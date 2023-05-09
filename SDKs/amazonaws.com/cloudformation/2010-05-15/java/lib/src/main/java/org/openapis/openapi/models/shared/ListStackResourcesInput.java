@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ListStackResourcesInput - The input for the &lt;a&gt;ListStackResource&lt;/a&gt; action.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListStackResourcesInput {
     
     public String nextToken;
+
     public ListStackResourcesInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,13 @@ public class ListStackResourcesInput {
     
     
     public String stackName;
+
     public ListStackResourcesInput withStackName(String stackName) {
         this.stackName = stackName;
         return this;
     }
     
+    public ListStackResourcesInput(@JsonProperty("StackName") String stackName) {
+        this.stackName = stackName;
+  }
 }

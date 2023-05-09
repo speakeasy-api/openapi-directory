@@ -12,9 +12,11 @@ public class OperatorNormalization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("option")
     public OperatorNormalizationOptionEnum option;
+
     public OperatorNormalization withOption(OperatorNormalizationOptionEnum option) {
         this.option = option;
         return this;
     }
     
+    public OperatorNormalization(){}
 }

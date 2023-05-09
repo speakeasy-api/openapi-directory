@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSystemTemplateRevisionsResponse {
     
     public String contentType;
+
     public GetSystemTemplateRevisionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSystemTemplateRevisionsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSystemTemplateRevisionsResponse getSystemTemplateRevisionsResponse;
+
     public GetSystemTemplateRevisionsResponse withGetSystemTemplateRevisionsResponse(org.openapis.openapi.models.shared.GetSystemTemplateRevisionsResponse getSystemTemplateRevisionsResponse) {
         this.getSystemTemplateRevisionsResponse = getSystemTemplateRevisionsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetSystemTemplateRevisionsResponse {
      */
     
     public Object internalFailureException;
+
     public GetSystemTemplateRevisionsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class GetSystemTemplateRevisionsResponse {
      */
     
     public Object invalidRequestException;
+
     public GetSystemTemplateRevisionsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class GetSystemTemplateRevisionsResponse {
     
     
     public Integer statusCode;
+
     public GetSystemTemplateRevisionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetSystemTemplateRevisionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSystemTemplateRevisionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetSystemTemplateRevisionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetSystemTemplateRevisionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class GetSystemTemplateRevisionsResponse {
      */
     
     public Object throttlingException;
+
     public GetSystemTemplateRevisionsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetSystemTemplateRevisionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

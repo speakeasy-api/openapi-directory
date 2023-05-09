@@ -61,11 +61,9 @@ public class AssetsReturns {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAssetsReturnsResponse res = new org.openapis.openapi.models.operations.PostAssetsReturnsResponse() {{
+        org.openapis.openapi.models.operations.PostAssetsReturnsResponse res = new org.openapis.openapi.models.operations.PostAssetsReturnsResponse(contentType, httpRes.statusCode()) {{
             postAssetsReturns200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class AssetsReturns {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAssetsReturnsAverageResponse res = new org.openapis.openapi.models.operations.PostAssetsReturnsAverageResponse() {{
+        org.openapis.openapi.models.operations.PostAssetsReturnsAverageResponse res = new org.openapis.openapi.models.operations.PostAssetsReturnsAverageResponse(contentType, httpRes.statusCode()) {{
             postAssetsReturnsAverage200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -122,6 +118,100 @@ public class AssetsReturns {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.operations.PostAssetsReturnsAverage200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.PostAssetsReturnsAverage200ApplicationJSON.class);
                 res.postAssetsReturnsAverage200ApplicationJSONObject = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Logarithmic Returns
+     * Compute the logarithmic return(s) of one or several asset(s) for one or several time period(s).
+     * 
+     * References
+     * * [Wikipedia, Logarithmic or continuously compounded return](https://en.wikipedia.org/wiki/Rate_of_return#Logarithmic_or_continuously_compounded_return)
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PostAssetsReturnsLogarithmicResponse postAssetsReturnsLogarithmic(org.openapis.openapi.models.operations.PostAssetsReturnsLogarithmicRequestBody request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/assets/returns/logarithmic");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.PostAssetsReturnsLogarithmicResponse res = new org.openapis.openapi.models.operations.PostAssetsReturnsLogarithmicResponse(contentType, httpRes.statusCode()) {{
+            postAssetsReturnsLogarithmic200ApplicationJSONObject = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.PostAssetsReturnsLogarithmic200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.PostAssetsReturnsLogarithmic200ApplicationJSON.class);
+                res.postAssetsReturnsLogarithmic200ApplicationJSONObject = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Turbulence-partitioned Asset Returns
+     * Partition asset returns into several subsets based on their turbulence index.
+     * 
+     * References
+     * * [George Chow, Jacquier, E., Kritzman, M., &amp; Kenneth Lowry. (1999). Optimal Portfolios in Good Times and Bad. Financial Analysts Journal, 55(3), 65\u201373.](https://www.jstor.org/stable/4480169)
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PostAssetsReturnsTurbulencePartitionedResponse postAssetsReturnsTurbulencePartitioned(org.openapis.openapi.models.operations.PostAssetsReturnsTurbulencePartitionedRequestBody request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/assets/returns/turbulence-partitioned");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.PostAssetsReturnsTurbulencePartitionedResponse res = new org.openapis.openapi.models.operations.PostAssetsReturnsTurbulencePartitionedResponse(contentType, httpRes.statusCode()) {{
+            postAssetsReturnsTurbulencePartitioned200ApplicationJSONObject = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.PostAssetsReturnsTurbulencePartitioned200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.PostAssetsReturnsTurbulencePartitioned200ApplicationJSON.class);
+                res.postAssetsReturnsTurbulencePartitioned200ApplicationJSONObject = out;
             }
         }
 

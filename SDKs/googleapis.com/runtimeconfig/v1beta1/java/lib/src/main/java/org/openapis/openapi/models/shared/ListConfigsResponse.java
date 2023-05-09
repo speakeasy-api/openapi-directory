@@ -18,6 +18,7 @@ public class ListConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configs")
     public RuntimeConfig[] configs;
+
     public ListConfigsResponse withConfigs(RuntimeConfig[] configs) {
         this.configs = configs;
         return this;
@@ -29,9 +30,11 @@ public class ListConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListConfigsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListConfigsResponse(){}
 }

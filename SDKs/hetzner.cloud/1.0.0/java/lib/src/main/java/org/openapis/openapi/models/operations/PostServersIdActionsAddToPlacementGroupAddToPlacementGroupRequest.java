@@ -12,9 +12,13 @@ public class PostServersIdActionsAddToPlacementGroupAddToPlacementGroupRequest {
      */
     @JsonProperty("placement_group")
     public Long placementGroup;
+
     public PostServersIdActionsAddToPlacementGroupAddToPlacementGroupRequest withPlacementGroup(Long placementGroup) {
         this.placementGroup = placementGroup;
         return this;
     }
     
+    public PostServersIdActionsAddToPlacementGroupAddToPlacementGroupRequest(@JsonProperty("placement_group") Long placementGroup) {
+        this.placementGroup = placementGroup;
+  }
 }

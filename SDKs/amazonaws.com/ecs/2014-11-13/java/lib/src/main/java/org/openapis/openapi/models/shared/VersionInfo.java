@@ -15,6 +15,7 @@ public class VersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentHash")
     public String agentHash;
+
     public VersionInfo withAgentHash(String agentHash) {
         this.agentHash = agentHash;
         return this;
@@ -23,6 +24,7 @@ public class VersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentVersion")
     public String agentVersion;
+
     public VersionInfo withAgentVersion(String agentVersion) {
         this.agentVersion = agentVersion;
         return this;
@@ -31,9 +33,11 @@ public class VersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dockerVersion")
     public String dockerVersion;
+
     public VersionInfo withDockerVersion(String dockerVersion) {
         this.dockerVersion = dockerVersion;
         return this;
     }
     
+    public VersionInfo(){}
 }

@@ -12,6 +12,7 @@ public class ListInflectedForms200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("features")
     public ListInflectedForms200ApplicationJSONFeatures[] features;
+
     public ListInflectedForms200ApplicationJSON withFeatures(ListInflectedForms200ApplicationJSONFeatures[] features) {
         this.features = features;
         return this;
@@ -20,6 +21,7 @@ public class ListInflectedForms200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isLemma")
     public Boolean isLemma;
+
     public ListInflectedForms200ApplicationJSON withIsLemma(Boolean isLemma) {
         this.isLemma = isLemma;
         return this;
@@ -28,9 +30,11 @@ public class ListInflectedForms200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public ListInflectedForms200ApplicationJSON withText(String text) {
         this.text = text;
         return this;
     }
     
+    public ListInflectedForms200ApplicationJSON(){}
 }

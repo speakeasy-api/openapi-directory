@@ -12,6 +12,7 @@ public class ColorHsl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("h")
     public Double h;
+
     public ColorHsl withH(Double h) {
         this.h = h;
         return this;
@@ -20,6 +21,7 @@ public class ColorHsl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("l")
     public Double l;
+
     public ColorHsl withL(Double l) {
         this.l = l;
         return this;
@@ -28,9 +30,11 @@ public class ColorHsl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s")
     public Double s;
+
     public ColorHsl withS(Double s) {
         this.s = s;
         return this;
     }
     
+    public ColorHsl(){}
 }

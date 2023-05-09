@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyVpnConnectionResultVpnConnectionRoutes {
     
     public String destinationCidrBlock;
+
     public ModifyVpnConnectionResultVpnConnectionRoutes withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -19,6 +20,7 @@ public class ModifyVpnConnectionResultVpnConnectionRoutes {
     
     
     public ModifyVpnConnectionResultVpnConnectionRoutesSourceEnum source;
+
     public ModifyVpnConnectionResultVpnConnectionRoutes withSource(ModifyVpnConnectionResultVpnConnectionRoutesSourceEnum source) {
         this.source = source;
         return this;
@@ -26,9 +28,11 @@ public class ModifyVpnConnectionResultVpnConnectionRoutes {
     
     
     public ModifyVpnConnectionResultVpnConnectionRoutesStateEnum state;
+
     public ModifyVpnConnectionResultVpnConnectionRoutes withState(ModifyVpnConnectionResultVpnConnectionRoutesStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ModifyVpnConnectionResultVpnConnectionRoutes(){}
 }

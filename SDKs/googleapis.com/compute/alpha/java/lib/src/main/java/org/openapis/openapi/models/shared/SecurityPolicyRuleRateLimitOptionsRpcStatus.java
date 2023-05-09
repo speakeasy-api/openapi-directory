@@ -18,6 +18,7 @@ public class SecurityPolicyRuleRateLimitOptionsRpcStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Integer code;
+
     public SecurityPolicyRuleRateLimitOptionsRpcStatus withCode(Integer code) {
         this.code = code;
         return this;
@@ -29,9 +30,11 @@ public class SecurityPolicyRuleRateLimitOptionsRpcStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public SecurityPolicyRuleRateLimitOptionsRpcStatus withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public SecurityPolicyRuleRateLimitOptionsRpcStatus(){}
 }

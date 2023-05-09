@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CrashesGetAppCrashesInfoResponse {
     
     public String contentType;
+
     public CrashesGetAppCrashesInfoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CrashesGetAppCrashesInfoResponse {
     
     
     public Integer statusCode;
+
     public CrashesGetAppCrashesInfoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CrashesGetAppCrashesInfoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CrashesGetAppCrashesInfoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CrashesGetAppCrashesInfoResponse {
      */
     
     public CrashesGetAppCrashesInfo200ApplicationJSON crashesGetAppCrashesInfo200ApplicationJSONObject;
+
     public CrashesGetAppCrashesInfoResponse withCrashesGetAppCrashesInfo200ApplicationJSONObject(CrashesGetAppCrashesInfo200ApplicationJSON crashesGetAppCrashesInfo200ApplicationJSONObject) {
         this.crashesGetAppCrashesInfo200ApplicationJSONObject = crashesGetAppCrashesInfo200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class CrashesGetAppCrashesInfoResponse {
      */
     
     public CrashesGetAppCrashesInfoDefaultApplicationJSON crashesGetAppCrashesInfoDefaultApplicationJSONObject;
+
     public CrashesGetAppCrashesInfoResponse withCrashesGetAppCrashesInfoDefaultApplicationJSONObject(CrashesGetAppCrashesInfoDefaultApplicationJSON crashesGetAppCrashesInfoDefaultApplicationJSONObject) {
         this.crashesGetAppCrashesInfoDefaultApplicationJSONObject = crashesGetAppCrashesInfoDefaultApplicationJSONObject;
         return this;
     }
     
+    public CrashesGetAppCrashesInfoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

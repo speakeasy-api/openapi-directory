@@ -18,6 +18,7 @@ public class ProductDeliveryTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("areaDeliveryTimes")
     public ProductDeliveryTimeAreaDeliveryTime[] areaDeliveryTimes;
+
     public ProductDeliveryTime withAreaDeliveryTimes(ProductDeliveryTimeAreaDeliveryTime[] areaDeliveryTimes) {
         this.areaDeliveryTimes = areaDeliveryTimes;
         return this;
@@ -29,9 +30,11 @@ public class ProductDeliveryTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public ProductId productId;
+
     public ProductDeliveryTime withProductId(ProductId productId) {
         this.productId = productId;
         return this;
     }
     
+    public ProductDeliveryTime(){}
 }

@@ -15,6 +15,7 @@ public class BatchCheckLayerAvailabilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failures")
     public LayerFailure[] failures;
+
     public BatchCheckLayerAvailabilityResponse withFailures(LayerFailure[] failures) {
         this.failures = failures;
         return this;
@@ -23,9 +24,11 @@ public class BatchCheckLayerAvailabilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layers")
     public Layer[] layers;
+
     public BatchCheckLayerAvailabilityResponse withLayers(Layer[] layers) {
         this.layers = layers;
         return this;
     }
     
+    public BatchCheckLayerAvailabilityResponse(){}
 }

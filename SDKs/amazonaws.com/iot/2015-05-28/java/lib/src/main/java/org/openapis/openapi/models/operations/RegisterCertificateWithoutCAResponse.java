@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterCertificateWithoutCAResponse {
@@ -12,6 +13,7 @@ public class RegisterCertificateWithoutCAResponse {
      */
     
     public Object certificateStateException;
+
     public RegisterCertificateWithoutCAResponse withCertificateStateException(Object certificateStateException) {
         this.certificateStateException = certificateStateException;
         return this;
@@ -22,6 +24,7 @@ public class RegisterCertificateWithoutCAResponse {
      */
     
     public Object certificateValidationException;
+
     public RegisterCertificateWithoutCAResponse withCertificateValidationException(Object certificateValidationException) {
         this.certificateValidationException = certificateValidationException;
         return this;
@@ -29,6 +32,7 @@ public class RegisterCertificateWithoutCAResponse {
     
     
     public String contentType;
+
     public RegisterCertificateWithoutCAResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class RegisterCertificateWithoutCAResponse {
      */
     
     public Object internalFailureException;
+
     public RegisterCertificateWithoutCAResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class RegisterCertificateWithoutCAResponse {
      */
     
     public Object invalidRequestException;
+
     public RegisterCertificateWithoutCAResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class RegisterCertificateWithoutCAResponse {
      */
     
     public org.openapis.openapi.models.shared.RegisterCertificateWithoutCAResponse registerCertificateWithoutCAResponse;
+
     public RegisterCertificateWithoutCAResponse withRegisterCertificateWithoutCAResponse(org.openapis.openapi.models.shared.RegisterCertificateWithoutCAResponse registerCertificateWithoutCAResponse) {
         this.registerCertificateWithoutCAResponse = registerCertificateWithoutCAResponse;
         return this;
@@ -69,6 +76,7 @@ public class RegisterCertificateWithoutCAResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public RegisterCertificateWithoutCAResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -76,6 +84,7 @@ public class RegisterCertificateWithoutCAResponse {
     
     
     public Integer statusCode;
+
     public RegisterCertificateWithoutCAResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class RegisterCertificateWithoutCAResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterCertificateWithoutCAResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class RegisterCertificateWithoutCAResponse {
      */
     
     public Object serviceUnavailableException;
+
     public RegisterCertificateWithoutCAResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -103,6 +114,7 @@ public class RegisterCertificateWithoutCAResponse {
      */
     
     public Object throttlingException;
+
     public RegisterCertificateWithoutCAResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -113,9 +125,14 @@ public class RegisterCertificateWithoutCAResponse {
      */
     
     public Object unauthorizedException;
+
     public RegisterCertificateWithoutCAResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public RegisterCertificateWithoutCAResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

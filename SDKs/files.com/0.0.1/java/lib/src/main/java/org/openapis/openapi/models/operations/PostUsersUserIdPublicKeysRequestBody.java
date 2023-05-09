@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUsersUserIdPublicKeysRequestBody {
@@ -12,6 +13,7 @@ public class PostUsersUserIdPublicKeysRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=public_key")
     public String publicKey;
+
     public PostUsersUserIdPublicKeysRequestBody withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
@@ -22,9 +24,14 @@ public class PostUsersUserIdPublicKeysRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=title")
     public String title;
+
     public PostUsersUserIdPublicKeysRequestBody withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PostUsersUserIdPublicKeysRequestBody(@JsonProperty("public_key") String publicKey, @JsonProperty("title") String title) {
+        this.publicKey = publicKey;
+        this.title = title;
+  }
 }

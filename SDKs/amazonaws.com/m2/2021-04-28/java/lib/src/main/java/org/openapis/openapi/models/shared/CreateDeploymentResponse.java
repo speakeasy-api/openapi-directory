@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateDeploymentResponse {
     @JsonProperty("deploymentId")
     public String deploymentId;
+
     public CreateDeploymentResponse withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
     }
     
+    public CreateDeploymentResponse(@JsonProperty("deploymentId") String deploymentId) {
+        this.deploymentId = deploymentId;
+  }
 }

@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.KgsearchEntitiesSearchRequest;
 import org.openapis.openapi.models.operations.KgsearchEntitiesSearchResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -29,9 +28,9 @@ public class Application {
                 .build();
 
             KgsearchEntitiesSearchRequest req = new KgsearchEntitiesSearchRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 accessToken = "provident";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "quibusdam";
                 fields = "unde";
                 ids = new String[]{{
@@ -46,7 +45,7 @@ public class Application {
                     add("iure"),
                     add("magnam"),
                 }};
-                limit = 891773;
+                limit = 891773L;
                 oauthToken = "ipsa";
                 prefix = false;
                 prettyPrint = false;
@@ -58,16 +57,18 @@ public class Application {
                 }};
                 uploadType = "placeat";
                 uploadProtocol = "voluptatum";
-            }}            
+            }};            
 
             KgsearchEntitiesSearchResponse res = sdk.entities.kgsearchEntitiesSearch(req);
 
-            if (res.searchResponse.isPresent()) {
+            if (res.searchResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -75,9 +76,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### entities
+### [entities](docs/entities/README.md)
 
-* `kgsearchEntitiesSearch` - Searches Knowledge Graph for entities that match the constraints. A list of matched entities will be returned in response, which will be in JSON-LD format and compatible with http://schema.org
+* [kgsearchEntitiesSearch](docs/entities/README.md#kgsearchentitiessearch) - Searches Knowledge Graph for entities that match the constraints. A list of matched entities will be returned in response, which will be in JSON-LD format and compatible with http://schema.org
 <!-- End SDK Available Operations -->
 
 ### Maturity

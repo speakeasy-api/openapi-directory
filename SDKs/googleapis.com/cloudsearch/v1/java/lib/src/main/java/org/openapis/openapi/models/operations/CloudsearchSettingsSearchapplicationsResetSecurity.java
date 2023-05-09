@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CloudsearchSettingsSearchapplicationsResetSecurity {
     @SpeakeasyMetadata("security:option=true")
     public CloudsearchSettingsSearchapplicationsResetSecurityOption1 option1;
+
     public CloudsearchSettingsSearchapplicationsResetSecurity withOption1(CloudsearchSettingsSearchapplicationsResetSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class CloudsearchSettingsSearchapplicationsResetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public CloudsearchSettingsSearchapplicationsResetSecurityOption2 option2;
+
     public CloudsearchSettingsSearchapplicationsResetSecurity withOption2(CloudsearchSettingsSearchapplicationsResetSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class CloudsearchSettingsSearchapplicationsResetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public CloudsearchSettingsSearchapplicationsResetSecurityOption3 option3;
+
     public CloudsearchSettingsSearchapplicationsResetSecurity withOption3(CloudsearchSettingsSearchapplicationsResetSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public CloudsearchSettingsSearchapplicationsResetSecurity(){}
 }

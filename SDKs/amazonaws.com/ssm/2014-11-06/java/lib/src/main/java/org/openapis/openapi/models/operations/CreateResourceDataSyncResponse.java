@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateResourceDataSyncResponse {
     
     public String contentType;
+
     public CreateResourceDataSyncResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateResourceDataSyncResponse {
      */
     
     public java.util.Map<String, Object> createResourceDataSyncResult;
+
     public CreateResourceDataSyncResponse withCreateResourceDataSyncResult(java.util.Map<String, Object> createResourceDataSyncResult) {
         this.createResourceDataSyncResult = createResourceDataSyncResult;
         return this;
@@ -29,6 +32,7 @@ public class CreateResourceDataSyncResponse {
      */
     
     public Object internalServerError;
+
     public CreateResourceDataSyncResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class CreateResourceDataSyncResponse {
      */
     
     public Object resourceDataSyncAlreadyExistsException;
+
     public CreateResourceDataSyncResponse withResourceDataSyncAlreadyExistsException(Object resourceDataSyncAlreadyExistsException) {
         this.resourceDataSyncAlreadyExistsException = resourceDataSyncAlreadyExistsException;
         return this;
@@ -46,6 +51,7 @@ public class CreateResourceDataSyncResponse {
     
     
     public Integer statusCode;
+
     public CreateResourceDataSyncResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateResourceDataSyncResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateResourceDataSyncResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class CreateResourceDataSyncResponse {
      */
     
     public Object resourceDataSyncCountExceededException;
+
     public CreateResourceDataSyncResponse withResourceDataSyncCountExceededException(Object resourceDataSyncCountExceededException) {
         this.resourceDataSyncCountExceededException = resourceDataSyncCountExceededException;
         return this;
@@ -73,9 +81,14 @@ public class CreateResourceDataSyncResponse {
      */
     
     public Object resourceDataSyncInvalidConfigurationException;
+
     public CreateResourceDataSyncResponse withResourceDataSyncInvalidConfigurationException(Object resourceDataSyncInvalidConfigurationException) {
         this.resourceDataSyncInvalidConfigurationException = resourceDataSyncInvalidConfigurationException;
         return this;
     }
     
+    public CreateResourceDataSyncResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

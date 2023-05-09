@@ -58,11 +58,9 @@ public class Templates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TemplatesCreateResponse res = new org.openapis.openapi.models.operations.TemplatesCreateResponse() {{
+        org.openapis.openapi.models.operations.TemplatesCreateResponse res = new org.openapis.openapi.models.operations.TemplatesCreateResponse(contentType, httpRes.statusCode()) {{
             templatesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -98,11 +96,9 @@ public class Templates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TemplatesFetchResponse res = new org.openapis.openapi.models.operations.TemplatesFetchResponse() {{
+        org.openapis.openapi.models.operations.TemplatesFetchResponse res = new org.openapis.openapi.models.operations.TemplatesFetchResponse(contentType, httpRes.statusCode()) {{
             templateResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -144,12 +140,10 @@ public class Templates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TemplatesFetchAllResponse res = new org.openapis.openapi.models.operations.TemplatesFetchAllResponse() {{
+        org.openapis.openapi.models.operations.TemplatesFetchAllResponse res = new org.openapis.openapi.models.operations.TemplatesFetchAllResponse(contentType, httpRes.statusCode()) {{
             templatesResponse = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -192,11 +186,9 @@ public class Templates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TemplatesRemoveResponse res = new org.openapis.openapi.models.operations.TemplatesRemoveResponse() {{
+        org.openapis.openapi.models.operations.TemplatesRemoveResponse res = new org.openapis.openapi.models.operations.TemplatesRemoveResponse(contentType, httpRes.statusCode()) {{
             templatesRemove200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -232,11 +224,9 @@ public class Templates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TemplatesUpdateResponse res = new org.openapis.openapi.models.operations.TemplatesUpdateResponse() {{
+        org.openapis.openapi.models.operations.TemplatesUpdateResponse res = new org.openapis.openapi.models.operations.TemplatesUpdateResponse(contentType, httpRes.statusCode()) {{
             templateResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

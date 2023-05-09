@@ -15,6 +15,7 @@ public class CreateApiResponseCorsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowCredentials")
     public Boolean allowCredentials;
+
     public CreateApiResponseCorsConfiguration withAllowCredentials(Boolean allowCredentials) {
         this.allowCredentials = allowCredentials;
         return this;
@@ -23,6 +24,7 @@ public class CreateApiResponseCorsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowHeaders")
     public String[] allowHeaders;
+
     public CreateApiResponseCorsConfiguration withAllowHeaders(String[] allowHeaders) {
         this.allowHeaders = allowHeaders;
         return this;
@@ -31,6 +33,7 @@ public class CreateApiResponseCorsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowMethods")
     public String[] allowMethods;
+
     public CreateApiResponseCorsConfiguration withAllowMethods(String[] allowMethods) {
         this.allowMethods = allowMethods;
         return this;
@@ -39,6 +42,7 @@ public class CreateApiResponseCorsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowOrigins")
     public String[] allowOrigins;
+
     public CreateApiResponseCorsConfiguration withAllowOrigins(String[] allowOrigins) {
         this.allowOrigins = allowOrigins;
         return this;
@@ -47,6 +51,7 @@ public class CreateApiResponseCorsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExposeHeaders")
     public String[] exposeHeaders;
+
     public CreateApiResponseCorsConfiguration withExposeHeaders(String[] exposeHeaders) {
         this.exposeHeaders = exposeHeaders;
         return this;
@@ -55,9 +60,11 @@ public class CreateApiResponseCorsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxAge")
     public Long maxAge;
+
     public CreateApiResponseCorsConfiguration withMaxAge(Long maxAge) {
         this.maxAge = maxAge;
         return this;
     }
     
+    public CreateApiResponseCorsConfiguration(){}
 }

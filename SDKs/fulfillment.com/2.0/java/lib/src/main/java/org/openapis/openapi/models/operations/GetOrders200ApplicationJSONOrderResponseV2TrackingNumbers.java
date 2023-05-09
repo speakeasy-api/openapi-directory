@@ -12,9 +12,11 @@ public class GetOrders200ApplicationJSONOrderResponseV2TrackingNumbers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrier")
     public GetOrders200ApplicationJSONOrderResponseV2TrackingNumbersCarrierHydratedV2 carrier;
+
     public GetOrders200ApplicationJSONOrderResponseV2TrackingNumbers withCarrier(GetOrders200ApplicationJSONOrderResponseV2TrackingNumbersCarrierHydratedV2 carrier) {
         this.carrier = carrier;
         return this;
     }
     
+    public GetOrders200ApplicationJSONOrderResponseV2TrackingNumbers(){}
 }

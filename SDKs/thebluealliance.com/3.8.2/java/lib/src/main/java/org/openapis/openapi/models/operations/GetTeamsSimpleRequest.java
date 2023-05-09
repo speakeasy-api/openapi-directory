@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTeamsSimpleRequest {
@@ -12,6 +13,7 @@ public class GetTeamsSimpleRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public GetTeamsSimpleRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -22,9 +24,13 @@ public class GetTeamsSimpleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=page_num")
     public Long pageNum;
+
     public GetTeamsSimpleRequest withPageNum(Long pageNum) {
         this.pageNum = pageNum;
         return this;
     }
     
+    public GetTeamsSimpleRequest(@JsonProperty("page_num") Long pageNum) {
+        this.pageNum = pageNum;
+  }
 }

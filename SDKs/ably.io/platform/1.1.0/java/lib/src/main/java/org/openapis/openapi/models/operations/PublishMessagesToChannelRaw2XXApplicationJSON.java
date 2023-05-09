@@ -15,6 +15,7 @@ public class PublishMessagesToChannelRaw2XXApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
     public String channel;
+
     public PublishMessagesToChannelRaw2XXApplicationJSON withChannel(String channel) {
         this.channel = channel;
         return this;
@@ -23,9 +24,11 @@ public class PublishMessagesToChannelRaw2XXApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageId")
     public String messageId;
+
     public PublishMessagesToChannelRaw2XXApplicationJSON withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
     }
     
+    public PublishMessagesToChannelRaw2XXApplicationJSON(){}
 }

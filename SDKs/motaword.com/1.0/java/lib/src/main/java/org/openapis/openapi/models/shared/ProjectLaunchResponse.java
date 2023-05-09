@@ -15,9 +15,11 @@ public class ProjectLaunchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ProjectLaunchResponseEnumEnum status;
+
     public ProjectLaunchResponse withStatus(ProjectLaunchResponseEnumEnum status) {
         this.status = status;
         return this;
     }
     
+    public ProjectLaunchResponse(){}
 }

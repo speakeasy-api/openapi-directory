@@ -12,9 +12,13 @@ public class BuildsListToolsetProjects200ApplicationJSONTestcloud {
      */
     @JsonProperty("projects")
     public BuildsListToolsetProjects200ApplicationJSONTestcloudProjects[] projects;
+
     public BuildsListToolsetProjects200ApplicationJSONTestcloud withProjects(BuildsListToolsetProjects200ApplicationJSONTestcloudProjects[] projects) {
         this.projects = projects;
         return this;
     }
     
+    public BuildsListToolsetProjects200ApplicationJSONTestcloud(@JsonProperty("projects") BuildsListToolsetProjects200ApplicationJSONTestcloudProjects[] projects) {
+        this.projects = projects;
+  }
 }

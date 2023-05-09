@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentPageTableTableCell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colSpan")
     public Integer colSpan;
+
     public GoogleCloudDocumentaiV1beta3DocumentPageTableTableCell withColSpan(Integer colSpan) {
         this.colSpan = colSpan;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentPageTableTableCell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedLanguages")
     public GoogleCloudDocumentaiV1beta3DocumentPageDetectedLanguage[] detectedLanguages;
+
     public GoogleCloudDocumentaiV1beta3DocumentPageTableTableCell withDetectedLanguages(GoogleCloudDocumentaiV1beta3DocumentPageDetectedLanguage[] detectedLanguages) {
         this.detectedLanguages = detectedLanguages;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentPageTableTableCell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layout")
     public GoogleCloudDocumentaiV1beta3DocumentPageLayout layout;
+
     public GoogleCloudDocumentaiV1beta3DocumentPageTableTableCell withLayout(GoogleCloudDocumentaiV1beta3DocumentPageLayout layout) {
         this.layout = layout;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDocumentaiV1beta3DocumentPageTableTableCell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowSpan")
     public Integer rowSpan;
+
     public GoogleCloudDocumentaiV1beta3DocumentPageTableTableCell withRowSpan(Integer rowSpan) {
         this.rowSpan = rowSpan;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3DocumentPageTableTableCell(){}
 }

@@ -18,9 +18,11 @@ public class SourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceFiles")
     public java.util.Map<String, Object>[] sourceFiles;
+
     public SourceInfo withSourceFiles(java.util.Map<String, Object>[] sourceFiles) {
         this.sourceFiles = sourceFiles;
         return this;
     }
     
+    public SourceInfo(){}
 }

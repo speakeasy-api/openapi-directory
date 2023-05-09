@@ -15,6 +15,7 @@ public class RoutedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public RoutedResource withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,9 +24,11 @@ public class RoutedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RoutedResource withName(String name) {
         this.name = name;
         return this;
     }
     
+    public RoutedResource(){}
 }

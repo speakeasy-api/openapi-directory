@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteSubnetCidrReservationResultDeletedSubnetCidrReservation {
     
     public String cidr;
+
     public DeleteSubnetCidrReservationResultDeletedSubnetCidrReservation withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -19,6 +20,7 @@ public class DeleteSubnetCidrReservationResultDeletedSubnetCidrReservation {
     
     
     public String description;
+
     public DeleteSubnetCidrReservationResultDeletedSubnetCidrReservation withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class DeleteSubnetCidrReservationResultDeletedSubnetCidrReservation {
     
     
     public String ownerId;
+
     public DeleteSubnetCidrReservationResultDeletedSubnetCidrReservation withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -33,6 +36,7 @@ public class DeleteSubnetCidrReservationResultDeletedSubnetCidrReservation {
     
     
     public DeleteSubnetCidrReservationResultDeletedSubnetCidrReservationReservationTypeEnum reservationType;
+
     public DeleteSubnetCidrReservationResultDeletedSubnetCidrReservation withReservationType(DeleteSubnetCidrReservationResultDeletedSubnetCidrReservationReservationTypeEnum reservationType) {
         this.reservationType = reservationType;
         return this;
@@ -40,6 +44,7 @@ public class DeleteSubnetCidrReservationResultDeletedSubnetCidrReservation {
     
     
     public String subnetCidrReservationId;
+
     public DeleteSubnetCidrReservationResultDeletedSubnetCidrReservation withSubnetCidrReservationId(String subnetCidrReservationId) {
         this.subnetCidrReservationId = subnetCidrReservationId;
         return this;
@@ -47,6 +52,7 @@ public class DeleteSubnetCidrReservationResultDeletedSubnetCidrReservation {
     
     
     public String subnetId;
+
     public DeleteSubnetCidrReservationResultDeletedSubnetCidrReservation withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -54,9 +60,11 @@ public class DeleteSubnetCidrReservationResultDeletedSubnetCidrReservation {
     
     
     public DeleteSubnetCidrReservationResultDeletedSubnetCidrReservationTags[] tags;
+
     public DeleteSubnetCidrReservationResultDeletedSubnetCidrReservation withTags(DeleteSubnetCidrReservationResultDeletedSubnetCidrReservationTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DeleteSubnetCidrReservationResultDeletedSubnetCidrReservation(){}
 }

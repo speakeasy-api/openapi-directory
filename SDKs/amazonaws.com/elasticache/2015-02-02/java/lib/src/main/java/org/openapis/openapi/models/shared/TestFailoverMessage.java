@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class TestFailoverMessage {
     
     public String nodeGroupId;
+
     public TestFailoverMessage withNodeGroupId(String nodeGroupId) {
         this.nodeGroupId = nodeGroupId;
         return this;
@@ -16,9 +17,14 @@ public class TestFailoverMessage {
     
     
     public String replicationGroupId;
+
     public TestFailoverMessage withReplicationGroupId(String replicationGroupId) {
         this.replicationGroupId = replicationGroupId;
         return this;
     }
     
+    public TestFailoverMessage(@JsonProperty("NodeGroupId") String nodeGroupId, @JsonProperty("ReplicationGroupId") String replicationGroupId) {
+        this.nodeGroupId = nodeGroupId;
+        this.replicationGroupId = replicationGroupId;
+  }
 }

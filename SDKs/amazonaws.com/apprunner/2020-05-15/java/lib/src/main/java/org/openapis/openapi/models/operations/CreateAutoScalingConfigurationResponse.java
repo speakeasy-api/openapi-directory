@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAutoScalingConfigurationResponse {
     
     public String contentType;
+
     public CreateAutoScalingConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateAutoScalingConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAutoScalingConfigurationResponse createAutoScalingConfigurationResponse;
+
     public CreateAutoScalingConfigurationResponse withCreateAutoScalingConfigurationResponse(org.openapis.openapi.models.shared.CreateAutoScalingConfigurationResponse createAutoScalingConfigurationResponse) {
         this.createAutoScalingConfigurationResponse = createAutoScalingConfigurationResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateAutoScalingConfigurationResponse {
      */
     
     public Object internalServiceErrorException;
+
     public CreateAutoScalingConfigurationResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class CreateAutoScalingConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateAutoScalingConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class CreateAutoScalingConfigurationResponse {
     
     
     public Integer statusCode;
+
     public CreateAutoScalingConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateAutoScalingConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAutoScalingConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CreateAutoScalingConfigurationResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateAutoScalingConfigurationResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
     }
     
+    public CreateAutoScalingConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

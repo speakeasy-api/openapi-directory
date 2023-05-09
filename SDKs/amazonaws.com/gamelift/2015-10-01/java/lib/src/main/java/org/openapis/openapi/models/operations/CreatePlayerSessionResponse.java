@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePlayerSessionResponse {
     
     public String contentType;
+
     public CreatePlayerSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreatePlayerSessionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreatePlayerSessionOutput createPlayerSessionOutput;
+
     public CreatePlayerSessionResponse withCreatePlayerSessionOutput(org.openapis.openapi.models.shared.CreatePlayerSessionOutput createPlayerSessionOutput) {
         this.createPlayerSessionOutput = createPlayerSessionOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreatePlayerSessionResponse {
      */
     
     public Object gameSessionFullException;
+
     public CreatePlayerSessionResponse withGameSessionFullException(Object gameSessionFullException) {
         this.gameSessionFullException = gameSessionFullException;
         return this;
@@ -39,6 +43,7 @@ public class CreatePlayerSessionResponse {
      */
     
     public Object internalServiceException;
+
     public CreatePlayerSessionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class CreatePlayerSessionResponse {
      */
     
     public Object invalidGameSessionStatusException;
+
     public CreatePlayerSessionResponse withInvalidGameSessionStatusException(Object invalidGameSessionStatusException) {
         this.invalidGameSessionStatusException = invalidGameSessionStatusException;
         return this;
@@ -59,6 +65,7 @@ public class CreatePlayerSessionResponse {
      */
     
     public Object invalidRequestException;
+
     public CreatePlayerSessionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class CreatePlayerSessionResponse {
      */
     
     public Object notFoundException;
+
     public CreatePlayerSessionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +84,7 @@ public class CreatePlayerSessionResponse {
     
     
     public Integer statusCode;
+
     public CreatePlayerSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreatePlayerSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePlayerSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreatePlayerSessionResponse {
      */
     
     public Object terminalRoutingStrategyException;
+
     public CreatePlayerSessionResponse withTerminalRoutingStrategyException(Object terminalRoutingStrategyException) {
         this.terminalRoutingStrategyException = terminalRoutingStrategyException;
         return this;
@@ -103,9 +114,14 @@ public class CreatePlayerSessionResponse {
      */
     
     public Object unauthorizedException;
+
     public CreatePlayerSessionResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreatePlayerSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

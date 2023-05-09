@@ -15,6 +15,7 @@ public class FailureInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public FailureInfo withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -23,9 +24,11 @@ public class FailureInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedRecordsS3Url")
     public String failedRecordsS3Url;
+
     public FailureInfo withFailedRecordsS3Url(String failedRecordsS3Url) {
         this.failedRecordsS3Url = failedRecordsS3Url;
         return this;
     }
     
+    public FailureInfo(){}
 }

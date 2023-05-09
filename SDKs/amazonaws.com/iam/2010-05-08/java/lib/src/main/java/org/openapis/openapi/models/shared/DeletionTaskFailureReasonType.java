@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeletionTaskFailureReasonType {
     
     public String reason;
+
     public DeletionTaskFailureReasonType withReason(String reason) {
         this.reason = reason;
         return this;
@@ -19,9 +20,11 @@ public class DeletionTaskFailureReasonType {
     
     
     public RoleUsageType[] roleUsageList;
+
     public DeletionTaskFailureReasonType withRoleUsageList(RoleUsageType[] roleUsageList) {
         this.roleUsageList = roleUsageList;
         return this;
     }
     
+    public DeletionTaskFailureReasonType(){}
 }

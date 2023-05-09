@@ -15,6 +15,7 @@ public class KeysAndAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributesToGet")
     public String[] attributesToGet;
+
     public KeysAndAttributes withAttributesToGet(String[] attributesToGet) {
         this.attributesToGet = attributesToGet;
         return this;
@@ -23,6 +24,7 @@ public class KeysAndAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsistentRead")
     public Boolean consistentRead;
+
     public KeysAndAttributes withConsistentRead(Boolean consistentRead) {
         this.consistentRead = consistentRead;
         return this;
@@ -31,6 +33,7 @@ public class KeysAndAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpressionAttributeNames")
     public java.util.Map<String, String> expressionAttributeNames;
+
     public KeysAndAttributes withExpressionAttributeNames(java.util.Map<String, String> expressionAttributeNames) {
         this.expressionAttributeNames = expressionAttributeNames;
         return this;
@@ -38,6 +41,7 @@ public class KeysAndAttributes {
     
     @JsonProperty("Keys")
     public java.util.Map<String, AttributeValue>[] keys;
+
     public KeysAndAttributes withKeys(java.util.Map<String, AttributeValue>[] keys) {
         this.keys = keys;
         return this;
@@ -46,9 +50,13 @@ public class KeysAndAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectionExpression")
     public String projectionExpression;
+
     public KeysAndAttributes withProjectionExpression(String projectionExpression) {
         this.projectionExpression = projectionExpression;
         return this;
     }
     
+    public KeysAndAttributes(@JsonProperty("Keys") java.util.Map<String, AttributeValue>[] keys) {
+        this.keys = keys;
+  }
 }

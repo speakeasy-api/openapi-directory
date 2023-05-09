@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2LabelLock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capabilities")
     public GoogleAppsDriveLabelsV2LabelLockCapabilities capabilities;
+
     public GoogleAppsDriveLabelsV2LabelLock withCapabilities(GoogleAppsDriveLabelsV2LabelLockCapabilities capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsDriveLabelsV2LabelLock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("choiceId")
     public String choiceId;
+
     public GoogleAppsDriveLabelsV2LabelLock withChoiceId(String choiceId) {
         this.choiceId = choiceId;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsDriveLabelsV2LabelLock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleAppsDriveLabelsV2LabelLock withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAppsDriveLabelsV2LabelLock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creator")
     public GoogleAppsDriveLabelsV2UserInfo creator;
+
     public GoogleAppsDriveLabelsV2LabelLock withCreator(GoogleAppsDriveLabelsV2UserInfo creator) {
         this.creator = creator;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAppsDriveLabelsV2LabelLock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteTime")
     public String deleteTime;
+
     public GoogleAppsDriveLabelsV2LabelLock withDeleteTime(String deleteTime) {
         this.deleteTime = deleteTime;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAppsDriveLabelsV2LabelLock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldId")
     public String fieldId;
+
     public GoogleAppsDriveLabelsV2LabelLock withFieldId(String fieldId) {
         this.fieldId = fieldId;
         return this;
@@ -84,6 +90,7 @@ public class GoogleAppsDriveLabelsV2LabelLock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAppsDriveLabelsV2LabelLock withName(String name) {
         this.name = name;
         return this;
@@ -95,9 +102,11 @@ public class GoogleAppsDriveLabelsV2LabelLock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleAppsDriveLabelsV2LabelLockStateEnum state;
+
     public GoogleAppsDriveLabelsV2LabelLock withState(GoogleAppsDriveLabelsV2LabelLockStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2LabelLock(){}
 }

@@ -15,9 +15,11 @@ public class GetYearMonthJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public GetYearMonthJSON200ApplicationJSONResponse response;
+
     public GetYearMonthJSON200ApplicationJSON withResponse(GetYearMonthJSON200ApplicationJSONResponse response) {
         this.response = response;
         return this;
     }
     
+    public GetYearMonthJSON200ApplicationJSON(){}
 }

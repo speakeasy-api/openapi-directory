@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ImportSource {
     @JsonProperty("S3")
     public S3ImportSource s3;
+
     public ImportSource withS3(S3ImportSource s3) {
         this.s3 = s3;
         return this;
     }
     
+    public ImportSource(@JsonProperty("S3") S3ImportSource s3) {
+        this.s3 = s3;
+  }
 }

@@ -18,9 +18,11 @@ public class DuplicateLineItemResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duplicateLineItemId")
     public String duplicateLineItemId;
+
     public DuplicateLineItemResponse withDuplicateLineItemId(String duplicateLineItemId) {
         this.duplicateLineItemId = duplicateLineItemId;
         return this;
     }
     
+    public DuplicateLineItemResponse(){}
 }

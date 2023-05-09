@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PolicyAttributeDescription {
     
     public String attributeName;
+
     public PolicyAttributeDescription withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -19,9 +20,11 @@ public class PolicyAttributeDescription {
     
     
     public String attributeValue;
+
     public PolicyAttributeDescription withAttributeValue(String attributeValue) {
         this.attributeValue = attributeValue;
         return this;
     }
     
+    public PolicyAttributeDescription(){}
 }

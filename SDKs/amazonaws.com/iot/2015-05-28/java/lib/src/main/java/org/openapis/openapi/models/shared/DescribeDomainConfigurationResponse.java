@@ -20,6 +20,7 @@ public class DescribeDomainConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizerConfig")
     public AuthorizerConfig authorizerConfig;
+
     public DescribeDomainConfigurationResponse withAuthorizerConfig(AuthorizerConfig authorizerConfig) {
         this.authorizerConfig = authorizerConfig;
         return this;
@@ -28,6 +29,7 @@ public class DescribeDomainConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainConfigurationArn")
     public String domainConfigurationArn;
+
     public DescribeDomainConfigurationResponse withDomainConfigurationArn(String domainConfigurationArn) {
         this.domainConfigurationArn = domainConfigurationArn;
         return this;
@@ -36,6 +38,7 @@ public class DescribeDomainConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainConfigurationName")
     public String domainConfigurationName;
+
     public DescribeDomainConfigurationResponse withDomainConfigurationName(String domainConfigurationName) {
         this.domainConfigurationName = domainConfigurationName;
         return this;
@@ -44,6 +47,7 @@ public class DescribeDomainConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainConfigurationStatus")
     public DomainConfigurationStatusEnum domainConfigurationStatus;
+
     public DescribeDomainConfigurationResponse withDomainConfigurationStatus(DomainConfigurationStatusEnum domainConfigurationStatus) {
         this.domainConfigurationStatus = domainConfigurationStatus;
         return this;
@@ -52,6 +56,7 @@ public class DescribeDomainConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainName")
     public String domainName;
+
     public DescribeDomainConfigurationResponse withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -60,6 +65,7 @@ public class DescribeDomainConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainType")
     public DomainTypeEnum domainType;
+
     public DescribeDomainConfigurationResponse withDomainType(DomainTypeEnum domainType) {
         this.domainType = domainType;
         return this;
@@ -70,6 +76,7 @@ public class DescribeDomainConfigurationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastStatusChangeDate")
     public OffsetDateTime lastStatusChangeDate;
+
     public DescribeDomainConfigurationResponse withLastStatusChangeDate(OffsetDateTime lastStatusChangeDate) {
         this.lastStatusChangeDate = lastStatusChangeDate;
         return this;
@@ -78,6 +85,7 @@ public class DescribeDomainConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverCertificates")
     public ServerCertificateSummary[] serverCertificates;
+
     public DescribeDomainConfigurationResponse withServerCertificates(ServerCertificateSummary[] serverCertificates) {
         this.serverCertificates = serverCertificates;
         return this;
@@ -86,9 +94,11 @@ public class DescribeDomainConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceType")
     public ServiceTypeEnum serviceType;
+
     public DescribeDomainConfigurationResponse withServiceType(ServiceTypeEnum serviceType) {
         this.serviceType = serviceType;
         return this;
     }
     
+    public DescribeDomainConfigurationResponse(){}
 }

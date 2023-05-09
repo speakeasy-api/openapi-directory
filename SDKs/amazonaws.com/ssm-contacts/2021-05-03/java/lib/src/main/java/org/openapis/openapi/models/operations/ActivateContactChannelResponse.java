@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActivateContactChannelResponse {
@@ -12,6 +13,7 @@ public class ActivateContactChannelResponse {
      */
     
     public Object accessDeniedException;
+
     public ActivateContactChannelResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ActivateContactChannelResponse {
      */
     
     public java.util.Map<String, Object> activateContactChannelResult;
+
     public ActivateContactChannelResponse withActivateContactChannelResult(java.util.Map<String, Object> activateContactChannelResult) {
         this.activateContactChannelResult = activateContactChannelResult;
         return this;
@@ -29,6 +32,7 @@ public class ActivateContactChannelResponse {
     
     
     public String contentType;
+
     public ActivateContactChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ActivateContactChannelResponse {
      */
     
     public Object internalServerException;
+
     public ActivateContactChannelResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class ActivateContactChannelResponse {
     
     
     public Integer statusCode;
+
     public ActivateContactChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ActivateContactChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActivateContactChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ActivateContactChannelResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ActivateContactChannelResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class ActivateContactChannelResponse {
      */
     
     public Object throttlingException;
+
     public ActivateContactChannelResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ActivateContactChannelResponse {
      */
     
     public Object validationException;
+
     public ActivateContactChannelResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ActivateContactChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

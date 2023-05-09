@@ -15,6 +15,7 @@ public class CopyOptimisationRequest {
      */
     @JsonProperty("channelIdSource")
     public String channelIdSource;
+
     public CopyOptimisationRequest withChannelIdSource(String channelIdSource) {
         this.channelIdSource = channelIdSource;
         return this;
@@ -25,6 +26,7 @@ public class CopyOptimisationRequest {
      */
     @JsonProperty("channelIdTarget")
     public String channelIdTarget;
+
     public CopyOptimisationRequest withChannelIdTarget(String channelIdTarget) {
         this.channelIdTarget = channelIdTarget;
         return this;
@@ -35,9 +37,15 @@ public class CopyOptimisationRequest {
      */
     @JsonProperty("keepExistingOptimisation")
     public Boolean keepExistingOptimisation;
+
     public CopyOptimisationRequest withKeepExistingOptimisation(Boolean keepExistingOptimisation) {
         this.keepExistingOptimisation = keepExistingOptimisation;
         return this;
     }
     
+    public CopyOptimisationRequest(@JsonProperty("channelIdSource") String channelIdSource, @JsonProperty("channelIdTarget") String channelIdTarget, @JsonProperty("keepExistingOptimisation") Boolean keepExistingOptimisation) {
+        this.channelIdSource = channelIdSource;
+        this.channelIdTarget = channelIdTarget;
+        this.keepExistingOptimisation = keepExistingOptimisation;
+  }
 }

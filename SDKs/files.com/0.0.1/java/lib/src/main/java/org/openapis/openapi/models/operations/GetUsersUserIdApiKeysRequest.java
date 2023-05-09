@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersUserIdApiKeysRequest {
@@ -12,6 +13,7 @@ public class GetUsersUserIdApiKeysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetUsersUserIdApiKeysRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -22,6 +24,7 @@ public class GetUsersUserIdApiKeysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public java.util.Map<String, Object> filter;
+
     public GetUsersUserIdApiKeysRequest withFilter(java.util.Map<String, Object> filter) {
         this.filter = filter;
         return this;
@@ -32,28 +35,20 @@ public class GetUsersUserIdApiKeysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_gt")
     public java.util.Map<String, Object> filterGt;
+
     public GetUsersUserIdApiKeysRequest withFilterGt(java.util.Map<String, Object> filterGt) {
         this.filterGt = filterGt;
         return this;
     }
     
     /**
-     * If set, return records where the specified field is greater than or equal to the supplied value. Valid fields are `expires_at`.
+     * If set, return records where the specified field is greater than or equal the supplied value. Valid fields are `expires_at`.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_gteq")
     public java.util.Map<String, Object> filterGteq;
+
     public GetUsersUserIdApiKeysRequest withFilterGteq(java.util.Map<String, Object> filterGteq) {
         this.filterGteq = filterGteq;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is equal to the supplied value. Valid fields are `expires_at`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_like")
-    public java.util.Map<String, Object> filterLike;
-    public GetUsersUserIdApiKeysRequest withFilterLike(java.util.Map<String, Object> filterLike) {
-        this.filterLike = filterLike;
         return this;
     }
     
@@ -62,16 +57,18 @@ public class GetUsersUserIdApiKeysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_lt")
     public java.util.Map<String, Object> filterLt;
+
     public GetUsersUserIdApiKeysRequest withFilterLt(java.util.Map<String, Object> filterLt) {
         this.filterLt = filterLt;
         return this;
     }
     
     /**
-     * If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `expires_at`.
+     * If set, return records where the specified field is less than or equal the supplied value. Valid fields are `expires_at`.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_lteq")
     public java.util.Map<String, Object> filterLteq;
+
     public GetUsersUserIdApiKeysRequest withFilterLteq(java.util.Map<String, Object> filterLteq) {
         this.filterLteq = filterLteq;
         return this;
@@ -82,6 +79,7 @@ public class GetUsersUserIdApiKeysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetUsersUserIdApiKeysRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -92,6 +90,7 @@ public class GetUsersUserIdApiKeysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public java.util.Map<String, Object> sortBy;
+
     public GetUsersUserIdApiKeysRequest withSortBy(java.util.Map<String, Object> sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -102,9 +101,13 @@ public class GetUsersUserIdApiKeysRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
     public Integer userId;
+
     public GetUsersUserIdApiKeysRequest withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetUsersUserIdApiKeysRequest(@JsonProperty("user_id") Integer userId) {
+        this.userId = userId;
+  }
 }

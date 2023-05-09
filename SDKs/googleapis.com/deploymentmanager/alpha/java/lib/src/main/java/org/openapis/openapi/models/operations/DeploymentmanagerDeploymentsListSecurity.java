@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DeploymentmanagerDeploymentsListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DeploymentmanagerDeploymentsListSecurityOption1 option1;
+
     public DeploymentmanagerDeploymentsListSecurity withOption1(DeploymentmanagerDeploymentsListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class DeploymentmanagerDeploymentsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DeploymentmanagerDeploymentsListSecurityOption2 option2;
+
     public DeploymentmanagerDeploymentsListSecurity withOption2(DeploymentmanagerDeploymentsListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class DeploymentmanagerDeploymentsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DeploymentmanagerDeploymentsListSecurityOption3 option3;
+
     public DeploymentmanagerDeploymentsListSecurity withOption3(DeploymentmanagerDeploymentsListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,9 +33,11 @@ public class DeploymentmanagerDeploymentsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DeploymentmanagerDeploymentsListSecurityOption4 option4;
+
     public DeploymentmanagerDeploymentsListSecurity withOption4(DeploymentmanagerDeploymentsListSecurityOption4 option4) {
         this.option4 = option4;
         return this;
     }
     
+    public DeploymentmanagerDeploymentsListSecurity(){}
 }

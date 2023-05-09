@@ -18,6 +18,7 @@ public class RfeSimpleVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("estimate_due_date")
     public LocalDate estimateDueDate;
+
     public RfeSimpleVO withEstimateDueDate(LocalDate estimateDueDate) {
         this.estimateDueDate = estimateDueDate;
         return this;
@@ -26,6 +27,7 @@ public class RfeSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rfe_id")
     public Long rfeId;
+
     public RfeSimpleVO withRfeId(Long rfeId) {
         this.rfeId = rfeId;
         return this;
@@ -34,6 +36,7 @@ public class RfeSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rfe_items")
     public RfeItemSimpleVO[] rfeItems;
+
     public RfeSimpleVO withRfeItems(RfeItemSimpleVO[] rfeItems) {
         this.rfeItems = rfeItems;
         return this;
@@ -42,6 +45,7 @@ public class RfeSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rfe_title")
     public String rfeTitle;
+
     public RfeSimpleVO withRfeTitle(String rfeTitle) {
         this.rfeTitle = rfeTitle;
         return this;
@@ -50,9 +54,11 @@ public class RfeSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplier_estimates")
     public RfeSuEstimateSimpleVO[] supplierEstimates;
+
     public RfeSimpleVO withSupplierEstimates(RfeSuEstimateSimpleVO[] supplierEstimates) {
         this.supplierEstimates = supplierEstimates;
         return this;
     }
     
+    public RfeSimpleVO(){}
 }

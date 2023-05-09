@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleChromeManagementV1NetworkInfo - Network device information. * This field provides device information, which is static and will not change over time. * Data for this field is controlled via policy: [ReportNetworkDeviceConfiguration](https://chromeenterprise.google/policies/#ReportNetworkDeviceConfiguration) * Data Collection Frequency: At device startup * Default Data Reporting Frequency: At device startup - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: Yes * Reported for affiliated users only: N/A
+ * GoogleChromeManagementV1NetworkInfo - Network device information. * This field provides device information, which is static and will not change over time. * Data for this field is controlled via policy: [ReportNetworkDeviceConfiguration](https://chromeenterprise.google/policies/#ReportNetworkDeviceConfiguration) * Data Collection Frequency: At device startup * Default Data Reporting Frequency: At device startup - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: Yes * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_NETWORK_INFO
  */
 public class GoogleChromeManagementV1NetworkInfo {
     /**
@@ -18,9 +18,11 @@ public class GoogleChromeManagementV1NetworkInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkDevices")
     public GoogleChromeManagementV1NetworkDevice[] networkDevices;
+
     public GoogleChromeManagementV1NetworkInfo withNetworkDevices(GoogleChromeManagementV1NetworkDevice[] networkDevices) {
         this.networkDevices = networkDevices;
         return this;
     }
     
+    public GoogleChromeManagementV1NetworkInfo(){}
 }

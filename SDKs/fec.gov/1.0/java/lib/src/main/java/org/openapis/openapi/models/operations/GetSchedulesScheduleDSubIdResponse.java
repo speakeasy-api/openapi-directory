@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSchedulesScheduleDSubIdResponse {
     
     public String contentType;
+
     public GetSchedulesScheduleDSubIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetSchedulesScheduleDSubIdResponse {
     
     
     public Integer statusCode;
+
     public GetSchedulesScheduleDSubIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetSchedulesScheduleDSubIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSchedulesScheduleDSubIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -30,9 +34,14 @@ public class GetSchedulesScheduleDSubIdResponse {
     
     
     public GetSchedulesScheduleDSubIdDefaultApplicationJSON getSchedulesScheduleDSubIdDefaultApplicationJSONObject;
+
     public GetSchedulesScheduleDSubIdResponse withGetSchedulesScheduleDSubIdDefaultApplicationJSONObject(GetSchedulesScheduleDSubIdDefaultApplicationJSON getSchedulesScheduleDSubIdDefaultApplicationJSONObject) {
         this.getSchedulesScheduleDSubIdDefaultApplicationJSONObject = getSchedulesScheduleDSubIdDefaultApplicationJSONObject;
         return this;
     }
     
+    public GetSchedulesScheduleDSubIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

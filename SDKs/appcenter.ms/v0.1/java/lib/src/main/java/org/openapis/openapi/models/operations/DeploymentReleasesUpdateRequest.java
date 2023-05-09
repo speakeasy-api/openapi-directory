@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeploymentReleasesUpdateRequest {
@@ -12,6 +13,7 @@ public class DeploymentReleasesUpdateRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public DeploymentReleasesUpdateRequestBody requestBody;
+
     public DeploymentReleasesUpdateRequest withRequestBody(DeploymentReleasesUpdateRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class DeploymentReleasesUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public DeploymentReleasesUpdateRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -32,6 +35,7 @@ public class DeploymentReleasesUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment_name")
     public String deploymentName;
+
     public DeploymentReleasesUpdateRequest withDeploymentName(String deploymentName) {
         this.deploymentName = deploymentName;
         return this;
@@ -42,6 +46,7 @@ public class DeploymentReleasesUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public DeploymentReleasesUpdateRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -52,9 +57,17 @@ public class DeploymentReleasesUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_label")
     public String releaseLabel;
+
     public DeploymentReleasesUpdateRequest withReleaseLabel(String releaseLabel) {
         this.releaseLabel = releaseLabel;
         return this;
     }
     
+    public DeploymentReleasesUpdateRequest(@JsonProperty("RequestBody") DeploymentReleasesUpdateRequestBody requestBody, @JsonProperty("app_name") String appName, @JsonProperty("deployment_name") String deploymentName, @JsonProperty("owner_name") String ownerName, @JsonProperty("release_label") String releaseLabel) {
+        this.requestBody = requestBody;
+        this.appName = appName;
+        this.deploymentName = deploymentName;
+        this.ownerName = ownerName;
+        this.releaseLabel = releaseLabel;
+  }
 }

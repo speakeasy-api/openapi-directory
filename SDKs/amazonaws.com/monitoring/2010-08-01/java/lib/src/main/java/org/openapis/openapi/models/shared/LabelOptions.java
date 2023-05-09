@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class LabelOptions {
     
     public String timezone;
+
     public LabelOptions withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public LabelOptions(){}
 }

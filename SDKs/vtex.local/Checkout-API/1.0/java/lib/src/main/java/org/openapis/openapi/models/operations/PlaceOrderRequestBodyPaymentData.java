@@ -18,6 +18,7 @@ public class PlaceOrderRequestBodyPaymentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("giftCardMessages")
     public Object[] giftCardMessages;
+
     public PlaceOrderRequestBodyPaymentData withGiftCardMessages(Object[] giftCardMessages) {
         this.giftCardMessages = giftCardMessages;
         return this;
@@ -29,6 +30,7 @@ public class PlaceOrderRequestBodyPaymentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("giftCards")
     public PlaceOrderRequestBodyPaymentDataGiftCards[] giftCards;
+
     public PlaceOrderRequestBodyPaymentData withGiftCards(PlaceOrderRequestBodyPaymentDataGiftCards[] giftCards) {
         this.giftCards = giftCards;
         return this;
@@ -40,6 +42,7 @@ public class PlaceOrderRequestBodyPaymentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentSystems")
     public PlaceOrderRequestBodyPaymentDataPaymentSystems[] paymentSystems;
+
     public PlaceOrderRequestBodyPaymentData withPaymentSystems(PlaceOrderRequestBodyPaymentDataPaymentSystems[] paymentSystems) {
         this.paymentSystems = paymentSystems;
         return this;
@@ -50,6 +53,7 @@ public class PlaceOrderRequestBodyPaymentData {
      */
     @JsonProperty("payments")
     public PlaceOrderRequestBodyPaymentDataPayments[] payments;
+
     public PlaceOrderRequestBodyPaymentData withPayments(PlaceOrderRequestBodyPaymentDataPayments[] payments) {
         this.payments = payments;
         return this;
@@ -61,9 +65,13 @@ public class PlaceOrderRequestBodyPaymentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateStatus")
     public String updateStatus;
+
     public PlaceOrderRequestBodyPaymentData withUpdateStatus(String updateStatus) {
         this.updateStatus = updateStatus;
         return this;
     }
     
+    public PlaceOrderRequestBodyPaymentData(@JsonProperty("payments") PlaceOrderRequestBodyPaymentDataPayments[] payments) {
+        this.payments = payments;
+  }
 }

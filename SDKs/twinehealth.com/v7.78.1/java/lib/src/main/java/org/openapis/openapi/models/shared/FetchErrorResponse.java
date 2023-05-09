@@ -15,6 +15,7 @@ public class FetchErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error errors;
+
     public FetchErrorResponse withErrors(Error errors) {
         this.errors = errors;
         return this;
@@ -23,9 +24,11 @@ public class FetchErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public FetchMetaResponse meta;
+
     public FetchErrorResponse withMeta(FetchMetaResponse meta) {
         this.meta = meta;
         return this;
     }
     
+    public FetchErrorResponse(){}
 }

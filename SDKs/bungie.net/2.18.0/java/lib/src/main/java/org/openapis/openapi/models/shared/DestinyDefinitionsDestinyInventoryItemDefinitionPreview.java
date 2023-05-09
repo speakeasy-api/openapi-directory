@@ -16,6 +16,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionPreview {
      */
     
     public Long artifactHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionPreview withArtifactHash(Long artifactHash) {
         this.artifactHash = artifactHash;
         return this;
@@ -26,6 +27,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionPreview {
      */
     
     public DestinyDefinitionsItemsDestinyDerivedItemCategoryDefinition[] derivedItemCategories;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionPreview withDerivedItemCategories(DestinyDefinitionsItemsDestinyDerivedItemCategoryDefinition[] derivedItemCategories) {
         this.derivedItemCategories = derivedItemCategories;
         return this;
@@ -36,6 +38,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionPreview {
      */
     
     public String previewActionString;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionPreview withPreviewActionString(String previewActionString) {
         this.previewActionString = previewActionString;
         return this;
@@ -46,6 +49,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionPreview {
      */
     
     public Long previewVendorHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionPreview withPreviewVendorHash(Long previewVendorHash) {
         this.previewVendorHash = previewVendorHash;
         return this;
@@ -56,9 +60,11 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionPreview {
      */
     
     public String screenStyle;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionPreview withScreenStyle(String screenStyle) {
         this.screenStyle = screenStyle;
         return this;
     }
     
+    public DestinyDefinitionsDestinyInventoryItemDefinitionPreview(){}
 }

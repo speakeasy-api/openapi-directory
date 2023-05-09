@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2betaCustomAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexable")
     public Boolean indexable;
+
     public GoogleCloudRetailV2betaCustomAttribute withIndexable(Boolean indexable) {
         this.indexable = indexable;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2betaCustomAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numbers")
     public Double[] numbers;
+
     public GoogleCloudRetailV2betaCustomAttribute withNumbers(Double[] numbers) {
         this.numbers = numbers;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRetailV2betaCustomAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchable")
     public Boolean searchable;
+
     public GoogleCloudRetailV2betaCustomAttribute withSearchable(Boolean searchable) {
         this.searchable = searchable;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudRetailV2betaCustomAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String[] text;
+
     public GoogleCloudRetailV2betaCustomAttribute withText(String[] text) {
         this.text = text;
         return this;
     }
     
+    public GoogleCloudRetailV2betaCustomAttribute(){}
 }

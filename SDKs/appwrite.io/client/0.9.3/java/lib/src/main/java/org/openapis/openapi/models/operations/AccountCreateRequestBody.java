@@ -14,6 +14,7 @@ public class AccountCreateRequestBody {
      */
     @JsonProperty("email")
     public String email;
+
     public AccountCreateRequestBody withEmail(String email) {
         this.email = email;
         return this;
@@ -25,6 +26,7 @@ public class AccountCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AccountCreateRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -35,9 +37,14 @@ public class AccountCreateRequestBody {
      */
     @JsonProperty("password")
     public String password;
+
     public AccountCreateRequestBody withPassword(String password) {
         this.password = password;
         return this;
     }
     
+    public AccountCreateRequestBody(@JsonProperty("email") String email, @JsonProperty("password") String password) {
+        this.email = email;
+        this.password = password;
+  }
 }

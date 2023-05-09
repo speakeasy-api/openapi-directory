@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApplicationsStatusResponse {
@@ -12,6 +13,7 @@ public class GetApplicationsStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredError fourHundredError;
+
     public GetApplicationsStatusResponse withFourHundredError(org.openapis.openapi.models.shared.FourHundredError fourHundredError) {
         this.fourHundredError = fourHundredError;
         return this;
@@ -22,6 +24,7 @@ public class GetApplicationsStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndOneError fourHundredAndOneError;
+
     public GetApplicationsStatusResponse withFourHundredAndOneError(org.openapis.openapi.models.shared.FourHundredAndOneError fourHundredAndOneError) {
         this.fourHundredAndOneError = fourHundredAndOneError;
         return this;
@@ -32,6 +35,7 @@ public class GetApplicationsStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndThreeError fourHundredAndThreeError;
+
     public GetApplicationsStatusResponse withFourHundredAndThreeError(org.openapis.openapi.models.shared.FourHundredAndThreeError fourHundredAndThreeError) {
         this.fourHundredAndThreeError = fourHundredAndThreeError;
         return this;
@@ -42,6 +46,7 @@ public class GetApplicationsStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.FiveHundredError fiveHundredError;
+
     public GetApplicationsStatusResponse withFiveHundredError(org.openapis.openapi.models.shared.FiveHundredError fiveHundredError) {
         this.fiveHundredError = fiveHundredError;
         return this;
@@ -52,6 +57,7 @@ public class GetApplicationsStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.ApplicationStatus applicationStatus;
+
     public GetApplicationsStatusResponse withApplicationStatus(org.openapis.openapi.models.shared.ApplicationStatus applicationStatus) {
         this.applicationStatus = applicationStatus;
         return this;
@@ -59,6 +65,7 @@ public class GetApplicationsStatusResponse {
     
     
     public String contentType;
+
     public GetApplicationsStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -66,6 +73,7 @@ public class GetApplicationsStatusResponse {
     
     
     public Integer statusCode;
+
     public GetApplicationsStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetApplicationsStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApplicationsStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetApplicationsStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

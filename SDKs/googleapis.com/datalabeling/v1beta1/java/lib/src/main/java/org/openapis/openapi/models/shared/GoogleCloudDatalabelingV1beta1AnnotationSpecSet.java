@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1AnnotationSpecSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotationSpecs")
     public GoogleCloudDatalabelingV1beta1AnnotationSpec[] annotationSpecs;
+
     public GoogleCloudDatalabelingV1beta1AnnotationSpecSet withAnnotationSpecs(GoogleCloudDatalabelingV1beta1AnnotationSpec[] annotationSpecs) {
         this.annotationSpecs = annotationSpecs;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatalabelingV1beta1AnnotationSpecSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blockingResources")
     public String[] blockingResources;
+
     public GoogleCloudDatalabelingV1beta1AnnotationSpecSet withBlockingResources(String[] blockingResources) {
         this.blockingResources = blockingResources;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatalabelingV1beta1AnnotationSpecSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDatalabelingV1beta1AnnotationSpecSet withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDatalabelingV1beta1AnnotationSpecSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDatalabelingV1beta1AnnotationSpecSet withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDatalabelingV1beta1AnnotationSpecSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDatalabelingV1beta1AnnotationSpecSet withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1AnnotationSpecSet(){}
 }

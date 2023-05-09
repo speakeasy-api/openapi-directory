@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersUserIdLikesTracksSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Authorization")
     public String authHeader;
+
     public GetUsersUserIdLikesTracksSecurity withAuthHeader(String authHeader) {
         this.authHeader = authHeader;
         return this;
@@ -16,9 +18,14 @@ public class GetUsersUserIdLikesTracksSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=client_id")
     public String clientId;
+
     public GetUsersUserIdLikesTracksSecurity withClientId(String clientId) {
         this.clientId = clientId;
         return this;
     }
     
+    public GetUsersUserIdLikesTracksSecurity(@JsonProperty("AuthHeader") String authHeader, @JsonProperty("ClientId") String clientId) {
+        this.authHeader = authHeader;
+        this.clientId = clientId;
+  }
 }

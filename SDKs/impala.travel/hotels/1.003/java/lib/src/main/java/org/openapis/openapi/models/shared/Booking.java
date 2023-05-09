@@ -24,6 +24,7 @@ public class Booking {
      */
     @JsonProperty("bookedRooms")
     public BookedRoom[] bookedRooms;
+
     public Booking withBookedRooms(BookedRoom[] bookedRooms) {
         this.bookedRooms = bookedRooms;
         return this;
@@ -34,6 +35,7 @@ public class Booking {
      */
     @JsonProperty("bookingId")
     public String bookingId;
+
     public Booking withBookingId(String bookingId) {
         this.bookingId = bookingId;
         return this;
@@ -45,6 +47,7 @@ public class Booking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancellation")
     public BookingCancellation cancellation;
+
     public Booking withCancellation(BookingCancellation cancellation) {
         this.cancellation = cancellation;
         return this;
@@ -55,6 +58,7 @@ public class Booking {
      */
     @JsonProperty("contact")
     public BookingPerson contact;
+
     public Booking withContact(BookingPerson contact) {
         this.contact = contact;
         return this;
@@ -67,6 +71,7 @@ public class Booking {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Booking withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -78,6 +83,7 @@ public class Booking {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("end")
     public LocalDate end;
+
     public Booking withEnd(LocalDate end) {
         this.end = end;
         return this;
@@ -88,6 +94,7 @@ public class Booking {
      */
     @JsonProperty("hotel")
     public HotelStub hotel;
+
     public Booking withHotel(HotelStub hotel) {
         this.hotel = hotel;
         return this;
@@ -99,6 +106,7 @@ public class Booking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hotelConfirmationCode")
     public String hotelConfirmationCode;
+
     public Booking withHotelConfirmationCode(String hotelConfirmationCode) {
         this.hotelConfirmationCode = hotelConfirmationCode;
         return this;
@@ -111,6 +119,7 @@ public class Booking {
      */
     @JsonProperty("notes")
     public BookingNotes notes;
+
     public Booking withNotes(BookingNotes notes) {
         this.notes = notes;
         return this;
@@ -122,6 +131,7 @@ public class Booking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentBearerToken")
     public String paymentBearerToken;
+
     public Booking withPaymentBearerToken(String paymentBearerToken) {
         this.paymentBearerToken = paymentBearerToken;
         return this;
@@ -133,6 +143,7 @@ public class Booking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentClientSecret")
     public String paymentClientSecret;
+
     public Booking withPaymentClientSecret(String paymentClientSecret) {
         this.paymentClientSecret = paymentClientSecret;
         return this;
@@ -144,6 +155,7 @@ public class Booking {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("start")
     public LocalDate start;
+
     public Booking withStart(LocalDate start) {
         this.start = start;
         return this;
@@ -154,6 +166,7 @@ public class Booking {
      */
     @JsonProperty("status")
     public BookingStatusEnum status;
+
     public Booking withStatus(BookingStatusEnum status) {
         this.status = status;
         return this;
@@ -166,9 +179,22 @@ public class Booking {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public Booking withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Booking(@JsonProperty("bookedRooms") BookedRoom[] bookedRooms, @JsonProperty("bookingId") String bookingId, @JsonProperty("contact") BookingPerson contact, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("end") LocalDate end, @JsonProperty("hotel") HotelStub hotel, @JsonProperty("notes") BookingNotes notes, @JsonProperty("start") LocalDate start, @JsonProperty("status") BookingStatusEnum status, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
+        this.bookedRooms = bookedRooms;
+        this.bookingId = bookingId;
+        this.contact = contact;
+        this.createdAt = createdAt;
+        this.end = end;
+        this.hotel = hotel;
+        this.notes = notes;
+        this.start = start;
+        this.status = status;
+        this.updatedAt = updatedAt;
+  }
 }

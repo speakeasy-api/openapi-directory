@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateContactListResponse {
@@ -12,6 +13,7 @@ public class UpdateContactListResponse {
      */
     
     public Object badRequestException;
+
     public UpdateContactListResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateContactListResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateContactListResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateContactListResponse {
     
     
     public String contentType;
+
     public UpdateContactListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateContactListResponse {
      */
     
     public Object notFoundException;
+
     public UpdateContactListResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateContactListResponse {
     
     
     public Integer statusCode;
+
     public UpdateContactListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateContactListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateContactListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateContactListResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateContactListResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateContactListResponse {
      */
     
     public java.util.Map<String, Object> updateContactListResponse;
+
     public UpdateContactListResponse withUpdateContactListResponse(java.util.Map<String, Object> updateContactListResponse) {
         this.updateContactListResponse = updateContactListResponse;
         return this;
     }
     
+    public UpdateContactListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

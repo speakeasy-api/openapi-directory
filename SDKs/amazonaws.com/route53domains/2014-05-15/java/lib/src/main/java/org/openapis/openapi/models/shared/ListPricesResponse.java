@@ -15,6 +15,7 @@ public class ListPricesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageMarker")
     public String nextPageMarker;
+
     public ListPricesResponse withNextPageMarker(String nextPageMarker) {
         this.nextPageMarker = nextPageMarker;
         return this;
@@ -23,9 +24,11 @@ public class ListPricesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Prices")
     public DomainPrice[] prices;
+
     public ListPricesResponse withPrices(DomainPrice[] prices) {
         this.prices = prices;
         return this;
     }
     
+    public ListPricesResponse(){}
 }

@@ -12,6 +12,7 @@ public class RunAMonitor200ApplicationJSONRunStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assertions")
     public RunAMonitor200ApplicationJSONRunStatsAssertions assertions;
+
     public RunAMonitor200ApplicationJSONRunStats withAssertions(RunAMonitor200ApplicationJSONRunStatsAssertions assertions) {
         this.assertions = assertions;
         return this;
@@ -20,9 +21,11 @@ public class RunAMonitor200ApplicationJSONRunStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests")
     public RunAMonitor200ApplicationJSONRunStatsRequests requests;
+
     public RunAMonitor200ApplicationJSONRunStats withRequests(RunAMonitor200ApplicationJSONRunStatsRequests requests) {
         this.requests = requests;
         return this;
     }
     
+    public RunAMonitor200ApplicationJSONRunStats(){}
 }

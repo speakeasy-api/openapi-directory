@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTrackingSnippetRequest {
@@ -12,9 +13,13 @@ public class GetTrackingSnippetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain")
     public String domain;
+
     public GetTrackingSnippetRequest withDomain(String domain) {
         this.domain = domain;
         return this;
     }
     
+    public GetTrackingSnippetRequest(@JsonProperty("domain") String domain) {
+        this.domain = domain;
+  }
 }

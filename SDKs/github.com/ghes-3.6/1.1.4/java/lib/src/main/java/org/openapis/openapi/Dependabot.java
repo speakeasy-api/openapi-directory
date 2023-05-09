@@ -60,10 +60,8 @@ public class Dependabot {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DependabotAddSelectedRepoToOrgSecretResponse res = new org.openapis.openapi.models.operations.DependabotAddSelectedRepoToOrgSecretResponse() {{
+        org.openapis.openapi.models.operations.DependabotAddSelectedRepoToOrgSecretResponse res = new org.openapis.openapi.models.operations.DependabotAddSelectedRepoToOrgSecretResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 409) {
@@ -174,11 +172,9 @@ public class Dependabot {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DependabotCreateOrUpdateOrgSecretResponse res = new org.openapis.openapi.models.operations.DependabotCreateOrUpdateOrgSecretResponse() {{
+        org.openapis.openapi.models.operations.DependabotCreateOrUpdateOrgSecretResponse res = new org.openapis.openapi.models.operations.DependabotCreateOrUpdateOrgSecretResponse(contentType, httpRes.statusCode()) {{
             emptyObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -296,11 +292,9 @@ public class Dependabot {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DependabotCreateOrUpdateRepoSecretResponse res = new org.openapis.openapi.models.operations.DependabotCreateOrUpdateRepoSecretResponse() {{
+        org.openapis.openapi.models.operations.DependabotCreateOrUpdateRepoSecretResponse res = new org.openapis.openapi.models.operations.DependabotCreateOrUpdateRepoSecretResponse(contentType, httpRes.statusCode()) {{
             emptyObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -338,10 +332,8 @@ public class Dependabot {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DependabotDeleteOrgSecretResponse res = new org.openapis.openapi.models.operations.DependabotDeleteOrgSecretResponse() {{
+        org.openapis.openapi.models.operations.DependabotDeleteOrgSecretResponse res = new org.openapis.openapi.models.operations.DependabotDeleteOrgSecretResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -372,10 +364,8 @@ public class Dependabot {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DependabotDeleteRepoSecretResponse res = new org.openapis.openapi.models.operations.DependabotDeleteRepoSecretResponse() {{
+        org.openapis.openapi.models.operations.DependabotDeleteRepoSecretResponse res = new org.openapis.openapi.models.operations.DependabotDeleteRepoSecretResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -406,11 +396,9 @@ public class Dependabot {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DependabotGetOrgPublicKeyResponse res = new org.openapis.openapi.models.operations.DependabotGetOrgPublicKeyResponse() {{
+        org.openapis.openapi.models.operations.DependabotGetOrgPublicKeyResponse res = new org.openapis.openapi.models.operations.DependabotGetOrgPublicKeyResponse(contentType, httpRes.statusCode()) {{
             dependabotPublicKey = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -446,11 +434,9 @@ public class Dependabot {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DependabotGetOrgSecretResponse res = new org.openapis.openapi.models.operations.DependabotGetOrgSecretResponse() {{
+        org.openapis.openapi.models.operations.DependabotGetOrgSecretResponse res = new org.openapis.openapi.models.operations.DependabotGetOrgSecretResponse(contentType, httpRes.statusCode()) {{
             organizationDependabotSecret = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -486,11 +472,9 @@ public class Dependabot {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DependabotGetRepoPublicKeyResponse res = new org.openapis.openapi.models.operations.DependabotGetRepoPublicKeyResponse() {{
+        org.openapis.openapi.models.operations.DependabotGetRepoPublicKeyResponse res = new org.openapis.openapi.models.operations.DependabotGetRepoPublicKeyResponse(contentType, httpRes.statusCode()) {{
             dependabotPublicKey = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -526,11 +510,9 @@ public class Dependabot {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DependabotGetRepoSecretResponse res = new org.openapis.openapi.models.operations.DependabotGetRepoSecretResponse() {{
+        org.openapis.openapi.models.operations.DependabotGetRepoSecretResponse res = new org.openapis.openapi.models.operations.DependabotGetRepoSecretResponse(contentType, httpRes.statusCode()) {{
             dependabotSecret = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -572,11 +554,9 @@ public class Dependabot {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DependabotListOrgSecretsResponse res = new org.openapis.openapi.models.operations.DependabotListOrgSecretsResponse() {{
+        org.openapis.openapi.models.operations.DependabotListOrgSecretsResponse res = new org.openapis.openapi.models.operations.DependabotListOrgSecretsResponse(contentType, httpRes.statusCode()) {{
             dependabotListOrgSecrets200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -620,11 +600,9 @@ public class Dependabot {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DependabotListRepoSecretsResponse res = new org.openapis.openapi.models.operations.DependabotListRepoSecretsResponse() {{
+        org.openapis.openapi.models.operations.DependabotListRepoSecretsResponse res = new org.openapis.openapi.models.operations.DependabotListRepoSecretsResponse(contentType, httpRes.statusCode()) {{
             dependabotListRepoSecrets200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -668,11 +646,9 @@ public class Dependabot {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DependabotListSelectedReposForOrgSecretResponse res = new org.openapis.openapi.models.operations.DependabotListSelectedReposForOrgSecretResponse() {{
+        org.openapis.openapi.models.operations.DependabotListSelectedReposForOrgSecretResponse res = new org.openapis.openapi.models.operations.DependabotListSelectedReposForOrgSecretResponse(contentType, httpRes.statusCode()) {{
             dependabotListSelectedReposForOrgSecret200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -708,10 +684,8 @@ public class Dependabot {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DependabotRemoveSelectedRepoFromOrgSecretResponse res = new org.openapis.openapi.models.operations.DependabotRemoveSelectedRepoFromOrgSecretResponse() {{
+        org.openapis.openapi.models.operations.DependabotRemoveSelectedRepoFromOrgSecretResponse res = new org.openapis.openapi.models.operations.DependabotRemoveSelectedRepoFromOrgSecretResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 409) {
@@ -747,10 +721,8 @@ public class Dependabot {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DependabotSetSelectedReposForOrgSecretResponse res = new org.openapis.openapi.models.operations.DependabotSetSelectedReposForOrgSecretResponse() {{
+        org.openapis.openapi.models.operations.DependabotSetSelectedReposForOrgSecretResponse res = new org.openapis.openapi.models.operations.DependabotSetSelectedReposForOrgSecretResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

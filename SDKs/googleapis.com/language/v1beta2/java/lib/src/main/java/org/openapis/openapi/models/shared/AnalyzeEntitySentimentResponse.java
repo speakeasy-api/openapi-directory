@@ -18,6 +18,7 @@ public class AnalyzeEntitySentimentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entities")
     public Entity[] entities;
+
     public AnalyzeEntitySentimentResponse withEntities(Entity[] entities) {
         this.entities = entities;
         return this;
@@ -29,9 +30,11 @@ public class AnalyzeEntitySentimentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public AnalyzeEntitySentimentResponse withLanguage(String language) {
         this.language = language;
         return this;
     }
     
+    public AnalyzeEntitySentimentResponse(){}
 }

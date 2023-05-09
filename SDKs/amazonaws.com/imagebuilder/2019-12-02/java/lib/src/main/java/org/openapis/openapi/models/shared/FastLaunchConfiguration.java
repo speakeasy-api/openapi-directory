@@ -15,6 +15,7 @@ public class FastLaunchConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public FastLaunchConfiguration withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +23,7 @@ public class FastLaunchConfiguration {
     
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public FastLaunchConfiguration withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -30,6 +32,7 @@ public class FastLaunchConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchTemplate")
     public FastLaunchLaunchTemplateSpecification launchTemplate;
+
     public FastLaunchConfiguration withLaunchTemplate(FastLaunchLaunchTemplateSpecification launchTemplate) {
         this.launchTemplate = launchTemplate;
         return this;
@@ -38,6 +41,7 @@ public class FastLaunchConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxParallelLaunches")
     public Long maxParallelLaunches;
+
     public FastLaunchConfiguration withMaxParallelLaunches(Long maxParallelLaunches) {
         this.maxParallelLaunches = maxParallelLaunches;
         return this;
@@ -46,9 +50,13 @@ public class FastLaunchConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotConfiguration")
     public FastLaunchSnapshotConfiguration snapshotConfiguration;
+
     public FastLaunchConfiguration withSnapshotConfiguration(FastLaunchSnapshotConfiguration snapshotConfiguration) {
         this.snapshotConfiguration = snapshotConfiguration;
         return this;
     }
     
+    public FastLaunchConfiguration(@JsonProperty("enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

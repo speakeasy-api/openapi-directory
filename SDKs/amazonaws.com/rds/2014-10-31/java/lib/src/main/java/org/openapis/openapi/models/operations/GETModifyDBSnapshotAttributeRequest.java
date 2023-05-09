@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyDBSnapshotAttributeRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyDBSnapshotAttributeActionEnum action;
+
     public GETModifyDBSnapshotAttributeRequest withAction(GETModifyDBSnapshotAttributeActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyDBSnapshotAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AttributeName")
     public String attributeName;
+
     public GETModifyDBSnapshotAttributeRequest withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyDBSnapshotAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBSnapshotIdentifier")
     public String dbSnapshotIdentifier;
+
     public GETModifyDBSnapshotAttributeRequest withDBSnapshotIdentifier(String dbSnapshotIdentifier) {
         this.dbSnapshotIdentifier = dbSnapshotIdentifier;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyDBSnapshotAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ValuesToAdd")
     public String[] valuesToAdd;
+
     public GETModifyDBSnapshotAttributeRequest withValuesToAdd(String[] valuesToAdd) {
         this.valuesToAdd = valuesToAdd;
         return this;
@@ -49,6 +54,7 @@ public class GETModifyDBSnapshotAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ValuesToRemove")
     public String[] valuesToRemove;
+
     public GETModifyDBSnapshotAttributeRequest withValuesToRemove(String[] valuesToRemove) {
         this.valuesToRemove = valuesToRemove;
         return this;
@@ -56,6 +62,7 @@ public class GETModifyDBSnapshotAttributeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyDBSnapshotAttributeVersionEnum version;
+
     public GETModifyDBSnapshotAttributeRequest withVersion(GETModifyDBSnapshotAttributeVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETModifyDBSnapshotAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyDBSnapshotAttributeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETModifyDBSnapshotAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyDBSnapshotAttributeRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETModifyDBSnapshotAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyDBSnapshotAttributeRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETModifyDBSnapshotAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyDBSnapshotAttributeRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETModifyDBSnapshotAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyDBSnapshotAttributeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETModifyDBSnapshotAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyDBSnapshotAttributeRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,16 @@ public class GETModifyDBSnapshotAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyDBSnapshotAttributeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyDBSnapshotAttributeRequest(@JsonProperty("Action") GETModifyDBSnapshotAttributeActionEnum action, @JsonProperty("AttributeName") String attributeName, @JsonProperty("DBSnapshotIdentifier") String dbSnapshotIdentifier, @JsonProperty("Version") GETModifyDBSnapshotAttributeVersionEnum version) {
+        this.action = action;
+        this.attributeName = attributeName;
+        this.dbSnapshotIdentifier = dbSnapshotIdentifier;
+        this.version = version;
+  }
 }

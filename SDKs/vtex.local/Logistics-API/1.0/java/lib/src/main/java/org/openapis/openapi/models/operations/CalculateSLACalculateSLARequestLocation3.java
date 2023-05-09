@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CalculateSLACalculateSLARequestLocation3 {
     @JsonProperty("country")
     public String country;
+
     public CalculateSLACalculateSLARequestLocation3 withCountry(String country) {
         this.country = country;
         return this;
@@ -16,6 +17,7 @@ public class CalculateSLACalculateSLARequestLocation3 {
     
     @JsonProperty("point")
     public Double[] point;
+
     public CalculateSLACalculateSLARequestLocation3 withPoint(Double[] point) {
         this.point = point;
         return this;
@@ -23,9 +25,15 @@ public class CalculateSLACalculateSLARequestLocation3 {
     
     @JsonProperty("zipCode")
     public String zipCode;
+
     public CalculateSLACalculateSLARequestLocation3 withZipCode(String zipCode) {
         this.zipCode = zipCode;
         return this;
     }
     
+    public CalculateSLACalculateSLARequestLocation3(@JsonProperty("country") String country, @JsonProperty("point") Double[] point, @JsonProperty("zipCode") String zipCode) {
+        this.country = country;
+        this.point = point;
+        this.zipCode = zipCode;
+  }
 }

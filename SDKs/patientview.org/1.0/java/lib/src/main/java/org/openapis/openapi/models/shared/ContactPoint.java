@@ -17,6 +17,7 @@ public class ContactPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactPointType")
     public ContactPointType contactPointType;
+
     public ContactPoint withContactPointType(ContactPointType contactPointType) {
         this.contactPointType = contactPointType;
         return this;
@@ -25,6 +26,7 @@ public class ContactPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public ContactPoint withContent(String content) {
         this.content = content;
         return this;
@@ -35,6 +37,7 @@ public class ContactPoint {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public ContactPoint withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -43,6 +46,7 @@ public class ContactPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ContactPoint withId(Long id) {
         this.id = id;
         return this;
@@ -53,9 +57,11 @@ public class ContactPoint {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdate")
     public OffsetDateTime lastUpdate;
+
     public ContactPoint withLastUpdate(OffsetDateTime lastUpdate) {
         this.lastUpdate = lastUpdate;
         return this;
     }
     
+    public ContactPoint(){}
 }

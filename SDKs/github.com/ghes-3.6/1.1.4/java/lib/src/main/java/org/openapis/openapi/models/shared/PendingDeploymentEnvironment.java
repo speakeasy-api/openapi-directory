@@ -12,6 +12,7 @@ public class PendingDeploymentEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public PendingDeploymentEnvironment withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -23,6 +24,7 @@ public class PendingDeploymentEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public PendingDeploymentEnvironment withId(Long id) {
         this.id = id;
         return this;
@@ -34,6 +36,7 @@ public class PendingDeploymentEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PendingDeploymentEnvironment withName(String name) {
         this.name = name;
         return this;
@@ -42,6 +45,7 @@ public class PendingDeploymentEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("node_id")
     public String nodeId;
+
     public PendingDeploymentEnvironment withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -50,9 +54,11 @@ public class PendingDeploymentEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public PendingDeploymentEnvironment withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public PendingDeploymentEnvironment(){}
 }

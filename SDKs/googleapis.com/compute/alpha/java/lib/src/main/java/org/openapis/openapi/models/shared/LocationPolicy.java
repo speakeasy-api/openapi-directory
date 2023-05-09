@@ -18,6 +18,7 @@ public class LocationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations")
     public java.util.Map<String, LocationPolicyLocation> locations;
+
     public LocationPolicy withLocations(java.util.Map<String, LocationPolicyLocation> locations) {
         this.locations = locations;
         return this;
@@ -29,9 +30,11 @@ public class LocationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetShape")
     public LocationPolicyTargetShapeEnum targetShape;
+
     public LocationPolicy withTargetShape(LocationPolicyTargetShapeEnum targetShape) {
         this.targetShape = targetShape;
         return this;
     }
     
+    public LocationPolicy(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StreamState {
     @JsonProperty("streamDescriptor")
     public StreamDescriptor streamDescriptor;
+
     public StreamState withStreamDescriptor(StreamDescriptor streamDescriptor) {
         this.streamDescriptor = streamDescriptor;
         return this;
@@ -19,9 +20,13 @@ public class StreamState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamState")
     public java.util.Map<String, Object> streamState;
+
     public StreamState withStreamState(java.util.Map<String, Object> streamState) {
         this.streamState = streamState;
         return this;
     }
     
+    public StreamState(@JsonProperty("streamDescriptor") StreamDescriptor streamDescriptor) {
+        this.streamDescriptor = streamDescriptor;
+  }
 }

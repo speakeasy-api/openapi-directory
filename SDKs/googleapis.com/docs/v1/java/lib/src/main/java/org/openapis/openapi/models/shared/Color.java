@@ -18,9 +18,11 @@ public class Color {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rgbColor")
     public RgbColor rgbColor;
+
     public Color withRgbColor(RgbColor rgbColor) {
         this.rgbColor = rgbColor;
         return this;
     }
     
+    public Color(){}
 }

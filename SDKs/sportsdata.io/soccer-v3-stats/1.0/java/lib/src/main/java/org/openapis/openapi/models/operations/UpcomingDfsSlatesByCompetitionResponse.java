@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpcomingDfsSlatesByCompetitionResponse {
     
     public String contentType;
+
     public UpcomingDfsSlatesByCompetitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpcomingDfsSlatesByCompetitionResponse {
     
     
     public org.openapis.openapi.models.shared.DfsSlate[] dfsSlates;
+
     public UpcomingDfsSlatesByCompetitionResponse withDfsSlates(org.openapis.openapi.models.shared.DfsSlate[] dfsSlates) {
         this.dfsSlates = dfsSlates;
         return this;
@@ -23,6 +26,7 @@ public class UpcomingDfsSlatesByCompetitionResponse {
     
     
     public Integer statusCode;
+
     public UpcomingDfsSlatesByCompetitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class UpcomingDfsSlatesByCompetitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpcomingDfsSlatesByCompetitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UpcomingDfsSlatesByCompetitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

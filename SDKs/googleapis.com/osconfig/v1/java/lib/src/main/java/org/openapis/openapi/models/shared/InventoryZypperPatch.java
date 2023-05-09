@@ -18,6 +18,7 @@ public class InventoryZypperPatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public InventoryZypperPatch withCategory(String category) {
         this.category = category;
         return this;
@@ -29,6 +30,7 @@ public class InventoryZypperPatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patchName")
     public String patchName;
+
     public InventoryZypperPatch withPatchName(String patchName) {
         this.patchName = patchName;
         return this;
@@ -40,6 +42,7 @@ public class InventoryZypperPatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public String severity;
+
     public InventoryZypperPatch withSeverity(String severity) {
         this.severity = severity;
         return this;
@@ -51,9 +54,11 @@ public class InventoryZypperPatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public String summary;
+
     public InventoryZypperPatch withSummary(String summary) {
         this.summary = summary;
         return this;
     }
     
+    public InventoryZypperPatch(){}
 }

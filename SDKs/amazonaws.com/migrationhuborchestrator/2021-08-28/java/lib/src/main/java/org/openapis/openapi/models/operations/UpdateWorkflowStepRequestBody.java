@@ -15,6 +15,7 @@ public class UpdateWorkflowStepRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateWorkflowStepRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class UpdateWorkflowStepRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateWorkflowStepRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +39,7 @@ public class UpdateWorkflowStepRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String[] next;
+
     public UpdateWorkflowStepRequestBody withNext(String[] next) {
         this.next = next;
         return this;
@@ -48,6 +51,7 @@ public class UpdateWorkflowStepRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputs")
     public org.openapis.openapi.models.shared.WorkflowStepOutput[] outputs;
+
     public UpdateWorkflowStepRequestBody withOutputs(org.openapis.openapi.models.shared.WorkflowStepOutput[] outputs) {
         this.outputs = outputs;
         return this;
@@ -59,6 +63,7 @@ public class UpdateWorkflowStepRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String[] previous;
+
     public UpdateWorkflowStepRequestBody withPrevious(String[] previous) {
         this.previous = previous;
         return this;
@@ -70,6 +75,7 @@ public class UpdateWorkflowStepRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public UpdateWorkflowStepRequestBodyStatusEnum status;
+
     public UpdateWorkflowStepRequestBody withStatus(UpdateWorkflowStepRequestBodyStatusEnum status) {
         this.status = status;
         return this;
@@ -81,6 +87,7 @@ public class UpdateWorkflowStepRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepActionType")
     public UpdateWorkflowStepRequestBodyStepActionTypeEnum stepActionType;
+
     public UpdateWorkflowStepRequestBody withStepActionType(UpdateWorkflowStepRequestBodyStepActionTypeEnum stepActionType) {
         this.stepActionType = stepActionType;
         return this;
@@ -91,6 +98,7 @@ public class UpdateWorkflowStepRequestBody {
      */
     @JsonProperty("stepGroupId")
     public String stepGroupId;
+
     public UpdateWorkflowStepRequestBody withStepGroupId(String stepGroupId) {
         this.stepGroupId = stepGroupId;
         return this;
@@ -102,6 +110,7 @@ public class UpdateWorkflowStepRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepTarget")
     public String[] stepTarget;
+
     public UpdateWorkflowStepRequestBody withStepTarget(String[] stepTarget) {
         this.stepTarget = stepTarget;
         return this;
@@ -112,6 +121,7 @@ public class UpdateWorkflowStepRequestBody {
      */
     @JsonProperty("workflowId")
     public String workflowId;
+
     public UpdateWorkflowStepRequestBody withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
@@ -123,9 +133,14 @@ public class UpdateWorkflowStepRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowStepAutomationConfiguration")
     public UpdateWorkflowStepRequestBodyWorkflowStepAutomationConfiguration workflowStepAutomationConfiguration;
+
     public UpdateWorkflowStepRequestBody withWorkflowStepAutomationConfiguration(UpdateWorkflowStepRequestBodyWorkflowStepAutomationConfiguration workflowStepAutomationConfiguration) {
         this.workflowStepAutomationConfiguration = workflowStepAutomationConfiguration;
         return this;
     }
     
+    public UpdateWorkflowStepRequestBody(@JsonProperty("stepGroupId") String stepGroupId, @JsonProperty("workflowId") String workflowId) {
+        this.stepGroupId = stepGroupId;
+        this.workflowId = workflowId;
+  }
 }

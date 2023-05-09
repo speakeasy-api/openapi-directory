@@ -16,6 +16,7 @@ public class DestinyEntitiesCharactersDestinyCharacterRenderComponent {
      */
     
     public DestinyDyeReference[] customDyes;
+
     public DestinyEntitiesCharactersDestinyCharacterRenderComponent withCustomDyes(DestinyDyeReference[] customDyes) {
         this.customDyes = customDyes;
         return this;
@@ -26,6 +27,7 @@ public class DestinyEntitiesCharactersDestinyCharacterRenderComponent {
      */
     
     public DestinyEntitiesCharactersDestinyCharacterRenderComponentCustomization customization;
+
     public DestinyEntitiesCharactersDestinyCharacterRenderComponent withCustomization(DestinyEntitiesCharactersDestinyCharacterRenderComponentCustomization customization) {
         this.customization = customization;
         return this;
@@ -39,9 +41,11 @@ public class DestinyEntitiesCharactersDestinyCharacterRenderComponent {
      */
     
     public DestinyEntitiesCharactersDestinyCharacterRenderComponentPeerView peerView;
+
     public DestinyEntitiesCharactersDestinyCharacterRenderComponent withPeerView(DestinyEntitiesCharactersDestinyCharacterRenderComponentPeerView peerView) {
         this.peerView = peerView;
         return this;
     }
     
+    public DestinyEntitiesCharactersDestinyCharacterRenderComponent(){}
 }

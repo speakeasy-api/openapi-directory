@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetinvestorAccountResponse {
     
     public String contentType;
+
     public GetinvestorAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetinvestorAccountResponse {
     
     
     public Integer statusCode;
+
     public GetinvestorAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetinvestorAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetinvestorAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetinvestorAccountResponse {
      */
     
     public GetinvestorAccount200ApplicationJSON getinvestorAccount200ApplicationJSONObject;
+
     public GetinvestorAccountResponse withGetinvestorAccount200ApplicationJSONObject(GetinvestorAccount200ApplicationJSON getinvestorAccount200ApplicationJSONObject) {
         this.getinvestorAccount200ApplicationJSONObject = getinvestorAccount200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetinvestorAccountResponse {
      */
     
     public GetinvestorAccount400ApplicationJSON getinvestorAccount400ApplicationJSONObject;
+
     public GetinvestorAccountResponse withGetinvestorAccount400ApplicationJSONObject(GetinvestorAccount400ApplicationJSON getinvestorAccount400ApplicationJSONObject) {
         this.getinvestorAccount400ApplicationJSONObject = getinvestorAccount400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetinvestorAccountResponse {
      */
     
     public GetinvestorAccount401ApplicationJSON getinvestorAccount401ApplicationJSONObject;
+
     public GetinvestorAccountResponse withGetinvestorAccount401ApplicationJSONObject(GetinvestorAccount401ApplicationJSON getinvestorAccount401ApplicationJSONObject) {
         this.getinvestorAccount401ApplicationJSONObject = getinvestorAccount401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class GetinvestorAccountResponse {
      */
     
     public GetinvestorAccount403ApplicationJSON getinvestorAccount403ApplicationJSONObject;
+
     public GetinvestorAccountResponse withGetinvestorAccount403ApplicationJSONObject(GetinvestorAccount403ApplicationJSON getinvestorAccount403ApplicationJSONObject) {
         this.getinvestorAccount403ApplicationJSONObject = getinvestorAccount403ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class GetinvestorAccountResponse {
      */
     
     public GetinvestorAccount404ApplicationJSON getinvestorAccount404ApplicationJSONObject;
+
     public GetinvestorAccountResponse withGetinvestorAccount404ApplicationJSONObject(GetinvestorAccount404ApplicationJSON getinvestorAccount404ApplicationJSONObject) {
         this.getinvestorAccount404ApplicationJSONObject = getinvestorAccount404ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class GetinvestorAccountResponse {
      */
     
     public GetinvestorAccount409ApplicationJSON getinvestorAccount409ApplicationJSONObject;
+
     public GetinvestorAccountResponse withGetinvestorAccount409ApplicationJSONObject(GetinvestorAccount409ApplicationJSON getinvestorAccount409ApplicationJSONObject) {
         this.getinvestorAccount409ApplicationJSONObject = getinvestorAccount409ApplicationJSONObject;
         return this;
@@ -93,6 +103,7 @@ public class GetinvestorAccountResponse {
      */
     
     public GetinvestorAccount429ApplicationJSON getinvestorAccount429ApplicationJSONObject;
+
     public GetinvestorAccountResponse withGetinvestorAccount429ApplicationJSONObject(GetinvestorAccount429ApplicationJSON getinvestorAccount429ApplicationJSONObject) {
         this.getinvestorAccount429ApplicationJSONObject = getinvestorAccount429ApplicationJSONObject;
         return this;
@@ -103,9 +114,14 @@ public class GetinvestorAccountResponse {
      */
     
     public GetinvestorAccount500ApplicationJSON getinvestorAccount500ApplicationJSONObject;
+
     public GetinvestorAccountResponse withGetinvestorAccount500ApplicationJSONObject(GetinvestorAccount500ApplicationJSON getinvestorAccount500ApplicationJSONObject) {
         this.getinvestorAccount500ApplicationJSONObject = getinvestorAccount500ApplicationJSONObject;
         return this;
     }
     
+    public GetinvestorAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

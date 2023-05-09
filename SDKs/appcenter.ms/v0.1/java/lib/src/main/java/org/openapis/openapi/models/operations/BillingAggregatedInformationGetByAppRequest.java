@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BillingAggregatedInformationGetByAppRequest {
@@ -12,6 +13,7 @@ public class BillingAggregatedInformationGetByAppRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public BillingAggregatedInformationGetByAppRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class BillingAggregatedInformationGetByAppRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public BillingAggregatedInformationGetByAppRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -32,6 +35,7 @@ public class BillingAggregatedInformationGetByAppRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=period")
     public BillingAggregatedInformationGetByAppPeriodEnum period;
+
     public BillingAggregatedInformationGetByAppRequest withPeriod(BillingAggregatedInformationGetByAppPeriodEnum period) {
         this.period = period;
         return this;
@@ -42,6 +46,7 @@ public class BillingAggregatedInformationGetByAppRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service")
     public BillingAggregatedInformationGetByAppServiceEnum service;
+
     public BillingAggregatedInformationGetByAppRequest withService(BillingAggregatedInformationGetByAppServiceEnum service) {
         this.service = service;
         return this;
@@ -52,9 +57,14 @@ public class BillingAggregatedInformationGetByAppRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showOriginalPlans")
     public Boolean showOriginalPlans;
+
     public BillingAggregatedInformationGetByAppRequest withShowOriginalPlans(Boolean showOriginalPlans) {
         this.showOriginalPlans = showOriginalPlans;
         return this;
     }
     
+    public BillingAggregatedInformationGetByAppRequest(@JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.ownerName = ownerName;
+  }
 }

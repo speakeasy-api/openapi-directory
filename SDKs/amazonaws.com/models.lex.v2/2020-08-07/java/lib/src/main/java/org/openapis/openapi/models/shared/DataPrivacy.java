@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DataPrivacy {
     @JsonProperty("childDirected")
     public Boolean childDirected;
+
     public DataPrivacy withChildDirected(Boolean childDirected) {
         this.childDirected = childDirected;
         return this;
     }
     
+    public DataPrivacy(@JsonProperty("childDirected") Boolean childDirected) {
+        this.childDirected = childDirected;
+  }
 }

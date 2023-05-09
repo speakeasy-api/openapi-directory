@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAssistantResponse {
@@ -12,6 +13,7 @@ public class DeleteAssistantResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteAssistantResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAssistantResponse {
     
     
     public String contentType;
+
     public DeleteAssistantResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAssistantResponse {
      */
     
     public java.util.Map<String, Object> deleteAssistantResponse;
+
     public DeleteAssistantResponse withDeleteAssistantResponse(java.util.Map<String, Object> deleteAssistantResponse) {
         this.deleteAssistantResponse = deleteAssistantResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAssistantResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteAssistantResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteAssistantResponse {
     
     
     public Integer statusCode;
+
     public DeleteAssistantResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteAssistantResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAssistantResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteAssistantResponse {
      */
     
     public Object validationException;
+
     public DeleteAssistantResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteAssistantResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

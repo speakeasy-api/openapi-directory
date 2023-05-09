@@ -15,6 +15,7 @@ public class UpdateThemeRequestBodyUpdatedTheme {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public UpdateThemeRequestBodyUpdatedTheme withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class UpdateThemeRequestBodyUpdatedTheme {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateThemeRequestBodyUpdatedTheme withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class UpdateThemeRequestBodyUpdatedTheme {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrides")
     public org.openapis.openapi.models.shared.ThemeValues[] overrides;
+
     public UpdateThemeRequestBodyUpdatedTheme withOverrides(org.openapis.openapi.models.shared.ThemeValues[] overrides) {
         this.overrides = overrides;
         return this;
@@ -39,9 +42,11 @@ public class UpdateThemeRequestBodyUpdatedTheme {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public org.openapis.openapi.models.shared.ThemeValues[] values;
+
     public UpdateThemeRequestBodyUpdatedTheme withValues(org.openapis.openapi.models.shared.ThemeValues[] values) {
         this.values = values;
         return this;
     }
     
+    public UpdateThemeRequestBodyUpdatedTheme(){}
 }

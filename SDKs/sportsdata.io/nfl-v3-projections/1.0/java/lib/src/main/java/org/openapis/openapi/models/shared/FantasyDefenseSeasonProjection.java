@@ -12,6 +12,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssistedTackles")
     public Double assistedTackles;
+
     public FantasyDefenseSeasonProjection withAssistedTackles(Double assistedTackles) {
         this.assistedTackles = assistedTackles;
         return this;
@@ -20,6 +21,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuctionValue")
     public Double auctionValue;
+
     public FantasyDefenseSeasonProjection withAuctionValue(Double auctionValue) {
         this.auctionValue = auctionValue;
         return this;
@@ -28,6 +30,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuctionValuePPR")
     public Double auctionValuePPR;
+
     public FantasyDefenseSeasonProjection withAuctionValuePPR(Double auctionValuePPR) {
         this.auctionValuePPR = auctionValuePPR;
         return this;
@@ -36,6 +39,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AverageDraftPosition")
     public Double averageDraftPosition;
+
     public FantasyDefenseSeasonProjection withAverageDraftPosition(Double averageDraftPosition) {
         this.averageDraftPosition = averageDraftPosition;
         return this;
@@ -44,6 +48,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AverageDraftPosition2QB")
     public Double averageDraftPosition2QB;
+
     public FantasyDefenseSeasonProjection withAverageDraftPosition2QB(Double averageDraftPosition2QB) {
         this.averageDraftPosition2QB = averageDraftPosition2QB;
         return this;
@@ -52,6 +57,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AverageDraftPositionDynasty")
     public Double averageDraftPositionDynasty;
+
     public FantasyDefenseSeasonProjection withAverageDraftPositionDynasty(Double averageDraftPositionDynasty) {
         this.averageDraftPositionDynasty = averageDraftPositionDynasty;
         return this;
@@ -60,6 +66,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AverageDraftPositionPPR")
     public Double averageDraftPositionPPR;
+
     public FantasyDefenseSeasonProjection withAverageDraftPositionPPR(Double averageDraftPositionPPR) {
         this.averageDraftPositionPPR = averageDraftPositionPPR;
         return this;
@@ -68,6 +75,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockedKickReturnTouchdowns")
     public Double blockedKickReturnTouchdowns;
+
     public FantasyDefenseSeasonProjection withBlockedKickReturnTouchdowns(Double blockedKickReturnTouchdowns) {
         this.blockedKickReturnTouchdowns = blockedKickReturnTouchdowns;
         return this;
@@ -76,6 +84,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockedKickReturnYards")
     public Double blockedKickReturnYards;
+
     public FantasyDefenseSeasonProjection withBlockedKickReturnYards(Double blockedKickReturnYards) {
         this.blockedKickReturnYards = blockedKickReturnYards;
         return this;
@@ -84,6 +93,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockedKicks")
     public Double blockedKicks;
+
     public FantasyDefenseSeasonProjection withBlockedKicks(Double blockedKicks) {
         this.blockedKicks = blockedKicks;
         return this;
@@ -92,6 +102,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefensiveTouchdowns")
     public Double defensiveTouchdowns;
+
     public FantasyDefenseSeasonProjection withDefensiveTouchdowns(Double defensiveTouchdowns) {
         this.defensiveTouchdowns = defensiveTouchdowns;
         return this;
@@ -100,6 +111,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DraftKingsFantasyPointsAllowed")
     public Double draftKingsFantasyPointsAllowed;
+
     public FantasyDefenseSeasonProjection withDraftKingsFantasyPointsAllowed(Double draftKingsFantasyPointsAllowed) {
         this.draftKingsFantasyPointsAllowed = draftKingsFantasyPointsAllowed;
         return this;
@@ -108,6 +120,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DraftKingsKickerFantasyPointsAllowed")
     public Double draftKingsKickerFantasyPointsAllowed;
+
     public FantasyDefenseSeasonProjection withDraftKingsKickerFantasyPointsAllowed(Double draftKingsKickerFantasyPointsAllowed) {
         this.draftKingsKickerFantasyPointsAllowed = draftKingsKickerFantasyPointsAllowed;
         return this;
@@ -116,6 +129,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DraftKingsQuarterbackFantasyPointsAllowed")
     public Double draftKingsQuarterbackFantasyPointsAllowed;
+
     public FantasyDefenseSeasonProjection withDraftKingsQuarterbackFantasyPointsAllowed(Double draftKingsQuarterbackFantasyPointsAllowed) {
         this.draftKingsQuarterbackFantasyPointsAllowed = draftKingsQuarterbackFantasyPointsAllowed;
         return this;
@@ -124,6 +138,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DraftKingsRunningbackFantasyPointsAllowed")
     public Double draftKingsRunningbackFantasyPointsAllowed;
+
     public FantasyDefenseSeasonProjection withDraftKingsRunningbackFantasyPointsAllowed(Double draftKingsRunningbackFantasyPointsAllowed) {
         this.draftKingsRunningbackFantasyPointsAllowed = draftKingsRunningbackFantasyPointsAllowed;
         return this;
@@ -132,6 +147,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DraftKingsTightEndFantasyPointsAllowed")
     public Double draftKingsTightEndFantasyPointsAllowed;
+
     public FantasyDefenseSeasonProjection withDraftKingsTightEndFantasyPointsAllowed(Double draftKingsTightEndFantasyPointsAllowed) {
         this.draftKingsTightEndFantasyPointsAllowed = draftKingsTightEndFantasyPointsAllowed;
         return this;
@@ -140,6 +156,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DraftKingsWideReceiverFantasyPointsAllowed")
     public Double draftKingsWideReceiverFantasyPointsAllowed;
+
     public FantasyDefenseSeasonProjection withDraftKingsWideReceiverFantasyPointsAllowed(Double draftKingsWideReceiverFantasyPointsAllowed) {
         this.draftKingsWideReceiverFantasyPointsAllowed = draftKingsWideReceiverFantasyPointsAllowed;
         return this;
@@ -148,6 +165,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FanDuelFantasyPointsAllowed")
     public Double fanDuelFantasyPointsAllowed;
+
     public FantasyDefenseSeasonProjection withFanDuelFantasyPointsAllowed(Double fanDuelFantasyPointsAllowed) {
         this.fanDuelFantasyPointsAllowed = fanDuelFantasyPointsAllowed;
         return this;
@@ -156,6 +174,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FanDuelKickerFantasyPointsAllowed")
     public Double fanDuelKickerFantasyPointsAllowed;
+
     public FantasyDefenseSeasonProjection withFanDuelKickerFantasyPointsAllowed(Double fanDuelKickerFantasyPointsAllowed) {
         this.fanDuelKickerFantasyPointsAllowed = fanDuelKickerFantasyPointsAllowed;
         return this;
@@ -164,6 +183,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FanDuelQuarterbackFantasyPointsAllowed")
     public Double fanDuelQuarterbackFantasyPointsAllowed;
+
     public FantasyDefenseSeasonProjection withFanDuelQuarterbackFantasyPointsAllowed(Double fanDuelQuarterbackFantasyPointsAllowed) {
         this.fanDuelQuarterbackFantasyPointsAllowed = fanDuelQuarterbackFantasyPointsAllowed;
         return this;
@@ -172,6 +192,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FanDuelRunningbackFantasyPointsAllowed")
     public Double fanDuelRunningbackFantasyPointsAllowed;
+
     public FantasyDefenseSeasonProjection withFanDuelRunningbackFantasyPointsAllowed(Double fanDuelRunningbackFantasyPointsAllowed) {
         this.fanDuelRunningbackFantasyPointsAllowed = fanDuelRunningbackFantasyPointsAllowed;
         return this;
@@ -180,6 +201,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FanDuelTightEndFantasyPointsAllowed")
     public Double fanDuelTightEndFantasyPointsAllowed;
+
     public FantasyDefenseSeasonProjection withFanDuelTightEndFantasyPointsAllowed(Double fanDuelTightEndFantasyPointsAllowed) {
         this.fanDuelTightEndFantasyPointsAllowed = fanDuelTightEndFantasyPointsAllowed;
         return this;
@@ -188,6 +210,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FanDuelWideReceiverFantasyPointsAllowed")
     public Double fanDuelWideReceiverFantasyPointsAllowed;
+
     public FantasyDefenseSeasonProjection withFanDuelWideReceiverFantasyPointsAllowed(Double fanDuelWideReceiverFantasyPointsAllowed) {
         this.fanDuelWideReceiverFantasyPointsAllowed = fanDuelWideReceiverFantasyPointsAllowed;
         return this;
@@ -196,6 +219,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyDraftFantasyPointsAllowed")
     public Double fantasyDraftFantasyPointsAllowed;
+
     public FantasyDefenseSeasonProjection withFantasyDraftFantasyPointsAllowed(Double fantasyDraftFantasyPointsAllowed) {
         this.fantasyDraftFantasyPointsAllowed = fantasyDraftFantasyPointsAllowed;
         return this;
@@ -204,6 +228,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyDraftKickerFantasyPointsAllowed")
     public Double fantasyDraftKickerFantasyPointsAllowed;
+
     public FantasyDefenseSeasonProjection withFantasyDraftKickerFantasyPointsAllowed(Double fantasyDraftKickerFantasyPointsAllowed) {
         this.fantasyDraftKickerFantasyPointsAllowed = fantasyDraftKickerFantasyPointsAllowed;
         return this;
@@ -212,6 +237,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyDraftQuarterbackFantasyPointsAllowed")
     public Double fantasyDraftQuarterbackFantasyPointsAllowed;
+
     public FantasyDefenseSeasonProjection withFantasyDraftQuarterbackFantasyPointsAllowed(Double fantasyDraftQuarterbackFantasyPointsAllowed) {
         this.fantasyDraftQuarterbackFantasyPointsAllowed = fantasyDraftQuarterbackFantasyPointsAllowed;
         return this;
@@ -220,6 +246,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyDraftRunningbackFantasyPointsAllowed")
     public Double fantasyDraftRunningbackFantasyPointsAllowed;
+
     public FantasyDefenseSeasonProjection withFantasyDraftRunningbackFantasyPointsAllowed(Double fantasyDraftRunningbackFantasyPointsAllowed) {
         this.fantasyDraftRunningbackFantasyPointsAllowed = fantasyDraftRunningbackFantasyPointsAllowed;
         return this;
@@ -228,6 +255,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyDraftTightEndFantasyPointsAllowed")
     public Double fantasyDraftTightEndFantasyPointsAllowed;
+
     public FantasyDefenseSeasonProjection withFantasyDraftTightEndFantasyPointsAllowed(Double fantasyDraftTightEndFantasyPointsAllowed) {
         this.fantasyDraftTightEndFantasyPointsAllowed = fantasyDraftTightEndFantasyPointsAllowed;
         return this;
@@ -236,6 +264,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyDraftWideReceiverFantasyPointsAllowed")
     public Double fantasyDraftWideReceiverFantasyPointsAllowed;
+
     public FantasyDefenseSeasonProjection withFantasyDraftWideReceiverFantasyPointsAllowed(Double fantasyDraftWideReceiverFantasyPointsAllowed) {
         this.fantasyDraftWideReceiverFantasyPointsAllowed = fantasyDraftWideReceiverFantasyPointsAllowed;
         return this;
@@ -244,6 +273,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPoints")
     public Double fantasyPoints;
+
     public FantasyDefenseSeasonProjection withFantasyPoints(Double fantasyPoints) {
         this.fantasyPoints = fantasyPoints;
         return this;
@@ -252,6 +282,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsAllowed")
     public Double fantasyPointsAllowed;
+
     public FantasyDefenseSeasonProjection withFantasyPointsAllowed(Double fantasyPointsAllowed) {
         this.fantasyPointsAllowed = fantasyPointsAllowed;
         return this;
@@ -260,6 +291,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsDraftKings")
     public Double fantasyPointsDraftKings;
+
     public FantasyDefenseSeasonProjection withFantasyPointsDraftKings(Double fantasyPointsDraftKings) {
         this.fantasyPointsDraftKings = fantasyPointsDraftKings;
         return this;
@@ -268,6 +300,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsFanDuel")
     public Double fantasyPointsFanDuel;
+
     public FantasyDefenseSeasonProjection withFantasyPointsFanDuel(Double fantasyPointsFanDuel) {
         this.fantasyPointsFanDuel = fantasyPointsFanDuel;
         return this;
@@ -276,6 +309,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsFantasyDraft")
     public Double fantasyPointsFantasyDraft;
+
     public FantasyDefenseSeasonProjection withFantasyPointsFantasyDraft(Double fantasyPointsFantasyDraft) {
         this.fantasyPointsFantasyDraft = fantasyPointsFantasyDraft;
         return this;
@@ -284,6 +318,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsYahoo")
     public Double fantasyPointsYahoo;
+
     public FantasyDefenseSeasonProjection withFantasyPointsYahoo(Double fantasyPointsYahoo) {
         this.fantasyPointsYahoo = fantasyPointsYahoo;
         return this;
@@ -292,6 +327,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalReturnTouchdowns")
     public Double fieldGoalReturnTouchdowns;
+
     public FantasyDefenseSeasonProjection withFieldGoalReturnTouchdowns(Double fieldGoalReturnTouchdowns) {
         this.fieldGoalReturnTouchdowns = fieldGoalReturnTouchdowns;
         return this;
@@ -300,6 +336,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalReturnYards")
     public Double fieldGoalReturnYards;
+
     public FantasyDefenseSeasonProjection withFieldGoalReturnYards(Double fieldGoalReturnYards) {
         this.fieldGoalReturnYards = fieldGoalReturnYards;
         return this;
@@ -308,6 +345,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FourthDownAttempts")
     public Double fourthDownAttempts;
+
     public FantasyDefenseSeasonProjection withFourthDownAttempts(Double fourthDownAttempts) {
         this.fourthDownAttempts = fourthDownAttempts;
         return this;
@@ -316,6 +354,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FourthDownConversions")
     public Double fourthDownConversions;
+
     public FantasyDefenseSeasonProjection withFourthDownConversions(Double fourthDownConversions) {
         this.fourthDownConversions = fourthDownConversions;
         return this;
@@ -324,6 +363,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumbleReturnTouchdowns")
     public Double fumbleReturnTouchdowns;
+
     public FantasyDefenseSeasonProjection withFumbleReturnTouchdowns(Double fumbleReturnTouchdowns) {
         this.fumbleReturnTouchdowns = fumbleReturnTouchdowns;
         return this;
@@ -332,6 +372,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumbleReturnYards")
     public Double fumbleReturnYards;
+
     public FantasyDefenseSeasonProjection withFumbleReturnYards(Double fumbleReturnYards) {
         this.fumbleReturnYards = fumbleReturnYards;
         return this;
@@ -340,6 +381,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumblesForced")
     public Double fumblesForced;
+
     public FantasyDefenseSeasonProjection withFumblesForced(Double fumblesForced) {
         this.fumblesForced = fumblesForced;
         return this;
@@ -348,6 +390,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumblesRecovered")
     public Double fumblesRecovered;
+
     public FantasyDefenseSeasonProjection withFumblesRecovered(Double fumblesRecovered) {
         this.fumblesRecovered = fumblesRecovered;
         return this;
@@ -356,6 +399,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Games")
     public Long games;
+
     public FantasyDefenseSeasonProjection withGames(Long games) {
         this.games = games;
         return this;
@@ -364,6 +408,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalTeamID")
     public Long globalTeamID;
+
     public FantasyDefenseSeasonProjection withGlobalTeamID(Long globalTeamID) {
         this.globalTeamID = globalTeamID;
         return this;
@@ -372,6 +417,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Humidity")
     public Long humidity;
+
     public FantasyDefenseSeasonProjection withHumidity(Long humidity) {
         this.humidity = humidity;
         return this;
@@ -380,6 +426,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InterceptionReturnTouchdowns")
     public Double interceptionReturnTouchdowns;
+
     public FantasyDefenseSeasonProjection withInterceptionReturnTouchdowns(Double interceptionReturnTouchdowns) {
         this.interceptionReturnTouchdowns = interceptionReturnTouchdowns;
         return this;
@@ -388,6 +435,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InterceptionReturnYards")
     public Double interceptionReturnYards;
+
     public FantasyDefenseSeasonProjection withInterceptionReturnYards(Double interceptionReturnYards) {
         this.interceptionReturnYards = interceptionReturnYards;
         return this;
@@ -396,6 +444,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Interceptions")
     public Double interceptions;
+
     public FantasyDefenseSeasonProjection withInterceptions(Double interceptions) {
         this.interceptions = interceptions;
         return this;
@@ -404,6 +453,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickReturnLong")
     public Double kickReturnLong;
+
     public FantasyDefenseSeasonProjection withKickReturnLong(Double kickReturnLong) {
         this.kickReturnLong = kickReturnLong;
         return this;
@@ -412,6 +462,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickReturnTouchdowns")
     public Double kickReturnTouchdowns;
+
     public FantasyDefenseSeasonProjection withKickReturnTouchdowns(Double kickReturnTouchdowns) {
         this.kickReturnTouchdowns = kickReturnTouchdowns;
         return this;
@@ -420,6 +471,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickReturnYards")
     public Double kickReturnYards;
+
     public FantasyDefenseSeasonProjection withKickReturnYards(Double kickReturnYards) {
         this.kickReturnYards = kickReturnYards;
         return this;
@@ -428,6 +480,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickReturns")
     public Double kickReturns;
+
     public FantasyDefenseSeasonProjection withKickReturns(Double kickReturns) {
         this.kickReturns = kickReturns;
         return this;
@@ -436,6 +489,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickerFantasyPointsAllowed")
     public Double kickerFantasyPointsAllowed;
+
     public FantasyDefenseSeasonProjection withKickerFantasyPointsAllowed(Double kickerFantasyPointsAllowed) {
         this.kickerFantasyPointsAllowed = kickerFantasyPointsAllowed;
         return this;
@@ -444,6 +498,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OffensiveYardsAllowed")
     public Double offensiveYardsAllowed;
+
     public FantasyDefenseSeasonProjection withOffensiveYardsAllowed(Double offensiveYardsAllowed) {
         this.offensiveYardsAllowed = offensiveYardsAllowed;
         return this;
@@ -452,6 +507,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassesDefended")
     public Double passesDefended;
+
     public FantasyDefenseSeasonProjection withPassesDefended(Double passesDefended) {
         this.passesDefended = passesDefended;
         return this;
@@ -460,6 +516,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public FantasyDefenseSeasonProjection withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -468,6 +525,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PointsAllowed")
     public Double pointsAllowed;
+
     public FantasyDefenseSeasonProjection withPointsAllowed(Double pointsAllowed) {
         this.pointsAllowed = pointsAllowed;
         return this;
@@ -476,6 +534,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PointsAllowedByDefenseSpecialTeams")
     public Double pointsAllowedByDefenseSpecialTeams;
+
     public FantasyDefenseSeasonProjection withPointsAllowedByDefenseSpecialTeams(Double pointsAllowedByDefenseSpecialTeams) {
         this.pointsAllowedByDefenseSpecialTeams = pointsAllowedByDefenseSpecialTeams;
         return this;
@@ -484,6 +543,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntReturnLong")
     public Double puntReturnLong;
+
     public FantasyDefenseSeasonProjection withPuntReturnLong(Double puntReturnLong) {
         this.puntReturnLong = puntReturnLong;
         return this;
@@ -492,6 +552,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntReturnTouchdowns")
     public Double puntReturnTouchdowns;
+
     public FantasyDefenseSeasonProjection withPuntReturnTouchdowns(Double puntReturnTouchdowns) {
         this.puntReturnTouchdowns = puntReturnTouchdowns;
         return this;
@@ -500,6 +561,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntReturnYards")
     public Double puntReturnYards;
+
     public FantasyDefenseSeasonProjection withPuntReturnYards(Double puntReturnYards) {
         this.puntReturnYards = puntReturnYards;
         return this;
@@ -508,6 +570,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntReturns")
     public Double puntReturns;
+
     public FantasyDefenseSeasonProjection withPuntReturns(Double puntReturns) {
         this.puntReturns = puntReturns;
         return this;
@@ -516,6 +579,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuarterbackFantasyPointsAllowed")
     public Double quarterbackFantasyPointsAllowed;
+
     public FantasyDefenseSeasonProjection withQuarterbackFantasyPointsAllowed(Double quarterbackFantasyPointsAllowed) {
         this.quarterbackFantasyPointsAllowed = quarterbackFantasyPointsAllowed;
         return this;
@@ -524,6 +588,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuarterbackHits")
     public Double quarterbackHits;
+
     public FantasyDefenseSeasonProjection withQuarterbackHits(Double quarterbackHits) {
         this.quarterbackHits = quarterbackHits;
         return this;
@@ -532,6 +597,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RunningbackFantasyPointsAllowed")
     public Double runningbackFantasyPointsAllowed;
+
     public FantasyDefenseSeasonProjection withRunningbackFantasyPointsAllowed(Double runningbackFantasyPointsAllowed) {
         this.runningbackFantasyPointsAllowed = runningbackFantasyPointsAllowed;
         return this;
@@ -540,6 +606,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SackYards")
     public Double sackYards;
+
     public FantasyDefenseSeasonProjection withSackYards(Double sackYards) {
         this.sackYards = sackYards;
         return this;
@@ -548,6 +615,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sacks")
     public Double sacks;
+
     public FantasyDefenseSeasonProjection withSacks(Double sacks) {
         this.sacks = sacks;
         return this;
@@ -556,6 +624,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Safeties")
     public Double safeties;
+
     public FantasyDefenseSeasonProjection withSafeties(Double safeties) {
         this.safeties = safeties;
         return this;
@@ -564,6 +633,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScoringDetails")
     public ScoringDetail[] scoringDetails;
+
     public FantasyDefenseSeasonProjection withScoringDetails(ScoringDetail[] scoringDetails) {
         this.scoringDetails = scoringDetails;
         return this;
@@ -572,6 +642,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Season")
     public Long season;
+
     public FantasyDefenseSeasonProjection withSeason(Long season) {
         this.season = season;
         return this;
@@ -580,6 +651,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeasonType")
     public Long seasonType;
+
     public FantasyDefenseSeasonProjection withSeasonType(Long seasonType) {
         this.seasonType = seasonType;
         return this;
@@ -588,6 +660,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SoloTackles")
     public Double soloTackles;
+
     public FantasyDefenseSeasonProjection withSoloTackles(Double soloTackles) {
         this.soloTackles = soloTackles;
         return this;
@@ -596,6 +669,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpecialTeamsTouchdowns")
     public Double specialTeamsTouchdowns;
+
     public FantasyDefenseSeasonProjection withSpecialTeamsTouchdowns(Double specialTeamsTouchdowns) {
         this.specialTeamsTouchdowns = specialTeamsTouchdowns;
         return this;
@@ -604,6 +678,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TacklesForLoss")
     public Double tacklesForLoss;
+
     public FantasyDefenseSeasonProjection withTacklesForLoss(Double tacklesForLoss) {
         this.tacklesForLoss = tacklesForLoss;
         return this;
@@ -612,6 +687,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public FantasyDefenseSeasonProjection withTeam(String team) {
         this.team = team;
         return this;
@@ -620,6 +696,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamID")
     public Long teamID;
+
     public FantasyDefenseSeasonProjection withTeamID(Long teamID) {
         this.teamID = teamID;
         return this;
@@ -628,6 +705,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Temperature")
     public Long temperature;
+
     public FantasyDefenseSeasonProjection withTemperature(Long temperature) {
         this.temperature = temperature;
         return this;
@@ -636,6 +714,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThirdDownAttempts")
     public Double thirdDownAttempts;
+
     public FantasyDefenseSeasonProjection withThirdDownAttempts(Double thirdDownAttempts) {
         this.thirdDownAttempts = thirdDownAttempts;
         return this;
@@ -644,6 +723,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThirdDownConversions")
     public Double thirdDownConversions;
+
     public FantasyDefenseSeasonProjection withThirdDownConversions(Double thirdDownConversions) {
         this.thirdDownConversions = thirdDownConversions;
         return this;
@@ -652,6 +732,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TightEndFantasyPointsAllowed")
     public Double tightEndFantasyPointsAllowed;
+
     public FantasyDefenseSeasonProjection withTightEndFantasyPointsAllowed(Double tightEndFantasyPointsAllowed) {
         this.tightEndFantasyPointsAllowed = tightEndFantasyPointsAllowed;
         return this;
@@ -660,6 +741,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TouchdownsScored")
     public Double touchdownsScored;
+
     public FantasyDefenseSeasonProjection withTouchdownsScored(Double touchdownsScored) {
         this.touchdownsScored = touchdownsScored;
         return this;
@@ -668,6 +750,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoPointConversionReturns")
     public Double twoPointConversionReturns;
+
     public FantasyDefenseSeasonProjection withTwoPointConversionReturns(Double twoPointConversionReturns) {
         this.twoPointConversionReturns = twoPointConversionReturns;
         return this;
@@ -676,6 +759,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WideReceiverFantasyPointsAllowed")
     public Double wideReceiverFantasyPointsAllowed;
+
     public FantasyDefenseSeasonProjection withWideReceiverFantasyPointsAllowed(Double wideReceiverFantasyPointsAllowed) {
         this.wideReceiverFantasyPointsAllowed = wideReceiverFantasyPointsAllowed;
         return this;
@@ -684,6 +768,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindSpeed")
     public Long windSpeed;
+
     public FantasyDefenseSeasonProjection withWindSpeed(Long windSpeed) {
         this.windSpeed = windSpeed;
         return this;
@@ -692,6 +777,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("YahooFantasyPointsAllowed")
     public Double yahooFantasyPointsAllowed;
+
     public FantasyDefenseSeasonProjection withYahooFantasyPointsAllowed(Double yahooFantasyPointsAllowed) {
         this.yahooFantasyPointsAllowed = yahooFantasyPointsAllowed;
         return this;
@@ -700,6 +786,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("YahooKickerFantasyPointsAllowed")
     public Double yahooKickerFantasyPointsAllowed;
+
     public FantasyDefenseSeasonProjection withYahooKickerFantasyPointsAllowed(Double yahooKickerFantasyPointsAllowed) {
         this.yahooKickerFantasyPointsAllowed = yahooKickerFantasyPointsAllowed;
         return this;
@@ -708,6 +795,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("YahooQuarterbackFantasyPointsAllowed")
     public Double yahooQuarterbackFantasyPointsAllowed;
+
     public FantasyDefenseSeasonProjection withYahooQuarterbackFantasyPointsAllowed(Double yahooQuarterbackFantasyPointsAllowed) {
         this.yahooQuarterbackFantasyPointsAllowed = yahooQuarterbackFantasyPointsAllowed;
         return this;
@@ -716,6 +804,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("YahooRunningbackFantasyPointsAllowed")
     public Double yahooRunningbackFantasyPointsAllowed;
+
     public FantasyDefenseSeasonProjection withYahooRunningbackFantasyPointsAllowed(Double yahooRunningbackFantasyPointsAllowed) {
         this.yahooRunningbackFantasyPointsAllowed = yahooRunningbackFantasyPointsAllowed;
         return this;
@@ -724,6 +813,7 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("YahooTightEndFantasyPointsAllowed")
     public Double yahooTightEndFantasyPointsAllowed;
+
     public FantasyDefenseSeasonProjection withYahooTightEndFantasyPointsAllowed(Double yahooTightEndFantasyPointsAllowed) {
         this.yahooTightEndFantasyPointsAllowed = yahooTightEndFantasyPointsAllowed;
         return this;
@@ -732,9 +822,11 @@ public class FantasyDefenseSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("YahooWideReceiverFantasyPointsAllowed")
     public Double yahooWideReceiverFantasyPointsAllowed;
+
     public FantasyDefenseSeasonProjection withYahooWideReceiverFantasyPointsAllowed(Double yahooWideReceiverFantasyPointsAllowed) {
         this.yahooWideReceiverFantasyPointsAllowed = yahooWideReceiverFantasyPointsAllowed;
         return this;
     }
     
+    public FantasyDefenseSeasonProjection(){}
 }

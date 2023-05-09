@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETListDeadLetterSourceQueuesResponse {
     
     public byte[] body;
+
     public GETListDeadLetterSourceQueuesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETListDeadLetterSourceQueuesResponse {
     
     
     public String contentType;
+
     public GETListDeadLetterSourceQueuesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETListDeadLetterSourceQueuesResponse {
     
     
     public Integer statusCode;
+
     public GETListDeadLetterSourceQueuesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETListDeadLetterSourceQueuesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETListDeadLetterSourceQueuesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETListDeadLetterSourceQueuesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

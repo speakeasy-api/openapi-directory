@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateEventRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateEventRequestBody requestBody;
+
     public CreateEventRequest withRequestBody(CreateEventRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class CreateEventRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversation_id")
     public String conversationId;
+
     public CreateEventRequest withConversationId(String conversationId) {
         this.conversationId = conversationId;
         return this;
     }
     
+    public CreateEventRequest(@JsonProperty("conversation_id") String conversationId) {
+        this.conversationId = conversationId;
+  }
 }

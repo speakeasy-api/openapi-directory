@@ -18,6 +18,7 @@ public class TriggerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
     public String channel;
+
     public TriggerInput withChannel(String channel) {
         this.channel = channel;
         return this;
@@ -29,17 +30,19 @@ public class TriggerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public Destination destination;
+
     public TriggerInput withDestination(Destination destination) {
         this.destination = destination;
         return this;
     }
     
     /**
-     * Optional. EventDataContentType specifies the type of payload in MIME format that is expected from the CloudEvent data field. This will be set to `application/json` if the value is not defined.
+     * Optional. EventDataContentType specifies the type of payload in MIME format that is expected from the CloudEvent data field. This is set to `application/json` if the value is not defined.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventDataContentType")
     public String eventDataContentType;
+
     public TriggerInput withEventDataContentType(String eventDataContentType) {
         this.eventDataContentType = eventDataContentType;
         return this;
@@ -51,6 +54,7 @@ public class TriggerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventFilters")
     public EventFilter[] eventFilters;
+
     public TriggerInput withEventFilters(EventFilter[] eventFilters) {
         this.eventFilters = eventFilters;
         return this;
@@ -62,6 +66,7 @@ public class TriggerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public TriggerInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -73,6 +78,7 @@ public class TriggerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TriggerInput withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class TriggerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccount")
     public String serviceAccount;
+
     public TriggerInput withServiceAccount(String serviceAccount) {
         this.serviceAccount = serviceAccount;
         return this;
@@ -95,9 +102,11 @@ public class TriggerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transport")
     public TransportInput transport;
+
     public TriggerInput withTransport(TransportInput transport) {
         this.transport = transport;
         return this;
     }
     
+    public TriggerInput(){}
 }

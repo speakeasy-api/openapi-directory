@@ -15,9 +15,11 @@ public class RemoveFacetFromObjectRequestBodyObjectReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Selector")
     public String selector;
+
     public RemoveFacetFromObjectRequestBodyObjectReference withSelector(String selector) {
         this.selector = selector;
         return this;
     }
     
+    public RemoveFacetFromObjectRequestBodyObjectReference(){}
 }

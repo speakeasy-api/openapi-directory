@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDomainConfigurationResponse {
@@ -12,6 +13,7 @@ public class CreateDomainConfigurationResponse {
      */
     
     public Object certificateValidationException;
+
     public CreateDomainConfigurationResponse withCertificateValidationException(Object certificateValidationException) {
         this.certificateValidationException = certificateValidationException;
         return this;
@@ -19,6 +21,7 @@ public class CreateDomainConfigurationResponse {
     
     
     public String contentType;
+
     public CreateDomainConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateDomainConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDomainConfigurationResponse createDomainConfigurationResponse;
+
     public CreateDomainConfigurationResponse withCreateDomainConfigurationResponse(org.openapis.openapi.models.shared.CreateDomainConfigurationResponse createDomainConfigurationResponse) {
         this.createDomainConfigurationResponse = createDomainConfigurationResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateDomainConfigurationResponse {
      */
     
     public Object internalFailureException;
+
     public CreateDomainConfigurationResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class CreateDomainConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateDomainConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class CreateDomainConfigurationResponse {
      */
     
     public Object limitExceededException;
+
     public CreateDomainConfigurationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateDomainConfigurationResponse {
     
     
     public Integer statusCode;
+
     public CreateDomainConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateDomainConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDomainConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateDomainConfigurationResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateDomainConfigurationResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -93,6 +103,7 @@ public class CreateDomainConfigurationResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateDomainConfigurationResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -103,6 +114,7 @@ public class CreateDomainConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public CreateDomainConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -113,9 +125,14 @@ public class CreateDomainConfigurationResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateDomainConfigurationResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateDomainConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

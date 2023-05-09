@@ -15,6 +15,7 @@ public class UpdateProvisioningParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public UpdateProvisioningParameter withKey(String key) {
         this.key = key;
         return this;
@@ -23,6 +24,7 @@ public class UpdateProvisioningParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UsePreviousValue")
     public Boolean usePreviousValue;
+
     public UpdateProvisioningParameter withUsePreviousValue(Boolean usePreviousValue) {
         this.usePreviousValue = usePreviousValue;
         return this;
@@ -31,9 +33,11 @@ public class UpdateProvisioningParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public UpdateProvisioningParameter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public UpdateProvisioningParameter(){}
 }

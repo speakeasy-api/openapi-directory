@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EvaluateRebalanceResponse {
     
     public String contentType;
+
     public EvaluateRebalanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class EvaluateRebalanceResponse {
      */
     
     public EvaluateRebalance400ApplicationJSON evaluateRebalance400ApplicationJSONObject;
+
     public EvaluateRebalanceResponse withEvaluateRebalance400ApplicationJSONObject(EvaluateRebalance400ApplicationJSON evaluateRebalance400ApplicationJSONObject) {
         this.evaluateRebalance400ApplicationJSONObject = evaluateRebalance400ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class EvaluateRebalanceResponse {
      */
     
     public EvaluateRebalance401ApplicationJSON evaluateRebalance401ApplicationJSONObject;
+
     public EvaluateRebalanceResponse withEvaluateRebalance401ApplicationJSONObject(EvaluateRebalance401ApplicationJSON evaluateRebalance401ApplicationJSONObject) {
         this.evaluateRebalance401ApplicationJSONObject = evaluateRebalance401ApplicationJSONObject;
         return this;
@@ -39,6 +43,7 @@ public class EvaluateRebalanceResponse {
      */
     
     public EvaluateRebalance403ApplicationJSON evaluateRebalance403ApplicationJSONObject;
+
     public EvaluateRebalanceResponse withEvaluateRebalance403ApplicationJSONObject(EvaluateRebalance403ApplicationJSON evaluateRebalance403ApplicationJSONObject) {
         this.evaluateRebalance403ApplicationJSONObject = evaluateRebalance403ApplicationJSONObject;
         return this;
@@ -49,6 +54,7 @@ public class EvaluateRebalanceResponse {
      */
     
     public EvaluateRebalance404ApplicationJSON evaluateRebalance404ApplicationJSONObject;
+
     public EvaluateRebalanceResponse withEvaluateRebalance404ApplicationJSONObject(EvaluateRebalance404ApplicationJSON evaluateRebalance404ApplicationJSONObject) {
         this.evaluateRebalance404ApplicationJSONObject = evaluateRebalance404ApplicationJSONObject;
         return this;
@@ -59,6 +65,7 @@ public class EvaluateRebalanceResponse {
      */
     
     public EvaluateRebalance409ApplicationJSON evaluateRebalance409ApplicationJSONObject;
+
     public EvaluateRebalanceResponse withEvaluateRebalance409ApplicationJSONObject(EvaluateRebalance409ApplicationJSON evaluateRebalance409ApplicationJSONObject) {
         this.evaluateRebalance409ApplicationJSONObject = evaluateRebalance409ApplicationJSONObject;
         return this;
@@ -69,6 +76,7 @@ public class EvaluateRebalanceResponse {
      */
     
     public EvaluateRebalance429ApplicationJSON evaluateRebalance429ApplicationJSONObject;
+
     public EvaluateRebalanceResponse withEvaluateRebalance429ApplicationJSONObject(EvaluateRebalance429ApplicationJSON evaluateRebalance429ApplicationJSONObject) {
         this.evaluateRebalance429ApplicationJSONObject = evaluateRebalance429ApplicationJSONObject;
         return this;
@@ -79,6 +87,7 @@ public class EvaluateRebalanceResponse {
      */
     
     public EvaluateRebalance500ApplicationJSON evaluateRebalance500ApplicationJSONObject;
+
     public EvaluateRebalanceResponse withEvaluateRebalance500ApplicationJSONObject(EvaluateRebalance500ApplicationJSON evaluateRebalance500ApplicationJSONObject) {
         this.evaluateRebalance500ApplicationJSONObject = evaluateRebalance500ApplicationJSONObject;
         return this;
@@ -86,6 +95,7 @@ public class EvaluateRebalanceResponse {
     
     
     public Integer statusCode;
+
     public EvaluateRebalanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class EvaluateRebalanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EvaluateRebalanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class EvaluateRebalanceResponse {
      */
     
     public EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPot thisIsTheReturnObjectWithEvaluationPerPot;
+
     public EvaluateRebalanceResponse withThisIsTheReturnObjectWithEvaluationPerPot(EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPot thisIsTheReturnObjectWithEvaluationPerPot) {
         this.thisIsTheReturnObjectWithEvaluationPerPot = thisIsTheReturnObjectWithEvaluationPerPot;
         return this;
     }
     
+    public EvaluateRebalanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

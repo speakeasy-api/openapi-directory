@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReleasesGetPublicGroupsForReleaseByHashResponse {
     
     public String contentType;
+
     public ReleasesGetPublicGroupsForReleaseByHashResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReleasesGetPublicGroupsForReleaseByHashResponse {
     
     
     public Integer statusCode;
+
     public ReleasesGetPublicGroupsForReleaseByHashResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReleasesGetPublicGroupsForReleaseByHashResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReleasesGetPublicGroupsForReleaseByHashResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReleasesGetPublicGroupsForReleaseByHashResponse {
      */
     
     public ReleasesGetPublicGroupsForReleaseByHash200ApplicationJSON[] releasesGetPublicGroupsForReleaseByHash200ApplicationJSONObjects;
+
     public ReleasesGetPublicGroupsForReleaseByHashResponse withReleasesGetPublicGroupsForReleaseByHash200ApplicationJSONObjects(ReleasesGetPublicGroupsForReleaseByHash200ApplicationJSON[] releasesGetPublicGroupsForReleaseByHash200ApplicationJSONObjects) {
         this.releasesGetPublicGroupsForReleaseByHash200ApplicationJSONObjects = releasesGetPublicGroupsForReleaseByHash200ApplicationJSONObjects;
         return this;
@@ -45,9 +50,14 @@ public class ReleasesGetPublicGroupsForReleaseByHashResponse {
      */
     
     public ReleasesGetPublicGroupsForReleaseByHash404ApplicationJSON releasesGetPublicGroupsForReleaseByHash404ApplicationJSONObject;
+
     public ReleasesGetPublicGroupsForReleaseByHashResponse withReleasesGetPublicGroupsForReleaseByHash404ApplicationJSONObject(ReleasesGetPublicGroupsForReleaseByHash404ApplicationJSON releasesGetPublicGroupsForReleaseByHash404ApplicationJSONObject) {
         this.releasesGetPublicGroupsForReleaseByHash404ApplicationJSONObject = releasesGetPublicGroupsForReleaseByHash404ApplicationJSONObject;
         return this;
     }
     
+    public ReleasesGetPublicGroupsForReleaseByHashResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

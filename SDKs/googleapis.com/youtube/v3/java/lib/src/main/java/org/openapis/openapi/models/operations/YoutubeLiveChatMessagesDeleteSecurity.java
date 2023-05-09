@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class YoutubeLiveChatMessagesDeleteSecurity {
     @SpeakeasyMetadata("security:option=true")
     public YoutubeLiveChatMessagesDeleteSecurityOption1 option1;
+
     public YoutubeLiveChatMessagesDeleteSecurity withOption1(YoutubeLiveChatMessagesDeleteSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class YoutubeLiveChatMessagesDeleteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public YoutubeLiveChatMessagesDeleteSecurityOption2 option2;
+
     public YoutubeLiveChatMessagesDeleteSecurity withOption2(YoutubeLiveChatMessagesDeleteSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public YoutubeLiveChatMessagesDeleteSecurity(){}
 }

@@ -12,6 +12,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETUpdateScalingParametersScalingParameters {
     @SpeakeasyMetadata("queryParam:name=DesiredInstanceType")
     public org.openapis.openapi.models.shared.PartitionInstanceTypeEnum desiredInstanceType;
+
     public GETUpdateScalingParametersScalingParameters withDesiredInstanceType(org.openapis.openapi.models.shared.PartitionInstanceTypeEnum desiredInstanceType) {
         this.desiredInstanceType = desiredInstanceType;
         return this;
@@ -19,6 +20,7 @@ public class GETUpdateScalingParametersScalingParameters {
     
     @SpeakeasyMetadata("queryParam:name=DesiredPartitionCount")
     public Long desiredPartitionCount;
+
     public GETUpdateScalingParametersScalingParameters withDesiredPartitionCount(Long desiredPartitionCount) {
         this.desiredPartitionCount = desiredPartitionCount;
         return this;
@@ -26,9 +28,11 @@ public class GETUpdateScalingParametersScalingParameters {
     
     @SpeakeasyMetadata("queryParam:name=DesiredReplicationCount")
     public Long desiredReplicationCount;
+
     public GETUpdateScalingParametersScalingParameters withDesiredReplicationCount(Long desiredReplicationCount) {
         this.desiredReplicationCount = desiredReplicationCount;
         return this;
     }
     
+    public GETUpdateScalingParametersScalingParameters(){}
 }

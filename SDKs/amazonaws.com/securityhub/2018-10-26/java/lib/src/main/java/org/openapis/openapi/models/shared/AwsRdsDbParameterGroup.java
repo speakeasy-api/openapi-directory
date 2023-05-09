@@ -15,6 +15,7 @@ public class AwsRdsDbParameterGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DbParameterGroupName")
     public String dbParameterGroupName;
+
     public AwsRdsDbParameterGroup withDbParameterGroupName(String dbParameterGroupName) {
         this.dbParameterGroupName = dbParameterGroupName;
         return this;
@@ -23,9 +24,11 @@ public class AwsRdsDbParameterGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterApplyStatus")
     public String parameterApplyStatus;
+
     public AwsRdsDbParameterGroup withParameterApplyStatus(String parameterApplyStatus) {
         this.parameterApplyStatus = parameterApplyStatus;
         return this;
     }
     
+    public AwsRdsDbParameterGroup(){}
 }

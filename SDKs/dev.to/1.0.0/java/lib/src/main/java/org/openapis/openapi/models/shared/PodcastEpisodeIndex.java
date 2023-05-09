@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PodcastEpisodeIndex {
     @JsonProperty("class_name")
     public String className;
+
     public PodcastEpisodeIndex withClassName(String className) {
         this.className = className;
         return this;
@@ -19,6 +20,7 @@ public class PodcastEpisodeIndex {
     
     @JsonProperty("id")
     public Integer id;
+
     public PodcastEpisodeIndex withId(Integer id) {
         this.id = id;
         return this;
@@ -29,6 +31,7 @@ public class PodcastEpisodeIndex {
      */
     @JsonProperty("image_url")
     public String imageUrl;
+
     public PodcastEpisodeIndex withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -36,6 +39,7 @@ public class PodcastEpisodeIndex {
     
     @JsonProperty("path")
     public String path;
+
     public PodcastEpisodeIndex withPath(String path) {
         this.path = path;
         return this;
@@ -46,6 +50,7 @@ public class PodcastEpisodeIndex {
      */
     @JsonProperty("podcast")
     public SharedPodcast podcast;
+
     public PodcastEpisodeIndex withPodcast(SharedPodcast podcast) {
         this.podcast = podcast;
         return this;
@@ -53,6 +58,7 @@ public class PodcastEpisodeIndex {
     
     @JsonProperty("title")
     public String title;
+
     public PodcastEpisodeIndex withTitle(String title) {
         this.title = title;
         return this;
@@ -60,9 +66,19 @@ public class PodcastEpisodeIndex {
     
     @JsonProperty("type_of")
     public String typeOf;
+
     public PodcastEpisodeIndex withTypeOf(String typeOf) {
         this.typeOf = typeOf;
         return this;
     }
     
+    public PodcastEpisodeIndex(@JsonProperty("class_name") String className, @JsonProperty("id") Integer id, @JsonProperty("image_url") String imageUrl, @JsonProperty("path") String path, @JsonProperty("podcast") SharedPodcast podcast, @JsonProperty("title") String title, @JsonProperty("type_of") String typeOf) {
+        this.className = className;
+        this.id = id;
+        this.imageUrl = imageUrl;
+        this.path = path;
+        this.podcast = podcast;
+        this.title = title;
+        this.typeOf = typeOf;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateControlResponse {
@@ -12,6 +13,7 @@ public class UpdateControlResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateControlResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateControlResponse {
     
     
     public String contentType;
+
     public UpdateControlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateControlResponse {
      */
     
     public Object internalServerException;
+
     public UpdateControlResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateControlResponse {
     
     
     public Integer statusCode;
+
     public UpdateControlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateControlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateControlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateControlResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateControlResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateControlResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateControlResponse updateControlResponse;
+
     public UpdateControlResponse withUpdateControlResponse(org.openapis.openapi.models.shared.UpdateControlResponse updateControlResponse) {
         this.updateControlResponse = updateControlResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateControlResponse {
      */
     
     public Object validationException;
+
     public UpdateControlResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateControlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

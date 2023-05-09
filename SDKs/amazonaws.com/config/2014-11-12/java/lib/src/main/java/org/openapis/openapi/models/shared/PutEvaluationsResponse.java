@@ -15,9 +15,11 @@ public class PutEvaluationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedEvaluations")
     public Evaluation[] failedEvaluations;
+
     public PutEvaluationsResponse withFailedEvaluations(Evaluation[] failedEvaluations) {
         this.failedEvaluations = failedEvaluations;
         return this;
     }
     
+    public PutEvaluationsResponse(){}
 }

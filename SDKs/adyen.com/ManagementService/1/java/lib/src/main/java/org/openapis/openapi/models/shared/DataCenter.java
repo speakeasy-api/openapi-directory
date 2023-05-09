@@ -17,6 +17,7 @@ public class DataCenter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("livePrefix")
     public String livePrefix;
+
     public DataCenter withLivePrefix(String livePrefix) {
         this.livePrefix = livePrefix;
         return this;
@@ -33,9 +34,11 @@ public class DataCenter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DataCenter withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DataCenter(){}
 }

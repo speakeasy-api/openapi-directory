@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFleetResponse {
     
     public String contentType;
+
     public CreateFleetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateFleetResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateFleetResponse createFleetResponse;
+
     public CreateFleetResponse withCreateFleetResponse(org.openapis.openapi.models.shared.CreateFleetResponse createFleetResponse) {
         this.createFleetResponse = createFleetResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateFleetResponse {
      */
     
     public Object internalServerException;
+
     public CreateFleetResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class CreateFleetResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateFleetResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class CreateFleetResponse {
      */
     
     public Object limitExceededException;
+
     public CreateFleetResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateFleetResponse {
     
     
     public Integer statusCode;
+
     public CreateFleetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateFleetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFleetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CreateFleetResponse {
      */
     
     public Object throttlingException;
+
     public CreateFleetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateFleetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

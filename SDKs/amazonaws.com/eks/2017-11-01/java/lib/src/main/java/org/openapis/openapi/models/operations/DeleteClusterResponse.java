@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteClusterResponse {
@@ -12,6 +13,7 @@ public class DeleteClusterResponse {
      */
     
     public Object clientException;
+
     public DeleteClusterResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteClusterResponse {
     
     
     public String contentType;
+
     public DeleteClusterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteClusterResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteClusterResponse deleteClusterResponse;
+
     public DeleteClusterResponse withDeleteClusterResponse(org.openapis.openapi.models.shared.DeleteClusterResponse deleteClusterResponse) {
         this.deleteClusterResponse = deleteClusterResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteClusterResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteClusterResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteClusterResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteClusterResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteClusterResponse {
     
     
     public Integer statusCode;
+
     public DeleteClusterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteClusterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteClusterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteClusterResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteClusterResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteClusterResponse {
      */
     
     public Object serverException;
+
     public DeleteClusterResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
     }
     
+    public DeleteClusterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

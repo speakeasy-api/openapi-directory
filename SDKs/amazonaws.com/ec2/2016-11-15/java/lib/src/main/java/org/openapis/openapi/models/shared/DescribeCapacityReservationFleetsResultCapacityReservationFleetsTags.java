@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeCapacityReservationFleetsResultCapacityReservationFleetsTags {
     
     public String key;
+
     public DescribeCapacityReservationFleetsResultCapacityReservationFleetsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DescribeCapacityReservationFleetsResultCapacityReservationFleetsTag
     
     
     public String value;
+
     public DescribeCapacityReservationFleetsResultCapacityReservationFleetsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DescribeCapacityReservationFleetsResultCapacityReservationFleetsTags(){}
 }

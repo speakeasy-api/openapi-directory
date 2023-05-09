@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConversionsGetStatisticsSingleRequest {
@@ -12,6 +13,7 @@ public class ConversionsGetStatisticsSingleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversionId")
     public Long conversionId;
+
     public ConversionsGetStatisticsSingleRequest withConversionId(Long conversionId) {
         this.conversionId = conversionId;
         return this;
@@ -22,6 +24,7 @@ public class ConversionsGetStatisticsSingleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=favourite")
     public Boolean favourite;
+
     public ConversionsGetStatisticsSingleRequest withFavourite(Boolean favourite) {
         this.favourite = favourite;
         return this;
@@ -32,6 +35,7 @@ public class ConversionsGetStatisticsSingleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDay")
     public String fromDay;
+
     public ConversionsGetStatisticsSingleRequest withFromDay(String fromDay) {
         this.fromDay = fromDay;
         return this;
@@ -42,6 +46,7 @@ public class ConversionsGetStatisticsSingleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hourly")
     public Boolean hourly;
+
     public ConversionsGetStatisticsSingleRequest withHourly(Boolean hourly) {
         this.hourly = hourly;
         return this;
@@ -52,6 +57,7 @@ public class ConversionsGetStatisticsSingleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
     public String tag;
+
     public ConversionsGetStatisticsSingleRequest withTag(String tag) {
         this.tag = tag;
         return this;
@@ -62,6 +68,7 @@ public class ConversionsGetStatisticsSingleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeFrame")
     public ConversionsGetStatisticsSingleTimeFrameEnum timeFrame;
+
     public ConversionsGetStatisticsSingleRequest withTimeFrame(ConversionsGetStatisticsSingleTimeFrameEnum timeFrame) {
         this.timeFrame = timeFrame;
         return this;
@@ -72,9 +79,14 @@ public class ConversionsGetStatisticsSingleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDay")
     public String toDay;
+
     public ConversionsGetStatisticsSingleRequest withToDay(String toDay) {
         this.toDay = toDay;
         return this;
     }
     
+    public ConversionsGetStatisticsSingleRequest(@JsonProperty("conversionId") Long conversionId, @JsonProperty("timeFrame") ConversionsGetStatisticsSingleTimeFrameEnum timeFrame) {
+        this.conversionId = conversionId;
+        this.timeFrame = timeFrame;
+  }
 }

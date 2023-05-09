@@ -12,9 +12,11 @@ public class ListAndSearchMediaItems200ApplicationJSONLinksLast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public ListAndSearchMediaItems200ApplicationJSONLinksLast withHref(String href) {
         this.href = href;
         return this;
     }
     
+    public ListAndSearchMediaItems200ApplicationJSONLinksLast(){}
 }

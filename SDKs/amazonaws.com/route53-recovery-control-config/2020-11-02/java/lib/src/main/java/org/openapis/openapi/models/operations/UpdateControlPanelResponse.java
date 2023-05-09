@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateControlPanelResponse {
@@ -12,6 +13,7 @@ public class UpdateControlPanelResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateControlPanelResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateControlPanelResponse {
      */
     
     public Object conflictException;
+
     public UpdateControlPanelResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateControlPanelResponse {
     
     
     public String contentType;
+
     public UpdateControlPanelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateControlPanelResponse {
      */
     
     public Object internalServerException;
+
     public UpdateControlPanelResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateControlPanelResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateControlPanelResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateControlPanelResponse {
     
     
     public Integer statusCode;
+
     public UpdateControlPanelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateControlPanelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateControlPanelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateControlPanelResponse {
      */
     
     public Object throttlingException;
+
     public UpdateControlPanelResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateControlPanelResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateControlPanelResponse updateControlPanelResponse;
+
     public UpdateControlPanelResponse withUpdateControlPanelResponse(org.openapis.openapi.models.shared.UpdateControlPanelResponse updateControlPanelResponse) {
         this.updateControlPanelResponse = updateControlPanelResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdateControlPanelResponse {
      */
     
     public Object validationException;
+
     public UpdateControlPanelResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateControlPanelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

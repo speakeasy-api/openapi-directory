@@ -12,6 +12,7 @@ public class FileCommitCommit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author")
     public FileCommitCommitAuthor author;
+
     public FileCommitCommit withAuthor(FileCommitCommitAuthor author) {
         this.author = author;
         return this;
@@ -20,6 +21,7 @@ public class FileCommitCommit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committer")
     public FileCommitCommitCommitter committer;
+
     public FileCommitCommit withCommitter(FileCommitCommitCommitter committer) {
         this.committer = committer;
         return this;
@@ -28,6 +30,7 @@ public class FileCommitCommit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public FileCommitCommit withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -36,6 +39,7 @@ public class FileCommitCommit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public FileCommitCommit withMessage(String message) {
         this.message = message;
         return this;
@@ -44,6 +48,7 @@ public class FileCommitCommit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("node_id")
     public String nodeId;
+
     public FileCommitCommit withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -52,6 +57,7 @@ public class FileCommitCommit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parents")
     public FileCommitCommitParents[] parents;
+
     public FileCommitCommit withParents(FileCommitCommitParents[] parents) {
         this.parents = parents;
         return this;
@@ -60,6 +66,7 @@ public class FileCommitCommit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sha")
     public String sha;
+
     public FileCommitCommit withSha(String sha) {
         this.sha = sha;
         return this;
@@ -68,6 +75,7 @@ public class FileCommitCommit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tree")
     public FileCommitCommitTree tree;
+
     public FileCommitCommit withTree(FileCommitCommitTree tree) {
         this.tree = tree;
         return this;
@@ -76,6 +84,7 @@ public class FileCommitCommit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public FileCommitCommit withUrl(String url) {
         this.url = url;
         return this;
@@ -84,9 +93,11 @@ public class FileCommitCommit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verification")
     public FileCommitCommitVerification verification;
+
     public FileCommitCommit withVerification(FileCommitCommitVerification verification) {
         this.verification = verification;
         return this;
     }
     
+    public FileCommitCommit(){}
 }

@@ -18,6 +18,7 @@ public class SamlSpConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assertionConsumerServiceUri")
     public String assertionConsumerServiceUri;
+
     public SamlSpConfig withAssertionConsumerServiceUri(String assertionConsumerServiceUri) {
         this.assertionConsumerServiceUri = assertionConsumerServiceUri;
         return this;
@@ -29,9 +30,11 @@ public class SamlSpConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityId")
     public String entityId;
+
     public SamlSpConfig withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
     }
     
+    public SamlSpConfig(){}
 }

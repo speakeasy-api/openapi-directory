@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TaxonomyCategoriesRequest {
@@ -13,6 +14,7 @@ public class TaxonomyCategoriesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public TaxonomyCategoriesRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -25,9 +27,13 @@ public class TaxonomyCategoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destId")
     public Long destId;
+
     public TaxonomyCategoriesRequest withDestId(Long destId) {
         this.destId = destId;
         return this;
     }
     
+    public TaxonomyCategoriesRequest(@JsonProperty("Accept-Language") String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+  }
 }

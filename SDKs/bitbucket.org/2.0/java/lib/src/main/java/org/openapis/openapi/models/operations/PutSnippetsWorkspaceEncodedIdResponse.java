@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutSnippetsWorkspaceEncodedIdResponse {
     
     public byte[] body;
+
     public PutSnippetsWorkspaceEncodedIdResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PutSnippetsWorkspaceEncodedIdResponse {
     
     
     public String contentType;
+
     public PutSnippetsWorkspaceEncodedIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class PutSnippetsWorkspaceEncodedIdResponse {
     
     
     public Integer statusCode;
+
     public PutSnippetsWorkspaceEncodedIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class PutSnippetsWorkspaceEncodedIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutSnippetsWorkspaceEncodedIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class PutSnippetsWorkspaceEncodedIdResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public PutSnippetsWorkspaceEncodedIdResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -50,9 +56,14 @@ public class PutSnippetsWorkspaceEncodedIdResponse {
      */
     
     public java.util.Map<String, Object> snippet;
+
     public PutSnippetsWorkspaceEncodedIdResponse withSnippet(java.util.Map<String, Object> snippet) {
         this.snippet = snippet;
         return this;
     }
     
+    public PutSnippetsWorkspaceEncodedIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

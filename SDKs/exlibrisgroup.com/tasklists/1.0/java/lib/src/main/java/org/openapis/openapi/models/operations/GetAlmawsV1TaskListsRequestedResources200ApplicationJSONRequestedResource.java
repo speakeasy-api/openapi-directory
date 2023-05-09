@@ -18,6 +18,7 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceLocation location;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResource withLocation(GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceLocation location) {
         this.location = location;
         return this;
@@ -29,6 +30,7 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request")
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequest[] request;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResource withRequest(GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequest[] request) {
         this.request = request;
         return this;
@@ -40,9 +42,11 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_metadata")
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceResourceMetadata resourceMetadata;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResource withResourceMetadata(GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceResourceMetadata resourceMetadata) {
         this.resourceMetadata = resourceMetadata;
         return this;
     }
     
+    public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResource(){}
 }

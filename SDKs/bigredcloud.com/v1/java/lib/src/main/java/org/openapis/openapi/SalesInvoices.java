@@ -59,11 +59,9 @@ public class SalesInvoices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SalesInvoicesDeleteResponse res = new org.openapis.openapi.models.operations.SalesInvoicesDeleteResponse() {{
+        org.openapis.openapi.models.operations.SalesInvoicesDeleteResponse res = new org.openapis.openapi.models.operations.SalesInvoicesDeleteResponse(contentType, httpRes.statusCode()) {{
             salesInvoicesDelete200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -96,11 +94,9 @@ public class SalesInvoices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SalesInvoicesGetResponse res = new org.openapis.openapi.models.operations.SalesInvoicesGetResponse() {{
+        org.openapis.openapi.models.operations.SalesInvoicesGetResponse res = new org.openapis.openapi.models.operations.SalesInvoicesGetResponse(contentType, httpRes.statusCode()) {{
             pageResultSalesInvoiceQueryDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -139,11 +135,9 @@ public class SalesInvoices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SalesInvoicesPostResponse res = new org.openapis.openapi.models.operations.SalesInvoicesPostResponse() {{
+        org.openapis.openapi.models.operations.SalesInvoicesPostResponse res = new org.openapis.openapi.models.operations.SalesInvoicesPostResponse(contentType, httpRes.statusCode()) {{
             salesInvoicesPost200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -182,11 +176,9 @@ public class SalesInvoices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SalesInvoicesPostCreateSaleInvoiceWithGeneratingReferenceResponse res = new org.openapis.openapi.models.operations.SalesInvoicesPostCreateSaleInvoiceWithGeneratingReferenceResponse() {{
+        org.openapis.openapi.models.operations.SalesInvoicesPostCreateSaleInvoiceWithGeneratingReferenceResponse res = new org.openapis.openapi.models.operations.SalesInvoicesPostCreateSaleInvoiceWithGeneratingReferenceResponse(contentType, httpRes.statusCode()) {{
             salesInvoicesPostCreateSaleInvoiceWithGeneratingReference200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -225,11 +217,9 @@ public class SalesInvoices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SalesInvoicesProcessBatchResponse res = new org.openapis.openapi.models.operations.SalesInvoicesProcessBatchResponse() {{
+        org.openapis.openapi.models.operations.SalesInvoicesProcessBatchResponse res = new org.openapis.openapi.models.operations.SalesInvoicesProcessBatchResponse(contentType, httpRes.statusCode()) {{
             salesInvoicesProcessBatch200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -268,11 +258,9 @@ public class SalesInvoices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SalesInvoicesPutResponse res = new org.openapis.openapi.models.operations.SalesInvoicesPutResponse() {{
+        org.openapis.openapi.models.operations.SalesInvoicesPutResponse res = new org.openapis.openapi.models.operations.SalesInvoicesPutResponse(contentType, httpRes.statusCode()) {{
             salesInvoicesPut200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -306,11 +294,9 @@ public class SalesInvoices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV1SalesInvoicesIdResponse res = new org.openapis.openapi.models.operations.GetV1SalesInvoicesIdResponse() {{
+        org.openapis.openapi.models.operations.GetV1SalesInvoicesIdResponse res = new org.openapis.openapi.models.operations.GetV1SalesInvoicesIdResponse(contentType, httpRes.statusCode()) {{
             salesInvoiceCreditNoteDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

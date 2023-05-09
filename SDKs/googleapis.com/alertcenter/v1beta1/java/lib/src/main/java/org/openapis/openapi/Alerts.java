@@ -62,11 +62,9 @@ public class Alerts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AlertcenterAlertsBatchDeleteResponse res = new org.openapis.openapi.models.operations.AlertcenterAlertsBatchDeleteResponse() {{
+        org.openapis.openapi.models.operations.AlertcenterAlertsBatchDeleteResponse res = new org.openapis.openapi.models.operations.AlertcenterAlertsBatchDeleteResponse(contentType, httpRes.statusCode()) {{
             batchDeleteAlertsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Alerts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AlertcenterAlertsBatchUndeleteResponse res = new org.openapis.openapi.models.operations.AlertcenterAlertsBatchUndeleteResponse() {{
+        org.openapis.openapi.models.operations.AlertcenterAlertsBatchUndeleteResponse res = new org.openapis.openapi.models.operations.AlertcenterAlertsBatchUndeleteResponse(contentType, httpRes.statusCode()) {{
             batchUndeleteAlertsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Alerts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AlertcenterAlertsDeleteResponse res = new org.openapis.openapi.models.operations.AlertcenterAlertsDeleteResponse() {{
+        org.openapis.openapi.models.operations.AlertcenterAlertsDeleteResponse res = new org.openapis.openapi.models.operations.AlertcenterAlertsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,11 +198,9 @@ public class Alerts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AlertcenterAlertsFeedbackCreateResponse res = new org.openapis.openapi.models.operations.AlertcenterAlertsFeedbackCreateResponse() {{
+        org.openapis.openapi.models.operations.AlertcenterAlertsFeedbackCreateResponse res = new org.openapis.openapi.models.operations.AlertcenterAlertsFeedbackCreateResponse(contentType, httpRes.statusCode()) {{
             alertFeedback = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Alerts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AlertcenterAlertsFeedbackListResponse res = new org.openapis.openapi.models.operations.AlertcenterAlertsFeedbackListResponse() {{
+        org.openapis.openapi.models.operations.AlertcenterAlertsFeedbackListResponse res = new org.openapis.openapi.models.operations.AlertcenterAlertsFeedbackListResponse(contentType, httpRes.statusCode()) {{
             listAlertFeedbackResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Alerts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AlertcenterAlertsGetResponse res = new org.openapis.openapi.models.operations.AlertcenterAlertsGetResponse() {{
+        org.openapis.openapi.models.operations.AlertcenterAlertsGetResponse res = new org.openapis.openapi.models.operations.AlertcenterAlertsGetResponse(contentType, httpRes.statusCode()) {{
             alert = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +330,9 @@ public class Alerts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AlertcenterAlertsGetMetadataResponse res = new org.openapis.openapi.models.operations.AlertcenterAlertsGetMetadataResponse() {{
+        org.openapis.openapi.models.operations.AlertcenterAlertsGetMetadataResponse res = new org.openapis.openapi.models.operations.AlertcenterAlertsGetMetadataResponse(contentType, httpRes.statusCode()) {{
             alertMetadata = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -388,11 +374,9 @@ public class Alerts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AlertcenterAlertsListResponse res = new org.openapis.openapi.models.operations.AlertcenterAlertsListResponse() {{
+        org.openapis.openapi.models.operations.AlertcenterAlertsListResponse res = new org.openapis.openapi.models.operations.AlertcenterAlertsListResponse(contentType, httpRes.statusCode()) {{
             listAlertsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -436,11 +420,9 @@ public class Alerts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AlertcenterAlertsUndeleteResponse res = new org.openapis.openapi.models.operations.AlertcenterAlertsUndeleteResponse() {{
+        org.openapis.openapi.models.operations.AlertcenterAlertsUndeleteResponse res = new org.openapis.openapi.models.operations.AlertcenterAlertsUndeleteResponse(contentType, httpRes.statusCode()) {{
             alert = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class OutputLogEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ingestionTime")
     public Long ingestionTime;
+
     public OutputLogEvent withIngestionTime(Long ingestionTime) {
         this.ingestionTime = ingestionTime;
         return this;
@@ -23,6 +24,7 @@ public class OutputLogEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public OutputLogEvent withMessage(String message) {
         this.message = message;
         return this;
@@ -31,9 +33,11 @@ public class OutputLogEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public Long timestamp;
+
     public OutputLogEvent withTimestamp(Long timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public OutputLogEvent(){}
 }

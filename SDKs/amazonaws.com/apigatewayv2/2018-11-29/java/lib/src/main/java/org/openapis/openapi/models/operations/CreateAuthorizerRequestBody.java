@@ -15,6 +15,7 @@ public class CreateAuthorizerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizerCredentialsArn")
     public String authorizerCredentialsArn;
+
     public CreateAuthorizerRequestBody withAuthorizerCredentialsArn(String authorizerCredentialsArn) {
         this.authorizerCredentialsArn = authorizerCredentialsArn;
         return this;
@@ -26,6 +27,7 @@ public class CreateAuthorizerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizerPayloadFormatVersion")
     public String authorizerPayloadFormatVersion;
+
     public CreateAuthorizerRequestBody withAuthorizerPayloadFormatVersion(String authorizerPayloadFormatVersion) {
         this.authorizerPayloadFormatVersion = authorizerPayloadFormatVersion;
         return this;
@@ -37,6 +39,7 @@ public class CreateAuthorizerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizerResultTtlInSeconds")
     public Long authorizerResultTtlInSeconds;
+
     public CreateAuthorizerRequestBody withAuthorizerResultTtlInSeconds(Long authorizerResultTtlInSeconds) {
         this.authorizerResultTtlInSeconds = authorizerResultTtlInSeconds;
         return this;
@@ -47,6 +50,7 @@ public class CreateAuthorizerRequestBody {
      */
     @JsonProperty("authorizerType")
     public CreateAuthorizerRequestBodyAuthorizerTypeEnum authorizerType;
+
     public CreateAuthorizerRequestBody withAuthorizerType(CreateAuthorizerRequestBodyAuthorizerTypeEnum authorizerType) {
         this.authorizerType = authorizerType;
         return this;
@@ -58,6 +62,7 @@ public class CreateAuthorizerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizerUri")
     public String authorizerUri;
+
     public CreateAuthorizerRequestBody withAuthorizerUri(String authorizerUri) {
         this.authorizerUri = authorizerUri;
         return this;
@@ -69,6 +74,7 @@ public class CreateAuthorizerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableSimpleResponses")
     public Boolean enableSimpleResponses;
+
     public CreateAuthorizerRequestBody withEnableSimpleResponses(Boolean enableSimpleResponses) {
         this.enableSimpleResponses = enableSimpleResponses;
         return this;
@@ -79,6 +85,7 @@ public class CreateAuthorizerRequestBody {
      */
     @JsonProperty("identitySource")
     public String[] identitySource;
+
     public CreateAuthorizerRequestBody withIdentitySource(String[] identitySource) {
         this.identitySource = identitySource;
         return this;
@@ -90,6 +97,7 @@ public class CreateAuthorizerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityValidationExpression")
     public String identityValidationExpression;
+
     public CreateAuthorizerRequestBody withIdentityValidationExpression(String identityValidationExpression) {
         this.identityValidationExpression = identityValidationExpression;
         return this;
@@ -101,6 +109,7 @@ public class CreateAuthorizerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jwtConfiguration")
     public CreateAuthorizerRequestBodyJwtConfiguration jwtConfiguration;
+
     public CreateAuthorizerRequestBody withJwtConfiguration(CreateAuthorizerRequestBodyJwtConfiguration jwtConfiguration) {
         this.jwtConfiguration = jwtConfiguration;
         return this;
@@ -111,9 +120,15 @@ public class CreateAuthorizerRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateAuthorizerRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateAuthorizerRequestBody(@JsonProperty("authorizerType") CreateAuthorizerRequestBodyAuthorizerTypeEnum authorizerType, @JsonProperty("identitySource") String[] identitySource, @JsonProperty("name") String name) {
+        this.authorizerType = authorizerType;
+        this.identitySource = identitySource;
+        this.name = name;
+  }
 }

@@ -12,9 +12,13 @@ public class DescribeSimulationJobBatchRequestBody {
      */
     @JsonProperty("batch")
     public String batch;
+
     public DescribeSimulationJobBatchRequestBody withBatch(String batch) {
         this.batch = batch;
         return this;
     }
     
+    public DescribeSimulationJobBatchRequestBody(@JsonProperty("batch") String batch) {
+        this.batch = batch;
+  }
 }

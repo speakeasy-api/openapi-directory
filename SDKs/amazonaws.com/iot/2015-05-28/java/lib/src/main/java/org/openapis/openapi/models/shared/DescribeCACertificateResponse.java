@@ -15,6 +15,7 @@ public class DescribeCACertificateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateDescription")
     public CACertificateDescription certificateDescription;
+
     public DescribeCACertificateResponse withCertificateDescription(CACertificateDescription certificateDescription) {
         this.certificateDescription = certificateDescription;
         return this;
@@ -23,9 +24,11 @@ public class DescribeCACertificateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrationConfig")
     public RegistrationConfig registrationConfig;
+
     public DescribeCACertificateResponse withRegistrationConfig(RegistrationConfig registrationConfig) {
         this.registrationConfig = registrationConfig;
         return this;
     }
     
+    public DescribeCACertificateResponse(){}
 }

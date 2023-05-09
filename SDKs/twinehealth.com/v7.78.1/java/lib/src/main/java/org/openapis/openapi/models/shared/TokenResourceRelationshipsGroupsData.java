@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TokenResourceRelationshipsGroupsData {
     @JsonProperty("id")
     public String id;
+
     public TokenResourceRelationshipsGroupsData withId(String id) {
         this.id = id;
         return this;
@@ -16,9 +17,14 @@ public class TokenResourceRelationshipsGroupsData {
     
     @JsonProperty("type")
     public TokenResourceRelationshipsGroupsDataTypeEnum type;
+
     public TokenResourceRelationshipsGroupsData withType(TokenResourceRelationshipsGroupsDataTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public TokenResourceRelationshipsGroupsData(@JsonProperty("id") String id, @JsonProperty("type") TokenResourceRelationshipsGroupsDataTypeEnum type) {
+        this.id = id;
+        this.type = type;
+  }
 }

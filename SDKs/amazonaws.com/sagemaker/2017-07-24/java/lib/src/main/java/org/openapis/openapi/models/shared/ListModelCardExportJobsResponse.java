@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListModelCardExportJobsResponse {
     @JsonProperty("ModelCardExportJobSummaries")
     public ModelCardExportJobSummary[] modelCardExportJobSummaries;
+
     public ListModelCardExportJobsResponse withModelCardExportJobSummaries(ModelCardExportJobSummary[] modelCardExportJobSummaries) {
         this.modelCardExportJobSummaries = modelCardExportJobSummaries;
         return this;
@@ -22,9 +23,13 @@ public class ListModelCardExportJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListModelCardExportJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListModelCardExportJobsResponse(@JsonProperty("ModelCardExportJobSummaries") ModelCardExportJobSummary[] modelCardExportJobSummaries) {
+        this.modelCardExportJobSummaries = modelCardExportJobSummaries;
+  }
 }

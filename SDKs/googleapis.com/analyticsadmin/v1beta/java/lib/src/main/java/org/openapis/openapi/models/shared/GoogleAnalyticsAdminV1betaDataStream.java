@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1betaDataStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidAppStreamData")
     public GoogleAnalyticsAdminV1betaDataStreamAndroidAppStreamData androidAppStreamData;
+
     public GoogleAnalyticsAdminV1betaDataStream withAndroidAppStreamData(GoogleAnalyticsAdminV1betaDataStreamAndroidAppStreamData androidAppStreamData) {
         this.androidAppStreamData = androidAppStreamData;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1betaDataStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleAnalyticsAdminV1betaDataStream withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1betaDataStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleAnalyticsAdminV1betaDataStream withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAnalyticsAdminV1betaDataStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iosAppStreamData")
     public GoogleAnalyticsAdminV1betaDataStreamIosAppStreamData iosAppStreamData;
+
     public GoogleAnalyticsAdminV1betaDataStream withIosAppStreamData(GoogleAnalyticsAdminV1betaDataStreamIosAppStreamData iosAppStreamData) {
         this.iosAppStreamData = iosAppStreamData;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAnalyticsAdminV1betaDataStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAnalyticsAdminV1betaDataStream withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAnalyticsAdminV1betaDataStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleAnalyticsAdminV1betaDataStreamTypeEnum type;
+
     public GoogleAnalyticsAdminV1betaDataStream withType(GoogleAnalyticsAdminV1betaDataStreamTypeEnum type) {
         this.type = type;
         return this;
@@ -84,6 +90,7 @@ public class GoogleAnalyticsAdminV1betaDataStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleAnalyticsAdminV1betaDataStream withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -95,9 +102,11 @@ public class GoogleAnalyticsAdminV1betaDataStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webStreamData")
     public GoogleAnalyticsAdminV1betaDataStreamWebStreamData webStreamData;
+
     public GoogleAnalyticsAdminV1betaDataStream withWebStreamData(GoogleAnalyticsAdminV1betaDataStreamWebStreamData webStreamData) {
         this.webStreamData = webStreamData;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1betaDataStream(){}
 }

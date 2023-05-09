@@ -15,9 +15,13 @@ public class PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequest
      */
     @JsonProperty("id")
     public Long id;
+
     public PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequestFirewallRemoveFromResourcesServer withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequestFirewallRemoveFromResourcesServer(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

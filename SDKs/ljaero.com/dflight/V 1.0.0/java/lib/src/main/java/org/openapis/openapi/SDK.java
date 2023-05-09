@@ -29,7 +29,7 @@ public class SDK {
 	 */
 	public static final String[] SERVERS = {
         /**
-         * DFlight API
+         * DFlight API v1.0.2
          */
         "https://dflight-api.ljaero.com/",
 	};
@@ -197,6 +197,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 		
 		this.aerodromes = new Aerodromes(

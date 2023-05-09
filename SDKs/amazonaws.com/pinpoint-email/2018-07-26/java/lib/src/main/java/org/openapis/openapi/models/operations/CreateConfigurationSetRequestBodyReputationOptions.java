@@ -22,6 +22,7 @@ public class CreateConfigurationSetRequestBodyReputationOptions {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastFreshStart")
     public OffsetDateTime lastFreshStart;
+
     public CreateConfigurationSetRequestBodyReputationOptions withLastFreshStart(OffsetDateTime lastFreshStart) {
         this.lastFreshStart = lastFreshStart;
         return this;
@@ -30,9 +31,11 @@ public class CreateConfigurationSetRequestBodyReputationOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReputationMetricsEnabled")
     public Boolean reputationMetricsEnabled;
+
     public CreateConfigurationSetRequestBodyReputationOptions withReputationMetricsEnabled(Boolean reputationMetricsEnabled) {
         this.reputationMetricsEnabled = reputationMetricsEnabled;
         return this;
     }
     
+    public CreateConfigurationSetRequestBodyReputationOptions(){}
 }

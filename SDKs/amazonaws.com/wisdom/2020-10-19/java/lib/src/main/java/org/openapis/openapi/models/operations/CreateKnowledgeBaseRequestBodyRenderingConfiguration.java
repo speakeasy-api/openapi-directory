@@ -15,9 +15,11 @@ public class CreateKnowledgeBaseRequestBodyRenderingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateUri")
     public String templateUri;
+
     public CreateKnowledgeBaseRequestBodyRenderingConfiguration withTemplateUri(String templateUri) {
         this.templateUri = templateUri;
         return this;
     }
     
+    public CreateKnowledgeBaseRequestBodyRenderingConfiguration(){}
 }

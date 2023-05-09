@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchAcknowledgeAlarmResponse {
@@ -12,6 +13,7 @@ public class BatchAcknowledgeAlarmResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchAcknowledgeAlarmResponse batchAcknowledgeAlarmResponse;
+
     public BatchAcknowledgeAlarmResponse withBatchAcknowledgeAlarmResponse(org.openapis.openapi.models.shared.BatchAcknowledgeAlarmResponse batchAcknowledgeAlarmResponse) {
         this.batchAcknowledgeAlarmResponse = batchAcknowledgeAlarmResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchAcknowledgeAlarmResponse {
     
     
     public String contentType;
+
     public BatchAcknowledgeAlarmResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchAcknowledgeAlarmResponse {
      */
     
     public Object internalFailureException;
+
     public BatchAcknowledgeAlarmResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class BatchAcknowledgeAlarmResponse {
      */
     
     public Object invalidRequestException;
+
     public BatchAcknowledgeAlarmResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class BatchAcknowledgeAlarmResponse {
     
     
     public Integer statusCode;
+
     public BatchAcknowledgeAlarmResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class BatchAcknowledgeAlarmResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchAcknowledgeAlarmResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class BatchAcknowledgeAlarmResponse {
      */
     
     public Object serviceUnavailableException;
+
     public BatchAcknowledgeAlarmResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -73,9 +81,14 @@ public class BatchAcknowledgeAlarmResponse {
      */
     
     public Object throttlingException;
+
     public BatchAcknowledgeAlarmResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public BatchAcknowledgeAlarmResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

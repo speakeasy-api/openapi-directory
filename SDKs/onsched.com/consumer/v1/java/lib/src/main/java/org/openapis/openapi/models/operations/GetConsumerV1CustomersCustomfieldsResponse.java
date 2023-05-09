@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetConsumerV1CustomersCustomfieldsResponse {
     
     public String contentType;
+
     public GetConsumerV1CustomersCustomfieldsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetConsumerV1CustomersCustomfieldsResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomFieldDefinitionListViewModel customFieldDefinitionListViewModel;
+
     public GetConsumerV1CustomersCustomfieldsResponse withCustomFieldDefinitionListViewModel(org.openapis.openapi.models.shared.CustomFieldDefinitionListViewModel customFieldDefinitionListViewModel) {
         this.customFieldDefinitionListViewModel = customFieldDefinitionListViewModel;
         return this;
@@ -26,6 +29,7 @@ public class GetConsumerV1CustomersCustomfieldsResponse {
     
     
     public Integer statusCode;
+
     public GetConsumerV1CustomersCustomfieldsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetConsumerV1CustomersCustomfieldsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetConsumerV1CustomersCustomfieldsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetConsumerV1CustomersCustomfieldsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

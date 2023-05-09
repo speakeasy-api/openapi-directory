@@ -15,6 +15,7 @@ public class AwsGroundStationAgentEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentStatus")
     public AgentStatusEnum agentStatus;
+
     public AwsGroundStationAgentEndpoint withAgentStatus(AgentStatusEnum agentStatus) {
         this.agentStatus = agentStatus;
         return this;
@@ -23,6 +24,7 @@ public class AwsGroundStationAgentEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auditResults")
     public AuditResultsEnum auditResults;
+
     public AwsGroundStationAgentEndpoint withAuditResults(AuditResultsEnum auditResults) {
         this.auditResults = auditResults;
         return this;
@@ -30,6 +32,7 @@ public class AwsGroundStationAgentEndpoint {
     
     @JsonProperty("egressAddress")
     public ConnectionDetails egressAddress;
+
     public AwsGroundStationAgentEndpoint withEgressAddress(ConnectionDetails egressAddress) {
         this.egressAddress = egressAddress;
         return this;
@@ -37,6 +40,7 @@ public class AwsGroundStationAgentEndpoint {
     
     @JsonProperty("ingressAddress")
     public RangedConnectionDetails ingressAddress;
+
     public AwsGroundStationAgentEndpoint withIngressAddress(RangedConnectionDetails ingressAddress) {
         this.ingressAddress = ingressAddress;
         return this;
@@ -44,9 +48,15 @@ public class AwsGroundStationAgentEndpoint {
     
     @JsonProperty("name")
     public String name;
+
     public AwsGroundStationAgentEndpoint withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AwsGroundStationAgentEndpoint(@JsonProperty("egressAddress") ConnectionDetails egressAddress, @JsonProperty("ingressAddress") RangedConnectionDetails ingressAddress, @JsonProperty("name") String name) {
+        this.egressAddress = egressAddress;
+        this.ingressAddress = ingressAddress;
+        this.name = name;
+  }
 }

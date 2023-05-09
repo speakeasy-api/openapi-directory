@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SubaccountAddRequest {
     @JsonProperty("keyid")
     public String keyid;
+
     public SubaccountAddRequest withKeyid(String keyid) {
         this.keyid = keyid;
         return this;
@@ -19,6 +20,7 @@ public class SubaccountAddRequest {
     
     @JsonProperty("subAccountEdit")
     public SubaccountAddRequestSubAccountEditEnum subAccountEdit;
+
     public SubaccountAddRequest withSubAccountEdit(SubaccountAddRequestSubAccountEditEnum subAccountEdit) {
         this.subAccountEdit = subAccountEdit;
         return this;
@@ -26,6 +28,7 @@ public class SubaccountAddRequest {
     
     @JsonProperty("subAccountLogin")
     public String subAccountLogin;
+
     public SubaccountAddRequest withSubAccountLogin(String subAccountLogin) {
         this.subAccountLogin = subAccountLogin;
         return this;
@@ -33,9 +36,16 @@ public class SubaccountAddRequest {
     
     @JsonProperty("subAccountPassword")
     public String subAccountPassword;
+
     public SubaccountAddRequest withSubAccountPassword(String subAccountPassword) {
         this.subAccountPassword = subAccountPassword;
         return this;
     }
     
+    public SubaccountAddRequest(@JsonProperty("keyid") String keyid, @JsonProperty("subAccountEdit") SubaccountAddRequestSubAccountEditEnum subAccountEdit, @JsonProperty("subAccountLogin") String subAccountLogin, @JsonProperty("subAccountPassword") String subAccountPassword) {
+        this.keyid = keyid;
+        this.subAccountEdit = subAccountEdit;
+        this.subAccountLogin = subAccountLogin;
+        this.subAccountPassword = subAccountPassword;
+  }
 }

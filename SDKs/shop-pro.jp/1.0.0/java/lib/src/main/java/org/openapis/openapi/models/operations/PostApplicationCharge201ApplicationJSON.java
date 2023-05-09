@@ -12,9 +12,11 @@ public class PostApplicationCharge201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("application_charge")
     public PostApplicationCharge201ApplicationJSONApplicationCharge applicationCharge;
+
     public PostApplicationCharge201ApplicationJSON withApplicationCharge(PostApplicationCharge201ApplicationJSONApplicationCharge applicationCharge) {
         this.applicationCharge = applicationCharge;
         return this;
     }
     
+    public PostApplicationCharge201ApplicationJSON(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ModifyDocumentPermissionResponse {
     
     public String contentType;
+
     public ModifyDocumentPermissionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ModifyDocumentPermissionResponse {
      */
     
     public Object documentLimitExceeded;
+
     public ModifyDocumentPermissionResponse withDocumentLimitExceeded(Object documentLimitExceeded) {
         this.documentLimitExceeded = documentLimitExceeded;
         return this;
@@ -29,6 +32,7 @@ public class ModifyDocumentPermissionResponse {
      */
     
     public Object documentPermissionLimit;
+
     public ModifyDocumentPermissionResponse withDocumentPermissionLimit(Object documentPermissionLimit) {
         this.documentPermissionLimit = documentPermissionLimit;
         return this;
@@ -39,6 +43,7 @@ public class ModifyDocumentPermissionResponse {
      */
     
     public Object internalServerError;
+
     public ModifyDocumentPermissionResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class ModifyDocumentPermissionResponse {
      */
     
     public Object invalidDocument;
+
     public ModifyDocumentPermissionResponse withInvalidDocument(Object invalidDocument) {
         this.invalidDocument = invalidDocument;
         return this;
@@ -59,6 +65,7 @@ public class ModifyDocumentPermissionResponse {
      */
     
     public Object invalidPermissionType;
+
     public ModifyDocumentPermissionResponse withInvalidPermissionType(Object invalidPermissionType) {
         this.invalidPermissionType = invalidPermissionType;
         return this;
@@ -69,6 +76,7 @@ public class ModifyDocumentPermissionResponse {
      */
     
     public java.util.Map<String, Object> modifyDocumentPermissionResponse;
+
     public ModifyDocumentPermissionResponse withModifyDocumentPermissionResponse(java.util.Map<String, Object> modifyDocumentPermissionResponse) {
         this.modifyDocumentPermissionResponse = modifyDocumentPermissionResponse;
         return this;
@@ -76,6 +84,7 @@ public class ModifyDocumentPermissionResponse {
     
     
     public Integer statusCode;
+
     public ModifyDocumentPermissionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ModifyDocumentPermissionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ModifyDocumentPermissionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ModifyDocumentPermissionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

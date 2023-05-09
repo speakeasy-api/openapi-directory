@@ -14,6 +14,7 @@ public class SendMessageRequestBody3Custom {
      */
     @JsonProperty("channel")
     public SendMessageRequestBody3CustomChannelEnum channel;
+
     public SendMessageRequestBody3Custom withChannel(SendMessageRequestBody3CustomChannelEnum channel) {
         this.channel = channel;
         return this;
@@ -25,6 +26,7 @@ public class SendMessageRequestBody3Custom {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_ref")
     public String clientRef;
+
     public SendMessageRequestBody3Custom withClientRef(String clientRef) {
         this.clientRef = clientRef;
         return this;
@@ -36,6 +38,7 @@ public class SendMessageRequestBody3Custom {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom")
     public java.util.Map<String, Object> custom;
+
     public SendMessageRequestBody3Custom withCustom(java.util.Map<String, Object> custom) {
         this.custom = custom;
         return this;
@@ -47,6 +50,7 @@ public class SendMessageRequestBody3Custom {
      */
     @JsonProperty("from")
     public String from;
+
     public SendMessageRequestBody3Custom withFrom(String from) {
         this.from = from;
         return this;
@@ -57,6 +61,7 @@ public class SendMessageRequestBody3Custom {
      */
     @JsonProperty("message_type")
     public SendMessageRequestBody3CustomMessageTypeEnum messageType;
+
     public SendMessageRequestBody3Custom withMessageType(SendMessageRequestBody3CustomMessageTypeEnum messageType) {
         this.messageType = messageType;
         return this;
@@ -68,9 +73,16 @@ public class SendMessageRequestBody3Custom {
      */
     @JsonProperty("to")
     public String to;
+
     public SendMessageRequestBody3Custom withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public SendMessageRequestBody3Custom(@JsonProperty("channel") SendMessageRequestBody3CustomChannelEnum channel, @JsonProperty("from") String from, @JsonProperty("message_type") SendMessageRequestBody3CustomMessageTypeEnum messageType, @JsonProperty("to") String to) {
+        this.channel = channel;
+        this.from = from;
+        this.messageType = messageType;
+        this.to = to;
+  }
 }

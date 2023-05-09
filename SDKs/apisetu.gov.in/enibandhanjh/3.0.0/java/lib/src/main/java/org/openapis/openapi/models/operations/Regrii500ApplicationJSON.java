@@ -15,6 +15,7 @@ public class Regrii500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Regrii500ApplicationJSONErrorEnum error;
+
     public Regrii500ApplicationJSON withError(Regrii500ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Regrii500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Regrii500ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Regrii500ApplicationJSON withErrorDescription(Regrii500ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Regrii500ApplicationJSON(){}
 }

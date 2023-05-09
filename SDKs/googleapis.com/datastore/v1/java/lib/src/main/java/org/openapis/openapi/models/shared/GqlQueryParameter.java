@@ -18,6 +18,7 @@ public class GqlQueryParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public GqlQueryParameter withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -29,9 +30,11 @@ public class GqlQueryParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Value value;
+
     public GqlQueryParameter withValue(Value value) {
         this.value = value;
         return this;
     }
     
+    public GqlQueryParameter(){}
 }

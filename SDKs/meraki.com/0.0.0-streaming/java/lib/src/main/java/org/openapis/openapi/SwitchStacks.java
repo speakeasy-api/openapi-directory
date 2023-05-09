@@ -11,7 +11,6 @@ import java.nio.charset.StandardCharsets;
 import org.openapis.openapi.utils.HTTPClient;
 import org.openapis.openapi.utils.HTTPRequest;
 import org.openapis.openapi.utils.JSON;
-import org.openapis.openapi.utils.SerializedBody;
 
 public class SwitchStacks {
 	
@@ -30,170 +29,6 @@ public class SwitchStacks {
 		this._sdkVersion = sdkVersion;
 		this._genVersion = genVersion;
 	}
-
-    /**
-     * Add a switch to a stack
-     * Add a switch to a stack
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.AddNetworkSwitchStackResponse addNetworkSwitchStack(org.openapis.openapi.models.operations.AddNetworkSwitchStackRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddNetworkSwitchStackRequest.class, baseUrl, "/networks/{networkId}/switchStacks/{switchStackId}/add", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("POST");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
-        if (serializedRequestBody == null) {
-            throw new Exception("Request body is required");
-        }
-        req.setBody(serializedRequestBody);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.AddNetworkSwitchStackResponse res = new org.openapis.openapi.models.operations.AddNetworkSwitchStackResponse() {{
-            addNetworkSwitchStack200ApplicationJSONObject = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.addNetworkSwitchStack200ApplicationJSONObject = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Create a stack
-     * Create a stack
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.CreateNetworkSwitchStackResponse createNetworkSwitchStack(org.openapis.openapi.models.operations.CreateNetworkSwitchStackRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSwitchStackRequest.class, baseUrl, "/networks/{networkId}/switchStacks", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("POST");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
-        if (serializedRequestBody == null) {
-            throw new Exception("Request body is required");
-        }
-        req.setBody(serializedRequestBody);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.CreateNetworkSwitchStackResponse res = new org.openapis.openapi.models.operations.CreateNetworkSwitchStackResponse() {{
-            createNetworkSwitchStack201ApplicationJSONObject = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 201) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.createNetworkSwitchStack201ApplicationJSONObject = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Delete a stack
-     * Delete a stack
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.DeleteNetworkSwitchStackResponse deleteNetworkSwitchStack(org.openapis.openapi.models.operations.DeleteNetworkSwitchStackRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSwitchStackRequest.class, baseUrl, "/networks/{networkId}/switchStacks/{switchStackId}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("DELETE");
-        req.setURL(url);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.DeleteNetworkSwitchStackResponse res = new org.openapis.openapi.models.operations.DeleteNetworkSwitchStackResponse() {{
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 204) {
-        }
-
-        return res;
-    }
-
-    /**
-     * Show a switch stack
-     * Show a switch stack
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.GetNetworkSwitchStackResponse getNetworkSwitchStack(org.openapis.openapi.models.operations.GetNetworkSwitchStackRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchStackRequest.class, baseUrl, "/networks/{networkId}/switchStacks/{switchStackId}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.GetNetworkSwitchStackResponse res = new org.openapis.openapi.models.operations.GetNetworkSwitchStackResponse() {{
-            getNetworkSwitchStack200ApplicationJSONObject = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.getNetworkSwitchStack200ApplicationJSONObject = out;
-            }
-        }
-
-        return res;
-    }
 
     /**
      * List the switch stacks in a network
@@ -217,11 +52,9 @@ public class SwitchStacks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSwitchStacksResponse res = new org.openapis.openapi.models.operations.GetNetworkSwitchStacksResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSwitchStacksResponse res = new org.openapis.openapi.models.operations.GetNetworkSwitchStacksResponse(contentType, httpRes.statusCode()) {{
             getNetworkSwitchStacks200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -229,51 +62,6 @@ public class SwitchStacks {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object>[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>[]>() {});
                 res.getNetworkSwitchStacks200ApplicationJSONObjects = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Remove a switch from a stack
-     * Remove a switch from a stack
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.RemoveNetworkSwitchStackResponse removeNetworkSwitchStack(org.openapis.openapi.models.operations.RemoveNetworkSwitchStackRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveNetworkSwitchStackRequest.class, baseUrl, "/networks/{networkId}/switchStacks/{switchStackId}/remove", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("POST");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
-        if (serializedRequestBody == null) {
-            throw new Exception("Request body is required");
-        }
-        req.setBody(serializedRequestBody);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.RemoveNetworkSwitchStackResponse res = new org.openapis.openapi.models.operations.RemoveNetworkSwitchStackResponse() {{
-            removeNetworkSwitchStack200ApplicationJSONObject = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.removeNetworkSwitchStack200ApplicationJSONObject = out;
             }
         }
 

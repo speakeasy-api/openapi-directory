@@ -12,6 +12,7 @@ public class RmcerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public RmcerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,6 +23,7 @@ public class RmcerRequestBodyCertificateParameters {
      */
     @JsonProperty("regno")
     public String regno;
+
     public RmcerRequestBodyCertificateParameters withRegno(String regno) {
         this.regno = regno;
         return this;
@@ -32,6 +34,7 @@ public class RmcerRequestBodyCertificateParameters {
      */
     @JsonProperty("sro_id")
     public String sroId;
+
     public RmcerRequestBodyCertificateParameters withSroId(String sroId) {
         this.sroId = sroId;
         return this;
@@ -42,9 +45,16 @@ public class RmcerRequestBodyCertificateParameters {
      */
     @JsonProperty("yr")
     public String yr;
+
     public RmcerRequestBodyCertificateParameters withYr(String yr) {
         this.yr = yr;
         return this;
     }
     
+    public RmcerRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("regno") String regno, @JsonProperty("sro_id") String sroId, @JsonProperty("yr") String yr) {
+        this.fullName = fullName;
+        this.regno = regno;
+        this.sroId = sroId;
+        this.yr = yr;
+  }
 }

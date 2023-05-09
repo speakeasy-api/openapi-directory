@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TimelineReviewedEventLinks {
     @JsonProperty("html")
     public TimelineReviewedEventLinksHtml html;
+
     public TimelineReviewedEventLinks withHtml(TimelineReviewedEventLinksHtml html) {
         this.html = html;
         return this;
@@ -16,9 +17,14 @@ public class TimelineReviewedEventLinks {
     
     @JsonProperty("pull_request")
     public TimelineReviewedEventLinksPullRequest pullRequest;
+
     public TimelineReviewedEventLinks withPullRequest(TimelineReviewedEventLinksPullRequest pullRequest) {
         this.pullRequest = pullRequest;
         return this;
     }
     
+    public TimelineReviewedEventLinks(@JsonProperty("html") TimelineReviewedEventLinksHtml html, @JsonProperty("pull_request") TimelineReviewedEventLinksPullRequest pullRequest) {
+        this.html = html;
+        this.pullRequest = pullRequest;
+  }
 }

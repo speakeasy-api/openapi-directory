@@ -12,9 +12,11 @@ public class GetOneRecurringPayment200ApplicationJSONResultSubscriber {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sub_partner_id")
     public String subPartnerId;
+
     public GetOneRecurringPayment200ApplicationJSONResultSubscriber withSubPartnerId(String subPartnerId) {
         this.subPartnerId = subPartnerId;
         return this;
     }
     
+    public GetOneRecurringPayment200ApplicationJSONResultSubscriber(){}
 }

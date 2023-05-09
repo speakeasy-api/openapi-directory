@@ -18,9 +18,11 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Integer index;
+
     public Location withIndex(Integer index) {
         this.index = index;
         return this;
     }
     
+    public Location(){}
 }

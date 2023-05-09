@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TranslateProjectsLocationsGetSupportedLanguagesResponse {
     
     public String contentType;
+
     public TranslateProjectsLocationsGetSupportedLanguagesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TranslateProjectsLocationsGetSupportedLanguagesResponse {
     
     
     public Integer statusCode;
+
     public TranslateProjectsLocationsGetSupportedLanguagesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TranslateProjectsLocationsGetSupportedLanguagesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TranslateProjectsLocationsGetSupportedLanguagesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class TranslateProjectsLocationsGetSupportedLanguagesResponse {
      */
     
     public org.openapis.openapi.models.shared.SupportedLanguages supportedLanguages;
+
     public TranslateProjectsLocationsGetSupportedLanguagesResponse withSupportedLanguages(org.openapis.openapi.models.shared.SupportedLanguages supportedLanguages) {
         this.supportedLanguages = supportedLanguages;
         return this;
     }
     
+    public TranslateProjectsLocationsGetSupportedLanguagesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

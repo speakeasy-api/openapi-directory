@@ -18,6 +18,7 @@ public class PivotGroupRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateTimeRule")
     public DateTimeRule dateTimeRule;
+
     public PivotGroupRule withDateTimeRule(DateTimeRule dateTimeRule) {
         this.dateTimeRule = dateTimeRule;
         return this;
@@ -29,6 +30,7 @@ public class PivotGroupRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("histogramRule")
     public HistogramRule histogramRule;
+
     public PivotGroupRule withHistogramRule(HistogramRule histogramRule) {
         this.histogramRule = histogramRule;
         return this;
@@ -40,9 +42,11 @@ public class PivotGroupRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manualRule")
     public ManualRule manualRule;
+
     public PivotGroupRule withManualRule(ManualRule manualRule) {
         this.manualRule = manualRule;
         return this;
     }
     
+    public PivotGroupRule(){}
 }

@@ -18,6 +18,7 @@ public class TargetVMDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appliedLicense")
     public AppliedLicense appliedLicense;
+
     public TargetVMDetails withAppliedLicense(AppliedLicense appliedLicense) {
         this.appliedLicense = appliedLicense;
         return this;
@@ -29,6 +30,7 @@ public class TargetVMDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bootOption")
     public TargetVMDetailsBootOptionEnum bootOption;
+
     public TargetVMDetails withBootOption(TargetVMDetailsBootOptionEnum bootOption) {
         this.bootOption = bootOption;
         return this;
@@ -40,6 +42,7 @@ public class TargetVMDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeScheduling")
     public ComputeScheduling computeScheduling;
+
     public TargetVMDetails withComputeScheduling(ComputeScheduling computeScheduling) {
         this.computeScheduling = computeScheduling;
         return this;
@@ -51,6 +54,7 @@ public class TargetVMDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskType")
     public TargetVMDetailsDiskTypeEnum diskType;
+
     public TargetVMDetails withDiskType(TargetVMDetailsDiskTypeEnum diskType) {
         this.diskType = diskType;
         return this;
@@ -62,6 +66,7 @@ public class TargetVMDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalIp")
     public String externalIp;
+
     public TargetVMDetails withExternalIp(String externalIp) {
         this.externalIp = externalIp;
         return this;
@@ -73,6 +78,7 @@ public class TargetVMDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internalIp")
     public String internalIp;
+
     public TargetVMDetails withInternalIp(String internalIp) {
         this.internalIp = internalIp;
         return this;
@@ -84,6 +90,7 @@ public class TargetVMDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public TargetVMDetails withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -95,6 +102,7 @@ public class TargetVMDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licenseType")
     public TargetVMDetailsLicenseTypeEnum licenseType;
+
     public TargetVMDetails withLicenseType(TargetVMDetailsLicenseTypeEnum licenseType) {
         this.licenseType = licenseType;
         return this;
@@ -106,6 +114,7 @@ public class TargetVMDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineType")
     public String machineType;
+
     public TargetVMDetails withMachineType(String machineType) {
         this.machineType = machineType;
         return this;
@@ -117,6 +126,7 @@ public class TargetVMDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineTypeSeries")
     public String machineTypeSeries;
+
     public TargetVMDetails withMachineTypeSeries(String machineTypeSeries) {
         this.machineTypeSeries = machineTypeSeries;
         return this;
@@ -128,6 +138,7 @@ public class TargetVMDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public TargetVMDetails withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -139,6 +150,7 @@ public class TargetVMDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TargetVMDetails withName(String name) {
         this.name = name;
         return this;
@@ -150,6 +162,7 @@ public class TargetVMDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public TargetVMDetails withNetwork(String network) {
         this.network = network;
         return this;
@@ -161,6 +174,7 @@ public class TargetVMDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkInterfaces")
     public NetworkInterface[] networkInterfaces;
+
     public TargetVMDetails withNetworkInterfaces(NetworkInterface[] networkInterfaces) {
         this.networkInterfaces = networkInterfaces;
         return this;
@@ -172,6 +186,7 @@ public class TargetVMDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkTags")
     public String[] networkTags;
+
     public TargetVMDetails withNetworkTags(String[] networkTags) {
         this.networkTags = networkTags;
         return this;
@@ -183,6 +198,7 @@ public class TargetVMDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public TargetVMDetails withProject(String project) {
         this.project = project;
         return this;
@@ -194,6 +210,7 @@ public class TargetVMDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secureBoot")
     public Boolean secureBoot;
+
     public TargetVMDetails withSecureBoot(Boolean secureBoot) {
         this.secureBoot = secureBoot;
         return this;
@@ -205,6 +222,7 @@ public class TargetVMDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccount")
     public String serviceAccount;
+
     public TargetVMDetails withServiceAccount(String serviceAccount) {
         this.serviceAccount = serviceAccount;
         return this;
@@ -216,6 +234,7 @@ public class TargetVMDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetwork")
     public String subnetwork;
+
     public TargetVMDetails withSubnetwork(String subnetwork) {
         this.subnetwork = subnetwork;
         return this;
@@ -227,6 +246,7 @@ public class TargetVMDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetProject")
     public String targetProject;
+
     public TargetVMDetails withTargetProject(String targetProject) {
         this.targetProject = targetProject;
         return this;
@@ -238,9 +258,11 @@ public class TargetVMDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public TargetVMDetails withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public TargetVMDetails(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdatepartialrecurrenceRequest {
     @JsonProperty("deliveryDay")
     public Integer deliveryDay;
+
     public UpdatepartialrecurrenceRequest withDeliveryDay(Integer deliveryDay) {
         this.deliveryDay = deliveryDay;
         return this;
@@ -16,6 +17,7 @@ public class UpdatepartialrecurrenceRequest {
     
     @JsonProperty("deliveryWeekday")
     public String deliveryWeekday;
+
     public UpdatepartialrecurrenceRequest withDeliveryWeekday(String deliveryWeekday) {
         this.deliveryWeekday = deliveryWeekday;
         return this;
@@ -23,9 +25,15 @@ public class UpdatepartialrecurrenceRequest {
     
     @JsonProperty("status")
     public String status;
+
     public UpdatepartialrecurrenceRequest withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public UpdatepartialrecurrenceRequest(@JsonProperty("deliveryDay") Integer deliveryDay, @JsonProperty("deliveryWeekday") String deliveryWeekday, @JsonProperty("status") String status) {
+        this.deliveryDay = deliveryDay;
+        this.deliveryWeekday = deliveryWeekday;
+        this.status = status;
+  }
 }

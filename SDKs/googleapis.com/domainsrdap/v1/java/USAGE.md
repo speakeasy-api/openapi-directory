@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.DomainsrdapAutnumGetRequest;
 import org.openapis.openapi.models.operations.DomainsrdapAutnumGetResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -15,11 +14,10 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DomainsrdapAutnumGetRequest req = new DomainsrdapAutnumGetRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                autnumId = "quibusdam";
+            DomainsrdapAutnumGetRequest req = new DomainsrdapAutnumGetRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
                 callback = "unde";
                 fields = "nulla";
                 key = "corrupti";
@@ -28,15 +26,17 @@ public class Application {
                 quotaUser = "vel";
                 uploadType = "error";
                 uploadProtocol = "deserunt";
-            }}            
+            }};            
 
             DomainsrdapAutnumGetResponse res = sdk.autnum.domainsrdapAutnumGet(req);
 
-            if (res.rdapResponse.isPresent()) {
+            if (res.rdapResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -15,6 +15,7 @@ public class NodesRegistrationsListRegistrationAttributes {
      */
     
     public NodesRegistrationsListRegistrationAttributesCategoryEnum category;
+
     public NodesRegistrationsListRegistrationAttributes withCategory(NodesRegistrationsListRegistrationAttributesCategoryEnum category) {
         this.category = category;
         return this;
@@ -25,6 +26,7 @@ public class NodesRegistrationsListRegistrationAttributes {
      */
     
     public Boolean collection;
+
     public NodesRegistrationsListRegistrationAttributes withCollection(Boolean collection) {
         this.collection = collection;
         return this;
@@ -35,6 +37,7 @@ public class NodesRegistrationsListRegistrationAttributes {
      */
     
     public Boolean currentUserCanComment;
+
     public NodesRegistrationsListRegistrationAttributes withCurrentUserCanComment(Boolean currentUserCanComment) {
         this.currentUserCanComment = currentUserCanComment;
         return this;
@@ -45,6 +48,7 @@ public class NodesRegistrationsListRegistrationAttributes {
      */
     
     public String[] currentUserPermissions;
+
     public NodesRegistrationsListRegistrationAttributes withCurrentUserPermissions(String[] currentUserPermissions) {
         this.currentUserPermissions = currentUserPermissions;
         return this;
@@ -55,6 +59,7 @@ public class NodesRegistrationsListRegistrationAttributes {
      */
     
     public OffsetDateTime dateCreated;
+
     public NodesRegistrationsListRegistrationAttributes withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -65,6 +70,7 @@ public class NodesRegistrationsListRegistrationAttributes {
      */
     
     public OffsetDateTime dateModified;
+
     public NodesRegistrationsListRegistrationAttributes withDateModified(OffsetDateTime dateModified) {
         this.dateModified = dateModified;
         return this;
@@ -75,6 +81,7 @@ public class NodesRegistrationsListRegistrationAttributes {
      */
     
     public OffsetDateTime dateRegistered;
+
     public NodesRegistrationsListRegistrationAttributes withDateRegistered(OffsetDateTime dateRegistered) {
         this.dateRegistered = dateRegistered;
         return this;
@@ -85,6 +92,7 @@ public class NodesRegistrationsListRegistrationAttributes {
      */
     
     public OffsetDateTime dateWithdrawn;
+
     public NodesRegistrationsListRegistrationAttributes withDateWithdrawn(OffsetDateTime dateWithdrawn) {
         this.dateWithdrawn = dateWithdrawn;
         return this;
@@ -95,6 +103,7 @@ public class NodesRegistrationsListRegistrationAttributes {
      */
     
     public String description;
+
     public NodesRegistrationsListRegistrationAttributes withDescription(String description) {
         this.description = description;
         return this;
@@ -105,6 +114,7 @@ public class NodesRegistrationsListRegistrationAttributes {
      */
     
     public OffsetDateTime embargoEndDate;
+
     public NodesRegistrationsListRegistrationAttributes withEmbargoEndDate(OffsetDateTime embargoEndDate) {
         this.embargoEndDate = embargoEndDate;
         return this;
@@ -115,6 +125,7 @@ public class NodesRegistrationsListRegistrationAttributes {
      */
     
     public Boolean fork;
+
     public NodesRegistrationsListRegistrationAttributes withFork(Boolean fork) {
         this.fork = fork;
         return this;
@@ -125,6 +136,7 @@ public class NodesRegistrationsListRegistrationAttributes {
      */
     
     public String nodeLicense;
+
     public NodesRegistrationsListRegistrationAttributes withNodeLicense(String nodeLicense) {
         this.nodeLicense = nodeLicense;
         return this;
@@ -135,6 +147,7 @@ public class NodesRegistrationsListRegistrationAttributes {
      */
     
     public Boolean pendingEmbargoApproval;
+
     public NodesRegistrationsListRegistrationAttributes withPendingEmbargoApproval(Boolean pendingEmbargoApproval) {
         this.pendingEmbargoApproval = pendingEmbargoApproval;
         return this;
@@ -145,6 +158,7 @@ public class NodesRegistrationsListRegistrationAttributes {
      */
     
     public Boolean pendingRegistrationApproval;
+
     public NodesRegistrationsListRegistrationAttributes withPendingRegistrationApproval(Boolean pendingRegistrationApproval) {
         this.pendingRegistrationApproval = pendingRegistrationApproval;
         return this;
@@ -155,6 +169,7 @@ public class NodesRegistrationsListRegistrationAttributes {
      */
     
     public Boolean pendingWithdrawal;
+
     public NodesRegistrationsListRegistrationAttributes withPendingWithdrawal(Boolean pendingWithdrawal) {
         this.pendingWithdrawal = pendingWithdrawal;
         return this;
@@ -165,6 +180,7 @@ public class NodesRegistrationsListRegistrationAttributes {
      */
     
     public Boolean preprint;
+
     public NodesRegistrationsListRegistrationAttributes withPreprint(Boolean preprint) {
         this.preprint = preprint;
         return this;
@@ -175,6 +191,7 @@ public class NodesRegistrationsListRegistrationAttributes {
      */
     
     public Boolean public_;
+
     public NodesRegistrationsListRegistrationAttributes withPublic(Boolean public_) {
         this.public_ = public_;
         return this;
@@ -185,6 +202,7 @@ public class NodesRegistrationsListRegistrationAttributes {
      */
     
     public String registeredMeta;
+
     public NodesRegistrationsListRegistrationAttributes withRegisteredMeta(String registeredMeta) {
         this.registeredMeta = registeredMeta;
         return this;
@@ -195,6 +213,7 @@ public class NodesRegistrationsListRegistrationAttributes {
      */
     
     public Boolean registration;
+
     public NodesRegistrationsListRegistrationAttributes withRegistration(Boolean registration) {
         this.registration = registration;
         return this;
@@ -205,6 +224,7 @@ public class NodesRegistrationsListRegistrationAttributes {
      */
     
     public String registrationSupplement;
+
     public NodesRegistrationsListRegistrationAttributes withRegistrationSupplement(String registrationSupplement) {
         this.registrationSupplement = registrationSupplement;
         return this;
@@ -215,6 +235,7 @@ public class NodesRegistrationsListRegistrationAttributes {
      */
     
     public String[] tags;
+
     public NodesRegistrationsListRegistrationAttributes withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -225,6 +246,7 @@ public class NodesRegistrationsListRegistrationAttributes {
      */
     
     public String templateFrom;
+
     public NodesRegistrationsListRegistrationAttributes withTemplateFrom(String templateFrom) {
         this.templateFrom = templateFrom;
         return this;
@@ -235,6 +257,7 @@ public class NodesRegistrationsListRegistrationAttributes {
      */
     
     public String title;
+
     public NodesRegistrationsListRegistrationAttributes withTitle(String title) {
         this.title = title;
         return this;
@@ -245,6 +268,7 @@ public class NodesRegistrationsListRegistrationAttributes {
      */
     
     public String withdrawalJustification;
+
     public NodesRegistrationsListRegistrationAttributes withWithdrawalJustification(String withdrawalJustification) {
         this.withdrawalJustification = withdrawalJustification;
         return this;
@@ -255,9 +279,11 @@ public class NodesRegistrationsListRegistrationAttributes {
      */
     
     public Boolean withdrawn;
+
     public NodesRegistrationsListRegistrationAttributes withWithdrawn(Boolean withdrawn) {
         this.withdrawn = withdrawn;
         return this;
     }
     
+    public NodesRegistrationsListRegistrationAttributes(){}
 }

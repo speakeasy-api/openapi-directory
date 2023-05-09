@@ -18,6 +18,7 @@ public class TextSpan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beginOffset")
     public Integer beginOffset;
+
     public TextSpan withBeginOffset(Integer beginOffset) {
         this.beginOffset = beginOffset;
         return this;
@@ -29,9 +30,11 @@ public class TextSpan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public TextSpan withContent(String content) {
         this.content = content;
         return this;
     }
     
+    public TextSpan(){}
 }

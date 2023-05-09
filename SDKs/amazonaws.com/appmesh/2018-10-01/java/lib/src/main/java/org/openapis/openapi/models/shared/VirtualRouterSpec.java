@@ -15,9 +15,11 @@ public class VirtualRouterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceNames")
     public String[] serviceNames;
+
     public VirtualRouterSpec withServiceNames(String[] serviceNames) {
         this.serviceNames = serviceNames;
         return this;
     }
     
+    public VirtualRouterSpec(){}
 }

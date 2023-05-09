@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DescribeAddonVersionsRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DescribeAddonVersionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +17,7 @@ public class DescribeAddonVersionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DescribeAddonVersionsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +25,7 @@ public class DescribeAddonVersionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DescribeAddonVersionsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +33,7 @@ public class DescribeAddonVersionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DescribeAddonVersionsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +41,7 @@ public class DescribeAddonVersionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DescribeAddonVersionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +49,7 @@ public class DescribeAddonVersionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DescribeAddonVersionsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +57,7 @@ public class DescribeAddonVersionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DescribeAddonVersionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +68,7 @@ public class DescribeAddonVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=addonName")
     public String addonName;
+
     public DescribeAddonVersionsRequest withAddonName(String addonName) {
         this.addonName = addonName;
         return this;
@@ -71,6 +79,7 @@ public class DescribeAddonVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=kubernetesVersion")
     public String kubernetesVersion;
+
     public DescribeAddonVersionsRequest withKubernetesVersion(String kubernetesVersion) {
         this.kubernetesVersion = kubernetesVersion;
         return this;
@@ -81,6 +90,7 @@ public class DescribeAddonVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public DescribeAddonVersionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -91,6 +101,7 @@ public class DescribeAddonVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public DescribeAddonVersionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -101,6 +112,7 @@ public class DescribeAddonVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=owners")
     public String[] owners;
+
     public DescribeAddonVersionsRequest withOwners(String[] owners) {
         this.owners = owners;
         return this;
@@ -111,6 +123,7 @@ public class DescribeAddonVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=publishers")
     public String[] publishers;
+
     public DescribeAddonVersionsRequest withPublishers(String[] publishers) {
         this.publishers = publishers;
         return this;
@@ -121,9 +134,11 @@ public class DescribeAddonVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=types")
     public String[] types;
+
     public DescribeAddonVersionsRequest withTypes(String[] types) {
         this.types = types;
         return this;
     }
     
+    public DescribeAddonVersionsRequest(){}
 }

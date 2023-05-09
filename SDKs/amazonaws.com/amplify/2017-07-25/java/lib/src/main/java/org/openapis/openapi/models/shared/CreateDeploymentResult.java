@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateDeploymentResult {
     @JsonProperty("fileUploadUrls")
     public java.util.Map<String, String> fileUploadUrls;
+
     public CreateDeploymentResult withFileUploadUrls(java.util.Map<String, String> fileUploadUrls) {
         this.fileUploadUrls = fileUploadUrls;
         return this;
@@ -22,6 +23,7 @@ public class CreateDeploymentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobId")
     public String jobId;
+
     public CreateDeploymentResult withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -29,9 +31,14 @@ public class CreateDeploymentResult {
     
     @JsonProperty("zipUploadUrl")
     public String zipUploadUrl;
+
     public CreateDeploymentResult withZipUploadUrl(String zipUploadUrl) {
         this.zipUploadUrl = zipUploadUrl;
         return this;
     }
     
+    public CreateDeploymentResult(@JsonProperty("fileUploadUrls") java.util.Map<String, String> fileUploadUrls, @JsonProperty("zipUploadUrl") String zipUploadUrl) {
+        this.fileUploadUrls = fileUploadUrls;
+        this.zipUploadUrl = zipUploadUrl;
+  }
 }

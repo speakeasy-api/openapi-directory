@@ -15,6 +15,7 @@ public class OBWriteDomesticStandingOrderConsent5DataInitiationFirstPaymentAmoun
      */
     @JsonProperty("Amount")
     public String amount;
+
     public OBWriteDomesticStandingOrderConsent5DataInitiationFirstPaymentAmount withAmount(String amount) {
         this.amount = amount;
         return this;
@@ -25,9 +26,14 @@ public class OBWriteDomesticStandingOrderConsent5DataInitiationFirstPaymentAmoun
      */
     @JsonProperty("Currency")
     public String currency;
+
     public OBWriteDomesticStandingOrderConsent5DataInitiationFirstPaymentAmount withCurrency(String currency) {
         this.currency = currency;
         return this;
     }
     
+    public OBWriteDomesticStandingOrderConsent5DataInitiationFirstPaymentAmount(@JsonProperty("Amount") String amount, @JsonProperty("Currency") String currency) {
+        this.amount = amount;
+        this.currency = currency;
+  }
 }

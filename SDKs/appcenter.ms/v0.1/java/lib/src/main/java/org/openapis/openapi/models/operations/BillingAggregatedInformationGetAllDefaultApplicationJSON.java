@@ -15,9 +15,11 @@ public class BillingAggregatedInformationGetAllDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public BillingAggregatedInformationGetAllDefaultApplicationJSONError error;
+
     public BillingAggregatedInformationGetAllDefaultApplicationJSON withError(BillingAggregatedInformationGetAllDefaultApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public BillingAggregatedInformationGetAllDefaultApplicationJSON(){}
 }

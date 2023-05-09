@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TransferCreditRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TransferBalanceOrCreditRequest transferBalanceOrCreditRequest;
+
     public TransferCreditRequest withTransferBalanceOrCreditRequest(org.openapis.openapi.models.shared.TransferBalanceOrCreditRequest transferBalanceOrCreditRequest) {
         this.transferBalanceOrCreditRequest = transferBalanceOrCreditRequest;
         return this;
@@ -19,9 +21,14 @@ public class TransferCreditRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api_key")
     public String apiKey;
+
     public TransferCreditRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public TransferCreditRequest(@JsonProperty("TransferBalanceOrCreditRequest") org.openapis.openapi.models.shared.TransferBalanceOrCreditRequest transferBalanceOrCreditRequest, @JsonProperty("api_key") String apiKey) {
+        this.transferBalanceOrCreditRequest = transferBalanceOrCreditRequest;
+        this.apiKey = apiKey;
+  }
 }

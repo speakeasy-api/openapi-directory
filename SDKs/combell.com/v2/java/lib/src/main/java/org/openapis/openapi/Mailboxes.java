@@ -64,10 +64,8 @@ public class Mailboxes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangeMailboxPasswordResponse res = new org.openapis.openapi.models.operations.ChangeMailboxPasswordResponse() {{
+        org.openapis.openapi.models.operations.ChangeMailboxPasswordResponse res = new org.openapis.openapi.models.operations.ChangeMailboxPasswordResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -104,10 +102,8 @@ public class Mailboxes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfigureMailboxAutoForwardResponse res = new org.openapis.openapi.models.operations.ConfigureMailboxAutoForwardResponse() {{
+        org.openapis.openapi.models.operations.ConfigureMailboxAutoForwardResponse res = new org.openapis.openapi.models.operations.ConfigureMailboxAutoForwardResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -144,10 +140,8 @@ public class Mailboxes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfigureMailboxAutoReplyResponse res = new org.openapis.openapi.models.operations.ConfigureMailboxAutoReplyResponse() {{
+        org.openapis.openapi.models.operations.ConfigureMailboxAutoReplyResponse res = new org.openapis.openapi.models.operations.ConfigureMailboxAutoReplyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -178,10 +172,8 @@ public class Mailboxes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateMailboxResponse res = new org.openapis.openapi.models.operations.CreateMailboxResponse() {{
+        org.openapis.openapi.models.operations.CreateMailboxResponse res = new org.openapis.openapi.models.operations.CreateMailboxResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -218,10 +210,8 @@ public class Mailboxes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteMailboxResponse res = new org.openapis.openapi.models.operations.DeleteMailboxResponse() {{
+        org.openapis.openapi.models.operations.DeleteMailboxResponse res = new org.openapis.openapi.models.operations.DeleteMailboxResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400) {
@@ -256,11 +246,9 @@ public class Mailboxes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMailboxResponse res = new org.openapis.openapi.models.operations.GetMailboxResponse() {{
+        org.openapis.openapi.models.operations.GetMailboxResponse res = new org.openapis.openapi.models.operations.GetMailboxResponse(contentType, httpRes.statusCode()) {{
             mailboxDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -301,11 +289,9 @@ public class Mailboxes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMailboxesResponse res = new org.openapis.openapi.models.operations.GetMailboxesResponse() {{
+        org.openapis.openapi.models.operations.GetMailboxesResponse res = new org.openapis.openapi.models.operations.GetMailboxesResponse(contentType, httpRes.statusCode()) {{
             mailboxes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

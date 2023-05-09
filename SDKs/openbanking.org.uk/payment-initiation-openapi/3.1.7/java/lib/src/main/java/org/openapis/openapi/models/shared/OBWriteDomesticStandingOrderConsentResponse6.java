@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OBWriteDomesticStandingOrderConsentResponse6 {
     @JsonProperty("Data")
     public OBWriteDomesticStandingOrderConsentResponse6Data data;
+
     public OBWriteDomesticStandingOrderConsentResponse6 withData(OBWriteDomesticStandingOrderConsentResponse6Data data) {
         this.data = data;
         return this;
@@ -25,6 +26,7 @@ public class OBWriteDomesticStandingOrderConsentResponse6 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Links")
     public Links links;
+
     public OBWriteDomesticStandingOrderConsentResponse6 withLinks(Links links) {
         this.links = links;
         return this;
@@ -36,6 +38,7 @@ public class OBWriteDomesticStandingOrderConsentResponse6 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Meta")
     public Meta meta;
+
     public OBWriteDomesticStandingOrderConsentResponse6 withMeta(Meta meta) {
         this.meta = meta;
         return this;
@@ -46,9 +49,14 @@ public class OBWriteDomesticStandingOrderConsentResponse6 {
      */
     @JsonProperty("Risk")
     public OBRisk1 risk;
+
     public OBWriteDomesticStandingOrderConsentResponse6 withRisk(OBRisk1 risk) {
         this.risk = risk;
         return this;
     }
     
+    public OBWriteDomesticStandingOrderConsentResponse6(@JsonProperty("Data") OBWriteDomesticStandingOrderConsentResponse6Data data, @JsonProperty("Risk") OBRisk1 risk) {
+        this.data = data;
+        this.risk = risk;
+  }
 }

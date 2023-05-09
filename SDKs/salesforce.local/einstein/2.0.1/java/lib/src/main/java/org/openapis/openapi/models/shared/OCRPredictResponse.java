@@ -15,6 +15,7 @@ public class OCRPredictResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public OCRPredictResponse withObject(String object) {
         this.object = object;
         return this;
@@ -23,6 +24,7 @@ public class OCRPredictResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("probabilities")
     public OCRResult[] probabilities;
+
     public OCRPredictResponse withProbabilities(OCRResult[] probabilities) {
         this.probabilities = probabilities;
         return this;
@@ -34,6 +36,7 @@ public class OCRPredictResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleId")
     public String sampleId;
+
     public OCRPredictResponse withSampleId(String sampleId) {
         this.sampleId = sampleId;
         return this;
@@ -45,9 +48,11 @@ public class OCRPredictResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task")
     public String task;
+
     public OCRPredictResponse withTask(String task) {
         this.task = task;
         return this;
     }
     
+    public OCRPredictResponse(){}
 }

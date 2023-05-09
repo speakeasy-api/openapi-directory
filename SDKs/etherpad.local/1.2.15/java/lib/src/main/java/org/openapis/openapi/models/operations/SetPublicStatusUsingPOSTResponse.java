@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetPublicStatusUsingPOSTResponse {
     
     public String contentType;
+
     public SetPublicStatusUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SetPublicStatusUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public SetPublicStatusUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SetPublicStatusUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetPublicStatusUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SetPublicStatusUsingPOSTResponse {
      */
     
     public SetPublicStatusUsingPOST200ApplicationJSON setPublicStatusUsingPOST200ApplicationJSONObject;
+
     public SetPublicStatusUsingPOSTResponse withSetPublicStatusUsingPOST200ApplicationJSONObject(SetPublicStatusUsingPOST200ApplicationJSON setPublicStatusUsingPOST200ApplicationJSONObject) {
         this.setPublicStatusUsingPOST200ApplicationJSONObject = setPublicStatusUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class SetPublicStatusUsingPOSTResponse {
      */
     
     public SetPublicStatusUsingPOST400ApplicationJSON setPublicStatusUsingPOST400ApplicationJSONObject;
+
     public SetPublicStatusUsingPOSTResponse withSetPublicStatusUsingPOST400ApplicationJSONObject(SetPublicStatusUsingPOST400ApplicationJSON setPublicStatusUsingPOST400ApplicationJSONObject) {
         this.setPublicStatusUsingPOST400ApplicationJSONObject = setPublicStatusUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class SetPublicStatusUsingPOSTResponse {
      */
     
     public SetPublicStatusUsingPOST401ApplicationJSON setPublicStatusUsingPOST401ApplicationJSONObject;
+
     public SetPublicStatusUsingPOSTResponse withSetPublicStatusUsingPOST401ApplicationJSONObject(SetPublicStatusUsingPOST401ApplicationJSON setPublicStatusUsingPOST401ApplicationJSONObject) {
         this.setPublicStatusUsingPOST401ApplicationJSONObject = setPublicStatusUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class SetPublicStatusUsingPOSTResponse {
      */
     
     public SetPublicStatusUsingPOST500ApplicationJSON setPublicStatusUsingPOST500ApplicationJSONObject;
+
     public SetPublicStatusUsingPOSTResponse withSetPublicStatusUsingPOST500ApplicationJSONObject(SetPublicStatusUsingPOST500ApplicationJSON setPublicStatusUsingPOST500ApplicationJSONObject) {
         this.setPublicStatusUsingPOST500ApplicationJSONObject = setPublicStatusUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public SetPublicStatusUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -262,4 +262,15 @@ lib/src/main/java/org/openapis/openapi/models/shared/UrlChannels.java
 lib/src/main/java/org/openapis/openapi/models/shared/UrlChannel.java
 lib/src/main/java/org/openapis/openapi/models/shared/Metadata.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReportingMetadataEntry.java
+docs/sdk/README.md
+docs/accounts/README.md
+docs/adclients/README.md
+docs/adunits/README.md
+docs/alerts/README.md
+docs/customchannels/README.md
+docs/metadata/README.md
+docs/payments/README.md
+docs/reports/README.md
+docs/savedadstyles/README.md
+docs/urlchannels/README.md
 USAGE.md

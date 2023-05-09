@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class InventoryVaccinesReadResponse {
     
     public String contentType;
+
     public InventoryVaccinesReadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class InventoryVaccinesReadResponse {
      */
     
     public org.openapis.openapi.models.shared.InventoryVaccine inventoryVaccine;
+
     public InventoryVaccinesReadResponse withInventoryVaccine(org.openapis.openapi.models.shared.InventoryVaccine inventoryVaccine) {
         this.inventoryVaccine = inventoryVaccine;
         return this;
@@ -26,6 +29,7 @@ public class InventoryVaccinesReadResponse {
     
     
     public Integer statusCode;
+
     public InventoryVaccinesReadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class InventoryVaccinesReadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public InventoryVaccinesReadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public InventoryVaccinesReadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

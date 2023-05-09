@@ -14,6 +14,7 @@ public class StartExportRequestBody {
      */
     @JsonProperty("s3Bucket")
     public String s3Bucket;
+
     public StartExportRequestBody withS3Bucket(String s3Bucket) {
         this.s3Bucket = s3Bucket;
         return this;
@@ -25,6 +26,7 @@ public class StartExportRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3BucketOwner")
     public String s3BucketOwner;
+
     public StartExportRequestBody withS3BucketOwner(String s3BucketOwner) {
         this.s3BucketOwner = s3BucketOwner;
         return this;
@@ -35,9 +37,14 @@ public class StartExportRequestBody {
      */
     @JsonProperty("s3Key")
     public String s3Key;
+
     public StartExportRequestBody withS3Key(String s3Key) {
         this.s3Key = s3Key;
         return this;
     }
     
+    public StartExportRequestBody(@JsonProperty("s3Bucket") String s3Bucket, @JsonProperty("s3Key") String s3Key) {
+        this.s3Bucket = s3Bucket;
+        this.s3Key = s3Key;
+  }
 }

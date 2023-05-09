@@ -15,6 +15,7 @@ public class DescribeDataRepositoryTasksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataRepositoryTasks")
     public DataRepositoryTask[] dataRepositoryTasks;
+
     public DescribeDataRepositoryTasksResponse withDataRepositoryTasks(DataRepositoryTask[] dataRepositoryTasks) {
         this.dataRepositoryTasks = dataRepositoryTasks;
         return this;
@@ -26,9 +27,11 @@ public class DescribeDataRepositoryTasksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeDataRepositoryTasksResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeDataRepositoryTasksResponse(){}
 }

@@ -18,6 +18,7 @@ public class InvoiceNotification2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public InvoiceNotification2200ApplicationJSON withDate(String date) {
         this.date = date;
         return this;
@@ -29,6 +30,7 @@ public class InvoiceNotification2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderId")
     public String orderId;
+
     public InvoiceNotification2200ApplicationJSON withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -40,9 +42,11 @@ public class InvoiceNotification2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receipt")
     public String receipt;
+
     public InvoiceNotification2200ApplicationJSON withReceipt(String receipt) {
         this.receipt = receipt;
         return this;
     }
     
+    public InvoiceNotification2200ApplicationJSON(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DataShare {
     
     public Boolean allowPubliclyAccessibleConsumers;
+
     public DataShare withAllowPubliclyAccessibleConsumers(Boolean allowPubliclyAccessibleConsumers) {
         this.allowPubliclyAccessibleConsumers = allowPubliclyAccessibleConsumers;
         return this;
@@ -19,6 +20,7 @@ public class DataShare {
     
     
     public String dataShareArn;
+
     public DataShare withDataShareArn(String dataShareArn) {
         this.dataShareArn = dataShareArn;
         return this;
@@ -26,6 +28,7 @@ public class DataShare {
     
     
     public DataShareAssociation[] dataShareAssociations;
+
     public DataShare withDataShareAssociations(DataShareAssociation[] dataShareAssociations) {
         this.dataShareAssociations = dataShareAssociations;
         return this;
@@ -33,6 +36,7 @@ public class DataShare {
     
     
     public String managedBy;
+
     public DataShare withManagedBy(String managedBy) {
         this.managedBy = managedBy;
         return this;
@@ -40,9 +44,11 @@ public class DataShare {
     
     
     public String producerArn;
+
     public DataShare withProducerArn(String producerArn) {
         this.producerArn = producerArn;
         return this;
     }
     
+    public DataShare(){}
 }

@@ -76,4 +76,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/CustomerRead.java
 lib/src/main/java/org/openapis/openapi/models/shared/SessionAcquiringChannelEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/SessionIntentEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/SessionInput.java
+docs/sdk/README.md
+docs/orders/README.md
+docs/sessions/README.md
 USAGE.md

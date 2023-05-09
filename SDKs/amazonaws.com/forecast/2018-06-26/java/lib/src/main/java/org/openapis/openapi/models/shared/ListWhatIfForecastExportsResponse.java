@@ -15,6 +15,7 @@ public class ListWhatIfForecastExportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListWhatIfForecastExportsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListWhatIfForecastExportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WhatIfForecastExports")
     public WhatIfForecastExportSummary[] whatIfForecastExports;
+
     public ListWhatIfForecastExportsResponse withWhatIfForecastExports(WhatIfForecastExportSummary[] whatIfForecastExports) {
         this.whatIfForecastExports = whatIfForecastExports;
         return this;
     }
     
+    public ListWhatIfForecastExportsResponse(){}
 }

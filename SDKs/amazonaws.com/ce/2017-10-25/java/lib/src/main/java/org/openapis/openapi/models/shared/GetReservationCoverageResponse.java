@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetReservationCoverageResponse {
     @JsonProperty("CoveragesByTime")
     public CoverageByTime[] coveragesByTime;
+
     public GetReservationCoverageResponse withCoveragesByTime(CoverageByTime[] coveragesByTime) {
         this.coveragesByTime = coveragesByTime;
         return this;
@@ -22,6 +23,7 @@ public class GetReservationCoverageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public GetReservationCoverageResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -30,9 +32,13 @@ public class GetReservationCoverageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Total")
     public Coverage total;
+
     public GetReservationCoverageResponse withTotal(Coverage total) {
         this.total = total;
         return this;
     }
     
+    public GetReservationCoverageResponse(@JsonProperty("CoveragesByTime") CoverageByTime[] coveragesByTime) {
+        this.coveragesByTime = coveragesByTime;
+  }
 }

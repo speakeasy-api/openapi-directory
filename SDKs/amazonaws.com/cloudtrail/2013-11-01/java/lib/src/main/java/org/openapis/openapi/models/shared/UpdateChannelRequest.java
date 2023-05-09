@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateChannelRequest {
     @JsonProperty("Channel")
     public String channel;
+
     public UpdateChannelRequest withChannel(String channel) {
         this.channel = channel;
         return this;
@@ -19,6 +20,7 @@ public class UpdateChannelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Destinations")
     public Destination[] destinations;
+
     public UpdateChannelRequest withDestinations(Destination[] destinations) {
         this.destinations = destinations;
         return this;
@@ -27,9 +29,13 @@ public class UpdateChannelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateChannelRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateChannelRequest(@JsonProperty("Channel") String channel) {
+        this.channel = channel;
+  }
 }

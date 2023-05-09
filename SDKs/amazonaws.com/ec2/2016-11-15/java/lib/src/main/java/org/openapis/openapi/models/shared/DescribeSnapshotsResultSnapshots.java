@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeSnapshotsResultSnapshots {
     
     public String dataEncryptionKeyId;
+
     public DescribeSnapshotsResultSnapshots withDataEncryptionKeyId(String dataEncryptionKeyId) {
         this.dataEncryptionKeyId = dataEncryptionKeyId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeSnapshotsResultSnapshots {
     
     
     public String description;
+
     public DescribeSnapshotsResultSnapshots withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class DescribeSnapshotsResultSnapshots {
     
     
     public Boolean encrypted;
+
     public DescribeSnapshotsResultSnapshots withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -33,6 +36,7 @@ public class DescribeSnapshotsResultSnapshots {
     
     
     public String kmsKeyId;
+
     public DescribeSnapshotsResultSnapshots withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -40,6 +44,7 @@ public class DescribeSnapshotsResultSnapshots {
     
     
     public String outpostArn;
+
     public DescribeSnapshotsResultSnapshots withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -47,6 +52,7 @@ public class DescribeSnapshotsResultSnapshots {
     
     
     public String ownerAlias;
+
     public DescribeSnapshotsResultSnapshots withOwnerAlias(String ownerAlias) {
         this.ownerAlias = ownerAlias;
         return this;
@@ -54,6 +60,7 @@ public class DescribeSnapshotsResultSnapshots {
     
     
     public String ownerId;
+
     public DescribeSnapshotsResultSnapshots withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -61,6 +68,7 @@ public class DescribeSnapshotsResultSnapshots {
     
     
     public String progress;
+
     public DescribeSnapshotsResultSnapshots withProgress(String progress) {
         this.progress = progress;
         return this;
@@ -68,6 +76,7 @@ public class DescribeSnapshotsResultSnapshots {
     
     
     public OffsetDateTime restoreExpiryTime;
+
     public DescribeSnapshotsResultSnapshots withRestoreExpiryTime(OffsetDateTime restoreExpiryTime) {
         this.restoreExpiryTime = restoreExpiryTime;
         return this;
@@ -75,6 +84,7 @@ public class DescribeSnapshotsResultSnapshots {
     
     
     public String snapshotId;
+
     public DescribeSnapshotsResultSnapshots withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -82,6 +92,7 @@ public class DescribeSnapshotsResultSnapshots {
     
     
     public OffsetDateTime startTime;
+
     public DescribeSnapshotsResultSnapshots withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -89,6 +100,7 @@ public class DescribeSnapshotsResultSnapshots {
     
     
     public DescribeSnapshotsResultSnapshotsStateEnum state;
+
     public DescribeSnapshotsResultSnapshots withState(DescribeSnapshotsResultSnapshotsStateEnum state) {
         this.state = state;
         return this;
@@ -96,6 +108,7 @@ public class DescribeSnapshotsResultSnapshots {
     
     
     public String stateMessage;
+
     public DescribeSnapshotsResultSnapshots withStateMessage(String stateMessage) {
         this.stateMessage = stateMessage;
         return this;
@@ -103,6 +116,7 @@ public class DescribeSnapshotsResultSnapshots {
     
     
     public DescribeSnapshotsResultSnapshotsStorageTierEnum storageTier;
+
     public DescribeSnapshotsResultSnapshots withStorageTier(DescribeSnapshotsResultSnapshotsStorageTierEnum storageTier) {
         this.storageTier = storageTier;
         return this;
@@ -110,6 +124,7 @@ public class DescribeSnapshotsResultSnapshots {
     
     
     public DescribeSnapshotsResultSnapshotsTags[] tags;
+
     public DescribeSnapshotsResultSnapshots withTags(DescribeSnapshotsResultSnapshotsTags[] tags) {
         this.tags = tags;
         return this;
@@ -117,6 +132,7 @@ public class DescribeSnapshotsResultSnapshots {
     
     
     public String volumeId;
+
     public DescribeSnapshotsResultSnapshots withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
@@ -124,9 +140,11 @@ public class DescribeSnapshotsResultSnapshots {
     
     
     public Long volumeSize;
+
     public DescribeSnapshotsResultSnapshots withVolumeSize(Long volumeSize) {
         this.volumeSize = volumeSize;
         return this;
     }
     
+    public DescribeSnapshotsResultSnapshots(){}
 }

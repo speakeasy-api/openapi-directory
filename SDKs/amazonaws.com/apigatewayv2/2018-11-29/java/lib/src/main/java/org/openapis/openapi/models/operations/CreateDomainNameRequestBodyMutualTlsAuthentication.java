@@ -15,6 +15,7 @@ public class CreateDomainNameRequestBodyMutualTlsAuthentication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TruststoreUri")
     public String truststoreUri;
+
     public CreateDomainNameRequestBodyMutualTlsAuthentication withTruststoreUri(String truststoreUri) {
         this.truststoreUri = truststoreUri;
         return this;
@@ -23,9 +24,11 @@ public class CreateDomainNameRequestBodyMutualTlsAuthentication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TruststoreVersion")
     public String truststoreVersion;
+
     public CreateDomainNameRequestBodyMutualTlsAuthentication withTruststoreVersion(String truststoreVersion) {
         this.truststoreVersion = truststoreVersion;
         return this;
     }
     
+    public CreateDomainNameRequestBodyMutualTlsAuthentication(){}
 }

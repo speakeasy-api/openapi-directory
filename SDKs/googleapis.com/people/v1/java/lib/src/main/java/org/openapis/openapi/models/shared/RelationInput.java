@@ -18,6 +18,7 @@ public class RelationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public FieldMetadataInput metadata;
+
     public RelationInput withMetadata(FieldMetadataInput metadata) {
         this.metadata = metadata;
         return this;
@@ -29,6 +30,7 @@ public class RelationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("person")
     public String person;
+
     public RelationInput withPerson(String person) {
         this.person = person;
         return this;
@@ -40,9 +42,11 @@ public class RelationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public RelationInput withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RelationInput(){}
 }

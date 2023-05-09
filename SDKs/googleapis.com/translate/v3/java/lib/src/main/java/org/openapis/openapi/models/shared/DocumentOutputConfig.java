@@ -18,6 +18,7 @@ public class DocumentOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsDestination")
     public GcsDestination gcsDestination;
+
     public DocumentOutputConfig withGcsDestination(GcsDestination gcsDestination) {
         this.gcsDestination = gcsDestination;
         return this;
@@ -29,9 +30,11 @@ public class DocumentOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public DocumentOutputConfig withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
     }
     
+    public DocumentOutputConfig(){}
 }

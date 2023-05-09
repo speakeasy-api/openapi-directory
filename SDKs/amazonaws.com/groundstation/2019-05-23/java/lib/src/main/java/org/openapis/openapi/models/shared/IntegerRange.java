@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IntegerRange {
     @JsonProperty("maximum")
     public Long maximum;
+
     public IntegerRange withMaximum(Long maximum) {
         this.maximum = maximum;
         return this;
@@ -19,9 +20,14 @@ public class IntegerRange {
     
     @JsonProperty("minimum")
     public Long minimum;
+
     public IntegerRange withMinimum(Long minimum) {
         this.minimum = minimum;
         return this;
     }
     
+    public IntegerRange(@JsonProperty("maximum") Long maximum, @JsonProperty("minimum") Long minimum) {
+        this.maximum = maximum;
+        this.minimum = minimum;
+  }
 }

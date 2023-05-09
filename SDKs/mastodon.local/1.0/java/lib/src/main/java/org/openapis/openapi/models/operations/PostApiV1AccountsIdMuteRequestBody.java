@@ -12,6 +12,7 @@ public class PostApiV1AccountsIdMuteRequestBody {
      */
     
     public Long duration;
+
     public PostApiV1AccountsIdMuteRequestBody withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -22,9 +23,11 @@ public class PostApiV1AccountsIdMuteRequestBody {
      */
     
     public Boolean notifications;
+
     public PostApiV1AccountsIdMuteRequestBody withNotifications(Boolean notifications) {
         this.notifications = notifications;
         return this;
     }
     
+    public PostApiV1AccountsIdMuteRequestBody(){}
 }

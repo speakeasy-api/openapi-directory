@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class TemplateParameter {
     
     public String defaultValue;
+
     public TemplateParameter withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -19,6 +20,7 @@ public class TemplateParameter {
     
     
     public String description;
+
     public TemplateParameter withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class TemplateParameter {
     
     
     public Boolean noEcho;
+
     public TemplateParameter withNoEcho(Boolean noEcho) {
         this.noEcho = noEcho;
         return this;
@@ -33,9 +36,11 @@ public class TemplateParameter {
     
     
     public String parameterKey;
+
     public TemplateParameter withParameterKey(String parameterKey) {
         this.parameterKey = parameterKey;
         return this;
     }
     
+    public TemplateParameter(){}
 }

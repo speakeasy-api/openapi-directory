@@ -12,9 +12,13 @@ public class ReactionsCreateForTeamDiscussionCommentLegacyRequestBody {
      */
     @JsonProperty("content")
     public ReactionsCreateForTeamDiscussionCommentLegacyRequestBodyContentEnum content;
+
     public ReactionsCreateForTeamDiscussionCommentLegacyRequestBody withContent(ReactionsCreateForTeamDiscussionCommentLegacyRequestBodyContentEnum content) {
         this.content = content;
         return this;
     }
     
+    public ReactionsCreateForTeamDiscussionCommentLegacyRequestBody(@JsonProperty("content") ReactionsCreateForTeamDiscussionCommentLegacyRequestBodyContentEnum content) {
+        this.content = content;
+  }
 }

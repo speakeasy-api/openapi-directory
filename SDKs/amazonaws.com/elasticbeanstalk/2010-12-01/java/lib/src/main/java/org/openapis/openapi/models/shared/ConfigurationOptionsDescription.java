@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ConfigurationOptionsDescription {
     
     public ConfigurationOptionDescription[] options;
+
     public ConfigurationOptionsDescription withOptions(ConfigurationOptionDescription[] options) {
         this.options = options;
         return this;
@@ -19,6 +20,7 @@ public class ConfigurationOptionsDescription {
     
     
     public String platformArn;
+
     public ConfigurationOptionsDescription withPlatformArn(String platformArn) {
         this.platformArn = platformArn;
         return this;
@@ -26,9 +28,11 @@ public class ConfigurationOptionsDescription {
     
     
     public String solutionStackName;
+
     public ConfigurationOptionsDescription withSolutionStackName(String solutionStackName) {
         this.solutionStackName = solutionStackName;
         return this;
     }
     
+    public ConfigurationOptionsDescription(){}
 }

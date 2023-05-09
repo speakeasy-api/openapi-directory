@@ -15,9 +15,11 @@ public class GetRunResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("run")
     public Run run;
+
     public GetRunResult withRun(Run run) {
         this.run = run;
         return this;
     }
     
+    public GetRunResult(){}
 }

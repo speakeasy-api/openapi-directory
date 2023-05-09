@@ -15,6 +15,7 @@ public class AssociationOverview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationStatusAggregatedCount")
     public java.util.Map<String, Long> associationStatusAggregatedCount;
+
     public AssociationOverview withAssociationStatusAggregatedCount(java.util.Map<String, Long> associationStatusAggregatedCount) {
         this.associationStatusAggregatedCount = associationStatusAggregatedCount;
         return this;
@@ -23,6 +24,7 @@ public class AssociationOverview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetailedStatus")
     public String detailedStatus;
+
     public AssociationOverview withDetailedStatus(String detailedStatus) {
         this.detailedStatus = detailedStatus;
         return this;
@@ -31,9 +33,11 @@ public class AssociationOverview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public AssociationOverview withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public AssociationOverview(){}
 }

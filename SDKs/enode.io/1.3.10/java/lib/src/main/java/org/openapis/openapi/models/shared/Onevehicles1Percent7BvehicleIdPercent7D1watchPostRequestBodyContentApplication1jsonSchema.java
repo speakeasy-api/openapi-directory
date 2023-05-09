@@ -18,9 +18,11 @@ public class Onevehicles1Percent7BvehicleIdPercent7D1watchPostRequestBodyContent
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public Onevehicles1Percent7BvehicleIdPercent7D1watchPostRequestBodyContentApplication1jsonSchemaPropertiesEnum properties;
+
     public Onevehicles1Percent7BvehicleIdPercent7D1watchPostRequestBodyContentApplication1jsonSchema withProperties(Onevehicles1Percent7BvehicleIdPercent7D1watchPostRequestBodyContentApplication1jsonSchemaPropertiesEnum properties) {
         this.properties = properties;
         return this;
     }
     
+    public Onevehicles1Percent7BvehicleIdPercent7D1watchPostRequestBodyContentApplication1jsonSchema(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateSafetyRuleResponse {
     
     public String contentType;
+
     public UpdateSafetyRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateSafetyRuleResponse {
      */
     
     public Object internalServerException;
+
     public UpdateSafetyRuleResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -26,6 +29,7 @@ public class UpdateSafetyRuleResponse {
     
     
     public Integer statusCode;
+
     public UpdateSafetyRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class UpdateSafetyRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateSafetyRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateSafetyRuleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateSafetyRuleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -53,6 +59,7 @@ public class UpdateSafetyRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateSafetyRuleResponse updateSafetyRuleResponse;
+
     public UpdateSafetyRuleResponse withUpdateSafetyRuleResponse(org.openapis.openapi.models.shared.UpdateSafetyRuleResponse updateSafetyRuleResponse) {
         this.updateSafetyRuleResponse = updateSafetyRuleResponse;
         return this;
@@ -63,9 +70,14 @@ public class UpdateSafetyRuleResponse {
      */
     
     public Object validationException;
+
     public UpdateSafetyRuleResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateSafetyRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

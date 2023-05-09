@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListFleetMetricsResponse {
     
     public String contentType;
+
     public ListFleetMetricsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListFleetMetricsResponse {
      */
     
     public Object internalFailureException;
+
     public ListFleetMetricsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListFleetMetricsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListFleetMetricsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListFleetMetricsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListFleetMetricsResponse listFleetMetricsResponse;
+
     public ListFleetMetricsResponse withListFleetMetricsResponse(org.openapis.openapi.models.shared.ListFleetMetricsResponse listFleetMetricsResponse) {
         this.listFleetMetricsResponse = listFleetMetricsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListFleetMetricsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListFleetMetricsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class ListFleetMetricsResponse {
     
     
     public Integer statusCode;
+
     public ListFleetMetricsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListFleetMetricsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListFleetMetricsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListFleetMetricsResponse {
      */
     
     public Object throttlingException;
+
     public ListFleetMetricsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListFleetMetricsResponse {
      */
     
     public Object unauthorizedException;
+
     public ListFleetMetricsResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListFleetMetricsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

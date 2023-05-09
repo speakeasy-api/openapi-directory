@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateByteMatchSetResponse {
     
     public String contentType;
+
     public UpdateByteMatchSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateByteMatchSetResponse {
     
     
     public Integer statusCode;
+
     public UpdateByteMatchSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateByteMatchSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateByteMatchSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UpdateByteMatchSetResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateByteMatchSetResponse updateByteMatchSetResponse;
+
     public UpdateByteMatchSetResponse withUpdateByteMatchSetResponse(org.openapis.openapi.models.shared.UpdateByteMatchSetResponse updateByteMatchSetResponse) {
         this.updateByteMatchSetResponse = updateByteMatchSetResponse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateByteMatchSetResponse {
      */
     
     public Object wafInternalErrorException;
+
     public UpdateByteMatchSetResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class UpdateByteMatchSetResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public UpdateByteMatchSetResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateByteMatchSetResponse {
      */
     
     public Object wafInvalidOperationException;
+
     public UpdateByteMatchSetResponse withWAFInvalidOperationException(Object wafInvalidOperationException) {
         this.wafInvalidOperationException = wafInvalidOperationException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateByteMatchSetResponse {
      */
     
     public Object wafInvalidParameterException;
+
     public UpdateByteMatchSetResponse withWAFInvalidParameterException(Object wafInvalidParameterException) {
         this.wafInvalidParameterException = wafInvalidParameterException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateByteMatchSetResponse {
      */
     
     public Object wafLimitsExceededException;
+
     public UpdateByteMatchSetResponse withWAFLimitsExceededException(Object wafLimitsExceededException) {
         this.wafLimitsExceededException = wafLimitsExceededException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateByteMatchSetResponse {
      */
     
     public Object wafNonexistentContainerException;
+
     public UpdateByteMatchSetResponse withWAFNonexistentContainerException(Object wafNonexistentContainerException) {
         this.wafNonexistentContainerException = wafNonexistentContainerException;
         return this;
@@ -103,6 +114,7 @@ public class UpdateByteMatchSetResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public UpdateByteMatchSetResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
@@ -113,9 +125,14 @@ public class UpdateByteMatchSetResponse {
      */
     
     public Object wafStaleDataException;
+
     public UpdateByteMatchSetResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
     }
     
+    public UpdateByteMatchSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

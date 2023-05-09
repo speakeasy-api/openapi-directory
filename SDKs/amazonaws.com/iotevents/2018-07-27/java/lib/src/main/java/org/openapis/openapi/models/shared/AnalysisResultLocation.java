@@ -15,9 +15,11 @@ public class AnalysisResultLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public AnalysisResultLocation withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public AnalysisResultLocation(){}
 }

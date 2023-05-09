@@ -12,9 +12,13 @@ public class SetLoggingOptionsRequestBody {
      */
     @JsonProperty("loggingOptionsPayload")
     public SetLoggingOptionsRequestBodyLoggingOptionsPayload loggingOptionsPayload;
+
     public SetLoggingOptionsRequestBody withLoggingOptionsPayload(SetLoggingOptionsRequestBodyLoggingOptionsPayload loggingOptionsPayload) {
         this.loggingOptionsPayload = loggingOptionsPayload;
         return this;
     }
     
+    public SetLoggingOptionsRequestBody(@JsonProperty("loggingOptionsPayload") SetLoggingOptionsRequestBodyLoggingOptionsPayload loggingOptionsPayload) {
+        this.loggingOptionsPayload = loggingOptionsPayload;
+  }
 }

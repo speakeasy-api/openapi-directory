@@ -17,6 +17,7 @@ public class TagResource {
      */
     @JsonProperty("id")
     public String id;
+
     public TagResource withId(String id) {
         this.id = id;
         return this;
@@ -24,6 +25,7 @@ public class TagResource {
     
     @JsonProperty("relationships")
     public TagResourceRelationships relationships;
+
     public TagResource withRelationships(TagResourceRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -34,9 +36,15 @@ public class TagResource {
      */
     @JsonProperty("type")
     public String type;
+
     public TagResource withType(String type) {
         this.type = type;
         return this;
     }
     
+    public TagResource(@JsonProperty("id") String id, @JsonProperty("relationships") TagResourceRelationships relationships, @JsonProperty("type") String type) {
+        this.id = id;
+        this.relationships = relationships;
+        this.type = type;
+  }
 }

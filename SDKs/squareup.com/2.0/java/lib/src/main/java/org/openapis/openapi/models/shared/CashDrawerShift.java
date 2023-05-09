@@ -26,6 +26,7 @@ public class CashDrawerShift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cash_paid_in_money")
     public Money cashPaidInMoney;
+
     public CashDrawerShift withCashPaidInMoney(Money cashPaidInMoney) {
         this.cashPaidInMoney = cashPaidInMoney;
         return this;
@@ -42,6 +43,7 @@ public class CashDrawerShift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cash_paid_out_money")
     public Money cashPaidOutMoney;
+
     public CashDrawerShift withCashPaidOutMoney(Money cashPaidOutMoney) {
         this.cashPaidOutMoney = cashPaidOutMoney;
         return this;
@@ -58,6 +60,7 @@ public class CashDrawerShift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cash_payment_money")
     public Money cashPaymentMoney;
+
     public CashDrawerShift withCashPaymentMoney(Money cashPaymentMoney) {
         this.cashPaymentMoney = cashPaymentMoney;
         return this;
@@ -74,6 +77,7 @@ public class CashDrawerShift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cash_refunds_money")
     public Money cashRefundsMoney;
+
     public CashDrawerShift withCashRefundsMoney(Money cashRefundsMoney) {
         this.cashRefundsMoney = cashRefundsMoney;
         return this;
@@ -85,6 +89,7 @@ public class CashDrawerShift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closed_at")
     public String closedAt;
+
     public CashDrawerShift withClosedAt(String closedAt) {
         this.closedAt = closedAt;
         return this;
@@ -101,6 +106,7 @@ public class CashDrawerShift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closed_cash_money")
     public Money closedCashMoney;
+
     public CashDrawerShift withClosedCashMoney(Money closedCashMoney) {
         this.closedCashMoney = closedCashMoney;
         return this;
@@ -113,6 +119,7 @@ public class CashDrawerShift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closing_employee_id")
     public String closingEmployeeId;
+
     public CashDrawerShift withClosingEmployeeId(String closingEmployeeId) {
         this.closingEmployeeId = closingEmployeeId;
         return this;
@@ -124,6 +131,7 @@ public class CashDrawerShift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CashDrawerShift withDescription(String description) {
         this.description = description;
         return this;
@@ -132,6 +140,7 @@ public class CashDrawerShift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device")
     public CashDrawerDevice device;
+
     public CashDrawerShift withDevice(CashDrawerDevice device) {
         this.device = device;
         return this;
@@ -144,6 +153,7 @@ public class CashDrawerShift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employee_ids")
     public String[] employeeIds;
+
     public CashDrawerShift withEmployeeIds(String[] employeeIds) {
         this.employeeIds = employeeIds;
         return this;
@@ -155,6 +165,7 @@ public class CashDrawerShift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ended_at")
     public String endedAt;
+
     public CashDrawerShift withEndedAt(String endedAt) {
         this.endedAt = endedAt;
         return this;
@@ -166,6 +177,7 @@ public class CashDrawerShift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ending_employee_id")
     public String endingEmployeeId;
+
     public CashDrawerShift withEndingEmployeeId(String endingEmployeeId) {
         this.endingEmployeeId = endingEmployeeId;
         return this;
@@ -182,6 +194,7 @@ public class CashDrawerShift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expected_cash_money")
     public Money expectedCashMoney;
+
     public CashDrawerShift withExpectedCashMoney(Money expectedCashMoney) {
         this.expectedCashMoney = expectedCashMoney;
         return this;
@@ -193,6 +206,7 @@ public class CashDrawerShift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CashDrawerShift withId(String id) {
         this.id = id;
         return this;
@@ -204,6 +218,7 @@ public class CashDrawerShift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opened_at")
     public String openedAt;
+
     public CashDrawerShift withOpenedAt(String openedAt) {
         this.openedAt = openedAt;
         return this;
@@ -220,6 +235,7 @@ public class CashDrawerShift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opened_cash_money")
     public Money openedCashMoney;
+
     public CashDrawerShift withOpenedCashMoney(Money openedCashMoney) {
         this.openedCashMoney = openedCashMoney;
         return this;
@@ -231,6 +247,7 @@ public class CashDrawerShift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opening_employee_id")
     public String openingEmployeeId;
+
     public CashDrawerShift withOpeningEmployeeId(String openingEmployeeId) {
         this.openingEmployeeId = openingEmployeeId;
         return this;
@@ -242,9 +259,11 @@ public class CashDrawerShift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public CashDrawerShift withState(String state) {
         this.state = state;
         return this;
     }
     
+    public CashDrawerShift(){}
 }

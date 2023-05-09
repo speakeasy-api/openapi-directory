@@ -15,6 +15,7 @@ public class AwsElbLoadBalancerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZones")
     public String[] availabilityZones;
+
     public AwsElbLoadBalancerDetails withAvailabilityZones(String[] availabilityZones) {
         this.availabilityZones = availabilityZones;
         return this;
@@ -23,6 +24,7 @@ public class AwsElbLoadBalancerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackendServerDescriptions")
     public AwsElbLoadBalancerBackendServerDescription[] backendServerDescriptions;
+
     public AwsElbLoadBalancerDetails withBackendServerDescriptions(AwsElbLoadBalancerBackendServerDescription[] backendServerDescriptions) {
         this.backendServerDescriptions = backendServerDescriptions;
         return this;
@@ -31,6 +33,7 @@ public class AwsElbLoadBalancerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CanonicalHostedZoneName")
     public String canonicalHostedZoneName;
+
     public AwsElbLoadBalancerDetails withCanonicalHostedZoneName(String canonicalHostedZoneName) {
         this.canonicalHostedZoneName = canonicalHostedZoneName;
         return this;
@@ -39,6 +42,7 @@ public class AwsElbLoadBalancerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CanonicalHostedZoneNameID")
     public String canonicalHostedZoneNameID;
+
     public AwsElbLoadBalancerDetails withCanonicalHostedZoneNameID(String canonicalHostedZoneNameID) {
         this.canonicalHostedZoneNameID = canonicalHostedZoneNameID;
         return this;
@@ -47,6 +51,7 @@ public class AwsElbLoadBalancerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedTime")
     public String createdTime;
+
     public AwsElbLoadBalancerDetails withCreatedTime(String createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -55,6 +60,7 @@ public class AwsElbLoadBalancerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DnsName")
     public String dnsName;
+
     public AwsElbLoadBalancerDetails withDnsName(String dnsName) {
         this.dnsName = dnsName;
         return this;
@@ -63,6 +69,7 @@ public class AwsElbLoadBalancerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HealthCheck")
     public AwsElbLoadBalancerHealthCheck healthCheck;
+
     public AwsElbLoadBalancerDetails withHealthCheck(AwsElbLoadBalancerHealthCheck healthCheck) {
         this.healthCheck = healthCheck;
         return this;
@@ -71,6 +78,7 @@ public class AwsElbLoadBalancerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Instances")
     public AwsElbLoadBalancerInstance[] instances;
+
     public AwsElbLoadBalancerDetails withInstances(AwsElbLoadBalancerInstance[] instances) {
         this.instances = instances;
         return this;
@@ -79,6 +87,7 @@ public class AwsElbLoadBalancerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ListenerDescriptions")
     public AwsElbLoadBalancerListenerDescription[] listenerDescriptions;
+
     public AwsElbLoadBalancerDetails withListenerDescriptions(AwsElbLoadBalancerListenerDescription[] listenerDescriptions) {
         this.listenerDescriptions = listenerDescriptions;
         return this;
@@ -87,6 +96,7 @@ public class AwsElbLoadBalancerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoadBalancerAttributes")
     public AwsElbLoadBalancerAttributes loadBalancerAttributes;
+
     public AwsElbLoadBalancerDetails withLoadBalancerAttributes(AwsElbLoadBalancerAttributes loadBalancerAttributes) {
         this.loadBalancerAttributes = loadBalancerAttributes;
         return this;
@@ -95,6 +105,7 @@ public class AwsElbLoadBalancerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoadBalancerName")
     public String loadBalancerName;
+
     public AwsElbLoadBalancerDetails withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
@@ -103,6 +114,7 @@ public class AwsElbLoadBalancerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Policies")
     public AwsElbLoadBalancerPolicies policies;
+
     public AwsElbLoadBalancerDetails withPolicies(AwsElbLoadBalancerPolicies policies) {
         this.policies = policies;
         return this;
@@ -111,6 +123,7 @@ public class AwsElbLoadBalancerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Scheme")
     public String scheme;
+
     public AwsElbLoadBalancerDetails withScheme(String scheme) {
         this.scheme = scheme;
         return this;
@@ -119,6 +132,7 @@ public class AwsElbLoadBalancerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroups")
     public String[] securityGroups;
+
     public AwsElbLoadBalancerDetails withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -127,6 +141,7 @@ public class AwsElbLoadBalancerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceSecurityGroup")
     public AwsElbLoadBalancerSourceSecurityGroup sourceSecurityGroup;
+
     public AwsElbLoadBalancerDetails withSourceSecurityGroup(AwsElbLoadBalancerSourceSecurityGroup sourceSecurityGroup) {
         this.sourceSecurityGroup = sourceSecurityGroup;
         return this;
@@ -135,6 +150,7 @@ public class AwsElbLoadBalancerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subnets")
     public String[] subnets;
+
     public AwsElbLoadBalancerDetails withSubnets(String[] subnets) {
         this.subnets = subnets;
         return this;
@@ -143,9 +159,11 @@ public class AwsElbLoadBalancerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public AwsElbLoadBalancerDetails withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public AwsElbLoadBalancerDetails(){}
 }

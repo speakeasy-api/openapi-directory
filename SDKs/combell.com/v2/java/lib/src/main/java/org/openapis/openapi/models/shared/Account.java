@@ -15,6 +15,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public Account withId(Integer id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifier")
     public String identifier;
+
     public Account withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -37,9 +39,11 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servicepack_id")
     public Integer servicepackId;
+
     public Account withServicepackId(Integer servicepackId) {
         this.servicepackId = servicepackId;
         return this;
     }
     
+    public Account(){}
 }

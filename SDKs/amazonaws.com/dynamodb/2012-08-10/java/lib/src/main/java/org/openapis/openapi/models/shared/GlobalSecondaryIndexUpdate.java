@@ -15,6 +15,7 @@ public class GlobalSecondaryIndexUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Create")
     public CreateGlobalSecondaryIndexAction create;
+
     public GlobalSecondaryIndexUpdate withCreate(CreateGlobalSecondaryIndexAction create) {
         this.create = create;
         return this;
@@ -23,6 +24,7 @@ public class GlobalSecondaryIndexUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Delete")
     public DeleteGlobalSecondaryIndexAction delete;
+
     public GlobalSecondaryIndexUpdate withDelete(DeleteGlobalSecondaryIndexAction delete) {
         this.delete = delete;
         return this;
@@ -31,9 +33,11 @@ public class GlobalSecondaryIndexUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Update")
     public UpdateGlobalSecondaryIndexAction update;
+
     public GlobalSecondaryIndexUpdate withUpdate(UpdateGlobalSecondaryIndexAction update) {
         this.update = update;
         return this;
     }
     
+    public GlobalSecondaryIndexUpdate(){}
 }

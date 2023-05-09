@@ -14,6 +14,7 @@ public class CreateMemberRequestBody {
      */
     @JsonProperty("account")
     public CreateMemberRequestBodyAccount account;
+
     public CreateMemberRequestBody withAccount(CreateMemberRequestBodyAccount account) {
         this.account = account;
         return this;
@@ -25,9 +26,13 @@ public class CreateMemberRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateMemberRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateMemberRequestBody(@JsonProperty("account") CreateMemberRequestBodyAccount account) {
+        this.account = account;
+  }
 }

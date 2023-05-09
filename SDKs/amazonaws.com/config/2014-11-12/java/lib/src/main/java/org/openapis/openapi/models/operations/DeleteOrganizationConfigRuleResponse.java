@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteOrganizationConfigRuleResponse {
     
     public String contentType;
+
     public DeleteOrganizationConfigRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteOrganizationConfigRuleResponse {
      */
     
     public Object noSuchOrganizationConfigRuleException;
+
     public DeleteOrganizationConfigRuleResponse withNoSuchOrganizationConfigRuleException(Object noSuchOrganizationConfigRuleException) {
         this.noSuchOrganizationConfigRuleException = noSuchOrganizationConfigRuleException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteOrganizationConfigRuleResponse {
      */
     
     public Object organizationAccessDeniedException;
+
     public DeleteOrganizationConfigRuleResponse withOrganizationAccessDeniedException(Object organizationAccessDeniedException) {
         this.organizationAccessDeniedException = organizationAccessDeniedException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteOrganizationConfigRuleResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteOrganizationConfigRuleResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteOrganizationConfigRuleResponse {
     
     
     public Integer statusCode;
+
     public DeleteOrganizationConfigRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DeleteOrganizationConfigRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteOrganizationConfigRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteOrganizationConfigRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

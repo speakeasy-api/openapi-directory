@@ -15,6 +15,7 @@ public class BatchGetCustomDataIdentifiersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customDataIdentifiers")
     public BatchGetCustomDataIdentifierSummary[] customDataIdentifiers;
+
     public BatchGetCustomDataIdentifiersResponse withCustomDataIdentifiers(BatchGetCustomDataIdentifierSummary[] customDataIdentifiers) {
         this.customDataIdentifiers = customDataIdentifiers;
         return this;
@@ -23,9 +24,11 @@ public class BatchGetCustomDataIdentifiersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notFoundIdentifierIds")
     public String[] notFoundIdentifierIds;
+
     public BatchGetCustomDataIdentifiersResponse withNotFoundIdentifierIds(String[] notFoundIdentifierIds) {
         this.notFoundIdentifierIds = notFoundIdentifierIds;
         return this;
     }
     
+    public BatchGetCustomDataIdentifiersResponse(){}
 }

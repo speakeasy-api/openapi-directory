@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RetrieveAccountTransactionsV2Response {
     
     public String contentType;
+
     public RetrieveAccountTransactionsV2Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class RetrieveAccountTransactionsV2Response {
     
     
     public Integer statusCode;
+
     public RetrieveAccountTransactionsV2Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,65 +26,113 @@ public class RetrieveAccountTransactionsV2Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RetrieveAccountTransactionsV2Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    /**
+     * Retrieve account transactions
+     */
+    
+    public java.util.Map<String, Object> retrieveAccountTransactionsV2200ApplicationJSONObject;
+
+    public RetrieveAccountTransactionsV2Response withRetrieveAccountTransactionsV2200ApplicationJSONObject(java.util.Map<String, Object> retrieveAccountTransactionsV2200ApplicationJSONObject) {
+        this.retrieveAccountTransactionsV2200ApplicationJSONObject = retrieveAccountTransactionsV2200ApplicationJSONObject;
+        return this;
+    }
+    
+    /**
+     * Date range error
+     */
     
     public java.util.Map<String, Object> retrieveAccountTransactionsV2400ApplicationJSONObject;
+
     public RetrieveAccountTransactionsV2Response withRetrieveAccountTransactionsV2400ApplicationJSONObject(java.util.Map<String, Object> retrieveAccountTransactionsV2400ApplicationJSONObject) {
         this.retrieveAccountTransactionsV2400ApplicationJSONObject = retrieveAccountTransactionsV2400ApplicationJSONObject;
         return this;
     }
     
+    /**
+     * Failed Authentication
+     */
     
     public java.util.Map<String, Object> retrieveAccountTransactionsV2401ApplicationJSONObject;
+
     public RetrieveAccountTransactionsV2Response withRetrieveAccountTransactionsV2401ApplicationJSONObject(java.util.Map<String, Object> retrieveAccountTransactionsV2401ApplicationJSONObject) {
         this.retrieveAccountTransactionsV2401ApplicationJSONObject = retrieveAccountTransactionsV2401ApplicationJSONObject;
         return this;
     }
     
+    /**
+     * Account Access Forbidden
+     */
     
     public java.util.Map<String, Object> retrieveAccountTransactionsV2403ApplicationJSONObject;
+
     public RetrieveAccountTransactionsV2Response withRetrieveAccountTransactionsV2403ApplicationJSONObject(java.util.Map<String, Object> retrieveAccountTransactionsV2403ApplicationJSONObject) {
         this.retrieveAccountTransactionsV2403ApplicationJSONObject = retrieveAccountTransactionsV2403ApplicationJSONObject;
         return this;
     }
     
+    /**
+     * Account not found error
+     */
     
     public java.util.Map<String, Object> retrieveAccountTransactionsV2404ApplicationJSONObject;
+
     public RetrieveAccountTransactionsV2Response withRetrieveAccountTransactionsV2404ApplicationJSONObject(java.util.Map<String, Object> retrieveAccountTransactionsV2404ApplicationJSONObject) {
         this.retrieveAccountTransactionsV2404ApplicationJSONObject = retrieveAccountTransactionsV2404ApplicationJSONObject;
         return this;
     }
     
+    /**
+     * Account state error
+     */
     
     public java.util.Map<String, Object> retrieveAccountTransactionsV2409ApplicationJSONObject;
+
     public RetrieveAccountTransactionsV2Response withRetrieveAccountTransactionsV2409ApplicationJSONObject(java.util.Map<String, Object> retrieveAccountTransactionsV2409ApplicationJSONObject) {
         this.retrieveAccountTransactionsV2409ApplicationJSONObject = retrieveAccountTransactionsV2409ApplicationJSONObject;
         return this;
     }
     
+    /**
+     * Rate Limit Error
+     */
     
     public java.util.Map<String, Object> retrieveAccountTransactionsV2429ApplicationJSONObject;
+
     public RetrieveAccountTransactionsV2Response withRetrieveAccountTransactionsV2429ApplicationJSONObject(java.util.Map<String, Object> retrieveAccountTransactionsV2429ApplicationJSONObject) {
         this.retrieveAccountTransactionsV2429ApplicationJSONObject = retrieveAccountTransactionsV2429ApplicationJSONObject;
         return this;
     }
     
+    /**
+     * Unknown Request Error
+     */
     
     public java.util.Map<String, Object> retrieveAccountTransactionsV2500ApplicationJSONObject;
+
     public RetrieveAccountTransactionsV2Response withRetrieveAccountTransactionsV2500ApplicationJSONObject(java.util.Map<String, Object> retrieveAccountTransactionsV2500ApplicationJSONObject) {
         this.retrieveAccountTransactionsV2500ApplicationJSONObject = retrieveAccountTransactionsV2500ApplicationJSONObject;
         return this;
     }
     
+    /**
+     * Connection Error
+     */
     
     public java.util.Map<String, Object> retrieveAccountTransactionsV2503ApplicationJSONObject;
+
     public RetrieveAccountTransactionsV2Response withRetrieveAccountTransactionsV2503ApplicationJSONObject(java.util.Map<String, Object> retrieveAccountTransactionsV2503ApplicationJSONObject) {
         this.retrieveAccountTransactionsV2503ApplicationJSONObject = retrieveAccountTransactionsV2503ApplicationJSONObject;
         return this;
     }
     
+    public RetrieveAccountTransactionsV2Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

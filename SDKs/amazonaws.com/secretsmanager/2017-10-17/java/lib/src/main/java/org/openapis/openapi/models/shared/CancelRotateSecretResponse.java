@@ -15,6 +15,7 @@ public class CancelRotateSecretResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ARN")
     public String arn;
+
     public CancelRotateSecretResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class CancelRotateSecretResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CancelRotateSecretResponse withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class CancelRotateSecretResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionId")
     public String versionId;
+
     public CancelRotateSecretResponse withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public CancelRotateSecretResponse(){}
 }

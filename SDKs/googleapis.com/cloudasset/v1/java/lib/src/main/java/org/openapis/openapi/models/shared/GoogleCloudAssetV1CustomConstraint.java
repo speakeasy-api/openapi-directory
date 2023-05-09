@@ -18,6 +18,7 @@ public class GoogleCloudAssetV1CustomConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionType")
     public GoogleCloudAssetV1CustomConstraintActionTypeEnum actionType;
+
     public GoogleCloudAssetV1CustomConstraint withActionType(GoogleCloudAssetV1CustomConstraintActionTypeEnum actionType) {
         this.actionType = actionType;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudAssetV1CustomConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public String condition;
+
     public GoogleCloudAssetV1CustomConstraint withCondition(String condition) {
         this.condition = condition;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudAssetV1CustomConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudAssetV1CustomConstraint withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudAssetV1CustomConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudAssetV1CustomConstraint withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudAssetV1CustomConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("methodTypes")
     public GoogleCloudAssetV1CustomConstraintMethodTypesEnum[] methodTypes;
+
     public GoogleCloudAssetV1CustomConstraint withMethodTypes(GoogleCloudAssetV1CustomConstraintMethodTypesEnum[] methodTypes) {
         this.methodTypes = methodTypes;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudAssetV1CustomConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudAssetV1CustomConstraint withName(String name) {
         this.name = name;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudAssetV1CustomConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceTypes")
     public String[] resourceTypes;
+
     public GoogleCloudAssetV1CustomConstraint withResourceTypes(String[] resourceTypes) {
         this.resourceTypes = resourceTypes;
         return this;
     }
     
+    public GoogleCloudAssetV1CustomConstraint(){}
 }

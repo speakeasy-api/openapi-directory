@@ -18,6 +18,7 @@ public class GetNamespaceRepositoryImagesSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active_from")
     public String activeFrom;
+
     public GetNamespaceRepositoryImagesSummaryResponse withActiveFrom(String activeFrom) {
         this.activeFrom = activeFrom;
         return this;
@@ -26,9 +27,11 @@ public class GetNamespaceRepositoryImagesSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statistics")
     public GetNamespaceRepositoryImagesSummaryResponseStatistics statistics;
+
     public GetNamespaceRepositoryImagesSummaryResponse withStatistics(GetNamespaceRepositoryImagesSummaryResponseStatistics statistics) {
         this.statistics = statistics;
         return this;
     }
     
+    public GetNamespaceRepositoryImagesSummaryResponse(){}
 }

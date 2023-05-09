@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeVpcEndpointConnectionsResultVpcEndpointConnections {
     
     public OffsetDateTime creationTimestamp;
+
     public DescribeVpcEndpointConnectionsResultVpcEndpointConnections withCreationTimestamp(OffsetDateTime creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -19,6 +20,7 @@ public class DescribeVpcEndpointConnectionsResultVpcEndpointConnections {
     
     
     public DescribeVpcEndpointConnectionsResultVpcEndpointConnectionsDnsEntries[] dnsEntries;
+
     public DescribeVpcEndpointConnectionsResultVpcEndpointConnections withDnsEntries(DescribeVpcEndpointConnectionsResultVpcEndpointConnectionsDnsEntries[] dnsEntries) {
         this.dnsEntries = dnsEntries;
         return this;
@@ -26,6 +28,7 @@ public class DescribeVpcEndpointConnectionsResultVpcEndpointConnections {
     
     
     public String[] gatewayLoadBalancerArns;
+
     public DescribeVpcEndpointConnectionsResultVpcEndpointConnections withGatewayLoadBalancerArns(String[] gatewayLoadBalancerArns) {
         this.gatewayLoadBalancerArns = gatewayLoadBalancerArns;
         return this;
@@ -33,6 +36,7 @@ public class DescribeVpcEndpointConnectionsResultVpcEndpointConnections {
     
     
     public DescribeVpcEndpointConnectionsResultVpcEndpointConnectionsIpAddressTypeEnum ipAddressType;
+
     public DescribeVpcEndpointConnectionsResultVpcEndpointConnections withIpAddressType(DescribeVpcEndpointConnectionsResultVpcEndpointConnectionsIpAddressTypeEnum ipAddressType) {
         this.ipAddressType = ipAddressType;
         return this;
@@ -40,6 +44,7 @@ public class DescribeVpcEndpointConnectionsResultVpcEndpointConnections {
     
     
     public String[] networkLoadBalancerArns;
+
     public DescribeVpcEndpointConnectionsResultVpcEndpointConnections withNetworkLoadBalancerArns(String[] networkLoadBalancerArns) {
         this.networkLoadBalancerArns = networkLoadBalancerArns;
         return this;
@@ -47,6 +52,7 @@ public class DescribeVpcEndpointConnectionsResultVpcEndpointConnections {
     
     
     public String serviceId;
+
     public DescribeVpcEndpointConnectionsResultVpcEndpointConnections withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -54,6 +60,7 @@ public class DescribeVpcEndpointConnectionsResultVpcEndpointConnections {
     
     
     public DescribeVpcEndpointConnectionsResultVpcEndpointConnectionsTags[] tags;
+
     public DescribeVpcEndpointConnectionsResultVpcEndpointConnections withTags(DescribeVpcEndpointConnectionsResultVpcEndpointConnectionsTags[] tags) {
         this.tags = tags;
         return this;
@@ -61,6 +68,7 @@ public class DescribeVpcEndpointConnectionsResultVpcEndpointConnections {
     
     
     public String vpcEndpointConnectionId;
+
     public DescribeVpcEndpointConnectionsResultVpcEndpointConnections withVpcEndpointConnectionId(String vpcEndpointConnectionId) {
         this.vpcEndpointConnectionId = vpcEndpointConnectionId;
         return this;
@@ -68,6 +76,7 @@ public class DescribeVpcEndpointConnectionsResultVpcEndpointConnections {
     
     
     public String vpcEndpointId;
+
     public DescribeVpcEndpointConnectionsResultVpcEndpointConnections withVpcEndpointId(String vpcEndpointId) {
         this.vpcEndpointId = vpcEndpointId;
         return this;
@@ -75,6 +84,7 @@ public class DescribeVpcEndpointConnectionsResultVpcEndpointConnections {
     
     
     public String vpcEndpointOwner;
+
     public DescribeVpcEndpointConnectionsResultVpcEndpointConnections withVpcEndpointOwner(String vpcEndpointOwner) {
         this.vpcEndpointOwner = vpcEndpointOwner;
         return this;
@@ -82,9 +92,11 @@ public class DescribeVpcEndpointConnectionsResultVpcEndpointConnections {
     
     
     public DescribeVpcEndpointConnectionsResultVpcEndpointConnectionsVpcEndpointStateEnum vpcEndpointState;
+
     public DescribeVpcEndpointConnectionsResultVpcEndpointConnections withVpcEndpointState(DescribeVpcEndpointConnectionsResultVpcEndpointConnectionsVpcEndpointStateEnum vpcEndpointState) {
         this.vpcEndpointState = vpcEndpointState;
         return this;
     }
     
+    public DescribeVpcEndpointConnectionsResultVpcEndpointConnections(){}
 }

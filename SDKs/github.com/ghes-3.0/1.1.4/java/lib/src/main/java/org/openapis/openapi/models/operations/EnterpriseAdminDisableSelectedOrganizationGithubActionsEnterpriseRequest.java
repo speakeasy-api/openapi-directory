@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminDisableSelectedOrganizationGithubActionsEnterpriseRequest {
@@ -12,6 +13,7 @@ public class EnterpriseAdminDisableSelectedOrganizationGithubActionsEnterpriseRe
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
     public String enterprise;
+
     public EnterpriseAdminDisableSelectedOrganizationGithubActionsEnterpriseRequest withEnterprise(String enterprise) {
         this.enterprise = enterprise;
         return this;
@@ -22,9 +24,14 @@ public class EnterpriseAdminDisableSelectedOrganizationGithubActionsEnterpriseRe
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_id")
     public Long orgId;
+
     public EnterpriseAdminDisableSelectedOrganizationGithubActionsEnterpriseRequest withOrgId(Long orgId) {
         this.orgId = orgId;
         return this;
     }
     
+    public EnterpriseAdminDisableSelectedOrganizationGithubActionsEnterpriseRequest(@JsonProperty("enterprise") String enterprise, @JsonProperty("org_id") Long orgId) {
+        this.enterprise = enterprise;
+        this.orgId = orgId;
+  }
 }

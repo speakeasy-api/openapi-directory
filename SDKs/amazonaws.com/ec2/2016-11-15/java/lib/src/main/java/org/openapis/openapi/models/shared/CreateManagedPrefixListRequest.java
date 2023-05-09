@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateManagedPrefixListRequest {
     
     public String addressFamily;
+
     public CreateManagedPrefixListRequest withAddressFamily(String addressFamily) {
         this.addressFamily = addressFamily;
         return this;
@@ -16,6 +17,7 @@ public class CreateManagedPrefixListRequest {
     
     
     public String clientToken;
+
     public CreateManagedPrefixListRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -23,6 +25,7 @@ public class CreateManagedPrefixListRequest {
     
     
     public Boolean dryRun;
+
     public CreateManagedPrefixListRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class CreateManagedPrefixListRequest {
     
     
     public AddPrefixListEntry[] entries;
+
     public CreateManagedPrefixListRequest withEntries(AddPrefixListEntry[] entries) {
         this.entries = entries;
         return this;
@@ -37,6 +41,7 @@ public class CreateManagedPrefixListRequest {
     
     
     public Long maxEntries;
+
     public CreateManagedPrefixListRequest withMaxEntries(Long maxEntries) {
         this.maxEntries = maxEntries;
         return this;
@@ -44,6 +49,7 @@ public class CreateManagedPrefixListRequest {
     
     
     public String prefixListName;
+
     public CreateManagedPrefixListRequest withPrefixListName(String prefixListName) {
         this.prefixListName = prefixListName;
         return this;
@@ -51,9 +57,15 @@ public class CreateManagedPrefixListRequest {
     
     
     public CreateManagedPrefixListRequestTagSpecifications[] tagSpecifications;
+
     public CreateManagedPrefixListRequest withTagSpecifications(CreateManagedPrefixListRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public CreateManagedPrefixListRequest(@JsonProperty("AddressFamily") String addressFamily, @JsonProperty("MaxEntries") Long maxEntries, @JsonProperty("PrefixListName") String prefixListName) {
+        this.addressFamily = addressFamily;
+        this.maxEntries = maxEntries;
+        this.prefixListName = prefixListName;
+  }
 }

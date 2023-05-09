@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PlayMediaIntentHandlingResponse {
     
     public String contentType;
+
     public PlayMediaIntentHandlingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PlayMediaIntentHandlingResponse {
     
     
     public Object[] playMediaIntentHandlingInvocationResponses;
+
     public PlayMediaIntentHandlingResponse withPlayMediaIntentHandlingInvocationResponses(Object[] playMediaIntentHandlingInvocationResponses) {
         this.playMediaIntentHandlingInvocationResponses = playMediaIntentHandlingInvocationResponses;
         return this;
@@ -23,6 +26,7 @@ public class PlayMediaIntentHandlingResponse {
     
     
     public Integer statusCode;
+
     public PlayMediaIntentHandlingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class PlayMediaIntentHandlingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PlayMediaIntentHandlingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PlayMediaIntentHandlingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

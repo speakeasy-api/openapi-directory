@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTracksTrackIdStreamsResponse {
     
     public String contentType;
+
     public GetTracksTrackIdStreamsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetTracksTrackIdStreamsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetTracksTrackIdStreamsResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class GetTracksTrackIdStreamsResponse {
     
     
     public Integer statusCode;
+
     public GetTracksTrackIdStreamsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetTracksTrackIdStreamsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTracksTrackIdStreamsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetTracksTrackIdStreamsResponse {
      */
     
     public org.openapis.openapi.models.shared.Streams streams;
+
     public GetTracksTrackIdStreamsResponse withStreams(org.openapis.openapi.models.shared.Streams streams) {
         this.streams = streams;
         return this;
     }
     
+    public GetTracksTrackIdStreamsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

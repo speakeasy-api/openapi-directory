@@ -19,6 +19,7 @@ public class WkHtmlToPdfHtmlToPdfRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileName")
     public String fileName;
+
     public WkHtmlToPdfHtmlToPdfRequest withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -26,6 +27,7 @@ public class WkHtmlToPdfHtmlToPdfRequest {
     
     @JsonProperty("html")
     public String html;
+
     public WkHtmlToPdfHtmlToPdfRequest withHtml(String html) {
         this.html = html;
         return this;
@@ -34,6 +36,7 @@ public class WkHtmlToPdfHtmlToPdfRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inlinePdf")
     public Boolean inlinePdf;
+
     public WkHtmlToPdfHtmlToPdfRequest withInlinePdf(Boolean inlinePdf) {
         this.inlinePdf = inlinePdf;
         return this;
@@ -42,9 +45,13 @@ public class WkHtmlToPdfHtmlToPdfRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public WkHtmlToPdfAdvancedOptions options;
+
     public WkHtmlToPdfHtmlToPdfRequest withOptions(WkHtmlToPdfAdvancedOptions options) {
         this.options = options;
         return this;
     }
     
+    public WkHtmlToPdfHtmlToPdfRequest(@JsonProperty("html") String html) {
+        this.html = html;
+  }
 }

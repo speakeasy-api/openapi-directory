@@ -61,14 +61,12 @@ public class Transactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsStatementIdTransactionsResponse res = new org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsStatementIdTransactionsResponse() {{
+        org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsStatementIdTransactionsResponse res = new org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsStatementIdTransactionsResponse(contentType, httpRes.statusCode()) {{
             obReadTransaction6 = null;
             obReadTransaction6 = null;
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -138,14 +136,12 @@ public class Transactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountsAccountIdTransactionsResponse res = new org.openapis.openapi.models.operations.GetAccountsAccountIdTransactionsResponse() {{
+        org.openapis.openapi.models.operations.GetAccountsAccountIdTransactionsResponse res = new org.openapis.openapi.models.operations.GetAccountsAccountIdTransactionsResponse(contentType, httpRes.statusCode()) {{
             obReadTransaction6 = null;
             obReadTransaction6 = null;
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

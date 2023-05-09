@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetManyRecurringPaymentsResponse {
     
     public String contentType;
+
     public GetManyRecurringPaymentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetManyRecurringPaymentsResponse {
     
     
     public Integer statusCode;
+
     public GetManyRecurringPaymentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetManyRecurringPaymentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetManyRecurringPaymentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetManyRecurringPaymentsResponse {
      */
     
     public GetManyRecurringPayments200ApplicationJSON getManyRecurringPayments200ApplicationJSONObject;
+
     public GetManyRecurringPaymentsResponse withGetManyRecurringPayments200ApplicationJSONObject(GetManyRecurringPayments200ApplicationJSON getManyRecurringPayments200ApplicationJSONObject) {
         this.getManyRecurringPayments200ApplicationJSONObject = getManyRecurringPayments200ApplicationJSONObject;
         return this;
     }
     
+    public GetManyRecurringPaymentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

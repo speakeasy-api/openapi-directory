@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartConfigRulesEvaluationResponse {
     
     public String contentType;
+
     public StartConfigRulesEvaluationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartConfigRulesEvaluationResponse {
      */
     
     public Object invalidParameterValueException;
+
     public StartConfigRulesEvaluationResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class StartConfigRulesEvaluationResponse {
      */
     
     public Object limitExceededException;
+
     public StartConfigRulesEvaluationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class StartConfigRulesEvaluationResponse {
      */
     
     public Object noSuchConfigRuleException;
+
     public StartConfigRulesEvaluationResponse withNoSuchConfigRuleException(Object noSuchConfigRuleException) {
         this.noSuchConfigRuleException = noSuchConfigRuleException;
         return this;
@@ -49,6 +54,7 @@ public class StartConfigRulesEvaluationResponse {
      */
     
     public Object resourceInUseException;
+
     public StartConfigRulesEvaluationResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class StartConfigRulesEvaluationResponse {
      */
     
     public java.util.Map<String, Object> startConfigRulesEvaluationResponse;
+
     public StartConfigRulesEvaluationResponse withStartConfigRulesEvaluationResponse(java.util.Map<String, Object> startConfigRulesEvaluationResponse) {
         this.startConfigRulesEvaluationResponse = startConfigRulesEvaluationResponse;
         return this;
@@ -66,6 +73,7 @@ public class StartConfigRulesEvaluationResponse {
     
     
     public Integer statusCode;
+
     public StartConfigRulesEvaluationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class StartConfigRulesEvaluationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartConfigRulesEvaluationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartConfigRulesEvaluationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

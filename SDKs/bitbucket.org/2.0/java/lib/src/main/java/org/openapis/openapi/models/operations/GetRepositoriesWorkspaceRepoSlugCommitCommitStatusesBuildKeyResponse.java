@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse {
     
     public String contentType;
+
     public GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRespons
     
     
     public Integer statusCode;
+
     public GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRespons
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRespons
      */
     
     public java.util.Map<String, Object> commitstatus;
+
     public GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse withCommitstatus(java.util.Map<String, Object> commitstatus) {
         this.commitstatus = commitstatus;
         return this;
@@ -43,9 +48,14 @@ public class GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRespons
      */
     
     public java.util.Map<String, Object> error;
+
     public GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetPaymentRootTypeForPaymentsInvestmentInstructions {
     @JsonProperty("investment_product_id")
     public String investmentProductId;
+
     public GetPaymentRootTypeForPaymentsInvestmentInstructions withInvestmentProductId(String investmentProductId) {
         this.investmentProductId = investmentProductId;
         return this;
@@ -22,6 +23,7 @@ public class GetPaymentRootTypeForPaymentsInvestmentInstructions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public String quantity;
+
     public GetPaymentRootTypeForPaymentsInvestmentInstructions withQuantity(String quantity) {
         this.quantity = quantity;
         return this;
@@ -33,9 +35,13 @@ public class GetPaymentRootTypeForPaymentsInvestmentInstructions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GetPaymentRootTypeForPaymentsInvestmentInstructions withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GetPaymentRootTypeForPaymentsInvestmentInstructions(@JsonProperty("investment_product_id") String investmentProductId) {
+        this.investmentProductId = investmentProductId;
+  }
 }

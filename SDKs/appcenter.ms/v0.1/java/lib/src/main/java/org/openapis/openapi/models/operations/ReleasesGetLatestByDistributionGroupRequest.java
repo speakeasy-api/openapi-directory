@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesGetLatestByDistributionGroupRequest {
@@ -12,6 +13,7 @@ public class ReleasesGetLatestByDistributionGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public ReleasesGetLatestByDistributionGroupRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class ReleasesGetLatestByDistributionGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=distribution_group_name")
     public String distributionGroupName;
+
     public ReleasesGetLatestByDistributionGroupRequest withDistributionGroupName(String distributionGroupName) {
         this.distributionGroupName = distributionGroupName;
         return this;
@@ -32,6 +35,7 @@ public class ReleasesGetLatestByDistributionGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_install_page")
     public Boolean isInstallPage;
+
     public ReleasesGetLatestByDistributionGroupRequest withIsInstallPage(Boolean isInstallPage) {
         this.isInstallPage = isInstallPage;
         return this;
@@ -42,6 +46,7 @@ public class ReleasesGetLatestByDistributionGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public ReleasesGetLatestByDistributionGroupRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -52,9 +57,16 @@ public class ReleasesGetLatestByDistributionGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
     public String releaseId;
+
     public ReleasesGetLatestByDistributionGroupRequest withReleaseId(String releaseId) {
         this.releaseId = releaseId;
         return this;
     }
     
+    public ReleasesGetLatestByDistributionGroupRequest(@JsonProperty("app_name") String appName, @JsonProperty("distribution_group_name") String distributionGroupName, @JsonProperty("owner_name") String ownerName, @JsonProperty("release_id") String releaseId) {
+        this.appName = appName;
+        this.distributionGroupName = distributionGroupName;
+        this.ownerName = ownerName;
+        this.releaseId = releaseId;
+  }
 }

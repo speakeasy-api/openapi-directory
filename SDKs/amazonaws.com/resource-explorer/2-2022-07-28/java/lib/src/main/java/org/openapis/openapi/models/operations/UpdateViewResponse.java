@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateViewResponse {
@@ -12,6 +13,7 @@ public class UpdateViewResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateViewResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateViewResponse {
     
     
     public String contentType;
+
     public UpdateViewResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateViewResponse {
      */
     
     public Object internalServerException;
+
     public UpdateViewResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateViewResponse {
     
     
     public Integer statusCode;
+
     public UpdateViewResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateViewResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateViewResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateViewResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateViewResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateViewResponse {
      */
     
     public Object throttlingException;
+
     public UpdateViewResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateViewResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateViewResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateViewResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateViewOutput updateViewOutput;
+
     public UpdateViewResponse withUpdateViewOutput(org.openapis.openapi.models.shared.UpdateViewOutput updateViewOutput) {
         this.updateViewOutput = updateViewOutput;
         return this;
@@ -93,9 +103,14 @@ public class UpdateViewResponse {
      */
     
     public Object validationException;
+
     public UpdateViewResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateViewResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

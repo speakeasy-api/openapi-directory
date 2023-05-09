@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETGETEbsEncryptionByDefaultResponse {
     
     public byte[] body;
+
     public GETGETEbsEncryptionByDefaultResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETGETEbsEncryptionByDefaultResponse {
     
     
     public String contentType;
+
     public GETGETEbsEncryptionByDefaultResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETGETEbsEncryptionByDefaultResponse {
     
     
     public Integer statusCode;
+
     public GETGETEbsEncryptionByDefaultResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETGETEbsEncryptionByDefaultResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETGETEbsEncryptionByDefaultResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETGETEbsEncryptionByDefaultResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

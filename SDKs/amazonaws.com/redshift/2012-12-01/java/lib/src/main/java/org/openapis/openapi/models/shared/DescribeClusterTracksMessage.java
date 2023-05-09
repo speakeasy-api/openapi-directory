@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeClusterTracksMessage {
     
     public String maintenanceTrackName;
+
     public DescribeClusterTracksMessage withMaintenanceTrackName(String maintenanceTrackName) {
         this.maintenanceTrackName = maintenanceTrackName;
         return this;
@@ -16,6 +17,7 @@ public class DescribeClusterTracksMessage {
     
     
     public String marker;
+
     public DescribeClusterTracksMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,9 +25,11 @@ public class DescribeClusterTracksMessage {
     
     
     public Long maxRecords;
+
     public DescribeClusterTracksMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
     }
     
+    public DescribeClusterTracksMessage(){}
 }

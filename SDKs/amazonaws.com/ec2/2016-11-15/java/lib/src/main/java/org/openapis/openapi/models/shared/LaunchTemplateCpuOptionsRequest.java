@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class LaunchTemplateCpuOptionsRequest {
     
     public Long coreCount;
+
     public LaunchTemplateCpuOptionsRequest withCoreCount(Long coreCount) {
         this.coreCount = coreCount;
         return this;
@@ -19,9 +20,11 @@ public class LaunchTemplateCpuOptionsRequest {
     
     
     public Long threadsPerCore;
+
     public LaunchTemplateCpuOptionsRequest withThreadsPerCore(Long threadsPerCore) {
         this.threadsPerCore = threadsPerCore;
         return this;
     }
     
+    public LaunchTemplateCpuOptionsRequest(){}
 }

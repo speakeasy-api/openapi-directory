@@ -18,6 +18,7 @@ public class PersonContactDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
     public PersonContactEmailsDTO emails;
+
     public PersonContactDTO withEmails(PersonContactEmailsDTO emails) {
         this.emails = emails;
         return this;
@@ -29,6 +30,7 @@ public class PersonContactDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fax")
     public String fax;
+
     public PersonContactDTO withFax(String fax) {
         this.fax = fax;
         return this;
@@ -40,6 +42,7 @@ public class PersonContactDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phones")
     public String[] phones;
+
     public PersonContactDTO withPhones(String[] phones) {
         this.phones = phones;
         return this;
@@ -51,9 +54,11 @@ public class PersonContactDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sms")
     public String sms;
+
     public PersonContactDTO withSms(String sms) {
         this.sms = sms;
         return this;
     }
     
+    public PersonContactDTO(){}
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateServiceSpecificCredentialResponse {
     
     public ServiceSpecificCredential serviceSpecificCredential;
+
     public CreateServiceSpecificCredentialResponse withServiceSpecificCredential(ServiceSpecificCredential serviceSpecificCredential) {
         this.serviceSpecificCredential = serviceSpecificCredential;
         return this;
     }
     
+    public CreateServiceSpecificCredentialResponse(){}
 }

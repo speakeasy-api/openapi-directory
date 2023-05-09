@@ -12,6 +12,7 @@ public class PagespeedApiImageV4 {
      */
     
     public String data;
+
     public PagespeedApiImageV4 withData(String data) {
         this.data = data;
         return this;
@@ -22,6 +23,7 @@ public class PagespeedApiImageV4 {
      */
     
     public Integer height;
+
     public PagespeedApiImageV4 withHeight(Integer height) {
         this.height = height;
         return this;
@@ -32,6 +34,7 @@ public class PagespeedApiImageV4 {
      */
     
     public String key;
+
     public PagespeedApiImageV4 withKey(String key) {
         this.key = key;
         return this;
@@ -42,6 +45,7 @@ public class PagespeedApiImageV4 {
      */
     
     public String mimeType;
+
     public PagespeedApiImageV4 withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -49,6 +53,7 @@ public class PagespeedApiImageV4 {
     
     
     public PagespeedApiImageV4PageRect pageRect;
+
     public PagespeedApiImageV4 withPageRect(PagespeedApiImageV4PageRect pageRect) {
         this.pageRect = pageRect;
         return this;
@@ -59,9 +64,11 @@ public class PagespeedApiImageV4 {
      */
     
     public Integer width;
+
     public PagespeedApiImageV4 withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public PagespeedApiImageV4(){}
 }

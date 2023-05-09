@@ -18,6 +18,7 @@ public class GeneratedAssetPackSlice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloadId")
     public String downloadId;
+
     public GeneratedAssetPackSlice withDownloadId(String downloadId) {
         this.downloadId = downloadId;
         return this;
@@ -29,6 +30,7 @@ public class GeneratedAssetPackSlice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("moduleName")
     public String moduleName;
+
     public GeneratedAssetPackSlice withModuleName(String moduleName) {
         this.moduleName = moduleName;
         return this;
@@ -40,6 +42,7 @@ public class GeneratedAssetPackSlice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sliceId")
     public String sliceId;
+
     public GeneratedAssetPackSlice withSliceId(String sliceId) {
         this.sliceId = sliceId;
         return this;
@@ -51,9 +54,11 @@ public class GeneratedAssetPackSlice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public GeneratedAssetPackSlice withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public GeneratedAssetPackSlice(){}
 }

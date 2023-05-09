@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SetIdentityFeedbackForwardingEnabledRequest - Represents a request to enable or disable whether Amazon SES forwards you bounce and complaint notifications through email. For information about email feedback forwarding, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/notifications-via-email.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SetIdentityFeedbackForwardingEnabledRequest {
     
     public Boolean forwardingEnabled;
+
     public SetIdentityFeedbackForwardingEnabledRequest withForwardingEnabled(Boolean forwardingEnabled) {
         this.forwardingEnabled = forwardingEnabled;
         return this;
@@ -19,9 +20,14 @@ public class SetIdentityFeedbackForwardingEnabledRequest {
     
     
     public String identity;
+
     public SetIdentityFeedbackForwardingEnabledRequest withIdentity(String identity) {
         this.identity = identity;
         return this;
     }
     
+    public SetIdentityFeedbackForwardingEnabledRequest(@JsonProperty("ForwardingEnabled") Boolean forwardingEnabled, @JsonProperty("Identity") String identity) {
+        this.forwardingEnabled = forwardingEnabled;
+        this.identity = identity;
+  }
 }

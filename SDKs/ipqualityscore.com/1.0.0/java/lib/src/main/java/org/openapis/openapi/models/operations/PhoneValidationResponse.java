@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PhoneValidationResponse {
     
     public String contentType;
+
     public PhoneValidationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PhoneValidationResponse {
     
     
     public Integer statusCode;
+
     public PhoneValidationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PhoneValidationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PhoneValidationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PhoneValidationResponse {
      */
     
     public PhoneValidation200ApplicationJSON phoneValidation200ApplicationJSONObject;
+
     public PhoneValidationResponse withPhoneValidation200ApplicationJSONObject(PhoneValidation200ApplicationJSON phoneValidation200ApplicationJSONObject) {
         this.phoneValidation200ApplicationJSONObject = phoneValidation200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class PhoneValidationResponse {
      */
     
     public PhoneValidation400ApplicationJSON phoneValidation400ApplicationJSONObject;
+
     public PhoneValidationResponse withPhoneValidation400ApplicationJSONObject(PhoneValidation400ApplicationJSON phoneValidation400ApplicationJSONObject) {
         this.phoneValidation400ApplicationJSONObject = phoneValidation400ApplicationJSONObject;
         return this;
@@ -53,9 +59,14 @@ public class PhoneValidationResponse {
      */
     
     public PhoneValidation500ApplicationJSON phoneValidation500ApplicationJSONObject;
+
     public PhoneValidationResponse withPhoneValidation500ApplicationJSONObject(PhoneValidation500ApplicationJSON phoneValidation500ApplicationJSONObject) {
         this.phoneValidation500ApplicationJSONObject = phoneValidation500ApplicationJSONObject;
         return this;
     }
     
+    public PhoneValidationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

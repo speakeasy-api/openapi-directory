@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListBookingsResponse {
     
     public String contentType;
+
     public ListBookingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ListBookingsResponse {
     
     
     public Integer statusCode;
+
     public ListBookingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ListBookingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListBookingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ListBookingsResponse {
      */
     
     public org.openapis.openapi.models.shared.GenericError genericError;
+
     public ListBookingsResponse withGenericError(org.openapis.openapi.models.shared.GenericError genericError) {
         this.genericError = genericError;
         return this;
@@ -43,6 +48,7 @@ public class ListBookingsResponse {
      */
     
     public ListBookings200ApplicationJSON listBookings200ApplicationJSONObject;
+
     public ListBookingsResponse withListBookings200ApplicationJSONObject(ListBookings200ApplicationJSON listBookings200ApplicationJSONObject) {
         this.listBookings200ApplicationJSONObject = listBookings200ApplicationJSONObject;
         return this;
@@ -53,9 +59,14 @@ public class ListBookingsResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ListBookingsResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ListBookingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWgTaskStatusListOfWorkgroupResponse {
     
     public byte[] body;
+
     public GetWgTaskStatusListOfWorkgroupResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetWgTaskStatusListOfWorkgroupResponse {
     
     
     public String contentType;
+
     public GetWgTaskStatusListOfWorkgroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetWgTaskStatusListOfWorkgroupResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO;
+
     public GetWgTaskStatusListOfWorkgroupResponse withHTTPStatusVO(org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO) {
         this.httpStatusVO = httpStatusVO;
         return this;
@@ -33,6 +37,7 @@ public class GetWgTaskStatusListOfWorkgroupResponse {
     
     
     public Integer statusCode;
+
     public GetWgTaskStatusListOfWorkgroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetWgTaskStatusListOfWorkgroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWgTaskStatusListOfWorkgroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class GetWgTaskStatusListOfWorkgroupResponse {
      */
     
     public org.openapis.openapi.models.shared.WgTaskStatusListVO wgTaskStatusListVO;
+
     public GetWgTaskStatusListOfWorkgroupResponse withWgTaskStatusListVO(org.openapis.openapi.models.shared.WgTaskStatusListVO wgTaskStatusListVO) {
         this.wgTaskStatusListVO = wgTaskStatusListVO;
         return this;
     }
     
+    public GetWgTaskStatusListOfWorkgroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountIdentifier")
     public String accountIdentifier;
+
     public User withAccountIdentifier(String accountIdentifier) {
         this.accountIdentifier = accountIdentifier;
         return this;
     }
     
+    public User(){}
 }

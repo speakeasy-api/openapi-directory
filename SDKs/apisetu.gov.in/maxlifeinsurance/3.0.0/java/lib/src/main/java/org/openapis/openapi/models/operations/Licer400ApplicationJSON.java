@@ -15,6 +15,7 @@ public class Licer400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Licer400ApplicationJSONErrorEnum error;
+
     public Licer400ApplicationJSON withError(Licer400ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Licer400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Licer400ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Licer400ApplicationJSON withErrorDescription(Licer400ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Licer400ApplicationJSON(){}
 }

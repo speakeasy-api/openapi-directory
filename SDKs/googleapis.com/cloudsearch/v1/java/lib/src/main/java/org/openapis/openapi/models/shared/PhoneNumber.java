@@ -18,6 +18,7 @@ public class PhoneNumber {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public PhoneNumber withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -26,9 +27,11 @@ public class PhoneNumber {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PhoneNumberTypeEnum type;
+
     public PhoneNumber withType(PhoneNumberTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PhoneNumber(){}
 }

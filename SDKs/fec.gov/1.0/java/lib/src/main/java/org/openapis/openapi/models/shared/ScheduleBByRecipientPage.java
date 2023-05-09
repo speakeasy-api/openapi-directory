@@ -12,6 +12,7 @@ public class ScheduleBByRecipientPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public SeekInfo pagination;
+
     public ScheduleBByRecipientPage withPagination(SeekInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class ScheduleBByRecipientPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public ScheduleBByRecipient[] results;
+
     public ScheduleBByRecipientPage withResults(ScheduleBByRecipient[] results) {
         this.results = results;
         return this;
     }
     
+    public ScheduleBByRecipientPage(){}
 }

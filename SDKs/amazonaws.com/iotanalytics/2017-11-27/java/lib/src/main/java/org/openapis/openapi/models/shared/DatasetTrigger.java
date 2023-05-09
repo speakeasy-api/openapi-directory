@@ -15,6 +15,7 @@ public class DatasetTrigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataset")
     public TriggeringDataset dataset;
+
     public DatasetTrigger withDataset(TriggeringDataset dataset) {
         this.dataset = dataset;
         return this;
@@ -23,9 +24,11 @@ public class DatasetTrigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public Schedule schedule;
+
     public DatasetTrigger withSchedule(Schedule schedule) {
         this.schedule = schedule;
         return this;
     }
     
+    public DatasetTrigger(){}
 }

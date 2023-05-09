@@ -15,6 +15,7 @@ public class AwsIamPolicyVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreateDate")
     public String createDate;
+
     public AwsIamPolicyVersion withCreateDate(String createDate) {
         this.createDate = createDate;
         return this;
@@ -23,6 +24,7 @@ public class AwsIamPolicyVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsDefaultVersion")
     public Boolean isDefaultVersion;
+
     public AwsIamPolicyVersion withIsDefaultVersion(Boolean isDefaultVersion) {
         this.isDefaultVersion = isDefaultVersion;
         return this;
@@ -31,9 +33,11 @@ public class AwsIamPolicyVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionId")
     public String versionId;
+
     public AwsIamPolicyVersion withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public AwsIamPolicyVersion(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MaintenanceControllerCreateMaintenanceJobRawRequest {
@@ -12,6 +13,7 @@ public class MaintenanceControllerCreateMaintenanceJobRawRequest {
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public MaintenanceControllerCreateMaintenanceJobRawRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class MaintenanceControllerCreateMaintenanceJobRawRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branchID")
     public String branchID;
+
     public MaintenanceControllerCreateMaintenanceJobRawRequest withBranchID(String branchID) {
         this.branchID = branchID;
         return this;
@@ -32,9 +35,15 @@ public class MaintenanceControllerCreateMaintenanceJobRawRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
     public String shortName;
+
     public MaintenanceControllerCreateMaintenanceJobRawRequest withShortName(String shortName) {
         this.shortName = shortName;
         return this;
     }
     
+    public MaintenanceControllerCreateMaintenanceJobRawRequest(@JsonProperty("RequestBody") byte[] requestBody, @JsonProperty("branchID") String branchID, @JsonProperty("shortName") String shortName) {
+        this.requestBody = requestBody;
+        this.branchID = branchID;
+        this.shortName = shortName;
+  }
 }

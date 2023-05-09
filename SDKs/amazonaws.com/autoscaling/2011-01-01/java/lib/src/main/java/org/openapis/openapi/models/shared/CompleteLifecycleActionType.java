@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CompleteLifecycleActionType {
     
     public String autoScalingGroupName;
+
     public CompleteLifecycleActionType withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -16,6 +17,7 @@ public class CompleteLifecycleActionType {
     
     
     public String instanceId;
+
     public CompleteLifecycleActionType withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -23,6 +25,7 @@ public class CompleteLifecycleActionType {
     
     
     public String lifecycleActionResult;
+
     public CompleteLifecycleActionType withLifecycleActionResult(String lifecycleActionResult) {
         this.lifecycleActionResult = lifecycleActionResult;
         return this;
@@ -30,6 +33,7 @@ public class CompleteLifecycleActionType {
     
     
     public String lifecycleActionToken;
+
     public CompleteLifecycleActionType withLifecycleActionToken(String lifecycleActionToken) {
         this.lifecycleActionToken = lifecycleActionToken;
         return this;
@@ -37,9 +41,15 @@ public class CompleteLifecycleActionType {
     
     
     public String lifecycleHookName;
+
     public CompleteLifecycleActionType withLifecycleHookName(String lifecycleHookName) {
         this.lifecycleHookName = lifecycleHookName;
         return this;
     }
     
+    public CompleteLifecycleActionType(@JsonProperty("AutoScalingGroupName") String autoScalingGroupName, @JsonProperty("LifecycleActionResult") String lifecycleActionResult, @JsonProperty("LifecycleHookName") String lifecycleHookName) {
+        this.autoScalingGroupName = autoScalingGroupName;
+        this.lifecycleActionResult = lifecycleActionResult;
+        this.lifecycleHookName = lifecycleHookName;
+  }
 }

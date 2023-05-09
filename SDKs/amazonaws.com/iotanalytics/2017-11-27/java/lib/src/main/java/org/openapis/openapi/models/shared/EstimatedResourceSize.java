@@ -22,6 +22,7 @@ public class EstimatedResourceSize {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("estimatedOn")
     public OffsetDateTime estimatedOn;
+
     public EstimatedResourceSize withEstimatedOn(OffsetDateTime estimatedOn) {
         this.estimatedOn = estimatedOn;
         return this;
@@ -30,9 +31,11 @@ public class EstimatedResourceSize {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimatedSizeInBytes")
     public Double estimatedSizeInBytes;
+
     public EstimatedResourceSize withEstimatedSizeInBytes(Double estimatedSizeInBytes) {
         this.estimatedSizeInBytes = estimatedSizeInBytes;
         return this;
     }
     
+    public EstimatedResourceSize(){}
 }

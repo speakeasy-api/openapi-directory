@@ -7,7 +7,7 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * PolicyControllerBundleInstallSpecManagementEnum - Management specifies how the bundle will be managed by the controller. TODO (b/271878194): Remove this
+ * PolicyControllerBundleInstallSpecManagementEnum - Management specifies how the bundle will be managed by the controller.
  */
 public enum PolicyControllerBundleInstallSpecManagementEnum {
     MANAGEMENT_UNSPECIFIED("MANAGEMENT_UNSPECIFIED"),

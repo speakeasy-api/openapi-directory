@@ -15,6 +15,7 @@ public class DescribeRecommendationLimitationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limitations")
     public Limitation[] limitations;
+
     public DescribeRecommendationLimitationsResponse withLimitations(Limitation[] limitations) {
         this.limitations = limitations;
         return this;
@@ -23,9 +24,11 @@ public class DescribeRecommendationLimitationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeRecommendationLimitationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeRecommendationLimitationsResponse(){}
 }

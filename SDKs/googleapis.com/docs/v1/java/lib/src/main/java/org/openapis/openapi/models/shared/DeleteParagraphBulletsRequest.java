@@ -18,9 +18,11 @@ public class DeleteParagraphBulletsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public Range range;
+
     public DeleteParagraphBulletsRequest withRange(Range range) {
         this.range = range;
         return this;
     }
     
+    public DeleteParagraphBulletsRequest(){}
 }

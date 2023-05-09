@@ -15,9 +15,11 @@ public class HttpProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HttpName")
     public String httpName;
+
     public HttpProperties withHttpName(String httpName) {
         this.httpName = httpName;
         return this;
     }
     
+    public HttpProperties(){}
 }

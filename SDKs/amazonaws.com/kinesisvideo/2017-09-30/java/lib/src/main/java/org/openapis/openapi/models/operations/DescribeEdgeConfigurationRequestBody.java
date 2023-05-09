@@ -15,6 +15,7 @@ public class DescribeEdgeConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public DescribeEdgeConfigurationRequestBody withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -26,9 +27,11 @@ public class DescribeEdgeConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public DescribeEdgeConfigurationRequestBody withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public DescribeEdgeConfigurationRequestBody(){}
 }

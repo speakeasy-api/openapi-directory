@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateComputerResponse {
@@ -12,6 +13,7 @@ public class CreateComputerResponse {
      */
     
     public Object authenticationFailedException;
+
     public CreateComputerResponse withAuthenticationFailedException(Object authenticationFailedException) {
         this.authenticationFailedException = authenticationFailedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateComputerResponse {
      */
     
     public Object clientException;
+
     public CreateComputerResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class CreateComputerResponse {
     
     
     public String contentType;
+
     public CreateComputerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateComputerResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateComputerResult createComputerResult;
+
     public CreateComputerResponse withCreateComputerResult(org.openapis.openapi.models.shared.CreateComputerResult createComputerResult) {
         this.createComputerResult = createComputerResult;
         return this;
@@ -49,6 +54,7 @@ public class CreateComputerResponse {
      */
     
     public Object directoryUnavailableException;
+
     public CreateComputerResponse withDirectoryUnavailableException(Object directoryUnavailableException) {
         this.directoryUnavailableException = directoryUnavailableException;
         return this;
@@ -59,6 +65,7 @@ public class CreateComputerResponse {
      */
     
     public Object entityAlreadyExistsException;
+
     public CreateComputerResponse withEntityAlreadyExistsException(Object entityAlreadyExistsException) {
         this.entityAlreadyExistsException = entityAlreadyExistsException;
         return this;
@@ -69,6 +76,7 @@ public class CreateComputerResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public CreateComputerResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -79,6 +87,7 @@ public class CreateComputerResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateComputerResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -89,6 +98,7 @@ public class CreateComputerResponse {
      */
     
     public Object serviceException;
+
     public CreateComputerResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -96,6 +106,7 @@ public class CreateComputerResponse {
     
     
     public Integer statusCode;
+
     public CreateComputerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class CreateComputerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateComputerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class CreateComputerResponse {
      */
     
     public Object unsupportedOperationException;
+
     public CreateComputerResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public CreateComputerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

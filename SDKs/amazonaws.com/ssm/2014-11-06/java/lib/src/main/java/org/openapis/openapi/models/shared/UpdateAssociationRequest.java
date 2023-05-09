@@ -15,6 +15,7 @@ public class UpdateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlarmConfiguration")
     public AlarmConfiguration alarmConfiguration;
+
     public UpdateAssociationRequest withAlarmConfiguration(AlarmConfiguration alarmConfiguration) {
         this.alarmConfiguration = alarmConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class UpdateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplyOnlyAtCronInterval")
     public Boolean applyOnlyAtCronInterval;
+
     public UpdateAssociationRequest withApplyOnlyAtCronInterval(Boolean applyOnlyAtCronInterval) {
         this.applyOnlyAtCronInterval = applyOnlyAtCronInterval;
         return this;
@@ -30,6 +32,7 @@ public class UpdateAssociationRequest {
     
     @JsonProperty("AssociationId")
     public String associationId;
+
     public UpdateAssociationRequest withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -38,6 +41,7 @@ public class UpdateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationName")
     public String associationName;
+
     public UpdateAssociationRequest withAssociationName(String associationName) {
         this.associationName = associationName;
         return this;
@@ -46,6 +50,7 @@ public class UpdateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationVersion")
     public String associationVersion;
+
     public UpdateAssociationRequest withAssociationVersion(String associationVersion) {
         this.associationVersion = associationVersion;
         return this;
@@ -54,6 +59,7 @@ public class UpdateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutomationTargetParameterName")
     public String automationTargetParameterName;
+
     public UpdateAssociationRequest withAutomationTargetParameterName(String automationTargetParameterName) {
         this.automationTargetParameterName = automationTargetParameterName;
         return this;
@@ -62,6 +68,7 @@ public class UpdateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CalendarNames")
     public String[] calendarNames;
+
     public UpdateAssociationRequest withCalendarNames(String[] calendarNames) {
         this.calendarNames = calendarNames;
         return this;
@@ -70,6 +77,7 @@ public class UpdateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceSeverity")
     public AssociationComplianceSeverityEnum complianceSeverity;
+
     public UpdateAssociationRequest withComplianceSeverity(AssociationComplianceSeverityEnum complianceSeverity) {
         this.complianceSeverity = complianceSeverity;
         return this;
@@ -78,6 +86,7 @@ public class UpdateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentVersion")
     public String documentVersion;
+
     public UpdateAssociationRequest withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -86,6 +95,7 @@ public class UpdateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxConcurrency")
     public String maxConcurrency;
+
     public UpdateAssociationRequest withMaxConcurrency(String maxConcurrency) {
         this.maxConcurrency = maxConcurrency;
         return this;
@@ -94,6 +104,7 @@ public class UpdateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxErrors")
     public String maxErrors;
+
     public UpdateAssociationRequest withMaxErrors(String maxErrors) {
         this.maxErrors = maxErrors;
         return this;
@@ -102,6 +113,7 @@ public class UpdateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateAssociationRequest withName(String name) {
         this.name = name;
         return this;
@@ -110,6 +122,7 @@ public class UpdateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputLocation")
     public InstanceAssociationOutputLocation outputLocation;
+
     public UpdateAssociationRequest withOutputLocation(InstanceAssociationOutputLocation outputLocation) {
         this.outputLocation = outputLocation;
         return this;
@@ -118,6 +131,7 @@ public class UpdateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, String[]> parameters;
+
     public UpdateAssociationRequest withParameters(java.util.Map<String, String[]> parameters) {
         this.parameters = parameters;
         return this;
@@ -126,6 +140,7 @@ public class UpdateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleExpression")
     public String scheduleExpression;
+
     public UpdateAssociationRequest withScheduleExpression(String scheduleExpression) {
         this.scheduleExpression = scheduleExpression;
         return this;
@@ -134,6 +149,7 @@ public class UpdateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleOffset")
     public Long scheduleOffset;
+
     public UpdateAssociationRequest withScheduleOffset(Long scheduleOffset) {
         this.scheduleOffset = scheduleOffset;
         return this;
@@ -142,6 +158,7 @@ public class UpdateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SyncCompliance")
     public AssociationSyncComplianceEnum syncCompliance;
+
     public UpdateAssociationRequest withSyncCompliance(AssociationSyncComplianceEnum syncCompliance) {
         this.syncCompliance = syncCompliance;
         return this;
@@ -150,6 +167,7 @@ public class UpdateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetLocations")
     public TargetLocation[] targetLocations;
+
     public UpdateAssociationRequest withTargetLocations(TargetLocation[] targetLocations) {
         this.targetLocations = targetLocations;
         return this;
@@ -158,6 +176,7 @@ public class UpdateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetMaps")
     public java.util.Map<String, String[]>[] targetMaps;
+
     public UpdateAssociationRequest withTargetMaps(java.util.Map<String, String[]>[] targetMaps) {
         this.targetMaps = targetMaps;
         return this;
@@ -166,9 +185,13 @@ public class UpdateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Targets")
     public Target[] targets;
+
     public UpdateAssociationRequest withTargets(Target[] targets) {
         this.targets = targets;
         return this;
     }
     
+    public UpdateAssociationRequest(@JsonProperty("AssociationId") String associationId) {
+        this.associationId = associationId;
+  }
 }

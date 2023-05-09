@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetHTMLUsingGETResponse {
     
     public String contentType;
+
     public SetHTMLUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SetHTMLUsingGETResponse {
     
     
     public Integer statusCode;
+
     public SetHTMLUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SetHTMLUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetHTMLUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SetHTMLUsingGETResponse {
      */
     
     public SetHTMLUsingGET200ApplicationJSON setHTMLUsingGET200ApplicationJSONObject;
+
     public SetHTMLUsingGETResponse withSetHTMLUsingGET200ApplicationJSONObject(SetHTMLUsingGET200ApplicationJSON setHTMLUsingGET200ApplicationJSONObject) {
         this.setHTMLUsingGET200ApplicationJSONObject = setHTMLUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class SetHTMLUsingGETResponse {
      */
     
     public SetHTMLUsingGET400ApplicationJSON setHTMLUsingGET400ApplicationJSONObject;
+
     public SetHTMLUsingGETResponse withSetHTMLUsingGET400ApplicationJSONObject(SetHTMLUsingGET400ApplicationJSON setHTMLUsingGET400ApplicationJSONObject) {
         this.setHTMLUsingGET400ApplicationJSONObject = setHTMLUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class SetHTMLUsingGETResponse {
      */
     
     public SetHTMLUsingGET401ApplicationJSON setHTMLUsingGET401ApplicationJSONObject;
+
     public SetHTMLUsingGETResponse withSetHTMLUsingGET401ApplicationJSONObject(SetHTMLUsingGET401ApplicationJSON setHTMLUsingGET401ApplicationJSONObject) {
         this.setHTMLUsingGET401ApplicationJSONObject = setHTMLUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class SetHTMLUsingGETResponse {
      */
     
     public SetHTMLUsingGET500ApplicationJSON setHTMLUsingGET500ApplicationJSONObject;
+
     public SetHTMLUsingGETResponse withSetHTMLUsingGET500ApplicationJSONObject(SetHTMLUsingGET500ApplicationJSON setHTMLUsingGET500ApplicationJSONObject) {
         this.setHTMLUsingGET500ApplicationJSONObject = setHTMLUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public SetHTMLUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

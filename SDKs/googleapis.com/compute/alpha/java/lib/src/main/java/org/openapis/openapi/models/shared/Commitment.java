@@ -18,6 +18,7 @@ public class Commitment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoRenew")
     public Boolean autoRenew;
+
     public Commitment withAutoRenew(Boolean autoRenew) {
         this.autoRenew = autoRenew;
         return this;
@@ -29,6 +30,7 @@ public class Commitment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public CommitmentCategoryEnum category;
+
     public Commitment withCategory(CommitmentCategoryEnum category) {
         this.category = category;
         return this;
@@ -40,6 +42,7 @@ public class Commitment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public Commitment withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -51,6 +54,7 @@ public class Commitment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Commitment withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +66,7 @@ public class Commitment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTimestamp")
     public String endTimestamp;
+
     public Commitment withEndTimestamp(String endTimestamp) {
         this.endTimestamp = endTimestamp;
         return this;
@@ -73,6 +78,7 @@ public class Commitment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Commitment withId(String id) {
         this.id = id;
         return this;
@@ -84,6 +90,7 @@ public class Commitment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Commitment withKind(String kind) {
         this.kind = kind;
         return this;
@@ -95,6 +102,7 @@ public class Commitment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licenseResource")
     public LicenseResourceCommitment licenseResource;
+
     public Commitment withLicenseResource(LicenseResourceCommitment licenseResource) {
         this.licenseResource = licenseResource;
         return this;
@@ -106,6 +114,7 @@ public class Commitment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mergeSourceCommitments")
     public String[] mergeSourceCommitments;
+
     public Commitment withMergeSourceCommitments(String[] mergeSourceCommitments) {
         this.mergeSourceCommitments = mergeSourceCommitments;
         return this;
@@ -117,6 +126,7 @@ public class Commitment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Commitment withName(String name) {
         this.name = name;
         return this;
@@ -128,6 +138,7 @@ public class Commitment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plan")
     public CommitmentPlanEnum plan;
+
     public Commitment withPlan(CommitmentPlanEnum plan) {
         this.plan = plan;
         return this;
@@ -139,6 +150,7 @@ public class Commitment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public Commitment withRegion(String region) {
         this.region = region;
         return this;
@@ -150,6 +162,7 @@ public class Commitment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservations")
     public Reservation[] reservations;
+
     public Commitment withReservations(Reservation[] reservations) {
         this.reservations = reservations;
         return this;
@@ -161,6 +174,7 @@ public class Commitment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public ResourceCommitment[] resources;
+
     public Commitment withResources(ResourceCommitment[] resources) {
         this.resources = resources;
         return this;
@@ -172,6 +186,7 @@ public class Commitment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public Commitment withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -183,17 +198,19 @@ public class Commitment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLinkWithId")
     public String selfLinkWithId;
+
     public Commitment withSelfLinkWithId(String selfLinkWithId) {
         this.selfLinkWithId = selfLinkWithId;
         return this;
     }
     
     /**
-     * Source commitment to be splitted into a new commitment.
+     * Source commitment to be split into a new commitment.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("splitSourceCommitment")
     public String splitSourceCommitment;
+
     public Commitment withSplitSourceCommitment(String splitSourceCommitment) {
         this.splitSourceCommitment = splitSourceCommitment;
         return this;
@@ -205,6 +222,7 @@ public class Commitment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTimestamp")
     public String startTimestamp;
+
     public Commitment withStartTimestamp(String startTimestamp) {
         this.startTimestamp = startTimestamp;
         return this;
@@ -216,6 +234,7 @@ public class Commitment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CommitmentStatusEnum status;
+
     public Commitment withStatus(CommitmentStatusEnum status) {
         this.status = status;
         return this;
@@ -227,6 +246,7 @@ public class Commitment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public Commitment withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -238,9 +258,11 @@ public class Commitment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CommitmentTypeEnum type;
+
     public Commitment withType(CommitmentTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Commitment(){}
 }

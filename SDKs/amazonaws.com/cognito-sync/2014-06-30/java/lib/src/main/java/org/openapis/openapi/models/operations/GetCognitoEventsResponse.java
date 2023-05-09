@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCognitoEventsResponse {
     
     public String contentType;
+
     public GetCognitoEventsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetCognitoEventsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCognitoEventsResponse getCognitoEventsResponse;
+
     public GetCognitoEventsResponse withGetCognitoEventsResponse(org.openapis.openapi.models.shared.GetCognitoEventsResponse getCognitoEventsResponse) {
         this.getCognitoEventsResponse = getCognitoEventsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetCognitoEventsResponse {
      */
     
     public Object internalErrorException;
+
     public GetCognitoEventsResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class GetCognitoEventsResponse {
      */
     
     public Object invalidParameterException;
+
     public GetCognitoEventsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class GetCognitoEventsResponse {
      */
     
     public Object notAuthorizedException;
+
     public GetCognitoEventsResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -56,6 +62,7 @@ public class GetCognitoEventsResponse {
     
     
     public Integer statusCode;
+
     public GetCognitoEventsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetCognitoEventsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCognitoEventsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetCognitoEventsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetCognitoEventsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class GetCognitoEventsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetCognitoEventsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetCognitoEventsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

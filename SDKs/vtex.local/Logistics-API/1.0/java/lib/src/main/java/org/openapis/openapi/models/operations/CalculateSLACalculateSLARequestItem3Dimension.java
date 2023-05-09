@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CalculateSLACalculateSLARequestItem3Dimension {
     @JsonProperty("height")
     public Integer height;
+
     public CalculateSLACalculateSLARequestItem3Dimension withHeight(Integer height) {
         this.height = height;
         return this;
@@ -16,6 +17,7 @@ public class CalculateSLACalculateSLARequestItem3Dimension {
     
     @JsonProperty("length")
     public Integer length;
+
     public CalculateSLACalculateSLARequestItem3Dimension withLength(Integer length) {
         this.length = length;
         return this;
@@ -23,6 +25,7 @@ public class CalculateSLACalculateSLARequestItem3Dimension {
     
     @JsonProperty("weight")
     public Integer weight;
+
     public CalculateSLACalculateSLARequestItem3Dimension withWeight(Integer weight) {
         this.weight = weight;
         return this;
@@ -30,9 +33,16 @@ public class CalculateSLACalculateSLARequestItem3Dimension {
     
     @JsonProperty("width")
     public Integer width;
+
     public CalculateSLACalculateSLARequestItem3Dimension withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public CalculateSLACalculateSLARequestItem3Dimension(@JsonProperty("height") Integer height, @JsonProperty("length") Integer length, @JsonProperty("weight") Integer weight, @JsonProperty("width") Integer width) {
+        this.height = height;
+        this.length = length;
+        this.weight = weight;
+        this.width = width;
+  }
 }

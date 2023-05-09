@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListResourceDelegatesResponse {
     
     public String contentType;
+
     public ListResourceDelegatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListResourceDelegatesResponse {
      */
     
     public Object entityNotFoundException;
+
     public ListResourceDelegatesResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class ListResourceDelegatesResponse {
      */
     
     public Object entityStateException;
+
     public ListResourceDelegatesResponse withEntityStateException(Object entityStateException) {
         this.entityStateException = entityStateException;
         return this;
@@ -39,6 +43,7 @@ public class ListResourceDelegatesResponse {
      */
     
     public Object invalidParameterException;
+
     public ListResourceDelegatesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class ListResourceDelegatesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListResourceDelegatesResponse listResourceDelegatesResponse;
+
     public ListResourceDelegatesResponse withListResourceDelegatesResponse(org.openapis.openapi.models.shared.ListResourceDelegatesResponse listResourceDelegatesResponse) {
         this.listResourceDelegatesResponse = listResourceDelegatesResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListResourceDelegatesResponse {
      */
     
     public Object organizationNotFoundException;
+
     public ListResourceDelegatesResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ListResourceDelegatesResponse {
      */
     
     public Object organizationStateException;
+
     public ListResourceDelegatesResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -76,6 +84,7 @@ public class ListResourceDelegatesResponse {
     
     
     public Integer statusCode;
+
     public ListResourceDelegatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ListResourceDelegatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListResourceDelegatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListResourceDelegatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

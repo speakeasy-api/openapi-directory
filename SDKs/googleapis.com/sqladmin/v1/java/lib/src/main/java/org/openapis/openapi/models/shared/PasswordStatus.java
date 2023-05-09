@@ -18,6 +18,7 @@ public class PasswordStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locked")
     public Boolean locked;
+
     public PasswordStatus withLocked(Boolean locked) {
         this.locked = locked;
         return this;
@@ -29,9 +30,11 @@ public class PasswordStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passwordExpirationTime")
     public String passwordExpirationTime;
+
     public PasswordStatus withPasswordExpirationTime(String passwordExpirationTime) {
         this.passwordExpirationTime = passwordExpirationTime;
         return this;
     }
     
+    public PasswordStatus(){}
 }

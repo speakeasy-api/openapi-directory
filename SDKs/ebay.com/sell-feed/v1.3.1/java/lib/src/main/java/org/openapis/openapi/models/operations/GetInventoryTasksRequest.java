@@ -12,6 +12,7 @@ public class GetInventoryTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_range")
     public String dateRange;
+
     public GetInventoryTasksRequest withDateRange(String dateRange) {
         this.dateRange = dateRange;
         return this;
@@ -22,6 +23,7 @@ public class GetInventoryTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=feed_type")
     public String feedType;
+
     public GetInventoryTasksRequest withFeedType(String feedType) {
         this.feedType = feedType;
         return this;
@@ -32,6 +34,7 @@ public class GetInventoryTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public GetInventoryTasksRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -42,6 +45,7 @@ public class GetInventoryTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=look_back_days")
     public String lookBackDays;
+
     public GetInventoryTasksRequest withLookBackDays(String lookBackDays) {
         this.lookBackDays = lookBackDays;
         return this;
@@ -52,6 +56,7 @@ public class GetInventoryTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetInventoryTasksRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -62,9 +67,11 @@ public class GetInventoryTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=schedule_id")
     public String scheduleId;
+
     public GetInventoryTasksRequest withScheduleId(String scheduleId) {
         this.scheduleId = scheduleId;
         return this;
     }
     
+    public GetInventoryTasksRequest(){}
 }

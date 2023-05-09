@@ -15,6 +15,7 @@ public class Etcer400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Etcer400ApplicationJSONErrorEnum error;
+
     public Etcer400ApplicationJSON withError(Etcer400ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Etcer400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Etcer400ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Etcer400ApplicationJSON withErrorDescription(Etcer400ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Etcer400ApplicationJSON(){}
 }

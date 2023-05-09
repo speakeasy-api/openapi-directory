@@ -15,6 +15,7 @@ public class RuleGroupSourceStatelessRuleMatchAttributesSourcePorts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FromPort")
     public Long fromPort;
+
     public RuleGroupSourceStatelessRuleMatchAttributesSourcePorts withFromPort(Long fromPort) {
         this.fromPort = fromPort;
         return this;
@@ -23,9 +24,11 @@ public class RuleGroupSourceStatelessRuleMatchAttributesSourcePorts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ToPort")
     public Long toPort;
+
     public RuleGroupSourceStatelessRuleMatchAttributesSourcePorts withToPort(Long toPort) {
         this.toPort = toPort;
         return this;
     }
     
+    public RuleGroupSourceStatelessRuleMatchAttributesSourcePorts(){}
 }

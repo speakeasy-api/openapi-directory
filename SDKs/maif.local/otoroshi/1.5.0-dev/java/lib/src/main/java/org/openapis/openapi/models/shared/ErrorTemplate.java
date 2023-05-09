@@ -15,6 +15,7 @@ public class ErrorTemplate {
      */
     @JsonProperty("messages")
     public java.util.Map<String, String> messages;
+
     public ErrorTemplate withMessages(java.util.Map<String, String> messages) {
         this.messages = messages;
         return this;
@@ -25,6 +26,7 @@ public class ErrorTemplate {
      */
     @JsonProperty("serviceId")
     public String serviceId;
+
     public ErrorTemplate withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -35,6 +37,7 @@ public class ErrorTemplate {
      */
     @JsonProperty("template40x")
     public String template40x;
+
     public ErrorTemplate withTemplate40x(String template40x) {
         this.template40x = template40x;
         return this;
@@ -45,6 +48,7 @@ public class ErrorTemplate {
      */
     @JsonProperty("template50x")
     public String template50x;
+
     public ErrorTemplate withTemplate50x(String template50x) {
         this.template50x = template50x;
         return this;
@@ -55,6 +59,7 @@ public class ErrorTemplate {
      */
     @JsonProperty("templateBuild")
     public String templateBuild;
+
     public ErrorTemplate withTemplateBuild(String templateBuild) {
         this.templateBuild = templateBuild;
         return this;
@@ -65,9 +70,18 @@ public class ErrorTemplate {
      */
     @JsonProperty("templateMaintenance")
     public String templateMaintenance;
+
     public ErrorTemplate withTemplateMaintenance(String templateMaintenance) {
         this.templateMaintenance = templateMaintenance;
         return this;
     }
     
+    public ErrorTemplate(@JsonProperty("messages") java.util.Map<String, String> messages, @JsonProperty("serviceId") String serviceId, @JsonProperty("template40x") String template40x, @JsonProperty("template50x") String template50x, @JsonProperty("templateBuild") String templateBuild, @JsonProperty("templateMaintenance") String templateMaintenance) {
+        this.messages = messages;
+        this.serviceId = serviceId;
+        this.template40x = template40x;
+        this.template50x = template50x;
+        this.templateBuild = templateBuild;
+        this.templateMaintenance = templateMaintenance;
+  }
 }

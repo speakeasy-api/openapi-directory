@@ -207,4 +207,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/SuperFundProduct.java
 lib/src/main/java/org/openapis/openapi/models/shared/TimesheetObject.java
 lib/src/main/java/org/openapis/openapi/models/shared/Payslips.java
 lib/src/main/java/org/openapis/openapi/models/shared/PayslipLines.java
+docs/sdk/README.md
+docs/payrollau/README.md
 USAGE.md

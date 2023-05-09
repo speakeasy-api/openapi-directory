@@ -318,4 +318,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateControlResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateSettingsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ValidateAssessmentReportIntegrityResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

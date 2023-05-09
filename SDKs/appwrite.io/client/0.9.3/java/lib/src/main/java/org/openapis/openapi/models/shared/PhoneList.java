@@ -15,6 +15,7 @@ public class PhoneList {
      */
     @JsonProperty("phones")
     public Phone[] phones;
+
     public PhoneList withPhones(Phone[] phones) {
         this.phones = phones;
         return this;
@@ -25,9 +26,14 @@ public class PhoneList {
      */
     @JsonProperty("sum")
     public Integer sum;
+
     public PhoneList withSum(Integer sum) {
         this.sum = sum;
         return this;
     }
     
+    public PhoneList(@JsonProperty("phones") Phone[] phones, @JsonProperty("sum") Integer sum) {
+        this.phones = phones;
+        this.sum = sum;
+  }
 }

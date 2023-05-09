@@ -18,6 +18,7 @@ public class Key {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effectiveConnectionType")
     public String effectiveConnectionType;
+
     public Key withEffectiveConnectionType(String effectiveConnectionType) {
         this.effectiveConnectionType = effectiveConnectionType;
         return this;
@@ -29,6 +30,7 @@ public class Key {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formFactor")
     public KeyFormFactorEnum formFactor;
+
     public Key withFormFactor(KeyFormFactorEnum formFactor) {
         this.formFactor = formFactor;
         return this;
@@ -40,6 +42,7 @@ public class Key {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origin")
     public String origin;
+
     public Key withOrigin(String origin) {
         this.origin = origin;
         return this;
@@ -51,9 +54,11 @@ public class Key {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Key withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Key(){}
 }

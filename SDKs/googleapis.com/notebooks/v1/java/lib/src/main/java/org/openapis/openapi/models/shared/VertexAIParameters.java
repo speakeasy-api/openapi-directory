@@ -18,6 +18,7 @@ public class VertexAIParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("env")
     public java.util.Map<String, String> env;
+
     public VertexAIParameters withEnv(java.util.Map<String, String> env) {
         this.env = env;
         return this;
@@ -29,9 +30,11 @@ public class VertexAIParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public VertexAIParameters withNetwork(String network) {
         this.network = network;
         return this;
     }
     
+    public VertexAIParameters(){}
 }

@@ -15,6 +15,7 @@ public class Cuepoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cueType")
     public CuepointCueTypeEnum cueType;
+
     public Cuepoint withCueType(CuepointCueTypeEnum cueType) {
         this.cueType = cueType;
         return this;
@@ -26,6 +27,7 @@ public class Cuepoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationSecs")
     public Long durationSecs;
+
     public Cuepoint withDurationSecs(Long durationSecs) {
         this.durationSecs = durationSecs;
         return this;
@@ -34,6 +36,7 @@ public class Cuepoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Cuepoint withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -45,6 +48,7 @@ public class Cuepoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Cuepoint withId(String id) {
         this.id = id;
         return this;
@@ -56,6 +60,7 @@ public class Cuepoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insertionOffsetTimeMs")
     public String insertionOffsetTimeMs;
+
     public Cuepoint withInsertionOffsetTimeMs(String insertionOffsetTimeMs) {
         this.insertionOffsetTimeMs = insertionOffsetTimeMs;
         return this;
@@ -67,9 +72,11 @@ public class Cuepoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("walltimeMs")
     public String walltimeMs;
+
     public Cuepoint withWalltimeMs(String walltimeMs) {
         this.walltimeMs = walltimeMs;
         return this;
     }
     
+    public Cuepoint(){}
 }

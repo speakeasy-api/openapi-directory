@@ -107,4 +107,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/CreateTimeOffPeriodResponse
 lib/src/main/java/org/openapis/openapi/models/shared/CreateTimeOffPeriodResponseData.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateTimeOffPeriodResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateTimeOffPeriodRequest.java
+docs/sdk/README.md
 USAGE.md

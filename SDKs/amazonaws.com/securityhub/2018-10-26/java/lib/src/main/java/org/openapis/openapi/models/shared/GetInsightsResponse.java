@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetInsightsResponse {
     @JsonProperty("Insights")
     public Insight[] insights;
+
     public GetInsightsResponse withInsights(Insight[] insights) {
         this.insights = insights;
         return this;
@@ -22,9 +23,13 @@ public class GetInsightsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetInsightsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetInsightsResponse(@JsonProperty("Insights") Insight[] insights) {
+        this.insights = insights;
+  }
 }

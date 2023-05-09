@@ -18,6 +18,7 @@ public class UpdateSettingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settings")
     public FormSettings settings;
+
     public UpdateSettingsRequest withSettings(FormSettings settings) {
         this.settings = settings;
         return this;
@@ -29,9 +30,11 @@ public class UpdateSettingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public String updateMask;
+
     public UpdateSettingsRequest withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
     }
     
+    public UpdateSettingsRequest(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MultiMeasureMappings {
     @JsonProperty("MultiMeasureAttributeMappings")
     public MultiMeasureAttributeMapping[] multiMeasureAttributeMappings;
+
     public MultiMeasureMappings withMultiMeasureAttributeMappings(MultiMeasureAttributeMapping[] multiMeasureAttributeMappings) {
         this.multiMeasureAttributeMappings = multiMeasureAttributeMappings;
         return this;
@@ -22,9 +23,13 @@ public class MultiMeasureMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetMultiMeasureName")
     public String targetMultiMeasureName;
+
     public MultiMeasureMappings withTargetMultiMeasureName(String targetMultiMeasureName) {
         this.targetMultiMeasureName = targetMultiMeasureName;
         return this;
     }
     
+    public MultiMeasureMappings(@JsonProperty("MultiMeasureAttributeMappings") MultiMeasureAttributeMapping[] multiMeasureAttributeMappings) {
+        this.multiMeasureAttributeMappings = multiMeasureAttributeMappings;
+  }
 }

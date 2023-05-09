@@ -15,6 +15,7 @@ public class ConstraintDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConstraintId")
     public String constraintId;
+
     public ConstraintDetail withConstraintId(String constraintId) {
         this.constraintId = constraintId;
         return this;
@@ -23,6 +24,7 @@ public class ConstraintDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ConstraintDetail withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class ConstraintDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Owner")
     public String owner;
+
     public ConstraintDetail withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -39,6 +42,7 @@ public class ConstraintDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PortfolioId")
     public String portfolioId;
+
     public ConstraintDetail withPortfolioId(String portfolioId) {
         this.portfolioId = portfolioId;
         return this;
@@ -47,6 +51,7 @@ public class ConstraintDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductId")
     public String productId;
+
     public ConstraintDetail withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -55,9 +60,11 @@ public class ConstraintDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public ConstraintDetail withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ConstraintDetail(){}
 }

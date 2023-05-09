@@ -12,6 +12,7 @@ public class WebhookEventResourceRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction")
     public WebhookEventResourceRelationshipsTransaction transaction;
+
     public WebhookEventResourceRelationships withTransaction(WebhookEventResourceRelationshipsTransaction transaction) {
         this.transaction = transaction;
         return this;
@@ -19,9 +20,13 @@ public class WebhookEventResourceRelationships {
     
     @JsonProperty("webhook")
     public WebhookEventResourceRelationshipsWebhook webhook;
+
     public WebhookEventResourceRelationships withWebhook(WebhookEventResourceRelationshipsWebhook webhook) {
         this.webhook = webhook;
         return this;
     }
     
+    public WebhookEventResourceRelationships(@JsonProperty("webhook") WebhookEventResourceRelationshipsWebhook webhook) {
+        this.webhook = webhook;
+  }
 }

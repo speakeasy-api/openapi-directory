@@ -15,6 +15,7 @@ public class BranchConfigurationsCreateRequestBodyToolsetsXamarin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("args")
     public String args;
+
     public BranchConfigurationsCreateRequestBodyToolsetsXamarin withArgs(String args) {
         this.args = args;
         return this;
@@ -23,6 +24,7 @@ public class BranchConfigurationsCreateRequestBodyToolsetsXamarin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration")
     public String configuration;
+
     public BranchConfigurationsCreateRequestBodyToolsetsXamarin withConfiguration(String configuration) {
         this.configuration = configuration;
         return this;
@@ -31,6 +33,7 @@ public class BranchConfigurationsCreateRequestBodyToolsetsXamarin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSimBuild")
     public Boolean isSimBuild;
+
     public BranchConfigurationsCreateRequestBodyToolsetsXamarin withIsSimBuild(Boolean isSimBuild) {
         this.isSimBuild = isSimBuild;
         return this;
@@ -39,6 +42,7 @@ public class BranchConfigurationsCreateRequestBodyToolsetsXamarin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monoVersion")
     public String monoVersion;
+
     public BranchConfigurationsCreateRequestBodyToolsetsXamarin withMonoVersion(String monoVersion) {
         this.monoVersion = monoVersion;
         return this;
@@ -47,6 +51,7 @@ public class BranchConfigurationsCreateRequestBodyToolsetsXamarin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("p12File")
     public String p12File;
+
     public BranchConfigurationsCreateRequestBodyToolsetsXamarin withP12File(String p12File) {
         this.p12File = p12File;
         return this;
@@ -55,6 +60,7 @@ public class BranchConfigurationsCreateRequestBodyToolsetsXamarin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("p12Pwd")
     public String p12Pwd;
+
     public BranchConfigurationsCreateRequestBodyToolsetsXamarin withP12Pwd(String p12Pwd) {
         this.p12Pwd = p12Pwd;
         return this;
@@ -63,6 +69,7 @@ public class BranchConfigurationsCreateRequestBodyToolsetsXamarin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provProfile")
     public String provProfile;
+
     public BranchConfigurationsCreateRequestBodyToolsetsXamarin withProvProfile(String provProfile) {
         this.provProfile = provProfile;
         return this;
@@ -71,6 +78,7 @@ public class BranchConfigurationsCreateRequestBodyToolsetsXamarin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sdkBundle")
     public String sdkBundle;
+
     public BranchConfigurationsCreateRequestBodyToolsetsXamarin withSDKBundle(String sdkBundle) {
         this.sdkBundle = sdkBundle;
         return this;
@@ -79,6 +87,7 @@ public class BranchConfigurationsCreateRequestBodyToolsetsXamarin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slnPath")
     public String slnPath;
+
     public BranchConfigurationsCreateRequestBodyToolsetsXamarin withSlnPath(String slnPath) {
         this.slnPath = slnPath;
         return this;
@@ -92,9 +101,11 @@ public class BranchConfigurationsCreateRequestBodyToolsetsXamarin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("symlink")
     public String symlink;
+
     public BranchConfigurationsCreateRequestBodyToolsetsXamarin withSymlink(String symlink) {
         this.symlink = symlink;
         return this;
     }
     
+    public BranchConfigurationsCreateRequestBodyToolsetsXamarin(){}
 }

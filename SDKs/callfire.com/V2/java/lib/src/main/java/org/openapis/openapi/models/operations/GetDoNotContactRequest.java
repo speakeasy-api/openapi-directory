@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDoNotContactRequest {
@@ -12,9 +13,13 @@ public class GetDoNotContactRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=number")
     public String number;
+
     public GetDoNotContactRequest withNumber(String number) {
         this.number = number;
         return this;
     }
     
+    public GetDoNotContactRequest(@JsonProperty("number") String number) {
+        this.number = number;
+  }
 }

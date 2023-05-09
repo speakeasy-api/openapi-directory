@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateComponentRequest {
     @JsonProperty("ComponentName")
     public String componentName;
+
     public UpdateComponentRequest withComponentName(String componentName) {
         this.componentName = componentName;
         return this;
@@ -19,6 +20,7 @@ public class UpdateComponentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NewComponentName")
     public String newComponentName;
+
     public UpdateComponentRequest withNewComponentName(String newComponentName) {
         this.newComponentName = newComponentName;
         return this;
@@ -26,6 +28,7 @@ public class UpdateComponentRequest {
     
     @JsonProperty("ResourceGroupName")
     public String resourceGroupName;
+
     public UpdateComponentRequest withResourceGroupName(String resourceGroupName) {
         this.resourceGroupName = resourceGroupName;
         return this;
@@ -34,9 +37,14 @@ public class UpdateComponentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceList")
     public String[] resourceList;
+
     public UpdateComponentRequest withResourceList(String[] resourceList) {
         this.resourceList = resourceList;
         return this;
     }
     
+    public UpdateComponentRequest(@JsonProperty("ComponentName") String componentName, @JsonProperty("ResourceGroupName") String resourceGroupName) {
+        this.componentName = componentName;
+        this.resourceGroupName = resourceGroupName;
+  }
 }

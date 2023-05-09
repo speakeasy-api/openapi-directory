@@ -9,11 +9,12 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * ZonalStatisticsConfigInput - &lt;p/&gt;
+ * ZonalStatisticsConfigInput - The structure representing input configuration of ZonalStatistics operation.
  */
 public class ZonalStatisticsConfigInput {
     @JsonProperty("Statistics")
     public ZonalStatisticsEnum[] statistics;
+
     public ZonalStatisticsConfigInput withStatistics(ZonalStatisticsEnum[] statistics) {
         this.statistics = statistics;
         return this;
@@ -22,6 +23,7 @@ public class ZonalStatisticsConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetBands")
     public String[] targetBands;
+
     public ZonalStatisticsConfigInput withTargetBands(String[] targetBands) {
         this.targetBands = targetBands;
         return this;
@@ -29,9 +31,23 @@ public class ZonalStatisticsConfigInput {
     
     @JsonProperty("ZoneS3Path")
     public String zoneS3Path;
+
     public ZonalStatisticsConfigInput withZoneS3Path(String zoneS3Path) {
         this.zoneS3Path = zoneS3Path;
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ZoneS3PathKmsKeyId")
+    public String zoneS3PathKmsKeyId;
+
+    public ZonalStatisticsConfigInput withZoneS3PathKmsKeyId(String zoneS3PathKmsKeyId) {
+        this.zoneS3PathKmsKeyId = zoneS3PathKmsKeyId;
+        return this;
+    }
+    
+    public ZonalStatisticsConfigInput(@JsonProperty("Statistics") ZonalStatisticsEnum[] statistics, @JsonProperty("ZoneS3Path") String zoneS3Path) {
+        this.statistics = statistics;
+        this.zoneS3Path = zoneS3Path;
+  }
 }

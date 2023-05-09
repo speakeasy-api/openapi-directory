@@ -20,6 +20,7 @@ public class Algorithm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("algorithmArn")
     public String algorithmArn;
+
     public Algorithm withAlgorithmArn(String algorithmArn) {
         this.algorithmArn = algorithmArn;
         return this;
@@ -28,6 +29,7 @@ public class Algorithm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("algorithmImage")
     public AlgorithmImage algorithmImage;
+
     public Algorithm withAlgorithmImage(AlgorithmImage algorithmImage) {
         this.algorithmImage = algorithmImage;
         return this;
@@ -38,6 +40,7 @@ public class Algorithm {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public Algorithm withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -46,6 +49,7 @@ public class Algorithm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultHyperParameterRanges")
     public DefaultHyperParameterRanges defaultHyperParameterRanges;
+
     public Algorithm withDefaultHyperParameterRanges(DefaultHyperParameterRanges defaultHyperParameterRanges) {
         this.defaultHyperParameterRanges = defaultHyperParameterRanges;
         return this;
@@ -54,6 +58,7 @@ public class Algorithm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultHyperParameters")
     public java.util.Map<String, String> defaultHyperParameters;
+
     public Algorithm withDefaultHyperParameters(java.util.Map<String, String> defaultHyperParameters) {
         this.defaultHyperParameters = defaultHyperParameters;
         return this;
@@ -62,6 +67,7 @@ public class Algorithm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultResourceConfig")
     public java.util.Map<String, String> defaultResourceConfig;
+
     public Algorithm withDefaultResourceConfig(java.util.Map<String, String> defaultResourceConfig) {
         this.defaultResourceConfig = defaultResourceConfig;
         return this;
@@ -72,6 +78,7 @@ public class Algorithm {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public Algorithm withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -80,6 +87,7 @@ public class Algorithm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Algorithm withName(String name) {
         this.name = name;
         return this;
@@ -88,6 +96,7 @@ public class Algorithm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public Algorithm withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -96,9 +105,11 @@ public class Algorithm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainingInputMode")
     public String trainingInputMode;
+
     public Algorithm withTrainingInputMode(String trainingInputMode) {
         this.trainingInputMode = trainingInputMode;
         return this;
     }
     
+    public Algorithm(){}
 }

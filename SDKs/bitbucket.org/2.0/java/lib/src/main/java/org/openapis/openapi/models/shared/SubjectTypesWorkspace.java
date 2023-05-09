@@ -15,9 +15,11 @@ public class SubjectTypesWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events")
     public SubjectTypesWorkspaceLink events;
+
     public SubjectTypesWorkspace withEvents(SubjectTypesWorkspaceLink events) {
         this.events = events;
         return this;
     }
     
+    public SubjectTypesWorkspace(){}
 }

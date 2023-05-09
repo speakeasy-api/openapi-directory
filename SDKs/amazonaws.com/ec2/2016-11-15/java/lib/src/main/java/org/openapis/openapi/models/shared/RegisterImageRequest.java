@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * RegisterImageRequest - Contains the parameters for RegisterImage.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RegisterImageRequest {
     
     public RegisterImageRequestArchitectureEnum architecture;
+
     public RegisterImageRequest withArchitecture(RegisterImageRequestArchitectureEnum architecture) {
         this.architecture = architecture;
         return this;
@@ -19,6 +20,7 @@ public class RegisterImageRequest {
     
     
     public String[] billingProducts;
+
     public RegisterImageRequest withBillingProducts(String[] billingProducts) {
         this.billingProducts = billingProducts;
         return this;
@@ -26,6 +28,7 @@ public class RegisterImageRequest {
     
     
     public RegisterImageRequestBlockDeviceMappings[] blockDeviceMappings;
+
     public RegisterImageRequest withBlockDeviceMappings(RegisterImageRequestBlockDeviceMappings[] blockDeviceMappings) {
         this.blockDeviceMappings = blockDeviceMappings;
         return this;
@@ -33,6 +36,7 @@ public class RegisterImageRequest {
     
     
     public BootModeValuesEnum bootMode;
+
     public RegisterImageRequest withBootMode(BootModeValuesEnum bootMode) {
         this.bootMode = bootMode;
         return this;
@@ -40,6 +44,7 @@ public class RegisterImageRequest {
     
     
     public String description;
+
     public RegisterImageRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +52,7 @@ public class RegisterImageRequest {
     
     
     public Boolean dryRun;
+
     public RegisterImageRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -54,6 +60,7 @@ public class RegisterImageRequest {
     
     
     public Boolean enaSupport;
+
     public RegisterImageRequest withEnaSupport(Boolean enaSupport) {
         this.enaSupport = enaSupport;
         return this;
@@ -61,6 +68,7 @@ public class RegisterImageRequest {
     
     
     public String imageLocation;
+
     public RegisterImageRequest withImageLocation(String imageLocation) {
         this.imageLocation = imageLocation;
         return this;
@@ -68,6 +76,7 @@ public class RegisterImageRequest {
     
     
     public ImdsSupportValuesEnum imdsSupport;
+
     public RegisterImageRequest withImdsSupport(ImdsSupportValuesEnum imdsSupport) {
         this.imdsSupport = imdsSupport;
         return this;
@@ -75,6 +84,7 @@ public class RegisterImageRequest {
     
     
     public String kernelId;
+
     public RegisterImageRequest withKernelId(String kernelId) {
         this.kernelId = kernelId;
         return this;
@@ -82,6 +92,7 @@ public class RegisterImageRequest {
     
     
     public String name;
+
     public RegisterImageRequest withName(String name) {
         this.name = name;
         return this;
@@ -89,6 +100,7 @@ public class RegisterImageRequest {
     
     
     public String ramdiskId;
+
     public RegisterImageRequest withRamdiskId(String ramdiskId) {
         this.ramdiskId = ramdiskId;
         return this;
@@ -96,6 +108,7 @@ public class RegisterImageRequest {
     
     
     public String rootDeviceName;
+
     public RegisterImageRequest withRootDeviceName(String rootDeviceName) {
         this.rootDeviceName = rootDeviceName;
         return this;
@@ -103,6 +116,7 @@ public class RegisterImageRequest {
     
     
     public String sriovNetSupport;
+
     public RegisterImageRequest withSriovNetSupport(String sriovNetSupport) {
         this.sriovNetSupport = sriovNetSupport;
         return this;
@@ -110,6 +124,7 @@ public class RegisterImageRequest {
     
     
     public TpmSupportValuesEnum tpmSupport;
+
     public RegisterImageRequest withTpmSupport(TpmSupportValuesEnum tpmSupport) {
         this.tpmSupport = tpmSupport;
         return this;
@@ -117,6 +132,7 @@ public class RegisterImageRequest {
     
     
     public String uefiData;
+
     public RegisterImageRequest withUefiData(String uefiData) {
         this.uefiData = uefiData;
         return this;
@@ -124,9 +140,13 @@ public class RegisterImageRequest {
     
     
     public String virtualizationType;
+
     public RegisterImageRequest withVirtualizationType(String virtualizationType) {
         this.virtualizationType = virtualizationType;
         return this;
     }
     
+    public RegisterImageRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

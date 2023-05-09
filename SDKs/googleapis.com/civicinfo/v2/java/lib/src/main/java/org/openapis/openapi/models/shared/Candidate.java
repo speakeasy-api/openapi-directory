@@ -18,6 +18,7 @@ public class Candidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidateUrl")
     public String candidateUrl;
+
     public Candidate withCandidateUrl(String candidateUrl) {
         this.candidateUrl = candidateUrl;
         return this;
@@ -29,6 +30,7 @@ public class Candidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channels")
     public Channel[] channels;
+
     public Candidate withChannels(Channel[] channels) {
         this.channels = channels;
         return this;
@@ -40,6 +42,7 @@ public class Candidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public Candidate withEmail(String email) {
         this.email = email;
         return this;
@@ -51,6 +54,7 @@ public class Candidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Candidate withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class Candidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderOnBallot")
     public String orderOnBallot;
+
     public Candidate withOrderOnBallot(String orderOnBallot) {
         this.orderOnBallot = orderOnBallot;
         return this;
@@ -73,6 +78,7 @@ public class Candidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("party")
     public String party;
+
     public Candidate withParty(String party) {
         this.party = party;
         return this;
@@ -84,6 +90,7 @@ public class Candidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public Candidate withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -95,9 +102,11 @@ public class Candidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("photoUrl")
     public String photoUrl;
+
     public Candidate withPhotoUrl(String photoUrl) {
         this.photoUrl = photoUrl;
         return this;
     }
     
+    public Candidate(){}
 }

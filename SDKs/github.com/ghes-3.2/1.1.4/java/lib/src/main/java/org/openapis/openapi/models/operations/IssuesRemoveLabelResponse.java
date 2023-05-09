@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IssuesRemoveLabelResponse {
     
     public String contentType;
+
     public IssuesRemoveLabelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class IssuesRemoveLabelResponse {
     
     
     public Integer statusCode;
+
     public IssuesRemoveLabelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class IssuesRemoveLabelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IssuesRemoveLabelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class IssuesRemoveLabelResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public IssuesRemoveLabelResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,9 +48,14 @@ public class IssuesRemoveLabelResponse {
      */
     
     public org.openapis.openapi.models.shared.Label[] labels;
+
     public IssuesRemoveLabelResponse withLabels(org.openapis.openapi.models.shared.Label[] labels) {
         this.labels = labels;
         return this;
     }
     
+    public IssuesRemoveLabelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

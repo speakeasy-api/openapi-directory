@@ -18,6 +18,7 @@ public class GetSolution404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GetSolution404ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -29,9 +30,11 @@ public class GetSolution404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public GetSolution404ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public GetSolution404ApplicationJSON(){}
 }

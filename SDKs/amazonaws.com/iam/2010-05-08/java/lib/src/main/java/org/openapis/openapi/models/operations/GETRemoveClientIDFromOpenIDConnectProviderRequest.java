@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRemoveClientIDFromOpenIDConnectProviderRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETRemoveClientIDFromOpenIDConnectProviderActionEnum action;
+
     public GETRemoveClientIDFromOpenIDConnectProviderRequest withAction(GETRemoveClientIDFromOpenIDConnectProviderActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETRemoveClientIDFromOpenIDConnectProviderRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientID")
     public String clientID;
+
     public GETRemoveClientIDFromOpenIDConnectProviderRequest withClientID(String clientID) {
         this.clientID = clientID;
         return this;
@@ -29,6 +32,7 @@ public class GETRemoveClientIDFromOpenIDConnectProviderRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OpenIDConnectProviderArn")
     public String openIDConnectProviderArn;
+
     public GETRemoveClientIDFromOpenIDConnectProviderRequest withOpenIDConnectProviderArn(String openIDConnectProviderArn) {
         this.openIDConnectProviderArn = openIDConnectProviderArn;
         return this;
@@ -36,6 +40,7 @@ public class GETRemoveClientIDFromOpenIDConnectProviderRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETRemoveClientIDFromOpenIDConnectProviderVersionEnum version;
+
     public GETRemoveClientIDFromOpenIDConnectProviderRequest withVersion(GETRemoveClientIDFromOpenIDConnectProviderVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETRemoveClientIDFromOpenIDConnectProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETRemoveClientIDFromOpenIDConnectProviderRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETRemoveClientIDFromOpenIDConnectProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETRemoveClientIDFromOpenIDConnectProviderRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETRemoveClientIDFromOpenIDConnectProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETRemoveClientIDFromOpenIDConnectProviderRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETRemoveClientIDFromOpenIDConnectProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETRemoveClientIDFromOpenIDConnectProviderRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETRemoveClientIDFromOpenIDConnectProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETRemoveClientIDFromOpenIDConnectProviderRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETRemoveClientIDFromOpenIDConnectProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETRemoveClientIDFromOpenIDConnectProviderRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETRemoveClientIDFromOpenIDConnectProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETRemoveClientIDFromOpenIDConnectProviderRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETRemoveClientIDFromOpenIDConnectProviderRequest(@JsonProperty("Action") GETRemoveClientIDFromOpenIDConnectProviderActionEnum action, @JsonProperty("ClientID") String clientID, @JsonProperty("OpenIDConnectProviderArn") String openIDConnectProviderArn, @JsonProperty("Version") GETRemoveClientIDFromOpenIDConnectProviderVersionEnum version) {
+        this.action = action;
+        this.clientID = clientID;
+        this.openIDConnectProviderArn = openIDConnectProviderArn;
+        this.version = version;
+  }
 }

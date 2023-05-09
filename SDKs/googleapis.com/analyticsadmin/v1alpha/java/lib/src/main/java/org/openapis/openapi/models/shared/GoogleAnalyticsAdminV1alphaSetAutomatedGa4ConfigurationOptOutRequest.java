@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaSetAutomatedGa4ConfigurationOptOutReques
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optOut")
     public Boolean optOut;
+
     public GoogleAnalyticsAdminV1alphaSetAutomatedGa4ConfigurationOptOutRequest withOptOut(Boolean optOut) {
         this.optOut = optOut;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaSetAutomatedGa4ConfigurationOptOutReques
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("property")
     public String property;
+
     public GoogleAnalyticsAdminV1alphaSetAutomatedGa4ConfigurationOptOutRequest withProperty(String property) {
         this.property = property;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaSetAutomatedGa4ConfigurationOptOutRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SmsConversionRequest {
@@ -13,6 +14,7 @@ public class SmsConversionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=delivered")
     public org.openapis.openapi.models.shared.DeliveredEnum delivered;
+
     public SmsConversionRequest withDelivered(org.openapis.openapi.models.shared.DeliveredEnum delivered) {
         this.delivered = delivered;
         return this;
@@ -23,6 +25,7 @@ public class SmsConversionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=message-id")
     public String messageId;
+
     public SmsConversionRequest withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
@@ -34,9 +37,15 @@ public class SmsConversionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timestamp")
     public String timestamp;
+
     public SmsConversionRequest withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public SmsConversionRequest(@JsonProperty("delivered") org.openapis.openapi.models.shared.DeliveredEnum delivered, @JsonProperty("message-id") String messageId, @JsonProperty("timestamp") String timestamp) {
+        this.delivered = delivered;
+        this.messageId = messageId;
+        this.timestamp = timestamp;
+  }
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ServicenetworkingServicesDnsRecordSetsUpdateSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ServicenetworkingServicesDnsRecordSetsUpdateSecurityOption1 option1;
+
     public ServicenetworkingServicesDnsRecordSetsUpdateSecurity withOption1(ServicenetworkingServicesDnsRecordSetsUpdateSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ServicenetworkingServicesDnsRecordSetsUpdateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ServicenetworkingServicesDnsRecordSetsUpdateSecurityOption2 option2;
+
     public ServicenetworkingServicesDnsRecordSetsUpdateSecurity withOption2(ServicenetworkingServicesDnsRecordSetsUpdateSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ServicenetworkingServicesDnsRecordSetsUpdateSecurity(){}
 }

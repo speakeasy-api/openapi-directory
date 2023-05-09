@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyResponsesDestinyCharacterResponseCollectibles {
     
     public DestinyComponentsCollectiblesDestinyCollectiblesComponent data;
+
     public DestinyResponsesDestinyCharacterResponseCollectibles withData(DestinyComponentsCollectiblesDestinyCollectiblesComponent data) {
         this.data = data;
         return this;
@@ -22,6 +23,7 @@ public class DestinyResponsesDestinyCharacterResponseCollectibles {
      */
     
     public Boolean disabled;
+
     public DestinyResponsesDestinyCharacterResponseCollectibles withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -29,9 +31,11 @@ public class DestinyResponsesDestinyCharacterResponseCollectibles {
     
     
     public Integer privacy;
+
     public DestinyResponsesDestinyCharacterResponseCollectibles withPrivacy(Integer privacy) {
         this.privacy = privacy;
         return this;
     }
     
+    public DestinyResponsesDestinyCharacterResponseCollectibles(){}
 }

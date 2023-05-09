@@ -15,9 +15,11 @@ public class CreateQualificationTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QualificationType")
     public QualificationType qualificationType;
+
     public CreateQualificationTypeResponse withQualificationType(QualificationType qualificationType) {
         this.qualificationType = qualificationType;
         return this;
     }
     
+    public CreateQualificationTypeResponse(){}
 }

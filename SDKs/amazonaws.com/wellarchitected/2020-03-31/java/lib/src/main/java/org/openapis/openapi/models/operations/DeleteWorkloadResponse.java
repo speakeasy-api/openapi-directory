@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteWorkloadResponse {
@@ -12,6 +13,7 @@ public class DeleteWorkloadResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteWorkloadResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteWorkloadResponse {
      */
     
     public Object conflictException;
+
     public DeleteWorkloadResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteWorkloadResponse {
     
     
     public String contentType;
+
     public DeleteWorkloadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteWorkloadResponse {
      */
     
     public Object internalServerException;
+
     public DeleteWorkloadResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteWorkloadResponse {
     
     
     public Integer statusCode;
+
     public DeleteWorkloadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteWorkloadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteWorkloadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteWorkloadResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteWorkloadResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DeleteWorkloadResponse {
      */
     
     public Object throttlingException;
+
     public DeleteWorkloadResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteWorkloadResponse {
      */
     
     public Object validationException;
+
     public DeleteWorkloadResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteWorkloadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

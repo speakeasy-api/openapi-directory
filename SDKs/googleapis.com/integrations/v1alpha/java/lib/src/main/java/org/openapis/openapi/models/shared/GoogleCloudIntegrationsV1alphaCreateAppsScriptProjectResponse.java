@@ -18,9 +18,11 @@ public class GoogleCloudIntegrationsV1alphaCreateAppsScriptProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public GoogleCloudIntegrationsV1alphaCreateAppsScriptProjectResponse withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaCreateAppsScriptProjectResponse(){}
 }

@@ -22,6 +22,7 @@ public class EphemerisItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public EphemerisItem withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class EphemerisItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public EphemerisItem withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -38,6 +40,7 @@ public class EphemerisItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ephemerisId")
     public String ephemerisId;
+
     public EphemerisItem withEphemerisId(String ephemerisId) {
         this.ephemerisId = ephemerisId;
         return this;
@@ -46,6 +49,7 @@ public class EphemerisItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EphemerisItem withName(String name) {
         this.name = name;
         return this;
@@ -54,6 +58,7 @@ public class EphemerisItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Long priority;
+
     public EphemerisItem withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -62,6 +67,7 @@ public class EphemerisItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceS3Object")
     public S3Object sourceS3Object;
+
     public EphemerisItem withSourceS3Object(S3Object sourceS3Object) {
         this.sourceS3Object = sourceS3Object;
         return this;
@@ -70,9 +76,11 @@ public class EphemerisItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public EphemerisStatusEnum status;
+
     public EphemerisItem withStatus(EphemerisStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public EphemerisItem(){}
 }

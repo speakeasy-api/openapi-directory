@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class OptionGroupOptionSettingsList {
     
     public String allowedValues;
+
     public OptionGroupOptionSettingsList withAllowedValues(String allowedValues) {
         this.allowedValues = allowedValues;
         return this;
@@ -16,6 +17,7 @@ public class OptionGroupOptionSettingsList {
     
     
     public String applyType;
+
     public OptionGroupOptionSettingsList withApplyType(String applyType) {
         this.applyType = applyType;
         return this;
@@ -23,6 +25,7 @@ public class OptionGroupOptionSettingsList {
     
     
     public String defaultValue;
+
     public OptionGroupOptionSettingsList withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -30,6 +33,7 @@ public class OptionGroupOptionSettingsList {
     
     
     public Boolean isModifiable;
+
     public OptionGroupOptionSettingsList withIsModifiable(Boolean isModifiable) {
         this.isModifiable = isModifiable;
         return this;
@@ -37,6 +41,7 @@ public class OptionGroupOptionSettingsList {
     
     
     public String settingDescription;
+
     public OptionGroupOptionSettingsList withSettingDescription(String settingDescription) {
         this.settingDescription = settingDescription;
         return this;
@@ -44,9 +49,11 @@ public class OptionGroupOptionSettingsList {
     
     
     public String settingName;
+
     public OptionGroupOptionSettingsList withSettingName(String settingName) {
         this.settingName = settingName;
         return this;
     }
     
+    public OptionGroupOptionSettingsList(){}
 }

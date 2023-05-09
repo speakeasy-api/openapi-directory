@@ -18,6 +18,7 @@ public class HttpFaultDelay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixedDelay")
     public Duration fixedDelay;
+
     public HttpFaultDelay withFixedDelay(Duration fixedDelay) {
         this.fixedDelay = fixedDelay;
         return this;
@@ -29,9 +30,11 @@ public class HttpFaultDelay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage")
     public Double percentage;
+
     public HttpFaultDelay withPercentage(Double percentage) {
         this.percentage = percentage;
         return this;
     }
     
+    public HttpFaultDelay(){}
 }

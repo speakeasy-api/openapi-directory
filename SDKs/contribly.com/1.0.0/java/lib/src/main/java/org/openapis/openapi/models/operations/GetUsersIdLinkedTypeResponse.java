@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUsersIdLinkedTypeResponse {
     
     public String contentType;
+
     public GetUsersIdLinkedTypeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetUsersIdLinkedTypeResponse {
      */
     
     public org.openapis.openapi.models.shared.LinkedProfile linkedProfile;
+
     public GetUsersIdLinkedTypeResponse withLinkedProfile(org.openapis.openapi.models.shared.LinkedProfile linkedProfile) {
         this.linkedProfile = linkedProfile;
         return this;
@@ -26,6 +29,7 @@ public class GetUsersIdLinkedTypeResponse {
     
     
     public Integer statusCode;
+
     public GetUsersIdLinkedTypeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetUsersIdLinkedTypeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUsersIdLinkedTypeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetUsersIdLinkedTypeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

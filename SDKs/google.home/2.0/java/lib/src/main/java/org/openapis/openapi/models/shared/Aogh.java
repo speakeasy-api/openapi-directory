@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Aogh {
     @JsonProperty("aogh_api_version")
     public String aoghApiVersion;
+
     public Aogh withAoghApiVersion(String aoghApiVersion) {
         this.aoghApiVersion = aoghApiVersion;
         return this;
     }
     
+    public Aogh(@JsonProperty("aogh_api_version") String aoghApiVersion) {
+        this.aoghApiVersion = aoghApiVersion;
+  }
 }

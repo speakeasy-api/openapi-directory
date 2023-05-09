@@ -12,9 +12,11 @@ public class GetWFSInventory200ApplicationJSONPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventory")
     public GetWFSInventory200ApplicationJSONPayloadInventory[] inventory;
+
     public GetWFSInventory200ApplicationJSONPayload withInventory(GetWFSInventory200ApplicationJSONPayloadInventory[] inventory) {
         this.inventory = inventory;
         return this;
     }
     
+    public GetWFSInventory200ApplicationJSONPayload(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeRecipeRequest {
     @JsonProperty("recipeArn")
     public String recipeArn;
+
     public DescribeRecipeRequest withRecipeArn(String recipeArn) {
         this.recipeArn = recipeArn;
         return this;
     }
     
+    public DescribeRecipeRequest(@JsonProperty("recipeArn") String recipeArn) {
+        this.recipeArn = recipeArn;
+  }
 }

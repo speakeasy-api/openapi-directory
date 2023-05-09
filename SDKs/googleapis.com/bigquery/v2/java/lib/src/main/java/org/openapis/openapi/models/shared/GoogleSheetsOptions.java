@@ -15,6 +15,7 @@ public class GoogleSheetsOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public String range;
+
     public GoogleSheetsOptions withRange(String range) {
         this.range = range;
         return this;
@@ -26,9 +27,11 @@ public class GoogleSheetsOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipLeadingRows")
     public String skipLeadingRows;
+
     public GoogleSheetsOptions withSkipLeadingRows(String skipLeadingRows) {
         this.skipLeadingRows = skipLeadingRows;
         return this;
     }
     
+    public GoogleSheetsOptions(){}
 }

@@ -15,6 +15,7 @@ public class UpdateDomainContactPrivacyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdminPrivacy")
     public Boolean adminPrivacy;
+
     public UpdateDomainContactPrivacyRequest withAdminPrivacy(Boolean adminPrivacy) {
         this.adminPrivacy = adminPrivacy;
         return this;
@@ -22,6 +23,7 @@ public class UpdateDomainContactPrivacyRequest {
     
     @JsonProperty("DomainName")
     public String domainName;
+
     public UpdateDomainContactPrivacyRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -30,6 +32,7 @@ public class UpdateDomainContactPrivacyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistrantPrivacy")
     public Boolean registrantPrivacy;
+
     public UpdateDomainContactPrivacyRequest withRegistrantPrivacy(Boolean registrantPrivacy) {
         this.registrantPrivacy = registrantPrivacy;
         return this;
@@ -38,9 +41,13 @@ public class UpdateDomainContactPrivacyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TechPrivacy")
     public Boolean techPrivacy;
+
     public UpdateDomainContactPrivacyRequest withTechPrivacy(Boolean techPrivacy) {
         this.techPrivacy = techPrivacy;
         return this;
     }
     
+    public UpdateDomainContactPrivacyRequest(@JsonProperty("DomainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

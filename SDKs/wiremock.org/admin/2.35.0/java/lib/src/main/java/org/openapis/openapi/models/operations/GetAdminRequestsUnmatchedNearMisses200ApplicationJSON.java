@@ -15,9 +15,11 @@ public class GetAdminRequestsUnmatchedNearMisses200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nearMisses")
     public GetAdminRequestsUnmatchedNearMisses200ApplicationJSONNearMisses[] nearMisses;
+
     public GetAdminRequestsUnmatchedNearMisses200ApplicationJSON withNearMisses(GetAdminRequestsUnmatchedNearMisses200ApplicationJSONNearMisses[] nearMisses) {
         this.nearMisses = nearMisses;
         return this;
     }
     
+    public GetAdminRequestsUnmatchedNearMisses200ApplicationJSON(){}
 }

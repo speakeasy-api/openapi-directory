@@ -15,6 +15,7 @@ public class ParentSavingsPlanOffering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public CurrencyCodeEnum currency;
+
     public ParentSavingsPlanOffering withCurrency(CurrencyCodeEnum currency) {
         this.currency = currency;
         return this;
@@ -23,6 +24,7 @@ public class ParentSavingsPlanOffering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationSeconds")
     public Long durationSeconds;
+
     public ParentSavingsPlanOffering withDurationSeconds(Long durationSeconds) {
         this.durationSeconds = durationSeconds;
         return this;
@@ -31,6 +33,7 @@ public class ParentSavingsPlanOffering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offeringId")
     public String offeringId;
+
     public ParentSavingsPlanOffering withOfferingId(String offeringId) {
         this.offeringId = offeringId;
         return this;
@@ -39,6 +42,7 @@ public class ParentSavingsPlanOffering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentOption")
     public SavingsPlanPaymentOptionEnum paymentOption;
+
     public ParentSavingsPlanOffering withPaymentOption(SavingsPlanPaymentOptionEnum paymentOption) {
         this.paymentOption = paymentOption;
         return this;
@@ -47,6 +51,7 @@ public class ParentSavingsPlanOffering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("planDescription")
     public String planDescription;
+
     public ParentSavingsPlanOffering withPlanDescription(String planDescription) {
         this.planDescription = planDescription;
         return this;
@@ -55,9 +60,11 @@ public class ParentSavingsPlanOffering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("planType")
     public SavingsPlanTypeEnum planType;
+
     public ParentSavingsPlanOffering withPlanType(SavingsPlanTypeEnum planType) {
         this.planType = planType;
         return this;
     }
     
+    public ParentSavingsPlanOffering(){}
 }

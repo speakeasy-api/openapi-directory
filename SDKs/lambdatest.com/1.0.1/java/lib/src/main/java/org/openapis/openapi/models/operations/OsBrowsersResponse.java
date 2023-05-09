@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OsBrowsersResponse {
@@ -12,6 +13,7 @@ public class OsBrowsersResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessDenied accessDenied;
+
     public OsBrowsersResponse withAccessDenied(org.openapis.openapi.models.shared.AccessDenied accessDenied) {
         this.accessDenied = accessDenied;
         return this;
@@ -19,6 +21,7 @@ public class OsBrowsersResponse {
     
     
     public String contentType;
+
     public OsBrowsersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class OsBrowsersResponse {
     
     
     public Integer statusCode;
+
     public OsBrowsersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class OsBrowsersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OsBrowsersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class OsBrowsersResponse {
      */
     
     public org.openapis.openapi.models.shared.OsBrowsers osBrowsers;
+
     public OsBrowsersResponse withOsBrowsers(org.openapis.openapi.models.shared.OsBrowsers osBrowsers) {
         this.osBrowsers = osBrowsers;
         return this;
     }
     
+    public OsBrowsersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class GetClassificationInclusions200ApplicationVndApiPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.ClassificationInclusion[] data;
+
     public GetClassificationInclusions200ApplicationVndApiPlusJson withData(org.openapis.openapi.models.shared.ClassificationInclusion[] data) {
         this.data = data;
         return this;
@@ -23,9 +24,11 @@ public class GetClassificationInclusions200ApplicationVndApiPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public org.openapis.openapi.models.shared.Links links;
+
     public GetClassificationInclusions200ApplicationVndApiPlusJson withLinks(org.openapis.openapi.models.shared.Links links) {
         this.links = links;
         return this;
     }
     
+    public GetClassificationInclusions200ApplicationVndApiPlusJson(){}
 }

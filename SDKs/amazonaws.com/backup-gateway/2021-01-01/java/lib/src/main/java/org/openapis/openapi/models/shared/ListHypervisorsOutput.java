@@ -15,6 +15,7 @@ public class ListHypervisorsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Hypervisors")
     public Hypervisor[] hypervisors;
+
     public ListHypervisorsOutput withHypervisors(Hypervisor[] hypervisors) {
         this.hypervisors = hypervisors;
         return this;
@@ -23,9 +24,11 @@ public class ListHypervisorsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListHypervisorsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListHypervisorsOutput(){}
 }

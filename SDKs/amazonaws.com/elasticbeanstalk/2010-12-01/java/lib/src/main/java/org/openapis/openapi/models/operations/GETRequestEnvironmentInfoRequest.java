@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRequestEnvironmentInfoRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETRequestEnvironmentInfoActionEnum action;
+
     public GETRequestEnvironmentInfoRequest withAction(GETRequestEnvironmentInfoActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETRequestEnvironmentInfoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnvironmentId")
     public String environmentId;
+
     public GETRequestEnvironmentInfoRequest withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -29,6 +32,7 @@ public class GETRequestEnvironmentInfoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnvironmentName")
     public String environmentName;
+
     public GETRequestEnvironmentInfoRequest withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -39,6 +43,7 @@ public class GETRequestEnvironmentInfoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InfoType")
     public GETRequestEnvironmentInfoInfoTypeEnum infoType;
+
     public GETRequestEnvironmentInfoRequest withInfoType(GETRequestEnvironmentInfoInfoTypeEnum infoType) {
         this.infoType = infoType;
         return this;
@@ -46,6 +51,7 @@ public class GETRequestEnvironmentInfoRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETRequestEnvironmentInfoVersionEnum version;
+
     public GETRequestEnvironmentInfoRequest withVersion(GETRequestEnvironmentInfoVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETRequestEnvironmentInfoRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETRequestEnvironmentInfoRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETRequestEnvironmentInfoRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETRequestEnvironmentInfoRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETRequestEnvironmentInfoRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETRequestEnvironmentInfoRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETRequestEnvironmentInfoRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETRequestEnvironmentInfoRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETRequestEnvironmentInfoRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETRequestEnvironmentInfoRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETRequestEnvironmentInfoRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETRequestEnvironmentInfoRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,15 @@ public class GETRequestEnvironmentInfoRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETRequestEnvironmentInfoRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETRequestEnvironmentInfoRequest(@JsonProperty("Action") GETRequestEnvironmentInfoActionEnum action, @JsonProperty("InfoType") GETRequestEnvironmentInfoInfoTypeEnum infoType, @JsonProperty("Version") GETRequestEnvironmentInfoVersionEnum version) {
+        this.action = action;
+        this.infoType = infoType;
+        this.version = version;
+  }
 }

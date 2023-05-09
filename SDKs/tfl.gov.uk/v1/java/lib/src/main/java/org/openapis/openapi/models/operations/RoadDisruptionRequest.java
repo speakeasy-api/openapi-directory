@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RoadDisruptionRequest {
@@ -12,6 +13,7 @@ public class RoadDisruptionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=categories")
     public String[] categories;
+
     public RoadDisruptionRequest withCategories(String[] categories) {
         this.categories = categories;
         return this;
@@ -22,6 +24,7 @@ public class RoadDisruptionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=closures")
     public Boolean closures;
+
     public RoadDisruptionRequest withClosures(Boolean closures) {
         this.closures = closures;
         return this;
@@ -32,6 +35,7 @@ public class RoadDisruptionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ids")
     public String[] ids;
+
     public RoadDisruptionRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -42,6 +46,7 @@ public class RoadDisruptionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=severities")
     public String[] severities;
+
     public RoadDisruptionRequest withSeverities(String[] severities) {
         this.severities = severities;
         return this;
@@ -52,9 +57,13 @@ public class RoadDisruptionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stripContent")
     public Boolean stripContent;
+
     public RoadDisruptionRequest withStripContent(Boolean stripContent) {
         this.stripContent = stripContent;
         return this;
     }
     
+    public RoadDisruptionRequest(@JsonProperty("ids") String[] ids) {
+        this.ids = ids;
+  }
 }

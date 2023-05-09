@@ -15,6 +15,7 @@ public class AwsWafv2CustomHttpHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AwsWafv2CustomHttpHeader withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class AwsWafv2CustomHttpHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public AwsWafv2CustomHttpHeader withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AwsWafv2CustomHttpHeader(){}
 }

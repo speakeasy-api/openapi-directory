@@ -15,6 +15,7 @@ public class DescribeAccountResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DedicatedTenancyManagementCidrRange")
     public String dedicatedTenancyManagementCidrRange;
+
     public DescribeAccountResult withDedicatedTenancyManagementCidrRange(String dedicatedTenancyManagementCidrRange) {
         this.dedicatedTenancyManagementCidrRange = dedicatedTenancyManagementCidrRange;
         return this;
@@ -23,9 +24,11 @@ public class DescribeAccountResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DedicatedTenancySupport")
     public DedicatedTenancySupportResultEnumEnum dedicatedTenancySupport;
+
     public DescribeAccountResult withDedicatedTenancySupport(DedicatedTenancySupportResultEnumEnum dedicatedTenancySupport) {
         this.dedicatedTenancySupport = dedicatedTenancySupport;
         return this;
     }
     
+    public DescribeAccountResult(){}
 }

@@ -15,9 +15,11 @@ public class CreateEnvironment400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public CreateEnvironment400ApplicationJSONError error;
+
     public CreateEnvironment400ApplicationJSON withError(CreateEnvironment400ApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public CreateEnvironment400ApplicationJSON(){}
 }

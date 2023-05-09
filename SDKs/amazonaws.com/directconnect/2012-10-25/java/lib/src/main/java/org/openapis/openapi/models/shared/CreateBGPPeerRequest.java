@@ -12,6 +12,7 @@ public class CreateBGPPeerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newBGPPeer")
     public NewBGPPeer newBGPPeer;
+
     public CreateBGPPeerRequest withNewBGPPeer(NewBGPPeer newBGPPeer) {
         this.newBGPPeer = newBGPPeer;
         return this;
@@ -20,9 +21,11 @@ public class CreateBGPPeerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualInterfaceId")
     public String virtualInterfaceId;
+
     public CreateBGPPeerRequest withVirtualInterfaceId(String virtualInterfaceId) {
         this.virtualInterfaceId = virtualInterfaceId;
         return this;
     }
     
+    public CreateBGPPeerRequest(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateFleetRequestTagSpecifications {
     
     public CreateFleetRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public CreateFleetRequestTagSpecifications withResourceType(CreateFleetRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class CreateFleetRequestTagSpecifications {
     
     
     public CreateFleetRequestTagSpecificationsTags[] tags;
+
     public CreateFleetRequestTagSpecifications withTags(CreateFleetRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateFleetRequestTagSpecifications(){}
 }

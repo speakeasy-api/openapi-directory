@@ -22,6 +22,7 @@ public class SpeakerEnrollmentJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public SpeakerEnrollmentJob withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class SpeakerEnrollmentJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public SpeakerEnrollmentJob withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -38,6 +40,7 @@ public class SpeakerEnrollmentJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainId")
     public String domainId;
+
     public SpeakerEnrollmentJob withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -48,6 +51,7 @@ public class SpeakerEnrollmentJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndedAt")
     public OffsetDateTime endedAt;
+
     public SpeakerEnrollmentJob withEndedAt(OffsetDateTime endedAt) {
         this.endedAt = endedAt;
         return this;
@@ -56,6 +60,7 @@ public class SpeakerEnrollmentJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnrollmentConfig")
     public EnrollmentConfig enrollmentConfig;
+
     public SpeakerEnrollmentJob withEnrollmentConfig(EnrollmentConfig enrollmentConfig) {
         this.enrollmentConfig = enrollmentConfig;
         return this;
@@ -64,6 +69,7 @@ public class SpeakerEnrollmentJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureDetails")
     public FailureDetails failureDetails;
+
     public SpeakerEnrollmentJob withFailureDetails(FailureDetails failureDetails) {
         this.failureDetails = failureDetails;
         return this;
@@ -72,6 +78,7 @@ public class SpeakerEnrollmentJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputDataConfig")
     public InputDataConfig inputDataConfig;
+
     public SpeakerEnrollmentJob withInputDataConfig(InputDataConfig inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -80,6 +87,7 @@ public class SpeakerEnrollmentJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public SpeakerEnrollmentJob withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -88,6 +96,7 @@ public class SpeakerEnrollmentJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public SpeakerEnrollmentJob withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -96,6 +105,7 @@ public class SpeakerEnrollmentJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobProgress")
     public JobProgress jobProgress;
+
     public SpeakerEnrollmentJob withJobProgress(JobProgress jobProgress) {
         this.jobProgress = jobProgress;
         return this;
@@ -104,6 +114,7 @@ public class SpeakerEnrollmentJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public SpeakerEnrollmentJobStatusEnum jobStatus;
+
     public SpeakerEnrollmentJob withJobStatus(SpeakerEnrollmentJobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -112,9 +123,11 @@ public class SpeakerEnrollmentJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputDataConfig")
     public OutputDataConfig outputDataConfig;
+
     public SpeakerEnrollmentJob withOutputDataConfig(OutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
     }
     
+    public SpeakerEnrollmentJob(){}
 }

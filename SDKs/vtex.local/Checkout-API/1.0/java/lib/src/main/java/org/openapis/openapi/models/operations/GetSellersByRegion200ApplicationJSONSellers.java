@@ -15,6 +15,7 @@ public class GetSellersByRegion200ApplicationJSONSellers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetSellersByRegion200ApplicationJSONSellers withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class GetSellersByRegion200ApplicationJSONSellers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo")
     public String logo;
+
     public GetSellersByRegion200ApplicationJSONSellers withLogo(String logo) {
         this.logo = logo;
         return this;
@@ -37,9 +39,11 @@ public class GetSellersByRegion200ApplicationJSONSellers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetSellersByRegion200ApplicationJSONSellers withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetSellersByRegion200ApplicationJSONSellers(){}
 }

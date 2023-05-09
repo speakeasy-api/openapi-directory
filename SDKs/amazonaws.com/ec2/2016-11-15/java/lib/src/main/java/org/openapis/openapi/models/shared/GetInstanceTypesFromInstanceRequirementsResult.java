@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetInstanceTypesFromInstanceRequirementsResult {
     
     public GetInstanceTypesFromInstanceRequirementsResultInstanceTypes[] instanceTypes;
+
     public GetInstanceTypesFromInstanceRequirementsResult withInstanceTypes(GetInstanceTypesFromInstanceRequirementsResultInstanceTypes[] instanceTypes) {
         this.instanceTypes = instanceTypes;
         return this;
@@ -19,9 +20,11 @@ public class GetInstanceTypesFromInstanceRequirementsResult {
     
     
     public String nextToken;
+
     public GetInstanceTypesFromInstanceRequirementsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetInstanceTypesFromInstanceRequirementsResult(){}
 }

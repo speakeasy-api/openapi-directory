@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateGameSessionResponse {
@@ -12,6 +13,7 @@ public class UpdateGameSessionResponse {
      */
     
     public Object conflictException;
+
     public UpdateGameSessionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateGameSessionResponse {
     
     
     public String contentType;
+
     public UpdateGameSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateGameSessionResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateGameSessionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateGameSessionResponse {
      */
     
     public Object invalidGameSessionStatusException;
+
     public UpdateGameSessionResponse withInvalidGameSessionStatusException(Object invalidGameSessionStatusException) {
         this.invalidGameSessionStatusException = invalidGameSessionStatusException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateGameSessionResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateGameSessionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateGameSessionResponse {
      */
     
     public Object notFoundException;
+
     public UpdateGameSessionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateGameSessionResponse {
     
     
     public Integer statusCode;
+
     public UpdateGameSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateGameSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateGameSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateGameSessionResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateGameSessionResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateGameSessionResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateGameSessionOutput updateGameSessionOutput;
+
     public UpdateGameSessionResponse withUpdateGameSessionOutput(org.openapis.openapi.models.shared.UpdateGameSessionOutput updateGameSessionOutput) {
         this.updateGameSessionOutput = updateGameSessionOutput;
         return this;
     }
     
+    public UpdateGameSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

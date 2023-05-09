@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class NtmksResponse {
     
     public String contentType;
+
     public NtmksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class NtmksResponse {
     
     
     public Integer statusCode;
+
     public NtmksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class NtmksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public NtmksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class NtmksResponse {
      */
     
     public Ntmks400ApplicationJSON ntmks400ApplicationJSONObject;
+
     public NtmksResponse withNtmks400ApplicationJSONObject(Ntmks400ApplicationJSON ntmks400ApplicationJSONObject) {
         this.ntmks400ApplicationJSONObject = ntmks400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class NtmksResponse {
      */
     
     public Ntmks401ApplicationJSON ntmks401ApplicationJSONObject;
+
     public NtmksResponse withNtmks401ApplicationJSONObject(Ntmks401ApplicationJSON ntmks401ApplicationJSONObject) {
         this.ntmks401ApplicationJSONObject = ntmks401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class NtmksResponse {
      */
     
     public Ntmks404ApplicationJSON ntmks404ApplicationJSONObject;
+
     public NtmksResponse withNtmks404ApplicationJSONObject(Ntmks404ApplicationJSON ntmks404ApplicationJSONObject) {
         this.ntmks404ApplicationJSONObject = ntmks404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class NtmksResponse {
      */
     
     public Ntmks500ApplicationJSON ntmks500ApplicationJSONObject;
+
     public NtmksResponse withNtmks500ApplicationJSONObject(Ntmks500ApplicationJSON ntmks500ApplicationJSONObject) {
         this.ntmks500ApplicationJSONObject = ntmks500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class NtmksResponse {
      */
     
     public Ntmks502ApplicationJSON ntmks502ApplicationJSONObject;
+
     public NtmksResponse withNtmks502ApplicationJSONObject(Ntmks502ApplicationJSON ntmks502ApplicationJSONObject) {
         this.ntmks502ApplicationJSONObject = ntmks502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class NtmksResponse {
      */
     
     public Ntmks503ApplicationJSON ntmks503ApplicationJSONObject;
+
     public NtmksResponse withNtmks503ApplicationJSONObject(Ntmks503ApplicationJSON ntmks503ApplicationJSONObject) {
         this.ntmks503ApplicationJSONObject = ntmks503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class NtmksResponse {
      */
     
     public Ntmks504ApplicationJSON ntmks504ApplicationJSONObject;
+
     public NtmksResponse withNtmks504ApplicationJSONObject(Ntmks504ApplicationJSON ntmks504ApplicationJSONObject) {
         this.ntmks504ApplicationJSONObject = ntmks504ApplicationJSONObject;
         return this;
     }
     
+    public NtmksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

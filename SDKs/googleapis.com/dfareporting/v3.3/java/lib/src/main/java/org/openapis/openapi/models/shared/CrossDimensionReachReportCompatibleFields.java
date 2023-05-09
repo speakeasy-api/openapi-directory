@@ -18,6 +18,7 @@ public class CrossDimensionReachReportCompatibleFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("breakdown")
     public Dimension[] breakdown;
+
     public CrossDimensionReachReportCompatibleFields withBreakdown(Dimension[] breakdown) {
         this.breakdown = breakdown;
         return this;
@@ -29,6 +30,7 @@ public class CrossDimensionReachReportCompatibleFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionFilters")
     public Dimension[] dimensionFilters;
+
     public CrossDimensionReachReportCompatibleFields withDimensionFilters(Dimension[] dimensionFilters) {
         this.dimensionFilters = dimensionFilters;
         return this;
@@ -40,6 +42,7 @@ public class CrossDimensionReachReportCompatibleFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public CrossDimensionReachReportCompatibleFields withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class CrossDimensionReachReportCompatibleFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public Metric[] metrics;
+
     public CrossDimensionReachReportCompatibleFields withMetrics(Metric[] metrics) {
         this.metrics = metrics;
         return this;
@@ -62,9 +66,11 @@ public class CrossDimensionReachReportCompatibleFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overlapMetrics")
     public Metric[] overlapMetrics;
+
     public CrossDimensionReachReportCompatibleFields withOverlapMetrics(Metric[] overlapMetrics) {
         this.overlapMetrics = overlapMetrics;
         return this;
     }
     
+    public CrossDimensionReachReportCompatibleFields(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RoleMapping {
     @JsonProperty("principalId")
     public String principalId;
+
     public RoleMapping withPrincipalId(String principalId) {
         this.principalId = principalId;
         return this;
@@ -25,6 +26,7 @@ public class RoleMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principalName")
     public String principalName;
+
     public RoleMapping withPrincipalName(String principalName) {
         this.principalName = principalName;
         return this;
@@ -32,9 +34,14 @@ public class RoleMapping {
     
     @JsonProperty("role")
     public RoleTypeEnum role;
+
     public RoleMapping withRole(RoleTypeEnum role) {
         this.role = role;
         return this;
     }
     
+    public RoleMapping(@JsonProperty("principalId") String principalId, @JsonProperty("role") RoleTypeEnum role) {
+        this.principalId = principalId;
+        this.role = role;
+  }
 }

@@ -12,6 +12,7 @@ public class ListTestGridSessionActionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResult")
     public Long maxResult;
+
     public ListTestGridSessionActionsRequest withMaxResult(Long maxResult) {
         this.maxResult = maxResult;
         return this;
@@ -20,6 +21,7 @@ public class ListTestGridSessionActionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListTestGridSessionActionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,9 +29,13 @@ public class ListTestGridSessionActionsRequest {
     
     @JsonProperty("sessionArn")
     public String sessionArn;
+
     public ListTestGridSessionActionsRequest withSessionArn(String sessionArn) {
         this.sessionArn = sessionArn;
         return this;
     }
     
+    public ListTestGridSessionActionsRequest(@JsonProperty("sessionArn") String sessionArn) {
+        this.sessionArn = sessionArn;
+  }
 }

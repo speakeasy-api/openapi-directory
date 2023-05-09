@@ -15,6 +15,7 @@ public class ListenerTlsCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acm")
     public ListenerTlsAcmCertificate acm;
+
     public ListenerTlsCertificate withAcm(ListenerTlsAcmCertificate acm) {
         this.acm = acm;
         return this;
@@ -23,6 +24,7 @@ public class ListenerTlsCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file")
     public ListenerTlsFileCertificate file;
+
     public ListenerTlsCertificate withFile(ListenerTlsFileCertificate file) {
         this.file = file;
         return this;
@@ -31,9 +33,11 @@ public class ListenerTlsCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sds")
     public ListenerTlsSdsCertificate sds;
+
     public ListenerTlsCertificate withSds(ListenerTlsSdsCertificate sds) {
         this.sds = sds;
         return this;
     }
     
+    public ListenerTlsCertificate(){}
 }

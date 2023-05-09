@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteFirewallDomainListResponse {
@@ -12,6 +13,7 @@ public class DeleteFirewallDomainListResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteFirewallDomainListResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteFirewallDomainListResponse {
      */
     
     public Object conflictException;
+
     public DeleteFirewallDomainListResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteFirewallDomainListResponse {
     
     
     public String contentType;
+
     public DeleteFirewallDomainListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteFirewallDomainListResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteFirewallDomainListResponse deleteFirewallDomainListResponse;
+
     public DeleteFirewallDomainListResponse withDeleteFirewallDomainListResponse(org.openapis.openapi.models.shared.DeleteFirewallDomainListResponse deleteFirewallDomainListResponse) {
         this.deleteFirewallDomainListResponse = deleteFirewallDomainListResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteFirewallDomainListResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DeleteFirewallDomainListResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteFirewallDomainListResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteFirewallDomainListResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteFirewallDomainListResponse {
     
     
     public Integer statusCode;
+
     public DeleteFirewallDomainListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteFirewallDomainListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteFirewallDomainListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DeleteFirewallDomainListResponse {
      */
     
     public Object throttlingException;
+
     public DeleteFirewallDomainListResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteFirewallDomainListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

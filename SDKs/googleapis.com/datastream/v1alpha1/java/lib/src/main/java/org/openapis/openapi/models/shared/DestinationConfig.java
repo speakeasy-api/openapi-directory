@@ -18,6 +18,7 @@ public class DestinationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationConnectionProfileName")
     public String destinationConnectionProfileName;
+
     public DestinationConfig withDestinationConnectionProfileName(String destinationConnectionProfileName) {
         this.destinationConnectionProfileName = destinationConnectionProfileName;
         return this;
@@ -29,9 +30,11 @@ public class DestinationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsDestinationConfig")
     public GcsDestinationConfig gcsDestinationConfig;
+
     public DestinationConfig withGcsDestinationConfig(GcsDestinationConfig gcsDestinationConfig) {
         this.gcsDestinationConfig = gcsDestinationConfig;
         return this;
     }
     
+    public DestinationConfig(){}
 }

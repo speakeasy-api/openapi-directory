@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RemoveEndpointsRequest {
     @JsonProperty("EndpointGroupArn")
     public String endpointGroupArn;
+
     public RemoveEndpointsRequest withEndpointGroupArn(String endpointGroupArn) {
         this.endpointGroupArn = endpointGroupArn;
         return this;
@@ -16,9 +17,14 @@ public class RemoveEndpointsRequest {
     
     @JsonProperty("EndpointIdentifiers")
     public EndpointIdentifier[] endpointIdentifiers;
+
     public RemoveEndpointsRequest withEndpointIdentifiers(EndpointIdentifier[] endpointIdentifiers) {
         this.endpointIdentifiers = endpointIdentifiers;
         return this;
     }
     
+    public RemoveEndpointsRequest(@JsonProperty("EndpointGroupArn") String endpointGroupArn, @JsonProperty("EndpointIdentifiers") EndpointIdentifier[] endpointIdentifiers) {
+        this.endpointGroupArn = endpointGroupArn;
+        this.endpointIdentifiers = endpointIdentifiers;
+  }
 }

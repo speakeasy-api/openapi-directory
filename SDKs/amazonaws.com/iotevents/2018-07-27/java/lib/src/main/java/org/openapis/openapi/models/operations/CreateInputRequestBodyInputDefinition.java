@@ -15,9 +15,11 @@ public class CreateInputRequestBodyInputDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public org.openapis.openapi.models.shared.Attribute[] attributes;
+
     public CreateInputRequestBodyInputDefinition withAttributes(org.openapis.openapi.models.shared.Attribute[] attributes) {
         this.attributes = attributes;
         return this;
     }
     
+    public CreateInputRequestBodyInputDefinition(){}
 }

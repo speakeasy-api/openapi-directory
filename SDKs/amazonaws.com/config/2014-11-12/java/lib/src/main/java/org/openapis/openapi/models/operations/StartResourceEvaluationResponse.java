@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartResourceEvaluationResponse {
     
     public String contentType;
+
     public StartResourceEvaluationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartResourceEvaluationResponse {
      */
     
     public Object idempotentParameterMismatch;
+
     public StartResourceEvaluationResponse withIdempotentParameterMismatch(Object idempotentParameterMismatch) {
         this.idempotentParameterMismatch = idempotentParameterMismatch;
         return this;
@@ -29,6 +32,7 @@ public class StartResourceEvaluationResponse {
      */
     
     public Object invalidParameterValueException;
+
     public StartResourceEvaluationResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class StartResourceEvaluationResponse {
      */
     
     public org.openapis.openapi.models.shared.StartResourceEvaluationResponse startResourceEvaluationResponse;
+
     public StartResourceEvaluationResponse withStartResourceEvaluationResponse(org.openapis.openapi.models.shared.StartResourceEvaluationResponse startResourceEvaluationResponse) {
         this.startResourceEvaluationResponse = startResourceEvaluationResponse;
         return this;
@@ -46,6 +51,7 @@ public class StartResourceEvaluationResponse {
     
     
     public Integer statusCode;
+
     public StartResourceEvaluationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class StartResourceEvaluationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartResourceEvaluationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartResourceEvaluationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

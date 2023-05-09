@@ -18,6 +18,7 @@ public class UpdateProtectedRangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public UpdateProtectedRangeRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -29,9 +30,11 @@ public class UpdateProtectedRangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protectedRange")
     public ProtectedRange protectedRange;
+
     public UpdateProtectedRangeRequest withProtectedRange(ProtectedRange protectedRange) {
         this.protectedRange = protectedRange;
         return this;
     }
     
+    public UpdateProtectedRangeRequest(){}
 }

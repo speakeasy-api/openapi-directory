@@ -15,9 +15,11 @@ public class RemoveLFTagsFromResourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Failures")
     public LFTagError[] failures;
+
     public RemoveLFTagsFromResourceResponse withFailures(LFTagError[] failures) {
         this.failures = failures;
         return this;
     }
     
+    public RemoveLFTagsFromResourceResponse(){}
 }

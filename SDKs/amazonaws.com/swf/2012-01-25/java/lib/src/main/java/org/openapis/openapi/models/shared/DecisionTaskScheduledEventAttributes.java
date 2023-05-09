@@ -15,6 +15,7 @@ public class DecisionTaskScheduledEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startToCloseTimeout")
     public String startToCloseTimeout;
+
     public DecisionTaskScheduledEventAttributes withStartToCloseTimeout(String startToCloseTimeout) {
         this.startToCloseTimeout = startToCloseTimeout;
         return this;
@@ -22,6 +23,7 @@ public class DecisionTaskScheduledEventAttributes {
     
     @JsonProperty("taskList")
     public TaskList taskList;
+
     public DecisionTaskScheduledEventAttributes withTaskList(TaskList taskList) {
         this.taskList = taskList;
         return this;
@@ -30,9 +32,13 @@ public class DecisionTaskScheduledEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskPriority")
     public String taskPriority;
+
     public DecisionTaskScheduledEventAttributes withTaskPriority(String taskPriority) {
         this.taskPriority = taskPriority;
         return this;
     }
     
+    public DecisionTaskScheduledEventAttributes(@JsonProperty("taskList") TaskList taskList) {
+        this.taskList = taskList;
+  }
 }

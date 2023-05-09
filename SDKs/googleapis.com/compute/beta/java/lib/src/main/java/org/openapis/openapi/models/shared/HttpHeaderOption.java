@@ -18,6 +18,7 @@ public class HttpHeaderOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headerName")
     public String headerName;
+
     public HttpHeaderOption withHeaderName(String headerName) {
         this.headerName = headerName;
         return this;
@@ -29,6 +30,7 @@ public class HttpHeaderOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headerValue")
     public String headerValue;
+
     public HttpHeaderOption withHeaderValue(String headerValue) {
         this.headerValue = headerValue;
         return this;
@@ -40,9 +42,11 @@ public class HttpHeaderOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replace")
     public Boolean replace;
+
     public HttpHeaderOption withReplace(Boolean replace) {
         this.replace = replace;
         return this;
     }
     
+    public HttpHeaderOption(){}
 }

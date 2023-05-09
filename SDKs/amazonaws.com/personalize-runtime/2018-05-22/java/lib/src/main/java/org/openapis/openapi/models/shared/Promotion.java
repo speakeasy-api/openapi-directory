@@ -15,6 +15,7 @@ public class Promotion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterArn")
     public String filterArn;
+
     public Promotion withFilterArn(String filterArn) {
         this.filterArn = filterArn;
         return this;
@@ -23,6 +24,7 @@ public class Promotion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterValues")
     public java.util.Map<String, String> filterValues;
+
     public Promotion withFilterValues(java.util.Map<String, String> filterValues) {
         this.filterValues = filterValues;
         return this;
@@ -31,6 +33,7 @@ public class Promotion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Promotion withName(String name) {
         this.name = name;
         return this;
@@ -39,9 +42,11 @@ public class Promotion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentPromotedItems")
     public Long percentPromotedItems;
+
     public Promotion withPercentPromotedItems(Long percentPromotedItems) {
         this.percentPromotedItems = percentPromotedItems;
         return this;
     }
     
+    public Promotion(){}
 }

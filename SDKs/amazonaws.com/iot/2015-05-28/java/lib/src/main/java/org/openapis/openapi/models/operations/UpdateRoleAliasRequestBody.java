@@ -15,6 +15,7 @@ public class UpdateRoleAliasRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credentialDurationSeconds")
     public Long credentialDurationSeconds;
+
     public UpdateRoleAliasRequestBody withCredentialDurationSeconds(Long credentialDurationSeconds) {
         this.credentialDurationSeconds = credentialDurationSeconds;
         return this;
@@ -26,9 +27,11 @@ public class UpdateRoleAliasRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public UpdateRoleAliasRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public UpdateRoleAliasRequestBody(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TransferOld {
     @JsonProperty("amount")
     public Amount amount;
+
     public TransferOld withAmount(Amount amount) {
         this.amount = amount;
         return this;
@@ -25,6 +26,7 @@ public class TransferOld {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TransferOld withDescription(String description) {
         this.description = description;
         return this;
@@ -32,6 +34,7 @@ public class TransferOld {
     
     @JsonProperty("destination")
     public PartyIdentification destination;
+
     public TransferOld withDestination(PartyIdentification destination) {
         this.destination = destination;
         return this;
@@ -42,6 +45,7 @@ public class TransferOld {
      */
     @JsonProperty("id")
     public String id;
+
     public TransferOld withId(String id) {
         this.id = id;
         return this;
@@ -53,6 +57,7 @@ public class TransferOld {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public TransferOld withReference(String reference) {
         this.reference = reference;
         return this;
@@ -64,6 +69,7 @@ public class TransferOld {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refusalReason")
     public String refusalReason;
+
     public TransferOld withRefusalReason(String refusalReason) {
         this.refusalReason = refusalReason;
         return this;
@@ -76,6 +82,7 @@ public class TransferOld {
      */
     @JsonProperty("resultCode")
     public String resultCode;
+
     public TransferOld withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
@@ -83,9 +90,17 @@ public class TransferOld {
     
     @JsonProperty("source")
     public InternalPartyIdentification source;
+
     public TransferOld withSource(InternalPartyIdentification source) {
         this.source = source;
         return this;
     }
     
+    public TransferOld(@JsonProperty("amount") Amount amount, @JsonProperty("destination") PartyIdentification destination, @JsonProperty("id") String id, @JsonProperty("resultCode") String resultCode, @JsonProperty("source") InternalPartyIdentification source) {
+        this.amount = amount;
+        this.destination = destination;
+        this.id = id;
+        this.resultCode = resultCode;
+        this.source = source;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFilterResponse {
     
     public String contentType;
+
     public CreateFilterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateFilterResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateFilterResponse createFilterResponse;
+
     public CreateFilterResponse withCreateFilterResponse(org.openapis.openapi.models.shared.CreateFilterResponse createFilterResponse) {
         this.createFilterResponse = createFilterResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateFilterResponse {
      */
     
     public Object invalidInputException;
+
     public CreateFilterResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class CreateFilterResponse {
      */
     
     public Object limitExceededException;
+
     public CreateFilterResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateFilterResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateFilterResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CreateFilterResponse {
     
     
     public Integer statusCode;
+
     public CreateFilterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateFilterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFilterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateFilterResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateFilterResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -83,9 +92,14 @@ public class CreateFilterResponse {
      */
     
     public Object tooManyTagsException;
+
     public CreateFilterResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public CreateFilterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

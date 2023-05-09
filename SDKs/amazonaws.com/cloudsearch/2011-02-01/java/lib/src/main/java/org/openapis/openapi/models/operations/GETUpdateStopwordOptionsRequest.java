@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUpdateStopwordOptionsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETUpdateStopwordOptionsActionEnum action;
+
     public GETUpdateStopwordOptionsRequest withAction(GETUpdateStopwordOptionsActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class GETUpdateStopwordOptionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DomainName")
     public String domainName;
+
     public GETUpdateStopwordOptionsRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -23,6 +26,7 @@ public class GETUpdateStopwordOptionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Stopwords")
     public String stopwords;
+
     public GETUpdateStopwordOptionsRequest withStopwords(String stopwords) {
         this.stopwords = stopwords;
         return this;
@@ -30,6 +34,7 @@ public class GETUpdateStopwordOptionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETUpdateStopwordOptionsVersionEnum version;
+
     public GETUpdateStopwordOptionsRequest withVersion(GETUpdateStopwordOptionsVersionEnum version) {
         this.version = version;
         return this;
@@ -37,6 +42,7 @@ public class GETUpdateStopwordOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETUpdateStopwordOptionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -44,6 +50,7 @@ public class GETUpdateStopwordOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETUpdateStopwordOptionsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -51,6 +58,7 @@ public class GETUpdateStopwordOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETUpdateStopwordOptionsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -58,6 +66,7 @@ public class GETUpdateStopwordOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETUpdateStopwordOptionsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -65,6 +74,7 @@ public class GETUpdateStopwordOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETUpdateStopwordOptionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -72,6 +82,7 @@ public class GETUpdateStopwordOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETUpdateStopwordOptionsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -79,9 +90,16 @@ public class GETUpdateStopwordOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETUpdateStopwordOptionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETUpdateStopwordOptionsRequest(@JsonProperty("Action") GETUpdateStopwordOptionsActionEnum action, @JsonProperty("DomainName") String domainName, @JsonProperty("Stopwords") String stopwords, @JsonProperty("Version") GETUpdateStopwordOptionsVersionEnum version) {
+        this.action = action;
+        this.domainName = domainName;
+        this.stopwords = stopwords;
+        this.version = version;
+  }
 }

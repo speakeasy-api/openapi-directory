@@ -18,6 +18,7 @@ public class ListRuntimeEntitySchemasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListRuntimeEntitySchemasResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListRuntimeEntitySchemasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeEntitySchemas")
     public RuntimeEntitySchema[] runtimeEntitySchemas;
+
     public ListRuntimeEntitySchemasResponse withRuntimeEntitySchemas(RuntimeEntitySchema[] runtimeEntitySchemas) {
         this.runtimeEntitySchemas = runtimeEntitySchemas;
         return this;
     }
     
+    public ListRuntimeEntitySchemasResponse(){}
 }

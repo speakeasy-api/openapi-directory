@@ -15,6 +15,7 @@ public class Tariffh0 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ap")
     public Long ap;
+
     public Tariffh0 withAp(Long ap) {
         this.ap = ap;
         return this;
@@ -26,9 +27,11 @@ public class Tariffh0 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gp")
     public Long gp;
+
     public Tariffh0 withGp(Long gp) {
         this.gp = gp;
         return this;
     }
     
+    public Tariffh0(){}
 }

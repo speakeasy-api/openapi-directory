@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetQueryStateResponse {
@@ -12,6 +13,7 @@ public class GetQueryStateResponse {
      */
     
     public Object accessDeniedException;
+
     public GetQueryStateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetQueryStateResponse {
     
     
     public String contentType;
+
     public GetQueryStateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetQueryStateResponse {
      */
     
     public org.openapis.openapi.models.shared.GetQueryStateResponse getQueryStateResponse;
+
     public GetQueryStateResponse withGetQueryStateResponse(org.openapis.openapi.models.shared.GetQueryStateResponse getQueryStateResponse) {
         this.getQueryStateResponse = getQueryStateResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetQueryStateResponse {
      */
     
     public Object internalServiceException;
+
     public GetQueryStateResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class GetQueryStateResponse {
      */
     
     public Object invalidInputException;
+
     public GetQueryStateResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -56,6 +62,7 @@ public class GetQueryStateResponse {
     
     
     public Integer statusCode;
+
     public GetQueryStateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetQueryStateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetQueryStateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetQueryStateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

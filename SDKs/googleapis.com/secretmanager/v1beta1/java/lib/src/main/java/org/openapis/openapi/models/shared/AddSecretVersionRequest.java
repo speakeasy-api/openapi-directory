@@ -18,9 +18,11 @@ public class AddSecretVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public SecretPayload payload;
+
     public AddSecretVersionRequest withPayload(SecretPayload payload) {
         this.payload = payload;
         return this;
     }
     
+    public AddSecretVersionRequest(){}
 }

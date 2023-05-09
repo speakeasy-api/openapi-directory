@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeclineHandshakeResponse {
@@ -12,6 +13,7 @@ public class DeclineHandshakeResponse {
      */
     
     public Object accessDeniedException;
+
     public DeclineHandshakeResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeclineHandshakeResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeclineHandshakeResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class DeclineHandshakeResponse {
     
     
     public String contentType;
+
     public DeclineHandshakeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeclineHandshakeResponse {
      */
     
     public org.openapis.openapi.models.shared.DeclineHandshakeResponse declineHandshakeResponse;
+
     public DeclineHandshakeResponse withDeclineHandshakeResponse(org.openapis.openapi.models.shared.DeclineHandshakeResponse declineHandshakeResponse) {
         this.declineHandshakeResponse = declineHandshakeResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeclineHandshakeResponse {
      */
     
     public Object handshakeAlreadyInStateException;
+
     public DeclineHandshakeResponse withHandshakeAlreadyInStateException(Object handshakeAlreadyInStateException) {
         this.handshakeAlreadyInStateException = handshakeAlreadyInStateException;
         return this;
@@ -59,6 +65,7 @@ public class DeclineHandshakeResponse {
      */
     
     public Object handshakeNotFoundException;
+
     public DeclineHandshakeResponse withHandshakeNotFoundException(Object handshakeNotFoundException) {
         this.handshakeNotFoundException = handshakeNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DeclineHandshakeResponse {
      */
     
     public Object invalidHandshakeTransitionException;
+
     public DeclineHandshakeResponse withInvalidHandshakeTransitionException(Object invalidHandshakeTransitionException) {
         this.invalidHandshakeTransitionException = invalidHandshakeTransitionException;
         return this;
@@ -79,6 +87,7 @@ public class DeclineHandshakeResponse {
      */
     
     public Object invalidInputException;
+
     public DeclineHandshakeResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -89,6 +98,7 @@ public class DeclineHandshakeResponse {
      */
     
     public Object serviceException;
+
     public DeclineHandshakeResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -96,6 +106,7 @@ public class DeclineHandshakeResponse {
     
     
     public Integer statusCode;
+
     public DeclineHandshakeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class DeclineHandshakeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeclineHandshakeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class DeclineHandshakeResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeclineHandshakeResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeclineHandshakeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

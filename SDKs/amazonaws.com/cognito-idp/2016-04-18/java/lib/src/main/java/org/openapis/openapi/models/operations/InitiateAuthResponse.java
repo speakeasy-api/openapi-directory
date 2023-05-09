@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class InitiateAuthResponse {
     
     public String contentType;
+
     public InitiateAuthResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class InitiateAuthResponse {
      */
     
     public Object forbiddenException;
+
     public InitiateAuthResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -29,6 +32,7 @@ public class InitiateAuthResponse {
      */
     
     public org.openapis.openapi.models.shared.InitiateAuthResponse initiateAuthResponse;
+
     public InitiateAuthResponse withInitiateAuthResponse(org.openapis.openapi.models.shared.InitiateAuthResponse initiateAuthResponse) {
         this.initiateAuthResponse = initiateAuthResponse;
         return this;
@@ -39,6 +43,7 @@ public class InitiateAuthResponse {
      */
     
     public Object internalErrorException;
+
     public InitiateAuthResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class InitiateAuthResponse {
      */
     
     public Object invalidLambdaResponseException;
+
     public InitiateAuthResponse withInvalidLambdaResponseException(Object invalidLambdaResponseException) {
         this.invalidLambdaResponseException = invalidLambdaResponseException;
         return this;
@@ -59,6 +65,7 @@ public class InitiateAuthResponse {
      */
     
     public Object invalidParameterException;
+
     public InitiateAuthResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class InitiateAuthResponse {
      */
     
     public Object invalidSmsRoleAccessPolicyException;
+
     public InitiateAuthResponse withInvalidSmsRoleAccessPolicyException(Object invalidSmsRoleAccessPolicyException) {
         this.invalidSmsRoleAccessPolicyException = invalidSmsRoleAccessPolicyException;
         return this;
@@ -79,6 +87,7 @@ public class InitiateAuthResponse {
      */
     
     public Object invalidSmsRoleTrustRelationshipException;
+
     public InitiateAuthResponse withInvalidSmsRoleTrustRelationshipException(Object invalidSmsRoleTrustRelationshipException) {
         this.invalidSmsRoleTrustRelationshipException = invalidSmsRoleTrustRelationshipException;
         return this;
@@ -89,6 +98,7 @@ public class InitiateAuthResponse {
      */
     
     public Object invalidUserPoolConfigurationException;
+
     public InitiateAuthResponse withInvalidUserPoolConfigurationException(Object invalidUserPoolConfigurationException) {
         this.invalidUserPoolConfigurationException = invalidUserPoolConfigurationException;
         return this;
@@ -99,6 +109,7 @@ public class InitiateAuthResponse {
      */
     
     public Object notAuthorizedException;
+
     public InitiateAuthResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -109,6 +120,7 @@ public class InitiateAuthResponse {
      */
     
     public Object passwordResetRequiredException;
+
     public InitiateAuthResponse withPasswordResetRequiredException(Object passwordResetRequiredException) {
         this.passwordResetRequiredException = passwordResetRequiredException;
         return this;
@@ -119,6 +131,7 @@ public class InitiateAuthResponse {
      */
     
     public Object resourceNotFoundException;
+
     public InitiateAuthResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -126,6 +139,7 @@ public class InitiateAuthResponse {
     
     
     public Integer statusCode;
+
     public InitiateAuthResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,6 +147,7 @@ public class InitiateAuthResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public InitiateAuthResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -143,6 +158,7 @@ public class InitiateAuthResponse {
      */
     
     public Object tooManyRequestsException;
+
     public InitiateAuthResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -153,6 +169,7 @@ public class InitiateAuthResponse {
      */
     
     public Object unexpectedLambdaException;
+
     public InitiateAuthResponse withUnexpectedLambdaException(Object unexpectedLambdaException) {
         this.unexpectedLambdaException = unexpectedLambdaException;
         return this;
@@ -163,6 +180,7 @@ public class InitiateAuthResponse {
      */
     
     public Object userLambdaValidationException;
+
     public InitiateAuthResponse withUserLambdaValidationException(Object userLambdaValidationException) {
         this.userLambdaValidationException = userLambdaValidationException;
         return this;
@@ -173,6 +191,7 @@ public class InitiateAuthResponse {
      */
     
     public Object userNotConfirmedException;
+
     public InitiateAuthResponse withUserNotConfirmedException(Object userNotConfirmedException) {
         this.userNotConfirmedException = userNotConfirmedException;
         return this;
@@ -183,9 +202,14 @@ public class InitiateAuthResponse {
      */
     
     public Object userNotFoundException;
+
     public InitiateAuthResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
     }
     
+    public InitiateAuthResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

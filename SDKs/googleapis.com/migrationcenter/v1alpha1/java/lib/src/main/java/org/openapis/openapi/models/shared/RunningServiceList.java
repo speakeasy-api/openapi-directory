@@ -18,9 +18,11 @@ public class RunningServiceList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("services")
     public RunningService[] services;
+
     public RunningServiceList withServices(RunningService[] services) {
         this.services = services;
         return this;
     }
     
+    public RunningServiceList(){}
 }

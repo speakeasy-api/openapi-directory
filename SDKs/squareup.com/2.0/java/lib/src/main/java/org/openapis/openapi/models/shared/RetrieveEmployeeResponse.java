@@ -18,6 +18,7 @@ public class RetrieveEmployeeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employee")
     public Employee employee;
+
     public RetrieveEmployeeResponse withEmployee(Employee employee) {
         this.employee = employee;
         return this;
@@ -29,9 +30,11 @@ public class RetrieveEmployeeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public RetrieveEmployeeResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public RetrieveEmployeeResponse(){}
 }

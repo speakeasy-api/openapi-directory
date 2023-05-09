@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposSetStatusCheckContextsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public Object requestBody;
+
     public ReposSetStatusCheckContextsRequest withRequestBody(Object requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class ReposSetStatusCheckContextsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branch")
     public String branch;
+
     public ReposSetStatusCheckContextsRequest withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -26,6 +29,7 @@ public class ReposSetStatusCheckContextsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposSetStatusCheckContextsRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -33,9 +37,15 @@ public class ReposSetStatusCheckContextsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposSetStatusCheckContextsRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReposSetStatusCheckContextsRequest(@JsonProperty("branch") String branch, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.branch = branch;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

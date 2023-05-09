@@ -61,11 +61,9 @@ public class ResponsePolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DnsResponsePoliciesCreateResponse res = new org.openapis.openapi.models.operations.DnsResponsePoliciesCreateResponse() {{
+        org.openapis.openapi.models.operations.DnsResponsePoliciesCreateResponse res = new org.openapis.openapi.models.operations.DnsResponsePoliciesCreateResponse(contentType, httpRes.statusCode()) {{
             responsePolicy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,10 +105,8 @@ public class ResponsePolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DnsResponsePoliciesDeleteResponse res = new org.openapis.openapi.models.operations.DnsResponsePoliciesDeleteResponse() {{
+        org.openapis.openapi.models.operations.DnsResponsePoliciesDeleteResponse res = new org.openapis.openapi.models.operations.DnsResponsePoliciesDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class ResponsePolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DnsResponsePoliciesGetResponse res = new org.openapis.openapi.models.operations.DnsResponsePoliciesGetResponse() {{
+        org.openapis.openapi.models.operations.DnsResponsePoliciesGetResponse res = new org.openapis.openapi.models.operations.DnsResponsePoliciesGetResponse(contentType, httpRes.statusCode()) {{
             responsePolicy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class ResponsePolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DnsResponsePoliciesListResponse res = new org.openapis.openapi.models.operations.DnsResponsePoliciesListResponse() {{
+        org.openapis.openapi.models.operations.DnsResponsePoliciesListResponse res = new org.openapis.openapi.models.operations.DnsResponsePoliciesListResponse(contentType, httpRes.statusCode()) {{
             responsePoliciesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class ResponsePolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DnsResponsePoliciesPatchResponse res = new org.openapis.openapi.models.operations.DnsResponsePoliciesPatchResponse() {{
+        org.openapis.openapi.models.operations.DnsResponsePoliciesPatchResponse res = new org.openapis.openapi.models.operations.DnsResponsePoliciesPatchResponse(contentType, httpRes.statusCode()) {{
             responsePoliciesPatchResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,11 +279,9 @@ public class ResponsePolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DnsResponsePoliciesUpdateResponse res = new org.openapis.openapi.models.operations.DnsResponsePoliciesUpdateResponse() {{
+        org.openapis.openapi.models.operations.DnsResponsePoliciesUpdateResponse res = new org.openapis.openapi.models.operations.DnsResponsePoliciesUpdateResponse(contentType, httpRes.statusCode()) {{
             responsePoliciesUpdateResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

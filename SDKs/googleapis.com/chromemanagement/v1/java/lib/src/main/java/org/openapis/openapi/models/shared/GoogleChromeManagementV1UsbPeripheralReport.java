@@ -18,6 +18,7 @@ public class GoogleChromeManagementV1UsbPeripheralReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public String[] categories;
+
     public GoogleChromeManagementV1UsbPeripheralReport withCategories(String[] categories) {
         this.categories = categories;
         return this;
@@ -29,6 +30,7 @@ public class GoogleChromeManagementV1UsbPeripheralReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classId")
     public Integer classId;
+
     public GoogleChromeManagementV1UsbPeripheralReport withClassId(Integer classId) {
         this.classId = classId;
         return this;
@@ -40,6 +42,7 @@ public class GoogleChromeManagementV1UsbPeripheralReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firmwareVersion")
     public String firmwareVersion;
+
     public GoogleChromeManagementV1UsbPeripheralReport withFirmwareVersion(String firmwareVersion) {
         this.firmwareVersion = firmwareVersion;
         return this;
@@ -51,6 +54,7 @@ public class GoogleChromeManagementV1UsbPeripheralReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleChromeManagementV1UsbPeripheralReport withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class GoogleChromeManagementV1UsbPeripheralReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pid")
     public Integer pid;
+
     public GoogleChromeManagementV1UsbPeripheralReport withPid(Integer pid) {
         this.pid = pid;
         return this;
@@ -73,6 +78,7 @@ public class GoogleChromeManagementV1UsbPeripheralReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subclassId")
     public Integer subclassId;
+
     public GoogleChromeManagementV1UsbPeripheralReport withSubclassId(Integer subclassId) {
         this.subclassId = subclassId;
         return this;
@@ -84,6 +90,7 @@ public class GoogleChromeManagementV1UsbPeripheralReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor")
     public String vendor;
+
     public GoogleChromeManagementV1UsbPeripheralReport withVendor(String vendor) {
         this.vendor = vendor;
         return this;
@@ -95,9 +102,11 @@ public class GoogleChromeManagementV1UsbPeripheralReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vid")
     public Integer vid;
+
     public GoogleChromeManagementV1UsbPeripheralReport withVid(Integer vid) {
         this.vid = vid;
         return this;
     }
     
+    public GoogleChromeManagementV1UsbPeripheralReport(){}
 }

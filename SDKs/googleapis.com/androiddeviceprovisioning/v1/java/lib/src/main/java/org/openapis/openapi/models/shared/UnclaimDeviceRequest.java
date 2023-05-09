@@ -18,6 +18,7 @@ public class UnclaimDeviceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceId")
     public String deviceId;
+
     public UnclaimDeviceRequest withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -29,6 +30,7 @@ public class UnclaimDeviceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceIdentifier")
     public DeviceIdentifier deviceIdentifier;
+
     public UnclaimDeviceRequest withDeviceIdentifier(DeviceIdentifier deviceIdentifier) {
         this.deviceIdentifier = deviceIdentifier;
         return this;
@@ -40,6 +42,7 @@ public class UnclaimDeviceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sectionType")
     public UnclaimDeviceRequestSectionTypeEnum sectionType;
+
     public UnclaimDeviceRequest withSectionType(UnclaimDeviceRequestSectionTypeEnum sectionType) {
         this.sectionType = sectionType;
         return this;
@@ -51,6 +54,7 @@ public class UnclaimDeviceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vacationModeDays")
     public Integer vacationModeDays;
+
     public UnclaimDeviceRequest withVacationModeDays(Integer vacationModeDays) {
         this.vacationModeDays = vacationModeDays;
         return this;
@@ -62,9 +66,11 @@ public class UnclaimDeviceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vacationModeExpireTime")
     public String vacationModeExpireTime;
+
     public UnclaimDeviceRequest withVacationModeExpireTime(String vacationModeExpireTime) {
         this.vacationModeExpireTime = vacationModeExpireTime;
         return this;
     }
     
+    public UnclaimDeviceRequest(){}
 }

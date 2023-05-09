@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateContactMethodRequest {
     @JsonProperty("contactEndpoint")
     public String contactEndpoint;
+
     public CreateContactMethodRequest withContactEndpoint(String contactEndpoint) {
         this.contactEndpoint = contactEndpoint;
         return this;
@@ -16,9 +17,14 @@ public class CreateContactMethodRequest {
     
     @JsonProperty("protocol")
     public ContactProtocolEnum protocol;
+
     public CreateContactMethodRequest withProtocol(ContactProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
     }
     
+    public CreateContactMethodRequest(@JsonProperty("contactEndpoint") String contactEndpoint, @JsonProperty("protocol") ContactProtocolEnum protocol) {
+        this.contactEndpoint = contactEndpoint;
+        this.protocol = protocol;
+  }
 }

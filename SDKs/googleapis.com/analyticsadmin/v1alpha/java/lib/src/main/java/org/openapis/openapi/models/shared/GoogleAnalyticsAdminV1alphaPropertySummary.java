@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaPropertySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleAnalyticsAdminV1alphaPropertySummary withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaPropertySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public GoogleAnalyticsAdminV1alphaPropertySummary withParent(String parent) {
         this.parent = parent;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1alphaPropertySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("property")
     public String property;
+
     public GoogleAnalyticsAdminV1alphaPropertySummary withProperty(String property) {
         this.property = property;
         return this;
@@ -51,9 +54,11 @@ public class GoogleAnalyticsAdminV1alphaPropertySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyType")
     public GoogleAnalyticsAdminV1alphaPropertySummaryPropertyTypeEnum propertyType;
+
     public GoogleAnalyticsAdminV1alphaPropertySummary withPropertyType(GoogleAnalyticsAdminV1alphaPropertySummaryPropertyTypeEnum propertyType) {
         this.propertyType = propertyType;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaPropertySummary(){}
 }

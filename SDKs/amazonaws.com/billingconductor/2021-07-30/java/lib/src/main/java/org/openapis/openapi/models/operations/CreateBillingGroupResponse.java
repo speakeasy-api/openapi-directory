@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateBillingGroupResponse {
@@ -12,6 +13,7 @@ public class CreateBillingGroupResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateBillingGroupResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateBillingGroupResponse {
      */
     
     public Object conflictException;
+
     public CreateBillingGroupResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateBillingGroupResponse {
     
     
     public String contentType;
+
     public CreateBillingGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateBillingGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateBillingGroupOutput createBillingGroupOutput;
+
     public CreateBillingGroupResponse withCreateBillingGroupOutput(org.openapis.openapi.models.shared.CreateBillingGroupOutput createBillingGroupOutput) {
         this.createBillingGroupOutput = createBillingGroupOutput;
         return this;
@@ -49,6 +54,7 @@ public class CreateBillingGroupResponse {
      */
     
     public Object internalServerException;
+
     public CreateBillingGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateBillingGroupResponse {
      */
     
     public Object serviceLimitExceededException;
+
     public CreateBillingGroupResponse withServiceLimitExceededException(Object serviceLimitExceededException) {
         this.serviceLimitExceededException = serviceLimitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateBillingGroupResponse {
     
     
     public Integer statusCode;
+
     public CreateBillingGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateBillingGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateBillingGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateBillingGroupResponse {
      */
     
     public Object throttlingException;
+
     public CreateBillingGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateBillingGroupResponse {
      */
     
     public Object validationException;
+
     public CreateBillingGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateBillingGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

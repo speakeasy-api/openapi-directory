@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesJourneyPlannerJourneyPlannerCycleHireDock
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationId")
     public String destinationId;
+
     public TflApiPresentationEntitiesJourneyPlannerJourneyPlannerCycleHireDockingStationData withDestinationId(String destinationId) {
         this.destinationId = destinationId;
         return this;
@@ -20,6 +21,7 @@ public class TflApiPresentationEntitiesJourneyPlannerJourneyPlannerCycleHireDock
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationNumberOfBikes")
     public Integer destinationNumberOfBikes;
+
     public TflApiPresentationEntitiesJourneyPlannerJourneyPlannerCycleHireDockingStationData withDestinationNumberOfBikes(Integer destinationNumberOfBikes) {
         this.destinationNumberOfBikes = destinationNumberOfBikes;
         return this;
@@ -28,6 +30,7 @@ public class TflApiPresentationEntitiesJourneyPlannerJourneyPlannerCycleHireDock
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationNumberOfEmptySlots")
     public Integer destinationNumberOfEmptySlots;
+
     public TflApiPresentationEntitiesJourneyPlannerJourneyPlannerCycleHireDockingStationData withDestinationNumberOfEmptySlots(Integer destinationNumberOfEmptySlots) {
         this.destinationNumberOfEmptySlots = destinationNumberOfEmptySlots;
         return this;
@@ -36,6 +39,7 @@ public class TflApiPresentationEntitiesJourneyPlannerJourneyPlannerCycleHireDock
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originId")
     public String originId;
+
     public TflApiPresentationEntitiesJourneyPlannerJourneyPlannerCycleHireDockingStationData withOriginId(String originId) {
         this.originId = originId;
         return this;
@@ -44,6 +48,7 @@ public class TflApiPresentationEntitiesJourneyPlannerJourneyPlannerCycleHireDock
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originNumberOfBikes")
     public Integer originNumberOfBikes;
+
     public TflApiPresentationEntitiesJourneyPlannerJourneyPlannerCycleHireDockingStationData withOriginNumberOfBikes(Integer originNumberOfBikes) {
         this.originNumberOfBikes = originNumberOfBikes;
         return this;
@@ -52,9 +57,11 @@ public class TflApiPresentationEntitiesJourneyPlannerJourneyPlannerCycleHireDock
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originNumberOfEmptySlots")
     public Integer originNumberOfEmptySlots;
+
     public TflApiPresentationEntitiesJourneyPlannerJourneyPlannerCycleHireDockingStationData withOriginNumberOfEmptySlots(Integer originNumberOfEmptySlots) {
         this.originNumberOfEmptySlots = originNumberOfEmptySlots;
         return this;
     }
     
+    public TflApiPresentationEntitiesJourneyPlannerJourneyPlannerCycleHireDockingStationData(){}
 }

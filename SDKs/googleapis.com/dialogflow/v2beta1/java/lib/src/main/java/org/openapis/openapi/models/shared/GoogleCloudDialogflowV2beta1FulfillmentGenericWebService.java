@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1FulfillmentGenericWebService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCloudFunction")
     public Boolean isCloudFunction;
+
     public GoogleCloudDialogflowV2beta1FulfillmentGenericWebService withIsCloudFunction(Boolean isCloudFunction) {
         this.isCloudFunction = isCloudFunction;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1FulfillmentGenericWebService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public GoogleCloudDialogflowV2beta1FulfillmentGenericWebService withPassword(String password) {
         this.password = password;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1FulfillmentGenericWebService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestHeaders")
     public java.util.Map<String, String> requestHeaders;
+
     public GoogleCloudDialogflowV2beta1FulfillmentGenericWebService withRequestHeaders(java.util.Map<String, String> requestHeaders) {
         this.requestHeaders = requestHeaders;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2beta1FulfillmentGenericWebService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GoogleCloudDialogflowV2beta1FulfillmentGenericWebService withUri(String uri) {
         this.uri = uri;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDialogflowV2beta1FulfillmentGenericWebService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public GoogleCloudDialogflowV2beta1FulfillmentGenericWebService withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1FulfillmentGenericWebService(){}
 }

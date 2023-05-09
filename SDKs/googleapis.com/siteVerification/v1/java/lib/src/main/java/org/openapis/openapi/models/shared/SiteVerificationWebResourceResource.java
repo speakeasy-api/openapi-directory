@@ -18,6 +18,7 @@ public class SiteVerificationWebResourceResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SiteVerificationWebResourceResource withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class SiteVerificationWebResourceResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owners")
     public String[] owners;
+
     public SiteVerificationWebResourceResource withOwners(String[] owners) {
         this.owners = owners;
         return this;
@@ -40,9 +42,11 @@ public class SiteVerificationWebResourceResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("site")
     public SiteVerificationWebResourceResourceSite site;
+
     public SiteVerificationWebResourceResource withSite(SiteVerificationWebResourceResourceSite site) {
         this.site = site;
         return this;
     }
     
+    public SiteVerificationWebResourceResource(){}
 }

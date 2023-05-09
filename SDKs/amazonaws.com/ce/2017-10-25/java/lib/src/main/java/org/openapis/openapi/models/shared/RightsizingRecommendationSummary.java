@@ -15,6 +15,7 @@ public class RightsizingRecommendationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedTotalMonthlySavingsAmount")
     public String estimatedTotalMonthlySavingsAmount;
+
     public RightsizingRecommendationSummary withEstimatedTotalMonthlySavingsAmount(String estimatedTotalMonthlySavingsAmount) {
         this.estimatedTotalMonthlySavingsAmount = estimatedTotalMonthlySavingsAmount;
         return this;
@@ -23,6 +24,7 @@ public class RightsizingRecommendationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SavingsCurrencyCode")
     public String savingsCurrencyCode;
+
     public RightsizingRecommendationSummary withSavingsCurrencyCode(String savingsCurrencyCode) {
         this.savingsCurrencyCode = savingsCurrencyCode;
         return this;
@@ -31,6 +33,7 @@ public class RightsizingRecommendationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SavingsPercentage")
     public String savingsPercentage;
+
     public RightsizingRecommendationSummary withSavingsPercentage(String savingsPercentage) {
         this.savingsPercentage = savingsPercentage;
         return this;
@@ -39,9 +42,11 @@ public class RightsizingRecommendationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalRecommendationCount")
     public String totalRecommendationCount;
+
     public RightsizingRecommendationSummary withTotalRecommendationCount(String totalRecommendationCount) {
         this.totalRecommendationCount = totalRecommendationCount;
         return this;
     }
     
+    public RightsizingRecommendationSummary(){}
 }

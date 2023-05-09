@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DataflowProjectsLocationsJobsGetExecutionDetailsResponse {
     
     public String contentType;
+
     public DataflowProjectsLocationsJobsGetExecutionDetailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DataflowProjectsLocationsJobsGetExecutionDetailsResponse {
      */
     
     public org.openapis.openapi.models.shared.JobExecutionDetails jobExecutionDetails;
+
     public DataflowProjectsLocationsJobsGetExecutionDetailsResponse withJobExecutionDetails(org.openapis.openapi.models.shared.JobExecutionDetails jobExecutionDetails) {
         this.jobExecutionDetails = jobExecutionDetails;
         return this;
@@ -26,6 +29,7 @@ public class DataflowProjectsLocationsJobsGetExecutionDetailsResponse {
     
     
     public Integer statusCode;
+
     public DataflowProjectsLocationsJobsGetExecutionDetailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DataflowProjectsLocationsJobsGetExecutionDetailsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DataflowProjectsLocationsJobsGetExecutionDetailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DataflowProjectsLocationsJobsGetExecutionDetailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

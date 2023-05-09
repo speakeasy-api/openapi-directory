@@ -18,6 +18,7 @@ public class CreateSheetsChartRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chartId")
     public Integer chartId;
+
     public CreateSheetsChartRequest withChartId(Integer chartId) {
         this.chartId = chartId;
         return this;
@@ -29,6 +30,7 @@ public class CreateSheetsChartRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elementProperties")
     public PageElementProperties elementProperties;
+
     public CreateSheetsChartRequest withElementProperties(PageElementProperties elementProperties) {
         this.elementProperties = elementProperties;
         return this;
@@ -40,6 +42,7 @@ public class CreateSheetsChartRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkingMode")
     public CreateSheetsChartRequestLinkingModeEnum linkingMode;
+
     public CreateSheetsChartRequest withLinkingMode(CreateSheetsChartRequestLinkingModeEnum linkingMode) {
         this.linkingMode = linkingMode;
         return this;
@@ -51,6 +54,7 @@ public class CreateSheetsChartRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public CreateSheetsChartRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -62,9 +66,11 @@ public class CreateSheetsChartRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spreadsheetId")
     public String spreadsheetId;
+
     public CreateSheetsChartRequest withSpreadsheetId(String spreadsheetId) {
         this.spreadsheetId = spreadsheetId;
         return this;
     }
     
+    public CreateSheetsChartRequest(){}
 }

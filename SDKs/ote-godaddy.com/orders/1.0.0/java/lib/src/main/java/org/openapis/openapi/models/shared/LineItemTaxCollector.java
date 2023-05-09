@@ -12,9 +12,13 @@ public class LineItemTaxCollector {
      */
     @JsonProperty("taxCollectorId")
     public Long taxCollectorId;
+
     public LineItemTaxCollector withTaxCollectorId(Long taxCollectorId) {
         this.taxCollectorId = taxCollectorId;
         return this;
     }
     
+    public LineItemTaxCollector(@JsonProperty("taxCollectorId") Long taxCollectorId) {
+        this.taxCollectorId = taxCollectorId;
+  }
 }

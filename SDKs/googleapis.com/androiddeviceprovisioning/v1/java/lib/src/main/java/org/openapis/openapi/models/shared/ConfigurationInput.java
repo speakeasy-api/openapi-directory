@@ -18,6 +18,7 @@ public class ConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companyName")
     public String companyName;
+
     public ConfigurationInput withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -29,6 +30,7 @@ public class ConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationName")
     public String configurationName;
+
     public ConfigurationInput withConfigurationName(String configurationName) {
         this.configurationName = configurationName;
         return this;
@@ -40,6 +42,7 @@ public class ConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactEmail")
     public String contactEmail;
+
     public ConfigurationInput withContactEmail(String contactEmail) {
         this.contactEmail = contactEmail;
         return this;
@@ -51,6 +54,7 @@ public class ConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactPhone")
     public String contactPhone;
+
     public ConfigurationInput withContactPhone(String contactPhone) {
         this.contactPhone = contactPhone;
         return this;
@@ -62,6 +66,7 @@ public class ConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customMessage")
     public String customMessage;
+
     public ConfigurationInput withCustomMessage(String customMessage) {
         this.customMessage = customMessage;
         return this;
@@ -73,6 +78,7 @@ public class ConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dpcExtras")
     public String dpcExtras;
+
     public ConfigurationInput withDpcExtras(String dpcExtras) {
         this.dpcExtras = dpcExtras;
         return this;
@@ -84,6 +90,7 @@ public class ConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dpcResourcePath")
     public String dpcResourcePath;
+
     public ConfigurationInput withDpcResourcePath(String dpcResourcePath) {
         this.dpcResourcePath = dpcResourcePath;
         return this;
@@ -95,9 +102,11 @@ public class ConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDefault")
     public Boolean isDefault;
+
     public ConfigurationInput withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
     }
     
+    public ConfigurationInput(){}
 }

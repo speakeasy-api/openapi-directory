@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class StartExportTaskMessage {
     
     public String[] exportOnly;
+
     public StartExportTaskMessage withExportOnly(String[] exportOnly) {
         this.exportOnly = exportOnly;
         return this;
@@ -16,6 +17,7 @@ public class StartExportTaskMessage {
     
     
     public String exportTaskIdentifier;
+
     public StartExportTaskMessage withExportTaskIdentifier(String exportTaskIdentifier) {
         this.exportTaskIdentifier = exportTaskIdentifier;
         return this;
@@ -23,6 +25,7 @@ public class StartExportTaskMessage {
     
     
     public String iamRoleArn;
+
     public StartExportTaskMessage withIamRoleArn(String iamRoleArn) {
         this.iamRoleArn = iamRoleArn;
         return this;
@@ -30,6 +33,7 @@ public class StartExportTaskMessage {
     
     
     public String kmsKeyId;
+
     public StartExportTaskMessage withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -37,6 +41,7 @@ public class StartExportTaskMessage {
     
     
     public String s3BucketName;
+
     public StartExportTaskMessage withS3BucketName(String s3BucketName) {
         this.s3BucketName = s3BucketName;
         return this;
@@ -44,6 +49,7 @@ public class StartExportTaskMessage {
     
     
     public String s3Prefix;
+
     public StartExportTaskMessage withS3Prefix(String s3Prefix) {
         this.s3Prefix = s3Prefix;
         return this;
@@ -51,9 +57,17 @@ public class StartExportTaskMessage {
     
     
     public String sourceArn;
+
     public StartExportTaskMessage withSourceArn(String sourceArn) {
         this.sourceArn = sourceArn;
         return this;
     }
     
+    public StartExportTaskMessage(@JsonProperty("ExportTaskIdentifier") String exportTaskIdentifier, @JsonProperty("IamRoleArn") String iamRoleArn, @JsonProperty("KmsKeyId") String kmsKeyId, @JsonProperty("S3BucketName") String s3BucketName, @JsonProperty("SourceArn") String sourceArn) {
+        this.exportTaskIdentifier = exportTaskIdentifier;
+        this.iamRoleArn = iamRoleArn;
+        this.kmsKeyId = kmsKeyId;
+        this.s3BucketName = s3BucketName;
+        this.sourceArn = sourceArn;
+  }
 }

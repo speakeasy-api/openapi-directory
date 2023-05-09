@@ -12,6 +12,7 @@ public class ListAccountsForParentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAccountsForParentRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListAccountsForParentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAccountsForParentRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,9 +29,13 @@ public class ListAccountsForParentRequest {
     
     @JsonProperty("ParentId")
     public String parentId;
+
     public ListAccountsForParentRequest withParentId(String parentId) {
         this.parentId = parentId;
         return this;
     }
     
+    public ListAccountsForParentRequest(@JsonProperty("ParentId") String parentId) {
+        this.parentId = parentId;
+  }
 }

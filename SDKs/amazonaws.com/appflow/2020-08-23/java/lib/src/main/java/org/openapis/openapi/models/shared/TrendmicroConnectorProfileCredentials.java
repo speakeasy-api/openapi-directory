@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TrendmicroConnectorProfileCredentials {
     @JsonProperty("apiSecretKey")
     public String apiSecretKey;
+
     public TrendmicroConnectorProfileCredentials withApiSecretKey(String apiSecretKey) {
         this.apiSecretKey = apiSecretKey;
         return this;
     }
     
+    public TrendmicroConnectorProfileCredentials(@JsonProperty("apiSecretKey") String apiSecretKey) {
+        this.apiSecretKey = apiSecretKey;
+  }
 }

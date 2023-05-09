@@ -12,6 +12,7 @@ public class PostAuthRenew200ApplicationJSON {
      */
     @JsonProperty("access_token")
     public String accessToken;
+
     public PostAuthRenew200ApplicationJSON withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -22,9 +23,14 @@ public class PostAuthRenew200ApplicationJSON {
      */
     @JsonProperty("token_type")
     public String tokenType;
+
     public PostAuthRenew200ApplicationJSON withTokenType(String tokenType) {
         this.tokenType = tokenType;
         return this;
     }
     
+    public PostAuthRenew200ApplicationJSON(@JsonProperty("access_token") String accessToken, @JsonProperty("token_type") String tokenType) {
+        this.accessToken = accessToken;
+        this.tokenType = tokenType;
+  }
 }

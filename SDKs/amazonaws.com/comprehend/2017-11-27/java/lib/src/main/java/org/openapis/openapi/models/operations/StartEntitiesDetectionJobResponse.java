@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartEntitiesDetectionJobResponse {
     
     public String contentType;
+
     public StartEntitiesDetectionJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartEntitiesDetectionJobResponse {
      */
     
     public Object internalServerException;
+
     public StartEntitiesDetectionJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class StartEntitiesDetectionJobResponse {
      */
     
     public Object invalidRequestException;
+
     public StartEntitiesDetectionJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,8 +43,20 @@ public class StartEntitiesDetectionJobResponse {
      */
     
     public Object kmsKeyValidationException;
+
     public StartEntitiesDetectionJobResponse withKmsKeyValidationException(Object kmsKeyValidationException) {
         this.kmsKeyValidationException = kmsKeyValidationException;
+        return this;
+    }
+    
+    /**
+     * ResourceInUseException
+     */
+    
+    public Object resourceInUseException;
+
+    public StartEntitiesDetectionJobResponse withResourceInUseException(Object resourceInUseException) {
+        this.resourceInUseException = resourceInUseException;
         return this;
     }
     
@@ -49,6 +65,7 @@ public class StartEntitiesDetectionJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartEntitiesDetectionJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +76,7 @@ public class StartEntitiesDetectionJobResponse {
      */
     
     public Object resourceUnavailableException;
+
     public StartEntitiesDetectionJobResponse withResourceUnavailableException(Object resourceUnavailableException) {
         this.resourceUnavailableException = resourceUnavailableException;
         return this;
@@ -69,6 +87,7 @@ public class StartEntitiesDetectionJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StartEntitiesDetectionJobResponse startEntitiesDetectionJobResponse;
+
     public StartEntitiesDetectionJobResponse withStartEntitiesDetectionJobResponse(org.openapis.openapi.models.shared.StartEntitiesDetectionJobResponse startEntitiesDetectionJobResponse) {
         this.startEntitiesDetectionJobResponse = startEntitiesDetectionJobResponse;
         return this;
@@ -76,6 +95,7 @@ public class StartEntitiesDetectionJobResponse {
     
     
     public Integer statusCode;
+
     public StartEntitiesDetectionJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +103,7 @@ public class StartEntitiesDetectionJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartEntitiesDetectionJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +114,7 @@ public class StartEntitiesDetectionJobResponse {
      */
     
     public Object tooManyRequestsException;
+
     public StartEntitiesDetectionJobResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +125,14 @@ public class StartEntitiesDetectionJobResponse {
      */
     
     public Object tooManyTagsException;
+
     public StartEntitiesDetectionJobResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public StartEntitiesDetectionJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class Registration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudPubsubTopic")
     public CloudPubsubTopic cloudPubsubTopic;
+
     public Registration withCloudPubsubTopic(CloudPubsubTopic cloudPubsubTopic) {
         this.cloudPubsubTopic = cloudPubsubTopic;
         return this;
@@ -29,6 +30,7 @@ public class Registration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiryTime")
     public String expiryTime;
+
     public Registration withExpiryTime(String expiryTime) {
         this.expiryTime = expiryTime;
         return this;
@@ -40,6 +42,7 @@ public class Registration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feed")
     public Feed feed;
+
     public Registration withFeed(Feed feed) {
         this.feed = feed;
         return this;
@@ -51,9 +54,11 @@ public class Registration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrationId")
     public String registrationId;
+
     public Registration withRegistrationId(String registrationId) {
         this.registrationId = registrationId;
         return this;
     }
     
+    public Registration(){}
 }

@@ -15,6 +15,7 @@ public class FrameMetricDatum {
      */
     @JsonProperty("frameMetric")
     public FrameMetric frameMetric;
+
     public FrameMetricDatum withFrameMetric(FrameMetric frameMetric) {
         this.frameMetric = frameMetric;
         return this;
@@ -22,9 +23,14 @@ public class FrameMetricDatum {
     
     @JsonProperty("values")
     public Double[] values;
+
     public FrameMetricDatum withValues(Double[] values) {
         this.values = values;
         return this;
     }
     
+    public FrameMetricDatum(@JsonProperty("frameMetric") FrameMetric frameMetric, @JsonProperty("values") Double[] values) {
+        this.frameMetric = frameMetric;
+        this.values = values;
+  }
 }

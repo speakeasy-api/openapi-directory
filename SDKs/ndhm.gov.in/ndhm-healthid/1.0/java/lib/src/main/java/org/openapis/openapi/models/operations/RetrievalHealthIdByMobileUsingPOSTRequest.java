@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrievalHealthIdByMobileUsingPOSTRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public RetrievalHealthIdByMobileUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,9 +21,13 @@ public class RetrievalHealthIdByMobileUsingPOSTRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.RetriveHealthIdMobilePayLoad retriveHealthIdMobilePayLoad;
+
     public RetrievalHealthIdByMobileUsingPOSTRequest withRetriveHealthIdMobilePayLoad(org.openapis.openapi.models.shared.RetriveHealthIdMobilePayLoad retriveHealthIdMobilePayLoad) {
         this.retriveHealthIdMobilePayLoad = retriveHealthIdMobilePayLoad;
         return this;
     }
     
+    public RetrievalHealthIdByMobileUsingPOSTRequest(@JsonProperty("RetriveHealthIdMobilePayLoad") org.openapis.openapi.models.shared.RetriveHealthIdMobilePayLoad retriveHealthIdMobilePayLoad) {
+        this.retriveHealthIdMobilePayLoad = retriveHealthIdMobilePayLoad;
+  }
 }

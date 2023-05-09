@@ -18,9 +18,11 @@ public class AggregationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregateFields")
     public java.util.Map<String, Value> aggregateFields;
+
     public AggregationResult withAggregateFields(java.util.Map<String, Value> aggregateFields) {
         this.aggregateFields = aggregateFields;
         return this;
     }
     
+    public AggregationResult(){}
 }

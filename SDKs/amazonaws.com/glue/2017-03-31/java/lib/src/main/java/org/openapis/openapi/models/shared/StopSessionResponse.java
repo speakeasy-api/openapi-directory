@@ -15,9 +15,11 @@ public class StopSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public StopSessionResponse withId(String id) {
         this.id = id;
         return this;
     }
     
+    public StopSessionResponse(){}
 }

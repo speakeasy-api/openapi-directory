@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ConnectDirectoryResponse {
@@ -12,6 +13,7 @@ public class ConnectDirectoryResponse {
      */
     
     public Object clientException;
+
     public ConnectDirectoryResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -22,6 +24,7 @@ public class ConnectDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.ConnectDirectoryResult connectDirectoryResult;
+
     public ConnectDirectoryResponse withConnectDirectoryResult(org.openapis.openapi.models.shared.ConnectDirectoryResult connectDirectoryResult) {
         this.connectDirectoryResult = connectDirectoryResult;
         return this;
@@ -29,6 +32,7 @@ public class ConnectDirectoryResponse {
     
     
     public String contentType;
+
     public ConnectDirectoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ConnectDirectoryResponse {
      */
     
     public Object directoryLimitExceededException;
+
     public ConnectDirectoryResponse withDirectoryLimitExceededException(Object directoryLimitExceededException) {
         this.directoryLimitExceededException = directoryLimitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class ConnectDirectoryResponse {
      */
     
     public Object invalidParameterException;
+
     public ConnectDirectoryResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class ConnectDirectoryResponse {
      */
     
     public Object serviceException;
+
     public ConnectDirectoryResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class ConnectDirectoryResponse {
     
     
     public Integer statusCode;
+
     public ConnectDirectoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ConnectDirectoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ConnectDirectoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ConnectDirectoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

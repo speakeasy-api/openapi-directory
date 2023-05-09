@@ -18,6 +18,7 @@ public class RemoteFunctionOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connection")
     public String connection;
+
     public RemoteFunctionOptions withConnection(String connection) {
         this.connection = connection;
         return this;
@@ -29,6 +30,7 @@ public class RemoteFunctionOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoint")
     public String endpoint;
+
     public RemoteFunctionOptions withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -40,6 +42,7 @@ public class RemoteFunctionOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxBatchingRows")
     public String maxBatchingRows;
+
     public RemoteFunctionOptions withMaxBatchingRows(String maxBatchingRows) {
         this.maxBatchingRows = maxBatchingRows;
         return this;
@@ -51,9 +54,11 @@ public class RemoteFunctionOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userDefinedContext")
     public java.util.Map<String, String> userDefinedContext;
+
     public RemoteFunctionOptions withUserDefinedContext(java.util.Map<String, String> userDefinedContext) {
         this.userDefinedContext = userDefinedContext;
         return this;
     }
     
+    public RemoteFunctionOptions(){}
 }

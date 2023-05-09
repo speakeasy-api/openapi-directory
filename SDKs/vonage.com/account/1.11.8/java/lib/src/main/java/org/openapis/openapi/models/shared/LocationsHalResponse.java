@@ -18,6 +18,7 @@ public class LocationsHalResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_embedded")
     public LocationsEmbeddedObject embedded;
+
     public LocationsHalResponse withEmbedded(LocationsEmbeddedObject embedded) {
         this.embedded = embedded;
         return this;
@@ -26,6 +27,7 @@ public class LocationsHalResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public Links links;
+
     public LocationsHalResponse withLinks(Links links) {
         this.links = links;
         return this;
@@ -34,6 +36,7 @@ public class LocationsHalResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public Double page;
+
     public LocationsHalResponse withPage(Double page) {
         this.page = page;
         return this;
@@ -42,6 +45,7 @@ public class LocationsHalResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page_size")
     public Double pageSize;
+
     public LocationsHalResponse withPageSize(Double pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -50,6 +54,7 @@ public class LocationsHalResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_items")
     public Double totalItems;
+
     public LocationsHalResponse withTotalItems(Double totalItems) {
         this.totalItems = totalItems;
         return this;
@@ -58,9 +63,11 @@ public class LocationsHalResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_pages")
     public Double totalPages;
+
     public LocationsHalResponse withTotalPages(Double totalPages) {
         this.totalPages = totalPages;
         return this;
     }
     
+    public LocationsHalResponse(){}
 }

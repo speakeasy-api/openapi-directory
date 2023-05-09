@@ -15,6 +15,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssetInformationList")
     public LineItemAssetInformation[] assetInformationList;
+
     public LineItem withAssetInformationList(LineItemAssetInformation[] assetInformationList) {
         this.assetInformationList = assetInformationList;
         return this;
@@ -23,6 +24,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogItemId")
     public String catalogItemId;
+
     public LineItem withCatalogItemId(String catalogItemId) {
         this.catalogItemId = catalogItemId;
         return this;
@@ -31,6 +33,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LineItemId")
     public String lineItemId;
+
     public LineItem withLineItemId(String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
@@ -39,6 +42,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreviousLineItemId")
     public String previousLineItemId;
+
     public LineItem withPreviousLineItemId(String previousLineItemId) {
         this.previousLineItemId = previousLineItemId;
         return this;
@@ -47,6 +51,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreviousOrderId")
     public String previousOrderId;
+
     public LineItem withPreviousOrderId(String previousOrderId) {
         this.previousOrderId = previousOrderId;
         return this;
@@ -55,6 +60,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Quantity")
     public Long quantity;
+
     public LineItem withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
@@ -63,6 +69,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShipmentInformation")
     public ShipmentInformation shipmentInformation;
+
     public LineItem withShipmentInformation(ShipmentInformation shipmentInformation) {
         this.shipmentInformation = shipmentInformation;
         return this;
@@ -71,9 +78,11 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public LineItemStatusEnum status;
+
     public LineItem withStatus(LineItemStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public LineItem(){}
 }

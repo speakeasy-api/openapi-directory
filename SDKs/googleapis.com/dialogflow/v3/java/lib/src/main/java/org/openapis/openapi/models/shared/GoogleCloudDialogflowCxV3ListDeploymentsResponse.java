@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3ListDeploymentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deployments")
     public GoogleCloudDialogflowCxV3Deployment[] deployments;
+
     public GoogleCloudDialogflowCxV3ListDeploymentsResponse withDeployments(GoogleCloudDialogflowCxV3Deployment[] deployments) {
         this.deployments = deployments;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3ListDeploymentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDialogflowCxV3ListDeploymentsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3ListDeploymentsResponse(){}
 }

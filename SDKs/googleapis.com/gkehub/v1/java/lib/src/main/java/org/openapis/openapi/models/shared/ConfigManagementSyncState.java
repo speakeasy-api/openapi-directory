@@ -18,6 +18,7 @@ public class ConfigManagementSyncState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public ConfigManagementSyncStateCodeEnum code;
+
     public ConfigManagementSyncState withCode(ConfigManagementSyncStateCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class ConfigManagementSyncState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public ConfigManagementSyncError[] errors;
+
     public ConfigManagementSyncState withErrors(ConfigManagementSyncError[] errors) {
         this.errors = errors;
         return this;
@@ -40,6 +42,7 @@ public class ConfigManagementSyncState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importToken")
     public String importToken;
+
     public ConfigManagementSyncState withImportToken(String importToken) {
         this.importToken = importToken;
         return this;
@@ -51,6 +54,7 @@ public class ConfigManagementSyncState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastSync")
     public String lastSync;
+
     public ConfigManagementSyncState withLastSync(String lastSync) {
         this.lastSync = lastSync;
         return this;
@@ -62,6 +66,7 @@ public class ConfigManagementSyncState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastSyncTime")
     public String lastSyncTime;
+
     public ConfigManagementSyncState withLastSyncTime(String lastSyncTime) {
         this.lastSyncTime = lastSyncTime;
         return this;
@@ -73,6 +78,7 @@ public class ConfigManagementSyncState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceToken")
     public String sourceToken;
+
     public ConfigManagementSyncState withSourceToken(String sourceToken) {
         this.sourceToken = sourceToken;
         return this;
@@ -84,9 +90,11 @@ public class ConfigManagementSyncState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syncToken")
     public String syncToken;
+
     public ConfigManagementSyncState withSyncToken(String syncToken) {
         this.syncToken = syncToken;
         return this;
     }
     
+    public ConfigManagementSyncState(){}
 }

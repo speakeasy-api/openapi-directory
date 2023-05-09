@@ -18,6 +18,7 @@ public class UpdateTransactionCategoryRequestData {
      */
     @JsonProperty("id")
     public String id;
+
     public UpdateTransactionCategoryRequestData withId(String id) {
         this.id = id;
         return this;
@@ -28,9 +29,14 @@ public class UpdateTransactionCategoryRequestData {
      */
     @JsonProperty("type")
     public String type;
+
     public UpdateTransactionCategoryRequestData withType(String type) {
         this.type = type;
         return this;
     }
     
+    public UpdateTransactionCategoryRequestData(@JsonProperty("id") String id, @JsonProperty("type") String type) {
+        this.id = id;
+        this.type = type;
+  }
 }

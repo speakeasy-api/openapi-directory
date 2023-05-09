@@ -15,6 +15,7 @@ public class InstanceGroupStateChangeReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public InstanceGroupStateChangeReasonCodeEnum code;
+
     public InstanceGroupStateChangeReason withCode(InstanceGroupStateChangeReasonCodeEnum code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class InstanceGroupStateChangeReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public InstanceGroupStateChangeReason withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public InstanceGroupStateChangeReason(){}
 }

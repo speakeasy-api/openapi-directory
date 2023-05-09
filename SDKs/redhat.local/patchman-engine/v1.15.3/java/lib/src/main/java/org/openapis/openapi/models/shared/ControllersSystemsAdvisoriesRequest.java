@@ -15,6 +15,7 @@ public class ControllersSystemsAdvisoriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advisories")
     public String[] advisories;
+
     public ControllersSystemsAdvisoriesRequest withAdvisories(String[] advisories) {
         this.advisories = advisories;
         return this;
@@ -23,9 +24,11 @@ public class ControllersSystemsAdvisoriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systems")
     public String[] systems;
+
     public ControllersSystemsAdvisoriesRequest withSystems(String[] systems) {
         this.systems = systems;
         return this;
     }
     
+    public ControllersSystemsAdvisoriesRequest(){}
 }

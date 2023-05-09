@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCharityOrgsRequest {
@@ -12,6 +13,7 @@ public class GetCharityOrgsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
     public String xEbayCMarketplaceId;
+
     public GetCharityOrgsRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
         this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
@@ -22,6 +24,7 @@ public class GetCharityOrgsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public GetCharityOrgsRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -32,6 +35,7 @@ public class GetCharityOrgsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetCharityOrgsRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -42,6 +46,7 @@ public class GetCharityOrgsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetCharityOrgsRequest withQ(String q) {
         this.q = q;
         return this;
@@ -52,9 +57,13 @@ public class GetCharityOrgsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=registration_ids")
     public String registrationIds;
+
     public GetCharityOrgsRequest withRegistrationIds(String registrationIds) {
         this.registrationIds = registrationIds;
         return this;
     }
     
+    public GetCharityOrgsRequest(@JsonProperty("X-EBAY-C-MARKETPLACE-ID") String xEbayCMarketplaceId) {
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
+  }
 }

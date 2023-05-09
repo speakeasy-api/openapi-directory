@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GitCreateRefRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public GitCreateRefRequestBody requestBody;
+
     public GitCreateRefRequest withRequestBody(GitCreateRefRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class GitCreateRefRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public GitCreateRefRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -29,9 +32,15 @@ public class GitCreateRefRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public GitCreateRefRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public GitCreateRefRequest(@JsonProperty("RequestBody") GitCreateRefRequestBody requestBody, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.requestBody = requestBody;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

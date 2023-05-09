@@ -15,6 +15,7 @@ public class ResourceAvailabilityViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessId")
     public Integer businessId;
+
     public ResourceAvailabilityViewModel withBusinessId(Integer businessId) {
         this.businessId = businessId;
         return this;
@@ -23,6 +24,7 @@ public class ResourceAvailabilityViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreBusinessHours")
     public Boolean ignoreBusinessHours;
+
     public ResourceAvailabilityViewModel withIgnoreBusinessHours(Boolean ignoreBusinessHours) {
         this.ignoreBusinessHours = ignoreBusinessHours;
         return this;
@@ -31,6 +33,7 @@ public class ResourceAvailabilityViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceId")
     public Integer resourceId;
+
     public ResourceAvailabilityViewModel withResourceId(Integer resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -39,6 +42,7 @@ public class ResourceAvailabilityViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public ResourceAvailabilityViewModel withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -47,6 +51,7 @@ public class ResourceAvailabilityViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceTzo")
     public Integer resourceTzo;
+
     public ResourceAvailabilityViewModel withResourceTzo(Integer resourceTzo) {
         this.resourceTzo = resourceTzo;
         return this;
@@ -55,9 +60,11 @@ public class ResourceAvailabilityViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weekdays")
     public AvailabilityViewModel2 weekdays;
+
     public ResourceAvailabilityViewModel withWeekdays(AvailabilityViewModel2 weekdays) {
         this.weekdays = weekdays;
         return this;
     }
     
+    public ResourceAvailabilityViewModel(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BestFaresRequest {
@@ -12,6 +13,7 @@ public class BestFaresRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public BestFaresRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class BestFaresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cabin-class")
     public String cabinClass;
+
     public BestFaresRequest withCabinClass(String cabinClass) {
         this.cabinClass = cabinClass;
         return this;
@@ -32,6 +35,7 @@ public class BestFaresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=catalogues")
     public String catalogues;
+
     public BestFaresRequest withCatalogues(String catalogues) {
         this.catalogues = catalogues;
         return this;
@@ -42,6 +46,7 @@ public class BestFaresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public BestFaresRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -52,6 +57,7 @@ public class BestFaresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destination")
     public String destination;
+
     public BestFaresRequest withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -62,6 +68,7 @@ public class BestFaresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fare-family")
     public String fareFamily;
+
     public BestFaresRequest withFareFamily(String fareFamily) {
         this.fareFamily = fareFamily;
         return this;
@@ -72,6 +79,7 @@ public class BestFaresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=origin")
     public String origin;
+
     public BestFaresRequest withOrigin(String origin) {
         this.origin = origin;
         return this;
@@ -82,6 +90,7 @@ public class BestFaresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=range")
     public String range;
+
     public BestFaresRequest withRange(String range) {
         this.range = range;
         return this;
@@ -92,6 +101,7 @@ public class BestFaresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trackingid")
     public String trackingid;
+
     public BestFaresRequest withTrackingid(String trackingid) {
         this.trackingid = trackingid;
         return this;
@@ -102,6 +112,7 @@ public class BestFaresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=travel-date")
     public String travelDate;
+
     public BestFaresRequest withTravelDate(String travelDate) {
         this.travelDate = travelDate;
         return this;
@@ -112,9 +123,19 @@ public class BestFaresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trip-duration")
     public String tripDuration;
+
     public BestFaresRequest withTripDuration(String tripDuration) {
         this.tripDuration = tripDuration;
         return this;
     }
     
+    public BestFaresRequest(@JsonProperty("Accept") String accept, @JsonProperty("catalogues") String catalogues, @JsonProperty("destination") String destination, @JsonProperty("origin") String origin, @JsonProperty("range") String range, @JsonProperty("travel-date") String travelDate, @JsonProperty("trip-duration") String tripDuration) {
+        this.accept = accept;
+        this.catalogues = catalogues;
+        this.destination = destination;
+        this.origin = origin;
+        this.range = range;
+        this.travelDate = travelDate;
+        this.tripDuration = tripDuration;
+  }
 }

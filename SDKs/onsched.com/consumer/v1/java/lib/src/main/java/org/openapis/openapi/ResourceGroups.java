@@ -59,11 +59,9 @@ public class ResourceGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConsumerV1ResourcegroupsResponse res = new org.openapis.openapi.models.operations.GetConsumerV1ResourcegroupsResponse() {{
+        org.openapis.openapi.models.operations.GetConsumerV1ResourcegroupsResponse res = new org.openapis.openapi.models.operations.GetConsumerV1ResourcegroupsResponse(contentType, httpRes.statusCode()) {{
             resourceGroupListViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class ResourceGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConsumerV1ResourcegroupsIdResponse res = new org.openapis.openapi.models.operations.GetConsumerV1ResourcegroupsIdResponse() {{
+        org.openapis.openapi.models.operations.GetConsumerV1ResourcegroupsIdResponse res = new org.openapis.openapi.models.operations.GetConsumerV1ResourcegroupsIdResponse(contentType, httpRes.statusCode()) {{
             resourceGroupViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

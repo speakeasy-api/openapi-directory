@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetApplicationsResponse {
@@ -12,6 +13,7 @@ public class BatchGetApplicationsResponse {
      */
     
     public Object applicationDoesNotExistException;
+
     public BatchGetApplicationsResponse withApplicationDoesNotExistException(Object applicationDoesNotExistException) {
         this.applicationDoesNotExistException = applicationDoesNotExistException;
         return this;
@@ -22,6 +24,7 @@ public class BatchGetApplicationsResponse {
      */
     
     public Object applicationNameRequiredException;
+
     public BatchGetApplicationsResponse withApplicationNameRequiredException(Object applicationNameRequiredException) {
         this.applicationNameRequiredException = applicationNameRequiredException;
         return this;
@@ -32,6 +35,7 @@ public class BatchGetApplicationsResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetApplicationsOutput batchGetApplicationsOutput;
+
     public BatchGetApplicationsResponse withBatchGetApplicationsOutput(org.openapis.openapi.models.shared.BatchGetApplicationsOutput batchGetApplicationsOutput) {
         this.batchGetApplicationsOutput = batchGetApplicationsOutput;
         return this;
@@ -42,6 +46,7 @@ public class BatchGetApplicationsResponse {
      */
     
     public Object batchLimitExceededException;
+
     public BatchGetApplicationsResponse withBatchLimitExceededException(Object batchLimitExceededException) {
         this.batchLimitExceededException = batchLimitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class BatchGetApplicationsResponse {
     
     
     public String contentType;
+
     public BatchGetApplicationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class BatchGetApplicationsResponse {
      */
     
     public Object invalidApplicationNameException;
+
     public BatchGetApplicationsResponse withInvalidApplicationNameException(Object invalidApplicationNameException) {
         this.invalidApplicationNameException = invalidApplicationNameException;
         return this;
@@ -66,6 +73,7 @@ public class BatchGetApplicationsResponse {
     
     
     public Integer statusCode;
+
     public BatchGetApplicationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class BatchGetApplicationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetApplicationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchGetApplicationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

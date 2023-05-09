@@ -18,6 +18,7 @@ public class Dimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionKey")
     public String dimensionKey;
+
     public Dimension withDimensionKey(String dimensionKey) {
         this.dimensionKey = dimensionKey;
         return this;
@@ -29,6 +30,7 @@ public class Dimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Dimension withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class Dimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Dimension withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Dimension(){}
 }

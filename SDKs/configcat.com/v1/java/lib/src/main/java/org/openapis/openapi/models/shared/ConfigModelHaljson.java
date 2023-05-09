@@ -15,6 +15,7 @@ public class ConfigModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_embedded")
     public ConfigModelHaljsonEmbedded embedded;
+
     public ConfigModelHaljson withEmbedded(ConfigModelHaljsonEmbedded embedded) {
         this.embedded = embedded;
         return this;
@@ -23,6 +24,7 @@ public class ConfigModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public ConfigModelHaljsonLinks links;
+
     public ConfigModelHaljson withLinks(ConfigModelHaljsonLinks links) {
         this.links = links;
         return this;
@@ -31,6 +33,7 @@ public class ConfigModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configId")
     public String configId;
+
     public ConfigModelHaljson withConfigId(String configId) {
         this.configId = configId;
         return this;
@@ -39,6 +42,7 @@ public class ConfigModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ConfigModelHaljson withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +51,7 @@ public class ConfigModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ConfigModelHaljson withName(String name) {
         this.name = name;
         return this;
@@ -55,9 +60,11 @@ public class ConfigModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Integer order;
+
     public ConfigModelHaljson withOrder(Integer order) {
         this.order = order;
         return this;
     }
     
+    public ConfigModelHaljson(){}
 }

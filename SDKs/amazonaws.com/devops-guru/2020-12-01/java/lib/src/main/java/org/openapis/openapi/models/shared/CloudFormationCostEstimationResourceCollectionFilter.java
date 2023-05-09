@@ -15,9 +15,11 @@ public class CloudFormationCostEstimationResourceCollectionFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackNames")
     public String[] stackNames;
+
     public CloudFormationCostEstimationResourceCollectionFilter withStackNames(String[] stackNames) {
         this.stackNames = stackNames;
         return this;
     }
     
+    public CloudFormationCostEstimationResourceCollectionFilter(){}
 }

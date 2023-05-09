@@ -17,6 +17,7 @@ public class IdentificationTokenGenerationRequest {
      */
     @JsonProperty("email")
     public String email;
+
     public IdentificationTokenGenerationRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -28,6 +29,7 @@ public class IdentificationTokenGenerationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public IdentificationTokenGenerationRequest withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -39,9 +41,13 @@ public class IdentificationTokenGenerationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public IdentificationTokenGenerationRequest withLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
     
+    public IdentificationTokenGenerationRequest(@JsonProperty("email") String email) {
+        this.email = email;
+  }
 }

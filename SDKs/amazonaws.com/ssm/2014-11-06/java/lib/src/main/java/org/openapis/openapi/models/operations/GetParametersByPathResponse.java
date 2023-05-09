@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetParametersByPathResponse {
     
     public String contentType;
+
     public GetParametersByPathResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetParametersByPathResponse {
      */
     
     public org.openapis.openapi.models.shared.GetParametersByPathResult getParametersByPathResult;
+
     public GetParametersByPathResponse withGetParametersByPathResult(org.openapis.openapi.models.shared.GetParametersByPathResult getParametersByPathResult) {
         this.getParametersByPathResult = getParametersByPathResult;
         return this;
@@ -29,6 +32,7 @@ public class GetParametersByPathResponse {
      */
     
     public Object internalServerError;
+
     public GetParametersByPathResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class GetParametersByPathResponse {
      */
     
     public Object invalidFilterKey;
+
     public GetParametersByPathResponse withInvalidFilterKey(Object invalidFilterKey) {
         this.invalidFilterKey = invalidFilterKey;
         return this;
@@ -49,6 +54,7 @@ public class GetParametersByPathResponse {
      */
     
     public Object invalidFilterOption;
+
     public GetParametersByPathResponse withInvalidFilterOption(Object invalidFilterOption) {
         this.invalidFilterOption = invalidFilterOption;
         return this;
@@ -59,6 +65,7 @@ public class GetParametersByPathResponse {
      */
     
     public Object invalidFilterValue;
+
     public GetParametersByPathResponse withInvalidFilterValue(Object invalidFilterValue) {
         this.invalidFilterValue = invalidFilterValue;
         return this;
@@ -69,6 +76,7 @@ public class GetParametersByPathResponse {
      */
     
     public Object invalidKeyId;
+
     public GetParametersByPathResponse withInvalidKeyId(Object invalidKeyId) {
         this.invalidKeyId = invalidKeyId;
         return this;
@@ -79,6 +87,7 @@ public class GetParametersByPathResponse {
      */
     
     public Object invalidNextToken;
+
     public GetParametersByPathResponse withInvalidNextToken(Object invalidNextToken) {
         this.invalidNextToken = invalidNextToken;
         return this;
@@ -86,6 +95,7 @@ public class GetParametersByPathResponse {
     
     
     public Integer statusCode;
+
     public GetParametersByPathResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class GetParametersByPathResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetParametersByPathResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetParametersByPathResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

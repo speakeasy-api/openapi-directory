@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SearchLocalGatewayRoutesResult {
     
     public String nextToken;
+
     public SearchLocalGatewayRoutesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class SearchLocalGatewayRoutesResult {
     
     
     public SearchLocalGatewayRoutesResultRoutes[] routes;
+
     public SearchLocalGatewayRoutesResult withRoutes(SearchLocalGatewayRoutesResultRoutes[] routes) {
         this.routes = routes;
         return this;
     }
     
+    public SearchLocalGatewayRoutesResult(){}
 }

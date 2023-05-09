@@ -15,9 +15,11 @@ public class OrganizationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_code")
     public String taxCode;
+
     public OrganizationData withTaxCode(String taxCode) {
         this.taxCode = taxCode;
         return this;
     }
     
+    public OrganizationData(){}
 }

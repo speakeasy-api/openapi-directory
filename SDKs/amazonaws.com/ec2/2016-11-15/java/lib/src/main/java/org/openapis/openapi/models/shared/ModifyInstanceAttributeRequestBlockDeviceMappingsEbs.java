@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyInstanceAttributeRequestBlockDeviceMappingsEbs {
     
     public Boolean deleteOnTermination;
+
     public ModifyInstanceAttributeRequestBlockDeviceMappingsEbs withDeleteOnTermination(Boolean deleteOnTermination) {
         this.deleteOnTermination = deleteOnTermination;
         return this;
@@ -19,9 +20,11 @@ public class ModifyInstanceAttributeRequestBlockDeviceMappingsEbs {
     
     
     public String volumeId;
+
     public ModifyInstanceAttributeRequestBlockDeviceMappingsEbs withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public ModifyInstanceAttributeRequestBlockDeviceMappingsEbs(){}
 }

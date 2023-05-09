@@ -58,11 +58,9 @@ public class CombinedAudiences {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoCombinedAudiencesGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoCombinedAudiencesGetResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoCombinedAudiencesGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoCombinedAudiencesGetResponse(contentType, httpRes.statusCode()) {{
             combinedAudience = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class CombinedAudiences {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoCombinedAudiencesListResponse res = new org.openapis.openapi.models.operations.DisplayvideoCombinedAudiencesListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoCombinedAudiencesListResponse res = new org.openapis.openapi.models.operations.DisplayvideoCombinedAudiencesListResponse(contentType, httpRes.statusCode()) {{
             listCombinedAudiencesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

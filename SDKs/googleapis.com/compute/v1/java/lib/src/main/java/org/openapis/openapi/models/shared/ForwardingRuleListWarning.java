@@ -18,6 +18,7 @@ public class ForwardingRuleListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public ForwardingRuleListWarningCodeEnum code;
+
     public ForwardingRuleListWarning withCode(ForwardingRuleListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class ForwardingRuleListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ForwardingRuleListWarningData[] data;
+
     public ForwardingRuleListWarning withData(ForwardingRuleListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class ForwardingRuleListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ForwardingRuleListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ForwardingRuleListWarning(){}
 }

@@ -15,6 +15,7 @@ public class AssetModelCompositeModelDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AssetModelCompositeModelDefinition withDescription(String description) {
         this.description = description;
         return this;
@@ -22,6 +23,7 @@ public class AssetModelCompositeModelDefinition {
     
     @JsonProperty("name")
     public String name;
+
     public AssetModelCompositeModelDefinition withName(String name) {
         this.name = name;
         return this;
@@ -33,6 +35,7 @@ public class AssetModelCompositeModelDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public Object properties;
+
     public AssetModelCompositeModelDefinition withProperties(Object properties) {
         this.properties = properties;
         return this;
@@ -40,9 +43,14 @@ public class AssetModelCompositeModelDefinition {
     
     @JsonProperty("type")
     public String type;
+
     public AssetModelCompositeModelDefinition withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AssetModelCompositeModelDefinition(@JsonProperty("name") String name, @JsonProperty("type") String type) {
+        this.name = name;
+        this.type = type;
+  }
 }

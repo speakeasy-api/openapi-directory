@@ -15,6 +15,7 @@ public class FsxConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExclusionPatterns")
     public String[] exclusionPatterns;
+
     public FsxConfiguration withExclusionPatterns(String[] exclusionPatterns) {
         this.exclusionPatterns = exclusionPatterns;
         return this;
@@ -23,6 +24,7 @@ public class FsxConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldMappings")
     public DataSourceToIndexFieldMapping[] fieldMappings;
+
     public FsxConfiguration withFieldMappings(DataSourceToIndexFieldMapping[] fieldMappings) {
         this.fieldMappings = fieldMappings;
         return this;
@@ -30,6 +32,7 @@ public class FsxConfiguration {
     
     @JsonProperty("FileSystemId")
     public String fileSystemId;
+
     public FsxConfiguration withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -37,6 +40,7 @@ public class FsxConfiguration {
     
     @JsonProperty("FileSystemType")
     public FsxFileSystemTypeEnum fileSystemType;
+
     public FsxConfiguration withFileSystemType(FsxFileSystemTypeEnum fileSystemType) {
         this.fileSystemType = fileSystemType;
         return this;
@@ -45,6 +49,7 @@ public class FsxConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InclusionPatterns")
     public String[] inclusionPatterns;
+
     public FsxConfiguration withInclusionPatterns(String[] inclusionPatterns) {
         this.inclusionPatterns = inclusionPatterns;
         return this;
@@ -53,6 +58,7 @@ public class FsxConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretArn")
     public String secretArn;
+
     public FsxConfiguration withSecretArn(String secretArn) {
         this.secretArn = secretArn;
         return this;
@@ -60,9 +66,15 @@ public class FsxConfiguration {
     
     @JsonProperty("VpcConfiguration")
     public DataSourceVpcConfiguration vpcConfiguration;
+
     public FsxConfiguration withVpcConfiguration(DataSourceVpcConfiguration vpcConfiguration) {
         this.vpcConfiguration = vpcConfiguration;
         return this;
     }
     
+    public FsxConfiguration(@JsonProperty("FileSystemId") String fileSystemId, @JsonProperty("FileSystemType") FsxFileSystemTypeEnum fileSystemType, @JsonProperty("VpcConfiguration") DataSourceVpcConfiguration vpcConfiguration) {
+        this.fileSystemId = fileSystemId;
+        this.fileSystemType = fileSystemType;
+        this.vpcConfiguration = vpcConfiguration;
+  }
 }

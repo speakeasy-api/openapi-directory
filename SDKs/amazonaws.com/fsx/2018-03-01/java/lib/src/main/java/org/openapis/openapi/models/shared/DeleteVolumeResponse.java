@@ -15,6 +15,7 @@ public class DeleteVolumeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lifecycle")
     public VolumeLifecycleEnum lifecycle;
+
     public DeleteVolumeResponse withLifecycle(VolumeLifecycleEnum lifecycle) {
         this.lifecycle = lifecycle;
         return this;
@@ -23,6 +24,7 @@ public class DeleteVolumeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OntapResponse")
     public DeleteVolumeOntapResponse ontapResponse;
+
     public DeleteVolumeResponse withOntapResponse(DeleteVolumeOntapResponse ontapResponse) {
         this.ontapResponse = ontapResponse;
         return this;
@@ -31,9 +33,11 @@ public class DeleteVolumeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeId")
     public String volumeId;
+
     public DeleteVolumeResponse withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public DeleteVolumeResponse(){}
 }

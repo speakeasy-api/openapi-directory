@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class UserHardLinkedUserMembership {
     
     public Long crossSaveOverriddenMembershipId;
+
     public UserHardLinkedUserMembership withCrossSaveOverriddenMembershipId(Long crossSaveOverriddenMembershipId) {
         this.crossSaveOverriddenMembershipId = crossSaveOverriddenMembershipId;
         return this;
@@ -16,6 +17,7 @@ public class UserHardLinkedUserMembership {
     
     
     public Integer crossSaveOverriddenType;
+
     public UserHardLinkedUserMembership withCrossSaveOverriddenType(Integer crossSaveOverriddenType) {
         this.crossSaveOverriddenType = crossSaveOverriddenType;
         return this;
@@ -23,6 +25,7 @@ public class UserHardLinkedUserMembership {
     
     
     public Long membershipId;
+
     public UserHardLinkedUserMembership withMembershipId(Long membershipId) {
         this.membershipId = membershipId;
         return this;
@@ -30,9 +33,11 @@ public class UserHardLinkedUserMembership {
     
     
     public Integer membershipType;
+
     public UserHardLinkedUserMembership withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
     }
     
+    public UserHardLinkedUserMembership(){}
 }

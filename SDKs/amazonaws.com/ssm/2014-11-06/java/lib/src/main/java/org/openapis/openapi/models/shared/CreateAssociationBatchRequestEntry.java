@@ -18,6 +18,7 @@ public class CreateAssociationBatchRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlarmConfiguration")
     public AlarmConfiguration alarmConfiguration;
+
     public CreateAssociationBatchRequestEntry withAlarmConfiguration(AlarmConfiguration alarmConfiguration) {
         this.alarmConfiguration = alarmConfiguration;
         return this;
@@ -26,6 +27,7 @@ public class CreateAssociationBatchRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplyOnlyAtCronInterval")
     public Boolean applyOnlyAtCronInterval;
+
     public CreateAssociationBatchRequestEntry withApplyOnlyAtCronInterval(Boolean applyOnlyAtCronInterval) {
         this.applyOnlyAtCronInterval = applyOnlyAtCronInterval;
         return this;
@@ -34,6 +36,7 @@ public class CreateAssociationBatchRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationName")
     public String associationName;
+
     public CreateAssociationBatchRequestEntry withAssociationName(String associationName) {
         this.associationName = associationName;
         return this;
@@ -42,6 +45,7 @@ public class CreateAssociationBatchRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutomationTargetParameterName")
     public String automationTargetParameterName;
+
     public CreateAssociationBatchRequestEntry withAutomationTargetParameterName(String automationTargetParameterName) {
         this.automationTargetParameterName = automationTargetParameterName;
         return this;
@@ -50,6 +54,7 @@ public class CreateAssociationBatchRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CalendarNames")
     public String[] calendarNames;
+
     public CreateAssociationBatchRequestEntry withCalendarNames(String[] calendarNames) {
         this.calendarNames = calendarNames;
         return this;
@@ -58,6 +63,7 @@ public class CreateAssociationBatchRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceSeverity")
     public AssociationComplianceSeverityEnum complianceSeverity;
+
     public CreateAssociationBatchRequestEntry withComplianceSeverity(AssociationComplianceSeverityEnum complianceSeverity) {
         this.complianceSeverity = complianceSeverity;
         return this;
@@ -66,6 +72,7 @@ public class CreateAssociationBatchRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentVersion")
     public String documentVersion;
+
     public CreateAssociationBatchRequestEntry withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -74,6 +81,7 @@ public class CreateAssociationBatchRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public CreateAssociationBatchRequestEntry withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -82,6 +90,7 @@ public class CreateAssociationBatchRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxConcurrency")
     public String maxConcurrency;
+
     public CreateAssociationBatchRequestEntry withMaxConcurrency(String maxConcurrency) {
         this.maxConcurrency = maxConcurrency;
         return this;
@@ -90,6 +99,7 @@ public class CreateAssociationBatchRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxErrors")
     public String maxErrors;
+
     public CreateAssociationBatchRequestEntry withMaxErrors(String maxErrors) {
         this.maxErrors = maxErrors;
         return this;
@@ -97,6 +107,7 @@ public class CreateAssociationBatchRequestEntry {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateAssociationBatchRequestEntry withName(String name) {
         this.name = name;
         return this;
@@ -105,6 +116,7 @@ public class CreateAssociationBatchRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputLocation")
     public InstanceAssociationOutputLocation outputLocation;
+
     public CreateAssociationBatchRequestEntry withOutputLocation(InstanceAssociationOutputLocation outputLocation) {
         this.outputLocation = outputLocation;
         return this;
@@ -113,6 +125,7 @@ public class CreateAssociationBatchRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, String[]> parameters;
+
     public CreateAssociationBatchRequestEntry withParameters(java.util.Map<String, String[]> parameters) {
         this.parameters = parameters;
         return this;
@@ -121,6 +134,7 @@ public class CreateAssociationBatchRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleExpression")
     public String scheduleExpression;
+
     public CreateAssociationBatchRequestEntry withScheduleExpression(String scheduleExpression) {
         this.scheduleExpression = scheduleExpression;
         return this;
@@ -129,6 +143,7 @@ public class CreateAssociationBatchRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleOffset")
     public Long scheduleOffset;
+
     public CreateAssociationBatchRequestEntry withScheduleOffset(Long scheduleOffset) {
         this.scheduleOffset = scheduleOffset;
         return this;
@@ -137,6 +152,7 @@ public class CreateAssociationBatchRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SyncCompliance")
     public AssociationSyncComplianceEnum syncCompliance;
+
     public CreateAssociationBatchRequestEntry withSyncCompliance(AssociationSyncComplianceEnum syncCompliance) {
         this.syncCompliance = syncCompliance;
         return this;
@@ -145,6 +161,7 @@ public class CreateAssociationBatchRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetLocations")
     public TargetLocation[] targetLocations;
+
     public CreateAssociationBatchRequestEntry withTargetLocations(TargetLocation[] targetLocations) {
         this.targetLocations = targetLocations;
         return this;
@@ -153,6 +170,7 @@ public class CreateAssociationBatchRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetMaps")
     public java.util.Map<String, String[]>[] targetMaps;
+
     public CreateAssociationBatchRequestEntry withTargetMaps(java.util.Map<String, String[]>[] targetMaps) {
         this.targetMaps = targetMaps;
         return this;
@@ -161,9 +179,13 @@ public class CreateAssociationBatchRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Targets")
     public Target[] targets;
+
     public CreateAssociationBatchRequestEntry withTargets(Target[] targets) {
         this.targets = targets;
         return this;
     }
     
+    public CreateAssociationBatchRequestEntry(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

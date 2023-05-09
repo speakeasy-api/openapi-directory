@@ -18,6 +18,7 @@ public class PinTableHeaderRowsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pinnedHeaderRowsCount")
     public Integer pinnedHeaderRowsCount;
+
     public PinTableHeaderRowsRequest withPinnedHeaderRowsCount(Integer pinnedHeaderRowsCount) {
         this.pinnedHeaderRowsCount = pinnedHeaderRowsCount;
         return this;
@@ -29,9 +30,11 @@ public class PinTableHeaderRowsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableStartLocation")
     public Location tableStartLocation;
+
     public PinTableHeaderRowsRequest withTableStartLocation(Location tableStartLocation) {
         this.tableStartLocation = tableStartLocation;
         return this;
     }
     
+    public PinTableHeaderRowsRequest(){}
 }

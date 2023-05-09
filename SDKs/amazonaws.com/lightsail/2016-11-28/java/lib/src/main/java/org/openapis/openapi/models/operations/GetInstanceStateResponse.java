@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetInstanceStateResponse {
@@ -12,6 +13,7 @@ public class GetInstanceStateResponse {
      */
     
     public Object accessDeniedException;
+
     public GetInstanceStateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetInstanceStateResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public GetInstanceStateResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class GetInstanceStateResponse {
     
     
     public String contentType;
+
     public GetInstanceStateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetInstanceStateResponse {
      */
     
     public org.openapis.openapi.models.shared.GetInstanceStateResult getInstanceStateResult;
+
     public GetInstanceStateResponse withGetInstanceStateResult(org.openapis.openapi.models.shared.GetInstanceStateResult getInstanceStateResult) {
         this.getInstanceStateResult = getInstanceStateResult;
         return this;
@@ -49,6 +54,7 @@ public class GetInstanceStateResponse {
      */
     
     public Object invalidInputException;
+
     public GetInstanceStateResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetInstanceStateResponse {
      */
     
     public Object notFoundException;
+
     public GetInstanceStateResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetInstanceStateResponse {
      */
     
     public Object operationFailureException;
+
     public GetInstanceStateResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class GetInstanceStateResponse {
      */
     
     public Object serviceException;
+
     public GetInstanceStateResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class GetInstanceStateResponse {
     
     
     public Integer statusCode;
+
     public GetInstanceStateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetInstanceStateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetInstanceStateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetInstanceStateResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetInstanceStateResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetInstanceStateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

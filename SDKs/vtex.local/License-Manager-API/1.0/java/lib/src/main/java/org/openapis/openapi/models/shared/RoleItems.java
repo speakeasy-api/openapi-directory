@@ -18,6 +18,7 @@ public class RoleItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public RoleItems withId(Long id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class RoleItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isAdmin")
     public Boolean isAdmin;
+
     public RoleItems withIsAdmin(Boolean isAdmin) {
         this.isAdmin = isAdmin;
         return this;
@@ -37,6 +39,7 @@ public class RoleItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logins")
     public String logins;
+
     public RoleItems withLogins(String logins) {
         this.logins = logins;
         return this;
@@ -48,6 +51,7 @@ public class RoleItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RoleItems withName(String name) {
         this.name = name;
         return this;
@@ -59,6 +63,7 @@ public class RoleItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("products")
     public ProductItems[] products;
+
     public RoleItems withProducts(ProductItems[] products) {
         this.products = products;
         return this;
@@ -67,6 +72,7 @@ public class RoleItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public String resources;
+
     public RoleItems withResources(String resources) {
         this.resources = resources;
         return this;
@@ -78,9 +84,11 @@ public class RoleItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleType")
     public Long roleType;
+
     public RoleItems withRoleType(Long roleType) {
         this.roleType = roleType;
         return this;
     }
     
+    public RoleItems(){}
 }

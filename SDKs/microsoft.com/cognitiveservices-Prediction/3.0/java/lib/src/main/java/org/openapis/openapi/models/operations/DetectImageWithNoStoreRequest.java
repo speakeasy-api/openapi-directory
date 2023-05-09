@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DetectImageWithNoStoreRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public DetectImageWithNoStoreRequestBody requestBody;
+
     public DetectImageWithNoStoreRequest withRequestBody(DetectImageWithNoStoreRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class DetectImageWithNoStoreRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=application")
     public String application;
+
     public DetectImageWithNoStoreRequest withApplication(String application) {
         this.application = application;
         return this;
@@ -29,6 +32,7 @@ public class DetectImageWithNoStoreRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public DetectImageWithNoStoreRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -39,9 +43,15 @@ public class DetectImageWithNoStoreRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=publishedName")
     public String publishedName;
+
     public DetectImageWithNoStoreRequest withPublishedName(String publishedName) {
         this.publishedName = publishedName;
         return this;
     }
     
+    public DetectImageWithNoStoreRequest(@JsonProperty("RequestBody") DetectImageWithNoStoreRequestBody requestBody, @JsonProperty("projectId") String projectId, @JsonProperty("publishedName") String publishedName) {
+        this.requestBody = requestBody;
+        this.projectId = projectId;
+        this.publishedName = publishedName;
+  }
 }

@@ -12,6 +12,7 @@ public class BlogArticleLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("android")
     public Href android;
+
     public BlogArticleLinks withAndroid(Href android) {
         this.android = android;
         return this;
@@ -20,6 +21,7 @@ public class BlogArticleLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("header_image")
     public Href headerImage;
+
     public BlogArticleLinks withHeaderImage(Href headerImage) {
         this.headerImage = headerImage;
         return this;
@@ -28,6 +30,7 @@ public class BlogArticleLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ios")
     public Href ios;
+
     public BlogArticleLinks withIos(Href ios) {
         this.ios = ios;
         return this;
@@ -36,6 +39,7 @@ public class BlogArticleLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public Href self;
+
     public BlogArticleLinks withSelf(Href self) {
         this.self = self;
         return this;
@@ -44,9 +48,11 @@ public class BlogArticleLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web")
     public Href web;
+
     public BlogArticleLinks withWeb(Href web) {
         this.web = web;
         return this;
     }
     
+    public BlogArticleLinks(){}
 }

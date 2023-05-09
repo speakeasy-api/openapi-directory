@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetByIsoCodeRequest {
@@ -12,9 +13,13 @@ public class GetByIsoCodeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=isoCode")
     public String isoCode;
+
     public GetByIsoCodeRequest withIsoCode(String isoCode) {
         this.isoCode = isoCode;
         return this;
     }
     
+    public GetByIsoCodeRequest(@JsonProperty("isoCode") String isoCode) {
+        this.isoCode = isoCode;
+  }
 }

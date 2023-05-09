@@ -12,6 +12,7 @@ public class ListAssetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aliases")
     public Boolean aliases;
+
     public ListAssetsRequest withAliases(Boolean aliases) {
         this.aliases = aliases;
         return this;
@@ -22,6 +23,7 @@ public class ListAssetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public ListAssetsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -32,9 +34,11 @@ public class ListAssetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedAfter")
     public String updatedAfter;
+
     public ListAssetsRequest withUpdatedAfter(String updatedAfter) {
         this.updatedAfter = updatedAfter;
         return this;
     }
     
+    public ListAssetsRequest(){}
 }

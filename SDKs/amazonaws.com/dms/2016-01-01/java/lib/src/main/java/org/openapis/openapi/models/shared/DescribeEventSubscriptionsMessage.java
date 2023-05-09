@@ -15,6 +15,7 @@ public class DescribeEventSubscriptionsMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public Filter[] filters;
+
     public DescribeEventSubscriptionsMessage withFilters(Filter[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +24,7 @@ public class DescribeEventSubscriptionsMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public DescribeEventSubscriptionsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -31,6 +33,7 @@ public class DescribeEventSubscriptionsMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxRecords")
     public Long maxRecords;
+
     public DescribeEventSubscriptionsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -39,9 +42,11 @@ public class DescribeEventSubscriptionsMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubscriptionName")
     public String subscriptionName;
+
     public DescribeEventSubscriptionsMessage withSubscriptionName(String subscriptionName) {
         this.subscriptionName = subscriptionName;
         return this;
     }
     
+    public DescribeEventSubscriptionsMessage(){}
 }

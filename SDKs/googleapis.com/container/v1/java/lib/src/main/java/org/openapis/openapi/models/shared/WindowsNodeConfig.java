@@ -18,9 +18,11 @@ public class WindowsNodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osVersion")
     public WindowsNodeConfigOsVersionEnum osVersion;
+
     public WindowsNodeConfig withOsVersion(WindowsNodeConfigOsVersionEnum osVersion) {
         this.osVersion = osVersion;
         return this;
     }
     
+    public WindowsNodeConfig(){}
 }

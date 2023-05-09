@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWorkgroupMemberListResponse {
     
     public byte[] body;
+
     public GetWorkgroupMemberListResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetWorkgroupMemberListResponse {
     
     
     public String contentType;
+
     public GetWorkgroupMemberListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetWorkgroupMemberListResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO;
+
     public GetWorkgroupMemberListResponse withHTTPStatusVO(org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO) {
         this.httpStatusVO = httpStatusVO;
         return this;
@@ -33,6 +37,7 @@ public class GetWorkgroupMemberListResponse {
     
     
     public Integer statusCode;
+
     public GetWorkgroupMemberListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetWorkgroupMemberListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWorkgroupMemberListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class GetWorkgroupMemberListResponse {
      */
     
     public org.openapis.openapi.models.shared.WorkgroupMembersListVO workgroupMembersListVO;
+
     public GetWorkgroupMemberListResponse withWorkgroupMembersListVO(org.openapis.openapi.models.shared.WorkgroupMembersListVO workgroupMembersListVO) {
         this.workgroupMembersListVO = workgroupMembersListVO;
         return this;
     }
     
+    public GetWorkgroupMemberListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

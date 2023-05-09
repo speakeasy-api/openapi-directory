@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class LoginProfile {
     
     public OffsetDateTime createDate;
+
     public LoginProfile withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -19,6 +21,7 @@ public class LoginProfile {
     
     
     public Boolean passwordResetRequired;
+
     public LoginProfile withPasswordResetRequired(Boolean passwordResetRequired) {
         this.passwordResetRequired = passwordResetRequired;
         return this;
@@ -26,9 +29,14 @@ public class LoginProfile {
     
     
     public String userName;
+
     public LoginProfile withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public LoginProfile(@JsonProperty("CreateDate") OffsetDateTime createDate, @JsonProperty("UserName") String userName) {
+        this.createDate = createDate;
+        this.userName = userName;
+  }
 }

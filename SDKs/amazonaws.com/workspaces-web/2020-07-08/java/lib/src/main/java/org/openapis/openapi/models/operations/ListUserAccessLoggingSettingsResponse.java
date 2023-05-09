@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListUserAccessLoggingSettingsResponse {
@@ -12,6 +13,7 @@ public class ListUserAccessLoggingSettingsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListUserAccessLoggingSettingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListUserAccessLoggingSettingsResponse {
     
     
     public String contentType;
+
     public ListUserAccessLoggingSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListUserAccessLoggingSettingsResponse {
      */
     
     public Object internalServerException;
+
     public ListUserAccessLoggingSettingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListUserAccessLoggingSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListUserAccessLoggingSettingsResponse listUserAccessLoggingSettingsResponse;
+
     public ListUserAccessLoggingSettingsResponse withListUserAccessLoggingSettingsResponse(org.openapis.openapi.models.shared.ListUserAccessLoggingSettingsResponse listUserAccessLoggingSettingsResponse) {
         this.listUserAccessLoggingSettingsResponse = listUserAccessLoggingSettingsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListUserAccessLoggingSettingsResponse {
     
     
     public Integer statusCode;
+
     public ListUserAccessLoggingSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListUserAccessLoggingSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListUserAccessLoggingSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListUserAccessLoggingSettingsResponse {
      */
     
     public Object throttlingException;
+
     public ListUserAccessLoggingSettingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListUserAccessLoggingSettingsResponse {
      */
     
     public Object validationException;
+
     public ListUserAccessLoggingSettingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListUserAccessLoggingSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

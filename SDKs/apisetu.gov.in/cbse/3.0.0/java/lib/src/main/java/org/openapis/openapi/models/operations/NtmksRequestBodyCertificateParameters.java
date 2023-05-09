@@ -12,6 +12,7 @@ public class NtmksRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public NtmksRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,6 +23,7 @@ public class NtmksRequestBodyCertificateParameters {
      */
     @JsonProperty("rollno")
     public String rollno;
+
     public NtmksRequestBodyCertificateParameters withRollno(String rollno) {
         this.rollno = rollno;
         return this;
@@ -32,9 +34,15 @@ public class NtmksRequestBodyCertificateParameters {
      */
     @JsonProperty("year")
     public String year;
+
     public NtmksRequestBodyCertificateParameters withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public NtmksRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("rollno") String rollno, @JsonProperty("year") String year) {
+        this.fullName = fullName;
+        this.rollno = rollno;
+        this.year = year;
+  }
 }

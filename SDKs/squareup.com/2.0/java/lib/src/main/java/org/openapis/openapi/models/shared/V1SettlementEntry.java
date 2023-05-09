@@ -15,6 +15,7 @@ public class V1SettlementEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount_money")
     public V1Money amountMoney;
+
     public V1SettlementEntry withAmountMoney(V1Money amountMoney) {
         this.amountMoney = amountMoney;
         return this;
@@ -23,6 +24,7 @@ public class V1SettlementEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fee_money")
     public V1Money feeMoney;
+
     public V1SettlementEntry withFeeMoney(V1Money feeMoney) {
         this.feeMoney = feeMoney;
         return this;
@@ -34,6 +36,7 @@ public class V1SettlementEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_id")
     public String paymentId;
+
     public V1SettlementEntry withPaymentId(String paymentId) {
         this.paymentId = paymentId;
         return this;
@@ -45,9 +48,11 @@ public class V1SettlementEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public V1SettlementEntry withType(String type) {
         this.type = type;
         return this;
     }
     
+    public V1SettlementEntry(){}
 }

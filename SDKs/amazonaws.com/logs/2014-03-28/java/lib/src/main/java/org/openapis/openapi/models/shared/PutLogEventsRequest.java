@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutLogEventsRequest {
     @JsonProperty("logEvents")
     public InputLogEvent[] logEvents;
+
     public PutLogEventsRequest withLogEvents(InputLogEvent[] logEvents) {
         this.logEvents = logEvents;
         return this;
@@ -18,6 +19,7 @@ public class PutLogEventsRequest {
     
     @JsonProperty("logGroupName")
     public String logGroupName;
+
     public PutLogEventsRequest withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
@@ -25,6 +27,7 @@ public class PutLogEventsRequest {
     
     @JsonProperty("logStreamName")
     public String logStreamName;
+
     public PutLogEventsRequest withLogStreamName(String logStreamName) {
         this.logStreamName = logStreamName;
         return this;
@@ -33,9 +36,15 @@ public class PutLogEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sequenceToken")
     public String sequenceToken;
+
     public PutLogEventsRequest withSequenceToken(String sequenceToken) {
         this.sequenceToken = sequenceToken;
         return this;
     }
     
+    public PutLogEventsRequest(@JsonProperty("logEvents") InputLogEvent[] logEvents, @JsonProperty("logGroupName") String logGroupName, @JsonProperty("logStreamName") String logStreamName) {
+        this.logEvents = logEvents;
+        this.logGroupName = logGroupName;
+        this.logStreamName = logStreamName;
+  }
 }

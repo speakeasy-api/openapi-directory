@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LineSearchResponse {
     
     public byte[] body;
+
     public LineSearchResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class LineSearchResponse {
     
     
     public String contentType;
+
     public LineSearchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class LineSearchResponse {
     
     
     public Integer statusCode;
+
     public LineSearchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class LineSearchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LineSearchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class LineSearchResponse {
      */
     
     public org.openapis.openapi.models.shared.TflApiPresentationEntitiesRouteSearchResponse tflApiPresentationEntitiesRouteSearchResponse;
+
     public LineSearchResponse withTflApiPresentationEntitiesRouteSearchResponse(org.openapis.openapi.models.shared.TflApiPresentationEntitiesRouteSearchResponse tflApiPresentationEntitiesRouteSearchResponse) {
         this.tflApiPresentationEntitiesRouteSearchResponse = tflApiPresentationEntitiesRouteSearchResponse;
         return this;
     }
     
+    public LineSearchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

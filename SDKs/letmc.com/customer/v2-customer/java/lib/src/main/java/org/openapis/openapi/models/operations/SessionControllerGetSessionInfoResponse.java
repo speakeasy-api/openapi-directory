@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SessionControllerGetSessionInfoResponse {
     
     public String contentType;
+
     public SessionControllerGetSessionInfoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SessionControllerGetSessionInfoResponse {
      */
     
     public String sessionControllerGetSessionInfo200ApplicationJSONString;
+
     public SessionControllerGetSessionInfoResponse withSessionControllerGetSessionInfo200ApplicationJSONString(String sessionControllerGetSessionInfo200ApplicationJSONString) {
         this.sessionControllerGetSessionInfo200ApplicationJSONString = sessionControllerGetSessionInfo200ApplicationJSONString;
         return this;
@@ -29,6 +32,7 @@ public class SessionControllerGetSessionInfoResponse {
      */
     
     public String sessionControllerGetSessionInfo200ApplicationXMLString;
+
     public SessionControllerGetSessionInfoResponse withSessionControllerGetSessionInfo200ApplicationXMLString(String sessionControllerGetSessionInfo200ApplicationXMLString) {
         this.sessionControllerGetSessionInfo200ApplicationXMLString = sessionControllerGetSessionInfo200ApplicationXMLString;
         return this;
@@ -39,6 +43,7 @@ public class SessionControllerGetSessionInfoResponse {
      */
     
     public String sessionControllerGetSessionInfo200TextXMLString;
+
     public SessionControllerGetSessionInfoResponse withSessionControllerGetSessionInfo200TextXMLString(String sessionControllerGetSessionInfo200TextXMLString) {
         this.sessionControllerGetSessionInfo200TextXMLString = sessionControllerGetSessionInfo200TextXMLString;
         return this;
@@ -46,6 +51,7 @@ public class SessionControllerGetSessionInfoResponse {
     
     
     public Integer statusCode;
+
     public SessionControllerGetSessionInfoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class SessionControllerGetSessionInfoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SessionControllerGetSessionInfoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class SessionControllerGetSessionInfoResponse {
      */
     
     public String sessionControllerGetSessionInfo200TextJSONString;
+
     public SessionControllerGetSessionInfoResponse withSessionControllerGetSessionInfo200TextJSONString(String sessionControllerGetSessionInfo200TextJSONString) {
         this.sessionControllerGetSessionInfo200TextJSONString = sessionControllerGetSessionInfo200TextJSONString;
         return this;
     }
     
+    public SessionControllerGetSessionInfoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

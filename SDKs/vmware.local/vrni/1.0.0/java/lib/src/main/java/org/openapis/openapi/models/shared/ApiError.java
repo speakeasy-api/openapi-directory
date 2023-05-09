@@ -15,6 +15,7 @@ public class ApiError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Integer code;
+
     public ApiError withCode(Integer code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class ApiError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public ErrorDetail[] details;
+
     public ApiError withDetails(ErrorDetail[] details) {
         this.details = details;
         return this;
@@ -31,9 +33,11 @@ public class ApiError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ApiError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ApiError(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRotationResponse {
@@ -12,6 +13,7 @@ public class DeleteRotationResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteRotationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteRotationResponse {
      */
     
     public Object conflictException;
+
     public DeleteRotationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteRotationResponse {
     
     
     public String contentType;
+
     public DeleteRotationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteRotationResponse {
      */
     
     public java.util.Map<String, Object> deleteRotationResult;
+
     public DeleteRotationResponse withDeleteRotationResult(java.util.Map<String, Object> deleteRotationResult) {
         this.deleteRotationResult = deleteRotationResult;
         return this;
@@ -49,6 +54,7 @@ public class DeleteRotationResponse {
      */
     
     public Object internalServerException;
+
     public DeleteRotationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteRotationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteRotationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteRotationResponse {
     
     
     public Integer statusCode;
+
     public DeleteRotationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteRotationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRotationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteRotationResponse {
      */
     
     public Object throttlingException;
+
     public DeleteRotationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteRotationResponse {
      */
     
     public Object validationException;
+
     public DeleteRotationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteRotationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteFleetsResultUnsuccessfulFleetDeletionsError {
     
     public DeleteFleetsResultUnsuccessfulFleetDeletionsErrorCodeEnum code;
+
     public DeleteFleetsResultUnsuccessfulFleetDeletionsError withCode(DeleteFleetsResultUnsuccessfulFleetDeletionsErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class DeleteFleetsResultUnsuccessfulFleetDeletionsError {
     
     
     public String message;
+
     public DeleteFleetsResultUnsuccessfulFleetDeletionsError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DeleteFleetsResultUnsuccessfulFleetDeletionsError(){}
 }

@@ -15,9 +15,11 @@ public class CreateInfrastructureConfigurationRequestBodyLogging {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Logs")
     public org.openapis.openapi.models.shared.S3Logs s3Logs;
+
     public CreateInfrastructureConfigurationRequestBodyLogging withS3Logs(org.openapis.openapi.models.shared.S3Logs s3Logs) {
         this.s3Logs = s3Logs;
         return this;
     }
     
+    public CreateInfrastructureConfigurationRequestBodyLogging(){}
 }

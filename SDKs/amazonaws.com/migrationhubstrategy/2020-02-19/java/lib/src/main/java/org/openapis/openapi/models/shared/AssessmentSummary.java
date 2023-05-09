@@ -20,6 +20,7 @@ public class AssessmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("antipatternReportS3Object")
     public S3Object antipatternReportS3Object;
+
     public AssessmentSummary withAntipatternReportS3Object(S3Object antipatternReportS3Object) {
         this.antipatternReportS3Object = antipatternReportS3Object;
         return this;
@@ -28,6 +29,7 @@ public class AssessmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("antipatternReportStatus")
     public AntipatternReportStatusEnum antipatternReportStatus;
+
     public AssessmentSummary withAntipatternReportStatus(AntipatternReportStatusEnum antipatternReportStatus) {
         this.antipatternReportStatus = antipatternReportStatus;
         return this;
@@ -36,6 +38,7 @@ public class AssessmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("antipatternReportStatusMessage")
     public String antipatternReportStatusMessage;
+
     public AssessmentSummary withAntipatternReportStatusMessage(String antipatternReportStatusMessage) {
         this.antipatternReportStatusMessage = antipatternReportStatusMessage;
         return this;
@@ -46,6 +49,7 @@ public class AssessmentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastAnalyzedTimestamp")
     public OffsetDateTime lastAnalyzedTimestamp;
+
     public AssessmentSummary withLastAnalyzedTimestamp(OffsetDateTime lastAnalyzedTimestamp) {
         this.lastAnalyzedTimestamp = lastAnalyzedTimestamp;
         return this;
@@ -54,6 +58,7 @@ public class AssessmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listAntipatternSeveritySummary")
     public AntipatternSeveritySummary[] listAntipatternSeveritySummary;
+
     public AssessmentSummary withListAntipatternSeveritySummary(AntipatternSeveritySummary[] listAntipatternSeveritySummary) {
         this.listAntipatternSeveritySummary = listAntipatternSeveritySummary;
         return this;
@@ -62,6 +67,7 @@ public class AssessmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listApplicationComponentStatusSummary")
     public ApplicationComponentStatusSummary[] listApplicationComponentStatusSummary;
+
     public AssessmentSummary withListApplicationComponentStatusSummary(ApplicationComponentStatusSummary[] listApplicationComponentStatusSummary) {
         this.listApplicationComponentStatusSummary = listApplicationComponentStatusSummary;
         return this;
@@ -70,6 +76,7 @@ public class AssessmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listApplicationComponentStrategySummary")
     public StrategySummary[] listApplicationComponentStrategySummary;
+
     public AssessmentSummary withListApplicationComponentStrategySummary(StrategySummary[] listApplicationComponentStrategySummary) {
         this.listApplicationComponentStrategySummary = listApplicationComponentStrategySummary;
         return this;
@@ -78,6 +85,7 @@ public class AssessmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listApplicationComponentSummary")
     public ApplicationComponentSummary[] listApplicationComponentSummary;
+
     public AssessmentSummary withListApplicationComponentSummary(ApplicationComponentSummary[] listApplicationComponentSummary) {
         this.listApplicationComponentSummary = listApplicationComponentSummary;
         return this;
@@ -86,6 +94,7 @@ public class AssessmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listServerStatusSummary")
     public ServerStatusSummary[] listServerStatusSummary;
+
     public AssessmentSummary withListServerStatusSummary(ServerStatusSummary[] listServerStatusSummary) {
         this.listServerStatusSummary = listServerStatusSummary;
         return this;
@@ -94,6 +103,7 @@ public class AssessmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listServerStrategySummary")
     public StrategySummary[] listServerStrategySummary;
+
     public AssessmentSummary withListServerStrategySummary(StrategySummary[] listServerStrategySummary) {
         this.listServerStrategySummary = listServerStrategySummary;
         return this;
@@ -102,9 +112,11 @@ public class AssessmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listServerSummary")
     public ServerSummary[] listServerSummary;
+
     public AssessmentSummary withListServerSummary(ServerSummary[] listServerSummary) {
         this.listServerSummary = listServerSummary;
         return this;
     }
     
+    public AssessmentSummary(){}
 }

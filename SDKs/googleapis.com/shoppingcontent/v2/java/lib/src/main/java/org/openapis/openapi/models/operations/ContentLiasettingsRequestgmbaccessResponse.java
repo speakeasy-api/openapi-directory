@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ContentLiasettingsRequestgmbaccessResponse {
     
     public String contentType;
+
     public ContentLiasettingsRequestgmbaccessResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ContentLiasettingsRequestgmbaccessResponse {
      */
     
     public org.openapis.openapi.models.shared.LiasettingsRequestGmbAccessResponse liasettingsRequestGmbAccessResponse;
+
     public ContentLiasettingsRequestgmbaccessResponse withLiasettingsRequestGmbAccessResponse(org.openapis.openapi.models.shared.LiasettingsRequestGmbAccessResponse liasettingsRequestGmbAccessResponse) {
         this.liasettingsRequestGmbAccessResponse = liasettingsRequestGmbAccessResponse;
         return this;
@@ -26,6 +29,7 @@ public class ContentLiasettingsRequestgmbaccessResponse {
     
     
     public Integer statusCode;
+
     public ContentLiasettingsRequestgmbaccessResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ContentLiasettingsRequestgmbaccessResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ContentLiasettingsRequestgmbaccessResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ContentLiasettingsRequestgmbaccessResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -21,6 +21,7 @@ public class HubInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public HubInfo withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -28,6 +29,7 @@ public class HubInfo {
     
     @JsonProperty("HubArn")
     public String hubArn;
+
     public HubInfo withHubArn(String hubArn) {
         this.hubArn = hubArn;
         return this;
@@ -36,6 +38,7 @@ public class HubInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HubDescription")
     public String hubDescription;
+
     public HubInfo withHubDescription(String hubDescription) {
         this.hubDescription = hubDescription;
         return this;
@@ -44,6 +47,7 @@ public class HubInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HubDisplayName")
     public String hubDisplayName;
+
     public HubInfo withHubDisplayName(String hubDisplayName) {
         this.hubDisplayName = hubDisplayName;
         return this;
@@ -51,6 +55,7 @@ public class HubInfo {
     
     @JsonProperty("HubName")
     public String hubName;
+
     public HubInfo withHubName(String hubName) {
         this.hubName = hubName;
         return this;
@@ -59,6 +64,7 @@ public class HubInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HubSearchKeywords")
     public String[] hubSearchKeywords;
+
     public HubInfo withHubSearchKeywords(String[] hubSearchKeywords) {
         this.hubSearchKeywords = hubSearchKeywords;
         return this;
@@ -66,6 +72,7 @@ public class HubInfo {
     
     @JsonProperty("HubStatus")
     public HubStatusEnum hubStatus;
+
     public HubInfo withHubStatus(HubStatusEnum hubStatus) {
         this.hubStatus = hubStatus;
         return this;
@@ -75,9 +82,17 @@ public class HubInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public HubInfo withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
     }
     
+    public HubInfo(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("HubArn") String hubArn, @JsonProperty("HubName") String hubName, @JsonProperty("HubStatus") HubStatusEnum hubStatus, @JsonProperty("LastModifiedTime") OffsetDateTime lastModifiedTime) {
+        this.creationTime = creationTime;
+        this.hubArn = hubArn;
+        this.hubName = hubName;
+        this.hubStatus = hubStatus;
+        this.lastModifiedTime = lastModifiedTime;
+  }
 }

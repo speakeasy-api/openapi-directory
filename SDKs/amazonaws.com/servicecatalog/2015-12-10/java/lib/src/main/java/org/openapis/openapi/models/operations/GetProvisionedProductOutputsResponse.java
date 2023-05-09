@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetProvisionedProductOutputsResponse {
     
     public String contentType;
+
     public GetProvisionedProductOutputsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetProvisionedProductOutputsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetProvisionedProductOutputsOutput getProvisionedProductOutputsOutput;
+
     public GetProvisionedProductOutputsResponse withGetProvisionedProductOutputsOutput(org.openapis.openapi.models.shared.GetProvisionedProductOutputsOutput getProvisionedProductOutputsOutput) {
         this.getProvisionedProductOutputsOutput = getProvisionedProductOutputsOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetProvisionedProductOutputsResponse {
      */
     
     public Object invalidParametersException;
+
     public GetProvisionedProductOutputsResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -36,6 +40,7 @@ public class GetProvisionedProductOutputsResponse {
     
     
     public Integer statusCode;
+
     public GetProvisionedProductOutputsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetProvisionedProductOutputsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetProvisionedProductOutputsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class GetProvisionedProductOutputsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetProvisionedProductOutputsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetProvisionedProductOutputsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

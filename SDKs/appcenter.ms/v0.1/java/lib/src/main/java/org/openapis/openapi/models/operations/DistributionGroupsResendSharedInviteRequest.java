@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DistributionGroupsResendSharedInviteRequest {
@@ -12,6 +13,7 @@ public class DistributionGroupsResendSharedInviteRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public DistributionGroupsResendSharedInviteRequestBody requestBody;
+
     public DistributionGroupsResendSharedInviteRequest withRequestBody(DistributionGroupsResendSharedInviteRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class DistributionGroupsResendSharedInviteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=distribution_group_name")
     public String distributionGroupName;
+
     public DistributionGroupsResendSharedInviteRequest withDistributionGroupName(String distributionGroupName) {
         this.distributionGroupName = distributionGroupName;
         return this;
@@ -32,9 +35,15 @@ public class DistributionGroupsResendSharedInviteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
     public String orgName;
+
     public DistributionGroupsResendSharedInviteRequest withOrgName(String orgName) {
         this.orgName = orgName;
         return this;
     }
     
+    public DistributionGroupsResendSharedInviteRequest(@JsonProperty("RequestBody") DistributionGroupsResendSharedInviteRequestBody requestBody, @JsonProperty("distribution_group_name") String distributionGroupName, @JsonProperty("org_name") String orgName) {
+        this.requestBody = requestBody;
+        this.distributionGroupName = distributionGroupName;
+        this.orgName = orgName;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateMissionProfileResponse {
     
     public String contentType;
+
     public CreateMissionProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateMissionProfileResponse {
      */
     
     public Object dependencyException;
+
     public CreateMissionProfileResponse withDependencyException(Object dependencyException) {
         this.dependencyException = dependencyException;
         return this;
@@ -29,6 +32,7 @@ public class CreateMissionProfileResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateMissionProfileResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class CreateMissionProfileResponse {
      */
     
     public org.openapis.openapi.models.shared.MissionProfileIdResponse missionProfileIdResponse;
+
     public CreateMissionProfileResponse withMissionProfileIdResponse(org.openapis.openapi.models.shared.MissionProfileIdResponse missionProfileIdResponse) {
         this.missionProfileIdResponse = missionProfileIdResponse;
         return this;
@@ -46,6 +51,7 @@ public class CreateMissionProfileResponse {
     
     
     public Integer statusCode;
+
     public CreateMissionProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateMissionProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateMissionProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CreateMissionProfileResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateMissionProfileResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public CreateMissionProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

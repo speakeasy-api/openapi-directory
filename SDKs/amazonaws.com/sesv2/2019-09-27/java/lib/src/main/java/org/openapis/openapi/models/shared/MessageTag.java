@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MessageTag {
     @JsonProperty("Name")
     public String name;
+
     public MessageTag withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class MessageTag {
     
     @JsonProperty("Value")
     public String value;
+
     public MessageTag withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public MessageTag(@JsonProperty("Name") String name, @JsonProperty("Value") String value) {
+        this.name = name;
+        this.value = value;
+  }
 }

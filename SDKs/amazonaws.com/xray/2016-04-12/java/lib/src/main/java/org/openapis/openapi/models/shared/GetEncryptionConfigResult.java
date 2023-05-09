@@ -15,9 +15,11 @@ public class GetEncryptionConfigResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionConfig")
     public EncryptionConfig encryptionConfig;
+
     public GetEncryptionConfigResult withEncryptionConfig(EncryptionConfig encryptionConfig) {
         this.encryptionConfig = encryptionConfig;
         return this;
     }
     
+    public GetEncryptionConfigResult(){}
 }

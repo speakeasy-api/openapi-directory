@@ -12,6 +12,7 @@ public class ListHITsForQualificationTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListHITsForQualificationTypeRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListHITsForQualificationTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListHITsForQualificationTypeRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,9 +29,13 @@ public class ListHITsForQualificationTypeRequest {
     
     @JsonProperty("QualificationTypeId")
     public String qualificationTypeId;
+
     public ListHITsForQualificationTypeRequest withQualificationTypeId(String qualificationTypeId) {
         this.qualificationTypeId = qualificationTypeId;
         return this;
     }
     
+    public ListHITsForQualificationTypeRequest(@JsonProperty("QualificationTypeId") String qualificationTypeId) {
+        this.qualificationTypeId = qualificationTypeId;
+  }
 }

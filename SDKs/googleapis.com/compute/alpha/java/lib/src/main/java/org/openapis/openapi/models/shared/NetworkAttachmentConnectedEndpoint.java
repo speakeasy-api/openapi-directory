@@ -18,6 +18,7 @@ public class NetworkAttachmentConnectedEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public NetworkAttachmentConnectedEndpoint withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -29,17 +30,19 @@ public class NetworkAttachmentConnectedEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectIdOrNum")
     public String projectIdOrNum;
+
     public NetworkAttachmentConnectedEndpoint withProjectIdOrNum(String projectIdOrNum) {
         this.projectIdOrNum = projectIdOrNum;
         return this;
     }
     
     /**
-     * Alias IP ranges from the same subnetwork
+     * Alias IP ranges from the same subnetwork.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondaryIpCidrRanges")
     public String[] secondaryIpCidrRanges;
+
     public NetworkAttachmentConnectedEndpoint withSecondaryIpCidrRanges(String[] secondaryIpCidrRanges) {
         this.secondaryIpCidrRanges = secondaryIpCidrRanges;
         return this;
@@ -51,6 +54,7 @@ public class NetworkAttachmentConnectedEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public NetworkAttachmentConnectedEndpointStatusEnum status;
+
     public NetworkAttachmentConnectedEndpoint withStatus(NetworkAttachmentConnectedEndpointStatusEnum status) {
         this.status = status;
         return this;
@@ -62,9 +66,11 @@ public class NetworkAttachmentConnectedEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetwork")
     public String subnetwork;
+
     public NetworkAttachmentConnectedEndpoint withSubnetwork(String subnetwork) {
         this.subnetwork = subnetwork;
         return this;
     }
     
+    public NetworkAttachmentConnectedEndpoint(){}
 }

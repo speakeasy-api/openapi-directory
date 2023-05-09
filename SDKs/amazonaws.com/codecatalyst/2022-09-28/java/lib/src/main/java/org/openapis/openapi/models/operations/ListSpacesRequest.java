@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSpacesRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ListSpacesRequestBody requestBody;
+
     public ListSpacesRequest withRequestBody(ListSpacesRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class ListSpacesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public ListSpacesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListSpacesRequest(@JsonProperty("RequestBody") ListSpacesRequestBody requestBody) {
+        this.requestBody = requestBody;
+  }
 }

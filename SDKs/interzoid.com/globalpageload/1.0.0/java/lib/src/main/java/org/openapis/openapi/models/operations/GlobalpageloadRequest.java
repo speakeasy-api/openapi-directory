@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GlobalpageloadRequest {
@@ -12,6 +13,7 @@ public class GlobalpageloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
     public String license;
+
     public GlobalpageloadRequest withLicense(String license) {
         this.license = license;
         return this;
@@ -22,6 +24,7 @@ public class GlobalpageloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=origin")
     public String origin;
+
     public GlobalpageloadRequest withOrigin(String origin) {
         this.origin = origin;
         return this;
@@ -32,9 +35,15 @@ public class GlobalpageloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
     public String url;
+
     public GlobalpageloadRequest withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GlobalpageloadRequest(@JsonProperty("license") String license, @JsonProperty("origin") String origin, @JsonProperty("url") String url) {
+        this.license = license;
+        this.origin = origin;
+        this.url = url;
+  }
 }

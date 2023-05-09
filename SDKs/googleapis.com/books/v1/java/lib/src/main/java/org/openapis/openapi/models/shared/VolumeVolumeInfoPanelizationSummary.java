@@ -15,6 +15,7 @@ public class VolumeVolumeInfoPanelizationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containsEpubBubbles")
     public Boolean containsEpubBubbles;
+
     public VolumeVolumeInfoPanelizationSummary withContainsEpubBubbles(Boolean containsEpubBubbles) {
         this.containsEpubBubbles = containsEpubBubbles;
         return this;
@@ -23,6 +24,7 @@ public class VolumeVolumeInfoPanelizationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containsImageBubbles")
     public Boolean containsImageBubbles;
+
     public VolumeVolumeInfoPanelizationSummary withContainsImageBubbles(Boolean containsImageBubbles) {
         this.containsImageBubbles = containsImageBubbles;
         return this;
@@ -31,6 +33,7 @@ public class VolumeVolumeInfoPanelizationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("epubBubbleVersion")
     public String epubBubbleVersion;
+
     public VolumeVolumeInfoPanelizationSummary withEpubBubbleVersion(String epubBubbleVersion) {
         this.epubBubbleVersion = epubBubbleVersion;
         return this;
@@ -39,9 +42,11 @@ public class VolumeVolumeInfoPanelizationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageBubbleVersion")
     public String imageBubbleVersion;
+
     public VolumeVolumeInfoPanelizationSummary withImageBubbleVersion(String imageBubbleVersion) {
         this.imageBubbleVersion = imageBubbleVersion;
         return this;
     }
     
+    public VolumeVolumeInfoPanelizationSummary(){}
 }

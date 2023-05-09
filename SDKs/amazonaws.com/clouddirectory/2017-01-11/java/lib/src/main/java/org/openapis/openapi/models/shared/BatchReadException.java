@@ -15,6 +15,7 @@ public class BatchReadException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public BatchReadException withMessage(String message) {
         this.message = message;
         return this;
@@ -23,9 +24,11 @@ public class BatchReadException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public BatchReadExceptionTypeEnum type;
+
     public BatchReadException withType(BatchReadExceptionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public BatchReadException(){}
 }

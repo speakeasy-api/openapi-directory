@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class HashtagHistoryRequest {
@@ -12,9 +13,13 @@ public class HashtagHistoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hashtag")
     public String hashtag;
+
     public HashtagHistoryRequest withHashtag(String hashtag) {
         this.hashtag = hashtag;
         return this;
     }
     
+    public HashtagHistoryRequest(@JsonProperty("hashtag") String hashtag) {
+        this.hashtag = hashtag;
+  }
 }

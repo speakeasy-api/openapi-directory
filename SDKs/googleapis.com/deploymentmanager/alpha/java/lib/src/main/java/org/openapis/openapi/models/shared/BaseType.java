@@ -18,6 +18,7 @@ public class BaseType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectionOverrides")
     public CollectionOverride[] collectionOverrides;
+
     public BaseType withCollectionOverrides(CollectionOverride[] collectionOverrides) {
         this.collectionOverrides = collectionOverrides;
         return this;
@@ -29,6 +30,7 @@ public class BaseType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credential")
     public Credential credential;
+
     public BaseType withCredential(Credential credential) {
         this.credential = credential;
         return this;
@@ -40,6 +42,7 @@ public class BaseType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("descriptorUrl")
     public String descriptorUrl;
+
     public BaseType withDescriptorUrl(String descriptorUrl) {
         this.descriptorUrl = descriptorUrl;
         return this;
@@ -51,9 +54,11 @@ public class BaseType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public Options options;
+
     public BaseType withOptions(Options options) {
         this.options = options;
         return this;
     }
     
+    public BaseType(){}
 }

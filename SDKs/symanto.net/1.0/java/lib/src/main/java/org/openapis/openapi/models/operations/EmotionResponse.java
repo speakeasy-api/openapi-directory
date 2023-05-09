@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EmotionResponse {
     
     public String contentType;
+
     public EmotionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class EmotionResponse {
      */
     
     public org.openapis.openapi.models.shared.PostPredicted[] predictionResults;
+
     public EmotionResponse withPredictionResults(org.openapis.openapi.models.shared.PostPredicted[] predictionResults) {
         this.predictionResults = predictionResults;
         return this;
@@ -26,6 +29,7 @@ public class EmotionResponse {
     
     
     public Integer statusCode;
+
     public EmotionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class EmotionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EmotionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class EmotionResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationErrors validationErrors;
+
     public EmotionResponse withValidationErrors(org.openapis.openapi.models.shared.ValidationErrors validationErrors) {
         this.validationErrors = validationErrors;
         return this;
     }
     
+    public EmotionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

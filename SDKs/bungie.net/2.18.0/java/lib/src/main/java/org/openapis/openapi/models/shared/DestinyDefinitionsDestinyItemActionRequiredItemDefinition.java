@@ -15,6 +15,7 @@ public class DestinyDefinitionsDestinyItemActionRequiredItemDefinition {
      */
     
     public Integer count;
+
     public DestinyDefinitionsDestinyItemActionRequiredItemDefinition withCount(Integer count) {
         this.count = count;
         return this;
@@ -25,6 +26,7 @@ public class DestinyDefinitionsDestinyItemActionRequiredItemDefinition {
      */
     
     public Boolean deleteOnAction;
+
     public DestinyDefinitionsDestinyItemActionRequiredItemDefinition withDeleteOnAction(Boolean deleteOnAction) {
         this.deleteOnAction = deleteOnAction;
         return this;
@@ -35,9 +37,11 @@ public class DestinyDefinitionsDestinyItemActionRequiredItemDefinition {
      */
     
     public Long itemHash;
+
     public DestinyDefinitionsDestinyItemActionRequiredItemDefinition withItemHash(Long itemHash) {
         this.itemHash = itemHash;
         return this;
     }
     
+    public DestinyDefinitionsDestinyItemActionRequiredItemDefinition(){}
 }

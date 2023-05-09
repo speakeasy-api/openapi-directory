@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RotateTunnelAccessTokenRequest {
     @JsonProperty("clientMode")
     public ClientModeEnum clientMode;
+
     public RotateTunnelAccessTokenRequest withClientMode(ClientModeEnum clientMode) {
         this.clientMode = clientMode;
         return this;
@@ -22,6 +23,7 @@ public class RotateTunnelAccessTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationConfig")
     public DestinationConfig destinationConfig;
+
     public RotateTunnelAccessTokenRequest withDestinationConfig(DestinationConfig destinationConfig) {
         this.destinationConfig = destinationConfig;
         return this;
@@ -29,9 +31,14 @@ public class RotateTunnelAccessTokenRequest {
     
     @JsonProperty("tunnelId")
     public String tunnelId;
+
     public RotateTunnelAccessTokenRequest withTunnelId(String tunnelId) {
         this.tunnelId = tunnelId;
         return this;
     }
     
+    public RotateTunnelAccessTokenRequest(@JsonProperty("clientMode") ClientModeEnum clientMode, @JsonProperty("tunnelId") String tunnelId) {
+        this.clientMode = clientMode;
+        this.tunnelId = tunnelId;
+  }
 }

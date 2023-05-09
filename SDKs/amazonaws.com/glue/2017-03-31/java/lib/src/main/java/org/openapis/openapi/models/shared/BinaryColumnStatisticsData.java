@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BinaryColumnStatisticsData {
     @JsonProperty("AverageLength")
     public Double averageLength;
+
     public BinaryColumnStatisticsData withAverageLength(Double averageLength) {
         this.averageLength = averageLength;
         return this;
@@ -19,6 +20,7 @@ public class BinaryColumnStatisticsData {
     
     @JsonProperty("MaximumLength")
     public Long maximumLength;
+
     public BinaryColumnStatisticsData withMaximumLength(Long maximumLength) {
         this.maximumLength = maximumLength;
         return this;
@@ -26,9 +28,15 @@ public class BinaryColumnStatisticsData {
     
     @JsonProperty("NumberOfNulls")
     public Long numberOfNulls;
+
     public BinaryColumnStatisticsData withNumberOfNulls(Long numberOfNulls) {
         this.numberOfNulls = numberOfNulls;
         return this;
     }
     
+    public BinaryColumnStatisticsData(@JsonProperty("AverageLength") Double averageLength, @JsonProperty("MaximumLength") Long maximumLength, @JsonProperty("NumberOfNulls") Long numberOfNulls) {
+        this.averageLength = averageLength;
+        this.maximumLength = maximumLength;
+        this.numberOfNulls = numberOfNulls;
+  }
 }

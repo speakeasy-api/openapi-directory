@@ -15,6 +15,7 @@ public class ListUserProfilesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListUserProfilesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListUserProfilesResult {
     
     @JsonProperty("userProfiles")
     public UserProfileSummary[] userProfiles;
+
     public ListUserProfilesResult withUserProfiles(UserProfileSummary[] userProfiles) {
         this.userProfiles = userProfiles;
         return this;
     }
     
+    public ListUserProfilesResult(@JsonProperty("userProfiles") UserProfileSummary[] userProfiles) {
+        this.userProfiles = userProfiles;
+  }
 }

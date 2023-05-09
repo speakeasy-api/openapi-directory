@@ -15,6 +15,7 @@ public class PatientManagement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public FhirCondition condition;
+
     public PatientManagement withCondition(FhirCondition condition) {
         this.condition = condition;
         return this;
@@ -23,6 +24,7 @@ public class PatientManagement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encounters")
     public FhirEncounter[] encounters;
+
     public PatientManagement withEncounters(FhirEncounter[] encounters) {
         this.encounters = encounters;
         return this;
@@ -31,6 +33,7 @@ public class PatientManagement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupCode")
     public String groupCode;
+
     public PatientManagement withGroupCode(String groupCode) {
         this.groupCode = groupCode;
         return this;
@@ -39,6 +42,7 @@ public class PatientManagement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifier")
     public String identifier;
+
     public PatientManagement withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -47,6 +51,7 @@ public class PatientManagement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("observations")
     public FhirObservation[] observations;
+
     public PatientManagement withObservations(FhirObservation[] observations) {
         this.observations = observations;
         return this;
@@ -55,6 +60,7 @@ public class PatientManagement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patient")
     public FhirPatient patient;
+
     public PatientManagement withPatient(FhirPatient patient) {
         this.patient = patient;
         return this;
@@ -63,9 +69,11 @@ public class PatientManagement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("practitioners")
     public FhirPractitioner[] practitioners;
+
     public PatientManagement withPractitioners(FhirPractitioner[] practitioners) {
         this.practitioners = practitioners;
         return this;
     }
     
+    public PatientManagement(){}
 }

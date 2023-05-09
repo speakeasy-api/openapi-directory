@@ -18,6 +18,7 @@ public class AddConditionalFormatRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Integer index;
+
     public AddConditionalFormatRuleRequest withIndex(Integer index) {
         this.index = index;
         return this;
@@ -29,9 +30,11 @@ public class AddConditionalFormatRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rule")
     public ConditionalFormatRule rule;
+
     public AddConditionalFormatRuleRequest withRule(ConditionalFormatRule rule) {
         this.rule = rule;
         return this;
     }
     
+    public AddConditionalFormatRuleRequest(){}
 }

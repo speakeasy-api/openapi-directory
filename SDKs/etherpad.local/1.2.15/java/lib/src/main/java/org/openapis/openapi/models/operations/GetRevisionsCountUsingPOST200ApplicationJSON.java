@@ -15,6 +15,7 @@ public class GetRevisionsCountUsingPOST200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public GetRevisionsCountUsingPOST200ApplicationJSON withCode(Long code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class GetRevisionsCountUsingPOST200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public GetRevisionsCountUsingPOST200ApplicationJSONData data;
+
     public GetRevisionsCountUsingPOST200ApplicationJSON withData(GetRevisionsCountUsingPOST200ApplicationJSONData data) {
         this.data = data;
         return this;
@@ -31,9 +33,11 @@ public class GetRevisionsCountUsingPOST200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GetRevisionsCountUsingPOST200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GetRevisionsCountUsingPOST200ApplicationJSON(){}
 }

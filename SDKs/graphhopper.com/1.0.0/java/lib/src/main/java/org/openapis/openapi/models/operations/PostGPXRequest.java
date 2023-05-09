@@ -12,6 +12,7 @@ public class PostGPXRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gps_accuracy")
     public Long gpsAccuracy;
+
     public PostGPXRequest withGpsAccuracy(Long gpsAccuracy) {
         this.gpsAccuracy = gpsAccuracy;
         return this;
@@ -22,9 +23,11 @@ public class PostGPXRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicle")
     public String vehicle;
+
     public PostGPXRequest withVehicle(String vehicle) {
         this.vehicle = vehicle;
         return this;
     }
     
+    public PostGPXRequest(){}
 }

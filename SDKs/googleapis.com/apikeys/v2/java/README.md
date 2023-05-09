@@ -16,12 +16,11 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.ApikeysKeysLookupKeySecurityOption1;
-import org.openapis.openapi.models.operations.ApikeysKeysLookupKeySecurityOption2;
-import org.openapis.openapi.models.operations.ApikeysKeysLookupKeySecurity;
 import org.openapis.openapi.models.operations.ApikeysKeysLookupKeyRequest;
 import org.openapis.openapi.models.operations.ApikeysKeysLookupKeyResponse;
+import org.openapis.openapi.models.operations.ApikeysKeysLookupKeySecurity;
+import org.openapis.openapi.models.operations.ApikeysKeysLookupKeySecurityOption1;
+import org.openapis.openapi.models.operations.ApikeysKeysLookupKeySecurityOption2;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -32,9 +31,9 @@ public class Application {
                 .build();
 
             ApikeysKeysLookupKeyRequest req = new ApikeysKeysLookupKeyRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 accessToken = "provident";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "quibusdam";
                 fields = "unde";
                 key = "nulla";
@@ -44,21 +43,23 @@ public class Application {
                 quotaUser = "vel";
                 uploadType = "error";
                 uploadProtocol = "deserunt";
-            }}            
+            }};            
 
             ApikeysKeysLookupKeyResponse res = sdk.keys.apikeysKeysLookupKey(req, new ApikeysKeysLookupKeySecurity() {{
-                option1 = new ApikeysKeysLookupKeySecurityOption1() {{
+                option1 = new ApikeysKeysLookupKeySecurityOption1("suscipit", "iure") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.v2LookupKeyResponse.isPresent()) {
+            if (res.v2LookupKeyResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -66,19 +67,19 @@ public class Application {
 ## Available Resources and Operations
 
 
-### keys
+### [keys](docs/keys/README.md)
 
-* `apikeysKeysLookupKey` - Find the parent project and resource name of the API key that matches the key string in the request. If the API key has been purged, resource name will not be set. The service account must have the `apikeys.keys.lookup` permission on the parent project.
+* [apikeysKeysLookupKey](docs/keys/README.md#apikeyskeyslookupkey) - Find the parent project and resource name of the API key that matches the key string in the request. If the API key has been purged, resource name will not be set. The service account must have the `apikeys.keys.lookup` permission on the parent project.
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `apikeysProjectsLocationsKeysCreate` - Creates a new API key. NOTE: Key is a global resource; hence the only supported value for location is `global`.
-* `apikeysProjectsLocationsKeysDelete` - Deletes an API key. Deleted key can be retrieved within 30 days of deletion. Afterward, key will be purged from the project. NOTE: Key is a global resource; hence the only supported value for location is `global`.
-* `apikeysProjectsLocationsKeysGet` - Gets the metadata for an API key. The key string of the API key isn't included in the response. NOTE: Key is a global resource; hence the only supported value for location is `global`.
-* `apikeysProjectsLocationsKeysGetKeyString` - Get the key string for an API key. NOTE: Key is a global resource; hence the only supported value for location is `global`.
-* `apikeysProjectsLocationsKeysList` - Lists the API keys owned by a project. The key string of the API key isn't included in the response. NOTE: Key is a global resource; hence the only supported value for location is `global`.
-* `apikeysProjectsLocationsKeysPatch` - Patches the modifiable fields of an API key. The key string of the API key isn't included in the response. NOTE: Key is a global resource; hence the only supported value for location is `global`.
-* `apikeysProjectsLocationsKeysUndelete` - Undeletes an API key which was deleted within 30 days. NOTE: Key is a global resource; hence the only supported value for location is `global`.
+* [apikeysProjectsLocationsKeysCreate](docs/projects/README.md#apikeysprojectslocationskeyscreate) - Creates a new API key. NOTE: Key is a global resource; hence the only supported value for location is `global`.
+* [apikeysProjectsLocationsKeysDelete](docs/projects/README.md#apikeysprojectslocationskeysdelete) - Deletes an API key. Deleted key can be retrieved within 30 days of deletion. Afterward, key will be purged from the project. NOTE: Key is a global resource; hence the only supported value for location is `global`.
+* [apikeysProjectsLocationsKeysGet](docs/projects/README.md#apikeysprojectslocationskeysget) - Gets the metadata for an API key. The key string of the API key isn't included in the response. NOTE: Key is a global resource; hence the only supported value for location is `global`.
+* [apikeysProjectsLocationsKeysGetKeyString](docs/projects/README.md#apikeysprojectslocationskeysgetkeystring) - Get the key string for an API key. NOTE: Key is a global resource; hence the only supported value for location is `global`.
+* [apikeysProjectsLocationsKeysList](docs/projects/README.md#apikeysprojectslocationskeyslist) - Lists the API keys owned by a project. The key string of the API key isn't included in the response. NOTE: Key is a global resource; hence the only supported value for location is `global`.
+* [apikeysProjectsLocationsKeysPatch](docs/projects/README.md#apikeysprojectslocationskeyspatch) - Patches the modifiable fields of an API key. The key string of the API key isn't included in the response. NOTE: Key is a global resource; hence the only supported value for location is `global`.
+* [apikeysProjectsLocationsKeysUndelete](docs/projects/README.md#apikeysprojectslocationskeysundelete) - Undeletes an API key which was deleted within 30 days. NOTE: Key is a global resource; hence the only supported value for location is `global`.
 <!-- End SDK Available Operations -->
 
 ### Maturity

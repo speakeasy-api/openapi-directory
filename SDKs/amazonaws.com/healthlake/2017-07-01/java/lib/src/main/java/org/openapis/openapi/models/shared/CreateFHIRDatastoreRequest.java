@@ -12,6 +12,7 @@ public class CreateFHIRDatastoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateFHIRDatastoreRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -20,6 +21,7 @@ public class CreateFHIRDatastoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatastoreName")
     public String datastoreName;
+
     public CreateFHIRDatastoreRequest withDatastoreName(String datastoreName) {
         this.datastoreName = datastoreName;
         return this;
@@ -27,6 +29,7 @@ public class CreateFHIRDatastoreRequest {
     
     @JsonProperty("DatastoreTypeVersion")
     public FHIRVersionEnum datastoreTypeVersion;
+
     public CreateFHIRDatastoreRequest withDatastoreTypeVersion(FHIRVersionEnum datastoreTypeVersion) {
         this.datastoreTypeVersion = datastoreTypeVersion;
         return this;
@@ -35,6 +38,7 @@ public class CreateFHIRDatastoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreloadDataConfig")
     public PreloadDataConfig preloadDataConfig;
+
     public CreateFHIRDatastoreRequest withPreloadDataConfig(PreloadDataConfig preloadDataConfig) {
         this.preloadDataConfig = preloadDataConfig;
         return this;
@@ -43,6 +47,7 @@ public class CreateFHIRDatastoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SseConfiguration")
     public SseConfiguration sseConfiguration;
+
     public CreateFHIRDatastoreRequest withSseConfiguration(SseConfiguration sseConfiguration) {
         this.sseConfiguration = sseConfiguration;
         return this;
@@ -51,9 +56,13 @@ public class CreateFHIRDatastoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateFHIRDatastoreRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateFHIRDatastoreRequest(@JsonProperty("DatastoreTypeVersion") FHIRVersionEnum datastoreTypeVersion) {
+        this.datastoreTypeVersion = datastoreTypeVersion;
+  }
 }

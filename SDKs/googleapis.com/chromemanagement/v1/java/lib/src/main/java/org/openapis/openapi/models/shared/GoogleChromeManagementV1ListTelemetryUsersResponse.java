@@ -18,6 +18,7 @@ public class GoogleChromeManagementV1ListTelemetryUsersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleChromeManagementV1ListTelemetryUsersResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleChromeManagementV1ListTelemetryUsersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telemetryUsers")
     public GoogleChromeManagementV1TelemetryUser[] telemetryUsers;
+
     public GoogleChromeManagementV1ListTelemetryUsersResponse withTelemetryUsers(GoogleChromeManagementV1TelemetryUser[] telemetryUsers) {
         this.telemetryUsers = telemetryUsers;
         return this;
     }
     
+    public GoogleChromeManagementV1ListTelemetryUsersResponse(){}
 }

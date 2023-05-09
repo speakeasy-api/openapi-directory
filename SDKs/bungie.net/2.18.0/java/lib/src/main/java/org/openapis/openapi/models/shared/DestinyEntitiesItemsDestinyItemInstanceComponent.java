@@ -17,6 +17,7 @@ public class DestinyEntitiesItemsDestinyItemInstanceComponent {
      */
     
     public DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnum breakerType;
+
     public DestinyEntitiesItemsDestinyItemInstanceComponent withBreakerType(DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnum breakerType) {
         this.breakerType = breakerType;
         return this;
@@ -27,6 +28,7 @@ public class DestinyEntitiesItemsDestinyItemInstanceComponent {
      */
     
     public Long breakerTypeHash;
+
     public DestinyEntitiesItemsDestinyItemInstanceComponent withBreakerTypeHash(Long breakerTypeHash) {
         this.breakerTypeHash = breakerTypeHash;
         return this;
@@ -37,6 +39,7 @@ public class DestinyEntitiesItemsDestinyItemInstanceComponent {
      */
     
     public Boolean canEquip;
+
     public DestinyEntitiesItemsDestinyItemInstanceComponent withCanEquip(Boolean canEquip) {
         this.canEquip = canEquip;
         return this;
@@ -47,6 +50,7 @@ public class DestinyEntitiesItemsDestinyItemInstanceComponent {
      */
     
     public Integer cannotEquipReason;
+
     public DestinyEntitiesItemsDestinyItemInstanceComponent withCannotEquipReason(Integer cannotEquipReason) {
         this.cannotEquipReason = cannotEquipReason;
         return this;
@@ -57,6 +61,7 @@ public class DestinyEntitiesItemsDestinyItemInstanceComponent {
      */
     
     public Integer damageType;
+
     public DestinyEntitiesItemsDestinyItemInstanceComponent withDamageType(Integer damageType) {
         this.damageType = damageType;
         return this;
@@ -67,6 +72,7 @@ public class DestinyEntitiesItemsDestinyItemInstanceComponent {
      */
     
     public Long damageTypeHash;
+
     public DestinyEntitiesItemsDestinyItemInstanceComponent withDamageTypeHash(Long damageTypeHash) {
         this.damageTypeHash = damageTypeHash;
         return this;
@@ -77,6 +83,7 @@ public class DestinyEntitiesItemsDestinyItemInstanceComponent {
      */
     
     public DestinyEntitiesItemsDestinyItemInstanceComponentEnergy energy;
+
     public DestinyEntitiesItemsDestinyItemInstanceComponent withEnergy(DestinyEntitiesItemsDestinyItemInstanceComponentEnergy energy) {
         this.energy = energy;
         return this;
@@ -87,6 +94,7 @@ public class DestinyEntitiesItemsDestinyItemInstanceComponent {
      */
     
     public Integer equipRequiredLevel;
+
     public DestinyEntitiesItemsDestinyItemInstanceComponent withEquipRequiredLevel(Integer equipRequiredLevel) {
         this.equipRequiredLevel = equipRequiredLevel;
         return this;
@@ -97,6 +105,7 @@ public class DestinyEntitiesItemsDestinyItemInstanceComponent {
      */
     
     public Boolean isEquipped;
+
     public DestinyEntitiesItemsDestinyItemInstanceComponent withIsEquipped(Boolean isEquipped) {
         this.isEquipped = isEquipped;
         return this;
@@ -107,6 +116,7 @@ public class DestinyEntitiesItemsDestinyItemInstanceComponent {
      */
     
     public Integer itemLevel;
+
     public DestinyEntitiesItemsDestinyItemInstanceComponent withItemLevel(Integer itemLevel) {
         this.itemLevel = itemLevel;
         return this;
@@ -117,6 +127,7 @@ public class DestinyEntitiesItemsDestinyItemInstanceComponent {
      */
     
     public DestinyEntitiesItemsDestinyItemInstanceComponentPrimaryStat primaryStat;
+
     public DestinyEntitiesItemsDestinyItemInstanceComponent withPrimaryStat(DestinyEntitiesItemsDestinyItemInstanceComponentPrimaryStat primaryStat) {
         this.primaryStat = primaryStat;
         return this;
@@ -127,6 +138,7 @@ public class DestinyEntitiesItemsDestinyItemInstanceComponent {
      */
     
     public Integer quality;
+
     public DestinyEntitiesItemsDestinyItemInstanceComponent withQuality(Integer quality) {
         this.quality = quality;
         return this;
@@ -138,9 +150,11 @@ public class DestinyEntitiesItemsDestinyItemInstanceComponent {
      */
     
     public Long[] unlockHashesRequiredToEquip;
+
     public DestinyEntitiesItemsDestinyItemInstanceComponent withUnlockHashesRequiredToEquip(Long[] unlockHashesRequiredToEquip) {
         this.unlockHashesRequiredToEquip = unlockHashesRequiredToEquip;
         return this;
     }
     
+    public DestinyEntitiesItemsDestinyItemInstanceComponent(){}
 }

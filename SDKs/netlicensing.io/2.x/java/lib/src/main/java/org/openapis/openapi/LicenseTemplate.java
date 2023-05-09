@@ -63,12 +63,10 @@ public class LicenseTemplate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateLicenseTemplateResponse res = new org.openapis.openapi.models.operations.CreateLicenseTemplateResponse() {{
+        org.openapis.openapi.models.operations.CreateLicenseTemplateResponse res = new org.openapis.openapi.models.operations.CreateLicenseTemplateResponse(contentType, httpRes.statusCode()) {{
             netlicensing = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -117,12 +115,10 @@ public class LicenseTemplate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteLicenseTemplateResponse res = new org.openapis.openapi.models.operations.DeleteLicenseTemplateResponse() {{
+        org.openapis.openapi.models.operations.DeleteLicenseTemplateResponse res = new org.openapis.openapi.models.operations.DeleteLicenseTemplateResponse(contentType, httpRes.statusCode()) {{
             netlicensing = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -165,12 +161,10 @@ public class LicenseTemplate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLicenseTemplateResponse res = new org.openapis.openapi.models.operations.GetLicenseTemplateResponse() {{
+        org.openapis.openapi.models.operations.GetLicenseTemplateResponse res = new org.openapis.openapi.models.operations.GetLicenseTemplateResponse(contentType, httpRes.statusCode()) {{
             netlicensing = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,10 +187,11 @@ public class LicenseTemplate {
     /**
      * List License Templates
      * Return a list of all License Templates for the current Vendor
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListLicenseTemplatesResponse listLicenseTemplates() throws Exception {
+    public org.openapis.openapi.models.operations.ListLicenseTemplatesResponse listLicenseTemplates(org.openapis.openapi.models.operations.ListLicenseTemplatesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/licensetemplate");
         
@@ -205,17 +200,16 @@ public class LicenseTemplate {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListLicenseTemplatesResponse res = new org.openapis.openapi.models.operations.ListLicenseTemplatesResponse() {{
+        org.openapis.openapi.models.operations.ListLicenseTemplatesResponse res = new org.openapis.openapi.models.operations.ListLicenseTemplatesResponse(contentType, httpRes.statusCode()) {{
             netlicensings = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -260,12 +254,10 @@ public class LicenseTemplate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateLicenseTemplateResponse res = new org.openapis.openapi.models.operations.UpdateLicenseTemplateResponse() {{
+        org.openapis.openapi.models.operations.UpdateLicenseTemplateResponse res = new org.openapis.openapi.models.operations.UpdateLicenseTemplateResponse(contentType, httpRes.statusCode()) {{
             netlicensing = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

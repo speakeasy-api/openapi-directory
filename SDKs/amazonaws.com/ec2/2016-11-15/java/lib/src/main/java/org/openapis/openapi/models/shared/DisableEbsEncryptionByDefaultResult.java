@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DisableEbsEncryptionByDefaultResult {
     
     public Boolean ebsEncryptionByDefault;
+
     public DisableEbsEncryptionByDefaultResult withEbsEncryptionByDefault(Boolean ebsEncryptionByDefault) {
         this.ebsEncryptionByDefault = ebsEncryptionByDefault;
         return this;
     }
     
+    public DisableEbsEncryptionByDefaultResult(){}
 }

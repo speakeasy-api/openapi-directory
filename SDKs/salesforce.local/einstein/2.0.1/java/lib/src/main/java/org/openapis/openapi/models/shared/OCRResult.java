@@ -18,6 +18,7 @@ public class OCRResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public Attributes attributes;
+
     public OCRResult withAttributes(Attributes attributes) {
         this.attributes = attributes;
         return this;
@@ -26,6 +27,7 @@ public class OCRResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boundingBox")
     public BoundingBox boundingBox;
+
     public OCRResult withBoundingBox(BoundingBox boundingBox) {
         this.boundingBox = boundingBox;
         return this;
@@ -37,6 +39,7 @@ public class OCRResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public OCRResult withLabel(String label) {
         this.label = label;
         return this;
@@ -48,9 +51,11 @@ public class OCRResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("probability")
     public Float probability;
+
     public OCRResult withProbability(Float probability) {
         this.probability = probability;
         return this;
     }
     
+    public OCRResult(){}
 }

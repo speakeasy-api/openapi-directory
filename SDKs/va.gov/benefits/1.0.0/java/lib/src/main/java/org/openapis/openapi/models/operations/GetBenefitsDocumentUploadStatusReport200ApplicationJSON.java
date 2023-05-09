@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetBenefitsDocumentUploadStatusReport200ApplicationJSON {
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.DocumentUploadStatus[] data;
+
     public GetBenefitsDocumentUploadStatusReport200ApplicationJSON withData(org.openapis.openapi.models.shared.DocumentUploadStatus[] data) {
         this.data = data;
         return this;
     }
     
+    public GetBenefitsDocumentUploadStatusReport200ApplicationJSON(@JsonProperty("data") org.openapis.openapi.models.shared.DocumentUploadStatus[] data) {
+        this.data = data;
+  }
 }

@@ -15,6 +15,7 @@ public class R53HostedZoneDeletionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public R53HostedZoneDeletionStateCodeEnum code;
+
     public R53HostedZoneDeletionState withCode(R53HostedZoneDeletionStateCodeEnum code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class R53HostedZoneDeletionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public R53HostedZoneDeletionState withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public R53HostedZoneDeletionState(){}
 }

@@ -18,6 +18,7 @@ public class Query {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distinctOn")
     public PropertyReference[] distinctOn;
+
     public Query withDistinctOn(PropertyReference[] distinctOn) {
         this.distinctOn = distinctOn;
         return this;
@@ -29,6 +30,7 @@ public class Query {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endCursor")
     public String endCursor;
+
     public Query withEndCursor(String endCursor) {
         this.endCursor = endCursor;
         return this;
@@ -40,6 +42,7 @@ public class Query {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public Filter filter;
+
     public Query withFilter(Filter filter) {
         this.filter = filter;
         return this;
@@ -51,6 +54,7 @@ public class Query {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public KindExpression[] kind;
+
     public Query withKind(KindExpression[] kind) {
         this.kind = kind;
         return this;
@@ -62,6 +66,7 @@ public class Query {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Integer limit;
+
     public Query withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -73,6 +78,7 @@ public class Query {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Integer offset;
+
     public Query withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -84,6 +90,7 @@ public class Query {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public PropertyOrder[] order;
+
     public Query withOrder(PropertyOrder[] order) {
         this.order = order;
         return this;
@@ -95,6 +102,7 @@ public class Query {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projection")
     public Projection[] projection;
+
     public Query withProjection(Projection[] projection) {
         this.projection = projection;
         return this;
@@ -106,9 +114,11 @@ public class Query {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startCursor")
     public String startCursor;
+
     public Query withStartCursor(String startCursor) {
         this.startCursor = startCursor;
         return this;
     }
     
+    public Query(){}
 }

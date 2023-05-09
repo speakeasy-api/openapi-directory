@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * PauseClusterMessage - Describes a pause cluster operation. For example, a scheduled action to run the &lt;code&gt;PauseCluster&lt;/code&gt; API operation. 
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class PauseClusterMessage {
     
     public String clusterIdentifier;
+
     public PauseClusterMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
     }
     
+    public PauseClusterMessage(@JsonProperty("ClusterIdentifier") String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+  }
 }

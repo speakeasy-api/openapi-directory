@@ -15,6 +15,7 @@ public class GetFaucetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public GetFaucetResponseData data;
+
     public GetFaucetResponse withData(GetFaucetResponseData data) {
         this.data = data;
         return this;
@@ -26,9 +27,11 @@ public class GetFaucetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public GetFaucetResponse withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public GetFaucetResponse(){}
 }

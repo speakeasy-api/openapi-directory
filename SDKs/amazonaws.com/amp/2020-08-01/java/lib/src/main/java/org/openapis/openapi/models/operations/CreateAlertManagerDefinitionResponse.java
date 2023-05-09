@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAlertManagerDefinitionResponse {
@@ -12,6 +13,7 @@ public class CreateAlertManagerDefinitionResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateAlertManagerDefinitionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateAlertManagerDefinitionResponse {
      */
     
     public Object conflictException;
+
     public CreateAlertManagerDefinitionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateAlertManagerDefinitionResponse {
     
     
     public String contentType;
+
     public CreateAlertManagerDefinitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateAlertManagerDefinitionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAlertManagerDefinitionResponse createAlertManagerDefinitionResponse;
+
     public CreateAlertManagerDefinitionResponse withCreateAlertManagerDefinitionResponse(org.openapis.openapi.models.shared.CreateAlertManagerDefinitionResponse createAlertManagerDefinitionResponse) {
         this.createAlertManagerDefinitionResponse = createAlertManagerDefinitionResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateAlertManagerDefinitionResponse {
      */
     
     public Object internalServerException;
+
     public CreateAlertManagerDefinitionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateAlertManagerDefinitionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateAlertManagerDefinitionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateAlertManagerDefinitionResponse {
     
     
     public Integer statusCode;
+
     public CreateAlertManagerDefinitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateAlertManagerDefinitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAlertManagerDefinitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateAlertManagerDefinitionResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateAlertManagerDefinitionResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class CreateAlertManagerDefinitionResponse {
      */
     
     public Object throttlingException;
+
     public CreateAlertManagerDefinitionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateAlertManagerDefinitionResponse {
      */
     
     public Object validationException;
+
     public CreateAlertManagerDefinitionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateAlertManagerDefinitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

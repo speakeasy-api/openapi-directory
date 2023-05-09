@@ -15,9 +15,11 @@ public class GetQuery200ApplicationJSONResultAstPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public GetQuery200ApplicationJSONResultAstPackagePath[] path;
+
     public GetQuery200ApplicationJSONResultAstPackage withPath(GetQuery200ApplicationJSONResultAstPackagePath[] path) {
         this.path = path;
         return this;
     }
     
+    public GetQuery200ApplicationJSONResultAstPackage(){}
 }

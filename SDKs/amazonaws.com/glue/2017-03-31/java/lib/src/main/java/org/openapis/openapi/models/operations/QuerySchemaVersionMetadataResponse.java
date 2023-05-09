@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class QuerySchemaVersionMetadataResponse {
@@ -12,6 +13,7 @@ public class QuerySchemaVersionMetadataResponse {
      */
     
     public Object accessDeniedException;
+
     public QuerySchemaVersionMetadataResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class QuerySchemaVersionMetadataResponse {
     
     
     public String contentType;
+
     public QuerySchemaVersionMetadataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class QuerySchemaVersionMetadataResponse {
      */
     
     public Object entityNotFoundException;
+
     public QuerySchemaVersionMetadataResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class QuerySchemaVersionMetadataResponse {
      */
     
     public Object invalidInputException;
+
     public QuerySchemaVersionMetadataResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class QuerySchemaVersionMetadataResponse {
      */
     
     public org.openapis.openapi.models.shared.QuerySchemaVersionMetadataResponse querySchemaVersionMetadataResponse;
+
     public QuerySchemaVersionMetadataResponse withQuerySchemaVersionMetadataResponse(org.openapis.openapi.models.shared.QuerySchemaVersionMetadataResponse querySchemaVersionMetadataResponse) {
         this.querySchemaVersionMetadataResponse = querySchemaVersionMetadataResponse;
         return this;
@@ -56,6 +62,7 @@ public class QuerySchemaVersionMetadataResponse {
     
     
     public Integer statusCode;
+
     public QuerySchemaVersionMetadataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class QuerySchemaVersionMetadataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public QuerySchemaVersionMetadataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public QuerySchemaVersionMetadataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

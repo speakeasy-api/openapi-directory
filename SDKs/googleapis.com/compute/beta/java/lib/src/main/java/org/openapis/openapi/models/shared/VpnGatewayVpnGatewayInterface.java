@@ -18,6 +18,7 @@ public class VpnGatewayVpnGatewayInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public VpnGatewayVpnGatewayInterface withId(Long id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class VpnGatewayVpnGatewayInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interconnectAttachment")
     public String interconnectAttachment;
+
     public VpnGatewayVpnGatewayInterface withInterconnectAttachment(String interconnectAttachment) {
         this.interconnectAttachment = interconnectAttachment;
         return this;
@@ -40,9 +42,23 @@ public class VpnGatewayVpnGatewayInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public VpnGatewayVpnGatewayInterface withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
     }
     
+    /**
+     * [Output Only] IPv6 address for this VPN interface associated with the VPN gateway. The IPv6 address must be a regional external IPv6 address. The format is RFC 5952 format (e.g. 2001:db8::2d9:51:0:0).
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ipv6Address")
+    public String ipv6Address;
+
+    public VpnGatewayVpnGatewayInterface withIpv6Address(String ipv6Address) {
+        this.ipv6Address = ipv6Address;
+        return this;
+    }
+    
+    public VpnGatewayVpnGatewayInterface(){}
 }

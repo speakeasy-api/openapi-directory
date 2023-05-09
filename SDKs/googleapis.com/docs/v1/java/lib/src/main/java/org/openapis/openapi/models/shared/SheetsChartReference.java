@@ -18,6 +18,7 @@ public class SheetsChartReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chartId")
     public Integer chartId;
+
     public SheetsChartReference withChartId(Integer chartId) {
         this.chartId = chartId;
         return this;
@@ -29,9 +30,11 @@ public class SheetsChartReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spreadsheetId")
     public String spreadsheetId;
+
     public SheetsChartReference withSpreadsheetId(String spreadsheetId) {
         this.spreadsheetId = spreadsheetId;
         return this;
     }
     
+    public SheetsChartReference(){}
 }

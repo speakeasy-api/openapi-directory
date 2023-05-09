@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateRoleAliasResponse {
     
     public String contentType;
+
     public CreateRoleAliasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateRoleAliasResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateRoleAliasResponse createRoleAliasResponse;
+
     public CreateRoleAliasResponse withCreateRoleAliasResponse(org.openapis.openapi.models.shared.CreateRoleAliasResponse createRoleAliasResponse) {
         this.createRoleAliasResponse = createRoleAliasResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateRoleAliasResponse {
      */
     
     public Object internalFailureException;
+
     public CreateRoleAliasResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreateRoleAliasResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateRoleAliasResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateRoleAliasResponse {
      */
     
     public Object limitExceededException;
+
     public CreateRoleAliasResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class CreateRoleAliasResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateRoleAliasResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -66,6 +73,7 @@ public class CreateRoleAliasResponse {
     
     
     public Integer statusCode;
+
     public CreateRoleAliasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateRoleAliasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateRoleAliasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateRoleAliasResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateRoleAliasResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -93,6 +103,7 @@ public class CreateRoleAliasResponse {
      */
     
     public Object throttlingException;
+
     public CreateRoleAliasResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateRoleAliasResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateRoleAliasResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateRoleAliasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

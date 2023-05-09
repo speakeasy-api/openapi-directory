@@ -15,6 +15,7 @@ public class ListVPCEConfigurationsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListVPCEConfigurationsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListVPCEConfigurationsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpceConfigurations")
     public VPCEConfiguration[] vpceConfigurations;
+
     public ListVPCEConfigurationsResult withVpceConfigurations(VPCEConfiguration[] vpceConfigurations) {
         this.vpceConfigurations = vpceConfigurations;
         return this;
     }
     
+    public ListVPCEConfigurationsResult(){}
 }

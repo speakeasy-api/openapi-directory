@@ -15,9 +15,11 @@ public class ExportBundleResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloadUrl")
     public String downloadUrl;
+
     public ExportBundleResult withDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
     }
     
+    public ExportBundleResult(){}
 }

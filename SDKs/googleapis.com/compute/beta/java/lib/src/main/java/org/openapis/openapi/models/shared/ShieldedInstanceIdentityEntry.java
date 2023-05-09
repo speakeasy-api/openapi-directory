@@ -18,6 +18,7 @@ public class ShieldedInstanceIdentityEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ekCert")
     public String ekCert;
+
     public ShieldedInstanceIdentityEntry withEkCert(String ekCert) {
         this.ekCert = ekCert;
         return this;
@@ -29,9 +30,11 @@ public class ShieldedInstanceIdentityEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ekPub")
     public String ekPub;
+
     public ShieldedInstanceIdentityEntry withEkPub(String ekPub) {
         this.ekPub = ekPub;
         return this;
     }
     
+    public ShieldedInstanceIdentityEntry(){}
 }

@@ -12,6 +12,7 @@ public class GetLabelDetectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AggregateBy")
     public LabelDetectionAggregateByEnum aggregateBy;
+
     public GetLabelDetectionRequest withAggregateBy(LabelDetectionAggregateByEnum aggregateBy) {
         this.aggregateBy = aggregateBy;
         return this;
@@ -19,6 +20,7 @@ public class GetLabelDetectionRequest {
     
     @JsonProperty("JobId")
     public String jobId;
+
     public GetLabelDetectionRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -27,6 +29,7 @@ public class GetLabelDetectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetLabelDetectionRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -35,6 +38,7 @@ public class GetLabelDetectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetLabelDetectionRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -43,9 +47,13 @@ public class GetLabelDetectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public LabelDetectionSortByEnum sortBy;
+
     public GetLabelDetectionRequest withSortBy(LabelDetectionSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
     }
     
+    public GetLabelDetectionRequest(@JsonProperty("JobId") String jobId) {
+        this.jobId = jobId;
+  }
 }

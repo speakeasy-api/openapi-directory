@@ -15,6 +15,7 @@ public class AwsS3BucketBucketLifecycleConfigurationRulesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AbortIncompleteMultipartUpload")
     public AwsS3BucketBucketLifecycleConfigurationRulesAbortIncompleteMultipartUploadDetails abortIncompleteMultipartUpload;
+
     public AwsS3BucketBucketLifecycleConfigurationRulesDetails withAbortIncompleteMultipartUpload(AwsS3BucketBucketLifecycleConfigurationRulesAbortIncompleteMultipartUploadDetails abortIncompleteMultipartUpload) {
         this.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
         return this;
@@ -23,6 +24,7 @@ public class AwsS3BucketBucketLifecycleConfigurationRulesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpirationDate")
     public String expirationDate;
+
     public AwsS3BucketBucketLifecycleConfigurationRulesDetails withExpirationDate(String expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -31,6 +33,7 @@ public class AwsS3BucketBucketLifecycleConfigurationRulesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpirationInDays")
     public Long expirationInDays;
+
     public AwsS3BucketBucketLifecycleConfigurationRulesDetails withExpirationInDays(Long expirationInDays) {
         this.expirationInDays = expirationInDays;
         return this;
@@ -39,6 +42,7 @@ public class AwsS3BucketBucketLifecycleConfigurationRulesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpiredObjectDeleteMarker")
     public Boolean expiredObjectDeleteMarker;
+
     public AwsS3BucketBucketLifecycleConfigurationRulesDetails withExpiredObjectDeleteMarker(Boolean expiredObjectDeleteMarker) {
         this.expiredObjectDeleteMarker = expiredObjectDeleteMarker;
         return this;
@@ -47,6 +51,7 @@ public class AwsS3BucketBucketLifecycleConfigurationRulesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public AwsS3BucketBucketLifecycleConfigurationRulesFilterDetails filter;
+
     public AwsS3BucketBucketLifecycleConfigurationRulesDetails withFilter(AwsS3BucketBucketLifecycleConfigurationRulesFilterDetails filter) {
         this.filter = filter;
         return this;
@@ -55,6 +60,7 @@ public class AwsS3BucketBucketLifecycleConfigurationRulesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ID")
     public String id;
+
     public AwsS3BucketBucketLifecycleConfigurationRulesDetails withId(String id) {
         this.id = id;
         return this;
@@ -63,6 +69,7 @@ public class AwsS3BucketBucketLifecycleConfigurationRulesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NoncurrentVersionExpirationInDays")
     public Long noncurrentVersionExpirationInDays;
+
     public AwsS3BucketBucketLifecycleConfigurationRulesDetails withNoncurrentVersionExpirationInDays(Long noncurrentVersionExpirationInDays) {
         this.noncurrentVersionExpirationInDays = noncurrentVersionExpirationInDays;
         return this;
@@ -71,6 +78,7 @@ public class AwsS3BucketBucketLifecycleConfigurationRulesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NoncurrentVersionTransitions")
     public AwsS3BucketBucketLifecycleConfigurationRulesNoncurrentVersionTransitionsDetails[] noncurrentVersionTransitions;
+
     public AwsS3BucketBucketLifecycleConfigurationRulesDetails withNoncurrentVersionTransitions(AwsS3BucketBucketLifecycleConfigurationRulesNoncurrentVersionTransitionsDetails[] noncurrentVersionTransitions) {
         this.noncurrentVersionTransitions = noncurrentVersionTransitions;
         return this;
@@ -79,6 +87,7 @@ public class AwsS3BucketBucketLifecycleConfigurationRulesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Prefix")
     public String prefix;
+
     public AwsS3BucketBucketLifecycleConfigurationRulesDetails withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -87,6 +96,7 @@ public class AwsS3BucketBucketLifecycleConfigurationRulesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public AwsS3BucketBucketLifecycleConfigurationRulesDetails withStatus(String status) {
         this.status = status;
         return this;
@@ -95,9 +105,11 @@ public class AwsS3BucketBucketLifecycleConfigurationRulesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Transitions")
     public AwsS3BucketBucketLifecycleConfigurationRulesTransitionsDetails[] transitions;
+
     public AwsS3BucketBucketLifecycleConfigurationRulesDetails withTransitions(AwsS3BucketBucketLifecycleConfigurationRulesTransitionsDetails[] transitions) {
         this.transitions = transitions;
         return this;
     }
     
+    public AwsS3BucketBucketLifecycleConfigurationRulesDetails(){}
 }

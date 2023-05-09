@@ -59,10 +59,8 @@ public class CreativeFieldValues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingCreativeFieldValuesDeleteResponse res = new org.openapis.openapi.models.operations.DfareportingCreativeFieldValuesDeleteResponse() {{
+        org.openapis.openapi.models.operations.DfareportingCreativeFieldValuesDeleteResponse res = new org.openapis.openapi.models.operations.DfareportingCreativeFieldValuesDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class CreativeFieldValues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingCreativeFieldValuesGetResponse res = new org.openapis.openapi.models.operations.DfareportingCreativeFieldValuesGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingCreativeFieldValuesGetResponse res = new org.openapis.openapi.models.operations.DfareportingCreativeFieldValuesGetResponse(contentType, httpRes.statusCode()) {{
             creativeFieldValue = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class CreativeFieldValues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingCreativeFieldValuesInsertResponse res = new org.openapis.openapi.models.operations.DfareportingCreativeFieldValuesInsertResponse() {{
+        org.openapis.openapi.models.operations.DfareportingCreativeFieldValuesInsertResponse res = new org.openapis.openapi.models.operations.DfareportingCreativeFieldValuesInsertResponse(contentType, httpRes.statusCode()) {{
             creativeFieldValue = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class CreativeFieldValues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingCreativeFieldValuesListResponse res = new org.openapis.openapi.models.operations.DfareportingCreativeFieldValuesListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingCreativeFieldValuesListResponse res = new org.openapis.openapi.models.operations.DfareportingCreativeFieldValuesListResponse(contentType, httpRes.statusCode()) {{
             creativeFieldValuesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class CreativeFieldValues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingCreativeFieldValuesPatchResponse res = new org.openapis.openapi.models.operations.DfareportingCreativeFieldValuesPatchResponse() {{
+        org.openapis.openapi.models.operations.DfareportingCreativeFieldValuesPatchResponse res = new org.openapis.openapi.models.operations.DfareportingCreativeFieldValuesPatchResponse(contentType, httpRes.statusCode()) {{
             creativeFieldValue = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,11 +279,9 @@ public class CreativeFieldValues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingCreativeFieldValuesUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingCreativeFieldValuesUpdateResponse() {{
+        org.openapis.openapi.models.operations.DfareportingCreativeFieldValuesUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingCreativeFieldValuesUpdateResponse(contentType, httpRes.statusCode()) {{
             creativeFieldValue = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,6 +18,7 @@ public class DeviceSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("screenDensity")
     public Long screenDensity;
+
     public DeviceSpec withScreenDensity(Long screenDensity) {
         this.screenDensity = screenDensity;
         return this;
@@ -29,6 +30,7 @@ public class DeviceSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedAbis")
     public String[] supportedAbis;
+
     public DeviceSpec withSupportedAbis(String[] supportedAbis) {
         this.supportedAbis = supportedAbis;
         return this;
@@ -40,9 +42,11 @@ public class DeviceSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedLocales")
     public String[] supportedLocales;
+
     public DeviceSpec withSupportedLocales(String[] supportedLocales) {
         this.supportedLocales = supportedLocales;
         return this;
     }
     
+    public DeviceSpec(){}
 }

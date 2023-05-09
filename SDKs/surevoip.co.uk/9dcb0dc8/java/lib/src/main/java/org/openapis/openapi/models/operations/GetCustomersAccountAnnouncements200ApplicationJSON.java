@@ -15,9 +15,11 @@ public class GetCustomersAccountAnnouncements200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list")
     public org.openapis.openapi.models.shared.OneannouncementsPostResponses201ContentApplication1jsonSchema[] list;
+
     public GetCustomersAccountAnnouncements200ApplicationJSON withList(org.openapis.openapi.models.shared.OneannouncementsPostResponses201ContentApplication1jsonSchema[] list) {
         this.list = list;
         return this;
     }
     
+    public GetCustomersAccountAnnouncements200ApplicationJSON(){}
 }

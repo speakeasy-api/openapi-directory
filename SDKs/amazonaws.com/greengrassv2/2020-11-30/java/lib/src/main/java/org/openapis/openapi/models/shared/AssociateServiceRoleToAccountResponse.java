@@ -15,9 +15,11 @@ public class AssociateServiceRoleToAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedAt")
     public String associatedAt;
+
     public AssociateServiceRoleToAccountResponse withAssociatedAt(String associatedAt) {
         this.associatedAt = associatedAt;
         return this;
     }
     
+    public AssociateServiceRoleToAccountResponse(){}
 }

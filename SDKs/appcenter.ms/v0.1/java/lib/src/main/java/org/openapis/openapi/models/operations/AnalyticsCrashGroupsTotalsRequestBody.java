@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AnalyticsCrashGroupsTotalsRequestBody {
     @JsonProperty("crash_groups")
     public AnalyticsCrashGroupsTotalsRequestBodyCrashGroups[] crashGroups;
+
     public AnalyticsCrashGroupsTotalsRequestBody withCrashGroups(AnalyticsCrashGroupsTotalsRequestBodyCrashGroups[] crashGroups) {
         this.crashGroups = crashGroups;
         return this;
     }
     
+    public AnalyticsCrashGroupsTotalsRequestBody(@JsonProperty("crash_groups") AnalyticsCrashGroupsTotalsRequestBodyCrashGroups[] crashGroups) {
+        this.crashGroups = crashGroups;
+  }
 }

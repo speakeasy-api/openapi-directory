@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetServersIdActionsActionsResponse {
     @JsonProperty("actions")
     public GetServersIdActionsActionsResponseAction[] actions;
+
     public GetServersIdActionsActionsResponse withActions(GetServersIdActionsActionsResponseAction[] actions) {
         this.actions = actions;
         return this;
@@ -22,9 +23,13 @@ public class GetServersIdActionsActionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public GetServersIdActionsActionsResponseMeta meta;
+
     public GetServersIdActionsActionsResponse withMeta(GetServersIdActionsActionsResponseMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public GetServersIdActionsActionsResponse(@JsonProperty("actions") GetServersIdActionsActionsResponseAction[] actions) {
+        this.actions = actions;
+  }
 }

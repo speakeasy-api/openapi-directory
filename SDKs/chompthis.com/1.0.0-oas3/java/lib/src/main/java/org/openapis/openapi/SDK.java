@@ -152,6 +152,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -191,11 +196,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFoodBrandedBarcodePhpResponse res = new org.openapis.openapi.models.operations.GetFoodBrandedBarcodePhpResponse() {{
+        org.openapis.openapi.models.operations.GetFoodBrandedBarcodePhpResponse res = new org.openapis.openapi.models.operations.GetFoodBrandedBarcodePhpResponse(contentType, httpRes.statusCode()) {{
             brandedFoodObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -249,11 +252,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFoodBrandedNamePhpResponse res = new org.openapis.openapi.models.operations.GetFoodBrandedNamePhpResponse() {{
+        org.openapis.openapi.models.operations.GetFoodBrandedNamePhpResponse res = new org.openapis.openapi.models.operations.GetFoodBrandedNamePhpResponse(contentType, httpRes.statusCode()) {{
             brandedFoodObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -307,11 +308,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFoodBrandedSearchPhpResponse res = new org.openapis.openapi.models.operations.GetFoodBrandedSearchPhpResponse() {{
+        org.openapis.openapi.models.operations.GetFoodBrandedSearchPhpResponse res = new org.openapis.openapi.models.operations.GetFoodBrandedSearchPhpResponse(contentType, httpRes.statusCode()) {{
             brandedFoodObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -368,11 +367,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFoodIngredientSearchPhpResponse res = new org.openapis.openapi.models.operations.GetFoodIngredientSearchPhpResponse() {{
+        org.openapis.openapi.models.operations.GetFoodIngredientSearchPhpResponse res = new org.openapis.openapi.models.operations.GetFoodIngredientSearchPhpResponse(contentType, httpRes.statusCode()) {{
             ingredientObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

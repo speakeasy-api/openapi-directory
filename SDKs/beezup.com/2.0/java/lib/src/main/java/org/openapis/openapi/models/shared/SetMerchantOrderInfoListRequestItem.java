@@ -12,6 +12,7 @@ public class SetMerchantOrderInfoListRequestItem {
      */
     @JsonProperty("accountId")
     public Integer accountId;
+
     public SetMerchantOrderInfoListRequestItem withAccountId(Integer accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +23,7 @@ public class SetMerchantOrderInfoListRequestItem {
      */
     @JsonProperty("beezUPOrderId")
     public String beezUPOrderId;
+
     public SetMerchantOrderInfoListRequestItem withBeezUPOrderId(String beezUPOrderId) {
         this.beezUPOrderId = beezUPOrderId;
         return this;
@@ -32,6 +34,7 @@ public class SetMerchantOrderInfoListRequestItem {
      */
     @JsonProperty("marketplaceTechnicalCode")
     public String marketplaceTechnicalCode;
+
     public SetMerchantOrderInfoListRequestItem withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
         this.marketplaceTechnicalCode = marketplaceTechnicalCode;
         return this;
@@ -42,9 +45,16 @@ public class SetMerchantOrderInfoListRequestItem {
      */
     @JsonProperty("order_MerchantOrderId")
     public String orderMerchantOrderId;
+
     public SetMerchantOrderInfoListRequestItem withOrderMerchantOrderId(String orderMerchantOrderId) {
         this.orderMerchantOrderId = orderMerchantOrderId;
         return this;
     }
     
+    public SetMerchantOrderInfoListRequestItem(@JsonProperty("accountId") Integer accountId, @JsonProperty("beezUPOrderId") String beezUPOrderId, @JsonProperty("marketplaceTechnicalCode") String marketplaceTechnicalCode, @JsonProperty("order_MerchantOrderId") String orderMerchantOrderId) {
+        this.accountId = accountId;
+        this.beezUPOrderId = beezUPOrderId;
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
+        this.orderMerchantOrderId = orderMerchantOrderId;
+  }
 }

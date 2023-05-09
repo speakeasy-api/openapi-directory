@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetLicenseRequest {
     @JsonProperty("LicenseArn")
     public String licenseArn;
+
     public GetLicenseRequest withLicenseArn(String licenseArn) {
         this.licenseArn = licenseArn;
         return this;
@@ -19,9 +20,13 @@ public class GetLicenseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public GetLicenseRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public GetLicenseRequest(@JsonProperty("LicenseArn") String licenseArn) {
+        this.licenseArn = licenseArn;
+  }
 }

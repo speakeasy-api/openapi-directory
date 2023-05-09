@@ -16,6 +16,7 @@ public class FeedConnections {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public FeedConnection[] items;
+
     public FeedConnections withItems(FeedConnection[] items) {
         this.items = items;
         return this;
@@ -24,9 +25,11 @@ public class FeedConnections {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public Pagination pagination;
+
     public FeedConnections withPagination(Pagination pagination) {
         this.pagination = pagination;
         return this;
     }
     
+    public FeedConnections(){}
 }

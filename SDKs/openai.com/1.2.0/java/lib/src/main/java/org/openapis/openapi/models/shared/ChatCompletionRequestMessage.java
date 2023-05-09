@@ -14,6 +14,7 @@ public class ChatCompletionRequestMessage {
      */
     @JsonProperty("content")
     public String content;
+
     public ChatCompletionRequestMessage withContent(String content) {
         this.content = content;
         return this;
@@ -25,6 +26,7 @@ public class ChatCompletionRequestMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ChatCompletionRequestMessage withName(String name) {
         this.name = name;
         return this;
@@ -35,9 +37,14 @@ public class ChatCompletionRequestMessage {
      */
     @JsonProperty("role")
     public ChatCompletionRequestMessageRoleEnum role;
+
     public ChatCompletionRequestMessage withRole(ChatCompletionRequestMessageRoleEnum role) {
         this.role = role;
         return this;
     }
     
+    public ChatCompletionRequestMessage(@JsonProperty("content") String content, @JsonProperty("role") ChatCompletionRequestMessageRoleEnum role) {
+        this.content = content;
+        this.role = role;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLegalEntitiesIdBusinessLinesResponse {
@@ -12,6 +13,7 @@ public class GetLegalEntitiesIdBusinessLinesResponse {
      */
     
     public org.openapis.openapi.models.shared.BusinessLines businessLines;
+
     public GetLegalEntitiesIdBusinessLinesResponse withBusinessLines(org.openapis.openapi.models.shared.BusinessLines businessLines) {
         this.businessLines = businessLines;
         return this;
@@ -19,6 +21,7 @@ public class GetLegalEntitiesIdBusinessLinesResponse {
     
     
     public String contentType;
+
     public GetLegalEntitiesIdBusinessLinesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetLegalEntitiesIdBusinessLinesResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public GetLegalEntitiesIdBusinessLinesResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class GetLegalEntitiesIdBusinessLinesResponse {
     
     
     public Integer statusCode;
+
     public GetLegalEntitiesIdBusinessLinesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetLegalEntitiesIdBusinessLinesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLegalEntitiesIdBusinessLinesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetLegalEntitiesIdBusinessLinesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

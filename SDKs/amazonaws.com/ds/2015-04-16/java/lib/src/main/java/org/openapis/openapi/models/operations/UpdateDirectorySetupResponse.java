@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDirectorySetupResponse {
@@ -12,6 +13,7 @@ public class UpdateDirectorySetupResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateDirectorySetupResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateDirectorySetupResponse {
      */
     
     public Object clientException;
+
     public UpdateDirectorySetupResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDirectorySetupResponse {
     
     
     public String contentType;
+
     public UpdateDirectorySetupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDirectorySetupResponse {
      */
     
     public Object directoryDoesNotExistException;
+
     public UpdateDirectorySetupResponse withDirectoryDoesNotExistException(Object directoryDoesNotExistException) {
         this.directoryDoesNotExistException = directoryDoesNotExistException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateDirectorySetupResponse {
      */
     
     public Object directoryInDesiredStateException;
+
     public UpdateDirectorySetupResponse withDirectoryInDesiredStateException(Object directoryInDesiredStateException) {
         this.directoryInDesiredStateException = directoryInDesiredStateException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateDirectorySetupResponse {
      */
     
     public Object directoryUnavailableException;
+
     public UpdateDirectorySetupResponse withDirectoryUnavailableException(Object directoryUnavailableException) {
         this.directoryUnavailableException = directoryUnavailableException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateDirectorySetupResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateDirectorySetupResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -79,6 +87,7 @@ public class UpdateDirectorySetupResponse {
      */
     
     public Object snapshotLimitExceededException;
+
     public UpdateDirectorySetupResponse withSnapshotLimitExceededException(Object snapshotLimitExceededException) {
         this.snapshotLimitExceededException = snapshotLimitExceededException;
         return this;
@@ -86,6 +95,7 @@ public class UpdateDirectorySetupResponse {
     
     
     public Integer statusCode;
+
     public UpdateDirectorySetupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class UpdateDirectorySetupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDirectorySetupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class UpdateDirectorySetupResponse {
      */
     
     public Object serviceException;
+
     public UpdateDirectorySetupResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -113,6 +125,7 @@ public class UpdateDirectorySetupResponse {
      */
     
     public Object unsupportedOperationException;
+
     public UpdateDirectorySetupResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
@@ -123,9 +136,14 @@ public class UpdateDirectorySetupResponse {
      */
     
     public java.util.Map<String, Object> updateDirectorySetupResult;
+
     public UpdateDirectorySetupResponse withUpdateDirectorySetupResult(java.util.Map<String, Object> updateDirectorySetupResult) {
         this.updateDirectorySetupResult = updateDirectorySetupResult;
         return this;
     }
     
+    public UpdateDirectorySetupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

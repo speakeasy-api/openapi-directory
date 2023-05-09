@@ -15,6 +15,7 @@ public class CreateProjectRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateProjectRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -25,9 +26,13 @@ public class CreateProjectRequestBody {
      */
     @JsonProperty("displayName")
     public String displayName;
+
     public CreateProjectRequestBody withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public CreateProjectRequestBody(@JsonProperty("displayName") String displayName) {
+        this.displayName = displayName;
+  }
 }

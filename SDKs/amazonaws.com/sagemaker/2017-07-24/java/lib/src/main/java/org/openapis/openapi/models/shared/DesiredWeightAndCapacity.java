@@ -15,6 +15,7 @@ public class DesiredWeightAndCapacity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DesiredInstanceCount")
     public Long desiredInstanceCount;
+
     public DesiredWeightAndCapacity withDesiredInstanceCount(Long desiredInstanceCount) {
         this.desiredInstanceCount = desiredInstanceCount;
         return this;
@@ -23,6 +24,7 @@ public class DesiredWeightAndCapacity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DesiredWeight")
     public Float desiredWeight;
+
     public DesiredWeightAndCapacity withDesiredWeight(Float desiredWeight) {
         this.desiredWeight = desiredWeight;
         return this;
@@ -30,9 +32,13 @@ public class DesiredWeightAndCapacity {
     
     @JsonProperty("VariantName")
     public String variantName;
+
     public DesiredWeightAndCapacity withVariantName(String variantName) {
         this.variantName = variantName;
         return this;
     }
     
+    public DesiredWeightAndCapacity(@JsonProperty("VariantName") String variantName) {
+        this.variantName = variantName;
+  }
 }

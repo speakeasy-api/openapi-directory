@@ -509,4 +509,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/CreatedCommentOwner.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreatedCommentReplyToUserBadgeCounts.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreatedCommentReplyToUser.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreatedComment.java
+docs/sdk/README.md
 USAGE.md

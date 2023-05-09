@@ -15,6 +15,7 @@ public class GetSnapshotsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetSnapshotsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,6 +24,7 @@ public class GetSnapshotsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnapShotTimeFilter")
     public TimeRange snapShotTimeFilter;
+
     public GetSnapshotsResponse withSnapShotTimeFilter(TimeRange snapShotTimeFilter) {
         this.snapShotTimeFilter = snapShotTimeFilter;
         return this;
@@ -31,6 +33,7 @@ public class GetSnapshotsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnapshotsData")
     public String[][] snapshotsData;
+
     public GetSnapshotsResponse withSnapshotsData(String[][] snapshotsData) {
         this.snapshotsData = snapshotsData;
         return this;
@@ -39,9 +42,11 @@ public class GetSnapshotsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnapshotsDataHeader")
     public String[] snapshotsDataHeader;
+
     public GetSnapshotsResponse withSnapshotsDataHeader(String[] snapshotsDataHeader) {
         this.snapshotsDataHeader = snapshotsDataHeader;
         return this;
     }
     
+    public GetSnapshotsResponse(){}
 }

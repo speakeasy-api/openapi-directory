@@ -15,9 +15,11 @@ public class BirthData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateOfBirth")
     public String dateOfBirth;
+
     public BirthData withDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
     }
     
+    public BirthData(){}
 }

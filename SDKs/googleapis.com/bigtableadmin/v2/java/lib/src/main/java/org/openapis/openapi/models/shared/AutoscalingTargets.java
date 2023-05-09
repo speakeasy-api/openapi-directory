@@ -18,6 +18,7 @@ public class AutoscalingTargets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuUtilizationPercent")
     public Integer cpuUtilizationPercent;
+
     public AutoscalingTargets withCpuUtilizationPercent(Integer cpuUtilizationPercent) {
         this.cpuUtilizationPercent = cpuUtilizationPercent;
         return this;
@@ -29,9 +30,11 @@ public class AutoscalingTargets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageUtilizationGibPerNode")
     public Integer storageUtilizationGibPerNode;
+
     public AutoscalingTargets withStorageUtilizationGibPerNode(Integer storageUtilizationGibPerNode) {
         this.storageUtilizationGibPerNode = storageUtilizationGibPerNode;
         return this;
     }
     
+    public AutoscalingTargets(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3SentimentAnalysisResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("magnitude")
     public Float magnitude;
+
     public GoogleCloudDialogflowCxV3SentimentAnalysisResult withMagnitude(Float magnitude) {
         this.magnitude = magnitude;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3SentimentAnalysisResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Float score;
+
     public GoogleCloudDialogflowCxV3SentimentAnalysisResult withScore(Float score) {
         this.score = score;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3SentimentAnalysisResult(){}
 }

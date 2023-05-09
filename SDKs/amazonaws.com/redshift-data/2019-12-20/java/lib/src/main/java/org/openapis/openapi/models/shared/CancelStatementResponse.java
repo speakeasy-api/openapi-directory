@@ -15,9 +15,11 @@ public class CancelStatementResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public Boolean status;
+
     public CancelStatementResponse withStatus(Boolean status) {
         this.status = status;
         return this;
     }
     
+    public CancelStatementResponse(){}
 }

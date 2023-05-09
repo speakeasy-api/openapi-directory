@@ -18,9 +18,11 @@ public class GcsSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputUri")
     public String inputUri;
+
     public GcsSource withInputUri(String inputUri) {
         this.inputUri = inputUri;
         return this;
     }
     
+    public GcsSource(){}
 }

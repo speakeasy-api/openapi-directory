@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ServicedirectoryProjectsLocationsRegistrationPoliciesTestIamPermissionsResponse {
     
     public String contentType;
+
     public ServicedirectoryProjectsLocationsRegistrationPoliciesTestIamPermissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ServicedirectoryProjectsLocationsRegistrationPoliciesTestIamPermiss
     
     
     public Integer statusCode;
+
     public ServicedirectoryProjectsLocationsRegistrationPoliciesTestIamPermissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ServicedirectoryProjectsLocationsRegistrationPoliciesTestIamPermiss
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ServicedirectoryProjectsLocationsRegistrationPoliciesTestIamPermissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ServicedirectoryProjectsLocationsRegistrationPoliciesTestIamPermiss
      */
     
     public org.openapis.openapi.models.shared.TestIamPermissionsResponse testIamPermissionsResponse;
+
     public ServicedirectoryProjectsLocationsRegistrationPoliciesTestIamPermissionsResponse withTestIamPermissionsResponse(org.openapis.openapi.models.shared.TestIamPermissionsResponse testIamPermissionsResponse) {
         this.testIamPermissionsResponse = testIamPermissionsResponse;
         return this;
     }
     
+    public ServicedirectoryProjectsLocationsRegistrationPoliciesTestIamPermissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

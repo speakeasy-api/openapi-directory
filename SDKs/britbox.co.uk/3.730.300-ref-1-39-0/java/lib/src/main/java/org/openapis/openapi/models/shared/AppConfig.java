@@ -18,6 +18,7 @@ public class AppConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classification")
     public java.util.Map<String, Classification> classification;
+
     public AppConfig withClassification(java.util.Map<String, Classification> classification) {
         this.classification = classification;
         return this;
@@ -26,6 +27,7 @@ public class AppConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display")
     public AppConfigDisplay display;
+
     public AppConfig withDisplay(AppConfigDisplay display) {
         this.display = display;
         return this;
@@ -34,6 +36,7 @@ public class AppConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("general")
     public AppConfigGeneral general;
+
     public AppConfig withGeneral(AppConfigGeneral general) {
         this.general = general;
         return this;
@@ -42,6 +45,7 @@ public class AppConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("i18n")
     public AppConfigI18n i18n;
+
     public AppConfig withI18n(AppConfigI18n i18n) {
         this.i18n = i18n;
         return this;
@@ -50,6 +54,7 @@ public class AppConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linear")
     public AppConfigLinear linear;
+
     public AppConfig withLinear(AppConfigLinear linear) {
         this.linear = linear;
         return this;
@@ -58,6 +63,7 @@ public class AppConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("navigation")
     public Navigation navigation;
+
     public AppConfig withNavigation(Navigation navigation) {
         this.navigation = navigation;
         return this;
@@ -66,6 +72,7 @@ public class AppConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playback")
     public AppConfigPlayback playback;
+
     public AppConfig withPlayback(AppConfigPlayback playback) {
         this.playback = playback;
         return this;
@@ -74,6 +81,7 @@ public class AppConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sitemap")
     public PageSummary[] sitemap;
+
     public AppConfig withSitemap(PageSummary[] sitemap) {
         this.sitemap = sitemap;
         return this;
@@ -82,9 +90,11 @@ public class AppConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscription")
     public AppConfigSubscription subscription;
+
     public AppConfig withSubscription(AppConfigSubscription subscription) {
         this.subscription = subscription;
         return this;
     }
     
+    public AppConfig(){}
 }

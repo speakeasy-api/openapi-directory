@@ -12,9 +12,13 @@ public class TestRenderEmailTemplateRequestBody {
      */
     @JsonProperty("TemplateData")
     public String templateData;
+
     public TestRenderEmailTemplateRequestBody withTemplateData(String templateData) {
         this.templateData = templateData;
         return this;
     }
     
+    public TestRenderEmailTemplateRequestBody(@JsonProperty("TemplateData") String templateData) {
+        this.templateData = templateData;
+  }
 }

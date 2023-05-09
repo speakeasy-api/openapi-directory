@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGenericObjectByTypeRequest {
@@ -12,6 +13,7 @@ public class GetGenericObjectByTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direct")
     public Boolean direct;
+
     public GetGenericObjectByTypeRequest withDirect(Boolean direct) {
         this.direct = direct;
         return this;
@@ -22,6 +24,7 @@ public class GetGenericObjectByTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=distinct_counts")
     public Boolean distinctCounts;
+
     public GetGenericObjectByTypeRequest withDistinctCounts(Boolean distinctCounts) {
         this.distinctCounts = distinctCounts;
         return this;
@@ -32,6 +35,7 @@ public class GetGenericObjectByTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=evidence")
     public String evidence;
+
     public GetGenericObjectByTypeRequest withEvidence(String evidence) {
         this.evidence = evidence;
         return this;
@@ -42,6 +46,7 @@ public class GetGenericObjectByTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_automatic_assertions")
     public Boolean excludeAutomaticAssertions;
+
     public GetGenericObjectByTypeRequest withExcludeAutomaticAssertions(Boolean excludeAutomaticAssertions) {
         this.excludeAutomaticAssertions = excludeAutomaticAssertions;
         return this;
@@ -52,6 +57,7 @@ public class GetGenericObjectByTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facet")
     public Boolean facet;
+
     public GetGenericObjectByTypeRequest withFacet(Boolean facet) {
         this.facet = facet;
         return this;
@@ -62,6 +68,7 @@ public class GetGenericObjectByTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facet_fields")
     public String[] facetFields;
+
     public GetGenericObjectByTypeRequest withFacetFields(String[] facetFields) {
         this.facetFields = facetFields;
         return this;
@@ -72,6 +79,7 @@ public class GetGenericObjectByTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fetch_objects")
     public Boolean fetchObjects;
+
     public GetGenericObjectByTypeRequest withFetchObjects(Boolean fetchObjects) {
         this.fetchObjects = fetchObjects;
         return this;
@@ -82,6 +90,7 @@ public class GetGenericObjectByTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=get_association_counts")
     public Boolean getAssociationCounts;
+
     public GetGenericObjectByTypeRequest withGetAssociationCounts(Boolean getAssociationCounts) {
         this.getAssociationCounts = getAssociationCounts;
         return this;
@@ -92,6 +101,7 @@ public class GetGenericObjectByTypeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetGenericObjectByTypeRequest withId(String id) {
         this.id = id;
         return this;
@@ -102,6 +112,7 @@ public class GetGenericObjectByTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
     public Long rows;
+
     public GetGenericObjectByTypeRequest withRows(Long rows) {
         this.rows = rows;
         return this;
@@ -112,6 +123,7 @@ public class GetGenericObjectByTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slim")
     public String[] slim;
+
     public GetGenericObjectByTypeRequest withSlim(String[] slim) {
         this.slim = slim;
         return this;
@@ -122,6 +134,7 @@ public class GetGenericObjectByTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public Long start;
+
     public GetGenericObjectByTypeRequest withStart(Long start) {
         this.start = start;
         return this;
@@ -132,6 +145,7 @@ public class GetGenericObjectByTypeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
     public GetGenericObjectByTypeTypeEnum type;
+
     public GetGenericObjectByTypeRequest withType(GetGenericObjectByTypeTypeEnum type) {
         this.type = type;
         return this;
@@ -142,6 +156,7 @@ public class GetGenericObjectByTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unselect_evidence")
     public Boolean unselectEvidence;
+
     public GetGenericObjectByTypeRequest withUnselectEvidence(Boolean unselectEvidence) {
         this.unselectEvidence = unselectEvidence;
         return this;
@@ -152,9 +167,14 @@ public class GetGenericObjectByTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=use_compact_associations")
     public Boolean useCompactAssociations;
+
     public GetGenericObjectByTypeRequest withUseCompactAssociations(Boolean useCompactAssociations) {
         this.useCompactAssociations = useCompactAssociations;
         return this;
     }
     
+    public GetGenericObjectByTypeRequest(@JsonProperty("id") String id, @JsonProperty("type") GetGenericObjectByTypeTypeEnum type) {
+        this.id = id;
+        this.type = type;
+  }
 }

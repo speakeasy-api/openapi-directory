@@ -15,6 +15,7 @@ public class ErrorsUpdateStateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotation")
     public String annotation;
+
     public ErrorsUpdateStateRequestBody withAnnotation(String annotation) {
         this.annotation = annotation;
         return this;
@@ -22,9 +23,13 @@ public class ErrorsUpdateStateRequestBody {
     
     @JsonProperty("state")
     public ErrorsUpdateStateRequestBodyStateEnum state;
+
     public ErrorsUpdateStateRequestBody withState(ErrorsUpdateStateRequestBodyStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ErrorsUpdateStateRequestBody(@JsonProperty("state") ErrorsUpdateStateRequestBodyStateEnum state) {
+        this.state = state;
+  }
 }

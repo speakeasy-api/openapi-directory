@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CloneReceiptRuleSetRequest - Represents a request to create a receipt rule set by cloning an existing one. You use receipt rule sets to receive email with Amazon SES. For more information, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-concepts.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CloneReceiptRuleSetRequest {
     
     public String originalRuleSetName;
+
     public CloneReceiptRuleSetRequest withOriginalRuleSetName(String originalRuleSetName) {
         this.originalRuleSetName = originalRuleSetName;
         return this;
@@ -19,9 +20,14 @@ public class CloneReceiptRuleSetRequest {
     
     
     public String ruleSetName;
+
     public CloneReceiptRuleSetRequest withRuleSetName(String ruleSetName) {
         this.ruleSetName = ruleSetName;
         return this;
     }
     
+    public CloneReceiptRuleSetRequest(@JsonProperty("OriginalRuleSetName") String originalRuleSetName, @JsonProperty("RuleSetName") String ruleSetName) {
+        this.originalRuleSetName = originalRuleSetName;
+        this.ruleSetName = ruleSetName;
+  }
 }

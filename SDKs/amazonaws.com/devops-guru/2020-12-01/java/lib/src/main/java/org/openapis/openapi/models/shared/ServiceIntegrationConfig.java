@@ -15,6 +15,7 @@ public class ServiceIntegrationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogsAnomalyDetection")
     public LogsAnomalyDetectionIntegration logsAnomalyDetection;
+
     public ServiceIntegrationConfig withLogsAnomalyDetection(LogsAnomalyDetectionIntegration logsAnomalyDetection) {
         this.logsAnomalyDetection = logsAnomalyDetection;
         return this;
@@ -23,9 +24,11 @@ public class ServiceIntegrationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpsCenter")
     public OpsCenterIntegration opsCenter;
+
     public ServiceIntegrationConfig withOpsCenter(OpsCenterIntegration opsCenter) {
         this.opsCenter = opsCenter;
         return this;
     }
     
+    public ServiceIntegrationConfig(){}
 }

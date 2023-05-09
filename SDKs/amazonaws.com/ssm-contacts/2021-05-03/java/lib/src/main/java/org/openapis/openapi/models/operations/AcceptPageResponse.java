@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AcceptPageResponse {
@@ -12,6 +13,7 @@ public class AcceptPageResponse {
      */
     
     public java.util.Map<String, Object> acceptPageResult;
+
     public AcceptPageResponse withAcceptPageResult(java.util.Map<String, Object> acceptPageResult) {
         this.acceptPageResult = acceptPageResult;
         return this;
@@ -22,6 +24,7 @@ public class AcceptPageResponse {
      */
     
     public Object accessDeniedException;
+
     public AcceptPageResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -29,6 +32,7 @@ public class AcceptPageResponse {
     
     
     public String contentType;
+
     public AcceptPageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AcceptPageResponse {
      */
     
     public Object internalServerException;
+
     public AcceptPageResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class AcceptPageResponse {
     
     
     public Integer statusCode;
+
     public AcceptPageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class AcceptPageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AcceptPageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class AcceptPageResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AcceptPageResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class AcceptPageResponse {
      */
     
     public Object throttlingException;
+
     public AcceptPageResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class AcceptPageResponse {
      */
     
     public Object validationException;
+
     public AcceptPageResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AcceptPageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

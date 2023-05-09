@@ -12,6 +12,7 @@ public class PersonCounts {
      */
     
     public Long calls;
+
     public PersonCounts withCalls(Long calls) {
         this.calls = calls;
         return this;
@@ -22,6 +23,7 @@ public class PersonCounts {
      */
     
     public Long emailsBounced;
+
     public PersonCounts withEmailsBounced(Long emailsBounced) {
         this.emailsBounced = emailsBounced;
         return this;
@@ -32,6 +34,7 @@ public class PersonCounts {
      */
     
     public Long emailsClicked;
+
     public PersonCounts withEmailsClicked(Long emailsClicked) {
         this.emailsClicked = emailsClicked;
         return this;
@@ -42,6 +45,7 @@ public class PersonCounts {
      */
     
     public Long emailsRepliedTo;
+
     public PersonCounts withEmailsRepliedTo(Long emailsRepliedTo) {
         this.emailsRepliedTo = emailsRepliedTo;
         return this;
@@ -52,6 +56,7 @@ public class PersonCounts {
      */
     
     public Long emailsSent;
+
     public PersonCounts withEmailsSent(Long emailsSent) {
         this.emailsSent = emailsSent;
         return this;
@@ -62,9 +67,11 @@ public class PersonCounts {
      */
     
     public Long emailsViewed;
+
     public PersonCounts withEmailsViewed(Long emailsViewed) {
         this.emailsViewed = emailsViewed;
         return this;
     }
     
+    public PersonCounts(){}
 }

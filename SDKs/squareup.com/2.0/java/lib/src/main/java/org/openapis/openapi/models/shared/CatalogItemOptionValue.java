@@ -23,6 +23,7 @@ public class CatalogItemOptionValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public CatalogItemOptionValue withColor(String color) {
         this.color = color;
         return this;
@@ -34,6 +35,7 @@ public class CatalogItemOptionValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CatalogItemOptionValue withDescription(String description) {
         this.description = description;
         return this;
@@ -45,6 +47,7 @@ public class CatalogItemOptionValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_option_id")
     public String itemOptionId;
+
     public CatalogItemOptionValue withItemOptionId(String itemOptionId) {
         this.itemOptionId = itemOptionId;
         return this;
@@ -56,6 +59,7 @@ public class CatalogItemOptionValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CatalogItemOptionValue withName(String name) {
         this.name = name;
         return this;
@@ -67,9 +71,11 @@ public class CatalogItemOptionValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ordinal")
     public Long ordinal;
+
     public CatalogItemOptionValue withOrdinal(Long ordinal) {
         this.ordinal = ordinal;
         return this;
     }
     
+    public CatalogItemOptionValue(){}
 }

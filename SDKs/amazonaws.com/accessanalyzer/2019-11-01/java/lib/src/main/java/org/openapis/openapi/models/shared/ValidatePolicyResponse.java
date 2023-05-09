@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ValidatePolicyResponse {
     @JsonProperty("findings")
     public ValidatePolicyFinding[] findings;
+
     public ValidatePolicyResponse withFindings(ValidatePolicyFinding[] findings) {
         this.findings = findings;
         return this;
@@ -22,9 +23,13 @@ public class ValidatePolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ValidatePolicyResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ValidatePolicyResponse(@JsonProperty("findings") ValidatePolicyFinding[] findings) {
+        this.findings = findings;
+  }
 }

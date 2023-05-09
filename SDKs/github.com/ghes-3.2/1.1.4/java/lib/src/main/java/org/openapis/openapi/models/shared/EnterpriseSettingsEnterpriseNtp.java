@@ -12,6 +12,7 @@ public class EnterpriseSettingsEnterpriseNtp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary_server")
     public String primaryServer;
+
     public EnterpriseSettingsEnterpriseNtp withPrimaryServer(String primaryServer) {
         this.primaryServer = primaryServer;
         return this;
@@ -20,9 +21,11 @@ public class EnterpriseSettingsEnterpriseNtp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondary_server")
     public String secondaryServer;
+
     public EnterpriseSettingsEnterpriseNtp withSecondaryServer(String secondaryServer) {
         this.secondaryServer = secondaryServer;
         return this;
     }
     
+    public EnterpriseSettingsEnterpriseNtp(){}
 }

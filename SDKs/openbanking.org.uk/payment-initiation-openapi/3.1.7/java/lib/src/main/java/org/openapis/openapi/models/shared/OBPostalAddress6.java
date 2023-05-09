@@ -15,6 +15,7 @@ public class OBPostalAddress6 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddressLine")
     public String[] addressLine;
+
     public OBPostalAddress6 withAddressLine(String[] addressLine) {
         this.addressLine = addressLine;
         return this;
@@ -26,6 +27,7 @@ public class OBPostalAddress6 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddressType")
     public OBAddressTypeCodeEnum addressType;
+
     public OBPostalAddress6 withAddressType(OBAddressTypeCodeEnum addressType) {
         this.addressType = addressType;
         return this;
@@ -37,6 +39,7 @@ public class OBPostalAddress6 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BuildingNumber")
     public String buildingNumber;
+
     public OBPostalAddress6 withBuildingNumber(String buildingNumber) {
         this.buildingNumber = buildingNumber;
         return this;
@@ -48,6 +51,7 @@ public class OBPostalAddress6 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Country")
     public String country;
+
     public OBPostalAddress6 withCountry(String country) {
         this.country = country;
         return this;
@@ -59,6 +63,7 @@ public class OBPostalAddress6 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CountrySubDivision")
     public String countrySubDivision;
+
     public OBPostalAddress6 withCountrySubDivision(String countrySubDivision) {
         this.countrySubDivision = countrySubDivision;
         return this;
@@ -70,6 +75,7 @@ public class OBPostalAddress6 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Department")
     public String department;
+
     public OBPostalAddress6 withDepartment(String department) {
         this.department = department;
         return this;
@@ -81,6 +87,7 @@ public class OBPostalAddress6 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PostCode")
     public String postCode;
+
     public OBPostalAddress6 withPostCode(String postCode) {
         this.postCode = postCode;
         return this;
@@ -92,6 +99,7 @@ public class OBPostalAddress6 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreetName")
     public String streetName;
+
     public OBPostalAddress6 withStreetName(String streetName) {
         this.streetName = streetName;
         return this;
@@ -103,6 +111,7 @@ public class OBPostalAddress6 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubDepartment")
     public String subDepartment;
+
     public OBPostalAddress6 withSubDepartment(String subDepartment) {
         this.subDepartment = subDepartment;
         return this;
@@ -114,9 +123,11 @@ public class OBPostalAddress6 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TownName")
     public String townName;
+
     public OBPostalAddress6 withTownName(String townName) {
         this.townName = townName;
         return this;
     }
     
+    public OBPostalAddress6(){}
 }

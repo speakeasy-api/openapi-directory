@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05SubscriptionRequestsCmInitJsonRequest {
@@ -12,6 +13,7 @@ public class PostV05SubscriptionRequestsCmInitJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05SubscriptionRequestsCmInitJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,9 +21,14 @@ public class PostV05SubscriptionRequestsCmInitJsonRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SubscriptionRequest subscriptionRequest;
+
     public PostV05SubscriptionRequestsCmInitJsonRequest withSubscriptionRequest(org.openapis.openapi.models.shared.SubscriptionRequest subscriptionRequest) {
         this.subscriptionRequest = subscriptionRequest;
         return this;
     }
     
+    public PostV05SubscriptionRequestsCmInitJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("SubscriptionRequest") org.openapis.openapi.models.shared.SubscriptionRequest subscriptionRequest) {
+        this.authorization = authorization;
+        this.subscriptionRequest = subscriptionRequest;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DataPointsPostRequest {
@@ -12,6 +13,7 @@ public class DataPointsPostRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ApiCoreDtoDatapointsDatapoint apiCoreDtoDatapointsDatapoint;
+
     public DataPointsPostRequest withApiCoreDtoDatapointsDatapoint(org.openapis.openapi.models.shared.ApiCoreDtoDatapointsDatapoint apiCoreDtoDatapointsDatapoint) {
         this.apiCoreDtoDatapointsDatapoint = apiCoreDtoDatapointsDatapoint;
         return this;
@@ -22,9 +24,14 @@ public class DataPointsPostRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public DataPointsPostRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public DataPointsPostRequest(@JsonProperty("Api.Core.Dto.Datapoints.Datapoint") org.openapis.openapi.models.shared.ApiCoreDtoDatapointsDatapoint apiCoreDtoDatapointsDatapoint, @JsonProperty("id") Long id) {
+        this.apiCoreDtoDatapointsDatapoint = apiCoreDtoDatapointsDatapoint;
+        this.id = id;
+  }
 }

@@ -14,6 +14,7 @@ public class PersonalInfo {
      */
     @JsonProperty("beezUPTimeZoneId")
     public Integer beezUPTimeZoneId;
+
     public PersonalInfo withBeezUPTimeZoneId(Integer beezUPTimeZoneId) {
         this.beezUPTimeZoneId = beezUPTimeZoneId;
         return this;
@@ -24,6 +25,7 @@ public class PersonalInfo {
      */
     @JsonProperty("firstName")
     public String firstName;
+
     public PersonalInfo withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -34,6 +36,7 @@ public class PersonalInfo {
      */
     @JsonProperty("lastName")
     public String lastName;
+
     public PersonalInfo withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -44,6 +47,7 @@ public class PersonalInfo {
      */
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public PersonalInfo withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -55,9 +59,16 @@ public class PersonalInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("whatIDo")
     public String whatIDo;
+
     public PersonalInfo withWhatIDo(String whatIDo) {
         this.whatIDo = whatIDo;
         return this;
     }
     
+    public PersonalInfo(@JsonProperty("beezUPTimeZoneId") Integer beezUPTimeZoneId, @JsonProperty("firstName") String firstName, @JsonProperty("lastName") String lastName, @JsonProperty("phoneNumber") String phoneNumber) {
+        this.beezUPTimeZoneId = beezUPTimeZoneId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
+  }
 }

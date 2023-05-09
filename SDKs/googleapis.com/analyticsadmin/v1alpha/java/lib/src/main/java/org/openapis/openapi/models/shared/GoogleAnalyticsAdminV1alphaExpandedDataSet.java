@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaExpandedDataSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataCollectionStartTime")
     public String dataCollectionStartTime;
+
     public GoogleAnalyticsAdminV1alphaExpandedDataSet withDataCollectionStartTime(String dataCollectionStartTime) {
         this.dataCollectionStartTime = dataCollectionStartTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaExpandedDataSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleAnalyticsAdminV1alphaExpandedDataSet withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1alphaExpandedDataSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionFilterExpression")
     public GoogleAnalyticsAdminV1alphaExpandedDataSetFilterExpression dimensionFilterExpression;
+
     public GoogleAnalyticsAdminV1alphaExpandedDataSet withDimensionFilterExpression(GoogleAnalyticsAdminV1alphaExpandedDataSetFilterExpression dimensionFilterExpression) {
         this.dimensionFilterExpression = dimensionFilterExpression;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAnalyticsAdminV1alphaExpandedDataSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionNames")
     public String[] dimensionNames;
+
     public GoogleAnalyticsAdminV1alphaExpandedDataSet withDimensionNames(String[] dimensionNames) {
         this.dimensionNames = dimensionNames;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAnalyticsAdminV1alphaExpandedDataSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleAnalyticsAdminV1alphaExpandedDataSet withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAnalyticsAdminV1alphaExpandedDataSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricNames")
     public String[] metricNames;
+
     public GoogleAnalyticsAdminV1alphaExpandedDataSet withMetricNames(String[] metricNames) {
         this.metricNames = metricNames;
         return this;
@@ -84,9 +90,11 @@ public class GoogleAnalyticsAdminV1alphaExpandedDataSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAnalyticsAdminV1alphaExpandedDataSet withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaExpandedDataSet(){}
 }

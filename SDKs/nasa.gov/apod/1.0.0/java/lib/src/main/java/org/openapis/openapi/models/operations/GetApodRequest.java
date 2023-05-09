@@ -12,6 +12,7 @@ public class GetApodRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
     public String date;
+
     public GetApodRequest withDate(String date) {
         this.date = date;
         return this;
@@ -22,9 +23,11 @@ public class GetApodRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hd")
     public Boolean hd;
+
     public GetApodRequest withHd(Boolean hd) {
         this.hd = hd;
         return this;
     }
     
+    public GetApodRequest(){}
 }

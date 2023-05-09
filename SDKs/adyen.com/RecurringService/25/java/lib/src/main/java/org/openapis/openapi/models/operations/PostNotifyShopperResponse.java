@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostNotifyShopperResponse {
     
     public String contentType;
+
     public PostNotifyShopperResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostNotifyShopperResponse {
      */
     
     public org.openapis.openapi.models.shared.NotifyShopperResult notifyShopperResult;
+
     public PostNotifyShopperResponse withNotifyShopperResult(org.openapis.openapi.models.shared.NotifyShopperResult notifyShopperResult) {
         this.notifyShopperResult = notifyShopperResult;
         return this;
@@ -29,6 +32,7 @@ public class PostNotifyShopperResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public PostNotifyShopperResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class PostNotifyShopperResponse {
     
     
     public Integer statusCode;
+
     public PostNotifyShopperResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostNotifyShopperResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostNotifyShopperResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostNotifyShopperResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

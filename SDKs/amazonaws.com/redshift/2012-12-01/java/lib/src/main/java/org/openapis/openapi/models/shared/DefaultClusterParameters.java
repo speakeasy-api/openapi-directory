@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DefaultClusterParameters {
     
     public String marker;
+
     public DefaultClusterParameters withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -19,6 +20,7 @@ public class DefaultClusterParameters {
     
     
     public String parameterGroupFamily;
+
     public DefaultClusterParameters withParameterGroupFamily(String parameterGroupFamily) {
         this.parameterGroupFamily = parameterGroupFamily;
         return this;
@@ -26,9 +28,11 @@ public class DefaultClusterParameters {
     
     
     public ParametersList[] parameters;
+
     public DefaultClusterParameters withParameters(ParametersList[] parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public DefaultClusterParameters(){}
 }

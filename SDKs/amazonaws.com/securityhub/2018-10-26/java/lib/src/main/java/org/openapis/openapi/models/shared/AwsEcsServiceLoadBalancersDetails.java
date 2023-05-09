@@ -15,6 +15,7 @@ public class AwsEcsServiceLoadBalancersDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerName")
     public String containerName;
+
     public AwsEcsServiceLoadBalancersDetails withContainerName(String containerName) {
         this.containerName = containerName;
         return this;
@@ -23,6 +24,7 @@ public class AwsEcsServiceLoadBalancersDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerPort")
     public Long containerPort;
+
     public AwsEcsServiceLoadBalancersDetails withContainerPort(Long containerPort) {
         this.containerPort = containerPort;
         return this;
@@ -31,6 +33,7 @@ public class AwsEcsServiceLoadBalancersDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoadBalancerName")
     public String loadBalancerName;
+
     public AwsEcsServiceLoadBalancersDetails withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
@@ -39,9 +42,11 @@ public class AwsEcsServiceLoadBalancersDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetGroupArn")
     public String targetGroupArn;
+
     public AwsEcsServiceLoadBalancersDetails withTargetGroupArn(String targetGroupArn) {
         this.targetGroupArn = targetGroupArn;
         return this;
     }
     
+    public AwsEcsServiceLoadBalancersDetails(){}
 }

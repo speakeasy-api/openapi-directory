@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeVpcAttributeRequest {
     
     public VpcAttributeNameEnum attribute;
+
     public DescribeVpcAttributeRequest withAttribute(VpcAttributeNameEnum attribute) {
         this.attribute = attribute;
         return this;
@@ -16,6 +17,7 @@ public class DescribeVpcAttributeRequest {
     
     
     public Boolean dryRun;
+
     public DescribeVpcAttributeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,9 +25,14 @@ public class DescribeVpcAttributeRequest {
     
     
     public String vpcId;
+
     public DescribeVpcAttributeRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DescribeVpcAttributeRequest(@JsonProperty("Attribute") VpcAttributeNameEnum attribute, @JsonProperty("VpcId") String vpcId) {
+        this.attribute = attribute;
+        this.vpcId = vpcId;
+  }
 }

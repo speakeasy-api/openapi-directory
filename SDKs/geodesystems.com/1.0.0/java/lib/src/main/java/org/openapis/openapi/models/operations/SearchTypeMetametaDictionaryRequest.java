@@ -13,6 +13,7 @@ public class SearchTypeMetametaDictionaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
     public OffsetDateTime changedateFrom;
+
     public SearchTypeMetametaDictionaryRequest withChangedateFrom(OffsetDateTime changedateFrom) {
         this.changedateFrom = changedateFrom;
         return this;
@@ -23,6 +24,7 @@ public class SearchTypeMetametaDictionaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
     public OffsetDateTime changedateTo;
+
     public SearchTypeMetametaDictionaryRequest withChangedateTo(OffsetDateTime changedateTo) {
         this.changedateTo = changedateTo;
         return this;
@@ -33,6 +35,7 @@ public class SearchTypeMetametaDictionaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
     public OffsetDateTime createdateFrom;
+
     public SearchTypeMetametaDictionaryRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
         this.createdateFrom = createdateFrom;
         return this;
@@ -43,6 +46,7 @@ public class SearchTypeMetametaDictionaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
     public OffsetDateTime createdateTo;
+
     public SearchTypeMetametaDictionaryRequest withCreatedateTo(OffsetDateTime createdateTo) {
         this.createdateTo = createdateTo;
         return this;
@@ -53,6 +57,7 @@ public class SearchTypeMetametaDictionaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public SearchTypeMetametaDictionaryRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +68,7 @@ public class SearchTypeMetametaDictionaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
     public String filesuffix;
+
     public SearchTypeMetametaDictionaryRequest withFilesuffix(String filesuffix) {
         this.filesuffix = filesuffix;
         return this;
@@ -73,6 +79,7 @@ public class SearchTypeMetametaDictionaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public OffsetDateTime fromdate;
+
     public SearchTypeMetametaDictionaryRequest withFromdate(OffsetDateTime fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -83,6 +90,7 @@ public class SearchTypeMetametaDictionaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
     public String group;
+
     public SearchTypeMetametaDictionaryRequest withGroup(String group) {
         this.group = group;
         return this;
@@ -93,6 +101,7 @@ public class SearchTypeMetametaDictionaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public Long max;
+
     public SearchTypeMetametaDictionaryRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -103,6 +112,7 @@ public class SearchTypeMetametaDictionaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
     public Float maxlatitude;
+
     public SearchTypeMetametaDictionaryRequest withMaxlatitude(Float maxlatitude) {
         this.maxlatitude = maxlatitude;
         return this;
@@ -113,6 +123,7 @@ public class SearchTypeMetametaDictionaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
     public Float maxlongitude;
+
     public SearchTypeMetametaDictionaryRequest withMaxlongitude(Float maxlongitude) {
         this.maxlongitude = maxlongitude;
         return this;
@@ -123,6 +134,7 @@ public class SearchTypeMetametaDictionaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
     public Float minlatitude;
+
     public SearchTypeMetametaDictionaryRequest withMinlatitude(Float minlatitude) {
         this.minlatitude = minlatitude;
         return this;
@@ -133,6 +145,7 @@ public class SearchTypeMetametaDictionaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
     public Float minlongitude;
+
     public SearchTypeMetametaDictionaryRequest withMinlongitude(Float minlongitude) {
         this.minlongitude = minlongitude;
         return this;
@@ -143,6 +156,7 @@ public class SearchTypeMetametaDictionaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public SearchTypeMetametaDictionaryRequest withName(String name) {
         this.name = name;
         return this;
@@ -153,6 +167,7 @@ public class SearchTypeMetametaDictionaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_metameta_dictionary.dictionary_type")
     public String searchTypeMetametaDictionaryDictionaryType;
+
     public SearchTypeMetametaDictionaryRequest withSearchTypeMetametaDictionaryDictionaryType(String searchTypeMetametaDictionaryDictionaryType) {
         this.searchTypeMetametaDictionaryDictionaryType = searchTypeMetametaDictionaryDictionaryType;
         return this;
@@ -163,6 +178,7 @@ public class SearchTypeMetametaDictionaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_metameta_dictionary.field_index")
     public Long searchTypeMetametaDictionaryFieldIndex;
+
     public SearchTypeMetametaDictionaryRequest withSearchTypeMetametaDictionaryFieldIndex(Long searchTypeMetametaDictionaryFieldIndex) {
         this.searchTypeMetametaDictionaryFieldIndex = searchTypeMetametaDictionaryFieldIndex;
         return this;
@@ -173,6 +189,7 @@ public class SearchTypeMetametaDictionaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_metameta_dictionary.handler_class")
     public String searchTypeMetametaDictionaryHandlerClass;
+
     public SearchTypeMetametaDictionaryRequest withSearchTypeMetametaDictionaryHandlerClass(String searchTypeMetametaDictionaryHandlerClass) {
         this.searchTypeMetametaDictionaryHandlerClass = searchTypeMetametaDictionaryHandlerClass;
         return this;
@@ -183,6 +200,7 @@ public class SearchTypeMetametaDictionaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_metameta_dictionary.isgroup")
     public Boolean searchTypeMetametaDictionaryIsgroup;
+
     public SearchTypeMetametaDictionaryRequest withSearchTypeMetametaDictionaryIsgroup(Boolean searchTypeMetametaDictionaryIsgroup) {
         this.searchTypeMetametaDictionaryIsgroup = searchTypeMetametaDictionaryIsgroup;
         return this;
@@ -193,6 +211,7 @@ public class SearchTypeMetametaDictionaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_metameta_dictionary.properties")
     public String searchTypeMetametaDictionaryProperties;
+
     public SearchTypeMetametaDictionaryRequest withSearchTypeMetametaDictionaryProperties(String searchTypeMetametaDictionaryProperties) {
         this.searchTypeMetametaDictionaryProperties = searchTypeMetametaDictionaryProperties;
         return this;
@@ -203,6 +222,7 @@ public class SearchTypeMetametaDictionaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_metameta_dictionary.short_name")
     public String searchTypeMetametaDictionaryShortName;
+
     public SearchTypeMetametaDictionaryRequest withSearchTypeMetametaDictionaryShortName(String searchTypeMetametaDictionaryShortName) {
         this.searchTypeMetametaDictionaryShortName = searchTypeMetametaDictionaryShortName;
         return this;
@@ -213,6 +233,7 @@ public class SearchTypeMetametaDictionaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_metameta_dictionary.super_type")
     public String searchTypeMetametaDictionarySuperType;
+
     public SearchTypeMetametaDictionaryRequest withSearchTypeMetametaDictionarySuperType(String searchTypeMetametaDictionarySuperType) {
         this.searchTypeMetametaDictionarySuperType = searchTypeMetametaDictionarySuperType;
         return this;
@@ -223,6 +244,7 @@ public class SearchTypeMetametaDictionaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_metameta_dictionary.wiki_text")
     public String searchTypeMetametaDictionaryWikiText;
+
     public SearchTypeMetametaDictionaryRequest withSearchTypeMetametaDictionaryWikiText(String searchTypeMetametaDictionaryWikiText) {
         this.searchTypeMetametaDictionaryWikiText = searchTypeMetametaDictionaryWikiText;
         return this;
@@ -233,6 +255,7 @@ public class SearchTypeMetametaDictionaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
     public Long skip;
+
     public SearchTypeMetametaDictionaryRequest withSkip(Long skip) {
         this.skip = skip;
         return this;
@@ -243,6 +266,7 @@ public class SearchTypeMetametaDictionaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public SearchTypeMetametaDictionaryRequest withText(String text) {
         this.text = text;
         return this;
@@ -253,9 +277,11 @@ public class SearchTypeMetametaDictionaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public OffsetDateTime todate;
+
     public SearchTypeMetametaDictionaryRequest withTodate(OffsetDateTime todate) {
         this.todate = todate;
         return this;
     }
     
+    public SearchTypeMetametaDictionaryRequest(){}
 }

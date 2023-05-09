@@ -15,6 +15,7 @@ public class DiskMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newDiskName")
     public String newDiskName;
+
     public DiskMap withNewDiskName(String newDiskName) {
         this.newDiskName = newDiskName;
         return this;
@@ -23,9 +24,11 @@ public class DiskMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalDiskPath")
     public String originalDiskPath;
+
     public DiskMap withOriginalDiskPath(String originalDiskPath) {
         this.originalDiskPath = originalDiskPath;
         return this;
     }
     
+    public DiskMap(){}
 }

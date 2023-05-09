@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AttributeNameAndValue {
     @JsonProperty("AttributeName")
     public String attributeName;
+
     public AttributeNameAndValue withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -19,9 +20,14 @@ public class AttributeNameAndValue {
     
     @JsonProperty("Value")
     public TypedAttributeValue value;
+
     public AttributeNameAndValue withValue(TypedAttributeValue value) {
         this.value = value;
         return this;
     }
     
+    public AttributeNameAndValue(@JsonProperty("AttributeName") String attributeName, @JsonProperty("Value") TypedAttributeValue value) {
+        this.attributeName = attributeName;
+        this.value = value;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQuoteForLanguagesRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GetQuotesForLanguagesBody getQuotesForLanguagesBody;
+
     public GetQuoteForLanguagesRequest withGetQuotesForLanguagesBody(org.openapis.openapi.models.shared.GetQuotesForLanguagesBody getQuotesForLanguagesBody) {
         this.getQuotesForLanguagesBody = getQuotesForLanguagesBody;
         return this;
@@ -19,9 +21,13 @@ public class GetQuoteForLanguagesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetQuoteForLanguagesRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public GetQuoteForLanguagesRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

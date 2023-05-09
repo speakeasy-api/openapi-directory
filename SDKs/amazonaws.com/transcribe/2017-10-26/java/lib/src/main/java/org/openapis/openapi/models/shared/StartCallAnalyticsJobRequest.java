@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartCallAnalyticsJobRequest {
     @JsonProperty("CallAnalyticsJobName")
     public String callAnalyticsJobName;
+
     public StartCallAnalyticsJobRequest withCallAnalyticsJobName(String callAnalyticsJobName) {
         this.callAnalyticsJobName = callAnalyticsJobName;
         return this;
@@ -19,6 +20,7 @@ public class StartCallAnalyticsJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChannelDefinitions")
     public ChannelDefinition[] channelDefinitions;
+
     public StartCallAnalyticsJobRequest withChannelDefinitions(ChannelDefinition[] channelDefinitions) {
         this.channelDefinitions = channelDefinitions;
         return this;
@@ -27,6 +29,7 @@ public class StartCallAnalyticsJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public StartCallAnalyticsJobRequest withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -34,6 +37,7 @@ public class StartCallAnalyticsJobRequest {
     
     @JsonProperty("Media")
     public Media media;
+
     public StartCallAnalyticsJobRequest withMedia(Media media) {
         this.media = media;
         return this;
@@ -42,6 +46,7 @@ public class StartCallAnalyticsJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputEncryptionKMSKeyId")
     public String outputEncryptionKMSKeyId;
+
     public StartCallAnalyticsJobRequest withOutputEncryptionKMSKeyId(String outputEncryptionKMSKeyId) {
         this.outputEncryptionKMSKeyId = outputEncryptionKMSKeyId;
         return this;
@@ -50,6 +55,7 @@ public class StartCallAnalyticsJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputLocation")
     public String outputLocation;
+
     public StartCallAnalyticsJobRequest withOutputLocation(String outputLocation) {
         this.outputLocation = outputLocation;
         return this;
@@ -58,9 +64,14 @@ public class StartCallAnalyticsJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Settings")
     public CallAnalyticsJobSettings settings;
+
     public StartCallAnalyticsJobRequest withSettings(CallAnalyticsJobSettings settings) {
         this.settings = settings;
         return this;
     }
     
+    public StartCallAnalyticsJobRequest(@JsonProperty("CallAnalyticsJobName") String callAnalyticsJobName, @JsonProperty("Media") Media media) {
+        this.callAnalyticsJobName = callAnalyticsJobName;
+        this.media = media;
+  }
 }

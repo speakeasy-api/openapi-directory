@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class AccessPreviewSummary {
     @JsonProperty("analyzerArn")
     public String analyzerArn;
+
     public AccessPreviewSummary withAnalyzerArn(String analyzerArn) {
         this.analyzerArn = analyzerArn;
         return this;
@@ -28,6 +29,7 @@ public class AccessPreviewSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public AccessPreviewSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -35,6 +37,7 @@ public class AccessPreviewSummary {
     
     @JsonProperty("id")
     public String id;
+
     public AccessPreviewSummary withId(String id) {
         this.id = id;
         return this;
@@ -42,6 +45,7 @@ public class AccessPreviewSummary {
     
     @JsonProperty("status")
     public AccessPreviewStatusEnum status;
+
     public AccessPreviewSummary withStatus(AccessPreviewStatusEnum status) {
         this.status = status;
         return this;
@@ -53,9 +57,16 @@ public class AccessPreviewSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReason")
     public AccessPreviewStatusReason statusReason;
+
     public AccessPreviewSummary withStatusReason(AccessPreviewStatusReason statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public AccessPreviewSummary(@JsonProperty("analyzerArn") String analyzerArn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("id") String id, @JsonProperty("status") AccessPreviewStatusEnum status) {
+        this.analyzerArn = analyzerArn;
+        this.createdAt = createdAt;
+        this.id = id;
+        this.status = status;
+  }
 }

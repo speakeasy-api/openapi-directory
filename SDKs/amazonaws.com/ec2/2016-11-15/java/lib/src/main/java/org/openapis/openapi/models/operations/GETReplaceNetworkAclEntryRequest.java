@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETReplaceNetworkAclEntryRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETReplaceNetworkAclEntryActionEnum action;
+
     public GETReplaceNetworkAclEntryRequest withAction(GETReplaceNetworkAclEntryActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETReplaceNetworkAclEntryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CidrBlock")
     public String cidrBlock;
+
     public GETReplaceNetworkAclEntryRequest withCidrBlock(String cidrBlock) {
         this.cidrBlock = cidrBlock;
         return this;
@@ -29,6 +32,7 @@ public class GETReplaceNetworkAclEntryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETReplaceNetworkAclEntryRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -39,6 +43,7 @@ public class GETReplaceNetworkAclEntryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Egress")
     public Boolean egress;
+
     public GETReplaceNetworkAclEntryRequest withEgress(Boolean egress) {
         this.egress = egress;
         return this;
@@ -49,6 +54,7 @@ public class GETReplaceNetworkAclEntryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Icmp")
     public GETReplaceNetworkAclEntryIcmp icmp;
+
     public GETReplaceNetworkAclEntryRequest withIcmp(GETReplaceNetworkAclEntryIcmp icmp) {
         this.icmp = icmp;
         return this;
@@ -59,6 +65,7 @@ public class GETReplaceNetworkAclEntryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Ipv6CidrBlock")
     public String ipv6CidrBlock;
+
     public GETReplaceNetworkAclEntryRequest withIpv6CidrBlock(String ipv6CidrBlock) {
         this.ipv6CidrBlock = ipv6CidrBlock;
         return this;
@@ -69,6 +76,7 @@ public class GETReplaceNetworkAclEntryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetworkAclId")
     public String networkAclId;
+
     public GETReplaceNetworkAclEntryRequest withNetworkAclId(String networkAclId) {
         this.networkAclId = networkAclId;
         return this;
@@ -79,6 +87,7 @@ public class GETReplaceNetworkAclEntryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PortRange")
     public GETReplaceNetworkAclEntryPortRange portRange;
+
     public GETReplaceNetworkAclEntryRequest withPortRange(GETReplaceNetworkAclEntryPortRange portRange) {
         this.portRange = portRange;
         return this;
@@ -89,6 +98,7 @@ public class GETReplaceNetworkAclEntryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Protocol")
     public String protocol;
+
     public GETReplaceNetworkAclEntryRequest withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -99,6 +109,7 @@ public class GETReplaceNetworkAclEntryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RuleAction")
     public GETReplaceNetworkAclEntryRuleActionEnum ruleAction;
+
     public GETReplaceNetworkAclEntryRequest withRuleAction(GETReplaceNetworkAclEntryRuleActionEnum ruleAction) {
         this.ruleAction = ruleAction;
         return this;
@@ -109,6 +120,7 @@ public class GETReplaceNetworkAclEntryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RuleNumber")
     public Long ruleNumber;
+
     public GETReplaceNetworkAclEntryRequest withRuleNumber(Long ruleNumber) {
         this.ruleNumber = ruleNumber;
         return this;
@@ -116,6 +128,7 @@ public class GETReplaceNetworkAclEntryRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETReplaceNetworkAclEntryVersionEnum version;
+
     public GETReplaceNetworkAclEntryRequest withVersion(GETReplaceNetworkAclEntryVersionEnum version) {
         this.version = version;
         return this;
@@ -123,6 +136,7 @@ public class GETReplaceNetworkAclEntryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETReplaceNetworkAclEntryRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -130,6 +144,7 @@ public class GETReplaceNetworkAclEntryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETReplaceNetworkAclEntryRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -137,6 +152,7 @@ public class GETReplaceNetworkAclEntryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETReplaceNetworkAclEntryRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -144,6 +160,7 @@ public class GETReplaceNetworkAclEntryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETReplaceNetworkAclEntryRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -151,6 +168,7 @@ public class GETReplaceNetworkAclEntryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETReplaceNetworkAclEntryRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -158,6 +176,7 @@ public class GETReplaceNetworkAclEntryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETReplaceNetworkAclEntryRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -165,9 +184,19 @@ public class GETReplaceNetworkAclEntryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETReplaceNetworkAclEntryRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETReplaceNetworkAclEntryRequest(@JsonProperty("Action") GETReplaceNetworkAclEntryActionEnum action, @JsonProperty("Egress") Boolean egress, @JsonProperty("NetworkAclId") String networkAclId, @JsonProperty("Protocol") String protocol, @JsonProperty("RuleAction") GETReplaceNetworkAclEntryRuleActionEnum ruleAction, @JsonProperty("RuleNumber") Long ruleNumber, @JsonProperty("Version") GETReplaceNetworkAclEntryVersionEnum version) {
+        this.action = action;
+        this.egress = egress;
+        this.networkAclId = networkAclId;
+        this.protocol = protocol;
+        this.ruleAction = ruleAction;
+        this.ruleNumber = ruleNumber;
+        this.version = version;
+  }
 }

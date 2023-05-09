@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResultRowValue {
     @JsonProperty("Key")
     public String key;
+
     public ResultRowValue withKey(String key) {
         this.key = key;
         return this;
@@ -19,6 +20,7 @@ public class ResultRowValue {
     
     @JsonProperty("Type")
     public String type;
+
     public ResultRowValue withType(String type) {
         this.type = type;
         return this;
@@ -26,9 +28,15 @@ public class ResultRowValue {
     
     @JsonProperty("Value")
     public String value;
+
     public ResultRowValue withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ResultRowValue(@JsonProperty("Key") String key, @JsonProperty("Type") String type, @JsonProperty("Value") String value) {
+        this.key = key;
+        this.type = type;
+        this.value = value;
+  }
 }

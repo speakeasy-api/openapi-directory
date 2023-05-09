@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FetchGroupResponse {
     
     public String contentType;
+
     public FetchGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FetchGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.FetchErrorResponse fetchErrorResponse;
+
     public FetchGroupResponse withFetchErrorResponse(org.openapis.openapi.models.shared.FetchErrorResponse fetchErrorResponse) {
         this.fetchErrorResponse = fetchErrorResponse;
         return this;
@@ -29,6 +32,7 @@ public class FetchGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.FetchGroupResponse fetchGroupResponse;
+
     public FetchGroupResponse withFetchGroupResponse(org.openapis.openapi.models.shared.FetchGroupResponse fetchGroupResponse) {
         this.fetchGroupResponse = fetchGroupResponse;
         return this;
@@ -36,6 +40,7 @@ public class FetchGroupResponse {
     
     
     public Integer statusCode;
+
     public FetchGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class FetchGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FetchGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FetchGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

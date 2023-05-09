@@ -12,6 +12,7 @@ public class PlayByPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Plays")
     public Play[] plays;
+
     public PlayByPlay withPlays(Play[] plays) {
         this.plays = plays;
         return this;
@@ -20,6 +21,7 @@ public class PlayByPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Quarters")
     public Quarter[] quarters;
+
     public PlayByPlay withQuarters(Quarter[] quarters) {
         this.quarters = quarters;
         return this;
@@ -28,9 +30,11 @@ public class PlayByPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public Score score;
+
     public PlayByPlay withScore(Score score) {
         this.score = score;
         return this;
     }
     
+    public PlayByPlay(){}
 }

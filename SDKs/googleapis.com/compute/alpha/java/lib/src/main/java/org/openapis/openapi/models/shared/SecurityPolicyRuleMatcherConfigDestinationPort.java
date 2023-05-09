@@ -15,6 +15,7 @@ public class SecurityPolicyRuleMatcherConfigDestinationPort {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipProtocol")
     public String ipProtocol;
+
     public SecurityPolicyRuleMatcherConfigDestinationPort withIpProtocol(String ipProtocol) {
         this.ipProtocol = ipProtocol;
         return this;
@@ -26,9 +27,11 @@ public class SecurityPolicyRuleMatcherConfigDestinationPort {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ports")
     public String[] ports;
+
     public SecurityPolicyRuleMatcherConfigDestinationPort withPorts(String[] ports) {
         this.ports = ports;
         return this;
     }
     
+    public SecurityPolicyRuleMatcherConfigDestinationPort(){}
 }

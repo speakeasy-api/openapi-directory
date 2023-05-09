@@ -18,6 +18,7 @@ public class RRSetRoutingPolicyWrrPolicyWrrPolicyItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthCheckedTargets")
     public RRSetRoutingPolicyHealthCheckTargets healthCheckedTargets;
+
     public RRSetRoutingPolicyWrrPolicyWrrPolicyItem withHealthCheckedTargets(RRSetRoutingPolicyHealthCheckTargets healthCheckedTargets) {
         this.healthCheckedTargets = healthCheckedTargets;
         return this;
@@ -26,6 +27,7 @@ public class RRSetRoutingPolicyWrrPolicyWrrPolicyItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public RRSetRoutingPolicyWrrPolicyWrrPolicyItem withKind(String kind) {
         this.kind = kind;
         return this;
@@ -34,6 +36,7 @@ public class RRSetRoutingPolicyWrrPolicyWrrPolicyItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rrdatas")
     public String[] rrdatas;
+
     public RRSetRoutingPolicyWrrPolicyWrrPolicyItem withRrdatas(String[] rrdatas) {
         this.rrdatas = rrdatas;
         return this;
@@ -45,6 +48,7 @@ public class RRSetRoutingPolicyWrrPolicyWrrPolicyItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signatureRrdatas")
     public String[] signatureRrdatas;
+
     public RRSetRoutingPolicyWrrPolicyWrrPolicyItem withSignatureRrdatas(String[] signatureRrdatas) {
         this.signatureRrdatas = signatureRrdatas;
         return this;
@@ -56,9 +60,11 @@ public class RRSetRoutingPolicyWrrPolicyWrrPolicyItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     public Double weight;
+
     public RRSetRoutingPolicyWrrPolicyWrrPolicyItem withWeight(Double weight) {
         this.weight = weight;
         return this;
     }
     
+    public RRSetRoutingPolicyWrrPolicyWrrPolicyItem(){}
 }

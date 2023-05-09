@@ -154,4 +154,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ProvisionedCapacityDescript
 lib/src/main/java/org/openapis/openapi/models/shared/ListTagsForVaultOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListVaultsOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

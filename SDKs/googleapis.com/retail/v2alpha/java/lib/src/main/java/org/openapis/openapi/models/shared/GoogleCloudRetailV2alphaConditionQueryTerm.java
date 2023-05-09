@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaConditionQueryTerm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullMatch")
     public Boolean fullMatch;
+
     public GoogleCloudRetailV2alphaConditionQueryTerm withFullMatch(Boolean fullMatch) {
         this.fullMatch = fullMatch;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRetailV2alphaConditionQueryTerm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GoogleCloudRetailV2alphaConditionQueryTerm withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaConditionQueryTerm(){}
 }

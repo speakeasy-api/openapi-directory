@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateBotLocaleResponse {
@@ -12,6 +13,7 @@ public class CreateBotLocaleResponse {
      */
     
     public Object conflictException;
+
     public CreateBotLocaleResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class CreateBotLocaleResponse {
     
     
     public String contentType;
+
     public CreateBotLocaleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateBotLocaleResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateBotLocaleResponse createBotLocaleResponse;
+
     public CreateBotLocaleResponse withCreateBotLocaleResponse(org.openapis.openapi.models.shared.CreateBotLocaleResponse createBotLocaleResponse) {
         this.createBotLocaleResponse = createBotLocaleResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateBotLocaleResponse {
      */
     
     public Object internalServerException;
+
     public CreateBotLocaleResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CreateBotLocaleResponse {
      */
     
     public Object preconditionFailedException;
+
     public CreateBotLocaleResponse withPreconditionFailedException(Object preconditionFailedException) {
         this.preconditionFailedException = preconditionFailedException;
         return this;
@@ -59,6 +65,7 @@ public class CreateBotLocaleResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateBotLocaleResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateBotLocaleResponse {
     
     
     public Integer statusCode;
+
     public CreateBotLocaleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateBotLocaleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateBotLocaleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateBotLocaleResponse {
      */
     
     public Object throttlingException;
+
     public CreateBotLocaleResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateBotLocaleResponse {
      */
     
     public Object validationException;
+
     public CreateBotLocaleResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateBotLocaleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

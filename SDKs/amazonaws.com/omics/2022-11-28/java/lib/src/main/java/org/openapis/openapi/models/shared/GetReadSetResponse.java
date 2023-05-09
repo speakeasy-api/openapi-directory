@@ -15,9 +15,11 @@ public class GetReadSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public String payload;
+
     public GetReadSetResponse withPayload(String payload) {
         this.payload = payload;
         return this;
     }
     
+    public GetReadSetResponse(){}
 }

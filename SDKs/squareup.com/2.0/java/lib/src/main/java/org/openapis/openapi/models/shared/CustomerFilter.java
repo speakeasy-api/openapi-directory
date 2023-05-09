@@ -23,6 +23,7 @@ public class CustomerFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public TimeRange createdAt;
+
     public CustomerFilter withCreatedAt(TimeRange createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -37,6 +38,7 @@ public class CustomerFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creation_source")
     public CustomerCreationSourceFilter creationSource;
+
     public CustomerFilter withCreationSource(CustomerCreationSourceFilter creationSource) {
         this.creationSource = creationSource;
         return this;
@@ -50,6 +52,7 @@ public class CustomerFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email_address")
     public CustomerTextFilter emailAddress;
+
     public CustomerFilter withEmailAddress(CustomerTextFilter emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -65,6 +68,7 @@ public class CustomerFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_ids")
     public FilterValue groupIds;
+
     public CustomerFilter withGroupIds(FilterValue groupIds) {
         this.groupIds = groupIds;
         return this;
@@ -78,6 +82,7 @@ public class CustomerFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone_number")
     public CustomerTextFilter phoneNumber;
+
     public CustomerFilter withPhoneNumber(CustomerTextFilter phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -91,6 +96,7 @@ public class CustomerFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_id")
     public CustomerTextFilter referenceId;
+
     public CustomerFilter withReferenceId(CustomerTextFilter referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -106,9 +112,11 @@ public class CustomerFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public TimeRange updatedAt;
+
     public CustomerFilter withUpdatedAt(TimeRange updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public CustomerFilter(){}
 }

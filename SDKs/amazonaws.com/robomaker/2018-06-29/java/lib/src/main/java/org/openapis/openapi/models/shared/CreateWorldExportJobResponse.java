@@ -20,6 +20,7 @@ public class CreateWorldExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public CreateWorldExportJobResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class CreateWorldExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public CreateWorldExportJobResponse withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -38,6 +40,7 @@ public class CreateWorldExportJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public CreateWorldExportJobResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +49,7 @@ public class CreateWorldExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureCode")
     public WorldExportJobErrorCodeEnum failureCode;
+
     public CreateWorldExportJobResponse withFailureCode(WorldExportJobErrorCodeEnum failureCode) {
         this.failureCode = failureCode;
         return this;
@@ -54,6 +58,7 @@ public class CreateWorldExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iamRole")
     public String iamRole;
+
     public CreateWorldExportJobResponse withIamRole(String iamRole) {
         this.iamRole = iamRole;
         return this;
@@ -65,6 +70,7 @@ public class CreateWorldExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputLocation")
     public OutputLocation outputLocation;
+
     public CreateWorldExportJobResponse withOutputLocation(OutputLocation outputLocation) {
         this.outputLocation = outputLocation;
         return this;
@@ -73,6 +79,7 @@ public class CreateWorldExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public WorldExportJobStatusEnum status;
+
     public CreateWorldExportJobResponse withStatus(WorldExportJobStatusEnum status) {
         this.status = status;
         return this;
@@ -81,9 +88,11 @@ public class CreateWorldExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateWorldExportJobResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateWorldExportJobResponse(){}
 }

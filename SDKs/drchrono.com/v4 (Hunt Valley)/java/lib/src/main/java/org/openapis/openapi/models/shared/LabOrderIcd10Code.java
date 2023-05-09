@@ -15,6 +15,7 @@ public class LabOrderIcd10Code {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public LabOrderIcd10Code withCode(String code) {
         this.code = code;
         return this;
@@ -26,9 +27,11 @@ public class LabOrderIcd10Code {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public LabOrderIcd10Code withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public LabOrderIcd10Code(){}
 }

@@ -18,6 +18,7 @@ public class SettlementReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDate")
     public String endDate;
+
     public SettlementReport withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -29,6 +30,7 @@ public class SettlementReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public SettlementReport withKind(String kind) {
         this.kind = kind;
         return this;
@@ -37,6 +39,7 @@ public class SettlementReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previousBalance")
     public Price previousBalance;
+
     public SettlementReport withPreviousBalance(Price previousBalance) {
         this.previousBalance = previousBalance;
         return this;
@@ -48,6 +51,7 @@ public class SettlementReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settlementId")
     public String settlementId;
+
     public SettlementReport withSettlementId(String settlementId) {
         this.settlementId = settlementId;
         return this;
@@ -59,6 +63,7 @@ public class SettlementReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDate")
     public String startDate;
+
     public SettlementReport withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -67,6 +72,7 @@ public class SettlementReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferAmount")
     public Price transferAmount;
+
     public SettlementReport withTransferAmount(Price transferAmount) {
         this.transferAmount = transferAmount;
         return this;
@@ -78,6 +84,7 @@ public class SettlementReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferDate")
     public String transferDate;
+
     public SettlementReport withTransferDate(String transferDate) {
         this.transferDate = transferDate;
         return this;
@@ -89,9 +96,11 @@ public class SettlementReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferIds")
     public String[] transferIds;
+
     public SettlementReport withTransferIds(String[] transferIds) {
         this.transferIds = transferIds;
         return this;
     }
     
+    public SettlementReport(){}
 }

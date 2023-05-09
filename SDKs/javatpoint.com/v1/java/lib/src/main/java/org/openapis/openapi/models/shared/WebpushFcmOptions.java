@@ -18,6 +18,7 @@ public class WebpushFcmOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analyticsLabel")
     public String analyticsLabel;
+
     public WebpushFcmOptions withAnalyticsLabel(String analyticsLabel) {
         this.analyticsLabel = analyticsLabel;
         return this;
@@ -29,9 +30,11 @@ public class WebpushFcmOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public String link;
+
     public WebpushFcmOptions withLink(String link) {
         this.link = link;
         return this;
     }
     
+    public WebpushFcmOptions(){}
 }

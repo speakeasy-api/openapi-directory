@@ -15,6 +15,7 @@ public class CardBin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bin")
     public String bin;
+
     public CardBin withBin(String bin) {
         this.bin = bin;
         return this;
@@ -26,6 +27,7 @@ public class CardBin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commercial")
     public Boolean commercial;
+
     public CardBin withCommercial(Boolean commercial) {
         this.commercial = commercial;
         return this;
@@ -45,6 +47,7 @@ public class CardBin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fundingSource")
     public String fundingSource;
+
     public CardBin withFundingSource(String fundingSource) {
         this.fundingSource = fundingSource;
         return this;
@@ -65,6 +68,7 @@ public class CardBin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fundsAvailability")
     public String fundsAvailability;
+
     public CardBin withFundsAvailability(String fundsAvailability) {
         this.fundsAvailability = fundsAvailability;
         return this;
@@ -76,6 +80,7 @@ public class CardBin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuerBin")
     public String issuerBin;
+
     public CardBin withIssuerBin(String issuerBin) {
         this.issuerBin = issuerBin;
         return this;
@@ -87,6 +92,7 @@ public class CardBin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuingBank")
     public String issuingBank;
+
     public CardBin withIssuingBank(String issuingBank) {
         this.issuingBank = issuingBank;
         return this;
@@ -98,6 +104,7 @@ public class CardBin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuingCountry")
     public String issuingCountry;
+
     public CardBin withIssuingCountry(String issuingCountry) {
         this.issuingCountry = issuingCountry;
         return this;
@@ -109,6 +116,7 @@ public class CardBin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuingCurrency")
     public String issuingCurrency;
+
     public CardBin withIssuingCurrency(String issuingCurrency) {
         this.issuingCurrency = issuingCurrency;
         return this;
@@ -120,6 +128,7 @@ public class CardBin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentMethod")
     public String paymentMethod;
+
     public CardBin withPaymentMethod(String paymentMethod) {
         this.paymentMethod = paymentMethod;
         return this;
@@ -142,6 +151,7 @@ public class CardBin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payoutEligible")
     public String payoutEligible;
+
     public CardBin withPayoutEligible(String payoutEligible) {
         this.payoutEligible = payoutEligible;
         return this;
@@ -153,9 +163,11 @@ public class CardBin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public String summary;
+
     public CardBin withSummary(String summary) {
         this.summary = summary;
         return this;
     }
     
+    public CardBin(){}
 }

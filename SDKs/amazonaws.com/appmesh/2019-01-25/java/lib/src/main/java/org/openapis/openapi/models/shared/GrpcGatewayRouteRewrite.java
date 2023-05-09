@@ -15,9 +15,11 @@ public class GrpcGatewayRouteRewrite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostname")
     public GatewayRouteHostnameRewrite hostname;
+
     public GrpcGatewayRouteRewrite withHostname(GatewayRouteHostnameRewrite hostname) {
         this.hostname = hostname;
         return this;
     }
     
+    public GrpcGatewayRouteRewrite(){}
 }

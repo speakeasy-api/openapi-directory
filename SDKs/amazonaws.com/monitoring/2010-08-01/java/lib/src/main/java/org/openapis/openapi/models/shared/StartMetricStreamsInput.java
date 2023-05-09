@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class StartMetricStreamsInput {
     
     public String[] names;
+
     public StartMetricStreamsInput withNames(String[] names) {
         this.names = names;
         return this;
     }
     
+    public StartMetricStreamsInput(@JsonProperty("Names") String[] names) {
+        this.names = names;
+  }
 }

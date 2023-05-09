@@ -15,6 +15,7 @@ public class DatastoreStorage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerManagedS3")
     public CustomerManagedDatastoreS3Storage customerManagedS3;
+
     public DatastoreStorage withCustomerManagedS3(CustomerManagedDatastoreS3Storage customerManagedS3) {
         this.customerManagedS3 = customerManagedS3;
         return this;
@@ -23,6 +24,7 @@ public class DatastoreStorage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iotSiteWiseMultiLayerStorage")
     public DatastoreIotSiteWiseMultiLayerStorage iotSiteWiseMultiLayerStorage;
+
     public DatastoreStorage withIotSiteWiseMultiLayerStorage(DatastoreIotSiteWiseMultiLayerStorage iotSiteWiseMultiLayerStorage) {
         this.iotSiteWiseMultiLayerStorage = iotSiteWiseMultiLayerStorage;
         return this;
@@ -31,9 +33,11 @@ public class DatastoreStorage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceManagedS3")
     public java.util.Map<String, Object> serviceManagedS3;
+
     public DatastoreStorage withServiceManagedS3(java.util.Map<String, Object> serviceManagedS3) {
         this.serviceManagedS3 = serviceManagedS3;
         return this;
     }
     
+    public DatastoreStorage(){}
 }

@@ -15,6 +15,7 @@ public class VcfOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreFilterField")
     public Boolean ignoreFilterField;
+
     public VcfOptions withIgnoreFilterField(Boolean ignoreFilterField) {
         this.ignoreFilterField = ignoreFilterField;
         return this;
@@ -23,9 +24,11 @@ public class VcfOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreQualField")
     public Boolean ignoreQualField;
+
     public VcfOptions withIgnoreQualField(Boolean ignoreQualField) {
         this.ignoreQualField = ignoreQualField;
         return this;
     }
     
+    public VcfOptions(){}
 }

@@ -12,6 +12,7 @@ public class PutConnectorsIdConnectorRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=auth_mechanism")
     public String authMechanism;
+
     public PutConnectorsIdConnectorRequestBody withAuthMechanism(String authMechanism) {
         this.authMechanism = authMechanism;
         return this;
@@ -22,6 +23,7 @@ public class PutConnectorsIdConnectorRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=hidden")
     public Boolean hidden;
+
     public PutConnectorsIdConnectorRequestBody withHidden(Boolean hidden) {
         this.hidden = hidden;
         return this;
@@ -32,6 +34,7 @@ public class PutConnectorsIdConnectorRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=id_categories")
     public String idCategories;
+
     public PutConnectorsIdConnectorRequestBody withIdCategories(String idCategories) {
         this.idCategories = idCategories;
         return this;
@@ -42,9 +45,11 @@ public class PutConnectorsIdConnectorRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=sync_frequency")
     public Long syncFrequency;
+
     public PutConnectorsIdConnectorRequestBody withSyncFrequency(Long syncFrequency) {
         this.syncFrequency = syncFrequency;
         return this;
     }
     
+    public PutConnectorsIdConnectorRequestBody(){}
 }

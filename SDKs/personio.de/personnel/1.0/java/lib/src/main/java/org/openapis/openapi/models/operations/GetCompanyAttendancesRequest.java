@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class GetCompanyAttendancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=employees")
     public Long[] employees;
+
     public GetCompanyAttendancesRequest withEmployees(Long[] employees) {
         this.employees = employees;
         return this;
@@ -23,6 +25,7 @@ public class GetCompanyAttendancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
     public LocalDate endDate;
+
     public GetCompanyAttendancesRequest withEndDate(LocalDate endDate) {
         this.endDate = endDate;
         return this;
@@ -33,6 +36,7 @@ public class GetCompanyAttendancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetCompanyAttendancesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -43,6 +47,7 @@ public class GetCompanyAttendancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public GetCompanyAttendancesRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -53,6 +58,7 @@ public class GetCompanyAttendancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
     public LocalDate startDate;
+
     public GetCompanyAttendancesRequest withStartDate(LocalDate startDate) {
         this.startDate = startDate;
         return this;
@@ -63,6 +69,7 @@ public class GetCompanyAttendancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_from")
     public String updatedFrom;
+
     public GetCompanyAttendancesRequest withUpdatedFrom(String updatedFrom) {
         this.updatedFrom = updatedFrom;
         return this;
@@ -73,9 +80,14 @@ public class GetCompanyAttendancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_to")
     public String updatedTo;
+
     public GetCompanyAttendancesRequest withUpdatedTo(String updatedTo) {
         this.updatedTo = updatedTo;
         return this;
     }
     
+    public GetCompanyAttendancesRequest(@JsonProperty("end_date") LocalDate endDate, @JsonProperty("start_date") LocalDate startDate) {
+        this.endDate = endDate;
+        this.startDate = startDate;
+  }
 }

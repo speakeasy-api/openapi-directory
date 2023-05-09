@@ -12,6 +12,7 @@ public class GETListsOverviewFormat200ApplicationJSONResultsLists {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("books")
     public GETListsOverviewFormat200ApplicationJSONResultsListsBooks[] books;
+
     public GETListsOverviewFormat200ApplicationJSONResultsLists withBooks(GETListsOverviewFormat200ApplicationJSONResultsListsBooks[] books) {
         this.books = books;
         return this;
@@ -20,6 +21,7 @@ public class GETListsOverviewFormat200ApplicationJSONResultsLists {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public GETListsOverviewFormat200ApplicationJSONResultsLists withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -28,6 +30,7 @@ public class GETListsOverviewFormat200ApplicationJSONResultsLists {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_id")
     public Long listId;
+
     public GETListsOverviewFormat200ApplicationJSONResultsLists withListId(Long listId) {
         this.listId = listId;
         return this;
@@ -36,6 +39,7 @@ public class GETListsOverviewFormat200ApplicationJSONResultsLists {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_image")
     public String listImage;
+
     public GETListsOverviewFormat200ApplicationJSONResultsLists withListImage(String listImage) {
         this.listImage = listImage;
         return this;
@@ -44,6 +48,7 @@ public class GETListsOverviewFormat200ApplicationJSONResultsLists {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_name")
     public String listName;
+
     public GETListsOverviewFormat200ApplicationJSONResultsLists withListName(String listName) {
         this.listName = listName;
         return this;
@@ -52,9 +57,11 @@ public class GETListsOverviewFormat200ApplicationJSONResultsLists {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated")
     public String updated;
+
     public GETListsOverviewFormat200ApplicationJSONResultsLists withUpdated(String updated) {
         this.updated = updated;
         return this;
     }
     
+    public GETListsOverviewFormat200ApplicationJSONResultsLists(){}
 }

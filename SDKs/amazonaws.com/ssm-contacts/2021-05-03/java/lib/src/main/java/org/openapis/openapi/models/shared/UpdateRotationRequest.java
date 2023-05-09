@@ -17,6 +17,7 @@ public class UpdateRotationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContactIds")
     public String[] contactIds;
+
     public UpdateRotationRequest withContactIds(String[] contactIds) {
         this.contactIds = contactIds;
         return this;
@@ -24,6 +25,7 @@ public class UpdateRotationRequest {
     
     @JsonProperty("Recurrence")
     public RecurrenceSettings recurrence;
+
     public UpdateRotationRequest withRecurrence(RecurrenceSettings recurrence) {
         this.recurrence = recurrence;
         return this;
@@ -31,6 +33,7 @@ public class UpdateRotationRequest {
     
     @JsonProperty("RotationId")
     public String rotationId;
+
     public UpdateRotationRequest withRotationId(String rotationId) {
         this.rotationId = rotationId;
         return this;
@@ -41,6 +44,7 @@ public class UpdateRotationRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public UpdateRotationRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -49,9 +53,14 @@ public class UpdateRotationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeZoneId")
     public String timeZoneId;
+
     public UpdateRotationRequest withTimeZoneId(String timeZoneId) {
         this.timeZoneId = timeZoneId;
         return this;
     }
     
+    public UpdateRotationRequest(@JsonProperty("Recurrence") RecurrenceSettings recurrence, @JsonProperty("RotationId") String rotationId) {
+        this.recurrence = recurrence;
+        this.rotationId = rotationId;
+  }
 }

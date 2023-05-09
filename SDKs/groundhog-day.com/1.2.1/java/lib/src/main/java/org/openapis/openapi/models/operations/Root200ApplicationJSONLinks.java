@@ -12,6 +12,7 @@ public class Root200ApplicationJSONLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groundhog")
     public Root200ApplicationJSONLinksGroundhog groundhog;
+
     public Root200ApplicationJSONLinks withGroundhog(Root200ApplicationJSONLinksGroundhog groundhog) {
         this.groundhog = groundhog;
         return this;
@@ -20,6 +21,7 @@ public class Root200ApplicationJSONLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groundhogs")
     public Root200ApplicationJSONLinksGroundhogs groundhogs;
+
     public Root200ApplicationJSONLinks withGroundhogs(Root200ApplicationJSONLinksGroundhogs groundhogs) {
         this.groundhogs = groundhogs;
         return this;
@@ -28,6 +30,7 @@ public class Root200ApplicationJSONLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictions")
     public Root200ApplicationJSONLinksPredictions predictions;
+
     public Root200ApplicationJSONLinks withPredictions(Root200ApplicationJSONLinksPredictions predictions) {
         this.predictions = predictions;
         return this;
@@ -36,6 +39,7 @@ public class Root200ApplicationJSONLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public Root200ApplicationJSONLinksSelf self;
+
     public Root200ApplicationJSONLinks withSelf(Root200ApplicationJSONLinksSelf self) {
         this.self = self;
         return this;
@@ -44,9 +48,11 @@ public class Root200ApplicationJSONLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public Root200ApplicationJSONLinksSpec spec;
+
     public Root200ApplicationJSONLinks withSpec(Root200ApplicationJSONLinksSpec spec) {
         this.spec = spec;
         return this;
     }
     
+    public Root200ApplicationJSONLinks(){}
 }

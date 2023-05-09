@@ -12,6 +12,7 @@ public class SeriesRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classification_inclusions")
     public SeriesRelationshipsAListOfClassificationsAssociatedWithTheSeries classificationInclusions;
+
     public SeriesRelationships withClassificationInclusions(SeriesRelationshipsAListOfClassificationsAssociatedWithTheSeries classificationInclusions) {
         this.classificationInclusions = classificationInclusions;
         return this;
@@ -23,6 +24,7 @@ public class SeriesRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cover_image")
     public SeriesRelationshipsCoverImage coverImage;
+
     public SeriesRelationships withCoverImage(SeriesRelationshipsCoverImage coverImage) {
         this.coverImage = coverImage;
         return this;
@@ -31,6 +33,7 @@ public class SeriesRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credits")
     public SeriesRelationshipsAListOfCreditsGivenToPeopleInTheSeries credits;
+
     public SeriesRelationships withCredits(SeriesRelationshipsAListOfCreditsGivenToPeopleInTheSeries credits) {
         this.credits = credits;
         return this;
@@ -39,6 +42,7 @@ public class SeriesRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("episodes")
     public SeriesRelationshipsAListOfPublishedAndReleasedEpisodesWithAnActualMediaFile episodes;
+
     public SeriesRelationships withEpisodes(SeriesRelationshipsAListOfPublishedAndReleasedEpisodesWithAnActualMediaFile episodes) {
         this.episodes = episodes;
         return this;
@@ -47,6 +51,7 @@ public class SeriesRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("images")
     public SeriesRelationshipsTheCoverImageForTheSeries images;
+
     public SeriesRelationships withImages(SeriesRelationshipsTheCoverImageForTheSeries images) {
         this.images = images;
         return this;
@@ -55,6 +60,7 @@ public class SeriesRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public SeriesRelationshipsTheNetworkTheSeriesBelongsTo network;
+
     public SeriesRelationships withNetwork(SeriesRelationshipsTheNetworkTheSeriesBelongsTo network) {
         this.network = network;
         return this;
@@ -63,6 +69,7 @@ public class SeriesRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seasons")
     public SeriesRelationshipsAListOfSeasonsInTheSeries seasons;
+
     public SeriesRelationships withSeasons(SeriesRelationshipsAListOfSeasonsInTheSeries seasons) {
         this.seasons = seasons;
         return this;
@@ -71,6 +78,7 @@ public class SeriesRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taggings")
     public SeriesRelationshipsAListOfAssociationsLinkingTagsToTheSeries taggings;
+
     public SeriesRelationships withTaggings(SeriesRelationshipsAListOfAssociationsLinkingTagsToTheSeries taggings) {
         this.taggings = taggings;
         return this;
@@ -79,9 +87,11 @@ public class SeriesRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public SeriesRelationshipsAListOfTagsAssociatedWithTheSeries tags;
+
     public SeriesRelationships withTags(SeriesRelationshipsAListOfTagsAssociatedWithTheSeries tags) {
         this.tags = tags;
         return this;
     }
     
+    public SeriesRelationships(){}
 }

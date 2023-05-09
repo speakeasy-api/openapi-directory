@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportCertificateResponse {
     
     public String contentType;
+
     public ImportCertificateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ImportCertificateResponse {
      */
     
     public org.openapis.openapi.models.shared.ImportCertificateResponse importCertificateResponse;
+
     public ImportCertificateResponse withImportCertificateResponse(org.openapis.openapi.models.shared.ImportCertificateResponse importCertificateResponse) {
         this.importCertificateResponse = importCertificateResponse;
         return this;
@@ -29,6 +32,7 @@ public class ImportCertificateResponse {
      */
     
     public Object invalidCertificateFault;
+
     public ImportCertificateResponse withInvalidCertificateFault(Object invalidCertificateFault) {
         this.invalidCertificateFault = invalidCertificateFault;
         return this;
@@ -39,6 +43,7 @@ public class ImportCertificateResponse {
      */
     
     public Object resourceAlreadyExistsFault;
+
     public ImportCertificateResponse withResourceAlreadyExistsFault(Object resourceAlreadyExistsFault) {
         this.resourceAlreadyExistsFault = resourceAlreadyExistsFault;
         return this;
@@ -46,6 +51,7 @@ public class ImportCertificateResponse {
     
     
     public Integer statusCode;
+
     public ImportCertificateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ImportCertificateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportCertificateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ImportCertificateResponse {
      */
     
     public Object resourceQuotaExceededFault;
+
     public ImportCertificateResponse withResourceQuotaExceededFault(Object resourceQuotaExceededFault) {
         this.resourceQuotaExceededFault = resourceQuotaExceededFault;
         return this;
     }
     
+    public ImportCertificateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class Aemtw401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Aemtw401ApplicationJSONErrorEnum error;
+
     public Aemtw401ApplicationJSON withError(Aemtw401ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Aemtw401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Aemtw401ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Aemtw401ApplicationJSON withErrorDescription(Aemtw401ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Aemtw401ApplicationJSON(){}
 }

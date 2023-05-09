@@ -15,9 +15,11 @@ public class ShippingMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_method")
     public ShippingMethodFields shippingMethod;
+
     public ShippingMethod withShippingMethod(ShippingMethodFields shippingMethod) {
         this.shippingMethod = shippingMethod;
         return this;
     }
     
+    public ShippingMethod(){}
 }

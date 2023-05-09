@@ -15,9 +15,11 @@ public class CancelTaskOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskId")
     public String taskId;
+
     public CancelTaskOutput withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public CancelTaskOutput(){}
 }

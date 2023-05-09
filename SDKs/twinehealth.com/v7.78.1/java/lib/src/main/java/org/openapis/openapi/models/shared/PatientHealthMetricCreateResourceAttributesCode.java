@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PatientHealthMetricCreateResourceAttributesCode {
     @JsonProperty("system")
     public String system;
+
     public PatientHealthMetricCreateResourceAttributesCode withSystem(String system) {
         this.system = system;
         return this;
@@ -16,9 +17,14 @@ public class PatientHealthMetricCreateResourceAttributesCode {
     
     @JsonProperty("value")
     public String value;
+
     public PatientHealthMetricCreateResourceAttributesCode withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PatientHealthMetricCreateResourceAttributesCode(@JsonProperty("system") String system, @JsonProperty("value") String value) {
+        this.system = system;
+        this.value = value;
+  }
 }

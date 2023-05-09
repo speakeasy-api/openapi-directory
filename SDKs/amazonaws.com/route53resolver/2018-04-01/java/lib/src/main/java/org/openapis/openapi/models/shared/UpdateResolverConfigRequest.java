@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateResolverConfigRequest {
     @JsonProperty("AutodefinedReverseFlag")
     public AutodefinedReverseFlagEnum autodefinedReverseFlag;
+
     public UpdateResolverConfigRequest withAutodefinedReverseFlag(AutodefinedReverseFlagEnum autodefinedReverseFlag) {
         this.autodefinedReverseFlag = autodefinedReverseFlag;
         return this;
@@ -16,9 +17,14 @@ public class UpdateResolverConfigRequest {
     
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public UpdateResolverConfigRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public UpdateResolverConfigRequest(@JsonProperty("AutodefinedReverseFlag") AutodefinedReverseFlagEnum autodefinedReverseFlag, @JsonProperty("ResourceId") String resourceId) {
+        this.autodefinedReverseFlag = autodefinedReverseFlag;
+        this.resourceId = resourceId;
+  }
 }

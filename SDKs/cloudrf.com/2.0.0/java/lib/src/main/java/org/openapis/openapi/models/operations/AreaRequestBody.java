@@ -15,6 +15,7 @@ public class AreaRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("antenna")
     public org.openapis.openapi.models.shared.Antenna antenna;
+
     public AreaRequestBody withAntenna(org.openapis.openapi.models.shared.Antenna antenna) {
         this.antenna = antenna;
         return this;
@@ -23,6 +24,7 @@ public class AreaRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public org.openapis.openapi.models.shared.Environment environment;
+
     public AreaRequestBody withEnvironment(org.openapis.openapi.models.shared.Environment environment) {
         this.environment = environment;
         return this;
@@ -31,6 +33,7 @@ public class AreaRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public org.openapis.openapi.models.shared.Model model;
+
     public AreaRequestBody withModel(org.openapis.openapi.models.shared.Model model) {
         this.model = model;
         return this;
@@ -42,6 +45,7 @@ public class AreaRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public AreaRequestBody withNetwork(String network) {
         this.network = network;
         return this;
@@ -50,6 +54,7 @@ public class AreaRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("output")
     public org.openapis.openapi.models.shared.Output output;
+
     public AreaRequestBody withOutput(org.openapis.openapi.models.shared.Output output) {
         this.output = output;
         return this;
@@ -58,6 +63,7 @@ public class AreaRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receiver")
     public org.openapis.openapi.models.shared.Receiver receiver;
+
     public AreaRequestBody withReceiver(org.openapis.openapi.models.shared.Receiver receiver) {
         this.receiver = receiver;
         return this;
@@ -69,6 +75,7 @@ public class AreaRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("site")
     public String site;
+
     public AreaRequestBody withSite(String site) {
         this.site = site;
         return this;
@@ -77,9 +84,11 @@ public class AreaRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transmitter")
     public org.openapis.openapi.models.shared.Transmitter transmitter;
+
     public AreaRequestBody withTransmitter(org.openapis.openapi.models.shared.Transmitter transmitter) {
         this.transmitter = transmitter;
         return this;
     }
     
+    public AreaRequestBody(){}
 }

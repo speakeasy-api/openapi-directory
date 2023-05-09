@@ -12,6 +12,7 @@ public class NAThermostat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_id")
     public String id;
+
     public NAThermostat withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class NAThermostat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("battery_percent")
     public Integer batteryPercent;
+
     public NAThermostat withBatteryPercent(Integer batteryPercent) {
         this.batteryPercent = batteryPercent;
         return this;
@@ -55,6 +57,7 @@ public class NAThermostat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("battery_vp")
     public Integer batteryVp;
+
     public NAThermostat withBatteryVp(Integer batteryVp) {
         this.batteryVp = batteryVp;
         return this;
@@ -63,6 +66,7 @@ public class NAThermostat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firmware")
     public Integer firmware;
+
     public NAThermostat withFirmware(Integer firmware) {
         this.firmware = firmware;
         return this;
@@ -71,6 +75,7 @@ public class NAThermostat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_message")
     public Integer lastMessage;
+
     public NAThermostat withLastMessage(Integer lastMessage) {
         this.lastMessage = lastMessage;
         return this;
@@ -79,6 +84,7 @@ public class NAThermostat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_therm_seen")
     public Integer lastThermSeen;
+
     public NAThermostat withLastThermSeen(Integer lastThermSeen) {
         this.lastThermSeen = lastThermSeen;
         return this;
@@ -87,6 +93,7 @@ public class NAThermostat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("measured")
     public NAThermMeasure measured;
+
     public NAThermostat withMeasured(NAThermMeasure measured) {
         this.measured = measured;
         return this;
@@ -95,6 +102,7 @@ public class NAThermostat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("module_name")
     public String moduleName;
+
     public NAThermostat withModuleName(String moduleName) {
         this.moduleName = moduleName;
         return this;
@@ -111,6 +119,7 @@ public class NAThermostat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rf_status")
     public Integer rfStatus;
+
     public NAThermostat withRfStatus(Integer rfStatus) {
         this.rfStatus = rfStatus;
         return this;
@@ -119,6 +128,7 @@ public class NAThermostat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setpoint")
     public NASetpoint setpoint;
+
     public NAThermostat withSetpoint(NASetpoint setpoint) {
         this.setpoint = setpoint;
         return this;
@@ -130,6 +140,7 @@ public class NAThermostat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setpoint_history")
     public NASetpointLog[] setpointHistory;
+
     public NAThermostat withSetpointHistory(NASetpointLog[] setpointHistory) {
         this.setpointHistory = setpointHistory;
         return this;
@@ -138,6 +149,7 @@ public class NAThermostat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setpoint_order")
     public NASetpoint setpointOrder;
+
     public NAThermostat withSetpointOrder(NASetpoint setpointOrder) {
         this.setpointOrder = setpointOrder;
         return this;
@@ -146,6 +158,7 @@ public class NAThermostat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("therm_orientation")
     public Integer thermOrientation;
+
     public NAThermostat withThermOrientation(Integer thermOrientation) {
         this.thermOrientation = thermOrientation;
         return this;
@@ -157,6 +170,7 @@ public class NAThermostat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("therm_program_list")
     public NAThermProgram[] thermProgramList;
+
     public NAThermostat withThermProgramList(NAThermProgram[] thermProgramList) {
         this.thermProgramList = thermProgramList;
         return this;
@@ -165,6 +179,7 @@ public class NAThermostat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("therm_relay_cmd")
     public Integer thermRelayCmd;
+
     public NAThermostat withThermRelayCmd(Integer thermRelayCmd) {
         this.thermRelayCmd = thermRelayCmd;
         return this;
@@ -183,9 +198,11 @@ public class NAThermostat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public NAThermostat withType(String type) {
         this.type = type;
         return this;
     }
     
+    public NAThermostat(){}
 }

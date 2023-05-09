@@ -75,12 +75,10 @@ public class Sections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddTaskForSectionResponse res = new org.openapis.openapi.models.operations.AddTaskForSectionResponse() {{
+        org.openapis.openapi.models.operations.AddTaskForSectionResponse res = new org.openapis.openapi.models.operations.AddTaskForSectionResponse(contentType, httpRes.statusCode()) {{
             addTaskForSection200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -135,12 +133,10 @@ public class Sections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSectionForProjectResponse res = new org.openapis.openapi.models.operations.CreateSectionForProjectResponse() {{
+        org.openapis.openapi.models.operations.CreateSectionForProjectResponse res = new org.openapis.openapi.models.operations.CreateSectionForProjectResponse(contentType, httpRes.statusCode()) {{
             createSectionForProject201ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -196,12 +192,10 @@ public class Sections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSectionResponse res = new org.openapis.openapi.models.operations.DeleteSectionResponse() {{
+        org.openapis.openapi.models.operations.DeleteSectionResponse res = new org.openapis.openapi.models.operations.DeleteSectionResponse(contentType, httpRes.statusCode()) {{
             deleteSection200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,12 +244,10 @@ public class Sections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSectionResponse res = new org.openapis.openapi.models.operations.GetSectionResponse() {{
+        org.openapis.openapi.models.operations.GetSectionResponse res = new org.openapis.openapi.models.operations.GetSectionResponse(contentType, httpRes.statusCode()) {{
             getSection200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -304,12 +296,10 @@ public class Sections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSectionsForProjectResponse res = new org.openapis.openapi.models.operations.GetSectionsForProjectResponse() {{
+        org.openapis.openapi.models.operations.GetSectionsForProjectResponse res = new org.openapis.openapi.models.operations.GetSectionsForProjectResponse(contentType, httpRes.statusCode()) {{
             getSectionsForProject200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -368,12 +358,10 @@ public class Sections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InsertSectionForProjectResponse res = new org.openapis.openapi.models.operations.InsertSectionForProjectResponse() {{
+        org.openapis.openapi.models.operations.InsertSectionForProjectResponse res = new org.openapis.openapi.models.operations.InsertSectionForProjectResponse(contentType, httpRes.statusCode()) {{
             insertSectionForProject200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -436,12 +424,10 @@ public class Sections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateSectionResponse res = new org.openapis.openapi.models.operations.UpdateSectionResponse() {{
+        org.openapis.openapi.models.operations.UpdateSectionResponse res = new org.openapis.openapi.models.operations.UpdateSectionResponse(contentType, httpRes.statusCode()) {{
             updateSection200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,6 +18,7 @@ public class NodeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public NodeInfo withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class NodeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public NodeInfo withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public NodeInfo(){}
 }

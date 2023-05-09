@@ -17,6 +17,7 @@ public class GetCMSpage200ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public GetCMSpage200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -27,6 +28,7 @@ public class GetCMSpage200ApplicationJSON {
      */
     @JsonProperty("name")
     public String name;
+
     public GetCMSpage200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -38,6 +40,7 @@ public class GetCMSpage200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sections")
     public GetCMSpage200ApplicationJSONSections[] sections;
+
     public GetCMSpage200ApplicationJSON withSections(GetCMSpage200ApplicationJSONSections[] sections) {
         this.sections = sections;
         return this;
@@ -48,6 +51,7 @@ public class GetCMSpage200ApplicationJSON {
      */
     @JsonProperty("status")
     public String status;
+
     public GetCMSpage200ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
@@ -58,6 +62,7 @@ public class GetCMSpage200ApplicationJSON {
      */
     @JsonProperty("type")
     public String type;
+
     public GetCMSpage200ApplicationJSON withType(String type) {
         this.type = type;
         return this;
@@ -69,6 +74,7 @@ public class GetCMSpage200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionId")
     public String versionId;
+
     public GetCMSpage200ApplicationJSON withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
@@ -80,9 +86,16 @@ public class GetCMSpage200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionStatus")
     public String versionStatus;
+
     public GetCMSpage200ApplicationJSON withVersionStatus(String versionStatus) {
         this.versionStatus = versionStatus;
         return this;
     }
     
+    public GetCMSpage200ApplicationJSON(@JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("status") String status, @JsonProperty("type") String type) {
+        this.id = id;
+        this.name = name;
+        this.status = status;
+        this.type = type;
+  }
 }

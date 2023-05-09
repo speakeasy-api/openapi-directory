@@ -19,9 +19,11 @@ public class CampaignRequestTrigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public CampaignRequestTriggerCodeEnum code;
+
     public CampaignRequestTrigger withCode(CampaignRequestTriggerCodeEnum code) {
         this.code = code;
         return this;
     }
     
+    public CampaignRequestTrigger(){}
 }

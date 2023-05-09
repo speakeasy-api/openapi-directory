@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PostOauthTokenRequestBody {
     /**
@@ -12,6 +12,7 @@ public class PostOauthTokenRequestBody {
      */
     
     public String clientId;
+
     public PostOauthTokenRequestBody withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -22,6 +23,7 @@ public class PostOauthTokenRequestBody {
      */
     
     public String clientSecret;
+
     public PostOauthTokenRequestBody withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -32,6 +34,7 @@ public class PostOauthTokenRequestBody {
      */
     
     public String code;
+
     public PostOauthTokenRequestBody withCode(String code) {
         this.code = code;
         return this;
@@ -42,6 +45,7 @@ public class PostOauthTokenRequestBody {
      */
     
     public String grantType;
+
     public PostOauthTokenRequestBody withGrantType(String grantType) {
         this.grantType = grantType;
         return this;
@@ -52,6 +56,7 @@ public class PostOauthTokenRequestBody {
      */
     
     public String redirectUri;
+
     public PostOauthTokenRequestBody withRedirectUri(String redirectUri) {
         this.redirectUri = redirectUri;
         return this;
@@ -62,9 +67,16 @@ public class PostOauthTokenRequestBody {
      */
     
     public String scopes;
+
     public PostOauthTokenRequestBody withScopes(String scopes) {
         this.scopes = scopes;
         return this;
     }
     
+    public PostOauthTokenRequestBody(@JsonProperty("client_id") String clientId, @JsonProperty("client_secret") String clientSecret, @JsonProperty("grant_type") String grantType, @JsonProperty("redirect_uri") String redirectUri) {
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
+        this.grantType = grantType;
+        this.redirectUri = redirectUri;
+  }
 }

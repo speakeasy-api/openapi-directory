@@ -15,6 +15,7 @@ public class PostNamespacesDeleteImagesResponseSuccessMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manifest_deletes")
     public Long manifestDeletes;
+
     public PostNamespacesDeleteImagesResponseSuccessMetrics withManifestDeletes(Long manifestDeletes) {
         this.manifestDeletes = manifestDeletes;
         return this;
@@ -26,6 +27,7 @@ public class PostNamespacesDeleteImagesResponseSuccessMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manifest_errors")
     public Long manifestErrors;
+
     public PostNamespacesDeleteImagesResponseSuccessMetrics withManifestErrors(Long manifestErrors) {
         this.manifestErrors = manifestErrors;
         return this;
@@ -37,6 +39,7 @@ public class PostNamespacesDeleteImagesResponseSuccessMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag_deletes")
     public Long tagDeletes;
+
     public PostNamespacesDeleteImagesResponseSuccessMetrics withTagDeletes(Long tagDeletes) {
         this.tagDeletes = tagDeletes;
         return this;
@@ -48,9 +51,11 @@ public class PostNamespacesDeleteImagesResponseSuccessMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag_errors")
     public Long tagErrors;
+
     public PostNamespacesDeleteImagesResponseSuccessMetrics withTagErrors(Long tagErrors) {
         this.tagErrors = tagErrors;
         return this;
     }
     
+    public PostNamespacesDeleteImagesResponseSuccessMetrics(){}
 }

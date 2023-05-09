@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RulesConfigurationType {
     @JsonProperty("Rules")
     public MappingRule[] rules;
+
     public RulesConfigurationType withRules(MappingRule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public RulesConfigurationType(@JsonProperty("Rules") MappingRule[] rules) {
+        this.rules = rules;
+  }
 }

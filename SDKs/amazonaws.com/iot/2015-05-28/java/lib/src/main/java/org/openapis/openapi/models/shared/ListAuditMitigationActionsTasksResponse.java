@@ -15,6 +15,7 @@ public class ListAuditMitigationActionsTasksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAuditMitigationActionsTasksResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListAuditMitigationActionsTasksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tasks")
     public AuditMitigationActionsTaskMetadata[] tasks;
+
     public ListAuditMitigationActionsTasksResponse withTasks(AuditMitigationActionsTaskMetadata[] tasks) {
         this.tasks = tasks;
         return this;
     }
     
+    public ListAuditMitigationActionsTasksResponse(){}
 }

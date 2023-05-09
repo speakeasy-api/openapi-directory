@@ -68,12 +68,10 @@ public class Item {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetItemFeedResponse res = new org.openapis.openapi.models.operations.GetItemFeedResponse() {{
+        org.openapis.openapi.models.operations.GetItemFeedResponse res = new org.openapis.openapi.models.operations.GetItemFeedResponse(contentType, httpRes.statusCode()) {{
             itemResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 206) {

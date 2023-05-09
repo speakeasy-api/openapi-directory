@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateRuleResponse {
     
     public String contentType;
+
     public UpdateRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateRuleResponse {
     
     
     public Integer statusCode;
+
     public UpdateRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UpdateRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateRuleResponse updateRuleResponse;
+
     public UpdateRuleResponse withUpdateRuleResponse(org.openapis.openapi.models.shared.UpdateRuleResponse updateRuleResponse) {
         this.updateRuleResponse = updateRuleResponse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateRuleResponse {
      */
     
     public Object wafInternalErrorException;
+
     public UpdateRuleResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class UpdateRuleResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public UpdateRuleResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateRuleResponse {
      */
     
     public Object wafInvalidOperationException;
+
     public UpdateRuleResponse withWAFInvalidOperationException(Object wafInvalidOperationException) {
         this.wafInvalidOperationException = wafInvalidOperationException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateRuleResponse {
      */
     
     public Object wafInvalidParameterException;
+
     public UpdateRuleResponse withWAFInvalidParameterException(Object wafInvalidParameterException) {
         this.wafInvalidParameterException = wafInvalidParameterException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateRuleResponse {
      */
     
     public Object wafLimitsExceededException;
+
     public UpdateRuleResponse withWAFLimitsExceededException(Object wafLimitsExceededException) {
         this.wafLimitsExceededException = wafLimitsExceededException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateRuleResponse {
      */
     
     public Object wafNonexistentContainerException;
+
     public UpdateRuleResponse withWAFNonexistentContainerException(Object wafNonexistentContainerException) {
         this.wafNonexistentContainerException = wafNonexistentContainerException;
         return this;
@@ -103,6 +114,7 @@ public class UpdateRuleResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public UpdateRuleResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
@@ -113,6 +125,7 @@ public class UpdateRuleResponse {
      */
     
     public Object wafReferencedItemException;
+
     public UpdateRuleResponse withWAFReferencedItemException(Object wafReferencedItemException) {
         this.wafReferencedItemException = wafReferencedItemException;
         return this;
@@ -123,9 +136,14 @@ public class UpdateRuleResponse {
      */
     
     public Object wafStaleDataException;
+
     public UpdateRuleResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
     }
     
+    public UpdateRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class ReturnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryTypes")
     public CategoryType[] categoryTypes;
+
     public ReturnPolicy withCategoryTypes(CategoryType[] categoryTypes) {
         this.categoryTypes = categoryTypes;
         return this;
@@ -29,6 +30,7 @@ public class ReturnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ReturnPolicy withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class ReturnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extendedHolidayReturnsOffered")
     public Boolean extendedHolidayReturnsOffered;
+
     public ReturnPolicy withExtendedHolidayReturnsOffered(Boolean extendedHolidayReturnsOffered) {
         this.extendedHolidayReturnsOffered = extendedHolidayReturnsOffered;
         return this;
@@ -51,6 +54,7 @@ public class ReturnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internationalOverride")
     public InternationalReturnOverrideType internationalOverride;
+
     public ReturnPolicy withInternationalOverride(InternationalReturnOverrideType internationalOverride) {
         this.internationalOverride = internationalOverride;
         return this;
@@ -62,6 +66,7 @@ public class ReturnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketplaceId")
     public String marketplaceId;
+
     public ReturnPolicy withMarketplaceId(String marketplaceId) {
         this.marketplaceId = marketplaceId;
         return this;
@@ -73,6 +78,7 @@ public class ReturnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ReturnPolicy withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class ReturnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refundMethod")
     public String refundMethod;
+
     public ReturnPolicy withRefundMethod(String refundMethod) {
         this.refundMethod = refundMethod;
         return this;
@@ -95,6 +102,7 @@ public class ReturnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restockingFeePercentage")
     public String restockingFeePercentage;
+
     public ReturnPolicy withRestockingFeePercentage(String restockingFeePercentage) {
         this.restockingFeePercentage = restockingFeePercentage;
         return this;
@@ -106,6 +114,7 @@ public class ReturnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnInstructions")
     public String returnInstructions;
+
     public ReturnPolicy withReturnInstructions(String returnInstructions) {
         this.returnInstructions = returnInstructions;
         return this;
@@ -117,6 +126,7 @@ public class ReturnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnMethod")
     public String returnMethod;
+
     public ReturnPolicy withReturnMethod(String returnMethod) {
         this.returnMethod = returnMethod;
         return this;
@@ -128,6 +138,7 @@ public class ReturnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnPeriod")
     public TimeDuration returnPeriod;
+
     public ReturnPolicy withReturnPeriod(TimeDuration returnPeriod) {
         this.returnPeriod = returnPeriod;
         return this;
@@ -139,6 +150,7 @@ public class ReturnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnPolicyId")
     public String returnPolicyId;
+
     public ReturnPolicy withReturnPolicyId(String returnPolicyId) {
         this.returnPolicyId = returnPolicyId;
         return this;
@@ -150,6 +162,7 @@ public class ReturnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnShippingCostPayer")
     public String returnShippingCostPayer;
+
     public ReturnPolicy withReturnShippingCostPayer(String returnShippingCostPayer) {
         this.returnShippingCostPayer = returnShippingCostPayer;
         return this;
@@ -161,9 +174,11 @@ public class ReturnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnsAccepted")
     public Boolean returnsAccepted;
+
     public ReturnPolicy withReturnsAccepted(Boolean returnsAccepted) {
         this.returnsAccepted = returnsAccepted;
         return this;
     }
     
+    public ReturnPolicy(){}
 }

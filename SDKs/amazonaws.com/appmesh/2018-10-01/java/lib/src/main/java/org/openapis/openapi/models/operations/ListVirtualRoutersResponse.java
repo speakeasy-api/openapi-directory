@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListVirtualRoutersResponse {
@@ -12,6 +13,7 @@ public class ListVirtualRoutersResponse {
      */
     
     public Object badRequestException;
+
     public ListVirtualRoutersResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListVirtualRoutersResponse {
     
     
     public String contentType;
+
     public ListVirtualRoutersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListVirtualRoutersResponse {
      */
     
     public Object forbiddenException;
+
     public ListVirtualRoutersResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class ListVirtualRoutersResponse {
      */
     
     public Object internalServerErrorException;
+
     public ListVirtualRoutersResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class ListVirtualRoutersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListVirtualRoutersOutput listVirtualRoutersOutput;
+
     public ListVirtualRoutersResponse withListVirtualRoutersOutput(org.openapis.openapi.models.shared.ListVirtualRoutersOutput listVirtualRoutersOutput) {
         this.listVirtualRoutersOutput = listVirtualRoutersOutput;
         return this;
@@ -59,6 +65,7 @@ public class ListVirtualRoutersResponse {
      */
     
     public Object notFoundException;
+
     public ListVirtualRoutersResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ListVirtualRoutersResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListVirtualRoutersResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class ListVirtualRoutersResponse {
     
     
     public Integer statusCode;
+
     public ListVirtualRoutersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListVirtualRoutersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListVirtualRoutersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class ListVirtualRoutersResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListVirtualRoutersResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListVirtualRoutersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

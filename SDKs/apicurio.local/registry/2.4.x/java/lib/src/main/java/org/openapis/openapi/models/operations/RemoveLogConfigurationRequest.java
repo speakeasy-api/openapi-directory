@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveLogConfigurationRequest {
@@ -12,9 +13,13 @@ public class RemoveLogConfigurationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=logger")
     public String logger;
+
     public RemoveLogConfigurationRequest withLogger(String logger) {
         this.logger = logger;
         return this;
     }
     
+    public RemoveLogConfigurationRequest(@JsonProperty("logger") String logger) {
+        this.logger = logger;
+  }
 }

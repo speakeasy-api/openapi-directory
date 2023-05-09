@@ -20,6 +20,7 @@ public class ImportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLogGroupArn")
     public String cloudWatchLogGroupArn;
+
     public ImportSummary withCloudWatchLogGroupArn(String cloudWatchLogGroupArn) {
         this.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
         return this;
@@ -30,6 +31,7 @@ public class ImportSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public ImportSummary withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -38,6 +40,7 @@ public class ImportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportArn")
     public String importArn;
+
     public ImportSummary withImportArn(String importArn) {
         this.importArn = importArn;
         return this;
@@ -46,6 +49,7 @@ public class ImportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportStatus")
     public ImportStatusEnum importStatus;
+
     public ImportSummary withImportStatus(ImportStatusEnum importStatus) {
         this.importStatus = importStatus;
         return this;
@@ -54,6 +58,7 @@ public class ImportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputFormat")
     public InputFormatEnum inputFormat;
+
     public ImportSummary withInputFormat(InputFormatEnum inputFormat) {
         this.inputFormat = inputFormat;
         return this;
@@ -62,6 +67,7 @@ public class ImportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3BucketSource")
     public S3BucketSource s3BucketSource;
+
     public ImportSummary withS3BucketSource(S3BucketSource s3BucketSource) {
         this.s3BucketSource = s3BucketSource;
         return this;
@@ -72,6 +78,7 @@ public class ImportSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public ImportSummary withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -80,9 +87,11 @@ public class ImportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableArn")
     public String tableArn;
+
     public ImportSummary withTableArn(String tableArn) {
         this.tableArn = tableArn;
         return this;
     }
     
+    public ImportSummary(){}
 }

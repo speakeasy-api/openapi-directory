@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAnomaliesForInsightResponse {
@@ -12,6 +13,7 @@ public class ListAnomaliesForInsightResponse {
      */
     
     public Object accessDeniedException;
+
     public ListAnomaliesForInsightResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListAnomaliesForInsightResponse {
     
     
     public String contentType;
+
     public ListAnomaliesForInsightResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListAnomaliesForInsightResponse {
      */
     
     public Object internalServerException;
+
     public ListAnomaliesForInsightResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListAnomaliesForInsightResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAnomaliesForInsightResponse listAnomaliesForInsightResponse;
+
     public ListAnomaliesForInsightResponse withListAnomaliesForInsightResponse(org.openapis.openapi.models.shared.ListAnomaliesForInsightResponse listAnomaliesForInsightResponse) {
         this.listAnomaliesForInsightResponse = listAnomaliesForInsightResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListAnomaliesForInsightResponse {
     
     
     public Integer statusCode;
+
     public ListAnomaliesForInsightResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListAnomaliesForInsightResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAnomaliesForInsightResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListAnomaliesForInsightResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListAnomaliesForInsightResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class ListAnomaliesForInsightResponse {
      */
     
     public Object throttlingException;
+
     public ListAnomaliesForInsightResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListAnomaliesForInsightResponse {
      */
     
     public Object validationException;
+
     public ListAnomaliesForInsightResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListAnomaliesForInsightResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

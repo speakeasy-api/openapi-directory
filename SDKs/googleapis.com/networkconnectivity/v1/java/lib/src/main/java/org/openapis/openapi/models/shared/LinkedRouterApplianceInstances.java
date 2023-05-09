@@ -18,6 +18,7 @@ public class LinkedRouterApplianceInstances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instances")
     public RouterApplianceInstance[] instances;
+
     public LinkedRouterApplianceInstances withInstances(RouterApplianceInstance[] instances) {
         this.instances = instances;
         return this;
@@ -29,6 +30,7 @@ public class LinkedRouterApplianceInstances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("siteToSiteDataTransfer")
     public Boolean siteToSiteDataTransfer;
+
     public LinkedRouterApplianceInstances withSiteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
         this.siteToSiteDataTransfer = siteToSiteDataTransfer;
         return this;
@@ -40,9 +42,11 @@ public class LinkedRouterApplianceInstances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcNetwork")
     public String vpcNetwork;
+
     public LinkedRouterApplianceInstances withVpcNetwork(String vpcNetwork) {
         this.vpcNetwork = vpcNetwork;
         return this;
     }
     
+    public LinkedRouterApplianceInstances(){}
 }

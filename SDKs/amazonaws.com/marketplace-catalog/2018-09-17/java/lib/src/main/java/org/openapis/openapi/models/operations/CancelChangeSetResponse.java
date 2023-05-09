@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelChangeSetResponse {
@@ -12,6 +13,7 @@ public class CancelChangeSetResponse {
      */
     
     public Object accessDeniedException;
+
     public CancelChangeSetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CancelChangeSetResponse {
      */
     
     public org.openapis.openapi.models.shared.CancelChangeSetResponse cancelChangeSetResponse;
+
     public CancelChangeSetResponse withCancelChangeSetResponse(org.openapis.openapi.models.shared.CancelChangeSetResponse cancelChangeSetResponse) {
         this.cancelChangeSetResponse = cancelChangeSetResponse;
         return this;
@@ -29,6 +32,7 @@ public class CancelChangeSetResponse {
     
     
     public String contentType;
+
     public CancelChangeSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CancelChangeSetResponse {
      */
     
     public Object internalServiceException;
+
     public CancelChangeSetResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class CancelChangeSetResponse {
      */
     
     public Object resourceInUseException;
+
     public CancelChangeSetResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -56,6 +62,7 @@ public class CancelChangeSetResponse {
     
     
     public Integer statusCode;
+
     public CancelChangeSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CancelChangeSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelChangeSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CancelChangeSetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CancelChangeSetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class CancelChangeSetResponse {
      */
     
     public Object throttlingException;
+
     public CancelChangeSetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CancelChangeSetResponse {
      */
     
     public Object validationException;
+
     public CancelChangeSetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CancelChangeSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

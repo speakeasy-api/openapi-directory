@@ -18,9 +18,11 @@ public class LocalObjectReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LocalObjectReference withName(String name) {
         this.name = name;
         return this;
     }
     
+    public LocalObjectReference(){}
 }

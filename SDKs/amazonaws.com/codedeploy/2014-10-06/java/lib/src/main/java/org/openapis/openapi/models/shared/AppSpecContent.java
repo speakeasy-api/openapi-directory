@@ -15,6 +15,7 @@ public class AppSpecContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public AppSpecContent withContent(String content) {
         this.content = content;
         return this;
@@ -23,9 +24,11 @@ public class AppSpecContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sha256")
     public String sha256;
+
     public AppSpecContent withSha256(String sha256) {
         this.sha256 = sha256;
         return this;
     }
     
+    public AppSpecContent(){}
 }

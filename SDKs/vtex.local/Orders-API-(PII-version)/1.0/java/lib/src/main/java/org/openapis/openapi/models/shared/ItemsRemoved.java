@@ -12,6 +12,7 @@ public class ItemsRemoved {
      */
     @JsonProperty("id")
     public String id;
+
     public ItemsRemoved withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +23,7 @@ public class ItemsRemoved {
      */
     @JsonProperty("name")
     public String name;
+
     public ItemsRemoved withName(String name) {
         this.name = name;
         return this;
@@ -32,6 +34,7 @@ public class ItemsRemoved {
      */
     @JsonProperty("price")
     public Integer price;
+
     public ItemsRemoved withPrice(Integer price) {
         this.price = price;
         return this;
@@ -42,6 +45,7 @@ public class ItemsRemoved {
      */
     @JsonProperty("quantity")
     public Integer quantity;
+
     public ItemsRemoved withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
@@ -52,9 +56,17 @@ public class ItemsRemoved {
      */
     @JsonProperty("unitMultiplier")
     public String unitMultiplier;
+
     public ItemsRemoved withUnitMultiplier(String unitMultiplier) {
         this.unitMultiplier = unitMultiplier;
         return this;
     }
     
+    public ItemsRemoved(@JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("price") Integer price, @JsonProperty("quantity") Integer quantity, @JsonProperty("unitMultiplier") String unitMultiplier) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+        this.unitMultiplier = unitMultiplier;
+  }
 }

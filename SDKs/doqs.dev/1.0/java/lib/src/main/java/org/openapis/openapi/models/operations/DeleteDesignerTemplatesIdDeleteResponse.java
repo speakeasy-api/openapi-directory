@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDesignerTemplatesIdDeleteResponse {
     
     public String contentType;
+
     public DeleteDesignerTemplatesIdDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteDesignerTemplatesIdDeleteResponse {
      */
     
     public org.openapis.openapi.models.shared.ResponseError responseError;
+
     public DeleteDesignerTemplatesIdDeleteResponse withResponseError(org.openapis.openapi.models.shared.ResponseError responseError) {
         this.responseError = responseError;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDesignerTemplatesIdDeleteResponse {
      */
     
     public org.openapis.openapi.models.shared.ResponseOkNoneType responseOkNoneType;
+
     public DeleteDesignerTemplatesIdDeleteResponse withResponseOkNoneType(org.openapis.openapi.models.shared.ResponseOkNoneType responseOkNoneType) {
         this.responseOkNoneType = responseOkNoneType;
         return this;
@@ -36,6 +40,7 @@ public class DeleteDesignerTemplatesIdDeleteResponse {
     
     
     public Integer statusCode;
+
     public DeleteDesignerTemplatesIdDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DeleteDesignerTemplatesIdDeleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDesignerTemplatesIdDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteDesignerTemplatesIdDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

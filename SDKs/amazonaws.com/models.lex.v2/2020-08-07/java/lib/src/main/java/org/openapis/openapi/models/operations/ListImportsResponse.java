@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListImportsResponse {
     
     public String contentType;
+
     public ListImportsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListImportsResponse {
      */
     
     public Object internalServerException;
+
     public ListImportsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListImportsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListImportsResponse listImportsResponse;
+
     public ListImportsResponse withListImportsResponse(org.openapis.openapi.models.shared.ListImportsResponse listImportsResponse) {
         this.listImportsResponse = listImportsResponse;
         return this;
@@ -36,6 +40,7 @@ public class ListImportsResponse {
     
     
     public Integer statusCode;
+
     public ListImportsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListImportsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListImportsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class ListImportsResponse {
      */
     
     public Object throttlingException;
+
     public ListImportsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,9 +70,14 @@ public class ListImportsResponse {
      */
     
     public Object validationException;
+
     public ListImportsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListImportsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

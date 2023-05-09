@@ -16,51 +16,52 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.DeleteObjectRequest;
 import org.openapis.openapi.models.operations.DeleteObjectResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            DeleteObjectRequest req = new DeleteObjectRequest() {{
-                path = "corrupti";
-                xAmzAlgorithm = "provident";
-                xAmzContentSha256 = "distinctio";
-                xAmzCredential = "quibusdam";
-                xAmzDate = "unde";
-                xAmzSecurityToken = "nulla";
-                xAmzSignature = "corrupti";
-                xAmzSignedHeaders = "illum";
-            }}            
+            DeleteObjectRequest req = new DeleteObjectRequest("provident") {{
+                xAmzAlgorithm = "distinctio";
+                xAmzContentSha256 = "quibusdam";
+                xAmzCredential = "unde";
+                xAmzDate = "nulla";
+                xAmzSecurityToken = "corrupti";
+                xAmzSignature = "illum";
+                xAmzSignedHeaders = "vel";
+            }};            
 
             DeleteObjectResponse res = sdk.deleteObject(req);
 
-            if (res.deleteObjectResponse.isPresent()) {
+            if (res.deleteObjectResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `deleteObject` - Deletes an object at the specified path.
-* `describeObject` - Gets the headers for an object at the specified path.
-* `getObject` - Downloads the object at the specified path. If the object’s upload availability is set to <code>streaming</code>, AWS Elemental MediaStore downloads the object even if it’s still uploading the object.
-* `listItems` - Provides a list of metadata entries about folders and objects in the specified folder.
-* `putObject` - Uploads an object to the specified path. Object sizes are limited to 25 MB for standard upload availability and 10 MB for streaming upload availability.
+* [deleteObject](docs/sdk/README.md#deleteobject) - Deletes an object at the specified path.
+* [describeObject](docs/sdk/README.md#describeobject) - Gets the headers for an object at the specified path.
+* [getObject](docs/sdk/README.md#getobject) - Downloads the object at the specified path. If the object’s upload availability is set to <code>streaming</code>, AWS Elemental MediaStore downloads the object even if it’s still uploading the object.
+* [listItems](docs/sdk/README.md#listitems) - Provides a list of metadata entries about folders and objects in the specified folder.
+* [putObject](docs/sdk/README.md#putobject) - Uploads an object to the specified path. Object sizes are limited to 25 MB for standard upload availability and 10 MB for streaming upload availability.
 <!-- End SDK Available Operations -->
 
 ### Maturity

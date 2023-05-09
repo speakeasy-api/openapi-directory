@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetFrameMetricDataResponse {
@@ -12,6 +13,7 @@ public class BatchGetFrameMetricDataResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetFrameMetricDataResponse batchGetFrameMetricDataResponse;
+
     public BatchGetFrameMetricDataResponse withBatchGetFrameMetricDataResponse(org.openapis.openapi.models.shared.BatchGetFrameMetricDataResponse batchGetFrameMetricDataResponse) {
         this.batchGetFrameMetricDataResponse = batchGetFrameMetricDataResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchGetFrameMetricDataResponse {
     
     
     public String contentType;
+
     public BatchGetFrameMetricDataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetFrameMetricDataResponse {
      */
     
     public Object internalServerException;
+
     public BatchGetFrameMetricDataResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class BatchGetFrameMetricDataResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchGetFrameMetricDataResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class BatchGetFrameMetricDataResponse {
     
     
     public Integer statusCode;
+
     public BatchGetFrameMetricDataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class BatchGetFrameMetricDataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetFrameMetricDataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class BatchGetFrameMetricDataResponse {
      */
     
     public Object throttlingException;
+
     public BatchGetFrameMetricDataResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class BatchGetFrameMetricDataResponse {
      */
     
     public Object validationException;
+
     public BatchGetFrameMetricDataResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchGetFrameMetricDataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

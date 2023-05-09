@@ -18,9 +18,11 @@ public class AcmeChallengeSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("record")
     public AcmeTxtRecord[] record;
+
     public AcmeChallengeSet withRecord(AcmeTxtRecord[] record) {
         this.record = record;
         return this;
     }
     
+    public AcmeChallengeSet(){}
 }

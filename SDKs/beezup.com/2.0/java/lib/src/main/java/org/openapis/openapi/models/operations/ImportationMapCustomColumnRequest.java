@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportationMapCustomColumnRequest {
@@ -12,6 +13,7 @@ public class ImportationMapCustomColumnRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=columnId")
     public String columnId;
+
     public ImportationMapCustomColumnRequest withColumnId(String columnId) {
         this.columnId = columnId;
         return this;
@@ -22,6 +24,7 @@ public class ImportationMapCustomColumnRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=executionId")
     public String executionId;
+
     public ImportationMapCustomColumnRequest withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -29,6 +32,7 @@ public class ImportationMapCustomColumnRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.MapBeezUPColumnRequest mapBeezUPColumnRequest;
+
     public ImportationMapCustomColumnRequest withMapBeezUPColumnRequest(org.openapis.openapi.models.shared.MapBeezUPColumnRequest mapBeezUPColumnRequest) {
         this.mapBeezUPColumnRequest = mapBeezUPColumnRequest;
         return this;
@@ -39,9 +43,16 @@ public class ImportationMapCustomColumnRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
     public String storeId;
+
     public ImportationMapCustomColumnRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public ImportationMapCustomColumnRequest(@JsonProperty("columnId") String columnId, @JsonProperty("executionId") String executionId, @JsonProperty("mapBeezUPColumnRequest") org.openapis.openapi.models.shared.MapBeezUPColumnRequest mapBeezUPColumnRequest, @JsonProperty("storeId") String storeId) {
+        this.columnId = columnId;
+        this.executionId = executionId;
+        this.mapBeezUPColumnRequest = mapBeezUPColumnRequest;
+        this.storeId = storeId;
+  }
 }

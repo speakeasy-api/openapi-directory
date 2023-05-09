@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class GetShardIteratorInput {
     @JsonProperty("ShardId")
     public String shardId;
+
     public GetShardIteratorInput withShardId(String shardId) {
         this.shardId = shardId;
         return this;
@@ -26,6 +27,7 @@ public class GetShardIteratorInput {
     
     @JsonProperty("ShardIteratorType")
     public ShardIteratorTypeEnum shardIteratorType;
+
     public GetShardIteratorInput withShardIteratorType(ShardIteratorTypeEnum shardIteratorType) {
         this.shardIteratorType = shardIteratorType;
         return this;
@@ -34,6 +36,7 @@ public class GetShardIteratorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartingSequenceNumber")
     public String startingSequenceNumber;
+
     public GetShardIteratorInput withStartingSequenceNumber(String startingSequenceNumber) {
         this.startingSequenceNumber = startingSequenceNumber;
         return this;
@@ -42,6 +45,7 @@ public class GetShardIteratorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public GetShardIteratorInput withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -50,6 +54,7 @@ public class GetShardIteratorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public GetShardIteratorInput withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
@@ -60,9 +65,14 @@ public class GetShardIteratorInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Timestamp")
     public OffsetDateTime timestamp;
+
     public GetShardIteratorInput withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public GetShardIteratorInput(@JsonProperty("ShardId") String shardId, @JsonProperty("ShardIteratorType") ShardIteratorTypeEnum shardIteratorType) {
+        this.shardId = shardId;
+        this.shardIteratorType = shardIteratorType;
+  }
 }

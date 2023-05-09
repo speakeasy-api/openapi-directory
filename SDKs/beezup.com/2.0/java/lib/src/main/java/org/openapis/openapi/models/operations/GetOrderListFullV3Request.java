@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrderListFullV3Request {
@@ -12,6 +13,7 @@ public class GetOrderListFullV3Request {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Encoding")
     public String acceptEncoding;
+
     public GetOrderListFullV3Request withAcceptEncoding(String acceptEncoding) {
         this.acceptEncoding = acceptEncoding;
         return this;
@@ -19,9 +21,14 @@ public class GetOrderListFullV3Request {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.OrderListRequest orderListRequest;
+
     public GetOrderListFullV3Request withOrderListRequest(org.openapis.openapi.models.shared.OrderListRequest orderListRequest) {
         this.orderListRequest = orderListRequest;
         return this;
     }
     
+    public GetOrderListFullV3Request(@JsonProperty("Accept-Encoding") String acceptEncoding, @JsonProperty("orderListRequest") org.openapis.openapi.models.shared.OrderListRequest orderListRequest) {
+        this.acceptEncoding = acceptEncoding;
+        this.orderListRequest = orderListRequest;
+  }
 }

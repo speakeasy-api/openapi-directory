@@ -15,6 +15,7 @@ public class ListProcessingJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListProcessingJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListProcessingJobsResponse {
     
     @JsonProperty("ProcessingJobSummaries")
     public ProcessingJobSummary[] processingJobSummaries;
+
     public ListProcessingJobsResponse withProcessingJobSummaries(ProcessingJobSummary[] processingJobSummaries) {
         this.processingJobSummaries = processingJobSummaries;
         return this;
     }
     
+    public ListProcessingJobsResponse(@JsonProperty("ProcessingJobSummaries") ProcessingJobSummary[] processingJobSummaries) {
+        this.processingJobSummaries = processingJobSummaries;
+  }
 }

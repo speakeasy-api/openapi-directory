@@ -15,6 +15,7 @@ public class ParametricCloudWatchMonitoringConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logGroupName")
     public String logGroupName;
+
     public ParametricCloudWatchMonitoringConfiguration withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
@@ -23,9 +24,11 @@ public class ParametricCloudWatchMonitoringConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logStreamNamePrefix")
     public String logStreamNamePrefix;
+
     public ParametricCloudWatchMonitoringConfiguration withLogStreamNamePrefix(String logStreamNamePrefix) {
         this.logStreamNamePrefix = logStreamNamePrefix;
         return this;
     }
     
+    public ParametricCloudWatchMonitoringConfiguration(){}
 }

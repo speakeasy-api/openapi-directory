@@ -15,6 +15,7 @@ public class GetAutoScalingGroupRecommendationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoScalingGroupRecommendations")
     public AutoScalingGroupRecommendation[] autoScalingGroupRecommendations;
+
     public GetAutoScalingGroupRecommendationsResponse withAutoScalingGroupRecommendations(AutoScalingGroupRecommendation[] autoScalingGroupRecommendations) {
         this.autoScalingGroupRecommendations = autoScalingGroupRecommendations;
         return this;
@@ -23,6 +24,7 @@ public class GetAutoScalingGroupRecommendationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public GetRecommendationError[] errors;
+
     public GetAutoScalingGroupRecommendationsResponse withErrors(GetRecommendationError[] errors) {
         this.errors = errors;
         return this;
@@ -31,9 +33,11 @@ public class GetAutoScalingGroupRecommendationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetAutoScalingGroupRecommendationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetAutoScalingGroupRecommendationsResponse(){}
 }

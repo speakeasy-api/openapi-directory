@@ -12,6 +12,7 @@ public class CreateWorkflowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateWorkflowRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class CreateWorkflowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnExceptionSteps")
     public WorkflowStep[] onExceptionSteps;
+
     public CreateWorkflowRequest withOnExceptionSteps(WorkflowStep[] onExceptionSteps) {
         this.onExceptionSteps = onExceptionSteps;
         return this;
@@ -27,6 +29,7 @@ public class CreateWorkflowRequest {
     
     @JsonProperty("Steps")
     public WorkflowStep[] steps;
+
     public CreateWorkflowRequest withSteps(WorkflowStep[] steps) {
         this.steps = steps;
         return this;
@@ -35,9 +38,13 @@ public class CreateWorkflowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateWorkflowRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateWorkflowRequest(@JsonProperty("Steps") WorkflowStep[] steps) {
+        this.steps = steps;
+  }
 }

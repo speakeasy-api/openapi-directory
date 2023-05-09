@@ -18,6 +18,7 @@ public class TcpRouteInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TcpRouteInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class TcpRouteInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gateways")
     public String[] gateways;
+
     public TcpRouteInput withGateways(String[] gateways) {
         this.gateways = gateways;
         return this;
@@ -40,6 +42,7 @@ public class TcpRouteInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public TcpRouteInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -51,6 +54,7 @@ public class TcpRouteInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meshes")
     public String[] meshes;
+
     public TcpRouteInput withMeshes(String[] meshes) {
         this.meshes = meshes;
         return this;
@@ -62,6 +66,7 @@ public class TcpRouteInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TcpRouteInput withName(String name) {
         this.name = name;
         return this;
@@ -73,9 +78,11 @@ public class TcpRouteInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public TcpRouteRouteRule[] rules;
+
     public TcpRouteInput withRules(TcpRouteRouteRule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public TcpRouteInput(){}
 }

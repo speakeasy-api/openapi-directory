@@ -12,6 +12,7 @@ public class Ror1bRequestBodyCertificateParameters {
      */
     @JsonProperty("khatano")
     public String khatano;
+
     public Ror1bRequestBodyCertificateParameters withKhatano(String khatano) {
         this.khatano = khatano;
         return this;
@@ -22,6 +23,7 @@ public class Ror1bRequestBodyCertificateParameters {
      */
     @JsonProperty("level1")
     public String level1;
+
     public Ror1bRequestBodyCertificateParameters withLevel1(String level1) {
         this.level1 = level1;
         return this;
@@ -32,6 +34,7 @@ public class Ror1bRequestBodyCertificateParameters {
      */
     @JsonProperty("level2")
     public String level2;
+
     public Ror1bRequestBodyCertificateParameters withLevel2(String level2) {
         this.level2 = level2;
         return this;
@@ -42,9 +45,16 @@ public class Ror1bRequestBodyCertificateParameters {
      */
     @JsonProperty("level3")
     public String level3;
+
     public Ror1bRequestBodyCertificateParameters withLevel3(String level3) {
         this.level3 = level3;
         return this;
     }
     
+    public Ror1bRequestBodyCertificateParameters(@JsonProperty("khatano") String khatano, @JsonProperty("level1") String level1, @JsonProperty("level2") String level2, @JsonProperty("level3") String level3) {
+        this.khatano = khatano;
+        this.level1 = level1;
+        this.level2 = level2;
+        this.level3 = level3;
+  }
 }

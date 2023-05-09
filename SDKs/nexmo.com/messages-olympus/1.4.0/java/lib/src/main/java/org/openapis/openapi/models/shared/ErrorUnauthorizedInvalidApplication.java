@@ -18,6 +18,7 @@ public class ErrorUnauthorizedInvalidApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public ErrorUnauthorizedInvalidApplication withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -28,6 +29,7 @@ public class ErrorUnauthorizedInvalidApplication {
      */
     @JsonProperty("instance")
     public String instance;
+
     public ErrorUnauthorizedInvalidApplication withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -38,6 +40,7 @@ public class ErrorUnauthorizedInvalidApplication {
      */
     @JsonProperty("title")
     public String title;
+
     public ErrorUnauthorizedInvalidApplication withTitle(String title) {
         this.title = title;
         return this;
@@ -48,9 +51,15 @@ public class ErrorUnauthorizedInvalidApplication {
      */
     @JsonProperty("type")
     public String type;
+
     public ErrorUnauthorizedInvalidApplication withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ErrorUnauthorizedInvalidApplication(@JsonProperty("instance") String instance, @JsonProperty("title") String title, @JsonProperty("type") String type) {
+        this.instance = instance;
+        this.title = title;
+        this.type = type;
+  }
 }

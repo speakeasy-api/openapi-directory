@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisplayvideoMediaDownloadResponse {
     
     public String contentType;
+
     public DisplayvideoMediaDownloadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisplayvideoMediaDownloadResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleBytestreamMedia googleBytestreamMedia;
+
     public DisplayvideoMediaDownloadResponse withGoogleBytestreamMedia(org.openapis.openapi.models.shared.GoogleBytestreamMedia googleBytestreamMedia) {
         this.googleBytestreamMedia = googleBytestreamMedia;
         return this;
@@ -26,6 +29,7 @@ public class DisplayvideoMediaDownloadResponse {
     
     
     public Integer statusCode;
+
     public DisplayvideoMediaDownloadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DisplayvideoMediaDownloadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisplayvideoMediaDownloadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisplayvideoMediaDownloadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

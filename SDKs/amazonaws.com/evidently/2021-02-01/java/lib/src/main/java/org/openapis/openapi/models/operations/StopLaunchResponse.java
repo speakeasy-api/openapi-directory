@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopLaunchResponse {
@@ -12,6 +13,7 @@ public class StopLaunchResponse {
      */
     
     public Object accessDeniedException;
+
     public StopLaunchResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class StopLaunchResponse {
     
     
     public String contentType;
+
     public StopLaunchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StopLaunchResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopLaunchResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class StopLaunchResponse {
     
     
     public Integer statusCode;
+
     public StopLaunchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class StopLaunchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopLaunchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class StopLaunchResponse {
      */
     
     public org.openapis.openapi.models.shared.StopLaunchResponse stopLaunchResponse;
+
     public StopLaunchResponse withStopLaunchResponse(org.openapis.openapi.models.shared.StopLaunchResponse stopLaunchResponse) {
         this.stopLaunchResponse = stopLaunchResponse;
         return this;
@@ -63,6 +70,7 @@ public class StopLaunchResponse {
      */
     
     public Object throttlingException;
+
     public StopLaunchResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class StopLaunchResponse {
      */
     
     public Object validationException;
+
     public StopLaunchResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StopLaunchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

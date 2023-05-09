@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentTextAnchorTextSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endIndex")
     public String endIndex;
+
     public GoogleCloudDocumentaiV1beta2DocumentTextAnchorTextSegment withEndIndex(String endIndex) {
         this.endIndex = endIndex;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDocumentaiV1beta2DocumentTextAnchorTextSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startIndex")
     public String startIndex;
+
     public GoogleCloudDocumentaiV1beta2DocumentTextAnchorTextSegment withStartIndex(String startIndex) {
         this.startIndex = startIndex;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta2DocumentTextAnchorTextSegment(){}
 }

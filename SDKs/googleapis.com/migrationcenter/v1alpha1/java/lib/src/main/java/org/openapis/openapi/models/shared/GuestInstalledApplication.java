@@ -18,6 +18,7 @@ public class GuestInstalledApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GuestInstalledApplication withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class GuestInstalledApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public GuestInstalledApplication withPath(String path) {
         this.path = path;
         return this;
@@ -40,6 +42,7 @@ public class GuestInstalledApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public String time;
+
     public GuestInstalledApplication withTime(String time) {
         this.time = time;
         return this;
@@ -51,6 +54,7 @@ public class GuestInstalledApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor")
     public String vendor;
+
     public GuestInstalledApplication withVendor(String vendor) {
         this.vendor = vendor;
         return this;
@@ -62,9 +66,11 @@ public class GuestInstalledApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public GuestInstalledApplication withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public GuestInstalledApplication(){}
 }

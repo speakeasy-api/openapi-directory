@@ -15,6 +15,7 @@ public class AppComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalInfo")
     public java.util.Map<String, String[]> additionalInfo;
+
     public AppComponent withAdditionalInfo(java.util.Map<String, String[]> additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
@@ -23,6 +24,7 @@ public class AppComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AppComponent withId(String id) {
         this.id = id;
         return this;
@@ -30,6 +32,7 @@ public class AppComponent {
     
     @JsonProperty("name")
     public String name;
+
     public AppComponent withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +40,14 @@ public class AppComponent {
     
     @JsonProperty("type")
     public String type;
+
     public AppComponent withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AppComponent(@JsonProperty("name") String name, @JsonProperty("type") String type) {
+        this.name = name;
+        this.type = type;
+  }
 }

@@ -15,6 +15,7 @@ public class NADashboardData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AbsolutePressure")
     public Float absolutePressure;
+
     public NADashboardData withAbsolutePressure(Float absolutePressure) {
         this.absolutePressure = absolutePressure;
         return this;
@@ -23,6 +24,7 @@ public class NADashboardData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BoilerOff")
     public Integer boilerOff;
+
     public NADashboardData withBoilerOff(Integer boilerOff) {
         this.boilerOff = boilerOff;
         return this;
@@ -31,6 +33,7 @@ public class NADashboardData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BoilerOn")
     public Integer boilerOn;
+
     public NADashboardData withBoilerOn(Integer boilerOn) {
         this.boilerOn = boilerOn;
         return this;
@@ -42,6 +45,7 @@ public class NADashboardData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CO2")
     public Float co2;
+
     public NADashboardData withCo2(Float co2) {
         this.co2 = co2;
         return this;
@@ -53,6 +57,7 @@ public class NADashboardData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GustAngle")
     public Integer gustAngle;
+
     public NADashboardData withGustAngle(Integer gustAngle) {
         this.gustAngle = gustAngle;
         return this;
@@ -64,6 +69,7 @@ public class NADashboardData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GustStrength")
     public Integer gustStrength;
+
     public NADashboardData withGustStrength(Integer gustStrength) {
         this.gustStrength = gustStrength;
         return this;
@@ -75,6 +81,7 @@ public class NADashboardData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Humidity")
     public Float humidity;
+
     public NADashboardData withHumidity(Float humidity) {
         this.humidity = humidity;
         return this;
@@ -86,6 +93,7 @@ public class NADashboardData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Noise")
     public Float noise;
+
     public NADashboardData withNoise(Float noise) {
         this.noise = noise;
         return this;
@@ -97,6 +105,7 @@ public class NADashboardData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Pressure")
     public Float pressure;
+
     public NADashboardData withPressure(Float pressure) {
         this.pressure = pressure;
         return this;
@@ -108,6 +117,7 @@ public class NADashboardData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rain")
     public Float rain;
+
     public NADashboardData withRain(Float rain) {
         this.rain = rain;
         return this;
@@ -119,6 +129,7 @@ public class NADashboardData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Temperature")
     public Float temperature;
+
     public NADashboardData withTemperature(Float temperature) {
         this.temperature = temperature;
         return this;
@@ -130,6 +141,7 @@ public class NADashboardData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindAngle")
     public Integer windAngle;
+
     public NADashboardData withWindAngle(Integer windAngle) {
         this.windAngle = windAngle;
         return this;
@@ -141,6 +153,7 @@ public class NADashboardData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindStrength")
     public Integer windStrength;
+
     public NADashboardData withWindStrength(Integer windStrength) {
         this.windStrength = windStrength;
         return this;
@@ -152,6 +165,7 @@ public class NADashboardData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_max_temp")
     public Integer dateMaxTemp;
+
     public NADashboardData withDateMaxTemp(Integer dateMaxTemp) {
         this.dateMaxTemp = dateMaxTemp;
         return this;
@@ -163,6 +177,7 @@ public class NADashboardData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_max_wind_str")
     public Integer dateMaxWindStr;
+
     public NADashboardData withDateMaxWindStr(Integer dateMaxWindStr) {
         this.dateMaxWindStr = dateMaxWindStr;
         return this;
@@ -174,6 +189,7 @@ public class NADashboardData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_min_temp")
     public Integer dateMinTemp;
+
     public NADashboardData withDateMinTemp(Integer dateMinTemp) {
         this.dateMinTemp = dateMinTemp;
         return this;
@@ -182,6 +198,7 @@ public class NADashboardData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device_id")
     public Float deviceId;
+
     public NADashboardData withDeviceId(Float deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -193,6 +210,7 @@ public class NADashboardData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("health_idx")
     public Integer healthIdx;
+
     public NADashboardData withHealthIdx(Integer healthIdx) {
         this.healthIdx = healthIdx;
         return this;
@@ -204,6 +222,7 @@ public class NADashboardData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_temp")
     public Float maxTemp;
+
     public NADashboardData withMaxTemp(Float maxTemp) {
         this.maxTemp = maxTemp;
         return this;
@@ -212,6 +231,7 @@ public class NADashboardData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_wind_str")
     public Integer maxWindStr;
+
     public NADashboardData withMaxWindStr(Integer maxWindStr) {
         this.maxWindStr = maxWindStr;
         return this;
@@ -223,6 +243,7 @@ public class NADashboardData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("min_temp")
     public Float minTemp;
+
     public NADashboardData withMinTemp(Float minTemp) {
         this.minTemp = minTemp;
         return this;
@@ -234,6 +255,7 @@ public class NADashboardData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pressure_trend")
     public String pressureTrend;
+
     public NADashboardData withPressureTrend(String pressureTrend) {
         this.pressureTrend = pressureTrend;
         return this;
@@ -245,6 +267,7 @@ public class NADashboardData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sum_rain_1")
     public Float sumRain1;
+
     public NADashboardData withSumRain1(Float sumRain1) {
         this.sumRain1 = sumRain1;
         return this;
@@ -256,6 +279,7 @@ public class NADashboardData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sum_rain_24")
     public Float sumRain24;
+
     public NADashboardData withSumRain24(Float sumRain24) {
         this.sumRain24 = sumRain24;
         return this;
@@ -267,6 +291,7 @@ public class NADashboardData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("temp_trend")
     public String tempTrend;
+
     public NADashboardData withTempTrend(String tempTrend) {
         this.tempTrend = tempTrend;
         return this;
@@ -275,9 +300,11 @@ public class NADashboardData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time_utc")
     public Integer timeUtc;
+
     public NADashboardData withTimeUtc(Integer timeUtc) {
         this.timeUtc = timeUtc;
         return this;
     }
     
+    public NADashboardData(){}
 }

@@ -69,11 +69,9 @@ public class TaxonomyServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaxonomyAttractionsResponse res = new org.openapis.openapi.models.operations.TaxonomyAttractionsResponse() {{
+        org.openapis.openapi.models.operations.TaxonomyAttractionsResponse res = new org.openapis.openapi.models.operations.TaxonomyAttractionsResponse(contentType, httpRes.statusCode()) {{
             taxonomyAttractions200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -127,11 +125,9 @@ public class TaxonomyServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaxonomyCategoriesResponse res = new org.openapis.openapi.models.operations.TaxonomyCategoriesResponse() {{
+        org.openapis.openapi.models.operations.TaxonomyCategoriesResponse res = new org.openapis.openapi.models.operations.TaxonomyCategoriesResponse(contentType, httpRes.statusCode()) {{
             taxonomyCategories200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -179,11 +175,9 @@ public class TaxonomyServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaxonomyDestinationsResponse res = new org.openapis.openapi.models.operations.TaxonomyDestinationsResponse() {{
+        org.openapis.openapi.models.operations.TaxonomyDestinationsResponse res = new org.openapis.openapi.models.operations.TaxonomyDestinationsResponse(contentType, httpRes.statusCode()) {{
             taxonomyDestinations200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

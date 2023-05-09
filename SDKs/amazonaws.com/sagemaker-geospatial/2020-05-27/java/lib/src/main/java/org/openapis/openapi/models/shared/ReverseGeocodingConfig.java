@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * ReverseGeocodingConfig - &lt;p/&gt;
+ * ReverseGeocodingConfig - The input structure for Reverse Geocoding operation type.
  */
 public class ReverseGeocodingConfig {
     @JsonProperty("XAttributeName")
     public String xAttributeName;
+
     public ReverseGeocodingConfig withXAttributeName(String xAttributeName) {
         this.xAttributeName = xAttributeName;
         return this;
@@ -19,9 +20,14 @@ public class ReverseGeocodingConfig {
     
     @JsonProperty("YAttributeName")
     public String yAttributeName;
+
     public ReverseGeocodingConfig withYAttributeName(String yAttributeName) {
         this.yAttributeName = yAttributeName;
         return this;
     }
     
+    public ReverseGeocodingConfig(@JsonProperty("XAttributeName") String xAttributeName, @JsonProperty("YAttributeName") String yAttributeName) {
+        this.xAttributeName = xAttributeName;
+        this.yAttributeName = yAttributeName;
+  }
 }

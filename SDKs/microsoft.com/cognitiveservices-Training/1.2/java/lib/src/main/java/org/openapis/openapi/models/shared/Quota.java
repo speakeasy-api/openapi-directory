@@ -18,6 +18,7 @@ public class Quota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeUntilReset")
     public String timeUntilReset;
+
     public Quota withTimeUntilReset(String timeUntilReset) {
         this.timeUntilReset = timeUntilReset;
         return this;
@@ -29,6 +30,7 @@ public class Quota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Total")
     public Integer total;
+
     public Quota withTotal(Integer total) {
         this.total = total;
         return this;
@@ -40,9 +42,11 @@ public class Quota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Used")
     public Integer used;
+
     public Quota withUsed(Integer used) {
         this.used = used;
         return this;
     }
     
+    public Quota(){}
 }

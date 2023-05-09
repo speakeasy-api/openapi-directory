@@ -15,6 +15,7 @@ public class EnterpriseAdminListSelfHostedRunnersForEnterprise200ApplicationJSON
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runners")
     public org.openapis.openapi.models.shared.Runner[] runners;
+
     public EnterpriseAdminListSelfHostedRunnersForEnterprise200ApplicationJSON withRunners(org.openapis.openapi.models.shared.Runner[] runners) {
         this.runners = runners;
         return this;
@@ -23,9 +24,11 @@ public class EnterpriseAdminListSelfHostedRunnersForEnterprise200ApplicationJSON
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_count")
     public Double totalCount;
+
     public EnterpriseAdminListSelfHostedRunnersForEnterprise200ApplicationJSON withTotalCount(Double totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public EnterpriseAdminListSelfHostedRunnersForEnterprise200ApplicationJSON(){}
 }

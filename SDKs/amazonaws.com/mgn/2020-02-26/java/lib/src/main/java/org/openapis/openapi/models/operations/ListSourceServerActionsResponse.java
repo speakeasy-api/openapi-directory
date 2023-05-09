@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSourceServerActionsResponse {
     
     public String contentType;
+
     public ListSourceServerActionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListSourceServerActionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSourceServerActionsResponse listSourceServerActionsResponse;
+
     public ListSourceServerActionsResponse withListSourceServerActionsResponse(org.openapis.openapi.models.shared.ListSourceServerActionsResponse listSourceServerActionsResponse) {
         this.listSourceServerActionsResponse = listSourceServerActionsResponse;
         return this;
@@ -29,6 +32,7 @@ public class ListSourceServerActionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListSourceServerActionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class ListSourceServerActionsResponse {
     
     
     public Integer statusCode;
+
     public ListSourceServerActionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListSourceServerActionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSourceServerActionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class ListSourceServerActionsResponse {
      */
     
     public Object uninitializedAccountException;
+
     public ListSourceServerActionsResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
     }
     
+    public ListSourceServerActionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

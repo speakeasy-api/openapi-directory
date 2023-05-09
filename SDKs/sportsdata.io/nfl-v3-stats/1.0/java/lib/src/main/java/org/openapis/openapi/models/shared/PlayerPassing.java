@@ -12,6 +12,7 @@ public class PlayerPassing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPoints")
     public Double fantasyPoints;
+
     public PlayerPassing withFantasyPoints(Double fantasyPoints) {
         this.fantasyPoints = fantasyPoints;
         return this;
@@ -20,6 +21,7 @@ public class PlayerPassing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPosition")
     public String fantasyPosition;
+
     public PlayerPassing withFantasyPosition(String fantasyPosition) {
         this.fantasyPosition = fantasyPosition;
         return this;
@@ -28,6 +30,7 @@ public class PlayerPassing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumblesLost")
     public Long fumblesLost;
+
     public PlayerPassing withFumblesLost(Long fumblesLost) {
         this.fumblesLost = fumblesLost;
         return this;
@@ -36,6 +39,7 @@ public class PlayerPassing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public PlayerPassing withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +48,7 @@ public class PlayerPassing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Number")
     public Long number;
+
     public PlayerPassing withNumber(Long number) {
         this.number = number;
         return this;
@@ -52,6 +57,7 @@ public class PlayerPassing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingAttempts")
     public Long passingAttempts;
+
     public PlayerPassing withPassingAttempts(Long passingAttempts) {
         this.passingAttempts = passingAttempts;
         return this;
@@ -60,6 +66,7 @@ public class PlayerPassing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingCompletionPercentage")
     public Double passingCompletionPercentage;
+
     public PlayerPassing withPassingCompletionPercentage(Double passingCompletionPercentage) {
         this.passingCompletionPercentage = passingCompletionPercentage;
         return this;
@@ -68,6 +75,7 @@ public class PlayerPassing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingCompletions")
     public Long passingCompletions;
+
     public PlayerPassing withPassingCompletions(Long passingCompletions) {
         this.passingCompletions = passingCompletions;
         return this;
@@ -76,6 +84,7 @@ public class PlayerPassing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingInterceptions")
     public Long passingInterceptions;
+
     public PlayerPassing withPassingInterceptions(Long passingInterceptions) {
         this.passingInterceptions = passingInterceptions;
         return this;
@@ -84,6 +93,7 @@ public class PlayerPassing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingLong")
     public Long passingLong;
+
     public PlayerPassing withPassingLong(Long passingLong) {
         this.passingLong = passingLong;
         return this;
@@ -92,6 +102,7 @@ public class PlayerPassing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingRating")
     public Double passingRating;
+
     public PlayerPassing withPassingRating(Double passingRating) {
         this.passingRating = passingRating;
         return this;
@@ -100,6 +111,7 @@ public class PlayerPassing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingSackYards")
     public Long passingSackYards;
+
     public PlayerPassing withPassingSackYards(Long passingSackYards) {
         this.passingSackYards = passingSackYards;
         return this;
@@ -108,6 +120,7 @@ public class PlayerPassing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingSacks")
     public Long passingSacks;
+
     public PlayerPassing withPassingSacks(Long passingSacks) {
         this.passingSacks = passingSacks;
         return this;
@@ -116,6 +129,7 @@ public class PlayerPassing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingTouchdowns")
     public Long passingTouchdowns;
+
     public PlayerPassing withPassingTouchdowns(Long passingTouchdowns) {
         this.passingTouchdowns = passingTouchdowns;
         return this;
@@ -124,6 +138,7 @@ public class PlayerPassing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingYards")
     public Long passingYards;
+
     public PlayerPassing withPassingYards(Long passingYards) {
         this.passingYards = passingYards;
         return this;
@@ -132,6 +147,7 @@ public class PlayerPassing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingYardsPerAttempt")
     public Double passingYardsPerAttempt;
+
     public PlayerPassing withPassingYardsPerAttempt(Double passingYardsPerAttempt) {
         this.passingYardsPerAttempt = passingYardsPerAttempt;
         return this;
@@ -140,6 +156,7 @@ public class PlayerPassing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingYardsPerCompletion")
     public Double passingYardsPerCompletion;
+
     public PlayerPassing withPassingYardsPerCompletion(Double passingYardsPerCompletion) {
         this.passingYardsPerCompletion = passingYardsPerCompletion;
         return this;
@@ -148,6 +165,7 @@ public class PlayerPassing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerGameID")
     public Long playerGameID;
+
     public PlayerPassing withPlayerGameID(Long playerGameID) {
         this.playerGameID = playerGameID;
         return this;
@@ -156,6 +174,7 @@ public class PlayerPassing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public PlayerPassing withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -164,6 +183,7 @@ public class PlayerPassing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Position")
     public String position;
+
     public PlayerPassing withPosition(String position) {
         this.position = position;
         return this;
@@ -172,6 +192,7 @@ public class PlayerPassing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PositionCategory")
     public String positionCategory;
+
     public PlayerPassing withPositionCategory(String positionCategory) {
         this.positionCategory = positionCategory;
         return this;
@@ -180,6 +201,7 @@ public class PlayerPassing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShortName")
     public String shortName;
+
     public PlayerPassing withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -188,6 +210,7 @@ public class PlayerPassing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public PlayerPassing withTeam(String team) {
         this.team = team;
         return this;
@@ -196,6 +219,7 @@ public class PlayerPassing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoPointConversionPasses")
     public Long twoPointConversionPasses;
+
     public PlayerPassing withTwoPointConversionPasses(Long twoPointConversionPasses) {
         this.twoPointConversionPasses = twoPointConversionPasses;
         return this;
@@ -204,9 +228,11 @@ public class PlayerPassing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Updated")
     public String updated;
+
     public PlayerPassing withUpdated(String updated) {
         this.updated = updated;
         return this;
     }
     
+    public PlayerPassing(){}
 }

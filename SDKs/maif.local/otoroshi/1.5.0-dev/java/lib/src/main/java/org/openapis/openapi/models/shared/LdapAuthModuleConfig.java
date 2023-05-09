@@ -17,6 +17,7 @@ public class LdapAuthModuleConfig {
      */
     @JsonProperty("adminPassword")
     public String adminPassword;
+
     public LdapAuthModuleConfig withAdminPassword(String adminPassword) {
         this.adminPassword = adminPassword;
         return this;
@@ -27,6 +28,7 @@ public class LdapAuthModuleConfig {
      */
     @JsonProperty("adminUsername")
     public String adminUsername;
+
     public LdapAuthModuleConfig withAdminUsername(String adminUsername) {
         this.adminUsername = adminUsername;
         return this;
@@ -37,6 +39,7 @@ public class LdapAuthModuleConfig {
      */
     @JsonProperty("desc")
     public String desc;
+
     public LdapAuthModuleConfig withDesc(String desc) {
         this.desc = desc;
         return this;
@@ -47,6 +50,7 @@ public class LdapAuthModuleConfig {
      */
     @JsonProperty("emailField")
     public String emailField;
+
     public LdapAuthModuleConfig withEmailField(String emailField) {
         this.emailField = emailField;
         return this;
@@ -57,6 +61,7 @@ public class LdapAuthModuleConfig {
      */
     @JsonProperty("groupFilter")
     public String groupFilter;
+
     public LdapAuthModuleConfig withGroupFilter(String groupFilter) {
         this.groupFilter = groupFilter;
         return this;
@@ -67,6 +72,7 @@ public class LdapAuthModuleConfig {
      */
     @JsonProperty("id")
     public String id;
+
     public LdapAuthModuleConfig withId(String id) {
         this.id = id;
         return this;
@@ -77,6 +83,7 @@ public class LdapAuthModuleConfig {
      */
     @JsonProperty("name")
     public String name;
+
     public LdapAuthModuleConfig withName(String name) {
         this.name = name;
         return this;
@@ -87,6 +94,7 @@ public class LdapAuthModuleConfig {
      */
     @JsonProperty("nameField")
     public String nameField;
+
     public LdapAuthModuleConfig withNameField(String nameField) {
         this.nameField = nameField;
         return this;
@@ -98,6 +106,7 @@ public class LdapAuthModuleConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("otoroshiDataField")
     public String otoroshiDataField;
+
     public LdapAuthModuleConfig withOtoroshiDataField(String otoroshiDataField) {
         this.otoroshiDataField = otoroshiDataField;
         return this;
@@ -108,6 +117,7 @@ public class LdapAuthModuleConfig {
      */
     @JsonProperty("searchBase")
     public String searchBase;
+
     public LdapAuthModuleConfig withSearchBase(String searchBase) {
         this.searchBase = searchBase;
         return this;
@@ -118,6 +128,7 @@ public class LdapAuthModuleConfig {
      */
     @JsonProperty("searchFilter")
     public String searchFilter;
+
     public LdapAuthModuleConfig withSearchFilter(String searchFilter) {
         this.searchFilter = searchFilter;
         return this;
@@ -128,6 +139,7 @@ public class LdapAuthModuleConfig {
      */
     @JsonProperty("serverUrl")
     public String serverUrl;
+
     public LdapAuthModuleConfig withServerUrl(String serverUrl) {
         this.serverUrl = serverUrl;
         return this;
@@ -138,6 +150,7 @@ public class LdapAuthModuleConfig {
      */
     @JsonProperty("sessionMaxAge")
     public Integer sessionMaxAge;
+
     public LdapAuthModuleConfig withSessionMaxAge(Integer sessionMaxAge) {
         this.sessionMaxAge = sessionMaxAge;
         return this;
@@ -148,6 +161,7 @@ public class LdapAuthModuleConfig {
      */
     @JsonProperty("type")
     public String type;
+
     public LdapAuthModuleConfig withType(String type) {
         this.type = type;
         return this;
@@ -158,9 +172,25 @@ public class LdapAuthModuleConfig {
      */
     @JsonProperty("userBase")
     public String userBase;
+
     public LdapAuthModuleConfig withUserBase(String userBase) {
         this.userBase = userBase;
         return this;
     }
     
+    public LdapAuthModuleConfig(@JsonProperty("adminUsername") String adminUsername, @JsonProperty("adminPassword") String adminPassword, @JsonProperty("desc") String desc, @JsonProperty("emailField") String emailField, @JsonProperty("groupFilter") String groupFilter, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("nameField") String nameField, @JsonProperty("searchBase") String searchBase, @JsonProperty("searchFilter") String searchFilter, @JsonProperty("serverUrl") String serverUrl, @JsonProperty("sessionMaxAge") Integer sessionMaxAge, @JsonProperty("type") String type) {
+        this.adminUsername = adminUsername;
+        this.adminPassword = adminPassword;
+        this.desc = desc;
+        this.emailField = emailField;
+        this.groupFilter = groupFilter;
+        this.id = id;
+        this.name = name;
+        this.nameField = nameField;
+        this.searchBase = searchBase;
+        this.searchFilter = searchFilter;
+        this.serverUrl = serverUrl;
+        this.sessionMaxAge = sessionMaxAge;
+        this.type = type;
+  }
 }

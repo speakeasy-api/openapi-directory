@@ -20,6 +20,7 @@ public class InsightEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestImpactStatistics")
     public RequestImpactStatistics clientRequestImpactStatistics;
+
     public InsightEvent withClientRequestImpactStatistics(RequestImpactStatistics clientRequestImpactStatistics) {
         this.clientRequestImpactStatistics = clientRequestImpactStatistics;
         return this;
@@ -30,6 +31,7 @@ public class InsightEvent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EventTime")
     public OffsetDateTime eventTime;
+
     public InsightEvent withEventTime(OffsetDateTime eventTime) {
         this.eventTime = eventTime;
         return this;
@@ -38,6 +40,7 @@ public class InsightEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RootCauseServiceRequestImpactStatistics")
     public RequestImpactStatistics rootCauseServiceRequestImpactStatistics;
+
     public InsightEvent withRootCauseServiceRequestImpactStatistics(RequestImpactStatistics rootCauseServiceRequestImpactStatistics) {
         this.rootCauseServiceRequestImpactStatistics = rootCauseServiceRequestImpactStatistics;
         return this;
@@ -46,6 +49,7 @@ public class InsightEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Summary")
     public String summary;
+
     public InsightEvent withSummary(String summary) {
         this.summary = summary;
         return this;
@@ -54,9 +58,11 @@ public class InsightEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TopAnomalousServices")
     public AnomalousService[] topAnomalousServices;
+
     public InsightEvent withTopAnomalousServices(AnomalousService[] topAnomalousServices) {
         this.topAnomalousServices = topAnomalousServices;
         return this;
     }
     
+    public InsightEvent(){}
 }

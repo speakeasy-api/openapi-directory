@@ -15,6 +15,7 @@ public class ListRunGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public RunGroupListItem[] items;
+
     public ListRunGroupsResponse withItems(RunGroupListItem[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class ListRunGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListRunGroupsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListRunGroupsResponse(){}
 }

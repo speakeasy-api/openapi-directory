@@ -12,6 +12,7 @@ public class SetchargingscheduleRequestBodySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDate")
     public String endDate;
+
     public SetchargingscheduleRequestBodySchedule withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -20,6 +21,7 @@ public class SetchargingscheduleRequestBodySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Double limit;
+
     public SetchargingscheduleRequestBodySchedule withLimit(Double limit) {
         this.limit = limit;
         return this;
@@ -28,6 +30,7 @@ public class SetchargingscheduleRequestBodySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDate")
     public String startDate;
+
     public SetchargingscheduleRequestBodySchedule withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -36,9 +39,11 @@ public class SetchargingscheduleRequestBodySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public SetchargingscheduleRequestBodySchedule withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public SetchargingscheduleRequestBodySchedule(){}
 }

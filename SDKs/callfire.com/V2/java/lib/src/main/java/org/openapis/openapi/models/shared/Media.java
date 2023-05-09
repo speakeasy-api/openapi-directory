@@ -18,6 +18,7 @@ public class Media {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public Long accountId;
+
     public Media withAccountId(Long accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class Media {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created")
     public Long created;
+
     public Media withCreated(Long created) {
         this.created = created;
         return this;
@@ -40,6 +42,7 @@ public class Media {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Media withId(Long id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class Media {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lengthInBytes")
     public Long lengthInBytes;
+
     public Media withLengthInBytes(Long lengthInBytes) {
         this.lengthInBytes = lengthInBytes;
         return this;
@@ -62,6 +66,7 @@ public class Media {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mediaType")
     public String mediaType;
+
     public Media withMediaType(String mediaType) {
         this.mediaType = mediaType;
         return this;
@@ -73,6 +78,7 @@ public class Media {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Media withName(String name) {
         this.name = name;
         return this;
@@ -84,9 +90,11 @@ public class Media {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicUrl")
     public String publicUrl;
+
     public Media withPublicUrl(String publicUrl) {
         this.publicUrl = publicUrl;
         return this;
     }
     
+    public Media(){}
 }

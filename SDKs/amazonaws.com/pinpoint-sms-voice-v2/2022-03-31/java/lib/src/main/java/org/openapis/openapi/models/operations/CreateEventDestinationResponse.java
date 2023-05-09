@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateEventDestinationResponse {
@@ -12,6 +13,7 @@ public class CreateEventDestinationResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateEventDestinationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateEventDestinationResponse {
      */
     
     public Object conflictException;
+
     public CreateEventDestinationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateEventDestinationResponse {
     
     
     public String contentType;
+
     public CreateEventDestinationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateEventDestinationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateEventDestinationResult createEventDestinationResult;
+
     public CreateEventDestinationResponse withCreateEventDestinationResult(org.openapis.openapi.models.shared.CreateEventDestinationResult createEventDestinationResult) {
         this.createEventDestinationResult = createEventDestinationResult;
         return this;
@@ -49,6 +54,7 @@ public class CreateEventDestinationResponse {
      */
     
     public Object internalServerException;
+
     public CreateEventDestinationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateEventDestinationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateEventDestinationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateEventDestinationResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateEventDestinationResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateEventDestinationResponse {
     
     
     public Integer statusCode;
+
     public CreateEventDestinationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateEventDestinationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateEventDestinationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateEventDestinationResponse {
      */
     
     public Object throttlingException;
+
     public CreateEventDestinationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateEventDestinationResponse {
      */
     
     public Object validationException;
+
     public CreateEventDestinationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateEventDestinationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

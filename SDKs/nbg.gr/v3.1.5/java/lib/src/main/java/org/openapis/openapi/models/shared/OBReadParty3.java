@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OBReadParty3 {
     @JsonProperty("Data")
     public OBReadDataParty3 data;
+
     public OBReadParty3 withData(OBReadDataParty3 data) {
         this.data = data;
         return this;
@@ -25,6 +26,7 @@ public class OBReadParty3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Links")
     public Links links;
+
     public OBReadParty3 withLinks(Links links) {
         this.links = links;
         return this;
@@ -36,9 +38,13 @@ public class OBReadParty3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Meta")
     public Meta meta;
+
     public OBReadParty3 withMeta(Meta meta) {
         this.meta = meta;
         return this;
     }
     
+    public OBReadParty3(@JsonProperty("Data") OBReadDataParty3 data) {
+        this.data = data;
+  }
 }

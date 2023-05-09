@@ -12,6 +12,7 @@ public class PostPortfolioAnalysisSharpeRatioRequestBody1 {
      */
     @JsonProperty("assets")
     public Long assets;
+
     public PostPortfolioAnalysisSharpeRatioRequestBody1 withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -22,6 +23,7 @@ public class PostPortfolioAnalysisSharpeRatioRequestBody1 {
      */
     @JsonProperty("assetsCovarianceMatrix")
     public Double[][] assetsCovarianceMatrix;
+
     public PostPortfolioAnalysisSharpeRatioRequestBody1 withAssetsCovarianceMatrix(Double[][] assetsCovarianceMatrix) {
         this.assetsCovarianceMatrix = assetsCovarianceMatrix;
         return this;
@@ -32,6 +34,7 @@ public class PostPortfolioAnalysisSharpeRatioRequestBody1 {
      */
     @JsonProperty("assetsReturns")
     public Double[] assetsReturns;
+
     public PostPortfolioAnalysisSharpeRatioRequestBody1 withAssetsReturns(Double[] assetsReturns) {
         this.assetsReturns = assetsReturns;
         return this;
@@ -39,6 +42,7 @@ public class PostPortfolioAnalysisSharpeRatioRequestBody1 {
     
     @JsonProperty("portfolios")
     public PostPortfolioAnalysisSharpeRatioRequestBody1Portfolios[] portfolios;
+
     public PostPortfolioAnalysisSharpeRatioRequestBody1 withPortfolios(PostPortfolioAnalysisSharpeRatioRequestBody1Portfolios[] portfolios) {
         this.portfolios = portfolios;
         return this;
@@ -49,9 +53,17 @@ public class PostPortfolioAnalysisSharpeRatioRequestBody1 {
      */
     @JsonProperty("riskFreeRate")
     public Double riskFreeRate;
+
     public PostPortfolioAnalysisSharpeRatioRequestBody1 withRiskFreeRate(Double riskFreeRate) {
         this.riskFreeRate = riskFreeRate;
         return this;
     }
     
+    public PostPortfolioAnalysisSharpeRatioRequestBody1(@JsonProperty("assets") Long assets, @JsonProperty("assetsCovarianceMatrix") Double[][] assetsCovarianceMatrix, @JsonProperty("assetsReturns") Double[] assetsReturns, @JsonProperty("portfolios") PostPortfolioAnalysisSharpeRatioRequestBody1Portfolios[] portfolios, @JsonProperty("riskFreeRate") Double riskFreeRate) {
+        this.assets = assets;
+        this.assetsCovarianceMatrix = assetsCovarianceMatrix;
+        this.assetsReturns = assetsReturns;
+        this.portfolios = portfolios;
+        this.riskFreeRate = riskFreeRate;
+  }
 }

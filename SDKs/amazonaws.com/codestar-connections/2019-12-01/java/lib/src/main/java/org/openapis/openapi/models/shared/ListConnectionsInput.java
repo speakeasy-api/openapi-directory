@@ -12,6 +12,7 @@ public class ListConnectionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HostArnFilter")
     public String hostArnFilter;
+
     public ListConnectionsInput withHostArnFilter(String hostArnFilter) {
         this.hostArnFilter = hostArnFilter;
         return this;
@@ -20,6 +21,7 @@ public class ListConnectionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListConnectionsInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListConnectionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListConnectionsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +39,11 @@ public class ListConnectionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProviderTypeFilter")
     public ProviderTypeEnum providerTypeFilter;
+
     public ListConnectionsInput withProviderTypeFilter(ProviderTypeEnum providerTypeFilter) {
         this.providerTypeFilter = providerTypeFilter;
         return this;
     }
     
+    public ListConnectionsInput(){}
 }

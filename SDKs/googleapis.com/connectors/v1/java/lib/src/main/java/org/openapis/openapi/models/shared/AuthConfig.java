@@ -18,8 +18,21 @@ public class AuthConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalVariables")
     public ConfigVariable[] additionalVariables;
+
     public AuthConfig withAdditionalVariables(ConfigVariable[] additionalVariables) {
         this.additionalVariables = additionalVariables;
+        return this;
+    }
+    
+    /**
+     * Identifier key for auth config
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("authKey")
+    public String authKey;
+
+    public AuthConfig withAuthKey(String authKey) {
+        this.authKey = authKey;
         return this;
     }
     
@@ -29,8 +42,21 @@ public class AuthConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authType")
     public AuthConfigAuthTypeEnum authType;
+
     public AuthConfig withAuthType(AuthConfigAuthTypeEnum authType) {
         this.authType = authType;
+        return this;
+    }
+    
+    /**
+     * Parameters to support Oauth 2.0 Auth Code Grant Authentication. See https://www.rfc-editor.org/rfc/rfc6749#section-1.3.1 for more details.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("oauth2AuthCodeFlow")
+    public Oauth2AuthCodeFlow oauth2AuthCodeFlow;
+
+    public AuthConfig withOauth2AuthCodeFlow(Oauth2AuthCodeFlow oauth2AuthCodeFlow) {
+        this.oauth2AuthCodeFlow = oauth2AuthCodeFlow;
         return this;
     }
     
@@ -40,6 +66,7 @@ public class AuthConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oauth2ClientCredentials")
     public Oauth2ClientCredentials oauth2ClientCredentials;
+
     public AuthConfig withOauth2ClientCredentials(Oauth2ClientCredentials oauth2ClientCredentials) {
         this.oauth2ClientCredentials = oauth2ClientCredentials;
         return this;
@@ -51,6 +78,7 @@ public class AuthConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oauth2JwtBearer")
     public Oauth2JwtBearer oauth2JwtBearer;
+
     public AuthConfig withOauth2JwtBearer(Oauth2JwtBearer oauth2JwtBearer) {
         this.oauth2JwtBearer = oauth2JwtBearer;
         return this;
@@ -62,6 +90,7 @@ public class AuthConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sshPublicKey")
     public SshPublicKey sshPublicKey;
+
     public AuthConfig withSshPublicKey(SshPublicKey sshPublicKey) {
         this.sshPublicKey = sshPublicKey;
         return this;
@@ -73,9 +102,11 @@ public class AuthConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userPassword")
     public UserPassword userPassword;
+
     public AuthConfig withUserPassword(UserPassword userPassword) {
         this.userPassword = userPassword;
         return this;
     }
     
+    public AuthConfig(){}
 }

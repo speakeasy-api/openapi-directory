@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DBClusterCapacityInfo {
     
     public Long currentCapacity;
+
     public DBClusterCapacityInfo withCurrentCapacity(Long currentCapacity) {
         this.currentCapacity = currentCapacity;
         return this;
@@ -19,6 +20,7 @@ public class DBClusterCapacityInfo {
     
     
     public String dbClusterIdentifier;
+
     public DBClusterCapacityInfo withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -26,6 +28,7 @@ public class DBClusterCapacityInfo {
     
     
     public Long pendingCapacity;
+
     public DBClusterCapacityInfo withPendingCapacity(Long pendingCapacity) {
         this.pendingCapacity = pendingCapacity;
         return this;
@@ -33,6 +36,7 @@ public class DBClusterCapacityInfo {
     
     
     public Long secondsBeforeTimeout;
+
     public DBClusterCapacityInfo withSecondsBeforeTimeout(Long secondsBeforeTimeout) {
         this.secondsBeforeTimeout = secondsBeforeTimeout;
         return this;
@@ -40,9 +44,11 @@ public class DBClusterCapacityInfo {
     
     
     public String timeoutAction;
+
     public DBClusterCapacityInfo withTimeoutAction(String timeoutAction) {
         this.timeoutAction = timeoutAction;
         return this;
     }
     
+    public DBClusterCapacityInfo(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteMultipleReviewsRequest {
@@ -12,6 +13,7 @@ public class DeleteMultipleReviewsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public DeleteMultipleReviewsRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class DeleteMultipleReviewsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public DeleteMultipleReviewsRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +32,14 @@ public class DeleteMultipleReviewsRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public String[] requestBody;
+
     public DeleteMultipleReviewsRequest withRequestBody(String[] requestBody) {
         this.requestBody = requestBody;
         return this;
     }
     
+    public DeleteMultipleReviewsRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType) {
+        this.accept = accept;
+        this.contentType = contentType;
+  }
 }

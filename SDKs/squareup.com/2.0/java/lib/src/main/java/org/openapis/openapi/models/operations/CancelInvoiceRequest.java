@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelInvoiceRequest {
@@ -14,6 +15,7 @@ public class CancelInvoiceRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CancelInvoiceRequest cancelInvoiceRequest;
+
     public CancelInvoiceRequest withCancelInvoiceRequest(org.openapis.openapi.models.shared.CancelInvoiceRequest cancelInvoiceRequest) {
         this.cancelInvoiceRequest = cancelInvoiceRequest;
         return this;
@@ -24,9 +26,14 @@ public class CancelInvoiceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invoice_id")
     public String invoiceId;
+
     public CancelInvoiceRequest withInvoiceId(String invoiceId) {
         this.invoiceId = invoiceId;
         return this;
     }
     
+    public CancelInvoiceRequest(@JsonProperty("CancelInvoiceRequest") org.openapis.openapi.models.shared.CancelInvoiceRequest cancelInvoiceRequest, @JsonProperty("invoice_id") String invoiceId) {
+        this.cancelInvoiceRequest = cancelInvoiceRequest;
+        this.invoiceId = invoiceId;
+  }
 }

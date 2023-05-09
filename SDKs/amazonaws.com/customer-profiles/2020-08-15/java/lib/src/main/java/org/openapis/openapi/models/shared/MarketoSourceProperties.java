@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MarketoSourceProperties {
     @JsonProperty("Object")
     public String object;
+
     public MarketoSourceProperties withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public MarketoSourceProperties(@JsonProperty("Object") String object) {
+        this.object = object;
+  }
 }

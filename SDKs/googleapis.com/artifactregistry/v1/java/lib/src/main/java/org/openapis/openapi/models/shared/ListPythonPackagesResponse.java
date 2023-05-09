@@ -18,6 +18,7 @@ public class ListPythonPackagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListPythonPackagesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListPythonPackagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pythonPackages")
     public PythonPackage[] pythonPackages;
+
     public ListPythonPackagesResponse withPythonPackages(PythonPackage[] pythonPackages) {
         this.pythonPackages = pythonPackages;
         return this;
     }
     
+    public ListPythonPackagesResponse(){}
 }

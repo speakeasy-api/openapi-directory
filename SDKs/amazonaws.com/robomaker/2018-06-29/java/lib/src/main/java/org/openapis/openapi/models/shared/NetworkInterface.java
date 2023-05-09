@@ -15,6 +15,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkInterfaceId")
     public String networkInterfaceId;
+
     public NetworkInterface withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -23,6 +24,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateIpAddress")
     public String privateIpAddress;
+
     public NetworkInterface withPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
@@ -31,9 +33,11 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicIpAddress")
     public String publicIpAddress;
+
     public NetworkInterface withPublicIpAddress(String publicIpAddress) {
         this.publicIpAddress = publicIpAddress;
         return this;
     }
     
+    public NetworkInterface(){}
 }

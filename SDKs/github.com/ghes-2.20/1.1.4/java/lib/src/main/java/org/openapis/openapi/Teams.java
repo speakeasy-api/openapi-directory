@@ -54,7 +54,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsAddMemberLegacyResponse teamsAddMemberLegacy(org.openapis.openapi.models.operations.TeamsAddMemberLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsAddMemberLegacyRequest.class, baseUrl, "/teams/{team_id}/members/{username}", request, null);
@@ -69,11 +71,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsAddMemberLegacyResponse res = new org.openapis.openapi.models.operations.TeamsAddMemberLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsAddMemberLegacyResponse res = new org.openapis.openapi.models.operations.TeamsAddMemberLegacyResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 404 || httpRes.statusCode() == 422) {
@@ -117,11 +117,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsAddOrUpdateMembershipForUserResponse res = new org.openapis.openapi.models.operations.TeamsAddOrUpdateMembershipForUserResponse() {{
+        org.openapis.openapi.models.operations.TeamsAddOrUpdateMembershipForUserResponse res = new org.openapis.openapi.models.operations.TeamsAddOrUpdateMembershipForUserResponse(contentType, httpRes.statusCode()) {{
             teamMembership = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -169,11 +167,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsAddOrUpdateProjectPermissionsResponse res = new org.openapis.openapi.models.operations.TeamsAddOrUpdateProjectPermissionsResponse() {{
+        org.openapis.openapi.models.operations.TeamsAddOrUpdateProjectPermissionsResponse res = new org.openapis.openapi.models.operations.TeamsAddOrUpdateProjectPermissionsResponse(contentType, httpRes.statusCode()) {{
             teamsAddOrUpdateProjectPermissions403ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -215,10 +211,8 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsAddOrUpdateRepoPermissionsResponse res = new org.openapis.openapi.models.operations.TeamsAddOrUpdateRepoPermissionsResponse() {{
+        org.openapis.openapi.models.operations.TeamsAddOrUpdateRepoPermissionsResponse res = new org.openapis.openapi.models.operations.TeamsAddOrUpdateRepoPermissionsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -257,11 +251,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsCheckPermissionsForProjectResponse res = new org.openapis.openapi.models.operations.TeamsCheckPermissionsForProjectResponse() {{
+        org.openapis.openapi.models.operations.TeamsCheckPermissionsForProjectResponse res = new org.openapis.openapi.models.operations.TeamsCheckPermissionsForProjectResponse(contentType, httpRes.statusCode()) {{
             teamProject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -301,12 +293,10 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsCheckPermissionsForRepoResponse res = new org.openapis.openapi.models.operations.TeamsCheckPermissionsForRepoResponse() {{
+        org.openapis.openapi.models.operations.TeamsCheckPermissionsForRepoResponse res = new org.openapis.openapi.models.operations.TeamsCheckPermissionsForRepoResponse(contentType, httpRes.statusCode()) {{
             minimalRepository = null;
             fullRepository = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -356,13 +346,11 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsCreateResponse res = new org.openapis.openapi.models.operations.TeamsCreateResponse() {{
+        org.openapis.openapi.models.operations.TeamsCreateResponse res = new org.openapis.openapi.models.operations.TeamsCreateResponse(contentType, httpRes.statusCode()) {{
             teamFull = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -419,11 +407,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsCreateDiscussionResponse res = new org.openapis.openapi.models.operations.TeamsCreateDiscussionResponse() {{
+        org.openapis.openapi.models.operations.TeamsCreateDiscussionResponse res = new org.openapis.openapi.models.operations.TeamsCreateDiscussionResponse(contentType, httpRes.statusCode()) {{
             teamDiscussion = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -466,11 +452,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsCreateDiscussionCommentResponse res = new org.openapis.openapi.models.operations.TeamsCreateDiscussionCommentResponse() {{
+        org.openapis.openapi.models.operations.TeamsCreateDiscussionCommentResponse res = new org.openapis.openapi.models.operations.TeamsCreateDiscussionCommentResponse(contentType, httpRes.statusCode()) {{
             teamDiscussionComment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -508,10 +492,8 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsDeleteResponse res = new org.openapis.openapi.models.operations.TeamsDeleteResponse() {{
+        org.openapis.openapi.models.operations.TeamsDeleteResponse res = new org.openapis.openapi.models.operations.TeamsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -542,10 +524,8 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsDeleteDiscussionResponse res = new org.openapis.openapi.models.operations.TeamsDeleteDiscussionResponse() {{
+        org.openapis.openapi.models.operations.TeamsDeleteDiscussionResponse res = new org.openapis.openapi.models.operations.TeamsDeleteDiscussionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -576,10 +556,8 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsDeleteDiscussionCommentResponse res = new org.openapis.openapi.models.operations.TeamsDeleteDiscussionCommentResponse() {{
+        org.openapis.openapi.models.operations.TeamsDeleteDiscussionCommentResponse res = new org.openapis.openapi.models.operations.TeamsDeleteDiscussionCommentResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -609,11 +587,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsGetResponse res = new org.openapis.openapi.models.operations.TeamsGetResponse() {{
+        org.openapis.openapi.models.operations.TeamsGetResponse res = new org.openapis.openapi.models.operations.TeamsGetResponse(contentType, httpRes.statusCode()) {{
             teamFull = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -651,12 +627,10 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsGetByNameResponse res = new org.openapis.openapi.models.operations.TeamsGetByNameResponse() {{
+        org.openapis.openapi.models.operations.TeamsGetByNameResponse res = new org.openapis.openapi.models.operations.TeamsGetByNameResponse(contentType, httpRes.statusCode()) {{
             teamFull = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -699,11 +673,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsGetDiscussionResponse res = new org.openapis.openapi.models.operations.TeamsGetDiscussionResponse() {{
+        org.openapis.openapi.models.operations.TeamsGetDiscussionResponse res = new org.openapis.openapi.models.operations.TeamsGetDiscussionResponse(contentType, httpRes.statusCode()) {{
             teamDiscussion = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -739,11 +711,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsGetDiscussionCommentResponse res = new org.openapis.openapi.models.operations.TeamsGetDiscussionCommentResponse() {{
+        org.openapis.openapi.models.operations.TeamsGetDiscussionCommentResponse res = new org.openapis.openapi.models.operations.TeamsGetDiscussionCommentResponse(contentType, httpRes.statusCode()) {{
             teamDiscussionComment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -768,7 +738,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsGetMemberLegacyResponse teamsGetMemberLegacy(org.openapis.openapi.models.operations.TeamsGetMemberLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetMemberLegacyRequest.class, baseUrl, "/teams/{team_id}/members/{username}", request, null);
@@ -783,10 +755,8 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsGetMemberLegacyResponse res = new org.openapis.openapi.models.operations.TeamsGetMemberLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsGetMemberLegacyResponse res = new org.openapis.openapi.models.operations.TeamsGetMemberLegacyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 404) {
@@ -821,11 +791,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsGetMembershipForUserResponse res = new org.openapis.openapi.models.operations.TeamsGetMembershipForUserResponse() {{
+        org.openapis.openapi.models.operations.TeamsGetMembershipForUserResponse res = new org.openapis.openapi.models.operations.TeamsGetMembershipForUserResponse(contentType, httpRes.statusCode()) {{
             teamMembership = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -867,12 +835,10 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsListResponse res = new org.openapis.openapi.models.operations.TeamsListResponse() {{
+        org.openapis.openapi.models.operations.TeamsListResponse res = new org.openapis.openapi.models.operations.TeamsListResponse(contentType, httpRes.statusCode()) {{
             teams = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -922,11 +888,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsListChildResponse res = new org.openapis.openapi.models.operations.TeamsListChildResponse() {{
+        org.openapis.openapi.models.operations.TeamsListChildResponse res = new org.openapis.openapi.models.operations.TeamsListChildResponse(contentType, httpRes.statusCode()) {{
             team2s = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -970,11 +934,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsListDiscussionCommentsResponse res = new org.openapis.openapi.models.operations.TeamsListDiscussionCommentsResponse() {{
+        org.openapis.openapi.models.operations.TeamsListDiscussionCommentsResponse res = new org.openapis.openapi.models.operations.TeamsListDiscussionCommentsResponse(contentType, httpRes.statusCode()) {{
             teamDiscussionComments = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1018,11 +980,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsListDiscussionsResponse res = new org.openapis.openapi.models.operations.TeamsListDiscussionsResponse() {{
+        org.openapis.openapi.models.operations.TeamsListDiscussionsResponse res = new org.openapis.openapi.models.operations.TeamsListDiscussionsResponse(contentType, httpRes.statusCode()) {{
             teamDiscussions = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1066,12 +1026,10 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsListForAuthenticatedUserResponse res = new org.openapis.openapi.models.operations.TeamsListForAuthenticatedUserResponse() {{
+        org.openapis.openapi.models.operations.TeamsListForAuthenticatedUserResponse res = new org.openapis.openapi.models.operations.TeamsListForAuthenticatedUserResponse(contentType, httpRes.statusCode()) {{
             teamFulls = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1126,11 +1084,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsListMembersResponse res = new org.openapis.openapi.models.operations.TeamsListMembersResponse() {{
+        org.openapis.openapi.models.operations.TeamsListMembersResponse res = new org.openapis.openapi.models.operations.TeamsListMembersResponse(contentType, httpRes.statusCode()) {{
             simpleUsers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1182,11 +1138,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsListProjectsResponse res = new org.openapis.openapi.models.operations.TeamsListProjectsResponse() {{
+        org.openapis.openapi.models.operations.TeamsListProjectsResponse res = new org.openapis.openapi.models.operations.TeamsListProjectsResponse(contentType, httpRes.statusCode()) {{
             teamProjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1230,11 +1184,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsListReposResponse res = new org.openapis.openapi.models.operations.TeamsListReposResponse() {{
+        org.openapis.openapi.models.operations.TeamsListReposResponse res = new org.openapis.openapi.models.operations.TeamsListReposResponse(contentType, httpRes.statusCode()) {{
             minimalRepositories = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1265,7 +1217,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsRemoveMemberLegacyResponse teamsRemoveMemberLegacy(org.openapis.openapi.models.operations.TeamsRemoveMemberLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsRemoveMemberLegacyRequest.class, baseUrl, "/teams/{team_id}/members/{username}", request, null);
@@ -1280,10 +1234,8 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsRemoveMemberLegacyResponse res = new org.openapis.openapi.models.operations.TeamsRemoveMemberLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsRemoveMemberLegacyResponse res = new org.openapis.openapi.models.operations.TeamsRemoveMemberLegacyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 404) {
@@ -1314,10 +1266,8 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsRemoveMembershipForUserResponse res = new org.openapis.openapi.models.operations.TeamsRemoveMembershipForUserResponse() {{
+        org.openapis.openapi.models.operations.TeamsRemoveMembershipForUserResponse res = new org.openapis.openapi.models.operations.TeamsRemoveMembershipForUserResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1348,10 +1298,8 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsRemoveProjectResponse res = new org.openapis.openapi.models.operations.TeamsRemoveProjectResponse() {{
+        org.openapis.openapi.models.operations.TeamsRemoveProjectResponse res = new org.openapis.openapi.models.operations.TeamsRemoveProjectResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1382,10 +1330,8 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsRemoveRepoResponse res = new org.openapis.openapi.models.operations.TeamsRemoveRepoResponse() {{
+        org.openapis.openapi.models.operations.TeamsRemoveRepoResponse res = new org.openapis.openapi.models.operations.TeamsRemoveRepoResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1420,11 +1366,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsUpdateResponse res = new org.openapis.openapi.models.operations.TeamsUpdateResponse() {{
+        org.openapis.openapi.models.operations.TeamsUpdateResponse res = new org.openapis.openapi.models.operations.TeamsUpdateResponse(contentType, httpRes.statusCode()) {{
             teamFull = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1462,11 +1406,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsUpdateDiscussionResponse res = new org.openapis.openapi.models.operations.TeamsUpdateDiscussionResponse() {{
+        org.openapis.openapi.models.operations.TeamsUpdateDiscussionResponse res = new org.openapis.openapi.models.operations.TeamsUpdateDiscussionResponse(contentType, httpRes.statusCode()) {{
             teamDiscussion = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1507,11 +1449,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsUpdateDiscussionCommentResponse res = new org.openapis.openapi.models.operations.TeamsUpdateDiscussionCommentResponse() {{
+        org.openapis.openapi.models.operations.TeamsUpdateDiscussionCommentResponse res = new org.openapis.openapi.models.operations.TeamsUpdateDiscussionCommentResponse(contentType, httpRes.statusCode()) {{
             teamDiscussionComment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -57,11 +57,9 @@ public class WeatherByCityAndState {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetweatherResponse res = new org.openapis.openapi.models.operations.GetweatherResponse() {{
+        org.openapis.openapi.models.operations.GetweatherResponse res = new org.openapis.openapi.models.operations.GetweatherResponse(contentType, httpRes.statusCode()) {{
             getweather200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

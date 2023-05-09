@@ -12,6 +12,7 @@ public class GetSchedulesScheduleDSubIdDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public org.openapis.openapi.models.shared.OffsetInfo pagination;
+
     public GetSchedulesScheduleDSubIdDefaultApplicationJSON withPagination(org.openapis.openapi.models.shared.OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class GetSchedulesScheduleDSubIdDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public GetSchedulesScheduleDSubIdDefaultApplicationJSONResults[] results;
+
     public GetSchedulesScheduleDSubIdDefaultApplicationJSON withResults(GetSchedulesScheduleDSubIdDefaultApplicationJSONResults[] results) {
         this.results = results;
         return this;
     }
     
+    public GetSchedulesScheduleDSubIdDefaultApplicationJSON(){}
 }

@@ -12,6 +12,7 @@ public class Concept {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ancestors")
     public ConceptRelation[] ancestors;
+
     public Concept withAncestors(ConceptRelation[] ancestors) {
         this.ancestors = ancestors;
         return this;
@@ -20,6 +21,7 @@ public class Concept {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("article_list")
     public ConceptArticleList articleList;
+
     public Concept withArticleList(ConceptArticleList articleList) {
         this.articleList = articleList;
         return this;
@@ -28,6 +30,7 @@ public class Concept {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("combinations")
     public ConceptCombinations[] combinations;
+
     public Concept withCombinations(ConceptCombinations[] combinations) {
         this.combinations = combinations;
         return this;
@@ -36,6 +39,7 @@ public class Concept {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concept_created")
     public String conceptCreated;
+
     public Concept withConceptCreated(String conceptCreated) {
         this.conceptCreated = conceptCreated;
         return this;
@@ -44,6 +48,7 @@ public class Concept {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concept_id")
     public Long conceptId;
+
     public Concept withConceptId(Long conceptId) {
         this.conceptId = conceptId;
         return this;
@@ -52,6 +57,7 @@ public class Concept {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concept_name")
     public String conceptName;
+
     public Concept withConceptName(String conceptName) {
         this.conceptName = conceptName;
         return this;
@@ -60,6 +66,7 @@ public class Concept {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concept_status")
     public String conceptStatus;
+
     public Concept withConceptStatus(String conceptStatus) {
         this.conceptStatus = conceptStatus;
         return this;
@@ -68,6 +75,7 @@ public class Concept {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concept_type")
     public String conceptType;
+
     public Concept withConceptType(String conceptType) {
         this.conceptType = conceptType;
         return this;
@@ -76,6 +84,7 @@ public class Concept {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concept_updated")
     public String conceptUpdated;
+
     public Concept withConceptUpdated(String conceptUpdated) {
         this.conceptUpdated = conceptUpdated;
         return this;
@@ -84,6 +93,7 @@ public class Concept {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("descendants")
     public ConceptRelation[] descendants;
+
     public Concept withDescendants(ConceptRelation[] descendants) {
         this.descendants = descendants;
         return this;
@@ -92,6 +102,7 @@ public class Concept {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_times_tag")
     public Long isTimesTag;
+
     public Concept withIsTimesTag(Long isTimesTag) {
         this.isTimesTag = isTimesTag;
         return this;
@@ -100,6 +111,7 @@ public class Concept {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public ConceptLinks[] links;
+
     public Concept withLinks(ConceptLinks[] links) {
         this.links = links;
         return this;
@@ -108,6 +120,7 @@ public class Concept {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope_notes")
     public ConceptScopeNotes[] scopeNotes;
+
     public Concept withScopeNotes(ConceptScopeNotes[] scopeNotes) {
         this.scopeNotes = scopeNotes;
         return this;
@@ -116,6 +129,7 @@ public class Concept {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("search_api_query")
     public String searchApiQuery;
+
     public Concept withSearchApiQuery(String searchApiQuery) {
         this.searchApiQuery = searchApiQuery;
         return this;
@@ -124,6 +138,7 @@ public class Concept {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxonomy")
     public ConceptTaxonomy[] taxonomy;
+
     public Concept withTaxonomy(ConceptTaxonomy[] taxonomy) {
         this.taxonomy = taxonomy;
         return this;
@@ -132,9 +147,11 @@ public class Concept {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vernacular")
     public String vernacular;
+
     public Concept withVernacular(String vernacular) {
         this.vernacular = vernacular;
         return this;
     }
     
+    public Concept(){}
 }

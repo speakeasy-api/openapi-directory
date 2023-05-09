@@ -15,9 +15,11 @@ public class ViolationEventAdditionalInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidenceLevel")
     public ConfidenceLevelEnum confidenceLevel;
+
     public ViolationEventAdditionalInfo withConfidenceLevel(ConfidenceLevelEnum confidenceLevel) {
         this.confidenceLevel = confidenceLevel;
         return this;
     }
     
+    public ViolationEventAdditionalInfo(){}
 }

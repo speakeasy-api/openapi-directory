@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class TagsModelsContractsTagResponse {
     
     public IgnoresIgnoreResponse ignoreStatus;
+
     public TagsModelsContractsTagResponse withIgnoreStatus(IgnoresIgnoreResponse ignoreStatus) {
         this.ignoreStatus = ignoreStatus;
         return this;
@@ -16,9 +17,11 @@ public class TagsModelsContractsTagResponse {
     
     
     public String tagText;
+
     public TagsModelsContractsTagResponse withTagText(String tagText) {
         this.tagText = tagText;
         return this;
     }
     
+    public TagsModelsContractsTagResponse(){}
 }

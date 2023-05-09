@@ -12,9 +12,11 @@ public class GetEvents200ApplicationJSONLinksNext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public GetEvents200ApplicationJSONLinksNext withHref(String href) {
         this.href = href;
         return this;
     }
     
+    public GetEvents200ApplicationJSONLinksNext(){}
 }

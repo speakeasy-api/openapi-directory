@@ -18,9 +18,11 @@ public class SaveSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotLocation")
     public String snapshotLocation;
+
     public SaveSnapshotRequest withSnapshotLocation(String snapshotLocation) {
         this.snapshotLocation = snapshotLocation;
         return this;
     }
     
+    public SaveSnapshotRequest(){}
 }

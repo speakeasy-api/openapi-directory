@@ -12,6 +12,7 @@ public class GitRefObject {
      */
     @JsonProperty("sha")
     public String sha;
+
     public GitRefObject withSha(String sha) {
         this.sha = sha;
         return this;
@@ -19,6 +20,7 @@ public class GitRefObject {
     
     @JsonProperty("type")
     public String type;
+
     public GitRefObject withType(String type) {
         this.type = type;
         return this;
@@ -26,9 +28,15 @@ public class GitRefObject {
     
     @JsonProperty("url")
     public String url;
+
     public GitRefObject withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GitRefObject(@JsonProperty("sha") String sha, @JsonProperty("type") String type, @JsonProperty("url") String url) {
+        this.sha = sha;
+        this.type = type;
+        this.url = url;
+  }
 }

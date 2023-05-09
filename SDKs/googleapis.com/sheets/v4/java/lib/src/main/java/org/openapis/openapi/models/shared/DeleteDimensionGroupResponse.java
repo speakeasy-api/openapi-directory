@@ -18,9 +18,11 @@ public class DeleteDimensionGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionGroups")
     public DimensionGroup[] dimensionGroups;
+
     public DeleteDimensionGroupResponse withDimensionGroups(DimensionGroup[] dimensionGroups) {
         this.dimensionGroups = dimensionGroups;
         return this;
     }
     
+    public DeleteDimensionGroupResponse(){}
 }

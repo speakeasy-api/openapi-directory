@@ -18,28 +18,31 @@ public class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caseInsensitive")
     public Boolean caseInsensitive;
+
     public GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey withCaseInsensitive(Boolean caseInsensitive) {
         this.caseInsensitive = caseInsensitive;
         return this;
     }
     
     /**
-     * Only get facet values that contains the given strings. For example, suppose "categories" has three values "Women &gt; Shoe", "Women &gt; Dress" and "Men &gt; Shoe". If set "contains" to "Shoe", the "categories" facet will give only "Women &gt; Shoe" and "Men &gt; Shoe". Only supported on textual fields. Maximum is 10.
+     * Only get facet values that contains the given strings. For example, suppose "categories" has three values "Women &gt; Shoe", "Women &gt; Dress" and "Men &gt; Shoe". If set "contains" to "Shoe", the "categories" facet gives only "Women &gt; Shoe" and "Men &gt; Shoe". Only supported on textual fields. Maximum is 10.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contains")
     public String[] contains;
+
     public GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey withContains(String[] contains) {
         this.contains = contains;
         return this;
     }
     
     /**
-     * For all numerical facet keys that appear in the list of products from the catalog, the percentiles 0, 10, 30, 50, 70, 90 and 100 are computed from their distribution weekly. If the model assigns a high score to a numerical facet key and its intervals are not specified in the search request, these percentiles will become the bounds for its intervals and will be returned in the response. If the facet key intervals are specified in the request, then the specified intervals will be returned instead.
+     * Set only if values should be bucketized into intervals. Must be set for facets with numerical values. Must not be set for facet with text values. Maximum number of intervals is 40. For all numerical facet keys that appear in the list of products from the catalog, the percentiles 0, 10, 30, 50, 70, 90, and 100 are computed from their distribution weekly. If the model assigns a high score to a numerical facet key and its intervals are not specified in the search request, these percentiles become the bounds for its intervals and are returned in the response. If the facet key intervals are specified in the request, then the specified intervals are returned instead.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intervals")
     public GoogleCloudRetailV2betaInterval[] intervals;
+
     public GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey withIntervals(GoogleCloudRetailV2betaInterval[] intervals) {
         this.intervals = intervals;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey withKey(String key) {
         this.key = key;
         return this;
@@ -62,28 +66,31 @@ public class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderBy")
     public String orderBy;
+
     public GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
     }
     
     /**
-     * Only get facet values that start with the given string prefix. For example, suppose "categories" has three values "Women &gt; Shoe", "Women &gt; Dress" and "Men &gt; Shoe". If set "prefixes" to "Women", the "categories" facet will give only "Women &gt; Shoe" and "Women &gt; Dress". Only supported on textual fields. Maximum is 10.
+     * Only get facet values that start with the given string prefix. For example, suppose "categories" has three values "Women &gt; Shoe", "Women &gt; Dress" and "Men &gt; Shoe". If set "prefixes" to "Women", the "categories" facet gives only "Women &gt; Shoe" and "Women &gt; Dress". Only supported on textual fields. Maximum is 10.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefixes")
     public String[] prefixes;
+
     public GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey withPrefixes(String[] prefixes) {
         this.prefixes = prefixes;
         return this;
     }
     
     /**
-     * The query that is used to compute facet for the given facet key. When provided, it will override the default behavior of facet computation. The query syntax is the same as a filter expression. See SearchRequest.filter for detail syntax and limitations. Notice that there is no limitation on FacetKey.key when query is specified. In the response, SearchResponse.Facet.values.value will be always "1" and SearchResponse.Facet.values.count will be the number of results that match the query. For example, you can set a customized facet for "shipToStore", where FacetKey.key is "customizedShipToStore", and FacetKey.query is "availability: ANY(\"IN_STOCK\") AND shipToStore: ANY(\"123\")". Then the facet will count the products that are both in stock and ship to store "123".
+     * The query that is used to compute facet for the given facet key. When provided, it overrides the default behavior of facet computation. The query syntax is the same as a filter expression. See SearchRequest.filter for detail syntax and limitations. Notice that there is no limitation on FacetKey.key when query is specified. In the response, SearchResponse.Facet.values.value is always "1" and SearchResponse.Facet.values.count is the number of results that match the query. For example, you can set a customized facet for "shipToStore", where FacetKey.key is "customizedShipToStore", and FacetKey.query is "availability: ANY(\"IN_STOCK\") AND shipToStore: ANY(\"123\")". Then the facet counts the products that are both in stock and ship to store "123".
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey withQuery(String query) {
         this.query = query;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictedValues")
     public String[] restrictedValues;
+
     public GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey withRestrictedValues(String[] restrictedValues) {
         this.restrictedValues = restrictedValues;
         return this;
@@ -106,9 +114,11 @@ public class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnMinMax")
     public Boolean returnMinMax;
+
     public GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey withReturnMinMax(Boolean returnMinMax) {
         this.returnMinMax = returnMinMax;
         return this;
     }
     
+    public GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKey(){}
 }

@@ -15,6 +15,7 @@ public class CertificateValidationRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CertificateValidationRecord withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class CertificateValidationRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public CertificateValidationRecordStatusEnum status;
+
     public CertificateValidationRecord withStatus(CertificateValidationRecordStatusEnum status) {
         this.status = status;
         return this;
@@ -31,6 +33,7 @@ public class CertificateValidationRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public CertificateValidationRecord withType(String type) {
         this.type = type;
         return this;
@@ -39,9 +42,11 @@ public class CertificateValidationRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public CertificateValidationRecord withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CertificateValidationRecord(){}
 }

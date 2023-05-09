@@ -15,9 +15,11 @@ public class GetManagedScalingPolicyOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ManagedScalingPolicy")
     public ManagedScalingPolicy managedScalingPolicy;
+
     public GetManagedScalingPolicyOutput withManagedScalingPolicy(ManagedScalingPolicy managedScalingPolicy) {
         this.managedScalingPolicy = managedScalingPolicy;
         return this;
     }
     
+    public GetManagedScalingPolicyOutput(){}
 }

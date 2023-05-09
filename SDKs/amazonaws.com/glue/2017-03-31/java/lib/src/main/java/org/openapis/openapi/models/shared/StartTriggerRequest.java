@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartTriggerRequest {
     @JsonProperty("Name")
     public String name;
+
     public StartTriggerRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public StartTriggerRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

@@ -15,6 +15,7 @@ public class ContainerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerRuntime")
     public String containerRuntime;
+
     public ContainerDetails withContainerRuntime(String containerRuntime) {
         this.containerRuntime = containerRuntime;
         return this;
@@ -23,6 +24,7 @@ public class ContainerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageId")
     public String imageId;
+
     public ContainerDetails withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -31,6 +33,7 @@ public class ContainerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageName")
     public String imageName;
+
     public ContainerDetails withImageName(String imageName) {
         this.imageName = imageName;
         return this;
@@ -39,6 +42,7 @@ public class ContainerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LaunchedAt")
     public String launchedAt;
+
     public ContainerDetails withLaunchedAt(String launchedAt) {
         this.launchedAt = launchedAt;
         return this;
@@ -47,6 +51,7 @@ public class ContainerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ContainerDetails withName(String name) {
         this.name = name;
         return this;
@@ -55,6 +60,7 @@ public class ContainerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Privileged")
     public Boolean privileged;
+
     public ContainerDetails withPrivileged(Boolean privileged) {
         this.privileged = privileged;
         return this;
@@ -63,9 +69,11 @@ public class ContainerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeMounts")
     public VolumeMount[] volumeMounts;
+
     public ContainerDetails withVolumeMounts(VolumeMount[] volumeMounts) {
         this.volumeMounts = volumeMounts;
         return this;
     }
     
+    public ContainerDetails(){}
 }

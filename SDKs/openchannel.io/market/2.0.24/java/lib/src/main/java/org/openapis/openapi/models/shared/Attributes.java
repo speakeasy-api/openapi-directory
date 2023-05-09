@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Attributes - An app attribute
@@ -15,6 +15,7 @@ public class Attributes {
      */
     
     public String name;
+
     public Attributes withName(String name) {
         this.name = name;
         return this;
@@ -25,6 +26,7 @@ public class Attributes {
      */
     
     public AttributesTypeEnum type;
+
     public Attributes withType(AttributesTypeEnum type) {
         this.type = type;
         return this;
@@ -35,9 +37,14 @@ public class Attributes {
      */
     
     public String values;
+
     public Attributes withValues(String values) {
         this.values = values;
         return this;
     }
     
+    public Attributes(@JsonProperty("name") String name, @JsonProperty("type") AttributesTypeEnum type) {
+        this.name = name;
+        this.type = type;
+  }
 }

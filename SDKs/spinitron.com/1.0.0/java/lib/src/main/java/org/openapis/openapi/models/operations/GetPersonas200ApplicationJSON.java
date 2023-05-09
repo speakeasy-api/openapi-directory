@@ -15,6 +15,7 @@ public class GetPersonas200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public GetPersonas200ApplicationJSONLinks links;
+
     public GetPersonas200ApplicationJSON withLinks(GetPersonas200ApplicationJSONLinks links) {
         this.links = links;
         return this;
@@ -23,6 +24,7 @@ public class GetPersonas200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_meta")
     public org.openapis.openapi.models.shared.Pagination meta;
+
     public GetPersonas200ApplicationJSON withMeta(org.openapis.openapi.models.shared.Pagination meta) {
         this.meta = meta;
         return this;
@@ -31,9 +33,11 @@ public class GetPersonas200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public org.openapis.openapi.models.shared.Persona[] items;
+
     public GetPersonas200ApplicationJSON withItems(org.openapis.openapi.models.shared.Persona[] items) {
         this.items = items;
         return this;
     }
     
+    public GetPersonas200ApplicationJSON(){}
 }

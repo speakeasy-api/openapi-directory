@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ListImportsInput {
     
     public String exportName;
+
     public ListImportsInput withExportName(String exportName) {
         this.exportName = exportName;
         return this;
@@ -16,9 +17,13 @@ public class ListImportsInput {
     
     
     public String nextToken;
+
     public ListImportsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListImportsInput(@JsonProperty("ExportName") String exportName) {
+        this.exportName = exportName;
+  }
 }

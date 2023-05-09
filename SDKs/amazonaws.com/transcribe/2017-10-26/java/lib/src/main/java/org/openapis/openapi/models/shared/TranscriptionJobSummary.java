@@ -22,6 +22,7 @@ public class TranscriptionJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CompletionTime")
     public OffsetDateTime completionTime;
+
     public TranscriptionJobSummary withCompletionTime(OffsetDateTime completionTime) {
         this.completionTime = completionTime;
         return this;
@@ -30,6 +31,7 @@ public class TranscriptionJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentRedaction")
     public ContentRedaction contentRedaction;
+
     public TranscriptionJobSummary withContentRedaction(ContentRedaction contentRedaction) {
         this.contentRedaction = contentRedaction;
         return this;
@@ -40,6 +42,7 @@ public class TranscriptionJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public TranscriptionJobSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -48,6 +51,7 @@ public class TranscriptionJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public TranscriptionJobSummary withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -56,6 +60,7 @@ public class TranscriptionJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentifiedLanguageScore")
     public Float identifiedLanguageScore;
+
     public TranscriptionJobSummary withIdentifiedLanguageScore(Float identifiedLanguageScore) {
         this.identifiedLanguageScore = identifiedLanguageScore;
         return this;
@@ -64,6 +69,7 @@ public class TranscriptionJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentifyLanguage")
     public Boolean identifyLanguage;
+
     public TranscriptionJobSummary withIdentifyLanguage(Boolean identifyLanguage) {
         this.identifyLanguage = identifyLanguage;
         return this;
@@ -72,6 +78,7 @@ public class TranscriptionJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentifyMultipleLanguages")
     public Boolean identifyMultipleLanguages;
+
     public TranscriptionJobSummary withIdentifyMultipleLanguages(Boolean identifyMultipleLanguages) {
         this.identifyMultipleLanguages = identifyMultipleLanguages;
         return this;
@@ -80,6 +87,7 @@ public class TranscriptionJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public TranscriptionJobSummary withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -88,6 +96,7 @@ public class TranscriptionJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCodes")
     public LanguageCodeItem[] languageCodes;
+
     public TranscriptionJobSummary withLanguageCodes(LanguageCodeItem[] languageCodes) {
         this.languageCodes = languageCodes;
         return this;
@@ -99,6 +108,7 @@ public class TranscriptionJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelSettings")
     public ModelSettings modelSettings;
+
     public TranscriptionJobSummary withModelSettings(ModelSettings modelSettings) {
         this.modelSettings = modelSettings;
         return this;
@@ -107,6 +117,7 @@ public class TranscriptionJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputLocationType")
     public OutputLocationTypeEnum outputLocationType;
+
     public TranscriptionJobSummary withOutputLocationType(OutputLocationTypeEnum outputLocationType) {
         this.outputLocationType = outputLocationType;
         return this;
@@ -117,6 +128,7 @@ public class TranscriptionJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public TranscriptionJobSummary withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -125,6 +137,7 @@ public class TranscriptionJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TranscriptionJobName")
     public String transcriptionJobName;
+
     public TranscriptionJobSummary withTranscriptionJobName(String transcriptionJobName) {
         this.transcriptionJobName = transcriptionJobName;
         return this;
@@ -133,9 +146,11 @@ public class TranscriptionJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TranscriptionJobStatus")
     public TranscriptionJobStatusEnum transcriptionJobStatus;
+
     public TranscriptionJobSummary withTranscriptionJobStatus(TranscriptionJobStatusEnum transcriptionJobStatus) {
         this.transcriptionJobStatus = transcriptionJobStatus;
         return this;
     }
     
+    public TranscriptionJobSummary(){}
 }

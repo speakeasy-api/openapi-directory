@@ -18,6 +18,7 @@ public class VirtualMachine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceId")
     public String instanceId;
+
     public VirtualMachine withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -29,6 +30,7 @@ public class VirtualMachine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceName")
     public String instanceName;
+
     public VirtualMachine withInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
@@ -40,9 +42,11 @@ public class VirtualMachine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualMachineConfig")
     public VirtualMachineConfig virtualMachineConfig;
+
     public VirtualMachine withVirtualMachineConfig(VirtualMachineConfig virtualMachineConfig) {
         this.virtualMachineConfig = virtualMachineConfig;
         return this;
     }
     
+    public VirtualMachine(){}
 }

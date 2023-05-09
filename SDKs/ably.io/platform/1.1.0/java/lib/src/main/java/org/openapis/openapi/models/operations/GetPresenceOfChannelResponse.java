@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPresenceOfChannelResponse {
     
     public byte[] body;
+
     public GetPresenceOfChannelResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetPresenceOfChannelResponse {
     
     
     public String contentType;
+
     public GetPresenceOfChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetPresenceOfChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetPresenceOfChannelResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -33,6 +37,7 @@ public class GetPresenceOfChannelResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetPresenceOfChannelResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -43,6 +48,7 @@ public class GetPresenceOfChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.PresenceMessage[] presenceMessages;
+
     public GetPresenceOfChannelResponse withPresenceMessages(org.openapis.openapi.models.shared.PresenceMessage[] presenceMessages) {
         this.presenceMessages = presenceMessages;
         return this;
@@ -50,6 +56,7 @@ public class GetPresenceOfChannelResponse {
     
     
     public Integer statusCode;
+
     public GetPresenceOfChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -57,6 +64,7 @@ public class GetPresenceOfChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPresenceOfChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -67,9 +75,14 @@ public class GetPresenceOfChannelResponse {
      */
     
     public String getPresenceOfChannel200TextHTMLString;
+
     public GetPresenceOfChannelResponse withGetPresenceOfChannel200TextHTMLString(String getPresenceOfChannel200TextHTMLString) {
         this.getPresenceOfChannel200TextHTMLString = getPresenceOfChannel200TextHTMLString;
         return this;
     }
     
+    public GetPresenceOfChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

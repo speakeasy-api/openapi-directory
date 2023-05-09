@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListEarthObservationJobsResponse {
@@ -12,6 +13,7 @@ public class ListEarthObservationJobsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListEarthObservationJobsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListEarthObservationJobsResponse {
     
     
     public String contentType;
+
     public ListEarthObservationJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListEarthObservationJobsResponse {
      */
     
     public Object internalServerException;
+
     public ListEarthObservationJobsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListEarthObservationJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListEarthObservationJobOutput listEarthObservationJobOutput;
+
     public ListEarthObservationJobsResponse withListEarthObservationJobOutput(org.openapis.openapi.models.shared.ListEarthObservationJobOutput listEarthObservationJobOutput) {
         this.listEarthObservationJobOutput = listEarthObservationJobOutput;
         return this;
@@ -49,6 +54,7 @@ public class ListEarthObservationJobsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListEarthObservationJobsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListEarthObservationJobsResponse {
     
     
     public Integer statusCode;
+
     public ListEarthObservationJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListEarthObservationJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListEarthObservationJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListEarthObservationJobsResponse {
      */
     
     public Object throttlingException;
+
     public ListEarthObservationJobsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListEarthObservationJobsResponse {
      */
     
     public Object validationException;
+
     public ListEarthObservationJobsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListEarthObservationJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

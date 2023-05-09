@@ -18,6 +18,7 @@ public class DistributionGroupsPatchForOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_public")
     public Boolean isPublic;
+
     public DistributionGroupsPatchForOrgRequestBody withIsPublic(Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
@@ -29,9 +30,11 @@ public class DistributionGroupsPatchForOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DistributionGroupsPatchForOrgRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DistributionGroupsPatchForOrgRequestBody(){}
 }

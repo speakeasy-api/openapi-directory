@@ -15,6 +15,7 @@ public class PamMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public PamMessage withMessage(String message) {
         this.message = message;
         return this;
@@ -26,6 +27,7 @@ public class PamMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipients")
     public String[] recipients;
+
     public PamMessage withRecipients(String[] recipients) {
         this.recipients = recipients;
         return this;
@@ -37,6 +39,7 @@ public class PamMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slots")
     public String[] slots;
+
     public PamMessage withSlots(String[] slots) {
         this.slots = slots;
         return this;
@@ -48,6 +51,7 @@ public class PamMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thread_id")
     public String threadId;
+
     public PamMessage withThreadId(String threadId) {
         this.threadId = threadId;
         return this;
@@ -59,9 +63,11 @@ public class PamMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thread_key")
     public String threadKey;
+
     public PamMessage withThreadKey(String threadKey) {
         this.threadKey = threadKey;
         return this;
     }
     
+    public PamMessage(){}
 }

@@ -4,28 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchGroupsSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=api_key")
     public String apiKey;
+
     public SearchGroupsSecurity withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
-    public String oauth2Code;
-    public SearchGroupsSecurity withOauth2Code(String oauth2Code) {
-        this.oauth2Code = oauth2Code;
-        return this;
-    }
-    
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
-    public String oauth2Implicit;
-    public SearchGroupsSecurity withOauth2Implicit(String oauth2Implicit) {
-        this.oauth2Implicit = oauth2Implicit;
-        return this;
-    }
-    
+    public SearchGroupsSecurity(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

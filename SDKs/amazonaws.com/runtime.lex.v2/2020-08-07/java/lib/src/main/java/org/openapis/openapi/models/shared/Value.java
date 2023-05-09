@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Value {
     @JsonProperty("interpretedValue")
     public String interpretedValue;
+
     public Value withInterpretedValue(String interpretedValue) {
         this.interpretedValue = interpretedValue;
         return this;
@@ -22,6 +23,7 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalValue")
     public String originalValue;
+
     public Value withOriginalValue(String originalValue) {
         this.originalValue = originalValue;
         return this;
@@ -30,9 +32,13 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolvedValues")
     public String[] resolvedValues;
+
     public Value withResolvedValues(String[] resolvedValues) {
         this.resolvedValues = resolvedValues;
         return this;
     }
     
+    public Value(@JsonProperty("interpretedValue") String interpretedValue) {
+        this.interpretedValue = interpretedValue;
+  }
 }

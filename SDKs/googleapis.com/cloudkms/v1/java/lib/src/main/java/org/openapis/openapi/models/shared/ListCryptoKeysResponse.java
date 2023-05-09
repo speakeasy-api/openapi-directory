@@ -18,6 +18,7 @@ public class ListCryptoKeysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cryptoKeys")
     public CryptoKey[] cryptoKeys;
+
     public ListCryptoKeysResponse withCryptoKeys(CryptoKey[] cryptoKeys) {
         this.cryptoKeys = cryptoKeys;
         return this;
@@ -29,6 +30,7 @@ public class ListCryptoKeysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListCryptoKeysResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListCryptoKeysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSize")
     public Integer totalSize;
+
     public ListCryptoKeysResponse withTotalSize(Integer totalSize) {
         this.totalSize = totalSize;
         return this;
     }
     
+    public ListCryptoKeysResponse(){}
 }

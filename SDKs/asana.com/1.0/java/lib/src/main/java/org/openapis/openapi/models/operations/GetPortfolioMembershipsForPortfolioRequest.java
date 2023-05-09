@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPortfolioMembershipsForPortfolioRequest {
@@ -13,6 +14,7 @@ public class GetPortfolioMembershipsForPortfolioRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetPortfolioMembershipsForPortfolioRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -25,6 +27,7 @@ public class GetPortfolioMembershipsForPortfolioRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetPortfolioMembershipsForPortfolioRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -37,6 +40,7 @@ public class GetPortfolioMembershipsForPortfolioRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public GetPortfolioMembershipsForPortfolioRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -48,6 +52,7 @@ public class GetPortfolioMembershipsForPortfolioRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public GetPortfolioMembershipsForPortfolioRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -58,6 +63,7 @@ public class GetPortfolioMembershipsForPortfolioRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=portfolio_gid")
     public String portfolioGid;
+
     public GetPortfolioMembershipsForPortfolioRequest withPortfolioGid(String portfolioGid) {
         this.portfolioGid = portfolioGid;
         return this;
@@ -68,9 +74,13 @@ public class GetPortfolioMembershipsForPortfolioRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user")
     public String user;
+
     public GetPortfolioMembershipsForPortfolioRequest withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public GetPortfolioMembershipsForPortfolioRequest(@JsonProperty("portfolio_gid") String portfolioGid) {
+        this.portfolioGid = portfolioGid;
+  }
 }

@@ -22,6 +22,7 @@ public class OfferingStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("effectiveOn")
     public OffsetDateTime effectiveOn;
+
     public OfferingStatus withEffectiveOn(OffsetDateTime effectiveOn) {
         this.effectiveOn = effectiveOn;
         return this;
@@ -30,6 +31,7 @@ public class OfferingStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offering")
     public Offering offering;
+
     public OfferingStatus withOffering(Offering offering) {
         this.offering = offering;
         return this;
@@ -38,6 +40,7 @@ public class OfferingStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Long quantity;
+
     public OfferingStatus withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
@@ -46,9 +49,11 @@ public class OfferingStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public OfferingTransactionTypeEnum type;
+
     public OfferingStatus withType(OfferingTransactionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public OfferingStatus(){}
 }

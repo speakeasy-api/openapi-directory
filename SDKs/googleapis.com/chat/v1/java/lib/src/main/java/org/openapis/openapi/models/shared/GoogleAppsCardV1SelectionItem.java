@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleAppsCardV1SelectionItem - A selectable item in a selection input, such as a check box or a switch.
+ * GoogleAppsCardV1SelectionItem - An item that users can select in a selection input, such as a checkbox or switch.
  */
 public class GoogleAppsCardV1SelectionItem {
     /**
@@ -18,17 +18,19 @@ public class GoogleAppsCardV1SelectionItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selected")
     public Boolean selected;
+
     public GoogleAppsCardV1SelectionItem withSelected(Boolean selected) {
         this.selected = selected;
         return this;
     }
     
     /**
-     * The text displayed to users.
+     * The text that identifies or describes the item to users.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GoogleAppsCardV1SelectionItem withText(String text) {
         this.text = text;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAppsCardV1SelectionItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GoogleAppsCardV1SelectionItem withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GoogleAppsCardV1SelectionItem(){}
 }

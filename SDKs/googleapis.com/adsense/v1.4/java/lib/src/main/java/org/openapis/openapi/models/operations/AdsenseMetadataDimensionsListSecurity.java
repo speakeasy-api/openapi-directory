@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class AdsenseMetadataDimensionsListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public AdsenseMetadataDimensionsListSecurityOption1 option1;
+
     public AdsenseMetadataDimensionsListSecurity withOption1(AdsenseMetadataDimensionsListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class AdsenseMetadataDimensionsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public AdsenseMetadataDimensionsListSecurityOption2 option2;
+
     public AdsenseMetadataDimensionsListSecurity withOption2(AdsenseMetadataDimensionsListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public AdsenseMetadataDimensionsListSecurity(){}
 }

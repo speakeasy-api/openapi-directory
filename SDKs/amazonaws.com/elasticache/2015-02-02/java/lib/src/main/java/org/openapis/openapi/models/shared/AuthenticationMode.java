@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AuthenticationMode {
     
     public String[] passwords;
+
     public AuthenticationMode withPasswords(String[] passwords) {
         this.passwords = passwords;
         return this;
@@ -19,9 +20,11 @@ public class AuthenticationMode {
     
     
     public InputAuthenticationTypeEnum type;
+
     public AuthenticationMode withType(InputAuthenticationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AuthenticationMode(){}
 }

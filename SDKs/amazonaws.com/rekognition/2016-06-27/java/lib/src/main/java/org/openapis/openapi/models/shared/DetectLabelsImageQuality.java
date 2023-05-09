@@ -15,6 +15,7 @@ public class DetectLabelsImageQuality {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Brightness")
     public Float brightness;
+
     public DetectLabelsImageQuality withBrightness(Float brightness) {
         this.brightness = brightness;
         return this;
@@ -23,6 +24,7 @@ public class DetectLabelsImageQuality {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Contrast")
     public Float contrast;
+
     public DetectLabelsImageQuality withContrast(Float contrast) {
         this.contrast = contrast;
         return this;
@@ -31,9 +33,11 @@ public class DetectLabelsImageQuality {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sharpness")
     public Float sharpness;
+
     public DetectLabelsImageQuality withSharpness(Float sharpness) {
         this.sharpness = sharpness;
         return this;
     }
     
+    public DetectLabelsImageQuality(){}
 }

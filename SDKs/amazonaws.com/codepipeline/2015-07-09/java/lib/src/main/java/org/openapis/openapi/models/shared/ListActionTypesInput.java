@@ -15,6 +15,7 @@ public class ListActionTypesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionOwnerFilter")
     public ActionOwnerEnum actionOwnerFilter;
+
     public ListActionTypesInput withActionOwnerFilter(ActionOwnerEnum actionOwnerFilter) {
         this.actionOwnerFilter = actionOwnerFilter;
         return this;
@@ -23,6 +24,7 @@ public class ListActionTypesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListActionTypesInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,9 +33,11 @@ public class ListActionTypesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionFilter")
     public String regionFilter;
+
     public ListActionTypesInput withRegionFilter(String regionFilter) {
         this.regionFilter = regionFilter;
         return this;
     }
     
+    public ListActionTypesInput(){}
 }

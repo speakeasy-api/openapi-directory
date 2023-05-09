@@ -18,6 +18,7 @@ public class EnvFromSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configMapRef")
     public ConfigMapEnvSource configMapRef;
+
     public EnvFromSource withConfigMapRef(ConfigMapEnvSource configMapRef) {
         this.configMapRef = configMapRef;
         return this;
@@ -29,6 +30,7 @@ public class EnvFromSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefix")
     public String prefix;
+
     public EnvFromSource withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -40,9 +42,11 @@ public class EnvFromSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secretRef")
     public SecretEnvSource secretRef;
+
     public EnvFromSource withSecretRef(SecretEnvSource secretRef) {
         this.secretRef = secretRef;
         return this;
     }
     
+    public EnvFromSource(){}
 }

@@ -15,6 +15,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderItemAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public BillbeeInterfacesBillbeeAPIModelOrderItemAttribute withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderItemAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public BillbeeInterfacesBillbeeAPIModelOrderItemAttribute withName(String name) {
         this.name = name;
         return this;
@@ -34,6 +36,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderItemAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Price")
     public Double price;
+
     public BillbeeInterfacesBillbeeAPIModelOrderItemAttribute withPrice(Double price) {
         this.price = price;
         return this;
@@ -45,9 +48,11 @@ public class BillbeeInterfacesBillbeeAPIModelOrderItemAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public BillbeeInterfacesBillbeeAPIModelOrderItemAttribute withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelOrderItemAttribute(){}
 }

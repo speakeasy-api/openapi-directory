@@ -14,6 +14,7 @@ public class CreateContainerRecipeRequestBody {
      */
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateContainerRecipeRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -24,6 +25,7 @@ public class CreateContainerRecipeRequestBody {
      */
     @JsonProperty("components")
     public org.openapis.openapi.models.shared.ComponentConfiguration[] components;
+
     public CreateContainerRecipeRequestBody withComponents(org.openapis.openapi.models.shared.ComponentConfiguration[] components) {
         this.components = components;
         return this;
@@ -34,6 +36,7 @@ public class CreateContainerRecipeRequestBody {
      */
     @JsonProperty("containerType")
     public CreateContainerRecipeRequestBodyContainerTypeEnum containerType;
+
     public CreateContainerRecipeRequestBody withContainerType(CreateContainerRecipeRequestBodyContainerTypeEnum containerType) {
         this.containerType = containerType;
         return this;
@@ -45,6 +48,7 @@ public class CreateContainerRecipeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateContainerRecipeRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -56,6 +60,7 @@ public class CreateContainerRecipeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dockerfileTemplateData")
     public String dockerfileTemplateData;
+
     public CreateContainerRecipeRequestBody withDockerfileTemplateData(String dockerfileTemplateData) {
         this.dockerfileTemplateData = dockerfileTemplateData;
         return this;
@@ -67,6 +72,7 @@ public class CreateContainerRecipeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dockerfileTemplateUri")
     public String dockerfileTemplateUri;
+
     public CreateContainerRecipeRequestBody withDockerfileTemplateUri(String dockerfileTemplateUri) {
         this.dockerfileTemplateUri = dockerfileTemplateUri;
         return this;
@@ -78,6 +84,7 @@ public class CreateContainerRecipeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageOsVersionOverride")
     public String imageOsVersionOverride;
+
     public CreateContainerRecipeRequestBody withImageOsVersionOverride(String imageOsVersionOverride) {
         this.imageOsVersionOverride = imageOsVersionOverride;
         return this;
@@ -89,6 +96,7 @@ public class CreateContainerRecipeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceConfiguration")
     public CreateContainerRecipeRequestBodyInstanceConfiguration instanceConfiguration;
+
     public CreateContainerRecipeRequestBody withInstanceConfiguration(CreateContainerRecipeRequestBodyInstanceConfiguration instanceConfiguration) {
         this.instanceConfiguration = instanceConfiguration;
         return this;
@@ -100,6 +108,7 @@ public class CreateContainerRecipeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyId")
     public String kmsKeyId;
+
     public CreateContainerRecipeRequestBody withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -110,6 +119,7 @@ public class CreateContainerRecipeRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateContainerRecipeRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -120,6 +130,7 @@ public class CreateContainerRecipeRequestBody {
      */
     @JsonProperty("parentImage")
     public String parentImage;
+
     public CreateContainerRecipeRequestBody withParentImage(String parentImage) {
         this.parentImage = parentImage;
         return this;
@@ -131,6 +142,7 @@ public class CreateContainerRecipeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platformOverride")
     public CreateContainerRecipeRequestBodyPlatformOverrideEnum platformOverride;
+
     public CreateContainerRecipeRequestBody withPlatformOverride(CreateContainerRecipeRequestBodyPlatformOverrideEnum platformOverride) {
         this.platformOverride = platformOverride;
         return this;
@@ -141,6 +153,7 @@ public class CreateContainerRecipeRequestBody {
      */
     @JsonProperty("semanticVersion")
     public String semanticVersion;
+
     public CreateContainerRecipeRequestBody withSemanticVersion(String semanticVersion) {
         this.semanticVersion = semanticVersion;
         return this;
@@ -152,6 +165,7 @@ public class CreateContainerRecipeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateContainerRecipeRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -162,6 +176,7 @@ public class CreateContainerRecipeRequestBody {
      */
     @JsonProperty("targetRepository")
     public CreateContainerRecipeRequestBodyTargetRepository targetRepository;
+
     public CreateContainerRecipeRequestBody withTargetRepository(CreateContainerRecipeRequestBodyTargetRepository targetRepository) {
         this.targetRepository = targetRepository;
         return this;
@@ -173,9 +188,19 @@ public class CreateContainerRecipeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workingDirectory")
     public String workingDirectory;
+
     public CreateContainerRecipeRequestBody withWorkingDirectory(String workingDirectory) {
         this.workingDirectory = workingDirectory;
         return this;
     }
     
+    public CreateContainerRecipeRequestBody(@JsonProperty("clientToken") String clientToken, @JsonProperty("components") org.openapis.openapi.models.shared.ComponentConfiguration[] components, @JsonProperty("containerType") CreateContainerRecipeRequestBodyContainerTypeEnum containerType, @JsonProperty("name") String name, @JsonProperty("parentImage") String parentImage, @JsonProperty("semanticVersion") String semanticVersion, @JsonProperty("targetRepository") CreateContainerRecipeRequestBodyTargetRepository targetRepository) {
+        this.clientToken = clientToken;
+        this.components = components;
+        this.containerType = containerType;
+        this.name = name;
+        this.parentImage = parentImage;
+        this.semanticVersion = semanticVersion;
+        this.targetRepository = targetRepository;
+  }
 }

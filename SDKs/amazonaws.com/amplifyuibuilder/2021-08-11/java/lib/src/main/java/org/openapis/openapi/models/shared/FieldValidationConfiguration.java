@@ -15,6 +15,7 @@ public class FieldValidationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numValues")
     public Long[] numValues;
+
     public FieldValidationConfiguration withNumValues(Long[] numValues) {
         this.numValues = numValues;
         return this;
@@ -23,6 +24,7 @@ public class FieldValidationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strValues")
     public String[] strValues;
+
     public FieldValidationConfiguration withStrValues(String[] strValues) {
         this.strValues = strValues;
         return this;
@@ -30,6 +32,7 @@ public class FieldValidationConfiguration {
     
     @JsonProperty("type")
     public String type;
+
     public FieldValidationConfiguration withType(String type) {
         this.type = type;
         return this;
@@ -38,9 +41,13 @@ public class FieldValidationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationMessage")
     public String validationMessage;
+
     public FieldValidationConfiguration withValidationMessage(String validationMessage) {
         this.validationMessage = validationMessage;
         return this;
     }
     
+    public FieldValidationConfiguration(@JsonProperty("type") String type) {
+        this.type = type;
+  }
 }

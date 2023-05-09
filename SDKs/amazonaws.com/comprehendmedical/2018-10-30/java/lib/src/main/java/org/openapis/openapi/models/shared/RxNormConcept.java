@@ -15,6 +15,7 @@ public class RxNormConcept {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public RxNormConcept withCode(String code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class RxNormConcept {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public RxNormConcept withDescription(String description) {
         this.description = description;
         return this;
@@ -31,9 +33,11 @@ public class RxNormConcept {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public Float score;
+
     public RxNormConcept withScore(Float score) {
         this.score = score;
         return this;
     }
     
+    public RxNormConcept(){}
 }

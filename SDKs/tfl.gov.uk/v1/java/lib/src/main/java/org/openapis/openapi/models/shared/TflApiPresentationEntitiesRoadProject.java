@@ -17,6 +17,7 @@ public class TflApiPresentationEntitiesRoadProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boroughsBenefited")
     public String[] boroughsBenefited;
+
     public TflApiPresentationEntitiesRoadProject withBoroughsBenefited(String[] boroughsBenefited) {
         this.boroughsBenefited = boroughsBenefited;
         return this;
@@ -27,6 +28,7 @@ public class TflApiPresentationEntitiesRoadProject {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("constructionEndDate")
     public OffsetDateTime constructionEndDate;
+
     public TflApiPresentationEntitiesRoadProject withConstructionEndDate(OffsetDateTime constructionEndDate) {
         this.constructionEndDate = constructionEndDate;
         return this;
@@ -37,6 +39,7 @@ public class TflApiPresentationEntitiesRoadProject {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("constructionStartDate")
     public OffsetDateTime constructionStartDate;
+
     public TflApiPresentationEntitiesRoadProject withConstructionStartDate(OffsetDateTime constructionStartDate) {
         this.constructionStartDate = constructionStartDate;
         return this;
@@ -47,6 +50,7 @@ public class TflApiPresentationEntitiesRoadProject {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("consultationEndDate")
     public OffsetDateTime consultationEndDate;
+
     public TflApiPresentationEntitiesRoadProject withConsultationEndDate(OffsetDateTime consultationEndDate) {
         this.consultationEndDate = consultationEndDate;
         return this;
@@ -55,6 +59,7 @@ public class TflApiPresentationEntitiesRoadProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consultationPageUrl")
     public String consultationPageUrl;
+
     public TflApiPresentationEntitiesRoadProject withConsultationPageUrl(String consultationPageUrl) {
         this.consultationPageUrl = consultationPageUrl;
         return this;
@@ -65,6 +70,7 @@ public class TflApiPresentationEntitiesRoadProject {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("consultationStartDate")
     public OffsetDateTime consultationStartDate;
+
     public TflApiPresentationEntitiesRoadProject withConsultationStartDate(OffsetDateTime consultationStartDate) {
         this.consultationStartDate = consultationStartDate;
         return this;
@@ -73,6 +79,7 @@ public class TflApiPresentationEntitiesRoadProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactEmail")
     public String contactEmail;
+
     public TflApiPresentationEntitiesRoadProject withContactEmail(String contactEmail) {
         this.contactEmail = contactEmail;
         return this;
@@ -81,6 +88,7 @@ public class TflApiPresentationEntitiesRoadProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactName")
     public String contactName;
+
     public TflApiPresentationEntitiesRoadProject withContactName(String contactName) {
         this.contactName = contactName;
         return this;
@@ -89,6 +97,7 @@ public class TflApiPresentationEntitiesRoadProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cycleSuperhighwayId")
     public String cycleSuperhighwayId;
+
     public TflApiPresentationEntitiesRoadProject withCycleSuperhighwayId(String cycleSuperhighwayId) {
         this.cycleSuperhighwayId = cycleSuperhighwayId;
         return this;
@@ -97,6 +106,7 @@ public class TflApiPresentationEntitiesRoadProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalPageUrl")
     public String externalPageUrl;
+
     public TflApiPresentationEntitiesRoadProject withExternalPageUrl(String externalPageUrl) {
         this.externalPageUrl = externalPageUrl;
         return this;
@@ -105,6 +115,7 @@ public class TflApiPresentationEntitiesRoadProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phase")
     public TflApiPresentationEntitiesRoadProjectPhaseEnum phase;
+
     public TflApiPresentationEntitiesRoadProject withPhase(TflApiPresentationEntitiesRoadProjectPhaseEnum phase) {
         this.phase = phase;
         return this;
@@ -113,6 +124,7 @@ public class TflApiPresentationEntitiesRoadProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectDescription")
     public String projectDescription;
+
     public TflApiPresentationEntitiesRoadProject withProjectDescription(String projectDescription) {
         this.projectDescription = projectDescription;
         return this;
@@ -121,6 +133,7 @@ public class TflApiPresentationEntitiesRoadProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public TflApiPresentationEntitiesRoadProject withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -129,6 +142,7 @@ public class TflApiPresentationEntitiesRoadProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectName")
     public String projectName;
+
     public TflApiPresentationEntitiesRoadProject withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -137,6 +151,7 @@ public class TflApiPresentationEntitiesRoadProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectPageUrl")
     public String projectPageUrl;
+
     public TflApiPresentationEntitiesRoadProject withProjectPageUrl(String projectPageUrl) {
         this.projectPageUrl = projectPageUrl;
         return this;
@@ -145,6 +160,7 @@ public class TflApiPresentationEntitiesRoadProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectSummaryPageUrl")
     public String projectSummaryPageUrl;
+
     public TflApiPresentationEntitiesRoadProject withProjectSummaryPageUrl(String projectSummaryPageUrl) {
         this.projectSummaryPageUrl = projectSummaryPageUrl;
         return this;
@@ -153,9 +169,11 @@ public class TflApiPresentationEntitiesRoadProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemeName")
     public String schemeName;
+
     public TflApiPresentationEntitiesRoadProject withSchemeName(String schemeName) {
         this.schemeName = schemeName;
         return this;
     }
     
+    public TflApiPresentationEntitiesRoadProject(){}
 }

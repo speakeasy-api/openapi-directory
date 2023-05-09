@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AgentStoreCopyRequest {
@@ -12,6 +13,7 @@ public class AgentStoreCopyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public AgentStoreCopyRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class AgentStoreCopyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=otherAgent")
     public Integer otherAgent;
+
     public AgentStoreCopyRequest withOtherAgent(Integer otherAgent) {
         this.otherAgent = otherAgent;
         return this;
     }
     
+    public AgentStoreCopyRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("otherAgent") Integer otherAgent) {
+        this.agentNum = agentNum;
+        this.otherAgent = otherAgent;
+  }
 }

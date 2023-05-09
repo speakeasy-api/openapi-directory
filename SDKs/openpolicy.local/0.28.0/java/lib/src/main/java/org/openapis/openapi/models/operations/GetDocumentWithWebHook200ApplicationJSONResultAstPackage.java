@@ -15,9 +15,11 @@ public class GetDocumentWithWebHook200ApplicationJSONResultAstPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public GetDocumentWithWebHook200ApplicationJSONResultAstPackagePath[] path;
+
     public GetDocumentWithWebHook200ApplicationJSONResultAstPackage withPath(GetDocumentWithWebHook200ApplicationJSONResultAstPackagePath[] path) {
         this.path = path;
         return this;
     }
     
+    public GetDocumentWithWebHook200ApplicationJSONResultAstPackage(){}
 }

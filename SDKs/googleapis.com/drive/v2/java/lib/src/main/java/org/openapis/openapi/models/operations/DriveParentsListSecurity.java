@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DriveParentsListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DriveParentsListSecurityOption1 option1;
+
     public DriveParentsListSecurity withOption1(DriveParentsListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class DriveParentsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DriveParentsListSecurityOption2 option2;
+
     public DriveParentsListSecurity withOption2(DriveParentsListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class DriveParentsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DriveParentsListSecurityOption3 option3;
+
     public DriveParentsListSecurity withOption3(DriveParentsListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class DriveParentsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DriveParentsListSecurityOption4 option4;
+
     public DriveParentsListSecurity withOption4(DriveParentsListSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,6 +41,7 @@ public class DriveParentsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DriveParentsListSecurityOption5 option5;
+
     public DriveParentsListSecurity withOption5(DriveParentsListSecurityOption5 option5) {
         this.option5 = option5;
         return this;
@@ -44,6 +49,7 @@ public class DriveParentsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DriveParentsListSecurityOption6 option6;
+
     public DriveParentsListSecurity withOption6(DriveParentsListSecurityOption6 option6) {
         this.option6 = option6;
         return this;
@@ -51,9 +57,11 @@ public class DriveParentsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DriveParentsListSecurityOption7 option7;
+
     public DriveParentsListSecurity withOption7(DriveParentsListSecurityOption7 option7) {
         this.option7 = option7;
         return this;
     }
     
+    public DriveParentsListSecurity(){}
 }

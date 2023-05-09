@@ -21,6 +21,7 @@ public class ProjectSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public ProjectSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -28,6 +29,7 @@ public class ProjectSummary {
     
     @JsonProperty("ProjectArn")
     public String projectArn;
+
     public ProjectSummary withProjectArn(String projectArn) {
         this.projectArn = projectArn;
         return this;
@@ -36,6 +38,7 @@ public class ProjectSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectDescription")
     public String projectDescription;
+
     public ProjectSummary withProjectDescription(String projectDescription) {
         this.projectDescription = projectDescription;
         return this;
@@ -43,6 +46,7 @@ public class ProjectSummary {
     
     @JsonProperty("ProjectId")
     public String projectId;
+
     public ProjectSummary withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -50,6 +54,7 @@ public class ProjectSummary {
     
     @JsonProperty("ProjectName")
     public String projectName;
+
     public ProjectSummary withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -57,9 +62,17 @@ public class ProjectSummary {
     
     @JsonProperty("ProjectStatus")
     public ProjectStatusEnum projectStatus;
+
     public ProjectSummary withProjectStatus(ProjectStatusEnum projectStatus) {
         this.projectStatus = projectStatus;
         return this;
     }
     
+    public ProjectSummary(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("ProjectArn") String projectArn, @JsonProperty("ProjectId") String projectId, @JsonProperty("ProjectName") String projectName, @JsonProperty("ProjectStatus") ProjectStatusEnum projectStatus) {
+        this.creationTime = creationTime;
+        this.projectArn = projectArn;
+        this.projectId = projectId;
+        this.projectName = projectName;
+        this.projectStatus = projectStatus;
+  }
 }

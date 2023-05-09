@@ -75,12 +75,10 @@ public class FeatureFlagsAndSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSettingResponse res = new org.openapis.openapi.models.operations.CreateSettingResponse() {{
+        org.openapis.openapi.models.operations.CreateSettingResponse res = new org.openapis.openapi.models.operations.CreateSettingResponse(contentType, httpRes.statusCode()) {{
             settingModelHaljson = null;
             settingModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -124,10 +122,8 @@ public class FeatureFlagsAndSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSettingResponse res = new org.openapis.openapi.models.operations.DeleteSettingResponse() {{
+        org.openapis.openapi.models.operations.DeleteSettingResponse res = new org.openapis.openapi.models.operations.DeleteSettingResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 429) {
@@ -159,12 +155,10 @@ public class FeatureFlagsAndSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSettingResponse res = new org.openapis.openapi.models.operations.GetSettingResponse() {{
+        org.openapis.openapi.models.operations.GetSettingResponse res = new org.openapis.openapi.models.operations.GetSettingResponse(contentType, httpRes.statusCode()) {{
             settingModelHaljson = null;
             settingModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -208,12 +202,10 @@ public class FeatureFlagsAndSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSettingsResponse res = new org.openapis.openapi.models.operations.GetSettingsResponse() {{
+        org.openapis.openapi.models.operations.GetSettingsResponse res = new org.openapis.openapi.models.operations.GetSettingsResponse(contentType, httpRes.statusCode()) {{
             settingModelHaljsons = null;
             settingModels = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -324,12 +316,10 @@ public class FeatureFlagsAndSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateSettingResponse res = new org.openapis.openapi.models.operations.UpdateSettingResponse() {{
+        org.openapis.openapi.models.operations.UpdateSettingResponse res = new org.openapis.openapi.models.operations.UpdateSettingResponse(contentType, httpRes.statusCode()) {{
             settingModelHaljson = null;
             settingModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

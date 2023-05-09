@@ -15,9 +15,11 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String data;
+
     public Certificate withData(String data) {
         this.data = data;
         return this;
     }
     
+    public Certificate(){}
 }

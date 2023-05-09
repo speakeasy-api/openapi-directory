@@ -18,6 +18,7 @@ public class LinkedInterconnectAttachmentsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("siteToSiteDataTransfer")
     public Boolean siteToSiteDataTransfer;
+
     public LinkedInterconnectAttachmentsInput withSiteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
         this.siteToSiteDataTransfer = siteToSiteDataTransfer;
         return this;
@@ -29,9 +30,11 @@ public class LinkedInterconnectAttachmentsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uris")
     public String[] uris;
+
     public LinkedInterconnectAttachmentsInput withUris(String[] uris) {
         this.uris = uris;
         return this;
     }
     
+    public LinkedInterconnectAttachmentsInput(){}
 }

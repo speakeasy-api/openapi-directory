@@ -15,6 +15,7 @@ public class SamlConfigOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupAttribute")
     public String groupAttribute;
+
     public SamlConfigOptions withGroupAttribute(String groupAttribute) {
         this.groupAttribute = groupAttribute;
         return this;
@@ -22,6 +23,7 @@ public class SamlConfigOptions {
     
     @JsonProperty("metadata")
     public String metadata;
+
     public SamlConfigOptions withMetadata(String metadata) {
         this.metadata = metadata;
         return this;
@@ -30,6 +32,7 @@ public class SamlConfigOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionTimeout")
     public Long sessionTimeout;
+
     public SamlConfigOptions withSessionTimeout(Long sessionTimeout) {
         this.sessionTimeout = sessionTimeout;
         return this;
@@ -38,9 +41,13 @@ public class SamlConfigOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userAttribute")
     public String userAttribute;
+
     public SamlConfigOptions withUserAttribute(String userAttribute) {
         this.userAttribute = userAttribute;
         return this;
     }
     
+    public SamlConfigOptions(@JsonProperty("metadata") String metadata) {
+        this.metadata = metadata;
+  }
 }

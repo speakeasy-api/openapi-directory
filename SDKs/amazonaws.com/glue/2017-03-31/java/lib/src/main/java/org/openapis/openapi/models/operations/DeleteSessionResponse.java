@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSessionResponse {
@@ -12,6 +13,7 @@ public class DeleteSessionResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteSessionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteSessionResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteSessionResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSessionResponse {
     
     
     public String contentType;
+
     public DeleteSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteSessionResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteSessionResponse deleteSessionResponse;
+
     public DeleteSessionResponse withDeleteSessionResponse(org.openapis.openapi.models.shared.DeleteSessionResponse deleteSessionResponse) {
         this.deleteSessionResponse = deleteSessionResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteSessionResponse {
      */
     
     public Object illegalSessionStateException;
+
     public DeleteSessionResponse withIllegalSessionStateException(Object illegalSessionStateException) {
         this.illegalSessionStateException = illegalSessionStateException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteSessionResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteSessionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteSessionResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteSessionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteSessionResponse {
      */
     
     public Object operationTimeoutException;
+
     public DeleteSessionResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -86,6 +95,7 @@ public class DeleteSessionResponse {
     
     
     public Integer statusCode;
+
     public DeleteSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class DeleteSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

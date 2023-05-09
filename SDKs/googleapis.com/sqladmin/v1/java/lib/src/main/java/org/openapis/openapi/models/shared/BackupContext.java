@@ -18,6 +18,7 @@ public class BackupContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backupId")
     public String backupId;
+
     public BackupContext withBackupId(String backupId) {
         this.backupId = backupId;
         return this;
@@ -29,9 +30,11 @@ public class BackupContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public BackupContext withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public BackupContext(){}
 }

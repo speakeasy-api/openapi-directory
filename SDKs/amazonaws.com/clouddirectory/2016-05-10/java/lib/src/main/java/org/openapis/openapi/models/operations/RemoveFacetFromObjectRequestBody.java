@@ -12,6 +12,7 @@ public class RemoveFacetFromObjectRequestBody {
      */
     @JsonProperty("ObjectReference")
     public RemoveFacetFromObjectRequestBodyObjectReference objectReference;
+
     public RemoveFacetFromObjectRequestBody withObjectReference(RemoveFacetFromObjectRequestBodyObjectReference objectReference) {
         this.objectReference = objectReference;
         return this;
@@ -22,9 +23,14 @@ public class RemoveFacetFromObjectRequestBody {
      */
     @JsonProperty("SchemaFacet")
     public RemoveFacetFromObjectRequestBodySchemaFacet schemaFacet;
+
     public RemoveFacetFromObjectRequestBody withSchemaFacet(RemoveFacetFromObjectRequestBodySchemaFacet schemaFacet) {
         this.schemaFacet = schemaFacet;
         return this;
     }
     
+    public RemoveFacetFromObjectRequestBody(@JsonProperty("ObjectReference") RemoveFacetFromObjectRequestBodyObjectReference objectReference, @JsonProperty("SchemaFacet") RemoveFacetFromObjectRequestBodySchemaFacet schemaFacet) {
+        this.objectReference = objectReference;
+        this.schemaFacet = schemaFacet;
+  }
 }

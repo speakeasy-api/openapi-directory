@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateSpotDatafeedSubscriptionRequest - Contains the parameters for CreateSpotDatafeedSubscription.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateSpotDatafeedSubscriptionRequest {
     
     public String bucket;
+
     public CreateSpotDatafeedSubscriptionRequest withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -19,6 +20,7 @@ public class CreateSpotDatafeedSubscriptionRequest {
     
     
     public Boolean dryRun;
+
     public CreateSpotDatafeedSubscriptionRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -26,9 +28,13 @@ public class CreateSpotDatafeedSubscriptionRequest {
     
     
     public String prefix;
+
     public CreateSpotDatafeedSubscriptionRequest withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
     
+    public CreateSpotDatafeedSubscriptionRequest(@JsonProperty("Bucket") String bucket) {
+        this.bucket = bucket;
+  }
 }

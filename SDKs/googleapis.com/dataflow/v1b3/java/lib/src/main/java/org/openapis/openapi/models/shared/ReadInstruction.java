@@ -18,9 +18,11 @@ public class ReadInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Source source;
+
     public ReadInstruction withSource(Source source) {
         this.source = source;
         return this;
     }
     
+    public ReadInstruction(){}
 }

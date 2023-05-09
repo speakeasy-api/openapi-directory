@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0ServicesSearchSearchAds360FieldsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleAdsSearchads360V0ServicesSearchSearchAds360FieldsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAdsSearchads360V0ServicesSearchSearchAds360FieldsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public GoogleAdsSearchads360V0ResourcesSearchAds360Field[] results;
+
     public GoogleAdsSearchads360V0ServicesSearchSearchAds360FieldsResponse withResults(GoogleAdsSearchads360V0ResourcesSearchAds360Field[] results) {
         this.results = results;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAdsSearchads360V0ServicesSearchSearchAds360FieldsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalResultsCount")
     public String totalResultsCount;
+
     public GoogleAdsSearchads360V0ServicesSearchSearchAds360FieldsResponse withTotalResultsCount(String totalResultsCount) {
         this.totalResultsCount = totalResultsCount;
         return this;
     }
     
+    public GoogleAdsSearchads360V0ServicesSearchSearchAds360FieldsResponse(){}
 }

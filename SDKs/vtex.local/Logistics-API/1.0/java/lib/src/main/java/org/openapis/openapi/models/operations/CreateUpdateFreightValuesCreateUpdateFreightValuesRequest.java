@@ -12,6 +12,7 @@ public class CreateUpdateFreightValuesCreateUpdateFreightValuesRequest {
      */
     @JsonProperty("absoluteMoneyCost")
     public String absoluteMoneyCost;
+
     public CreateUpdateFreightValuesCreateUpdateFreightValuesRequest withAbsoluteMoneyCost(String absoluteMoneyCost) {
         this.absoluteMoneyCost = absoluteMoneyCost;
         return this;
@@ -22,6 +23,7 @@ public class CreateUpdateFreightValuesCreateUpdateFreightValuesRequest {
      */
     @JsonProperty("country")
     public String country;
+
     public CreateUpdateFreightValuesCreateUpdateFreightValuesRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -32,6 +34,7 @@ public class CreateUpdateFreightValuesCreateUpdateFreightValuesRequest {
      */
     @JsonProperty("maxVolume")
     public Integer maxVolume;
+
     public CreateUpdateFreightValuesCreateUpdateFreightValuesRequest withMaxVolume(Integer maxVolume) {
         this.maxVolume = maxVolume;
         return this;
@@ -42,6 +45,7 @@ public class CreateUpdateFreightValuesCreateUpdateFreightValuesRequest {
      */
     @JsonProperty("operationType")
     public Integer operationType;
+
     public CreateUpdateFreightValuesCreateUpdateFreightValuesRequest withOperationType(Integer operationType) {
         this.operationType = operationType;
         return this;
@@ -52,6 +56,7 @@ public class CreateUpdateFreightValuesCreateUpdateFreightValuesRequest {
      */
     @JsonProperty("polygon")
     public String polygon;
+
     public CreateUpdateFreightValuesCreateUpdateFreightValuesRequest withPolygon(String polygon) {
         this.polygon = polygon;
         return this;
@@ -62,6 +67,7 @@ public class CreateUpdateFreightValuesCreateUpdateFreightValuesRequest {
      */
     @JsonProperty("pricePercent")
     public Integer pricePercent;
+
     public CreateUpdateFreightValuesCreateUpdateFreightValuesRequest withPricePercent(Integer pricePercent) {
         this.pricePercent = pricePercent;
         return this;
@@ -72,6 +78,7 @@ public class CreateUpdateFreightValuesCreateUpdateFreightValuesRequest {
      */
     @JsonProperty("pricePercentByWeight")
     public Integer pricePercentByWeight;
+
     public CreateUpdateFreightValuesCreateUpdateFreightValuesRequest withPricePercentByWeight(Integer pricePercentByWeight) {
         this.pricePercentByWeight = pricePercentByWeight;
         return this;
@@ -82,6 +89,7 @@ public class CreateUpdateFreightValuesCreateUpdateFreightValuesRequest {
      */
     @JsonProperty("timeCost")
     public String timeCost;
+
     public CreateUpdateFreightValuesCreateUpdateFreightValuesRequest withTimeCost(String timeCost) {
         this.timeCost = timeCost;
         return this;
@@ -92,6 +100,7 @@ public class CreateUpdateFreightValuesCreateUpdateFreightValuesRequest {
      */
     @JsonProperty("weightEnd")
     public Integer weightEnd;
+
     public CreateUpdateFreightValuesCreateUpdateFreightValuesRequest withWeightEnd(Integer weightEnd) {
         this.weightEnd = weightEnd;
         return this;
@@ -102,6 +111,7 @@ public class CreateUpdateFreightValuesCreateUpdateFreightValuesRequest {
      */
     @JsonProperty("weightStart")
     public Integer weightStart;
+
     public CreateUpdateFreightValuesCreateUpdateFreightValuesRequest withWeightStart(Integer weightStart) {
         this.weightStart = weightStart;
         return this;
@@ -112,6 +122,7 @@ public class CreateUpdateFreightValuesCreateUpdateFreightValuesRequest {
      */
     @JsonProperty("zipCodeEnd")
     public String zipCodeEnd;
+
     public CreateUpdateFreightValuesCreateUpdateFreightValuesRequest withZipCodeEnd(String zipCodeEnd) {
         this.zipCodeEnd = zipCodeEnd;
         return this;
@@ -122,9 +133,24 @@ public class CreateUpdateFreightValuesCreateUpdateFreightValuesRequest {
      */
     @JsonProperty("zipCodeStart")
     public String zipCodeStart;
+
     public CreateUpdateFreightValuesCreateUpdateFreightValuesRequest withZipCodeStart(String zipCodeStart) {
         this.zipCodeStart = zipCodeStart;
         return this;
     }
     
+    public CreateUpdateFreightValuesCreateUpdateFreightValuesRequest(@JsonProperty("absoluteMoneyCost") String absoluteMoneyCost, @JsonProperty("country") String country, @JsonProperty("maxVolume") Integer maxVolume, @JsonProperty("operationType") Integer operationType, @JsonProperty("polygon") String polygon, @JsonProperty("pricePercent") Integer pricePercent, @JsonProperty("pricePercentByWeight") Integer pricePercentByWeight, @JsonProperty("timeCost") String timeCost, @JsonProperty("weightEnd") Integer weightEnd, @JsonProperty("weightStart") Integer weightStart, @JsonProperty("zipCodeEnd") String zipCodeEnd, @JsonProperty("zipCodeStart") String zipCodeStart) {
+        this.absoluteMoneyCost = absoluteMoneyCost;
+        this.country = country;
+        this.maxVolume = maxVolume;
+        this.operationType = operationType;
+        this.polygon = polygon;
+        this.pricePercent = pricePercent;
+        this.pricePercentByWeight = pricePercentByWeight;
+        this.timeCost = timeCost;
+        this.weightEnd = weightEnd;
+        this.weightStart = weightStart;
+        this.zipCodeEnd = zipCodeEnd;
+        this.zipCodeStart = zipCodeStart;
+  }
 }

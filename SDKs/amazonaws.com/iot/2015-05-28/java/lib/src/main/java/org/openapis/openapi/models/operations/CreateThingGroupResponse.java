@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateThingGroupResponse {
     
     public String contentType;
+
     public CreateThingGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateThingGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateThingGroupResponse createThingGroupResponse;
+
     public CreateThingGroupResponse withCreateThingGroupResponse(org.openapis.openapi.models.shared.CreateThingGroupResponse createThingGroupResponse) {
         this.createThingGroupResponse = createThingGroupResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateThingGroupResponse {
      */
     
     public Object internalFailureException;
+
     public CreateThingGroupResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreateThingGroupResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateThingGroupResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class CreateThingGroupResponse {
     
     
     public Integer statusCode;
+
     public CreateThingGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateThingGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateThingGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class CreateThingGroupResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateThingGroupResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -73,9 +81,14 @@ public class CreateThingGroupResponse {
      */
     
     public Object throttlingException;
+
     public CreateThingGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateThingGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

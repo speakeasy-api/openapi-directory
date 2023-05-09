@@ -15,9 +15,11 @@ public class RenderingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateUri")
     public String templateUri;
+
     public RenderingConfiguration withTemplateUri(String templateUri) {
         this.templateUri = templateUri;
         return this;
     }
     
+    public RenderingConfiguration(){}
 }

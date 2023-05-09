@@ -15,9 +15,11 @@ public class InstantiateProjectRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.ProjectTemplateInstantiateProjectRequest data;
+
     public InstantiateProjectRequestBody withData(org.openapis.openapi.models.shared.ProjectTemplateInstantiateProjectRequest data) {
         this.data = data;
         return this;
     }
     
+    public InstantiateProjectRequestBody(){}
 }

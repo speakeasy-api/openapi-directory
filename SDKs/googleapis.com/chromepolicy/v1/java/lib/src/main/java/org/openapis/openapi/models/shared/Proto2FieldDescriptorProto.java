@@ -18,6 +18,7 @@ public class Proto2FieldDescriptorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultValue")
     public String defaultValue;
+
     public Proto2FieldDescriptorProto withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -29,6 +30,7 @@ public class Proto2FieldDescriptorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jsonName")
     public String jsonName;
+
     public Proto2FieldDescriptorProto withJsonName(String jsonName) {
         this.jsonName = jsonName;
         return this;
@@ -37,6 +39,7 @@ public class Proto2FieldDescriptorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public Proto2FieldDescriptorProtoLabelEnum label;
+
     public Proto2FieldDescriptorProto withLabel(Proto2FieldDescriptorProtoLabelEnum label) {
         this.label = label;
         return this;
@@ -45,6 +48,7 @@ public class Proto2FieldDescriptorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Proto2FieldDescriptorProto withName(String name) {
         this.name = name;
         return this;
@@ -53,6 +57,7 @@ public class Proto2FieldDescriptorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public Integer number;
+
     public Proto2FieldDescriptorProto withNumber(Integer number) {
         this.number = number;
         return this;
@@ -64,6 +69,7 @@ public class Proto2FieldDescriptorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oneofIndex")
     public Integer oneofIndex;
+
     public Proto2FieldDescriptorProto withOneofIndex(Integer oneofIndex) {
         this.oneofIndex = oneofIndex;
         return this;
@@ -75,6 +81,7 @@ public class Proto2FieldDescriptorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proto3Optional")
     public Boolean proto3Optional;
+
     public Proto2FieldDescriptorProto withProto3Optional(Boolean proto3Optional) {
         this.proto3Optional = proto3Optional;
         return this;
@@ -86,6 +93,7 @@ public class Proto2FieldDescriptorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public Proto2FieldDescriptorProtoTypeEnum type;
+
     public Proto2FieldDescriptorProto withType(Proto2FieldDescriptorProtoTypeEnum type) {
         this.type = type;
         return this;
@@ -97,9 +105,11 @@ public class Proto2FieldDescriptorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("typeName")
     public String typeName;
+
     public Proto2FieldDescriptorProto withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
     }
     
+    public Proto2FieldDescriptorProto(){}
 }

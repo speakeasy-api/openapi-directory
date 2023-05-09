@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Boundaries {
     @JsonProperty("features")
     public Boundary[] features;
+
     public Boundaries withFeatures(Boundary[] features) {
         this.features = features;
         return this;
@@ -19,9 +20,14 @@ public class Boundaries {
     
     @JsonProperty("type")
     public BoundariesTypeEnum type;
+
     public Boundaries withType(BoundariesTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Boundaries(@JsonProperty("features") Boundary[] features, @JsonProperty("type") BoundariesTypeEnum type) {
+        this.features = features;
+        this.type = type;
+  }
 }

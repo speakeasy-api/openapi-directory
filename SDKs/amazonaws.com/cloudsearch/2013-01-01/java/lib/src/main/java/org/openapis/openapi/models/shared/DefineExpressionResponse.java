@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DefineExpressionResponse - The result of a &lt;code&gt;DefineExpression&lt;/code&gt; request. Contains the status of the newly-configured expression.
@@ -15,9 +15,13 @@ public class DefineExpressionResponse {
      */
     
     public ExpressionStatus expression;
+
     public DefineExpressionResponse withExpression(ExpressionStatus expression) {
         this.expression = expression;
         return this;
     }
     
+    public DefineExpressionResponse(@JsonProperty("Expression") ExpressionStatus expression) {
+        this.expression = expression;
+  }
 }

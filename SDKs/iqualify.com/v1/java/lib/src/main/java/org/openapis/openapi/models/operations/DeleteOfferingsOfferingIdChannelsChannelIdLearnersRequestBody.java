@@ -12,9 +12,11 @@ public class DeleteOfferingsOfferingIdChannelsChannelIdLearnersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public DeleteOfferingsOfferingIdChannelsChannelIdLearnersRequestBody withEmail(String email) {
         this.email = email;
         return this;
     }
     
+    public DeleteOfferingsOfferingIdChannelsChannelIdLearnersRequestBody(){}
 }

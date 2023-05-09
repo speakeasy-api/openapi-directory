@@ -18,6 +18,7 @@ public class ListContainersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("container")
     public Container[] container;
+
     public ListContainersResponse withContainer(Container[] container) {
         this.container = container;
         return this;
@@ -29,9 +30,11 @@ public class ListContainersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListContainersResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListContainersResponse(){}
 }

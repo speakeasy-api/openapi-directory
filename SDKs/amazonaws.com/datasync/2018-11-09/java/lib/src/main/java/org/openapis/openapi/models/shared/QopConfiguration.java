@@ -15,6 +15,7 @@ public class QopConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataTransferProtection")
     public HdfsDataTransferProtectionEnum dataTransferProtection;
+
     public QopConfiguration withDataTransferProtection(HdfsDataTransferProtectionEnum dataTransferProtection) {
         this.dataTransferProtection = dataTransferProtection;
         return this;
@@ -23,9 +24,11 @@ public class QopConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RpcProtection")
     public HdfsRpcProtectionEnum rpcProtection;
+
     public QopConfiguration withRpcProtection(HdfsRpcProtectionEnum rpcProtection) {
         this.rpcProtection = rpcProtection;
         return this;
     }
     
+    public QopConfiguration(){}
 }

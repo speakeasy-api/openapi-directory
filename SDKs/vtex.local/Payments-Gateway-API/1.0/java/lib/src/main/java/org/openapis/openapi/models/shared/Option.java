@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Option {
     @JsonProperty("interestRate")
     public Double interestRate;
+
     public Option withInterestRate(Double interestRate) {
         this.interestRate = interestRate;
         return this;
@@ -16,6 +17,7 @@ public class Option {
     
     @JsonProperty("quantity")
     public Integer quantity;
+
     public Option withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
@@ -23,9 +25,15 @@ public class Option {
     
     @JsonProperty("value")
     public Double value;
+
     public Option withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public Option(@JsonProperty("interestRate") Double interestRate, @JsonProperty("quantity") Integer quantity, @JsonProperty("value") Double value) {
+        this.interestRate = interestRate;
+        this.quantity = quantity;
+        this.value = value;
+  }
 }

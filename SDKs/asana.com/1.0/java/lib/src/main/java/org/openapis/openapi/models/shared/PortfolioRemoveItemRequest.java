@@ -12,9 +12,13 @@ public class PortfolioRemoveItemRequest {
      */
     @JsonProperty("item")
     public String item;
+
     public PortfolioRemoveItemRequest withItem(String item) {
         this.item = item;
         return this;
     }
     
+    public PortfolioRemoveItemRequest(@JsonProperty("item") String item) {
+        this.item = item;
+  }
 }

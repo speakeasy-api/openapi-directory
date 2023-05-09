@@ -15,6 +15,7 @@ public class ScheduleRunTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public ScheduleRunTest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -23,6 +24,7 @@ public class ScheduleRunTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, String> parameters;
+
     public ScheduleRunTest withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
@@ -31,6 +33,7 @@ public class ScheduleRunTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testPackageArn")
     public String testPackageArn;
+
     public ScheduleRunTest withTestPackageArn(String testPackageArn) {
         this.testPackageArn = testPackageArn;
         return this;
@@ -39,6 +42,7 @@ public class ScheduleRunTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testSpecArn")
     public String testSpecArn;
+
     public ScheduleRunTest withTestSpecArn(String testSpecArn) {
         this.testSpecArn = testSpecArn;
         return this;
@@ -46,9 +50,13 @@ public class ScheduleRunTest {
     
     @JsonProperty("type")
     public TestTypeEnum type;
+
     public ScheduleRunTest withType(TestTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ScheduleRunTest(@JsonProperty("type") TestTypeEnum type) {
+        this.type = type;
+  }
 }

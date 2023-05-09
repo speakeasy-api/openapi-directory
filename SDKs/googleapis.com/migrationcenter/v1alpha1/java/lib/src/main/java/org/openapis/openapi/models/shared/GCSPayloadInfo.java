@@ -18,6 +18,7 @@ public class GCSPayloadInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public GCSPayloadInfoFormatEnum format;
+
     public GCSPayloadInfo withFormat(GCSPayloadInfoFormatEnum format) {
         this.format = format;
         return this;
@@ -29,9 +30,11 @@ public class GCSPayloadInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public GCSPayloadInfo withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public GCSPayloadInfo(){}
 }

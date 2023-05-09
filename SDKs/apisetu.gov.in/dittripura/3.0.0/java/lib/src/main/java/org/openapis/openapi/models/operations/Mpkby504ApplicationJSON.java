@@ -15,6 +15,7 @@ public class Mpkby504ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Mpkby504ApplicationJSONErrorEnum error;
+
     public Mpkby504ApplicationJSON withError(Mpkby504ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Mpkby504ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Mpkby504ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Mpkby504ApplicationJSON withErrorDescription(Mpkby504ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Mpkby504ApplicationJSON(){}
 }

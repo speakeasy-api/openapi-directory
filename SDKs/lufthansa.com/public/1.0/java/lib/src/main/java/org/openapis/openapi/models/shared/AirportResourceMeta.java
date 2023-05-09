@@ -15,6 +15,7 @@ public class AirportResourceMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("@Version")
     public String atVersion;
+
     public AirportResourceMeta withAtVersion(String atVersion) {
         this.atVersion = atVersion;
         return this;
@@ -26,6 +27,7 @@ public class AirportResourceMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Link")
     public Link[] link;
+
     public AirportResourceMeta withLink(Link[] link) {
         this.link = link;
         return this;
@@ -34,9 +36,11 @@ public class AirportResourceMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalCount")
     public Integer totalCount;
+
     public AirportResourceMeta withTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public AirportResourceMeta(){}
 }

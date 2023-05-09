@@ -18,6 +18,7 @@ public class ExportIamPolicyAnalysisRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analysisQuery")
     public IamPolicyAnalysisQuery analysisQuery;
+
     public ExportIamPolicyAnalysisRequest withAnalysisQuery(IamPolicyAnalysisQuery analysisQuery) {
         this.analysisQuery = analysisQuery;
         return this;
@@ -29,6 +30,7 @@ public class ExportIamPolicyAnalysisRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public Options options;
+
     public ExportIamPolicyAnalysisRequest withOptions(Options options) {
         this.options = options;
         return this;
@@ -40,9 +42,11 @@ public class ExportIamPolicyAnalysisRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputConfig")
     public IamPolicyAnalysisOutputConfig outputConfig;
+
     public ExportIamPolicyAnalysisRequest withOutputConfig(IamPolicyAnalysisOutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
     }
     
+    public ExportIamPolicyAnalysisRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserorderdetailsRequest {
@@ -12,6 +13,7 @@ public class UserorderdetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public UserorderdetailsRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class UserorderdetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public UserorderdetailsRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class UserorderdetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientEmail")
     public String clientEmail;
+
     public UserorderdetailsRequest withClientEmail(String clientEmail) {
         this.clientEmail = clientEmail;
         return this;
@@ -42,9 +46,16 @@ public class UserorderdetailsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
     public String orderId;
+
     public UserorderdetailsRequest withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
     }
     
+    public UserorderdetailsRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("clientEmail") String clientEmail, @JsonProperty("orderId") String orderId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.clientEmail = clientEmail;
+        this.orderId = orderId;
+  }
 }

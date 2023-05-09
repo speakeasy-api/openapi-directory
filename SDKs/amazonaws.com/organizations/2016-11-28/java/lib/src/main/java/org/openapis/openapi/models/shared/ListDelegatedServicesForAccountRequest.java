@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListDelegatedServicesForAccountRequest {
     @JsonProperty("AccountId")
     public String accountId;
+
     public ListDelegatedServicesForAccountRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -19,6 +20,7 @@ public class ListDelegatedServicesForAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListDelegatedServicesForAccountRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class ListDelegatedServicesForAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDelegatedServicesForAccountRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDelegatedServicesForAccountRequest(@JsonProperty("AccountId") String accountId) {
+        this.accountId = accountId;
+  }
 }

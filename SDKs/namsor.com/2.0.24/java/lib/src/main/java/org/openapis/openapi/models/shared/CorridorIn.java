@@ -15,6 +15,7 @@ public class CorridorIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstLastNameGeoFrom")
     public FirstLastNameGeoIn firstLastNameGeoFrom;
+
     public CorridorIn withFirstLastNameGeoFrom(FirstLastNameGeoIn firstLastNameGeoFrom) {
         this.firstLastNameGeoFrom = firstLastNameGeoFrom;
         return this;
@@ -23,6 +24,7 @@ public class CorridorIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstLastNameGeoTo")
     public FirstLastNameGeoIn firstLastNameGeoTo;
+
     public CorridorIn withFirstLastNameGeoTo(FirstLastNameGeoIn firstLastNameGeoTo) {
         this.firstLastNameGeoTo = firstLastNameGeoTo;
         return this;
@@ -31,9 +33,11 @@ public class CorridorIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CorridorIn withId(String id) {
         this.id = id;
         return this;
     }
     
+    public CorridorIn(){}
 }

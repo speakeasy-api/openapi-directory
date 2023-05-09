@@ -52,14 +52,12 @@ public class StopScreenshotTest {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopScreenshotsTestResponse res = new org.openapis.openapi.models.operations.StopScreenshotsTestResponse() {{
+        org.openapis.openapi.models.operations.StopScreenshotsTestResponse res = new org.openapis.openapi.models.operations.StopScreenshotsTestResponse(contentType, httpRes.statusCode()) {{
             stopScreenshotSuccess = null;
             accessDenied = null;
             forbidden = null;
             stopScreenshotNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

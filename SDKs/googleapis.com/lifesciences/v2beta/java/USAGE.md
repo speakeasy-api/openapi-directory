@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.LifesciencesProjectsLocationsListSecurity;
 import org.openapis.openapi.models.operations.LifesciencesProjectsLocationsListRequest;
 import org.openapis.openapi.models.operations.LifesciencesProjectsLocationsListResponse;
+import org.openapis.openapi.models.operations.LifesciencesProjectsLocationsListSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -16,34 +15,35 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            LifesciencesProjectsLocationsListRequest req = new LifesciencesProjectsLocationsListRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                callback = "quibusdam";
-                fields = "unde";
-                filter = "nulla";
-                key = "corrupti";
-                name = "illum";
+            LifesciencesProjectsLocationsListRequest req = new LifesciencesProjectsLocationsListRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
+                callback = "unde";
+                fields = "nulla";
+                filter = "corrupti";
+                key = "illum";
                 oauthToken = "vel";
-                pageSize = 623564;
+                pageSize = 623564L;
                 pageToken = "deserunt";
                 prettyPrint = false;
                 quotaUser = "suscipit";
                 uploadType = "iure";
                 uploadProtocol = "magnam";
-            }}            
+            }};            
 
-            LifesciencesProjectsLocationsListResponse res = sdk.projects.lifesciencesProjectsLocationsList(req, new LifesciencesProjectsLocationsListSecurity() {{
+            LifesciencesProjectsLocationsListResponse res = sdk.projects.lifesciencesProjectsLocationsList(req, new LifesciencesProjectsLocationsListSecurity("debitis", "ipsa") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.listLocationsResponse.isPresent()) {
+            if (res.listLocationsResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

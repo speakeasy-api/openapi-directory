@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteWorkspaceApiKeyResponse {
@@ -12,6 +13,7 @@ public class DeleteWorkspaceApiKeyResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteWorkspaceApiKeyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteWorkspaceApiKeyResponse {
      */
     
     public Object conflictException;
+
     public DeleteWorkspaceApiKeyResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteWorkspaceApiKeyResponse {
     
     
     public String contentType;
+
     public DeleteWorkspaceApiKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteWorkspaceApiKeyResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteWorkspaceApiKeyResponse deleteWorkspaceApiKeyResponse;
+
     public DeleteWorkspaceApiKeyResponse withDeleteWorkspaceApiKeyResponse(org.openapis.openapi.models.shared.DeleteWorkspaceApiKeyResponse deleteWorkspaceApiKeyResponse) {
         this.deleteWorkspaceApiKeyResponse = deleteWorkspaceApiKeyResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteWorkspaceApiKeyResponse {
      */
     
     public Object internalServerException;
+
     public DeleteWorkspaceApiKeyResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteWorkspaceApiKeyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteWorkspaceApiKeyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteWorkspaceApiKeyResponse {
     
     
     public Integer statusCode;
+
     public DeleteWorkspaceApiKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteWorkspaceApiKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteWorkspaceApiKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteWorkspaceApiKeyResponse {
      */
     
     public Object throttlingException;
+
     public DeleteWorkspaceApiKeyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteWorkspaceApiKeyResponse {
      */
     
     public Object validationException;
+
     public DeleteWorkspaceApiKeyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteWorkspaceApiKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

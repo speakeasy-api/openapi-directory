@@ -18,6 +18,7 @@ public class GoogleCloudRunV2EnvVar {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudRunV2EnvVar withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRunV2EnvVar {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GoogleCloudRunV2EnvVar withValue(String value) {
         this.value = value;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudRunV2EnvVar {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueSource")
     public GoogleCloudRunV2EnvVarSource valueSource;
+
     public GoogleCloudRunV2EnvVar withValueSource(GoogleCloudRunV2EnvVarSource valueSource) {
         this.valueSource = valueSource;
         return this;
     }
     
+    public GoogleCloudRunV2EnvVar(){}
 }

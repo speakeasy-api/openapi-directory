@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OpsItemRelatedItemsFilter {
     @JsonProperty("Key")
     public OpsItemRelatedItemsFilterKeyEnum key;
+
     public OpsItemRelatedItemsFilter withKey(OpsItemRelatedItemsFilterKeyEnum key) {
         this.key = key;
         return this;
@@ -19,6 +20,7 @@ public class OpsItemRelatedItemsFilter {
     
     @JsonProperty("Operator")
     public OpsItemRelatedItemsFilterOperatorEnum operator;
+
     public OpsItemRelatedItemsFilter withOperator(OpsItemRelatedItemsFilterOperatorEnum operator) {
         this.operator = operator;
         return this;
@@ -26,9 +28,15 @@ public class OpsItemRelatedItemsFilter {
     
     @JsonProperty("Values")
     public String[] values;
+
     public OpsItemRelatedItemsFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public OpsItemRelatedItemsFilter(@JsonProperty("Key") OpsItemRelatedItemsFilterKeyEnum key, @JsonProperty("Operator") OpsItemRelatedItemsFilterOperatorEnum operator, @JsonProperty("Values") String[] values) {
+        this.key = key;
+        this.operator = operator;
+        this.values = values;
+  }
 }

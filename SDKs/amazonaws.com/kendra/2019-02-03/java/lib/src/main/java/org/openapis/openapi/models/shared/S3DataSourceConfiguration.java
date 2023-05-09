@@ -15,6 +15,7 @@ public class S3DataSourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessControlListConfiguration")
     public AccessControlListConfiguration accessControlListConfiguration;
+
     public S3DataSourceConfiguration withAccessControlListConfiguration(AccessControlListConfiguration accessControlListConfiguration) {
         this.accessControlListConfiguration = accessControlListConfiguration;
         return this;
@@ -22,6 +23,7 @@ public class S3DataSourceConfiguration {
     
     @JsonProperty("BucketName")
     public String bucketName;
+
     public S3DataSourceConfiguration withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -33,6 +35,7 @@ public class S3DataSourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentsMetadataConfiguration")
     public DocumentsMetadataConfiguration documentsMetadataConfiguration;
+
     public S3DataSourceConfiguration withDocumentsMetadataConfiguration(DocumentsMetadataConfiguration documentsMetadataConfiguration) {
         this.documentsMetadataConfiguration = documentsMetadataConfiguration;
         return this;
@@ -41,6 +44,7 @@ public class S3DataSourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExclusionPatterns")
     public String[] exclusionPatterns;
+
     public S3DataSourceConfiguration withExclusionPatterns(String[] exclusionPatterns) {
         this.exclusionPatterns = exclusionPatterns;
         return this;
@@ -49,6 +53,7 @@ public class S3DataSourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InclusionPatterns")
     public String[] inclusionPatterns;
+
     public S3DataSourceConfiguration withInclusionPatterns(String[] inclusionPatterns) {
         this.inclusionPatterns = inclusionPatterns;
         return this;
@@ -57,9 +62,13 @@ public class S3DataSourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InclusionPrefixes")
     public String[] inclusionPrefixes;
+
     public S3DataSourceConfiguration withInclusionPrefixes(String[] inclusionPrefixes) {
         this.inclusionPrefixes = inclusionPrefixes;
         return this;
     }
     
+    public S3DataSourceConfiguration(@JsonProperty("BucketName") String bucketName) {
+        this.bucketName = bucketName;
+  }
 }

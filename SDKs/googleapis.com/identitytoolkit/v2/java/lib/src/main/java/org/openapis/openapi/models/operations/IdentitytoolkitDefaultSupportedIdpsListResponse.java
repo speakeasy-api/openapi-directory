@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IdentitytoolkitDefaultSupportedIdpsListResponse {
     
     public String contentType;
+
     public IdentitytoolkitDefaultSupportedIdpsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IdentitytoolkitDefaultSupportedIdpsListResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitAdminV2ListDefaultSupportedIdpsResponse googleCloudIdentitytoolkitAdminV2ListDefaultSupportedIdpsResponse;
+
     public IdentitytoolkitDefaultSupportedIdpsListResponse withGoogleCloudIdentitytoolkitAdminV2ListDefaultSupportedIdpsResponse(org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitAdminV2ListDefaultSupportedIdpsResponse googleCloudIdentitytoolkitAdminV2ListDefaultSupportedIdpsResponse) {
         this.googleCloudIdentitytoolkitAdminV2ListDefaultSupportedIdpsResponse = googleCloudIdentitytoolkitAdminV2ListDefaultSupportedIdpsResponse;
         return this;
@@ -26,6 +29,7 @@ public class IdentitytoolkitDefaultSupportedIdpsListResponse {
     
     
     public Integer statusCode;
+
     public IdentitytoolkitDefaultSupportedIdpsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IdentitytoolkitDefaultSupportedIdpsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IdentitytoolkitDefaultSupportedIdpsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IdentitytoolkitDefaultSupportedIdpsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

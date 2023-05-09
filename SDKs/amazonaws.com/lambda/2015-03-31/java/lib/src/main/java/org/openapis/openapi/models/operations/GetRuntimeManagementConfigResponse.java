@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRuntimeManagementConfigResponse {
     
     public String contentType;
+
     public GetRuntimeManagementConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetRuntimeManagementConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRuntimeManagementConfigResponse getRuntimeManagementConfigResponse;
+
     public GetRuntimeManagementConfigResponse withGetRuntimeManagementConfigResponse(org.openapis.openapi.models.shared.GetRuntimeManagementConfigResponse getRuntimeManagementConfigResponse) {
         this.getRuntimeManagementConfigResponse = getRuntimeManagementConfigResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetRuntimeManagementConfigResponse {
      */
     
     public Object invalidParameterValueException;
+
     public GetRuntimeManagementConfigResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class GetRuntimeManagementConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetRuntimeManagementConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class GetRuntimeManagementConfigResponse {
      */
     
     public Object serviceException;
+
     public GetRuntimeManagementConfigResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -56,6 +62,7 @@ public class GetRuntimeManagementConfigResponse {
     
     
     public Integer statusCode;
+
     public GetRuntimeManagementConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetRuntimeManagementConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRuntimeManagementConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetRuntimeManagementConfigResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetRuntimeManagementConfigResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetRuntimeManagementConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

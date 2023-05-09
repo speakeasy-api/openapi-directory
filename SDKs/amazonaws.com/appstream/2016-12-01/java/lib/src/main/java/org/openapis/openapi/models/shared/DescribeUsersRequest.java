@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeUsersRequest {
     @JsonProperty("AuthenticationType")
     public AuthenticationTypeEnum authenticationType;
+
     public DescribeUsersRequest withAuthenticationType(AuthenticationTypeEnum authenticationType) {
         this.authenticationType = authenticationType;
         return this;
@@ -19,6 +20,7 @@ public class DescribeUsersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeUsersRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class DescribeUsersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeUsersRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeUsersRequest(@JsonProperty("AuthenticationType") AuthenticationTypeEnum authenticationType) {
+        this.authenticationType = authenticationType;
+  }
 }

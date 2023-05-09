@@ -15,6 +15,7 @@ public class GetPaymentDetailsPaymentRequestOrderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment1")
     public String comment1;
+
     public GetPaymentDetailsPaymentRequestOrderDetails withComment1(String comment1) {
         this.comment1 = comment1;
         return this;
@@ -26,6 +27,7 @@ public class GetPaymentDetailsPaymentRequestOrderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment2")
     public String comment2;
+
     public GetPaymentDetailsPaymentRequestOrderDetails withComment2(String comment2) {
         this.comment2 = comment2;
         return this;
@@ -37,6 +39,7 @@ public class GetPaymentDetailsPaymentRequestOrderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerNumber")
     public String customerNumber;
+
     public GetPaymentDetailsPaymentRequestOrderDetails withCustomerNumber(String customerNumber) {
         this.customerNumber = customerNumber;
         return this;
@@ -48,6 +51,7 @@ public class GetPaymentDetailsPaymentRequestOrderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryAddressLine1")
     public String deliveryAddressLine1;
+
     public GetPaymentDetailsPaymentRequestOrderDetails withDeliveryAddressLine1(String deliveryAddressLine1) {
         this.deliveryAddressLine1 = deliveryAddressLine1;
         return this;
@@ -59,6 +63,7 @@ public class GetPaymentDetailsPaymentRequestOrderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryAddressLine2")
     public String deliveryAddressLine2;
+
     public GetPaymentDetailsPaymentRequestOrderDetails withDeliveryAddressLine2(String deliveryAddressLine2) {
         this.deliveryAddressLine2 = deliveryAddressLine2;
         return this;
@@ -70,6 +75,7 @@ public class GetPaymentDetailsPaymentRequestOrderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryCity")
     public String deliveryCity;
+
     public GetPaymentDetailsPaymentRequestOrderDetails withDeliveryCity(String deliveryCity) {
         this.deliveryCity = deliveryCity;
         return this;
@@ -81,6 +87,7 @@ public class GetPaymentDetailsPaymentRequestOrderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryCountry")
     public String deliveryCountry;
+
     public GetPaymentDetailsPaymentRequestOrderDetails withDeliveryCountry(String deliveryCountry) {
         this.deliveryCountry = deliveryCountry;
         return this;
@@ -92,6 +99,7 @@ public class GetPaymentDetailsPaymentRequestOrderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryPostCode")
     public String deliveryPostCode;
+
     public GetPaymentDetailsPaymentRequestOrderDetails withDeliveryPostCode(String deliveryPostCode) {
         this.deliveryPostCode = deliveryPostCode;
         return this;
@@ -103,6 +111,7 @@ public class GetPaymentDetailsPaymentRequestOrderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantCustomerIdentification")
     public String merchantCustomerIdentification;
+
     public GetPaymentDetailsPaymentRequestOrderDetails withMerchantCustomerIdentification(String merchantCustomerIdentification) {
         this.merchantCustomerIdentification = merchantCustomerIdentification;
         return this;
@@ -114,6 +123,7 @@ public class GetPaymentDetailsPaymentRequestOrderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantNumber")
     public String merchantNumber;
+
     public GetPaymentDetailsPaymentRequestOrderDetails withMerchantNumber(String merchantNumber) {
         this.merchantNumber = merchantNumber;
         return this;
@@ -125,6 +135,7 @@ public class GetPaymentDetailsPaymentRequestOrderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderId")
     public String orderId;
+
     public GetPaymentDetailsPaymentRequestOrderDetails withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -136,6 +147,7 @@ public class GetPaymentDetailsPaymentRequestOrderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public GetPaymentDetailsPaymentRequestOrderDetails withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -147,9 +159,11 @@ public class GetPaymentDetailsPaymentRequestOrderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variableReference")
     public String variableReference;
+
     public GetPaymentDetailsPaymentRequestOrderDetails withVariableReference(String variableReference) {
         this.variableReference = variableReference;
         return this;
     }
     
+    public GetPaymentDetailsPaymentRequestOrderDetails(){}
 }

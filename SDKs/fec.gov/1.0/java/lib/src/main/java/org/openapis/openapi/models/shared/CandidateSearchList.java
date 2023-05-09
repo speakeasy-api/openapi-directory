@@ -12,9 +12,11 @@ public class CandidateSearchList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public CandidateSearch[] results;
+
     public CandidateSearchList withResults(CandidateSearch[] results) {
         this.results = results;
         return this;
     }
     
+    public CandidateSearchList(){}
 }

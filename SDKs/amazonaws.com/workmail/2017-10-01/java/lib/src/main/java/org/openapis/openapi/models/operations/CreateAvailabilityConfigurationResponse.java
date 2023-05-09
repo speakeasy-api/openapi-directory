@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAvailabilityConfigurationResponse {
     
     public String contentType;
+
     public CreateAvailabilityConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateAvailabilityConfigurationResponse {
      */
     
     public java.util.Map<String, Object> createAvailabilityConfigurationResponse;
+
     public CreateAvailabilityConfigurationResponse withCreateAvailabilityConfigurationResponse(java.util.Map<String, Object> createAvailabilityConfigurationResponse) {
         this.createAvailabilityConfigurationResponse = createAvailabilityConfigurationResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateAvailabilityConfigurationResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateAvailabilityConfigurationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class CreateAvailabilityConfigurationResponse {
      */
     
     public Object limitExceededException;
+
     public CreateAvailabilityConfigurationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateAvailabilityConfigurationResponse {
      */
     
     public Object nameAvailabilityException;
+
     public CreateAvailabilityConfigurationResponse withNameAvailabilityException(Object nameAvailabilityException) {
         this.nameAvailabilityException = nameAvailabilityException;
         return this;
@@ -59,6 +65,7 @@ public class CreateAvailabilityConfigurationResponse {
      */
     
     public Object organizationNotFoundException;
+
     public CreateAvailabilityConfigurationResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateAvailabilityConfigurationResponse {
      */
     
     public Object organizationStateException;
+
     public CreateAvailabilityConfigurationResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -76,6 +84,7 @@ public class CreateAvailabilityConfigurationResponse {
     
     
     public Integer statusCode;
+
     public CreateAvailabilityConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class CreateAvailabilityConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAvailabilityConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateAvailabilityConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

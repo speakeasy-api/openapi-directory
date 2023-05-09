@@ -22,6 +22,7 @@ public class InstanceHealthCheckResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastStatusChange")
     public OffsetDateTime lastStatusChange;
+
     public InstanceHealthCheckResult withLastStatusChange(OffsetDateTime lastStatusChange) {
         this.lastStatusChange = lastStatusChange;
         return this;
@@ -32,6 +33,7 @@ public class InstanceHealthCheckResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdated")
     public OffsetDateTime lastUpdated;
+
     public InstanceHealthCheckResult withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -40,6 +42,7 @@ public class InstanceHealthCheckResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public InstanceHealthCheckStateEnum status;
+
     public InstanceHealthCheckResult withStatus(InstanceHealthCheckStateEnum status) {
         this.status = status;
         return this;
@@ -48,9 +51,11 @@ public class InstanceHealthCheckResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public InstanceHealthCheckTypeEnum type;
+
     public InstanceHealthCheckResult withType(InstanceHealthCheckTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public InstanceHealthCheckResult(){}
 }

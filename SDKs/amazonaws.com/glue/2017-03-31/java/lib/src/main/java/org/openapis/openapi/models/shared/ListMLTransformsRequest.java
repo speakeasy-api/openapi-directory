@@ -12,6 +12,7 @@ public class ListMLTransformsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public TransformFilterCriteria filter;
+
     public ListMLTransformsRequest withFilter(TransformFilterCriteria filter) {
         this.filter = filter;
         return this;
@@ -20,6 +21,7 @@ public class ListMLTransformsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListMLTransformsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListMLTransformsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListMLTransformsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +39,7 @@ public class ListMLTransformsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sort")
     public TransformSortCriteria sort;
+
     public ListMLTransformsRequest withSort(TransformSortCriteria sort) {
         this.sort = sort;
         return this;
@@ -44,9 +48,11 @@ public class ListMLTransformsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public ListMLTransformsRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public ListMLTransformsRequest(){}
 }

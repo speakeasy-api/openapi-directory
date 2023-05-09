@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1ListEnvironmentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environments")
     public GoogleCloudDataplexV1Environment[] environments;
+
     public GoogleCloudDataplexV1ListEnvironmentsResponse withEnvironments(GoogleCloudDataplexV1Environment[] environments) {
         this.environments = environments;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDataplexV1ListEnvironmentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDataplexV1ListEnvironmentsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudDataplexV1ListEnvironmentsResponse(){}
 }

@@ -15,9 +15,13 @@ public class AnalyticsListDevicePropertyValues200ApplicationJSON {
      */
     @JsonProperty("values")
     public String[] values;
+
     public AnalyticsListDevicePropertyValues200ApplicationJSON withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public AnalyticsListDevicePropertyValues200ApplicationJSON(@JsonProperty("values") String[] values) {
+        this.values = values;
+  }
 }

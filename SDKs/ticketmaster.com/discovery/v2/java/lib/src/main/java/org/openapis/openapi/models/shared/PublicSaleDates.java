@@ -15,6 +15,7 @@ public class PublicSaleDates {
      */
     
     public OffsetDateTime endDateTime;
+
     public PublicSaleDates withEndDateTime(OffsetDateTime endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -25,6 +26,7 @@ public class PublicSaleDates {
      */
     
     public OffsetDateTime startDateTime;
+
     public PublicSaleDates withStartDateTime(OffsetDateTime startDateTime) {
         this.startDateTime = startDateTime;
         return this;
@@ -35,9 +37,11 @@ public class PublicSaleDates {
      */
     
     public Boolean startTBD;
+
     public PublicSaleDates withStartTBD(Boolean startTBD) {
         this.startTBD = startTBD;
         return this;
     }
     
+    public PublicSaleDates(){}
 }

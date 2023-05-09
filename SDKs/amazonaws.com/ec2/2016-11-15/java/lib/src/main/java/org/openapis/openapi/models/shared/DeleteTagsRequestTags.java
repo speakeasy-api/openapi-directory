@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteTagsRequestTags {
     
     public String key;
+
     public DeleteTagsRequestTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DeleteTagsRequestTags {
     
     
     public String value;
+
     public DeleteTagsRequestTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DeleteTagsRequestTags(){}
 }

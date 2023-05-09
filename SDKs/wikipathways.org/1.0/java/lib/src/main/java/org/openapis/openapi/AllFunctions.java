@@ -53,10 +53,8 @@ public class AllFunctions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFindInteractionsResponse res = new org.openapis.openapi.models.operations.GetFindInteractionsResponse() {{
+        org.openapis.openapi.models.operations.GetFindInteractionsResponse res = new org.openapis.openapi.models.operations.GetFindInteractionsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -91,10 +89,8 @@ public class AllFunctions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFindPathwaysByLiteratureResponse res = new org.openapis.openapi.models.operations.GetFindPathwaysByLiteratureResponse() {{
+        org.openapis.openapi.models.operations.GetFindPathwaysByLiteratureResponse res = new org.openapis.openapi.models.operations.GetFindPathwaysByLiteratureResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -129,10 +125,8 @@ public class AllFunctions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFindPathwaysByTextResponse res = new org.openapis.openapi.models.operations.GetFindPathwaysByTextResponse() {{
+        org.openapis.openapi.models.operations.GetFindPathwaysByTextResponse res = new org.openapis.openapi.models.operations.GetFindPathwaysByTextResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -167,10 +161,8 @@ public class AllFunctions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFindPathwaysByXrefResponse res = new org.openapis.openapi.models.operations.GetFindPathwaysByXrefResponse() {{
+        org.openapis.openapi.models.operations.GetFindPathwaysByXrefResponse res = new org.openapis.openapi.models.operations.GetFindPathwaysByXrefResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -205,10 +197,8 @@ public class AllFunctions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGetColoredPathwayResponse res = new org.openapis.openapi.models.operations.GetGetColoredPathwayResponse() {{
+        org.openapis.openapi.models.operations.GetGetColoredPathwayResponse res = new org.openapis.openapi.models.operations.GetGetColoredPathwayResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -243,10 +233,8 @@ public class AllFunctions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGetCurationTagHistoryResponse res = new org.openapis.openapi.models.operations.GetGetCurationTagHistoryResponse() {{
+        org.openapis.openapi.models.operations.GetGetCurationTagHistoryResponse res = new org.openapis.openapi.models.operations.GetGetCurationTagHistoryResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -281,10 +269,8 @@ public class AllFunctions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGetCurationTagsResponse res = new org.openapis.openapi.models.operations.GetGetCurationTagsResponse() {{
+        org.openapis.openapi.models.operations.GetGetCurationTagsResponse res = new org.openapis.openapi.models.operations.GetGetCurationTagsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -319,10 +305,8 @@ public class AllFunctions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGetCurationTagsByNameResponse res = new org.openapis.openapi.models.operations.GetGetCurationTagsByNameResponse() {{
+        org.openapis.openapi.models.operations.GetGetCurationTagsByNameResponse res = new org.openapis.openapi.models.operations.GetGetCurationTagsByNameResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -357,10 +341,8 @@ public class AllFunctions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGetOntologyTermsByPathwayResponse res = new org.openapis.openapi.models.operations.GetGetOntologyTermsByPathwayResponse() {{
+        org.openapis.openapi.models.operations.GetGetOntologyTermsByPathwayResponse res = new org.openapis.openapi.models.operations.GetGetOntologyTermsByPathwayResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -395,10 +377,8 @@ public class AllFunctions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGetPathwayResponse res = new org.openapis.openapi.models.operations.GetGetPathwayResponse() {{
+        org.openapis.openapi.models.operations.GetGetPathwayResponse res = new org.openapis.openapi.models.operations.GetGetPathwayResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -433,10 +413,8 @@ public class AllFunctions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGetPathwayAsResponse res = new org.openapis.openapi.models.operations.GetGetPathwayAsResponse() {{
+        org.openapis.openapi.models.operations.GetGetPathwayAsResponse res = new org.openapis.openapi.models.operations.GetGetPathwayAsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -471,10 +449,8 @@ public class AllFunctions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGetPathwayHistoryResponse res = new org.openapis.openapi.models.operations.GetGetPathwayHistoryResponse() {{
+        org.openapis.openapi.models.operations.GetGetPathwayHistoryResponse res = new org.openapis.openapi.models.operations.GetGetPathwayHistoryResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -509,10 +485,8 @@ public class AllFunctions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGetPathwayInfoResponse res = new org.openapis.openapi.models.operations.GetGetPathwayInfoResponse() {{
+        org.openapis.openapi.models.operations.GetGetPathwayInfoResponse res = new org.openapis.openapi.models.operations.GetGetPathwayInfoResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -547,10 +521,8 @@ public class AllFunctions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGetPathwaysByOntologyTermResponse res = new org.openapis.openapi.models.operations.GetGetPathwaysByOntologyTermResponse() {{
+        org.openapis.openapi.models.operations.GetGetPathwaysByOntologyTermResponse res = new org.openapis.openapi.models.operations.GetGetPathwaysByOntologyTermResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -585,10 +557,8 @@ public class AllFunctions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGetPathwaysByParentOntologyTermResponse res = new org.openapis.openapi.models.operations.GetGetPathwaysByParentOntologyTermResponse() {{
+        org.openapis.openapi.models.operations.GetGetPathwaysByParentOntologyTermResponse res = new org.openapis.openapi.models.operations.GetGetPathwaysByParentOntologyTermResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -623,10 +593,8 @@ public class AllFunctions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGetRecentChangesResponse res = new org.openapis.openapi.models.operations.GetGetRecentChangesResponse() {{
+        org.openapis.openapi.models.operations.GetGetRecentChangesResponse res = new org.openapis.openapi.models.operations.GetGetRecentChangesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -661,10 +629,8 @@ public class AllFunctions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGetUserByOrcidResponse res = new org.openapis.openapi.models.operations.GetGetUserByOrcidResponse() {{
+        org.openapis.openapi.models.operations.GetGetUserByOrcidResponse res = new org.openapis.openapi.models.operations.GetGetUserByOrcidResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -699,10 +665,8 @@ public class AllFunctions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGetXrefListResponse res = new org.openapis.openapi.models.operations.GetGetXrefListResponse() {{
+        org.openapis.openapi.models.operations.GetGetXrefListResponse res = new org.openapis.openapi.models.operations.GetGetXrefListResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -737,10 +701,8 @@ public class AllFunctions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetListOrganismsResponse res = new org.openapis.openapi.models.operations.GetListOrganismsResponse() {{
+        org.openapis.openapi.models.operations.GetListOrganismsResponse res = new org.openapis.openapi.models.operations.GetListOrganismsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -775,10 +737,8 @@ public class AllFunctions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetListPathwaysResponse res = new org.openapis.openapi.models.operations.GetListPathwaysResponse() {{
+        org.openapis.openapi.models.operations.GetListPathwaysResponse res = new org.openapis.openapi.models.operations.GetListPathwaysResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -813,10 +773,8 @@ public class AllFunctions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLoginResponse res = new org.openapis.openapi.models.operations.GetLoginResponse() {{
+        org.openapis.openapi.models.operations.GetLoginResponse res = new org.openapis.openapi.models.operations.GetLoginResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -851,10 +809,8 @@ public class AllFunctions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRemoveCurationTagResponse res = new org.openapis.openapi.models.operations.GetRemoveCurationTagResponse() {{
+        org.openapis.openapi.models.operations.GetRemoveCurationTagResponse res = new org.openapis.openapi.models.operations.GetRemoveCurationTagResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -889,10 +845,8 @@ public class AllFunctions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRemoveOntologyTagResponse res = new org.openapis.openapi.models.operations.GetRemoveOntologyTagResponse() {{
+        org.openapis.openapi.models.operations.GetRemoveOntologyTagResponse res = new org.openapis.openapi.models.operations.GetRemoveOntologyTagResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -927,10 +881,8 @@ public class AllFunctions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSaveCurationTagResponse res = new org.openapis.openapi.models.operations.GetSaveCurationTagResponse() {{
+        org.openapis.openapi.models.operations.GetSaveCurationTagResponse res = new org.openapis.openapi.models.operations.GetSaveCurationTagResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -965,10 +917,8 @@ public class AllFunctions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSaveOntologyTagResponse res = new org.openapis.openapi.models.operations.GetSaveOntologyTagResponse() {{
+        org.openapis.openapi.models.operations.GetSaveOntologyTagResponse res = new org.openapis.openapi.models.operations.GetSaveOntologyTagResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1003,10 +953,8 @@ public class AllFunctions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUpdatePathwayResponse res = new org.openapis.openapi.models.operations.GetUpdatePathwayResponse() {{
+        org.openapis.openapi.models.operations.GetUpdatePathwayResponse res = new org.openapis.openapi.models.operations.GetUpdatePathwayResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1041,10 +989,8 @@ public class AllFunctions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCreatePathwayResponse res = new org.openapis.openapi.models.operations.PostCreatePathwayResponse() {{
+        org.openapis.openapi.models.operations.PostCreatePathwayResponse res = new org.openapis.openapi.models.operations.PostCreatePathwayResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

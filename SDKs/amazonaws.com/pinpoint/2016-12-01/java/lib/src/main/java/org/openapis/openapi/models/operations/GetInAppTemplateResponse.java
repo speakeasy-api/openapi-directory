@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetInAppTemplateResponse {
@@ -12,6 +13,7 @@ public class GetInAppTemplateResponse {
      */
     
     public Object badRequestException;
+
     public GetInAppTemplateResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetInAppTemplateResponse {
     
     
     public String contentType;
+
     public GetInAppTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetInAppTemplateResponse {
      */
     
     public Object forbiddenException;
+
     public GetInAppTemplateResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetInAppTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.GetInAppTemplateResponse getInAppTemplateResponse;
+
     public GetInAppTemplateResponse withGetInAppTemplateResponse(org.openapis.openapi.models.shared.GetInAppTemplateResponse getInAppTemplateResponse) {
         this.getInAppTemplateResponse = getInAppTemplateResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetInAppTemplateResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetInAppTemplateResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetInAppTemplateResponse {
      */
     
     public Object methodNotAllowedException;
+
     public GetInAppTemplateResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class GetInAppTemplateResponse {
      */
     
     public Object notFoundException;
+
     public GetInAppTemplateResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetInAppTemplateResponse {
      */
     
     public Object payloadTooLargeException;
+
     public GetInAppTemplateResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class GetInAppTemplateResponse {
     
     
     public Integer statusCode;
+
     public GetInAppTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetInAppTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetInAppTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetInAppTemplateResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetInAppTemplateResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetInAppTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

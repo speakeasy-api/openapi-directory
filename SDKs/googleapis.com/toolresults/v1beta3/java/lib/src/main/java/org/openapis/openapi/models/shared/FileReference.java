@@ -18,9 +18,11 @@ public class FileReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileUri")
     public String fileUri;
+
     public FileReference withFileUri(String fileUri) {
         this.fileUri = fileUri;
         return this;
     }
     
+    public FileReference(){}
 }

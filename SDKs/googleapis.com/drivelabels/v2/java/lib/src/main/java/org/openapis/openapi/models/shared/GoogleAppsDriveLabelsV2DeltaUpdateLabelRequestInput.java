@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestInput withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests")
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequestInput[] requests;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestInput withRequests(GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequestInput[] requests) {
         this.requests = requests;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useAdminAccess")
     public Boolean useAdminAccess;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestInput withUseAdminAccess(Boolean useAdminAccess) {
         this.useAdminAccess = useAdminAccess;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("view")
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestViewEnum view;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestInput withView(GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestViewEnum view) {
         this.view = view;
         return this;
@@ -62,9 +66,11 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("writeControl")
     public GoogleAppsDriveLabelsV2WriteControl writeControl;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestInput withWriteControl(GoogleAppsDriveLabelsV2WriteControl writeControl) {
         this.writeControl = writeControl;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestInput(){}
 }

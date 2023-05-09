@@ -20,6 +20,7 @@ public class AuthEventType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChallengeResponses")
     public ChallengeResponseType[] challengeResponses;
+
     public AuthEventType withChallengeResponses(ChallengeResponseType[] challengeResponses) {
         this.challengeResponses = challengeResponses;
         return this;
@@ -30,6 +31,7 @@ public class AuthEventType {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDate")
     public OffsetDateTime creationDate;
+
     public AuthEventType withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -38,6 +40,7 @@ public class AuthEventType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventContextData")
     public EventContextDataType eventContextData;
+
     public AuthEventType withEventContextData(EventContextDataType eventContextData) {
         this.eventContextData = eventContextData;
         return this;
@@ -46,6 +49,7 @@ public class AuthEventType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventFeedback")
     public EventFeedbackType eventFeedback;
+
     public AuthEventType withEventFeedback(EventFeedbackType eventFeedback) {
         this.eventFeedback = eventFeedback;
         return this;
@@ -54,6 +58,7 @@ public class AuthEventType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventId")
     public String eventId;
+
     public AuthEventType withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -62,6 +67,7 @@ public class AuthEventType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventResponse")
     public EventResponseTypeEnum eventResponse;
+
     public AuthEventType withEventResponse(EventResponseTypeEnum eventResponse) {
         this.eventResponse = eventResponse;
         return this;
@@ -70,6 +76,7 @@ public class AuthEventType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventRisk")
     public EventRiskType eventRisk;
+
     public AuthEventType withEventRisk(EventRiskType eventRisk) {
         this.eventRisk = eventRisk;
         return this;
@@ -78,9 +85,11 @@ public class AuthEventType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventType")
     public EventTypeEnum eventType;
+
     public AuthEventType withEventType(EventTypeEnum eventType) {
         this.eventType = eventType;
         return this;
     }
     
+    public AuthEventType(){}
 }

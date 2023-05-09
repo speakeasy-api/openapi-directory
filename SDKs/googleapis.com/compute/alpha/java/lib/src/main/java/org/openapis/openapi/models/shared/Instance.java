@@ -18,6 +18,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advancedMachineFeatures")
     public AdvancedMachineFeatures advancedMachineFeatures;
+
     public Instance withAdvancedMachineFeatures(AdvancedMachineFeatures advancedMachineFeatures) {
         this.advancedMachineFeatures = advancedMachineFeatures;
         return this;
@@ -29,6 +30,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canIpForward")
     public Boolean canIpForward;
+
     public Instance withCanIpForward(Boolean canIpForward) {
         this.canIpForward = canIpForward;
         return this;
@@ -40,6 +42,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidentialInstanceConfig")
     public ConfidentialInstanceConfig confidentialInstanceConfig;
+
     public Instance withConfidentialInstanceConfig(ConfidentialInstanceConfig confidentialInstanceConfig) {
         this.confidentialInstanceConfig = confidentialInstanceConfig;
         return this;
@@ -51,6 +54,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuPlatform")
     public String cpuPlatform;
+
     public Instance withCpuPlatform(String cpuPlatform) {
         this.cpuPlatform = cpuPlatform;
         return this;
@@ -62,6 +66,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public Instance withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -73,6 +78,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletionProtection")
     public Boolean deletionProtection;
+
     public Instance withDeletionProtection(Boolean deletionProtection) {
         this.deletionProtection = deletionProtection;
         return this;
@@ -84,6 +90,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Instance withDescription(String description) {
         this.description = description;
         return this;
@@ -95,6 +102,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disks")
     public AttachedDisk[] disks;
+
     public Instance withDisks(AttachedDisk[] disks) {
         this.disks = disks;
         return this;
@@ -106,6 +114,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayDevice")
     public DisplayDevice displayDevice;
+
     public Instance withDisplayDevice(DisplayDevice displayDevice) {
         this.displayDevice = displayDevice;
         return this;
@@ -117,6 +126,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eraseWindowsVssSignature")
     public Boolean eraseWindowsVssSignature;
+
     public Instance withEraseWindowsVssSignature(Boolean eraseWindowsVssSignature) {
         this.eraseWindowsVssSignature = eraseWindowsVssSignature;
         return this;
@@ -128,6 +138,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public Instance withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -139,6 +150,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guestAccelerators")
     public AcceleratorConfig[] guestAccelerators;
+
     public Instance withGuestAccelerators(AcceleratorConfig[] guestAccelerators) {
         this.guestAccelerators = guestAccelerators;
         return this;
@@ -150,6 +162,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostname")
     public String hostname;
+
     public Instance withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -161,6 +174,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Instance withId(String id) {
         this.id = id;
         return this;
@@ -169,6 +183,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceEncryptionKey")
     public CustomerEncryptionKey instanceEncryptionKey;
+
     public Instance withInstanceEncryptionKey(CustomerEncryptionKey instanceEncryptionKey) {
         this.instanceEncryptionKey = instanceEncryptionKey;
         return this;
@@ -180,6 +195,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyRevocationActionType")
     public InstanceKeyRevocationActionTypeEnum keyRevocationActionType;
+
     public Instance withKeyRevocationActionType(InstanceKeyRevocationActionTypeEnum keyRevocationActionType) {
         this.keyRevocationActionType = keyRevocationActionType;
         return this;
@@ -191,6 +207,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Instance withKind(String kind) {
         this.kind = kind;
         return this;
@@ -202,6 +219,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelFingerprint")
     public String labelFingerprint;
+
     public Instance withLabelFingerprint(String labelFingerprint) {
         this.labelFingerprint = labelFingerprint;
         return this;
@@ -213,6 +231,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Instance withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -224,6 +243,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastStartTimestamp")
     public String lastStartTimestamp;
+
     public Instance withLastStartTimestamp(String lastStartTimestamp) {
         this.lastStartTimestamp = lastStartTimestamp;
         return this;
@@ -235,6 +255,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastStopTimestamp")
     public String lastStopTimestamp;
+
     public Instance withLastStopTimestamp(String lastStopTimestamp) {
         this.lastStopTimestamp = lastStopTimestamp;
         return this;
@@ -246,6 +267,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastSuspendedTimestamp")
     public String lastSuspendedTimestamp;
+
     public Instance withLastSuspendedTimestamp(String lastSuspendedTimestamp) {
         this.lastSuspendedTimestamp = lastSuspendedTimestamp;
         return this;
@@ -257,6 +279,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineType")
     public String machineType;
+
     public Instance withMachineType(String machineType) {
         this.machineType = machineType;
         return this;
@@ -268,6 +291,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public Metadata metadata;
+
     public Instance withMetadata(Metadata metadata) {
         this.metadata = metadata;
         return this;
@@ -279,6 +303,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minCpuPlatform")
     public String minCpuPlatform;
+
     public Instance withMinCpuPlatform(String minCpuPlatform) {
         this.minCpuPlatform = minCpuPlatform;
         return this;
@@ -290,6 +315,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Instance withName(String name) {
         this.name = name;
         return this;
@@ -301,6 +327,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkInterfaces")
     public NetworkInterface[] networkInterfaces;
+
     public Instance withNetworkInterfaces(NetworkInterface[] networkInterfaces) {
         this.networkInterfaces = networkInterfaces;
         return this;
@@ -309,6 +336,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkPerformanceConfig")
     public NetworkPerformanceConfig networkPerformanceConfig;
+
     public Instance withNetworkPerformanceConfig(NetworkPerformanceConfig networkPerformanceConfig) {
         this.networkPerformanceConfig = networkPerformanceConfig;
         return this;
@@ -320,6 +348,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("params")
     public InstanceParams params;
+
     public Instance withParams(InstanceParams params) {
         this.params = params;
         return this;
@@ -331,6 +360,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postKeyRevocationActionType")
     public InstancePostKeyRevocationActionTypeEnum postKeyRevocationActionType;
+
     public Instance withPostKeyRevocationActionType(InstancePostKeyRevocationActionTypeEnum postKeyRevocationActionType) {
         this.postKeyRevocationActionType = postKeyRevocationActionType;
         return this;
@@ -342,6 +372,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preservedStateSizeGb")
     public String preservedStateSizeGb;
+
     public Instance withPreservedStateSizeGb(String preservedStateSizeGb) {
         this.preservedStateSizeGb = preservedStateSizeGb;
         return this;
@@ -353,6 +384,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateIpv6GoogleAccess")
     public InstancePrivateIpv6GoogleAccessEnum privateIpv6GoogleAccess;
+
     public Instance withPrivateIpv6GoogleAccess(InstancePrivateIpv6GoogleAccessEnum privateIpv6GoogleAccess) {
         this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
         return this;
@@ -364,6 +396,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservationAffinity")
     public ReservationAffinity reservationAffinity;
+
     public Instance withReservationAffinity(ReservationAffinity reservationAffinity) {
         this.reservationAffinity = reservationAffinity;
         return this;
@@ -375,6 +408,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourcePolicies")
     public String[] resourcePolicies;
+
     public Instance withResourcePolicies(String[] resourcePolicies) {
         this.resourcePolicies = resourcePolicies;
         return this;
@@ -386,6 +420,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceStatus")
     public ResourceStatus resourceStatus;
+
     public Instance withResourceStatus(ResourceStatus resourceStatus) {
         this.resourceStatus = resourceStatus;
         return this;
@@ -397,6 +432,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("satisfiesPzs")
     public Boolean satisfiesPzs;
+
     public Instance withSatisfiesPzs(Boolean satisfiesPzs) {
         this.satisfiesPzs = satisfiesPzs;
         return this;
@@ -408,6 +444,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduling")
     public Scheduling scheduling;
+
     public Instance withScheduling(Scheduling scheduling) {
         this.scheduling = scheduling;
         return this;
@@ -419,6 +456,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secureTags")
     public String[] secureTags;
+
     public Instance withSecureTags(String[] secureTags) {
         this.secureTags = secureTags;
         return this;
@@ -430,6 +468,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public Instance withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -441,6 +480,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLinkWithId")
     public String selfLinkWithId;
+
     public Instance withSelfLinkWithId(String selfLinkWithId) {
         this.selfLinkWithId = selfLinkWithId;
         return this;
@@ -452,6 +492,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccounts")
     public ServiceAccount[] serviceAccounts;
+
     public Instance withServiceAccounts(ServiceAccount[] serviceAccounts) {
         this.serviceAccounts = serviceAccounts;
         return this;
@@ -463,6 +504,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceIntegrationSpecs")
     public java.util.Map<String, ServiceIntegrationSpec> serviceIntegrationSpecs;
+
     public Instance withServiceIntegrationSpecs(java.util.Map<String, ServiceIntegrationSpec> serviceIntegrationSpecs) {
         this.serviceIntegrationSpecs = serviceIntegrationSpecs;
         return this;
@@ -474,6 +516,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shieldedInstanceConfig")
     public ShieldedInstanceConfig shieldedInstanceConfig;
+
     public Instance withShieldedInstanceConfig(ShieldedInstanceConfig shieldedInstanceConfig) {
         this.shieldedInstanceConfig = shieldedInstanceConfig;
         return this;
@@ -485,6 +528,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shieldedInstanceIntegrityPolicy")
     public ShieldedInstanceIntegrityPolicy shieldedInstanceIntegrityPolicy;
+
     public Instance withShieldedInstanceIntegrityPolicy(ShieldedInstanceIntegrityPolicy shieldedInstanceIntegrityPolicy) {
         this.shieldedInstanceIntegrityPolicy = shieldedInstanceIntegrityPolicy;
         return this;
@@ -496,6 +540,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shieldedVmConfig")
     public ShieldedVmConfig shieldedVmConfig;
+
     public Instance withShieldedVmConfig(ShieldedVmConfig shieldedVmConfig) {
         this.shieldedVmConfig = shieldedVmConfig;
         return this;
@@ -507,6 +552,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shieldedVmIntegrityPolicy")
     public ShieldedVmIntegrityPolicy shieldedVmIntegrityPolicy;
+
     public Instance withShieldedVmIntegrityPolicy(ShieldedVmIntegrityPolicy shieldedVmIntegrityPolicy) {
         this.shieldedVmIntegrityPolicy = shieldedVmIntegrityPolicy;
         return this;
@@ -518,6 +564,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceMachineImage")
     public String sourceMachineImage;
+
     public Instance withSourceMachineImage(String sourceMachineImage) {
         this.sourceMachineImage = sourceMachineImage;
         return this;
@@ -526,6 +573,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceMachineImageEncryptionKey")
     public CustomerEncryptionKey sourceMachineImageEncryptionKey;
+
     public Instance withSourceMachineImageEncryptionKey(CustomerEncryptionKey sourceMachineImageEncryptionKey) {
         this.sourceMachineImageEncryptionKey = sourceMachineImageEncryptionKey;
         return this;
@@ -537,6 +585,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startRestricted")
     public Boolean startRestricted;
+
     public Instance withStartRestricted(Boolean startRestricted) {
         this.startRestricted = startRestricted;
         return this;
@@ -548,6 +597,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public InstanceStatusEnum status;
+
     public Instance withStatus(InstanceStatusEnum status) {
         this.status = status;
         return this;
@@ -559,6 +609,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public Instance withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -570,6 +621,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tags tags;
+
     public Instance withTags(Tags tags) {
         this.tags = tags;
         return this;
@@ -581,6 +633,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upcomingMaintenance")
     public UpcomingMaintenance upcomingMaintenance;
+
     public Instance withUpcomingMaintenance(UpcomingMaintenance upcomingMaintenance) {
         this.upcomingMaintenance = upcomingMaintenance;
         return this;
@@ -592,9 +645,11 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public Instance withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public Instance(){}
 }

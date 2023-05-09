@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteAccessControlConfigurationRequest {
     @JsonProperty("Id")
     public String id;
+
     public DeleteAccessControlConfigurationRequest withId(String id) {
         this.id = id;
         return this;
@@ -16,9 +17,14 @@ public class DeleteAccessControlConfigurationRequest {
     
     @JsonProperty("IndexId")
     public String indexId;
+
     public DeleteAccessControlConfigurationRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
     }
     
+    public DeleteAccessControlConfigurationRequest(@JsonProperty("Id") String id, @JsonProperty("IndexId") String indexId) {
+        this.id = id;
+        this.indexId = indexId;
+  }
 }

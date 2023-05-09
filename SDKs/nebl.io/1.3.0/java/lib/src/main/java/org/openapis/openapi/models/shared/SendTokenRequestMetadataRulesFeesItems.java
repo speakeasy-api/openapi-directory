@@ -15,6 +15,7 @@ public class SendTokenRequestMetadataRulesFeesItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public SendTokenRequestMetadataRulesFeesItems withAddress(String address) {
         this.address = address;
         return this;
@@ -26,6 +27,7 @@ public class SendTokenRequestMetadataRulesFeesItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenId")
     public String tokenId;
+
     public SendTokenRequestMetadataRulesFeesItems withTokenId(String tokenId) {
         this.tokenId = tokenId;
         return this;
@@ -37,9 +39,11 @@ public class SendTokenRequestMetadataRulesFeesItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public SendTokenRequestMetadataRulesFeesItems withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public SendTokenRequestMetadataRulesFeesItems(){}
 }

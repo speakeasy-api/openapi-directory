@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteTransitGatewayRouteRequest {
     
     public String destinationCidrBlock;
+
     public DeleteTransitGatewayRouteRequest withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -16,6 +17,7 @@ public class DeleteTransitGatewayRouteRequest {
     
     
     public Boolean dryRun;
+
     public DeleteTransitGatewayRouteRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,9 +25,14 @@ public class DeleteTransitGatewayRouteRequest {
     
     
     public String transitGatewayRouteTableId;
+
     public DeleteTransitGatewayRouteRequest withTransitGatewayRouteTableId(String transitGatewayRouteTableId) {
         this.transitGatewayRouteTableId = transitGatewayRouteTableId;
         return this;
     }
     
+    public DeleteTransitGatewayRouteRequest(@JsonProperty("DestinationCidrBlock") String destinationCidrBlock, @JsonProperty("TransitGatewayRouteTableId") String transitGatewayRouteTableId) {
+        this.destinationCidrBlock = destinationCidrBlock;
+        this.transitGatewayRouteTableId = transitGatewayRouteTableId;
+  }
 }

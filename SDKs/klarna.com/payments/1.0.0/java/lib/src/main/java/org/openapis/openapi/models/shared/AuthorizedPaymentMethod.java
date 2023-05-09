@@ -12,6 +12,7 @@ public class AuthorizedPaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number_of_days")
     public Integer numberOfDays;
+
     public AuthorizedPaymentMethod withNumberOfDays(Integer numberOfDays) {
         this.numberOfDays = numberOfDays;
         return this;
@@ -20,6 +21,7 @@ public class AuthorizedPaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number_of_installments")
     public Integer numberOfInstallments;
+
     public AuthorizedPaymentMethod withNumberOfInstallments(Integer numberOfInstallments) {
         this.numberOfInstallments = numberOfInstallments;
         return this;
@@ -27,9 +29,13 @@ public class AuthorizedPaymentMethod {
     
     @JsonProperty("type")
     public AuthorizedPaymentMethodTypeEnum type;
+
     public AuthorizedPaymentMethod withType(AuthorizedPaymentMethodTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AuthorizedPaymentMethod(@JsonProperty("type") AuthorizedPaymentMethodTypeEnum type) {
+        this.type = type;
+  }
 }

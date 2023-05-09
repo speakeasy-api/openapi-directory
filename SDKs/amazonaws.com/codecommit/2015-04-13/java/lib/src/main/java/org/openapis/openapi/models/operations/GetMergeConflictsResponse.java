@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMergeConflictsResponse {
@@ -12,6 +13,7 @@ public class GetMergeConflictsResponse {
      */
     
     public Object commitDoesNotExistException;
+
     public GetMergeConflictsResponse withCommitDoesNotExistException(Object commitDoesNotExistException) {
         this.commitDoesNotExistException = commitDoesNotExistException;
         return this;
@@ -22,6 +24,7 @@ public class GetMergeConflictsResponse {
      */
     
     public Object commitRequiredException;
+
     public GetMergeConflictsResponse withCommitRequiredException(Object commitRequiredException) {
         this.commitRequiredException = commitRequiredException;
         return this;
@@ -29,6 +32,7 @@ public class GetMergeConflictsResponse {
     
     
     public String contentType;
+
     public GetMergeConflictsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetMergeConflictsResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public GetMergeConflictsResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -49,6 +54,7 @@ public class GetMergeConflictsResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public GetMergeConflictsResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -59,6 +65,7 @@ public class GetMergeConflictsResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public GetMergeConflictsResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -69,6 +76,7 @@ public class GetMergeConflictsResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public GetMergeConflictsResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetMergeConflictsResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public GetMergeConflictsResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -89,6 +98,7 @@ public class GetMergeConflictsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetMergeConflictsOutput getMergeConflictsOutput;
+
     public GetMergeConflictsResponse withGetMergeConflictsOutput(org.openapis.openapi.models.shared.GetMergeConflictsOutput getMergeConflictsOutput) {
         this.getMergeConflictsOutput = getMergeConflictsOutput;
         return this;
@@ -99,6 +109,7 @@ public class GetMergeConflictsResponse {
      */
     
     public Object invalidCommitException;
+
     public GetMergeConflictsResponse withInvalidCommitException(Object invalidCommitException) {
         this.invalidCommitException = invalidCommitException;
         return this;
@@ -109,6 +120,7 @@ public class GetMergeConflictsResponse {
      */
     
     public Object invalidConflictDetailLevelException;
+
     public GetMergeConflictsResponse withInvalidConflictDetailLevelException(Object invalidConflictDetailLevelException) {
         this.invalidConflictDetailLevelException = invalidConflictDetailLevelException;
         return this;
@@ -119,6 +131,7 @@ public class GetMergeConflictsResponse {
      */
     
     public Object invalidConflictResolutionStrategyException;
+
     public GetMergeConflictsResponse withInvalidConflictResolutionStrategyException(Object invalidConflictResolutionStrategyException) {
         this.invalidConflictResolutionStrategyException = invalidConflictResolutionStrategyException;
         return this;
@@ -129,6 +142,7 @@ public class GetMergeConflictsResponse {
      */
     
     public Object invalidContinuationTokenException;
+
     public GetMergeConflictsResponse withInvalidContinuationTokenException(Object invalidContinuationTokenException) {
         this.invalidContinuationTokenException = invalidContinuationTokenException;
         return this;
@@ -139,6 +153,7 @@ public class GetMergeConflictsResponse {
      */
     
     public Object invalidDestinationCommitSpecifierException;
+
     public GetMergeConflictsResponse withInvalidDestinationCommitSpecifierException(Object invalidDestinationCommitSpecifierException) {
         this.invalidDestinationCommitSpecifierException = invalidDestinationCommitSpecifierException;
         return this;
@@ -149,6 +164,7 @@ public class GetMergeConflictsResponse {
      */
     
     public Object invalidMaxConflictFilesException;
+
     public GetMergeConflictsResponse withInvalidMaxConflictFilesException(Object invalidMaxConflictFilesException) {
         this.invalidMaxConflictFilesException = invalidMaxConflictFilesException;
         return this;
@@ -159,6 +175,7 @@ public class GetMergeConflictsResponse {
      */
     
     public Object invalidMergeOptionException;
+
     public GetMergeConflictsResponse withInvalidMergeOptionException(Object invalidMergeOptionException) {
         this.invalidMergeOptionException = invalidMergeOptionException;
         return this;
@@ -169,6 +186,7 @@ public class GetMergeConflictsResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public GetMergeConflictsResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -179,6 +197,7 @@ public class GetMergeConflictsResponse {
      */
     
     public Object invalidSourceCommitSpecifierException;
+
     public GetMergeConflictsResponse withInvalidSourceCommitSpecifierException(Object invalidSourceCommitSpecifierException) {
         this.invalidSourceCommitSpecifierException = invalidSourceCommitSpecifierException;
         return this;
@@ -189,6 +208,7 @@ public class GetMergeConflictsResponse {
      */
     
     public Object maximumFileContentToLoadExceededException;
+
     public GetMergeConflictsResponse withMaximumFileContentToLoadExceededException(Object maximumFileContentToLoadExceededException) {
         this.maximumFileContentToLoadExceededException = maximumFileContentToLoadExceededException;
         return this;
@@ -199,6 +219,7 @@ public class GetMergeConflictsResponse {
      */
     
     public Object maximumItemsToCompareExceededException;
+
     public GetMergeConflictsResponse withMaximumItemsToCompareExceededException(Object maximumItemsToCompareExceededException) {
         this.maximumItemsToCompareExceededException = maximumItemsToCompareExceededException;
         return this;
@@ -209,6 +230,7 @@ public class GetMergeConflictsResponse {
      */
     
     public Object mergeOptionRequiredException;
+
     public GetMergeConflictsResponse withMergeOptionRequiredException(Object mergeOptionRequiredException) {
         this.mergeOptionRequiredException = mergeOptionRequiredException;
         return this;
@@ -219,6 +241,7 @@ public class GetMergeConflictsResponse {
      */
     
     public Object repositoryDoesNotExistException;
+
     public GetMergeConflictsResponse withRepositoryDoesNotExistException(Object repositoryDoesNotExistException) {
         this.repositoryDoesNotExistException = repositoryDoesNotExistException;
         return this;
@@ -229,6 +252,7 @@ public class GetMergeConflictsResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public GetMergeConflictsResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
@@ -236,6 +260,7 @@ public class GetMergeConflictsResponse {
     
     
     public Integer statusCode;
+
     public GetMergeConflictsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -243,6 +268,7 @@ public class GetMergeConflictsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMergeConflictsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -253,9 +279,14 @@ public class GetMergeConflictsResponse {
      */
     
     public Object tipsDivergenceExceededException;
+
     public GetMergeConflictsResponse withTipsDivergenceExceededException(Object tipsDivergenceExceededException) {
         this.tipsDivergenceExceededException = tipsDivergenceExceededException;
         return this;
     }
     
+    public GetMergeConflictsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

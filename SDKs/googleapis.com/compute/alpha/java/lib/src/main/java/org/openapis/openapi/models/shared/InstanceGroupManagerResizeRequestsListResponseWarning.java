@@ -18,6 +18,7 @@ public class InstanceGroupManagerResizeRequestsListResponseWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public InstanceGroupManagerResizeRequestsListResponseWarningCodeEnum code;
+
     public InstanceGroupManagerResizeRequestsListResponseWarning withCode(InstanceGroupManagerResizeRequestsListResponseWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class InstanceGroupManagerResizeRequestsListResponseWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public InstanceGroupManagerResizeRequestsListResponseWarningData[] data;
+
     public InstanceGroupManagerResizeRequestsListResponseWarning withData(InstanceGroupManagerResizeRequestsListResponseWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class InstanceGroupManagerResizeRequestsListResponseWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public InstanceGroupManagerResizeRequestsListResponseWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public InstanceGroupManagerResizeRequestsListResponseWarning(){}
 }

@@ -18,6 +18,7 @@ public class TimeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
     public String from;
+
     public TimeRange withFrom(String from) {
         this.from = from;
         return this;
@@ -29,9 +30,11 @@ public class TimeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to")
     public String to;
+
     public TimeRange withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public TimeRange(){}
 }

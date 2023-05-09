@@ -12,6 +12,7 @@ public class SourceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("external")
     public Boolean external;
+
     public SourceDTO withExternal(Boolean external) {
         this.external = external;
         return this;
@@ -20,9 +21,11 @@ public class SourceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SourceDTO withName(String name) {
         this.name = name;
         return this;
     }
     
+    public SourceDTO(){}
 }

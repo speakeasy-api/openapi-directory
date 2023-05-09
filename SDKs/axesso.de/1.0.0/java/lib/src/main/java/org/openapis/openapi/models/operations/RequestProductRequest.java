@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestProductRequest {
@@ -12,6 +13,7 @@ public class RequestProductRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public String size;
+
     public RequestProductRequest withSize(String size) {
         this.size = size;
         return this;
@@ -22,9 +24,13 @@ public class RequestProductRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
     public String url;
+
     public RequestProductRequest withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public RequestProductRequest(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

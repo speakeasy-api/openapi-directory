@@ -22,6 +22,7 @@ public class ProfilingStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("latestAgentOrchestratedAt")
     public OffsetDateTime latestAgentOrchestratedAt;
+
     public ProfilingStatus withLatestAgentOrchestratedAt(OffsetDateTime latestAgentOrchestratedAt) {
         this.latestAgentOrchestratedAt = latestAgentOrchestratedAt;
         return this;
@@ -32,6 +33,7 @@ public class ProfilingStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("latestAgentProfileReportedAt")
     public OffsetDateTime latestAgentProfileReportedAt;
+
     public ProfilingStatus withLatestAgentProfileReportedAt(OffsetDateTime latestAgentProfileReportedAt) {
         this.latestAgentProfileReportedAt = latestAgentProfileReportedAt;
         return this;
@@ -40,9 +42,11 @@ public class ProfilingStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestAggregatedProfile")
     public AggregatedProfileTime latestAggregatedProfile;
+
     public ProfilingStatus withLatestAggregatedProfile(AggregatedProfileTime latestAggregatedProfile) {
         this.latestAggregatedProfile = latestAggregatedProfile;
         return this;
     }
     
+    public ProfilingStatus(){}
 }

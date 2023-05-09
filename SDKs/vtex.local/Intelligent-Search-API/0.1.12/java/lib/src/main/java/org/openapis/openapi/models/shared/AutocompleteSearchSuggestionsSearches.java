@@ -15,6 +15,7 @@ public class AutocompleteSearchSuggestionsSearches {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public AutocompleteSearchSuggestionsSearchesAttributes[] attributes;
+
     public AutocompleteSearchSuggestionsSearches withAttributes(AutocompleteSearchSuggestionsSearchesAttributes[] attributes) {
         this.attributes = attributes;
         return this;
@@ -26,6 +27,7 @@ public class AutocompleteSearchSuggestionsSearches {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Double count;
+
     public AutocompleteSearchSuggestionsSearches withCount(Double count) {
         this.count = count;
         return this;
@@ -37,9 +39,11 @@ public class AutocompleteSearchSuggestionsSearches {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("term")
     public String term;
+
     public AutocompleteSearchSuggestionsSearches withTerm(String term) {
         this.term = term;
         return this;
     }
     
+    public AutocompleteSearchSuggestionsSearches(){}
 }

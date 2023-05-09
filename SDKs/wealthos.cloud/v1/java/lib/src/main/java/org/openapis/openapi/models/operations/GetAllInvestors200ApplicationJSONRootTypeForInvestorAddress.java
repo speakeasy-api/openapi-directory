@@ -12,6 +12,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestorAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address_line")
     public String addressLine;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestorAddress withAddressLine(String addressLine) {
         this.addressLine = addressLine;
         return this;
@@ -20,6 +21,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestorAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestorAddress withCity(String city) {
         this.city = city;
         return this;
@@ -30,6 +32,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestorAddress {
      */
     @JsonProperty("country")
     public String country;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestorAddress withCountry(String country) {
         this.country = country;
         return this;
@@ -37,6 +40,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestorAddress {
     
     @JsonProperty("postal_code")
     public String postalCode;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestorAddress withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -45,6 +49,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestorAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestorAddress withState(String state) {
         this.state = state;
         return this;
@@ -53,9 +58,14 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestorAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("street_name")
     public String streetName;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestorAddress withStreetName(String streetName) {
         this.streetName = streetName;
         return this;
     }
     
+    public GetAllInvestors200ApplicationJSONRootTypeForInvestorAddress(@JsonProperty("country") String country, @JsonProperty("postal_code") String postalCode) {
+        this.country = country;
+        this.postalCode = postalCode;
+  }
 }

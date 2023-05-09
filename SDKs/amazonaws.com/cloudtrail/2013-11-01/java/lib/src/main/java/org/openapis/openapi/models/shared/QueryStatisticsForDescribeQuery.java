@@ -20,6 +20,7 @@ public class QueryStatisticsForDescribeQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BytesScanned")
     public Long bytesScanned;
+
     public QueryStatisticsForDescribeQuery withBytesScanned(Long bytesScanned) {
         this.bytesScanned = bytesScanned;
         return this;
@@ -30,6 +31,7 @@ public class QueryStatisticsForDescribeQuery {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public QueryStatisticsForDescribeQuery withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class QueryStatisticsForDescribeQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventsMatched")
     public Long eventsMatched;
+
     public QueryStatisticsForDescribeQuery withEventsMatched(Long eventsMatched) {
         this.eventsMatched = eventsMatched;
         return this;
@@ -46,6 +49,7 @@ public class QueryStatisticsForDescribeQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventsScanned")
     public Long eventsScanned;
+
     public QueryStatisticsForDescribeQuery withEventsScanned(Long eventsScanned) {
         this.eventsScanned = eventsScanned;
         return this;
@@ -54,9 +58,11 @@ public class QueryStatisticsForDescribeQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionTimeInMillis")
     public Long executionTimeInMillis;
+
     public QueryStatisticsForDescribeQuery withExecutionTimeInMillis(Long executionTimeInMillis) {
         this.executionTimeInMillis = executionTimeInMillis;
         return this;
     }
     
+    public QueryStatisticsForDescribeQuery(){}
 }

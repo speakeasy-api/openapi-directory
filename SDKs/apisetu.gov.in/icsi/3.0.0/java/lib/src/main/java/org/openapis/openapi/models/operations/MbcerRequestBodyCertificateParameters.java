@@ -12,6 +12,7 @@ public class MbcerRequestBodyCertificateParameters {
      */
     @JsonProperty("CertType")
     public String certType;
+
     public MbcerRequestBodyCertificateParameters withCertType(String certType) {
         this.certType = certType;
         return this;
@@ -22,6 +23,7 @@ public class MbcerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public MbcerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -32,9 +34,15 @@ public class MbcerRequestBodyCertificateParameters {
      */
     @JsonProperty("Membership_No")
     public String membershipNo;
+
     public MbcerRequestBodyCertificateParameters withMembershipNo(String membershipNo) {
         this.membershipNo = membershipNo;
         return this;
     }
     
+    public MbcerRequestBodyCertificateParameters(@JsonProperty("CertType") String certType, @JsonProperty("FullName") String fullName, @JsonProperty("Membership_No") String membershipNo) {
+        this.certType = certType;
+        this.fullName = fullName;
+        this.membershipNo = membershipNo;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddBelegRequest {
@@ -12,6 +13,7 @@ public class AddBelegRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Belegdaten belegdaten;
+
     public AddBelegRequest withBelegdaten(org.openapis.openapi.models.shared.Belegdaten belegdaten) {
         this.belegdaten = belegdaten;
         return this;
@@ -22,6 +24,7 @@ public class AddBelegRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=belegUuid")
     public String belegUuid;
+
     public AddBelegRequest withBelegUuid(String belegUuid) {
         this.belegUuid = belegUuid;
         return this;
@@ -32,9 +35,15 @@ public class AddBelegRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=registrierkasseUuid")
     public String registrierkasseUuid;
+
     public AddBelegRequest withRegistrierkasseUuid(String registrierkasseUuid) {
         this.registrierkasseUuid = registrierkasseUuid;
         return this;
     }
     
+    public AddBelegRequest(@JsonProperty("Belegdaten") org.openapis.openapi.models.shared.Belegdaten belegdaten, @JsonProperty("belegUuid") String belegUuid, @JsonProperty("registrierkasseUuid") String registrierkasseUuid) {
+        this.belegdaten = belegdaten;
+        this.belegUuid = belegUuid;
+        this.registrierkasseUuid = registrierkasseUuid;
+  }
 }

@@ -15,6 +15,7 @@ public class TeamsGetUsers200ApplicationJSON {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public TeamsGetUsers200ApplicationJSON withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -25,6 +26,7 @@ public class TeamsGetUsers200ApplicationJSON {
      */
     @JsonProperty("email")
     public String email;
+
     public TeamsGetUsers200ApplicationJSON withEmail(String email) {
         this.email = email;
         return this;
@@ -35,6 +37,7 @@ public class TeamsGetUsers200ApplicationJSON {
      */
     @JsonProperty("name")
     public String name;
+
     public TeamsGetUsers200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -45,9 +48,16 @@ public class TeamsGetUsers200ApplicationJSON {
      */
     @JsonProperty("role")
     public TeamsGetUsers200ApplicationJSONRoleEnum role;
+
     public TeamsGetUsers200ApplicationJSON withRole(TeamsGetUsers200ApplicationJSONRoleEnum role) {
         this.role = role;
         return this;
     }
     
+    public TeamsGetUsers200ApplicationJSON(@JsonProperty("display_name") String displayName, @JsonProperty("email") String email, @JsonProperty("name") String name, @JsonProperty("role") TeamsGetUsers200ApplicationJSONRoleEnum role) {
+        this.displayName = displayName;
+        this.email = email;
+        this.name = name;
+        this.role = role;
+  }
 }

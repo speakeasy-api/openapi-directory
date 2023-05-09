@@ -15,6 +15,7 @@ public class ListWebsiteCertificateAuthoritiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListWebsiteCertificateAuthoritiesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListWebsiteCertificateAuthoritiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WebsiteCertificateAuthorities")
     public WebsiteCaSummary[] websiteCertificateAuthorities;
+
     public ListWebsiteCertificateAuthoritiesResponse withWebsiteCertificateAuthorities(WebsiteCaSummary[] websiteCertificateAuthorities) {
         this.websiteCertificateAuthorities = websiteCertificateAuthorities;
         return this;
     }
     
+    public ListWebsiteCertificateAuthoritiesResponse(){}
 }

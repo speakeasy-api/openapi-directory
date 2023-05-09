@@ -17,6 +17,7 @@ public class RecurringDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acquirer")
     public String acquirer;
+
     public RecurringDetail withAcquirer(String acquirer) {
         this.acquirer = acquirer;
         return this;
@@ -25,6 +26,7 @@ public class RecurringDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acquirerAccount")
     public String acquirerAccount;
+
     public RecurringDetail withAcquirerAccount(String acquirerAccount) {
         this.acquirerAccount = acquirerAccount;
         return this;
@@ -33,6 +35,7 @@ public class RecurringDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalData")
     public java.util.Map<String, String> additionalData;
+
     public RecurringDetail withAdditionalData(java.util.Map<String, String> additionalData) {
         this.additionalData = additionalData;
         return this;
@@ -41,6 +44,7 @@ public class RecurringDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias")
     public String alias;
+
     public RecurringDetail withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -49,6 +53,7 @@ public class RecurringDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aliasType")
     public String aliasType;
+
     public RecurringDetail withAliasType(String aliasType) {
         this.aliasType = aliasType;
         return this;
@@ -57,6 +62,7 @@ public class RecurringDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bank")
     public BankAccount bank;
+
     public RecurringDetail withBank(BankAccount bank) {
         this.bank = bank;
         return this;
@@ -65,6 +71,7 @@ public class RecurringDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingAddress")
     public Address billingAddress;
+
     public RecurringDetail withBillingAddress(Address billingAddress) {
         this.billingAddress = billingAddress;
         return this;
@@ -73,6 +80,7 @@ public class RecurringDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card")
     public Card card;
+
     public RecurringDetail withCard(Card card) {
         this.card = card;
         return this;
@@ -81,6 +89,7 @@ public class RecurringDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contractTypes")
     public String[] contractTypes;
+
     public RecurringDetail withContractTypes(String[] contractTypes) {
         this.contractTypes = contractTypes;
         return this;
@@ -91,6 +100,7 @@ public class RecurringDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public RecurringDetail withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -99,6 +109,7 @@ public class RecurringDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elv")
     public Elv elv;
+
     public RecurringDetail withElv(Elv elv) {
         this.elv = elv;
         return this;
@@ -107,6 +118,7 @@ public class RecurringDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstPspReference")
     public String firstPspReference;
+
     public RecurringDetail withFirstPspReference(String firstPspReference) {
         this.firstPspReference = firstPspReference;
         return this;
@@ -118,6 +130,7 @@ public class RecurringDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RecurringDetail withName(String name) {
         this.name = name;
         return this;
@@ -126,6 +139,7 @@ public class RecurringDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentMethodVariant")
     public String paymentMethodVariant;
+
     public RecurringDetail withPaymentMethodVariant(String paymentMethodVariant) {
         this.paymentMethodVariant = paymentMethodVariant;
         return this;
@@ -137,6 +151,7 @@ public class RecurringDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurringDetailReference")
     public String recurringDetailReference;
+
     public RecurringDetail withRecurringDetailReference(String recurringDetailReference) {
         this.recurringDetailReference = recurringDetailReference;
         return this;
@@ -145,6 +160,7 @@ public class RecurringDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperName")
     public Name shopperName;
+
     public RecurringDetail withShopperName(Name shopperName) {
         this.shopperName = shopperName;
         return this;
@@ -153,6 +169,7 @@ public class RecurringDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("socialSecurityNumber")
     public String socialSecurityNumber;
+
     public RecurringDetail withSocialSecurityNumber(String socialSecurityNumber) {
         this.socialSecurityNumber = socialSecurityNumber;
         return this;
@@ -161,6 +178,7 @@ public class RecurringDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenDetails")
     public TokenDetails tokenDetails;
+
     public RecurringDetail withTokenDetails(TokenDetails tokenDetails) {
         this.tokenDetails = tokenDetails;
         return this;
@@ -169,9 +187,11 @@ public class RecurringDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variant")
     public String variant;
+
     public RecurringDetail withVariant(String variant) {
         this.variant = variant;
         return this;
     }
     
+    public RecurringDetail(){}
 }

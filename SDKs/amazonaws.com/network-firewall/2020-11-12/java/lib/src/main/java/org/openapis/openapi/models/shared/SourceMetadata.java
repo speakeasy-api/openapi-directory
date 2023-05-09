@@ -15,6 +15,7 @@ public class SourceMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceArn")
     public String sourceArn;
+
     public SourceMetadata withSourceArn(String sourceArn) {
         this.sourceArn = sourceArn;
         return this;
@@ -23,9 +24,11 @@ public class SourceMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceUpdateToken")
     public String sourceUpdateToken;
+
     public SourceMetadata withSourceUpdateToken(String sourceUpdateToken) {
         this.sourceUpdateToken = sourceUpdateToken;
         return this;
     }
     
+    public SourceMetadata(){}
 }

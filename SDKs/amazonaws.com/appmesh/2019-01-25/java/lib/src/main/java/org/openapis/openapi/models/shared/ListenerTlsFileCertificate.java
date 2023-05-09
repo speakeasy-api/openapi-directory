@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListenerTlsFileCertificate {
     @JsonProperty("certificateChain")
     public String certificateChain;
+
     public ListenerTlsFileCertificate withCertificateChain(String certificateChain) {
         this.certificateChain = certificateChain;
         return this;
@@ -19,9 +20,14 @@ public class ListenerTlsFileCertificate {
     
     @JsonProperty("privateKey")
     public String privateKey;
+
     public ListenerTlsFileCertificate withPrivateKey(String privateKey) {
         this.privateKey = privateKey;
         return this;
     }
     
+    public ListenerTlsFileCertificate(@JsonProperty("certificateChain") String certificateChain, @JsonProperty("privateKey") String privateKey) {
+        this.certificateChain = certificateChain;
+        this.privateKey = privateKey;
+  }
 }

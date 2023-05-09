@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ZebraGETSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=apikey")
     public String queryApiKey;
+
     public ZebraGETSecurity withQueryApiKey(String queryApiKey) {
         this.queryApiKey = queryApiKey;
         return this;
     }
     
+    public ZebraGETSecurity(@JsonProperty("QueryApiKey") String queryApiKey) {
+        this.queryApiKey = queryApiKey;
+  }
 }

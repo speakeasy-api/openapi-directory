@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteListingsResponse {
@@ -12,6 +13,7 @@ public class DeleteListingsResponse {
      */
     
     public org.openapis.openapi.models.shared.AftermarketListingAction aftermarketListingAction;
+
     public DeleteListingsResponse withAftermarketListingAction(org.openapis.openapi.models.shared.AftermarketListingAction aftermarketListingAction) {
         this.aftermarketListingAction = aftermarketListingAction;
         return this;
@@ -19,6 +21,7 @@ public class DeleteListingsResponse {
     
     
     public byte[] body;
+
     public DeleteListingsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -26,6 +29,7 @@ public class DeleteListingsResponse {
     
     
     public String contentType;
+
     public DeleteListingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class DeleteListingsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public DeleteListingsResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -46,6 +51,7 @@ public class DeleteListingsResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorLimit errorLimit;
+
     public DeleteListingsResponse withErrorLimit(org.openapis.openapi.models.shared.ErrorLimit errorLimit) {
         this.errorLimit = errorLimit;
         return this;
@@ -53,6 +59,7 @@ public class DeleteListingsResponse {
     
     
     public Integer statusCode;
+
     public DeleteListingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -60,9 +67,14 @@ public class DeleteListingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteListingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteListingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class StartConfigRulesEvaluationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigRuleNames")
     public String[] configRuleNames;
+
     public StartConfigRulesEvaluationRequest withConfigRuleNames(String[] configRuleNames) {
         this.configRuleNames = configRuleNames;
         return this;
     }
     
+    public StartConfigRulesEvaluationRequest(){}
 }

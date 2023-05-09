@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutMetricPolicyResponse {
@@ -12,6 +13,7 @@ public class PutMetricPolicyResponse {
      */
     
     public Object containerInUseException;
+
     public PutMetricPolicyResponse withContainerInUseException(Object containerInUseException) {
         this.containerInUseException = containerInUseException;
         return this;
@@ -22,6 +24,7 @@ public class PutMetricPolicyResponse {
      */
     
     public Object containerNotFoundException;
+
     public PutMetricPolicyResponse withContainerNotFoundException(Object containerNotFoundException) {
         this.containerNotFoundException = containerNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class PutMetricPolicyResponse {
     
     
     public String contentType;
+
     public PutMetricPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PutMetricPolicyResponse {
      */
     
     public Object internalServerError;
+
     public PutMetricPolicyResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class PutMetricPolicyResponse {
      */
     
     public java.util.Map<String, Object> putMetricPolicyOutput;
+
     public PutMetricPolicyResponse withPutMetricPolicyOutput(java.util.Map<String, Object> putMetricPolicyOutput) {
         this.putMetricPolicyOutput = putMetricPolicyOutput;
         return this;
@@ -56,6 +62,7 @@ public class PutMetricPolicyResponse {
     
     
     public Integer statusCode;
+
     public PutMetricPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class PutMetricPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutMetricPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutMetricPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

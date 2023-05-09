@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AlgorithmValidationProfile {
     @JsonProperty("ProfileName")
     public String profileName;
+
     public AlgorithmValidationProfile withProfileName(String profileName) {
         this.profileName = profileName;
         return this;
@@ -21,6 +22,7 @@ public class AlgorithmValidationProfile {
     
     @JsonProperty("TrainingJobDefinition")
     public TrainingJobDefinition trainingJobDefinition;
+
     public AlgorithmValidationProfile withTrainingJobDefinition(TrainingJobDefinition trainingJobDefinition) {
         this.trainingJobDefinition = trainingJobDefinition;
         return this;
@@ -29,9 +31,14 @@ public class AlgorithmValidationProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransformJobDefinition")
     public TransformJobDefinition transformJobDefinition;
+
     public AlgorithmValidationProfile withTransformJobDefinition(TransformJobDefinition transformJobDefinition) {
         this.transformJobDefinition = transformJobDefinition;
         return this;
     }
     
+    public AlgorithmValidationProfile(@JsonProperty("ProfileName") String profileName, @JsonProperty("TrainingJobDefinition") TrainingJobDefinition trainingJobDefinition) {
+        this.profileName = profileName;
+        this.trainingJobDefinition = trainingJobDefinition;
+  }
 }

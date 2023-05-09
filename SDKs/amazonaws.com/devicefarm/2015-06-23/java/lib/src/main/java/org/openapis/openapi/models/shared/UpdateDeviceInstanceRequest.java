@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateDeviceInstanceRequest {
     @JsonProperty("arn")
     public String arn;
+
     public UpdateDeviceInstanceRequest withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,6 +20,7 @@ public class UpdateDeviceInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public String[] labels;
+
     public UpdateDeviceInstanceRequest withLabels(String[] labels) {
         this.labels = labels;
         return this;
@@ -27,9 +29,13 @@ public class UpdateDeviceInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileArn")
     public String profileArn;
+
     public UpdateDeviceInstanceRequest withProfileArn(String profileArn) {
         this.profileArn = profileArn;
         return this;
     }
     
+    public UpdateDeviceInstanceRequest(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

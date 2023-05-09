@@ -15,6 +15,7 @@ public class UserPoolConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appIdClientRegex")
     public String appIdClientRegex;
+
     public UserPoolConfig withAppIdClientRegex(String appIdClientRegex) {
         this.appIdClientRegex = appIdClientRegex;
         return this;
@@ -22,6 +23,7 @@ public class UserPoolConfig {
     
     @JsonProperty("awsRegion")
     public String awsRegion;
+
     public UserPoolConfig withAwsRegion(String awsRegion) {
         this.awsRegion = awsRegion;
         return this;
@@ -29,6 +31,7 @@ public class UserPoolConfig {
     
     @JsonProperty("defaultAction")
     public DefaultActionEnum defaultAction;
+
     public UserPoolConfig withDefaultAction(DefaultActionEnum defaultAction) {
         this.defaultAction = defaultAction;
         return this;
@@ -36,9 +39,15 @@ public class UserPoolConfig {
     
     @JsonProperty("userPoolId")
     public String userPoolId;
+
     public UserPoolConfig withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
     }
     
+    public UserPoolConfig(@JsonProperty("awsRegion") String awsRegion, @JsonProperty("defaultAction") DefaultActionEnum defaultAction, @JsonProperty("userPoolId") String userPoolId) {
+        this.awsRegion = awsRegion;
+        this.defaultAction = defaultAction;
+        this.userPoolId = userPoolId;
+  }
 }

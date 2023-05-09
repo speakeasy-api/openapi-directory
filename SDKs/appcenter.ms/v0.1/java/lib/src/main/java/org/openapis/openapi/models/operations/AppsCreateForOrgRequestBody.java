@@ -18,6 +18,7 @@ public class AppsCreateForOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AppsCreateForOrgRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +29,7 @@ public class AppsCreateForOrgRequestBody {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public AppsCreateForOrgRequestBody withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -39,6 +41,7 @@ public class AppsCreateForOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AppsCreateForOrgRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -49,6 +52,7 @@ public class AppsCreateForOrgRequestBody {
      */
     @JsonProperty("os")
     public AppsCreateForOrgRequestBodyOsEnum os;
+
     public AppsCreateForOrgRequestBody withOs(AppsCreateForOrgRequestBodyOsEnum os) {
         this.os = os;
         return this;
@@ -59,6 +63,7 @@ public class AppsCreateForOrgRequestBody {
      */
     @JsonProperty("platform")
     public AppsCreateForOrgRequestBodyPlatformEnum platform;
+
     public AppsCreateForOrgRequestBody withPlatform(AppsCreateForOrgRequestBodyPlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -70,9 +75,15 @@ public class AppsCreateForOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release_type")
     public String releaseType;
+
     public AppsCreateForOrgRequestBody withReleaseType(String releaseType) {
         this.releaseType = releaseType;
         return this;
     }
     
+    public AppsCreateForOrgRequestBody(@JsonProperty("display_name") String displayName, @JsonProperty("os") AppsCreateForOrgRequestBodyOsEnum os, @JsonProperty("platform") AppsCreateForOrgRequestBodyPlatformEnum platform) {
+        this.displayName = displayName;
+        this.os = os;
+        this.platform = platform;
+  }
 }

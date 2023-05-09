@@ -15,6 +15,7 @@ public class TestingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Assets")
     public Asset[] assets;
+
     public TestingData withAssets(Asset[] assets) {
         this.assets = assets;
         return this;
@@ -23,9 +24,11 @@ public class TestingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoCreate")
     public Boolean autoCreate;
+
     public TestingData withAutoCreate(Boolean autoCreate) {
         this.autoCreate = autoCreate;
         return this;
     }
     
+    public TestingData(){}
 }

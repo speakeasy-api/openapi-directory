@@ -18,9 +18,11 @@ public class GoogleCloudDatacatalogV1DataSourceConnectionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bigqueryConnectionSpec")
     public GoogleCloudDatacatalogV1BigQueryConnectionSpec bigqueryConnectionSpec;
+
     public GoogleCloudDatacatalogV1DataSourceConnectionSpec withBigqueryConnectionSpec(GoogleCloudDatacatalogV1BigQueryConnectionSpec bigqueryConnectionSpec) {
         this.bigqueryConnectionSpec = bigqueryConnectionSpec;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1DataSourceConnectionSpec(){}
 }

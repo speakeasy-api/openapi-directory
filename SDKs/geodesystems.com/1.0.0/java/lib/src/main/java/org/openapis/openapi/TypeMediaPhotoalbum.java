@@ -57,10 +57,8 @@ public class TypeMediaPhotoalbum {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchMediaPhotoalbumResponse res = new org.openapis.openapi.models.operations.SearchMediaPhotoalbumResponse() {{
+        org.openapis.openapi.models.operations.SearchMediaPhotoalbumResponse res = new org.openapis.openapi.models.operations.SearchMediaPhotoalbumResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

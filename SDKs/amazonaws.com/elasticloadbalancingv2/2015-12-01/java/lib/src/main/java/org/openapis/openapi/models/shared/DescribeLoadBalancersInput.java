@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeLoadBalancersInput {
     
     public String[] loadBalancerArns;
+
     public DescribeLoadBalancersInput withLoadBalancerArns(String[] loadBalancerArns) {
         this.loadBalancerArns = loadBalancerArns;
         return this;
@@ -16,6 +17,7 @@ public class DescribeLoadBalancersInput {
     
     
     public String marker;
+
     public DescribeLoadBalancersInput withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,6 +25,7 @@ public class DescribeLoadBalancersInput {
     
     
     public String[] names;
+
     public DescribeLoadBalancersInput withNames(String[] names) {
         this.names = names;
         return this;
@@ -30,9 +33,11 @@ public class DescribeLoadBalancersInput {
     
     
     public Long pageSize;
+
     public DescribeLoadBalancersInput withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public DescribeLoadBalancersInput(){}
 }

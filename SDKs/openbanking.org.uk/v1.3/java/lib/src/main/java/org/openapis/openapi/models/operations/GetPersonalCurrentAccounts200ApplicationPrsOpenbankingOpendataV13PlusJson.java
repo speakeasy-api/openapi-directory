@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJson {
     @JsonProperty("data")
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData[] data;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJson withData(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData[] data) {
         this.data = data;
         return this;
@@ -19,9 +20,14 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     
     @JsonProperty("meta")
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData meta;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJson withMeta(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData meta) {
         this.meta = meta;
         return this;
     }
     
+    public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJson(@JsonProperty("data") GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData[] data, @JsonProperty("meta") GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData meta) {
+        this.data = data;
+        this.meta = meta;
+  }
 }

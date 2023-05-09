@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContentRssNewsArticlesRequest {
@@ -12,6 +13,7 @@ public class ContentRssNewsArticlesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=categoryfilter")
     public String categoryfilter;
+
     public ContentRssNewsArticlesRequest withCategoryfilter(String categoryfilter) {
         this.categoryfilter = categoryfilter;
         return this;
@@ -22,6 +24,7 @@ public class ContentRssNewsArticlesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includebody")
     public Boolean includebody;
+
     public ContentRssNewsArticlesRequest withIncludebody(Boolean includebody) {
         this.includebody = includebody;
         return this;
@@ -32,9 +35,13 @@ public class ContentRssNewsArticlesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pageToken")
     public String pageToken;
+
     public ContentRssNewsArticlesRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
     }
     
+    public ContentRssNewsArticlesRequest(@JsonProperty("pageToken") String pageToken) {
+        this.pageToken = pageToken;
+  }
 }

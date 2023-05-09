@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTBatchDeleteAttributesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AWSAccessKeyId")
     public String awsAccessKeyId;
+
     public POSTBatchDeleteAttributesRequest withAWSAccessKeyId(String awsAccessKeyId) {
         this.awsAccessKeyId = awsAccessKeyId;
         return this;
@@ -16,6 +18,7 @@ public class POSTBatchDeleteAttributesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public POSTBatchDeleteAttributesActionEnum action;
+
     public POSTBatchDeleteAttributesRequest withAction(POSTBatchDeleteAttributesActionEnum action) {
         this.action = action;
         return this;
@@ -23,6 +26,7 @@ public class POSTBatchDeleteAttributesRequest {
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public POSTBatchDeleteAttributesRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -30,6 +34,7 @@ public class POSTBatchDeleteAttributesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Signature")
     public String signature;
+
     public POSTBatchDeleteAttributesRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -37,6 +42,7 @@ public class POSTBatchDeleteAttributesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureMethod")
     public String signatureMethod;
+
     public POSTBatchDeleteAttributesRequest withSignatureMethod(String signatureMethod) {
         this.signatureMethod = signatureMethod;
         return this;
@@ -44,6 +50,7 @@ public class POSTBatchDeleteAttributesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureVersion")
     public String signatureVersion;
+
     public POSTBatchDeleteAttributesRequest withSignatureVersion(String signatureVersion) {
         this.signatureVersion = signatureVersion;
         return this;
@@ -51,6 +58,7 @@ public class POSTBatchDeleteAttributesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Timestamp")
     public String timestamp;
+
     public POSTBatchDeleteAttributesRequest withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -58,9 +66,19 @@ public class POSTBatchDeleteAttributesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public POSTBatchDeleteAttributesVersionEnum version;
+
     public POSTBatchDeleteAttributesRequest withVersion(POSTBatchDeleteAttributesVersionEnum version) {
         this.version = version;
         return this;
     }
     
+    public POSTBatchDeleteAttributesRequest(@JsonProperty("AWSAccessKeyId") String awsAccessKeyId, @JsonProperty("Action") POSTBatchDeleteAttributesActionEnum action, @JsonProperty("Signature") String signature, @JsonProperty("SignatureMethod") String signatureMethod, @JsonProperty("SignatureVersion") String signatureVersion, @JsonProperty("Timestamp") String timestamp, @JsonProperty("Version") POSTBatchDeleteAttributesVersionEnum version) {
+        this.awsAccessKeyId = awsAccessKeyId;
+        this.action = action;
+        this.signature = signature;
+        this.signatureMethod = signatureMethod;
+        this.signatureVersion = signatureVersion;
+        this.timestamp = timestamp;
+        this.version = version;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TelemetryMetadata {
     @JsonProperty("count")
     public Long count;
+
     public TelemetryMetadata withCount(Long count) {
         this.count = count;
         return this;
@@ -22,6 +23,7 @@ public class TelemetryMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSize")
     public Long dataSize;
+
     public TelemetryMetadata withDataSize(Long dataSize) {
         this.dataSize = dataSize;
         return this;
@@ -29,9 +31,14 @@ public class TelemetryMetadata {
     
     @JsonProperty("messageType")
     public String messageType;
+
     public TelemetryMetadata withMessageType(String messageType) {
         this.messageType = messageType;
         return this;
     }
     
+    public TelemetryMetadata(@JsonProperty("count") Long count, @JsonProperty("messageType") String messageType) {
+        this.count = count;
+        this.messageType = messageType;
+  }
 }

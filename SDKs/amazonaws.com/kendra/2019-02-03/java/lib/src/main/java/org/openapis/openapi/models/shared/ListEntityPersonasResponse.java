@@ -15,6 +15,7 @@ public class ListEntityPersonasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEntityPersonasResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListEntityPersonasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SummaryItems")
     public PersonasSummary[] summaryItems;
+
     public ListEntityPersonasResponse withSummaryItems(PersonasSummary[] summaryItems) {
         this.summaryItems = summaryItems;
         return this;
     }
     
+    public ListEntityPersonasResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PreprocessingUnskewResponse {
     
     public String contentType;
+
     public PreprocessingUnskewResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PreprocessingUnskewResponse {
      */
     
     public String preprocessingUnskew200ApplicationJSONByteString;
+
     public PreprocessingUnskewResponse withPreprocessingUnskew200ApplicationJSONByteString(String preprocessingUnskew200ApplicationJSONByteString) {
         this.preprocessingUnskew200ApplicationJSONByteString = preprocessingUnskew200ApplicationJSONByteString;
         return this;
@@ -29,6 +32,7 @@ public class PreprocessingUnskewResponse {
      */
     
     public String preprocessingUnskew200ApplicationXMLByteString;
+
     public PreprocessingUnskewResponse withPreprocessingUnskew200ApplicationXMLByteString(String preprocessingUnskew200ApplicationXMLByteString) {
         this.preprocessingUnskew200ApplicationXMLByteString = preprocessingUnskew200ApplicationXMLByteString;
         return this;
@@ -39,6 +43,7 @@ public class PreprocessingUnskewResponse {
      */
     
     public String preprocessingUnskew200TextJSONByteString;
+
     public PreprocessingUnskewResponse withPreprocessingUnskew200TextJSONByteString(String preprocessingUnskew200TextJSONByteString) {
         this.preprocessingUnskew200TextJSONByteString = preprocessingUnskew200TextJSONByteString;
         return this;
@@ -49,6 +54,7 @@ public class PreprocessingUnskewResponse {
      */
     
     public String preprocessingUnskew200TextXMLByteString;
+
     public PreprocessingUnskewResponse withPreprocessingUnskew200TextXMLByteString(String preprocessingUnskew200TextXMLByteString) {
         this.preprocessingUnskew200TextXMLByteString = preprocessingUnskew200TextXMLByteString;
         return this;
@@ -56,6 +62,7 @@ public class PreprocessingUnskewResponse {
     
     
     public Integer statusCode;
+
     public PreprocessingUnskewResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class PreprocessingUnskewResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PreprocessingUnskewResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PreprocessingUnskewResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

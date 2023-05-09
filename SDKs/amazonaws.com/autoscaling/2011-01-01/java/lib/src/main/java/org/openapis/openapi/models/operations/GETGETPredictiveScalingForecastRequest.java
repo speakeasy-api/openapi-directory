@@ -4,12 +4,14 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETPredictiveScalingForecastRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETGETPredictiveScalingForecastActionEnum action;
+
     public GETGETPredictiveScalingForecastRequest withAction(GETGETPredictiveScalingForecastActionEnum action) {
         this.action = action;
         return this;
@@ -20,6 +22,7 @@ public class GETGETPredictiveScalingForecastRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoScalingGroupName")
     public String autoScalingGroupName;
+
     public GETGETPredictiveScalingForecastRequest withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -30,6 +33,7 @@ public class GETGETPredictiveScalingForecastRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndTime")
     public OffsetDateTime endTime;
+
     public GETGETPredictiveScalingForecastRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -40,6 +44,7 @@ public class GETGETPredictiveScalingForecastRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PolicyName")
     public String policyName;
+
     public GETGETPredictiveScalingForecastRequest withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -50,6 +55,7 @@ public class GETGETPredictiveScalingForecastRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartTime")
     public OffsetDateTime startTime;
+
     public GETGETPredictiveScalingForecastRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -57,6 +63,7 @@ public class GETGETPredictiveScalingForecastRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETGETPredictiveScalingForecastVersionEnum version;
+
     public GETGETPredictiveScalingForecastRequest withVersion(GETGETPredictiveScalingForecastVersionEnum version) {
         this.version = version;
         return this;
@@ -64,6 +71,7 @@ public class GETGETPredictiveScalingForecastRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETGETPredictiveScalingForecastRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -71,6 +79,7 @@ public class GETGETPredictiveScalingForecastRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETGETPredictiveScalingForecastRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -78,6 +87,7 @@ public class GETGETPredictiveScalingForecastRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETGETPredictiveScalingForecastRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -85,6 +95,7 @@ public class GETGETPredictiveScalingForecastRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETGETPredictiveScalingForecastRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -92,6 +103,7 @@ public class GETGETPredictiveScalingForecastRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETGETPredictiveScalingForecastRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -99,6 +111,7 @@ public class GETGETPredictiveScalingForecastRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETGETPredictiveScalingForecastRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -106,9 +119,18 @@ public class GETGETPredictiveScalingForecastRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETGETPredictiveScalingForecastRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETGETPredictiveScalingForecastRequest(@JsonProperty("Action") GETGETPredictiveScalingForecastActionEnum action, @JsonProperty("AutoScalingGroupName") String autoScalingGroupName, @JsonProperty("EndTime") OffsetDateTime endTime, @JsonProperty("PolicyName") String policyName, @JsonProperty("StartTime") OffsetDateTime startTime, @JsonProperty("Version") GETGETPredictiveScalingForecastVersionEnum version) {
+        this.action = action;
+        this.autoScalingGroupName = autoScalingGroupName;
+        this.endTime = endTime;
+        this.policyName = policyName;
+        this.startTime = startTime;
+        this.version = version;
+  }
 }

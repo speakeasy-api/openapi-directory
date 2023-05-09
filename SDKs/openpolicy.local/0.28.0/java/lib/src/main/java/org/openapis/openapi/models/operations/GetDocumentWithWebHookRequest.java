@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDocumentWithWebHookRequest {
@@ -12,6 +13,7 @@ public class GetDocumentWithWebHookRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/x-yaml")
     public byte[] requestBody;
+
     public GetDocumentWithWebHookRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class GetDocumentWithWebHookRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
     public String path;
+
     public GetDocumentWithWebHookRequest withPath(String path) {
         this.path = path;
         return this;
@@ -32,9 +35,14 @@ public class GetDocumentWithWebHookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pretty")
     public Boolean pretty;
+
     public GetDocumentWithWebHookRequest withPretty(Boolean pretty) {
         this.pretty = pretty;
         return this;
     }
     
+    public GetDocumentWithWebHookRequest(@JsonProperty("RequestBody") byte[] requestBody, @JsonProperty("path") String path) {
+        this.requestBody = requestBody;
+        this.path = path;
+  }
 }

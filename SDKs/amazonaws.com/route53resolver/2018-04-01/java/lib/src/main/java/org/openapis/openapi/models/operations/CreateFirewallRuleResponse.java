@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFirewallRuleResponse {
@@ -12,6 +13,7 @@ public class CreateFirewallRuleResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateFirewallRuleResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateFirewallRuleResponse {
     
     
     public String contentType;
+
     public CreateFirewallRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateFirewallRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateFirewallRuleResponse createFirewallRuleResponse;
+
     public CreateFirewallRuleResponse withCreateFirewallRuleResponse(org.openapis.openapi.models.shared.CreateFirewallRuleResponse createFirewallRuleResponse) {
         this.createFirewallRuleResponse = createFirewallRuleResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateFirewallRuleResponse {
      */
     
     public Object internalServiceErrorException;
+
     public CreateFirewallRuleResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -49,6 +54,7 @@ public class CreateFirewallRuleResponse {
      */
     
     public Object limitExceededException;
+
     public CreateFirewallRuleResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class CreateFirewallRuleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateFirewallRuleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateFirewallRuleResponse {
     
     
     public Integer statusCode;
+
     public CreateFirewallRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateFirewallRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFirewallRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateFirewallRuleResponse {
      */
     
     public Object throttlingException;
+
     public CreateFirewallRuleResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateFirewallRuleResponse {
      */
     
     public Object validationException;
+
     public CreateFirewallRuleResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateFirewallRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

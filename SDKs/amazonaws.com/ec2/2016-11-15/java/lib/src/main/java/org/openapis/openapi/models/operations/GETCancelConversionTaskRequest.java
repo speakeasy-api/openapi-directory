@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCancelConversionTaskRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETCancelConversionTaskActionEnum action;
+
     public GETCancelConversionTaskRequest withAction(GETCancelConversionTaskActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETCancelConversionTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConversionTaskId")
     public String conversionTaskId;
+
     public GETCancelConversionTaskRequest withConversionTaskId(String conversionTaskId) {
         this.conversionTaskId = conversionTaskId;
         return this;
@@ -29,6 +32,7 @@ public class GETCancelConversionTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETCancelConversionTaskRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -39,6 +43,7 @@ public class GETCancelConversionTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReasonMessage")
     public String reasonMessage;
+
     public GETCancelConversionTaskRequest withReasonMessage(String reasonMessage) {
         this.reasonMessage = reasonMessage;
         return this;
@@ -46,6 +51,7 @@ public class GETCancelConversionTaskRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETCancelConversionTaskVersionEnum version;
+
     public GETCancelConversionTaskRequest withVersion(GETCancelConversionTaskVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETCancelConversionTaskRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETCancelConversionTaskRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETCancelConversionTaskRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETCancelConversionTaskRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETCancelConversionTaskRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETCancelConversionTaskRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETCancelConversionTaskRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETCancelConversionTaskRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETCancelConversionTaskRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETCancelConversionTaskRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETCancelConversionTaskRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETCancelConversionTaskRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,15 @@ public class GETCancelConversionTaskRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETCancelConversionTaskRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETCancelConversionTaskRequest(@JsonProperty("Action") GETCancelConversionTaskActionEnum action, @JsonProperty("ConversionTaskId") String conversionTaskId, @JsonProperty("Version") GETCancelConversionTaskVersionEnum version) {
+        this.action = action;
+        this.conversionTaskId = conversionTaskId;
+        this.version = version;
+  }
 }

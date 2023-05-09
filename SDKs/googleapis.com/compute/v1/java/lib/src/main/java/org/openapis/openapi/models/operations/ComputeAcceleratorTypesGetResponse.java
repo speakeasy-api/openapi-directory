@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeAcceleratorTypesGetResponse {
@@ -12,6 +13,7 @@ public class ComputeAcceleratorTypesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.AcceleratorType acceleratorType;
+
     public ComputeAcceleratorTypesGetResponse withAcceleratorType(org.openapis.openapi.models.shared.AcceleratorType acceleratorType) {
         this.acceleratorType = acceleratorType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeAcceleratorTypesGetResponse {
     
     
     public String contentType;
+
     public ComputeAcceleratorTypesGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ComputeAcceleratorTypesGetResponse {
     
     
     public Integer statusCode;
+
     public ComputeAcceleratorTypesGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeAcceleratorTypesGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeAcceleratorTypesGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeAcceleratorTypesGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

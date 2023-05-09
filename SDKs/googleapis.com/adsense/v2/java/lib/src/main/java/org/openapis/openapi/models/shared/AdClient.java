@@ -18,6 +18,7 @@ public class AdClient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AdClient withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class AdClient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productCode")
     public String productCode;
+
     public AdClient withProductCode(String productCode) {
         this.productCode = productCode;
         return this;
@@ -40,6 +42,7 @@ public class AdClient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportingDimensionId")
     public String reportingDimensionId;
+
     public AdClient withReportingDimensionId(String reportingDimensionId) {
         this.reportingDimensionId = reportingDimensionId;
         return this;
@@ -51,9 +54,11 @@ public class AdClient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public AdClientStateEnum state;
+
     public AdClient withState(AdClientStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public AdClient(){}
 }

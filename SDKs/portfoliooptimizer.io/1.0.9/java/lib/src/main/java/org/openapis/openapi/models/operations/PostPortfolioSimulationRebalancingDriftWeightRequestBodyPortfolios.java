@@ -12,9 +12,13 @@ public class PostPortfolioSimulationRebalancingDriftWeightRequestBodyPortfolios 
      */
     @JsonProperty("assetsWeights")
     public Double[] assetsWeights;
+
     public PostPortfolioSimulationRebalancingDriftWeightRequestBodyPortfolios withAssetsWeights(Double[] assetsWeights) {
         this.assetsWeights = assetsWeights;
         return this;
     }
     
+    public PostPortfolioSimulationRebalancingDriftWeightRequestBodyPortfolios(@JsonProperty("assetsWeights") Double[] assetsWeights) {
+        this.assetsWeights = assetsWeights;
+  }
 }

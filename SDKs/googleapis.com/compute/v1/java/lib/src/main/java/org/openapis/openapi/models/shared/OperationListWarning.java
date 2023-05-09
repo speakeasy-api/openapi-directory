@@ -18,6 +18,7 @@ public class OperationListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public OperationListWarningCodeEnum code;
+
     public OperationListWarning withCode(OperationListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class OperationListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public OperationListWarningData[] data;
+
     public OperationListWarning withData(OperationListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class OperationListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public OperationListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public OperationListWarning(){}
 }

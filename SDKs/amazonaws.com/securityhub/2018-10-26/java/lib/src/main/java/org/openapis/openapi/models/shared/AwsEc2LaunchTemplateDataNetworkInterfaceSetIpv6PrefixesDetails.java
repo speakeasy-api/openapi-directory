@@ -15,9 +15,11 @@ public class AwsEc2LaunchTemplateDataNetworkInterfaceSetIpv6PrefixesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ipv6Prefix")
     public String ipv6Prefix;
+
     public AwsEc2LaunchTemplateDataNetworkInterfaceSetIpv6PrefixesDetails withIpv6Prefix(String ipv6Prefix) {
         this.ipv6Prefix = ipv6Prefix;
         return this;
     }
     
+    public AwsEc2LaunchTemplateDataNetworkInterfaceSetIpv6PrefixesDetails(){}
 }

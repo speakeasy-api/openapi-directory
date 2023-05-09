@@ -15,6 +15,7 @@ public class PlanningStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedDataToScanBytes")
     public Long estimatedDataToScanBytes;
+
     public PlanningStatistics withEstimatedDataToScanBytes(Long estimatedDataToScanBytes) {
         this.estimatedDataToScanBytes = estimatedDataToScanBytes;
         return this;
@@ -23,6 +24,7 @@ public class PlanningStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlanningTimeMillis")
     public Long planningTimeMillis;
+
     public PlanningStatistics withPlanningTimeMillis(Long planningTimeMillis) {
         this.planningTimeMillis = planningTimeMillis;
         return this;
@@ -31,6 +33,7 @@ public class PlanningStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueueTimeMillis")
     public Long queueTimeMillis;
+
     public PlanningStatistics withQueueTimeMillis(Long queueTimeMillis) {
         this.queueTimeMillis = queueTimeMillis;
         return this;
@@ -39,9 +42,11 @@ public class PlanningStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkUnitsGeneratedCount")
     public Long workUnitsGeneratedCount;
+
     public PlanningStatistics withWorkUnitsGeneratedCount(Long workUnitsGeneratedCount) {
         this.workUnitsGeneratedCount = workUnitsGeneratedCount;
         return this;
     }
     
+    public PlanningStatistics(){}
 }

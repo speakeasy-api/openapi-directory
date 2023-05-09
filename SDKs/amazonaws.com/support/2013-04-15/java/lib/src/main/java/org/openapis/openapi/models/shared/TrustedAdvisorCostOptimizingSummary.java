@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TrustedAdvisorCostOptimizingSummary {
     @JsonProperty("estimatedMonthlySavings")
     public Double estimatedMonthlySavings;
+
     public TrustedAdvisorCostOptimizingSummary withEstimatedMonthlySavings(Double estimatedMonthlySavings) {
         this.estimatedMonthlySavings = estimatedMonthlySavings;
         return this;
@@ -19,9 +20,14 @@ public class TrustedAdvisorCostOptimizingSummary {
     
     @JsonProperty("estimatedPercentMonthlySavings")
     public Double estimatedPercentMonthlySavings;
+
     public TrustedAdvisorCostOptimizingSummary withEstimatedPercentMonthlySavings(Double estimatedPercentMonthlySavings) {
         this.estimatedPercentMonthlySavings = estimatedPercentMonthlySavings;
         return this;
     }
     
+    public TrustedAdvisorCostOptimizingSummary(@JsonProperty("estimatedMonthlySavings") Double estimatedMonthlySavings, @JsonProperty("estimatedPercentMonthlySavings") Double estimatedPercentMonthlySavings) {
+        this.estimatedMonthlySavings = estimatedMonthlySavings;
+        this.estimatedPercentMonthlySavings = estimatedPercentMonthlySavings;
+  }
 }

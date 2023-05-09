@@ -15,6 +15,7 @@ public class Edge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationType")
     public AssociationEdgeTypeEnum associationType;
+
     public Edge withAssociationType(AssociationEdgeTypeEnum associationType) {
         this.associationType = associationType;
         return this;
@@ -23,6 +24,7 @@ public class Edge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationArn")
     public String destinationArn;
+
     public Edge withDestinationArn(String destinationArn) {
         this.destinationArn = destinationArn;
         return this;
@@ -31,9 +33,11 @@ public class Edge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceArn")
     public String sourceArn;
+
     public Edge withSourceArn(String sourceArn) {
         this.sourceArn = sourceArn;
         return this;
     }
     
+    public Edge(){}
 }

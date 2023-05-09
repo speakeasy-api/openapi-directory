@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListAccessesResponse {
     @JsonProperty("Accesses")
     public ListedAccess[] accesses;
+
     public ListAccessesResponse withAccesses(ListedAccess[] accesses) {
         this.accesses = accesses;
         return this;
@@ -22,6 +23,7 @@ public class ListAccessesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAccessesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -29,9 +31,14 @@ public class ListAccessesResponse {
     
     @JsonProperty("ServerId")
     public String serverId;
+
     public ListAccessesResponse withServerId(String serverId) {
         this.serverId = serverId;
         return this;
     }
     
+    public ListAccessesResponse(@JsonProperty("Accesses") ListedAccess[] accesses, @JsonProperty("ServerId") String serverId) {
+        this.accesses = accesses;
+        this.serverId = serverId;
+  }
 }

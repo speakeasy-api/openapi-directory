@@ -15,6 +15,7 @@ public class SendQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Max24HourSend")
     public Double max24HourSend;
+
     public SendQuota withMax24HourSend(Double max24HourSend) {
         this.max24HourSend = max24HourSend;
         return this;
@@ -23,6 +24,7 @@ public class SendQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxSendRate")
     public Double maxSendRate;
+
     public SendQuota withMaxSendRate(Double maxSendRate) {
         this.maxSendRate = maxSendRate;
         return this;
@@ -31,9 +33,11 @@ public class SendQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SentLast24Hours")
     public Double sentLast24Hours;
+
     public SendQuota withSentLast24Hours(Double sentLast24Hours) {
         this.sentLast24Hours = sentLast24Hours;
         return this;
     }
     
+    public SendQuota(){}
 }

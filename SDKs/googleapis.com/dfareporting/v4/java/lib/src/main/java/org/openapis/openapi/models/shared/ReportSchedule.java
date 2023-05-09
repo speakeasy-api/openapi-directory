@@ -20,6 +20,7 @@ public class ReportSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public ReportSchedule withActive(Boolean active) {
         this.active = active;
         return this;
@@ -31,6 +32,7 @@ public class ReportSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("every")
     public Integer every;
+
     public ReportSchedule withEvery(Integer every) {
         this.every = every;
         return this;
@@ -40,6 +42,7 @@ public class ReportSchedule {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("expirationDate")
     public LocalDate expirationDate;
+
     public ReportSchedule withExpirationDate(LocalDate expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -51,6 +54,7 @@ public class ReportSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeats")
     public String repeats;
+
     public ReportSchedule withRepeats(String repeats) {
         this.repeats = repeats;
         return this;
@@ -62,6 +66,7 @@ public class ReportSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeatsOnWeekDays")
     public ReportScheduleRepeatsOnWeekDaysEnum[] repeatsOnWeekDays;
+
     public ReportSchedule withRepeatsOnWeekDays(ReportScheduleRepeatsOnWeekDaysEnum[] repeatsOnWeekDays) {
         this.repeatsOnWeekDays = repeatsOnWeekDays;
         return this;
@@ -73,6 +78,7 @@ public class ReportSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runsOnDayOfMonth")
     public ReportScheduleRunsOnDayOfMonthEnum runsOnDayOfMonth;
+
     public ReportSchedule withRunsOnDayOfMonth(ReportScheduleRunsOnDayOfMonthEnum runsOnDayOfMonth) {
         this.runsOnDayOfMonth = runsOnDayOfMonth;
         return this;
@@ -82,6 +88,7 @@ public class ReportSchedule {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("startDate")
     public LocalDate startDate;
+
     public ReportSchedule withStartDate(LocalDate startDate) {
         this.startDate = startDate;
         return this;
@@ -93,9 +100,11 @@ public class ReportSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public ReportSchedule withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public ReportSchedule(){}
 }

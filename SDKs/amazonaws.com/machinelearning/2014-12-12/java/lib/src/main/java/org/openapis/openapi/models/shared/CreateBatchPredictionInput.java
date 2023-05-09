@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateBatchPredictionInput {
     @JsonProperty("BatchPredictionDataSourceId")
     public String batchPredictionDataSourceId;
+
     public CreateBatchPredictionInput withBatchPredictionDataSourceId(String batchPredictionDataSourceId) {
         this.batchPredictionDataSourceId = batchPredictionDataSourceId;
         return this;
@@ -18,6 +19,7 @@ public class CreateBatchPredictionInput {
     
     @JsonProperty("BatchPredictionId")
     public String batchPredictionId;
+
     public CreateBatchPredictionInput withBatchPredictionId(String batchPredictionId) {
         this.batchPredictionId = batchPredictionId;
         return this;
@@ -26,6 +28,7 @@ public class CreateBatchPredictionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchPredictionName")
     public String batchPredictionName;
+
     public CreateBatchPredictionInput withBatchPredictionName(String batchPredictionName) {
         this.batchPredictionName = batchPredictionName;
         return this;
@@ -33,6 +36,7 @@ public class CreateBatchPredictionInput {
     
     @JsonProperty("MLModelId")
     public String mlModelId;
+
     public CreateBatchPredictionInput withMLModelId(String mlModelId) {
         this.mlModelId = mlModelId;
         return this;
@@ -40,9 +44,16 @@ public class CreateBatchPredictionInput {
     
     @JsonProperty("OutputUri")
     public String outputUri;
+
     public CreateBatchPredictionInput withOutputUri(String outputUri) {
         this.outputUri = outputUri;
         return this;
     }
     
+    public CreateBatchPredictionInput(@JsonProperty("BatchPredictionDataSourceId") String batchPredictionDataSourceId, @JsonProperty("BatchPredictionId") String batchPredictionId, @JsonProperty("MLModelId") String mlModelId, @JsonProperty("OutputUri") String outputUri) {
+        this.batchPredictionDataSourceId = batchPredictionDataSourceId;
+        this.batchPredictionId = batchPredictionId;
+        this.mlModelId = mlModelId;
+        this.outputUri = outputUri;
+  }
 }

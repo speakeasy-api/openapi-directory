@@ -12,6 +12,7 @@ public class EnterpriseCrmEventbusProtoNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buganizerNotification")
     public EnterpriseCrmEventbusProtoBuganizerNotification buganizerNotification;
+
     public EnterpriseCrmEventbusProtoNotification withBuganizerNotification(EnterpriseCrmEventbusProtoBuganizerNotification buganizerNotification) {
         this.buganizerNotification = buganizerNotification;
         return this;
@@ -23,6 +24,7 @@ public class EnterpriseCrmEventbusProtoNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailAddress")
     public EnterpriseCrmEventbusProtoAddress emailAddress;
+
     public EnterpriseCrmEventbusProtoNotification withEmailAddress(EnterpriseCrmEventbusProtoAddress emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -31,6 +33,7 @@ public class EnterpriseCrmEventbusProtoNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("escalatorQueue")
     public String escalatorQueue;
+
     public EnterpriseCrmEventbusProtoNotification withEscalatorQueue(String escalatorQueue) {
         this.escalatorQueue = escalatorQueue;
         return this;
@@ -39,6 +42,7 @@ public class EnterpriseCrmEventbusProtoNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pubsubTopic")
     public String pubsubTopic;
+
     public EnterpriseCrmEventbusProtoNotification withPubsubTopic(String pubsubTopic) {
         this.pubsubTopic = pubsubTopic;
         return this;
@@ -47,9 +51,11 @@ public class EnterpriseCrmEventbusProtoNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request")
     public EnterpriseCrmEventbusProtoCustomSuspensionRequest request;
+
     public EnterpriseCrmEventbusProtoNotification withRequest(EnterpriseCrmEventbusProtoCustomSuspensionRequest request) {
         this.request = request;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoNotification(){}
 }

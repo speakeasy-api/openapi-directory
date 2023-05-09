@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaExecutionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attemptStats")
     public GoogleCloudIntegrationsV1alphaAttemptStats[] attemptStats;
+
     public GoogleCloudIntegrationsV1alphaExecutionDetails withAttemptStats(GoogleCloudIntegrationsV1alphaAttemptStats[] attemptStats) {
         this.attemptStats = attemptStats;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaExecutionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionSnapshots")
     public GoogleCloudIntegrationsV1alphaExecutionSnapshot[] executionSnapshots;
+
     public GoogleCloudIntegrationsV1alphaExecutionDetails withExecutionSnapshots(GoogleCloudIntegrationsV1alphaExecutionSnapshot[] executionSnapshots) {
         this.executionSnapshots = executionSnapshots;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudIntegrationsV1alphaExecutionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudIntegrationsV1alphaExecutionDetailsStateEnum state;
+
     public GoogleCloudIntegrationsV1alphaExecutionDetails withState(GoogleCloudIntegrationsV1alphaExecutionDetailsStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaExecutionDetails(){}
 }

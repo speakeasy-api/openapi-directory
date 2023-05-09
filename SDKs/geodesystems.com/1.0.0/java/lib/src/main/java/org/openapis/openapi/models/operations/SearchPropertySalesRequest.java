@@ -13,6 +13,7 @@ public class SearchPropertySalesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
     public OffsetDateTime changedateFrom;
+
     public SearchPropertySalesRequest withChangedateFrom(OffsetDateTime changedateFrom) {
         this.changedateFrom = changedateFrom;
         return this;
@@ -23,6 +24,7 @@ public class SearchPropertySalesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
     public OffsetDateTime changedateTo;
+
     public SearchPropertySalesRequest withChangedateTo(OffsetDateTime changedateTo) {
         this.changedateTo = changedateTo;
         return this;
@@ -33,6 +35,7 @@ public class SearchPropertySalesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
     public OffsetDateTime createdateFrom;
+
     public SearchPropertySalesRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
         this.createdateFrom = createdateFrom;
         return this;
@@ -43,6 +46,7 @@ public class SearchPropertySalesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
     public OffsetDateTime createdateTo;
+
     public SearchPropertySalesRequest withCreatedateTo(OffsetDateTime createdateTo) {
         this.createdateTo = createdateTo;
         return this;
@@ -53,6 +57,7 @@ public class SearchPropertySalesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public SearchPropertySalesRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +68,7 @@ public class SearchPropertySalesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
     public String filesuffix;
+
     public SearchPropertySalesRequest withFilesuffix(String filesuffix) {
         this.filesuffix = filesuffix;
         return this;
@@ -73,6 +79,7 @@ public class SearchPropertySalesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public OffsetDateTime fromdate;
+
     public SearchPropertySalesRequest withFromdate(OffsetDateTime fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -83,6 +90,7 @@ public class SearchPropertySalesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
     public String group;
+
     public SearchPropertySalesRequest withGroup(String group) {
         this.group = group;
         return this;
@@ -93,6 +101,7 @@ public class SearchPropertySalesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public Long max;
+
     public SearchPropertySalesRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -103,6 +112,7 @@ public class SearchPropertySalesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
     public Float maxlatitude;
+
     public SearchPropertySalesRequest withMaxlatitude(Float maxlatitude) {
         this.maxlatitude = maxlatitude;
         return this;
@@ -113,6 +123,7 @@ public class SearchPropertySalesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
     public Float maxlongitude;
+
     public SearchPropertySalesRequest withMaxlongitude(Float maxlongitude) {
         this.maxlongitude = maxlongitude;
         return this;
@@ -123,6 +134,7 @@ public class SearchPropertySalesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
     public Float minlatitude;
+
     public SearchPropertySalesRequest withMinlatitude(Float minlatitude) {
         this.minlatitude = minlatitude;
         return this;
@@ -133,6 +145,7 @@ public class SearchPropertySalesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
     public Float minlongitude;
+
     public SearchPropertySalesRequest withMinlongitude(Float minlongitude) {
         this.minlongitude = minlongitude;
         return this;
@@ -143,6 +156,7 @@ public class SearchPropertySalesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public SearchPropertySalesRequest withName(String name) {
         this.name = name;
         return this;
@@ -153,6 +167,7 @@ public class SearchPropertySalesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_property_sales.building_description")
     public String searchDbPropertySalesBuildingDescription;
+
     public SearchPropertySalesRequest withSearchDbPropertySalesBuildingDescription(String searchDbPropertySalesBuildingDescription) {
         this.searchDbPropertySalesBuildingDescription = searchDbPropertySalesBuildingDescription;
         return this;
@@ -163,6 +178,7 @@ public class SearchPropertySalesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_property_sales.building_design")
     public String searchDbPropertySalesBuildingDesign;
+
     public SearchPropertySalesRequest withSearchDbPropertySalesBuildingDesign(String searchDbPropertySalesBuildingDesign) {
         this.searchDbPropertySalesBuildingDesign = searchDbPropertySalesBuildingDesign;
         return this;
@@ -173,6 +189,7 @@ public class SearchPropertySalesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_property_sales.buyer")
     public String searchDbPropertySalesBuyer;
+
     public SearchPropertySalesRequest withSearchDbPropertySalesBuyer(String searchDbPropertySalesBuyer) {
         this.searchDbPropertySalesBuyer = searchDbPropertySalesBuyer;
         return this;
@@ -183,6 +200,7 @@ public class SearchPropertySalesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_property_sales.city")
     public String searchDbPropertySalesCity;
+
     public SearchPropertySalesRequest withSearchDbPropertySalesCity(String searchDbPropertySalesCity) {
         this.searchDbPropertySalesCity = searchDbPropertySalesCity;
         return this;
@@ -193,6 +211,7 @@ public class SearchPropertySalesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_property_sales.location")
     public String searchDbPropertySalesLocation;
+
     public SearchPropertySalesRequest withSearchDbPropertySalesLocation(String searchDbPropertySalesLocation) {
         this.searchDbPropertySalesLocation = searchDbPropertySalesLocation;
         return this;
@@ -203,6 +222,7 @@ public class SearchPropertySalesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_property_sales.property_address")
     public String searchDbPropertySalesPropertyAddress;
+
     public SearchPropertySalesRequest withSearchDbPropertySalesPropertyAddress(String searchDbPropertySalesPropertyAddress) {
         this.searchDbPropertySalesPropertyAddress = searchDbPropertySalesPropertyAddress;
         return this;
@@ -213,6 +233,7 @@ public class SearchPropertySalesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_property_sales.sale_date")
     public String searchDbPropertySalesSaleDate;
+
     public SearchPropertySalesRequest withSearchDbPropertySalesSaleDate(String searchDbPropertySalesSaleDate) {
         this.searchDbPropertySalesSaleDate = searchDbPropertySalesSaleDate;
         return this;
@@ -223,6 +244,7 @@ public class SearchPropertySalesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_property_sales.sale_price")
     public Double searchDbPropertySalesSalePrice;
+
     public SearchPropertySalesRequest withSearchDbPropertySalesSalePrice(Double searchDbPropertySalesSalePrice) {
         this.searchDbPropertySalesSalePrice = searchDbPropertySalesSalePrice;
         return this;
@@ -233,6 +255,7 @@ public class SearchPropertySalesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_property_sales.seller")
     public String searchDbPropertySalesSeller;
+
     public SearchPropertySalesRequest withSearchDbPropertySalesSeller(String searchDbPropertySalesSeller) {
         this.searchDbPropertySalesSeller = searchDbPropertySalesSeller;
         return this;
@@ -243,6 +266,7 @@ public class SearchPropertySalesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_property_sales.subdivision")
     public String searchDbPropertySalesSubdivision;
+
     public SearchPropertySalesRequest withSearchDbPropertySalesSubdivision(String searchDbPropertySalesSubdivision) {
         this.searchDbPropertySalesSubdivision = searchDbPropertySalesSubdivision;
         return this;
@@ -253,6 +277,7 @@ public class SearchPropertySalesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_property_sales.type")
     public String searchDbPropertySalesType;
+
     public SearchPropertySalesRequest withSearchDbPropertySalesType(String searchDbPropertySalesType) {
         this.searchDbPropertySalesType = searchDbPropertySalesType;
         return this;
@@ -263,6 +288,7 @@ public class SearchPropertySalesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_property_sales.zipcode")
     public String searchDbPropertySalesZipcode;
+
     public SearchPropertySalesRequest withSearchDbPropertySalesZipcode(String searchDbPropertySalesZipcode) {
         this.searchDbPropertySalesZipcode = searchDbPropertySalesZipcode;
         return this;
@@ -273,6 +299,7 @@ public class SearchPropertySalesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
     public Long skip;
+
     public SearchPropertySalesRequest withSkip(Long skip) {
         this.skip = skip;
         return this;
@@ -283,6 +310,7 @@ public class SearchPropertySalesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public SearchPropertySalesRequest withText(String text) {
         this.text = text;
         return this;
@@ -293,9 +321,11 @@ public class SearchPropertySalesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public OffsetDateTime todate;
+
     public SearchPropertySalesRequest withTodate(OffsetDateTime todate) {
         this.todate = todate;
         return this;
     }
     
+    public SearchPropertySalesRequest(){}
 }

@@ -18,6 +18,7 @@ public class UpsertUser400ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public java.util.Map<String, String> fields;
+
     public UpsertUser400ApplicationJSONErrors withFields(java.util.Map<String, String> fields) {
         this.fields = fields;
         return this;
@@ -29,9 +30,11 @@ public class UpsertUser400ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public UpsertUser400ApplicationJSONErrorsParameters parameters;
+
     public UpsertUser400ApplicationJSONErrors withParameters(UpsertUser400ApplicationJSONErrorsParameters parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public UpsertUser400ApplicationJSONErrors(){}
 }

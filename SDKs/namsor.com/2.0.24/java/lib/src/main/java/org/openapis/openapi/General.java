@@ -52,11 +52,9 @@ public class General {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NameTypeResponse res = new org.openapis.openapi.models.operations.NameTypeResponse() {{
+        org.openapis.openapi.models.operations.NameTypeResponse res = new org.openapis.openapi.models.operations.NameTypeResponse(contentType, httpRes.statusCode()) {{
             properNounCategorizedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -96,11 +94,9 @@ public class General {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NameTypeBatchResponse res = new org.openapis.openapi.models.operations.NameTypeBatchResponse() {{
+        org.openapis.openapi.models.operations.NameTypeBatchResponse res = new org.openapis.openapi.models.operations.NameTypeBatchResponse(contentType, httpRes.statusCode()) {{
             batchProperNounCategorizedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -138,11 +134,9 @@ public class General {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NameTypeGeoResponse res = new org.openapis.openapi.models.operations.NameTypeGeoResponse() {{
+        org.openapis.openapi.models.operations.NameTypeGeoResponse res = new org.openapis.openapi.models.operations.NameTypeGeoResponse(contentType, httpRes.statusCode()) {{
             properNounCategorizedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -182,11 +176,9 @@ public class General {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NameTypeGeoBatchResponse res = new org.openapis.openapi.models.operations.NameTypeGeoBatchResponse() {{
+        org.openapis.openapi.models.operations.NameTypeGeoBatchResponse res = new org.openapis.openapi.models.operations.NameTypeGeoBatchResponse(contentType, httpRes.statusCode()) {{
             batchProperNounCategorizedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

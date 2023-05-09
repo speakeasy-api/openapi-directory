@@ -61,11 +61,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RealtimebiddingBuyersCreativesCreateResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBuyersCreativesCreateResponse() {{
+        org.openapis.openapi.models.operations.RealtimebiddingBuyersCreativesCreateResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBuyersCreativesCreateResponse(contentType, httpRes.statusCode()) {{
             creative = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RealtimebiddingBuyersCreativesListResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBuyersCreativesListResponse() {{
+        org.openapis.openapi.models.operations.RealtimebiddingBuyersCreativesListResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBuyersCreativesListResponse(contentType, httpRes.statusCode()) {{
             listCreativesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RealtimebiddingBuyersCreativesPatchResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBuyersCreativesPatchResponse() {{
+        org.openapis.openapi.models.operations.RealtimebiddingBuyersCreativesPatchResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBuyersCreativesPatchResponse(contentType, httpRes.statusCode()) {{
             creative = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RealtimebiddingBuyersListResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBuyersListResponse() {{
+        org.openapis.openapi.models.operations.RealtimebiddingBuyersListResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBuyersListResponse(contentType, httpRes.statusCode()) {{
             listBuyersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -249,11 +241,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RealtimebiddingBuyersUserListsCloseResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBuyersUserListsCloseResponse() {{
+        org.openapis.openapi.models.operations.RealtimebiddingBuyersUserListsCloseResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBuyersUserListsCloseResponse(contentType, httpRes.statusCode()) {{
             userList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -297,11 +287,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RealtimebiddingBuyersUserListsCreateResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBuyersUserListsCreateResponse() {{
+        org.openapis.openapi.models.operations.RealtimebiddingBuyersUserListsCreateResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBuyersUserListsCreateResponse(contentType, httpRes.statusCode()) {{
             userList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -343,11 +331,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RealtimebiddingBuyersUserListsGetResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBuyersUserListsGetResponse() {{
+        org.openapis.openapi.models.operations.RealtimebiddingBuyersUserListsGetResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBuyersUserListsGetResponse(contentType, httpRes.statusCode()) {{
             userList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -389,11 +375,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RealtimebiddingBuyersUserListsGetRemarketingTagResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBuyersUserListsGetRemarketingTagResponse() {{
+        org.openapis.openapi.models.operations.RealtimebiddingBuyersUserListsGetRemarketingTagResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBuyersUserListsGetRemarketingTagResponse(contentType, httpRes.statusCode()) {{
             getRemarketingTagResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -435,11 +419,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RealtimebiddingBuyersUserListsListResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBuyersUserListsListResponse() {{
+        org.openapis.openapi.models.operations.RealtimebiddingBuyersUserListsListResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBuyersUserListsListResponse(contentType, httpRes.statusCode()) {{
             listUserListsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -483,11 +465,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RealtimebiddingBuyersUserListsOpenResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBuyersUserListsOpenResponse() {{
+        org.openapis.openapi.models.operations.RealtimebiddingBuyersUserListsOpenResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBuyersUserListsOpenResponse(contentType, httpRes.statusCode()) {{
             userList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -531,11 +511,9 @@ public class Buyers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RealtimebiddingBuyersUserListsUpdateResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBuyersUserListsUpdateResponse() {{
+        org.openapis.openapi.models.operations.RealtimebiddingBuyersUserListsUpdateResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBuyersUserListsUpdateResponse(contentType, httpRes.statusCode()) {{
             userList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

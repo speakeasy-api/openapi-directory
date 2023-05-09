@@ -15,9 +15,11 @@ public class TripsTripDetails200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Result")
     public TripsTripDetails200ApplicationJSONResult result;
+
     public TripsTripDetails200ApplicationJSON withResult(TripsTripDetails200ApplicationJSONResult result) {
         this.result = result;
         return this;
     }
     
+    public TripsTripDetails200ApplicationJSON(){}
 }

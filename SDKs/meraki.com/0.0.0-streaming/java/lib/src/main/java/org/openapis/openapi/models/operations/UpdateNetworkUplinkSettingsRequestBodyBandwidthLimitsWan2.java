@@ -18,6 +18,7 @@ public class UpdateNetworkUplinkSettingsRequestBodyBandwidthLimitsWan2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limitDown")
     public Long limitDown;
+
     public UpdateNetworkUplinkSettingsRequestBodyBandwidthLimitsWan2 withLimitDown(Long limitDown) {
         this.limitDown = limitDown;
         return this;
@@ -29,9 +30,11 @@ public class UpdateNetworkUplinkSettingsRequestBodyBandwidthLimitsWan2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limitUp")
     public Long limitUp;
+
     public UpdateNetworkUplinkSettingsRequestBodyBandwidthLimitsWan2 withLimitUp(Long limitUp) {
         this.limitUp = limitUp;
         return this;
     }
     
+    public UpdateNetworkUplinkSettingsRequestBodyBandwidthLimitsWan2(){}
 }

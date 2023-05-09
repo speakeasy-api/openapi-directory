@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlaceSingleBetRequest {
@@ -12,6 +13,7 @@ public class PlaceSingleBetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public PlaceSingleBetRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class PlaceSingleBetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiSecret")
     public String apiSecret;
+
     public PlaceSingleBetRequest withApiSecret(String apiSecret) {
         this.apiSecret = apiSecret;
         return this;
@@ -32,6 +35,7 @@ public class PlaceSingleBetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiTicket")
     public String apiTicket;
+
     public PlaceSingleBetRequest withApiTicket(String apiTicket) {
         this.apiTicket = apiTicket;
         return this;
@@ -42,6 +46,7 @@ public class PlaceSingleBetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=exclude")
     public String[] exclude;
+
     public PlaceSingleBetRequest withExclude(String[] exclude) {
         this.exclude = exclude;
         return this;
@@ -52,6 +57,7 @@ public class PlaceSingleBetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=fields")
     public String[] fields;
+
     public PlaceSingleBetRequest withFields(String[] fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class PlaceSingleBetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=include")
     public String[] include;
+
     public PlaceSingleBetRequest withInclude(String[] include) {
         this.include = include;
         return this;
@@ -72,9 +79,16 @@ public class PlaceSingleBetRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SingleBetRequestBody singleBetRequestBody;
+
     public PlaceSingleBetRequest withSingleBetRequestBody(org.openapis.openapi.models.shared.SingleBetRequestBody singleBetRequestBody) {
         this.singleBetRequestBody = singleBetRequestBody;
         return this;
     }
     
+    public PlaceSingleBetRequest(@JsonProperty("apiKey") String apiKey, @JsonProperty("apiSecret") String apiSecret, @JsonProperty("apiTicket") String apiTicket, @JsonProperty("singleBetRequestBody") org.openapis.openapi.models.shared.SingleBetRequestBody singleBetRequestBody) {
+        this.apiKey = apiKey;
+        this.apiSecret = apiSecret;
+        this.apiTicket = apiTicket;
+        this.singleBetRequestBody = singleBetRequestBody;
+  }
 }

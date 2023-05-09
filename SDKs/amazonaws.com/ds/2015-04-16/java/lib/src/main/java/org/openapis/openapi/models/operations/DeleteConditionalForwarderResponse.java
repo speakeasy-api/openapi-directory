@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteConditionalForwarderResponse {
@@ -12,6 +13,7 @@ public class DeleteConditionalForwarderResponse {
      */
     
     public Object clientException;
+
     public DeleteConditionalForwarderResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteConditionalForwarderResponse {
     
     
     public String contentType;
+
     public DeleteConditionalForwarderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteConditionalForwarderResponse {
      */
     
     public java.util.Map<String, Object> deleteConditionalForwarderResult;
+
     public DeleteConditionalForwarderResponse withDeleteConditionalForwarderResult(java.util.Map<String, Object> deleteConditionalForwarderResult) {
         this.deleteConditionalForwarderResult = deleteConditionalForwarderResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteConditionalForwarderResponse {
      */
     
     public Object directoryUnavailableException;
+
     public DeleteConditionalForwarderResponse withDirectoryUnavailableException(Object directoryUnavailableException) {
         this.directoryUnavailableException = directoryUnavailableException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteConditionalForwarderResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public DeleteConditionalForwarderResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteConditionalForwarderResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteConditionalForwarderResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteConditionalForwarderResponse {
     
     
     public Integer statusCode;
+
     public DeleteConditionalForwarderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteConditionalForwarderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteConditionalForwarderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteConditionalForwarderResponse {
      */
     
     public Object serviceException;
+
     public DeleteConditionalForwarderResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteConditionalForwarderResponse {
      */
     
     public Object unsupportedOperationException;
+
     public DeleteConditionalForwarderResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public DeleteConditionalForwarderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

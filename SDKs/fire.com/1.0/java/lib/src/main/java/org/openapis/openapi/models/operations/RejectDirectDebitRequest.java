@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RejectDirectDebitRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=directDebitUuid")
     public String directDebitUuid;
+
     public RejectDirectDebitRequest withDirectDebitUuid(String directDebitUuid) {
         this.directDebitUuid = directDebitUuid;
         return this;
     }
     
+    public RejectDirectDebitRequest(@JsonProperty("directDebitUuid") String directDebitUuid) {
+        this.directDebitUuid = directDebitUuid;
+  }
 }

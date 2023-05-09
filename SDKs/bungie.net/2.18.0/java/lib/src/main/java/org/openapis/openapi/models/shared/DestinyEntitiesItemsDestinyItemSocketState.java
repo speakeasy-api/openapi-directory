@@ -16,6 +16,7 @@ public class DestinyEntitiesItemsDestinyItemSocketState {
      */
     
     public Integer[] enableFailIndexes;
+
     public DestinyEntitiesItemsDestinyItemSocketState withEnableFailIndexes(Integer[] enableFailIndexes) {
         this.enableFailIndexes = enableFailIndexes;
         return this;
@@ -27,6 +28,7 @@ public class DestinyEntitiesItemsDestinyItemSocketState {
      */
     
     public Boolean isEnabled;
+
     public DestinyEntitiesItemsDestinyItemSocketState withIsEnabled(Boolean isEnabled) {
         this.isEnabled = isEnabled;
         return this;
@@ -38,6 +40,7 @@ public class DestinyEntitiesItemsDestinyItemSocketState {
      */
     
     public Boolean isVisible;
+
     public DestinyEntitiesItemsDestinyItemSocketState withIsVisible(Boolean isVisible) {
         this.isVisible = isVisible;
         return this;
@@ -49,9 +52,11 @@ public class DestinyEntitiesItemsDestinyItemSocketState {
      */
     
     public Long plugHash;
+
     public DestinyEntitiesItemsDestinyItemSocketState withPlugHash(Long plugHash) {
         this.plugHash = plugHash;
         return this;
     }
     
+    public DestinyEntitiesItemsDestinyItemSocketState(){}
 }

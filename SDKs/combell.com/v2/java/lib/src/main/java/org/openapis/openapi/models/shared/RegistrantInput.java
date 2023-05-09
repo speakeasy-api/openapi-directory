@@ -15,6 +15,7 @@ public class RegistrantInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public RegistrantInput withAddress(String address) {
         this.address = address;
         return this;
@@ -26,6 +27,7 @@ public class RegistrantInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public RegistrantInput withCity(String city) {
         this.city = city;
         return this;
@@ -38,6 +40,7 @@ public class RegistrantInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_name")
     public String companyName;
+
     public RegistrantInput withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -50,6 +53,7 @@ public class RegistrantInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country_code")
     public String countryCode;
+
     public RegistrantInput withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -61,6 +65,7 @@ public class RegistrantInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public RegistrantInput withEmail(String email) {
         this.email = email;
         return this;
@@ -73,6 +78,7 @@ public class RegistrantInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enterprise_number")
     public String enterpriseNumber;
+
     public RegistrantInput withEnterpriseNumber(String enterpriseNumber) {
         this.enterpriseNumber = enterpriseNumber;
         return this;
@@ -85,6 +91,7 @@ public class RegistrantInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extra_fields")
     public ExtraField[] extraFields;
+
     public RegistrantInput withExtraFields(ExtraField[] extraFields) {
         this.extraFields = extraFields;
         return this;
@@ -97,6 +104,7 @@ public class RegistrantInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fax")
     public String fax;
+
     public RegistrantInput withFax(String fax) {
         this.fax = fax;
         return this;
@@ -108,6 +116,7 @@ public class RegistrantInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
     public String firstName;
+
     public RegistrantInput withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -120,6 +129,7 @@ public class RegistrantInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language_code")
     public String languageCode;
+
     public RegistrantInput withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -131,6 +141,7 @@ public class RegistrantInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
     public String lastName;
+
     public RegistrantInput withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -143,6 +154,7 @@ public class RegistrantInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public RegistrantInput withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -154,9 +166,11 @@ public class RegistrantInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postal_code")
     public String postalCode;
+
     public RegistrantInput withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
     }
     
+    public RegistrantInput(){}
 }

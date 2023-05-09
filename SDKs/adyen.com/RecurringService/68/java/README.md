@@ -15,14 +15,14 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 ```java
 package hello.world;
 
+import java.time.OffsetDateTime;
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.PostCreatePermitSecurity;
 import org.openapis.openapi.models.operations.PostCreatePermitResponse;
+import org.openapis.openapi.models.operations.PostCreatePermitSecurity;
+import org.openapis.openapi.models.shared.Amount;
 import org.openapis.openapi.models.shared.CreatePermitRequest;
 import org.openapis.openapi.models.shared.Permit;
 import org.openapis.openapi.models.shared.PermitRestriction;
-import org.openapis.openapi.models.shared.Amount;
 import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
 public class Application {
@@ -31,75 +31,72 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            org.openapis.openapi.models.shared.CreatePermitRequest req = new CreatePermitRequest() {{
-                merchantAccount = "corrupti";
-                permits = new org.openapis.openapi.models.shared.Permit[]{{
-                    add(new Permit() {{
-                        partnerId = "distinctio";
-                        profileReference = "quibusdam";
-                        restriction = new PermitRestriction() {{
-                            maxAmount = new Amount() {{
-                                currency = "unde";
-                                value = 857946;
-                            }};
-                            singleTransactionLimit = new Amount() {{
-                                currency = "corrupti";
-                                value = 847252;
-                            }};
-                            singleUse = false;
-                        }};
-                        resultKey = "vel";
-                        validTillDate = "2021-09-16T11:56:06.019Z";
-                    }}),
-                    add(new Permit() {{
-                        partnerId = "suscipit";
-                        profileReference = "iure";
-                        restriction = new PermitRestriction() {{
-                            maxAmount = new Amount() {{
-                                currency = "magnam";
-                                value = 891773;
-                            }};
-                            singleTransactionLimit = new Amount() {{
-                                currency = "ipsa";
-                                value = 963663;
-                            }};
-                            singleUse = false;
-                        }};
-                        resultKey = "tempora";
-                        validTillDate = "2022-07-10T15:39:12.517Z";
-                    }}),
-                    add(new Permit() {{
-                        partnerId = "minus";
-                        profileReference = "placeat";
-                        restriction = new PermitRestriction() {{
-                            maxAmount = new Amount() {{
-                                currency = "voluptatum";
-                                value = 479977;
-                            }};
-                            singleTransactionLimit = new Amount() {{
-                                currency = "excepturi";
-                                value = 392785;
-                            }};
-                            singleUse = false;
-                        }};
-                        resultKey = "recusandae";
-                        validTillDate = "2022-10-15T05:10:19.629Z";
-                    }}),
-                }};
-                recurringDetailReference = "quis";
-                shopperReference = "veritatis";
-            }}            
+            org.openapis.openapi.models.shared.CreatePermitRequest req = new CreatePermitRequest("corrupti",                 new org.openapis.openapi.models.shared.Permit[]{{
+                                add(new Permit() {{
+                                    partnerId = "distinctio";
+                                    profileReference = "quibusdam";
+                                    restriction = new PermitRestriction() {{
+                                        maxAmount = new Amount("corrupti", 847252L) {{
+                                            currency = "unde";
+                                            value = 857946L;
+                                        }};
+                                        singleTransactionLimit = new Amount("deserunt", 384382L) {{
+                                            currency = "vel";
+                                            value = 623564L;
+                                        }};
+                                        singleUse = false;
+                                    }};
+                                    resultKey = "iure";
+                                    validTillDate = OffsetDateTime.parse("2022-02-09T12:04:06.508Z");
+                                }}),
+                                add(new Permit() {{
+                                    partnerId = "ipsa";
+                                    profileReference = "delectus";
+                                    restriction = new PermitRestriction() {{
+                                        maxAmount = new Amount("molestiae", 791725L) {{
+                                            currency = "tempora";
+                                            value = 383441L;
+                                        }};
+                                        singleTransactionLimit = new Amount("iusto", 568045L) {{
+                                            currency = "placeat";
+                                            value = 528895L;
+                                        }};
+                                        singleUse = false;
+                                    }};
+                                    resultKey = "nisi";
+                                    validTillDate = OffsetDateTime.parse("2020-06-29T11:50:59.674Z");
+                                }}),
+                                add(new Permit() {{
+                                    partnerId = "ab";
+                                    profileReference = "quis";
+                                    restriction = new PermitRestriction() {{
+                                        maxAmount = new Amount("perferendis", 368241L) {{
+                                            currency = "veritatis";
+                                            value = 648172L;
+                                        }};
+                                        singleTransactionLimit = new Amount("quo", 140350L) {{
+                                            currency = "repellendus";
+                                            value = 957156L;
+                                        }};
+                                        singleUse = false;
+                                    }};
+                                    resultKey = "at";
+                                    validTillDate = OffsetDateTime.parse("2020-01-25T09:54:35.794Z");
+                                }}),
+                            }}, "molestiae", "quod");            
 
             PostCreatePermitResponse res = sdk.general.postCreatePermit(req, new PostCreatePermitSecurity() {{
                 apiKeyAuth = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.createPermitResult.isPresent()) {
+            if (res.createPermitResult != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -107,14 +104,14 @@ public class Application {
 ## Available Resources and Operations
 
 
-### general
+### [general](docs/general/README.md)
 
-* `postCreatePermit` - Create new permits linked to a recurring contract.
-* `postDisable` - Disable stored payment details
-* `postDisablePermit` - Disable an existing permit.
-* `postListRecurringDetails` - Get stored payment details
-* `postNotifyShopper` - Ask issuer to notify the shopper
-* `postScheduleAccountUpdater` - Schedule running the Account Updater
+* [postCreatePermit](docs/general/README.md#postcreatepermit) - Create new permits linked to a recurring contract.
+* [postDisable](docs/general/README.md#postdisable) - Disable stored payment details
+* [postDisablePermit](docs/general/README.md#postdisablepermit) - Disable an existing permit.
+* [postListRecurringDetails](docs/general/README.md#postlistrecurringdetails) - Get stored payment details
+* [postNotifyShopper](docs/general/README.md#postnotifyshopper) - Ask issuer to notify the shopper
+* [postScheduleAccountUpdater](docs/general/README.md#postscheduleaccountupdater) - Schedule running the Account Updater
 <!-- End SDK Available Operations -->
 
 ### Maturity

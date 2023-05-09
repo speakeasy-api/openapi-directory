@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateConfiguredTableResponse {
@@ -12,6 +13,7 @@ public class CreateConfiguredTableResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateConfiguredTableResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateConfiguredTableResponse {
      */
     
     public Object conflictException;
+
     public CreateConfiguredTableResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateConfiguredTableResponse {
     
     
     public String contentType;
+
     public CreateConfiguredTableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateConfiguredTableResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateConfiguredTableOutput createConfiguredTableOutput;
+
     public CreateConfiguredTableResponse withCreateConfiguredTableOutput(org.openapis.openapi.models.shared.CreateConfiguredTableOutput createConfiguredTableOutput) {
         this.createConfiguredTableOutput = createConfiguredTableOutput;
         return this;
@@ -49,6 +54,7 @@ public class CreateConfiguredTableResponse {
      */
     
     public Object internalServerException;
+
     public CreateConfiguredTableResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateConfiguredTableResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateConfiguredTableResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateConfiguredTableResponse {
     
     
     public Integer statusCode;
+
     public CreateConfiguredTableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateConfiguredTableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateConfiguredTableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateConfiguredTableResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateConfiguredTableResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class CreateConfiguredTableResponse {
      */
     
     public Object throttlingException;
+
     public CreateConfiguredTableResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateConfiguredTableResponse {
      */
     
     public Object validationException;
+
     public CreateConfiguredTableResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateConfiguredTableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

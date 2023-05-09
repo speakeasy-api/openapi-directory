@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetChannelCatalogCategoriesResponse {
@@ -12,6 +13,7 @@ public class GetChannelCatalogCategoriesResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetChannelCatalogCategoriesResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetChannelCatalogCategoriesResponse {
     
     
     public String contentType;
+
     public GetChannelCatalogCategoriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetChannelCatalogCategoriesResponse {
     
     
     public Integer statusCode;
+
     public GetChannelCatalogCategoriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetChannelCatalogCategoriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetChannelCatalogCategoriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetChannelCatalogCategoriesResponse {
      */
     
     public org.openapis.openapi.models.shared.ChannelCatalogCategoryConfigurationList channelCatalogCategoryConfigurationList;
+
     public GetChannelCatalogCategoriesResponse withChannelCatalogCategoryConfigurationList(org.openapis.openapi.models.shared.ChannelCatalogCategoryConfigurationList channelCatalogCategoryConfigurationList) {
         this.channelCatalogCategoryConfigurationList = channelCatalogCategoryConfigurationList;
         return this;
     }
     
+    public GetChannelCatalogCategoriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopStreamProcessorResponse {
@@ -12,6 +13,7 @@ public class StopStreamProcessorResponse {
      */
     
     public Object accessDeniedException;
+
     public StopStreamProcessorResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class StopStreamProcessorResponse {
     
     
     public String contentType;
+
     public StopStreamProcessorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StopStreamProcessorResponse {
      */
     
     public Object internalServerError;
+
     public StopStreamProcessorResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class StopStreamProcessorResponse {
      */
     
     public Object invalidParameterException;
+
     public StopStreamProcessorResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class StopStreamProcessorResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public StopStreamProcessorResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -59,6 +65,7 @@ public class StopStreamProcessorResponse {
      */
     
     public Object resourceInUseException;
+
     public StopStreamProcessorResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -69,6 +76,7 @@ public class StopStreamProcessorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopStreamProcessorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class StopStreamProcessorResponse {
     
     
     public Integer statusCode;
+
     public StopStreamProcessorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class StopStreamProcessorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopStreamProcessorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class StopStreamProcessorResponse {
      */
     
     public java.util.Map<String, Object> stopStreamProcessorResponse;
+
     public StopStreamProcessorResponse withStopStreamProcessorResponse(java.util.Map<String, Object> stopStreamProcessorResponse) {
         this.stopStreamProcessorResponse = stopStreamProcessorResponse;
         return this;
@@ -103,9 +114,14 @@ public class StopStreamProcessorResponse {
      */
     
     public Object throttlingException;
+
     public StopStreamProcessorResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public StopStreamProcessorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateVpcLinkResponse {
@@ -12,6 +13,7 @@ public class UpdateVpcLinkResponse {
      */
     
     public Object badRequestException;
+
     public UpdateVpcLinkResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateVpcLinkResponse {
     
     
     public String contentType;
+
     public UpdateVpcLinkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateVpcLinkResponse {
      */
     
     public Object notFoundException;
+
     public UpdateVpcLinkResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateVpcLinkResponse {
     
     
     public Integer statusCode;
+
     public UpdateVpcLinkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateVpcLinkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateVpcLinkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateVpcLinkResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateVpcLinkResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -63,9 +70,14 @@ public class UpdateVpcLinkResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateVpcLinkResponse updateVpcLinkResponse;
+
     public UpdateVpcLinkResponse withUpdateVpcLinkResponse(org.openapis.openapi.models.shared.UpdateVpcLinkResponse updateVpcLinkResponse) {
         this.updateVpcLinkResponse = updateVpcLinkResponse;
         return this;
     }
     
+    public UpdateVpcLinkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

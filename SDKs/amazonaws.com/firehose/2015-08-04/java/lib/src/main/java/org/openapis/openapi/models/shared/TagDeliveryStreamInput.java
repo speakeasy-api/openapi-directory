@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TagDeliveryStreamInput {
     @JsonProperty("DeliveryStreamName")
     public String deliveryStreamName;
+
     public TagDeliveryStreamInput withDeliveryStreamName(String deliveryStreamName) {
         this.deliveryStreamName = deliveryStreamName;
         return this;
@@ -16,9 +17,14 @@ public class TagDeliveryStreamInput {
     
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public TagDeliveryStreamInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public TagDeliveryStreamInput(@JsonProperty("DeliveryStreamName") String deliveryStreamName, @JsonProperty("Tags") Tag[] tags) {
+        this.deliveryStreamName = deliveryStreamName;
+        this.tags = tags;
+  }
 }

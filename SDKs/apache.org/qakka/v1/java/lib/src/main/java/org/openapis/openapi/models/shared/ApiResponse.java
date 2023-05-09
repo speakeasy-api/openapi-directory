@@ -18,6 +18,7 @@ public class ApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Integer count;
+
     public ApiResponse withCount(Integer count) {
         this.count = count;
         return this;
@@ -29,6 +30,7 @@ public class ApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ApiResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -40,6 +42,7 @@ public class ApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queueMessages")
     public QueueMessage[] queueMessages;
+
     public ApiResponse withQueueMessages(QueueMessage[] queueMessages) {
         this.queueMessages = queueMessages;
         return this;
@@ -51,9 +54,11 @@ public class ApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queues")
     public Queue[] queues;
+
     public ApiResponse withQueues(Queue[] queues) {
         this.queues = queues;
         return this;
     }
     
+    public ApiResponse(){}
 }

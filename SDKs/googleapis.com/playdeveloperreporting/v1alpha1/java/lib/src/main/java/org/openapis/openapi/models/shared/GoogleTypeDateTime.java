@@ -18,6 +18,7 @@ public class GoogleTypeDateTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("day")
     public Integer day;
+
     public GoogleTypeDateTime withDay(Integer day) {
         this.day = day;
         return this;
@@ -29,6 +30,7 @@ public class GoogleTypeDateTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hours")
     public Integer hours;
+
     public GoogleTypeDateTime withHours(Integer hours) {
         this.hours = hours;
         return this;
@@ -40,6 +42,7 @@ public class GoogleTypeDateTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minutes")
     public Integer minutes;
+
     public GoogleTypeDateTime withMinutes(Integer minutes) {
         this.minutes = minutes;
         return this;
@@ -51,6 +54,7 @@ public class GoogleTypeDateTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("month")
     public Integer month;
+
     public GoogleTypeDateTime withMonth(Integer month) {
         this.month = month;
         return this;
@@ -62,6 +66,7 @@ public class GoogleTypeDateTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nanos")
     public Integer nanos;
+
     public GoogleTypeDateTime withNanos(Integer nanos) {
         this.nanos = nanos;
         return this;
@@ -73,6 +78,7 @@ public class GoogleTypeDateTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seconds")
     public Integer seconds;
+
     public GoogleTypeDateTime withSeconds(Integer seconds) {
         this.seconds = seconds;
         return this;
@@ -84,6 +90,7 @@ public class GoogleTypeDateTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public GoogleTypeTimeZone timeZone;
+
     public GoogleTypeDateTime withTimeZone(GoogleTypeTimeZone timeZone) {
         this.timeZone = timeZone;
         return this;
@@ -95,6 +102,7 @@ public class GoogleTypeDateTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utcOffset")
     public String utcOffset;
+
     public GoogleTypeDateTime withUtcOffset(String utcOffset) {
         this.utcOffset = utcOffset;
         return this;
@@ -106,9 +114,11 @@ public class GoogleTypeDateTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("year")
     public Integer year;
+
     public GoogleTypeDateTime withYear(Integer year) {
         this.year = year;
         return this;
     }
     
+    public GoogleTypeDateTime(){}
 }

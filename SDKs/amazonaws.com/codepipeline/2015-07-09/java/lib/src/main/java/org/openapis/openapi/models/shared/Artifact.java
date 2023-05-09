@@ -15,6 +15,7 @@ public class Artifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public ArtifactLocation location;
+
     public Artifact withLocation(ArtifactLocation location) {
         this.location = location;
         return this;
@@ -23,6 +24,7 @@ public class Artifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Artifact withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class Artifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revision")
     public String revision;
+
     public Artifact withRevision(String revision) {
         this.revision = revision;
         return this;
     }
     
+    public Artifact(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCallAnalyticsJobResponse {
@@ -12,6 +13,7 @@ public class GetCallAnalyticsJobResponse {
      */
     
     public Object badRequestException;
+
     public GetCallAnalyticsJobResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetCallAnalyticsJobResponse {
     
     
     public String contentType;
+
     public GetCallAnalyticsJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetCallAnalyticsJobResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCallAnalyticsJobResponse getCallAnalyticsJobResponse;
+
     public GetCallAnalyticsJobResponse withGetCallAnalyticsJobResponse(org.openapis.openapi.models.shared.GetCallAnalyticsJobResponse getCallAnalyticsJobResponse) {
         this.getCallAnalyticsJobResponse = getCallAnalyticsJobResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetCallAnalyticsJobResponse {
      */
     
     public Object internalFailureException;
+
     public GetCallAnalyticsJobResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class GetCallAnalyticsJobResponse {
      */
     
     public Object limitExceededException;
+
     public GetCallAnalyticsJobResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class GetCallAnalyticsJobResponse {
      */
     
     public Object notFoundException;
+
     public GetCallAnalyticsJobResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetCallAnalyticsJobResponse {
     
     
     public Integer statusCode;
+
     public GetCallAnalyticsJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetCallAnalyticsJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCallAnalyticsJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCallAnalyticsJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

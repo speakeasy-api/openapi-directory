@@ -15,9 +15,11 @@ public class RemoveAnalyticsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analyticsPropertyId")
     public String analyticsPropertyId;
+
     public RemoveAnalyticsRequest withAnalyticsPropertyId(String analyticsPropertyId) {
         this.analyticsPropertyId = analyticsPropertyId;
         return this;
     }
     
+    public RemoveAnalyticsRequest(){}
 }

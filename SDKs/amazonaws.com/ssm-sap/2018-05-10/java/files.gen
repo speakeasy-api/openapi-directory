@@ -117,4 +117,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/PutResourcePermissionOutput
 lib/src/main/java/org/openapis/openapi/models/shared/RegisterApplicationOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateApplicationSettingsOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

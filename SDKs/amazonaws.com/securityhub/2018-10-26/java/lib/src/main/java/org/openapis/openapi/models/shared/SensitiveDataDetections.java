@@ -15,6 +15,7 @@ public class SensitiveDataDetections {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public Long count;
+
     public SensitiveDataDetections withCount(Long count) {
         this.count = count;
         return this;
@@ -23,6 +24,7 @@ public class SensitiveDataDetections {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Occurrences")
     public Occurrences occurrences;
+
     public SensitiveDataDetections withOccurrences(Occurrences occurrences) {
         this.occurrences = occurrences;
         return this;
@@ -31,9 +33,11 @@ public class SensitiveDataDetections {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public SensitiveDataDetections withType(String type) {
         this.type = type;
         return this;
     }
     
+    public SensitiveDataDetections(){}
 }

@@ -17,6 +17,7 @@ public class PutOrdersIdShipOrderShipV2 {
      */
     @JsonProperty("trackingNumber")
     public String trackingNumber;
+
     public PutOrdersIdShipOrderShipV2 withTrackingNumber(String trackingNumber) {
         this.trackingNumber = trackingNumber;
         return this;
@@ -28,9 +29,13 @@ public class PutOrdersIdShipOrderShipV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weightOverride")
     public Float weightOverride;
+
     public PutOrdersIdShipOrderShipV2 withWeightOverride(Float weightOverride) {
         this.weightOverride = weightOverride;
         return this;
     }
     
+    public PutOrdersIdShipOrderShipV2(@JsonProperty("trackingNumber") String trackingNumber) {
+        this.trackingNumber = trackingNumber;
+  }
 }

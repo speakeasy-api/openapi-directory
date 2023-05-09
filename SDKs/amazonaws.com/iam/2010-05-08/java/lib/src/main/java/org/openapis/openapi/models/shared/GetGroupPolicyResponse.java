@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * GetGroupPolicyResponse - Contains the response to a successful &lt;a&gt;GetGroupPolicy&lt;/a&gt; request. 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetGroupPolicyResponse {
     
     public String groupName;
+
     public GetGroupPolicyResponse withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -19,6 +20,7 @@ public class GetGroupPolicyResponse {
     
     
     public String policyDocument;
+
     public GetGroupPolicyResponse withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
@@ -26,9 +28,15 @@ public class GetGroupPolicyResponse {
     
     
     public String policyName;
+
     public GetGroupPolicyResponse withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
     }
     
+    public GetGroupPolicyResponse(@JsonProperty("GroupName") String groupName, @JsonProperty("PolicyDocument") String policyDocument, @JsonProperty("PolicyName") String policyName) {
+        this.groupName = groupName;
+        this.policyDocument = policyDocument;
+        this.policyName = policyName;
+  }
 }

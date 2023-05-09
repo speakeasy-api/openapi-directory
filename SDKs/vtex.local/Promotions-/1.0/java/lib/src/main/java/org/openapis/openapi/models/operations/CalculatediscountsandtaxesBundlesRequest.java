@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CalculatediscountsandtaxesBundlesRequest {
@@ -12,6 +13,7 @@ public class CalculatediscountsandtaxesBundlesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public CalculatediscountsandtaxesBundlesRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -19,6 +21,7 @@ public class CalculatediscountsandtaxesBundlesRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CalculatediscountsandtaxesBundlesRequest calculatediscountsandtaxesBundlesRequest;
+
     public CalculatediscountsandtaxesBundlesRequest withCalculatediscountsandtaxesBundlesRequest(org.openapis.openapi.models.shared.CalculatediscountsandtaxesBundlesRequest calculatediscountsandtaxesBundlesRequest) {
         this.calculatediscountsandtaxesBundlesRequest = calculatediscountsandtaxesBundlesRequest;
         return this;
@@ -29,9 +32,15 @@ public class CalculatediscountsandtaxesBundlesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public CalculatediscountsandtaxesBundlesRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
     }
     
+    public CalculatediscountsandtaxesBundlesRequest(@JsonProperty("Accept") String accept, @JsonProperty("Calculatediscountsandtaxes_Bundles_Request") org.openapis.openapi.models.shared.CalculatediscountsandtaxesBundlesRequest calculatediscountsandtaxesBundlesRequest, @JsonProperty("Content-Type") String contentType) {
+        this.accept = accept;
+        this.calculatediscountsandtaxesBundlesRequest = calculatediscountsandtaxesBundlesRequest;
+        this.contentType = contentType;
+  }
 }

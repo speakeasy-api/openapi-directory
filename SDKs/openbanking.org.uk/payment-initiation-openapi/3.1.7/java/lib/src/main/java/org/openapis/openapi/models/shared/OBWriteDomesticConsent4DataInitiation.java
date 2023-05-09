@@ -17,6 +17,7 @@ public class OBWriteDomesticConsent4DataInitiation {
      */
     @JsonProperty("CreditorAccount")
     public OBWriteDomesticConsent4DataInitiationCreditorAccount creditorAccount;
+
     public OBWriteDomesticConsent4DataInitiation withCreditorAccount(OBWriteDomesticConsent4DataInitiationCreditorAccount creditorAccount) {
         this.creditorAccount = creditorAccount;
         return this;
@@ -28,6 +29,7 @@ public class OBWriteDomesticConsent4DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreditorPostalAddress")
     public OBPostalAddress6 creditorPostalAddress;
+
     public OBWriteDomesticConsent4DataInitiation withCreditorPostalAddress(OBPostalAddress6 creditorPostalAddress) {
         this.creditorPostalAddress = creditorPostalAddress;
         return this;
@@ -39,6 +41,7 @@ public class OBWriteDomesticConsent4DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DebtorAccount")
     public OBWriteDomesticConsent4DataInitiationDebtorAccount debtorAccount;
+
     public OBWriteDomesticConsent4DataInitiation withDebtorAccount(OBWriteDomesticConsent4DataInitiationDebtorAccount debtorAccount) {
         this.debtorAccount = debtorAccount;
         return this;
@@ -51,6 +54,7 @@ public class OBWriteDomesticConsent4DataInitiation {
      */
     @JsonProperty("EndToEndIdentification")
     public String endToEndIdentification;
+
     public OBWriteDomesticConsent4DataInitiation withEndToEndIdentification(String endToEndIdentification) {
         this.endToEndIdentification = endToEndIdentification;
         return this;
@@ -62,6 +66,7 @@ public class OBWriteDomesticConsent4DataInitiation {
      */
     @JsonProperty("InstructedAmount")
     public OBWriteDomesticConsent4DataInitiationInstructedAmount instructedAmount;
+
     public OBWriteDomesticConsent4DataInitiation withInstructedAmount(OBWriteDomesticConsent4DataInitiationInstructedAmount instructedAmount) {
         this.instructedAmount = instructedAmount;
         return this;
@@ -73,6 +78,7 @@ public class OBWriteDomesticConsent4DataInitiation {
      */
     @JsonProperty("InstructionIdentification")
     public String instructionIdentification;
+
     public OBWriteDomesticConsent4DataInitiation withInstructionIdentification(String instructionIdentification) {
         this.instructionIdentification = instructionIdentification;
         return this;
@@ -85,6 +91,7 @@ public class OBWriteDomesticConsent4DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalInstrument")
     public String localInstrument;
+
     public OBWriteDomesticConsent4DataInitiation withLocalInstrument(String localInstrument) {
         this.localInstrument = localInstrument;
         return this;
@@ -96,6 +103,7 @@ public class OBWriteDomesticConsent4DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemittanceInformation")
     public OBWriteDomesticConsent4DataInitiationRemittanceInformation remittanceInformation;
+
     public OBWriteDomesticConsent4DataInitiation withRemittanceInformation(OBWriteDomesticConsent4DataInitiationRemittanceInformation remittanceInformation) {
         this.remittanceInformation = remittanceInformation;
         return this;
@@ -107,9 +115,16 @@ public class OBWriteDomesticConsent4DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupplementaryData")
     public java.util.Map<String, Object> supplementaryData;
+
     public OBWriteDomesticConsent4DataInitiation withSupplementaryData(java.util.Map<String, Object> supplementaryData) {
         this.supplementaryData = supplementaryData;
         return this;
     }
     
+    public OBWriteDomesticConsent4DataInitiation(@JsonProperty("CreditorAccount") OBWriteDomesticConsent4DataInitiationCreditorAccount creditorAccount, @JsonProperty("EndToEndIdentification") String endToEndIdentification, @JsonProperty("InstructedAmount") OBWriteDomesticConsent4DataInitiationInstructedAmount instructedAmount, @JsonProperty("InstructionIdentification") String instructionIdentification) {
+        this.creditorAccount = creditorAccount;
+        this.endToEndIdentification = endToEndIdentification;
+        this.instructedAmount = instructedAmount;
+        this.instructionIdentification = instructionIdentification;
+  }
 }

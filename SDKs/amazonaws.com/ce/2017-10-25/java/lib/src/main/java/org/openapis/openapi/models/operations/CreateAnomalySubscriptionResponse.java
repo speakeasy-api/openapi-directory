@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAnomalySubscriptionResponse {
     
     public String contentType;
+
     public CreateAnomalySubscriptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateAnomalySubscriptionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAnomalySubscriptionResponse createAnomalySubscriptionResponse;
+
     public CreateAnomalySubscriptionResponse withCreateAnomalySubscriptionResponse(org.openapis.openapi.models.shared.CreateAnomalySubscriptionResponse createAnomalySubscriptionResponse) {
         this.createAnomalySubscriptionResponse = createAnomalySubscriptionResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateAnomalySubscriptionResponse {
      */
     
     public Object limitExceededException;
+
     public CreateAnomalySubscriptionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -36,6 +40,7 @@ public class CreateAnomalySubscriptionResponse {
     
     
     public Integer statusCode;
+
     public CreateAnomalySubscriptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class CreateAnomalySubscriptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAnomalySubscriptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class CreateAnomalySubscriptionResponse {
      */
     
     public Object unknownMonitorException;
+
     public CreateAnomalySubscriptionResponse withUnknownMonitorException(Object unknownMonitorException) {
         this.unknownMonitorException = unknownMonitorException;
         return this;
     }
     
+    public CreateAnomalySubscriptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

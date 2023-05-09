@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class RoleAssignment {
     /**
-     * The unique ID of the entity this role is assigned to\u2014either the `user_id` of a user or the `uniqueId` of a service account, as defined in [Identity and Access Management (IAM)](https://cloud.google.com/iam/docs/reference/rest/v1/projects.serviceAccounts).
+     * The unique ID of the entity this role is assigned to\u2014either the `user_id` of a user, the `group_id` of a group, or the `uniqueId` of a service account as defined in [Identity and Access Management (IAM)](https://cloud.google.com/iam/docs/reference/rest/v1/projects.serviceAccounts).
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignedTo")
     public String assignedTo;
+
     public RoleAssignment withAssignedTo(String assignedTo) {
         this.assignedTo = assignedTo;
         return this;
@@ -29,6 +30,7 @@ public class RoleAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assigneeType")
     public RoleAssignmentAssigneeTypeEnum assigneeType;
+
     public RoleAssignment withAssigneeType(RoleAssignmentAssigneeTypeEnum assigneeType) {
         this.assigneeType = assigneeType;
         return this;
@@ -40,6 +42,7 @@ public class RoleAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public RoleAssignment withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -51,6 +54,7 @@ public class RoleAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public RoleAssignment withKind(String kind) {
         this.kind = kind;
         return this;
@@ -62,6 +66,7 @@ public class RoleAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orgUnitId")
     public String orgUnitId;
+
     public RoleAssignment withOrgUnitId(String orgUnitId) {
         this.orgUnitId = orgUnitId;
         return this;
@@ -73,6 +78,7 @@ public class RoleAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleAssignmentId")
     public String roleAssignmentId;
+
     public RoleAssignment withRoleAssignmentId(String roleAssignmentId) {
         this.roleAssignmentId = roleAssignmentId;
         return this;
@@ -84,6 +90,7 @@ public class RoleAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleId")
     public String roleId;
+
     public RoleAssignment withRoleId(String roleId) {
         this.roleId = roleId;
         return this;
@@ -95,9 +102,11 @@ public class RoleAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scopeType")
     public String scopeType;
+
     public RoleAssignment withScopeType(String scopeType) {
         this.scopeType = scopeType;
         return this;
     }
     
+    public RoleAssignment(){}
 }

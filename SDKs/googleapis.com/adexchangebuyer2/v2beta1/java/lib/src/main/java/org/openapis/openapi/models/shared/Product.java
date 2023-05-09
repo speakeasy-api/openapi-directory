@@ -18,6 +18,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableEndTime")
     public String availableEndTime;
+
     public Product withAvailableEndTime(String availableEndTime) {
         this.availableEndTime = availableEndTime;
         return this;
@@ -29,6 +30,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableStartTime")
     public String availableStartTime;
+
     public Product withAvailableStartTime(String availableStartTime) {
         this.availableStartTime = availableStartTime;
         return this;
@@ -40,6 +42,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Product withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -51,6 +54,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creatorContacts")
     public ContactInformation[] creatorContacts;
+
     public Product withCreatorContacts(ContactInformation[] creatorContacts) {
         this.creatorContacts = creatorContacts;
         return this;
@@ -62,6 +66,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Product withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -73,6 +78,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasCreatorSignedOff")
     public Boolean hasCreatorSignedOff;
+
     public Product withHasCreatorSignedOff(Boolean hasCreatorSignedOff) {
         this.hasCreatorSignedOff = hasCreatorSignedOff;
         return this;
@@ -84,6 +90,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public Product withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -95,6 +102,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productRevision")
     public String productRevision;
+
     public Product withProductRevision(String productRevision) {
         this.productRevision = productRevision;
         return this;
@@ -106,6 +114,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisherProfileId")
     public String publisherProfileId;
+
     public Product withPublisherProfileId(String publisherProfileId) {
         this.publisherProfileId = publisherProfileId;
         return this;
@@ -117,6 +126,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seller")
     public Seller seller;
+
     public Product withSeller(Seller seller) {
         this.seller = seller;
         return this;
@@ -128,6 +138,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syndicationProduct")
     public ProductSyndicationProductEnum syndicationProduct;
+
     public Product withSyndicationProduct(ProductSyndicationProductEnum syndicationProduct) {
         this.syndicationProduct = syndicationProduct;
         return this;
@@ -139,6 +150,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingCriterion")
     public TargetingCriteria[] targetingCriterion;
+
     public Product withTargetingCriterion(TargetingCriteria[] targetingCriterion) {
         this.targetingCriterion = targetingCriterion;
         return this;
@@ -150,6 +162,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terms")
     public DealTerms terms;
+
     public Product withTerms(DealTerms terms) {
         this.terms = terms;
         return this;
@@ -161,6 +174,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Product withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -172,9 +186,11 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webPropertyCode")
     public String webPropertyCode;
+
     public Product withWebPropertyCode(String webPropertyCode) {
         this.webPropertyCode = webPropertyCode;
         return this;
     }
     
+    public Product(){}
 }

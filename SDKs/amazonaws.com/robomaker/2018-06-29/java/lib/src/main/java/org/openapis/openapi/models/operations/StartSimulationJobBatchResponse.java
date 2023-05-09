@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartSimulationJobBatchResponse {
     
     public String contentType;
+
     public StartSimulationJobBatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartSimulationJobBatchResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public StartSimulationJobBatchResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -29,6 +32,7 @@ public class StartSimulationJobBatchResponse {
      */
     
     public Object internalServerException;
+
     public StartSimulationJobBatchResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class StartSimulationJobBatchResponse {
      */
     
     public Object invalidParameterException;
+
     public StartSimulationJobBatchResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class StartSimulationJobBatchResponse {
      */
     
     public Object limitExceededException;
+
     public StartSimulationJobBatchResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class StartSimulationJobBatchResponse {
      */
     
     public org.openapis.openapi.models.shared.StartSimulationJobBatchResponse startSimulationJobBatchResponse;
+
     public StartSimulationJobBatchResponse withStartSimulationJobBatchResponse(org.openapis.openapi.models.shared.StartSimulationJobBatchResponse startSimulationJobBatchResponse) {
         this.startSimulationJobBatchResponse = startSimulationJobBatchResponse;
         return this;
@@ -66,6 +73,7 @@ public class StartSimulationJobBatchResponse {
     
     
     public Integer statusCode;
+
     public StartSimulationJobBatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class StartSimulationJobBatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartSimulationJobBatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class StartSimulationJobBatchResponse {
      */
     
     public Object throttlingException;
+
     public StartSimulationJobBatchResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public StartSimulationJobBatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class UpdateWorkspace403ApplicationJSONError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public UpdateWorkspace403ApplicationJSONError withMessage(String message) {
         this.message = message;
         return this;
@@ -20,9 +21,11 @@ public class UpdateWorkspace403ApplicationJSONError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateWorkspace403ApplicationJSONError withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateWorkspace403ApplicationJSONError(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCoreDevicesResponse {
@@ -12,6 +13,7 @@ public class ListCoreDevicesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListCoreDevicesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListCoreDevicesResponse {
     
     
     public String contentType;
+
     public ListCoreDevicesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListCoreDevicesResponse {
      */
     
     public Object internalServerException;
+
     public ListCoreDevicesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListCoreDevicesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCoreDevicesResponse listCoreDevicesResponse;
+
     public ListCoreDevicesResponse withListCoreDevicesResponse(org.openapis.openapi.models.shared.ListCoreDevicesResponse listCoreDevicesResponse) {
         this.listCoreDevicesResponse = listCoreDevicesResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListCoreDevicesResponse {
     
     
     public Integer statusCode;
+
     public ListCoreDevicesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListCoreDevicesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCoreDevicesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListCoreDevicesResponse {
      */
     
     public Object throttlingException;
+
     public ListCoreDevicesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListCoreDevicesResponse {
      */
     
     public Object validationException;
+
     public ListCoreDevicesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListCoreDevicesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

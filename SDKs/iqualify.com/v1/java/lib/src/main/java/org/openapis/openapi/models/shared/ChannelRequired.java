@@ -12,6 +12,7 @@ public class ChannelRequired {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isBroadcastOnly")
     public Boolean isBroadcastOnly;
+
     public ChannelRequired withIsBroadcastOnly(Boolean isBroadcastOnly) {
         this.isBroadcastOnly = isBroadcastOnly;
         return this;
@@ -19,9 +20,13 @@ public class ChannelRequired {
     
     @JsonProperty("title")
     public String title;
+
     public ChannelRequired withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ChannelRequired(@JsonProperty("title") String title) {
+        this.title = title;
+  }
 }

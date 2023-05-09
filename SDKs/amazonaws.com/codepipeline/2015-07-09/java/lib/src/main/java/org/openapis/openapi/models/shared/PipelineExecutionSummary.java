@@ -22,6 +22,7 @@ public class PipelineExecutionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public PipelineExecutionSummary withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -30,6 +31,7 @@ public class PipelineExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineExecutionId")
     public String pipelineExecutionId;
+
     public PipelineExecutionSummary withPipelineExecutionId(String pipelineExecutionId) {
         this.pipelineExecutionId = pipelineExecutionId;
         return this;
@@ -38,6 +40,7 @@ public class PipelineExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceRevisions")
     public SourceRevision[] sourceRevisions;
+
     public PipelineExecutionSummary withSourceRevisions(SourceRevision[] sourceRevisions) {
         this.sourceRevisions = sourceRevisions;
         return this;
@@ -48,6 +51,7 @@ public class PipelineExecutionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public PipelineExecutionSummary withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -56,6 +60,7 @@ public class PipelineExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PipelineExecutionStatusEnum status;
+
     public PipelineExecutionSummary withStatus(PipelineExecutionStatusEnum status) {
         this.status = status;
         return this;
@@ -64,6 +69,7 @@ public class PipelineExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stopTrigger")
     public StopExecutionTrigger stopTrigger;
+
     public PipelineExecutionSummary withStopTrigger(StopExecutionTrigger stopTrigger) {
         this.stopTrigger = stopTrigger;
         return this;
@@ -72,9 +78,11 @@ public class PipelineExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trigger")
     public ExecutionTrigger trigger;
+
     public PipelineExecutionSummary withTrigger(ExecutionTrigger trigger) {
         this.trigger = trigger;
         return this;
     }
     
+    public PipelineExecutionSummary(){}
 }

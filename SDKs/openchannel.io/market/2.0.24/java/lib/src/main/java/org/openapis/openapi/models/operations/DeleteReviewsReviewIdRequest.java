@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteReviewsReviewIdRequest {
@@ -12,6 +13,7 @@ public class DeleteReviewsReviewIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reviewId")
     public String reviewId;
+
     public DeleteReviewsReviewIdRequest withReviewId(String reviewId) {
         this.reviewId = reviewId;
         return this;
@@ -22,6 +24,7 @@ public class DeleteReviewsReviewIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userAccountId")
     public String userAccountId;
+
     public DeleteReviewsReviewIdRequest withUserAccountId(String userAccountId) {
         this.userAccountId = userAccountId;
         return this;
@@ -32,9 +35,14 @@ public class DeleteReviewsReviewIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
     public String userId;
+
     public DeleteReviewsReviewIdRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public DeleteReviewsReviewIdRequest(@JsonProperty("reviewId") String reviewId, @JsonProperty("userId") String userId) {
+        this.reviewId = reviewId;
+        this.userId = userId;
+  }
 }

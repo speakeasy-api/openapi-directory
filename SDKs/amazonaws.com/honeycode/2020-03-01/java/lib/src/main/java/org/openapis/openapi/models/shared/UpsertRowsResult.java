@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpsertRowsResult {
     @JsonProperty("rowIds")
     public String[] rowIds;
+
     public UpsertRowsResult withRowIds(String[] rowIds) {
         this.rowIds = rowIds;
         return this;
@@ -19,9 +20,14 @@ public class UpsertRowsResult {
     
     @JsonProperty("upsertAction")
     public UpsertActionEnum upsertAction;
+
     public UpsertRowsResult withUpsertAction(UpsertActionEnum upsertAction) {
         this.upsertAction = upsertAction;
         return this;
     }
     
+    public UpsertRowsResult(@JsonProperty("rowIds") String[] rowIds, @JsonProperty("upsertAction") UpsertActionEnum upsertAction) {
+        this.rowIds = rowIds;
+        this.upsertAction = upsertAction;
+  }
 }

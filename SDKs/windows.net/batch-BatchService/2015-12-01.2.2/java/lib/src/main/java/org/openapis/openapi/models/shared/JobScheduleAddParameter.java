@@ -18,6 +18,7 @@ public class JobScheduleAddParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public JobScheduleAddParameter withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -28,6 +29,7 @@ public class JobScheduleAddParameter {
      */
     @JsonProperty("id")
     public String id;
+
     public JobScheduleAddParameter withId(String id) {
         this.id = id;
         return this;
@@ -38,6 +40,7 @@ public class JobScheduleAddParameter {
      */
     @JsonProperty("jobSpecification")
     public JobSpecification jobSpecification;
+
     public JobScheduleAddParameter withJobSpecification(JobSpecification jobSpecification) {
         this.jobSpecification = jobSpecification;
         return this;
@@ -49,6 +52,7 @@ public class JobScheduleAddParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public MetadataItem[] metadata;
+
     public JobScheduleAddParameter withMetadata(MetadataItem[] metadata) {
         this.metadata = metadata;
         return this;
@@ -59,9 +63,15 @@ public class JobScheduleAddParameter {
      */
     @JsonProperty("schedule")
     public Schedule schedule;
+
     public JobScheduleAddParameter withSchedule(Schedule schedule) {
         this.schedule = schedule;
         return this;
     }
     
+    public JobScheduleAddParameter(@JsonProperty("id") String id, @JsonProperty("jobSpecification") JobSpecification jobSpecification, @JsonProperty("schedule") Schedule schedule) {
+        this.id = id;
+        this.jobSpecification = jobSpecification;
+        this.schedule = schedule;
+  }
 }

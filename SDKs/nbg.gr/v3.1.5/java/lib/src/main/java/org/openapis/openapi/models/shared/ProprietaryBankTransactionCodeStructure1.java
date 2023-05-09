@@ -17,6 +17,7 @@ public class ProprietaryBankTransactionCodeStructure1 {
      */
     @JsonProperty("Code")
     public String code;
+
     public ProprietaryBankTransactionCodeStructure1 withCode(String code) {
         this.code = code;
         return this;
@@ -28,9 +29,13 @@ public class ProprietaryBankTransactionCodeStructure1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Issuer")
     public String issuer;
+
     public ProprietaryBankTransactionCodeStructure1 withIssuer(String issuer) {
         this.issuer = issuer;
         return this;
     }
     
+    public ProprietaryBankTransactionCodeStructure1(@JsonProperty("Code") String code) {
+        this.code = code;
+  }
 }

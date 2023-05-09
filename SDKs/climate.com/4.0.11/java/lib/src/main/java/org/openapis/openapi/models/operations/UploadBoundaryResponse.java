@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UploadBoundaryResponse {
     
     public String contentType;
+
     public UploadBoundaryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UploadBoundaryResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public UploadBoundaryResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class UploadBoundaryResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public UploadBoundaryResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class UploadBoundaryResponse {
     
     
     public Integer statusCode;
+
     public UploadBoundaryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class UploadBoundaryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UploadBoundaryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class UploadBoundaryResponse {
      */
     
     public org.openapis.openapi.models.shared.UploadedBoundaryId uploadedBoundaryId;
+
     public UploadBoundaryResponse withUploadedBoundaryId(org.openapis.openapi.models.shared.UploadedBoundaryId uploadedBoundaryId) {
         this.uploadedBoundaryId = uploadedBoundaryId;
         return this;
     }
     
+    public UploadBoundaryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

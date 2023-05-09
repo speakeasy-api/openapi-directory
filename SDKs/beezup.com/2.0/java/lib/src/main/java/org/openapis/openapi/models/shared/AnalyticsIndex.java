@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AnalyticsIndex {
     @JsonProperty("links")
     public AnalyticsIndexLinks links;
+
     public AnalyticsIndex withLinks(AnalyticsIndexLinks links) {
         this.links = links;
         return this;
@@ -22,6 +23,7 @@ public class AnalyticsIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lovLinks")
     public AnalyticsIndexLovLinks lovLinks;
+
     public AnalyticsIndex withLovLinks(AnalyticsIndexLovLinks lovLinks) {
         this.lovLinks = lovLinks;
         return this;
@@ -29,9 +31,14 @@ public class AnalyticsIndex {
     
     @JsonProperty("stores")
     public AnalyticsStoreIndex[] stores;
+
     public AnalyticsIndex withStores(AnalyticsStoreIndex[] stores) {
         this.stores = stores;
         return this;
     }
     
+    public AnalyticsIndex(@JsonProperty("links") AnalyticsIndexLinks links, @JsonProperty("stores") AnalyticsStoreIndex[] stores) {
+        this.links = links;
+        this.stores = stores;
+  }
 }

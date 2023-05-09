@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class TypeSummary {
     
     public String defaultVersionId;
+
     public TypeSummary withDefaultVersionId(String defaultVersionId) {
         this.defaultVersionId = defaultVersionId;
         return this;
@@ -19,6 +20,7 @@ public class TypeSummary {
     
     
     public String description;
+
     public TypeSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class TypeSummary {
     
     
     public Boolean isActivated;
+
     public TypeSummary withIsActivated(Boolean isActivated) {
         this.isActivated = isActivated;
         return this;
@@ -33,6 +36,7 @@ public class TypeSummary {
     
     
     public OffsetDateTime lastUpdated;
+
     public TypeSummary withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -40,6 +44,7 @@ public class TypeSummary {
     
     
     public String latestPublicVersion;
+
     public TypeSummary withLatestPublicVersion(String latestPublicVersion) {
         this.latestPublicVersion = latestPublicVersion;
         return this;
@@ -47,6 +52,7 @@ public class TypeSummary {
     
     
     public String originalTypeName;
+
     public TypeSummary withOriginalTypeName(String originalTypeName) {
         this.originalTypeName = originalTypeName;
         return this;
@@ -54,6 +60,7 @@ public class TypeSummary {
     
     
     public String publicVersionNumber;
+
     public TypeSummary withPublicVersionNumber(String publicVersionNumber) {
         this.publicVersionNumber = publicVersionNumber;
         return this;
@@ -61,6 +68,7 @@ public class TypeSummary {
     
     
     public String publisherId;
+
     public TypeSummary withPublisherId(String publisherId) {
         this.publisherId = publisherId;
         return this;
@@ -68,6 +76,7 @@ public class TypeSummary {
     
     
     public IdentityProviderEnum publisherIdentity;
+
     public TypeSummary withPublisherIdentity(IdentityProviderEnum publisherIdentity) {
         this.publisherIdentity = publisherIdentity;
         return this;
@@ -75,6 +84,7 @@ public class TypeSummary {
     
     
     public String publisherName;
+
     public TypeSummary withPublisherName(String publisherName) {
         this.publisherName = publisherName;
         return this;
@@ -82,6 +92,7 @@ public class TypeSummary {
     
     
     public RegistryTypeEnum type;
+
     public TypeSummary withType(RegistryTypeEnum type) {
         this.type = type;
         return this;
@@ -89,6 +100,7 @@ public class TypeSummary {
     
     
     public String typeArn;
+
     public TypeSummary withTypeArn(String typeArn) {
         this.typeArn = typeArn;
         return this;
@@ -96,9 +108,11 @@ public class TypeSummary {
     
     
     public String typeName;
+
     public TypeSummary withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
     }
     
+    public TypeSummary(){}
 }

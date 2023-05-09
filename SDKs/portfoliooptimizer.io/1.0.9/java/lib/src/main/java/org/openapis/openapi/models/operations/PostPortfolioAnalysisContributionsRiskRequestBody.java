@@ -14,6 +14,7 @@ public class PostPortfolioAnalysisContributionsRiskRequestBody {
      */
     @JsonProperty("assets")
     public Long assets;
+
     public PostPortfolioAnalysisContributionsRiskRequestBody withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -24,6 +25,7 @@ public class PostPortfolioAnalysisContributionsRiskRequestBody {
      */
     @JsonProperty("assetsCovarianceMatrix")
     public Double[][] assetsCovarianceMatrix;
+
     public PostPortfolioAnalysisContributionsRiskRequestBody withAssetsCovarianceMatrix(Double[][] assetsCovarianceMatrix) {
         this.assetsCovarianceMatrix = assetsCovarianceMatrix;
         return this;
@@ -32,6 +34,7 @@ public class PostPortfolioAnalysisContributionsRiskRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetsGroups")
     public Long[][] assetsGroups;
+
     public PostPortfolioAnalysisContributionsRiskRequestBody withAssetsGroups(Long[][] assetsGroups) {
         this.assetsGroups = assetsGroups;
         return this;
@@ -39,9 +42,15 @@ public class PostPortfolioAnalysisContributionsRiskRequestBody {
     
     @JsonProperty("portfolios")
     public PostPortfolioAnalysisContributionsRiskRequestBodyPortfolios[] portfolios;
+
     public PostPortfolioAnalysisContributionsRiskRequestBody withPortfolios(PostPortfolioAnalysisContributionsRiskRequestBodyPortfolios[] portfolios) {
         this.portfolios = portfolios;
         return this;
     }
     
+    public PostPortfolioAnalysisContributionsRiskRequestBody(@JsonProperty("assets") Long assets, @JsonProperty("assetsCovarianceMatrix") Double[][] assetsCovarianceMatrix, @JsonProperty("portfolios") PostPortfolioAnalysisContributionsRiskRequestBodyPortfolios[] portfolios) {
+        this.assets = assets;
+        this.assetsCovarianceMatrix = assetsCovarianceMatrix;
+        this.portfolios = portfolios;
+  }
 }

@@ -15,6 +15,7 @@ public class ECSServiceRecommendedOptionProjectedMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectedMetrics")
     public ECSServiceProjectedMetric[] projectedMetrics;
+
     public ECSServiceRecommendedOptionProjectedMetric withProjectedMetrics(ECSServiceProjectedMetric[] projectedMetrics) {
         this.projectedMetrics = projectedMetrics;
         return this;
@@ -23,6 +24,7 @@ public class ECSServiceRecommendedOptionProjectedMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendedCpuUnits")
     public Long recommendedCpuUnits;
+
     public ECSServiceRecommendedOptionProjectedMetric withRecommendedCpuUnits(Long recommendedCpuUnits) {
         this.recommendedCpuUnits = recommendedCpuUnits;
         return this;
@@ -31,9 +33,11 @@ public class ECSServiceRecommendedOptionProjectedMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendedMemorySize")
     public Long recommendedMemorySize;
+
     public ECSServiceRecommendedOptionProjectedMetric withRecommendedMemorySize(Long recommendedMemorySize) {
         this.recommendedMemorySize = recommendedMemorySize;
         return this;
     }
     
+    public ECSServiceRecommendedOptionProjectedMetric(){}
 }

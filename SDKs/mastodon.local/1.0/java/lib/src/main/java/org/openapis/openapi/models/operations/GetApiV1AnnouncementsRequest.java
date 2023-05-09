@@ -12,9 +12,11 @@ public class GetApiV1AnnouncementsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=with_dismissed")
     public Boolean withDismissed;
+
     public GetApiV1AnnouncementsRequest withWithDismissed(Boolean withDismissed) {
         this.withDismissed = withDismissed;
         return this;
     }
     
+    public GetApiV1AnnouncementsRequest(){}
 }

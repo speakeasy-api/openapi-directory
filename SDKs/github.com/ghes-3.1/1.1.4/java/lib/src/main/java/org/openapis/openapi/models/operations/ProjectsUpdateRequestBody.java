@@ -15,6 +15,7 @@ public class ProjectsUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public ProjectsUpdateRequestBody withBody(String body) {
         this.body = body;
         return this;
@@ -26,6 +27,7 @@ public class ProjectsUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProjectsUpdateRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +39,7 @@ public class ProjectsUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_permission")
     public ProjectsUpdateRequestBodyOrganizationPermissionEnum organizationPermission;
+
     public ProjectsUpdateRequestBody withOrganizationPermission(ProjectsUpdateRequestBodyOrganizationPermissionEnum organizationPermission) {
         this.organizationPermission = organizationPermission;
         return this;
@@ -48,6 +51,7 @@ public class ProjectsUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("private")
     public Boolean private_;
+
     public ProjectsUpdateRequestBody withPrivate(Boolean private_) {
         this.private_ = private_;
         return this;
@@ -59,9 +63,11 @@ public class ProjectsUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public ProjectsUpdateRequestBody withState(String state) {
         this.state = state;
         return this;
     }
     
+    public ProjectsUpdateRequestBody(){}
 }

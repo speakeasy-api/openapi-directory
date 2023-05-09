@@ -18,6 +18,7 @@ public class ListLoyaltyProgramsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public ListLoyaltyProgramsResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -29,9 +30,11 @@ public class ListLoyaltyProgramsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("programs")
     public LoyaltyProgram[] programs;
+
     public ListLoyaltyProgramsResponse withPrograms(LoyaltyProgram[] programs) {
         this.programs = programs;
         return this;
     }
     
+    public ListLoyaltyProgramsResponse(){}
 }

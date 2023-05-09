@@ -15,6 +15,7 @@ public class Globalpageload200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public Globalpageload200ApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class Globalpageload200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Contents")
     public String contents;
+
     public Globalpageload200ApplicationJSON withContents(String contents) {
         this.contents = contents;
         return this;
@@ -31,6 +33,7 @@ public class Globalpageload200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Credits")
     public String credits;
+
     public Globalpageload200ApplicationJSON withCredits(String credits) {
         this.credits = credits;
         return this;
@@ -39,6 +42,7 @@ public class Globalpageload200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Origin")
     public String origin;
+
     public Globalpageload200ApplicationJSON withOrigin(String origin) {
         this.origin = origin;
         return this;
@@ -47,6 +51,7 @@ public class Globalpageload200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageResponseStatus")
     public String pageResponseStatus;
+
     public Globalpageload200ApplicationJSON withPageResponseStatus(String pageResponseStatus) {
         this.pageResponseStatus = pageResponseStatus;
         return this;
@@ -55,9 +60,11 @@ public class Globalpageload200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Seconds")
     public String seconds;
+
     public Globalpageload200ApplicationJSON withSeconds(String seconds) {
         this.seconds = seconds;
         return this;
     }
     
+    public Globalpageload200ApplicationJSON(){}
 }

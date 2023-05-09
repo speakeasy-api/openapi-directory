@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostFileCommentsRequestBody {
@@ -12,6 +13,7 @@ public class PostFileCommentsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=body")
     public String body;
+
     public PostFileCommentsRequestBody withBody(String body) {
         this.body = body;
         return this;
@@ -22,9 +24,14 @@ public class PostFileCommentsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=path")
     public String path;
+
     public PostFileCommentsRequestBody withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public PostFileCommentsRequestBody(@JsonProperty("body") String body, @JsonProperty("path") String path) {
+        this.body = body;
+        this.path = path;
+  }
 }

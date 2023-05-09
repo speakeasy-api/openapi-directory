@@ -15,6 +15,7 @@ public class MatchAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationPorts")
     public PortRange[] destinationPorts;
+
     public MatchAttributes withDestinationPorts(PortRange[] destinationPorts) {
         this.destinationPorts = destinationPorts;
         return this;
@@ -23,6 +24,7 @@ public class MatchAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Destinations")
     public Address[] destinations;
+
     public MatchAttributes withDestinations(Address[] destinations) {
         this.destinations = destinations;
         return this;
@@ -31,6 +33,7 @@ public class MatchAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Protocols")
     public Long[] protocols;
+
     public MatchAttributes withProtocols(Long[] protocols) {
         this.protocols = protocols;
         return this;
@@ -39,6 +42,7 @@ public class MatchAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourcePorts")
     public PortRange[] sourcePorts;
+
     public MatchAttributes withSourcePorts(PortRange[] sourcePorts) {
         this.sourcePorts = sourcePorts;
         return this;
@@ -47,6 +51,7 @@ public class MatchAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sources")
     public Address[] sources;
+
     public MatchAttributes withSources(Address[] sources) {
         this.sources = sources;
         return this;
@@ -55,9 +60,11 @@ public class MatchAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TCPFlags")
     public TCPFlagField[] tcpFlags;
+
     public MatchAttributes withTCPFlags(TCPFlagField[] tcpFlags) {
         this.tcpFlags = tcpFlags;
         return this;
     }
     
+    public MatchAttributes(){}
 }

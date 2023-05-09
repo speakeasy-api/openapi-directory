@@ -56,10 +56,8 @@ public class Analyse {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InterferenceResponse res = new org.openapis.openapi.models.operations.InterferenceResponse() {{
+        org.openapis.openapi.models.operations.InterferenceResponse res = new org.openapis.openapi.models.operations.InterferenceResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -97,10 +95,8 @@ public class Analyse {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MeshResponse res = new org.openapis.openapi.models.operations.MeshResponse() {{
+        org.openapis.openapi.models.operations.MeshResponse res = new org.openapis.openapi.models.operations.MeshResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -138,10 +134,8 @@ public class Analyse {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NetworkResponse res = new org.openapis.openapi.models.operations.NetworkResponse() {{
+        org.openapis.openapi.models.operations.NetworkResponse res = new org.openapis.openapi.models.operations.NetworkResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,9 +15,11 @@ public class AccountLevelPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blockPublicAccess")
     public BlockPublicAccess blockPublicAccess;
+
     public AccountLevelPermissions withBlockPublicAccess(BlockPublicAccess blockPublicAccess) {
         this.blockPublicAccess = blockPublicAccess;
         return this;
     }
     
+    public AccountLevelPermissions(){}
 }

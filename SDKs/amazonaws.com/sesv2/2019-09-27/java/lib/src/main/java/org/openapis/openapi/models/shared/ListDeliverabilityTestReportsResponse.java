@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListDeliverabilityTestReportsResponse {
     @JsonProperty("DeliverabilityTestReports")
     public DeliverabilityTestReport[] deliverabilityTestReports;
+
     public ListDeliverabilityTestReportsResponse withDeliverabilityTestReports(DeliverabilityTestReport[] deliverabilityTestReports) {
         this.deliverabilityTestReports = deliverabilityTestReports;
         return this;
@@ -22,9 +23,13 @@ public class ListDeliverabilityTestReportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDeliverabilityTestReportsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDeliverabilityTestReportsResponse(@JsonProperty("DeliverabilityTestReports") DeliverabilityTestReport[] deliverabilityTestReports) {
+        this.deliverabilityTestReports = deliverabilityTestReports;
+  }
 }

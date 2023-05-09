@@ -18,9 +18,11 @@ public class BillingAggregatedInformationGetAll200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregatedBillings")
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillings aggregatedBillings;
+
     public BillingAggregatedInformationGetAll200ApplicationJSON withAggregatedBillings(BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillings aggregatedBillings) {
         this.aggregatedBillings = aggregatedBillings;
         return this;
     }
     
+    public BillingAggregatedInformationGetAll200ApplicationJSON(){}
 }

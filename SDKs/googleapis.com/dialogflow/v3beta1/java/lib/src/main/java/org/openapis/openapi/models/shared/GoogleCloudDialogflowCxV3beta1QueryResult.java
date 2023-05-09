@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentPage")
     public GoogleCloudDialogflowCxV3beta1Page currentPage;
+
     public GoogleCloudDialogflowCxV3beta1QueryResult withCurrentPage(GoogleCloudDialogflowCxV3beta1Page currentPage) {
         this.currentPage = currentPage;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3beta1QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diagnosticInfo")
     public java.util.Map<String, Object> diagnosticInfo;
+
     public GoogleCloudDialogflowCxV3beta1QueryResult withDiagnosticInfo(java.util.Map<String, Object> diagnosticInfo) {
         this.diagnosticInfo = diagnosticInfo;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3beta1QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dtmf")
     public GoogleCloudDialogflowCxV3beta1DtmfInput dtmf;
+
     public GoogleCloudDialogflowCxV3beta1QueryResult withDtmf(GoogleCloudDialogflowCxV3beta1DtmfInput dtmf) {
         this.dtmf = dtmf;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3beta1QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intent")
     public GoogleCloudDialogflowCxV3beta1Intent intent;
+
     public GoogleCloudDialogflowCxV3beta1QueryResult withIntent(GoogleCloudDialogflowCxV3beta1Intent intent) {
         this.intent = intent;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowCxV3beta1QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentDetectionConfidence")
     public Float intentDetectionConfidence;
+
     public GoogleCloudDialogflowCxV3beta1QueryResult withIntentDetectionConfidence(Float intentDetectionConfidence) {
         this.intentDetectionConfidence = intentDetectionConfidence;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowCxV3beta1QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudDialogflowCxV3beta1QueryResult withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDialogflowCxV3beta1QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("match")
     public GoogleCloudDialogflowCxV3beta1Match match;
+
     public GoogleCloudDialogflowCxV3beta1QueryResult withMatch(GoogleCloudDialogflowCxV3beta1Match match) {
         this.match = match;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDialogflowCxV3beta1QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, Object> parameters;
+
     public GoogleCloudDialogflowCxV3beta1QueryResult withParameters(java.util.Map<String, Object> parameters) {
         this.parameters = parameters;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDialogflowCxV3beta1QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseMessages")
     public GoogleCloudDialogflowCxV3beta1ResponseMessage[] responseMessages;
+
     public GoogleCloudDialogflowCxV3beta1QueryResult withResponseMessages(GoogleCloudDialogflowCxV3beta1ResponseMessage[] responseMessages) {
         this.responseMessages = responseMessages;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudDialogflowCxV3beta1QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sentimentAnalysisResult")
     public GoogleCloudDialogflowCxV3beta1SentimentAnalysisResult sentimentAnalysisResult;
+
     public GoogleCloudDialogflowCxV3beta1QueryResult withSentimentAnalysisResult(GoogleCloudDialogflowCxV3beta1SentimentAnalysisResult sentimentAnalysisResult) {
         this.sentimentAnalysisResult = sentimentAnalysisResult;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudDialogflowCxV3beta1QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GoogleCloudDialogflowCxV3beta1QueryResult withText(String text) {
         this.text = text;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudDialogflowCxV3beta1QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transcript")
     public String transcript;
+
     public GoogleCloudDialogflowCxV3beta1QueryResult withTranscript(String transcript) {
         this.transcript = transcript;
         return this;
@@ -150,6 +162,7 @@ public class GoogleCloudDialogflowCxV3beta1QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerEvent")
     public String triggerEvent;
+
     public GoogleCloudDialogflowCxV3beta1QueryResult withTriggerEvent(String triggerEvent) {
         this.triggerEvent = triggerEvent;
         return this;
@@ -161,6 +174,7 @@ public class GoogleCloudDialogflowCxV3beta1QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerIntent")
     public String triggerIntent;
+
     public GoogleCloudDialogflowCxV3beta1QueryResult withTriggerIntent(String triggerIntent) {
         this.triggerIntent = triggerIntent;
         return this;
@@ -172,6 +186,7 @@ public class GoogleCloudDialogflowCxV3beta1QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhookPayloads")
     public java.util.Map<String, Object>[] webhookPayloads;
+
     public GoogleCloudDialogflowCxV3beta1QueryResult withWebhookPayloads(java.util.Map<String, Object>[] webhookPayloads) {
         this.webhookPayloads = webhookPayloads;
         return this;
@@ -183,9 +198,11 @@ public class GoogleCloudDialogflowCxV3beta1QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhookStatuses")
     public GoogleRpcStatus[] webhookStatuses;
+
     public GoogleCloudDialogflowCxV3beta1QueryResult withWebhookStatuses(GoogleRpcStatus[] webhookStatuses) {
         this.webhookStatuses = webhookStatuses;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1QueryResult(){}
 }

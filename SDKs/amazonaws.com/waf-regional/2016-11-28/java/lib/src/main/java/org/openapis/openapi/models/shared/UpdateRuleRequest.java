@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateRuleRequest {
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public UpdateRuleRequest withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
@@ -16,6 +17,7 @@ public class UpdateRuleRequest {
     
     @JsonProperty("RuleId")
     public String ruleId;
+
     public UpdateRuleRequest withRuleId(String ruleId) {
         this.ruleId = ruleId;
         return this;
@@ -23,9 +25,15 @@ public class UpdateRuleRequest {
     
     @JsonProperty("Updates")
     public RuleUpdate[] updates;
+
     public UpdateRuleRequest withUpdates(RuleUpdate[] updates) {
         this.updates = updates;
         return this;
     }
     
+    public UpdateRuleRequest(@JsonProperty("ChangeToken") String changeToken, @JsonProperty("RuleId") String ruleId, @JsonProperty("Updates") RuleUpdate[] updates) {
+        this.changeToken = changeToken;
+        this.ruleId = ruleId;
+        this.updates = updates;
+  }
 }

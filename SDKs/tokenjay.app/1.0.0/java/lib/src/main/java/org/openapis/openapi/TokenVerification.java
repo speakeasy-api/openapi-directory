@@ -51,15 +51,13 @@ public class TokenVerification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CheckTokenResponse res = new org.openapis.openapi.models.operations.CheckTokenResponse() {{
+        org.openapis.openapi.models.operations.CheckTokenResponse res = new org.openapis.openapi.models.operations.CheckTokenResponse(contentType, httpRes.statusCode()) {{
             body = null;
             checkToken400WildcardString = null;
             checkToken401WildcardString = null;
             checkToken404WildcardString = null;
             checkToken409WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -115,15 +113,13 @@ public class TokenVerification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListBlockedResponse res = new org.openapis.openapi.models.operations.ListBlockedResponse() {{
+        org.openapis.openapi.models.operations.ListBlockedResponse res = new org.openapis.openapi.models.operations.ListBlockedResponse(contentType, httpRes.statusCode()) {{
             body = null;
             listBlocked400WildcardString = null;
             listBlocked401WildcardString = null;
             listBlocked404WildcardString = null;
             listBlocked409WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -179,15 +175,13 @@ public class TokenVerification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListGenuineResponse res = new org.openapis.openapi.models.operations.ListGenuineResponse() {{
+        org.openapis.openapi.models.operations.ListGenuineResponse res = new org.openapis.openapi.models.operations.ListGenuineResponse(contentType, httpRes.statusCode()) {{
             body = null;
             listGenuine400WildcardString = null;
             listGenuine401WildcardString = null;
             listGenuine404WildcardString = null;
             listGenuine409WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

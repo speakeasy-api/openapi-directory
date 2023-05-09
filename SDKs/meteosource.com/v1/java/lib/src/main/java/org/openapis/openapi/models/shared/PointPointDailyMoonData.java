@@ -20,6 +20,7 @@ public class PointPointDailyMoonData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("always_down")
     public Boolean alwaysDown;
+
     public PointPointDailyMoonData withAlwaysDown(Boolean alwaysDown) {
         this.alwaysDown = alwaysDown;
         return this;
@@ -31,6 +32,7 @@ public class PointPointDailyMoonData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("always_up")
     public Boolean alwaysUp;
+
     public PointPointDailyMoonData withAlwaysUp(Boolean alwaysUp) {
         this.alwaysUp = alwaysUp;
         return this;
@@ -42,6 +44,7 @@ public class PointPointDailyMoonData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phase")
     public byte[] phase;
+
     public PointPointDailyMoonData withPhase(byte[] phase) {
         this.phase = phase;
         return this;
@@ -55,6 +58,7 @@ public class PointPointDailyMoonData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("rise")
     public OffsetDateTime rise;
+
     public PointPointDailyMoonData withRise(OffsetDateTime rise) {
         this.rise = rise;
         return this;
@@ -68,9 +72,11 @@ public class PointPointDailyMoonData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("set")
     public OffsetDateTime set;
+
     public PointPointDailyMoonData withSet(OffsetDateTime set) {
         this.set = set;
         return this;
     }
     
+    public PointPointDailyMoonData(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeApplicationSnapshotResponse {
     
     public String contentType;
+
     public DescribeApplicationSnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeApplicationSnapshotResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeApplicationSnapshotResponse describeApplicationSnapshotResponse;
+
     public DescribeApplicationSnapshotResponse withDescribeApplicationSnapshotResponse(org.openapis.openapi.models.shared.DescribeApplicationSnapshotResponse describeApplicationSnapshotResponse) {
         this.describeApplicationSnapshotResponse = describeApplicationSnapshotResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeApplicationSnapshotResponse {
      */
     
     public Object invalidArgumentException;
+
     public DescribeApplicationSnapshotResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeApplicationSnapshotResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeApplicationSnapshotResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeApplicationSnapshotResponse {
     
     
     public Integer statusCode;
+
     public DescribeApplicationSnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeApplicationSnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeApplicationSnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeApplicationSnapshotResponse {
      */
     
     public Object unsupportedOperationException;
+
     public DescribeApplicationSnapshotResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public DescribeApplicationSnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

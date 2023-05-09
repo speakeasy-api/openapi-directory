@@ -20,6 +20,7 @@ public class PricingPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billableEntityCount")
     public Long billableEntityCount;
+
     public PricingPlan withBillableEntityCount(Long billableEntityCount) {
         this.billableEntityCount = billableEntityCount;
         return this;
@@ -28,6 +29,7 @@ public class PricingPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundleInformation")
     public BundleInformation bundleInformation;
+
     public PricingPlan withBundleInformation(BundleInformation bundleInformation) {
         this.bundleInformation = bundleInformation;
         return this;
@@ -37,6 +39,7 @@ public class PricingPlan {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("effectiveDateTime")
     public OffsetDateTime effectiveDateTime;
+
     public PricingPlan withEffectiveDateTime(OffsetDateTime effectiveDateTime) {
         this.effectiveDateTime = effectiveDateTime;
         return this;
@@ -44,6 +47,7 @@ public class PricingPlan {
     
     @JsonProperty("pricingMode")
     public PricingModeEnum pricingMode;
+
     public PricingPlan withPricingMode(PricingModeEnum pricingMode) {
         this.pricingMode = pricingMode;
         return this;
@@ -53,6 +57,7 @@ public class PricingPlan {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateDateTime")
     public OffsetDateTime updateDateTime;
+
     public PricingPlan withUpdateDateTime(OffsetDateTime updateDateTime) {
         this.updateDateTime = updateDateTime;
         return this;
@@ -60,9 +65,16 @@ public class PricingPlan {
     
     @JsonProperty("updateReason")
     public UpdateReasonEnum updateReason;
+
     public PricingPlan withUpdateReason(UpdateReasonEnum updateReason) {
         this.updateReason = updateReason;
         return this;
     }
     
+    public PricingPlan(@JsonProperty("effectiveDateTime") OffsetDateTime effectiveDateTime, @JsonProperty("pricingMode") PricingModeEnum pricingMode, @JsonProperty("updateDateTime") OffsetDateTime updateDateTime, @JsonProperty("updateReason") UpdateReasonEnum updateReason) {
+        this.effectiveDateTime = effectiveDateTime;
+        this.pricingMode = pricingMode;
+        this.updateDateTime = updateDateTime;
+        this.updateReason = updateReason;
+  }
 }

@@ -16,39 +16,36 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AddClientPreferencesRequestBody;
 import org.openapis.openapi.models.operations.AddClientPreferencesRequest;
+import org.openapis.openapi.models.operations.AddClientPreferencesRequestBody;
 import org.openapis.openapi.models.operations.AddClientPreferencesResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti", "provident") {{
                     appKey = "YOUR_API_KEY_HERE";
                     appToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            AddClientPreferencesRequest req = new AddClientPreferencesRequest() {{
-                accept = "corrupti";
-                contentType = "provident";
-                requestBody = new AddClientPreferencesRequestBody() {{
-                    locale = "distinctio";
-                    optinNewsLetter = false;
-                }};
-                orderFormId = "quibusdam";
-            }}            
+            AddClientPreferencesRequest req = new AddClientPreferencesRequest("distinctio", "quibusdam",                 new AddClientPreferencesRequestBody() {{
+                                locale = "unde";
+                                optinNewsLetter = false;
+                            }};, "nulla");            
 
             AddClientPreferencesResponse res = sdk.cartAttachments.addClientPreferences(req);
 
-            if (res.addClientPreferences200ApplicationJSONAny.isPresent()) {
+            if (res.addClientPreferences200ApplicationJSONAny != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -56,58 +53,58 @@ public class Application {
 ## Available Resources and Operations
 
 
-### cartAttachments
+### [cartAttachments](docs/cartattachments/README.md)
 
-* `addClientPreferences` - Add client preferences
-* `addClientProfile` - Add client profile
-* `addMarketingData` - Add marketing data
-* `addMerchantContextData` - Add merchant context data
-* `addPaymentData` - Add payment data
-* `addShippingAddress` - Add shipping address and select delivery option
-* `getClientProfileByEmail` - Get client profile by email
+* [addClientPreferences](docs/cartattachments/README.md#addclientpreferences) - Add client preferences
+* [addClientProfile](docs/cartattachments/README.md#addclientprofile) - Add client profile
+* [addMarketingData](docs/cartattachments/README.md#addmarketingdata) - Add marketing data
+* [addMerchantContextData](docs/cartattachments/README.md#addmerchantcontextdata) - Add merchant context data
+* [addPaymentData](docs/cartattachments/README.md#addpaymentdata) - Add payment data
+* [addShippingAddress](docs/cartattachments/README.md#addshippingaddress) - Add shipping address and select delivery option
+* [getClientProfileByEmail](docs/cartattachments/README.md#getclientprofilebyemail) - Get client profile by email
 
-### configuration
+### [configuration](docs/configuration/README.md)
 
-* `clearorderFormMessages` - Clear orderForm messages
-* `getWindowToChangeSeller` - Get window to change seller
-* `getorderFormconfiguration` - Get orderForm configuration
-* `updateWindowToChangeSeller` - Update window to change seller
-* `updateorderFormconfiguration` - Update orderForm configuration
+* [clearorderFormMessages](docs/configuration/README.md#clearorderformmessages) - Clear orderForm messages
+* [getWindowToChangeSeller](docs/configuration/README.md#getwindowtochangeseller) - Get window to change seller
+* [getorderFormconfiguration](docs/configuration/README.md#getorderformconfiguration) - Get orderForm configuration
+* [updateWindowToChangeSeller](docs/configuration/README.md#updatewindowtochangeseller) - Update window to change seller
+* [updateorderFormconfiguration](docs/configuration/README.md#updateorderformconfiguration) - Update orderForm configuration
 
-### customData
+### [customData](docs/customdata/README.md)
 
-* `removesinglecustomfieldvalue` - Remove single custom field value
-* `setMultipleCustomFieldValues` - Set multiple custom field values
-* `setSingleCustomFieldValue` - Set single custom field value
+* [removesinglecustomfieldvalue](docs/customdata/README.md#removesinglecustomfieldvalue) - Remove single custom field value
+* [setMultipleCustomFieldValues](docs/customdata/README.md#setmultiplecustomfieldvalues) - Set multiple custom field values
+* [setSingleCustomFieldValue](docs/customdata/README.md#setsinglecustomfieldvalue) - Set single custom field value
 
-### fulfillment
+### [fulfillment](docs/fulfillment/README.md)
 
-* `getAddressByPostalCode` - Get address by postal code
-* `listPickupPpointsByLocation` - List pickup points by location
+* [getAddressByPostalCode](docs/fulfillment/README.md#getaddressbypostalcode) - Get address by postal code
+* [listPickupPpointsByLocation](docs/fulfillment/README.md#listpickupppointsbylocation) - List pickup points by location
 
-### orderPlacement
+### [orderPlacement](docs/orderplacement/README.md)
 
-* `placeOrder` - Place order
-* `placeOrderFromExistingOrderForm` - Place order from an existing cart
-* `processOrder` - Process order
+* [placeOrder](docs/orderplacement/README.md#placeorder) - Place order
+* [placeOrderFromExistingOrderForm](docs/orderplacement/README.md#placeorderfromexistingorderform) - Place order from an existing cart
+* [processOrder](docs/orderplacement/README.md#processorder) - Process order
 
-### region
+### [region](docs/region/README.md)
 
-* `getSellersByRegion` - Get sellers by region or address
+* [getSellersByRegion](docs/region/README.md#getsellersbyregion) - Get sellers by region or address
 
-### shoppingCart
+### [shoppingCart](docs/shoppingcart/README.md)
 
-* `addCoupons` - Add coupons to the cart
-* `cartSimulation` - Cart simulation
-* `createANewCart` - Get current or create a new cart
-* `getCartInformationById` - Get cart information by ID
-* `getCartInstallments` - Cart installments
-* `ignoreProfileData` - Ignore profile data
-* `items` - Add cart items
-* `itemsUpdate` - Update cart items
-* `priceChange` - Change price
-* `removeAllItems` - Remove all items
-* `removeallpersonaldata` - Remove all personal data
+* [addCoupons](docs/shoppingcart/README.md#addcoupons) - Add coupons to the cart
+* [cartSimulation](docs/shoppingcart/README.md#cartsimulation) - Cart simulation
+* [createANewCart](docs/shoppingcart/README.md#createanewcart) - Get current or create a new cart
+* [getCartInformationById](docs/shoppingcart/README.md#getcartinformationbyid) - Get cart information by ID
+* [getCartInstallments](docs/shoppingcart/README.md#getcartinstallments) - Cart installments
+* [ignoreProfileData](docs/shoppingcart/README.md#ignoreprofiledata) - Ignore profile data
+* [items](docs/shoppingcart/README.md#items) - Add cart items
+* [itemsUpdate](docs/shoppingcart/README.md#itemsupdate) - Update cart items
+* [priceChange](docs/shoppingcart/README.md#pricechange) - Change price
+* [removeAllItems](docs/shoppingcart/README.md#removeallitems) - Remove all items
+* [removeallpersonaldata](docs/shoppingcart/README.md#removeallpersonaldata) - Remove all personal data
 <!-- End SDK Available Operations -->
 
 ### Maturity

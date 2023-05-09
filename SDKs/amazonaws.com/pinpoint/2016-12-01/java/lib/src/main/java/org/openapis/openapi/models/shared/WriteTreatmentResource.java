@@ -15,6 +15,7 @@ public class WriteTreatmentResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomDeliveryConfiguration")
     public CustomDeliveryConfiguration customDeliveryConfiguration;
+
     public WriteTreatmentResource withCustomDeliveryConfiguration(CustomDeliveryConfiguration customDeliveryConfiguration) {
         this.customDeliveryConfiguration = customDeliveryConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class WriteTreatmentResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageConfiguration")
     public MessageConfiguration messageConfiguration;
+
     public WriteTreatmentResource withMessageConfiguration(MessageConfiguration messageConfiguration) {
         this.messageConfiguration = messageConfiguration;
         return this;
@@ -31,6 +33,7 @@ public class WriteTreatmentResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schedule")
     public Schedule schedule;
+
     public WriteTreatmentResource withSchedule(Schedule schedule) {
         this.schedule = schedule;
         return this;
@@ -38,6 +41,7 @@ public class WriteTreatmentResource {
     
     @JsonProperty("SizePercent")
     public Long sizePercent;
+
     public WriteTreatmentResource withSizePercent(Long sizePercent) {
         this.sizePercent = sizePercent;
         return this;
@@ -46,6 +50,7 @@ public class WriteTreatmentResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateConfiguration")
     public TemplateConfiguration templateConfiguration;
+
     public WriteTreatmentResource withTemplateConfiguration(TemplateConfiguration templateConfiguration) {
         this.templateConfiguration = templateConfiguration;
         return this;
@@ -54,6 +59,7 @@ public class WriteTreatmentResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TreatmentDescription")
     public String treatmentDescription;
+
     public WriteTreatmentResource withTreatmentDescription(String treatmentDescription) {
         this.treatmentDescription = treatmentDescription;
         return this;
@@ -62,9 +68,13 @@ public class WriteTreatmentResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TreatmentName")
     public String treatmentName;
+
     public WriteTreatmentResource withTreatmentName(String treatmentName) {
         this.treatmentName = treatmentName;
         return this;
     }
     
+    public WriteTreatmentResource(@JsonProperty("SizePercent") Long sizePercent) {
+        this.sizePercent = sizePercent;
+  }
 }

@@ -14,7 +14,8 @@ public enum BackupStateEnum {
     CREATING("CREATING"),
     FINALIZING("FINALIZING"),
     READY("READY"),
-    DELETING("DELETING");
+    DELETING("DELETING"),
+    INVALID("INVALID");
 
     @JsonValue
     public final String value;

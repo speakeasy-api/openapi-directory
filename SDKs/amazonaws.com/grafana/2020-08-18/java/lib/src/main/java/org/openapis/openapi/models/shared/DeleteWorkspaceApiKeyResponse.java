@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteWorkspaceApiKeyResponse {
     @JsonProperty("keyName")
     public String keyName;
+
     public DeleteWorkspaceApiKeyResponse withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -19,9 +20,14 @@ public class DeleteWorkspaceApiKeyResponse {
     
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public DeleteWorkspaceApiKeyResponse withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public DeleteWorkspaceApiKeyResponse(@JsonProperty("keyName") String keyName, @JsonProperty("workspaceId") String workspaceId) {
+        this.keyName = keyName;
+        this.workspaceId = workspaceId;
+  }
 }

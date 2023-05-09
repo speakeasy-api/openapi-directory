@@ -15,6 +15,7 @@ public class ClarifyShapBaselineConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MimeType")
     public String mimeType;
+
     public ClarifyShapBaselineConfig withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -23,6 +24,7 @@ public class ClarifyShapBaselineConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShapBaseline")
     public String shapBaseline;
+
     public ClarifyShapBaselineConfig withShapBaseline(String shapBaseline) {
         this.shapBaseline = shapBaseline;
         return this;
@@ -31,9 +33,11 @@ public class ClarifyShapBaselineConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShapBaselineUri")
     public String shapBaselineUri;
+
     public ClarifyShapBaselineConfig withShapBaselineUri(String shapBaselineUri) {
         this.shapBaselineUri = shapBaselineUri;
         return this;
     }
     
+    public ClarifyShapBaselineConfig(){}
 }

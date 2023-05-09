@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ContinueUpdateRollbackInput - The input for the &lt;a&gt;ContinueUpdateRollback&lt;/a&gt; action.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ContinueUpdateRollbackInput {
     
     public String clientRequestToken;
+
     public ContinueUpdateRollbackInput withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -19,6 +20,7 @@ public class ContinueUpdateRollbackInput {
     
     
     public String[] resourcesToSkip;
+
     public ContinueUpdateRollbackInput withResourcesToSkip(String[] resourcesToSkip) {
         this.resourcesToSkip = resourcesToSkip;
         return this;
@@ -26,6 +28,7 @@ public class ContinueUpdateRollbackInput {
     
     
     public String roleARN;
+
     public ContinueUpdateRollbackInput withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
@@ -33,9 +36,13 @@ public class ContinueUpdateRollbackInput {
     
     
     public String stackName;
+
     public ContinueUpdateRollbackInput withStackName(String stackName) {
         this.stackName = stackName;
         return this;
     }
     
+    public ContinueUpdateRollbackInput(@JsonProperty("StackName") String stackName) {
+        this.stackName = stackName;
+  }
 }

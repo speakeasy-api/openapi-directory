@@ -20,6 +20,7 @@ public class DescribeWorldResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public DescribeWorldResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class DescribeWorldResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public DescribeWorldResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class DescribeWorldResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generationJob")
     public String generationJob;
+
     public DescribeWorldResponse withGenerationJob(String generationJob) {
         this.generationJob = generationJob;
         return this;
@@ -46,6 +49,7 @@ public class DescribeWorldResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public DescribeWorldResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -54,6 +58,7 @@ public class DescribeWorldResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public String template;
+
     public DescribeWorldResponse withTemplate(String template) {
         this.template = template;
         return this;
@@ -62,9 +67,11 @@ public class DescribeWorldResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("worldDescriptionBody")
     public String worldDescriptionBody;
+
     public DescribeWorldResponse withWorldDescriptionBody(String worldDescriptionBody) {
         this.worldDescriptionBody = worldDescriptionBody;
         return this;
     }
     
+    public DescribeWorldResponse(){}
 }

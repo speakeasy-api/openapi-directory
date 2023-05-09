@@ -76,12 +76,10 @@ public class SurfaceObstacles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ObstaclesByDistanceUsV1ObstaclesDistanceQueryPostResponse res = new org.openapis.openapi.models.operations.ObstaclesByDistanceUsV1ObstaclesDistanceQueryPostResponse() {{
+        org.openapis.openapi.models.operations.ObstaclesByDistanceUsV1ObstaclesDistanceQueryPostResponse res = new org.openapis.openapi.models.operations.ObstaclesByDistanceUsV1ObstaclesDistanceQueryPostResponse(contentType, httpRes.statusCode()) {{
             obstacleDistanceResponse = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -137,12 +135,10 @@ public class SurfaceObstacles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ObstaclesByPolyUsV1ObstaclesPolygonQueryPostResponse res = new org.openapis.openapi.models.operations.ObstaclesByPolyUsV1ObstaclesPolygonQueryPostResponse() {{
+        org.openapis.openapi.models.operations.ObstaclesByPolyUsV1ObstaclesPolygonQueryPostResponse res = new org.openapis.openapi.models.operations.ObstaclesByPolyUsV1ObstaclesPolygonQueryPostResponse(contentType, httpRes.statusCode()) {{
             obstaclePolyResponse = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -198,12 +194,10 @@ public class SurfaceObstacles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ObstaclesByRouteUsV1ObstaclesRouteQueryPostResponse res = new org.openapis.openapi.models.operations.ObstaclesByRouteUsV1ObstaclesRouteQueryPostResponse() {{
+        org.openapis.openapi.models.operations.ObstaclesByRouteUsV1ObstaclesRouteQueryPostResponse res = new org.openapis.openapi.models.operations.ObstaclesByRouteUsV1ObstaclesRouteQueryPostResponse(contentType, httpRes.statusCode()) {{
             obstacleRouteResponse = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

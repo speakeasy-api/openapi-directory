@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListGroundStationsResponse {
     
     public String contentType;
+
     public ListGroundStationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListGroundStationsResponse {
      */
     
     public Object dependencyException;
+
     public ListGroundStationsResponse withDependencyException(Object dependencyException) {
         this.dependencyException = dependencyException;
         return this;
@@ -29,6 +32,7 @@ public class ListGroundStationsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListGroundStationsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListGroundStationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListGroundStationsResponse listGroundStationsResponse;
+
     public ListGroundStationsResponse withListGroundStationsResponse(org.openapis.openapi.models.shared.ListGroundStationsResponse listGroundStationsResponse) {
         this.listGroundStationsResponse = listGroundStationsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListGroundStationsResponse {
     
     
     public Integer statusCode;
+
     public ListGroundStationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListGroundStationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListGroundStationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListGroundStationsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListGroundStationsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ListGroundStationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

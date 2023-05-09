@@ -18,6 +18,7 @@ public class KeyRangeLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataDisk")
     public String dataDisk;
+
     public KeyRangeLocation withDataDisk(String dataDisk) {
         this.dataDisk = dataDisk;
         return this;
@@ -29,6 +30,7 @@ public class KeyRangeLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryEndpoint")
     public String deliveryEndpoint;
+
     public KeyRangeLocation withDeliveryEndpoint(String deliveryEndpoint) {
         this.deliveryEndpoint = deliveryEndpoint;
         return this;
@@ -40,6 +42,7 @@ public class KeyRangeLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deprecatedPersistentDirectory")
     public String deprecatedPersistentDirectory;
+
     public KeyRangeLocation withDeprecatedPersistentDirectory(String deprecatedPersistentDirectory) {
         this.deprecatedPersistentDirectory = deprecatedPersistentDirectory;
         return this;
@@ -51,6 +54,7 @@ public class KeyRangeLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end")
     public String end;
+
     public KeyRangeLocation withEnd(String end) {
         this.end = end;
         return this;
@@ -62,9 +66,11 @@ public class KeyRangeLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public String start;
+
     public KeyRangeLocation withStart(String start) {
         this.start = start;
         return this;
     }
     
+    public KeyRangeLocation(){}
 }

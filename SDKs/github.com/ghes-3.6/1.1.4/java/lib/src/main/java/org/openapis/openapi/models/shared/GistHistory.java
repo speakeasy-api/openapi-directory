@@ -20,6 +20,7 @@ public class GistHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("change_status")
     public GistHistoryChangeStatus changeStatus;
+
     public GistHistory withChangeStatus(GistHistoryChangeStatus changeStatus) {
         this.changeStatus = changeStatus;
         return this;
@@ -30,6 +31,7 @@ public class GistHistory {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("committed_at")
     public OffsetDateTime committedAt;
+
     public GistHistory withCommittedAt(OffsetDateTime committedAt) {
         this.committedAt = committedAt;
         return this;
@@ -38,6 +40,7 @@ public class GistHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public GistHistory withUrl(String url) {
         this.url = url;
         return this;
@@ -49,6 +52,7 @@ public class GistHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public NullableSimpleUser user;
+
     public GistHistory withUser(NullableSimpleUser user) {
         this.user = user;
         return this;
@@ -57,9 +61,11 @@ public class GistHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public GistHistory withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public GistHistory(){}
 }

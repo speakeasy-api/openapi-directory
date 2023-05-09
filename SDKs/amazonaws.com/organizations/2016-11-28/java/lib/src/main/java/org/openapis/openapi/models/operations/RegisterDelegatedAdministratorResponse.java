@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterDelegatedAdministratorResponse {
@@ -12,6 +13,7 @@ public class RegisterDelegatedAdministratorResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public RegisterDelegatedAdministratorResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class RegisterDelegatedAdministratorResponse {
      */
     
     public Object accessDeniedException;
+
     public RegisterDelegatedAdministratorResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class RegisterDelegatedAdministratorResponse {
      */
     
     public Object accountAlreadyRegisteredException;
+
     public RegisterDelegatedAdministratorResponse withAccountAlreadyRegisteredException(Object accountAlreadyRegisteredException) {
         this.accountAlreadyRegisteredException = accountAlreadyRegisteredException;
         return this;
@@ -42,6 +46,7 @@ public class RegisterDelegatedAdministratorResponse {
      */
     
     public Object accountNotFoundException;
+
     public RegisterDelegatedAdministratorResponse withAccountNotFoundException(Object accountNotFoundException) {
         this.accountNotFoundException = accountNotFoundException;
         return this;
@@ -52,6 +57,7 @@ public class RegisterDelegatedAdministratorResponse {
      */
     
     public Object concurrentModificationException;
+
     public RegisterDelegatedAdministratorResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -62,6 +68,7 @@ public class RegisterDelegatedAdministratorResponse {
      */
     
     public Object constraintViolationException;
+
     public RegisterDelegatedAdministratorResponse withConstraintViolationException(Object constraintViolationException) {
         this.constraintViolationException = constraintViolationException;
         return this;
@@ -69,6 +76,7 @@ public class RegisterDelegatedAdministratorResponse {
     
     
     public String contentType;
+
     public RegisterDelegatedAdministratorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -79,6 +87,7 @@ public class RegisterDelegatedAdministratorResponse {
      */
     
     public Object invalidInputException;
+
     public RegisterDelegatedAdministratorResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -89,6 +98,7 @@ public class RegisterDelegatedAdministratorResponse {
      */
     
     public Object serviceException;
+
     public RegisterDelegatedAdministratorResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -96,6 +106,7 @@ public class RegisterDelegatedAdministratorResponse {
     
     
     public Integer statusCode;
+
     public RegisterDelegatedAdministratorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class RegisterDelegatedAdministratorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterDelegatedAdministratorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class RegisterDelegatedAdministratorResponse {
      */
     
     public Object tooManyRequestsException;
+
     public RegisterDelegatedAdministratorResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -123,9 +136,14 @@ public class RegisterDelegatedAdministratorResponse {
      */
     
     public Object unsupportedAPIEndpointException;
+
     public RegisterDelegatedAdministratorResponse withUnsupportedAPIEndpointException(Object unsupportedAPIEndpointException) {
         this.unsupportedAPIEndpointException = unsupportedAPIEndpointException;
         return this;
     }
     
+    public RegisterDelegatedAdministratorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

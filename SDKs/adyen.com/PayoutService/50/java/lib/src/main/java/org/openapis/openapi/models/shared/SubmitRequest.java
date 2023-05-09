@@ -4,14 +4,11 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import java.time.OffsetDateTime;
-import org.openapis.openapi.utils.DateTimeDeserializer;
-import org.openapis.openapi.utils.DateTimeSerializer;
+import java.time.LocalDate;
 
 public class SubmitRequest {
     /**
@@ -20,6 +17,7 @@ public class SubmitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalData")
     public java.util.Map<String, String> additionalData;
+
     public SubmitRequest withAdditionalData(java.util.Map<String, String> additionalData) {
         this.additionalData = additionalData;
         return this;
@@ -27,6 +25,7 @@ public class SubmitRequest {
     
     @JsonProperty("amount")
     public Amount amount;
+
     public SubmitRequest withAmount(Amount amount) {
         this.amount = amount;
         return this;
@@ -42,11 +41,11 @@ public class SubmitRequest {
      * &gt; This field is required to update the existing `dateOfBirth` that is associated with this recurring contract.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonSerialize(using = DateTimeSerializer.class)
-    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("dateOfBirth")
-    public OffsetDateTime dateOfBirth;
-    public SubmitRequest withDateOfBirth(OffsetDateTime dateOfBirth) {
+    public LocalDate dateOfBirth;
+
+    public SubmitRequest withDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
     }
@@ -62,6 +61,7 @@ public class SubmitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityType")
     public SubmitRequestEntityTypeEnum entityType;
+
     public SubmitRequest withEntityType(SubmitRequestEntityTypeEnum entityType) {
         this.entityType = entityType;
         return this;
@@ -73,6 +73,7 @@ public class SubmitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fraudOffset")
     public Integer fraudOffset;
+
     public SubmitRequest withFraudOffset(Integer fraudOffset) {
         this.fraudOffset = fraudOffset;
         return this;
@@ -83,6 +84,7 @@ public class SubmitRequest {
      */
     @JsonProperty("merchantAccount")
     public String merchantAccount;
+
     public SubmitRequest withMerchantAccount(String merchantAccount) {
         this.merchantAccount = merchantAccount;
         return this;
@@ -98,6 +100,7 @@ public class SubmitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nationality")
     public String nationality;
+
     public SubmitRequest withNationality(String nationality) {
         this.nationality = nationality;
         return this;
@@ -105,6 +108,7 @@ public class SubmitRequest {
     
     @JsonProperty("recurring")
     public Recurring recurring;
+
     public SubmitRequest withRecurring(Recurring recurring) {
         this.recurring = recurring;
         return this;
@@ -115,6 +119,7 @@ public class SubmitRequest {
      */
     @JsonProperty("reference")
     public String reference;
+
     public SubmitRequest withReference(String reference) {
         this.reference = reference;
         return this;
@@ -127,6 +132,7 @@ public class SubmitRequest {
      */
     @JsonProperty("selectedRecurringDetailReference")
     public String selectedRecurringDetailReference;
+
     public SubmitRequest withSelectedRecurringDetailReference(String selectedRecurringDetailReference) {
         this.selectedRecurringDetailReference = selectedRecurringDetailReference;
         return this;
@@ -137,6 +143,7 @@ public class SubmitRequest {
      */
     @JsonProperty("shopperEmail")
     public String shopperEmail;
+
     public SubmitRequest withShopperEmail(String shopperEmail) {
         this.shopperEmail = shopperEmail;
         return this;
@@ -145,6 +152,7 @@ public class SubmitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperName")
     public Name shopperName;
+
     public SubmitRequest withShopperName(Name shopperName) {
         this.shopperName = shopperName;
         return this;
@@ -155,6 +163,7 @@ public class SubmitRequest {
      */
     @JsonProperty("shopperReference")
     public String shopperReference;
+
     public SubmitRequest withShopperReference(String shopperReference) {
         this.shopperReference = shopperReference;
         return this;
@@ -166,6 +175,7 @@ public class SubmitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperStatement")
     public String shopperStatement;
+
     public SubmitRequest withShopperStatement(String shopperStatement) {
         this.shopperStatement = shopperStatement;
         return this;
@@ -177,9 +187,19 @@ public class SubmitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("socialSecurityNumber")
     public String socialSecurityNumber;
+
     public SubmitRequest withSocialSecurityNumber(String socialSecurityNumber) {
         this.socialSecurityNumber = socialSecurityNumber;
         return this;
     }
     
+    public SubmitRequest(@JsonProperty("amount") Amount amount, @JsonProperty("merchantAccount") String merchantAccount, @JsonProperty("recurring") Recurring recurring, @JsonProperty("reference") String reference, @JsonProperty("selectedRecurringDetailReference") String selectedRecurringDetailReference, @JsonProperty("shopperEmail") String shopperEmail, @JsonProperty("shopperReference") String shopperReference) {
+        this.amount = amount;
+        this.merchantAccount = merchantAccount;
+        this.recurring = recurring;
+        this.reference = reference;
+        this.selectedRecurringDetailReference = selectedRecurringDetailReference;
+        this.shopperEmail = shopperEmail;
+        this.shopperReference = shopperReference;
+  }
 }

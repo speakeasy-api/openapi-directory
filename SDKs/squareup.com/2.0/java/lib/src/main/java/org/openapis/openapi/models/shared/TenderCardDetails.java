@@ -19,6 +19,7 @@ public class TenderCardDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card")
     public Card card;
+
     public TenderCardDetails withCard(Card card) {
         this.card = card;
         return this;
@@ -30,6 +31,7 @@ public class TenderCardDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entry_method")
     public String entryMethod;
+
     public TenderCardDetails withEntryMethod(String entryMethod) {
         this.entryMethod = entryMethod;
         return this;
@@ -43,9 +45,11 @@ public class TenderCardDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public TenderCardDetails withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public TenderCardDetails(){}
 }

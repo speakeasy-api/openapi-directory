@@ -15,9 +15,11 @@ public class CreateAssistantAssociationRequestBodyAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("knowledgeBaseId")
     public String knowledgeBaseId;
+
     public CreateAssistantAssociationRequestBodyAssociation withKnowledgeBaseId(String knowledgeBaseId) {
         this.knowledgeBaseId = knowledgeBaseId;
         return this;
     }
     
+    public CreateAssistantAssociationRequestBodyAssociation(){}
 }

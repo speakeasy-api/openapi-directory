@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateAvailabilityConfigurationRequest {
     @JsonProperty("DomainName")
     public String domainName;
+
     public UpdateAvailabilityConfigurationRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -19,6 +20,7 @@ public class UpdateAvailabilityConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EwsProvider")
     public EwsAvailabilityProvider ewsProvider;
+
     public UpdateAvailabilityConfigurationRequest withEwsProvider(EwsAvailabilityProvider ewsProvider) {
         this.ewsProvider = ewsProvider;
         return this;
@@ -27,6 +29,7 @@ public class UpdateAvailabilityConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LambdaProvider")
     public LambdaAvailabilityProvider lambdaProvider;
+
     public UpdateAvailabilityConfigurationRequest withLambdaProvider(LambdaAvailabilityProvider lambdaProvider) {
         this.lambdaProvider = lambdaProvider;
         return this;
@@ -34,9 +37,14 @@ public class UpdateAvailabilityConfigurationRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public UpdateAvailabilityConfigurationRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public UpdateAvailabilityConfigurationRequest(@JsonProperty("DomainName") String domainName, @JsonProperty("OrganizationId") String organizationId) {
+        this.domainName = domainName;
+        this.organizationId = organizationId;
+  }
 }

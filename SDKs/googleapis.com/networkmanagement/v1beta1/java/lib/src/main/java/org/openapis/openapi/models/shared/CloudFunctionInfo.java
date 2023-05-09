@@ -18,6 +18,7 @@ public class CloudFunctionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public CloudFunctionInfo withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class CloudFunctionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public CloudFunctionInfo withLocation(String location) {
         this.location = location;
         return this;
@@ -40,6 +42,7 @@ public class CloudFunctionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public CloudFunctionInfo withUri(String uri) {
         this.uri = uri;
         return this;
@@ -51,9 +54,11 @@ public class CloudFunctionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionId")
     public String versionId;
+
     public CloudFunctionInfo withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public CloudFunctionInfo(){}
 }

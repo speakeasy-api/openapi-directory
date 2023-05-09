@@ -12,6 +12,7 @@ public class CreateUnreferencedMergeCommitInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorName")
     public String authorName;
+
     public CreateUnreferencedMergeCommitInput withAuthorName(String authorName) {
         this.authorName = authorName;
         return this;
@@ -20,6 +21,7 @@ public class CreateUnreferencedMergeCommitInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitMessage")
     public String commitMessage;
+
     public CreateUnreferencedMergeCommitInput withCommitMessage(String commitMessage) {
         this.commitMessage = commitMessage;
         return this;
@@ -28,6 +30,7 @@ public class CreateUnreferencedMergeCommitInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conflictDetailLevel")
     public ConflictDetailLevelTypeEnumEnum conflictDetailLevel;
+
     public CreateUnreferencedMergeCommitInput withConflictDetailLevel(ConflictDetailLevelTypeEnumEnum conflictDetailLevel) {
         this.conflictDetailLevel = conflictDetailLevel;
         return this;
@@ -36,6 +39,7 @@ public class CreateUnreferencedMergeCommitInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conflictResolution")
     public ConflictResolution conflictResolution;
+
     public CreateUnreferencedMergeCommitInput withConflictResolution(ConflictResolution conflictResolution) {
         this.conflictResolution = conflictResolution;
         return this;
@@ -44,6 +48,7 @@ public class CreateUnreferencedMergeCommitInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conflictResolutionStrategy")
     public ConflictResolutionStrategyTypeEnumEnum conflictResolutionStrategy;
+
     public CreateUnreferencedMergeCommitInput withConflictResolutionStrategy(ConflictResolutionStrategyTypeEnumEnum conflictResolutionStrategy) {
         this.conflictResolutionStrategy = conflictResolutionStrategy;
         return this;
@@ -51,6 +56,7 @@ public class CreateUnreferencedMergeCommitInput {
     
     @JsonProperty("destinationCommitSpecifier")
     public String destinationCommitSpecifier;
+
     public CreateUnreferencedMergeCommitInput withDestinationCommitSpecifier(String destinationCommitSpecifier) {
         this.destinationCommitSpecifier = destinationCommitSpecifier;
         return this;
@@ -59,6 +65,7 @@ public class CreateUnreferencedMergeCommitInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public CreateUnreferencedMergeCommitInput withEmail(String email) {
         this.email = email;
         return this;
@@ -67,6 +74,7 @@ public class CreateUnreferencedMergeCommitInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keepEmptyFolders")
     public Boolean keepEmptyFolders;
+
     public CreateUnreferencedMergeCommitInput withKeepEmptyFolders(Boolean keepEmptyFolders) {
         this.keepEmptyFolders = keepEmptyFolders;
         return this;
@@ -74,6 +82,7 @@ public class CreateUnreferencedMergeCommitInput {
     
     @JsonProperty("mergeOption")
     public MergeOptionTypeEnumEnum mergeOption;
+
     public CreateUnreferencedMergeCommitInput withMergeOption(MergeOptionTypeEnumEnum mergeOption) {
         this.mergeOption = mergeOption;
         return this;
@@ -81,6 +90,7 @@ public class CreateUnreferencedMergeCommitInput {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public CreateUnreferencedMergeCommitInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -88,9 +98,16 @@ public class CreateUnreferencedMergeCommitInput {
     
     @JsonProperty("sourceCommitSpecifier")
     public String sourceCommitSpecifier;
+
     public CreateUnreferencedMergeCommitInput withSourceCommitSpecifier(String sourceCommitSpecifier) {
         this.sourceCommitSpecifier = sourceCommitSpecifier;
         return this;
     }
     
+    public CreateUnreferencedMergeCommitInput(@JsonProperty("destinationCommitSpecifier") String destinationCommitSpecifier, @JsonProperty("mergeOption") MergeOptionTypeEnumEnum mergeOption, @JsonProperty("repositoryName") String repositoryName, @JsonProperty("sourceCommitSpecifier") String sourceCommitSpecifier) {
+        this.destinationCommitSpecifier = destinationCommitSpecifier;
+        this.mergeOption = mergeOption;
+        this.repositoryName = repositoryName;
+        this.sourceCommitSpecifier = sourceCommitSpecifier;
+  }
 }

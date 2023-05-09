@@ -15,9 +15,11 @@ public class ListCustomLineItemVersionsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillingPeriodRange")
     public org.openapis.openapi.models.shared.ListCustomLineItemVersionsBillingPeriodRangeFilter billingPeriodRange;
+
     public ListCustomLineItemVersionsRequestBodyFilters withBillingPeriodRange(org.openapis.openapi.models.shared.ListCustomLineItemVersionsBillingPeriodRangeFilter billingPeriodRange) {
         this.billingPeriodRange = billingPeriodRange;
         return this;
     }
     
+    public ListCustomLineItemVersionsRequestBodyFilters(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetHookEventsSubjectTypeRequest {
@@ -12,9 +13,13 @@ public class GetHookEventsSubjectTypeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subject_type")
     public GetHookEventsSubjectTypeSubjectTypeEnum subjectType;
+
     public GetHookEventsSubjectTypeRequest withSubjectType(GetHookEventsSubjectTypeSubjectTypeEnum subjectType) {
         this.subjectType = subjectType;
         return this;
     }
     
+    public GetHookEventsSubjectTypeRequest(@JsonProperty("subject_type") GetHookEventsSubjectTypeSubjectTypeEnum subjectType) {
+        this.subjectType = subjectType;
+  }
 }

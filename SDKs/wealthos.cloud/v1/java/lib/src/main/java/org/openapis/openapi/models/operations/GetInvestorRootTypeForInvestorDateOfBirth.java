@@ -15,6 +15,7 @@ public class GetInvestorRootTypeForInvestorDateOfBirth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("day")
     public String day;
+
     public GetInvestorRootTypeForInvestorDateOfBirth withDay(String day) {
         this.day = day;
         return this;
@@ -26,6 +27,7 @@ public class GetInvestorRootTypeForInvestorDateOfBirth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("month")
     public String month;
+
     public GetInvestorRootTypeForInvestorDateOfBirth withMonth(String month) {
         this.month = month;
         return this;
@@ -37,9 +39,11 @@ public class GetInvestorRootTypeForInvestorDateOfBirth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("year")
     public String year;
+
     public GetInvestorRootTypeForInvestorDateOfBirth withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public GetInvestorRootTypeForInvestorDateOfBirth(){}
 }

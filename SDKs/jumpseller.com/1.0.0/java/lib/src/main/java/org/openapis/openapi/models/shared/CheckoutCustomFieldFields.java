@@ -15,6 +15,7 @@ public class CheckoutCustomFieldFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("area")
     public CheckoutCustomFieldFieldsAreaEnum area;
+
     public CheckoutCustomFieldFields withArea(CheckoutCustomFieldFieldsAreaEnum area) {
         this.area = area;
         return this;
@@ -26,6 +27,7 @@ public class CheckoutCustomFieldFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_field_select_options")
     public String[] customFieldSelectOptions;
+
     public CheckoutCustomFieldFields withCustomFieldSelectOptions(String[] customFieldSelectOptions) {
         this.customFieldSelectOptions = customFieldSelectOptions;
         return this;
@@ -37,6 +39,7 @@ public class CheckoutCustomFieldFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletable")
     public Boolean deletable;
+
     public CheckoutCustomFieldFields withDeletable(Boolean deletable) {
         this.deletable = deletable;
         return this;
@@ -48,6 +51,7 @@ public class CheckoutCustomFieldFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public CheckoutCustomFieldFields withId(Integer id) {
         this.id = id;
         return this;
@@ -59,6 +63,7 @@ public class CheckoutCustomFieldFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public CheckoutCustomFieldFields withLabel(String label) {
         this.label = label;
         return this;
@@ -70,6 +75,7 @@ public class CheckoutCustomFieldFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public Integer position;
+
     public CheckoutCustomFieldFields withPosition(Integer position) {
         this.position = position;
         return this;
@@ -81,6 +87,7 @@ public class CheckoutCustomFieldFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
+
     public CheckoutCustomFieldFields withRequired(Boolean required) {
         this.required = required;
         return this;
@@ -92,9 +99,11 @@ public class CheckoutCustomFieldFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CheckoutCustomFieldFieldsTypeEnum type;
+
     public CheckoutCustomFieldFields withType(CheckoutCustomFieldFieldsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CheckoutCustomFieldFields(){}
 }

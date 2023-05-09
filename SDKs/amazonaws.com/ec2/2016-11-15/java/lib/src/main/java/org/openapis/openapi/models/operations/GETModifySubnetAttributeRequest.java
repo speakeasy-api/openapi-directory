@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifySubnetAttributeRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifySubnetAttributeActionEnum action;
+
     public GETModifySubnetAttributeRequest withAction(GETModifySubnetAttributeActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifySubnetAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AssignIpv6AddressOnCreation")
     public GETModifySubnetAttributeAssignIpv6AddressOnCreation assignIpv6AddressOnCreation;
+
     public GETModifySubnetAttributeRequest withAssignIpv6AddressOnCreation(GETModifySubnetAttributeAssignIpv6AddressOnCreation assignIpv6AddressOnCreation) {
         this.assignIpv6AddressOnCreation = assignIpv6AddressOnCreation;
         return this;
@@ -29,6 +32,7 @@ public class GETModifySubnetAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CustomerOwnedIpv4Pool")
     public String customerOwnedIpv4Pool;
+
     public GETModifySubnetAttributeRequest withCustomerOwnedIpv4Pool(String customerOwnedIpv4Pool) {
         this.customerOwnedIpv4Pool = customerOwnedIpv4Pool;
         return this;
@@ -39,6 +43,7 @@ public class GETModifySubnetAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DisableLniAtDeviceIndex")
     public GETModifySubnetAttributeDisableLniAtDeviceIndex disableLniAtDeviceIndex;
+
     public GETModifySubnetAttributeRequest withDisableLniAtDeviceIndex(GETModifySubnetAttributeDisableLniAtDeviceIndex disableLniAtDeviceIndex) {
         this.disableLniAtDeviceIndex = disableLniAtDeviceIndex;
         return this;
@@ -49,6 +54,7 @@ public class GETModifySubnetAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnableDns64")
     public GETModifySubnetAttributeEnableDns64 enableDns64;
+
     public GETModifySubnetAttributeRequest withEnableDns64(GETModifySubnetAttributeEnableDns64 enableDns64) {
         this.enableDns64 = enableDns64;
         return this;
@@ -59,6 +65,7 @@ public class GETModifySubnetAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnableLniAtDeviceIndex")
     public Long enableLniAtDeviceIndex;
+
     public GETModifySubnetAttributeRequest withEnableLniAtDeviceIndex(Long enableLniAtDeviceIndex) {
         this.enableLniAtDeviceIndex = enableLniAtDeviceIndex;
         return this;
@@ -69,6 +76,7 @@ public class GETModifySubnetAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnableResourceNameDnsAAAARecordOnLaunch")
     public GETModifySubnetAttributeEnableResourceNameDNSAaaaRecordOnLaunch enableResourceNameDnsAAAARecordOnLaunch;
+
     public GETModifySubnetAttributeRequest withEnableResourceNameDnsAAAARecordOnLaunch(GETModifySubnetAttributeEnableResourceNameDNSAaaaRecordOnLaunch enableResourceNameDnsAAAARecordOnLaunch) {
         this.enableResourceNameDnsAAAARecordOnLaunch = enableResourceNameDnsAAAARecordOnLaunch;
         return this;
@@ -79,6 +87,7 @@ public class GETModifySubnetAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnableResourceNameDnsARecordOnLaunch")
     public GETModifySubnetAttributeEnableResourceNameDNSARecordOnLaunch enableResourceNameDnsARecordOnLaunch;
+
     public GETModifySubnetAttributeRequest withEnableResourceNameDnsARecordOnLaunch(GETModifySubnetAttributeEnableResourceNameDNSARecordOnLaunch enableResourceNameDnsARecordOnLaunch) {
         this.enableResourceNameDnsARecordOnLaunch = enableResourceNameDnsARecordOnLaunch;
         return this;
@@ -89,6 +98,7 @@ public class GETModifySubnetAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MapCustomerOwnedIpOnLaunch")
     public GETModifySubnetAttributeMapCustomerOwnedIPOnLaunch mapCustomerOwnedIpOnLaunch;
+
     public GETModifySubnetAttributeRequest withMapCustomerOwnedIpOnLaunch(GETModifySubnetAttributeMapCustomerOwnedIPOnLaunch mapCustomerOwnedIpOnLaunch) {
         this.mapCustomerOwnedIpOnLaunch = mapCustomerOwnedIpOnLaunch;
         return this;
@@ -99,6 +109,7 @@ public class GETModifySubnetAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MapPublicIpOnLaunch")
     public GETModifySubnetAttributeMapPublicIPOnLaunch mapPublicIpOnLaunch;
+
     public GETModifySubnetAttributeRequest withMapPublicIpOnLaunch(GETModifySubnetAttributeMapPublicIPOnLaunch mapPublicIpOnLaunch) {
         this.mapPublicIpOnLaunch = mapPublicIpOnLaunch;
         return this;
@@ -109,6 +120,7 @@ public class GETModifySubnetAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PrivateDnsHostnameTypeOnLaunch")
     public GETModifySubnetAttributePrivateDNSHostnameTypeOnLaunchEnum privateDnsHostnameTypeOnLaunch;
+
     public GETModifySubnetAttributeRequest withPrivateDnsHostnameTypeOnLaunch(GETModifySubnetAttributePrivateDNSHostnameTypeOnLaunchEnum privateDnsHostnameTypeOnLaunch) {
         this.privateDnsHostnameTypeOnLaunch = privateDnsHostnameTypeOnLaunch;
         return this;
@@ -119,6 +131,7 @@ public class GETModifySubnetAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SubnetId")
     public String subnetId;
+
     public GETModifySubnetAttributeRequest withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -126,6 +139,7 @@ public class GETModifySubnetAttributeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifySubnetAttributeVersionEnum version;
+
     public GETModifySubnetAttributeRequest withVersion(GETModifySubnetAttributeVersionEnum version) {
         this.version = version;
         return this;
@@ -133,6 +147,7 @@ public class GETModifySubnetAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifySubnetAttributeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -140,6 +155,7 @@ public class GETModifySubnetAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifySubnetAttributeRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -147,6 +163,7 @@ public class GETModifySubnetAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifySubnetAttributeRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -154,6 +171,7 @@ public class GETModifySubnetAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifySubnetAttributeRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -161,6 +179,7 @@ public class GETModifySubnetAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifySubnetAttributeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -168,6 +187,7 @@ public class GETModifySubnetAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifySubnetAttributeRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -175,9 +195,15 @@ public class GETModifySubnetAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifySubnetAttributeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifySubnetAttributeRequest(@JsonProperty("Action") GETModifySubnetAttributeActionEnum action, @JsonProperty("SubnetId") String subnetId, @JsonProperty("Version") GETModifySubnetAttributeVersionEnum version) {
+        this.action = action;
+        this.subnetId = subnetId;
+        this.version = version;
+  }
 }

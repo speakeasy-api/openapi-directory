@@ -18,6 +18,7 @@ public class ExpressionReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("children")
     public ExpressionReport[] children;
+
     public ExpressionReport withChildren(ExpressionReport[] children) {
         this.children = children;
         return this;
@@ -29,6 +30,7 @@ public class ExpressionReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourcePosition")
     public SourcePosition sourcePosition;
+
     public ExpressionReport withSourcePosition(SourcePosition sourcePosition) {
         this.sourcePosition = sourcePosition;
         return this;
@@ -40,9 +42,11 @@ public class ExpressionReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public ValueCount[] values;
+
     public ExpressionReport withValues(ValueCount[] values) {
         this.values = values;
         return this;
     }
     
+    public ExpressionReport(){}
 }

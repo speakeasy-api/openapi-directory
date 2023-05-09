@@ -15,6 +15,7 @@ public class ResourceCountsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("behindMajor")
     public Long behindMajor;
+
     public ResourceCountsSummary withBehindMajor(Long behindMajor) {
         this.behindMajor = behindMajor;
         return this;
@@ -23,6 +24,7 @@ public class ResourceCountsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("behindMinor")
     public Long behindMinor;
+
     public ResourceCountsSummary withBehindMinor(Long behindMinor) {
         this.behindMinor = behindMinor;
         return this;
@@ -31,6 +33,7 @@ public class ResourceCountsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failed")
     public Long failed;
+
     public ResourceCountsSummary withFailed(Long failed) {
         this.failed = failed;
         return this;
@@ -38,6 +41,7 @@ public class ResourceCountsSummary {
     
     @JsonProperty("total")
     public Long total;
+
     public ResourceCountsSummary withTotal(Long total) {
         this.total = total;
         return this;
@@ -46,9 +50,13 @@ public class ResourceCountsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upToDate")
     public Long upToDate;
+
     public ResourceCountsSummary withUpToDate(Long upToDate) {
         this.upToDate = upToDate;
         return this;
     }
     
+    public ResourceCountsSummary(@JsonProperty("total") Long total) {
+        this.total = total;
+  }
 }

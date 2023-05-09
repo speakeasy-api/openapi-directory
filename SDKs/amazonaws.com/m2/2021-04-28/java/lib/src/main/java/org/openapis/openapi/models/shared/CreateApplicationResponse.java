@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateApplicationResponse {
     @JsonProperty("applicationArn")
     public String applicationArn;
+
     public CreateApplicationResponse withApplicationArn(String applicationArn) {
         this.applicationArn = applicationArn;
         return this;
@@ -19,6 +20,7 @@ public class CreateApplicationResponse {
     
     @JsonProperty("applicationId")
     public String applicationId;
+
     public CreateApplicationResponse withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -26,9 +28,15 @@ public class CreateApplicationResponse {
     
     @JsonProperty("applicationVersion")
     public Long applicationVersion;
+
     public CreateApplicationResponse withApplicationVersion(Long applicationVersion) {
         this.applicationVersion = applicationVersion;
         return this;
     }
     
+    public CreateApplicationResponse(@JsonProperty("applicationArn") String applicationArn, @JsonProperty("applicationId") String applicationId, @JsonProperty("applicationVersion") Long applicationVersion) {
+        this.applicationArn = applicationArn;
+        this.applicationId = applicationId;
+        this.applicationVersion = applicationVersion;
+  }
 }

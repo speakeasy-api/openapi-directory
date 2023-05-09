@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2ArticleSuggestionModelMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainingModelType")
     public GoogleCloudDialogflowV2ArticleSuggestionModelMetadataTrainingModelTypeEnum trainingModelType;
+
     public GoogleCloudDialogflowV2ArticleSuggestionModelMetadata withTrainingModelType(GoogleCloudDialogflowV2ArticleSuggestionModelMetadataTrainingModelTypeEnum trainingModelType) {
         this.trainingModelType = trainingModelType;
         return this;
     }
     
+    public GoogleCloudDialogflowV2ArticleSuggestionModelMetadata(){}
 }

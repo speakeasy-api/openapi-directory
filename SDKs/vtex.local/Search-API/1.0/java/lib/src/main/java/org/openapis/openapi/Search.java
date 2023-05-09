@@ -60,7 +60,7 @@ public class Search {
      * 
      * Note that maybe the response can be HTTP 200 or 206, 206 means that it's a partial content response.
      * 
-     * If it is a 206 take a look at the Headers, will be an entry called resources. E.g.: resources \u2192 0-9/19. This means that the response is showing items from 0 to 9, 10 items, but there were 19 items found. See more information at the paging route example.
+     * If it is a 206 take a look at the Headers, will be an entry called resources. E.g.: resources → 0-9/19. This means that the response is showing items from 0 to 9, 10 items, but there were 19 items found. See more information at the paging route example.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -78,7 +78,7 @@ public class Search {
      * 
      * Note that maybe the response can be HTTP 200 or 206, 206 means that it's a partial content response.
      * 
-     * If it is a 206 take a look at the Headers, will be an entry called resources. E.g.: resources \u2192 0-9/19. This means that the response is showing items from 0 to 9, 10 items, but there were 19 items found. See more information at the paging route example.
+     * If it is a 206 take a look at the Headers, will be an entry called resources. E.g.: resources → 0-9/19. This means that the response is showing items from 0 to 9, 10 items, but there were 19 items found. See more information at the paging route example.
      * @param request the request object containing all of the parameters for the API call
      * @param serverURL an optional server URL to use
      * @return the response from the API call
@@ -111,11 +111,9 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProductSearchResponse res = new org.openapis.openapi.models.operations.ProductSearchResponse() {{
+        org.openapis.openapi.models.operations.ProductSearchResponse res = new org.openapis.openapi.models.operations.ProductSearchResponse(contentType, httpRes.statusCode()) {{
             productSearch200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -181,7 +179,7 @@ public class Search {
      * - **Initial item number** - `_from={{first}}`
      * - **Final item number** - `_to={{last}}`
      * 
-     * &gt;\u26a0\ufe0f This endpoint returns a maximum of 50 items per response, so the difference between `_from` and `_to` should not exceed this number. The result order is descending, from the highest product ID to the lowest.
+     * &gt;⚠️ This endpoint returns a maximum of 50 items per response, so the difference between `_from` and `_to` should not exceed this number. The result order is descending, from the highest product ID to the lowest.
      * 
      * ## Sorting
      * 
@@ -267,7 +265,7 @@ public class Search {
      * - **Initial item number** - `_from={{first}}`
      * - **Final item number** - `_to={{last}}`
      * 
-     * &gt;\u26a0\ufe0f This endpoint returns a maximum of 50 items per response, so the difference between `_from` and `_to` should not exceed this number. The result order is descending, from the highest product ID to the lowest.
+     * &gt;⚠️ This endpoint returns a maximum of 50 items per response, so the difference between `_from` and `_to` should not exceed this number. The result order is descending, from the highest product ID to the lowest.
      * 
      * ## Sorting
      * 
@@ -331,11 +329,9 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProductSearchFilteredandOrderedResponse res = new org.openapis.openapi.models.operations.ProductSearchFilteredandOrderedResponse() {{
+        org.openapis.openapi.models.operations.ProductSearchFilteredandOrderedResponse res = new org.openapis.openapi.models.operations.ProductSearchFilteredandOrderedResponse(contentType, httpRes.statusCode()) {{
             productSearchFilteredandOrdered200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -395,11 +391,9 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchbyproducturlResponse res = new org.openapis.openapi.models.operations.SearchbyproducturlResponse() {{
+        org.openapis.openapi.models.operations.SearchbyproducturlResponse res = new org.openapis.openapi.models.operations.SearchbyproducturlResponse(contentType, httpRes.statusCode()) {{
             searchbyproducturl200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

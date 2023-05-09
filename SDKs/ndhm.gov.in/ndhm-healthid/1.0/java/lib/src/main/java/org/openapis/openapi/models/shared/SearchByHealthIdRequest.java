@@ -15,9 +15,11 @@ public class SearchByHealthIdRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthId")
     public String healthId;
+
     public SearchByHealthIdRequest withHealthId(String healthId) {
         this.healthId = healthId;
         return this;
     }
     
+    public SearchByHealthIdRequest(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MutationActionSetStateParameter {
     @JsonProperty("componentName")
     public String componentName;
+
     public MutationActionSetStateParameter withComponentName(String componentName) {
         this.componentName = componentName;
         return this;
@@ -19,6 +20,7 @@ public class MutationActionSetStateParameter {
     
     @JsonProperty("property")
     public String property;
+
     public MutationActionSetStateParameter withProperty(String property) {
         this.property = property;
         return this;
@@ -26,9 +28,15 @@ public class MutationActionSetStateParameter {
     
     @JsonProperty("set")
     public ComponentProperty set;
+
     public MutationActionSetStateParameter withSet(ComponentProperty set) {
         this.set = set;
         return this;
     }
     
+    public MutationActionSetStateParameter(@JsonProperty("componentName") String componentName, @JsonProperty("property") String property, @JsonProperty("set") ComponentProperty set) {
+        this.componentName = componentName;
+        this.property = property;
+        this.set = set;
+  }
 }

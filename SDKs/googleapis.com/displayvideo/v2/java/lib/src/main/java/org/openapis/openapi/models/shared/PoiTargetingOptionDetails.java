@@ -18,6 +18,7 @@ public class PoiTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public PoiTargetingOptionDetails withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class PoiTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public PoiTargetingOptionDetails withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -40,9 +42,11 @@ public class PoiTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public PoiTargetingOptionDetails withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
     }
     
+    public PoiTargetingOptionDetails(){}
 }

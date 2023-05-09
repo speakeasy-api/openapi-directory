@@ -15,6 +15,7 @@ public class UpdateReportDefinitionRequestBodyDestinationS3Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucket")
     public String bucket;
+
     public UpdateReportDefinitionRequestBodyDestinationS3Location withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -23,9 +24,11 @@ public class UpdateReportDefinitionRequestBodyDestinationS3Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefix")
     public String prefix;
+
     public UpdateReportDefinitionRequestBodyDestinationS3Location withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
     
+    public UpdateReportDefinitionRequestBodyDestinationS3Location(){}
 }

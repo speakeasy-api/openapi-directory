@@ -59,11 +59,9 @@ public class ResourcePolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeResourcePoliciesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeResourcePoliciesAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeResourcePoliciesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeResourcePoliciesAggregatedListResponse(contentType, httpRes.statusCode()) {{
             resourcePolicyAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class ResourcePolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeResourcePoliciesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeResourcePoliciesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeResourcePoliciesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeResourcePoliciesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class ResourcePolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeResourcePoliciesGetResponse res = new org.openapis.openapi.models.operations.ComputeResourcePoliciesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeResourcePoliciesGetResponse res = new org.openapis.openapi.models.operations.ComputeResourcePoliciesGetResponse(contentType, httpRes.statusCode()) {{
             resourcePolicy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -197,11 +191,9 @@ public class ResourcePolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeResourcePoliciesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeResourcePoliciesGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeResourcePoliciesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeResourcePoliciesGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class ResourcePolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeResourcePoliciesInsertResponse res = new org.openapis.openapi.models.operations.ComputeResourcePoliciesInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeResourcePoliciesInsertResponse res = new org.openapis.openapi.models.operations.ComputeResourcePoliciesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -291,11 +281,9 @@ public class ResourcePolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeResourcePoliciesListResponse res = new org.openapis.openapi.models.operations.ComputeResourcePoliciesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeResourcePoliciesListResponse res = new org.openapis.openapi.models.operations.ComputeResourcePoliciesListResponse(contentType, httpRes.statusCode()) {{
             resourcePolicyList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -339,11 +327,9 @@ public class ResourcePolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeResourcePoliciesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeResourcePoliciesSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeResourcePoliciesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeResourcePoliciesSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -387,11 +373,9 @@ public class ResourcePolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeResourcePoliciesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeResourcePoliciesTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeResourcePoliciesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeResourcePoliciesTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

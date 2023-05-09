@@ -18,9 +18,11 @@ public class ProductRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("epid")
     public String epid;
+
     public ProductRecommendation withEpid(String epid) {
         this.epid = epid;
         return this;
     }
     
+    public ProductRecommendation(){}
 }

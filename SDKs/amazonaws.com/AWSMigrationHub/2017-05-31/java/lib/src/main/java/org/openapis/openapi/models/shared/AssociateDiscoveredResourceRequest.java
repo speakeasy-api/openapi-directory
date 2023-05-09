@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssociateDiscoveredResourceRequest {
     @JsonProperty("DiscoveredResource")
     public DiscoveredResource discoveredResource;
+
     public AssociateDiscoveredResourceRequest withDiscoveredResource(DiscoveredResource discoveredResource) {
         this.discoveredResource = discoveredResource;
         return this;
@@ -19,6 +20,7 @@ public class AssociateDiscoveredResourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DryRun")
     public Boolean dryRun;
+
     public AssociateDiscoveredResourceRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -26,6 +28,7 @@ public class AssociateDiscoveredResourceRequest {
     
     @JsonProperty("MigrationTaskName")
     public String migrationTaskName;
+
     public AssociateDiscoveredResourceRequest withMigrationTaskName(String migrationTaskName) {
         this.migrationTaskName = migrationTaskName;
         return this;
@@ -33,9 +36,15 @@ public class AssociateDiscoveredResourceRequest {
     
     @JsonProperty("ProgressUpdateStream")
     public String progressUpdateStream;
+
     public AssociateDiscoveredResourceRequest withProgressUpdateStream(String progressUpdateStream) {
         this.progressUpdateStream = progressUpdateStream;
         return this;
     }
     
+    public AssociateDiscoveredResourceRequest(@JsonProperty("DiscoveredResource") DiscoveredResource discoveredResource, @JsonProperty("MigrationTaskName") String migrationTaskName, @JsonProperty("ProgressUpdateStream") String progressUpdateStream) {
+        this.discoveredResource = discoveredResource;
+        this.migrationTaskName = migrationTaskName;
+        this.progressUpdateStream = progressUpdateStream;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTeamSimpleResponse {
     
     public String contentType;
+
     public GetTeamSimpleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetTeamSimpleResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetTeamSimpleResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetTeamSimpleResponse {
     
     
     public Integer statusCode;
+
     public GetTeamSimpleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetTeamSimpleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTeamSimpleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetTeamSimpleResponse {
      */
     
     public org.openapis.openapi.models.shared.TeamSimple teamSimple;
+
     public GetTeamSimpleResponse withTeamSimple(org.openapis.openapi.models.shared.TeamSimple teamSimple) {
         this.teamSimple = teamSimple;
         return this;
     }
     
+    public GetTeamSimpleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

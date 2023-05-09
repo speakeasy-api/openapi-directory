@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListMembershipsResponse {
@@ -12,6 +13,7 @@ public class ListMembershipsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListMembershipsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListMembershipsResponse {
     
     
     public String contentType;
+
     public ListMembershipsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListMembershipsResponse {
      */
     
     public Object internalServerException;
+
     public ListMembershipsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListMembershipsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListMembershipsOutput listMembershipsOutput;
+
     public ListMembershipsResponse withListMembershipsOutput(org.openapis.openapi.models.shared.ListMembershipsOutput listMembershipsOutput) {
         this.listMembershipsOutput = listMembershipsOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListMembershipsResponse {
     
     
     public Integer statusCode;
+
     public ListMembershipsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListMembershipsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListMembershipsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListMembershipsResponse {
      */
     
     public Object throttlingException;
+
     public ListMembershipsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListMembershipsResponse {
      */
     
     public Object validationException;
+
     public ListMembershipsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListMembershipsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

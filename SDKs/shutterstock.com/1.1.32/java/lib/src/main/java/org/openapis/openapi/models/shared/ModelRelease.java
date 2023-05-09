@@ -18,9 +18,11 @@ public class ModelRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ModelRelease withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ModelRelease(){}
 }

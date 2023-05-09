@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * UpdateConfigurationSetReputationMetricsEnabledRequest - Represents a request to modify the reputation metric publishing settings for a configuration set.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UpdateConfigurationSetReputationMetricsEnabledRequest {
     
     public String configurationSetName;
+
     public UpdateConfigurationSetReputationMetricsEnabledRequest withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -19,9 +20,14 @@ public class UpdateConfigurationSetReputationMetricsEnabledRequest {
     
     
     public Boolean enabled;
+
     public UpdateConfigurationSetReputationMetricsEnabledRequest withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public UpdateConfigurationSetReputationMetricsEnabledRequest(@JsonProperty("ConfigurationSetName") String configurationSetName, @JsonProperty("Enabled") Boolean enabled) {
+        this.configurationSetName = configurationSetName;
+        this.enabled = enabled;
+  }
 }

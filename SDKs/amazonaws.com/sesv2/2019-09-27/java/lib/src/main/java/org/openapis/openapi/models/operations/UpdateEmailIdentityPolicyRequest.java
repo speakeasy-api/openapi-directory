@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateEmailIdentityPolicyRequest {
@@ -12,6 +13,7 @@ public class UpdateEmailIdentityPolicyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EmailIdentity")
     public String emailIdentity;
+
     public UpdateEmailIdentityPolicyRequest withEmailIdentity(String emailIdentity) {
         this.emailIdentity = emailIdentity;
         return this;
@@ -22,6 +24,7 @@ public class UpdateEmailIdentityPolicyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=PolicyName")
     public String policyName;
+
     public UpdateEmailIdentityPolicyRequest withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -29,6 +32,7 @@ public class UpdateEmailIdentityPolicyRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateEmailIdentityPolicyRequestBody requestBody;
+
     public UpdateEmailIdentityPolicyRequest withRequestBody(UpdateEmailIdentityPolicyRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -36,6 +40,7 @@ public class UpdateEmailIdentityPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdateEmailIdentityPolicyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class UpdateEmailIdentityPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdateEmailIdentityPolicyRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class UpdateEmailIdentityPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdateEmailIdentityPolicyRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class UpdateEmailIdentityPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdateEmailIdentityPolicyRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class UpdateEmailIdentityPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdateEmailIdentityPolicyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class UpdateEmailIdentityPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdateEmailIdentityPolicyRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,9 +88,15 @@ public class UpdateEmailIdentityPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdateEmailIdentityPolicyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public UpdateEmailIdentityPolicyRequest(@JsonProperty("EmailIdentity") String emailIdentity, @JsonProperty("PolicyName") String policyName, @JsonProperty("RequestBody") UpdateEmailIdentityPolicyRequestBody requestBody) {
+        this.emailIdentity = emailIdentity;
+        this.policyName = policyName;
+        this.requestBody = requestBody;
+  }
 }

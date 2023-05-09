@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListBackendJobsResponse {
@@ -12,6 +13,7 @@ public class ListBackendJobsResponse {
      */
     
     public Object badRequestException;
+
     public ListBackendJobsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListBackendJobsResponse {
     
     
     public String contentType;
+
     public ListBackendJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListBackendJobsResponse {
      */
     
     public Object gatewayTimeoutException;
+
     public ListBackendJobsResponse withGatewayTimeoutException(Object gatewayTimeoutException) {
         this.gatewayTimeoutException = gatewayTimeoutException;
         return this;
@@ -39,6 +43,7 @@ public class ListBackendJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListBackendJobsResponse listBackendJobsResponse;
+
     public ListBackendJobsResponse withListBackendJobsResponse(org.openapis.openapi.models.shared.ListBackendJobsResponse listBackendJobsResponse) {
         this.listBackendJobsResponse = listBackendJobsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListBackendJobsResponse {
      */
     
     public Object notFoundException;
+
     public ListBackendJobsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListBackendJobsResponse {
     
     
     public Integer statusCode;
+
     public ListBackendJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListBackendJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListBackendJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListBackendJobsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListBackendJobsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListBackendJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

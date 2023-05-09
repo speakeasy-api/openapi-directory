@@ -15,6 +15,7 @@ public class AddonVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addonVersion")
     public String addonVersion;
+
     public AddonVersionInfo withAddonVersion(String addonVersion) {
         this.addonVersion = addonVersion;
         return this;
@@ -23,6 +24,7 @@ public class AddonVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("architecture")
     public String[] architecture;
+
     public AddonVersionInfo withArchitecture(String[] architecture) {
         this.architecture = architecture;
         return this;
@@ -31,6 +33,7 @@ public class AddonVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compatibilities")
     public Compatibility[] compatibilities;
+
     public AddonVersionInfo withCompatibilities(Compatibility[] compatibilities) {
         this.compatibilities = compatibilities;
         return this;
@@ -39,9 +42,11 @@ public class AddonVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiresConfiguration")
     public Boolean requiresConfiguration;
+
     public AddonVersionInfo withRequiresConfiguration(Boolean requiresConfiguration) {
         this.requiresConfiguration = requiresConfiguration;
         return this;
     }
     
+    public AddonVersionInfo(){}
 }

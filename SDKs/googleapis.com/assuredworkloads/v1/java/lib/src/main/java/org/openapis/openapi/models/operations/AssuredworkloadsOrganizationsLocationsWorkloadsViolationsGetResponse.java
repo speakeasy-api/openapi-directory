@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssuredworkloadsOrganizationsLocationsWorkloadsViolationsGetResponse {
     
     public String contentType;
+
     public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AssuredworkloadsOrganizationsLocationsWorkloadsViolationsGetRespons
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudAssuredworkloadsV1Violation googleCloudAssuredworkloadsV1Violation;
+
     public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsGetResponse withGoogleCloudAssuredworkloadsV1Violation(org.openapis.openapi.models.shared.GoogleCloudAssuredworkloadsV1Violation googleCloudAssuredworkloadsV1Violation) {
         this.googleCloudAssuredworkloadsV1Violation = googleCloudAssuredworkloadsV1Violation;
         return this;
@@ -26,6 +29,7 @@ public class AssuredworkloadsOrganizationsLocationsWorkloadsViolationsGetRespons
     
     
     public Integer statusCode;
+
     public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AssuredworkloadsOrganizationsLocationsWorkloadsViolationsGetRespons
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

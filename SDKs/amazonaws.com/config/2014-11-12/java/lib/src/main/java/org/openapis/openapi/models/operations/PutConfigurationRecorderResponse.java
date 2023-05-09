@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutConfigurationRecorderResponse {
     
     public String contentType;
+
     public PutConfigurationRecorderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutConfigurationRecorderResponse {
      */
     
     public Object invalidConfigurationRecorderNameException;
+
     public PutConfigurationRecorderResponse withInvalidConfigurationRecorderNameException(Object invalidConfigurationRecorderNameException) {
         this.invalidConfigurationRecorderNameException = invalidConfigurationRecorderNameException;
         return this;
@@ -29,6 +32,7 @@ public class PutConfigurationRecorderResponse {
      */
     
     public Object invalidRecordingGroupException;
+
     public PutConfigurationRecorderResponse withInvalidRecordingGroupException(Object invalidRecordingGroupException) {
         this.invalidRecordingGroupException = invalidRecordingGroupException;
         return this;
@@ -39,6 +43,7 @@ public class PutConfigurationRecorderResponse {
      */
     
     public Object invalidRoleException;
+
     public PutConfigurationRecorderResponse withInvalidRoleException(Object invalidRoleException) {
         this.invalidRoleException = invalidRoleException;
         return this;
@@ -49,6 +54,7 @@ public class PutConfigurationRecorderResponse {
      */
     
     public Object maxNumberOfConfigurationRecordersExceededException;
+
     public PutConfigurationRecorderResponse withMaxNumberOfConfigurationRecordersExceededException(Object maxNumberOfConfigurationRecordersExceededException) {
         this.maxNumberOfConfigurationRecordersExceededException = maxNumberOfConfigurationRecordersExceededException;
         return this;
@@ -56,6 +62,7 @@ public class PutConfigurationRecorderResponse {
     
     
     public Integer statusCode;
+
     public PutConfigurationRecorderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class PutConfigurationRecorderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutConfigurationRecorderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutConfigurationRecorderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

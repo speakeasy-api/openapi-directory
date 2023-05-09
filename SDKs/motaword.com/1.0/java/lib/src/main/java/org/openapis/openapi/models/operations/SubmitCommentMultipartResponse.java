@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SubmitCommentMultipartResponse {
@@ -12,6 +13,7 @@ public class SubmitCommentMultipartResponse {
      */
     
     public org.openapis.openapi.models.shared.Comment comment;
+
     public SubmitCommentMultipartResponse withComment(org.openapis.openapi.models.shared.Comment comment) {
         this.comment = comment;
         return this;
@@ -19,6 +21,7 @@ public class SubmitCommentMultipartResponse {
     
     
     public String contentType;
+
     public SubmitCommentMultipartResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SubmitCommentMultipartResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public SubmitCommentMultipartResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class SubmitCommentMultipartResponse {
     
     
     public Integer statusCode;
+
     public SubmitCommentMultipartResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class SubmitCommentMultipartResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SubmitCommentMultipartResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SubmitCommentMultipartResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

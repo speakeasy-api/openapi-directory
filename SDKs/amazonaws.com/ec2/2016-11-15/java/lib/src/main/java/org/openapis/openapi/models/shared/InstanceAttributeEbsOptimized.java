@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class InstanceAttributeEbsOptimized {
     
     public Boolean value;
+
     public InstanceAttributeEbsOptimized withValue(Boolean value) {
         this.value = value;
         return this;
     }
     
+    public InstanceAttributeEbsOptimized(){}
 }

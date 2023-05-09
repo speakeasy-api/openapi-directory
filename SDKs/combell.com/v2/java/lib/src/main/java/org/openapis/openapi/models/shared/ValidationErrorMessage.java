@@ -12,6 +12,7 @@ public class ValidationErrorMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_code")
     public String errorCode;
+
     public ValidationErrorMessage withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -20,9 +21,11 @@ public class ValidationErrorMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_text")
     public String errorText;
+
     public ValidationErrorMessage withErrorText(String errorText) {
         this.errorText = errorText;
         return this;
     }
     
+    public ValidationErrorMessage(){}
 }

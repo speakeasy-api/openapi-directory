@@ -18,6 +18,7 @@ public class BandingProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstBandColor")
     public Color firstBandColor;
+
     public BandingProperties withFirstBandColor(Color firstBandColor) {
         this.firstBandColor = firstBandColor;
         return this;
@@ -29,6 +30,7 @@ public class BandingProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstBandColorStyle")
     public ColorStyle firstBandColorStyle;
+
     public BandingProperties withFirstBandColorStyle(ColorStyle firstBandColorStyle) {
         this.firstBandColorStyle = firstBandColorStyle;
         return this;
@@ -40,6 +42,7 @@ public class BandingProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("footerColor")
     public Color footerColor;
+
     public BandingProperties withFooterColor(Color footerColor) {
         this.footerColor = footerColor;
         return this;
@@ -51,6 +54,7 @@ public class BandingProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("footerColorStyle")
     public ColorStyle footerColorStyle;
+
     public BandingProperties withFooterColorStyle(ColorStyle footerColorStyle) {
         this.footerColorStyle = footerColorStyle;
         return this;
@@ -62,6 +66,7 @@ public class BandingProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headerColor")
     public Color headerColor;
+
     public BandingProperties withHeaderColor(Color headerColor) {
         this.headerColor = headerColor;
         return this;
@@ -73,6 +78,7 @@ public class BandingProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headerColorStyle")
     public ColorStyle headerColorStyle;
+
     public BandingProperties withHeaderColorStyle(ColorStyle headerColorStyle) {
         this.headerColorStyle = headerColorStyle;
         return this;
@@ -84,6 +90,7 @@ public class BandingProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondBandColor")
     public Color secondBandColor;
+
     public BandingProperties withSecondBandColor(Color secondBandColor) {
         this.secondBandColor = secondBandColor;
         return this;
@@ -95,9 +102,11 @@ public class BandingProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondBandColorStyle")
     public ColorStyle secondBandColorStyle;
+
     public BandingProperties withSecondBandColorStyle(ColorStyle secondBandColorStyle) {
         this.secondBandColorStyle = secondBandColorStyle;
         return this;
     }
     
+    public BandingProperties(){}
 }

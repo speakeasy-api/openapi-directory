@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ModifyDBClusterSnapshotAttributeMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyDBClusterSnapshotAttributeMessage {
     
     public String attributeName;
+
     public ModifyDBClusterSnapshotAttributeMessage withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -19,6 +20,7 @@ public class ModifyDBClusterSnapshotAttributeMessage {
     
     
     public String dbClusterSnapshotIdentifier;
+
     public ModifyDBClusterSnapshotAttributeMessage withDBClusterSnapshotIdentifier(String dbClusterSnapshotIdentifier) {
         this.dbClusterSnapshotIdentifier = dbClusterSnapshotIdentifier;
         return this;
@@ -26,6 +28,7 @@ public class ModifyDBClusterSnapshotAttributeMessage {
     
     
     public String[] valuesToAdd;
+
     public ModifyDBClusterSnapshotAttributeMessage withValuesToAdd(String[] valuesToAdd) {
         this.valuesToAdd = valuesToAdd;
         return this;
@@ -33,9 +36,14 @@ public class ModifyDBClusterSnapshotAttributeMessage {
     
     
     public String[] valuesToRemove;
+
     public ModifyDBClusterSnapshotAttributeMessage withValuesToRemove(String[] valuesToRemove) {
         this.valuesToRemove = valuesToRemove;
         return this;
     }
     
+    public ModifyDBClusterSnapshotAttributeMessage(@JsonProperty("AttributeName") String attributeName, @JsonProperty("DBClusterSnapshotIdentifier") String dbClusterSnapshotIdentifier) {
+        this.attributeName = attributeName;
+        this.dbClusterSnapshotIdentifier = dbClusterSnapshotIdentifier;
+  }
 }

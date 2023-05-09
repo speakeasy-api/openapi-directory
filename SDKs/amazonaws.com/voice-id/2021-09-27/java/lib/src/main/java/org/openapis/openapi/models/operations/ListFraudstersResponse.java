@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListFraudstersResponse {
@@ -12,6 +13,7 @@ public class ListFraudstersResponse {
      */
     
     public Object accessDeniedException;
+
     public ListFraudstersResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListFraudstersResponse {
     
     
     public String contentType;
+
     public ListFraudstersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListFraudstersResponse {
      */
     
     public Object internalServerException;
+
     public ListFraudstersResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListFraudstersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListFraudstersResponse listFraudstersResponse;
+
     public ListFraudstersResponse withListFraudstersResponse(org.openapis.openapi.models.shared.ListFraudstersResponse listFraudstersResponse) {
         this.listFraudstersResponse = listFraudstersResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListFraudstersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListFraudstersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListFraudstersResponse {
     
     
     public Integer statusCode;
+
     public ListFraudstersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListFraudstersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListFraudstersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListFraudstersResponse {
      */
     
     public Object throttlingException;
+
     public ListFraudstersResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListFraudstersResponse {
      */
     
     public Object validationException;
+
     public ListFraudstersResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListFraudstersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

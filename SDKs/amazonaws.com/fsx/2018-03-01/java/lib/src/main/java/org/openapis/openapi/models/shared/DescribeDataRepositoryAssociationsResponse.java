@@ -15,6 +15,7 @@ public class DescribeDataRepositoryAssociationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Associations")
     public DataRepositoryAssociation[] associations;
+
     public DescribeDataRepositoryAssociationsResponse withAssociations(DataRepositoryAssociation[] associations) {
         this.associations = associations;
         return this;
@@ -26,9 +27,11 @@ public class DescribeDataRepositoryAssociationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeDataRepositoryAssociationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeDataRepositoryAssociationsResponse(){}
 }

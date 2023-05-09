@@ -18,6 +18,7 @@ public class AlwaysOnVpnPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lockdownEnabled")
     public Boolean lockdownEnabled;
+
     public AlwaysOnVpnPackage withLockdownEnabled(Boolean lockdownEnabled) {
         this.lockdownEnabled = lockdownEnabled;
         return this;
@@ -29,9 +30,11 @@ public class AlwaysOnVpnPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageName")
     public String packageName;
+
     public AlwaysOnVpnPackage withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
     }
     
+    public AlwaysOnVpnPackage(){}
 }

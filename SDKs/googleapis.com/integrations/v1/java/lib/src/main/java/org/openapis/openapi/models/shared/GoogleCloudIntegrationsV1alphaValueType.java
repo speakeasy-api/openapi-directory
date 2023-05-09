@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("booleanArray")
     public GoogleCloudIntegrationsV1alphaBooleanParameterArray booleanArray;
+
     public GoogleCloudIntegrationsV1alphaValueType withBooleanArray(GoogleCloudIntegrationsV1alphaBooleanParameterArray booleanArray) {
         this.booleanArray = booleanArray;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("booleanValue")
     public Boolean booleanValue;
+
     public GoogleCloudIntegrationsV1alphaValueType withBooleanValue(Boolean booleanValue) {
         this.booleanValue = booleanValue;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleArray")
     public GoogleCloudIntegrationsV1alphaDoubleParameterArray doubleArray;
+
     public GoogleCloudIntegrationsV1alphaValueType withDoubleArray(GoogleCloudIntegrationsV1alphaDoubleParameterArray doubleArray) {
         this.doubleArray = doubleArray;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIntegrationsV1alphaValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleValue")
     public Double doubleValue;
+
     public GoogleCloudIntegrationsV1alphaValueType withDoubleValue(Double doubleValue) {
         this.doubleValue = doubleValue;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudIntegrationsV1alphaValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intArray")
     public GoogleCloudIntegrationsV1alphaIntParameterArray intArray;
+
     public GoogleCloudIntegrationsV1alphaValueType withIntArray(GoogleCloudIntegrationsV1alphaIntParameterArray intArray) {
         this.intArray = intArray;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudIntegrationsV1alphaValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intValue")
     public String intValue;
+
     public GoogleCloudIntegrationsV1alphaValueType withIntValue(String intValue) {
         this.intValue = intValue;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudIntegrationsV1alphaValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jsonValue")
     public String jsonValue;
+
     public GoogleCloudIntegrationsV1alphaValueType withJsonValue(String jsonValue) {
         this.jsonValue = jsonValue;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudIntegrationsV1alphaValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringArray")
     public GoogleCloudIntegrationsV1alphaStringParameterArray stringArray;
+
     public GoogleCloudIntegrationsV1alphaValueType withStringArray(GoogleCloudIntegrationsV1alphaStringParameterArray stringArray) {
         this.stringArray = stringArray;
         return this;
@@ -106,9 +114,11 @@ public class GoogleCloudIntegrationsV1alphaValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValue")
     public String stringValue;
+
     public GoogleCloudIntegrationsV1alphaValueType withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaValueType(){}
 }

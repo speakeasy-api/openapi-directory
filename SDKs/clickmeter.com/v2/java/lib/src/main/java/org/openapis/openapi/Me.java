@@ -49,14 +49,12 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MeGetMeResponse res = new org.openapis.openapi.models.operations.MeGetMeResponse() {{
+        org.openapis.openapi.models.operations.MeGetMeResponse res = new org.openapis.openapi.models.operations.MeGetMeResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoAccountingUser = null;
             apiCoreDtoAccountingUser = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,14 +103,12 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MeGetMePlanResponse res = new org.openapis.openapi.models.operations.MeGetMePlanResponse() {{
+        org.openapis.openapi.models.operations.MeGetMePlanResponse res = new org.openapis.openapi.models.operations.MeGetMePlanResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoAccountingPlan = null;
             apiCoreDtoAccountingPlan = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

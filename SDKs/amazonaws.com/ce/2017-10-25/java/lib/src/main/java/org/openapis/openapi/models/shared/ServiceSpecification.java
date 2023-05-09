@@ -15,9 +15,11 @@ public class ServiceSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EC2Specification")
     public Ec2Specification ec2Specification;
+
     public ServiceSpecification withEc2Specification(Ec2Specification ec2Specification) {
         this.ec2Specification = ec2Specification;
         return this;
     }
     
+    public ServiceSpecification(){}
 }

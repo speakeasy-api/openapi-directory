@@ -12,6 +12,7 @@ public class GetServers200ApplicationJSONServersPublicNetIpv6DnsPtr {
      */
     @JsonProperty("dns_ptr")
     public String dnsPtr;
+
     public GetServers200ApplicationJSONServersPublicNetIpv6DnsPtr withDnsPtr(String dnsPtr) {
         this.dnsPtr = dnsPtr;
         return this;
@@ -22,9 +23,14 @@ public class GetServers200ApplicationJSONServersPublicNetIpv6DnsPtr {
      */
     @JsonProperty("ip")
     public String ip;
+
     public GetServers200ApplicationJSONServersPublicNetIpv6DnsPtr withIp(String ip) {
         this.ip = ip;
         return this;
     }
     
+    public GetServers200ApplicationJSONServersPublicNetIpv6DnsPtr(@JsonProperty("dns_ptr") String dnsPtr, @JsonProperty("ip") String ip) {
+        this.dnsPtr = dnsPtr;
+        this.ip = ip;
+  }
 }

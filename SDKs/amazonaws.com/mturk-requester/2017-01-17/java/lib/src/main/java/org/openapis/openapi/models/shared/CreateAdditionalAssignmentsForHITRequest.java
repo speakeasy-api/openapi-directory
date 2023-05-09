@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateAdditionalAssignmentsForHITRequest {
     @JsonProperty("HITId")
     public String hitId;
+
     public CreateAdditionalAssignmentsForHITRequest withHITId(String hitId) {
         this.hitId = hitId;
         return this;
@@ -18,6 +19,7 @@ public class CreateAdditionalAssignmentsForHITRequest {
     
     @JsonProperty("NumberOfAdditionalAssignments")
     public Long numberOfAdditionalAssignments;
+
     public CreateAdditionalAssignmentsForHITRequest withNumberOfAdditionalAssignments(Long numberOfAdditionalAssignments) {
         this.numberOfAdditionalAssignments = numberOfAdditionalAssignments;
         return this;
@@ -26,9 +28,14 @@ public class CreateAdditionalAssignmentsForHITRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UniqueRequestToken")
     public String uniqueRequestToken;
+
     public CreateAdditionalAssignmentsForHITRequest withUniqueRequestToken(String uniqueRequestToken) {
         this.uniqueRequestToken = uniqueRequestToken;
         return this;
     }
     
+    public CreateAdditionalAssignmentsForHITRequest(@JsonProperty("HITId") String hitId, @JsonProperty("NumberOfAdditionalAssignments") Long numberOfAdditionalAssignments) {
+        this.hitId = hitId;
+        this.numberOfAdditionalAssignments = numberOfAdditionalAssignments;
+  }
 }

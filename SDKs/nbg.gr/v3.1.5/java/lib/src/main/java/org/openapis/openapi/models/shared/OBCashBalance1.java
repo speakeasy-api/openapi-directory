@@ -22,6 +22,7 @@ public class OBCashBalance1 {
      */
     @JsonProperty("AccountId")
     public String accountId;
+
     public OBCashBalance1 withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class OBCashBalance1 {
     
     @JsonProperty("Amount")
     public OBActiveOrHistoricCurrencyAndAmount amount;
+
     public OBCashBalance1 withAmount(OBActiveOrHistoricCurrencyAndAmount amount) {
         this.amount = amount;
         return this;
@@ -36,6 +38,7 @@ public class OBCashBalance1 {
     
     @JsonProperty("CreditDebitIndicator")
     public OBCreditDebitCodeEnum creditDebitIndicator;
+
     public OBCashBalance1 withCreditDebitIndicator(OBCreditDebitCodeEnum creditDebitIndicator) {
         this.creditDebitIndicator = creditDebitIndicator;
         return this;
@@ -47,6 +50,7 @@ public class OBCashBalance1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreditLine")
     public OBCreditLine1[] creditLine;
+
     public OBCashBalance1 withCreditLine(OBCreditLine1[] creditLine) {
         this.creditLine = creditLine;
         return this;
@@ -59,6 +63,7 @@ public class OBCashBalance1 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DateTime")
     public OffsetDateTime dateTime;
+
     public OBCashBalance1 withDateTime(OffsetDateTime dateTime) {
         this.dateTime = dateTime;
         return this;
@@ -66,9 +71,17 @@ public class OBCashBalance1 {
     
     @JsonProperty("Type")
     public OBBalanceType1CodeEnum type;
+
     public OBCashBalance1 withType(OBBalanceType1CodeEnum type) {
         this.type = type;
         return this;
     }
     
+    public OBCashBalance1(@JsonProperty("AccountId") String accountId, @JsonProperty("Amount") OBActiveOrHistoricCurrencyAndAmount amount, @JsonProperty("CreditDebitIndicator") OBCreditDebitCodeEnum creditDebitIndicator, @JsonProperty("DateTime") OffsetDateTime dateTime, @JsonProperty("Type") OBBalanceType1CodeEnum type) {
+        this.accountId = accountId;
+        this.amount = amount;
+        this.creditDebitIndicator = creditDebitIndicator;
+        this.dateTime = dateTime;
+        this.type = type;
+  }
 }

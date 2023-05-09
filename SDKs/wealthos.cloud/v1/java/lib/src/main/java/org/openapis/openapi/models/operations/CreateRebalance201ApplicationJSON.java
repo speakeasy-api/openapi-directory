@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateRebalance201ApplicationJSON {
     @JsonProperty("pot_details")
     public CreateRebalance201ApplicationJSONEachPotInstructionOfTheRebalanceRequest[] potDetails;
+
     public CreateRebalance201ApplicationJSON withPotDetails(CreateRebalance201ApplicationJSONEachPotInstructionOfTheRebalanceRequest[] potDetails) {
         this.potDetails = potDetails;
         return this;
@@ -22,6 +23,7 @@ public class CreateRebalance201ApplicationJSON {
      */
     @JsonProperty("rebalance_request_id")
     public String rebalanceRequestId;
+
     public CreateRebalance201ApplicationJSON withRebalanceRequestId(String rebalanceRequestId) {
         this.rebalanceRequestId = rebalanceRequestId;
         return this;
@@ -32,9 +34,15 @@ public class CreateRebalance201ApplicationJSON {
      */
     @JsonProperty("status")
     public CreateRebalance201ApplicationJSONStatusEnum status;
+
     public CreateRebalance201ApplicationJSON withStatus(CreateRebalance201ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CreateRebalance201ApplicationJSON(@JsonProperty("pot_details") CreateRebalance201ApplicationJSONEachPotInstructionOfTheRebalanceRequest[] potDetails, @JsonProperty("rebalance_request_id") String rebalanceRequestId, @JsonProperty("status") CreateRebalance201ApplicationJSONStatusEnum status) {
+        this.potDetails = potDetails;
+        this.rebalanceRequestId = rebalanceRequestId;
+        this.status = status;
+  }
 }

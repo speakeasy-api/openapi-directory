@@ -18,6 +18,7 @@ public class LogConfigCloudAuditOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizationLoggingOptions")
     public AuthorizationLoggingOptions authorizationLoggingOptions;
+
     public LogConfigCloudAuditOptions withAuthorizationLoggingOptions(AuthorizationLoggingOptions authorizationLoggingOptions) {
         this.authorizationLoggingOptions = authorizationLoggingOptions;
         return this;
@@ -29,9 +30,11 @@ public class LogConfigCloudAuditOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logName")
     public LogConfigCloudAuditOptionsLogNameEnum logName;
+
     public LogConfigCloudAuditOptions withLogName(LogConfigCloudAuditOptionsLogNameEnum logName) {
         this.logName = logName;
         return this;
     }
     
+    public LogConfigCloudAuditOptions(){}
 }

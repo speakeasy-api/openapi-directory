@@ -12,6 +12,7 @@ public class ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellers {
      */
     @JsonProperty("addToCartLink")
     public String addToCartLink;
+
     public ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellers withAddToCartLink(String addToCartLink) {
         this.addToCartLink = addToCartLink;
         return this;
@@ -22,6 +23,7 @@ public class ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellers {
      */
     @JsonProperty("commertialOffer")
     public ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellersCommertialOffer commertialOffer;
+
     public ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellers withCommertialOffer(ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellersCommertialOffer commertialOffer) {
         this.commertialOffer = commertialOffer;
         return this;
@@ -32,6 +34,7 @@ public class ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellers {
      */
     @JsonProperty("sellerDefault")
     public Boolean sellerDefault;
+
     public ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellers withSellerDefault(Boolean sellerDefault) {
         this.sellerDefault = sellerDefault;
         return this;
@@ -42,6 +45,7 @@ public class ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellers {
      */
     @JsonProperty("sellerId")
     public String sellerId;
+
     public ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellers withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
@@ -52,9 +56,17 @@ public class ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellers {
      */
     @JsonProperty("sellerName")
     public String sellerName;
+
     public ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellers withSellerName(String sellerName) {
         this.sellerName = sellerName;
         return this;
     }
     
+    public ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellers(@JsonProperty("addToCartLink") String addToCartLink, @JsonProperty("commertialOffer") ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellersCommertialOffer commertialOffer, @JsonProperty("sellerDefault") Boolean sellerDefault, @JsonProperty("sellerId") String sellerId, @JsonProperty("sellerName") String sellerName) {
+        this.addToCartLink = addToCartLink;
+        this.commertialOffer = commertialOffer;
+        this.sellerDefault = sellerDefault;
+        this.sellerId = sellerId;
+        this.sellerName = sellerName;
+  }
 }

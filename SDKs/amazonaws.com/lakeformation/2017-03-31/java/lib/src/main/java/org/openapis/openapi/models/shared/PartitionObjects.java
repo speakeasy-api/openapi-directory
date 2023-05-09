@@ -15,6 +15,7 @@ public class PartitionObjects {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Objects")
     public TableObject[] objects;
+
     public PartitionObjects withObjects(TableObject[] objects) {
         this.objects = objects;
         return this;
@@ -23,9 +24,11 @@ public class PartitionObjects {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartitionValues")
     public String[] partitionValues;
+
     public PartitionObjects withPartitionValues(String[] partitionValues) {
         this.partitionValues = partitionValues;
         return this;
     }
     
+    public PartitionObjects(){}
 }

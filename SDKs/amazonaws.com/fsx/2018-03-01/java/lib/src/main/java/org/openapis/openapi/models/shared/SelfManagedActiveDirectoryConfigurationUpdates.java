@@ -15,6 +15,7 @@ public class SelfManagedActiveDirectoryConfigurationUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DnsIps")
     public String[] dnsIps;
+
     public SelfManagedActiveDirectoryConfigurationUpdates withDnsIps(String[] dnsIps) {
         this.dnsIps = dnsIps;
         return this;
@@ -23,6 +24,7 @@ public class SelfManagedActiveDirectoryConfigurationUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Password")
     public String password;
+
     public SelfManagedActiveDirectoryConfigurationUpdates withPassword(String password) {
         this.password = password;
         return this;
@@ -31,9 +33,11 @@ public class SelfManagedActiveDirectoryConfigurationUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserName")
     public String userName;
+
     public SelfManagedActiveDirectoryConfigurationUpdates withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public SelfManagedActiveDirectoryConfigurationUpdates(){}
 }

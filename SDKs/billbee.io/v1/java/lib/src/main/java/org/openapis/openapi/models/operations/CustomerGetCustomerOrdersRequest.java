@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CustomerGetCustomerOrdersRequest {
@@ -12,6 +13,7 @@ public class CustomerGetCustomerOrdersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public CustomerGetCustomerOrdersRequest withId(Long id) {
         this.id = id;
         return this;
@@ -22,6 +24,7 @@ public class CustomerGetCustomerOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public CustomerGetCustomerOrdersRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -32,9 +35,13 @@ public class CustomerGetCustomerOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Integer pageSize;
+
     public CustomerGetCustomerOrdersRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public CustomerGetCustomerOrdersRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

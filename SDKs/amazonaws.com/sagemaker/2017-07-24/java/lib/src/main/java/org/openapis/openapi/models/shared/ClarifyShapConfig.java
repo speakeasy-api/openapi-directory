@@ -15,6 +15,7 @@ public class ClarifyShapConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfSamples")
     public Long numberOfSamples;
+
     public ClarifyShapConfig withNumberOfSamples(Long numberOfSamples) {
         this.numberOfSamples = numberOfSamples;
         return this;
@@ -23,6 +24,7 @@ public class ClarifyShapConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Seed")
     public Long seed;
+
     public ClarifyShapConfig withSeed(Long seed) {
         this.seed = seed;
         return this;
@@ -30,6 +32,7 @@ public class ClarifyShapConfig {
     
     @JsonProperty("ShapBaselineConfig")
     public ClarifyShapBaselineConfig shapBaselineConfig;
+
     public ClarifyShapConfig withShapBaselineConfig(ClarifyShapBaselineConfig shapBaselineConfig) {
         this.shapBaselineConfig = shapBaselineConfig;
         return this;
@@ -38,6 +41,7 @@ public class ClarifyShapConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TextConfig")
     public ClarifyTextConfig textConfig;
+
     public ClarifyShapConfig withTextConfig(ClarifyTextConfig textConfig) {
         this.textConfig = textConfig;
         return this;
@@ -46,9 +50,13 @@ public class ClarifyShapConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UseLogit")
     public Boolean useLogit;
+
     public ClarifyShapConfig withUseLogit(Boolean useLogit) {
         this.useLogit = useLogit;
         return this;
     }
     
+    public ClarifyShapConfig(@JsonProperty("ShapBaselineConfig") ClarifyShapBaselineConfig shapBaselineConfig) {
+        this.shapBaselineConfig = shapBaselineConfig;
+  }
 }

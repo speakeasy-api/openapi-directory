@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCreditCardInfoResponse {
@@ -12,6 +13,7 @@ public class GetCreditCardInfoResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetCreditCardInfoResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetCreditCardInfoResponse {
     
     
     public String contentType;
+
     public GetCreditCardInfoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetCreditCardInfoResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetCreditCardInfoResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetCreditCardInfoResponse {
     
     
     public Integer statusCode;
+
     public GetCreditCardInfoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetCreditCardInfoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCreditCardInfoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class GetCreditCardInfoResponse {
      */
     
     public org.openapis.openapi.models.shared.CreditCardInfoResponse creditCardInfoResponse;
+
     public GetCreditCardInfoResponse withCreditCardInfoResponse(org.openapis.openapi.models.shared.CreditCardInfoResponse creditCardInfoResponse) {
         this.creditCardInfoResponse = creditCardInfoResponse;
         return this;
     }
     
+    public GetCreditCardInfoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

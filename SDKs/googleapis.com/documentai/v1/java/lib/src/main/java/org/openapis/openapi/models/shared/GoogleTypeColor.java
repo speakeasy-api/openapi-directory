@@ -18,6 +18,7 @@ public class GoogleTypeColor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alpha")
     public Float alpha;
+
     public GoogleTypeColor withAlpha(Float alpha) {
         this.alpha = alpha;
         return this;
@@ -29,6 +30,7 @@ public class GoogleTypeColor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blue")
     public Float blue;
+
     public GoogleTypeColor withBlue(Float blue) {
         this.blue = blue;
         return this;
@@ -40,6 +42,7 @@ public class GoogleTypeColor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("green")
     public Float green;
+
     public GoogleTypeColor withGreen(Float green) {
         this.green = green;
         return this;
@@ -51,9 +54,11 @@ public class GoogleTypeColor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("red")
     public Float red;
+
     public GoogleTypeColor withRed(Float red) {
         this.red = red;
         return this;
     }
     
+    public GoogleTypeColor(){}
 }

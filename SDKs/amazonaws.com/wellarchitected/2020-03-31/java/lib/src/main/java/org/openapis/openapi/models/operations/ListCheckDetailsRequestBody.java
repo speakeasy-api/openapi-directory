@@ -14,6 +14,7 @@ public class ListCheckDetailsRequestBody {
      */
     @JsonProperty("ChoiceId")
     public String choiceId;
+
     public ListCheckDetailsRequestBody withChoiceId(String choiceId) {
         this.choiceId = choiceId;
         return this;
@@ -24,6 +25,7 @@ public class ListCheckDetailsRequestBody {
      */
     @JsonProperty("LensArn")
     public String lensArn;
+
     public ListCheckDetailsRequestBody withLensArn(String lensArn) {
         this.lensArn = lensArn;
         return this;
@@ -35,6 +37,7 @@ public class ListCheckDetailsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListCheckDetailsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -46,6 +49,7 @@ public class ListCheckDetailsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCheckDetailsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -56,6 +60,7 @@ public class ListCheckDetailsRequestBody {
      */
     @JsonProperty("PillarId")
     public String pillarId;
+
     public ListCheckDetailsRequestBody withPillarId(String pillarId) {
         this.pillarId = pillarId;
         return this;
@@ -66,9 +71,16 @@ public class ListCheckDetailsRequestBody {
      */
     @JsonProperty("QuestionId")
     public String questionId;
+
     public ListCheckDetailsRequestBody withQuestionId(String questionId) {
         this.questionId = questionId;
         return this;
     }
     
+    public ListCheckDetailsRequestBody(@JsonProperty("ChoiceId") String choiceId, @JsonProperty("LensArn") String lensArn, @JsonProperty("PillarId") String pillarId, @JsonProperty("QuestionId") String questionId) {
+        this.choiceId = choiceId;
+        this.lensArn = lensArn;
+        this.pillarId = pillarId;
+        this.questionId = questionId;
+  }
 }

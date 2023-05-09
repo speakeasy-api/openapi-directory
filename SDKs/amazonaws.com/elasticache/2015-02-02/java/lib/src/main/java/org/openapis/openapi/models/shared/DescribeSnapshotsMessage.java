@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSnapshotsMessage {
     
     public String cacheClusterId;
+
     public DescribeSnapshotsMessage withCacheClusterId(String cacheClusterId) {
         this.cacheClusterId = cacheClusterId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeSnapshotsMessage {
     
     
     public String marker;
+
     public DescribeSnapshotsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -26,6 +28,7 @@ public class DescribeSnapshotsMessage {
     
     
     public Long maxRecords;
+
     public DescribeSnapshotsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -33,6 +36,7 @@ public class DescribeSnapshotsMessage {
     
     
     public String replicationGroupId;
+
     public DescribeSnapshotsMessage withReplicationGroupId(String replicationGroupId) {
         this.replicationGroupId = replicationGroupId;
         return this;
@@ -40,6 +44,7 @@ public class DescribeSnapshotsMessage {
     
     
     public Boolean showNodeGroupConfig;
+
     public DescribeSnapshotsMessage withShowNodeGroupConfig(Boolean showNodeGroupConfig) {
         this.showNodeGroupConfig = showNodeGroupConfig;
         return this;
@@ -47,6 +52,7 @@ public class DescribeSnapshotsMessage {
     
     
     public String snapshotName;
+
     public DescribeSnapshotsMessage withSnapshotName(String snapshotName) {
         this.snapshotName = snapshotName;
         return this;
@@ -54,9 +60,11 @@ public class DescribeSnapshotsMessage {
     
     
     public String snapshotSource;
+
     public DescribeSnapshotsMessage withSnapshotSource(String snapshotSource) {
         this.snapshotSource = snapshotSource;
         return this;
     }
     
+    public DescribeSnapshotsMessage(){}
 }

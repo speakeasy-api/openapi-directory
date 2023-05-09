@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposGetDeploymentBranchPolicyRequest {
@@ -12,6 +13,7 @@ public class ReposGetDeploymentBranchPolicyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branch_policy_id")
     public Long branchPolicyId;
+
     public ReposGetDeploymentBranchPolicyRequest withBranchPolicyId(Long branchPolicyId) {
         this.branchPolicyId = branchPolicyId;
         return this;
@@ -22,6 +24,7 @@ public class ReposGetDeploymentBranchPolicyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environment_name")
     public String environmentName;
+
     public ReposGetDeploymentBranchPolicyRequest withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -32,6 +35,7 @@ public class ReposGetDeploymentBranchPolicyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposGetDeploymentBranchPolicyRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -42,9 +46,16 @@ public class ReposGetDeploymentBranchPolicyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposGetDeploymentBranchPolicyRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReposGetDeploymentBranchPolicyRequest(@JsonProperty("branch_policy_id") Long branchPolicyId, @JsonProperty("environment_name") String environmentName, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.branchPolicyId = branchPolicyId;
+        this.environmentName = environmentName;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

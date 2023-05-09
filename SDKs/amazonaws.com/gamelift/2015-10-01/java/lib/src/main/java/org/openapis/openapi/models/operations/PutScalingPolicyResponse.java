@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutScalingPolicyResponse {
     
     public String contentType;
+
     public PutScalingPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutScalingPolicyResponse {
      */
     
     public Object internalServiceException;
+
     public PutScalingPolicyResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class PutScalingPolicyResponse {
      */
     
     public Object invalidRequestException;
+
     public PutScalingPolicyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class PutScalingPolicyResponse {
      */
     
     public Object notFoundException;
+
     public PutScalingPolicyResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -49,6 +54,7 @@ public class PutScalingPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.PutScalingPolicyOutput putScalingPolicyOutput;
+
     public PutScalingPolicyResponse withPutScalingPolicyOutput(org.openapis.openapi.models.shared.PutScalingPolicyOutput putScalingPolicyOutput) {
         this.putScalingPolicyOutput = putScalingPolicyOutput;
         return this;
@@ -56,6 +62,7 @@ public class PutScalingPolicyResponse {
     
     
     public Integer statusCode;
+
     public PutScalingPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class PutScalingPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutScalingPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class PutScalingPolicyResponse {
      */
     
     public Object unauthorizedException;
+
     public PutScalingPolicyResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public PutScalingPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

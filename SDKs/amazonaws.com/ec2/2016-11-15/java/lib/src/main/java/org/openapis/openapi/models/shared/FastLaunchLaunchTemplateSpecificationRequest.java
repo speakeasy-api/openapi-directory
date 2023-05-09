@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * FastLaunchLaunchTemplateSpecificationRequest - &lt;p&gt;Request to create a launch template for a fast-launch enabled Windows AMI.&lt;/p&gt; &lt;note&gt; &lt;p&gt;Note - You can specify either the &lt;code&gt;LaunchTemplateName&lt;/code&gt; or the &lt;code&gt;LaunchTemplateId&lt;/code&gt;, but not both.&lt;/p&gt; &lt;/note&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class FastLaunchLaunchTemplateSpecificationRequest {
     
     public String launchTemplateId;
+
     public FastLaunchLaunchTemplateSpecificationRequest withLaunchTemplateId(String launchTemplateId) {
         this.launchTemplateId = launchTemplateId;
         return this;
@@ -19,6 +20,7 @@ public class FastLaunchLaunchTemplateSpecificationRequest {
     
     
     public String launchTemplateName;
+
     public FastLaunchLaunchTemplateSpecificationRequest withLaunchTemplateName(String launchTemplateName) {
         this.launchTemplateName = launchTemplateName;
         return this;
@@ -26,9 +28,13 @@ public class FastLaunchLaunchTemplateSpecificationRequest {
     
     
     public String version;
+
     public FastLaunchLaunchTemplateSpecificationRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public FastLaunchLaunchTemplateSpecificationRequest(@JsonProperty("Version") String version) {
+        this.version = version;
+  }
 }

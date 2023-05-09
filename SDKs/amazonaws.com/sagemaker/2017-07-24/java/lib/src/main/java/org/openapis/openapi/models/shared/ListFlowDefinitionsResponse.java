@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListFlowDefinitionsResponse {
     @JsonProperty("FlowDefinitionSummaries")
     public FlowDefinitionSummary[] flowDefinitionSummaries;
+
     public ListFlowDefinitionsResponse withFlowDefinitionSummaries(FlowDefinitionSummary[] flowDefinitionSummaries) {
         this.flowDefinitionSummaries = flowDefinitionSummaries;
         return this;
@@ -22,9 +23,13 @@ public class ListFlowDefinitionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListFlowDefinitionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFlowDefinitionsResponse(@JsonProperty("FlowDefinitionSummaries") FlowDefinitionSummary[] flowDefinitionSummaries) {
+        this.flowDefinitionSummaries = flowDefinitionSummaries;
+  }
 }

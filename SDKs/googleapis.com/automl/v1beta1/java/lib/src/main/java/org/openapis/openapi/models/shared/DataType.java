@@ -18,6 +18,7 @@ public class DataType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listElementType")
     public DataType listElementType;
+
     public DataType withListElementType(DataType listElementType) {
         this.listElementType = listElementType;
         return this;
@@ -29,6 +30,7 @@ public class DataType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nullable")
     public Boolean nullable;
+
     public DataType withNullable(Boolean nullable) {
         this.nullable = nullable;
         return this;
@@ -40,6 +42,7 @@ public class DataType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("structType")
     public StructType structType;
+
     public DataType withStructType(StructType structType) {
         this.structType = structType;
         return this;
@@ -51,6 +54,7 @@ public class DataType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeFormat")
     public String timeFormat;
+
     public DataType withTimeFormat(String timeFormat) {
         this.timeFormat = timeFormat;
         return this;
@@ -62,9 +66,11 @@ public class DataType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("typeCode")
     public DataTypeTypeCodeEnum typeCode;
+
     public DataType withTypeCode(DataTypeTypeCodeEnum typeCode) {
         this.typeCode = typeCode;
         return this;
     }
     
+    public DataType(){}
 }

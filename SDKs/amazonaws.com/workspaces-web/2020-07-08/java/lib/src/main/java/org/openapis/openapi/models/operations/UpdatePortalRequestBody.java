@@ -15,6 +15,7 @@ public class UpdatePortalRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authenticationType")
     public UpdatePortalRequestBodyAuthenticationTypeEnum authenticationType;
+
     public UpdatePortalRequestBody withAuthenticationType(UpdatePortalRequestBodyAuthenticationTypeEnum authenticationType) {
         this.authenticationType = authenticationType;
         return this;
@@ -26,9 +27,11 @@ public class UpdatePortalRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public UpdatePortalRequestBody withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public UpdatePortalRequestBody(){}
 }

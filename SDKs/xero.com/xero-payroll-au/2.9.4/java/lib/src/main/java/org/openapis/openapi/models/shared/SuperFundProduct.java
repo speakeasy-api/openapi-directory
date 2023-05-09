@@ -15,6 +15,7 @@ public class SuperFundProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ABN")
     public String abn;
+
     public SuperFundProduct withAbn(String abn) {
         this.abn = abn;
         return this;
@@ -26,6 +27,7 @@ public class SuperFundProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductName")
     public String productName;
+
     public SuperFundProduct withProductName(String productName) {
         this.productName = productName;
         return this;
@@ -37,6 +39,7 @@ public class SuperFundProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SPIN")
     public String spin;
+
     public SuperFundProduct withSpin(String spin) {
         this.spin = spin;
         return this;
@@ -48,9 +51,11 @@ public class SuperFundProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("USI")
     public String usi;
+
     public SuperFundProduct withUsi(String usi) {
         this.usi = usi;
         return this;
     }
     
+    public SuperFundProduct(){}
 }

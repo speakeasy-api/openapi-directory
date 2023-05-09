@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AttachToIndexResponse {
@@ -12,6 +13,7 @@ public class AttachToIndexResponse {
      */
     
     public Object accessDeniedException;
+
     public AttachToIndexResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AttachToIndexResponse {
      */
     
     public org.openapis.openapi.models.shared.AttachToIndexResponse attachToIndexResponse;
+
     public AttachToIndexResponse withAttachToIndexResponse(org.openapis.openapi.models.shared.AttachToIndexResponse attachToIndexResponse) {
         this.attachToIndexResponse = attachToIndexResponse;
         return this;
@@ -29,6 +32,7 @@ public class AttachToIndexResponse {
     
     
     public String contentType;
+
     public AttachToIndexResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AttachToIndexResponse {
      */
     
     public Object directoryNotEnabledException;
+
     public AttachToIndexResponse withDirectoryNotEnabledException(Object directoryNotEnabledException) {
         this.directoryNotEnabledException = directoryNotEnabledException;
         return this;
@@ -49,6 +54,7 @@ public class AttachToIndexResponse {
      */
     
     public Object indexedAttributeMissingException;
+
     public AttachToIndexResponse withIndexedAttributeMissingException(Object indexedAttributeMissingException) {
         this.indexedAttributeMissingException = indexedAttributeMissingException;
         return this;
@@ -59,6 +65,7 @@ public class AttachToIndexResponse {
      */
     
     public Object internalServiceException;
+
     public AttachToIndexResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class AttachToIndexResponse {
      */
     
     public Object invalidArnException;
+
     public AttachToIndexResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -79,6 +87,7 @@ public class AttachToIndexResponse {
      */
     
     public Object invalidAttachmentException;
+
     public AttachToIndexResponse withInvalidAttachmentException(Object invalidAttachmentException) {
         this.invalidAttachmentException = invalidAttachmentException;
         return this;
@@ -89,6 +98,7 @@ public class AttachToIndexResponse {
      */
     
     public Object limitExceededException;
+
     public AttachToIndexResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -99,6 +109,7 @@ public class AttachToIndexResponse {
      */
     
     public Object linkNameAlreadyInUseException;
+
     public AttachToIndexResponse withLinkNameAlreadyInUseException(Object linkNameAlreadyInUseException) {
         this.linkNameAlreadyInUseException = linkNameAlreadyInUseException;
         return this;
@@ -109,6 +120,7 @@ public class AttachToIndexResponse {
      */
     
     public Object notIndexException;
+
     public AttachToIndexResponse withNotIndexException(Object notIndexException) {
         this.notIndexException = notIndexException;
         return this;
@@ -116,6 +128,7 @@ public class AttachToIndexResponse {
     
     
     public Integer statusCode;
+
     public AttachToIndexResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -123,6 +136,7 @@ public class AttachToIndexResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AttachToIndexResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -133,6 +147,7 @@ public class AttachToIndexResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AttachToIndexResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -143,6 +158,7 @@ public class AttachToIndexResponse {
      */
     
     public Object retryableConflictException;
+
     public AttachToIndexResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -153,9 +169,14 @@ public class AttachToIndexResponse {
      */
     
     public Object validationException;
+
     public AttachToIndexResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AttachToIndexResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

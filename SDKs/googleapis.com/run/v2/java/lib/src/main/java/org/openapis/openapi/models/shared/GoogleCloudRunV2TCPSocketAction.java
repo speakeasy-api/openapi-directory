@@ -18,9 +18,11 @@ public class GoogleCloudRunV2TCPSocketAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public GoogleCloudRunV2TCPSocketAction withPort(Integer port) {
         this.port = port;
         return this;
     }
     
+    public GoogleCloudRunV2TCPSocketAction(){}
 }

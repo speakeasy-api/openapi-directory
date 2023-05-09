@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AgentFilter {
     @JsonProperty("agentHealthCodes")
     public AgentHealthCodeEnum[] agentHealthCodes;
+
     public AgentFilter withAgentHealthCodes(AgentHealthCodeEnum[] agentHealthCodes) {
         this.agentHealthCodes = agentHealthCodes;
         return this;
@@ -19,9 +20,14 @@ public class AgentFilter {
     
     @JsonProperty("agentHealths")
     public AgentHealthEnum[] agentHealths;
+
     public AgentFilter withAgentHealths(AgentHealthEnum[] agentHealths) {
         this.agentHealths = agentHealths;
         return this;
     }
     
+    public AgentFilter(@JsonProperty("agentHealthCodes") AgentHealthCodeEnum[] agentHealthCodes, @JsonProperty("agentHealths") AgentHealthEnum[] agentHealths) {
+        this.agentHealthCodes = agentHealthCodes;
+        this.agentHealths = agentHealths;
+  }
 }

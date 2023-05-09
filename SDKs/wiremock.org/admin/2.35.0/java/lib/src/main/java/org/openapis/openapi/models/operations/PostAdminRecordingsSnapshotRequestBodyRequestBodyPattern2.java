@@ -18,6 +18,7 @@ public class PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caseInsensitive")
     public Boolean caseInsensitive;
+
     public PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern2 withCaseInsensitive(Boolean caseInsensitive) {
         this.caseInsensitive = caseInsensitive;
         return this;
@@ -26,9 +27,11 @@ public class PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matcher")
     public PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern2MatcherEnum matcher;
+
     public PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern2 withMatcher(PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern2MatcherEnum matcher) {
         this.matcher = matcher;
         return this;
     }
     
+    public PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern2(){}
 }

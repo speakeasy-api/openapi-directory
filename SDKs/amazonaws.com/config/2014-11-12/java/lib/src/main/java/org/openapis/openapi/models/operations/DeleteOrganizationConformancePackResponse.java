@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteOrganizationConformancePackResponse {
     
     public String contentType;
+
     public DeleteOrganizationConformancePackResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteOrganizationConformancePackResponse {
      */
     
     public Object noSuchOrganizationConformancePackException;
+
     public DeleteOrganizationConformancePackResponse withNoSuchOrganizationConformancePackException(Object noSuchOrganizationConformancePackException) {
         this.noSuchOrganizationConformancePackException = noSuchOrganizationConformancePackException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteOrganizationConformancePackResponse {
      */
     
     public Object organizationAccessDeniedException;
+
     public DeleteOrganizationConformancePackResponse withOrganizationAccessDeniedException(Object organizationAccessDeniedException) {
         this.organizationAccessDeniedException = organizationAccessDeniedException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteOrganizationConformancePackResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteOrganizationConformancePackResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteOrganizationConformancePackResponse {
     
     
     public Integer statusCode;
+
     public DeleteOrganizationConformancePackResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DeleteOrganizationConformancePackResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteOrganizationConformancePackResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteOrganizationConformancePackResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

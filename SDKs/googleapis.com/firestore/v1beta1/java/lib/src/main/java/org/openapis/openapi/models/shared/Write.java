@@ -18,6 +18,7 @@ public class Write {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentDocument")
     public Precondition currentDocument;
+
     public Write withCurrentDocument(Precondition currentDocument) {
         this.currentDocument = currentDocument;
         return this;
@@ -29,6 +30,7 @@ public class Write {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delete")
     public String delete;
+
     public Write withDelete(String delete) {
         this.delete = delete;
         return this;
@@ -40,6 +42,7 @@ public class Write {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transform")
     public DocumentTransform transform;
+
     public Write withTransform(DocumentTransform transform) {
         this.transform = transform;
         return this;
@@ -51,6 +54,7 @@ public class Write {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("update")
     public Document update;
+
     public Write withUpdate(Document update) {
         this.update = update;
         return this;
@@ -62,6 +66,7 @@ public class Write {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public DocumentMask updateMask;
+
     public Write withUpdateMask(DocumentMask updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -73,9 +78,11 @@ public class Write {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTransforms")
     public FieldTransform[] updateTransforms;
+
     public Write withUpdateTransforms(FieldTransform[] updateTransforms) {
         this.updateTransforms = updateTransforms;
         return this;
     }
     
+    public Write(){}
 }

@@ -125,4 +125,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/CreateTaskRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Task.java
 lib/src/main/java/org/openapis/openapi/models/shared/TaskCollection.java
 lib/src/main/java/org/openapis/openapi/models/shared/FormDataContentDisposition.java
+docs/sdk/README.md
+docs/customerservicemetrictask/README.md
+docs/inventorytask/README.md
+docs/ordertask/README.md
+docs/schedule/README.md
+docs/task/README.md
 USAGE.md

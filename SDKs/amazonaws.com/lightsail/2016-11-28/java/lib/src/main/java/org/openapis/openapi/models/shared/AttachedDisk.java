@@ -15,6 +15,7 @@ public class AttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public AttachedDisk withPath(String path) {
         this.path = path;
         return this;
@@ -23,9 +24,11 @@ public class AttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeInGb")
     public Long sizeInGb;
+
     public AttachedDisk withSizeInGb(Long sizeInGb) {
         this.sizeInGb = sizeInGb;
         return this;
     }
     
+    public AttachedDisk(){}
 }

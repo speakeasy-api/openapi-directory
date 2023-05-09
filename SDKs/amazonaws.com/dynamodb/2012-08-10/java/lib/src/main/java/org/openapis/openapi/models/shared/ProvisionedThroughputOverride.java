@@ -15,9 +15,11 @@ public class ProvisionedThroughputOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadCapacityUnits")
     public Long readCapacityUnits;
+
     public ProvisionedThroughputOverride withReadCapacityUnits(Long readCapacityUnits) {
         this.readCapacityUnits = readCapacityUnits;
         return this;
     }
     
+    public ProvisionedThroughputOverride(){}
 }

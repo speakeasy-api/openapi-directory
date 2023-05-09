@@ -12,14 +12,14 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * 3 - Delete
  */
 public enum BatchItemSaleRepsDtoOpCodeEnum {
-    ONE("1"),
-    TWO("2"),
-    THREE("3");
+    ONE(1),
+    TWO(2),
+    THREE(3);
 
     @JsonValue
-    public final String value;
+    public final Integer value;
 
-    private BatchItemSaleRepsDtoOpCodeEnum(String value) {
+    private BatchItemSaleRepsDtoOpCodeEnum(Integer value) {
         this.value = value;
     }
 }

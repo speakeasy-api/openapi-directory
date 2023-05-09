@@ -19,9 +19,13 @@ public class UpdateWorkspaceResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateDateTime")
     public OffsetDateTime updateDateTime;
+
     public UpdateWorkspaceResponse withUpdateDateTime(OffsetDateTime updateDateTime) {
         this.updateDateTime = updateDateTime;
         return this;
     }
     
+    public UpdateWorkspaceResponse(@JsonProperty("updateDateTime") OffsetDateTime updateDateTime) {
+        this.updateDateTime = updateDateTime;
+  }
 }

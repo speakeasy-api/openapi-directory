@@ -12,6 +12,7 @@ public class TransactionsResponseData {
      */
     @JsonProperty("server_knowledge")
     public Long serverKnowledge;
+
     public TransactionsResponseData withServerKnowledge(Long serverKnowledge) {
         this.serverKnowledge = serverKnowledge;
         return this;
@@ -19,9 +20,14 @@ public class TransactionsResponseData {
     
     @JsonProperty("transactions")
     public TransactionDetail[] transactions;
+
     public TransactionsResponseData withTransactions(TransactionDetail[] transactions) {
         this.transactions = transactions;
         return this;
     }
     
+    public TransactionsResponseData(@JsonProperty("server_knowledge") Long serverKnowledge, @JsonProperty("transactions") TransactionDetail[] transactions) {
+        this.serverKnowledge = serverKnowledge;
+        this.transactions = transactions;
+  }
 }

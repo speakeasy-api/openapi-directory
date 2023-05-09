@@ -18,6 +18,7 @@ public class FailedCampaignStateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignId")
     public String campaignId;
+
     public FailedCampaignStateResponse withCampaignId(String campaignId) {
         this.campaignId = campaignId;
         return this;
@@ -29,9 +30,11 @@ public class FailedCampaignStateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureCode")
     public GetCampaignStateBatchFailureCodeEnum failureCode;
+
     public FailedCampaignStateResponse withFailureCode(GetCampaignStateBatchFailureCodeEnum failureCode) {
         this.failureCode = failureCode;
         return this;
     }
     
+    public FailedCampaignStateResponse(){}
 }

@@ -15,9 +15,11 @@ public class DeleteRepositoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repository")
     public Repository repository;
+
     public DeleteRepositoryResponse withRepository(Repository repository) {
         this.repository = repository;
         return this;
     }
     
+    public DeleteRepositoryResponse(){}
 }

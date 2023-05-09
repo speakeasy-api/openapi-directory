@@ -18,6 +18,7 @@ public class LicenseResourceCommitment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public String amount;
+
     public LicenseResourceCommitment withAmount(String amount) {
         this.amount = amount;
         return this;
@@ -29,6 +30,7 @@ public class LicenseResourceCommitment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coresPerLicense")
     public String coresPerLicense;
+
     public LicenseResourceCommitment withCoresPerLicense(String coresPerLicense) {
         this.coresPerLicense = coresPerLicense;
         return this;
@@ -40,9 +42,11 @@ public class LicenseResourceCommitment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("license")
     public String license;
+
     public LicenseResourceCommitment withLicense(String license) {
         this.license = license;
         return this;
     }
     
+    public LicenseResourceCommitment(){}
 }

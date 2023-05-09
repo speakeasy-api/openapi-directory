@@ -15,6 +15,7 @@ public class MemberDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CognitoMemberDefinition")
     public CognitoMemberDefinition cognitoMemberDefinition;
+
     public MemberDefinition withCognitoMemberDefinition(CognitoMemberDefinition cognitoMemberDefinition) {
         this.cognitoMemberDefinition = cognitoMemberDefinition;
         return this;
@@ -23,9 +24,11 @@ public class MemberDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OidcMemberDefinition")
     public OidcMemberDefinition oidcMemberDefinition;
+
     public MemberDefinition withOidcMemberDefinition(OidcMemberDefinition oidcMemberDefinition) {
         this.oidcMemberDefinition = oidcMemberDefinition;
         return this;
     }
     
+    public MemberDefinition(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportAdvisorySystemsRequest {
@@ -12,6 +13,7 @@ public class ExportAdvisorySystemsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=advisory_id")
     public String advisoryId;
+
     public ExportAdvisorySystemsRequest withAdvisoryId(String advisoryId) {
         this.advisoryId = advisoryId;
         return this;
@@ -22,6 +24,7 @@ public class ExportAdvisorySystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[display_name]")
     public String filterDisplayName;
+
     public ExportAdvisorySystemsRequest withFilterDisplayName(String filterDisplayName) {
         this.filterDisplayName = filterDisplayName;
         return this;
@@ -32,6 +35,7 @@ public class ExportAdvisorySystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[id]")
     public String filterId;
+
     public ExportAdvisorySystemsRequest withFilterId(String filterId) {
         this.filterId = filterId;
         return this;
@@ -42,6 +46,7 @@ public class ExportAdvisorySystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[last_evaluation]")
     public String filterLastEvaluation;
+
     public ExportAdvisorySystemsRequest withFilterLastEvaluation(String filterLastEvaluation) {
         this.filterLastEvaluation = filterLastEvaluation;
         return this;
@@ -52,6 +57,7 @@ public class ExportAdvisorySystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[last_upload]")
     public String filterLastUpload;
+
     public ExportAdvisorySystemsRequest withFilterLastUpload(String filterLastUpload) {
         this.filterLastUpload = filterLastUpload;
         return this;
@@ -62,6 +68,7 @@ public class ExportAdvisorySystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[other_count]")
     public String filterOtherCount;
+
     public ExportAdvisorySystemsRequest withFilterOtherCount(String filterOtherCount) {
         this.filterOtherCount = filterOtherCount;
         return this;
@@ -72,6 +79,7 @@ public class ExportAdvisorySystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[packages_installed]")
     public String filterPackagesInstalled;
+
     public ExportAdvisorySystemsRequest withFilterPackagesInstalled(String filterPackagesInstalled) {
         this.filterPackagesInstalled = filterPackagesInstalled;
         return this;
@@ -82,6 +90,7 @@ public class ExportAdvisorySystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[packages_updatable]")
     public String filterPackagesUpdatable;
+
     public ExportAdvisorySystemsRequest withFilterPackagesUpdatable(String filterPackagesUpdatable) {
         this.filterPackagesUpdatable = filterPackagesUpdatable;
         return this;
@@ -92,6 +101,7 @@ public class ExportAdvisorySystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[rhba_count]")
     public String filterRhbaCount;
+
     public ExportAdvisorySystemsRequest withFilterRhbaCount(String filterRhbaCount) {
         this.filterRhbaCount = filterRhbaCount;
         return this;
@@ -102,6 +112,7 @@ public class ExportAdvisorySystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[rhea_count]")
     public String filterRheaCount;
+
     public ExportAdvisorySystemsRequest withFilterRheaCount(String filterRheaCount) {
         this.filterRheaCount = filterRheaCount;
         return this;
@@ -112,6 +123,7 @@ public class ExportAdvisorySystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[rhsa_count]")
     public String filterRhsaCount;
+
     public ExportAdvisorySystemsRequest withFilterRhsaCount(String filterRhsaCount) {
         this.filterRhsaCount = filterRhsaCount;
         return this;
@@ -122,6 +134,7 @@ public class ExportAdvisorySystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[stale]")
     public String filterStale;
+
     public ExportAdvisorySystemsRequest withFilterStale(String filterStale) {
         this.filterStale = filterStale;
         return this;
@@ -132,6 +145,7 @@ public class ExportAdvisorySystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[system_profile][sap_sids][in]")
     public String[] filterSystemProfileSapSidsIn;
+
     public ExportAdvisorySystemsRequest withFilterSystemProfileSapSidsIn(String[] filterSystemProfileSapSidsIn) {
         this.filterSystemProfileSapSidsIn = filterSystemProfileSapSidsIn;
         return this;
@@ -142,6 +156,7 @@ public class ExportAdvisorySystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[system_profile][sap_system]")
     public String filterSystemProfileSapSystem;
+
     public ExportAdvisorySystemsRequest withFilterSystemProfileSapSystem(String filterSystemProfileSapSystem) {
         this.filterSystemProfileSapSystem = filterSystemProfileSapSystem;
         return this;
@@ -152,6 +167,7 @@ public class ExportAdvisorySystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public ExportAdvisorySystemsRequest withSearch(String search) {
         this.search = search;
         return this;
@@ -162,9 +178,13 @@ public class ExportAdvisorySystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
     public String[] tags;
+
     public ExportAdvisorySystemsRequest withTags(String[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ExportAdvisorySystemsRequest(@JsonProperty("advisory_id") String advisoryId) {
+        this.advisoryId = advisoryId;
+  }
 }

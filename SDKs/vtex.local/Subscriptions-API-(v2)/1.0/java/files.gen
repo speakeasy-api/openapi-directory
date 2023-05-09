@@ -114,4 +114,9 @@ lib/src/main/java/org/openapis/openapi/models/shared/InsertAddressesforSubscript
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateSubscriptionsbySubscriptionIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Item.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/report/README.md
+docs/settings/README.md
+docs/subscriptiongroup/README.md
+docs/subscriptions/README.md
 USAGE.md

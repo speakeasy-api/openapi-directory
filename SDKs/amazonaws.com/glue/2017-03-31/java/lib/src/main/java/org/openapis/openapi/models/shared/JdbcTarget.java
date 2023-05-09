@@ -15,6 +15,7 @@ public class JdbcTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionName")
     public String connectionName;
+
     public JdbcTarget withConnectionName(String connectionName) {
         this.connectionName = connectionName;
         return this;
@@ -23,6 +24,7 @@ public class JdbcTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableAdditionalMetadata")
     public JdbcMetadataEntryEnum[] enableAdditionalMetadata;
+
     public JdbcTarget withEnableAdditionalMetadata(JdbcMetadataEntryEnum[] enableAdditionalMetadata) {
         this.enableAdditionalMetadata = enableAdditionalMetadata;
         return this;
@@ -31,6 +33,7 @@ public class JdbcTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Exclusions")
     public String[] exclusions;
+
     public JdbcTarget withExclusions(String[] exclusions) {
         this.exclusions = exclusions;
         return this;
@@ -39,9 +42,11 @@ public class JdbcTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Path")
     public String path;
+
     public JdbcTarget withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public JdbcTarget(){}
 }

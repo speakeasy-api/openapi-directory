@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MirrorAccountsInsertRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Account account;
+
     public MirrorAccountsInsertRequest withAccount(org.openapis.openapi.models.shared.Account account) {
         this.account = account;
         return this;
@@ -19,6 +21,7 @@ public class MirrorAccountsInsertRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountName")
     public String accountName;
+
     public MirrorAccountsInsertRequest withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -29,6 +32,7 @@ public class MirrorAccountsInsertRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountType")
     public String accountType;
+
     public MirrorAccountsInsertRequest withAccountType(String accountType) {
         this.accountType = accountType;
         return this;
@@ -39,6 +43,7 @@ public class MirrorAccountsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public MirrorAccountsInsertRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class MirrorAccountsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public MirrorAccountsInsertRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -59,6 +65,7 @@ public class MirrorAccountsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public MirrorAccountsInsertRequest withKey(String key) {
         this.key = key;
         return this;
@@ -69,6 +76,7 @@ public class MirrorAccountsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public MirrorAccountsInsertRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -79,6 +87,7 @@ public class MirrorAccountsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public MirrorAccountsInsertRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -89,6 +98,7 @@ public class MirrorAccountsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public MirrorAccountsInsertRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -99,6 +109,7 @@ public class MirrorAccountsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public MirrorAccountsInsertRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -109,9 +120,15 @@ public class MirrorAccountsInsertRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userToken")
     public String userToken;
+
     public MirrorAccountsInsertRequest withUserToken(String userToken) {
         this.userToken = userToken;
         return this;
     }
     
+    public MirrorAccountsInsertRequest(@JsonProperty("accountName") String accountName, @JsonProperty("accountType") String accountType, @JsonProperty("userToken") String userToken) {
+        this.accountName = accountName;
+        this.accountType = accountType;
+        this.userToken = userToken;
+  }
 }

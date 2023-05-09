@@ -45,7 +45,6 @@ public class PointWeather {
      * * The response contains an `Expires` header, which defines the point at which the API response will not change for the same request. We highly recommend using this to avoid unnecessary requests and **increase the performance of your app**.
      * * Meteosource API supports HTTP compression. To enable it, simply add an `Accept-Encoding: gzip` header to your request.
      * * When daylight saving time starts, one hourly record will be missing (typically `2:00:00 AM`). When daylight saving time ends, the hourly forecast will contain two records with duplicate times (typically `2:00:00 AM`).
-     * 
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -72,13 +71,11 @@ public class PointWeather {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AirQualityAirQualityGetResponse res = new org.openapis.openapi.models.operations.AirQualityAirQualityGetResponse() {{
+        org.openapis.openapi.models.operations.AirQualityAirQualityGetResponse res = new org.openapis.openapi.models.operations.AirQualityAirQualityGetResponse(contentType, httpRes.statusCode()) {{
             airQualityPointData = null;
             generalRequestError = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -136,7 +133,6 @@ public class PointWeather {
      * * Meteosource API supports HTTP compression. To enable it, simply add an `Accept-Encoding: gzip` header to your request.
      * * When daylight saving time starts, one hourly record will be missing (typically `2:00:00 AM`). When daylight saving time ends, the hourly forecast will contain two records with duplicate times (typically `2:00:00 AM`).
      * * The detailed description of weather alerts is only available in English. The alert category is translated into selected language.
-     * 
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -163,13 +159,11 @@ public class PointWeather {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PointPointGetResponse res = new org.openapis.openapi.models.operations.PointPointGetResponse() {{
+        org.openapis.openapi.models.operations.PointPointGetResponse res = new org.openapis.openapi.models.operations.PointPointGetResponse(contentType, httpRes.statusCode()) {{
             pointPointData = null;
             generalRequestError = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

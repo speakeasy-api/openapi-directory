@@ -3,12 +3,11 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsCreateSecurityOption1;
-import org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsCreateSecurityOption2;
-import org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsCreateSecurity;
 import org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsCreateRequest;
 import org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsCreateResponse;
+import org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsCreateSecurity;
+import org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsCreateSecurityOption1;
+import org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsCreateSecurityOption2;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.RuntimeConfig;
 import org.openapis.openapi.models.shared.XgafvEnum;
@@ -19,38 +18,39 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            RuntimeconfigProjectsConfigsCreateRequest req = new RuntimeconfigProjectsConfigsCreateRequest() {{
-                dollarXgafv = "2";
+            RuntimeconfigProjectsConfigsCreateRequest req = new RuntimeconfigProjectsConfigsCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 runtimeConfig = new RuntimeConfig() {{
-                    description = "provident";
-                    name = "distinctio";
-                }};
-                accessToken = "quibusdam";
-                alt = "media";
-                callback = "nulla";
-                fields = "corrupti";
-                key = "illum";
-                oauthToken = "vel";
-                parent = "error";
+                    description = "distinctio";
+                    name = "Stuart Stiedemann";
+                }};;
+                accessToken = "vel";
+                alt = AltEnum.MEDIA;
+                callback = "deserunt";
+                fields = "suscipit";
+                key = "iure";
+                oauthToken = "magnam";
                 prettyPrint = false;
-                quotaUser = "deserunt";
-                requestId = "suscipit";
-                uploadType = "iure";
-                uploadProtocol = "magnam";
-            }}            
+                quotaUser = "debitis";
+                requestId = "ipsa";
+                uploadType = "delectus";
+                uploadProtocol = "tempora";
+            }};            
 
             RuntimeconfigProjectsConfigsCreateResponse res = sdk.projects.runtimeconfigProjectsConfigsCreate(req, new RuntimeconfigProjectsConfigsCreateSecurity() {{
-                option1 = new RuntimeconfigProjectsConfigsCreateSecurityOption1() {{
+                option1 = new RuntimeconfigProjectsConfigsCreateSecurityOption1("suscipit", "molestiae") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.runtimeConfig.isPresent()) {
+            if (res.runtimeConfig != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -18,6 +18,7 @@ public class Progress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analyzed")
     public Double analyzed;
+
     public Progress withAnalyzed(Double analyzed) {
         this.analyzed = analyzed;
         return this;
@@ -29,6 +30,7 @@ public class Progress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encoded")
     public Double encoded;
+
     public Progress withEncoded(Double encoded) {
         this.encoded = encoded;
         return this;
@@ -40,6 +42,7 @@ public class Progress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notified")
     public Double notified;
+
     public Progress withNotified(Double notified) {
         this.notified = notified;
         return this;
@@ -51,9 +54,11 @@ public class Progress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploaded")
     public Double uploaded;
+
     public Progress withUploaded(Double uploaded) {
         this.uploaded = uploaded;
         return this;
     }
     
+    public Progress(){}
 }

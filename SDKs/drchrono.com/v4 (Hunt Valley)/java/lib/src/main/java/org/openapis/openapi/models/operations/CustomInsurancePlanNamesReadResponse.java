@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CustomInsurancePlanNamesReadResponse {
     
     public String contentType;
+
     public CustomInsurancePlanNamesReadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CustomInsurancePlanNamesReadResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomInsurancePlanName customInsurancePlanName;
+
     public CustomInsurancePlanNamesReadResponse withCustomInsurancePlanName(org.openapis.openapi.models.shared.CustomInsurancePlanName customInsurancePlanName) {
         this.customInsurancePlanName = customInsurancePlanName;
         return this;
@@ -26,6 +29,7 @@ public class CustomInsurancePlanNamesReadResponse {
     
     
     public Integer statusCode;
+
     public CustomInsurancePlanNamesReadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CustomInsurancePlanNamesReadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CustomInsurancePlanNamesReadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CustomInsurancePlanNamesReadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

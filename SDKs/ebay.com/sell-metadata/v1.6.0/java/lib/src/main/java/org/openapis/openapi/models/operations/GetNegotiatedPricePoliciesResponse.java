@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNegotiatedPricePoliciesResponse {
     
     public String contentType;
+
     public GetNegotiatedPricePoliciesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetNegotiatedPricePoliciesResponse {
      */
     
     public org.openapis.openapi.models.shared.NegotiatedPricePolicyResponse negotiatedPricePolicyResponse;
+
     public GetNegotiatedPricePoliciesResponse withNegotiatedPricePolicyResponse(org.openapis.openapi.models.shared.NegotiatedPricePolicyResponse negotiatedPricePolicyResponse) {
         this.negotiatedPricePolicyResponse = negotiatedPricePolicyResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetNegotiatedPricePoliciesResponse {
     
     
     public Integer statusCode;
+
     public GetNegotiatedPricePoliciesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetNegotiatedPricePoliciesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNegotiatedPricePoliciesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetNegotiatedPricePoliciesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

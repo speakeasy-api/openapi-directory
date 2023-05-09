@@ -15,9 +15,11 @@ public class DescribeDocumentClassificationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentClassificationJobProperties")
     public DocumentClassificationJobProperties documentClassificationJobProperties;
+
     public DescribeDocumentClassificationJobResponse withDocumentClassificationJobProperties(DocumentClassificationJobProperties documentClassificationJobProperties) {
         this.documentClassificationJobProperties = documentClassificationJobProperties;
         return this;
     }
     
+    public DescribeDocumentClassificationJobResponse(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudRecaptchaenterpriseV1IOSKeySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowAllBundleIds")
     public Boolean allowAllBundleIds;
+
     public GoogleCloudRecaptchaenterpriseV1IOSKeySettings withAllowAllBundleIds(Boolean allowAllBundleIds) {
         this.allowAllBundleIds = allowAllBundleIds;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRecaptchaenterpriseV1IOSKeySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedBundleIds")
     public String[] allowedBundleIds;
+
     public GoogleCloudRecaptchaenterpriseV1IOSKeySettings withAllowedBundleIds(String[] allowedBundleIds) {
         this.allowedBundleIds = allowedBundleIds;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1IOSKeySettings(){}
 }

@@ -18,9 +18,11 @@ public class SalesTaxes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salesTaxes")
     public SalesTax[] salesTaxes;
+
     public SalesTaxes withSalesTaxes(SalesTax[] salesTaxes) {
         this.salesTaxes = salesTaxes;
         return this;
     }
     
+    public SalesTaxes(){}
 }

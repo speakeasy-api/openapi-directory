@@ -14,6 +14,7 @@ public class PatientSMSNotifcationRequestNotification {
      */
     @JsonProperty("careContextInfo")
     public String careContextInfo;
+
     public PatientSMSNotifcationRequestNotification withCareContextInfo(String careContextInfo) {
         this.careContextInfo = careContextInfo;
         return this;
@@ -25,6 +26,7 @@ public class PatientSMSNotifcationRequestNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deeplinkUrl")
     public String deeplinkUrl;
+
     public PatientSMSNotifcationRequestNotification withDeeplinkUrl(String deeplinkUrl) {
         this.deeplinkUrl = deeplinkUrl;
         return this;
@@ -32,6 +34,7 @@ public class PatientSMSNotifcationRequestNotification {
     
     @JsonProperty("hip")
     public PatientSMSNotifcationRequestNotificationHip hip;
+
     public PatientSMSNotifcationRequestNotification withHip(PatientSMSNotifcationRequestNotificationHip hip) {
         this.hip = hip;
         return this;
@@ -42,6 +45,7 @@ public class PatientSMSNotifcationRequestNotification {
      */
     @JsonProperty("phoneNo")
     public String phoneNo;
+
     public PatientSMSNotifcationRequestNotification withPhoneNo(String phoneNo) {
         this.phoneNo = phoneNo;
         return this;
@@ -53,9 +57,15 @@ public class PatientSMSNotifcationRequestNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receiverName")
     public String receiverName;
+
     public PatientSMSNotifcationRequestNotification withReceiverName(String receiverName) {
         this.receiverName = receiverName;
         return this;
     }
     
+    public PatientSMSNotifcationRequestNotification(@JsonProperty("careContextInfo") String careContextInfo, @JsonProperty("hip") PatientSMSNotifcationRequestNotificationHip hip, @JsonProperty("phoneNo") String phoneNo) {
+        this.careContextInfo = careContextInfo;
+        this.hip = hip;
+        this.phoneNo = phoneNo;
+  }
 }

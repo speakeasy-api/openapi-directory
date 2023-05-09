@@ -18,6 +18,7 @@ public class EntityName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_id")
     public String entityId;
+
     public EntityName withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -26,6 +27,7 @@ public class EntityName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_type")
     public EntityTypeEnum entityType;
+
     public EntityName withEntityType(EntityTypeEnum entityType) {
         this.entityType = entityType;
         return this;
@@ -34,6 +36,7 @@ public class EntityName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EntityName withName(String name) {
         this.name = name;
         return this;
@@ -42,9 +45,11 @@ public class EntityName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public Long time;
+
     public EntityName withTime(Long time) {
         this.time = time;
         return this;
     }
     
+    public EntityName(){}
 }

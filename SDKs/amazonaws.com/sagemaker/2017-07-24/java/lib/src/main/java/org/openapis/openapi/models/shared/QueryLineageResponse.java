@@ -15,6 +15,7 @@ public class QueryLineageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Edges")
     public Edge[] edges;
+
     public QueryLineageResponse withEdges(Edge[] edges) {
         this.edges = edges;
         return this;
@@ -23,6 +24,7 @@ public class QueryLineageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public QueryLineageResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,9 +33,11 @@ public class QueryLineageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Vertices")
     public Vertex[] vertices;
+
     public QueryLineageResponse withVertices(Vertex[] vertices) {
         this.vertices = vertices;
         return this;
     }
     
+    public QueryLineageResponse(){}
 }

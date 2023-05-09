@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OrgsConvertMemberToOutsideCollaboratorResponse {
     
     public String contentType;
+
     public OrgsConvertMemberToOutsideCollaboratorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class OrgsConvertMemberToOutsideCollaboratorResponse {
     
     
     public Integer statusCode;
+
     public OrgsConvertMemberToOutsideCollaboratorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class OrgsConvertMemberToOutsideCollaboratorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OrgsConvertMemberToOutsideCollaboratorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class OrgsConvertMemberToOutsideCollaboratorResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public OrgsConvertMemberToOutsideCollaboratorResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,9 +48,14 @@ public class OrgsConvertMemberToOutsideCollaboratorResponse {
      */
     
     public java.util.Map<String, Object> orgsConvertMemberToOutsideCollaborator202ApplicationJSONObject;
+
     public OrgsConvertMemberToOutsideCollaboratorResponse withOrgsConvertMemberToOutsideCollaborator202ApplicationJSONObject(java.util.Map<String, Object> orgsConvertMemberToOutsideCollaborator202ApplicationJSONObject) {
         this.orgsConvertMemberToOutsideCollaborator202ApplicationJSONObject = orgsConvertMemberToOutsideCollaborator202ApplicationJSONObject;
         return this;
     }
     
+    public OrgsConvertMemberToOutsideCollaboratorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -20,6 +20,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachment")
     public Attachment attachment;
+
     public Document withAttachment(Attachment attachment) {
         this.attachment = attachment;
         return this;
@@ -30,6 +31,7 @@ public class Document {
      */
     @JsonProperty("attachments")
     public Attachment[] attachments;
+
     public Document withAttachments(Attachment[] attachments) {
         this.attachments = attachments;
         return this;
@@ -43,6 +45,7 @@ public class Document {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public Document withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -53,6 +56,7 @@ public class Document {
      */
     @JsonProperty("description")
     public String description;
+
     public Document withDescription(String description) {
         this.description = description;
         return this;
@@ -64,6 +68,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiryDate")
     public String expiryDate;
+
     public Document withExpiryDate(String expiryDate) {
         this.expiryDate = expiryDate;
         return this;
@@ -75,6 +80,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileName")
     public String fileName;
+
     public Document withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -86,6 +92,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Document withId(String id) {
         this.id = id;
         return this;
@@ -97,6 +104,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuerCountry")
     public String issuerCountry;
+
     public Document withIssuerCountry(String issuerCountry) {
         this.issuerCountry = issuerCountry;
         return this;
@@ -108,6 +116,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuerState")
     public String issuerState;
+
     public Document withIssuerState(String issuerState) {
         this.issuerState = issuerState;
         return this;
@@ -121,6 +130,7 @@ public class Document {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modificationDate")
     public OffsetDateTime modificationDate;
+
     public Document withModificationDate(OffsetDateTime modificationDate) {
         this.modificationDate = modificationDate;
         return this;
@@ -132,6 +142,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public Document withNumber(String number) {
         this.number = number;
         return this;
@@ -139,6 +150,7 @@ public class Document {
     
     @JsonProperty("owner")
     public OwnerEntity owner;
+
     public Document withOwner(OwnerEntity owner) {
         this.owner = owner;
         return this;
@@ -164,9 +176,16 @@ public class Document {
      */
     @JsonProperty("type")
     public DocumentTypeEnum type;
+
     public Document withType(DocumentTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Document(@JsonProperty("attachments") Attachment[] attachments, @JsonProperty("description") String description, @JsonProperty("owner") OwnerEntity owner, @JsonProperty("type") DocumentTypeEnum type) {
+        this.attachments = attachments;
+        this.description = description;
+        this.owner = owner;
+        this.type = type;
+  }
 }

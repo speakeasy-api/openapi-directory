@@ -15,9 +15,11 @@ public class AppsDeleteAuthorizationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("access_token")
     public String accessToken;
+
     public AppsDeleteAuthorizationRequestBody withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
     }
     
+    public AppsDeleteAuthorizationRequestBody(){}
 }

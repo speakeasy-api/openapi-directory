@@ -15,6 +15,7 @@ public class CreateAccountWithAadhaarOtp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public CreateAccountWithAadhaarOtp withEmail(String email) {
         this.email = email;
         return this;
@@ -23,6 +24,7 @@ public class CreateAccountWithAadhaarOtp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public CreateAccountWithAadhaarOtp withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -31,6 +33,7 @@ public class CreateAccountWithAadhaarOtp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public CreateAccountWithAadhaarOtp withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -39,6 +42,7 @@ public class CreateAccountWithAadhaarOtp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("middleName")
     public String middleName;
+
     public CreateAccountWithAadhaarOtp withMiddleName(String middleName) {
         this.middleName = middleName;
         return this;
@@ -47,6 +51,7 @@ public class CreateAccountWithAadhaarOtp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobile")
     public String mobile;
+
     public CreateAccountWithAadhaarOtp withMobile(String mobile) {
         this.mobile = mobile;
         return this;
@@ -55,6 +60,7 @@ public class CreateAccountWithAadhaarOtp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("otp")
     public String otp;
+
     public CreateAccountWithAadhaarOtp withOtp(String otp) {
         this.otp = otp;
         return this;
@@ -63,6 +69,7 @@ public class CreateAccountWithAadhaarOtp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public CreateAccountWithAadhaarOtp withPassword(String password) {
         this.password = password;
         return this;
@@ -71,6 +78,7 @@ public class CreateAccountWithAadhaarOtp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profilePhoto")
     public String profilePhoto;
+
     public CreateAccountWithAadhaarOtp withProfilePhoto(String profilePhoto) {
         this.profilePhoto = profilePhoto;
         return this;
@@ -79,6 +87,7 @@ public class CreateAccountWithAadhaarOtp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictions")
     public String restrictions;
+
     public CreateAccountWithAadhaarOtp withRestrictions(String restrictions) {
         this.restrictions = restrictions;
         return this;
@@ -87,6 +96,7 @@ public class CreateAccountWithAadhaarOtp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("txnId")
     public String txnId;
+
     public CreateAccountWithAadhaarOtp withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
@@ -95,9 +105,11 @@ public class CreateAccountWithAadhaarOtp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public CreateAccountWithAadhaarOtp withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public CreateAccountWithAadhaarOtp(){}
 }

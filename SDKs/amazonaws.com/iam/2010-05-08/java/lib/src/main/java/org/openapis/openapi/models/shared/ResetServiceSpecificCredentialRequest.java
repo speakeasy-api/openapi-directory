@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ResetServiceSpecificCredentialRequest {
     
     public String serviceSpecificCredentialId;
+
     public ResetServiceSpecificCredentialRequest withServiceSpecificCredentialId(String serviceSpecificCredentialId) {
         this.serviceSpecificCredentialId = serviceSpecificCredentialId;
         return this;
@@ -16,9 +17,13 @@ public class ResetServiceSpecificCredentialRequest {
     
     
     public String userName;
+
     public ResetServiceSpecificCredentialRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public ResetServiceSpecificCredentialRequest(@JsonProperty("ServiceSpecificCredentialId") String serviceSpecificCredentialId) {
+        this.serviceSpecificCredentialId = serviceSpecificCredentialId;
+  }
 }

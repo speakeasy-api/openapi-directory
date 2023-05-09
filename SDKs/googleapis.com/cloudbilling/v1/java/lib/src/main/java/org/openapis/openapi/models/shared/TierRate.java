@@ -18,6 +18,7 @@ public class TierRate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startUsageAmount")
     public Double startUsageAmount;
+
     public TierRate withStartUsageAmount(Double startUsageAmount) {
         this.startUsageAmount = startUsageAmount;
         return this;
@@ -29,9 +30,11 @@ public class TierRate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unitPrice")
     public Money unitPrice;
+
     public TierRate withUnitPrice(Money unitPrice) {
         this.unitPrice = unitPrice;
         return this;
     }
     
+    public TierRate(){}
 }

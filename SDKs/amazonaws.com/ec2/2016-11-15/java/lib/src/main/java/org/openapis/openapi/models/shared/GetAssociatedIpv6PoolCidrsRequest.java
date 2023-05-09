@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetAssociatedIpv6PoolCidrsRequest {
     
     public Boolean dryRun;
+
     public GetAssociatedIpv6PoolCidrsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class GetAssociatedIpv6PoolCidrsRequest {
     
     
     public Long maxResults;
+
     public GetAssociatedIpv6PoolCidrsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -23,6 +25,7 @@ public class GetAssociatedIpv6PoolCidrsRequest {
     
     
     public String nextToken;
+
     public GetAssociatedIpv6PoolCidrsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -30,9 +33,13 @@ public class GetAssociatedIpv6PoolCidrsRequest {
     
     
     public String poolId;
+
     public GetAssociatedIpv6PoolCidrsRequest withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
     }
     
+    public GetAssociatedIpv6PoolCidrsRequest(@JsonProperty("PoolId") String poolId) {
+        this.poolId = poolId;
+  }
 }

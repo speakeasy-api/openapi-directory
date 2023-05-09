@@ -20,6 +20,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artifactsUrl")
     public String artifactsUrl;
+
     public Step withArtifactsUrl(String artifactsUrl) {
         this.artifactsUrl = artifactsUrl;
         return this;
@@ -28,6 +29,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("context")
     public String context;
+
     public Step withContext(String context) {
         this.context = context;
         return this;
@@ -37,6 +39,7 @@ public class Step {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public Step withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -45,6 +48,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logUrl")
     public String logUrl;
+
     public Step withLogUrl(String logUrl) {
         this.logUrl = logUrl;
         return this;
@@ -53,6 +57,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("screenshots")
     public java.util.Map<String, String> screenshots;
+
     public Step withScreenshots(java.util.Map<String, String> screenshots) {
         this.screenshots = screenshots;
         return this;
@@ -62,6 +67,7 @@ public class Step {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public Step withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -69,6 +75,7 @@ public class Step {
     
     @JsonProperty("status")
     public JobStatusEnum status;
+
     public Step withStatus(JobStatusEnum status) {
         this.status = status;
         return this;
@@ -77,6 +84,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReason")
     public String statusReason;
+
     public Step withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
@@ -84,6 +92,7 @@ public class Step {
     
     @JsonProperty("stepName")
     public String stepName;
+
     public Step withStepName(String stepName) {
         this.stepName = stepName;
         return this;
@@ -92,6 +101,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testArtifactsUrl")
     public String testArtifactsUrl;
+
     public Step withTestArtifactsUrl(String testArtifactsUrl) {
         this.testArtifactsUrl = testArtifactsUrl;
         return this;
@@ -100,9 +110,16 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testConfigUrl")
     public String testConfigUrl;
+
     public Step withTestConfigUrl(String testConfigUrl) {
         this.testConfigUrl = testConfigUrl;
         return this;
     }
     
+    public Step(@JsonProperty("endTime") OffsetDateTime endTime, @JsonProperty("startTime") OffsetDateTime startTime, @JsonProperty("status") JobStatusEnum status, @JsonProperty("stepName") String stepName) {
+        this.endTime = endTime;
+        this.startTime = startTime;
+        this.status = status;
+        this.stepName = stepName;
+  }
 }

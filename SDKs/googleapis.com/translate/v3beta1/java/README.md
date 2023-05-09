@@ -16,15 +16,14 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.TranslateProjectsLocationsBatchTranslateDocumentSecurity;
 import org.openapis.openapi.models.operations.TranslateProjectsLocationsBatchTranslateDocumentRequest;
 import org.openapis.openapi.models.operations.TranslateProjectsLocationsBatchTranslateDocumentResponse;
+import org.openapis.openapi.models.operations.TranslateProjectsLocationsBatchTranslateDocumentSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.BatchTranslateDocumentRequest;
-import org.openapis.openapi.models.shared.BatchDocumentOutputConfig;
-import org.openapis.openapi.models.shared.GcsDestination;
 import org.openapis.openapi.models.shared.BatchDocumentInputConfig;
+import org.openapis.openapi.models.shared.BatchDocumentOutputConfig;
+import org.openapis.openapi.models.shared.BatchTranslateDocumentRequest;
+import org.openapis.openapi.models.shared.GcsDestination;
 import org.openapis.openapi.models.shared.GcsSource;
 import org.openapis.openapi.models.shared.TranslateTextGlossaryConfig;
 import org.openapis.openapi.models.shared.XgafvEnum;
@@ -35,36 +34,28 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            TranslateProjectsLocationsBatchTranslateDocumentRequest req = new TranslateProjectsLocationsBatchTranslateDocumentRequest() {{
-                dollarXgafv = "2";
+            TranslateProjectsLocationsBatchTranslateDocumentRequest req = new TranslateProjectsLocationsBatchTranslateDocumentRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 batchTranslateDocumentRequest = new BatchTranslateDocumentRequest() {{
-                    customizedAttribution = "provident";
+                    customizedAttribution = "distinctio";
                     enableShadowRemovalNativePdf = false;
                     formatConversions = new java.util.HashMap<String, String>() {{
-                        put("quibusdam", "unde");
-                        put("nulla", "corrupti");
-                        put("illum", "vel");
+                        put("unde", "nulla");
+                        put("corrupti", "illum");
+                        put("vel", "error");
+                        put("deserunt", "suscipit");
                     }};
                     glossaries = new java.util.HashMap<String, org.openapis.openapi.models.shared.TranslateTextGlossaryConfig>() {{
-                        put("deserunt", new TranslateTextGlossaryConfig() {{
-                            glossary = "suscipit";
+                        put("magnam", new TranslateTextGlossaryConfig() {{
+                            glossary = "debitis";
                             ignoreCase = false;
                         }});
-                        put("iure", new TranslateTextGlossaryConfig() {{
-                            glossary = "magnam";
-                            ignoreCase = false;
-                        }});
-                        put("debitis", new TranslateTextGlossaryConfig() {{
-                            glossary = "ipsa";
+                        put("ipsa", new TranslateTextGlossaryConfig() {{
+                            glossary = "delectus";
                             ignoreCase = false;
                         }});
                     }};
                     inputConfigs = new org.openapis.openapi.models.shared.BatchDocumentInputConfig[]{{
-                        add(new BatchDocumentInputConfig() {{
-                            gcsSource = new GcsSource() {{
-                                inputUri = "tempora";
-                            }};
-                        }}),
                         add(new BatchDocumentInputConfig() {{
                             gcsSource = new GcsSource() {{
                                 inputUri = "suscipit";
@@ -75,52 +66,50 @@ public class Application {
                                 inputUri = "molestiae";
                             }};
                         }}),
-                        add(new BatchDocumentInputConfig() {{
-                            gcsSource = new GcsSource() {{
-                                inputUri = "minus";
-                            }};
-                        }}),
                     }};
                     models = new java.util.HashMap<String, String>() {{
-                        put("voluptatum", "iusto");
-                        put("excepturi", "nisi");
-                        put("recusandae", "temporibus");
-                        put("ab", "quis");
+                        put("placeat", "voluptatum");
+                        put("iusto", "excepturi");
+                        put("nisi", "recusandae");
+                        put("temporibus", "ab");
                     }};
                     outputConfig = new BatchDocumentOutputConfig() {{
                         gcsDestination = new GcsDestination() {{
-                            outputUriPrefix = "veritatis";
-                        }};
-                    }};
-                    sourceLanguageCode = "deserunt";
+                            outputUriPrefix = "quis";
+                        }};;
+                    }};;
+                    sourceLanguageCode = "veritatis";
                     targetLanguageCodes = new String[]{{
+                        add("perferendis"),
                         add("ipsam"),
+                        add("repellendus"),
                     }};
-                }};
-                accessToken = "repellendus";
-                alt = "proto";
-                callback = "quo";
-                fields = "odit";
+                }};;
+                accessToken = "sapiente";
+                alt = AltEnum.PROTO;
+                callback = "odit";
+                fields = "at";
                 key = "at";
-                oauthToken = "at";
-                parent = "maiores";
+                oauthToken = "maiores";
                 prettyPrint = false;
                 quotaUser = "molestiae";
                 uploadType = "quod";
                 uploadProtocol = "quod";
-            }}            
+            }};            
 
-            TranslateProjectsLocationsBatchTranslateDocumentResponse res = sdk.projects.translateProjectsLocationsBatchTranslateDocument(req, new TranslateProjectsLocationsBatchTranslateDocumentSecurity() {{
+            TranslateProjectsLocationsBatchTranslateDocumentResponse res = sdk.projects.translateProjectsLocationsBatchTranslateDocument(req, new TranslateProjectsLocationsBatchTranslateDocumentSecurity("esse", "totam") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.operation.isPresent()) {
+            if (res.operation != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -128,22 +117,22 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `translateProjectsLocationsBatchTranslateDocument` - Translates a large volume of document in asynchronous batch mode. This function provides real-time output as the inputs are being processed. If caller cancels a request, the partial results (for an input file, it's all or nothing) may still be available on the specified output location. This call returns immediately and you can use google.longrunning.Operation.name to poll the status of the call.
-* `translateProjectsLocationsBatchTranslateText` - Translates a large volume of text in asynchronous batch mode. This function provides real-time output as the inputs are being processed. If caller cancels a request, the partial results (for an input file, it's all or nothing) may still be available on the specified output location. This call returns immediately and you can use google.longrunning.Operation.name to poll the status of the call.
-* `translateProjectsLocationsDetectLanguage` - Detects the language of text within a request.
-* `translateProjectsLocationsGetSupportedLanguages` - Returns a list of supported languages for translation.
-* `translateProjectsLocationsGlossariesCreate` - Creates a glossary and returns the long-running operation. Returns NOT_FOUND, if the project doesn't exist.
-* `translateProjectsLocationsGlossariesList` - Lists glossaries in a project. Returns NOT_FOUND, if the project doesn't exist.
-* `translateProjectsLocationsList` - Lists information about the supported locations for this service.
-* `translateProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `translateProjectsLocationsOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-* `translateProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `translateProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-* `translateProjectsLocationsOperationsWait` - Waits until the specified long-running operation is done or reaches at most a specified timeout, returning the latest state. If the operation is already done, the latest state is immediately returned. If the timeout specified is greater than the default HTTP/RPC timeout, the HTTP/RPC timeout is used. If the server does not support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Note that this method is on a best-effort basis. It may return the latest state before the specified timeout (including immediately), meaning even an immediate response is no guarantee that the operation is done.
-* `translateProjectsLocationsTranslateDocument` - Translates documents in synchronous mode.
-* `translateProjectsLocationsTranslateText` - Translates input text and returns translated text.
+* [translateProjectsLocationsBatchTranslateDocument](docs/projects/README.md#translateprojectslocationsbatchtranslatedocument) - Translates a large volume of document in asynchronous batch mode. This function provides real-time output as the inputs are being processed. If caller cancels a request, the partial results (for an input file, it's all or nothing) may still be available on the specified output location. This call returns immediately and you can use google.longrunning.Operation.name to poll the status of the call.
+* [translateProjectsLocationsBatchTranslateText](docs/projects/README.md#translateprojectslocationsbatchtranslatetext) - Translates a large volume of text in asynchronous batch mode. This function provides real-time output as the inputs are being processed. If caller cancels a request, the partial results (for an input file, it's all or nothing) may still be available on the specified output location. This call returns immediately and you can use google.longrunning.Operation.name to poll the status of the call.
+* [translateProjectsLocationsDetectLanguage](docs/projects/README.md#translateprojectslocationsdetectlanguage) - Detects the language of text within a request.
+* [translateProjectsLocationsGetSupportedLanguages](docs/projects/README.md#translateprojectslocationsgetsupportedlanguages) - Returns a list of supported languages for translation.
+* [translateProjectsLocationsGlossariesCreate](docs/projects/README.md#translateprojectslocationsglossariescreate) - Creates a glossary and returns the long-running operation. Returns NOT_FOUND, if the project doesn't exist.
+* [translateProjectsLocationsGlossariesList](docs/projects/README.md#translateprojectslocationsglossarieslist) - Lists glossaries in a project. Returns NOT_FOUND, if the project doesn't exist.
+* [translateProjectsLocationsList](docs/projects/README.md#translateprojectslocationslist) - Lists information about the supported locations for this service.
+* [translateProjectsLocationsOperationsCancel](docs/projects/README.md#translateprojectslocationsoperationscancel) - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+* [translateProjectsLocationsOperationsDelete](docs/projects/README.md#translateprojectslocationsoperationsdelete) - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+* [translateProjectsLocationsOperationsGet](docs/projects/README.md#translateprojectslocationsoperationsget) - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+* [translateProjectsLocationsOperationsList](docs/projects/README.md#translateprojectslocationsoperationslist) - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
+* [translateProjectsLocationsOperationsWait](docs/projects/README.md#translateprojectslocationsoperationswait) - Waits until the specified long-running operation is done or reaches at most a specified timeout, returning the latest state. If the operation is already done, the latest state is immediately returned. If the timeout specified is greater than the default HTTP/RPC timeout, the HTTP/RPC timeout is used. If the server does not support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Note that this method is on a best-effort basis. It may return the latest state before the specified timeout (including immediately), meaning even an immediate response is no guarantee that the operation is done.
+* [translateProjectsLocationsTranslateDocument](docs/projects/README.md#translateprojectslocationstranslatedocument) - Translates documents in synchronous mode.
+* [translateProjectsLocationsTranslateText](docs/projects/README.md#translateprojectslocationstranslatetext) - Translates input text and returns translated text.
 <!-- End SDK Available Operations -->
 
 ### Maturity

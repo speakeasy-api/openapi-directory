@@ -18,6 +18,7 @@ public class AppList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultAppIds")
     public String[] defaultAppIds;
+
     public AppList withDefaultAppIds(String[] defaultAppIds) {
         this.defaultAppIds = defaultAppIds;
         return this;
@@ -29,6 +30,7 @@ public class AppList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public AppList withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -40,6 +42,7 @@ public class AppList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public App[] items;
+
     public AppList withItems(App[] items) {
         this.items = items;
         return this;
@@ -51,6 +54,7 @@ public class AppList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AppList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -62,9 +66,11 @@ public class AppList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public AppList withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
     }
     
+    public AppList(){}
 }

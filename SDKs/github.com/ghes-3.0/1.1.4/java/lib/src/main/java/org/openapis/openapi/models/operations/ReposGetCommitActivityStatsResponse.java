@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposGetCommitActivityStatsResponse {
     
     public String contentType;
+
     public ReposGetCommitActivityStatsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposGetCommitActivityStatsResponse {
     
     
     public Integer statusCode;
+
     public ReposGetCommitActivityStatsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposGetCommitActivityStatsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposGetCommitActivityStatsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposGetCommitActivityStatsResponse {
      */
     
     public org.openapis.openapi.models.shared.CommitActivity[] commitActivities;
+
     public ReposGetCommitActivityStatsResponse withCommitActivities(org.openapis.openapi.models.shared.CommitActivity[] commitActivities) {
         this.commitActivities = commitActivities;
         return this;
@@ -43,9 +48,14 @@ public class ReposGetCommitActivityStatsResponse {
      */
     
     public java.util.Map<String, Object> reposGetCommitActivityStats202ApplicationJSONObject;
+
     public ReposGetCommitActivityStatsResponse withReposGetCommitActivityStats202ApplicationJSONObject(java.util.Map<String, Object> reposGetCommitActivityStats202ApplicationJSONObject) {
         this.reposGetCommitActivityStats202ApplicationJSONObject = reposGetCommitActivityStats202ApplicationJSONObject;
         return this;
     }
     
+    public ReposGetCommitActivityStatsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

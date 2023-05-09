@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1ListEntriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public GoogleCloudDatacatalogV1Entry[] entries;
+
     public GoogleCloudDatacatalogV1ListEntriesResponse withEntries(GoogleCloudDatacatalogV1Entry[] entries) {
         this.entries = entries;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatacatalogV1ListEntriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDatacatalogV1ListEntriesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1ListEntriesResponse(){}
 }

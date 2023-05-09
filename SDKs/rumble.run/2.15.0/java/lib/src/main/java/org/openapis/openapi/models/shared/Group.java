@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Group - Automatically created
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Group {
     
     public Long createdAt;
+
     public Group withCreatedAt(Long createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -19,6 +20,7 @@ public class Group {
     
     
     public String createdByEmail;
+
     public Group withCreatedByEmail(String createdByEmail) {
         this.createdByEmail = createdByEmail;
         return this;
@@ -26,6 +28,7 @@ public class Group {
     
     
     public String description;
+
     public Group withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +36,7 @@ public class Group {
     
     
     public Long expiresAt;
+
     public Group withExpiresAt(Long expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -40,6 +44,7 @@ public class Group {
     
     
     public String id;
+
     public Group withId(String id) {
         this.id = id;
         return this;
@@ -47,6 +52,7 @@ public class Group {
     
     
     public String name;
+
     public Group withName(String name) {
         this.name = name;
         return this;
@@ -54,6 +60,7 @@ public class Group {
     
     
     public String orgDefaultRole;
+
     public Group withOrgDefaultRole(String orgDefaultRole) {
         this.orgDefaultRole = orgDefaultRole;
         return this;
@@ -61,6 +68,7 @@ public class Group {
     
     
     public java.util.Map<String, Object> orgRoles;
+
     public Group withOrgRoles(java.util.Map<String, Object> orgRoles) {
         this.orgRoles = orgRoles;
         return this;
@@ -68,6 +76,7 @@ public class Group {
     
     
     public String roleSummary;
+
     public Group withRoleSummary(String roleSummary) {
         this.roleSummary = roleSummary;
         return this;
@@ -75,6 +84,7 @@ public class Group {
     
     
     public Long updatedAt;
+
     public Group withUpdatedAt(Long updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -82,9 +92,13 @@ public class Group {
     
     
     public Long userCount;
+
     public Group withUserCount(Long userCount) {
         this.userCount = userCount;
         return this;
     }
     
+    public Group(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

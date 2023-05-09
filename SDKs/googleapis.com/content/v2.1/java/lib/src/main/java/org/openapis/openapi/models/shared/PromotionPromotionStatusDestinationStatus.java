@@ -18,6 +18,7 @@ public class PromotionPromotionStatusDestinationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public String destination;
+
     public PromotionPromotionStatusDestinationStatus withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -29,9 +30,11 @@ public class PromotionPromotionStatusDestinationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PromotionPromotionStatusDestinationStatusStatusEnum status;
+
     public PromotionPromotionStatusDestinationStatus withStatus(PromotionPromotionStatusDestinationStatusStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PromotionPromotionStatusDestinationStatus(){}
 }

@@ -18,6 +18,7 @@ public class SchemaFieldSpecNumericIndexingSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxValue")
     public Double maxValue;
+
     public SchemaFieldSpecNumericIndexingSpec withMaxValue(Double maxValue) {
         this.maxValue = maxValue;
         return this;
@@ -29,9 +30,11 @@ public class SchemaFieldSpecNumericIndexingSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minValue")
     public Double minValue;
+
     public SchemaFieldSpecNumericIndexingSpec withMinValue(Double minValue) {
         this.minValue = minValue;
         return this;
     }
     
+    public SchemaFieldSpecNumericIndexingSpec(){}
 }

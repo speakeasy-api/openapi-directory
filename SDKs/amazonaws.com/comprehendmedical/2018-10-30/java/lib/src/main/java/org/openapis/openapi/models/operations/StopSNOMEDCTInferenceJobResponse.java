@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopSNOMEDCTInferenceJobResponse {
     
     public String contentType;
+
     public StopSNOMEDCTInferenceJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopSNOMEDCTInferenceJobResponse {
      */
     
     public Object internalServerException;
+
     public StopSNOMEDCTInferenceJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class StopSNOMEDCTInferenceJobResponse {
      */
     
     public Object invalidRequestException;
+
     public StopSNOMEDCTInferenceJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class StopSNOMEDCTInferenceJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopSNOMEDCTInferenceJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class StopSNOMEDCTInferenceJobResponse {
     
     
     public Integer statusCode;
+
     public StopSNOMEDCTInferenceJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StopSNOMEDCTInferenceJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopSNOMEDCTInferenceJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class StopSNOMEDCTInferenceJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StopSNOMEDCTInferenceJobResponse stopSNOMEDCTInferenceJobResponse;
+
     public StopSNOMEDCTInferenceJobResponse withStopSNOMEDCTInferenceJobResponse(org.openapis.openapi.models.shared.StopSNOMEDCTInferenceJobResponse stopSNOMEDCTInferenceJobResponse) {
         this.stopSNOMEDCTInferenceJobResponse = stopSNOMEDCTInferenceJobResponse;
         return this;
@@ -73,9 +81,14 @@ public class StopSNOMEDCTInferenceJobResponse {
      */
     
     public Object tooManyRequestsException;
+
     public StopSNOMEDCTInferenceJobResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public StopSNOMEDCTInferenceJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class RuleGroupSourceStatelessRulesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Priority")
     public Long priority;
+
     public RuleGroupSourceStatelessRulesDetails withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -23,9 +24,11 @@ public class RuleGroupSourceStatelessRulesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleDefinition")
     public RuleGroupSourceStatelessRuleDefinition ruleDefinition;
+
     public RuleGroupSourceStatelessRulesDetails withRuleDefinition(RuleGroupSourceStatelessRuleDefinition ruleDefinition) {
         this.ruleDefinition = ruleDefinition;
         return this;
     }
     
+    public RuleGroupSourceStatelessRulesDetails(){}
 }

@@ -20,6 +20,7 @@ public class TopicSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aliases")
     public TopicSearchResultItemAliases[] aliases;
+
     public TopicSearchResultItem withAliases(TopicSearchResultItemAliases[] aliases) {
         this.aliases = aliases;
         return this;
@@ -29,6 +30,7 @@ public class TopicSearchResultItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public TopicSearchResultItem withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -36,6 +38,7 @@ public class TopicSearchResultItem {
     
     @JsonProperty("created_by")
     public String createdBy;
+
     public TopicSearchResultItem withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -43,6 +46,7 @@ public class TopicSearchResultItem {
     
     @JsonProperty("curated")
     public Boolean curated;
+
     public TopicSearchResultItem withCurated(Boolean curated) {
         this.curated = curated;
         return this;
@@ -50,6 +54,7 @@ public class TopicSearchResultItem {
     
     @JsonProperty("description")
     public String description;
+
     public TopicSearchResultItem withDescription(String description) {
         this.description = description;
         return this;
@@ -57,6 +62,7 @@ public class TopicSearchResultItem {
     
     @JsonProperty("display_name")
     public String displayName;
+
     public TopicSearchResultItem withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -64,6 +70,7 @@ public class TopicSearchResultItem {
     
     @JsonProperty("featured")
     public Boolean featured;
+
     public TopicSearchResultItem withFeatured(Boolean featured) {
         this.featured = featured;
         return this;
@@ -72,6 +79,7 @@ public class TopicSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo_url")
     public String logoUrl;
+
     public TopicSearchResultItem withLogoUrl(String logoUrl) {
         this.logoUrl = logoUrl;
         return this;
@@ -79,6 +87,7 @@ public class TopicSearchResultItem {
     
     @JsonProperty("name")
     public String name;
+
     public TopicSearchResultItem withName(String name) {
         this.name = name;
         return this;
@@ -87,6 +96,7 @@ public class TopicSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("related")
     public TopicSearchResultItemRelated[] related;
+
     public TopicSearchResultItem withRelated(TopicSearchResultItemRelated[] related) {
         this.related = related;
         return this;
@@ -94,6 +104,7 @@ public class TopicSearchResultItem {
     
     @JsonProperty("released")
     public String released;
+
     public TopicSearchResultItem withReleased(String released) {
         this.released = released;
         return this;
@@ -102,6 +113,7 @@ public class TopicSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repository_count")
     public Long repositoryCount;
+
     public TopicSearchResultItem withRepositoryCount(Long repositoryCount) {
         this.repositoryCount = repositoryCount;
         return this;
@@ -109,6 +121,7 @@ public class TopicSearchResultItem {
     
     @JsonProperty("score")
     public Double score;
+
     public TopicSearchResultItem withScore(Double score) {
         this.score = score;
         return this;
@@ -116,6 +129,7 @@ public class TopicSearchResultItem {
     
     @JsonProperty("short_description")
     public String shortDescription;
+
     public TopicSearchResultItem withShortDescription(String shortDescription) {
         this.shortDescription = shortDescription;
         return this;
@@ -124,6 +138,7 @@ public class TopicSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text_matches")
     public SearchResultTextMatches[] textMatches;
+
     public TopicSearchResultItem withTextMatches(SearchResultTextMatches[] textMatches) {
         this.textMatches = textMatches;
         return this;
@@ -133,9 +148,23 @@ public class TopicSearchResultItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public TopicSearchResultItem withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public TopicSearchResultItem(@JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("created_by") String createdBy, @JsonProperty("curated") Boolean curated, @JsonProperty("description") String description, @JsonProperty("display_name") String displayName, @JsonProperty("featured") Boolean featured, @JsonProperty("name") String name, @JsonProperty("released") String released, @JsonProperty("score") Double score, @JsonProperty("short_description") String shortDescription, @JsonProperty("updated_at") OffsetDateTime updatedAt) {
+        this.createdAt = createdAt;
+        this.createdBy = createdBy;
+        this.curated = curated;
+        this.description = description;
+        this.displayName = displayName;
+        this.featured = featured;
+        this.name = name;
+        this.released = released;
+        this.score = score;
+        this.shortDescription = shortDescription;
+        this.updatedAt = updatedAt;
+  }
 }

@@ -25,6 +25,7 @@ public class BucketRetentionPolicy {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("effectiveTime")
     public OffsetDateTime effectiveTime;
+
     public BucketRetentionPolicy withEffectiveTime(OffsetDateTime effectiveTime) {
         this.effectiveTime = effectiveTime;
         return this;
@@ -36,6 +37,7 @@ public class BucketRetentionPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isLocked")
     public Boolean isLocked;
+
     public BucketRetentionPolicy withIsLocked(Boolean isLocked) {
         this.isLocked = isLocked;
         return this;
@@ -47,9 +49,11 @@ public class BucketRetentionPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retentionPeriod")
     public String retentionPeriod;
+
     public BucketRetentionPolicy withRetentionPeriod(String retentionPeriod) {
         this.retentionPeriod = retentionPeriod;
         return this;
     }
     
+    public BucketRetentionPolicy(){}
 }

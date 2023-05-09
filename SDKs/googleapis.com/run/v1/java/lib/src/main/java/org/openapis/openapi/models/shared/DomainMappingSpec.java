@@ -18,6 +18,7 @@ public class DomainMappingSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateMode")
     public DomainMappingSpecCertificateModeEnum certificateMode;
+
     public DomainMappingSpec withCertificateMode(DomainMappingSpecCertificateModeEnum certificateMode) {
         this.certificateMode = certificateMode;
         return this;
@@ -29,6 +30,7 @@ public class DomainMappingSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forceOverride")
     public Boolean forceOverride;
+
     public DomainMappingSpec withForceOverride(Boolean forceOverride) {
         this.forceOverride = forceOverride;
         return this;
@@ -40,9 +42,11 @@ public class DomainMappingSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routeName")
     public String routeName;
+
     public DomainMappingSpec withRouteName(String routeName) {
         this.routeName = routeName;
         return this;
     }
     
+    public DomainMappingSpec(){}
 }

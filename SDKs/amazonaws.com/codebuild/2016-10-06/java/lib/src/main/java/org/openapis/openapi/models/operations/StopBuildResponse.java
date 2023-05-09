@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopBuildResponse {
     
     public String contentType;
+
     public StopBuildResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopBuildResponse {
      */
     
     public Object invalidInputException;
+
     public StopBuildResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -29,6 +32,7 @@ public class StopBuildResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopBuildResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class StopBuildResponse {
     
     
     public Integer statusCode;
+
     public StopBuildResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class StopBuildResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopBuildResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class StopBuildResponse {
      */
     
     public org.openapis.openapi.models.shared.StopBuildOutput stopBuildOutput;
+
     public StopBuildResponse withStopBuildOutput(org.openapis.openapi.models.shared.StopBuildOutput stopBuildOutput) {
         this.stopBuildOutput = stopBuildOutput;
         return this;
     }
     
+    public StopBuildResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

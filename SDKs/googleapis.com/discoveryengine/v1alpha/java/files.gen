@@ -45,6 +45,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/DiscoveryengineProjects
 lib/src/main/java/org/openapis/openapi/models/operations/DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsPatchSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsPatchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsPatchResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsPurgeSecurity.java
+lib/src/main/java/org/openapis/openapi/models/operations/DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsPurgeRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsPurgeResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendResponse.java
@@ -76,6 +79,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDiscoveryengineV
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDiscoveryengineV1alphaBigQuerySource.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleTypeDate.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDiscoveryengineV1alphaListDocumentsResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDiscoveryengineV1alphaPurgeDocumentsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDiscoveryengineV1alphaRecommendResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDiscoveryengineV1alphaRecommendResponseRecommendationResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDiscoveryengineV1alphaRecommendRequest.java
@@ -93,4 +97,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleApiHttpBody.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDiscoveryengineV1alphaImportUserEventsRequestInlineSource.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleLongrunningListOperationsResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

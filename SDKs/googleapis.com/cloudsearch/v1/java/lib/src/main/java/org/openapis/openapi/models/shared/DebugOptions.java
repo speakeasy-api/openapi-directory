@@ -18,9 +18,11 @@ public class DebugOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableDebugging")
     public Boolean enableDebugging;
+
     public DebugOptions withEnableDebugging(Boolean enableDebugging) {
         this.enableDebugging = enableDebugging;
         return this;
     }
     
+    public DebugOptions(){}
 }

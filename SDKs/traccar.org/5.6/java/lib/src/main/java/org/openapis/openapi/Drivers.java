@@ -55,10 +55,8 @@ public class Drivers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDriversIdResponse res = new org.openapis.openapi.models.operations.DeleteDriversIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteDriversIdResponse res = new org.openapis.openapi.models.operations.DeleteDriversIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -95,11 +93,9 @@ public class Drivers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDriversResponse res = new org.openapis.openapi.models.operations.GetDriversResponse() {{
+        org.openapis.openapi.models.operations.GetDriversResponse res = new org.openapis.openapi.models.operations.GetDriversResponse(contentType, httpRes.statusCode()) {{
             drivers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -139,11 +135,9 @@ public class Drivers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostDriversResponse res = new org.openapis.openapi.models.operations.PostDriversResponse() {{
+        org.openapis.openapi.models.operations.PostDriversResponse res = new org.openapis.openapi.models.operations.PostDriversResponse(contentType, httpRes.statusCode()) {{
             driver = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -183,11 +177,9 @@ public class Drivers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutDriversIdResponse res = new org.openapis.openapi.models.operations.PutDriversIdResponse() {{
+        org.openapis.openapi.models.operations.PutDriversIdResponse res = new org.openapis.openapi.models.operations.PutDriversIdResponse(contentType, httpRes.statusCode()) {{
             driver = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

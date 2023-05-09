@@ -18,6 +18,7 @@ public class SavedQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public SavedQuery withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class SavedQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public SavedQuery withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class SavedQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matterId")
     public String matterId;
+
     public SavedQuery withMatterId(String matterId) {
         this.matterId = matterId;
         return this;
@@ -51,6 +54,7 @@ public class SavedQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public Query query;
+
     public SavedQuery withQuery(Query query) {
         this.query = query;
         return this;
@@ -62,9 +66,11 @@ public class SavedQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("savedQueryId")
     public String savedQueryId;
+
     public SavedQuery withSavedQueryId(String savedQueryId) {
         this.savedQueryId = savedQueryId;
         return this;
     }
     
+    public SavedQuery(){}
 }

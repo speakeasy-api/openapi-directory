@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAutocompleteRequest {
@@ -12,6 +13,7 @@ public class GetAutocompleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=boost_fx")
     public String[] boostFx;
+
     public GetAutocompleteRequest withBoostFx(String[] boostFx) {
         this.boostFx = boostFx;
         return this;
@@ -22,6 +24,7 @@ public class GetAutocompleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=boost_q")
     public String[] boostQ;
+
     public GetAutocompleteRequest withBoostQ(String[] boostQ) {
         this.boostQ = boostQ;
         return this;
@@ -32,6 +35,7 @@ public class GetAutocompleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
     public String[] category;
+
     public GetAutocompleteRequest withCategory(String[] category) {
         this.category = category;
         return this;
@@ -42,6 +46,7 @@ public class GetAutocompleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_groups")
     public Boolean excludeGroups;
+
     public GetAutocompleteRequest withExcludeGroups(Boolean excludeGroups) {
         this.excludeGroups = excludeGroups;
         return this;
@@ -52,6 +57,7 @@ public class GetAutocompleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fq")
     public String[] fq;
+
     public GetAutocompleteRequest withFq(String[] fq) {
         this.fq = fq;
         return this;
@@ -62,6 +68,7 @@ public class GetAutocompleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=highlight_class")
     public String highlightClass;
+
     public GetAutocompleteRequest withHighlightClass(String highlightClass) {
         this.highlightClass = highlightClass;
         return this;
@@ -72,6 +79,7 @@ public class GetAutocompleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_eqs")
     public Boolean includeEqs;
+
     public GetAutocompleteRequest withIncludeEqs(Boolean includeEqs) {
         this.includeEqs = includeEqs;
         return this;
@@ -82,6 +90,7 @@ public class GetAutocompleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_match")
     public String minMatch;
+
     public GetAutocompleteRequest withMinMatch(String minMatch) {
         this.minMatch = minMatch;
         return this;
@@ -92,6 +101,7 @@ public class GetAutocompleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minimal_tokenizer")
     public Boolean minimalTokenizer;
+
     public GetAutocompleteRequest withMinimalTokenizer(Boolean minimalTokenizer) {
         this.minimalTokenizer = minimalTokenizer;
         return this;
@@ -102,6 +112,7 @@ public class GetAutocompleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prefix")
     public String[] prefix;
+
     public GetAutocompleteRequest withPrefix(String[] prefix) {
         this.prefix = prefix;
         return this;
@@ -112,6 +123,7 @@ public class GetAutocompleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
     public Long rows;
+
     public GetAutocompleteRequest withRows(Long rows) {
         this.rows = rows;
         return this;
@@ -122,6 +134,7 @@ public class GetAutocompleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public String start;
+
     public GetAutocompleteRequest withStart(String start) {
         this.start = start;
         return this;
@@ -132,6 +145,7 @@ public class GetAutocompleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=taxon")
     public String[] taxon;
+
     public GetAutocompleteRequest withTaxon(String[] taxon) {
         this.taxon = taxon;
         return this;
@@ -139,9 +153,13 @@ public class GetAutocompleteRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=term")
     public String term;
+
     public GetAutocompleteRequest withTerm(String term) {
         this.term = term;
         return this;
     }
     
+    public GetAutocompleteRequest(@JsonProperty("term") String term) {
+        this.term = term;
+  }
 }

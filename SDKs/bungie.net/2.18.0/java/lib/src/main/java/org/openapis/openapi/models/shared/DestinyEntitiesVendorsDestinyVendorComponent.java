@@ -15,6 +15,7 @@ public class DestinyEntitiesVendorsDestinyVendorComponent {
      */
     
     public Boolean canPurchase;
+
     public DestinyEntitiesVendorsDestinyVendorComponent withCanPurchase(Boolean canPurchase) {
         this.canPurchase = canPurchase;
         return this;
@@ -26,6 +27,7 @@ public class DestinyEntitiesVendorsDestinyVendorComponent {
      */
     
     public Boolean enabled;
+
     public DestinyEntitiesVendorsDestinyVendorComponent withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -38,6 +40,7 @@ public class DestinyEntitiesVendorsDestinyVendorComponent {
      */
     
     public OffsetDateTime nextRefreshDate;
+
     public DestinyEntitiesVendorsDestinyVendorComponent withNextRefreshDate(OffsetDateTime nextRefreshDate) {
         this.nextRefreshDate = nextRefreshDate;
         return this;
@@ -48,6 +51,7 @@ public class DestinyEntitiesVendorsDestinyVendorComponent {
      */
     
     public DestinyEntitiesVendorsDestinyVendorComponentProgression progression;
+
     public DestinyEntitiesVendorsDestinyVendorComponent withProgression(DestinyEntitiesVendorsDestinyVendorComponentProgression progression) {
         this.progression = progression;
         return this;
@@ -58,6 +62,7 @@ public class DestinyEntitiesVendorsDestinyVendorComponent {
      */
     
     public Integer seasonalRank;
+
     public DestinyEntitiesVendorsDestinyVendorComponent withSeasonalRank(Integer seasonalRank) {
         this.seasonalRank = seasonalRank;
         return this;
@@ -68,6 +73,7 @@ public class DestinyEntitiesVendorsDestinyVendorComponent {
      */
     
     public Long vendorHash;
+
     public DestinyEntitiesVendorsDestinyVendorComponent withVendorHash(Long vendorHash) {
         this.vendorHash = vendorHash;
         return this;
@@ -78,9 +84,11 @@ public class DestinyEntitiesVendorsDestinyVendorComponent {
      */
     
     public Integer vendorLocationIndex;
+
     public DestinyEntitiesVendorsDestinyVendorComponent withVendorLocationIndex(Integer vendorLocationIndex) {
         this.vendorLocationIndex = vendorLocationIndex;
         return this;
     }
     
+    public DestinyEntitiesVendorsDestinyVendorComponent(){}
 }

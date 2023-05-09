@@ -12,6 +12,7 @@ public class NAHealthyHomeCoachDataBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devices")
     public NAHealthyHomeCoach[] devices;
+
     public NAHealthyHomeCoachDataBody withDevices(NAHealthyHomeCoach[] devices) {
         this.devices = devices;
         return this;
@@ -20,9 +21,11 @@ public class NAHealthyHomeCoachDataBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public NAUser user;
+
     public NAHealthyHomeCoachDataBody withUser(NAUser user) {
         this.user = user;
         return this;
     }
     
+    public NAHealthyHomeCoachDataBody(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListExecutionsResponse {
     @JsonProperty("Executions")
     public ListedExecution[] executions;
+
     public ListExecutionsResponse withExecutions(ListedExecution[] executions) {
         this.executions = executions;
         return this;
@@ -22,6 +23,7 @@ public class ListExecutionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListExecutionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -29,9 +31,14 @@ public class ListExecutionsResponse {
     
     @JsonProperty("WorkflowId")
     public String workflowId;
+
     public ListExecutionsResponse withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
     }
     
+    public ListExecutionsResponse(@JsonProperty("Executions") ListedExecution[] executions, @JsonProperty("WorkflowId") String workflowId) {
+        this.executions = executions;
+        this.workflowId = workflowId;
+  }
 }

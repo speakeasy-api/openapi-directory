@@ -50,4 +50,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/FetchPageRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ExecuteStatementRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/CommitTransactionRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

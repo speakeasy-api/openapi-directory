@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class SetSecurityGroupsInput {
     
     public String loadBalancerArn;
+
     public SetSecurityGroupsInput withLoadBalancerArn(String loadBalancerArn) {
         this.loadBalancerArn = loadBalancerArn;
         return this;
@@ -16,9 +17,14 @@ public class SetSecurityGroupsInput {
     
     
     public String[] securityGroups;
+
     public SetSecurityGroupsInput withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
     }
     
+    public SetSecurityGroupsInput(@JsonProperty("LoadBalancerArn") String loadBalancerArn, @JsonProperty("SecurityGroups") String[] securityGroups) {
+        this.loadBalancerArn = loadBalancerArn;
+        this.securityGroups = securityGroups;
+  }
 }

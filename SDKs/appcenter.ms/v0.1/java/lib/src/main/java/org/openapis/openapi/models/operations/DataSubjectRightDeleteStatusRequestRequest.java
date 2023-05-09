@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DataSubjectRightDeleteStatusRequestRequest {
@@ -12,6 +13,7 @@ public class DataSubjectRightDeleteStatusRequestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
+
     public DataSubjectRightDeleteStatusRequestRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -22,9 +24,14 @@ public class DataSubjectRightDeleteStatusRequestRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=token")
     public String token;
+
     public DataSubjectRightDeleteStatusRequestRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public DataSubjectRightDeleteStatusRequestRequest(@JsonProperty("email") String email, @JsonProperty("token") String token) {
+        this.email = email;
+        this.token = token;
+  }
 }

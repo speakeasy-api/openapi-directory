@@ -15,6 +15,7 @@ public class OpenZFSOriginSnapshotConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CopyStrategy")
     public OpenZFSCopyStrategyEnum copyStrategy;
+
     public OpenZFSOriginSnapshotConfiguration withCopyStrategy(OpenZFSCopyStrategyEnum copyStrategy) {
         this.copyStrategy = copyStrategy;
         return this;
@@ -26,9 +27,11 @@ public class OpenZFSOriginSnapshotConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnapshotARN")
     public String snapshotARN;
+
     public OpenZFSOriginSnapshotConfiguration withSnapshotARN(String snapshotARN) {
         this.snapshotARN = snapshotARN;
         return this;
     }
     
+    public OpenZFSOriginSnapshotConfiguration(){}
 }

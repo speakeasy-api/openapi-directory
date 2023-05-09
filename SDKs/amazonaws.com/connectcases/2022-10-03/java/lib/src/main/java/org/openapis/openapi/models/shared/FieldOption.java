@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FieldOption {
     @JsonProperty("active")
     public Boolean active;
+
     public FieldOption withActive(Boolean active) {
         this.active = active;
         return this;
@@ -19,6 +20,7 @@ public class FieldOption {
     
     @JsonProperty("name")
     public String name;
+
     public FieldOption withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,15 @@ public class FieldOption {
     
     @JsonProperty("value")
     public String value;
+
     public FieldOption withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public FieldOption(@JsonProperty("active") Boolean active, @JsonProperty("name") String name, @JsonProperty("value") String value) {
+        this.active = active;
+        this.name = name;
+        this.value = value;
+  }
 }

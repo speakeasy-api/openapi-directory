@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCommitteeCommitteeIdCandidatesHistoryCycleRequest {
@@ -13,6 +14,7 @@ public class GetCommitteeCommitteeIdCandidatesHistoryCycleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetCommitteeCommitteeIdCandidatesHistoryCycleRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -24,6 +26,7 @@ public class GetCommitteeCommitteeIdCandidatesHistoryCycleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=committee_id")
     public String committeeId;
+
     public GetCommitteeCommitteeIdCandidatesHistoryCycleRequest withCommitteeId(String committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -41,6 +44,7 @@ public class GetCommitteeCommitteeIdCandidatesHistoryCycleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cycle")
     public Integer cycle;
+
     public GetCommitteeCommitteeIdCandidatesHistoryCycleRequest withCycle(Integer cycle) {
         this.cycle = cycle;
         return this;
@@ -52,6 +56,7 @@ public class GetCommitteeCommitteeIdCandidatesHistoryCycleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_full")
     public Boolean electionFull;
+
     public GetCommitteeCommitteeIdCandidatesHistoryCycleRequest withElectionFull(Boolean electionFull) {
         this.electionFull = electionFull;
         return this;
@@ -62,6 +67,7 @@ public class GetCommitteeCommitteeIdCandidatesHistoryCycleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetCommitteeCommitteeIdCandidatesHistoryCycleRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -72,6 +78,7 @@ public class GetCommitteeCommitteeIdCandidatesHistoryCycleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetCommitteeCommitteeIdCandidatesHistoryCycleRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -83,6 +90,7 @@ public class GetCommitteeCommitteeIdCandidatesHistoryCycleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetCommitteeCommitteeIdCandidatesHistoryCycleRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -93,6 +101,7 @@ public class GetCommitteeCommitteeIdCandidatesHistoryCycleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetCommitteeCommitteeIdCandidatesHistoryCycleRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -103,6 +112,7 @@ public class GetCommitteeCommitteeIdCandidatesHistoryCycleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetCommitteeCommitteeIdCandidatesHistoryCycleRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -113,9 +123,15 @@ public class GetCommitteeCommitteeIdCandidatesHistoryCycleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetCommitteeCommitteeIdCandidatesHistoryCycleRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
     }
     
+    public GetCommitteeCommitteeIdCandidatesHistoryCycleRequest(@JsonProperty("api_key") String apiKey, @JsonProperty("committee_id") String committeeId, @JsonProperty("cycle") Integer cycle) {
+        this.apiKey = apiKey;
+        this.committeeId = committeeId;
+        this.cycle = cycle;
+  }
 }

@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.EmailValidationRequest;
 import org.openapis.openapi.models.operations.EmailValidationResponse;
 
@@ -26,19 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            EmailValidationRequest req = new EmailValidationRequest() {{
-                userEmailHere = "example@example.com";
-                yourApiKeyHere = "asd24#sdfs322#";
-            }}            
+            EmailValidationRequest req = new EmailValidationRequest("example@example.com", "asd24#sdfs322#");            
 
             EmailValidationResponse res = sdk.emailValidation.emailValidation(req);
 
-            if (res.emailValidation200ApplicationJSONObject.isPresent()) {
+            if (res.emailValidation200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -46,17 +44,17 @@ public class Application {
 ## Available Resources and Operations
 
 
-### emailValidation
+### [emailValidation](docs/emailvalidation/README.md)
 
-* `emailValidation` - Email Validation
+* [emailValidation](docs/emailvalidation/README.md#emailvalidation) - Email Validation
 
-### maliciousUrlScanner
+### [maliciousUrlScanner](docs/maliciousurlscanner/README.md)
 
-* `maliciousUrlScanner` - Malicious URL Scanner
+* [maliciousUrlScanner](docs/maliciousurlscanner/README.md#maliciousurlscanner) - Malicious URL Scanner
 
-### phoneValidation
+### [phoneValidation](docs/phonevalidation/README.md)
 
-* `phoneValidation` - Phone Validation
+* [phoneValidation](docs/phonevalidation/README.md#phonevalidation) - Phone Validation
 <!-- End SDK Available Operations -->
 
 ### Maturity

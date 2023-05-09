@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ResetServiceSettingResponse {
     
     public String contentType;
+
     public ResetServiceSettingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ResetServiceSettingResponse {
      */
     
     public Object internalServerError;
+
     public ResetServiceSettingResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class ResetServiceSettingResponse {
      */
     
     public org.openapis.openapi.models.shared.ResetServiceSettingResult resetServiceSettingResult;
+
     public ResetServiceSettingResponse withResetServiceSettingResult(org.openapis.openapi.models.shared.ResetServiceSettingResult resetServiceSettingResult) {
         this.resetServiceSettingResult = resetServiceSettingResult;
         return this;
@@ -36,6 +40,7 @@ public class ResetServiceSettingResponse {
     
     
     public Integer statusCode;
+
     public ResetServiceSettingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ResetServiceSettingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ResetServiceSettingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class ResetServiceSettingResponse {
      */
     
     public Object serviceSettingNotFound;
+
     public ResetServiceSettingResponse withServiceSettingNotFound(Object serviceSettingNotFound) {
         this.serviceSettingNotFound = serviceSettingNotFound;
         return this;
@@ -63,9 +70,14 @@ public class ResetServiceSettingResponse {
      */
     
     public Object tooManyUpdates;
+
     public ResetServiceSettingResponse withTooManyUpdates(Object tooManyUpdates) {
         this.tooManyUpdates = tooManyUpdates;
         return this;
     }
     
+    public ResetServiceSettingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

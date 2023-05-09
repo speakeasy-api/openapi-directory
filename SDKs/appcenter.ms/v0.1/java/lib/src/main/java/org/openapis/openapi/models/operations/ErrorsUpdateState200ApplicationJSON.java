@@ -20,6 +20,7 @@ public class ErrorsUpdateState200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotation")
     public String annotation;
+
     public ErrorsUpdateState200ApplicationJSON withAnnotation(String annotation) {
         this.annotation = annotation;
         return this;
@@ -28,6 +29,7 @@ public class ErrorsUpdateState200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appBuild")
     public String appBuild;
+
     public ErrorsUpdateState200ApplicationJSON withAppBuild(String appBuild) {
         this.appBuild = appBuild;
         return this;
@@ -35,6 +37,7 @@ public class ErrorsUpdateState200ApplicationJSON {
     
     @JsonProperty("appVersion")
     public String appVersion;
+
     public ErrorsUpdateState200ApplicationJSON withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
@@ -43,6 +46,7 @@ public class ErrorsUpdateState200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codeRaw")
     public String codeRaw;
+
     public ErrorsUpdateState200ApplicationJSON withCodeRaw(String codeRaw) {
         this.codeRaw = codeRaw;
         return this;
@@ -50,6 +54,7 @@ public class ErrorsUpdateState200ApplicationJSON {
     
     @JsonProperty("count")
     public Long count;
+
     public ErrorsUpdateState200ApplicationJSON withCount(Long count) {
         this.count = count;
         return this;
@@ -57,6 +62,7 @@ public class ErrorsUpdateState200ApplicationJSON {
     
     @JsonProperty("deviceCount")
     public Long deviceCount;
+
     public ErrorsUpdateState200ApplicationJSON withDeviceCount(Long deviceCount) {
         this.deviceCount = deviceCount;
         return this;
@@ -64,6 +70,7 @@ public class ErrorsUpdateState200ApplicationJSON {
     
     @JsonProperty("errorGroupId")
     public String errorGroupId;
+
     public ErrorsUpdateState200ApplicationJSON withErrorGroupId(String errorGroupId) {
         this.errorGroupId = errorGroupId;
         return this;
@@ -72,6 +79,7 @@ public class ErrorsUpdateState200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceptionAppCode")
     public Boolean exceptionAppCode;
+
     public ErrorsUpdateState200ApplicationJSON withExceptionAppCode(Boolean exceptionAppCode) {
         this.exceptionAppCode = exceptionAppCode;
         return this;
@@ -80,6 +88,7 @@ public class ErrorsUpdateState200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceptionClassMethod")
     public Boolean exceptionClassMethod;
+
     public ErrorsUpdateState200ApplicationJSON withExceptionClassMethod(Boolean exceptionClassMethod) {
         this.exceptionClassMethod = exceptionClassMethod;
         return this;
@@ -88,6 +97,7 @@ public class ErrorsUpdateState200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceptionClassName")
     public String exceptionClassName;
+
     public ErrorsUpdateState200ApplicationJSON withExceptionClassName(String exceptionClassName) {
         this.exceptionClassName = exceptionClassName;
         return this;
@@ -96,6 +106,7 @@ public class ErrorsUpdateState200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceptionFile")
     public String exceptionFile;
+
     public ErrorsUpdateState200ApplicationJSON withExceptionFile(String exceptionFile) {
         this.exceptionFile = exceptionFile;
         return this;
@@ -104,6 +115,7 @@ public class ErrorsUpdateState200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceptionLine")
     public String exceptionLine;
+
     public ErrorsUpdateState200ApplicationJSON withExceptionLine(String exceptionLine) {
         this.exceptionLine = exceptionLine;
         return this;
@@ -112,6 +124,7 @@ public class ErrorsUpdateState200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceptionMessage")
     public String exceptionMessage;
+
     public ErrorsUpdateState200ApplicationJSON withExceptionMessage(String exceptionMessage) {
         this.exceptionMessage = exceptionMessage;
         return this;
@@ -120,6 +133,7 @@ public class ErrorsUpdateState200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceptionMethod")
     public String exceptionMethod;
+
     public ErrorsUpdateState200ApplicationJSON withExceptionMethod(String exceptionMethod) {
         this.exceptionMethod = exceptionMethod;
         return this;
@@ -128,6 +142,7 @@ public class ErrorsUpdateState200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceptionType")
     public String exceptionType;
+
     public ErrorsUpdateState200ApplicationJSON withExceptionType(String exceptionType) {
         this.exceptionType = exceptionType;
         return this;
@@ -137,6 +152,7 @@ public class ErrorsUpdateState200ApplicationJSON {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("firstOccurrence")
     public OffsetDateTime firstOccurrence;
+
     public ErrorsUpdateState200ApplicationJSON withFirstOccurrence(OffsetDateTime firstOccurrence) {
         this.firstOccurrence = firstOccurrence;
         return this;
@@ -145,6 +161,7 @@ public class ErrorsUpdateState200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hidden")
     public Boolean hidden;
+
     public ErrorsUpdateState200ApplicationJSON withHidden(Boolean hidden) {
         this.hidden = hidden;
         return this;
@@ -154,6 +171,7 @@ public class ErrorsUpdateState200ApplicationJSON {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastOccurrence")
     public OffsetDateTime lastOccurrence;
+
     public ErrorsUpdateState200ApplicationJSON withLastOccurrence(OffsetDateTime lastOccurrence) {
         this.lastOccurrence = lastOccurrence;
         return this;
@@ -162,6 +180,7 @@ public class ErrorsUpdateState200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasonFrames")
     public ErrorsUpdateState200ApplicationJSONReasonFrames[] reasonFrames;
+
     public ErrorsUpdateState200ApplicationJSON withReasonFrames(ErrorsUpdateState200ApplicationJSONReasonFrames[] reasonFrames) {
         this.reasonFrames = reasonFrames;
         return this;
@@ -169,9 +188,19 @@ public class ErrorsUpdateState200ApplicationJSON {
     
     @JsonProperty("state")
     public ErrorsUpdateState200ApplicationJSONStateEnum state;
+
     public ErrorsUpdateState200ApplicationJSON withState(ErrorsUpdateState200ApplicationJSONStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ErrorsUpdateState200ApplicationJSON(@JsonProperty("appVersion") String appVersion, @JsonProperty("count") Long count, @JsonProperty("deviceCount") Long deviceCount, @JsonProperty("errorGroupId") String errorGroupId, @JsonProperty("firstOccurrence") OffsetDateTime firstOccurrence, @JsonProperty("lastOccurrence") OffsetDateTime lastOccurrence, @JsonProperty("state") ErrorsUpdateState200ApplicationJSONStateEnum state) {
+        this.appVersion = appVersion;
+        this.count = count;
+        this.deviceCount = deviceCount;
+        this.errorGroupId = errorGroupId;
+        this.firstOccurrence = firstOccurrence;
+        this.lastOccurrence = lastOccurrence;
+        this.state = state;
+  }
 }

@@ -18,6 +18,7 @@ public class ListGuardiansResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guardians")
     public Guardian[] guardians;
+
     public ListGuardiansResponse withGuardians(Guardian[] guardians) {
         this.guardians = guardians;
         return this;
@@ -29,9 +30,11 @@ public class ListGuardiansResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListGuardiansResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListGuardiansResponse(){}
 }

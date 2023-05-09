@@ -15,9 +15,11 @@ public class UpdateACLResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ACL")
     public Acl acl;
+
     public UpdateACLResponse withAcl(Acl acl) {
         this.acl = acl;
         return this;
     }
     
+    public UpdateACLResponse(){}
 }

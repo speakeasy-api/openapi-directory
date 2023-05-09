@@ -65,15 +65,13 @@ public class PaymentLink {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PaymentLinkApiAllResponse res = new org.openapis.openapi.models.operations.PaymentLinkApiAllResponse() {{
+        org.openapis.openapi.models.operations.PaymentLinkApiAllResponse res = new org.openapis.openapi.models.operations.PaymentLinkApiAllResponse(contentType, httpRes.statusCode()) {{
             listResultPaymentLink = null;
             listResultPaymentLink = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -137,15 +135,13 @@ public class PaymentLink {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PaymentLinkApiDeleteFormResponse res = new org.openapis.openapi.models.operations.PaymentLinkApiDeleteFormResponse() {{
+        org.openapis.openapi.models.operations.PaymentLinkApiDeleteFormResponse res = new org.openapis.openapi.models.operations.PaymentLinkApiDeleteFormResponse(contentType, httpRes.statusCode()) {{
             paymentLinkApiDeleteForm200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             paymentLinkApiDeleteForm200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -209,15 +205,13 @@ public class PaymentLink {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PaymentLinkApiDeleteJsonResponse res = new org.openapis.openapi.models.operations.PaymentLinkApiDeleteJsonResponse() {{
+        org.openapis.openapi.models.operations.PaymentLinkApiDeleteJsonResponse res = new org.openapis.openapi.models.operations.PaymentLinkApiDeleteJsonResponse(contentType, httpRes.statusCode()) {{
             paymentLinkApiDeleteJSON200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             paymentLinkApiDeleteJSON200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -281,15 +275,13 @@ public class PaymentLink {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PaymentLinkApiDeleteRawResponse res = new org.openapis.openapi.models.operations.PaymentLinkApiDeleteRawResponse() {{
+        org.openapis.openapi.models.operations.PaymentLinkApiDeleteRawResponse res = new org.openapis.openapi.models.operations.PaymentLinkApiDeleteRawResponse(contentType, httpRes.statusCode()) {{
             paymentLinkApiDeleteRaw200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             paymentLinkApiDeleteRaw200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -353,15 +345,13 @@ public class PaymentLink {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PaymentLinkApiNewFormResponse res = new org.openapis.openapi.models.operations.PaymentLinkApiNewFormResponse() {{
+        org.openapis.openapi.models.operations.PaymentLinkApiNewFormResponse res = new org.openapis.openapi.models.operations.PaymentLinkApiNewFormResponse(contentType, httpRes.statusCode()) {{
             paymentLinkApiNewForm200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             paymentLinkApiNewForm200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -425,15 +415,13 @@ public class PaymentLink {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PaymentLinkApiNewJsonResponse res = new org.openapis.openapi.models.operations.PaymentLinkApiNewJsonResponse() {{
+        org.openapis.openapi.models.operations.PaymentLinkApiNewJsonResponse res = new org.openapis.openapi.models.operations.PaymentLinkApiNewJsonResponse(contentType, httpRes.statusCode()) {{
             paymentLinkApiNewJSON200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             paymentLinkApiNewJSON200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -497,15 +485,13 @@ public class PaymentLink {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PaymentLinkApiNewRawResponse res = new org.openapis.openapi.models.operations.PaymentLinkApiNewRawResponse() {{
+        org.openapis.openapi.models.operations.PaymentLinkApiNewRawResponse res = new org.openapis.openapi.models.operations.PaymentLinkApiNewRawResponse(contentType, httpRes.statusCode()) {{
             paymentLinkApiNewRaw200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             paymentLinkApiNewRaw200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -570,15 +556,13 @@ public class PaymentLink {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PaymentLinkApiUriResponse res = new org.openapis.openapi.models.operations.PaymentLinkApiUriResponse() {{
+        org.openapis.openapi.models.operations.PaymentLinkApiUriResponse res = new org.openapis.openapi.models.operations.PaymentLinkApiUriResponse(contentType, httpRes.statusCode()) {{
             paymentLinkUriApiModel = null;
             paymentLinkUriApiModel = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

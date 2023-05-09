@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * WorkmailAction - &lt;p&gt;When included in a receipt rule, this action calls Amazon WorkMail and, optionally, publishes a notification to Amazon Simple Notification Service (Amazon SNS). You will typically not use this action directly because Amazon WorkMail adds the rule automatically during its setup procedure.&lt;/p&gt; &lt;p&gt;For information using a receipt rule to call Amazon WorkMail, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-action-workmail.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class WorkmailAction {
     
     public String organizationArn;
+
     public WorkmailAction withOrganizationArn(String organizationArn) {
         this.organizationArn = organizationArn;
         return this;
@@ -19,9 +20,13 @@ public class WorkmailAction {
     
     
     public String topicArn;
+
     public WorkmailAction withTopicArn(String topicArn) {
         this.topicArn = topicArn;
         return this;
     }
     
+    public WorkmailAction(@JsonProperty("OrganizationArn") String organizationArn) {
+        this.organizationArn = organizationArn;
+  }
 }

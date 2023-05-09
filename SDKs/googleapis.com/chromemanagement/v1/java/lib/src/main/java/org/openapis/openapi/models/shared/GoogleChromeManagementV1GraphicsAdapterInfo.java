@@ -18,6 +18,7 @@ public class GoogleChromeManagementV1GraphicsAdapterInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adapter")
     public String adapter;
+
     public GoogleChromeManagementV1GraphicsAdapterInfo withAdapter(String adapter) {
         this.adapter = adapter;
         return this;
@@ -29,6 +30,7 @@ public class GoogleChromeManagementV1GraphicsAdapterInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceId")
     public String deviceId;
+
     public GoogleChromeManagementV1GraphicsAdapterInfo withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -40,9 +42,11 @@ public class GoogleChromeManagementV1GraphicsAdapterInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("driverVersion")
     public String driverVersion;
+
     public GoogleChromeManagementV1GraphicsAdapterInfo withDriverVersion(String driverVersion) {
         this.driverVersion = driverVersion;
         return this;
     }
     
+    public GoogleChromeManagementV1GraphicsAdapterInfo(){}
 }

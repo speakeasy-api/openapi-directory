@@ -12,6 +12,7 @@ public class ListDocumentVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListDocumentVersionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -19,6 +20,7 @@ public class ListDocumentVersionsRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public ListDocumentVersionsRequest withName(String name) {
         this.name = name;
         return this;
@@ -27,9 +29,13 @@ public class ListDocumentVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDocumentVersionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDocumentVersionsRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

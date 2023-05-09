@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * PurchaseReservedNodeOfferingMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PurchaseReservedNodeOfferingMessage {
     
     public Long nodeCount;
+
     public PurchaseReservedNodeOfferingMessage withNodeCount(Long nodeCount) {
         this.nodeCount = nodeCount;
         return this;
@@ -19,9 +20,13 @@ public class PurchaseReservedNodeOfferingMessage {
     
     
     public String reservedNodeOfferingId;
+
     public PurchaseReservedNodeOfferingMessage withReservedNodeOfferingId(String reservedNodeOfferingId) {
         this.reservedNodeOfferingId = reservedNodeOfferingId;
         return this;
     }
     
+    public PurchaseReservedNodeOfferingMessage(@JsonProperty("ReservedNodeOfferingId") String reservedNodeOfferingId) {
+        this.reservedNodeOfferingId = reservedNodeOfferingId;
+  }
 }

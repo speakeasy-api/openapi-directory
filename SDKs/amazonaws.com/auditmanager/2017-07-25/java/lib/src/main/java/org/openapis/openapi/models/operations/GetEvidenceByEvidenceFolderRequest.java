@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEvidenceByEvidenceFolderRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetEvidenceByEvidenceFolderRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class GetEvidenceByEvidenceFolderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetEvidenceByEvidenceFolderRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class GetEvidenceByEvidenceFolderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetEvidenceByEvidenceFolderRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class GetEvidenceByEvidenceFolderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetEvidenceByEvidenceFolderRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class GetEvidenceByEvidenceFolderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetEvidenceByEvidenceFolderRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class GetEvidenceByEvidenceFolderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetEvidenceByEvidenceFolderRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class GetEvidenceByEvidenceFolderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetEvidenceByEvidenceFolderRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class GetEvidenceByEvidenceFolderRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assessmentId")
     public String assessmentId;
+
     public GetEvidenceByEvidenceFolderRequest withAssessmentId(String assessmentId) {
         this.assessmentId = assessmentId;
         return this;
@@ -71,6 +80,7 @@ public class GetEvidenceByEvidenceFolderRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=controlSetId")
     public String controlSetId;
+
     public GetEvidenceByEvidenceFolderRequest withControlSetId(String controlSetId) {
         this.controlSetId = controlSetId;
         return this;
@@ -81,6 +91,7 @@ public class GetEvidenceByEvidenceFolderRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=evidenceFolderId")
     public String evidenceFolderId;
+
     public GetEvidenceByEvidenceFolderRequest withEvidenceFolderId(String evidenceFolderId) {
         this.evidenceFolderId = evidenceFolderId;
         return this;
@@ -91,6 +102,7 @@ public class GetEvidenceByEvidenceFolderRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public GetEvidenceByEvidenceFolderRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -101,9 +113,15 @@ public class GetEvidenceByEvidenceFolderRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public GetEvidenceByEvidenceFolderRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetEvidenceByEvidenceFolderRequest(@JsonProperty("assessmentId") String assessmentId, @JsonProperty("controlSetId") String controlSetId, @JsonProperty("evidenceFolderId") String evidenceFolderId) {
+        this.assessmentId = assessmentId;
+        this.controlSetId = controlSetId;
+        this.evidenceFolderId = evidenceFolderId;
+  }
 }

@@ -18,6 +18,7 @@ public class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchPla
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndDate")
     public String endDate;
+
     public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchPlannedBranchClosure withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -29,9 +30,11 @@ public class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchPla
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartDate")
     public String startDate;
+
     public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchPlannedBranchClosure withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchPlannedBranchClosure(){}
 }

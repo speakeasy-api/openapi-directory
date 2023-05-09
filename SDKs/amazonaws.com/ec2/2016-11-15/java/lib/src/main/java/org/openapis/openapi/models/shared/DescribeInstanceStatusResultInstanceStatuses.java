@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceStatusResultInstanceStatuses {
     
     public String availabilityZone;
+
     public DescribeInstanceStatusResultInstanceStatuses withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -19,6 +20,7 @@ public class DescribeInstanceStatusResultInstanceStatuses {
     
     
     public DescribeInstanceStatusResultInstanceStatusesEvents[] events;
+
     public DescribeInstanceStatusResultInstanceStatuses withEvents(DescribeInstanceStatusResultInstanceStatusesEvents[] events) {
         this.events = events;
         return this;
@@ -26,6 +28,7 @@ public class DescribeInstanceStatusResultInstanceStatuses {
     
     
     public String instanceId;
+
     public DescribeInstanceStatusResultInstanceStatuses withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -33,6 +36,7 @@ public class DescribeInstanceStatusResultInstanceStatuses {
     
     
     public DescribeInstanceStatusResultInstanceStatusesInstanceState instanceState;
+
     public DescribeInstanceStatusResultInstanceStatuses withInstanceState(DescribeInstanceStatusResultInstanceStatusesInstanceState instanceState) {
         this.instanceState = instanceState;
         return this;
@@ -40,6 +44,7 @@ public class DescribeInstanceStatusResultInstanceStatuses {
     
     
     public DescribeInstanceStatusResultInstanceStatusesInstanceStatus instanceStatus;
+
     public DescribeInstanceStatusResultInstanceStatuses withInstanceStatus(DescribeInstanceStatusResultInstanceStatusesInstanceStatus instanceStatus) {
         this.instanceStatus = instanceStatus;
         return this;
@@ -47,6 +52,7 @@ public class DescribeInstanceStatusResultInstanceStatuses {
     
     
     public String outpostArn;
+
     public DescribeInstanceStatusResultInstanceStatuses withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -54,9 +60,11 @@ public class DescribeInstanceStatusResultInstanceStatuses {
     
     
     public DescribeInstanceStatusResultInstanceStatusesSystemStatus systemStatus;
+
     public DescribeInstanceStatusResultInstanceStatuses withSystemStatus(DescribeInstanceStatusResultInstanceStatusesSystemStatus systemStatus) {
         this.systemStatus = systemStatus;
         return this;
     }
     
+    public DescribeInstanceStatusResultInstanceStatuses(){}
 }

@@ -15,6 +15,7 @@ public class DescribeLDAPSSettingsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LDAPSSettingsInfo")
     public LDAPSSettingInfo[] ldapsSettingsInfo;
+
     public DescribeLDAPSSettingsResult withLDAPSSettingsInfo(LDAPSSettingInfo[] ldapsSettingsInfo) {
         this.ldapsSettingsInfo = ldapsSettingsInfo;
         return this;
@@ -23,9 +24,11 @@ public class DescribeLDAPSSettingsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeLDAPSSettingsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeLDAPSSettingsResult(){}
 }

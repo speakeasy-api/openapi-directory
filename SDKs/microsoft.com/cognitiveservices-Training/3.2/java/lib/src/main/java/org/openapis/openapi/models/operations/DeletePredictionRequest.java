@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePredictionRequest {
@@ -12,6 +13,7 @@ public class DeletePredictionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
     public String[] ids;
+
     public DeletePredictionRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -22,9 +24,14 @@ public class DeletePredictionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public DeletePredictionRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public DeletePredictionRequest(@JsonProperty("ids") String[] ids, @JsonProperty("projectId") String projectId) {
+        this.ids = ids;
+        this.projectId = projectId;
+  }
 }

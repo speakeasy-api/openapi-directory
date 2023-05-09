@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2IntentMessageTableCardRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cells")
     public GoogleCloudDialogflowV2IntentMessageTableCardCell[] cells;
+
     public GoogleCloudDialogflowV2IntentMessageTableCardRow withCells(GoogleCloudDialogflowV2IntentMessageTableCardCell[] cells) {
         this.cells = cells;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2IntentMessageTableCardRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dividerAfter")
     public Boolean dividerAfter;
+
     public GoogleCloudDialogflowV2IntentMessageTableCardRow withDividerAfter(Boolean dividerAfter) {
         this.dividerAfter = dividerAfter;
         return this;
     }
     
+    public GoogleCloudDialogflowV2IntentMessageTableCardRow(){}
 }

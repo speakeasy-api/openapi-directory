@@ -18,6 +18,7 @@ public class ListUsersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public UserItems[] items;
+
     public ListUsersResponse withItems(UserItems[] items) {
         this.items = items;
         return this;
@@ -29,9 +30,11 @@ public class ListUsersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paging")
     public Paging paging;
+
     public ListUsersResponse withPaging(Paging paging) {
         this.paging = paging;
         return this;
     }
     
+    public ListUsersResponse(){}
 }

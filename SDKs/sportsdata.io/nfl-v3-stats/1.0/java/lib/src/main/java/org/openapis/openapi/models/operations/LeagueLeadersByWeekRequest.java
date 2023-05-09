@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LeagueLeadersByWeekRequest {
@@ -12,6 +13,7 @@ public class LeagueLeadersByWeekRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=column")
     public LeagueLeadersByWeekColumnEnum column;
+
     public LeagueLeadersByWeekRequest withColumn(LeagueLeadersByWeekColumnEnum column) {
         this.column = column;
         return this;
@@ -23,6 +25,7 @@ public class LeagueLeadersByWeekRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public LeagueLeadersByWeekFormatEnum format;
+
     public LeagueLeadersByWeekRequest withFormat(LeagueLeadersByWeekFormatEnum format) {
         this.format = format;
         return this;
@@ -33,6 +36,7 @@ public class LeagueLeadersByWeekRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=position")
     public LeagueLeadersByWeekPositionEnum position;
+
     public LeagueLeadersByWeekRequest withPosition(LeagueLeadersByWeekPositionEnum position) {
         this.position = position;
         return this;
@@ -45,6 +49,7 @@ public class LeagueLeadersByWeekRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=season")
     public String season;
+
     public LeagueLeadersByWeekRequest withSeason(String season) {
         this.season = season;
         return this;
@@ -57,9 +62,17 @@ public class LeagueLeadersByWeekRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=week")
     public String week;
+
     public LeagueLeadersByWeekRequest withWeek(String week) {
         this.week = week;
         return this;
     }
     
+    public LeagueLeadersByWeekRequest(@JsonProperty("column") LeagueLeadersByWeekColumnEnum column, @JsonProperty("format") LeagueLeadersByWeekFormatEnum format, @JsonProperty("position") LeagueLeadersByWeekPositionEnum position, @JsonProperty("season") String season, @JsonProperty("week") String week) {
+        this.column = column;
+        this.format = format;
+        this.position = position;
+        this.season = season;
+        this.week = week;
+  }
 }

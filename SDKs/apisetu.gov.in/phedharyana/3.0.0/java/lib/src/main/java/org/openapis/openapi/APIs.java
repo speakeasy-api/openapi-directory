@@ -55,7 +55,7 @@ public class APIs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EtcerResponse res = new org.openapis.openapi.models.operations.EtcerResponse() {{
+        org.openapis.openapi.models.operations.EtcerResponse res = new org.openapis.openapi.models.operations.EtcerResponse(contentType, httpRes.statusCode()) {{
             etcer400ApplicationJSONObject = null;
             etcer401ApplicationJSONObject = null;
             etcer404ApplicationJSONObject = null;
@@ -64,8 +64,6 @@ public class APIs {
             etcer503ApplicationJSONObject = null;
             etcer504ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,7 +146,7 @@ public class APIs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GovidResponse res = new org.openapis.openapi.models.operations.GovidResponse() {{
+        org.openapis.openapi.models.operations.GovidResponse res = new org.openapis.openapi.models.operations.GovidResponse(contentType, httpRes.statusCode()) {{
             govid400ApplicationJSONObject = null;
             govid401ApplicationJSONObject = null;
             govid404ApplicationJSONObject = null;
@@ -157,8 +155,6 @@ public class APIs {
             govid503ApplicationJSONObject = null;
             govid504ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,7 +237,7 @@ public class APIs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SicerResponse res = new org.openapis.openapi.models.operations.SicerResponse() {{
+        org.openapis.openapi.models.operations.SicerResponse res = new org.openapis.openapi.models.operations.SicerResponse(contentType, httpRes.statusCode()) {{
             sicer400ApplicationJSONObject = null;
             sicer401ApplicationJSONObject = null;
             sicer404ApplicationJSONObject = null;
@@ -250,8 +246,6 @@ public class APIs {
             sicer503ApplicationJSONObject = null;
             sicer504ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

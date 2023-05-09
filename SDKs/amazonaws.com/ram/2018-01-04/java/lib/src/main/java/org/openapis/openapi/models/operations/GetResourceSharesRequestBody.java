@@ -15,6 +15,7 @@ public class GetResourceSharesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public GetResourceSharesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +27,7 @@ public class GetResourceSharesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetResourceSharesRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -37,19 +39,33 @@ public class GetResourceSharesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetResourceSharesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
     /**
-     * Specifies that you want to retrieve details of only those resource shares that use the RAM permission with this &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resoure Name (ARN)&lt;/a&gt;.
+     * Specifies that you want to retrieve details of only those resource shares that use the managed permission with this &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resource Name (ARN)&lt;/a&gt;.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissionArn")
     public String permissionArn;
+
     public GetResourceSharesRequestBody withPermissionArn(String permissionArn) {
         this.permissionArn = permissionArn;
+        return this;
+    }
+    
+    /**
+     * Specifies that you want to retrieve details for only those resource shares that use the specified version of the managed permission.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("permissionVersion")
+    public Long permissionVersion;
+
+    public GetResourceSharesRequestBody withPermissionVersion(Long permissionVersion) {
+        this.permissionVersion = permissionVersion;
         return this;
     }
     
@@ -58,6 +74,7 @@ public class GetResourceSharesRequestBody {
      */
     @JsonProperty("resourceOwner")
     public GetResourceSharesRequestBodyResourceOwnerEnum resourceOwner;
+
     public GetResourceSharesRequestBody withResourceOwner(GetResourceSharesRequestBodyResourceOwnerEnum resourceOwner) {
         this.resourceOwner = resourceOwner;
         return this;
@@ -69,6 +86,7 @@ public class GetResourceSharesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceShareArns")
     public String[] resourceShareArns;
+
     public GetResourceSharesRequestBody withResourceShareArns(String[] resourceShareArns) {
         this.resourceShareArns = resourceShareArns;
         return this;
@@ -80,6 +98,7 @@ public class GetResourceSharesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceShareStatus")
     public GetResourceSharesRequestBodyResourceShareStatusEnum resourceShareStatus;
+
     public GetResourceSharesRequestBody withResourceShareStatus(GetResourceSharesRequestBodyResourceShareStatusEnum resourceShareStatus) {
         this.resourceShareStatus = resourceShareStatus;
         return this;
@@ -91,9 +110,13 @@ public class GetResourceSharesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagFilters")
     public org.openapis.openapi.models.shared.TagFilter[] tagFilters;
+
     public GetResourceSharesRequestBody withTagFilters(org.openapis.openapi.models.shared.TagFilter[] tagFilters) {
         this.tagFilters = tagFilters;
         return this;
     }
     
+    public GetResourceSharesRequestBody(@JsonProperty("resourceOwner") GetResourceSharesRequestBodyResourceOwnerEnum resourceOwner) {
+        this.resourceOwner = resourceOwner;
+  }
 }

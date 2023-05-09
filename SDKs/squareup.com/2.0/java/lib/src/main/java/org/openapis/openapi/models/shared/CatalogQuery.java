@@ -42,6 +42,7 @@ public class CatalogQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exact_query")
     public CatalogQueryExact exactQuery;
+
     public CatalogQuery withExactQuery(CatalogQueryExact exactQuery) {
         this.exactQuery = exactQuery;
         return this;
@@ -53,6 +54,7 @@ public class CatalogQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_variations_for_item_option_values_query")
     public CatalogQueryItemVariationsForItemOptionValues itemVariationsForItemOptionValuesQuery;
+
     public CatalogQuery withItemVariationsForItemOptionValuesQuery(CatalogQueryItemVariationsForItemOptionValues itemVariationsForItemOptionValuesQuery) {
         this.itemVariationsForItemOptionValuesQuery = itemVariationsForItemOptionValuesQuery;
         return this;
@@ -64,6 +66,7 @@ public class CatalogQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items_for_item_options_query")
     public CatalogQueryItemsForItemOptions itemsForItemOptionsQuery;
+
     public CatalogQuery withItemsForItemOptionsQuery(CatalogQueryItemsForItemOptions itemsForItemOptionsQuery) {
         this.itemsForItemOptionsQuery = itemsForItemOptionsQuery;
         return this;
@@ -75,6 +78,7 @@ public class CatalogQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items_for_modifier_list_query")
     public CatalogQueryItemsForModifierList itemsForModifierListQuery;
+
     public CatalogQuery withItemsForModifierListQuery(CatalogQueryItemsForModifierList itemsForModifierListQuery) {
         this.itemsForModifierListQuery = itemsForModifierListQuery;
         return this;
@@ -86,6 +90,7 @@ public class CatalogQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items_for_tax_query")
     public CatalogQueryItemsForTax itemsForTaxQuery;
+
     public CatalogQuery withItemsForTaxQuery(CatalogQueryItemsForTax itemsForTaxQuery) {
         this.itemsForTaxQuery = itemsForTaxQuery;
         return this;
@@ -97,6 +102,7 @@ public class CatalogQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefix_query")
     public CatalogQueryPrefix prefixQuery;
+
     public CatalogQuery withPrefixQuery(CatalogQueryPrefix prefixQuery) {
         this.prefixQuery = prefixQuery;
         return this;
@@ -108,6 +114,7 @@ public class CatalogQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range_query")
     public CatalogQueryRange rangeQuery;
+
     public CatalogQuery withRangeQuery(CatalogQueryRange rangeQuery) {
         this.rangeQuery = rangeQuery;
         return this;
@@ -120,6 +127,7 @@ public class CatalogQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("set_query")
     public CatalogQuerySet setQuery;
+
     public CatalogQuery withSetQuery(CatalogQuerySet setQuery) {
         this.setQuery = setQuery;
         return this;
@@ -131,6 +139,7 @@ public class CatalogQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sorted_attribute_query")
     public CatalogQuerySortedAttribute sortedAttributeQuery;
+
     public CatalogQuery withSortedAttributeQuery(CatalogQuerySortedAttribute sortedAttributeQuery) {
         this.sortedAttributeQuery = sortedAttributeQuery;
         return this;
@@ -142,9 +151,11 @@ public class CatalogQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text_query")
     public CatalogQueryText textQuery;
+
     public CatalogQuery withTextQuery(CatalogQueryText textQuery) {
         this.textQuery = textQuery;
         return this;
     }
     
+    public CatalogQuery(){}
 }

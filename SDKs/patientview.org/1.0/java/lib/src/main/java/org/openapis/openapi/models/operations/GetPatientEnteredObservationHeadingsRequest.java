@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPatientEnteredObservationHeadingsRequest {
@@ -12,9 +13,13 @@ public class GetPatientEnteredObservationHeadingsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public Long userId;
+
     public GetPatientEnteredObservationHeadingsRequest withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetPatientEnteredObservationHeadingsRequest(@JsonProperty("userId") Long userId) {
+        this.userId = userId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostIndividualsPartyIdBusinessNamesRequest {
@@ -12,6 +13,7 @@ public class PostIndividualsPartyIdBusinessNamesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public PostIndividualsPartyIdBusinessNamesRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class PostIndividualsPartyIdBusinessNamesRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.BusinessNameInput businessNameInput;
+
     public PostIndividualsPartyIdBusinessNamesRequest withBusinessNameInput(org.openapis.openapi.models.shared.BusinessNameInput businessNameInput) {
         this.businessNameInput = businessNameInput;
         return this;
@@ -32,9 +35,15 @@ public class PostIndividualsPartyIdBusinessNamesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partyId")
     public String partyId;
+
     public PostIndividualsPartyIdBusinessNamesRequest withPartyId(String partyId) {
         this.partyId = partyId;
         return this;
     }
     
+    public PostIndividualsPartyIdBusinessNamesRequest(@JsonProperty("apiKey") String apiKey, @JsonProperty("business-nameInput") org.openapis.openapi.models.shared.BusinessNameInput businessNameInput, @JsonProperty("partyId") String partyId) {
+        this.apiKey = apiKey;
+        this.businessNameInput = businessNameInput;
+        this.partyId = partyId;
+  }
 }

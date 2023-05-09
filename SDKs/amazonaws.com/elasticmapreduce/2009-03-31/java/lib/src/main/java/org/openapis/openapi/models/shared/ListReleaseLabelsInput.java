@@ -12,6 +12,7 @@ public class ListReleaseLabelsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public ReleaseLabelFilter filters;
+
     public ListReleaseLabelsInput withFilters(ReleaseLabelFilter filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class ListReleaseLabelsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListReleaseLabelsInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class ListReleaseLabelsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListReleaseLabelsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListReleaseLabelsInput(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FSxWindowsFileServerAuthorizationConfig {
     @JsonProperty("credentialsParameter")
     public String credentialsParameter;
+
     public FSxWindowsFileServerAuthorizationConfig withCredentialsParameter(String credentialsParameter) {
         this.credentialsParameter = credentialsParameter;
         return this;
@@ -19,9 +20,14 @@ public class FSxWindowsFileServerAuthorizationConfig {
     
     @JsonProperty("domain")
     public String domain;
+
     public FSxWindowsFileServerAuthorizationConfig withDomain(String domain) {
         this.domain = domain;
         return this;
     }
     
+    public FSxWindowsFileServerAuthorizationConfig(@JsonProperty("credentialsParameter") String credentialsParameter, @JsonProperty("domain") String domain) {
+        this.credentialsParameter = credentialsParameter;
+        this.domain = domain;
+  }
 }

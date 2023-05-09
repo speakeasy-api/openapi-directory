@@ -18,6 +18,7 @@ public class VideoContentDetailsRegionRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowed")
     public String[] allowed;
+
     public VideoContentDetailsRegionRestriction withAllowed(String[] allowed) {
         this.allowed = allowed;
         return this;
@@ -29,9 +30,11 @@ public class VideoContentDetailsRegionRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blocked")
     public String[] blocked;
+
     public VideoContentDetailsRegionRestriction withBlocked(String[] blocked) {
         this.blocked = blocked;
         return this;
     }
     
+    public VideoContentDetailsRegionRestriction(){}
 }

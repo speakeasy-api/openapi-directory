@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse {
     
     public String contentType;
+
     public PostRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public PostRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class PostRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse {
     
     
     public Integer statusCode;
+
     public PostRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class PostRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class PostRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public PostRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
     }
     
+    public PostRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

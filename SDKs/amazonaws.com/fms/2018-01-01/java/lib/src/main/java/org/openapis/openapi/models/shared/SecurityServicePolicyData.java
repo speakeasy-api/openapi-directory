@@ -15,6 +15,7 @@ public class SecurityServicePolicyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ManagedServiceData")
     public String managedServiceData;
+
     public SecurityServicePolicyData withManagedServiceData(String managedServiceData) {
         this.managedServiceData = managedServiceData;
         return this;
@@ -23,6 +24,7 @@ public class SecurityServicePolicyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyOption")
     public PolicyOption policyOption;
+
     public SecurityServicePolicyData withPolicyOption(PolicyOption policyOption) {
         this.policyOption = policyOption;
         return this;
@@ -30,9 +32,13 @@ public class SecurityServicePolicyData {
     
     @JsonProperty("Type")
     public SecurityServiceTypeEnum type;
+
     public SecurityServicePolicyData withType(SecurityServiceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SecurityServicePolicyData(@JsonProperty("Type") SecurityServiceTypeEnum type) {
+        this.type = type;
+  }
 }

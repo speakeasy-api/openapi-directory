@@ -117,6 +117,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -148,11 +153,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETUserContentByDateJsonResponse res = new org.openapis.openapi.models.operations.GETUserContentByDateJsonResponse() {{
+        org.openapis.openapi.models.operations.GETUserContentByDateJsonResponse res = new org.openapis.openapi.models.operations.GETUserContentByDateJsonResponse(contentType, httpRes.statusCode()) {{
             getUserContentByDateJSON200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -168,10 +171,11 @@ public class SDK {
 
     /**
      * Recent User Comments
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GETUserContentRecentJsonResponse getUserContentRecentJson() throws Exception {
+    public org.openapis.openapi.models.operations.GETUserContentRecentJsonResponse getUserContentRecentJson(org.openapis.openapi.models.operations.GETUserContentRecentJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user-content/recent.json");
         
@@ -180,16 +184,15 @@ public class SDK {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETUserContentRecentJsonResponse res = new org.openapis.openapi.models.operations.GETUserContentRecentJsonResponse() {{
+        org.openapis.openapi.models.operations.GETUserContentRecentJsonResponse res = new org.openapis.openapi.models.operations.GETUserContentRecentJsonResponse(contentType, httpRes.statusCode()) {{
             getUserContentRecentJSON200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -231,11 +234,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETUserContentUrlJsonResponse res = new org.openapis.openapi.models.operations.GETUserContentUrlJsonResponse() {{
+        org.openapis.openapi.models.operations.GETUserContentUrlJsonResponse res = new org.openapis.openapi.models.operations.GETUserContentUrlJsonResponse(contentType, httpRes.statusCode()) {{
             getUserContentUrlJSON200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -277,11 +278,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETUserContentUserJsonResponse res = new org.openapis.openapi.models.operations.GETUserContentUserJsonResponse() {{
+        org.openapis.openapi.models.operations.GETUserContentUserJsonResponse res = new org.openapis.openapi.models.operations.GETUserContentUserJsonResponse(contentType, httpRes.statusCode()) {{
             getUserContentUserJSON200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

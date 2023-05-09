@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteReportDefinitionResponse {
     
     public String contentType;
+
     public DeleteReportDefinitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteReportDefinitionResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteReportDefinitionResponse deleteReportDefinitionResponse;
+
     public DeleteReportDefinitionResponse withDeleteReportDefinitionResponse(org.openapis.openapi.models.shared.DeleteReportDefinitionResponse deleteReportDefinitionResponse) {
         this.deleteReportDefinitionResponse = deleteReportDefinitionResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteReportDefinitionResponse {
      */
     
     public Object internalErrorException;
+
     public DeleteReportDefinitionResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -36,6 +40,7 @@ public class DeleteReportDefinitionResponse {
     
     
     public Integer statusCode;
+
     public DeleteReportDefinitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DeleteReportDefinitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteReportDefinitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DeleteReportDefinitionResponse {
      */
     
     public Object validationException;
+
     public DeleteReportDefinitionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteReportDefinitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

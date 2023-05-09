@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartProductSubscriptionResponse {
@@ -12,6 +13,7 @@ public class StartProductSubscriptionResponse {
      */
     
     public Object accessDeniedException;
+
     public StartProductSubscriptionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StartProductSubscriptionResponse {
      */
     
     public Object conflictException;
+
     public StartProductSubscriptionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class StartProductSubscriptionResponse {
     
     
     public String contentType;
+
     public StartProductSubscriptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartProductSubscriptionResponse {
      */
     
     public Object internalServerException;
+
     public StartProductSubscriptionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class StartProductSubscriptionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartProductSubscriptionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class StartProductSubscriptionResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public StartProductSubscriptionResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -69,6 +76,7 @@ public class StartProductSubscriptionResponse {
      */
     
     public org.openapis.openapi.models.shared.StartProductSubscriptionResponse startProductSubscriptionResponse;
+
     public StartProductSubscriptionResponse withStartProductSubscriptionResponse(org.openapis.openapi.models.shared.StartProductSubscriptionResponse startProductSubscriptionResponse) {
         this.startProductSubscriptionResponse = startProductSubscriptionResponse;
         return this;
@@ -76,6 +84,7 @@ public class StartProductSubscriptionResponse {
     
     
     public Integer statusCode;
+
     public StartProductSubscriptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class StartProductSubscriptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartProductSubscriptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class StartProductSubscriptionResponse {
      */
     
     public Object throttlingException;
+
     public StartProductSubscriptionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class StartProductSubscriptionResponse {
      */
     
     public Object validationException;
+
     public StartProductSubscriptionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartProductSubscriptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

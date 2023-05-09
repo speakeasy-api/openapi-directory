@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsDeleteDiscussionCommentInOrgRequest {
@@ -12,6 +13,7 @@ public class TeamsDeleteDiscussionCommentInOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_number")
     public Long commentNumber;
+
     public TeamsDeleteDiscussionCommentInOrgRequest withCommentNumber(Long commentNumber) {
         this.commentNumber = commentNumber;
         return this;
@@ -22,6 +24,7 @@ public class TeamsDeleteDiscussionCommentInOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
     public Long discussionNumber;
+
     public TeamsDeleteDiscussionCommentInOrgRequest withDiscussionNumber(Long discussionNumber) {
         this.discussionNumber = discussionNumber;
         return this;
@@ -32,6 +35,7 @@ public class TeamsDeleteDiscussionCommentInOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public TeamsDeleteDiscussionCommentInOrgRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -42,9 +46,16 @@ public class TeamsDeleteDiscussionCommentInOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
     public String teamSlug;
+
     public TeamsDeleteDiscussionCommentInOrgRequest withTeamSlug(String teamSlug) {
         this.teamSlug = teamSlug;
         return this;
     }
     
+    public TeamsDeleteDiscussionCommentInOrgRequest(@JsonProperty("comment_number") Long commentNumber, @JsonProperty("discussion_number") Long discussionNumber, @JsonProperty("org") String org, @JsonProperty("team_slug") String teamSlug) {
+        this.commentNumber = commentNumber;
+        this.discussionNumber = discussionNumber;
+        this.org = org;
+        this.teamSlug = teamSlug;
+  }
 }

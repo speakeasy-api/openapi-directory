@@ -12,9 +12,13 @@ public class EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterpriseReques
      */
     @JsonProperty("labels")
     public String[] labels;
+
     public EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterpriseRequestBody withLabels(String[] labels) {
         this.labels = labels;
         return this;
     }
     
+    public EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterpriseRequestBody(@JsonProperty("labels") String[] labels) {
+        this.labels = labels;
+  }
 }

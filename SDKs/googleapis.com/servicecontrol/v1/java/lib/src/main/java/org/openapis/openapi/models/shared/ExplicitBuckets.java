@@ -18,9 +18,11 @@ public class ExplicitBuckets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bounds")
     public Double[] bounds;
+
     public ExplicitBuckets withBounds(Double[] bounds) {
         this.bounds = bounds;
         return this;
     }
     
+    public ExplicitBuckets(){}
 }

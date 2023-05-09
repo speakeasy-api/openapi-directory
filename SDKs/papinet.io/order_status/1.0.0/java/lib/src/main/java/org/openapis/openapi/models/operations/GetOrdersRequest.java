@@ -12,6 +12,7 @@ public class GetOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public GetOrdersRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -22,6 +23,7 @@ public class GetOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetOrdersRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -32,9 +34,11 @@ public class GetOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderStatus")
     public GetOrdersOrderStatusEnum orderStatus;
+
     public GetOrdersRequest withOrderStatus(GetOrdersOrderStatusEnum orderStatus) {
         this.orderStatus = orderStatus;
         return this;
     }
     
+    public GetOrdersRequest(){}
 }

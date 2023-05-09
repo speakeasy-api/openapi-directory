@@ -15,6 +15,7 @@ public class AwsElbLbCookieStickinessPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CookieExpirationPeriod")
     public Long cookieExpirationPeriod;
+
     public AwsElbLbCookieStickinessPolicy withCookieExpirationPeriod(Long cookieExpirationPeriod) {
         this.cookieExpirationPeriod = cookieExpirationPeriod;
         return this;
@@ -23,9 +24,11 @@ public class AwsElbLbCookieStickinessPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyName")
     public String policyName;
+
     public AwsElbLbCookieStickinessPolicy withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
     }
     
+    public AwsElbLbCookieStickinessPolicy(){}
 }

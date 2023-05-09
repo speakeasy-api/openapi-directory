@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * PortMapping - &lt;p&gt;Port mappings allow containers to access ports on the host container instance to send or receive traffic. Port mappings are specified as part of the container definition.&lt;/p&gt; &lt;p&gt;If you use containers in a task with the &lt;code&gt;awsvpc&lt;/code&gt; or &lt;code&gt;host&lt;/code&gt; network mode, specify the exposed ports using &lt;code&gt;containerPort&lt;/code&gt;. The &lt;code&gt;hostPort&lt;/code&gt; can be left blank or it must be the same value as the &lt;code&gt;containerPort&lt;/code&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt;You can't expose the same container port for multiple protocols. If you attempt this, an error is returned.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;After a task reaches the &lt;code&gt;RUNNING&lt;/code&gt; status, manual and automatic host and container port assignments are visible in the &lt;code&gt;networkBindings&lt;/code&gt; section of &lt;a&gt;DescribeTasks&lt;/a&gt; API responses.&lt;/p&gt;
+ * PortMapping - &lt;p&gt;Port mappings allow containers to access ports on the host container instance to send or receive traffic. Port mappings are specified as part of the container definition.&lt;/p&gt; &lt;p&gt;If you use containers in a task with the &lt;code&gt;awsvpc&lt;/code&gt; or &lt;code&gt;host&lt;/code&gt; network mode, specify the exposed ports using &lt;code&gt;containerPort&lt;/code&gt;. The &lt;code&gt;hostPort&lt;/code&gt; can be left blank or it must be the same value as the &lt;code&gt;containerPort&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;Most fields of this parameter (&lt;code&gt;containerPort&lt;/code&gt;, &lt;code&gt;hostPort&lt;/code&gt;, &lt;code&gt;protocol&lt;/code&gt;) maps to &lt;code&gt;PortBindings&lt;/code&gt; in the &lt;a href="https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate"&gt;Create a container&lt;/a&gt; section of the &lt;a href="https://docs.docker.com/engine/api/v1.35/"&gt;Docker Remote API&lt;/a&gt; and the &lt;code&gt;--publish&lt;/code&gt; option to &lt;a href="https://docs.docker.com/engine/reference/commandline/run/"&gt; &lt;code&gt;docker run&lt;/code&gt; &lt;/a&gt;. If the network mode of a task definition is set to &lt;code&gt;host&lt;/code&gt;, host ports must either be undefined or match the container port in the port mapping.&lt;/p&gt; &lt;note&gt; &lt;p&gt;You can't expose the same container port for multiple protocols. If you attempt this, an error is returned.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;After a task reaches the &lt;code&gt;RUNNING&lt;/code&gt; status, manual and automatic host and container port assignments are visible in the &lt;code&gt;networkBindings&lt;/code&gt; section of &lt;a&gt;DescribeTasks&lt;/a&gt; API responses.&lt;/p&gt;
  */
 public class PortMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appProtocol")
     public ApplicationProtocolEnum appProtocol;
+
     public PortMapping withAppProtocol(ApplicationProtocolEnum appProtocol) {
         this.appProtocol = appProtocol;
         return this;
@@ -23,6 +24,7 @@ public class PortMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerPort")
     public Long containerPort;
+
     public PortMapping withContainerPort(Long containerPort) {
         this.containerPort = containerPort;
         return this;
@@ -31,6 +33,7 @@ public class PortMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerPortRange")
     public String containerPortRange;
+
     public PortMapping withContainerPortRange(String containerPortRange) {
         this.containerPortRange = containerPortRange;
         return this;
@@ -39,6 +42,7 @@ public class PortMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostPort")
     public Long hostPort;
+
     public PortMapping withHostPort(Long hostPort) {
         this.hostPort = hostPort;
         return this;
@@ -47,6 +51,7 @@ public class PortMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PortMapping withName(String name) {
         this.name = name;
         return this;
@@ -55,9 +60,11 @@ public class PortMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public TransportProtocolEnum protocol;
+
     public PortMapping withProtocol(TransportProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
     }
     
+    public PortMapping(){}
 }

@@ -57,13 +57,12 @@ public class Token {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JWTObtainResponse res = new org.openapis.openapi.models.operations.JWTObtainResponse() {{
+        org.openapis.openapi.models.operations.JWTObtainResponse res = new org.openapis.openapi.models.operations.JWTObtainResponse(contentType, httpRes.statusCode()) {{
             spectacularJWTObtain = null;
             jwtObtain401ApplicationJSONObject = null;
             jwtObtain403ApplicationJSONObject = null;
+            jwtObtain429ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -85,6 +84,13 @@ public class Token {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
                 res.jwtObtain403ApplicationJSONObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 429) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.jwtObtain429ApplicationJSONObject = out;
             }
         }
 
@@ -117,13 +123,12 @@ public class Token {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JWTRefreshResponse res = new org.openapis.openapi.models.operations.JWTRefreshResponse() {{
+        org.openapis.openapi.models.operations.JWTRefreshResponse res = new org.openapis.openapi.models.operations.JWTRefreshResponse(contentType, httpRes.statusCode()) {{
             spectacularJWTRefresh = null;
             jwtRefresh401ApplicationJSONObject = null;
             jwtRefresh403ApplicationJSONObject = null;
+            jwtRefresh429ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -145,6 +150,13 @@ public class Token {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
                 res.jwtRefresh403ApplicationJSONObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 429) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.jwtRefresh429ApplicationJSONObject = out;
             }
         }
 

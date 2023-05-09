@@ -15,6 +15,7 @@ public class Scope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceResourceId")
     public String complianceResourceId;
+
     public Scope withComplianceResourceId(String complianceResourceId) {
         this.complianceResourceId = complianceResourceId;
         return this;
@@ -23,6 +24,7 @@ public class Scope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceResourceTypes")
     public String[] complianceResourceTypes;
+
     public Scope withComplianceResourceTypes(String[] complianceResourceTypes) {
         this.complianceResourceTypes = complianceResourceTypes;
         return this;
@@ -31,6 +33,7 @@ public class Scope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagKey")
     public String tagKey;
+
     public Scope withTagKey(String tagKey) {
         this.tagKey = tagKey;
         return this;
@@ -39,9 +42,11 @@ public class Scope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagValue")
     public String tagValue;
+
     public Scope withTagValue(String tagValue) {
         this.tagValue = tagValue;
         return this;
     }
     
+    public Scope(){}
 }

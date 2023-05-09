@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SendDocumentRequest {
@@ -12,6 +13,7 @@ public class SendDocumentRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SendDocument sendDocument;
+
     public SendDocumentRequest withSendDocument(org.openapis.openapi.models.shared.SendDocument sendDocument) {
         this.sendDocument = sendDocument;
         return this;
@@ -19,9 +21,13 @@ public class SendDocumentRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public SendDocumentRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public SendDocumentRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

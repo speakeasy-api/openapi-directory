@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSubscriptionPushReportingResponse {
@@ -12,6 +13,7 @@ public class GetSubscriptionPushReportingResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetSubscriptionPushReportingResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetSubscriptionPushReportingResponse {
     
     
     public String contentType;
+
     public GetSubscriptionPushReportingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetSubscriptionPushReportingResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetSubscriptionPushReportingResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetSubscriptionPushReportingResponse {
     
     
     public Integer statusCode;
+
     public GetSubscriptionPushReportingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetSubscriptionPushReportingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSubscriptionPushReportingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,6 +56,7 @@ public class GetSubscriptionPushReportingResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponseMessage errorResponseMessage;
+
     public GetSubscriptionPushReportingResponse withErrorResponseMessage(org.openapis.openapi.models.shared.ErrorResponseMessage errorResponseMessage) {
         this.errorResponseMessage = errorResponseMessage;
         return this;
@@ -60,9 +67,14 @@ public class GetSubscriptionPushReportingResponse {
      */
     
     public org.openapis.openapi.models.shared.SubscriptionPushReporting[] subscriptionPushReportings;
+
     public GetSubscriptionPushReportingResponse withSubscriptionPushReportings(org.openapis.openapi.models.shared.SubscriptionPushReporting[] subscriptionPushReportings) {
         this.subscriptionPushReportings = subscriptionPushReportings;
         return this;
     }
     
+    public GetSubscriptionPushReportingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

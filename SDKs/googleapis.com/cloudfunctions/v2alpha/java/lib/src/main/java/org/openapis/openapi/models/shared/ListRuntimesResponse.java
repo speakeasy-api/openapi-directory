@@ -18,9 +18,11 @@ public class ListRuntimesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimes")
     public Runtime[] runtimes;
+
     public ListRuntimesResponse withRuntimes(Runtime[] runtimes) {
         this.runtimes = runtimes;
         return this;
     }
     
+    public ListRuntimesResponse(){}
 }

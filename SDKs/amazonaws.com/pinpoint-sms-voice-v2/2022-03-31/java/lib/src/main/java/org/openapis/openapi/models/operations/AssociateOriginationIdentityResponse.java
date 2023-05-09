@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateOriginationIdentityResponse {
@@ -12,6 +13,7 @@ public class AssociateOriginationIdentityResponse {
      */
     
     public Object accessDeniedException;
+
     public AssociateOriginationIdentityResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AssociateOriginationIdentityResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateOriginationIdentityResult associateOriginationIdentityResult;
+
     public AssociateOriginationIdentityResponse withAssociateOriginationIdentityResult(org.openapis.openapi.models.shared.AssociateOriginationIdentityResult associateOriginationIdentityResult) {
         this.associateOriginationIdentityResult = associateOriginationIdentityResult;
         return this;
@@ -32,6 +35,7 @@ public class AssociateOriginationIdentityResponse {
      */
     
     public Object conflictException;
+
     public AssociateOriginationIdentityResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateOriginationIdentityResponse {
     
     
     public String contentType;
+
     public AssociateOriginationIdentityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class AssociateOriginationIdentityResponse {
      */
     
     public Object internalServerException;
+
     public AssociateOriginationIdentityResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class AssociateOriginationIdentityResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateOriginationIdentityResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class AssociateOriginationIdentityResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public AssociateOriginationIdentityResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class AssociateOriginationIdentityResponse {
     
     
     public Integer statusCode;
+
     public AssociateOriginationIdentityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class AssociateOriginationIdentityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateOriginationIdentityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class AssociateOriginationIdentityResponse {
      */
     
     public Object throttlingException;
+
     public AssociateOriginationIdentityResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class AssociateOriginationIdentityResponse {
      */
     
     public Object validationException;
+
     public AssociateOriginationIdentityResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AssociateOriginationIdentityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

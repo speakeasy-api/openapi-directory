@@ -18,6 +18,7 @@ public class Column {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     public String weight;
+
     public Column withWeight(String weight) {
         this.weight = weight;
         return this;
@@ -29,9 +30,11 @@ public class Column {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("widgets")
     public Widget[] widgets;
+
     public Column withWidgets(Widget[] widgets) {
         this.widgets = widgets;
         return this;
     }
     
+    public Column(){}
 }

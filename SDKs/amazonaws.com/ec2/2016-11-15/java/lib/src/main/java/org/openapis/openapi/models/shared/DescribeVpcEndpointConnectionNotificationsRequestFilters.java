@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpcEndpointConnectionNotificationsRequestFilters {
     
     public String name;
+
     public DescribeVpcEndpointConnectionNotificationsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeVpcEndpointConnectionNotificationsRequestFilters {
     
     
     public String[] values;
+
     public DescribeVpcEndpointConnectionNotificationsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeVpcEndpointConnectionNotificationsRequestFilters(){}
 }

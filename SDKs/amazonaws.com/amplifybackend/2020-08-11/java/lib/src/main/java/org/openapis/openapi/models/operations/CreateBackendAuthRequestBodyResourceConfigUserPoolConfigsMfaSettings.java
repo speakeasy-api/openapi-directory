@@ -15,6 +15,7 @@ public class CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsMfaSetting
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MfaTypes")
     public org.openapis.openapi.models.shared.MfaTypesElementEnum[] mfaTypes;
+
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsMfaSettings withMfaTypes(org.openapis.openapi.models.shared.MfaTypesElementEnum[] mfaTypes) {
         this.mfaTypes = mfaTypes;
         return this;
@@ -23,9 +24,11 @@ public class CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsMfaSetting
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SmsMessage")
     public String smsMessage;
+
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsMfaSettings withSmsMessage(String smsMessage) {
         this.smsMessage = smsMessage;
         return this;
     }
     
+    public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsMfaSettings(){}
 }

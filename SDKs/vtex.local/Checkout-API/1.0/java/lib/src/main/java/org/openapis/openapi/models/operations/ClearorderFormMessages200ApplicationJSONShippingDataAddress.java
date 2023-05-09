@@ -18,6 +18,7 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressId")
     public String addressId;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataAddress withAddressId(String addressId) {
         this.addressId = addressId;
         return this;
@@ -29,6 +30,7 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressType")
     public String addressType;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataAddress withAddressType(String addressType) {
         this.addressType = addressType;
         return this;
@@ -40,6 +42,7 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataAddress withCity(String city) {
         this.city = city;
         return this;
@@ -51,6 +54,7 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complement")
     public String complement;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataAddress withComplement(String complement) {
         this.complement = complement;
         return this;
@@ -62,6 +66,7 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataAddress withCountry(String country) {
         this.country = country;
         return this;
@@ -73,6 +78,7 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geoCoordinates")
     public Double[] geoCoordinates;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataAddress withGeoCoordinates(Double[] geoCoordinates) {
         this.geoCoordinates = geoCoordinates;
         return this;
@@ -84,6 +90,7 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDisposable")
     public Boolean isDisposable;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataAddress withIsDisposable(Boolean isDisposable) {
         this.isDisposable = isDisposable;
         return this;
@@ -95,6 +102,7 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("neighborhood")
     public String neighborhood;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataAddress withNeighborhood(String neighborhood) {
         this.neighborhood = neighborhood;
         return this;
@@ -106,6 +114,7 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataAddress withNumber(String number) {
         this.number = number;
         return this;
@@ -117,6 +126,7 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataAddress withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -128,6 +138,7 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receiverName")
     public String receiverName;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataAddress withReceiverName(String receiverName) {
         this.receiverName = receiverName;
         return this;
@@ -139,6 +150,7 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataAddress withReference(String reference) {
         this.reference = reference;
         return this;
@@ -150,6 +162,7 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataAddress withState(String state) {
         this.state = state;
         return this;
@@ -161,9 +174,11 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("street")
     public String street;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataAddress withStreet(String street) {
         this.street = street;
         return this;
     }
     
+    public ClearorderFormMessages200ApplicationJSONShippingDataAddress(){}
 }

@@ -51,11 +51,9 @@ public class AuthController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBasicUserInformationResponse res = new org.openapis.openapi.models.operations.GetBasicUserInformationResponse() {{
+        org.openapis.openapi.models.operations.GetBasicUserInformationResponse res = new org.openapis.openapi.models.operations.GetBasicUserInformationResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -93,11 +91,9 @@ public class AuthController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LogInResponse res = new org.openapis.openapi.models.operations.LogInResponse() {{
+        org.openapis.openapi.models.operations.LogInResponse res = new org.openapis.openapi.models.operations.LogInResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -133,10 +129,8 @@ public class AuthController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LogOutResponse res = new org.openapis.openapi.models.operations.LogOutResponse() {{
+        org.openapis.openapi.models.operations.LogOutResponse res = new org.openapis.openapi.models.operations.LogOutResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 204 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403) {

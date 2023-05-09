@@ -18,6 +18,7 @@ public class DeviceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adbEnabled")
     public Boolean adbEnabled;
+
     public DeviceSettings withAdbEnabled(Boolean adbEnabled) {
         this.adbEnabled = adbEnabled;
         return this;
@@ -29,6 +30,7 @@ public class DeviceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("developmentSettingsEnabled")
     public Boolean developmentSettingsEnabled;
+
     public DeviceSettings withDevelopmentSettingsEnabled(Boolean developmentSettingsEnabled) {
         this.developmentSettingsEnabled = developmentSettingsEnabled;
         return this;
@@ -40,6 +42,7 @@ public class DeviceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionStatus")
     public DeviceSettingsEncryptionStatusEnum encryptionStatus;
+
     public DeviceSettings withEncryptionStatus(DeviceSettingsEncryptionStatusEnum encryptionStatus) {
         this.encryptionStatus = encryptionStatus;
         return this;
@@ -51,6 +54,7 @@ public class DeviceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDeviceSecure")
     public Boolean isDeviceSecure;
+
     public DeviceSettings withIsDeviceSecure(Boolean isDeviceSecure) {
         this.isDeviceSecure = isDeviceSecure;
         return this;
@@ -62,6 +66,7 @@ public class DeviceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isEncrypted")
     public Boolean isEncrypted;
+
     public DeviceSettings withIsEncrypted(Boolean isEncrypted) {
         this.isEncrypted = isEncrypted;
         return this;
@@ -73,6 +78,7 @@ public class DeviceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unknownSourcesEnabled")
     public Boolean unknownSourcesEnabled;
+
     public DeviceSettings withUnknownSourcesEnabled(Boolean unknownSourcesEnabled) {
         this.unknownSourcesEnabled = unknownSourcesEnabled;
         return this;
@@ -84,9 +90,11 @@ public class DeviceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verifyAppsEnabled")
     public Boolean verifyAppsEnabled;
+
     public DeviceSettings withVerifyAppsEnabled(Boolean verifyAppsEnabled) {
         this.verifyAppsEnabled = verifyAppsEnabled;
         return this;
     }
     
+    public DeviceSettings(){}
 }

@@ -15,9 +15,11 @@ public class StopJobResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job")
     public Job job;
+
     public StopJobResult withJob(Job job) {
         this.job = job;
         return this;
     }
     
+    public StopJobResult(){}
 }

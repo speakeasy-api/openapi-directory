@@ -12,6 +12,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BasicAttributes")
     public BillbeeInterfacesOrderMultiLanguageString[] basicAttributes;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withBasicAttributes(BillbeeInterfacesOrderMultiLanguageString[] basicAttributes) {
         this.basicAttributes = basicAttributes;
         return this;
@@ -20,6 +21,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillOfMaterial")
     public BillbeeInterfacesBillbeeAPIModelBomSubArticleAPIModel[] billOfMaterial;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withBillOfMaterial(BillbeeInterfacesBillbeeAPIModelBomSubArticleAPIModel[] billOfMaterial) {
         this.billOfMaterial = billOfMaterial;
         return this;
@@ -28,6 +30,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Category1")
     public BillbeeInterfacesBillbeeAPIModelArticleCategoryAPIModel category1;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withCategory1(BillbeeInterfacesBillbeeAPIModelArticleCategoryAPIModel category1) {
         this.category1 = category1;
         return this;
@@ -36,6 +39,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Category2")
     public BillbeeInterfacesBillbeeAPIModelArticleCategoryAPIModel category2;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withCategory2(BillbeeInterfacesBillbeeAPIModelArticleCategoryAPIModel category2) {
         this.category2 = category2;
         return this;
@@ -44,6 +48,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Category3")
     public BillbeeInterfacesBillbeeAPIModelArticleCategoryAPIModel category3;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withCategory3(BillbeeInterfacesBillbeeAPIModelArticleCategoryAPIModel category3) {
         this.category3 = category3;
         return this;
@@ -52,6 +57,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Condition")
     public Integer condition;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withCondition(Integer condition) {
         this.condition = condition;
         return this;
@@ -60,6 +66,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CostPrice")
     public Double costPrice;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withCostPrice(Double costPrice) {
         this.costPrice = costPrice;
         return this;
@@ -68,6 +75,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CountryOfOrigin")
     public String countryOfOrigin;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withCountryOfOrigin(String countryOfOrigin) {
         this.countryOfOrigin = countryOfOrigin;
         return this;
@@ -76,6 +84,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomFields")
     public BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldValueModel[] customFields;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withCustomFields(BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldValueModel[] customFields) {
         this.customFields = customFields;
         return this;
@@ -84,6 +93,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeliveryTime")
     public Integer deliveryTime;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withDeliveryTime(Integer deliveryTime) {
         this.deliveryTime = deliveryTime;
         return this;
@@ -92,6 +102,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public BillbeeInterfacesOrderMultiLanguageString[] description;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withDescription(BillbeeInterfacesOrderMultiLanguageString[] description) {
         this.description = description;
         return this;
@@ -100,6 +111,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EAN")
     public String ean;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withEan(String ean) {
         this.ean = ean;
         return this;
@@ -108,6 +120,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportDescription")
     public String exportDescription;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withExportDescription(String exportDescription) {
         this.exportDescription = exportDescription;
         return this;
@@ -116,6 +129,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportDescriptionMultiLanguage")
     public BillbeeInterfacesOrderMultiLanguageString[] exportDescriptionMultiLanguage;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withExportDescriptionMultiLanguage(BillbeeInterfacesOrderMultiLanguageString[] exportDescriptionMultiLanguage) {
         this.exportDescriptionMultiLanguage = exportDescriptionMultiLanguage;
         return this;
@@ -124,6 +138,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HeightCm")
     public Double heightCm;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withHeightCm(Double heightCm) {
         this.heightCm = heightCm;
         return this;
@@ -132,6 +147,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Long id;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withId(Long id) {
         this.id = id;
         return this;
@@ -140,6 +156,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Images")
     public BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel[] images;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withImages(BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel[] images) {
         this.images = images;
         return this;
@@ -148,6 +165,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvoiceText")
     public BillbeeInterfacesOrderMultiLanguageString[] invoiceText;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withInvoiceText(BillbeeInterfacesOrderMultiLanguageString[] invoiceText) {
         this.invoiceText = invoiceText;
         return this;
@@ -155,6 +173,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     
     @JsonProperty("IsCustomizable")
     public Boolean isCustomizable;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withIsCustomizable(Boolean isCustomizable) {
         this.isCustomizable = isCustomizable;
         return this;
@@ -163,6 +182,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsDeactivated")
     public Boolean isDeactivated;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withIsDeactivated(Boolean isDeactivated) {
         this.isDeactivated = isDeactivated;
         return this;
@@ -170,6 +190,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     
     @JsonProperty("IsDigital")
     public Boolean isDigital;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withIsDigital(Boolean isDigital) {
         this.isDigital = isDigital;
         return this;
@@ -178,6 +199,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LengthCm")
     public Double lengthCm;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withLengthCm(Double lengthCm) {
         this.lengthCm = lengthCm;
         return this;
@@ -186,6 +208,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LowStock")
     public Boolean lowStock;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withLowStock(Boolean lowStock) {
         this.lowStock = lowStock;
         return this;
@@ -194,6 +217,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Manufacturer")
     public String manufacturer;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
         return this;
@@ -202,6 +226,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Materials")
     public BillbeeInterfacesOrderMultiLanguageString[] materials;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withMaterials(BillbeeInterfacesOrderMultiLanguageString[] materials) {
         this.materials = materials;
         return this;
@@ -210,6 +235,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Occasion")
     public Integer occasion;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withOccasion(Integer occasion) {
         this.occasion = occasion;
         return this;
@@ -217,6 +243,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     
     @JsonProperty("Price")
     public Double price;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withPrice(Double price) {
         this.price = price;
         return this;
@@ -225,6 +252,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Recipient")
     public Integer recipient;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withRecipient(Integer recipient) {
         this.recipient = recipient;
         return this;
@@ -233,6 +261,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SKU")
     public String sku;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withSku(String sku) {
         this.sku = sku;
         return this;
@@ -241,6 +270,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShippingProductId")
     public Long shippingProductId;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withShippingProductId(Long shippingProductId) {
         this.shippingProductId = shippingProductId;
         return this;
@@ -249,6 +279,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShortDescription")
     public BillbeeInterfacesOrderMultiLanguageString[] shortDescription;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withShortDescription(BillbeeInterfacesOrderMultiLanguageString[] shortDescription) {
         this.shortDescription = shortDescription;
         return this;
@@ -257,6 +288,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SoldAmount")
     public Double soldAmount;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withSoldAmount(Double soldAmount) {
         this.soldAmount = soldAmount;
         return this;
@@ -265,6 +297,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SoldAmountLast30Days")
     public Double soldAmountLast30Days;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withSoldAmountLast30Days(Double soldAmountLast30Days) {
         this.soldAmountLast30Days = soldAmountLast30Days;
         return this;
@@ -273,6 +306,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SoldSumGross")
     public Double soldSumGross;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withSoldSumGross(Double soldSumGross) {
         this.soldSumGross = soldSumGross;
         return this;
@@ -281,6 +315,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SoldSumGrossLast30Days")
     public Double soldSumGrossLast30Days;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withSoldSumGrossLast30Days(Double soldSumGrossLast30Days) {
         this.soldSumGrossLast30Days = soldSumGrossLast30Days;
         return this;
@@ -289,6 +324,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SoldSumNet")
     public Double soldSumNet;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withSoldSumNet(Double soldSumNet) {
         this.soldSumNet = soldSumNet;
         return this;
@@ -297,6 +333,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SoldSumNetLast30Days")
     public Double soldSumNetLast30Days;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withSoldSumNetLast30Days(Double soldSumNetLast30Days) {
         this.soldSumNetLast30Days = soldSumNetLast30Days;
         return this;
@@ -305,6 +342,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sources")
     public BillbeeInterfacesBillbeeAPIModelArticleSourceAPIModel[] sources;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withSources(BillbeeInterfacesBillbeeAPIModelArticleSourceAPIModel[] sources) {
         this.sources = sources;
         return this;
@@ -313,6 +351,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StockCode")
     public String stockCode;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withStockCode(String stockCode) {
         this.stockCode = stockCode;
         return this;
@@ -321,6 +360,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StockCurrent")
     public Double stockCurrent;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withStockCurrent(Double stockCurrent) {
         this.stockCurrent = stockCurrent;
         return this;
@@ -329,6 +369,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StockDesired")
     public Double stockDesired;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withStockDesired(Double stockDesired) {
         this.stockDesired = stockDesired;
         return this;
@@ -337,6 +378,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StockReduceItemsPerSale")
     public Double stockReduceItemsPerSale;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withStockReduceItemsPerSale(Double stockReduceItemsPerSale) {
         this.stockReduceItemsPerSale = stockReduceItemsPerSale;
         return this;
@@ -345,6 +387,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StockWarning")
     public Double stockWarning;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withStockWarning(Double stockWarning) {
         this.stockWarning = stockWarning;
         return this;
@@ -353,6 +396,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Stocks")
     public BillbeeInterfacesBillbeeAPIModelStockArticleAPIModel[] stocks;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withStocks(BillbeeInterfacesBillbeeAPIModelStockArticleAPIModel[] stocks) {
         this.stocks = stocks;
         return this;
@@ -361,6 +405,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public BillbeeInterfacesOrderMultiLanguageString[] tags;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withTags(BillbeeInterfacesOrderMultiLanguageString[] tags) {
         this.tags = tags;
         return this;
@@ -369,6 +414,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaricNumber")
     public String taricNumber;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withTaricNumber(String taricNumber) {
         this.taricNumber = taricNumber;
         return this;
@@ -377,6 +423,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public BillbeeInterfacesOrderMultiLanguageString[] title;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withTitle(BillbeeInterfacesOrderMultiLanguageString[] title) {
         this.title = title;
         return this;
@@ -384,6 +431,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     
     @JsonProperty("Type")
     public Integer type;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withType(Integer type) {
         this.type = type;
         return this;
@@ -392,6 +440,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unit")
     public Integer unit;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withUnit(Integer unit) {
         this.unit = unit;
         return this;
@@ -400,6 +449,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnitsPerItem")
     public Double unitsPerItem;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withUnitsPerItem(Double unitsPerItem) {
         this.unitsPerItem = unitsPerItem;
         return this;
@@ -407,6 +457,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     
     @JsonProperty("Vat1Rate")
     public Double vat1Rate;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withVat1Rate(Double vat1Rate) {
         this.vat1Rate = vat1Rate;
         return this;
@@ -414,6 +465,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     
     @JsonProperty("Vat2Rate")
     public Double vat2Rate;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withVat2Rate(Double vat2Rate) {
         this.vat2Rate = vat2Rate;
         return this;
@@ -421,6 +473,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     
     @JsonProperty("VatIndex")
     public Integer vatIndex;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withVatIndex(Integer vatIndex) {
         this.vatIndex = vatIndex;
         return this;
@@ -429,6 +482,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Weight")
     public Integer weight;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withWeight(Integer weight) {
         this.weight = weight;
         return this;
@@ -437,6 +491,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WeightNet")
     public Integer weightNet;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withWeightNet(Integer weightNet) {
         this.weightNet = weightNet;
         return this;
@@ -445,9 +500,19 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WidthCm")
     public Double widthCm;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModel withWidthCm(Double widthCm) {
         this.widthCm = widthCm;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelArticleAPIModel(@JsonProperty("IsCustomizable") Boolean isCustomizable, @JsonProperty("IsDigital") Boolean isDigital, @JsonProperty("Price") Double price, @JsonProperty("Type") Integer type, @JsonProperty("Vat1Rate") Double vat1Rate, @JsonProperty("Vat2Rate") Double vat2Rate, @JsonProperty("VatIndex") Integer vatIndex) {
+        this.isCustomizable = isCustomizable;
+        this.isDigital = isDigital;
+        this.price = price;
+        this.type = type;
+        this.vat1Rate = vat1Rate;
+        this.vat2Rate = vat2Rate;
+        this.vatIndex = vatIndex;
+  }
 }

@@ -18,6 +18,7 @@ public class PhoneNumberInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public FieldMetadataInput metadata;
+
     public PhoneNumberInput withMetadata(FieldMetadataInput metadata) {
         this.metadata = metadata;
         return this;
@@ -29,6 +30,7 @@ public class PhoneNumberInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public PhoneNumberInput withType(String type) {
         this.type = type;
         return this;
@@ -40,9 +42,11 @@ public class PhoneNumberInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public PhoneNumberInput withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PhoneNumberInput(){}
 }

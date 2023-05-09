@@ -18,6 +18,7 @@ public class SetAddonsConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addonsConfig")
     public AddonsConfig addonsConfig;
+
     public SetAddonsConfigRequest withAddonsConfig(AddonsConfig addonsConfig) {
         this.addonsConfig = addonsConfig;
         return this;
@@ -29,6 +30,7 @@ public class SetAddonsConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterId")
     public String clusterId;
+
     public SetAddonsConfigRequest withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -40,6 +42,7 @@ public class SetAddonsConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SetAddonsConfigRequest withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class SetAddonsConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public SetAddonsConfigRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -62,9 +66,11 @@ public class SetAddonsConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public SetAddonsConfigRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public SetAddonsConfigRequest(){}
 }

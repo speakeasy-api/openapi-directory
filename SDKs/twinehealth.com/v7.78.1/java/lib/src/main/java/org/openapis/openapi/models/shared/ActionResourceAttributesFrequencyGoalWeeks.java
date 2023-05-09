@@ -12,9 +12,11 @@ public class ActionResourceAttributesFrequencyGoalWeeks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("days")
     public ActionResourceAttributesFrequencyGoalWeeksDaysEnum[] days;
+
     public ActionResourceAttributesFrequencyGoalWeeks withDays(ActionResourceAttributesFrequencyGoalWeeksDaysEnum[] days) {
         this.days = days;
         return this;
     }
     
+    public ActionResourceAttributesFrequencyGoalWeeks(){}
 }

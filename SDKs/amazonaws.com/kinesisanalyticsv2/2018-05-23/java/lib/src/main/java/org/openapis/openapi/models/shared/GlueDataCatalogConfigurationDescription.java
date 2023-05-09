@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GlueDataCatalogConfigurationDescription {
     @JsonProperty("DatabaseARN")
     public String databaseARN;
+
     public GlueDataCatalogConfigurationDescription withDatabaseARN(String databaseARN) {
         this.databaseARN = databaseARN;
         return this;
     }
     
+    public GlueDataCatalogConfigurationDescription(@JsonProperty("DatabaseARN") String databaseARN) {
+        this.databaseARN = databaseARN;
+  }
 }

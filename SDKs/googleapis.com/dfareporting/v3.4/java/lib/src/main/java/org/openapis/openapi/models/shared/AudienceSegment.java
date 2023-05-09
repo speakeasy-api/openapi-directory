@@ -18,6 +18,7 @@ public class AudienceSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allocation")
     public Integer allocation;
+
     public AudienceSegment withAllocation(Integer allocation) {
         this.allocation = allocation;
         return this;
@@ -29,6 +30,7 @@ public class AudienceSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AudienceSegment withId(String id) {
         this.id = id;
         return this;
@@ -40,9 +42,11 @@ public class AudienceSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AudienceSegment withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AudienceSegment(){}
 }

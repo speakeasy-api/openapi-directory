@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRetainedMessageResponse {
     
     public String contentType;
+
     public GetRetainedMessageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetRetainedMessageResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRetainedMessageResponse getRetainedMessageResponse;
+
     public GetRetainedMessageResponse withGetRetainedMessageResponse(org.openapis.openapi.models.shared.GetRetainedMessageResponse getRetainedMessageResponse) {
         this.getRetainedMessageResponse = getRetainedMessageResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetRetainedMessageResponse {
      */
     
     public Object internalFailureException;
+
     public GetRetainedMessageResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class GetRetainedMessageResponse {
      */
     
     public Object invalidRequestException;
+
     public GetRetainedMessageResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class GetRetainedMessageResponse {
      */
     
     public Object methodNotAllowedException;
+
     public GetRetainedMessageResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -56,6 +62,7 @@ public class GetRetainedMessageResponse {
     
     
     public Integer statusCode;
+
     public GetRetainedMessageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetRetainedMessageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRetainedMessageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetRetainedMessageResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetRetainedMessageResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class GetRetainedMessageResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetRetainedMessageResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -93,6 +103,7 @@ public class GetRetainedMessageResponse {
      */
     
     public Object throttlingException;
+
     public GetRetainedMessageResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class GetRetainedMessageResponse {
      */
     
     public Object unauthorizedException;
+
     public GetRetainedMessageResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public GetRetainedMessageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

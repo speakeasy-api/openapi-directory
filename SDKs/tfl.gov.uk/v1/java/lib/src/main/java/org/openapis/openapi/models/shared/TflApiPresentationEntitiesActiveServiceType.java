@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesActiveServiceType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public String mode;
+
     public TflApiPresentationEntitiesActiveServiceType withMode(String mode) {
         this.mode = mode;
         return this;
@@ -20,9 +21,11 @@ public class TflApiPresentationEntitiesActiveServiceType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceType")
     public String serviceType;
+
     public TflApiPresentationEntitiesActiveServiceType withServiceType(String serviceType) {
         this.serviceType = serviceType;
         return this;
     }
     
+    public TflApiPresentationEntitiesActiveServiceType(){}
 }

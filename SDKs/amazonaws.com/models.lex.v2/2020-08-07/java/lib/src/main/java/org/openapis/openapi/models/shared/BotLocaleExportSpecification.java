@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BotLocaleExportSpecification {
     @JsonProperty("botId")
     public String botId;
+
     public BotLocaleExportSpecification withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -19,6 +20,7 @@ public class BotLocaleExportSpecification {
     
     @JsonProperty("botVersion")
     public String botVersion;
+
     public BotLocaleExportSpecification withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -26,9 +28,15 @@ public class BotLocaleExportSpecification {
     
     @JsonProperty("localeId")
     public String localeId;
+
     public BotLocaleExportSpecification withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
     }
     
+    public BotLocaleExportSpecification(@JsonProperty("botId") String botId, @JsonProperty("botVersion") String botVersion, @JsonProperty("localeId") String localeId) {
+        this.botId = botId;
+        this.botVersion = botVersion;
+        this.localeId = localeId;
+  }
 }

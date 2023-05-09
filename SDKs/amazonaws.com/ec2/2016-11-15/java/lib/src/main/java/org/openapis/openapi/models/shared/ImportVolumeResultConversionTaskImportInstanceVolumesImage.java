@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ImportVolumeResultConversionTaskImportInstanceVolumesImage {
     
     public String checksum;
+
     public ImportVolumeResultConversionTaskImportInstanceVolumesImage withChecksum(String checksum) {
         this.checksum = checksum;
         return this;
@@ -19,6 +20,7 @@ public class ImportVolumeResultConversionTaskImportInstanceVolumesImage {
     
     
     public ImportVolumeResultConversionTaskImportInstanceVolumesImageFormatEnum format;
+
     public ImportVolumeResultConversionTaskImportInstanceVolumesImage withFormat(ImportVolumeResultConversionTaskImportInstanceVolumesImageFormatEnum format) {
         this.format = format;
         return this;
@@ -26,6 +28,7 @@ public class ImportVolumeResultConversionTaskImportInstanceVolumesImage {
     
     
     public String importManifestUrl;
+
     public ImportVolumeResultConversionTaskImportInstanceVolumesImage withImportManifestUrl(String importManifestUrl) {
         this.importManifestUrl = importManifestUrl;
         return this;
@@ -33,9 +36,11 @@ public class ImportVolumeResultConversionTaskImportInstanceVolumesImage {
     
     
     public Long size;
+
     public ImportVolumeResultConversionTaskImportInstanceVolumesImage withSize(Long size) {
         this.size = size;
         return this;
     }
     
+    public ImportVolumeResultConversionTaskImportInstanceVolumesImage(){}
 }

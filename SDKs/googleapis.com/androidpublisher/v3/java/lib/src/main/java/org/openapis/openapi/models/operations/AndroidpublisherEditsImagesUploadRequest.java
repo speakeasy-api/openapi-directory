@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidpublisherEditsImagesUploadRequest {
@@ -12,6 +13,7 @@ public class AndroidpublisherEditsImagesUploadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public AndroidpublisherEditsImagesUploadRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class AndroidpublisherEditsImagesUploadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public AndroidpublisherEditsImagesUploadRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class AndroidpublisherEditsImagesUploadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AndroidpublisherEditsImagesUploadRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class AndroidpublisherEditsImagesUploadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public AndroidpublisherEditsImagesUploadRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class AndroidpublisherEditsImagesUploadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=editId")
     public String editId;
+
     public AndroidpublisherEditsImagesUploadRequest withEditId(String editId) {
         this.editId = editId;
         return this;
@@ -62,6 +68,7 @@ public class AndroidpublisherEditsImagesUploadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AndroidpublisherEditsImagesUploadRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class AndroidpublisherEditsImagesUploadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=imageType")
     public AndroidpublisherEditsImagesUploadImageTypeEnum imageType;
+
     public AndroidpublisherEditsImagesUploadRequest withImageType(AndroidpublisherEditsImagesUploadImageTypeEnum imageType) {
         this.imageType = imageType;
         return this;
@@ -82,6 +90,7 @@ public class AndroidpublisherEditsImagesUploadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AndroidpublisherEditsImagesUploadRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class AndroidpublisherEditsImagesUploadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=language")
     public String language;
+
     public AndroidpublisherEditsImagesUploadRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -102,6 +112,7 @@ public class AndroidpublisherEditsImagesUploadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AndroidpublisherEditsImagesUploadRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -112,6 +123,7 @@ public class AndroidpublisherEditsImagesUploadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=packageName")
     public String packageName;
+
     public AndroidpublisherEditsImagesUploadRequest withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -122,6 +134,7 @@ public class AndroidpublisherEditsImagesUploadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AndroidpublisherEditsImagesUploadRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -132,6 +145,7 @@ public class AndroidpublisherEditsImagesUploadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AndroidpublisherEditsImagesUploadRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -142,6 +156,7 @@ public class AndroidpublisherEditsImagesUploadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public AndroidpublisherEditsImagesUploadRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -152,9 +167,16 @@ public class AndroidpublisherEditsImagesUploadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public AndroidpublisherEditsImagesUploadRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public AndroidpublisherEditsImagesUploadRequest(@JsonProperty("editId") String editId, @JsonProperty("imageType") AndroidpublisherEditsImagesUploadImageTypeEnum imageType, @JsonProperty("language") String language, @JsonProperty("packageName") String packageName) {
+        this.editId = editId;
+        this.imageType = imageType;
+        this.language = language;
+        this.packageName = packageName;
+  }
 }

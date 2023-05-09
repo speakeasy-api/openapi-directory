@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleChromeManagementV1TelemetryUsbPeripheralsEvent - `TelemetryUsbPeripheralsEvent` is triggered USB devices are either added or removed.
+ * GoogleChromeManagementV1TelemetryUsbPeripheralsEvent - `TelemetryUsbPeripheralsEvent` is triggered USB devices are either added or removed. * Granular permission needed: TELEMETRY_API_PERIPHERALS_REPORT
  */
 public class GoogleChromeManagementV1TelemetryUsbPeripheralsEvent {
     /**
@@ -18,9 +18,11 @@ public class GoogleChromeManagementV1TelemetryUsbPeripheralsEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usbPeripheralReport")
     public GoogleChromeManagementV1UsbPeripheralReport[] usbPeripheralReport;
+
     public GoogleChromeManagementV1TelemetryUsbPeripheralsEvent withUsbPeripheralReport(GoogleChromeManagementV1UsbPeripheralReport[] usbPeripheralReport) {
         this.usbPeripheralReport = usbPeripheralReport;
         return this;
     }
     
+    public GoogleChromeManagementV1TelemetryUsbPeripheralsEvent(){}
 }

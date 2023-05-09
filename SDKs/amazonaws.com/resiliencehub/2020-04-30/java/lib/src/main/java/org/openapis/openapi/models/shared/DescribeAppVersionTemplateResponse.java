@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeAppVersionTemplateResponse {
     @JsonProperty("appArn")
     public String appArn;
+
     public DescribeAppVersionTemplateResponse withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
@@ -19,6 +20,7 @@ public class DescribeAppVersionTemplateResponse {
     
     @JsonProperty("appTemplateBody")
     public String appTemplateBody;
+
     public DescribeAppVersionTemplateResponse withAppTemplateBody(String appTemplateBody) {
         this.appTemplateBody = appTemplateBody;
         return this;
@@ -26,9 +28,15 @@ public class DescribeAppVersionTemplateResponse {
     
     @JsonProperty("appVersion")
     public String appVersion;
+
     public DescribeAppVersionTemplateResponse withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
     }
     
+    public DescribeAppVersionTemplateResponse(@JsonProperty("appArn") String appArn, @JsonProperty("appTemplateBody") String appTemplateBody, @JsonProperty("appVersion") String appVersion) {
+        this.appArn = appArn;
+        this.appTemplateBody = appTemplateBody;
+        this.appVersion = appVersion;
+  }
 }

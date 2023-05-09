@@ -15,9 +15,11 @@ public class CreateEventSourceMappingRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public org.openapis.openapi.models.shared.Filter[] filters;
+
     public CreateEventSourceMappingRequestBodyFilterCriteria withFilters(org.openapis.openapi.models.shared.Filter[] filters) {
         this.filters = filters;
         return this;
     }
     
+    public CreateEventSourceMappingRequestBodyFilterCriteria(){}
 }

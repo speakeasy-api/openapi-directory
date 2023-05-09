@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VirtualRouterData {
     @JsonProperty("meshName")
     public String meshName;
+
     public VirtualRouterData withMeshName(String meshName) {
         this.meshName = meshName;
         return this;
@@ -22,6 +23,7 @@ public class VirtualRouterData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public ResourceMetadata metadata;
+
     public VirtualRouterData withMetadata(ResourceMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -30,6 +32,7 @@ public class VirtualRouterData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public VirtualRouterSpec spec;
+
     public VirtualRouterData withSpec(VirtualRouterSpec spec) {
         this.spec = spec;
         return this;
@@ -38,6 +41,7 @@ public class VirtualRouterData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public VirtualRouterStatus status;
+
     public VirtualRouterData withStatus(VirtualRouterStatus status) {
         this.status = status;
         return this;
@@ -45,9 +49,14 @@ public class VirtualRouterData {
     
     @JsonProperty("virtualRouterName")
     public String virtualRouterName;
+
     public VirtualRouterData withVirtualRouterName(String virtualRouterName) {
         this.virtualRouterName = virtualRouterName;
         return this;
     }
     
+    public VirtualRouterData(@JsonProperty("meshName") String meshName, @JsonProperty("virtualRouterName") String virtualRouterName) {
+        this.meshName = meshName;
+        this.virtualRouterName = virtualRouterName;
+  }
 }

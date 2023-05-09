@@ -15,6 +15,7 @@ public class DescribeBucketsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buckets")
     public BucketMetadata[] buckets;
+
     public DescribeBucketsResponse withBuckets(BucketMetadata[] buckets) {
         this.buckets = buckets;
         return this;
@@ -23,9 +24,11 @@ public class DescribeBucketsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeBucketsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeBucketsResponse(){}
 }

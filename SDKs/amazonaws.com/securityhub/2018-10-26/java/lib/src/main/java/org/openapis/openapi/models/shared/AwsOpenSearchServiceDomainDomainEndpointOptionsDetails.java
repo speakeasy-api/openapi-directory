@@ -15,6 +15,7 @@ public class AwsOpenSearchServiceDomainDomainEndpointOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomEndpoint")
     public String customEndpoint;
+
     public AwsOpenSearchServiceDomainDomainEndpointOptionsDetails withCustomEndpoint(String customEndpoint) {
         this.customEndpoint = customEndpoint;
         return this;
@@ -23,6 +24,7 @@ public class AwsOpenSearchServiceDomainDomainEndpointOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomEndpointCertificateArn")
     public String customEndpointCertificateArn;
+
     public AwsOpenSearchServiceDomainDomainEndpointOptionsDetails withCustomEndpointCertificateArn(String customEndpointCertificateArn) {
         this.customEndpointCertificateArn = customEndpointCertificateArn;
         return this;
@@ -31,6 +33,7 @@ public class AwsOpenSearchServiceDomainDomainEndpointOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomEndpointEnabled")
     public Boolean customEndpointEnabled;
+
     public AwsOpenSearchServiceDomainDomainEndpointOptionsDetails withCustomEndpointEnabled(Boolean customEndpointEnabled) {
         this.customEndpointEnabled = customEndpointEnabled;
         return this;
@@ -39,6 +42,7 @@ public class AwsOpenSearchServiceDomainDomainEndpointOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnforceHTTPS")
     public Boolean enforceHTTPS;
+
     public AwsOpenSearchServiceDomainDomainEndpointOptionsDetails withEnforceHTTPS(Boolean enforceHTTPS) {
         this.enforceHTTPS = enforceHTTPS;
         return this;
@@ -47,9 +51,11 @@ public class AwsOpenSearchServiceDomainDomainEndpointOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TLSSecurityPolicy")
     public String tlsSecurityPolicy;
+
     public AwsOpenSearchServiceDomainDomainEndpointOptionsDetails withTLSSecurityPolicy(String tlsSecurityPolicy) {
         this.tlsSecurityPolicy = tlsSecurityPolicy;
         return this;
     }
     
+    public AwsOpenSearchServiceDomainDomainEndpointOptionsDetails(){}
 }

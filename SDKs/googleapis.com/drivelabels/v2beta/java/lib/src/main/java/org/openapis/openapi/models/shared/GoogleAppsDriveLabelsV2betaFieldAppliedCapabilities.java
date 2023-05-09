@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2betaFieldAppliedCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canRead")
     public Boolean canRead;
+
     public GoogleAppsDriveLabelsV2betaFieldAppliedCapabilities withCanRead(Boolean canRead) {
         this.canRead = canRead;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsDriveLabelsV2betaFieldAppliedCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canSearch")
     public Boolean canSearch;
+
     public GoogleAppsDriveLabelsV2betaFieldAppliedCapabilities withCanSearch(Boolean canSearch) {
         this.canSearch = canSearch;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAppsDriveLabelsV2betaFieldAppliedCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canWrite")
     public Boolean canWrite;
+
     public GoogleAppsDriveLabelsV2betaFieldAppliedCapabilities withCanWrite(Boolean canWrite) {
         this.canWrite = canWrite;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2betaFieldAppliedCapabilities(){}
 }

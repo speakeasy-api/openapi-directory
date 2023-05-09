@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAliasResponse {
@@ -12,6 +13,7 @@ public class GetAliasResponse {
      */
     
     public org.openapis.openapi.models.shared.AliasConfiguration aliasConfiguration;
+
     public GetAliasResponse withAliasConfiguration(org.openapis.openapi.models.shared.AliasConfiguration aliasConfiguration) {
         this.aliasConfiguration = aliasConfiguration;
         return this;
@@ -19,6 +21,7 @@ public class GetAliasResponse {
     
     
     public String contentType;
+
     public GetAliasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetAliasResponse {
      */
     
     public Object invalidParameterValueException;
+
     public GetAliasResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class GetAliasResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetAliasResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class GetAliasResponse {
      */
     
     public Object serviceException;
+
     public GetAliasResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -56,6 +62,7 @@ public class GetAliasResponse {
     
     
     public Integer statusCode;
+
     public GetAliasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetAliasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAliasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetAliasResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetAliasResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetAliasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

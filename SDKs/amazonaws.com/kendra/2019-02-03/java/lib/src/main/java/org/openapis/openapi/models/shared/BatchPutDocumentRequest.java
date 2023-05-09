@@ -12,6 +12,7 @@ public class BatchPutDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomDocumentEnrichmentConfiguration")
     public CustomDocumentEnrichmentConfiguration customDocumentEnrichmentConfiguration;
+
     public BatchPutDocumentRequest withCustomDocumentEnrichmentConfiguration(CustomDocumentEnrichmentConfiguration customDocumentEnrichmentConfiguration) {
         this.customDocumentEnrichmentConfiguration = customDocumentEnrichmentConfiguration;
         return this;
@@ -19,6 +20,7 @@ public class BatchPutDocumentRequest {
     
     @JsonProperty("Documents")
     public Document[] documents;
+
     public BatchPutDocumentRequest withDocuments(Document[] documents) {
         this.documents = documents;
         return this;
@@ -26,6 +28,7 @@ public class BatchPutDocumentRequest {
     
     @JsonProperty("IndexId")
     public String indexId;
+
     public BatchPutDocumentRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
@@ -34,9 +37,14 @@ public class BatchPutDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public BatchPutDocumentRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public BatchPutDocumentRequest(@JsonProperty("Documents") Document[] documents, @JsonProperty("IndexId") String indexId) {
+        this.documents = documents;
+        this.indexId = indexId;
+  }
 }

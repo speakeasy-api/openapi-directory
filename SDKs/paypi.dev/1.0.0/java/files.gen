@@ -40,4 +40,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostSendCode400Applicat
 lib/src/main/java/org/openapis/openapi/models/operations/PostSendCode200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostSendCodeResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

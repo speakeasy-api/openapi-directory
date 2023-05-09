@@ -18,20 +18,23 @@ public class GoogleCloudDiscoveryengineV1alphaMediaInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mediaProgressDuration")
     public String mediaProgressDuration;
+
     public GoogleCloudDiscoveryengineV1alphaMediaInfo withMediaProgressDuration(String mediaProgressDuration) {
         this.mediaProgressDuration = mediaProgressDuration;
         return this;
     }
     
     /**
-     * Media progress should be computed using only the media_progress_duration relative to the media total length. This value must be between [0, 1.0] inclusive. If this is not a playback or the progress cannot be computed (e.g. ongoing livestream), this field should be unset.
+     * Media progress should be computed using only the media_progress_duration relative to the media total length. This value must be between `[0, 1.0]` inclusive. If this is not a playback or the progress cannot be computed (e.g. ongoing livestream), this field should be unset.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mediaProgressPercentage")
     public Float mediaProgressPercentage;
+
     public GoogleCloudDiscoveryengineV1alphaMediaInfo withMediaProgressPercentage(Float mediaProgressPercentage) {
         this.mediaProgressPercentage = mediaProgressPercentage;
         return this;
     }
     
+    public GoogleCloudDiscoveryengineV1alphaMediaInfo(){}
 }

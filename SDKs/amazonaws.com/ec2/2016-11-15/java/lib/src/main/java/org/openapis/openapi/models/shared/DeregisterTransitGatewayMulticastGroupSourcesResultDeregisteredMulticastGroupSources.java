@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeregisterTransitGatewayMulticastGroupSourcesResultDeregisteredMulticastGroupSources {
     
     public String[] deregisteredNetworkInterfaceIds;
+
     public DeregisterTransitGatewayMulticastGroupSourcesResultDeregisteredMulticastGroupSources withDeregisteredNetworkInterfaceIds(String[] deregisteredNetworkInterfaceIds) {
         this.deregisteredNetworkInterfaceIds = deregisteredNetworkInterfaceIds;
         return this;
@@ -19,6 +20,7 @@ public class DeregisterTransitGatewayMulticastGroupSourcesResultDeregisteredMult
     
     
     public String groupIpAddress;
+
     public DeregisterTransitGatewayMulticastGroupSourcesResultDeregisteredMulticastGroupSources withGroupIpAddress(String groupIpAddress) {
         this.groupIpAddress = groupIpAddress;
         return this;
@@ -26,9 +28,11 @@ public class DeregisterTransitGatewayMulticastGroupSourcesResultDeregisteredMult
     
     
     public String transitGatewayMulticastDomainId;
+
     public DeregisterTransitGatewayMulticastGroupSourcesResultDeregisteredMulticastGroupSources withTransitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
         this.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
         return this;
     }
     
+    public DeregisterTransitGatewayMulticastGroupSourcesResultDeregisteredMulticastGroupSources(){}
 }

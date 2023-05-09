@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateCustomLineItemPercentageChargeDetails {
     @JsonProperty("PercentageValue")
     public Double percentageValue;
+
     public UpdateCustomLineItemPercentageChargeDetails withPercentageValue(Double percentageValue) {
         this.percentageValue = percentageValue;
         return this;
     }
     
+    public UpdateCustomLineItemPercentageChargeDetails(@JsonProperty("PercentageValue") Double percentageValue) {
+        this.percentageValue = percentageValue;
+  }
 }

@@ -12,6 +12,7 @@ public class ListCertificateAuthoritiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListCertificateAuthoritiesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListCertificateAuthoritiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCertificateAuthoritiesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,9 +30,11 @@ public class ListCertificateAuthoritiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceOwner")
     public ResourceOwnerEnum resourceOwner;
+
     public ListCertificateAuthoritiesRequest withResourceOwner(ResourceOwnerEnum resourceOwner) {
         this.resourceOwner = resourceOwner;
         return this;
     }
     
+    public ListCertificateAuthoritiesRequest(){}
 }

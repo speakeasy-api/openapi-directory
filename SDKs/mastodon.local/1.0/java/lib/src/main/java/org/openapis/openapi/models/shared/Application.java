@@ -19,6 +19,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_id")
     public String clientId;
+
     public Application withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -30,6 +31,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_secret")
     public String clientSecret;
+
     public Application withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -40,6 +42,7 @@ public class Application {
      */
     @JsonProperty("name")
     public String name;
+
     public Application withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vapid_key")
     public String vapidKey;
+
     public Application withVapidKey(String vapidKey) {
         this.vapidKey = vapidKey;
         return this;
@@ -62,9 +66,13 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("website")
     public String website;
+
     public Application withWebsite(String website) {
         this.website = website;
         return this;
     }
     
+    public Application(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class AppengineAppsAuthorizedDomainsListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public AppengineAppsAuthorizedDomainsListSecurityOption1 option1;
+
     public AppengineAppsAuthorizedDomainsListSecurity withOption1(AppengineAppsAuthorizedDomainsListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class AppengineAppsAuthorizedDomainsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public AppengineAppsAuthorizedDomainsListSecurityOption2 option2;
+
     public AppengineAppsAuthorizedDomainsListSecurity withOption2(AppengineAppsAuthorizedDomainsListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class AppengineAppsAuthorizedDomainsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public AppengineAppsAuthorizedDomainsListSecurityOption3 option3;
+
     public AppengineAppsAuthorizedDomainsListSecurity withOption3(AppengineAppsAuthorizedDomainsListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public AppengineAppsAuthorizedDomainsListSecurity(){}
 }

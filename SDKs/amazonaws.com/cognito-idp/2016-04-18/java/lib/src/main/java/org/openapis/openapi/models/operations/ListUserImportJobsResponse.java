@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListUserImportJobsResponse {
     
     public String contentType;
+
     public ListUserImportJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListUserImportJobsResponse {
      */
     
     public Object internalErrorException;
+
     public ListUserImportJobsResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class ListUserImportJobsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListUserImportJobsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListUserImportJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListUserImportJobsResponse listUserImportJobsResponse;
+
     public ListUserImportJobsResponse withListUserImportJobsResponse(org.openapis.openapi.models.shared.ListUserImportJobsResponse listUserImportJobsResponse) {
         this.listUserImportJobsResponse = listUserImportJobsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListUserImportJobsResponse {
      */
     
     public Object notAuthorizedException;
+
     public ListUserImportJobsResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -59,6 +65,7 @@ public class ListUserImportJobsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListUserImportJobsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ListUserImportJobsResponse {
     
     
     public Integer statusCode;
+
     public ListUserImportJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListUserImportJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListUserImportJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class ListUserImportJobsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListUserImportJobsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListUserImportJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

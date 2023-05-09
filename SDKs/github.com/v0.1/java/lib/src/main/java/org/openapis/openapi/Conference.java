@@ -58,11 +58,9 @@ public class Conference {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV01ConferenceDeafResponse res = new org.openapis.openapi.models.operations.PostV01ConferenceDeafResponse() {{
+        org.openapis.openapi.models.operations.PostV01ConferenceDeafResponse res = new org.openapis.openapi.models.operations.PostV01ConferenceDeafResponse(contentType, httpRes.statusCode()) {{
             conferenceDeafResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class Conference {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV01ConferenceHangupResponse res = new org.openapis.openapi.models.operations.PostV01ConferenceHangupResponse() {{
+        org.openapis.openapi.models.operations.PostV01ConferenceHangupResponse res = new org.openapis.openapi.models.operations.PostV01ConferenceHangupResponse(contentType, httpRes.statusCode()) {{
             conferenceHangupResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -144,11 +140,9 @@ public class Conference {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV01ConferenceKickResponse res = new org.openapis.openapi.models.operations.PostV01ConferenceKickResponse() {{
+        org.openapis.openapi.models.operations.PostV01ConferenceKickResponse res = new org.openapis.openapi.models.operations.PostV01ConferenceKickResponse(contentType, httpRes.statusCode()) {{
             conferenceKickResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -187,11 +181,9 @@ public class Conference {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV01ConferenceListResponse res = new org.openapis.openapi.models.operations.PostV01ConferenceListResponse() {{
+        org.openapis.openapi.models.operations.PostV01ConferenceListResponse res = new org.openapis.openapi.models.operations.PostV01ConferenceListResponse(contentType, httpRes.statusCode()) {{
             conferenceListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -230,11 +222,9 @@ public class Conference {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV01ConferenceListMembersResponse res = new org.openapis.openapi.models.operations.PostV01ConferenceListMembersResponse() {{
+        org.openapis.openapi.models.operations.PostV01ConferenceListMembersResponse res = new org.openapis.openapi.models.operations.PostV01ConferenceListMembersResponse(contentType, httpRes.statusCode()) {{
             conferenceListMembersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -273,11 +263,9 @@ public class Conference {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV01ConferenceMuteResponse res = new org.openapis.openapi.models.operations.PostV01ConferenceMuteResponse() {{
+        org.openapis.openapi.models.operations.PostV01ConferenceMuteResponse res = new org.openapis.openapi.models.operations.PostV01ConferenceMuteResponse(contentType, httpRes.statusCode()) {{
             conferenceMuteResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -316,11 +304,9 @@ public class Conference {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV01ConferencePlayResponse res = new org.openapis.openapi.models.operations.PostV01ConferencePlayResponse() {{
+        org.openapis.openapi.models.operations.PostV01ConferencePlayResponse res = new org.openapis.openapi.models.operations.PostV01ConferencePlayResponse(contentType, httpRes.statusCode()) {{
             conferencePlayResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -359,11 +345,9 @@ public class Conference {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV01ConferenceRecordStartResponse res = new org.openapis.openapi.models.operations.PostV01ConferenceRecordStartResponse() {{
+        org.openapis.openapi.models.operations.PostV01ConferenceRecordStartResponse res = new org.openapis.openapi.models.operations.PostV01ConferenceRecordStartResponse(contentType, httpRes.statusCode()) {{
             conferenceRecordStartResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -402,11 +386,9 @@ public class Conference {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV01ConferenceRecordStopResponse res = new org.openapis.openapi.models.operations.PostV01ConferenceRecordStopResponse() {{
+        org.openapis.openapi.models.operations.PostV01ConferenceRecordStopResponse res = new org.openapis.openapi.models.operations.PostV01ConferenceRecordStopResponse(contentType, httpRes.statusCode()) {{
             conferenceRecordStopResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -445,11 +427,9 @@ public class Conference {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV01ConferenceSpeakResponse res = new org.openapis.openapi.models.operations.PostV01ConferenceSpeakResponse() {{
+        org.openapis.openapi.models.operations.PostV01ConferenceSpeakResponse res = new org.openapis.openapi.models.operations.PostV01ConferenceSpeakResponse(contentType, httpRes.statusCode()) {{
             conferenceSpeakResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -488,11 +468,9 @@ public class Conference {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV01ConferenceUndeafResponse res = new org.openapis.openapi.models.operations.PostV01ConferenceUndeafResponse() {{
+        org.openapis.openapi.models.operations.PostV01ConferenceUndeafResponse res = new org.openapis.openapi.models.operations.PostV01ConferenceUndeafResponse(contentType, httpRes.statusCode()) {{
             conferenceUndeafResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -531,11 +509,9 @@ public class Conference {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV01ConferenceUnmuteResponse res = new org.openapis.openapi.models.operations.PostV01ConferenceUnmuteResponse() {{
+        org.openapis.openapi.models.operations.PostV01ConferenceUnmuteResponse res = new org.openapis.openapi.models.operations.PostV01ConferenceUnmuteResponse(contentType, httpRes.statusCode()) {{
             conferenceUnmuteResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

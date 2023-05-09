@@ -35,4 +35,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ResultStandardizedCoefficie
 lib/src/main/java/org/openapis/openapi/models/shared/ResultCalls.java
 lib/src/main/java/org/openapis/openapi/models/shared/Error.java
 lib/src/main/java/org/openapis/openapi/models/shared/RegressionApiBody.java
+docs/sdk/README.md
 USAGE.md

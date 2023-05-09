@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesLineServiceType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineName")
     public String lineName;
+
     public TflApiPresentationEntitiesLineServiceType withLineName(String lineName) {
         this.lineName = lineName;
         return this;
@@ -20,9 +21,11 @@ public class TflApiPresentationEntitiesLineServiceType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineSpecificServiceTypes")
     public TflApiPresentationEntitiesLineSpecificServiceType[] lineSpecificServiceTypes;
+
     public TflApiPresentationEntitiesLineServiceType withLineSpecificServiceTypes(TflApiPresentationEntitiesLineSpecificServiceType[] lineSpecificServiceTypes) {
         this.lineSpecificServiceTypes = lineSpecificServiceTypes;
         return this;
     }
     
+    public TflApiPresentationEntitiesLineServiceType(){}
 }

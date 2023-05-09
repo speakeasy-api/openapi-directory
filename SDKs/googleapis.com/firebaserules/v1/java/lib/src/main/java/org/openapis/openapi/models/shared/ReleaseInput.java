@@ -18,6 +18,7 @@ public class ReleaseInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ReleaseInput withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class ReleaseInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rulesetName")
     public String rulesetName;
+
     public ReleaseInput withRulesetName(String rulesetName) {
         this.rulesetName = rulesetName;
         return this;
     }
     
+    public ReleaseInput(){}
 }

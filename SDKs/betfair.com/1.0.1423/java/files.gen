@@ -72,4 +72,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/MarketDataFilterFieldsEnum.
 lib/src/main/java/org/openapis/openapi/models/shared/MarketDataFilter.java
 lib/src/main/java/org/openapis/openapi/models/shared/HeartbeatMessage.java
 lib/src/main/java/org/openapis/openapi/models/shared/AuthenticationMessage.java
+docs/sdk/README.md
 USAGE.md

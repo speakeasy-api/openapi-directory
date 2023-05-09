@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisableImportFindingsForProductResponse {
     
     public String contentType;
+
     public DisableImportFindingsForProductResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisableImportFindingsForProductResponse {
      */
     
     public java.util.Map<String, Object> disableImportFindingsForProductResponse;
+
     public DisableImportFindingsForProductResponse withDisableImportFindingsForProductResponse(java.util.Map<String, Object> disableImportFindingsForProductResponse) {
         this.disableImportFindingsForProductResponse = disableImportFindingsForProductResponse;
         return this;
@@ -29,6 +32,7 @@ public class DisableImportFindingsForProductResponse {
      */
     
     public Object internalException;
+
     public DisableImportFindingsForProductResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class DisableImportFindingsForProductResponse {
      */
     
     public Object invalidAccessException;
+
     public DisableImportFindingsForProductResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -49,6 +54,7 @@ public class DisableImportFindingsForProductResponse {
      */
     
     public Object invalidInputException;
+
     public DisableImportFindingsForProductResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DisableImportFindingsForProductResponse {
      */
     
     public Object limitExceededException;
+
     public DisableImportFindingsForProductResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class DisableImportFindingsForProductResponse {
     
     
     public Integer statusCode;
+
     public DisableImportFindingsForProductResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DisableImportFindingsForProductResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisableImportFindingsForProductResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DisableImportFindingsForProductResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisableImportFindingsForProductResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DisableImportFindingsForProductResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

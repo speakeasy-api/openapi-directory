@@ -57,11 +57,9 @@ public class VisionModels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteModel1Response res = new org.openapis.openapi.models.operations.DeleteModel1Response() {{
+        org.openapis.openapi.models.operations.DeleteModel1Response res = new org.openapis.openapi.models.operations.DeleteModel1Response(contentType, httpRes.statusCode()) {{
             deletionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -104,11 +102,9 @@ public class VisionModels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTrainedModelLearningCurve1Response res = new org.openapis.openapi.models.operations.GetTrainedModelLearningCurve1Response() {{
+        org.openapis.openapi.models.operations.GetTrainedModelLearningCurve1Response res = new org.openapis.openapi.models.operations.GetTrainedModelLearningCurve1Response(contentType, httpRes.statusCode()) {{
             learningCurveList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -145,11 +141,9 @@ public class VisionModels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTrainedModelMetrics1Response res = new org.openapis.openapi.models.operations.GetTrainedModelMetrics1Response() {{
+        org.openapis.openapi.models.operations.GetTrainedModelMetrics1Response res = new org.openapis.openapi.models.operations.GetTrainedModelMetrics1Response(contentType, httpRes.statusCode()) {{
             metrics = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -192,11 +186,9 @@ public class VisionModels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTrainedModels1Response res = new org.openapis.openapi.models.operations.GetTrainedModels1Response() {{
+        org.openapis.openapi.models.operations.GetTrainedModels1Response res = new org.openapis.openapi.models.operations.GetTrainedModels1Response(contentType, httpRes.statusCode()) {{
             modelList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

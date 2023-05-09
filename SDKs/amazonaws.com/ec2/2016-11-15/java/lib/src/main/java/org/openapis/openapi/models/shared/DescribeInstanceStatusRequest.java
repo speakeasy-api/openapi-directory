@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceStatusRequest {
     
     public Boolean dryRun;
+
     public DescribeInstanceStatusRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeInstanceStatusRequest {
     
     
     public DescribeInstanceStatusRequestFilters[] filters;
+
     public DescribeInstanceStatusRequest withFilters(DescribeInstanceStatusRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeInstanceStatusRequest {
     
     
     public Boolean includeAllInstances;
+
     public DescribeInstanceStatusRequest withIncludeAllInstances(Boolean includeAllInstances) {
         this.includeAllInstances = includeAllInstances;
         return this;
@@ -30,6 +33,7 @@ public class DescribeInstanceStatusRequest {
     
     
     public String[] instanceIds;
+
     public DescribeInstanceStatusRequest withInstanceIds(String[] instanceIds) {
         this.instanceIds = instanceIds;
         return this;
@@ -37,6 +41,7 @@ public class DescribeInstanceStatusRequest {
     
     
     public Long maxResults;
+
     public DescribeInstanceStatusRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -44,9 +49,11 @@ public class DescribeInstanceStatusRequest {
     
     
     public String nextToken;
+
     public DescribeInstanceStatusRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeInstanceStatusRequest(){}
 }

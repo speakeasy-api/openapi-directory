@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeAddressesRequest {
     
     public String[] allocationIds;
+
     public DescribeAddressesRequest withAllocationIds(String[] allocationIds) {
         this.allocationIds = allocationIds;
         return this;
@@ -16,6 +17,7 @@ public class DescribeAddressesRequest {
     
     
     public Boolean dryRun;
+
     public DescribeAddressesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class DescribeAddressesRequest {
     
     
     public DescribeAddressesRequestFilters[] filters;
+
     public DescribeAddressesRequest withFilters(DescribeAddressesRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -30,9 +33,11 @@ public class DescribeAddressesRequest {
     
     
     public String[] publicIps;
+
     public DescribeAddressesRequest withPublicIps(String[] publicIps) {
         this.publicIps = publicIps;
         return this;
     }
     
+    public DescribeAddressesRequest(){}
 }

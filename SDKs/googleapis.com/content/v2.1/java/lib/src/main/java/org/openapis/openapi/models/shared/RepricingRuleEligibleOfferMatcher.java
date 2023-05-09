@@ -18,6 +18,7 @@ public class RepricingRuleEligibleOfferMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brandMatcher")
     public RepricingRuleEligibleOfferMatcherStringMatcher brandMatcher;
+
     public RepricingRuleEligibleOfferMatcher withBrandMatcher(RepricingRuleEligibleOfferMatcherStringMatcher brandMatcher) {
         this.brandMatcher = brandMatcher;
         return this;
@@ -29,6 +30,7 @@ public class RepricingRuleEligibleOfferMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemGroupIdMatcher")
     public RepricingRuleEligibleOfferMatcherStringMatcher itemGroupIdMatcher;
+
     public RepricingRuleEligibleOfferMatcher withItemGroupIdMatcher(RepricingRuleEligibleOfferMatcherStringMatcher itemGroupIdMatcher) {
         this.itemGroupIdMatcher = itemGroupIdMatcher;
         return this;
@@ -40,6 +42,7 @@ public class RepricingRuleEligibleOfferMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matcherOption")
     public RepricingRuleEligibleOfferMatcherMatcherOptionEnum matcherOption;
+
     public RepricingRuleEligibleOfferMatcher withMatcherOption(RepricingRuleEligibleOfferMatcherMatcherOptionEnum matcherOption) {
         this.matcherOption = matcherOption;
         return this;
@@ -51,6 +54,7 @@ public class RepricingRuleEligibleOfferMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offerIdMatcher")
     public RepricingRuleEligibleOfferMatcherStringMatcher offerIdMatcher;
+
     public RepricingRuleEligibleOfferMatcher withOfferIdMatcher(RepricingRuleEligibleOfferMatcherStringMatcher offerIdMatcher) {
         this.offerIdMatcher = offerIdMatcher;
         return this;
@@ -62,9 +66,11 @@ public class RepricingRuleEligibleOfferMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipWhenOnPromotion")
     public Boolean skipWhenOnPromotion;
+
     public RepricingRuleEligibleOfferMatcher withSkipWhenOnPromotion(Boolean skipWhenOnPromotion) {
         this.skipWhenOnPromotion = skipWhenOnPromotion;
         return this;
     }
     
+    public RepricingRuleEligibleOfferMatcher(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SubaccountCreate {
     @JsonProperty("email")
     public String email;
+
     public SubaccountCreate withEmail(String email) {
         this.email = email;
         return this;
@@ -22,6 +23,7 @@ public class SubaccountCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalId")
     public Long externalId;
+
     public SubaccountCreate withExternalId(Long externalId) {
         this.externalId = externalId;
         return this;
@@ -30,6 +32,7 @@ public class SubaccountCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketId")
     public SubaccountCreateMarketIdEnum marketId;
+
     public SubaccountCreate withMarketId(SubaccountCreateMarketIdEnum marketId) {
         this.marketId = marketId;
         return this;
@@ -37,6 +40,7 @@ public class SubaccountCreate {
     
     @JsonProperty("nameFirst")
     public String nameFirst;
+
     public SubaccountCreate withNameFirst(String nameFirst) {
         this.nameFirst = nameFirst;
         return this;
@@ -44,6 +48,7 @@ public class SubaccountCreate {
     
     @JsonProperty("nameLast")
     public String nameLast;
+
     public SubaccountCreate withNameLast(String nameLast) {
         this.nameLast = nameLast;
         return this;
@@ -51,9 +56,16 @@ public class SubaccountCreate {
     
     @JsonProperty("password")
     public String password;
+
     public SubaccountCreate withPassword(String password) {
         this.password = password;
         return this;
     }
     
+    public SubaccountCreate(@JsonProperty("email") String email, @JsonProperty("nameFirst") String nameFirst, @JsonProperty("nameLast") String nameLast, @JsonProperty("password") String password) {
+        this.email = email;
+        this.nameFirst = nameFirst;
+        this.nameLast = nameLast;
+        this.password = password;
+  }
 }

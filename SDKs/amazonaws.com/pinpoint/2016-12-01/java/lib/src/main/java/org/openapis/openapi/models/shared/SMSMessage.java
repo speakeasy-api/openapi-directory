@@ -15,6 +15,7 @@ public class SMSMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Body")
     public String body;
+
     public SMSMessage withBody(String body) {
         this.body = body;
         return this;
@@ -23,6 +24,7 @@ public class SMSMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntityId")
     public String entityId;
+
     public SMSMessage withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -31,6 +33,7 @@ public class SMSMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Keyword")
     public String keyword;
+
     public SMSMessage withKeyword(String keyword) {
         this.keyword = keyword;
         return this;
@@ -39,6 +42,7 @@ public class SMSMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MediaUrl")
     public String mediaUrl;
+
     public SMSMessage withMediaUrl(String mediaUrl) {
         this.mediaUrl = mediaUrl;
         return this;
@@ -47,6 +51,7 @@ public class SMSMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageType")
     public MessageTypeEnum messageType;
+
     public SMSMessage withMessageType(MessageTypeEnum messageType) {
         this.messageType = messageType;
         return this;
@@ -55,6 +60,7 @@ public class SMSMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OriginationNumber")
     public String originationNumber;
+
     public SMSMessage withOriginationNumber(String originationNumber) {
         this.originationNumber = originationNumber;
         return this;
@@ -63,6 +69,7 @@ public class SMSMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SenderId")
     public String senderId;
+
     public SMSMessage withSenderId(String senderId) {
         this.senderId = senderId;
         return this;
@@ -71,6 +78,7 @@ public class SMSMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Substitutions")
     public java.util.Map<String, String[]> substitutions;
+
     public SMSMessage withSubstitutions(java.util.Map<String, String[]> substitutions) {
         this.substitutions = substitutions;
         return this;
@@ -79,9 +87,11 @@ public class SMSMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateId")
     public String templateId;
+
     public SMSMessage withTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
     
+    public SMSMessage(){}
 }

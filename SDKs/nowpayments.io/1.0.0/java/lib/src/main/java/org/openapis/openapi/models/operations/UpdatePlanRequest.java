@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePlanRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdatePlanRequestBody requestBody;
+
     public UpdatePlanRequest withRequestBody(UpdatePlanRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,9 +18,13 @@ public class UpdatePlanRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=plan-id")
     public String planId;
+
     public UpdatePlanRequest withPlanId(String planId) {
         this.planId = planId;
         return this;
     }
     
+    public UpdatePlanRequest(@JsonProperty("plan-id") String planId) {
+        this.planId = planId;
+  }
 }

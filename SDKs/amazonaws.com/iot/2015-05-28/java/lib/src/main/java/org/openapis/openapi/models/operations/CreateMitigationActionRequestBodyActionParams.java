@@ -15,6 +15,7 @@ public class CreateMitigationActionRequestBodyActionParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addThingsToThingGroupParams")
     public org.openapis.openapi.models.shared.AddThingsToThingGroupParams addThingsToThingGroupParams;
+
     public CreateMitigationActionRequestBodyActionParams withAddThingsToThingGroupParams(org.openapis.openapi.models.shared.AddThingsToThingGroupParams addThingsToThingGroupParams) {
         this.addThingsToThingGroupParams = addThingsToThingGroupParams;
         return this;
@@ -23,6 +24,7 @@ public class CreateMitigationActionRequestBodyActionParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableIoTLoggingParams")
     public org.openapis.openapi.models.shared.EnableIoTLoggingParams enableIoTLoggingParams;
+
     public CreateMitigationActionRequestBodyActionParams withEnableIoTLoggingParams(org.openapis.openapi.models.shared.EnableIoTLoggingParams enableIoTLoggingParams) {
         this.enableIoTLoggingParams = enableIoTLoggingParams;
         return this;
@@ -31,6 +33,7 @@ public class CreateMitigationActionRequestBodyActionParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publishFindingToSnsParams")
     public org.openapis.openapi.models.shared.PublishFindingToSnsParams publishFindingToSnsParams;
+
     public CreateMitigationActionRequestBodyActionParams withPublishFindingToSnsParams(org.openapis.openapi.models.shared.PublishFindingToSnsParams publishFindingToSnsParams) {
         this.publishFindingToSnsParams = publishFindingToSnsParams;
         return this;
@@ -39,6 +42,7 @@ public class CreateMitigationActionRequestBodyActionParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replaceDefaultPolicyVersionParams")
     public org.openapis.openapi.models.shared.ReplaceDefaultPolicyVersionParams replaceDefaultPolicyVersionParams;
+
     public CreateMitigationActionRequestBodyActionParams withReplaceDefaultPolicyVersionParams(org.openapis.openapi.models.shared.ReplaceDefaultPolicyVersionParams replaceDefaultPolicyVersionParams) {
         this.replaceDefaultPolicyVersionParams = replaceDefaultPolicyVersionParams;
         return this;
@@ -47,6 +51,7 @@ public class CreateMitigationActionRequestBodyActionParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateCACertificateParams")
     public org.openapis.openapi.models.shared.UpdateCACertificateParams updateCACertificateParams;
+
     public CreateMitigationActionRequestBodyActionParams withUpdateCACertificateParams(org.openapis.openapi.models.shared.UpdateCACertificateParams updateCACertificateParams) {
         this.updateCACertificateParams = updateCACertificateParams;
         return this;
@@ -55,9 +60,11 @@ public class CreateMitigationActionRequestBodyActionParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateDeviceCertificateParams")
     public org.openapis.openapi.models.shared.UpdateDeviceCertificateParams updateDeviceCertificateParams;
+
     public CreateMitigationActionRequestBodyActionParams withUpdateDeviceCertificateParams(org.openapis.openapi.models.shared.UpdateDeviceCertificateParams updateDeviceCertificateParams) {
         this.updateDeviceCertificateParams = updateDeviceCertificateParams;
         return this;
     }
     
+    public CreateMitigationActionRequestBodyActionParams(){}
 }

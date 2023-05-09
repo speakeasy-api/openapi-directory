@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOnePlanResponse {
     
     public String contentType;
+
     public GetOnePlanResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetOnePlanResponse {
     
     
     public Integer statusCode;
+
     public GetOnePlanResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetOnePlanResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOnePlanResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetOnePlanResponse {
      */
     
     public GetOnePlan200ApplicationJSON getOnePlan200ApplicationJSONObject;
+
     public GetOnePlanResponse withGetOnePlan200ApplicationJSONObject(GetOnePlan200ApplicationJSON getOnePlan200ApplicationJSONObject) {
         this.getOnePlan200ApplicationJSONObject = getOnePlan200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class GetOnePlanResponse {
      */
     
     public GetOnePlan404ApplicationJSON getOnePlan404ApplicationJSONObject;
+
     public GetOnePlanResponse withGetOnePlan404ApplicationJSONObject(GetOnePlan404ApplicationJSON getOnePlan404ApplicationJSONObject) {
         this.getOnePlan404ApplicationJSONObject = getOnePlan404ApplicationJSONObject;
         return this;
     }
     
+    public GetOnePlanResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

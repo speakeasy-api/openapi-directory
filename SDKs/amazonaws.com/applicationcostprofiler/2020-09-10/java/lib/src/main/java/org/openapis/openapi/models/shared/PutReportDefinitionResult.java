@@ -15,9 +15,11 @@ public class PutReportDefinitionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportId")
     public String reportId;
+
     public PutReportDefinitionResult withReportId(String reportId) {
         this.reportId = reportId;
         return this;
     }
     
+    public PutReportDefinitionResult(){}
 }

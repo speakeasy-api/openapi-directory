@@ -15,9 +15,11 @@ public class DescribeDeliveryChannelStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeliveryChannelNames")
     public String[] deliveryChannelNames;
+
     public DescribeDeliveryChannelStatusRequest withDeliveryChannelNames(String[] deliveryChannelNames) {
         this.deliveryChannelNames = deliveryChannelNames;
         return this;
     }
     
+    public DescribeDeliveryChannelStatusRequest(){}
 }

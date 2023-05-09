@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminSetInformationForProvisionedEnterpriseUserRequest {
@@ -12,6 +13,7 @@ public class EnterpriseAdminSetInformationForProvisionedEnterpriseUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scim_user_id")
     public String scimUserId;
+
     public EnterpriseAdminSetInformationForProvisionedEnterpriseUserRequest withScimUserId(String scimUserId) {
         this.scimUserId = scimUserId;
         return this;
@@ -19,9 +21,14 @@ public class EnterpriseAdminSetInformationForProvisionedEnterpriseUserRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.User user;
+
     public EnterpriseAdminSetInformationForProvisionedEnterpriseUserRequest withUser(org.openapis.openapi.models.shared.User user) {
         this.user = user;
         return this;
     }
     
+    public EnterpriseAdminSetInformationForProvisionedEnterpriseUserRequest(@JsonProperty("scim_user_id") String scimUserId, @JsonProperty("user") org.openapis.openapi.models.shared.User user) {
+        this.scimUserId = scimUserId;
+        this.user = user;
+  }
 }

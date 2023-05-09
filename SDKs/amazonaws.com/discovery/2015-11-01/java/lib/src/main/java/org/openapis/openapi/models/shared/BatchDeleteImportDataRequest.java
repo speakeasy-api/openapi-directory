@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchDeleteImportDataRequest {
     @JsonProperty("importTaskIds")
     public String[] importTaskIds;
+
     public BatchDeleteImportDataRequest withImportTaskIds(String[] importTaskIds) {
         this.importTaskIds = importTaskIds;
         return this;
     }
     
+    public BatchDeleteImportDataRequest(@JsonProperty("importTaskIds") String[] importTaskIds) {
+        this.importTaskIds = importTaskIds;
+  }
 }

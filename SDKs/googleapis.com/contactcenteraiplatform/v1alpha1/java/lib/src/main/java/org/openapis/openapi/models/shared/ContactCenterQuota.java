@@ -13,25 +13,40 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class ContactCenterQuota {
     /**
-     * Reflects the count limit of contact centers on a billing account.
+     * Deprecated: Use the Quota fields instead. Reflects the count limit of contact centers on a billing account.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactCenterCountLimit")
     public Integer contactCenterCountLimit;
+
     public ContactCenterQuota withContactCenterCountLimit(Integer contactCenterCountLimit) {
         this.contactCenterCountLimit = contactCenterCountLimit;
         return this;
     }
     
     /**
-     * Reflects the count sum of contact centers on a billing account.
+     * Deprecated: Use the Quota fields instead. Reflects the count sum of contact centers on a billing account.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactCenterCountSum")
     public Integer contactCenterCountSum;
+
     public ContactCenterQuota withContactCenterCountSum(Integer contactCenterCountSum) {
         this.contactCenterCountSum = contactCenterCountSum;
         return this;
     }
     
+    /**
+     * Quota details per contact center instance type.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("quotas")
+    public Quota[] quotas;
+
+    public ContactCenterQuota withQuotas(Quota[] quotas) {
+        this.quotas = quotas;
+        return this;
+    }
+    
+    public ContactCenterQuota(){}
 }

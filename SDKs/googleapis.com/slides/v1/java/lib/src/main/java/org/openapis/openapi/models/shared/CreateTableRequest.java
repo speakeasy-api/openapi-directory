@@ -18,6 +18,7 @@ public class CreateTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columns")
     public Integer columns;
+
     public CreateTableRequest withColumns(Integer columns) {
         this.columns = columns;
         return this;
@@ -29,6 +30,7 @@ public class CreateTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elementProperties")
     public PageElementProperties elementProperties;
+
     public CreateTableRequest withElementProperties(PageElementProperties elementProperties) {
         this.elementProperties = elementProperties;
         return this;
@@ -40,6 +42,7 @@ public class CreateTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public CreateTableRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -51,9 +54,11 @@ public class CreateTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rows")
     public Integer rows;
+
     public CreateTableRequest withRows(Integer rows) {
         this.rows = rows;
         return this;
     }
     
+    public CreateTableRequest(){}
 }

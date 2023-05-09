@@ -15,9 +15,11 @@ public class ReportConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReportS3Configuration")
     public ReportS3Configuration reportS3Configuration;
+
     public ReportConfiguration withReportS3Configuration(ReportS3Configuration reportS3Configuration) {
         this.reportS3Configuration = reportS3Configuration;
         return this;
     }
     
+    public ReportConfiguration(){}
 }

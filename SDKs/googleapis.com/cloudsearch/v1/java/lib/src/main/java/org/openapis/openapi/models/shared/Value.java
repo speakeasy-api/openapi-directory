@@ -15,6 +15,7 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("booleanValue")
     public Boolean booleanValue;
+
     public Value withBooleanValue(Boolean booleanValue) {
         this.booleanValue = booleanValue;
         return this;
@@ -26,6 +27,7 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateValue")
     public Date dateValue;
+
     public Value withDateValue(Date dateValue) {
         this.dateValue = dateValue;
         return this;
@@ -34,6 +36,7 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleValue")
     public Double doubleValue;
+
     public Value withDoubleValue(Double doubleValue) {
         this.doubleValue = doubleValue;
         return this;
@@ -42,6 +45,7 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integerValue")
     public String integerValue;
+
     public Value withIntegerValue(String integerValue) {
         this.integerValue = integerValue;
         return this;
@@ -50,6 +54,7 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValue")
     public String stringValue;
+
     public Value withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
@@ -58,9 +63,11 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestampValue")
     public String timestampValue;
+
     public Value withTimestampValue(String timestampValue) {
         this.timestampValue = timestampValue;
         return this;
     }
     
+    public Value(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDomainResponse {
@@ -12,6 +13,7 @@ public class GetDomainResponse {
      */
     
     public Object accessDeniedException;
+
     public GetDomainResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetDomainResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public GetDomainResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class GetDomainResponse {
     
     
     public String contentType;
+
     public GetDomainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetDomainResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDomainResult getDomainResult;
+
     public GetDomainResponse withGetDomainResult(org.openapis.openapi.models.shared.GetDomainResult getDomainResult) {
         this.getDomainResult = getDomainResult;
         return this;
@@ -49,6 +54,7 @@ public class GetDomainResponse {
      */
     
     public Object invalidInputException;
+
     public GetDomainResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetDomainResponse {
      */
     
     public Object notFoundException;
+
     public GetDomainResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetDomainResponse {
      */
     
     public Object operationFailureException;
+
     public GetDomainResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class GetDomainResponse {
      */
     
     public Object serviceException;
+
     public GetDomainResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class GetDomainResponse {
     
     
     public Integer statusCode;
+
     public GetDomainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetDomainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDomainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetDomainResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetDomainResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetDomainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

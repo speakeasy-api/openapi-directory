@@ -15,6 +15,7 @@ public class Registrant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public Registrant withAddress(String address) {
         this.address = address;
         return this;
@@ -26,6 +27,7 @@ public class Registrant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public Registrant withCity(String city) {
         this.city = city;
         return this;
@@ -38,6 +40,7 @@ public class Registrant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_name")
     public String companyName;
+
     public Registrant withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -50,6 +53,7 @@ public class Registrant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country_code")
     public String countryCode;
+
     public Registrant withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -61,6 +65,7 @@ public class Registrant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public Registrant withEmail(String email) {
         this.email = email;
         return this;
@@ -73,6 +78,7 @@ public class Registrant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enterprise_number")
     public String enterpriseNumber;
+
     public Registrant withEnterpriseNumber(String enterpriseNumber) {
         this.enterpriseNumber = enterpriseNumber;
         return this;
@@ -85,6 +91,7 @@ public class Registrant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fax")
     public String fax;
+
     public Registrant withFax(String fax) {
         this.fax = fax;
         return this;
@@ -96,6 +103,7 @@ public class Registrant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
     public String firstName;
+
     public Registrant withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -108,6 +116,7 @@ public class Registrant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language_code")
     public String languageCode;
+
     public Registrant withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -119,6 +128,7 @@ public class Registrant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
     public String lastName;
+
     public Registrant withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -131,6 +141,7 @@ public class Registrant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public Registrant withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -142,9 +153,11 @@ public class Registrant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postal_code")
     public String postalCode;
+
     public Registrant withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
     }
     
+    public Registrant(){}
 }

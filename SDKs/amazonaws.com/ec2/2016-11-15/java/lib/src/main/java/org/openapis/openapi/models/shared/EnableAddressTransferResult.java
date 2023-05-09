@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class EnableAddressTransferResult {
     
     public EnableAddressTransferResultAddressTransfer addressTransfer;
+
     public EnableAddressTransferResult withAddressTransfer(EnableAddressTransferResultAddressTransfer addressTransfer) {
         this.addressTransfer = addressTransfer;
         return this;
     }
     
+    public EnableAddressTransferResult(){}
 }

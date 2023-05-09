@@ -12,6 +12,7 @@ public class ListBuildBatchesForProjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public BuildBatchFilter filter;
+
     public ListBuildBatchesForProjectInput withFilter(BuildBatchFilter filter) {
         this.filter = filter;
         return this;
@@ -20,6 +21,7 @@ public class ListBuildBatchesForProjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListBuildBatchesForProjectInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListBuildBatchesForProjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListBuildBatchesForProjectInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +39,7 @@ public class ListBuildBatchesForProjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectName")
     public String projectName;
+
     public ListBuildBatchesForProjectInput withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -44,9 +48,11 @@ public class ListBuildBatchesForProjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public SortOrderTypeEnum sortOrder;
+
     public ListBuildBatchesForProjectInput withSortOrder(SortOrderTypeEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListBuildBatchesForProjectInput(){}
 }

@@ -269,4 +269,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/ReviewsListResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReviewsReplyResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReviewReplyResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReviewsReplyRequest.java
+docs/sdk/README.md
+docs/edits/README.md
+docs/inappproducts/README.md
+docs/orders/README.md
+docs/purchases/README.md
+docs/reviews/README.md
 USAGE.md

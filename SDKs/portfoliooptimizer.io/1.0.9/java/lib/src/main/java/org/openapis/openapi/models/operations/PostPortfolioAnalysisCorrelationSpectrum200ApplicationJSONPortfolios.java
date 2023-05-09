@@ -12,9 +12,13 @@ public class PostPortfolioAnalysisCorrelationSpectrum200ApplicationJSONPortfolio
      */
     @JsonProperty("portfolioCorrelationSpectrum")
     public Double[] portfolioCorrelationSpectrum;
+
     public PostPortfolioAnalysisCorrelationSpectrum200ApplicationJSONPortfolios withPortfolioCorrelationSpectrum(Double[] portfolioCorrelationSpectrum) {
         this.portfolioCorrelationSpectrum = portfolioCorrelationSpectrum;
         return this;
     }
     
+    public PostPortfolioAnalysisCorrelationSpectrum200ApplicationJSONPortfolios(@JsonProperty("portfolioCorrelationSpectrum") Double[] portfolioCorrelationSpectrum) {
+        this.portfolioCorrelationSpectrum = portfolioCorrelationSpectrum;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContainerProjectsZonesClustersResourceLabelsSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String oauth2;
+
     public ContainerProjectsZonesClustersResourceLabelsSecurity withOauth2(String oauth2) {
         this.oauth2 = oauth2;
         return this;
@@ -16,9 +18,14 @@ public class ContainerProjectsZonesClustersResourceLabelsSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String oauth2c;
+
     public ContainerProjectsZonesClustersResourceLabelsSecurity withOauth2c(String oauth2c) {
         this.oauth2c = oauth2c;
         return this;
     }
     
+    public ContainerProjectsZonesClustersResourceLabelsSecurity(@JsonProperty("Oauth2") String oauth2, @JsonProperty("Oauth2c") String oauth2c) {
+        this.oauth2 = oauth2;
+        this.oauth2c = oauth2c;
+  }
 }

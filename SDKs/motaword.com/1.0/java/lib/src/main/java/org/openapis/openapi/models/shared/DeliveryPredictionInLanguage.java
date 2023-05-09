@@ -12,6 +12,7 @@ public class DeliveryPredictionInLanguage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public DeliveryPredictionInLanguage withLanguage(String language) {
         this.language = language;
         return this;
@@ -23,6 +24,7 @@ public class DeliveryPredictionInLanguage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("late")
     public Boolean late;
+
     public DeliveryPredictionInLanguage withLate(Boolean late) {
         this.late = late;
         return this;
@@ -31,9 +33,11 @@ public class DeliveryPredictionInLanguage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("probability")
     public Float probability;
+
     public DeliveryPredictionInLanguage withProbability(Float probability) {
         this.probability = probability;
         return this;
     }
     
+    public DeliveryPredictionInLanguage(){}
 }

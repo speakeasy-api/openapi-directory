@@ -18,6 +18,7 @@ public class GoogleCloudMlV1Scheduling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxRunningTime")
     public String maxRunningTime;
+
     public GoogleCloudMlV1Scheduling withMaxRunningTime(String maxRunningTime) {
         this.maxRunningTime = maxRunningTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudMlV1Scheduling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxWaitTime")
     public String maxWaitTime;
+
     public GoogleCloudMlV1Scheduling withMaxWaitTime(String maxWaitTime) {
         this.maxWaitTime = maxWaitTime;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudMlV1Scheduling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Integer priority;
+
     public GoogleCloudMlV1Scheduling withPriority(Integer priority) {
         this.priority = priority;
         return this;
     }
     
+    public GoogleCloudMlV1Scheduling(){}
 }

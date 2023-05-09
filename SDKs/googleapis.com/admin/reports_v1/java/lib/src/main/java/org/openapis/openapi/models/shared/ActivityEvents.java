@@ -15,6 +15,7 @@ public class ActivityEvents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ActivityEvents withName(String name) {
         this.name = name;
         return this;
@@ -26,6 +27,7 @@ public class ActivityEvents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public ActivityEventsParameters[] parameters;
+
     public ActivityEvents withParameters(ActivityEventsParameters[] parameters) {
         this.parameters = parameters;
         return this;
@@ -37,9 +39,11 @@ public class ActivityEvents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ActivityEvents withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ActivityEvents(){}
 }

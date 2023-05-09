@@ -18,6 +18,7 @@ public class UrlNormalization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("normalizedUrl")
     public String normalizedUrl;
+
     public UrlNormalization withNormalizedUrl(String normalizedUrl) {
         this.normalizedUrl = normalizedUrl;
         return this;
@@ -29,9 +30,11 @@ public class UrlNormalization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalUrl")
     public String originalUrl;
+
     public UrlNormalization withOriginalUrl(String originalUrl) {
         this.originalUrl = originalUrl;
         return this;
     }
     
+    public UrlNormalization(){}
 }

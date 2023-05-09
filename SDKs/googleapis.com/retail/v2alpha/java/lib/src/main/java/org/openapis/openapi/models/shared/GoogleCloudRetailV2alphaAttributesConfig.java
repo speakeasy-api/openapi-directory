@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaAttributesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributeConfigLevel")
     public GoogleCloudRetailV2alphaAttributesConfigAttributeConfigLevelEnum attributeConfigLevel;
+
     public GoogleCloudRetailV2alphaAttributesConfig withAttributeConfigLevel(GoogleCloudRetailV2alphaAttributesConfigAttributeConfigLevelEnum attributeConfigLevel) {
         this.attributeConfigLevel = attributeConfigLevel;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2alphaAttributesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalogAttributes")
     public java.util.Map<String, GoogleCloudRetailV2alphaCatalogAttribute> catalogAttributes;
+
     public GoogleCloudRetailV2alphaAttributesConfig withCatalogAttributes(java.util.Map<String, GoogleCloudRetailV2alphaCatalogAttribute> catalogAttributes) {
         this.catalogAttributes = catalogAttributes;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudRetailV2alphaAttributesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudRetailV2alphaAttributesConfig withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaAttributesConfig(){}
 }

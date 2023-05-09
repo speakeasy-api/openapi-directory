@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ApplicationResourceLifecycleConfig {
     
     public String serviceRole;
+
     public ApplicationResourceLifecycleConfig withServiceRole(String serviceRole) {
         this.serviceRole = serviceRole;
         return this;
@@ -19,9 +20,11 @@ public class ApplicationResourceLifecycleConfig {
     
     
     public ApplicationVersionLifecycleConfig versionLifecycleConfig;
+
     public ApplicationResourceLifecycleConfig withVersionLifecycleConfig(ApplicationVersionLifecycleConfig versionLifecycleConfig) {
         this.versionLifecycleConfig = versionLifecycleConfig;
         return this;
     }
     
+    public ApplicationResourceLifecycleConfig(){}
 }

@@ -12,6 +12,7 @@ public class ActionResourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public ActionResourceAttributesInput attributes;
+
     public ActionResourceInput withAttributes(ActionResourceAttributesInput attributes) {
         this.attributes = attributes;
         return this;
@@ -19,6 +20,7 @@ public class ActionResourceInput {
     
     @JsonProperty("id")
     public String id;
+
     public ActionResourceInput withId(String id) {
         this.id = id;
         return this;
@@ -27,6 +29,7 @@ public class ActionResourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationships")
     public ActionResourceRelationships relationships;
+
     public ActionResourceInput withRelationships(ActionResourceRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -34,9 +37,14 @@ public class ActionResourceInput {
     
     @JsonProperty("type")
     public String type;
+
     public ActionResourceInput withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ActionResourceInput(@JsonProperty("id") String id, @JsonProperty("type") String type) {
+        this.id = id;
+        this.type = type;
+  }
 }

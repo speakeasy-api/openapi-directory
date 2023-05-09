@@ -15,9 +15,11 @@ public class DescribeEffectivePolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EffectivePolicy")
     public EffectivePolicy effectivePolicy;
+
     public DescribeEffectivePolicyResponse withEffectivePolicy(EffectivePolicy effectivePolicy) {
         this.effectivePolicy = effectivePolicy;
         return this;
     }
     
+    public DescribeEffectivePolicyResponse(){}
 }

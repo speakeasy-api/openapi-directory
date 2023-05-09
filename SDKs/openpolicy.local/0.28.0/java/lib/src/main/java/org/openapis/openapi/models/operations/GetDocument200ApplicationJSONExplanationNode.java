@@ -19,6 +19,7 @@ public class GetDocument200ApplicationJSONExplanationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Double index;
+
     public GetDocument200ApplicationJSONExplanationNode withIndex(Double index) {
         this.index = index;
         return this;
@@ -27,9 +28,11 @@ public class GetDocument200ApplicationJSONExplanationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terms")
     public GetDocument200ApplicationJSONExplanationNodeTerms[] terms;
+
     public GetDocument200ApplicationJSONExplanationNode withTerms(GetDocument200ApplicationJSONExplanationNodeTerms[] terms) {
         this.terms = terms;
         return this;
     }
     
+    public GetDocument200ApplicationJSONExplanationNode(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutRepositoryCatalogDataRequest {
     @JsonProperty("catalogData")
     public RepositoryCatalogDataInput catalogData;
+
     public PutRepositoryCatalogDataRequest withCatalogData(RepositoryCatalogDataInput catalogData) {
         this.catalogData = catalogData;
         return this;
@@ -19,6 +20,7 @@ public class PutRepositoryCatalogDataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public PutRepositoryCatalogDataRequest withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -26,9 +28,14 @@ public class PutRepositoryCatalogDataRequest {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public PutRepositoryCatalogDataRequest withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public PutRepositoryCatalogDataRequest(@JsonProperty("catalogData") RepositoryCatalogDataInput catalogData, @JsonProperty("repositoryName") String repositoryName) {
+        this.catalogData = catalogData;
+        this.repositoryName = repositoryName;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateSizeConstraintSetResponse {
     
     public String contentType;
+
     public UpdateSizeConstraintSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateSizeConstraintSetResponse {
     
     
     public Integer statusCode;
+
     public UpdateSizeConstraintSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateSizeConstraintSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateSizeConstraintSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UpdateSizeConstraintSetResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateSizeConstraintSetResponse updateSizeConstraintSetResponse;
+
     public UpdateSizeConstraintSetResponse withUpdateSizeConstraintSetResponse(org.openapis.openapi.models.shared.UpdateSizeConstraintSetResponse updateSizeConstraintSetResponse) {
         this.updateSizeConstraintSetResponse = updateSizeConstraintSetResponse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateSizeConstraintSetResponse {
      */
     
     public Object wafInternalErrorException;
+
     public UpdateSizeConstraintSetResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class UpdateSizeConstraintSetResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public UpdateSizeConstraintSetResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateSizeConstraintSetResponse {
      */
     
     public Object wafInvalidOperationException;
+
     public UpdateSizeConstraintSetResponse withWAFInvalidOperationException(Object wafInvalidOperationException) {
         this.wafInvalidOperationException = wafInvalidOperationException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateSizeConstraintSetResponse {
      */
     
     public Object wafInvalidParameterException;
+
     public UpdateSizeConstraintSetResponse withWAFInvalidParameterException(Object wafInvalidParameterException) {
         this.wafInvalidParameterException = wafInvalidParameterException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateSizeConstraintSetResponse {
      */
     
     public Object wafLimitsExceededException;
+
     public UpdateSizeConstraintSetResponse withWAFLimitsExceededException(Object wafLimitsExceededException) {
         this.wafLimitsExceededException = wafLimitsExceededException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateSizeConstraintSetResponse {
      */
     
     public Object wafNonexistentContainerException;
+
     public UpdateSizeConstraintSetResponse withWAFNonexistentContainerException(Object wafNonexistentContainerException) {
         this.wafNonexistentContainerException = wafNonexistentContainerException;
         return this;
@@ -103,6 +114,7 @@ public class UpdateSizeConstraintSetResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public UpdateSizeConstraintSetResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
@@ -113,6 +125,7 @@ public class UpdateSizeConstraintSetResponse {
      */
     
     public Object wafReferencedItemException;
+
     public UpdateSizeConstraintSetResponse withWAFReferencedItemException(Object wafReferencedItemException) {
         this.wafReferencedItemException = wafReferencedItemException;
         return this;
@@ -123,9 +136,14 @@ public class UpdateSizeConstraintSetResponse {
      */
     
     public Object wafStaleDataException;
+
     public UpdateSizeConstraintSetResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
     }
     
+    public UpdateSizeConstraintSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

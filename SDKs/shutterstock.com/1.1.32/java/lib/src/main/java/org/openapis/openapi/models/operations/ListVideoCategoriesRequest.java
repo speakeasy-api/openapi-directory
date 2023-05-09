@@ -12,9 +12,11 @@ public class ListVideoCategoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public org.openapis.openapi.models.shared.LanguageEnum language;
+
     public ListVideoCategoriesRequest withLanguage(org.openapis.openapi.models.shared.LanguageEnum language) {
         this.language = language;
         return this;
     }
     
+    public ListVideoCategoriesRequest(){}
 }

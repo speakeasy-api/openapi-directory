@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ContentModelsContentTypeProperty {
     
     public java.util.Map<String, String> attributes;
+
     public ContentModelsContentTypeProperty withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -16,6 +17,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public String bindToProperty;
+
     public ContentModelsContentTypeProperty withBindToProperty(String bindToProperty) {
         this.bindToProperty = bindToProperty;
         return this;
@@ -23,6 +25,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public String boundRegex;
+
     public ContentModelsContentTypeProperty withBoundRegex(String boundRegex) {
         this.boundRegex = boundRegex;
         return this;
@@ -30,6 +33,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public ContentModelsContentTypeProperty[] childProperties;
+
     public ContentModelsContentTypeProperty withChildProperties(ContentModelsContentTypeProperty[] childProperties) {
         this.childProperties = childProperties;
         return this;
@@ -37,6 +41,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public String contentTypeAllowed;
+
     public ContentModelsContentTypeProperty withContentTypeAllowed(String contentTypeAllowed) {
         this.contentTypeAllowed = contentTypeAllowed;
         return this;
@@ -44,6 +49,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public Integer datatype;
+
     public ContentModelsContentTypeProperty withDatatype(Integer datatype) {
         this.datatype = datatype;
         return this;
@@ -51,6 +57,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public ContentModelsContentTypeDefaultValue[] defaultValues;
+
     public ContentModelsContentTypeProperty withDefaultValues(ContentModelsContentTypeDefaultValue[] defaultValues) {
         this.defaultValues = defaultValues;
         return this;
@@ -58,6 +65,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public Boolean enabled;
+
     public ContentModelsContentTypeProperty withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -65,6 +73,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public String entitytype;
+
     public ContentModelsContentTypeProperty withEntitytype(String entitytype) {
         this.entitytype = entitytype;
         return this;
@@ -72,6 +81,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public Boolean fallback;
+
     public ContentModelsContentTypeProperty withFallback(Boolean fallback) {
         this.fallback = fallback;
         return this;
@@ -79,6 +89,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public Boolean isCombo;
+
     public ContentModelsContentTypeProperty withIsCombo(Boolean isCombo) {
         this.isCombo = isCombo;
         return this;
@@ -86,6 +97,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public Boolean isExternalAllowed;
+
     public ContentModelsContentTypeProperty withIsExternalAllowed(Boolean isExternalAllowed) {
         this.isExternalAllowed = isExternalAllowed;
         return this;
@@ -93,6 +105,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public Boolean isImage;
+
     public ContentModelsContentTypeProperty withIsImage(Boolean isImage) {
         this.isImage = isImage;
         return this;
@@ -100,6 +113,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public Boolean isTitle;
+
     public ContentModelsContentTypeProperty withIsTitle(Boolean isTitle) {
         this.isTitle = isTitle;
         return this;
@@ -107,6 +121,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public Boolean isVideo;
+
     public ContentModelsContentTypeProperty withIsVideo(Boolean isVideo) {
         this.isVideo = isVideo;
         return this;
@@ -114,6 +129,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public String[] legalContentTypes;
+
     public ContentModelsContentTypeProperty withLegalContentTypes(String[] legalContentTypes) {
         this.legalContentTypes = legalContentTypes;
         return this;
@@ -121,6 +137,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public Boolean localizable;
+
     public ContentModelsContentTypeProperty withLocalizable(Boolean localizable) {
         this.localizable = localizable;
         return this;
@@ -128,6 +145,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public Integer maxByteLength;
+
     public ContentModelsContentTypeProperty withMaxByteLength(Integer maxByteLength) {
         this.maxByteLength = maxByteLength;
         return this;
@@ -135,6 +153,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public Integer maxFileSize;
+
     public ContentModelsContentTypeProperty withMaxFileSize(Integer maxFileSize) {
         this.maxFileSize = maxFileSize;
         return this;
@@ -142,6 +161,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public Integer maxHeight;
+
     public ContentModelsContentTypeProperty withMaxHeight(Integer maxHeight) {
         this.maxHeight = maxHeight;
         return this;
@@ -149,6 +169,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public Integer maxLength;
+
     public ContentModelsContentTypeProperty withMaxLength(Integer maxLength) {
         this.maxLength = maxLength;
         return this;
@@ -156,6 +177,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public Integer maxWidth;
+
     public ContentModelsContentTypeProperty withMaxWidth(Integer maxWidth) {
         this.maxWidth = maxWidth;
         return this;
@@ -163,6 +185,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public Integer minHeight;
+
     public ContentModelsContentTypeProperty withMinHeight(Integer minHeight) {
         this.minHeight = minHeight;
         return this;
@@ -170,6 +193,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public Integer minWidth;
+
     public ContentModelsContentTypeProperty withMinWidth(Integer minWidth) {
         this.minWidth = minWidth;
         return this;
@@ -177,6 +201,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public String name;
+
     public ContentModelsContentTypeProperty withName(String name) {
         this.name = name;
         return this;
@@ -184,6 +209,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public Integer order;
+
     public ContentModelsContentTypeProperty withOrder(Integer order) {
         this.order = order;
         return this;
@@ -191,6 +217,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public String propertyDescription;
+
     public ContentModelsContentTypeProperty withPropertyDescription(String propertyDescription) {
         this.propertyDescription = propertyDescription;
         return this;
@@ -198,6 +225,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public String propertySection;
+
     public ContentModelsContentTypeProperty withPropertySection(String propertySection) {
         this.propertySection = propertySection;
         return this;
@@ -205,6 +233,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public String readableName;
+
     public ContentModelsContentTypeProperty withReadableName(String readableName) {
         this.readableName = readableName;
         return this;
@@ -212,6 +241,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public String regexp;
+
     public ContentModelsContentTypeProperty withRegexp(String regexp) {
         this.regexp = regexp;
         return this;
@@ -219,6 +249,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public java.util.Map<String, String> representationSelection;
+
     public ContentModelsContentTypeProperty withRepresentationSelection(java.util.Map<String, String> representationSelection) {
         this.representationSelection = representationSelection;
         return this;
@@ -226,6 +257,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public String representationValidationString;
+
     public ContentModelsContentTypeProperty withRepresentationValidationString(String representationValidationString) {
         this.representationValidationString = representationValidationString;
         return this;
@@ -233,6 +265,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public Boolean required;
+
     public ContentModelsContentTypeProperty withRequired(Boolean required) {
         this.required = required;
         return this;
@@ -240,6 +273,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public String rootPropertyName;
+
     public ContentModelsContentTypeProperty withRootPropertyName(String rootPropertyName) {
         this.rootPropertyName = rootPropertyName;
         return this;
@@ -247,6 +281,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public String rssAttribute;
+
     public ContentModelsContentTypeProperty withRssAttribute(String rssAttribute) {
         this.rssAttribute = rssAttribute;
         return this;
@@ -254,6 +289,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public Boolean suppressProperty;
+
     public ContentModelsContentTypeProperty withSuppressProperty(Boolean suppressProperty) {
         this.suppressProperty = suppressProperty;
         return this;
@@ -261,6 +297,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public String validateAs;
+
     public ContentModelsContentTypeProperty withValidateAs(String validateAs) {
         this.validateAs = validateAs;
         return this;
@@ -268,6 +305,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public String value;
+
     public ContentModelsContentTypeProperty withValue(String value) {
         this.value = value;
         return this;
@@ -275,6 +313,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public Boolean visible;
+
     public ContentModelsContentTypeProperty withVisible(Boolean visible) {
         this.visible = visible;
         return this;
@@ -282,6 +321,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public String visibleDependency;
+
     public ContentModelsContentTypeProperty withVisibleDependency(String visibleDependency) {
         this.visibleDependency = visibleDependency;
         return this;
@@ -289,6 +329,7 @@ public class ContentModelsContentTypeProperty {
     
     
     public String visibleOn;
+
     public ContentModelsContentTypeProperty withVisibleOn(String visibleOn) {
         this.visibleOn = visibleOn;
         return this;
@@ -296,9 +337,11 @@ public class ContentModelsContentTypeProperty {
     
     
     public Integer weight;
+
     public ContentModelsContentTypeProperty withWeight(Integer weight) {
         this.weight = weight;
         return this;
     }
     
+    public ContentModelsContentTypeProperty(){}
 }

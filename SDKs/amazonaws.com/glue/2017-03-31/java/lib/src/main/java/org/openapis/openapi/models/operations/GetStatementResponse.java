@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetStatementResponse {
@@ -12,6 +13,7 @@ public class GetStatementResponse {
      */
     
     public Object accessDeniedException;
+
     public GetStatementResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetStatementResponse {
     
     
     public String contentType;
+
     public GetStatementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetStatementResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetStatementResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class GetStatementResponse {
      */
     
     public org.openapis.openapi.models.shared.GetStatementResponse getStatementResponse;
+
     public GetStatementResponse withGetStatementResponse(org.openapis.openapi.models.shared.GetStatementResponse getStatementResponse) {
         this.getStatementResponse = getStatementResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetStatementResponse {
      */
     
     public Object illegalSessionStateException;
+
     public GetStatementResponse withIllegalSessionStateException(Object illegalSessionStateException) {
         this.illegalSessionStateException = illegalSessionStateException;
         return this;
@@ -59,6 +65,7 @@ public class GetStatementResponse {
      */
     
     public Object internalServiceException;
+
     public GetStatementResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class GetStatementResponse {
      */
     
     public Object invalidInputException;
+
     public GetStatementResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -79,6 +87,7 @@ public class GetStatementResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetStatementResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -86,6 +95,7 @@ public class GetStatementResponse {
     
     
     public Integer statusCode;
+
     public GetStatementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class GetStatementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetStatementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetStatementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

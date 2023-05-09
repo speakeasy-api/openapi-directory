@@ -18,6 +18,7 @@ public class TargetWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customHtml")
     public String customHtml;
+
     public TargetWindow withCustomHtml(String customHtml) {
         this.customHtml = customHtml;
         return this;
@@ -29,9 +30,11 @@ public class TargetWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetWindowOption")
     public TargetWindowTargetWindowOptionEnum targetWindowOption;
+
     public TargetWindow withTargetWindowOption(TargetWindowTargetWindowOptionEnum targetWindowOption) {
         this.targetWindowOption = targetWindowOption;
         return this;
     }
     
+    public TargetWindow(){}
 }

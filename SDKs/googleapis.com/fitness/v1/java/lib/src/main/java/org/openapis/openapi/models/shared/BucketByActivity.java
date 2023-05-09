@@ -15,6 +15,7 @@ public class BucketByActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activityDataSourceId")
     public String activityDataSourceId;
+
     public BucketByActivity withActivityDataSourceId(String activityDataSourceId) {
         this.activityDataSourceId = activityDataSourceId;
         return this;
@@ -26,9 +27,11 @@ public class BucketByActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minDurationMillis")
     public String minDurationMillis;
+
     public BucketByActivity withMinDurationMillis(String minDurationMillis) {
         this.minDurationMillis = minDurationMillis;
         return this;
     }
     
+    public BucketByActivity(){}
 }

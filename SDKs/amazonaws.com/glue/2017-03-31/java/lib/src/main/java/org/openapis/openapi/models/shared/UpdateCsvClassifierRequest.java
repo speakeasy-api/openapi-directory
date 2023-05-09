@@ -15,6 +15,7 @@ public class UpdateCsvClassifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowSingleColumn")
     public Boolean allowSingleColumn;
+
     public UpdateCsvClassifierRequest withAllowSingleColumn(Boolean allowSingleColumn) {
         this.allowSingleColumn = allowSingleColumn;
         return this;
@@ -23,6 +24,7 @@ public class UpdateCsvClassifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainsHeader")
     public CsvHeaderOptionEnum containsHeader;
+
     public UpdateCsvClassifierRequest withContainsHeader(CsvHeaderOptionEnum containsHeader) {
         this.containsHeader = containsHeader;
         return this;
@@ -31,6 +33,7 @@ public class UpdateCsvClassifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomDatatypeConfigured")
     public Boolean customDatatypeConfigured;
+
     public UpdateCsvClassifierRequest withCustomDatatypeConfigured(Boolean customDatatypeConfigured) {
         this.customDatatypeConfigured = customDatatypeConfigured;
         return this;
@@ -39,6 +42,7 @@ public class UpdateCsvClassifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomDatatypes")
     public String[] customDatatypes;
+
     public UpdateCsvClassifierRequest withCustomDatatypes(String[] customDatatypes) {
         this.customDatatypes = customDatatypes;
         return this;
@@ -47,6 +51,7 @@ public class UpdateCsvClassifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Delimiter")
     public String delimiter;
+
     public UpdateCsvClassifierRequest withDelimiter(String delimiter) {
         this.delimiter = delimiter;
         return this;
@@ -55,6 +60,7 @@ public class UpdateCsvClassifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisableValueTrimming")
     public Boolean disableValueTrimming;
+
     public UpdateCsvClassifierRequest withDisableValueTrimming(Boolean disableValueTrimming) {
         this.disableValueTrimming = disableValueTrimming;
         return this;
@@ -63,6 +69,7 @@ public class UpdateCsvClassifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Header")
     public String[] header;
+
     public UpdateCsvClassifierRequest withHeader(String[] header) {
         this.header = header;
         return this;
@@ -70,6 +77,7 @@ public class UpdateCsvClassifierRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public UpdateCsvClassifierRequest withName(String name) {
         this.name = name;
         return this;
@@ -78,9 +86,13 @@ public class UpdateCsvClassifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuoteSymbol")
     public String quoteSymbol;
+
     public UpdateCsvClassifierRequest withQuoteSymbol(String quoteSymbol) {
         this.quoteSymbol = quoteSymbol;
         return this;
     }
     
+    public UpdateCsvClassifierRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

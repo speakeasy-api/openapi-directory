@@ -12,6 +12,7 @@ public class Searchbyproducturl200ApplicationJSONItems {
      */
     @JsonProperty("Videos")
     public Object[] videos;
+
     public Searchbyproducturl200ApplicationJSONItems withVideos(Object[] videos) {
         this.videos = videos;
         return this;
@@ -22,6 +23,7 @@ public class Searchbyproducturl200ApplicationJSONItems {
      */
     @JsonProperty("complementName")
     public String complementName;
+
     public Searchbyproducturl200ApplicationJSONItems withComplementName(String complementName) {
         this.complementName = complementName;
         return this;
@@ -32,6 +34,7 @@ public class Searchbyproducturl200ApplicationJSONItems {
      */
     @JsonProperty("ean")
     public String ean;
+
     public Searchbyproducturl200ApplicationJSONItems withEan(String ean) {
         this.ean = ean;
         return this;
@@ -42,6 +45,7 @@ public class Searchbyproducturl200ApplicationJSONItems {
      */
     @JsonProperty("estimatedDateArrival")
     public String estimatedDateArrival;
+
     public Searchbyproducturl200ApplicationJSONItems withEstimatedDateArrival(String estimatedDateArrival) {
         this.estimatedDateArrival = estimatedDateArrival;
         return this;
@@ -52,6 +56,7 @@ public class Searchbyproducturl200ApplicationJSONItems {
      */
     @JsonProperty("images")
     public Searchbyproducturl200ApplicationJSONItemsImages[] images;
+
     public Searchbyproducturl200ApplicationJSONItems withImages(Searchbyproducturl200ApplicationJSONItemsImages[] images) {
         this.images = images;
         return this;
@@ -62,6 +67,7 @@ public class Searchbyproducturl200ApplicationJSONItems {
      */
     @JsonProperty("isKit")
     public Boolean isKit;
+
     public Searchbyproducturl200ApplicationJSONItems withIsKit(Boolean isKit) {
         this.isKit = isKit;
         return this;
@@ -72,6 +78,7 @@ public class Searchbyproducturl200ApplicationJSONItems {
      */
     @JsonProperty("itemId")
     public String itemId;
+
     public Searchbyproducturl200ApplicationJSONItems withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -82,6 +89,7 @@ public class Searchbyproducturl200ApplicationJSONItems {
      */
     @JsonProperty("kitItems")
     public Searchbyproducturl200ApplicationJSONItemsKitItems[] kitItems;
+
     public Searchbyproducturl200ApplicationJSONItems withKitItems(Searchbyproducturl200ApplicationJSONItemsKitItems[] kitItems) {
         this.kitItems = kitItems;
         return this;
@@ -92,6 +100,7 @@ public class Searchbyproducturl200ApplicationJSONItems {
      */
     @JsonProperty("measurementUnit")
     public String measurementUnit;
+
     public Searchbyproducturl200ApplicationJSONItems withMeasurementUnit(String measurementUnit) {
         this.measurementUnit = measurementUnit;
         return this;
@@ -102,6 +111,7 @@ public class Searchbyproducturl200ApplicationJSONItems {
      */
     @JsonProperty("modalType")
     public String modalType;
+
     public Searchbyproducturl200ApplicationJSONItems withModalType(String modalType) {
         this.modalType = modalType;
         return this;
@@ -112,6 +122,7 @@ public class Searchbyproducturl200ApplicationJSONItems {
      */
     @JsonProperty("name")
     public String name;
+
     public Searchbyproducturl200ApplicationJSONItems withName(String name) {
         this.name = name;
         return this;
@@ -122,6 +133,7 @@ public class Searchbyproducturl200ApplicationJSONItems {
      */
     @JsonProperty("nameComplete")
     public String nameComplete;
+
     public Searchbyproducturl200ApplicationJSONItems withNameComplete(String nameComplete) {
         this.nameComplete = nameComplete;
         return this;
@@ -132,6 +144,7 @@ public class Searchbyproducturl200ApplicationJSONItems {
      */
     @JsonProperty("referenceId")
     public Searchbyproducturl200ApplicationJSONItemsReferenceId[] referenceId;
+
     public Searchbyproducturl200ApplicationJSONItems withReferenceId(Searchbyproducturl200ApplicationJSONItemsReferenceId[] referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -142,6 +155,7 @@ public class Searchbyproducturl200ApplicationJSONItems {
      */
     @JsonProperty("sellers")
     public Searchbyproducturl200ApplicationJSONItemsSellers[] sellers;
+
     public Searchbyproducturl200ApplicationJSONItems withSellers(Searchbyproducturl200ApplicationJSONItemsSellers[] sellers) {
         this.sellers = sellers;
         return this;
@@ -152,9 +166,27 @@ public class Searchbyproducturl200ApplicationJSONItems {
      */
     @JsonProperty("unitMultiplier")
     public Double unitMultiplier;
+
     public Searchbyproducturl200ApplicationJSONItems withUnitMultiplier(Double unitMultiplier) {
         this.unitMultiplier = unitMultiplier;
         return this;
     }
     
+    public Searchbyproducturl200ApplicationJSONItems(@JsonProperty("Videos") Object[] videos, @JsonProperty("complementName") String complementName, @JsonProperty("ean") String ean, @JsonProperty("estimatedDateArrival") String estimatedDateArrival, @JsonProperty("images") Searchbyproducturl200ApplicationJSONItemsImages[] images, @JsonProperty("isKit") Boolean isKit, @JsonProperty("itemId") String itemId, @JsonProperty("kitItems") Searchbyproducturl200ApplicationJSONItemsKitItems[] kitItems, @JsonProperty("measurementUnit") String measurementUnit, @JsonProperty("modalType") String modalType, @JsonProperty("name") String name, @JsonProperty("nameComplete") String nameComplete, @JsonProperty("referenceId") Searchbyproducturl200ApplicationJSONItemsReferenceId[] referenceId, @JsonProperty("sellers") Searchbyproducturl200ApplicationJSONItemsSellers[] sellers, @JsonProperty("unitMultiplier") Double unitMultiplier) {
+        this.videos = videos;
+        this.complementName = complementName;
+        this.ean = ean;
+        this.estimatedDateArrival = estimatedDateArrival;
+        this.images = images;
+        this.isKit = isKit;
+        this.itemId = itemId;
+        this.kitItems = kitItems;
+        this.measurementUnit = measurementUnit;
+        this.modalType = modalType;
+        this.name = name;
+        this.nameComplete = nameComplete;
+        this.referenceId = referenceId;
+        this.sellers = sellers;
+        this.unitMultiplier = unitMultiplier;
+  }
 }

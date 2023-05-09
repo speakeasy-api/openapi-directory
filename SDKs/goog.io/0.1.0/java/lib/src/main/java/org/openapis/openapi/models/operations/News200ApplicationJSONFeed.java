@@ -12,6 +12,7 @@ public class News200ApplicationJSONFeed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generator")
     public String generator;
+
     public News200ApplicationJSONFeed withGenerator(String generator) {
         this.generator = generator;
         return this;
@@ -20,6 +21,7 @@ public class News200ApplicationJSONFeed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generator_detail")
     public String generatorDetail;
+
     public News200ApplicationJSONFeed withGeneratorDetail(String generatorDetail) {
         this.generatorDetail = generatorDetail;
         return this;
@@ -28,6 +30,7 @@ public class News200ApplicationJSONFeed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public News200ApplicationJSONFeed withLanguage(String language) {
         this.language = language;
         return this;
@@ -36,6 +39,7 @@ public class News200ApplicationJSONFeed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public String link;
+
     public News200ApplicationJSONFeed withLink(String link) {
         this.link = link;
         return this;
@@ -44,6 +48,7 @@ public class News200ApplicationJSONFeed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public String links;
+
     public News200ApplicationJSONFeed withLinks(String links) {
         this.links = links;
         return this;
@@ -52,6 +57,7 @@ public class News200ApplicationJSONFeed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisher")
     public String publisher;
+
     public News200ApplicationJSONFeed withPublisher(String publisher) {
         this.publisher = publisher;
         return this;
@@ -60,6 +66,7 @@ public class News200ApplicationJSONFeed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisher_detail")
     public String publisherDetail;
+
     public News200ApplicationJSONFeed withPublisherDetail(String publisherDetail) {
         this.publisherDetail = publisherDetail;
         return this;
@@ -68,6 +75,7 @@ public class News200ApplicationJSONFeed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rights")
     public String rights;
+
     public News200ApplicationJSONFeed withRights(String rights) {
         this.rights = rights;
         return this;
@@ -76,6 +84,7 @@ public class News200ApplicationJSONFeed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rights_detail")
     public String rightsDetail;
+
     public News200ApplicationJSONFeed withRightsDetail(String rightsDetail) {
         this.rightsDetail = rightsDetail;
         return this;
@@ -84,6 +93,7 @@ public class News200ApplicationJSONFeed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtitle")
     public String subtitle;
+
     public News200ApplicationJSONFeed withSubtitle(String subtitle) {
         this.subtitle = subtitle;
         return this;
@@ -92,6 +102,7 @@ public class News200ApplicationJSONFeed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtitle_detail")
     public String subtitleDetail;
+
     public News200ApplicationJSONFeed withSubtitleDetail(String subtitleDetail) {
         this.subtitleDetail = subtitleDetail;
         return this;
@@ -100,6 +111,7 @@ public class News200ApplicationJSONFeed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public News200ApplicationJSONFeed withTitle(String title) {
         this.title = title;
         return this;
@@ -108,6 +120,7 @@ public class News200ApplicationJSONFeed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated")
     public String updated;
+
     public News200ApplicationJSONFeed withUpdated(String updated) {
         this.updated = updated;
         return this;
@@ -116,9 +129,11 @@ public class News200ApplicationJSONFeed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_parsed")
     public String updatedParsed;
+
     public News200ApplicationJSONFeed withUpdatedParsed(String updatedParsed) {
         this.updatedParsed = updatedParsed;
         return this;
     }
     
+    public News200ApplicationJSONFeed(){}
 }

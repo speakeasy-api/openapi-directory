@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Order {
     @JsonProperty("billTo")
     public BillTo billTo;
+
     public Order withBillTo(BillTo billTo) {
         this.billTo = billTo;
         return this;
@@ -24,6 +25,7 @@ public class Order {
      */
     @JsonProperty("createdAt")
     public String createdAt;
+
     public Order withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -34,6 +36,7 @@ public class Order {
      */
     @JsonProperty("currency")
     public String currency;
+
     public Order withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -41,6 +44,7 @@ public class Order {
     
     @JsonProperty("items")
     public LineItem[] items;
+
     public Order withItems(LineItem[] items) {
         this.items = items;
         return this;
@@ -51,6 +55,7 @@ public class Order {
      */
     @JsonProperty("orderId")
     public String orderId;
+
     public Order withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -63,6 +68,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentOrderId")
     public String parentOrderId;
+
     public Order withParentOrderId(String parentOrderId) {
         this.parentOrderId = parentOrderId;
         return this;
@@ -70,6 +76,7 @@ public class Order {
     
     @JsonProperty("payments")
     public Payment[] payments;
+
     public Order withPayments(Payment[] payments) {
         this.payments = payments;
         return this;
@@ -77,9 +84,19 @@ public class Order {
     
     @JsonProperty("pricing")
     public OrderPricing pricing;
+
     public Order withPricing(OrderPricing pricing) {
         this.pricing = pricing;
         return this;
     }
     
+    public Order(@JsonProperty("billTo") BillTo billTo, @JsonProperty("createdAt") String createdAt, @JsonProperty("currency") String currency, @JsonProperty("items") LineItem[] items, @JsonProperty("orderId") String orderId, @JsonProperty("payments") Payment[] payments, @JsonProperty("pricing") OrderPricing pricing) {
+        this.billTo = billTo;
+        this.createdAt = createdAt;
+        this.currency = currency;
+        this.items = items;
+        this.orderId = orderId;
+        this.payments = payments;
+        this.pricing = pricing;
+  }
 }

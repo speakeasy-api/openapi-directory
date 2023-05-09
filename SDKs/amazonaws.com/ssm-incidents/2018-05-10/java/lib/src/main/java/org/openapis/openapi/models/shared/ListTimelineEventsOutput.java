@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListTimelineEventsOutput {
     @JsonProperty("eventSummaries")
     public EventSummary[] eventSummaries;
+
     public ListTimelineEventsOutput withEventSummaries(EventSummary[] eventSummaries) {
         this.eventSummaries = eventSummaries;
         return this;
@@ -22,9 +23,13 @@ public class ListTimelineEventsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListTimelineEventsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListTimelineEventsOutput(@JsonProperty("eventSummaries") EventSummary[] eventSummaries) {
+        this.eventSummaries = eventSummaries;
+  }
 }

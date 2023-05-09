@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetVocabularyResponse {
@@ -12,6 +13,7 @@ public class GetVocabularyResponse {
      */
     
     public Object badRequestException;
+
     public GetVocabularyResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetVocabularyResponse {
     
     
     public String contentType;
+
     public GetVocabularyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetVocabularyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetVocabularyResponse getVocabularyResponse;
+
     public GetVocabularyResponse withGetVocabularyResponse(org.openapis.openapi.models.shared.GetVocabularyResponse getVocabularyResponse) {
         this.getVocabularyResponse = getVocabularyResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetVocabularyResponse {
      */
     
     public Object internalFailureException;
+
     public GetVocabularyResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class GetVocabularyResponse {
      */
     
     public Object limitExceededException;
+
     public GetVocabularyResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class GetVocabularyResponse {
      */
     
     public Object notFoundException;
+
     public GetVocabularyResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetVocabularyResponse {
     
     
     public Integer statusCode;
+
     public GetVocabularyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetVocabularyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetVocabularyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetVocabularyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

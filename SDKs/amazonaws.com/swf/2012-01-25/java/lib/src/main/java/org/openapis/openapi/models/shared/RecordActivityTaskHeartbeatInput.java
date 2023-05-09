@@ -12,6 +12,7 @@ public class RecordActivityTaskHeartbeatInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public RecordActivityTaskHeartbeatInput withDetails(String details) {
         this.details = details;
         return this;
@@ -19,9 +20,13 @@ public class RecordActivityTaskHeartbeatInput {
     
     @JsonProperty("taskToken")
     public String taskToken;
+
     public RecordActivityTaskHeartbeatInput withTaskToken(String taskToken) {
         this.taskToken = taskToken;
         return this;
     }
     
+    public RecordActivityTaskHeartbeatInput(@JsonProperty("taskToken") String taskToken) {
+        this.taskToken = taskToken;
+  }
 }

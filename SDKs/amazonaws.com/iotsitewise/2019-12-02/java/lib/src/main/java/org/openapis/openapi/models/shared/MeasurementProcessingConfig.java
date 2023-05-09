@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MeasurementProcessingConfig {
     @JsonProperty("forwardingConfig")
     public ForwardingConfig forwardingConfig;
+
     public MeasurementProcessingConfig withForwardingConfig(ForwardingConfig forwardingConfig) {
         this.forwardingConfig = forwardingConfig;
         return this;
     }
     
+    public MeasurementProcessingConfig(@JsonProperty("forwardingConfig") ForwardingConfig forwardingConfig) {
+        this.forwardingConfig = forwardingConfig;
+  }
 }

@@ -15,9 +15,11 @@ public class VirtualGatewayAccessLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file")
     public VirtualGatewayFileAccessLog file;
+
     public VirtualGatewayAccessLog withFile(VirtualGatewayFileAccessLog file) {
         this.file = file;
         return this;
     }
     
+    public VirtualGatewayAccessLog(){}
 }

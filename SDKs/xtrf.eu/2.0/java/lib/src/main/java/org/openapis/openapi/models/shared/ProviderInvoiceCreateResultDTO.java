@@ -15,6 +15,7 @@ public class ProviderInvoiceCreateResultDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoiceUrl")
     public String invoiceUrl;
+
     public ProviderInvoiceCreateResultDTO withInvoiceUrl(String invoiceUrl) {
         this.invoiceUrl = invoiceUrl;
         return this;
@@ -23,9 +24,11 @@ public class ProviderInvoiceCreateResultDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoicesIds")
     public Long[] invoicesIds;
+
     public ProviderInvoiceCreateResultDTO withInvoicesIds(Long[] invoicesIds) {
         this.invoicesIds = invoicesIds;
         return this;
     }
     
+    public ProviderInvoiceCreateResultDTO(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateRewardProgramActivationRequestInput {
     @JsonProperty("data")
     public RewardProgramActivationResourceInput data;
+
     public CreateRewardProgramActivationRequestInput withData(RewardProgramActivationResourceInput data) {
         this.data = data;
         return this;
     }
     
+    public CreateRewardProgramActivationRequestInput(@JsonProperty("data") RewardProgramActivationResourceInput data) {
+        this.data = data;
+  }
 }

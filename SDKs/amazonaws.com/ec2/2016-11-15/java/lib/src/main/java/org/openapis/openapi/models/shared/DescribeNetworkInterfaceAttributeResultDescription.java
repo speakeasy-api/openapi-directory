@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkInterfaceAttributeResultDescription {
     
     public String value;
+
     public DescribeNetworkInterfaceAttributeResultDescription withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DescribeNetworkInterfaceAttributeResultDescription(){}
 }

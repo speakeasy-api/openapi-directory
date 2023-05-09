@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateItemResponse {
@@ -12,6 +13,7 @@ public class UpdateItemResponse {
      */
     
     public Object conditionalCheckFailedException;
+
     public UpdateItemResponse withConditionalCheckFailedException(Object conditionalCheckFailedException) {
         this.conditionalCheckFailedException = conditionalCheckFailedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateItemResponse {
     
     
     public String contentType;
+
     public UpdateItemResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateItemResponse {
      */
     
     public Object internalServerError;
+
     public UpdateItemResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class UpdateItemResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateItemResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateItemResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public UpdateItemResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateItemResponse {
      */
     
     public Object requestLimitExceeded;
+
     public UpdateItemResponse withRequestLimitExceeded(Object requestLimitExceeded) {
         this.requestLimitExceeded = requestLimitExceeded;
         return this;
@@ -69,6 +76,7 @@ public class UpdateItemResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateItemResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateItemResponse {
     
     
     public Integer statusCode;
+
     public UpdateItemResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateItemResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateItemResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdateItemResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateItemOutput updateItemOutput;
+
     public UpdateItemResponse withUpdateItemOutput(org.openapis.openapi.models.shared.UpdateItemOutput updateItemOutput) {
         this.updateItemOutput = updateItemOutput;
         return this;
     }
     
+    public UpdateItemResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

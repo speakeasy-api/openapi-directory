@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ValidateIBANResponse {
@@ -12,6 +13,7 @@ public class ValidateIBANResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundred fourHundred;
+
     public ValidateIBANResponse withFourHundred(org.openapis.openapi.models.shared.FourHundred fourHundred) {
         this.fourHundred = fourHundred;
         return this;
@@ -22,6 +24,7 @@ public class ValidateIBANResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndOne fourHundredAndOne;
+
     public ValidateIBANResponse withFourHundredAndOne(org.openapis.openapi.models.shared.FourHundredAndOne fourHundredAndOne) {
         this.fourHundredAndOne = fourHundredAndOne;
         return this;
@@ -32,6 +35,7 @@ public class ValidateIBANResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndThree fourHundredAndThree;
+
     public ValidateIBANResponse withFourHundredAndThree(org.openapis.openapi.models.shared.FourHundredAndThree fourHundredAndThree) {
         this.fourHundredAndThree = fourHundredAndThree;
         return this;
@@ -42,6 +46,7 @@ public class ValidateIBANResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndTwentyTwo fourHundredAndTwentyTwo;
+
     public ValidateIBANResponse withFourHundredAndTwentyTwo(org.openapis.openapi.models.shared.FourHundredAndTwentyTwo fourHundredAndTwentyTwo) {
         this.fourHundredAndTwentyTwo = fourHundredAndTwentyTwo;
         return this;
@@ -49,6 +54,7 @@ public class ValidateIBANResponse {
     
     
     public String contentType;
+
     public ValidateIBANResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class ValidateIBANResponse {
      */
     
     public org.openapis.openapi.models.shared.IBANResult ibanResult;
+
     public ValidateIBANResponse withIBANResult(org.openapis.openapi.models.shared.IBANResult ibanResult) {
         this.ibanResult = ibanResult;
         return this;
@@ -66,6 +73,7 @@ public class ValidateIBANResponse {
     
     
     public Integer statusCode;
+
     public ValidateIBANResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ValidateIBANResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ValidateIBANResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ValidateIBANResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRadiodnsSpi31GIXmlResponse {
     
     public String contentType;
+
     public GetRadiodnsSpi31GIXmlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetRadiodnsSpi31GIXmlResponse {
     
     
     public Integer statusCode;
+
     public GetRadiodnsSpi31GIXmlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetRadiodnsSpi31GIXmlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRadiodnsSpi31GIXmlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetRadiodnsSpi31GIXmlResponse {
      */
     
     public String getRadiodnsSpi31GIXML200ApplicationXMLRadioDNSGroupInformationGIAsDefinedInETSITS102818V341HttpsWwwETSIOrgDeliverETSITS10280010289910281803040160TS102818v030401pPdfSection8String;
+
     public GetRadiodnsSpi31GIXmlResponse withGetRadiodnsSpi31GIXML200ApplicationXMLRadioDNSGroupInformationGIAsDefinedInETSITS102818V341HttpsWwwETSIOrgDeliverETSITS10280010289910281803040160TS102818v030401pPdfSection8String(String getRadiodnsSpi31GIXML200ApplicationXMLRadioDNSGroupInformationGIAsDefinedInETSITS102818V341HttpsWwwETSIOrgDeliverETSITS10280010289910281803040160TS102818v030401pPdfSection8String) {
         this.getRadiodnsSpi31GIXML200ApplicationXMLRadioDNSGroupInformationGIAsDefinedInETSITS102818V341HttpsWwwETSIOrgDeliverETSITS10280010289910281803040160TS102818v030401pPdfSection8String = getRadiodnsSpi31GIXML200ApplicationXMLRadioDNSGroupInformationGIAsDefinedInETSITS102818V341HttpsWwwETSIOrgDeliverETSITS10280010289910281803040160TS102818v030401pPdfSection8String;
         return this;
     }
     
+    public GetRadiodnsSpi31GIXmlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

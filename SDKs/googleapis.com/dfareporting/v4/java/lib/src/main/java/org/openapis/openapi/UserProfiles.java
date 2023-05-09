@@ -58,11 +58,9 @@ public class UserProfiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingUserProfilesGetResponse res = new org.openapis.openapi.models.operations.DfareportingUserProfilesGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingUserProfilesGetResponse res = new org.openapis.openapi.models.operations.DfareportingUserProfilesGetResponse(contentType, httpRes.statusCode()) {{
             userProfile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class UserProfiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingUserProfilesListResponse res = new org.openapis.openapi.models.operations.DfareportingUserProfilesListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingUserProfilesListResponse res = new org.openapis.openapi.models.operations.DfareportingUserProfilesListResponse(contentType, httpRes.statusCode()) {{
             userProfileList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

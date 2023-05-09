@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeGameServerInstancesResponse {
     
     public String contentType;
+
     public DescribeGameServerInstancesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeGameServerInstancesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeGameServerInstancesOutput describeGameServerInstancesOutput;
+
     public DescribeGameServerInstancesResponse withDescribeGameServerInstancesOutput(org.openapis.openapi.models.shared.DescribeGameServerInstancesOutput describeGameServerInstancesOutput) {
         this.describeGameServerInstancesOutput = describeGameServerInstancesOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeGameServerInstancesResponse {
      */
     
     public Object internalServiceException;
+
     public DescribeGameServerInstancesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeGameServerInstancesResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeGameServerInstancesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeGameServerInstancesResponse {
      */
     
     public Object notFoundException;
+
     public DescribeGameServerInstancesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeGameServerInstancesResponse {
     
     
     public Integer statusCode;
+
     public DescribeGameServerInstancesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeGameServerInstancesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeGameServerInstancesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeGameServerInstancesResponse {
      */
     
     public Object unauthorizedException;
+
     public DescribeGameServerInstancesResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DescribeGameServerInstancesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class DiffUploadRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checksumsInfo")
     public CompositeMedia checksumsInfo;
+
     public DiffUploadRequest withChecksumsInfo(CompositeMedia checksumsInfo) {
         this.checksumsInfo = checksumsInfo;
         return this;
@@ -29,6 +30,7 @@ public class DiffUploadRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectInfo")
     public CompositeMedia objectInfo;
+
     public DiffUploadRequest withObjectInfo(CompositeMedia objectInfo) {
         this.objectInfo = objectInfo;
         return this;
@@ -40,9 +42,11 @@ public class DiffUploadRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectVersion")
     public String objectVersion;
+
     public DiffUploadRequest withObjectVersion(String objectVersion) {
         this.objectVersion = objectVersion;
         return this;
     }
     
+    public DiffUploadRequest(){}
 }

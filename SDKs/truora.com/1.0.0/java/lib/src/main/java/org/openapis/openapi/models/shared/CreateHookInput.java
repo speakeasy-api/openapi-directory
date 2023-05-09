@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -15,6 +16,7 @@ public class CreateHookInput {
      */
     @SpeakeasyMetadata("form:name=actions")
     public String[] actions;
+
     public CreateHookInput withActions(String[] actions) {
         this.actions = actions;
         return this;
@@ -25,6 +27,7 @@ public class CreateHookInput {
      */
     @SpeakeasyMetadata("form:name=event_type")
     public CreateHookInputEventTypeEnum eventType;
+
     public CreateHookInput withEventType(CreateHookInputEventTypeEnum eventType) {
         this.eventType = eventType;
         return this;
@@ -35,6 +38,7 @@ public class CreateHookInput {
      */
     @SpeakeasyMetadata("form:name=status")
     public CreateHookInputStatusEnum status;
+
     public CreateHookInput withStatus(CreateHookInputStatusEnum status) {
         this.status = status;
         return this;
@@ -45,6 +49,7 @@ public class CreateHookInput {
      */
     @SpeakeasyMetadata("form:name=subscriber_address")
     public String subscriberAddress;
+
     public CreateHookInput withSubscriberAddress(String subscriberAddress) {
         this.subscriberAddress = subscriberAddress;
         return this;
@@ -55,6 +60,7 @@ public class CreateHookInput {
      */
     @SpeakeasyMetadata("form:name=subscriber_language")
     public CreateHookInputSubscriberLanguageEnum subscriberLanguage;
+
     public CreateHookInput withSubscriberLanguage(CreateHookInputSubscriberLanguageEnum subscriberLanguage) {
         this.subscriberLanguage = subscriberLanguage;
         return this;
@@ -65,6 +71,7 @@ public class CreateHookInput {
      */
     @SpeakeasyMetadata("form:name=subscriber_name")
     public String subscriberName;
+
     public CreateHookInput withSubscriberName(String subscriberName) {
         this.subscriberName = subscriberName;
         return this;
@@ -75,6 +82,7 @@ public class CreateHookInput {
      */
     @SpeakeasyMetadata("form:name=subscriber_type")
     public CreateHookInputSubscriberTypeEnum subscriberType;
+
     public CreateHookInput withSubscriberType(CreateHookInputSubscriberTypeEnum subscriberType) {
         this.subscriberType = subscriberType;
         return this;
@@ -85,9 +93,14 @@ public class CreateHookInput {
      */
     @SpeakeasyMetadata("form:name=subscriber_url")
     public String subscriberUrl;
+
     public CreateHookInput withSubscriberUrl(String subscriberUrl) {
         this.subscriberUrl = subscriberUrl;
         return this;
     }
     
+    public CreateHookInput(@JsonProperty("event_type") CreateHookInputEventTypeEnum eventType, @JsonProperty("subscriber_type") CreateHookInputSubscriberTypeEnum subscriberType) {
+        this.eventType = eventType;
+        this.subscriberType = subscriberType;
+  }
 }

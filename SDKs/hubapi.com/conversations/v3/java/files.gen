@@ -36,4 +36,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/IdentificationTokenResponse
 lib/src/main/java/org/openapis/openapi/models/shared/Error.java
 lib/src/main/java/org/openapis/openapi/models/shared/ErrorDetail.java
 lib/src/main/java/org/openapis/openapi/models/shared/IdentificationTokenGenerationRequest.java
+docs/sdk/README.md
+docs/generate/README.md
 USAGE.md

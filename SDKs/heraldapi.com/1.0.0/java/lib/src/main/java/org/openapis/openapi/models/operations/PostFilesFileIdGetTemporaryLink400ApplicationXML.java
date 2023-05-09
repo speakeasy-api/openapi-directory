@@ -17,9 +17,11 @@ public class PostFilesFileIdGetTemporaryLink400ApplicationXML {
      */
     
     public org.openapis.openapi.models.shared.ErrorV1 errors;
+
     public PostFilesFileIdGetTemporaryLink400ApplicationXML withErrors(org.openapis.openapi.models.shared.ErrorV1 errors) {
         this.errors = errors;
         return this;
     }
     
+    public PostFilesFileIdGetTemporaryLink400ApplicationXML(){}
 }

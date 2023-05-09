@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateGroupResponse {
     
     public String contentType;
+
     public CreateGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateGroupResponse createGroupResponse;
+
     public CreateGroupResponse withCreateGroupResponse(org.openapis.openapi.models.shared.CreateGroupResponse createGroupResponse) {
         this.createGroupResponse = createGroupResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateGroupResponse {
      */
     
     public Object groupExistsException;
+
     public CreateGroupResponse withGroupExistsException(Object groupExistsException) {
         this.groupExistsException = groupExistsException;
         return this;
@@ -39,6 +43,7 @@ public class CreateGroupResponse {
      */
     
     public Object internalErrorException;
+
     public CreateGroupResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class CreateGroupResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateGroupResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class CreateGroupResponse {
      */
     
     public Object limitExceededException;
+
     public CreateGroupResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateGroupResponse {
      */
     
     public Object notAuthorizedException;
+
     public CreateGroupResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -76,6 +84,7 @@ public class CreateGroupResponse {
     
     
     public Integer statusCode;
+
     public CreateGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,9 +114,14 @@ public class CreateGroupResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateGroupResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

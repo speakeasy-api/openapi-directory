@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FirestoreProjectsDatabasesDocumentsBatchWriteResponse {
@@ -12,6 +13,7 @@ public class FirestoreProjectsDatabasesDocumentsBatchWriteResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchWriteResponse batchWriteResponse;
+
     public FirestoreProjectsDatabasesDocumentsBatchWriteResponse withBatchWriteResponse(org.openapis.openapi.models.shared.BatchWriteResponse batchWriteResponse) {
         this.batchWriteResponse = batchWriteResponse;
         return this;
@@ -19,6 +21,7 @@ public class FirestoreProjectsDatabasesDocumentsBatchWriteResponse {
     
     
     public String contentType;
+
     public FirestoreProjectsDatabasesDocumentsBatchWriteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class FirestoreProjectsDatabasesDocumentsBatchWriteResponse {
     
     
     public Integer statusCode;
+
     public FirestoreProjectsDatabasesDocumentsBatchWriteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class FirestoreProjectsDatabasesDocumentsBatchWriteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FirestoreProjectsDatabasesDocumentsBatchWriteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FirestoreProjectsDatabasesDocumentsBatchWriteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

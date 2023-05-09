@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoTopNVa
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public String count;
+
     public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoTopNValue withCount(String count) {
         this.count = count;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoTopNVa
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoTopNValue withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoTopNValue(){}
 }

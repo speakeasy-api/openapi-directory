@@ -53,10 +53,8 @@ public class Resources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAreasResponse res = new org.openapis.openapi.models.operations.GetAreasResponse() {{
+        org.openapis.openapi.models.operations.GetAreasResponse res = new org.openapis.openapi.models.operations.GetAreasResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -92,10 +90,8 @@ public class Resources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventsResponse res = new org.openapis.openapi.models.operations.GetEventsResponse() {{
+        org.openapis.openapi.models.operations.GetEventsResponse res = new org.openapis.openapi.models.operations.GetEventsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -130,10 +126,8 @@ public class Resources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetJurisdictionResponse res = new org.openapis.openapi.models.operations.GetJurisdictionResponse() {{
+        org.openapis.openapi.models.operations.GetJurisdictionResponse res = new org.openapis.openapi.models.operations.GetJurisdictionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -168,10 +162,8 @@ public class Resources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetJurisdictiongeographyResponse res = new org.openapis.openapi.models.operations.GetJurisdictiongeographyResponse() {{
+        org.openapis.openapi.models.operations.GetJurisdictiongeographyResponse res = new org.openapis.openapi.models.operations.GetJurisdictiongeographyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

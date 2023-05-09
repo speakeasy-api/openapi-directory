@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2betaGcsSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSchema")
     public String dataSchema;
+
     public GoogleCloudRetailV2betaGcsSource withDataSchema(String dataSchema) {
         this.dataSchema = dataSchema;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRetailV2betaGcsSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputUris")
     public String[] inputUris;
+
     public GoogleCloudRetailV2betaGcsSource withInputUris(String[] inputUris) {
         this.inputUris = inputUris;
         return this;
     }
     
+    public GoogleCloudRetailV2betaGcsSource(){}
 }

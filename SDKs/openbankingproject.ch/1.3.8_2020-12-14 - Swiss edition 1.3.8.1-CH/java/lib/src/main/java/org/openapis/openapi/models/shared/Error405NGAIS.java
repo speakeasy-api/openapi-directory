@@ -20,6 +20,7 @@ public class Error405NGAIS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public java.util.Map<String, HrefType> links;
+
     public Error405NGAIS withLinks(java.util.Map<String, HrefType> links) {
         this.links = links;
         return this;
@@ -28,9 +29,11 @@ public class Error405NGAIS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tppMessages")
     public TppMessage405AIS[] tppMessages;
+
     public Error405NGAIS withTppMessages(TppMessage405AIS[] tppMessages) {
         this.tppMessages = tppMessages;
         return this;
     }
     
+    public Error405NGAIS(){}
 }

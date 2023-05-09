@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActivityListPublicEventsForRepoNetworkResponse {
     
     public String contentType;
+
     public ActivityListPublicEventsForRepoNetworkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActivityListPublicEventsForRepoNetworkResponse {
     
     
     public Integer statusCode;
+
     public ActivityListPublicEventsForRepoNetworkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ActivityListPublicEventsForRepoNetworkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActivityListPublicEventsForRepoNetworkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ActivityListPublicEventsForRepoNetworkResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ActivityListPublicEventsForRepoNetworkResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,9 +48,14 @@ public class ActivityListPublicEventsForRepoNetworkResponse {
      */
     
     public org.openapis.openapi.models.shared.Event[] events;
+
     public ActivityListPublicEventsForRepoNetworkResponse withEvents(org.openapis.openapi.models.shared.Event[] events) {
         this.events = events;
         return this;
     }
     
+    public ActivityListPublicEventsForRepoNetworkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

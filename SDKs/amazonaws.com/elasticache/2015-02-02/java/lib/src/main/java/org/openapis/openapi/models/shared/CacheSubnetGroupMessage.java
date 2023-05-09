@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CacheSubnetGroupMessage {
     
     public CacheSubnetGroups[] cacheSubnetGroups;
+
     public CacheSubnetGroupMessage withCacheSubnetGroups(CacheSubnetGroups[] cacheSubnetGroups) {
         this.cacheSubnetGroups = cacheSubnetGroups;
         return this;
@@ -19,9 +20,11 @@ public class CacheSubnetGroupMessage {
     
     
     public String marker;
+
     public CacheSubnetGroupMessage withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public CacheSubnetGroupMessage(){}
 }

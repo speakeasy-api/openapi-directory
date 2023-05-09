@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PendingModifiedValues {
     
     public Long automatedSnapshotRetentionPeriod;
+
     public PendingModifiedValues withAutomatedSnapshotRetentionPeriod(Long automatedSnapshotRetentionPeriod) {
         this.automatedSnapshotRetentionPeriod = automatedSnapshotRetentionPeriod;
         return this;
@@ -19,6 +20,7 @@ public class PendingModifiedValues {
     
     
     public String clusterIdentifier;
+
     public PendingModifiedValues withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -26,6 +28,7 @@ public class PendingModifiedValues {
     
     
     public String clusterType;
+
     public PendingModifiedValues withClusterType(String clusterType) {
         this.clusterType = clusterType;
         return this;
@@ -33,6 +36,7 @@ public class PendingModifiedValues {
     
     
     public String clusterVersion;
+
     public PendingModifiedValues withClusterVersion(String clusterVersion) {
         this.clusterVersion = clusterVersion;
         return this;
@@ -40,6 +44,7 @@ public class PendingModifiedValues {
     
     
     public String encryptionType;
+
     public PendingModifiedValues withEncryptionType(String encryptionType) {
         this.encryptionType = encryptionType;
         return this;
@@ -47,6 +52,7 @@ public class PendingModifiedValues {
     
     
     public Boolean enhancedVpcRouting;
+
     public PendingModifiedValues withEnhancedVpcRouting(Boolean enhancedVpcRouting) {
         this.enhancedVpcRouting = enhancedVpcRouting;
         return this;
@@ -54,6 +60,7 @@ public class PendingModifiedValues {
     
     
     public String maintenanceTrackName;
+
     public PendingModifiedValues withMaintenanceTrackName(String maintenanceTrackName) {
         this.maintenanceTrackName = maintenanceTrackName;
         return this;
@@ -61,6 +68,7 @@ public class PendingModifiedValues {
     
     
     public String masterUserPassword;
+
     public PendingModifiedValues withMasterUserPassword(String masterUserPassword) {
         this.masterUserPassword = masterUserPassword;
         return this;
@@ -68,6 +76,7 @@ public class PendingModifiedValues {
     
     
     public String nodeType;
+
     public PendingModifiedValues withNodeType(String nodeType) {
         this.nodeType = nodeType;
         return this;
@@ -75,6 +84,7 @@ public class PendingModifiedValues {
     
     
     public Long numberOfNodes;
+
     public PendingModifiedValues withNumberOfNodes(Long numberOfNodes) {
         this.numberOfNodes = numberOfNodes;
         return this;
@@ -82,9 +92,11 @@ public class PendingModifiedValues {
     
     
     public Boolean publiclyAccessible;
+
     public PendingModifiedValues withPubliclyAccessible(Boolean publiclyAccessible) {
         this.publiclyAccessible = publiclyAccessible;
         return this;
     }
     
+    public PendingModifiedValues(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutConfigurationSetSuppressionOptionsRequest {
@@ -12,6 +13,7 @@ public class PutConfigurationSetSuppressionOptionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConfigurationSetName")
     public String configurationSetName;
+
     public PutConfigurationSetSuppressionOptionsRequest withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -19,6 +21,7 @@ public class PutConfigurationSetSuppressionOptionsRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PutConfigurationSetSuppressionOptionsRequestBody requestBody;
+
     public PutConfigurationSetSuppressionOptionsRequest withRequestBody(PutConfigurationSetSuppressionOptionsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -26,6 +29,7 @@ public class PutConfigurationSetSuppressionOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public PutConfigurationSetSuppressionOptionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -33,6 +37,7 @@ public class PutConfigurationSetSuppressionOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public PutConfigurationSetSuppressionOptionsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -40,6 +45,7 @@ public class PutConfigurationSetSuppressionOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public PutConfigurationSetSuppressionOptionsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -47,6 +53,7 @@ public class PutConfigurationSetSuppressionOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public PutConfigurationSetSuppressionOptionsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -54,6 +61,7 @@ public class PutConfigurationSetSuppressionOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public PutConfigurationSetSuppressionOptionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -61,6 +69,7 @@ public class PutConfigurationSetSuppressionOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public PutConfigurationSetSuppressionOptionsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -68,9 +77,14 @@ public class PutConfigurationSetSuppressionOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public PutConfigurationSetSuppressionOptionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public PutConfigurationSetSuppressionOptionsRequest(@JsonProperty("ConfigurationSetName") String configurationSetName, @JsonProperty("RequestBody") PutConfigurationSetSuppressionOptionsRequestBody requestBody) {
+        this.configurationSetName = configurationSetName;
+        this.requestBody = requestBody;
+  }
 }

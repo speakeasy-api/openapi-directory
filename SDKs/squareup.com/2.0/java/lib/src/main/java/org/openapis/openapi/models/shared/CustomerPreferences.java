@@ -18,9 +18,11 @@ public class CustomerPreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email_unsubscribed")
     public Boolean emailUnsubscribed;
+
     public CustomerPreferences withEmailUnsubscribed(Boolean emailUnsubscribed) {
         this.emailUnsubscribed = emailUnsubscribed;
         return this;
     }
     
+    public CustomerPreferences(){}
 }

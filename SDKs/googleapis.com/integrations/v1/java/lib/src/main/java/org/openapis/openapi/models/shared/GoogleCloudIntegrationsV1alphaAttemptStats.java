@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaAttemptStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public GoogleCloudIntegrationsV1alphaAttemptStats withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIntegrationsV1alphaAttemptStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public GoogleCloudIntegrationsV1alphaAttemptStats withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaAttemptStats(){}
 }

@@ -25,6 +25,7 @@ public class NodeUpdateUserParameter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expiryTime")
     public OffsetDateTime expiryTime;
+
     public NodeUpdateUserParameter withExpiryTime(OffsetDateTime expiryTime) {
         this.expiryTime = expiryTime;
         return this;
@@ -36,6 +37,7 @@ public class NodeUpdateUserParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public NodeUpdateUserParameter withPassword(String password) {
         this.password = password;
         return this;
@@ -47,9 +49,11 @@ public class NodeUpdateUserParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sshPublicKey")
     public String sshPublicKey;
+
     public NodeUpdateUserParameter withSshPublicKey(String sshPublicKey) {
         this.sshPublicKey = sshPublicKey;
         return this;
     }
     
+    public NodeUpdateUserParameter(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSizeConstraintSetsResponse {
     
     public String contentType;
+
     public ListSizeConstraintSetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListSizeConstraintSetsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSizeConstraintSetsResponse listSizeConstraintSetsResponse;
+
     public ListSizeConstraintSetsResponse withListSizeConstraintSetsResponse(org.openapis.openapi.models.shared.ListSizeConstraintSetsResponse listSizeConstraintSetsResponse) {
         this.listSizeConstraintSetsResponse = listSizeConstraintSetsResponse;
         return this;
@@ -26,6 +29,7 @@ public class ListSizeConstraintSetsResponse {
     
     
     public Integer statusCode;
+
     public ListSizeConstraintSetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ListSizeConstraintSetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSizeConstraintSetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class ListSizeConstraintSetsResponse {
      */
     
     public Object wafInternalErrorException;
+
     public ListSizeConstraintSetsResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,9 +59,14 @@ public class ListSizeConstraintSetsResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public ListSizeConstraintSetsResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
     }
     
+    public ListSizeConstraintSetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

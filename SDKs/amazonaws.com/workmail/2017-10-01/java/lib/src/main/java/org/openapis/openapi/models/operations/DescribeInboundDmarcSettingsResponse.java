@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeInboundDmarcSettingsResponse {
     
     public String contentType;
+
     public DescribeInboundDmarcSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeInboundDmarcSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeInboundDmarcSettingsResponse describeInboundDmarcSettingsResponse;
+
     public DescribeInboundDmarcSettingsResponse withDescribeInboundDmarcSettingsResponse(org.openapis.openapi.models.shared.DescribeInboundDmarcSettingsResponse describeInboundDmarcSettingsResponse) {
         this.describeInboundDmarcSettingsResponse = describeInboundDmarcSettingsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeInboundDmarcSettingsResponse {
      */
     
     public Object organizationNotFoundException;
+
     public DescribeInboundDmarcSettingsResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeInboundDmarcSettingsResponse {
      */
     
     public Object organizationStateException;
+
     public DescribeInboundDmarcSettingsResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeInboundDmarcSettingsResponse {
     
     
     public Integer statusCode;
+
     public DescribeInboundDmarcSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeInboundDmarcSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeInboundDmarcSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeInboundDmarcSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

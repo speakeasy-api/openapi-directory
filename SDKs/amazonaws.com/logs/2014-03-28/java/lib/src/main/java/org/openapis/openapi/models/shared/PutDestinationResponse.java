@@ -15,9 +15,11 @@ public class PutDestinationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public Destination destination;
+
     public PutDestinationResponse withDestination(Destination destination) {
         this.destination = destination;
         return this;
     }
     
+    public PutDestinationResponse(){}
 }

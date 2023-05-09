@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateDomainResponse {
     @JsonProperty("domainArn")
     public String domainArn;
+
     public CreateDomainResponse withDomainArn(String domainArn) {
         this.domainArn = domainArn;
         return this;
@@ -19,6 +20,7 @@ public class CreateDomainResponse {
     
     @JsonProperty("domainId")
     public String domainId;
+
     public CreateDomainResponse withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -26,9 +28,15 @@ public class CreateDomainResponse {
     
     @JsonProperty("domainStatus")
     public DomainStatusEnum domainStatus;
+
     public CreateDomainResponse withDomainStatus(DomainStatusEnum domainStatus) {
         this.domainStatus = domainStatus;
         return this;
     }
     
+    public CreateDomainResponse(@JsonProperty("domainArn") String domainArn, @JsonProperty("domainId") String domainId, @JsonProperty("domainStatus") DomainStatusEnum domainStatus) {
+        this.domainArn = domainArn;
+        this.domainId = domainId;
+        this.domainStatus = domainStatus;
+  }
 }

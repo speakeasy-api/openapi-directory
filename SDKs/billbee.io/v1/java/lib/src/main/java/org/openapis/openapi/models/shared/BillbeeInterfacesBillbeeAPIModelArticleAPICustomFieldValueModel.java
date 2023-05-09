@@ -12,6 +12,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldValueModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArticleId")
     public Long articleId;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldValueModel withArticleId(Long articleId) {
         this.articleId = articleId;
         return this;
@@ -20,6 +21,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldValueModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Definition")
     public BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModel definition;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldValueModel withDefinition(BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModel definition) {
         this.definition = definition;
         return this;
@@ -28,6 +30,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldValueModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefinitionId")
     public Long definitionId;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldValueModel withDefinitionId(Long definitionId) {
         this.definitionId = definitionId;
         return this;
@@ -36,6 +39,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldValueModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Long id;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldValueModel withId(Long id) {
         this.id = id;
         return this;
@@ -44,9 +48,11 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldValueModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public java.util.Map<String, Object> value;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldValueModel withValue(java.util.Map<String, Object> value) {
         this.value = value;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldValueModel(){}
 }

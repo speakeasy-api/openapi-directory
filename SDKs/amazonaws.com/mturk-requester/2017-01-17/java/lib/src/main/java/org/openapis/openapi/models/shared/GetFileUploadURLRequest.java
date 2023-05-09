@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetFileUploadURLRequest {
     @JsonProperty("AssignmentId")
     public String assignmentId;
+
     public GetFileUploadURLRequest withAssignmentId(String assignmentId) {
         this.assignmentId = assignmentId;
         return this;
@@ -16,9 +17,14 @@ public class GetFileUploadURLRequest {
     
     @JsonProperty("QuestionIdentifier")
     public String questionIdentifier;
+
     public GetFileUploadURLRequest withQuestionIdentifier(String questionIdentifier) {
         this.questionIdentifier = questionIdentifier;
         return this;
     }
     
+    public GetFileUploadURLRequest(@JsonProperty("AssignmentId") String assignmentId, @JsonProperty("QuestionIdentifier") String questionIdentifier) {
+        this.assignmentId = assignmentId;
+        this.questionIdentifier = questionIdentifier;
+  }
 }

@@ -57,10 +57,8 @@ public class TypeColoradoWaterRights {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchColoradoWaterRightsResponse res = new org.openapis.openapi.models.operations.SearchColoradoWaterRightsResponse() {{
+        org.openapis.openapi.models.operations.SearchColoradoWaterRightsResponse res = new org.openapis.openapi.models.operations.SearchColoradoWaterRightsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

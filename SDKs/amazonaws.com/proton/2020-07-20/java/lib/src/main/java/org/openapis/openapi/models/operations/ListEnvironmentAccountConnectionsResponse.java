@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListEnvironmentAccountConnectionsResponse {
@@ -12,6 +13,7 @@ public class ListEnvironmentAccountConnectionsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListEnvironmentAccountConnectionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListEnvironmentAccountConnectionsResponse {
     
     
     public String contentType;
+
     public ListEnvironmentAccountConnectionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListEnvironmentAccountConnectionsResponse {
      */
     
     public Object internalServerException;
+
     public ListEnvironmentAccountConnectionsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListEnvironmentAccountConnectionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListEnvironmentAccountConnectionsOutput listEnvironmentAccountConnectionsOutput;
+
     public ListEnvironmentAccountConnectionsResponse withListEnvironmentAccountConnectionsOutput(org.openapis.openapi.models.shared.ListEnvironmentAccountConnectionsOutput listEnvironmentAccountConnectionsOutput) {
         this.listEnvironmentAccountConnectionsOutput = listEnvironmentAccountConnectionsOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListEnvironmentAccountConnectionsResponse {
     
     
     public Integer statusCode;
+
     public ListEnvironmentAccountConnectionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListEnvironmentAccountConnectionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListEnvironmentAccountConnectionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListEnvironmentAccountConnectionsResponse {
      */
     
     public Object throttlingException;
+
     public ListEnvironmentAccountConnectionsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListEnvironmentAccountConnectionsResponse {
      */
     
     public Object validationException;
+
     public ListEnvironmentAccountConnectionsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListEnvironmentAccountConnectionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

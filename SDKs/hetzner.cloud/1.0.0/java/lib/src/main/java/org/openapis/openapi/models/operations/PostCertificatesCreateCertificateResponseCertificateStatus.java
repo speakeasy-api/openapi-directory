@@ -18,6 +18,7 @@ public class PostCertificatesCreateCertificateResponseCertificateStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public PostCertificatesCreateCertificateResponseCertificateStatusError error;
+
     public PostCertificatesCreateCertificateResponseCertificateStatus withError(PostCertificatesCreateCertificateResponseCertificateStatusError error) {
         this.error = error;
         return this;
@@ -29,6 +30,7 @@ public class PostCertificatesCreateCertificateResponseCertificateStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuance")
     public PostCertificatesCreateCertificateResponseCertificateStatusIssuanceEnum issuance;
+
     public PostCertificatesCreateCertificateResponseCertificateStatus withIssuance(PostCertificatesCreateCertificateResponseCertificateStatusIssuanceEnum issuance) {
         this.issuance = issuance;
         return this;
@@ -40,9 +42,11 @@ public class PostCertificatesCreateCertificateResponseCertificateStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renewal")
     public PostCertificatesCreateCertificateResponseCertificateStatusRenewalEnum renewal;
+
     public PostCertificatesCreateCertificateResponseCertificateStatus withRenewal(PostCertificatesCreateCertificateResponseCertificateStatusRenewalEnum renewal) {
         this.renewal = renewal;
         return this;
     }
     
+    public PostCertificatesCreateCertificateResponseCertificateStatus(){}
 }

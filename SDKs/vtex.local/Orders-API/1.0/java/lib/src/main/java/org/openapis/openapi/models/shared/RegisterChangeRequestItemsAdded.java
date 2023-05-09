@@ -12,6 +12,7 @@ public class RegisterChangeRequestItemsAdded {
      */
     @JsonProperty("id")
     public String id;
+
     public RegisterChangeRequestItemsAdded withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +23,7 @@ public class RegisterChangeRequestItemsAdded {
      */
     @JsonProperty("price")
     public Integer price;
+
     public RegisterChangeRequestItemsAdded withPrice(Integer price) {
         this.price = price;
         return this;
@@ -32,9 +34,15 @@ public class RegisterChangeRequestItemsAdded {
      */
     @JsonProperty("quantity")
     public Integer quantity;
+
     public RegisterChangeRequestItemsAdded withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public RegisterChangeRequestItemsAdded(@JsonProperty("id") String id, @JsonProperty("price") Integer price, @JsonProperty("quantity") Integer quantity) {
+        this.id = id;
+        this.price = price;
+        this.quantity = quantity;
+  }
 }

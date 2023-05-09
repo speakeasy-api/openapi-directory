@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSslCertificateRequest {
@@ -12,6 +13,7 @@ public class GetSslCertificateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sha1Fingerprint")
     public String sha1FingerprintPathParameter;
+
     public GetSslCertificateRequest withSha1FingerprintPathParameter(String sha1FingerprintPathParameter) {
         this.sha1FingerprintPathParameter = sha1FingerprintPathParameter;
         return this;
@@ -22,9 +24,14 @@ public class GetSslCertificateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sha1_fingerprint")
     public String sha1FingerprintQueryParameter;
+
     public GetSslCertificateRequest withSha1FingerprintQueryParameter(String sha1FingerprintQueryParameter) {
         this.sha1FingerprintQueryParameter = sha1FingerprintQueryParameter;
         return this;
     }
     
+    public GetSslCertificateRequest(@JsonProperty("sha1FingerprintPathParameter") String sha1FingerprintPathParameter, @JsonProperty("sha1_fingerprintQueryParameter") String sha1FingerprintQueryParameter) {
+        this.sha1FingerprintPathParameter = sha1FingerprintPathParameter;
+        this.sha1FingerprintQueryParameter = sha1FingerprintQueryParameter;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class S3ClassificationScopeExclusion {
     @JsonProperty("bucketNames")
     public String[] bucketNames;
+
     public S3ClassificationScopeExclusion withBucketNames(String[] bucketNames) {
         this.bucketNames = bucketNames;
         return this;
     }
     
+    public S3ClassificationScopeExclusion(@JsonProperty("bucketNames") String[] bucketNames) {
+        this.bucketNames = bucketNames;
+  }
 }

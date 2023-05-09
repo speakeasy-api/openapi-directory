@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FirestoreProjectsDatabasesDocumentsRunAggregationQueryResponse {
     
     public String contentType;
+
     public FirestoreProjectsDatabasesDocumentsRunAggregationQueryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FirestoreProjectsDatabasesDocumentsRunAggregationQueryResponse {
      */
     
     public org.openapis.openapi.models.shared.RunAggregationQueryResponse runAggregationQueryResponse;
+
     public FirestoreProjectsDatabasesDocumentsRunAggregationQueryResponse withRunAggregationQueryResponse(org.openapis.openapi.models.shared.RunAggregationQueryResponse runAggregationQueryResponse) {
         this.runAggregationQueryResponse = runAggregationQueryResponse;
         return this;
@@ -26,6 +29,7 @@ public class FirestoreProjectsDatabasesDocumentsRunAggregationQueryResponse {
     
     
     public Integer statusCode;
+
     public FirestoreProjectsDatabasesDocumentsRunAggregationQueryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class FirestoreProjectsDatabasesDocumentsRunAggregationQueryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FirestoreProjectsDatabasesDocumentsRunAggregationQueryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FirestoreProjectsDatabasesDocumentsRunAggregationQueryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

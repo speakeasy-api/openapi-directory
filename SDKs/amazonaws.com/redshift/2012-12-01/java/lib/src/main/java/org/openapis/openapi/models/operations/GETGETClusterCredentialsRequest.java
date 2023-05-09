@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETClusterCredentialsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETGETClusterCredentialsActionEnum action;
+
     public GETGETClusterCredentialsRequest withAction(GETGETClusterCredentialsActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETGETClusterCredentialsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoCreate")
     public Boolean autoCreate;
+
     public GETGETClusterCredentialsRequest withAutoCreate(Boolean autoCreate) {
         this.autoCreate = autoCreate;
         return this;
@@ -29,6 +32,7 @@ public class GETGETClusterCredentialsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
     public String clusterIdentifier;
+
     public GETGETClusterCredentialsRequest withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -39,6 +43,7 @@ public class GETGETClusterCredentialsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DbGroups")
     public String[] dbGroups;
+
     public GETGETClusterCredentialsRequest withDbGroups(String[] dbGroups) {
         this.dbGroups = dbGroups;
         return this;
@@ -49,6 +54,7 @@ public class GETGETClusterCredentialsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DbName")
     public String dbName;
+
     public GETGETClusterCredentialsRequest withDbName(String dbName) {
         this.dbName = dbName;
         return this;
@@ -59,6 +65,7 @@ public class GETGETClusterCredentialsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DbUser")
     public String dbUser;
+
     public GETGETClusterCredentialsRequest withDbUser(String dbUser) {
         this.dbUser = dbUser;
         return this;
@@ -69,6 +76,7 @@ public class GETGETClusterCredentialsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DurationSeconds")
     public Long durationSeconds;
+
     public GETGETClusterCredentialsRequest withDurationSeconds(Long durationSeconds) {
         this.durationSeconds = durationSeconds;
         return this;
@@ -76,6 +84,7 @@ public class GETGETClusterCredentialsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETGETClusterCredentialsVersionEnum version;
+
     public GETGETClusterCredentialsRequest withVersion(GETGETClusterCredentialsVersionEnum version) {
         this.version = version;
         return this;
@@ -83,6 +92,7 @@ public class GETGETClusterCredentialsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETGETClusterCredentialsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -90,6 +100,7 @@ public class GETGETClusterCredentialsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETGETClusterCredentialsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -97,6 +108,7 @@ public class GETGETClusterCredentialsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETGETClusterCredentialsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -104,6 +116,7 @@ public class GETGETClusterCredentialsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETGETClusterCredentialsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -111,6 +124,7 @@ public class GETGETClusterCredentialsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETGETClusterCredentialsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -118,6 +132,7 @@ public class GETGETClusterCredentialsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETGETClusterCredentialsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -125,9 +140,16 @@ public class GETGETClusterCredentialsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETGETClusterCredentialsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETGETClusterCredentialsRequest(@JsonProperty("Action") GETGETClusterCredentialsActionEnum action, @JsonProperty("ClusterIdentifier") String clusterIdentifier, @JsonProperty("DbUser") String dbUser, @JsonProperty("Version") GETGETClusterCredentialsVersionEnum version) {
+        this.action = action;
+        this.clusterIdentifier = clusterIdentifier;
+        this.dbUser = dbUser;
+        this.version = version;
+  }
 }

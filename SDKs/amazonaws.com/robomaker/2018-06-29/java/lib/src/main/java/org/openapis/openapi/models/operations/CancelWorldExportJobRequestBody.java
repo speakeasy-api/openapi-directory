@@ -12,9 +12,13 @@ public class CancelWorldExportJobRequestBody {
      */
     @JsonProperty("job")
     public String job;
+
     public CancelWorldExportJobRequestBody withJob(String job) {
         this.job = job;
         return this;
     }
     
+    public CancelWorldExportJobRequestBody(@JsonProperty("job") String job) {
+        this.job = job;
+  }
 }

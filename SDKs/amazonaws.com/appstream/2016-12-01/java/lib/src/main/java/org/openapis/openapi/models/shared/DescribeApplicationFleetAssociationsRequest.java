@@ -12,6 +12,7 @@ public class DescribeApplicationFleetAssociationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationArn")
     public String applicationArn;
+
     public DescribeApplicationFleetAssociationsRequest withApplicationArn(String applicationArn) {
         this.applicationArn = applicationArn;
         return this;
@@ -20,6 +21,7 @@ public class DescribeApplicationFleetAssociationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetName")
     public String fleetName;
+
     public DescribeApplicationFleetAssociationsRequest withFleetName(String fleetName) {
         this.fleetName = fleetName;
         return this;
@@ -28,6 +30,7 @@ public class DescribeApplicationFleetAssociationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeApplicationFleetAssociationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +39,11 @@ public class DescribeApplicationFleetAssociationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeApplicationFleetAssociationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeApplicationFleetAssociationsRequest(){}
 }

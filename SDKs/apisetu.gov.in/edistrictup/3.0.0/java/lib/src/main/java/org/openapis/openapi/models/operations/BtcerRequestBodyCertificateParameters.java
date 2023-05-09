@@ -12,6 +12,7 @@ public class BtcerRequestBodyCertificateParameters {
      */
     @JsonProperty("ApplicationNo")
     public String applicationNo;
+
     public BtcerRequestBodyCertificateParameters withApplicationNo(String applicationNo) {
         this.applicationNo = applicationNo;
         return this;
@@ -22,9 +23,14 @@ public class BtcerRequestBodyCertificateParameters {
      */
     @JsonProperty("CertificateID")
     public String certificateID;
+
     public BtcerRequestBodyCertificateParameters withCertificateID(String certificateID) {
         this.certificateID = certificateID;
         return this;
     }
     
+    public BtcerRequestBodyCertificateParameters(@JsonProperty("ApplicationNo") String applicationNo, @JsonProperty("CertificateID") String certificateID) {
+        this.applicationNo = applicationNo;
+        this.certificateID = certificateID;
+  }
 }

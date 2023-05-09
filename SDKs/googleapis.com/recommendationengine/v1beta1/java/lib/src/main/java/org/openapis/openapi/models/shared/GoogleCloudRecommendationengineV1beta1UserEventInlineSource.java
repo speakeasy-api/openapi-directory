@@ -18,9 +18,11 @@ public class GoogleCloudRecommendationengineV1beta1UserEventInlineSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userEvents")
     public GoogleCloudRecommendationengineV1beta1UserEvent[] userEvents;
+
     public GoogleCloudRecommendationengineV1beta1UserEventInlineSource withUserEvents(GoogleCloudRecommendationengineV1beta1UserEvent[] userEvents) {
         this.userEvents = userEvents;
         return this;
     }
     
+    public GoogleCloudRecommendationengineV1beta1UserEventInlineSource(){}
 }

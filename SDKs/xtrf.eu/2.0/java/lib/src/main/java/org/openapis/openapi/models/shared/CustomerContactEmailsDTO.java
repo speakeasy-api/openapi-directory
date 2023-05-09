@@ -18,6 +18,7 @@ public class CustomerContactEmailsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additional")
     public String[] additional;
+
     public CustomerContactEmailsDTO withAdditional(String[] additional) {
         this.additional = additional;
         return this;
@@ -29,6 +30,7 @@ public class CustomerContactEmailsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cc")
     public String[] cc;
+
     public CustomerContactEmailsDTO withCc(String[] cc) {
         this.cc = cc;
         return this;
@@ -39,9 +41,13 @@ public class CustomerContactEmailsDTO {
      */
     @JsonProperty("primary")
     public String primary;
+
     public CustomerContactEmailsDTO withPrimary(String primary) {
         this.primary = primary;
         return this;
     }
     
+    public CustomerContactEmailsDTO(@JsonProperty("primary") String primary) {
+        this.primary = primary;
+  }
 }

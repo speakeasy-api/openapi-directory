@@ -18,6 +18,7 @@ public class PaginatedTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public PaginatedTags withCount(Long count) {
         this.count = count;
         return this;
@@ -29,6 +30,7 @@ public class PaginatedTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public PaginatedTags withNext(String next) {
         this.next = next;
         return this;
@@ -40,6 +42,7 @@ public class PaginatedTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String previous;
+
     public PaginatedTags withPrevious(String previous) {
         this.previous = previous;
         return this;
@@ -48,9 +51,11 @@ public class PaginatedTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public Tag[] results;
+
     public PaginatedTags withResults(Tag[] results) {
         this.results = results;
         return this;
     }
     
+    public PaginatedTags(){}
 }

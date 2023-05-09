@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EncryptionKey {
     @JsonProperty("Id")
     public String id;
+
     public EncryptionKey withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,14 @@ public class EncryptionKey {
     
     @JsonProperty("Type")
     public EncryptionKeyTypeEnum type;
+
     public EncryptionKey withType(EncryptionKeyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public EncryptionKey(@JsonProperty("Id") String id, @JsonProperty("Type") EncryptionKeyTypeEnum type) {
+        this.id = id;
+        this.type = type;
+  }
 }

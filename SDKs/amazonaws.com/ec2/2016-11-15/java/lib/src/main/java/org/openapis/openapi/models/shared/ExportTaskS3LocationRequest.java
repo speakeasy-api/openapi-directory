@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ExportTaskS3LocationRequest - Describes the destination for an export image task.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ExportTaskS3LocationRequest {
     
     public String s3Bucket;
+
     public ExportTaskS3LocationRequest withS3Bucket(String s3Bucket) {
         this.s3Bucket = s3Bucket;
         return this;
@@ -19,9 +20,13 @@ public class ExportTaskS3LocationRequest {
     
     
     public String s3Prefix;
+
     public ExportTaskS3LocationRequest withS3Prefix(String s3Prefix) {
         this.s3Prefix = s3Prefix;
         return this;
     }
     
+    public ExportTaskS3LocationRequest(@JsonProperty("S3Bucket") String s3Bucket) {
+        this.s3Bucket = s3Bucket;
+  }
 }

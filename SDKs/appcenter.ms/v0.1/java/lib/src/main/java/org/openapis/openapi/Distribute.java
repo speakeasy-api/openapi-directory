@@ -37,7 +37,9 @@ public class Distribute {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.AppleMappingTestFlightGroupsResponse appleMappingTestFlightGroups(org.openapis.openapi.models.operations.AppleMappingTestFlightGroupsRequest request, org.openapis.openapi.models.operations.AppleMappingTestFlightGroupsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppleMappingTestFlightGroupsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/apple_test_flight_groups", request, null);
@@ -53,12 +55,10 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppleMappingTestFlightGroupsResponse res = new org.openapis.openapi.models.operations.AppleMappingTestFlightGroupsResponse() {{
+        org.openapis.openapi.models.operations.AppleMappingTestFlightGroupsResponse res = new org.openapis.openapi.models.operations.AppleMappingTestFlightGroupsResponse(contentType, httpRes.statusCode()) {{
             appleMappingTestFlightGroups200ApplicationJSONObjects = null;
             appleMappingTestFlightGroupsDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -106,12 +106,10 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppleMappingCreateResponse res = new org.openapis.openapi.models.operations.AppleMappingCreateResponse() {{
+        org.openapis.openapi.models.operations.AppleMappingCreateResponse res = new org.openapis.openapi.models.operations.AppleMappingCreateResponse(contentType, httpRes.statusCode()) {{
             appleMappingCreate201ApplicationJSONObject = null;
             appleMappingCreateDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -156,11 +154,9 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppleMappingDeleteResponse res = new org.openapis.openapi.models.operations.AppleMappingDeleteResponse() {{
+        org.openapis.openapi.models.operations.AppleMappingDeleteResponse res = new org.openapis.openapi.models.operations.AppleMappingDeleteResponse(contentType, httpRes.statusCode()) {{
             appleMappingDeleteDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -198,12 +194,10 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppleMappingGetResponse res = new org.openapis.openapi.models.operations.AppleMappingGetResponse() {{
+        org.openapis.openapi.models.operations.AppleMappingGetResponse res = new org.openapis.openapi.models.operations.AppleMappingGetResponse(contentType, httpRes.statusCode()) {{
             appleMappingGet200ApplicationJSONObject = null;
             appleMappingGetDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -246,14 +240,12 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DevicesDeviceDetailsResponse res = new org.openapis.openapi.models.operations.DevicesDeviceDetailsResponse() {{
+        org.openapis.openapi.models.operations.DevicesDeviceDetailsResponse res = new org.openapis.openapi.models.operations.DevicesDeviceDetailsResponse(contentType, httpRes.statusCode()) {{
             devicesDeviceDetails200ApplicationJSONObject = null;
             devicesDeviceDetails400ApplicationJSONObject = null;
             devicesDeviceDetails403ApplicationJSONObject = null;
             devicesDeviceDetails404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -316,13 +308,11 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DevicesGetReleaseUpdateDevicesStatusResponse res = new org.openapis.openapi.models.operations.DevicesGetReleaseUpdateDevicesStatusResponse() {{
+        org.openapis.openapi.models.operations.DevicesGetReleaseUpdateDevicesStatusResponse res = new org.openapis.openapi.models.operations.DevicesGetReleaseUpdateDevicesStatusResponse(contentType, httpRes.statusCode()) {{
             devicesGetReleaseUpdateDevicesStatus200ApplicationJSONObject = null;
             devicesGetReleaseUpdateDevicesStatus400ApplicationJSONObject = null;
             devicesGetReleaseUpdateDevicesStatus404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -378,13 +368,11 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DevicesListResponse res = new org.openapis.openapi.models.operations.DevicesListResponse() {{
+        org.openapis.openapi.models.operations.DevicesListResponse res = new org.openapis.openapi.models.operations.DevicesListResponse(contentType, httpRes.statusCode()) {{
             devicesList200ApplicationJSONObjects = null;
             devicesList400ApplicationJSONObject = null;
             devicesList404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -440,11 +428,9 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DevicesListCsvFormatResponse res = new org.openapis.openapi.models.operations.DevicesListCsvFormatResponse() {{
+        org.openapis.openapi.models.operations.DevicesListCsvFormatResponse res = new org.openapis.openapi.models.operations.DevicesListCsvFormatResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -486,12 +472,10 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DevicesRegisterUserForDeviceResponse res = new org.openapis.openapi.models.operations.DevicesRegisterUserForDeviceResponse() {{
+        org.openapis.openapi.models.operations.DevicesRegisterUserForDeviceResponse res = new org.openapis.openapi.models.operations.DevicesRegisterUserForDeviceResponse(contentType, httpRes.statusCode()) {{
             devicesRegisterUserForDevice200ApplicationJSONObject = null;
             devicesRegisterUserForDevice404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -534,12 +518,10 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DevicesRemoveUserDeviceResponse res = new org.openapis.openapi.models.operations.DevicesRemoveUserDeviceResponse() {{
+        org.openapis.openapi.models.operations.DevicesRemoveUserDeviceResponse res = new org.openapis.openapi.models.operations.DevicesRemoveUserDeviceResponse(contentType, httpRes.statusCode()) {{
             devicesRemoveUserDevice403ApplicationJSONObject = null;
             devicesRemoveUserDevice404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -564,10 +546,11 @@ public class Distribute {
 
     /**
      * Returns all devices associated with the given user.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DevicesUserDevicesListResponse devicesUserDevicesList() throws Exception {
+    public org.openapis.openapi.models.operations.DevicesUserDevicesListResponse devicesUserDevicesList(org.openapis.openapi.models.operations.DevicesUserDevicesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/user/devices");
         
@@ -576,18 +559,17 @@ public class Distribute {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DevicesUserDevicesListResponse res = new org.openapis.openapi.models.operations.DevicesUserDevicesListResponse() {{
+        org.openapis.openapi.models.operations.DevicesUserDevicesListResponse res = new org.openapis.openapi.models.operations.DevicesUserDevicesListResponse(contentType, httpRes.statusCode()) {{
             devicesUserDevicesList200ApplicationJSONObjects = null;
             devicesUserDevicesList400ApplicationJSONObject = null;
             devicesUserDevicesList403ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -640,10 +622,8 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DistibutionReleasesInstallAnalyticsResponse res = new org.openapis.openapi.models.operations.DistibutionReleasesInstallAnalyticsResponse() {{
+        org.openapis.openapi.models.operations.DistibutionReleasesInstallAnalyticsResponse res = new org.openapis.openapi.models.operations.DistibutionReleasesInstallAnalyticsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -674,12 +654,10 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProvisioningProfileResponse res = new org.openapis.openapi.models.operations.ProvisioningProfileResponse() {{
+        org.openapis.openapi.models.operations.ProvisioningProfileResponse res = new org.openapis.openapi.models.operations.ProvisioningProfileResponse(contentType, httpRes.statusCode()) {{
             provisioningProfileResponse = null;
             provisioningProfile400ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -727,13 +705,11 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReleasesAddDistributionGroupResponse res = new org.openapis.openapi.models.operations.ReleasesAddDistributionGroupResponse() {{
+        org.openapis.openapi.models.operations.ReleasesAddDistributionGroupResponse res = new org.openapis.openapi.models.operations.ReleasesAddDistributionGroupResponse(contentType, httpRes.statusCode()) {{
             releasesAddDistributionGroup201ApplicationJSONObject = null;
             releasesAddDistributionGroup400ApplicationJSONObject = null;
             releasesAddDistributionGroup404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -788,13 +764,11 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReleasesAddStoreResponse res = new org.openapis.openapi.models.operations.ReleasesAddStoreResponse() {{
+        org.openapis.openapi.models.operations.ReleasesAddStoreResponse res = new org.openapis.openapi.models.operations.ReleasesAddStoreResponse(contentType, httpRes.statusCode()) {{
             releasesAddStore201ApplicationJSONObject = null;
             releasesAddStore400ApplicationJSONObject = null;
             releasesAddStore404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -849,13 +823,11 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReleasesAddTestersResponse res = new org.openapis.openapi.models.operations.ReleasesAddTestersResponse() {{
+        org.openapis.openapi.models.operations.ReleasesAddTestersResponse res = new org.openapis.openapi.models.operations.ReleasesAddTestersResponse(contentType, httpRes.statusCode()) {{
             releasesAddTesters201ApplicationJSONObject = null;
             releasesAddTesters400ApplicationJSONObject = null;
             releasesAddTesters404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -889,7 +861,9 @@ public class Distribute {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.ReleasesAvailableToTesterResponse releasesAvailableToTester(org.openapis.openapi.models.operations.ReleasesAvailableToTesterRequest request, org.openapis.openapi.models.operations.ReleasesAvailableToTesterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesAvailableToTesterRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases/filter_by_tester", request, null);
@@ -911,11 +885,9 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReleasesAvailableToTesterResponse res = new org.openapis.openapi.models.operations.ReleasesAvailableToTesterResponse() {{
+        org.openapis.openapi.models.operations.ReleasesAvailableToTesterResponse res = new org.openapis.openapi.models.operations.ReleasesAvailableToTesterResponse(contentType, httpRes.statusCode()) {{
             releasesAvailableToTester200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -953,13 +925,11 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReleasesCreateReleaseUploadResponse res = new org.openapis.openapi.models.operations.ReleasesCreateReleaseUploadResponse() {{
+        org.openapis.openapi.models.operations.ReleasesCreateReleaseUploadResponse res = new org.openapis.openapi.models.operations.ReleasesCreateReleaseUploadResponse(contentType, httpRes.statusCode()) {{
             releasesCreateReleaseUpload201ApplicationJSONObject = null;
             releasesCreateReleaseUpload400ApplicationJSONObject = null;
             releasesCreateReleaseUpload404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1009,12 +979,10 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReleasesDeleteResponse res = new org.openapis.openapi.models.operations.ReleasesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ReleasesDeleteResponse res = new org.openapis.openapi.models.operations.ReleasesDeleteResponse(contentType, httpRes.statusCode()) {{
             releasesDelete404ApplicationJSONObject = null;
             releasesDelete500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1059,11 +1027,9 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReleasesDeleteDistributionGroupResponse res = new org.openapis.openapi.models.operations.ReleasesDeleteDistributionGroupResponse() {{
+        org.openapis.openapi.models.operations.ReleasesDeleteDistributionGroupResponse res = new org.openapis.openapi.models.operations.ReleasesDeleteDistributionGroupResponse(contentType, httpRes.statusCode()) {{
             releasesDeleteDistributionGroup404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1101,11 +1067,9 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReleasesDeleteDistributionStoreResponse res = new org.openapis.openapi.models.operations.ReleasesDeleteDistributionStoreResponse() {{
+        org.openapis.openapi.models.operations.ReleasesDeleteDistributionStoreResponse res = new org.openapis.openapi.models.operations.ReleasesDeleteDistributionStoreResponse(contentType, httpRes.statusCode()) {{
             releasesDeleteDistributionStore404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1143,11 +1107,9 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReleasesDeleteDistributionTesterResponse res = new org.openapis.openapi.models.operations.ReleasesDeleteDistributionTesterResponse() {{
+        org.openapis.openapi.models.operations.ReleasesDeleteDistributionTesterResponse res = new org.openapis.openapi.models.operations.ReleasesDeleteDistributionTesterResponse(contentType, httpRes.statusCode()) {{
             releasesDeleteDistributionTester404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1185,11 +1147,9 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReleasesDeleteTesterFromDestinationsResponse res = new org.openapis.openapi.models.operations.ReleasesDeleteTesterFromDestinationsResponse() {{
+        org.openapis.openapi.models.operations.ReleasesDeleteTesterFromDestinationsResponse res = new org.openapis.openapi.models.operations.ReleasesDeleteTesterFromDestinationsResponse(contentType, httpRes.statusCode()) {{
             releasesDeleteTesterFromDestinations404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1227,10 +1187,8 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReleasesDeleteWithDistributionGroupIdResponse res = new org.openapis.openapi.models.operations.ReleasesDeleteWithDistributionGroupIdResponse() {{
+        org.openapis.openapi.models.operations.ReleasesDeleteWithDistributionGroupIdResponse res = new org.openapis.openapi.models.operations.ReleasesDeleteWithDistributionGroupIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {
@@ -1265,13 +1223,11 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReleasesGetIosManifestResponse res = new org.openapis.openapi.models.operations.ReleasesGetIosManifestResponse() {{
+        org.openapis.openapi.models.operations.ReleasesGetIosManifestResponse res = new org.openapis.openapi.models.operations.ReleasesGetIosManifestResponse(contentType, httpRes.statusCode()) {{
             releasesGetIosManifest400ApplicationJSONObject = null;
             releasesGetIosManifest403ApplicationJSONObject = null;
             releasesGetIosManifest404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1329,13 +1285,11 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReleasesGetLatestByDistributionGroupResponse res = new org.openapis.openapi.models.operations.ReleasesGetLatestByDistributionGroupResponse() {{
+        org.openapis.openapi.models.operations.ReleasesGetLatestByDistributionGroupResponse res = new org.openapis.openapi.models.operations.ReleasesGetLatestByDistributionGroupResponse(contentType, httpRes.statusCode()) {{
             releasesGetLatestByDistributionGroup200ApplicationJSONObject = null;
             releasesGetLatestByDistributionGroup404ApplicationJSONObject = null;
             releasesGetLatestByDistributionGroup501ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1391,12 +1345,10 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReleasesGetLatestByHashResponse res = new org.openapis.openapi.models.operations.ReleasesGetLatestByHashResponse() {{
+        org.openapis.openapi.models.operations.ReleasesGetLatestByHashResponse res = new org.openapis.openapi.models.operations.ReleasesGetLatestByHashResponse(contentType, httpRes.statusCode()) {{
             releasesGetLatestByHash200ApplicationJSONObject = null;
             releasesGetLatestByHash404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1443,13 +1395,11 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReleasesGetLatestByPublicDistributionGroupResponse res = new org.openapis.openapi.models.operations.ReleasesGetLatestByPublicDistributionGroupResponse() {{
+        org.openapis.openapi.models.operations.ReleasesGetLatestByPublicDistributionGroupResponse res = new org.openapis.openapi.models.operations.ReleasesGetLatestByPublicDistributionGroupResponse(contentType, httpRes.statusCode()) {{
             releasesGetLatestByPublicDistributionGroup200ApplicationJSONObject = null;
             releasesGetLatestByPublicDistributionGroup403ApplicationJSONObject = null;
             releasesGetLatestByPublicDistributionGroup404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1505,13 +1455,11 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReleasesGetLatestByUserResponse res = new org.openapis.openapi.models.operations.ReleasesGetLatestByUserResponse() {{
+        org.openapis.openapi.models.operations.ReleasesGetLatestByUserResponse res = new org.openapis.openapi.models.operations.ReleasesGetLatestByUserResponse(contentType, httpRes.statusCode()) {{
             releasesGetLatestByUser200ApplicationJSONObject = null;
             releasesGetLatestByUser400ApplicationJSONObject = null;
             releasesGetLatestByUser404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1567,12 +1515,10 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReleasesGetLatestPrivateReleaseResponse res = new org.openapis.openapi.models.operations.ReleasesGetLatestPrivateReleaseResponse() {{
+        org.openapis.openapi.models.operations.ReleasesGetLatestPrivateReleaseResponse res = new org.openapis.openapi.models.operations.ReleasesGetLatestPrivateReleaseResponse(contentType, httpRes.statusCode()) {{
             releasesGetLatestPrivateRelease200ApplicationJSONObject = null;
             releasesGetLatestPrivateRelease404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1598,7 +1544,9 @@ public class Distribute {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.ReleasesGetLatestPublicReleaseResponse releasesGetLatestPublicRelease(org.openapis.openapi.models.operations.ReleasesGetLatestPublicReleaseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesGetLatestPublicReleaseRequest.class, baseUrl, "/v0.1/public/sdk/apps/{app_secret}/releases/latest", request, null);
@@ -1613,12 +1561,10 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReleasesGetLatestPublicReleaseResponse res = new org.openapis.openapi.models.operations.ReleasesGetLatestPublicReleaseResponse() {{
+        org.openapis.openapi.models.operations.ReleasesGetLatestPublicReleaseResponse res = new org.openapis.openapi.models.operations.ReleasesGetLatestPublicReleaseResponse(contentType, httpRes.statusCode()) {{
             releasesGetLatestPublicRelease200ApplicationJSONObject = null;
             releasesGetLatestPublicRelease404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1659,12 +1605,10 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReleasesGetPublicGroupsForReleaseByHashResponse res = new org.openapis.openapi.models.operations.ReleasesGetPublicGroupsForReleaseByHashResponse() {{
+        org.openapis.openapi.models.operations.ReleasesGetPublicGroupsForReleaseByHashResponse res = new org.openapis.openapi.models.operations.ReleasesGetPublicGroupsForReleaseByHashResponse(contentType, httpRes.statusCode()) {{
             releasesGetPublicGroupsForReleaseByHash200ApplicationJSONObjects = null;
             releasesGetPublicGroupsForReleaseByHash404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1707,13 +1651,11 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReleasesGetReleaseUploadStatusResponse res = new org.openapis.openapi.models.operations.ReleasesGetReleaseUploadStatusResponse() {{
+        org.openapis.openapi.models.operations.ReleasesGetReleaseUploadStatusResponse res = new org.openapis.openapi.models.operations.ReleasesGetReleaseUploadStatusResponse(contentType, httpRes.statusCode()) {{
             releasesGetReleaseUploadStatus200ApplicationJSONObject = null;
             releasesGetReleaseUploadStatus400ApplicationJSONObject = null;
             releasesGetReleaseUploadStatus404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1761,11 +1703,9 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReleasesGetSparkleFeedResponse res = new org.openapis.openapi.models.operations.ReleasesGetSparkleFeedResponse() {{
+        org.openapis.openapi.models.operations.ReleasesGetSparkleFeedResponse res = new org.openapis.openapi.models.operations.ReleasesGetSparkleFeedResponse(contentType, httpRes.statusCode()) {{
             releasesGetSparkleFeedDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1809,11 +1749,9 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReleasesListResponse res = new org.openapis.openapi.models.operations.ReleasesListResponse() {{
+        org.openapis.openapi.models.operations.ReleasesListResponse res = new org.openapis.openapi.models.operations.ReleasesListResponse(contentType, httpRes.statusCode()) {{
             releasesList200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1849,12 +1787,10 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReleasesListByDistributionGroupResponse res = new org.openapis.openapi.models.operations.ReleasesListByDistributionGroupResponse() {{
+        org.openapis.openapi.models.operations.ReleasesListByDistributionGroupResponse res = new org.openapis.openapi.models.operations.ReleasesListByDistributionGroupResponse(contentType, httpRes.statusCode()) {{
             releasesListByDistributionGroup200ApplicationJSONObjects = null;
             releasesListByDistributionGroup404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1897,11 +1833,9 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReleasesListLatestResponse res = new org.openapis.openapi.models.operations.ReleasesListLatestResponse() {{
+        org.openapis.openapi.models.operations.ReleasesListLatestResponse res = new org.openapis.openapi.models.operations.ReleasesListLatestResponse(contentType, httpRes.statusCode()) {{
             releasesListLatest200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1939,11 +1873,9 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReleasesPutDistributionGroupResponse res = new org.openapis.openapi.models.operations.ReleasesPutDistributionGroupResponse() {{
+        org.openapis.openapi.models.operations.ReleasesPutDistributionGroupResponse res = new org.openapis.openapi.models.operations.ReleasesPutDistributionGroupResponse(contentType, httpRes.statusCode()) {{
             releasesPutDistributionGroup404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1983,11 +1915,9 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReleasesPutDistributionTesterResponse res = new org.openapis.openapi.models.operations.ReleasesPutDistributionTesterResponse() {{
+        org.openapis.openapi.models.operations.ReleasesPutDistributionTesterResponse res = new org.openapis.openapi.models.operations.ReleasesPutDistributionTesterResponse(contentType, httpRes.statusCode()) {{
             releasesPutDistributionTester404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2030,13 +1960,11 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReleasesUpdateResponse res = new org.openapis.openapi.models.operations.ReleasesUpdateResponse() {{
+        org.openapis.openapi.models.operations.ReleasesUpdateResponse res = new org.openapis.openapi.models.operations.ReleasesUpdateResponse(contentType, httpRes.statusCode()) {{
             releasesUpdate200ApplicationJSONObject = null;
             releasesUpdate400ApplicationJSONObject = null;
             releasesUpdate404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2091,13 +2019,11 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReleasesUpdateDetailsResponse res = new org.openapis.openapi.models.operations.ReleasesUpdateDetailsResponse() {{
+        org.openapis.openapi.models.operations.ReleasesUpdateDetailsResponse res = new org.openapis.openapi.models.operations.ReleasesUpdateDetailsResponse(contentType, httpRes.statusCode()) {{
             releasesUpdateDetails200ApplicationJSONObject = null;
             releasesUpdateDetails400ApplicationJSONObject = null;
             releasesUpdateDetails404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2158,13 +2084,11 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReleasesUpdateReleaseUploadStatusResponse res = new org.openapis.openapi.models.operations.ReleasesUpdateReleaseUploadStatusResponse() {{
+        org.openapis.openapi.models.operations.ReleasesUpdateReleaseUploadStatusResponse res = new org.openapis.openapi.models.operations.ReleasesUpdateReleaseUploadStatusResponse(contentType, httpRes.statusCode()) {{
             releasesUpdateReleaseUploadStatus200ApplicationJSONObject = null;
             releasesUpdateReleaseUploadStatus400ApplicationJSONObject = null;
             releasesUpdateReleaseUploadStatus404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2214,12 +2138,10 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoreNotificationsGetNotificationByAppIdResponse res = new org.openapis.openapi.models.operations.StoreNotificationsGetNotificationByAppIdResponse() {{
+        org.openapis.openapi.models.operations.StoreNotificationsGetNotificationByAppIdResponse res = new org.openapis.openapi.models.operations.StoreNotificationsGetNotificationByAppIdResponse(contentType, httpRes.statusCode()) {{
             storeNotificationsGetNotificationByAppId200ApplicationJSONObject = null;
             storeNotificationsGetNotificationByAppIdDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2262,11 +2184,9 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoreReleasePublishLogsGetResponse res = new org.openapis.openapi.models.operations.StoreReleasePublishLogsGetResponse() {{
+        org.openapis.openapi.models.operations.StoreReleasePublishLogsGetResponse res = new org.openapis.openapi.models.operations.StoreReleasePublishLogsGetResponse(contentType, httpRes.statusCode()) {{
             storeReleasePublishLogsGetDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2306,11 +2226,9 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoreReleasesDeleteResponse res = new org.openapis.openapi.models.operations.StoreReleasesDeleteResponse() {{
+        org.openapis.openapi.models.operations.StoreReleasesDeleteResponse res = new org.openapis.openapi.models.operations.StoreReleasesDeleteResponse(contentType, httpRes.statusCode()) {{
             storeReleasesDeleteDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -2348,12 +2266,10 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoreReleasesGetResponse res = new org.openapis.openapi.models.operations.StoreReleasesGetResponse() {{
+        org.openapis.openapi.models.operations.StoreReleasesGetResponse res = new org.openapis.openapi.models.operations.StoreReleasesGetResponse(contentType, httpRes.statusCode()) {{
             storeReleasesGet200ApplicationJSONObjects = null;
             storeReleasesGetDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2396,12 +2312,10 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoreReleasesGetLatestResponse res = new org.openapis.openapi.models.operations.StoreReleasesGetLatestResponse() {{
+        org.openapis.openapi.models.operations.StoreReleasesGetLatestResponse res = new org.openapis.openapi.models.operations.StoreReleasesGetLatestResponse(contentType, httpRes.statusCode()) {{
             storeReleasesGetLatest200ApplicationJSONObjects = null;
             storeReleasesGetLatestDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2444,12 +2358,10 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoreReleasesGetPublishErrorResponse res = new org.openapis.openapi.models.operations.StoreReleasesGetPublishErrorResponse() {{
+        org.openapis.openapi.models.operations.StoreReleasesGetPublishErrorResponse res = new org.openapis.openapi.models.operations.StoreReleasesGetPublishErrorResponse(contentType, httpRes.statusCode()) {{
             storeReleasesGetPublishError200ApplicationJSONObject = null;
             storeReleasesGetPublishErrorDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2492,12 +2404,10 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoreReleasesGetRealTimeStatusByReleaseIdResponse res = new org.openapis.openapi.models.operations.StoreReleasesGetRealTimeStatusByReleaseIdResponse() {{
+        org.openapis.openapi.models.operations.StoreReleasesGetRealTimeStatusByReleaseIdResponse res = new org.openapis.openapi.models.operations.StoreReleasesGetRealTimeStatusByReleaseIdResponse(contentType, httpRes.statusCode()) {{
             storeReleasesGetRealTimeStatusByReleaseId200ApplicationJSONObject = null;
             storeReleasesGetRealTimeStatusByReleaseIdDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2540,12 +2450,10 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoreReleasesListResponse res = new org.openapis.openapi.models.operations.StoreReleasesListResponse() {{
+        org.openapis.openapi.models.operations.StoreReleasesListResponse res = new org.openapis.openapi.models.operations.StoreReleasesListResponse(contentType, httpRes.statusCode()) {{
             storeReleasesList200ApplicationJSONObjects = null;
             storeReleasesListDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2593,12 +2501,10 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoresCreateResponse res = new org.openapis.openapi.models.operations.StoresCreateResponse() {{
+        org.openapis.openapi.models.operations.StoresCreateResponse res = new org.openapis.openapi.models.operations.StoresCreateResponse(contentType, httpRes.statusCode()) {{
             storesCreate201ApplicationJSONObject = null;
             storesCreateDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -2643,11 +2549,9 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoresDeleteResponse res = new org.openapis.openapi.models.operations.StoresDeleteResponse() {{
+        org.openapis.openapi.models.operations.StoresDeleteResponse res = new org.openapis.openapi.models.operations.StoresDeleteResponse(contentType, httpRes.statusCode()) {{
             storesDeleteDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -2685,12 +2589,10 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoresGetResponse res = new org.openapis.openapi.models.operations.StoresGetResponse() {{
+        org.openapis.openapi.models.operations.StoresGetResponse res = new org.openapis.openapi.models.operations.StoresGetResponse(contentType, httpRes.statusCode()) {{
             storesGet200ApplicationJSONObject = null;
             storesGetDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2733,11 +2635,9 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoresListResponse res = new org.openapis.openapi.models.operations.StoresListResponse() {{
+        org.openapis.openapi.models.operations.StoresListResponse res = new org.openapis.openapi.models.operations.StoresListResponse(contentType, httpRes.statusCode()) {{
             storesList200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2778,11 +2678,9 @@ public class Distribute {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoresPatchResponse res = new org.openapis.openapi.models.operations.StoresPatchResponse() {{
+        org.openapis.openapi.models.operations.StoresPatchResponse res = new org.openapis.openapi.models.operations.StoresPatchResponse(contentType, httpRes.statusCode()) {{
             storesPatchDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

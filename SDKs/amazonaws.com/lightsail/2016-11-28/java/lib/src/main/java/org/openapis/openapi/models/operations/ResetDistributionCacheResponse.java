@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ResetDistributionCacheResponse {
@@ -12,6 +13,7 @@ public class ResetDistributionCacheResponse {
      */
     
     public Object accessDeniedException;
+
     public ResetDistributionCacheResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ResetDistributionCacheResponse {
     
     
     public String contentType;
+
     public ResetDistributionCacheResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ResetDistributionCacheResponse {
      */
     
     public Object invalidInputException;
+
     public ResetDistributionCacheResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class ResetDistributionCacheResponse {
      */
     
     public Object notFoundException;
+
     public ResetDistributionCacheResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -49,6 +54,7 @@ public class ResetDistributionCacheResponse {
      */
     
     public Object operationFailureException;
+
     public ResetDistributionCacheResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -59,6 +65,7 @@ public class ResetDistributionCacheResponse {
      */
     
     public org.openapis.openapi.models.shared.ResetDistributionCacheResult resetDistributionCacheResult;
+
     public ResetDistributionCacheResponse withResetDistributionCacheResult(org.openapis.openapi.models.shared.ResetDistributionCacheResult resetDistributionCacheResult) {
         this.resetDistributionCacheResult = resetDistributionCacheResult;
         return this;
@@ -69,6 +76,7 @@ public class ResetDistributionCacheResponse {
      */
     
     public Object serviceException;
+
     public ResetDistributionCacheResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class ResetDistributionCacheResponse {
     
     
     public Integer statusCode;
+
     public ResetDistributionCacheResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ResetDistributionCacheResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ResetDistributionCacheResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class ResetDistributionCacheResponse {
      */
     
     public Object unauthenticatedException;
+
     public ResetDistributionCacheResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public ResetDistributionCacheResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

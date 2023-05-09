@@ -12,6 +12,7 @@ public class NAPlug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_id")
     public String id;
+
     public NAPlug withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class NAPlug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firmware")
     public Integer firmware;
+
     public NAPlug withFirmware(Integer firmware) {
         this.firmware = firmware;
         return this;
@@ -28,6 +30,7 @@ public class NAPlug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_bilan")
     public NAYearMonth lastBilan;
+
     public NAPlug withLastBilan(NAYearMonth lastBilan) {
         this.lastBilan = lastBilan;
         return this;
@@ -36,6 +39,7 @@ public class NAPlug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_plug_seen")
     public Integer lastPlugSeen;
+
     public NAPlug withLastPlugSeen(Integer lastPlugSeen) {
         this.lastPlugSeen = lastPlugSeen;
         return this;
@@ -44,6 +48,7 @@ public class NAPlug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_status_store")
     public Integer lastStatusStore;
+
     public NAPlug withLastStatusStore(Integer lastStatusStore) {
         this.lastStatusStore = lastStatusStore;
         return this;
@@ -52,6 +57,7 @@ public class NAPlug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modules")
     public NAThermostat[] modules;
+
     public NAPlug withModules(NAThermostat[] modules) {
         this.modules = modules;
         return this;
@@ -60,6 +66,7 @@ public class NAPlug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("place")
     public NAPlace place;
+
     public NAPlug withPlace(NAPlace place) {
         this.place = place;
         return this;
@@ -68,6 +75,7 @@ public class NAPlug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plug_connected_boiler")
     public Integer plugConnectedBoiler;
+
     public NAPlug withPlugConnectedBoiler(Integer plugConnectedBoiler) {
         this.plugConnectedBoiler = plugConnectedBoiler;
         return this;
@@ -76,6 +84,7 @@ public class NAPlug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("station_name")
     public String stationName;
+
     public NAPlug withStationName(String stationName) {
         this.stationName = stationName;
         return this;
@@ -84,6 +93,7 @@ public class NAPlug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syncing")
     public Boolean syncing;
+
     public NAPlug withSyncing(Boolean syncing) {
         this.syncing = syncing;
         return this;
@@ -102,6 +112,7 @@ public class NAPlug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public NAPlug withType(String type) {
         this.type = type;
         return this;
@@ -110,6 +121,7 @@ public class NAPlug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("udp_conn")
     public Boolean udpConn;
+
     public NAPlug withUdpConn(Boolean udpConn) {
         this.udpConn = udpConn;
         return this;
@@ -125,9 +137,11 @@ public class NAPlug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wifi_status")
     public Integer wifiStatus;
+
     public NAPlug withWifiStatus(Integer wifiStatus) {
         this.wifiStatus = wifiStatus;
         return this;
     }
     
+    public NAPlug(){}
 }

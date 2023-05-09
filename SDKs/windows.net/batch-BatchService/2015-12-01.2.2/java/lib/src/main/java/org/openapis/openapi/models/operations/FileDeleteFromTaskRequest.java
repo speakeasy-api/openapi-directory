@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FileDeleteFromTaskRequest {
@@ -12,6 +13,7 @@ public class FileDeleteFromTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public FileDeleteFromTaskRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -22,6 +24,7 @@ public class FileDeleteFromTaskRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public FileDeleteFromTaskRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -32,6 +35,7 @@ public class FileDeleteFromTaskRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileName")
     public String fileName;
+
     public FileDeleteFromTaskRequest withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -42,6 +46,7 @@ public class FileDeleteFromTaskRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
     public String jobId;
+
     public FileDeleteFromTaskRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -52,6 +57,7 @@ public class FileDeleteFromTaskRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public FileDeleteFromTaskRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -62,6 +68,7 @@ public class FileDeleteFromTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recursive")
     public Boolean recursive;
+
     public FileDeleteFromTaskRequest withRecursive(Boolean recursive) {
         this.recursive = recursive;
         return this;
@@ -72,6 +79,7 @@ public class FileDeleteFromTaskRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public FileDeleteFromTaskRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -82,6 +90,7 @@ public class FileDeleteFromTaskRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taskId")
     public String taskId;
+
     public FileDeleteFromTaskRequest withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
@@ -92,9 +101,16 @@ public class FileDeleteFromTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public FileDeleteFromTaskRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public FileDeleteFromTaskRequest(@JsonProperty("api-version") String apiVersion, @JsonProperty("fileName") String fileName, @JsonProperty("jobId") String jobId, @JsonProperty("taskId") String taskId) {
+        this.apiVersion = apiVersion;
+        this.fileName = fileName;
+        this.jobId = jobId;
+        this.taskId = taskId;
+  }
 }

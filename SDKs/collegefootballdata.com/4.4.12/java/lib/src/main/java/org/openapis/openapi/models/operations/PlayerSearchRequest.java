@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlayerSearchRequest {
@@ -12,6 +13,7 @@ public class PlayerSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=position")
     public String position;
+
     public PlayerSearchRequest withPosition(String position) {
         this.position = position;
         return this;
@@ -22,6 +24,7 @@ public class PlayerSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchTerm")
     public String searchTerm;
+
     public PlayerSearchRequest withSearchTerm(String searchTerm) {
         this.searchTerm = searchTerm;
         return this;
@@ -32,6 +35,7 @@ public class PlayerSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
     public String team;
+
     public PlayerSearchRequest withTeam(String team) {
         this.team = team;
         return this;
@@ -42,9 +46,13 @@ public class PlayerSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public Long year;
+
     public PlayerSearchRequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public PlayerSearchRequest(@JsonProperty("searchTerm") String searchTerm) {
+        this.searchTerm = searchTerm;
+  }
 }

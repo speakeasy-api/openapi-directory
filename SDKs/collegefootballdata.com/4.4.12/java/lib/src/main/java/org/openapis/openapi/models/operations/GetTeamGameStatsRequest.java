@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTeamGameStatsRequest {
@@ -12,6 +13,7 @@ public class GetTeamGameStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=classification")
     public String classification;
+
     public GetTeamGameStatsRequest withClassification(String classification) {
         this.classification = classification;
         return this;
@@ -22,6 +24,7 @@ public class GetTeamGameStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conference")
     public String conference;
+
     public GetTeamGameStatsRequest withConference(String conference) {
         this.conference = conference;
         return this;
@@ -32,6 +35,7 @@ public class GetTeamGameStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gameId")
     public Long gameId;
+
     public GetTeamGameStatsRequest withGameId(Long gameId) {
         this.gameId = gameId;
         return this;
@@ -42,6 +46,7 @@ public class GetTeamGameStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=seasonType")
     public String seasonType;
+
     public GetTeamGameStatsRequest withSeasonType(String seasonType) {
         this.seasonType = seasonType;
         return this;
@@ -52,6 +57,7 @@ public class GetTeamGameStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
     public String team;
+
     public GetTeamGameStatsRequest withTeam(String team) {
         this.team = team;
         return this;
@@ -62,6 +68,7 @@ public class GetTeamGameStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=week")
     public Long week;
+
     public GetTeamGameStatsRequest withWeek(Long week) {
         this.week = week;
         return this;
@@ -72,9 +79,13 @@ public class GetTeamGameStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public Long year;
+
     public GetTeamGameStatsRequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public GetTeamGameStatsRequest(@JsonProperty("year") Long year) {
+        this.year = year;
+  }
 }

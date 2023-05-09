@@ -18,9 +18,11 @@ public class SchemaProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("{fieldName}")
     public SchemaPropertiesFieldName fieldName;
+
     public SchemaProperties withFieldName(SchemaPropertiesFieldName fieldName) {
         this.fieldName = fieldName;
         return this;
     }
     
+    public SchemaProperties(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteMailboxPermissionsRequest {
     @JsonProperty("EntityId")
     public String entityId;
+
     public DeleteMailboxPermissionsRequest withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -16,6 +17,7 @@ public class DeleteMailboxPermissionsRequest {
     
     @JsonProperty("GranteeId")
     public String granteeId;
+
     public DeleteMailboxPermissionsRequest withGranteeId(String granteeId) {
         this.granteeId = granteeId;
         return this;
@@ -23,9 +25,15 @@ public class DeleteMailboxPermissionsRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public DeleteMailboxPermissionsRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public DeleteMailboxPermissionsRequest(@JsonProperty("EntityId") String entityId, @JsonProperty("GranteeId") String granteeId, @JsonProperty("OrganizationId") String organizationId) {
+        this.entityId = entityId;
+        this.granteeId = granteeId;
+        this.organizationId = organizationId;
+  }
 }

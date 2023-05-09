@@ -12,6 +12,7 @@ public class CfmstRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public CfmstRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,6 +23,7 @@ public class CfmstRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public CfmstRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
@@ -32,6 +34,7 @@ public class CfmstRequestBodyCertificateParameters {
      */
     @JsonProperty("rollno")
     public String rollno;
+
     public CfmstRequestBodyCertificateParameters withRollno(String rollno) {
         this.rollno = rollno;
         return this;
@@ -42,9 +45,16 @@ public class CfmstRequestBodyCertificateParameters {
      */
     @JsonProperty("year")
     public String year;
+
     public CfmstRequestBodyCertificateParameters withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public CfmstRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("UID") String uid, @JsonProperty("rollno") String rollno, @JsonProperty("year") String year) {
+        this.fullName = fullName;
+        this.uid = uid;
+        this.rollno = rollno;
+        this.year = year;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudIdentitytoolkitAdminV2SmsRegionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowByDefault")
     public GoogleCloudIdentitytoolkitAdminV2AllowByDefault allowByDefault;
+
     public GoogleCloudIdentitytoolkitAdminV2SmsRegionConfig withAllowByDefault(GoogleCloudIdentitytoolkitAdminV2AllowByDefault allowByDefault) {
         this.allowByDefault = allowByDefault;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIdentitytoolkitAdminV2SmsRegionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowlistOnly")
     public GoogleCloudIdentitytoolkitAdminV2AllowlistOnly allowlistOnly;
+
     public GoogleCloudIdentitytoolkitAdminV2SmsRegionConfig withAllowlistOnly(GoogleCloudIdentitytoolkitAdminV2AllowlistOnly allowlistOnly) {
         this.allowlistOnly = allowlistOnly;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitAdminV2SmsRegionConfig(){}
 }

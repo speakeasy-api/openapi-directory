@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UplinkSpectrumConfig {
     @JsonProperty("centerFrequency")
     public Frequency centerFrequency;
+
     public UplinkSpectrumConfig withCenterFrequency(Frequency centerFrequency) {
         this.centerFrequency = centerFrequency;
         return this;
@@ -22,9 +23,13 @@ public class UplinkSpectrumConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("polarization")
     public PolarizationEnum polarization;
+
     public UplinkSpectrumConfig withPolarization(PolarizationEnum polarization) {
         this.polarization = polarization;
         return this;
     }
     
+    public UplinkSpectrumConfig(@JsonProperty("centerFrequency") Frequency centerFrequency) {
+        this.centerFrequency = centerFrequency;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudAdvisorynotificationsV1ListNotificationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudAdvisorynotificationsV1ListNotificationsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudAdvisorynotificationsV1ListNotificationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notifications")
     public GoogleCloudAdvisorynotificationsV1Notification[] notifications;
+
     public GoogleCloudAdvisorynotificationsV1ListNotificationsResponse withNotifications(GoogleCloudAdvisorynotificationsV1Notification[] notifications) {
         this.notifications = notifications;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudAdvisorynotificationsV1ListNotificationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSize")
     public Integer totalSize;
+
     public GoogleCloudAdvisorynotificationsV1ListNotificationsResponse withTotalSize(Integer totalSize) {
         this.totalSize = totalSize;
         return this;
     }
     
+    public GoogleCloudAdvisorynotificationsV1ListNotificationsResponse(){}
 }

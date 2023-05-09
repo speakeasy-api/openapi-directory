@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateStorageVirtualMachineResponse {
@@ -12,6 +13,7 @@ public class CreateStorageVirtualMachineResponse {
      */
     
     public Object activeDirectoryError;
+
     public CreateStorageVirtualMachineResponse withActiveDirectoryError(Object activeDirectoryError) {
         this.activeDirectoryError = activeDirectoryError;
         return this;
@@ -22,6 +24,7 @@ public class CreateStorageVirtualMachineResponse {
      */
     
     public Object badRequest;
+
     public CreateStorageVirtualMachineResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -29,6 +32,7 @@ public class CreateStorageVirtualMachineResponse {
     
     
     public String contentType;
+
     public CreateStorageVirtualMachineResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateStorageVirtualMachineResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateStorageVirtualMachineResponse createStorageVirtualMachineResponse;
+
     public CreateStorageVirtualMachineResponse withCreateStorageVirtualMachineResponse(org.openapis.openapi.models.shared.CreateStorageVirtualMachineResponse createStorageVirtualMachineResponse) {
         this.createStorageVirtualMachineResponse = createStorageVirtualMachineResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateStorageVirtualMachineResponse {
      */
     
     public Object fileSystemNotFound;
+
     public CreateStorageVirtualMachineResponse withFileSystemNotFound(Object fileSystemNotFound) {
         this.fileSystemNotFound = fileSystemNotFound;
         return this;
@@ -59,6 +65,7 @@ public class CreateStorageVirtualMachineResponse {
      */
     
     public Object incompatibleParameterError;
+
     public CreateStorageVirtualMachineResponse withIncompatibleParameterError(Object incompatibleParameterError) {
         this.incompatibleParameterError = incompatibleParameterError;
         return this;
@@ -69,6 +76,7 @@ public class CreateStorageVirtualMachineResponse {
      */
     
     public Object internalServerError;
+
     public CreateStorageVirtualMachineResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -79,6 +87,7 @@ public class CreateStorageVirtualMachineResponse {
      */
     
     public Object serviceLimitExceeded;
+
     public CreateStorageVirtualMachineResponse withServiceLimitExceeded(Object serviceLimitExceeded) {
         this.serviceLimitExceeded = serviceLimitExceeded;
         return this;
@@ -86,6 +95,7 @@ public class CreateStorageVirtualMachineResponse {
     
     
     public Integer statusCode;
+
     public CreateStorageVirtualMachineResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateStorageVirtualMachineResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateStorageVirtualMachineResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class CreateStorageVirtualMachineResponse {
      */
     
     public Object unsupportedOperation;
+
     public CreateStorageVirtualMachineResponse withUnsupportedOperation(Object unsupportedOperation) {
         this.unsupportedOperation = unsupportedOperation;
         return this;
     }
     
+    public CreateStorageVirtualMachineResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

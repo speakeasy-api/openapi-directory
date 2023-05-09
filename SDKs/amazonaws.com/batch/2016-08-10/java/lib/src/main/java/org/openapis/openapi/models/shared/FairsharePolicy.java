@@ -15,6 +15,7 @@ public class FairsharePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeReservation")
     public Long computeReservation;
+
     public FairsharePolicy withComputeReservation(Long computeReservation) {
         this.computeReservation = computeReservation;
         return this;
@@ -23,6 +24,7 @@ public class FairsharePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shareDecaySeconds")
     public Long shareDecaySeconds;
+
     public FairsharePolicy withShareDecaySeconds(Long shareDecaySeconds) {
         this.shareDecaySeconds = shareDecaySeconds;
         return this;
@@ -31,9 +33,11 @@ public class FairsharePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shareDistribution")
     public ShareAttributes[] shareDistribution;
+
     public FairsharePolicy withShareDistribution(ShareAttributes[] shareDistribution) {
         this.shareDistribution = shareDistribution;
         return this;
     }
     
+    public FairsharePolicy(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateTrustResponse {
@@ -12,6 +13,7 @@ public class UpdateTrustResponse {
      */
     
     public Object clientException;
+
     public UpdateTrustResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateTrustResponse {
     
     
     public String contentType;
+
     public UpdateTrustResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateTrustResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public UpdateTrustResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateTrustResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateTrustResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateTrustResponse {
     
     
     public Integer statusCode;
+
     public UpdateTrustResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateTrustResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateTrustResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateTrustResponse {
      */
     
     public Object serviceException;
+
     public UpdateTrustResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateTrustResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateTrustResult updateTrustResult;
+
     public UpdateTrustResponse withUpdateTrustResult(org.openapis.openapi.models.shared.UpdateTrustResult updateTrustResult) {
         this.updateTrustResult = updateTrustResult;
         return this;
     }
     
+    public UpdateTrustResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

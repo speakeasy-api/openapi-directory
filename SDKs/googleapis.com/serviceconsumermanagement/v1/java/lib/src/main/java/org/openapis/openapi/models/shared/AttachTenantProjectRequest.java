@@ -18,6 +18,7 @@ public class AttachTenantProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalResource")
     public String externalResource;
+
     public AttachTenantProjectRequest withExternalResource(String externalResource) {
         this.externalResource = externalResource;
         return this;
@@ -29,6 +30,7 @@ public class AttachTenantProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservedResource")
     public String reservedResource;
+
     public AttachTenantProjectRequest withReservedResource(String reservedResource) {
         this.reservedResource = reservedResource;
         return this;
@@ -40,9 +42,11 @@ public class AttachTenantProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
+
     public AttachTenantProjectRequest withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public AttachTenantProjectRequest(){}
 }

@@ -19,6 +19,7 @@ public class ListFeatureGroupsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeAfter")
     public OffsetDateTime creationTimeAfter;
+
     public ListFeatureGroupsRequest withCreationTimeAfter(OffsetDateTime creationTimeAfter) {
         this.creationTimeAfter = creationTimeAfter;
         return this;
@@ -29,6 +30,7 @@ public class ListFeatureGroupsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeBefore")
     public OffsetDateTime creationTimeBefore;
+
     public ListFeatureGroupsRequest withCreationTimeBefore(OffsetDateTime creationTimeBefore) {
         this.creationTimeBefore = creationTimeBefore;
         return this;
@@ -37,6 +39,7 @@ public class ListFeatureGroupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeatureGroupStatusEquals")
     public FeatureGroupStatusEnum featureGroupStatusEquals;
+
     public ListFeatureGroupsRequest withFeatureGroupStatusEquals(FeatureGroupStatusEnum featureGroupStatusEquals) {
         this.featureGroupStatusEquals = featureGroupStatusEquals;
         return this;
@@ -45,6 +48,7 @@ public class ListFeatureGroupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListFeatureGroupsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -53,6 +57,7 @@ public class ListFeatureGroupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NameContains")
     public String nameContains;
+
     public ListFeatureGroupsRequest withNameContains(String nameContains) {
         this.nameContains = nameContains;
         return this;
@@ -61,6 +66,7 @@ public class ListFeatureGroupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListFeatureGroupsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -69,6 +75,7 @@ public class ListFeatureGroupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OfflineStoreStatusEquals")
     public OfflineStoreStatusValueEnum offlineStoreStatusEquals;
+
     public ListFeatureGroupsRequest withOfflineStoreStatusEquals(OfflineStoreStatusValueEnum offlineStoreStatusEquals) {
         this.offlineStoreStatusEquals = offlineStoreStatusEquals;
         return this;
@@ -77,6 +84,7 @@ public class ListFeatureGroupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public FeatureGroupSortByEnum sortBy;
+
     public ListFeatureGroupsRequest withSortBy(FeatureGroupSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -85,9 +93,11 @@ public class ListFeatureGroupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public FeatureGroupSortOrderEnum sortOrder;
+
     public ListFeatureGroupsRequest withSortOrder(FeatureGroupSortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListFeatureGroupsRequest(){}
 }

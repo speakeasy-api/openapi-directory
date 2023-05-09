@@ -18,9 +18,11 @@ public class DeployJobRunMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudRun")
     public CloudRunMetadata cloudRun;
+
     public DeployJobRunMetadata withCloudRun(CloudRunMetadata cloudRun) {
         this.cloudRun = cloudRun;
         return this;
     }
     
+    public DeployJobRunMetadata(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * MessageTag - &lt;p&gt;Contains the name and value of a tag that you can provide to &lt;code&gt;SendEmail&lt;/code&gt; or &lt;code&gt;SendRawEmail&lt;/code&gt; to apply to an email.&lt;/p&gt; &lt;p&gt;Message tags, which you use with configuration sets, enable you to publish email sending events. For information about using configuration sets, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class MessageTag {
     
     public String name;
+
     public MessageTag withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class MessageTag {
     
     
     public String value;
+
     public MessageTag withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public MessageTag(@JsonProperty("Name") String name, @JsonProperty("Value") String value) {
+        this.name = name;
+        this.value = value;
+  }
 }

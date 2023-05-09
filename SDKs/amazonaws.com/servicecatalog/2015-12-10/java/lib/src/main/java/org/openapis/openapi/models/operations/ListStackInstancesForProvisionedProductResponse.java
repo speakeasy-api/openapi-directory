@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListStackInstancesForProvisionedProductResponse {
     
     public String contentType;
+
     public ListStackInstancesForProvisionedProductResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListStackInstancesForProvisionedProductResponse {
      */
     
     public Object invalidParametersException;
+
     public ListStackInstancesForProvisionedProductResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -29,6 +32,7 @@ public class ListStackInstancesForProvisionedProductResponse {
      */
     
     public org.openapis.openapi.models.shared.ListStackInstancesForProvisionedProductOutput listStackInstancesForProvisionedProductOutput;
+
     public ListStackInstancesForProvisionedProductResponse withListStackInstancesForProvisionedProductOutput(org.openapis.openapi.models.shared.ListStackInstancesForProvisionedProductOutput listStackInstancesForProvisionedProductOutput) {
         this.listStackInstancesForProvisionedProductOutput = listStackInstancesForProvisionedProductOutput;
         return this;
@@ -36,6 +40,7 @@ public class ListStackInstancesForProvisionedProductResponse {
     
     
     public Integer statusCode;
+
     public ListStackInstancesForProvisionedProductResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListStackInstancesForProvisionedProductResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListStackInstancesForProvisionedProductResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class ListStackInstancesForProvisionedProductResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListStackInstancesForProvisionedProductResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ListStackInstancesForProvisionedProductResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

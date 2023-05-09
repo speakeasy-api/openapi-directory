@@ -15,6 +15,7 @@ public class CreateThemeRequestBodyThemeToCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateThemeRequestBodyThemeToCreate withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class CreateThemeRequestBodyThemeToCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrides")
     public org.openapis.openapi.models.shared.ThemeValues[] overrides;
+
     public CreateThemeRequestBodyThemeToCreate withOverrides(org.openapis.openapi.models.shared.ThemeValues[] overrides) {
         this.overrides = overrides;
         return this;
@@ -31,6 +33,7 @@ public class CreateThemeRequestBodyThemeToCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateThemeRequestBodyThemeToCreate withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -39,9 +42,11 @@ public class CreateThemeRequestBodyThemeToCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public org.openapis.openapi.models.shared.ThemeValues[] values;
+
     public CreateThemeRequestBodyThemeToCreate withValues(org.openapis.openapi.models.shared.ThemeValues[] values) {
         this.values = values;
         return this;
     }
     
+    public CreateThemeRequestBodyThemeToCreate(){}
 }

@@ -18,6 +18,7 @@ public class RemoveDnsZoneRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerNetwork")
     public String consumerNetwork;
+
     public RemoveDnsZoneRequest withConsumerNetwork(String consumerNetwork) {
         this.consumerNetwork = consumerNetwork;
         return this;
@@ -29,9 +30,11 @@ public class RemoveDnsZoneRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RemoveDnsZoneRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public RemoveDnsZoneRequest(){}
 }

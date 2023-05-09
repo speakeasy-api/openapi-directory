@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListVirtualInterfaceTestHistoryRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ListVirtualInterfaceTestHistoryRequest listVirtualInterfaceTestHistoryRequest;
+
     public ListVirtualInterfaceTestHistoryRequest withListVirtualInterfaceTestHistoryRequest(org.openapis.openapi.models.shared.ListVirtualInterfaceTestHistoryRequest listVirtualInterfaceTestHistoryRequest) {
         this.listVirtualInterfaceTestHistoryRequest = listVirtualInterfaceTestHistoryRequest;
         return this;
@@ -16,6 +18,7 @@ public class ListVirtualInterfaceTestHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListVirtualInterfaceTestHistoryRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class ListVirtualInterfaceTestHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListVirtualInterfaceTestHistoryRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class ListVirtualInterfaceTestHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListVirtualInterfaceTestHistoryRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class ListVirtualInterfaceTestHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListVirtualInterfaceTestHistoryRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class ListVirtualInterfaceTestHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListVirtualInterfaceTestHistoryRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class ListVirtualInterfaceTestHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListVirtualInterfaceTestHistoryRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class ListVirtualInterfaceTestHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListVirtualInterfaceTestHistoryRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class ListVirtualInterfaceTestHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public ListVirtualInterfaceTestHistoryXAmzTargetEnum xAmzTarget;
+
     public ListVirtualInterfaceTestHistoryRequest withXAmzTarget(ListVirtualInterfaceTestHistoryXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public ListVirtualInterfaceTestHistoryRequest(@JsonProperty("ListVirtualInterfaceTestHistoryRequest") org.openapis.openapi.models.shared.ListVirtualInterfaceTestHistoryRequest listVirtualInterfaceTestHistoryRequest, @JsonProperty("X-Amz-Target") ListVirtualInterfaceTestHistoryXAmzTargetEnum xAmzTarget) {
+        this.listVirtualInterfaceTestHistoryRequest = listVirtualInterfaceTestHistoryRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

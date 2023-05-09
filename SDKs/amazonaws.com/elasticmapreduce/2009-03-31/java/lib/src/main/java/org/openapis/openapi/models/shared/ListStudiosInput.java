@@ -12,9 +12,11 @@ public class ListStudiosInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public ListStudiosInput withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public ListStudiosInput(){}
 }

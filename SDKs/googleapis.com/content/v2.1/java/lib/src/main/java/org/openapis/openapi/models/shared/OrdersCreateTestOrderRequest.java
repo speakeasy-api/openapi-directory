@@ -15,6 +15,7 @@ public class OrdersCreateTestOrderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public OrdersCreateTestOrderRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -26,6 +27,7 @@ public class OrdersCreateTestOrderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateName")
     public String templateName;
+
     public OrdersCreateTestOrderRequest withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -34,9 +36,11 @@ public class OrdersCreateTestOrderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testOrder")
     public TestOrder testOrder;
+
     public OrdersCreateTestOrderRequest withTestOrder(TestOrder testOrder) {
         this.testOrder = testOrder;
         return this;
     }
     
+    public OrdersCreateTestOrderRequest(){}
 }

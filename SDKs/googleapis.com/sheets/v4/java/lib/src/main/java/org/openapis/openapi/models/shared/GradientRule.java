@@ -18,6 +18,7 @@ public class GradientRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxpoint")
     public InterpolationPoint maxpoint;
+
     public GradientRule withMaxpoint(InterpolationPoint maxpoint) {
         this.maxpoint = maxpoint;
         return this;
@@ -29,6 +30,7 @@ public class GradientRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("midpoint")
     public InterpolationPoint midpoint;
+
     public GradientRule withMidpoint(InterpolationPoint midpoint) {
         this.midpoint = midpoint;
         return this;
@@ -40,9 +42,11 @@ public class GradientRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minpoint")
     public InterpolationPoint minpoint;
+
     public GradientRule withMinpoint(InterpolationPoint minpoint) {
         this.minpoint = minpoint;
         return this;
     }
     
+    public GradientRule(){}
 }

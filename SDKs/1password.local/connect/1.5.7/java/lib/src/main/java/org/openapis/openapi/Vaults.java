@@ -56,12 +56,10 @@ public class Vaults {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVaultByIdResponse res = new org.openapis.openapi.models.operations.GetVaultByIdResponse() {{
+        org.openapis.openapi.models.operations.GetVaultByIdResponse res = new org.openapis.openapi.models.operations.GetVaultByIdResponse(contentType, httpRes.statusCode()) {{
             vault = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,12 +108,10 @@ public class Vaults {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVaultsResponse res = new org.openapis.openapi.models.operations.GetVaultsResponse() {{
+        org.openapis.openapi.models.operations.GetVaultsResponse res = new org.openapis.openapi.models.operations.GetVaultsResponse(contentType, httpRes.statusCode()) {{
             vaults = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

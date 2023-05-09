@@ -59,11 +59,9 @@ public class Groups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2GroupsJsonResponse res = new org.openapis.openapi.models.operations.GetV2GroupsJsonResponse() {{
+        org.openapis.openapi.models.operations.GetV2GroupsJsonResponse res = new org.openapis.openapi.models.operations.GetV2GroupsJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,11 +96,9 @@ public class Groups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2GroupsIdJsonResponse res = new org.openapis.openapi.models.operations.GetV2GroupsIdJsonResponse() {{
+        org.openapis.openapi.models.operations.GetV2GroupsIdJsonResponse res = new org.openapis.openapi.models.operations.GetV2GroupsIdJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

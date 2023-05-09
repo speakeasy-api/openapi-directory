@@ -20,6 +20,7 @@ public class FargateProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterName")
     public String clusterName;
+
     public FargateProfile withClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
@@ -30,6 +31,7 @@ public class FargateProfile {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public FargateProfile withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class FargateProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fargateProfileArn")
     public String fargateProfileArn;
+
     public FargateProfile withFargateProfileArn(String fargateProfileArn) {
         this.fargateProfileArn = fargateProfileArn;
         return this;
@@ -46,6 +49,7 @@ public class FargateProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fargateProfileName")
     public String fargateProfileName;
+
     public FargateProfile withFargateProfileName(String fargateProfileName) {
         this.fargateProfileName = fargateProfileName;
         return this;
@@ -54,6 +58,7 @@ public class FargateProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("podExecutionRoleArn")
     public String podExecutionRoleArn;
+
     public FargateProfile withPodExecutionRoleArn(String podExecutionRoleArn) {
         this.podExecutionRoleArn = podExecutionRoleArn;
         return this;
@@ -62,6 +67,7 @@ public class FargateProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectors")
     public FargateProfileSelector[] selectors;
+
     public FargateProfile withSelectors(FargateProfileSelector[] selectors) {
         this.selectors = selectors;
         return this;
@@ -70,6 +76,7 @@ public class FargateProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public FargateProfileStatusEnum status;
+
     public FargateProfile withStatus(FargateProfileStatusEnum status) {
         this.status = status;
         return this;
@@ -78,6 +85,7 @@ public class FargateProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnets")
     public String[] subnets;
+
     public FargateProfile withSubnets(String[] subnets) {
         this.subnets = subnets;
         return this;
@@ -86,9 +94,11 @@ public class FargateProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public FargateProfile withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public FargateProfile(){}
 }

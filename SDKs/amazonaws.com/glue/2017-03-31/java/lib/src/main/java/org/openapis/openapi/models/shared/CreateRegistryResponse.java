@@ -15,6 +15,7 @@ public class CreateRegistryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateRegistryResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class CreateRegistryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistryArn")
     public String registryArn;
+
     public CreateRegistryResponse withRegistryArn(String registryArn) {
         this.registryArn = registryArn;
         return this;
@@ -31,6 +33,7 @@ public class CreateRegistryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistryName")
     public String registryName;
+
     public CreateRegistryResponse withRegistryName(String registryName) {
         this.registryName = registryName;
         return this;
@@ -39,9 +42,11 @@ public class CreateRegistryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateRegistryResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateRegistryResponse(){}
 }

@@ -18,6 +18,7 @@ public class Links {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("droppedLinksCount")
     public Integer droppedLinksCount;
+
     public Links withDroppedLinksCount(Integer droppedLinksCount) {
         this.droppedLinksCount = droppedLinksCount;
         return this;
@@ -29,9 +30,11 @@ public class Links {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public Link[] link;
+
     public Links withLink(Link[] link) {
         this.link = link;
         return this;
     }
     
+    public Links(){}
 }

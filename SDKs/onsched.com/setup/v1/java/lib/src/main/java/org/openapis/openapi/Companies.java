@@ -53,11 +53,9 @@ public class Companies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSetupV1CompaniesDomainsIdResponse res = new org.openapis.openapi.models.operations.DeleteSetupV1CompaniesDomainsIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteSetupV1CompaniesDomainsIdResponse res = new org.openapis.openapi.models.operations.DeleteSetupV1CompaniesDomainsIdResponse(contentType, httpRes.statusCode()) {{
             companyDomainViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -92,11 +90,9 @@ public class Companies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSetupV1CompaniesEmailTemplatesMasterResponse res = new org.openapis.openapi.models.operations.DeleteSetupV1CompaniesEmailTemplatesMasterResponse() {{
+        org.openapis.openapi.models.operations.DeleteSetupV1CompaniesEmailTemplatesMasterResponse res = new org.openapis.openapi.models.operations.DeleteSetupV1CompaniesEmailTemplatesMasterResponse(contentType, httpRes.statusCode()) {{
             masterEmailTemplateSettingsViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -132,11 +128,9 @@ public class Companies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSetupV1CompaniesRegionsIdResponse res = new org.openapis.openapi.models.operations.DeleteSetupV1CompaniesRegionsIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteSetupV1CompaniesRegionsIdResponse res = new org.openapis.openapi.models.operations.DeleteSetupV1CompaniesRegionsIdResponse(contentType, httpRes.statusCode()) {{
             regionViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -172,11 +166,9 @@ public class Companies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetupV1CompaniesResponse res = new org.openapis.openapi.models.operations.GetSetupV1CompaniesResponse() {{
+        org.openapis.openapi.models.operations.GetSetupV1CompaniesResponse res = new org.openapis.openapi.models.operations.GetSetupV1CompaniesResponse(contentType, httpRes.statusCode()) {{
             companyViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -211,11 +203,9 @@ public class Companies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetupV1CompaniesDomainsResponse res = new org.openapis.openapi.models.operations.GetSetupV1CompaniesDomainsResponse() {{
+        org.openapis.openapi.models.operations.GetSetupV1CompaniesDomainsResponse res = new org.openapis.openapi.models.operations.GetSetupV1CompaniesDomainsResponse(contentType, httpRes.statusCode()) {{
             companyDomainListViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -251,11 +241,9 @@ public class Companies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetupV1CompaniesDomainsIdResponse res = new org.openapis.openapi.models.operations.GetSetupV1CompaniesDomainsIdResponse() {{
+        org.openapis.openapi.models.operations.GetSetupV1CompaniesDomainsIdResponse res = new org.openapis.openapi.models.operations.GetSetupV1CompaniesDomainsIdResponse(contentType, httpRes.statusCode()) {{
             companyDomainViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -290,11 +278,9 @@ public class Companies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetupV1CompaniesEmailTemplatesResponse res = new org.openapis.openapi.models.operations.GetSetupV1CompaniesEmailTemplatesResponse() {{
+        org.openapis.openapi.models.operations.GetSetupV1CompaniesEmailTemplatesResponse res = new org.openapis.openapi.models.operations.GetSetupV1CompaniesEmailTemplatesResponse(contentType, httpRes.statusCode()) {{
             emailTemplateListViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -329,11 +315,9 @@ public class Companies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetupV1CompaniesEmailTemplatesMasterResponse res = new org.openapis.openapi.models.operations.GetSetupV1CompaniesEmailTemplatesMasterResponse() {{
+        org.openapis.openapi.models.operations.GetSetupV1CompaniesEmailTemplatesMasterResponse res = new org.openapis.openapi.models.operations.GetSetupV1CompaniesEmailTemplatesMasterResponse(contentType, httpRes.statusCode()) {{
             masterEmailTemplateSettingsViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -370,11 +354,9 @@ public class Companies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetupV1CompaniesEmailTemplatesTemplateNameResponse res = new org.openapis.openapi.models.operations.GetSetupV1CompaniesEmailTemplatesTemplateNameResponse() {{
+        org.openapis.openapi.models.operations.GetSetupV1CompaniesEmailTemplatesTemplateNameResponse res = new org.openapis.openapi.models.operations.GetSetupV1CompaniesEmailTemplatesTemplateNameResponse(contentType, httpRes.statusCode()) {{
             contentResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -416,11 +398,9 @@ public class Companies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetupV1CompaniesRegionsResponse res = new org.openapis.openapi.models.operations.GetSetupV1CompaniesRegionsResponse() {{
+        org.openapis.openapi.models.operations.GetSetupV1CompaniesRegionsResponse res = new org.openapis.openapi.models.operations.GetSetupV1CompaniesRegionsResponse(contentType, httpRes.statusCode()) {{
             regionListViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -458,11 +438,9 @@ public class Companies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetupV1CompaniesRegionsIdResponse res = new org.openapis.openapi.models.operations.GetSetupV1CompaniesRegionsIdResponse() {{
+        org.openapis.openapi.models.operations.GetSetupV1CompaniesRegionsIdResponse res = new org.openapis.openapi.models.operations.GetSetupV1CompaniesRegionsIdResponse(contentType, httpRes.statusCode()) {{
             regionViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -498,11 +476,9 @@ public class Companies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetupV1CompaniesTimezonesDateResponse res = new org.openapis.openapi.models.operations.GetSetupV1CompaniesTimezonesDateResponse() {{
+        org.openapis.openapi.models.operations.GetSetupV1CompaniesTimezonesDateResponse res = new org.openapis.openapi.models.operations.GetSetupV1CompaniesTimezonesDateResponse(contentType, httpRes.statusCode()) {{
             timezoneViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -546,11 +522,9 @@ public class Companies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSetupV1CompaniesResponse res = new org.openapis.openapi.models.operations.PostSetupV1CompaniesResponse() {{
+        org.openapis.openapi.models.operations.PostSetupV1CompaniesResponse res = new org.openapis.openapi.models.operations.PostSetupV1CompaniesResponse(contentType, httpRes.statusCode()) {{
             companyViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -588,11 +562,9 @@ public class Companies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSetupV1CompaniesDomainsResponse res = new org.openapis.openapi.models.operations.PostSetupV1CompaniesDomainsResponse() {{
+        org.openapis.openapi.models.operations.PostSetupV1CompaniesDomainsResponse res = new org.openapis.openapi.models.operations.PostSetupV1CompaniesDomainsResponse(contentType, httpRes.statusCode()) {{
             companyDomainViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -631,11 +603,9 @@ public class Companies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSetupV1CompaniesEmailTemplatesMasterResponse res = new org.openapis.openapi.models.operations.PostSetupV1CompaniesEmailTemplatesMasterResponse() {{
+        org.openapis.openapi.models.operations.PostSetupV1CompaniesEmailTemplatesMasterResponse res = new org.openapis.openapi.models.operations.PostSetupV1CompaniesEmailTemplatesMasterResponse(contentType, httpRes.statusCode()) {{
             masterEmailTemplateSettingsViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -673,11 +643,9 @@ public class Companies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSetupV1CompaniesRegionsResponse res = new org.openapis.openapi.models.operations.PostSetupV1CompaniesRegionsResponse() {{
+        org.openapis.openapi.models.operations.PostSetupV1CompaniesRegionsResponse res = new org.openapis.openapi.models.operations.PostSetupV1CompaniesRegionsResponse(contentType, httpRes.statusCode()) {{
             regionViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -716,11 +684,9 @@ public class Companies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutSetupV1CompaniesResponse res = new org.openapis.openapi.models.operations.PutSetupV1CompaniesResponse() {{
+        org.openapis.openapi.models.operations.PutSetupV1CompaniesResponse res = new org.openapis.openapi.models.operations.PutSetupV1CompaniesResponse(contentType, httpRes.statusCode()) {{
             companyViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -758,11 +724,9 @@ public class Companies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutSetupV1CompaniesDomainsIdResponse res = new org.openapis.openapi.models.operations.PutSetupV1CompaniesDomainsIdResponse() {{
+        org.openapis.openapi.models.operations.PutSetupV1CompaniesDomainsIdResponse res = new org.openapis.openapi.models.operations.PutSetupV1CompaniesDomainsIdResponse(contentType, httpRes.statusCode()) {{
             companyDomainViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -800,11 +764,9 @@ public class Companies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutSetupV1CompaniesRegionsIdResponse res = new org.openapis.openapi.models.operations.PutSetupV1CompaniesRegionsIdResponse() {{
+        org.openapis.openapi.models.operations.PutSetupV1CompaniesRegionsIdResponse res = new org.openapis.openapi.models.operations.PutSetupV1CompaniesRegionsIdResponse(contentType, httpRes.statusCode()) {{
             regionViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

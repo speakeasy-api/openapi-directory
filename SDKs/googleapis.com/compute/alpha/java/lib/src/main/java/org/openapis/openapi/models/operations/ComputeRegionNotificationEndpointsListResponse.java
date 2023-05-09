@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeRegionNotificationEndpointsListResponse {
     
     public String contentType;
+
     public ComputeRegionNotificationEndpointsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeRegionNotificationEndpointsListResponse {
      */
     
     public org.openapis.openapi.models.shared.NotificationEndpointList notificationEndpointList;
+
     public ComputeRegionNotificationEndpointsListResponse withNotificationEndpointList(org.openapis.openapi.models.shared.NotificationEndpointList notificationEndpointList) {
         this.notificationEndpointList = notificationEndpointList;
         return this;
@@ -26,6 +29,7 @@ public class ComputeRegionNotificationEndpointsListResponse {
     
     
     public Integer statusCode;
+
     public ComputeRegionNotificationEndpointsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeRegionNotificationEndpointsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeRegionNotificationEndpointsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeRegionNotificationEndpointsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

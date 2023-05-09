@@ -56,14 +56,12 @@ public class BranchController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BranchControllerGetBranchesResponse res = new org.openapis.openapi.models.operations.BranchControllerGetBranchesResponse() {{
+        org.openapis.openapi.models.operations.BranchControllerGetBranchesResponse res = new org.openapis.openapi.models.operations.BranchControllerGetBranchesResponse(contentType, httpRes.statusCode()) {{
             branchModelResults = null;
             branchModelResults = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,14 +108,12 @@ public class BranchController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2CustomerShortNameBranchBranchesBranchIDResponse res = new org.openapis.openapi.models.operations.GetV2CustomerShortNameBranchBranchesBranchIDResponse() {{
+        org.openapis.openapi.models.operations.GetV2CustomerShortNameBranchBranchesBranchIDResponse res = new org.openapis.openapi.models.operations.GetV2CustomerShortNameBranchBranchesBranchIDResponse(contentType, httpRes.statusCode()) {{
             branchModel = null;
             branchModel = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

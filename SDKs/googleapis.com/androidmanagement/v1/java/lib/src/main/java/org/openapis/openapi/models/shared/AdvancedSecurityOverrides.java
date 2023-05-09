@@ -18,6 +18,7 @@ public class AdvancedSecurityOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commonCriteriaMode")
     public AdvancedSecurityOverridesCommonCriteriaModeEnum commonCriteriaMode;
+
     public AdvancedSecurityOverrides withCommonCriteriaMode(AdvancedSecurityOverridesCommonCriteriaModeEnum commonCriteriaMode) {
         this.commonCriteriaMode = commonCriteriaMode;
         return this;
@@ -29,6 +30,7 @@ public class AdvancedSecurityOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("developerSettings")
     public AdvancedSecurityOverridesDeveloperSettingsEnum developerSettings;
+
     public AdvancedSecurityOverrides withDeveloperSettings(AdvancedSecurityOverridesDeveloperSettingsEnum developerSettings) {
         this.developerSettings = developerSettings;
         return this;
@@ -40,6 +42,7 @@ public class AdvancedSecurityOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googlePlayProtectVerifyApps")
     public AdvancedSecurityOverridesGooglePlayProtectVerifyAppsEnum googlePlayProtectVerifyApps;
+
     public AdvancedSecurityOverrides withGooglePlayProtectVerifyApps(AdvancedSecurityOverridesGooglePlayProtectVerifyAppsEnum googlePlayProtectVerifyApps) {
         this.googlePlayProtectVerifyApps = googlePlayProtectVerifyApps;
         return this;
@@ -51,6 +54,7 @@ public class AdvancedSecurityOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personalAppsThatCanReadWorkNotifications")
     public String[] personalAppsThatCanReadWorkNotifications;
+
     public AdvancedSecurityOverrides withPersonalAppsThatCanReadWorkNotifications(String[] personalAppsThatCanReadWorkNotifications) {
         this.personalAppsThatCanReadWorkNotifications = personalAppsThatCanReadWorkNotifications;
         return this;
@@ -62,9 +66,11 @@ public class AdvancedSecurityOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("untrustedAppsPolicy")
     public AdvancedSecurityOverridesUntrustedAppsPolicyEnum untrustedAppsPolicy;
+
     public AdvancedSecurityOverrides withUntrustedAppsPolicy(AdvancedSecurityOverridesUntrustedAppsPolicyEnum untrustedAppsPolicy) {
         this.untrustedAppsPolicy = untrustedAppsPolicy;
         return this;
     }
     
+    public AdvancedSecurityOverrides(){}
 }

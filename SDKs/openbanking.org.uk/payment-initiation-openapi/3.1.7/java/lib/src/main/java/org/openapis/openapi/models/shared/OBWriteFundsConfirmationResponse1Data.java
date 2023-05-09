@@ -15,6 +15,7 @@ public class OBWriteFundsConfirmationResponse1Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FundsAvailableResult")
     public OBWriteFundsConfirmationResponse1DataFundsAvailableResult fundsAvailableResult;
+
     public OBWriteFundsConfirmationResponse1Data withFundsAvailableResult(OBWriteFundsConfirmationResponse1DataFundsAvailableResult fundsAvailableResult) {
         this.fundsAvailableResult = fundsAvailableResult;
         return this;
@@ -26,9 +27,11 @@ public class OBWriteFundsConfirmationResponse1Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupplementaryData")
     public java.util.Map<String, Object> supplementaryData;
+
     public OBWriteFundsConfirmationResponse1Data withSupplementaryData(java.util.Map<String, Object> supplementaryData) {
         this.supplementaryData = supplementaryData;
         return this;
     }
     
+    public OBWriteFundsConfirmationResponse1Data(){}
 }

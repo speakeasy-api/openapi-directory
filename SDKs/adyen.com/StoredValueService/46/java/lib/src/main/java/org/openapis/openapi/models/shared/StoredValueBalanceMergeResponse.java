@@ -20,6 +20,7 @@ public class StoredValueBalanceMergeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authCode")
     public String authCode;
+
     public StoredValueBalanceMergeResponse withAuthCode(String authCode) {
         this.authCode = authCode;
         return this;
@@ -28,6 +29,7 @@ public class StoredValueBalanceMergeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentBalance")
     public Amount currentBalance;
+
     public StoredValueBalanceMergeResponse withCurrentBalance(Amount currentBalance) {
         this.currentBalance = currentBalance;
         return this;
@@ -39,6 +41,7 @@ public class StoredValueBalanceMergeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public StoredValueBalanceMergeResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -52,6 +55,7 @@ public class StoredValueBalanceMergeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refusalReason")
     public String refusalReason;
+
     public StoredValueBalanceMergeResponse withRefusalReason(String refusalReason) {
         this.refusalReason = refusalReason;
         return this;
@@ -69,6 +73,7 @@ public class StoredValueBalanceMergeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public StoredValueBalanceMergeResponseResultCodeEnum resultCode;
+
     public StoredValueBalanceMergeResponse withResultCode(StoredValueBalanceMergeResponseResultCodeEnum resultCode) {
         this.resultCode = resultCode;
         return this;
@@ -80,9 +85,11 @@ public class StoredValueBalanceMergeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thirdPartyRefusalReason")
     public String thirdPartyRefusalReason;
+
     public StoredValueBalanceMergeResponse withThirdPartyRefusalReason(String thirdPartyRefusalReason) {
         this.thirdPartyRefusalReason = thirdPartyRefusalReason;
         return this;
     }
     
+    public StoredValueBalanceMergeResponse(){}
 }

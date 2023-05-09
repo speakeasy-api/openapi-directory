@@ -19,6 +19,7 @@ public class SslCertificateRequestDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificate_type")
     public SslCertificateTypeEnum certificateType;
+
     public SslCertificateRequestDetail withCertificateType(SslCertificateTypeEnum certificateType) {
         this.certificateType = certificateType;
         return this;
@@ -30,6 +31,7 @@ public class SslCertificateRequestDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("common_name")
     public String commonName;
+
     public SslCertificateRequestDetail withCommonName(String commonName) {
         this.commonName = commonName;
         return this;
@@ -41,6 +43,7 @@ public class SslCertificateRequestDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public SslCertificateRequestDetail withId(Integer id) {
         this.id = id;
         return this;
@@ -52,6 +55,7 @@ public class SslCertificateRequestDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_code")
     public String orderCode;
+
     public SslCertificateRequestDetail withOrderCode(String orderCode) {
         this.orderCode = orderCode;
         return this;
@@ -63,6 +67,7 @@ public class SslCertificateRequestDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject_alt_names")
     public SslSubjectAltName[] subjectAltNames;
+
     public SslCertificateRequestDetail withSubjectAltNames(SslSubjectAltName[] subjectAltNames) {
         this.subjectAltNames = subjectAltNames;
         return this;
@@ -75,6 +80,7 @@ public class SslCertificateRequestDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validation_level")
     public SslCertificateValidationLevelEnum validationLevel;
+
     public SslCertificateRequestDetail withValidationLevel(SslCertificateValidationLevelEnum validationLevel) {
         this.validationLevel = validationLevel;
         return this;
@@ -86,6 +92,7 @@ public class SslCertificateRequestDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validations")
     public SslCertificateRequestValidation[] validations;
+
     public SslCertificateRequestDetail withValidations(SslCertificateRequestValidation[] validations) {
         this.validations = validations;
         return this;
@@ -97,9 +104,11 @@ public class SslCertificateRequestDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor")
     public SslCertificateVendorEnum vendor;
+
     public SslCertificateRequestDetail withVendor(SslCertificateVendorEnum vendor) {
         this.vendor = vendor;
         return this;
     }
     
+    public SslCertificateRequestDetail(){}
 }

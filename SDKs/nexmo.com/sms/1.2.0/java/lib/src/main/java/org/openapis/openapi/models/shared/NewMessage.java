@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NewMessage {
@@ -12,6 +13,7 @@ public class NewMessage {
      */
     @SpeakeasyMetadata("form:name=account-ref")
     public String accountRef;
+
     public NewMessage withAccountRef(String accountRef) {
         this.accountRef = accountRef;
         return this;
@@ -22,6 +24,7 @@ public class NewMessage {
      */
     @SpeakeasyMetadata("form:name=api_key")
     public String apiKey;
+
     public NewMessage withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -32,6 +35,7 @@ public class NewMessage {
      */
     @SpeakeasyMetadata("form:name=api_secret")
     public String apiSecret;
+
     public NewMessage withApiSecret(String apiSecret) {
         this.apiSecret = apiSecret;
         return this;
@@ -42,6 +46,7 @@ public class NewMessage {
      */
     @SpeakeasyMetadata("form:name=body")
     public String body;
+
     public NewMessage withBody(String body) {
         this.body = body;
         return this;
@@ -52,6 +57,7 @@ public class NewMessage {
      */
     @SpeakeasyMetadata("form:name=callback")
     public String callback;
+
     public NewMessage withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class NewMessage {
      */
     @SpeakeasyMetadata("form:name=client-ref")
     public String clientRef;
+
     public NewMessage withClientRef(String clientRef) {
         this.clientRef = clientRef;
         return this;
@@ -72,6 +79,7 @@ public class NewMessage {
      */
     @SpeakeasyMetadata("form:name=content-id")
     public String contentId;
+
     public NewMessage withContentId(String contentId) {
         this.contentId = contentId;
         return this;
@@ -82,6 +90,7 @@ public class NewMessage {
      */
     @SpeakeasyMetadata("form:name=entity-id")
     public String entityId;
+
     public NewMessage withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -92,6 +101,7 @@ public class NewMessage {
      */
     @SpeakeasyMetadata("form:name=from")
     public String from;
+
     public NewMessage withFrom(String from) {
         this.from = from;
         return this;
@@ -102,6 +112,7 @@ public class NewMessage {
      */
     @SpeakeasyMetadata("form:name=message-class")
     public NewMessageMessageClassEnum messageClass;
+
     public NewMessage withMessageClass(NewMessageMessageClassEnum messageClass) {
         this.messageClass = messageClass;
         return this;
@@ -112,6 +123,7 @@ public class NewMessage {
      */
     @SpeakeasyMetadata("form:name=protocol-id")
     public Long protocolId;
+
     public NewMessage withProtocolId(Long protocolId) {
         this.protocolId = protocolId;
         return this;
@@ -122,6 +134,7 @@ public class NewMessage {
      */
     @SpeakeasyMetadata("form:name=sig")
     public String sig;
+
     public NewMessage withSig(String sig) {
         this.sig = sig;
         return this;
@@ -132,6 +145,7 @@ public class NewMessage {
      */
     @SpeakeasyMetadata("form:name=status-report-req")
     public Boolean statusReportReq;
+
     public NewMessage withStatusReportReq(Boolean statusReportReq) {
         this.statusReportReq = statusReportReq;
         return this;
@@ -142,6 +156,7 @@ public class NewMessage {
      */
     @SpeakeasyMetadata("form:name=text")
     public String text;
+
     public NewMessage withText(String text) {
         this.text = text;
         return this;
@@ -152,6 +167,7 @@ public class NewMessage {
      */
     @SpeakeasyMetadata("form:name=to")
     public String to;
+
     public NewMessage withTo(String to) {
         this.to = to;
         return this;
@@ -162,6 +178,7 @@ public class NewMessage {
      */
     @SpeakeasyMetadata("form:name=ttl")
     public Long ttl;
+
     public NewMessage withTtl(Long ttl) {
         this.ttl = ttl;
         return this;
@@ -172,6 +189,7 @@ public class NewMessage {
      */
     @SpeakeasyMetadata("form:name=type")
     public NewMessageTypeEnum type;
+
     public NewMessage withType(NewMessageTypeEnum type) {
         this.type = type;
         return this;
@@ -182,9 +200,15 @@ public class NewMessage {
      */
     @SpeakeasyMetadata("form:name=udh")
     public String udh;
+
     public NewMessage withUdh(String udh) {
         this.udh = udh;
         return this;
     }
     
+    public NewMessage(@JsonProperty("api_key") String apiKey, @JsonProperty("from") String from, @JsonProperty("to") String to) {
+        this.apiKey = apiKey;
+        this.from = from;
+        this.to = to;
+  }
 }

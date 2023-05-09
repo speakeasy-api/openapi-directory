@@ -58,11 +58,9 @@ public class Domains {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsListResponse res = new org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsListResponse() {{
+        org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsListResponse res = new org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsListResponse(contentType, httpRes.statusCode()) {{
             listDomainsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Domains {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsTrafficStatsGetResponse res = new org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsTrafficStatsGetResponse() {{
+        org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsTrafficStatsGetResponse res = new org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsTrafficStatsGetResponse(contentType, httpRes.statusCode()) {{
             trafficStats = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -150,11 +146,9 @@ public class Domains {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsTrafficStatsListResponse res = new org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsTrafficStatsListResponse() {{
+        org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsTrafficStatsListResponse res = new org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsTrafficStatsListResponse(contentType, httpRes.statusCode()) {{
             listTrafficStatsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -17,6 +17,7 @@ public class StartReplayRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public StartReplayRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -24,6 +25,7 @@ public class StartReplayRequest {
     
     @JsonProperty("Destination")
     public ReplayDestination destination;
+
     public StartReplayRequest withDestination(ReplayDestination destination) {
         this.destination = destination;
         return this;
@@ -33,6 +35,7 @@ public class StartReplayRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EventEndTime")
     public OffsetDateTime eventEndTime;
+
     public StartReplayRequest withEventEndTime(OffsetDateTime eventEndTime) {
         this.eventEndTime = eventEndTime;
         return this;
@@ -40,6 +43,7 @@ public class StartReplayRequest {
     
     @JsonProperty("EventSourceArn")
     public String eventSourceArn;
+
     public StartReplayRequest withEventSourceArn(String eventSourceArn) {
         this.eventSourceArn = eventSourceArn;
         return this;
@@ -49,6 +53,7 @@ public class StartReplayRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EventStartTime")
     public OffsetDateTime eventStartTime;
+
     public StartReplayRequest withEventStartTime(OffsetDateTime eventStartTime) {
         this.eventStartTime = eventStartTime;
         return this;
@@ -56,9 +61,17 @@ public class StartReplayRequest {
     
     @JsonProperty("ReplayName")
     public String replayName;
+
     public StartReplayRequest withReplayName(String replayName) {
         this.replayName = replayName;
         return this;
     }
     
+    public StartReplayRequest(@JsonProperty("Destination") ReplayDestination destination, @JsonProperty("EventEndTime") OffsetDateTime eventEndTime, @JsonProperty("EventSourceArn") String eventSourceArn, @JsonProperty("EventStartTime") OffsetDateTime eventStartTime, @JsonProperty("ReplayName") String replayName) {
+        this.destination = destination;
+        this.eventEndTime = eventEndTime;
+        this.eventSourceArn = eventSourceArn;
+        this.eventStartTime = eventStartTime;
+        this.replayName = replayName;
+  }
 }

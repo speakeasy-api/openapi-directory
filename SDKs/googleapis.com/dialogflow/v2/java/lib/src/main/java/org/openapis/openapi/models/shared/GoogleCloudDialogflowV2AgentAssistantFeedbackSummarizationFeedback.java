@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2AgentAssistantFeedbackSummarizationFeedback 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public GoogleCloudDialogflowV2AgentAssistantFeedbackSummarizationFeedback withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2AgentAssistantFeedbackSummarizationFeedback 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submitTime")
     public String submitTime;
+
     public GoogleCloudDialogflowV2AgentAssistantFeedbackSummarizationFeedback withSubmitTime(String submitTime) {
         this.submitTime = submitTime;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowV2AgentAssistantFeedbackSummarizationFeedback 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summaryText")
     public String summaryText;
+
     public GoogleCloudDialogflowV2AgentAssistantFeedbackSummarizationFeedback withSummaryText(String summaryText) {
         this.summaryText = summaryText;
         return this;
     }
     
+    public GoogleCloudDialogflowV2AgentAssistantFeedbackSummarizationFeedback(){}
 }

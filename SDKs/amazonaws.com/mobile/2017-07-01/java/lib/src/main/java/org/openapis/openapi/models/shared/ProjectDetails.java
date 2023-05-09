@@ -20,6 +20,7 @@ public class ProjectDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consoleUrl")
     public String consoleUrl;
+
     public ProjectDetails withConsoleUrl(String consoleUrl) {
         this.consoleUrl = consoleUrl;
         return this;
@@ -30,6 +31,7 @@ public class ProjectDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdDate")
     public OffsetDateTime createdDate;
+
     public ProjectDetails withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -40,6 +42,7 @@ public class ProjectDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDate")
     public OffsetDateTime lastUpdatedDate;
+
     public ProjectDetails withLastUpdatedDate(OffsetDateTime lastUpdatedDate) {
         this.lastUpdatedDate = lastUpdatedDate;
         return this;
@@ -51,6 +54,7 @@ public class ProjectDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProjectDetails withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class ProjectDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public ProjectDetails withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -73,6 +78,7 @@ public class ProjectDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public ProjectDetails withRegion(String region) {
         this.region = region;
         return this;
@@ -84,6 +90,7 @@ public class ProjectDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public Resource[] resources;
+
     public ProjectDetails withResources(Resource[] resources) {
         this.resources = resources;
         return this;
@@ -95,9 +102,11 @@ public class ProjectDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ProjectStateEnum state;
+
     public ProjectDetails withState(ProjectStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ProjectDetails(){}
 }

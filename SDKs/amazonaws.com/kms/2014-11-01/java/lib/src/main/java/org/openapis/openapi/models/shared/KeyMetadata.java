@@ -20,6 +20,7 @@ public class KeyMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AWSAccountId")
     public String awsAccountId;
+
     public KeyMetadata withAWSAccountId(String awsAccountId) {
         this.awsAccountId = awsAccountId;
         return this;
@@ -28,6 +29,7 @@ public class KeyMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public KeyMetadata withArn(String arn) {
         this.arn = arn;
         return this;
@@ -36,6 +38,7 @@ public class KeyMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudHsmClusterId")
     public String cloudHsmClusterId;
+
     public KeyMetadata withCloudHsmClusterId(String cloudHsmClusterId) {
         this.cloudHsmClusterId = cloudHsmClusterId;
         return this;
@@ -46,6 +49,7 @@ public class KeyMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDate")
     public OffsetDateTime creationDate;
+
     public KeyMetadata withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -54,6 +58,7 @@ public class KeyMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomKeyStoreId")
     public String customKeyStoreId;
+
     public KeyMetadata withCustomKeyStoreId(String customKeyStoreId) {
         this.customKeyStoreId = customKeyStoreId;
         return this;
@@ -62,6 +67,7 @@ public class KeyMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomerMasterKeySpec")
     public KeyMetadataCustomerMasterKeySpecEnum customerMasterKeySpec;
+
     public KeyMetadata withCustomerMasterKeySpec(KeyMetadataCustomerMasterKeySpecEnum customerMasterKeySpec) {
         this.customerMasterKeySpec = customerMasterKeySpec;
         return this;
@@ -72,6 +78,7 @@ public class KeyMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DeletionDate")
     public OffsetDateTime deletionDate;
+
     public KeyMetadata withDeletionDate(OffsetDateTime deletionDate) {
         this.deletionDate = deletionDate;
         return this;
@@ -80,6 +87,7 @@ public class KeyMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public KeyMetadata withDescription(String description) {
         this.description = description;
         return this;
@@ -88,6 +96,7 @@ public class KeyMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public KeyMetadata withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -96,6 +105,7 @@ public class KeyMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionAlgorithms")
     public EncryptionAlgorithmSpecEnum[] encryptionAlgorithms;
+
     public KeyMetadata withEncryptionAlgorithms(EncryptionAlgorithmSpecEnum[] encryptionAlgorithms) {
         this.encryptionAlgorithms = encryptionAlgorithms;
         return this;
@@ -104,6 +114,7 @@ public class KeyMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpirationModel")
     public ExpirationModelTypeEnum expirationModel;
+
     public KeyMetadata withExpirationModel(ExpirationModelTypeEnum expirationModel) {
         this.expirationModel = expirationModel;
         return this;
@@ -111,6 +122,7 @@ public class KeyMetadata {
     
     @JsonProperty("KeyId")
     public String keyId;
+
     public KeyMetadata withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -119,6 +131,7 @@ public class KeyMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyManager")
     public KeyManagerTypeEnum keyManager;
+
     public KeyMetadata withKeyManager(KeyManagerTypeEnum keyManager) {
         this.keyManager = keyManager;
         return this;
@@ -127,6 +140,7 @@ public class KeyMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeySpec")
     public KeySpecEnum keySpec;
+
     public KeyMetadata withKeySpec(KeySpecEnum keySpec) {
         this.keySpec = keySpec;
         return this;
@@ -135,6 +149,7 @@ public class KeyMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyState")
     public KeyStateEnum keyState;
+
     public KeyMetadata withKeyState(KeyStateEnum keyState) {
         this.keyState = keyState;
         return this;
@@ -143,6 +158,7 @@ public class KeyMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyUsage")
     public KeyUsageTypeEnum keyUsage;
+
     public KeyMetadata withKeyUsage(KeyUsageTypeEnum keyUsage) {
         this.keyUsage = keyUsage;
         return this;
@@ -151,6 +167,7 @@ public class KeyMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MacAlgorithms")
     public MacAlgorithmSpecEnum[] macAlgorithms;
+
     public KeyMetadata withMacAlgorithms(MacAlgorithmSpecEnum[] macAlgorithms) {
         this.macAlgorithms = macAlgorithms;
         return this;
@@ -159,6 +176,7 @@ public class KeyMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MultiRegion")
     public Boolean multiRegion;
+
     public KeyMetadata withMultiRegion(Boolean multiRegion) {
         this.multiRegion = multiRegion;
         return this;
@@ -167,6 +185,7 @@ public class KeyMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MultiRegionConfiguration")
     public MultiRegionConfiguration multiRegionConfiguration;
+
     public KeyMetadata withMultiRegionConfiguration(MultiRegionConfiguration multiRegionConfiguration) {
         this.multiRegionConfiguration = multiRegionConfiguration;
         return this;
@@ -175,6 +194,7 @@ public class KeyMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Origin")
     public OriginTypeEnum origin;
+
     public KeyMetadata withOrigin(OriginTypeEnum origin) {
         this.origin = origin;
         return this;
@@ -183,6 +203,7 @@ public class KeyMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PendingDeletionWindowInDays")
     public Long pendingDeletionWindowInDays;
+
     public KeyMetadata withPendingDeletionWindowInDays(Long pendingDeletionWindowInDays) {
         this.pendingDeletionWindowInDays = pendingDeletionWindowInDays;
         return this;
@@ -191,6 +212,7 @@ public class KeyMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SigningAlgorithms")
     public SigningAlgorithmSpecEnum[] signingAlgorithms;
+
     public KeyMetadata withSigningAlgorithms(SigningAlgorithmSpecEnum[] signingAlgorithms) {
         this.signingAlgorithms = signingAlgorithms;
         return this;
@@ -201,6 +223,7 @@ public class KeyMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ValidTo")
     public OffsetDateTime validTo;
+
     public KeyMetadata withValidTo(OffsetDateTime validTo) {
         this.validTo = validTo;
         return this;
@@ -209,9 +232,13 @@ public class KeyMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("XksKeyConfiguration")
     public XksKeyConfigurationType xksKeyConfiguration;
+
     public KeyMetadata withXksKeyConfiguration(XksKeyConfigurationType xksKeyConfiguration) {
         this.xksKeyConfiguration = xksKeyConfiguration;
         return this;
     }
     
+    public KeyMetadata(@JsonProperty("KeyId") String keyId) {
+        this.keyId = keyId;
+  }
 }

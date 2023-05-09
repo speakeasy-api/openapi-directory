@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeFleetsResponse {
     
     public String contentType;
+
     public DescribeFleetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeFleetsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeFleetsResult describeFleetsResult;
+
     public DescribeFleetsResponse withDescribeFleetsResult(org.openapis.openapi.models.shared.DescribeFleetsResult describeFleetsResult) {
         this.describeFleetsResult = describeFleetsResult;
         return this;
@@ -29,6 +32,7 @@ public class DescribeFleetsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeFleetsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeFleetsResponse {
     
     
     public Integer statusCode;
+
     public DescribeFleetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeFleetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeFleetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeFleetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

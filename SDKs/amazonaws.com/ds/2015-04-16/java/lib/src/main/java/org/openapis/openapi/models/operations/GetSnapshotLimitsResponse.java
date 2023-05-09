@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSnapshotLimitsResponse {
@@ -12,6 +13,7 @@ public class GetSnapshotLimitsResponse {
      */
     
     public Object clientException;
+
     public GetSnapshotLimitsResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class GetSnapshotLimitsResponse {
     
     
     public String contentType;
+
     public GetSnapshotLimitsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetSnapshotLimitsResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public GetSnapshotLimitsResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -39,6 +43,7 @@ public class GetSnapshotLimitsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSnapshotLimitsResult getSnapshotLimitsResult;
+
     public GetSnapshotLimitsResponse withGetSnapshotLimitsResult(org.openapis.openapi.models.shared.GetSnapshotLimitsResult getSnapshotLimitsResult) {
         this.getSnapshotLimitsResult = getSnapshotLimitsResult;
         return this;
@@ -46,6 +51,7 @@ public class GetSnapshotLimitsResponse {
     
     
     public Integer statusCode;
+
     public GetSnapshotLimitsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetSnapshotLimitsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSnapshotLimitsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetSnapshotLimitsResponse {
      */
     
     public Object serviceException;
+
     public GetSnapshotLimitsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
     }
     
+    public GetSnapshotLimitsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

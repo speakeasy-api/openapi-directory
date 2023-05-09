@@ -12,6 +12,7 @@ public class Navigation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account")
     public NavEntry account;
+
     public Navigation withAccount(NavEntry account) {
         this.account = account;
         return this;
@@ -23,6 +24,7 @@ public class Navigation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyright")
     public String copyright;
+
     public Navigation withCopyright(String copyright) {
         this.copyright = copyright;
         return this;
@@ -34,6 +36,7 @@ public class Navigation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public java.util.Map<String, Object> customFields;
+
     public Navigation withCustomFields(java.util.Map<String, Object> customFields) {
         this.customFields = customFields;
         return this;
@@ -42,6 +45,7 @@ public class Navigation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("footer")
     public NavEntry footer;
+
     public Navigation withFooter(NavEntry footer) {
         this.footer = footer;
         return this;
@@ -52,6 +56,7 @@ public class Navigation {
      */
     @JsonProperty("header")
     public NavEntry[] header;
+
     public Navigation withHeader(NavEntry[] header) {
         this.header = header;
         return this;
@@ -60,9 +65,13 @@ public class Navigation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobile")
     public NavEntry mobile;
+
     public Navigation withMobile(NavEntry mobile) {
         this.mobile = mobile;
         return this;
     }
     
+    public Navigation(@JsonProperty("header") NavEntry[] header) {
+        this.header = header;
+  }
 }

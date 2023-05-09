@@ -18,6 +18,7 @@ public class GkeNodePoolAcceleratorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceleratorCount")
     public String acceleratorCount;
+
     public GkeNodePoolAcceleratorConfig withAcceleratorCount(String acceleratorCount) {
         this.acceleratorCount = acceleratorCount;
         return this;
@@ -29,6 +30,7 @@ public class GkeNodePoolAcceleratorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceleratorType")
     public String acceleratorType;
+
     public GkeNodePoolAcceleratorConfig withAcceleratorType(String acceleratorType) {
         this.acceleratorType = acceleratorType;
         return this;
@@ -40,9 +42,11 @@ public class GkeNodePoolAcceleratorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gpuPartitionSize")
     public String gpuPartitionSize;
+
     public GkeNodePoolAcceleratorConfig withGpuPartitionSize(String gpuPartitionSize) {
         this.gpuPartitionSize = gpuPartitionSize;
         return this;
     }
     
+    public GkeNodePoolAcceleratorConfig(){}
 }

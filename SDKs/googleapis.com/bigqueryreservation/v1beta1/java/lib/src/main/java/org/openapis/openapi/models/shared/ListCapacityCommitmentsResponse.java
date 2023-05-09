@@ -18,6 +18,7 @@ public class ListCapacityCommitmentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacityCommitments")
     public CapacityCommitment[] capacityCommitments;
+
     public ListCapacityCommitmentsResponse withCapacityCommitments(CapacityCommitment[] capacityCommitments) {
         this.capacityCommitments = capacityCommitments;
         return this;
@@ -29,9 +30,11 @@ public class ListCapacityCommitmentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListCapacityCommitmentsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListCapacityCommitmentsResponse(){}
 }

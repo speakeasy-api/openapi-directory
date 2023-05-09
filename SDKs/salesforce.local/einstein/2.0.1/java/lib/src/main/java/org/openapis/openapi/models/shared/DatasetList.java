@@ -15,6 +15,7 @@ public class DatasetList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Dataset[] data;
+
     public DatasetList withData(Dataset[] data) {
         this.data = data;
         return this;
@@ -23,9 +24,11 @@ public class DatasetList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public DatasetList withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public DatasetList(){}
 }

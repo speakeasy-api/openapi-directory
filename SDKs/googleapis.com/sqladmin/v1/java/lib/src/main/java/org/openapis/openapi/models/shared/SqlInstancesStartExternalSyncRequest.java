@@ -18,6 +18,7 @@ public class SqlInstancesStartExternalSyncRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mysqlSyncConfig")
     public MySqlSyncConfig mysqlSyncConfig;
+
     public SqlInstancesStartExternalSyncRequest withMysqlSyncConfig(MySqlSyncConfig mysqlSyncConfig) {
         this.mysqlSyncConfig = mysqlSyncConfig;
         return this;
@@ -29,6 +30,7 @@ public class SqlInstancesStartExternalSyncRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipVerification")
     public Boolean skipVerification;
+
     public SqlInstancesStartExternalSyncRequest withSkipVerification(Boolean skipVerification) {
         this.skipVerification = skipVerification;
         return this;
@@ -40,9 +42,11 @@ public class SqlInstancesStartExternalSyncRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syncMode")
     public SqlInstancesStartExternalSyncRequestSyncModeEnum syncMode;
+
     public SqlInstancesStartExternalSyncRequest withSyncMode(SqlInstancesStartExternalSyncRequestSyncModeEnum syncMode) {
         this.syncMode = syncMode;
         return this;
     }
     
+    public SqlInstancesStartExternalSyncRequest(){}
 }

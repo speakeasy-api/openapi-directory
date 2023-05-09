@@ -15,9 +15,11 @@ public class ComputeType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public ComputeEnum name;
+
     public ComputeType withName(ComputeEnum name) {
         this.name = name;
         return this;
     }
     
+    public ComputeType(){}
 }

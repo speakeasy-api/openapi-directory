@@ -18,9 +18,11 @@ public class KeyId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyId")
     public String keyId;
+
     public KeyId withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
     }
     
+    public KeyId(){}
 }

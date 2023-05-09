@@ -18,6 +18,7 @@ public class UpdateSlidesPositionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insertionIndex")
     public Integer insertionIndex;
+
     public UpdateSlidesPositionRequest withInsertionIndex(Integer insertionIndex) {
         this.insertionIndex = insertionIndex;
         return this;
@@ -29,9 +30,11 @@ public class UpdateSlidesPositionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slideObjectIds")
     public String[] slideObjectIds;
+
     public UpdateSlidesPositionRequest withSlideObjectIds(String[] slideObjectIds) {
         this.slideObjectIds = slideObjectIds;
         return this;
     }
     
+    public UpdateSlidesPositionRequest(){}
 }

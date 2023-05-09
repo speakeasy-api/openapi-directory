@@ -15,6 +15,7 @@ public class AccountTier {
      */
     
     public OffsetDateTime createdAt;
+
     public AccountTier withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -25,6 +26,7 @@ public class AccountTier {
      */
     
     public Long id;
+
     public AccountTier withId(Long id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class AccountTier {
      */
     
     public String name;
+
     public AccountTier withName(String name) {
         this.name = name;
         return this;
@@ -45,6 +48,7 @@ public class AccountTier {
      */
     
     public Long order;
+
     public AccountTier withOrder(Long order) {
         this.order = order;
         return this;
@@ -55,9 +59,11 @@ public class AccountTier {
      */
     
     public OffsetDateTime updatedAt;
+
     public AccountTier withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public AccountTier(){}
 }

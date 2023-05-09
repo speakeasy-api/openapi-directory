@@ -15,6 +15,7 @@ public class DetectSentimentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sentiment")
     public SentimentTypeEnum sentiment;
+
     public DetectSentimentResponse withSentiment(SentimentTypeEnum sentiment) {
         this.sentiment = sentiment;
         return this;
@@ -23,9 +24,11 @@ public class DetectSentimentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SentimentScore")
     public SentimentScore sentimentScore;
+
     public DetectSentimentResponse withSentimentScore(SentimentScore sentimentScore) {
         this.sentimentScore = sentimentScore;
         return this;
     }
     
+    public DetectSentimentResponse(){}
 }

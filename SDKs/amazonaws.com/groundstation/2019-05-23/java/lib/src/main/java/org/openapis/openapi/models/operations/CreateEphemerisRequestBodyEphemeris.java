@@ -18,6 +18,7 @@ public class CreateEphemerisRequestBodyEphemeris {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oem")
     public org.openapis.openapi.models.shared.OEMEphemeris oem;
+
     public CreateEphemerisRequestBodyEphemeris withOem(org.openapis.openapi.models.shared.OEMEphemeris oem) {
         this.oem = oem;
         return this;
@@ -29,9 +30,11 @@ public class CreateEphemerisRequestBodyEphemeris {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tle")
     public org.openapis.openapi.models.shared.TLEEphemeris tle;
+
     public CreateEphemerisRequestBodyEphemeris withTle(org.openapis.openapi.models.shared.TLEEphemeris tle) {
         this.tle = tle;
         return this;
     }
     
+    public CreateEphemerisRequestBodyEphemeris(){}
 }

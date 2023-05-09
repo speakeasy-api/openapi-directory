@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutDestinationRequest {
     @JsonProperty("destinationName")
     public String destinationName;
+
     public PutDestinationRequest withDestinationName(String destinationName) {
         this.destinationName = destinationName;
         return this;
@@ -18,6 +19,7 @@ public class PutDestinationRequest {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public PutDestinationRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -26,6 +28,7 @@ public class PutDestinationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public PutDestinationRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -33,9 +36,15 @@ public class PutDestinationRequest {
     
     @JsonProperty("targetArn")
     public String targetArn;
+
     public PutDestinationRequest withTargetArn(String targetArn) {
         this.targetArn = targetArn;
         return this;
     }
     
+    public PutDestinationRequest(@JsonProperty("destinationName") String destinationName, @JsonProperty("roleArn") String roleArn, @JsonProperty("targetArn") String targetArn) {
+        this.destinationName = destinationName;
+        this.roleArn = roleArn;
+        this.targetArn = targetArn;
+  }
 }

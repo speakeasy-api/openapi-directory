@@ -22,6 +22,7 @@ public class StreamInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public StreamInfo withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class StreamInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public StreamInfo withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class StreamInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("files")
     public StreamFile[] files;
+
     public StreamInfo withFiles(StreamFile[] files) {
         this.files = files;
         return this;
@@ -48,6 +51,7 @@ public class StreamInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public StreamInfo withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -56,6 +60,7 @@ public class StreamInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public StreamInfo withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -64,6 +69,7 @@ public class StreamInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamArn")
     public String streamArn;
+
     public StreamInfo withStreamArn(String streamArn) {
         this.streamArn = streamArn;
         return this;
@@ -72,6 +78,7 @@ public class StreamInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamId")
     public String streamId;
+
     public StreamInfo withStreamId(String streamId) {
         this.streamId = streamId;
         return this;
@@ -80,9 +87,11 @@ public class StreamInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamVersion")
     public Long streamVersion;
+
     public StreamInfo withStreamVersion(Long streamVersion) {
         this.streamVersion = streamVersion;
         return this;
     }
     
+    public StreamInfo(){}
 }

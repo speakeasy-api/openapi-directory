@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetEventsTypeEnum;
 import org.openapis.openapi.models.operations.GetEventsRequest;
 import org.openapis.openapi.models.operations.GetEventsResponse;
+import org.openapis.openapi.models.operations.GetEventsTypeEnum;
 
 public class Application {
     public static void main(String[] args) {
@@ -33,17 +32,19 @@ public class Application {
                 nexttoken = "unde";
                 queryexecutionid = "nulla";
                 site = "corrupti";
-                type = "contacts";
-            }}            
+                type = GetEventsTypeEnum.CONTACTS;
+            }};            
 
             GetEventsResponse res = sdk.developers.getEvents(req);
 
-            if (res.eventRecords.isPresent()) {
+            if (res.eventRecords != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -51,9 +52,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### developers
+### [developers](docs/developers/README.md)
 
-* `getEvents` - get events for analytics
+* [getEvents](docs/developers/README.md#getevents) - get events for analytics
 <!-- End SDK Available Operations -->
 
 ### Maturity

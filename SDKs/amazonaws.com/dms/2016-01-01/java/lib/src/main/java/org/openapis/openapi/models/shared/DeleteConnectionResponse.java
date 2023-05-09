@@ -15,9 +15,11 @@ public class DeleteConnectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Connection")
     public Connection connection;
+
     public DeleteConnectionResponse withConnection(Connection connection) {
         this.connection = connection;
         return this;
     }
     
+    public DeleteConnectionResponse(){}
 }

@@ -15,9 +15,11 @@ public class KeywordFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public KeywordFilter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public KeywordFilter(){}
 }

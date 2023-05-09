@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetScoreCommentsRequest {
@@ -12,6 +13,7 @@ public class GetScoreCommentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public GetScoreCommentsDirectionEnum direction;
+
     public GetScoreCommentsRequest withDirection(GetScoreCommentsDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -23,6 +25,7 @@ public class GetScoreCommentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=score")
     public String score;
+
     public GetScoreCommentsRequest withScore(String score) {
         this.score = score;
         return this;
@@ -34,6 +37,7 @@ public class GetScoreCommentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sharingKey")
     public String sharingKey;
+
     public GetScoreCommentsRequest withSharingKey(String sharingKey) {
         this.sharingKey = sharingKey;
         return this;
@@ -44,6 +48,7 @@ public class GetScoreCommentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetScoreCommentsSortEnum sort;
+
     public GetScoreCommentsRequest withSort(GetScoreCommentsSortEnum sort) {
         this.sort = sort;
         return this;
@@ -54,9 +59,13 @@ public class GetScoreCommentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public GetScoreCommentsTypeEnum type;
+
     public GetScoreCommentsRequest withType(GetScoreCommentsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetScoreCommentsRequest(@JsonProperty("score") String score) {
+        this.score = score;
+  }
 }

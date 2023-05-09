@@ -15,6 +15,7 @@ public class DocumentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountHolderCode")
     public String accountHolderCode;
+
     public DocumentDetail withAccountHolderCode(String accountHolderCode) {
         this.accountHolderCode = accountHolderCode;
         return this;
@@ -28,6 +29,7 @@ public class DocumentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankAccountUUID")
     public String bankAccountUUID;
+
     public DocumentDetail withBankAccountUUID(String bankAccountUUID) {
         this.bankAccountUUID = bankAccountUUID;
         return this;
@@ -39,6 +41,7 @@ public class DocumentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DocumentDetail withDescription(String description) {
         this.description = description;
         return this;
@@ -60,6 +63,7 @@ public class DocumentDetail {
      */
     @JsonProperty("documentType")
     public DocumentDetailDocumentTypeEnum documentType;
+
     public DocumentDetail withDocumentType(DocumentDetailDocumentTypeEnum documentType) {
         this.documentType = documentType;
         return this;
@@ -71,6 +75,7 @@ public class DocumentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filename")
     public String filename;
+
     public DocumentDetail withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -83,6 +88,7 @@ public class DocumentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shareholderCode")
     public String shareholderCode;
+
     public DocumentDetail withShareholderCode(String shareholderCode) {
         this.shareholderCode = shareholderCode;
         return this;
@@ -94,9 +100,13 @@ public class DocumentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signatoryCode")
     public String signatoryCode;
+
     public DocumentDetail withSignatoryCode(String signatoryCode) {
         this.signatoryCode = signatoryCode;
         return this;
     }
     
+    public DocumentDetail(@JsonProperty("documentType") DocumentDetailDocumentTypeEnum documentType) {
+        this.documentType = documentType;
+  }
 }

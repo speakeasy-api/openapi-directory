@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateWorkteamRequest {
     @JsonProperty("Description")
     public String description;
+
     public CreateWorkteamRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -18,6 +19,7 @@ public class CreateWorkteamRequest {
     
     @JsonProperty("MemberDefinitions")
     public MemberDefinition[] memberDefinitions;
+
     public CreateWorkteamRequest withMemberDefinitions(MemberDefinition[] memberDefinitions) {
         this.memberDefinitions = memberDefinitions;
         return this;
@@ -26,6 +28,7 @@ public class CreateWorkteamRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationConfiguration")
     public NotificationConfiguration notificationConfiguration;
+
     public CreateWorkteamRequest withNotificationConfiguration(NotificationConfiguration notificationConfiguration) {
         this.notificationConfiguration = notificationConfiguration;
         return this;
@@ -34,6 +37,7 @@ public class CreateWorkteamRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateWorkteamRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -42,6 +46,7 @@ public class CreateWorkteamRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkforceName")
     public String workforceName;
+
     public CreateWorkteamRequest withWorkforceName(String workforceName) {
         this.workforceName = workforceName;
         return this;
@@ -49,9 +54,15 @@ public class CreateWorkteamRequest {
     
     @JsonProperty("WorkteamName")
     public String workteamName;
+
     public CreateWorkteamRequest withWorkteamName(String workteamName) {
         this.workteamName = workteamName;
         return this;
     }
     
+    public CreateWorkteamRequest(@JsonProperty("Description") String description, @JsonProperty("MemberDefinitions") MemberDefinition[] memberDefinitions, @JsonProperty("WorkteamName") String workteamName) {
+        this.description = description;
+        this.memberDefinitions = memberDefinitions;
+        this.workteamName = workteamName;
+  }
 }

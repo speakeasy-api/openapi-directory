@@ -23,6 +23,7 @@ public class UpdateWorkerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalFixedProperties")
     public String additionalFixedProperties;
+
     public UpdateWorkerResponse withAdditionalFixedProperties(String additionalFixedProperties) {
         this.additionalFixedProperties = additionalFixedProperties;
         return this;
@@ -34,6 +35,7 @@ public class UpdateWorkerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalTransientProperties")
     public String additionalTransientProperties;
+
     public UpdateWorkerResponse withAdditionalTransientProperties(String additionalTransientProperties) {
         this.additionalTransientProperties = additionalTransientProperties;
         return this;
@@ -44,6 +46,7 @@ public class UpdateWorkerResponse {
      */
     @JsonProperty("arn")
     public String arn;
+
     public UpdateWorkerResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -54,6 +57,7 @@ public class UpdateWorkerResponse {
      */
     @JsonProperty("fleet")
     public String fleet;
+
     public UpdateWorkerResponse withFleet(String fleet) {
         this.fleet = fleet;
         return this;
@@ -64,6 +68,7 @@ public class UpdateWorkerResponse {
      */
     @JsonProperty("id")
     public String id;
+
     public UpdateWorkerResponse withId(String id) {
         this.id = id;
         return this;
@@ -74,6 +79,7 @@ public class UpdateWorkerResponse {
      */
     @JsonProperty("name")
     public String name;
+
     public UpdateWorkerResponse withName(String name) {
         this.name = name;
         return this;
@@ -85,6 +91,7 @@ public class UpdateWorkerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orientation")
     public Orientation orientation;
+
     public UpdateWorkerResponse withOrientation(Orientation orientation) {
         this.orientation = orientation;
         return this;
@@ -96,6 +103,7 @@ public class UpdateWorkerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public PositionCoordinates position;
+
     public UpdateWorkerResponse withPosition(PositionCoordinates position) {
         this.position = position;
         return this;
@@ -108,6 +116,7 @@ public class UpdateWorkerResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public UpdateWorkerResponse withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -119,9 +128,17 @@ public class UpdateWorkerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendorProperties")
     public VendorProperties vendorProperties;
+
     public UpdateWorkerResponse withVendorProperties(VendorProperties vendorProperties) {
         this.vendorProperties = vendorProperties;
         return this;
     }
     
+    public UpdateWorkerResponse(@JsonProperty("arn") String arn, @JsonProperty("fleet") String fleet, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
+        this.arn = arn;
+        this.fleet = fleet;
+        this.id = id;
+        this.name = name;
+        this.updatedAt = updatedAt;
+  }
 }

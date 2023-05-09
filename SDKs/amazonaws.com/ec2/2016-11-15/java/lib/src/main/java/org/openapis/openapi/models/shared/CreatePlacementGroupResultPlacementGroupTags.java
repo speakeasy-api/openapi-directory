@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreatePlacementGroupResultPlacementGroupTags {
     
     public String key;
+
     public CreatePlacementGroupResultPlacementGroupTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CreatePlacementGroupResultPlacementGroupTags {
     
     
     public String value;
+
     public CreatePlacementGroupResultPlacementGroupTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreatePlacementGroupResultPlacementGroupTags(){}
 }

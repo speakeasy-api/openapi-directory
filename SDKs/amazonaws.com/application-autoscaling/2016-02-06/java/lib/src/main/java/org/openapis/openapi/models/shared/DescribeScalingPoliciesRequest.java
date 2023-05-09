@@ -12,6 +12,7 @@ public class DescribeScalingPoliciesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeScalingPoliciesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class DescribeScalingPoliciesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeScalingPoliciesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,6 +30,7 @@ public class DescribeScalingPoliciesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyNames")
     public String[] policyNames;
+
     public DescribeScalingPoliciesRequest withPolicyNames(String[] policyNames) {
         this.policyNames = policyNames;
         return this;
@@ -36,6 +39,7 @@ public class DescribeScalingPoliciesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public DescribeScalingPoliciesRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -44,6 +48,7 @@ public class DescribeScalingPoliciesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScalableDimension")
     public ScalableDimensionEnum scalableDimension;
+
     public DescribeScalingPoliciesRequest withScalableDimension(ScalableDimensionEnum scalableDimension) {
         this.scalableDimension = scalableDimension;
         return this;
@@ -51,9 +56,13 @@ public class DescribeScalingPoliciesRequest {
     
     @JsonProperty("ServiceNamespace")
     public ServiceNamespaceEnum serviceNamespace;
+
     public DescribeScalingPoliciesRequest withServiceNamespace(ServiceNamespaceEnum serviceNamespace) {
         this.serviceNamespace = serviceNamespace;
         return this;
     }
     
+    public DescribeScalingPoliciesRequest(@JsonProperty("ServiceNamespace") ServiceNamespaceEnum serviceNamespace) {
+        this.serviceNamespace = serviceNamespace;
+  }
 }

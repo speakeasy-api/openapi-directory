@@ -15,9 +15,11 @@ public class JobTimeout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attemptDurationSeconds")
     public Long attemptDurationSeconds;
+
     public JobTimeout withAttemptDurationSeconds(Long attemptDurationSeconds) {
         this.attemptDurationSeconds = attemptDurationSeconds;
         return this;
     }
     
+    public JobTimeout(){}
 }

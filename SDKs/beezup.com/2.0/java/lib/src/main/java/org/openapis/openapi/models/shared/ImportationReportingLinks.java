@@ -12,9 +12,11 @@ public class ImportationReportingLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("report")
     public LinksImportationGetReportLink report;
+
     public ImportationReportingLinks withReport(LinksImportationGetReportLink report) {
         this.report = report;
         return this;
     }
     
+    public ImportationReportingLinks(){}
 }

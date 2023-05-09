@@ -18,9 +18,11 @@ public class FundingSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("search_for")
     public String searchFor;
+
     public FundingSearch withSearchFor(String searchFor) {
         this.searchFor = searchFor;
         return this;
     }
     
+    public FundingSearch(){}
 }

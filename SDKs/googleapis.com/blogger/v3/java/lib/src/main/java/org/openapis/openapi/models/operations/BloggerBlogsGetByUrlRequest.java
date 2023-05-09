@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BloggerBlogsGetByUrlRequest {
@@ -12,6 +13,7 @@ public class BloggerBlogsGetByUrlRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public BloggerBlogsGetByUrlRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class BloggerBlogsGetByUrlRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public BloggerBlogsGetByUrlRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class BloggerBlogsGetByUrlRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public BloggerBlogsGetByUrlRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class BloggerBlogsGetByUrlRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public BloggerBlogsGetByUrlRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class BloggerBlogsGetByUrlRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public BloggerBlogsGetByUrlRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class BloggerBlogsGetByUrlRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public BloggerBlogsGetByUrlRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class BloggerBlogsGetByUrlRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public BloggerBlogsGetByUrlRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +90,7 @@ public class BloggerBlogsGetByUrlRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public BloggerBlogsGetByUrlRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -92,6 +101,7 @@ public class BloggerBlogsGetByUrlRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public BloggerBlogsGetByUrlRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -102,6 +112,7 @@ public class BloggerBlogsGetByUrlRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public BloggerBlogsGetByUrlRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -112,6 +123,7 @@ public class BloggerBlogsGetByUrlRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public BloggerBlogsGetByUrlRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -119,6 +131,7 @@ public class BloggerBlogsGetByUrlRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
     public String url;
+
     public BloggerBlogsGetByUrlRequest withUrl(String url) {
         this.url = url;
         return this;
@@ -126,9 +139,13 @@ public class BloggerBlogsGetByUrlRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
     public BloggerBlogsGetByUrlViewEnum view;
+
     public BloggerBlogsGetByUrlRequest withView(BloggerBlogsGetByUrlViewEnum view) {
         this.view = view;
         return this;
     }
     
+    public BloggerBlogsGetByUrlRequest(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

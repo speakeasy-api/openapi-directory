@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSeriesResponse {
     
     public String contentType;
+
     public GetSeriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetSeriesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetSeriesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetSeriesResponse {
     
     
     public Integer statusCode;
+
     public GetSeriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetSeriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSeriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetSeriesResponse {
      */
     
     public GetSeries200ApplicationVndApiPlusJson getSeries200ApplicationVndApiPlusJsonObject;
+
     public GetSeriesResponse withGetSeries200ApplicationVndApiPlusJsonObject(GetSeries200ApplicationVndApiPlusJson getSeries200ApplicationVndApiPlusJsonObject) {
         this.getSeries200ApplicationVndApiPlusJsonObject = getSeries200ApplicationVndApiPlusJsonObject;
         return this;
@@ -54,9 +60,14 @@ public class GetSeriesResponse {
      */
     
     public GetSeries400ApplicationVndApiPlusJson getSeries400ApplicationVndApiPlusJsonObject;
+
     public GetSeriesResponse withGetSeries400ApplicationVndApiPlusJsonObject(GetSeries400ApplicationVndApiPlusJson getSeries400ApplicationVndApiPlusJsonObject) {
         this.getSeries400ApplicationVndApiPlusJsonObject = getSeries400ApplicationVndApiPlusJsonObject;
         return this;
     }
     
+    public GetSeriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

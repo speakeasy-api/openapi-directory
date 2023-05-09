@@ -18,6 +18,7 @@ public class DNSConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterDns")
     public DNSConfigClusterDNSEnum clusterDns;
+
     public DNSConfig withClusterDns(DNSConfigClusterDNSEnum clusterDns) {
         this.clusterDns = clusterDns;
         return this;
@@ -29,6 +30,7 @@ public class DNSConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterDnsDomain")
     public String clusterDnsDomain;
+
     public DNSConfig withClusterDnsDomain(String clusterDnsDomain) {
         this.clusterDnsDomain = clusterDnsDomain;
         return this;
@@ -40,9 +42,11 @@ public class DNSConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterDnsScope")
     public DNSConfigClusterDNSScopeEnum clusterDnsScope;
+
     public DNSConfig withClusterDnsScope(DNSConfigClusterDNSScopeEnum clusterDnsScope) {
         this.clusterDnsScope = clusterDnsScope;
         return this;
     }
     
+    public DNSConfig(){}
 }

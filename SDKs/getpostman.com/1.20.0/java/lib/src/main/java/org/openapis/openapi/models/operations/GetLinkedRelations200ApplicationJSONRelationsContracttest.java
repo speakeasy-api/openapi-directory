@@ -12,9 +12,11 @@ public class GetLinkedRelations200ApplicationJSONRelationsContracttest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("2a9b8fa8-88b7-4b86-8372-8e3f6f6e07f2")
     public GetLinkedRelations200ApplicationJSONRelationsContracttest2a9b8fa888b74b8683728e3f6f6e07f2 twoa9b8fa888b74b8683728e3f6f6e07f2;
+
     public GetLinkedRelations200ApplicationJSONRelationsContracttest withTwoa9b8fa888b74b8683728e3f6f6e07f2(GetLinkedRelations200ApplicationJSONRelationsContracttest2a9b8fa888b74b8683728e3f6f6e07f2 twoa9b8fa888b74b8683728e3f6f6e07f2) {
         this.twoa9b8fa888b74b8683728e3f6f6e07f2 = twoa9b8fa888b74b8683728e3f6f6e07f2;
         return this;
     }
     
+    public GetLinkedRelations200ApplicationJSONRelationsContracttest(){}
 }

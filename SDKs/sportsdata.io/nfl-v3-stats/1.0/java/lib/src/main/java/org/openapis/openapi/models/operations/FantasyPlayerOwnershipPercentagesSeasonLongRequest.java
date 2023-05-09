@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FantasyPlayerOwnershipPercentagesSeasonLongRequest {
@@ -12,6 +13,7 @@ public class FantasyPlayerOwnershipPercentagesSeasonLongRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public FantasyPlayerOwnershipPercentagesSeasonLongFormatEnum format;
+
     public FantasyPlayerOwnershipPercentagesSeasonLongRequest withFormat(FantasyPlayerOwnershipPercentagesSeasonLongFormatEnum format) {
         this.format = format;
         return this;
@@ -24,6 +26,7 @@ public class FantasyPlayerOwnershipPercentagesSeasonLongRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=season")
     public String season;
+
     public FantasyPlayerOwnershipPercentagesSeasonLongRequest withSeason(String season) {
         this.season = season;
         return this;
@@ -36,9 +39,15 @@ public class FantasyPlayerOwnershipPercentagesSeasonLongRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=week")
     public String week;
+
     public FantasyPlayerOwnershipPercentagesSeasonLongRequest withWeek(String week) {
         this.week = week;
         return this;
     }
     
+    public FantasyPlayerOwnershipPercentagesSeasonLongRequest(@JsonProperty("format") FantasyPlayerOwnershipPercentagesSeasonLongFormatEnum format, @JsonProperty("season") String season, @JsonProperty("week") String week) {
+        this.format = format;
+        this.season = season;
+        this.week = week;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelMLTaskRunResponse {
@@ -12,6 +13,7 @@ public class CancelMLTaskRunResponse {
      */
     
     public org.openapis.openapi.models.shared.CancelMLTaskRunResponse cancelMLTaskRunResponse;
+
     public CancelMLTaskRunResponse withCancelMLTaskRunResponse(org.openapis.openapi.models.shared.CancelMLTaskRunResponse cancelMLTaskRunResponse) {
         this.cancelMLTaskRunResponse = cancelMLTaskRunResponse;
         return this;
@@ -19,6 +21,7 @@ public class CancelMLTaskRunResponse {
     
     
     public String contentType;
+
     public CancelMLTaskRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CancelMLTaskRunResponse {
      */
     
     public Object entityNotFoundException;
+
     public CancelMLTaskRunResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class CancelMLTaskRunResponse {
      */
     
     public Object internalServiceException;
+
     public CancelMLTaskRunResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class CancelMLTaskRunResponse {
      */
     
     public Object invalidInputException;
+
     public CancelMLTaskRunResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class CancelMLTaskRunResponse {
      */
     
     public Object operationTimeoutException;
+
     public CancelMLTaskRunResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class CancelMLTaskRunResponse {
     
     
     public Integer statusCode;
+
     public CancelMLTaskRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CancelMLTaskRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelMLTaskRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CancelMLTaskRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

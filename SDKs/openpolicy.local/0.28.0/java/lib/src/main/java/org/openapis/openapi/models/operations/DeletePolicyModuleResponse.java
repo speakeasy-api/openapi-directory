@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePolicyModuleResponse {
@@ -12,6 +13,7 @@ public class DeletePolicyModuleResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundred fourHundred;
+
     public DeletePolicyModuleResponse withFourHundred(org.openapis.openapi.models.shared.FourHundred fourHundred) {
         this.fourHundred = fourHundred;
         return this;
@@ -22,6 +24,7 @@ public class DeletePolicyModuleResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndFour fourHundredAndFour;
+
     public DeletePolicyModuleResponse withFourHundredAndFour(org.openapis.openapi.models.shared.FourHundredAndFour fourHundredAndFour) {
         this.fourHundredAndFour = fourHundredAndFour;
         return this;
@@ -29,6 +32,7 @@ public class DeletePolicyModuleResponse {
     
     
     public String contentType;
+
     public DeletePolicyModuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class DeletePolicyModuleResponse {
     
     
     public Integer statusCode;
+
     public DeletePolicyModuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DeletePolicyModuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePolicyModuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DeletePolicyModuleResponse {
      */
     
     public DeletePolicyModule200ApplicationJSON deletePolicyModule200ApplicationJSONObject;
+
     public DeletePolicyModuleResponse withDeletePolicyModule200ApplicationJSONObject(DeletePolicyModule200ApplicationJSON deletePolicyModule200ApplicationJSONObject) {
         this.deletePolicyModule200ApplicationJSONObject = deletePolicyModule200ApplicationJSONObject;
         return this;
     }
     
+    public DeletePolicyModuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

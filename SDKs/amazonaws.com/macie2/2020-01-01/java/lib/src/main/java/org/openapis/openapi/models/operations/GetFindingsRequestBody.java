@@ -14,6 +14,7 @@ public class GetFindingsRequestBody {
      */
     @JsonProperty("findingIds")
     public String[] findingIds;
+
     public GetFindingsRequestBody withFindingIds(String[] findingIds) {
         this.findingIds = findingIds;
         return this;
@@ -25,9 +26,13 @@ public class GetFindingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortCriteria")
     public GetFindingsRequestBodySortCriteria sortCriteria;
+
     public GetFindingsRequestBody withSortCriteria(GetFindingsRequestBodySortCriteria sortCriteria) {
         this.sortCriteria = sortCriteria;
         return this;
     }
     
+    public GetFindingsRequestBody(@JsonProperty("findingIds") String[] findingIds) {
+        this.findingIds = findingIds;
+  }
 }

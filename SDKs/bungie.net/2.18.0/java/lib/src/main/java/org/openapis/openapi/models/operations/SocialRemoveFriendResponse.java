@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SocialRemoveFriendResponse {
     
     public byte[] body;
+
     public SocialRemoveFriendResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class SocialRemoveFriendResponse {
     
     
     public String contentType;
+
     public SocialRemoveFriendResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class SocialRemoveFriendResponse {
     
     
     public Integer statusCode;
+
     public SocialRemoveFriendResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class SocialRemoveFriendResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SocialRemoveFriendResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SocialRemoveFriendResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

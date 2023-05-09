@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ReferenceStoreDetail {
     @JsonProperty("arn")
     public String arn;
+
     public ReferenceStoreDetail withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class ReferenceStoreDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public ReferenceStoreDetail withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -36,6 +38,7 @@ public class ReferenceStoreDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ReferenceStoreDetail withDescription(String description) {
         this.description = description;
         return this;
@@ -43,6 +46,7 @@ public class ReferenceStoreDetail {
     
     @JsonProperty("id")
     public String id;
+
     public ReferenceStoreDetail withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +55,7 @@ public class ReferenceStoreDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ReferenceStoreDetail withName(String name) {
         this.name = name;
         return this;
@@ -59,9 +64,15 @@ public class ReferenceStoreDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sseConfig")
     public SseConfig sseConfig;
+
     public ReferenceStoreDetail withSseConfig(SseConfig sseConfig) {
         this.sseConfig = sseConfig;
         return this;
     }
     
+    public ReferenceStoreDetail(@JsonProperty("arn") String arn, @JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("id") String id) {
+        this.arn = arn;
+        this.creationTime = creationTime;
+        this.id = id;
+  }
 }

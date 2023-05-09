@@ -18,9 +18,11 @@ public class AddCoupons200ApplicationJSONItemMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public AddCoupons200ApplicationJSONItemMetadataItems[] items;
+
     public AddCoupons200ApplicationJSONItemMetadata withItems(AddCoupons200ApplicationJSONItemMetadataItems[] items) {
         this.items = items;
         return this;
     }
     
+    public AddCoupons200ApplicationJSONItemMetadata(){}
 }

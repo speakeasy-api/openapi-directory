@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class YoutubeCommentThreadsListRequest {
@@ -12,6 +13,7 @@ public class YoutubeCommentThreadsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public YoutubeCommentThreadsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class YoutubeCommentThreadsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public YoutubeCommentThreadsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class YoutubeCommentThreadsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allThreadsRelatedToChannelId")
     public String allThreadsRelatedToChannelId;
+
     public YoutubeCommentThreadsListRequest withAllThreadsRelatedToChannelId(String allThreadsRelatedToChannelId) {
         this.allThreadsRelatedToChannelId = allThreadsRelatedToChannelId;
         return this;
@@ -42,6 +46,7 @@ public class YoutubeCommentThreadsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public YoutubeCommentThreadsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -52,6 +57,7 @@ public class YoutubeCommentThreadsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public YoutubeCommentThreadsListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class YoutubeCommentThreadsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=channelId")
     public String channelId;
+
     public YoutubeCommentThreadsListRequest withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -72,6 +79,7 @@ public class YoutubeCommentThreadsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public YoutubeCommentThreadsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -82,6 +90,7 @@ public class YoutubeCommentThreadsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String[] id;
+
     public YoutubeCommentThreadsListRequest withId(String[] id) {
         this.id = id;
         return this;
@@ -92,6 +101,7 @@ public class YoutubeCommentThreadsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public YoutubeCommentThreadsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -102,6 +112,7 @@ public class YoutubeCommentThreadsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public YoutubeCommentThreadsListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -112,6 +123,7 @@ public class YoutubeCommentThreadsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=moderationStatus")
     public YoutubeCommentThreadsListModerationStatusEnum moderationStatus;
+
     public YoutubeCommentThreadsListRequest withModerationStatus(YoutubeCommentThreadsListModerationStatusEnum moderationStatus) {
         this.moderationStatus = moderationStatus;
         return this;
@@ -122,6 +134,7 @@ public class YoutubeCommentThreadsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public YoutubeCommentThreadsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -129,6 +142,7 @@ public class YoutubeCommentThreadsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public YoutubeCommentThreadsListOrderEnum order;
+
     public YoutubeCommentThreadsListRequest withOrder(YoutubeCommentThreadsListOrderEnum order) {
         this.order = order;
         return this;
@@ -139,6 +153,7 @@ public class YoutubeCommentThreadsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public YoutubeCommentThreadsListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -149,6 +164,7 @@ public class YoutubeCommentThreadsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part")
     public String[] part;
+
     public YoutubeCommentThreadsListRequest withPart(String[] part) {
         this.part = part;
         return this;
@@ -159,6 +175,7 @@ public class YoutubeCommentThreadsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public YoutubeCommentThreadsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -169,6 +186,7 @@ public class YoutubeCommentThreadsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public YoutubeCommentThreadsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -179,6 +197,7 @@ public class YoutubeCommentThreadsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchTerms")
     public String searchTerms;
+
     public YoutubeCommentThreadsListRequest withSearchTerms(String searchTerms) {
         this.searchTerms = searchTerms;
         return this;
@@ -189,6 +208,7 @@ public class YoutubeCommentThreadsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textFormat")
     public YoutubeCommentThreadsListTextFormatEnum textFormat;
+
     public YoutubeCommentThreadsListRequest withTextFormat(YoutubeCommentThreadsListTextFormatEnum textFormat) {
         this.textFormat = textFormat;
         return this;
@@ -199,6 +219,7 @@ public class YoutubeCommentThreadsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public YoutubeCommentThreadsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -209,6 +230,7 @@ public class YoutubeCommentThreadsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public YoutubeCommentThreadsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -219,9 +241,13 @@ public class YoutubeCommentThreadsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=videoId")
     public String videoId;
+
     public YoutubeCommentThreadsListRequest withVideoId(String videoId) {
         this.videoId = videoId;
         return this;
     }
     
+    public YoutubeCommentThreadsListRequest(@JsonProperty("part") String[] part) {
+        this.part = part;
+  }
 }

@@ -18,9 +18,11 @@ public class GoogleCloudRetailV2UserEventInlineSourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userEvents")
     public GoogleCloudRetailV2UserEventInput[] userEvents;
+
     public GoogleCloudRetailV2UserEventInlineSourceInput withUserEvents(GoogleCloudRetailV2UserEventInput[] userEvents) {
         this.userEvents = userEvents;
         return this;
     }
     
+    public GoogleCloudRetailV2UserEventInlineSourceInput(){}
 }

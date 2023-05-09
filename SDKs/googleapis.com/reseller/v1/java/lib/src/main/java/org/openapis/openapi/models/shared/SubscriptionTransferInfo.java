@@ -18,6 +18,7 @@ public class SubscriptionTransferInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentLegacySkuId")
     public String currentLegacySkuId;
+
     public SubscriptionTransferInfo withCurrentLegacySkuId(String currentLegacySkuId) {
         this.currentLegacySkuId = currentLegacySkuId;
         return this;
@@ -29,6 +30,7 @@ public class SubscriptionTransferInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumTransferableSeats")
     public Integer minimumTransferableSeats;
+
     public SubscriptionTransferInfo withMinimumTransferableSeats(Integer minimumTransferableSeats) {
         this.minimumTransferableSeats = minimumTransferableSeats;
         return this;
@@ -40,9 +42,11 @@ public class SubscriptionTransferInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferabilityExpirationTime")
     public String transferabilityExpirationTime;
+
     public SubscriptionTransferInfo withTransferabilityExpirationTime(String transferabilityExpirationTime) {
         this.transferabilityExpirationTime = transferabilityExpirationTime;
         return this;
     }
     
+    public SubscriptionTransferInfo(){}
 }

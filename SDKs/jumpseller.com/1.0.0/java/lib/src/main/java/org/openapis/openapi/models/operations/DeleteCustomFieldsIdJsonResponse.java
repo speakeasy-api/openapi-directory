@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCustomFieldsIdJsonResponse {
     
     public String contentType;
+
     public DeleteCustomFieldsIdJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteCustomFieldsIdJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public DeleteCustomFieldsIdJsonResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -26,6 +29,7 @@ public class DeleteCustomFieldsIdJsonResponse {
     
     
     public Integer statusCode;
+
     public DeleteCustomFieldsIdJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeleteCustomFieldsIdJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCustomFieldsIdJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class DeleteCustomFieldsIdJsonResponse {
      */
     
     public String deleteCustomFieldsIdJSON200ApplicationJSONString;
+
     public DeleteCustomFieldsIdJsonResponse withDeleteCustomFieldsIdJSON200ApplicationJSONString(String deleteCustomFieldsIdJSON200ApplicationJSONString) {
         this.deleteCustomFieldsIdJSON200ApplicationJSONString = deleteCustomFieldsIdJSON200ApplicationJSONString;
         return this;
     }
     
+    public DeleteCustomFieldsIdJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

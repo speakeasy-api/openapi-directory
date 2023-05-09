@@ -12,6 +12,7 @@ public class ApplicationsApplication {
      */
     
     public Integer applicationId;
+
     public ApplicationsApplication withApplicationId(Integer applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -22,6 +23,7 @@ public class ApplicationsApplication {
      */
     
     public OffsetDateTime creationDate;
+
     public ApplicationsApplication withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -32,6 +34,7 @@ public class ApplicationsApplication {
      */
     
     public OffsetDateTime firstPublished;
+
     public ApplicationsApplication withFirstPublished(OffsetDateTime firstPublished) {
         this.firstPublished = firstPublished;
         return this;
@@ -42,6 +45,7 @@ public class ApplicationsApplication {
      */
     
     public String link;
+
     public ApplicationsApplication withLink(String link) {
         this.link = link;
         return this;
@@ -52,6 +56,7 @@ public class ApplicationsApplication {
      */
     
     public String name;
+
     public ApplicationsApplication withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +67,7 @@ public class ApplicationsApplication {
      */
     
     public String origin;
+
     public ApplicationsApplication withOrigin(String origin) {
         this.origin = origin;
         return this;
@@ -72,6 +78,7 @@ public class ApplicationsApplication {
      */
     
     public String overrideAuthorizeViewName;
+
     public ApplicationsApplication withOverrideAuthorizeViewName(String overrideAuthorizeViewName) {
         this.overrideAuthorizeViewName = overrideAuthorizeViewName;
         return this;
@@ -82,6 +89,7 @@ public class ApplicationsApplication {
      */
     
     public String redirectUrl;
+
     public ApplicationsApplication withRedirectUrl(String redirectUrl) {
         this.redirectUrl = redirectUrl;
         return this;
@@ -92,6 +100,7 @@ public class ApplicationsApplication {
      */
     
     public Long scope;
+
     public ApplicationsApplication withScope(Long scope) {
         this.scope = scope;
         return this;
@@ -102,6 +111,7 @@ public class ApplicationsApplication {
      */
     
     public Integer status;
+
     public ApplicationsApplication withStatus(Integer status) {
         this.status = status;
         return this;
@@ -112,6 +122,7 @@ public class ApplicationsApplication {
      */
     
     public OffsetDateTime statusChanged;
+
     public ApplicationsApplication withStatusChanged(OffsetDateTime statusChanged) {
         this.statusChanged = statusChanged;
         return this;
@@ -122,9 +133,11 @@ public class ApplicationsApplication {
      */
     
     public ApplicationsApplicationDeveloper[] team;
+
     public ApplicationsApplication withTeam(ApplicationsApplicationDeveloper[] team) {
         this.team = team;
         return this;
     }
     
+    public ApplicationsApplication(){}
 }

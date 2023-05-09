@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeRecommendationLimitationsResponse {
@@ -12,6 +13,7 @@ public class DescribeRecommendationLimitationsResponse {
      */
     
     public Object accessDeniedFault;
+
     public DescribeRecommendationLimitationsResponse withAccessDeniedFault(Object accessDeniedFault) {
         this.accessDeniedFault = accessDeniedFault;
         return this;
@@ -19,6 +21,7 @@ public class DescribeRecommendationLimitationsResponse {
     
     
     public String contentType;
+
     public DescribeRecommendationLimitationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeRecommendationLimitationsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeRecommendationLimitationsResponse describeRecommendationLimitationsResponse;
+
     public DescribeRecommendationLimitationsResponse withDescribeRecommendationLimitationsResponse(org.openapis.openapi.models.shared.DescribeRecommendationLimitationsResponse describeRecommendationLimitationsResponse) {
         this.describeRecommendationLimitationsResponse = describeRecommendationLimitationsResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeRecommendationLimitationsResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public DescribeRecommendationLimitationsResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -46,6 +51,7 @@ public class DescribeRecommendationLimitationsResponse {
     
     
     public Integer statusCode;
+
     public DescribeRecommendationLimitationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeRecommendationLimitationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeRecommendationLimitationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeRecommendationLimitationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

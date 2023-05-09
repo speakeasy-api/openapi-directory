@@ -18,6 +18,7 @@ public class GoogleCloudRecaptchaenterpriseV1EndpointVerificationInfoInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailAddress")
     public String emailAddress;
+
     public GoogleCloudRecaptchaenterpriseV1EndpointVerificationInfoInput withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRecaptchaenterpriseV1EndpointVerificationInfoInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public GoogleCloudRecaptchaenterpriseV1EndpointVerificationInfoInput withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1EndpointVerificationInfoInput(){}
 }

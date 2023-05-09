@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetChangeLogsResponse {
@@ -12,6 +13,7 @@ public class GetChangeLogsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetChangeLogsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetChangeLogsResponse {
     
     
     public String contentType;
+
     public GetChangeLogsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetChangeLogsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetChangeLogsResponse getChangeLogsResponse;
+
     public GetChangeLogsResponse withGetChangeLogsResponse(org.openapis.openapi.models.shared.GetChangeLogsResponse getChangeLogsResponse) {
         this.getChangeLogsResponse = getChangeLogsResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetChangeLogsResponse {
      */
     
     public Object internalServerException;
+
     public GetChangeLogsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetChangeLogsResponse {
     
     
     public Integer statusCode;
+
     public GetChangeLogsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetChangeLogsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetChangeLogsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetChangeLogsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetChangeLogsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class GetChangeLogsResponse {
      */
     
     public Object validationException;
+
     public GetChangeLogsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetChangeLogsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class CreateNewCardNewCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceptFeesAndCharges")
     public Boolean acceptFeesAndCharges;
+
     public CreateNewCardNewCard withAcceptFeesAndCharges(Boolean acceptFeesAndCharges) {
         this.acceptFeesAndCharges = acceptFeesAndCharges;
         return this;
@@ -23,6 +24,7 @@ public class CreateNewCardNewCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressType")
     public CreateNewCardNewCardAddressTypeEnum addressType;
+
     public CreateNewCardNewCard withAddressType(CreateNewCardNewCardAddressTypeEnum addressType) {
         this.addressType = addressType;
         return this;
@@ -31,6 +33,7 @@ public class CreateNewCardNewCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardPin")
     public String cardPin;
+
     public CreateNewCardNewCard withCardPin(String cardPin) {
         this.cardPin = cardPin;
         return this;
@@ -39,6 +42,7 @@ public class CreateNewCardNewCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eurIcan")
     public Long eurIcan;
+
     public CreateNewCardNewCard withEurIcan(Long eurIcan) {
         this.eurIcan = eurIcan;
         return this;
@@ -47,6 +51,7 @@ public class CreateNewCardNewCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gbpIcan")
     public Long gbpIcan;
+
     public CreateNewCardNewCard withGbpIcan(Long gbpIcan) {
         this.gbpIcan = gbpIcan;
         return this;
@@ -55,9 +60,11 @@ public class CreateNewCardNewCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public Long userId;
+
     public CreateNewCardNewCard withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public CreateNewCardNewCard(){}
 }

@@ -15,6 +15,7 @@ public class CompanyOptionDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowEntryOfGrossPriceInInvoicing")
     public Boolean allowEntryOfGrossPriceInInvoicing;
+
     public CompanyOptionDto withAllowEntryOfGrossPriceInInvoicing(Boolean allowEntryOfGrossPriceInInvoicing) {
         this.allowEntryOfGrossPriceInInvoicing = allowEntryOfGrossPriceInInvoicing;
         return this;
@@ -23,6 +24,7 @@ public class CompanyOptionDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditInputForReverseChargeVAT")
     public Boolean creditInputForReverseChargeVAT;
+
     public CompanyOptionDto withCreditInputForReverseChargeVAT(Boolean creditInputForReverseChargeVAT) {
         this.creditInputForReverseChargeVAT = creditInputForReverseChargeVAT;
         return this;
@@ -31,6 +33,7 @@ public class CompanyOptionDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditNoteJournalAgeingName")
     public String creditNoteJournalAgeingName;
+
     public CompanyOptionDto withCreditNoteJournalAgeingName(String creditNoteJournalAgeingName) {
         this.creditNoteJournalAgeingName = creditNoteJournalAgeingName;
         return this;
@@ -39,6 +42,7 @@ public class CompanyOptionDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditNoteJournalAgeingValue")
     public Integer creditNoteJournalAgeingValue;
+
     public CompanyOptionDto withCreditNoteJournalAgeingValue(Integer creditNoteJournalAgeingValue) {
         this.creditNoteJournalAgeingValue = creditNoteJournalAgeingValue;
         return this;
@@ -47,6 +51,7 @@ public class CompanyOptionDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discrepancyAllowed")
     public Double discrepancyAllowed;
+
     public CompanyOptionDto withDiscrepancyAllowed(Double discrepancyAllowed) {
         this.discrepancyAllowed = discrepancyAllowed;
         return this;
@@ -55,6 +60,7 @@ public class CompanyOptionDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableVOCRReporting")
     public Boolean enableVOCRReporting;
+
     public CompanyOptionDto withEnableVOCRReporting(Boolean enableVOCRReporting) {
         this.enableVOCRReporting = enableVOCRReporting;
         return this;
@@ -63,6 +69,7 @@ public class CompanyOptionDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marginVatScheme")
     public Boolean marginVatScheme;
+
     public CompanyOptionDto withMarginVatScheme(Boolean marginVatScheme) {
         this.marginVatScheme = marginVatScheme;
         return this;
@@ -71,6 +78,7 @@ public class CompanyOptionDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("printOSItemsOnly")
     public Boolean printOSItemsOnly;
+
     public CompanyOptionDto withPrintOSItemsOnly(Boolean printOSItemsOnly) {
         this.printOSItemsOnly = printOSItemsOnly;
         return this;
@@ -79,6 +87,7 @@ public class CompanyOptionDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purchasesVatAnalysisType")
     public Long purchasesVatAnalysisType;
+
     public CompanyOptionDto withPurchasesVatAnalysisType(Long purchasesVatAnalysisType) {
         this.purchasesVatAnalysisType = purchasesVatAnalysisType;
         return this;
@@ -87,6 +96,7 @@ public class CompanyOptionDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salesVatAnalysisType")
     public Long salesVatAnalysisType;
+
     public CompanyOptionDto withSalesVatAnalysisType(Long salesVatAnalysisType) {
         this.salesVatAnalysisType = salesVatAnalysisType;
         return this;
@@ -95,6 +105,7 @@ public class CompanyOptionDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useAllocations")
     public Boolean useAllocations;
+
     public CompanyOptionDto withUseAllocations(Boolean useAllocations) {
         this.useAllocations = useAllocations;
         return this;
@@ -103,6 +114,7 @@ public class CompanyOptionDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useNominal")
     public Boolean useNominal;
+
     public CompanyOptionDto withUseNominal(Boolean useNominal) {
         this.useNominal = useNominal;
         return this;
@@ -111,6 +123,7 @@ public class CompanyOptionDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useNominalCode")
     public Boolean useNominalCode;
+
     public CompanyOptionDto withUseNominalCode(Boolean useNominalCode) {
         this.useNominalCode = useNominalCode;
         return this;
@@ -119,9 +132,11 @@ public class CompanyOptionDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vocrSettingValue")
     public Boolean vocrSettingValue;
+
     public CompanyOptionDto withVocrSettingValue(Boolean vocrSettingValue) {
         this.vocrSettingValue = vocrSettingValue;
         return this;
     }
     
+    public CompanyOptionDto(){}
 }

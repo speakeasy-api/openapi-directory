@@ -12,6 +12,7 @@ public class DealTermsRubiconNonGuaranteedTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priorityPrice")
     public Price priorityPrice;
+
     public DealTermsRubiconNonGuaranteedTerms withPriorityPrice(Price priorityPrice) {
         this.priorityPrice = priorityPrice;
         return this;
@@ -20,9 +21,11 @@ public class DealTermsRubiconNonGuaranteedTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standardPrice")
     public Price standardPrice;
+
     public DealTermsRubiconNonGuaranteedTerms withStandardPrice(Price standardPrice) {
         this.standardPrice = standardPrice;
         return this;
     }
     
+    public DealTermsRubiconNonGuaranteedTerms(){}
 }

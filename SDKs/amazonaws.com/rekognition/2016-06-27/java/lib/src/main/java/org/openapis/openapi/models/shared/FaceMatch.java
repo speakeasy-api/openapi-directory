@@ -15,6 +15,7 @@ public class FaceMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Face")
     public Face face;
+
     public FaceMatch withFace(Face face) {
         this.face = face;
         return this;
@@ -23,9 +24,11 @@ public class FaceMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Similarity")
     public Float similarity;
+
     public FaceMatch withSimilarity(Float similarity) {
         this.similarity = similarity;
         return this;
     }
     
+    public FaceMatch(){}
 }

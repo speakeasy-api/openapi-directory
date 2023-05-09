@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateReplicationInstanceResponse {
@@ -12,6 +13,7 @@ public class CreateReplicationInstanceResponse {
      */
     
     public Object accessDeniedFault;
+
     public CreateReplicationInstanceResponse withAccessDeniedFault(Object accessDeniedFault) {
         this.accessDeniedFault = accessDeniedFault;
         return this;
@@ -19,6 +21,7 @@ public class CreateReplicationInstanceResponse {
     
     
     public String contentType;
+
     public CreateReplicationInstanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateReplicationInstanceResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateReplicationInstanceResponse createReplicationInstanceResponse;
+
     public CreateReplicationInstanceResponse withCreateReplicationInstanceResponse(org.openapis.openapi.models.shared.CreateReplicationInstanceResponse createReplicationInstanceResponse) {
         this.createReplicationInstanceResponse = createReplicationInstanceResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateReplicationInstanceResponse {
      */
     
     public Object insufficientResourceCapacityFault;
+
     public CreateReplicationInstanceResponse withInsufficientResourceCapacityFault(Object insufficientResourceCapacityFault) {
         this.insufficientResourceCapacityFault = insufficientResourceCapacityFault;
         return this;
@@ -49,6 +54,7 @@ public class CreateReplicationInstanceResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public CreateReplicationInstanceResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -59,6 +65,7 @@ public class CreateReplicationInstanceResponse {
      */
     
     public Object invalidSubnet;
+
     public CreateReplicationInstanceResponse withInvalidSubnet(Object invalidSubnet) {
         this.invalidSubnet = invalidSubnet;
         return this;
@@ -69,6 +76,7 @@ public class CreateReplicationInstanceResponse {
      */
     
     public Object kmsKeyNotAccessibleFault;
+
     public CreateReplicationInstanceResponse withKMSKeyNotAccessibleFault(Object kmsKeyNotAccessibleFault) {
         this.kmsKeyNotAccessibleFault = kmsKeyNotAccessibleFault;
         return this;
@@ -79,6 +87,7 @@ public class CreateReplicationInstanceResponse {
      */
     
     public Object replicationSubnetGroupDoesNotCoverEnoughAZs;
+
     public CreateReplicationInstanceResponse withReplicationSubnetGroupDoesNotCoverEnoughAZs(Object replicationSubnetGroupDoesNotCoverEnoughAZs) {
         this.replicationSubnetGroupDoesNotCoverEnoughAZs = replicationSubnetGroupDoesNotCoverEnoughAZs;
         return this;
@@ -89,6 +98,7 @@ public class CreateReplicationInstanceResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public CreateReplicationInstanceResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
@@ -96,6 +106,7 @@ public class CreateReplicationInstanceResponse {
     
     
     public Integer statusCode;
+
     public CreateReplicationInstanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class CreateReplicationInstanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateReplicationInstanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class CreateReplicationInstanceResponse {
      */
     
     public Object resourceAlreadyExistsFault;
+
     public CreateReplicationInstanceResponse withResourceAlreadyExistsFault(Object resourceAlreadyExistsFault) {
         this.resourceAlreadyExistsFault = resourceAlreadyExistsFault;
         return this;
@@ -123,6 +136,7 @@ public class CreateReplicationInstanceResponse {
      */
     
     public Object resourceQuotaExceededFault;
+
     public CreateReplicationInstanceResponse withResourceQuotaExceededFault(Object resourceQuotaExceededFault) {
         this.resourceQuotaExceededFault = resourceQuotaExceededFault;
         return this;
@@ -133,9 +147,14 @@ public class CreateReplicationInstanceResponse {
      */
     
     public Object storageQuotaExceededFault;
+
     public CreateReplicationInstanceResponse withStorageQuotaExceededFault(Object storageQuotaExceededFault) {
         this.storageQuotaExceededFault = storageQuotaExceededFault;
         return this;
     }
     
+    public CreateReplicationInstanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

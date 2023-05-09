@@ -15,9 +15,11 @@ public class GetDomainSuggestionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuggestionsList")
     public DomainSuggestion[] suggestionsList;
+
     public GetDomainSuggestionsResponse withSuggestionsList(DomainSuggestion[] suggestionsList) {
         this.suggestionsList = suggestionsList;
         return this;
     }
     
+    public GetDomainSuggestionsResponse(){}
 }

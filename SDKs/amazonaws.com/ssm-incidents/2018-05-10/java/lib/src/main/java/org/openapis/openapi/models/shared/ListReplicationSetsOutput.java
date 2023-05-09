@@ -15,6 +15,7 @@ public class ListReplicationSetsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListReplicationSetsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListReplicationSetsOutput {
     
     @JsonProperty("replicationSetArns")
     public String[] replicationSetArns;
+
     public ListReplicationSetsOutput withReplicationSetArns(String[] replicationSetArns) {
         this.replicationSetArns = replicationSetArns;
         return this;
     }
     
+    public ListReplicationSetsOutput(@JsonProperty("replicationSetArns") String[] replicationSetArns) {
+        this.replicationSetArns = replicationSetArns;
+  }
 }

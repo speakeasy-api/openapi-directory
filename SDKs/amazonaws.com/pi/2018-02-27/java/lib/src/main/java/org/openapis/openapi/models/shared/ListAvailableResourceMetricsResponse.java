@@ -15,6 +15,7 @@ public class ListAvailableResourceMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metrics")
     public ResponseResourceMetric[] metrics;
+
     public ListAvailableResourceMetricsResponse withMetrics(ResponseResourceMetric[] metrics) {
         this.metrics = metrics;
         return this;
@@ -23,9 +24,11 @@ public class ListAvailableResourceMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAvailableResourceMetricsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAvailableResourceMetricsResponse(){}
 }

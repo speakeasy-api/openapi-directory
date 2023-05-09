@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaListSfdcInstancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudIntegrationsV1alphaListSfdcInstancesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIntegrationsV1alphaListSfdcInstancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sfdcInstances")
     public GoogleCloudIntegrationsV1alphaSfdcInstance[] sfdcInstances;
+
     public GoogleCloudIntegrationsV1alphaListSfdcInstancesResponse withSfdcInstances(GoogleCloudIntegrationsV1alphaSfdcInstance[] sfdcInstances) {
         this.sfdcInstances = sfdcInstances;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaListSfdcInstancesResponse(){}
 }

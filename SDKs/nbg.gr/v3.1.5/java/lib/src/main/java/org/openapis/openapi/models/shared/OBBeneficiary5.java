@@ -15,6 +15,7 @@ public class OBBeneficiary5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public OBBeneficiary5 withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -26,6 +27,7 @@ public class OBBeneficiary5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BeneficiaryType")
     public OBBeneficiaryType1CodeEnum beneficiaryType;
+
     public OBBeneficiary5 withBeneficiaryType(OBBeneficiaryType1CodeEnum beneficiaryType) {
         this.beneficiaryType = beneficiaryType;
         return this;
@@ -34,9 +36,11 @@ public class OBBeneficiary5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreditorAccount")
     public OBCashAccount5 creditorAccount;
+
     public OBBeneficiary5 withCreditorAccount(OBCashAccount5 creditorAccount) {
         this.creditorAccount = creditorAccount;
         return this;
     }
     
+    public OBBeneficiary5(){}
 }

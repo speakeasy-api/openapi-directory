@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutAccountSettingResponse {
@@ -12,6 +13,7 @@ public class PutAccountSettingResponse {
      */
     
     public Object clientException;
+
     public PutAccountSettingResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class PutAccountSettingResponse {
     
     
     public String contentType;
+
     public PutAccountSettingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutAccountSettingResponse {
      */
     
     public Object invalidParameterException;
+
     public PutAccountSettingResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class PutAccountSettingResponse {
      */
     
     public org.openapis.openapi.models.shared.PutAccountSettingResponse putAccountSettingResponse;
+
     public PutAccountSettingResponse withPutAccountSettingResponse(org.openapis.openapi.models.shared.PutAccountSettingResponse putAccountSettingResponse) {
         this.putAccountSettingResponse = putAccountSettingResponse;
         return this;
@@ -49,6 +54,7 @@ public class PutAccountSettingResponse {
      */
     
     public Object serverException;
+
     public PutAccountSettingResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -56,6 +62,7 @@ public class PutAccountSettingResponse {
     
     
     public Integer statusCode;
+
     public PutAccountSettingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class PutAccountSettingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutAccountSettingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutAccountSettingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

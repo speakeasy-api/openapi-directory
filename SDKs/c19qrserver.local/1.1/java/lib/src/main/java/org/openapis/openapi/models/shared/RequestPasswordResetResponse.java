@@ -18,6 +18,7 @@ public class RequestPasswordResetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public RequestPasswordResetResponse withEmail(String email) {
         this.email = email;
         return this;
@@ -29,9 +30,11 @@ public class RequestPasswordResetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guid")
     public String guid;
+
     public RequestPasswordResetResponse withGuid(String guid) {
         this.guid = guid;
         return this;
     }
     
+    public RequestPasswordResetResponse(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1DocumentPageImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public GoogleCloudDocumentaiV1DocumentPageImage withContent(String content) {
         this.content = content;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1DocumentPageImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Integer height;
+
     public GoogleCloudDocumentaiV1DocumentPageImage withHeight(Integer height) {
         this.height = height;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1DocumentPageImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public GoogleCloudDocumentaiV1DocumentPageImage withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDocumentaiV1DocumentPageImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Integer width;
+
     public GoogleCloudDocumentaiV1DocumentPageImage withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1DocumentPageImage(){}
 }

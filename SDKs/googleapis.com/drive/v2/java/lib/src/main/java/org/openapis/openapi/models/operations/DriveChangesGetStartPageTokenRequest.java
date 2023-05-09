@@ -12,6 +12,7 @@ public class DriveChangesGetStartPageTokenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DriveChangesGetStartPageTokenRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +23,7 @@ public class DriveChangesGetStartPageTokenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=driveId")
     public String driveId;
+
     public DriveChangesGetStartPageTokenRequest withDriveId(String driveId) {
         this.driveId = driveId;
         return this;
@@ -32,6 +34,7 @@ public class DriveChangesGetStartPageTokenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DriveChangesGetStartPageTokenRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -42,6 +45,7 @@ public class DriveChangesGetStartPageTokenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DriveChangesGetStartPageTokenRequest withKey(String key) {
         this.key = key;
         return this;
@@ -52,6 +56,7 @@ public class DriveChangesGetStartPageTokenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DriveChangesGetStartPageTokenRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -62,6 +67,7 @@ public class DriveChangesGetStartPageTokenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DriveChangesGetStartPageTokenRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -72,6 +78,7 @@ public class DriveChangesGetStartPageTokenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DriveChangesGetStartPageTokenRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -82,6 +89,7 @@ public class DriveChangesGetStartPageTokenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsAllDrives")
     public Boolean supportsAllDrives;
+
     public DriveChangesGetStartPageTokenRequest withSupportsAllDrives(Boolean supportsAllDrives) {
         this.supportsAllDrives = supportsAllDrives;
         return this;
@@ -92,6 +100,7 @@ public class DriveChangesGetStartPageTokenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsTeamDrives")
     public Boolean supportsTeamDrives;
+
     public DriveChangesGetStartPageTokenRequest withSupportsTeamDrives(Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -102,6 +111,7 @@ public class DriveChangesGetStartPageTokenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=teamDriveId")
     public String teamDriveId;
+
     public DriveChangesGetStartPageTokenRequest withTeamDriveId(String teamDriveId) {
         this.teamDriveId = teamDriveId;
         return this;
@@ -112,9 +122,11 @@ public class DriveChangesGetStartPageTokenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public DriveChangesGetStartPageTokenRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public DriveChangesGetStartPageTokenRequest(){}
 }

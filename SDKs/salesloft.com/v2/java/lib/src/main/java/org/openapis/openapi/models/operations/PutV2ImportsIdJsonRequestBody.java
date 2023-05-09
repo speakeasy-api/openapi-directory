@@ -12,6 +12,7 @@ public class PutV2ImportsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=name")
     public String name;
+
     public PutV2ImportsIdJsonRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +23,11 @@ public class PutV2ImportsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=user_id")
     public Long userId;
+
     public PutV2ImportsIdJsonRequestBody withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public PutV2ImportsIdJsonRequestBody(){}
 }

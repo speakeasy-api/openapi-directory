@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ModifyClusterSubnetGroupMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyClusterSubnetGroupMessage {
     
     public String clusterSubnetGroupName;
+
     public ModifyClusterSubnetGroupMessage withClusterSubnetGroupName(String clusterSubnetGroupName) {
         this.clusterSubnetGroupName = clusterSubnetGroupName;
         return this;
@@ -19,6 +20,7 @@ public class ModifyClusterSubnetGroupMessage {
     
     
     public String description;
+
     public ModifyClusterSubnetGroupMessage withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +28,14 @@ public class ModifyClusterSubnetGroupMessage {
     
     
     public String[] subnetIds;
+
     public ModifyClusterSubnetGroupMessage withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
     }
     
+    public ModifyClusterSubnetGroupMessage(@JsonProperty("ClusterSubnetGroupName") String clusterSubnetGroupName, @JsonProperty("SubnetIds") String[] subnetIds) {
+        this.clusterSubnetGroupName = clusterSubnetGroupName;
+        this.subnetIds = subnetIds;
+  }
 }

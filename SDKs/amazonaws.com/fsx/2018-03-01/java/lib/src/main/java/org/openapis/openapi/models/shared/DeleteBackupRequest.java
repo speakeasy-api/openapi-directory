@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteBackupRequest {
     @JsonProperty("BackupId")
     public String backupId;
+
     public DeleteBackupRequest withBackupId(String backupId) {
         this.backupId = backupId;
         return this;
@@ -22,9 +23,13 @@ public class DeleteBackupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public DeleteBackupRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
     }
     
+    public DeleteBackupRequest(@JsonProperty("BackupId") String backupId) {
+        this.backupId = backupId;
+  }
 }

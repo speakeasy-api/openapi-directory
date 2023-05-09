@@ -12,7 +12,8 @@ import com.fasterxml.jackson.annotation.JsonValue;
 public enum GooglePlayDeveloperReportingV1beta1FreshnessInfoFreshnessAggregationPeriodEnum {
     AGGREGATION_PERIOD_UNSPECIFIED("AGGREGATION_PERIOD_UNSPECIFIED"),
     HOURLY("HOURLY"),
-    DAILY("DAILY");
+    DAILY("DAILY"),
+    FULL_RANGE("FULL_RANGE");
 
     @JsonValue
     public final String value;

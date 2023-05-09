@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WatchlistDetails {
     @JsonProperty("DefaultWatchlistId")
     public String defaultWatchlistId;
+
     public WatchlistDetails withDefaultWatchlistId(String defaultWatchlistId) {
         this.defaultWatchlistId = defaultWatchlistId;
         return this;
     }
     
+    public WatchlistDetails(@JsonProperty("DefaultWatchlistId") String defaultWatchlistId) {
+        this.defaultWatchlistId = defaultWatchlistId;
+  }
 }

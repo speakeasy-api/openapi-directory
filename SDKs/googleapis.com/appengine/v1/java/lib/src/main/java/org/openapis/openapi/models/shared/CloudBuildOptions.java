@@ -18,6 +18,7 @@ public class CloudBuildOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appYamlPath")
     public String appYamlPath;
+
     public CloudBuildOptions withAppYamlPath(String appYamlPath) {
         this.appYamlPath = appYamlPath;
         return this;
@@ -29,9 +30,11 @@ public class CloudBuildOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudBuildTimeout")
     public String cloudBuildTimeout;
+
     public CloudBuildOptions withCloudBuildTimeout(String cloudBuildTimeout) {
         this.cloudBuildTimeout = cloudBuildTimeout;
         return this;
     }
     
+    public CloudBuildOptions(){}
 }

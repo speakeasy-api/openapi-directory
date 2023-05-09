@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTimezoneAreaLocationRegionRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=area")
     public String area;
+
     public GetTimezoneAreaLocationRegionRequest withArea(String area) {
         this.area = area;
         return this;
@@ -16,6 +18,7 @@ public class GetTimezoneAreaLocationRegionRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
     public String location;
+
     public GetTimezoneAreaLocationRegionRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -23,9 +26,15 @@ public class GetTimezoneAreaLocationRegionRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=region")
     public String region;
+
     public GetTimezoneAreaLocationRegionRequest withRegion(String region) {
         this.region = region;
         return this;
     }
     
+    public GetTimezoneAreaLocationRegionRequest(@JsonProperty("area") String area, @JsonProperty("location") String location, @JsonProperty("region") String region) {
+        this.area = area;
+        this.location = location;
+        this.region = region;
+  }
 }

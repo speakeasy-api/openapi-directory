@@ -18,9 +18,11 @@ public class GetGuestAttributesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guestAttributes")
     public GuestAttributes[] guestAttributes;
+
     public GetGuestAttributesResponse withGuestAttributes(GuestAttributes[] guestAttributes) {
         this.guestAttributes = guestAttributes;
         return this;
     }
     
+    public GetGuestAttributesResponse(){}
 }

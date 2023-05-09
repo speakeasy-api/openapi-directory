@@ -12,6 +12,7 @@ public class TagTypeMarshaller {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public TagTypeMarshaller withId(Long id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class TagTypeMarshaller {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TagTypeMarshaller withName(String name) {
         this.name = name;
         return this;
     }
     
+    public TagTypeMarshaller(){}
 }

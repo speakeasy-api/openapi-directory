@@ -18,6 +18,7 @@ public class ListAttributeMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributeMetadata")
     public AttributeMetadata[] attributeMetadata;
+
     public ListAttributeMetadataResponse withAttributeMetadata(AttributeMetadata[] attributeMetadata) {
         this.attributeMetadata = attributeMetadata;
         return this;
@@ -29,9 +30,11 @@ public class ListAttributeMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListAttributeMetadataResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListAttributeMetadataResponse(){}
 }

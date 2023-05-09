@@ -12,6 +12,7 @@ public class ProfileCredits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balance")
     public Float balance;
+
     public ProfileCredits withBalance(Float balance) {
         this.balance = balance;
         return this;
@@ -20,6 +21,7 @@ public class ProfileCredits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isTransferAllowed")
     public Boolean isTransferAllowed;
+
     public ProfileCredits withIsTransferAllowed(Boolean isTransferAllowed) {
         this.isTransferAllowed = isTransferAllowed;
         return this;
@@ -28,9 +30,11 @@ public class ProfileCredits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Integer limit;
+
     public ProfileCredits withLimit(Integer limit) {
         this.limit = limit;
         return this;
     }
     
+    public ProfileCredits(){}
 }

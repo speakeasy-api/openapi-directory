@@ -15,6 +15,7 @@ public class RegistrationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DuplicateRegistrationAction")
     public DuplicateRegistrationActionEnum duplicateRegistrationAction;
+
     public RegistrationConfig withDuplicateRegistrationAction(DuplicateRegistrationActionEnum duplicateRegistrationAction) {
         this.duplicateRegistrationAction = duplicateRegistrationAction;
         return this;
@@ -23,6 +24,7 @@ public class RegistrationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FraudsterSimilarityThreshold")
     public Long fraudsterSimilarityThreshold;
+
     public RegistrationConfig withFraudsterSimilarityThreshold(Long fraudsterSimilarityThreshold) {
         this.fraudsterSimilarityThreshold = fraudsterSimilarityThreshold;
         return this;
@@ -31,9 +33,11 @@ public class RegistrationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WatchlistIds")
     public String[] watchlistIds;
+
     public RegistrationConfig withWatchlistIds(String[] watchlistIds) {
         this.watchlistIds = watchlistIds;
         return this;
     }
     
+    public RegistrationConfig(){}
 }

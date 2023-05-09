@@ -15,6 +15,7 @@ public class CreatePipelineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Pipeline")
     public Pipeline pipeline;
+
     public CreatePipelineResponse withPipeline(Pipeline pipeline) {
         this.pipeline = pipeline;
         return this;
@@ -23,9 +24,11 @@ public class CreatePipelineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Warnings")
     public Warning[] warnings;
+
     public CreatePipelineResponse withWarnings(Warning[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public CreatePipelineResponse(){}
 }

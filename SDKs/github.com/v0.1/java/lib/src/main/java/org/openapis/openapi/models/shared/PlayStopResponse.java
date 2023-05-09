@@ -15,6 +15,7 @@ public class PlayStopResponse {
      */
     @JsonProperty("Message")
     public PlayStopResponseMessageEnum message;
+
     public PlayStopResponse withMessage(PlayStopResponseMessageEnum message) {
         this.message = message;
         return this;
@@ -25,9 +26,14 @@ public class PlayStopResponse {
      */
     @JsonProperty("Success")
     public Boolean success;
+
     public PlayStopResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public PlayStopResponse(@JsonProperty("Message") PlayStopResponseMessageEnum message, @JsonProperty("Success") Boolean success) {
+        this.message = message;
+        this.success = success;
+  }
 }

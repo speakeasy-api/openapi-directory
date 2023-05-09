@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Leg {
     @JsonProperty("parts")
     public Part[] parts;
+
     public Leg withParts(Part[] parts) {
         this.parts = parts;
         return this;
@@ -22,6 +23,7 @@ public class Leg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort")
     public String sort;
+
     public Leg withSort(String sort) {
         this.sort = sort;
         return this;
@@ -32,9 +34,14 @@ public class Leg {
      */
     @JsonProperty("type")
     public String type;
+
     public Leg withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Leg(@JsonProperty("parts") Part[] parts, @JsonProperty("type") String type) {
+        this.parts = parts;
+        this.type = type;
+  }
 }

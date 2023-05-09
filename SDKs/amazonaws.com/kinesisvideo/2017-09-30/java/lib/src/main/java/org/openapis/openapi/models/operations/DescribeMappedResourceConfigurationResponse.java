@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeMappedResourceConfigurationResponse {
@@ -12,6 +13,7 @@ public class DescribeMappedResourceConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeMappedResourceConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DescribeMappedResourceConfigurationResponse {
      */
     
     public Object clientLimitExceededException;
+
     public DescribeMappedResourceConfigurationResponse withClientLimitExceededException(Object clientLimitExceededException) {
         this.clientLimitExceededException = clientLimitExceededException;
         return this;
@@ -29,6 +32,7 @@ public class DescribeMappedResourceConfigurationResponse {
     
     
     public String contentType;
+
     public DescribeMappedResourceConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DescribeMappedResourceConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeMappedResourceConfigurationOutput describeMappedResourceConfigurationOutput;
+
     public DescribeMappedResourceConfigurationResponse withDescribeMappedResourceConfigurationOutput(org.openapis.openapi.models.shared.DescribeMappedResourceConfigurationOutput describeMappedResourceConfigurationOutput) {
         this.describeMappedResourceConfigurationOutput = describeMappedResourceConfigurationOutput;
         return this;
@@ -49,6 +54,7 @@ public class DescribeMappedResourceConfigurationResponse {
      */
     
     public Object invalidArgumentException;
+
     public DescribeMappedResourceConfigurationResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeMappedResourceConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeMappedResourceConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeMappedResourceConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DescribeMappedResourceConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeMappedResourceConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeMappedResourceConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeMappedResourceConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

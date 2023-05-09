@@ -15,6 +15,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DimensionValue")
     public String dimensionValue;
+
     public Filter withDimensionValue(String dimensionValue) {
         this.dimensionValue = dimensionValue;
         return this;
@@ -23,9 +24,11 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterOperation")
     public FilterOperationEnum filterOperation;
+
     public Filter withFilterOperation(FilterOperationEnum filterOperation) {
         this.filterOperation = filterOperation;
         return this;
     }
     
+    public Filter(){}
 }

@@ -17,6 +17,7 @@ public class V1x1SpecDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_status")
     public String clientStatus;
+
     public V1x1SpecDetailVO withClientStatus(String clientStatus) {
         this.clientStatus = clientStatus;
         return this;
@@ -26,6 +27,7 @@ public class V1x1SpecDetailVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("create_date")
     public LocalDate createDate;
+
     public V1x1SpecDetailVO withCreateDate(LocalDate createDate) {
         this.createDate = createDate;
         return this;
@@ -37,6 +39,7 @@ public class V1x1SpecDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_by")
     public PersonVO createdBy;
+
     public V1x1SpecDetailVO withCreatedBy(PersonVO createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -48,6 +51,7 @@ public class V1x1SpecDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_level_custom_fields")
     public V1x1ProperyVO firstLevelCustomFields;
+
     public V1x1SpecDetailVO withFirstLevelCustomFields(V1x1ProperyVO firstLevelCustomFields) {
         this.firstLevelCustomFields = firstLevelCustomFields;
         return this;
@@ -59,6 +63,7 @@ public class V1x1SpecDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("header_custom_fields")
     public V1x1ProperyVO headerCustomFields;
+
     public V1x1SpecDetailVO withHeaderCustomFields(V1x1ProperyVO headerCustomFields) {
         this.headerCustomFields = headerCustomFields;
         return this;
@@ -67,6 +72,7 @@ public class V1x1SpecDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job_id")
     public Long jobId;
+
     public V1x1SpecDetailVO withJobId(Long jobId) {
         this.jobId = jobId;
         return this;
@@ -76,6 +82,7 @@ public class V1x1SpecDetailVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("last_updated")
     public LocalDate lastUpdated;
+
     public V1x1SpecDetailVO withLastUpdated(LocalDate lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -84,6 +91,7 @@ public class V1x1SpecDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product_type")
     public String productType;
+
     public V1x1SpecDetailVO withProductType(String productType) {
         this.productType = productType;
         return this;
@@ -95,6 +103,7 @@ public class V1x1SpecDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product_type_info")
     public ProductTypeVO productTypeInfo;
+
     public V1x1SpecDetailVO withProductTypeInfo(ProductTypeVO productTypeInfo) {
         this.productTypeInfo = productTypeInfo;
         return this;
@@ -103,6 +112,7 @@ public class V1x1SpecDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_1")
     public Long quantity1;
+
     public V1x1SpecDetailVO withQuantity1(Long quantity1) {
         this.quantity1 = quantity1;
         return this;
@@ -111,6 +121,7 @@ public class V1x1SpecDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_2")
     public Long quantity2;
+
     public V1x1SpecDetailVO withQuantity2(Long quantity2) {
         this.quantity2 = quantity2;
         return this;
@@ -119,6 +130,7 @@ public class V1x1SpecDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_3")
     public Long quantity3;
+
     public V1x1SpecDetailVO withQuantity3(Long quantity3) {
         this.quantity3 = quantity3;
         return this;
@@ -127,6 +139,7 @@ public class V1x1SpecDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_4")
     public Long quantity4;
+
     public V1x1SpecDetailVO withQuantity4(Long quantity4) {
         this.quantity4 = quantity4;
         return this;
@@ -135,6 +148,7 @@ public class V1x1SpecDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_5")
     public Long quantity5;
+
     public V1x1SpecDetailVO withQuantity5(Long quantity5) {
         this.quantity5 = quantity5;
         return this;
@@ -143,6 +157,7 @@ public class V1x1SpecDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_number")
     public String referenceNumber;
+
     public V1x1SpecDetailVO withReferenceNumber(String referenceNumber) {
         this.referenceNumber = referenceNumber;
         return this;
@@ -151,6 +166,7 @@ public class V1x1SpecDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("second_level_custom_fields")
     public V1x1ProperyVO[] secondLevelCustomFields;
+
     public V1x1SpecDetailVO withSecondLevelCustomFields(V1x1ProperyVO[] secondLevelCustomFields) {
         this.secondLevelCustomFields = secondLevelCustomFields;
         return this;
@@ -159,6 +175,7 @@ public class V1x1SpecDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public String sku;
+
     public V1x1SpecDetailVO withSku(String sku) {
         this.sku = sku;
         return this;
@@ -167,6 +184,7 @@ public class V1x1SpecDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_id")
     public Long specId;
+
     public V1x1SpecDetailVO withSpecId(Long specId) {
         this.specId = specId;
         return this;
@@ -175,6 +193,7 @@ public class V1x1SpecDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_name")
     public String specName;
+
     public V1x1SpecDetailVO withSpecName(String specName) {
         this.specName = specName;
         return this;
@@ -183,6 +202,7 @@ public class V1x1SpecDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_options")
     public SpecSimplestVO[] specOptions;
+
     public V1x1SpecDetailVO withSpecOptions(SpecSimplestVO[] specOptions) {
         this.specOptions = specOptions;
         return this;
@@ -191,6 +211,7 @@ public class V1x1SpecDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_options_complete")
     public SpecSimpleVO[] specOptionsComplete;
+
     public V1x1SpecDetailVO withSpecOptionsComplete(SpecSimpleVO[] specOptionsComplete) {
         this.specOptionsComplete = specOptionsComplete;
         return this;
@@ -202,6 +223,7 @@ public class V1x1SpecDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_original")
     public SpecSimplestVO specOriginal;
+
     public V1x1SpecDetailVO withSpecOriginal(SpecSimplestVO specOriginal) {
         this.specOriginal = specOriginal;
         return this;
@@ -213,6 +235,7 @@ public class V1x1SpecDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_type")
     public SpecTypeVO specType;
+
     public V1x1SpecDetailVO withSpecType(SpecTypeVO specType) {
         this.specType = specType;
         return this;
@@ -221,6 +244,7 @@ public class V1x1SpecDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplier_status")
     public String supplierStatus;
+
     public V1x1SpecDetailVO withSupplierStatus(String supplierStatus) {
         this.supplierStatus = supplierStatus;
         return this;
@@ -229,6 +253,7 @@ public class V1x1SpecDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uofms")
     public UofmSimpleVO[] uofms;
+
     public V1x1SpecDetailVO withUofms(UofmSimpleVO[] uofms) {
         this.uofms = uofms;
         return this;
@@ -237,9 +262,11 @@ public class V1x1SpecDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_state")
     public String userState;
+
     public V1x1SpecDetailVO withUserState(String userState) {
         this.userState = userState;
         return this;
     }
     
+    public V1x1SpecDetailVO(){}
 }

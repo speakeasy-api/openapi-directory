@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class FirestoreProjectsDatabasesDocumentsWriteSecurity {
     @SpeakeasyMetadata("security:option=true")
     public FirestoreProjectsDatabasesDocumentsWriteSecurityOption1 option1;
+
     public FirestoreProjectsDatabasesDocumentsWriteSecurity withOption1(FirestoreProjectsDatabasesDocumentsWriteSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class FirestoreProjectsDatabasesDocumentsWriteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FirestoreProjectsDatabasesDocumentsWriteSecurityOption2 option2;
+
     public FirestoreProjectsDatabasesDocumentsWriteSecurity withOption2(FirestoreProjectsDatabasesDocumentsWriteSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public FirestoreProjectsDatabasesDocumentsWriteSecurity(){}
 }

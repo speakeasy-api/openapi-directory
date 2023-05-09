@@ -15,9 +15,11 @@ public class AwsEc2SecurityGroupIpv6Range {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CidrIpv6")
     public String cidrIpv6;
+
     public AwsEc2SecurityGroupIpv6Range withCidrIpv6(String cidrIpv6) {
         this.cidrIpv6 = cidrIpv6;
         return this;
     }
     
+    public AwsEc2SecurityGroupIpv6Range(){}
 }

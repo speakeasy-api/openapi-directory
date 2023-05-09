@@ -18,6 +18,7 @@ public class CollectionStatusDestinationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approvedCountries")
     public String[] approvedCountries;
+
     public CollectionStatusDestinationStatus withApprovedCountries(String[] approvedCountries) {
         this.approvedCountries = approvedCountries;
         return this;
@@ -29,6 +30,7 @@ public class CollectionStatusDestinationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public String destination;
+
     public CollectionStatusDestinationStatus withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -40,6 +42,7 @@ public class CollectionStatusDestinationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disapprovedCountries")
     public String[] disapprovedCountries;
+
     public CollectionStatusDestinationStatus withDisapprovedCountries(String[] disapprovedCountries) {
         this.disapprovedCountries = disapprovedCountries;
         return this;
@@ -51,6 +54,7 @@ public class CollectionStatusDestinationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pendingCountries")
     public String[] pendingCountries;
+
     public CollectionStatusDestinationStatus withPendingCountries(String[] pendingCountries) {
         this.pendingCountries = pendingCountries;
         return this;
@@ -62,9 +66,11 @@ public class CollectionStatusDestinationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public CollectionStatusDestinationStatus withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public CollectionStatusDestinationStatus(){}
 }

@@ -3,12 +3,11 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.ControlChargerChargingSecurity;
-import org.openapis.openapi.models.operations.ControlChargerChargingRequestBodyActionEnum;
-import org.openapis.openapi.models.operations.ControlChargerChargingRequestBody;
 import org.openapis.openapi.models.operations.ControlChargerChargingRequest;
+import org.openapis.openapi.models.operations.ControlChargerChargingRequestBody;
+import org.openapis.openapi.models.operations.ControlChargerChargingRequestBodyActionEnum;
 import org.openapis.openapi.models.operations.ControlChargerChargingResponse;
+import org.openapis.openapi.models.operations.ControlChargerChargingSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -16,12 +15,9 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            ControlChargerChargingRequest req = new ControlChargerChargingRequest() {{
-                requestBody = new ControlChargerChargingRequestBody() {{
-                    action = "START";
-                }};
-                chargerId = "corrupti";
-            }}            
+            ControlChargerChargingRequest req = new ControlChargerChargingRequest("corrupti") {{
+                requestBody = new ControlChargerChargingRequestBody(ControlChargerChargingRequestBodyActionEnum.START);;
+            }};            
 
             ControlChargerChargingResponse res = sdk.chargers.controlChargerCharging(req, new ControlChargerChargingSecurity() {{
                 userAccessToken = "Bearer YOUR_ACCESS_TOKEN_HERE";
@@ -33,5 +29,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

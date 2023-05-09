@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TestGetDeviceSetOfOwnerDeviceSet {
     @JsonProperty("deviceConfigurations")
     public TestGetDeviceSetOfOwnerDeviceSetDeviceConfigurations[] deviceConfigurations;
+
     public TestGetDeviceSetOfOwnerDeviceSet withDeviceConfigurations(TestGetDeviceSetOfOwnerDeviceSetDeviceConfigurations[] deviceConfigurations) {
         this.deviceConfigurations = deviceConfigurations;
         return this;
@@ -24,6 +25,7 @@ public class TestGetDeviceSetOfOwnerDeviceSet {
      */
     @JsonProperty("id")
     public String id;
+
     public TestGetDeviceSetOfOwnerDeviceSet withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class TestGetDeviceSetOfOwnerDeviceSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manufacturerCount")
     public Double manufacturerCount;
+
     public TestGetDeviceSetOfOwnerDeviceSet withManufacturerCount(Double manufacturerCount) {
         this.manufacturerCount = manufacturerCount;
         return this;
@@ -45,6 +48,7 @@ public class TestGetDeviceSetOfOwnerDeviceSet {
      */
     @JsonProperty("name")
     public String name;
+
     public TestGetDeviceSetOfOwnerDeviceSet withName(String name) {
         this.name = name;
         return this;
@@ -56,6 +60,7 @@ public class TestGetDeviceSetOfOwnerDeviceSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osVersionCount")
     public Double osVersionCount;
+
     public TestGetDeviceSetOfOwnerDeviceSet withOsVersionCount(Double osVersionCount) {
         this.osVersionCount = osVersionCount;
         return this;
@@ -66,6 +71,7 @@ public class TestGetDeviceSetOfOwnerDeviceSet {
      */
     @JsonProperty("owner")
     public TestGetDeviceSetOfOwnerDeviceSetDeviceSetOwner owner;
+
     public TestGetDeviceSetOfOwnerDeviceSet withOwner(TestGetDeviceSetOfOwnerDeviceSetDeviceSetOwner owner) {
         this.owner = owner;
         return this;
@@ -77,9 +83,16 @@ public class TestGetDeviceSetOfOwnerDeviceSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     public String slug;
+
     public TestGetDeviceSetOfOwnerDeviceSet withSlug(String slug) {
         this.slug = slug;
         return this;
     }
     
+    public TestGetDeviceSetOfOwnerDeviceSet(@JsonProperty("deviceConfigurations") TestGetDeviceSetOfOwnerDeviceSetDeviceConfigurations[] deviceConfigurations, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("owner") TestGetDeviceSetOfOwnerDeviceSetDeviceSetOwner owner) {
+        this.deviceConfigurations = deviceConfigurations;
+        this.id = id;
+        this.name = name;
+        this.owner = owner;
+  }
 }

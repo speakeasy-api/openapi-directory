@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ForgotPasswordRequest {
@@ -12,6 +13,7 @@ public class ForgotPasswordRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PasswordResetEmailRequest passwordResetEmailRequest;
+
     public ForgotPasswordRequest withPasswordResetEmailRequest(org.openapis.openapi.models.shared.PasswordResetEmailRequest passwordResetEmailRequest) {
         this.passwordResetEmailRequest = passwordResetEmailRequest;
         return this;
@@ -42,6 +44,7 @@ public class ForgotPasswordRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public ForgotPasswordRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -62,9 +65,13 @@ public class ForgotPasswordRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public ForgotPasswordRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public ForgotPasswordRequest(@JsonProperty("PasswordResetEmailRequest") org.openapis.openapi.models.shared.PasswordResetEmailRequest passwordResetEmailRequest) {
+        this.passwordResetEmailRequest = passwordResetEmailRequest;
+  }
 }

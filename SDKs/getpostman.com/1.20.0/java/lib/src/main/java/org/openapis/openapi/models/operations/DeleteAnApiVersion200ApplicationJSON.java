@@ -15,9 +15,11 @@ public class DeleteAnApiVersion200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public DeleteAnApiVersion200ApplicationJSONVersion version;
+
     public DeleteAnApiVersion200ApplicationJSON withVersion(DeleteAnApiVersion200ApplicationJSONVersion version) {
         this.version = version;
         return this;
     }
     
+    public DeleteAnApiVersion200ApplicationJSON(){}
 }

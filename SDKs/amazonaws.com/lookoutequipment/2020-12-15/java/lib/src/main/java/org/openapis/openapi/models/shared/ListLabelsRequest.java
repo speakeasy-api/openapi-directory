@@ -17,6 +17,7 @@ public class ListLabelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Equipment")
     public String equipment;
+
     public ListLabelsRequest withEquipment(String equipment) {
         this.equipment = equipment;
         return this;
@@ -25,6 +26,7 @@ public class ListLabelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FaultCode")
     public String faultCode;
+
     public ListLabelsRequest withFaultCode(String faultCode) {
         this.faultCode = faultCode;
         return this;
@@ -35,6 +37,7 @@ public class ListLabelsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("IntervalEndTime")
     public OffsetDateTime intervalEndTime;
+
     public ListLabelsRequest withIntervalEndTime(OffsetDateTime intervalEndTime) {
         this.intervalEndTime = intervalEndTime;
         return this;
@@ -45,6 +48,7 @@ public class ListLabelsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("IntervalStartTime")
     public OffsetDateTime intervalStartTime;
+
     public ListLabelsRequest withIntervalStartTime(OffsetDateTime intervalStartTime) {
         this.intervalStartTime = intervalStartTime;
         return this;
@@ -52,6 +56,7 @@ public class ListLabelsRequest {
     
     @JsonProperty("LabelGroupName")
     public String labelGroupName;
+
     public ListLabelsRequest withLabelGroupName(String labelGroupName) {
         this.labelGroupName = labelGroupName;
         return this;
@@ -60,6 +65,7 @@ public class ListLabelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListLabelsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -68,9 +74,13 @@ public class ListLabelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLabelsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLabelsRequest(@JsonProperty("LabelGroupName") String labelGroupName) {
+        this.labelGroupName = labelGroupName;
+  }
 }

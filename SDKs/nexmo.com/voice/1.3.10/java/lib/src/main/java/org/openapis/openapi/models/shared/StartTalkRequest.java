@@ -18,6 +18,7 @@ public class StartTalkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public LanguageEnum language;
+
     public StartTalkRequest withLanguage(LanguageEnum language) {
         this.language = language;
         return this;
@@ -29,6 +30,7 @@ public class StartTalkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("level")
     public String level;
+
     public StartTalkRequest withLevel(String level) {
         this.level = level;
         return this;
@@ -40,6 +42,7 @@ public class StartTalkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loop")
     public Long loop;
+
     public StartTalkRequest withLoop(Long loop) {
         this.loop = loop;
         return this;
@@ -51,6 +54,7 @@ public class StartTalkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("premium")
     public Boolean premium;
+
     public StartTalkRequest withPremium(Boolean premium) {
         this.premium = premium;
         return this;
@@ -62,6 +66,7 @@ public class StartTalkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("style")
     public Long style;
+
     public StartTalkRequest withStyle(Long style) {
         this.style = style;
         return this;
@@ -72,6 +77,7 @@ public class StartTalkRequest {
      */
     @JsonProperty("text")
     public String text;
+
     public StartTalkRequest withText(String text) {
         this.text = text;
         return this;
@@ -83,9 +89,13 @@ public class StartTalkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voice_name")
     public VoiceNameEnum voiceName;
+
     public StartTalkRequest withVoiceName(VoiceNameEnum voiceName) {
         this.voiceName = voiceName;
         return this;
     }
     
+    public StartTalkRequest(@JsonProperty("text") String text) {
+        this.text = text;
+  }
 }

@@ -14,6 +14,7 @@ public class Attachment {
      */
     @JsonProperty("content")
     public String content;
+
     public Attachment withContent(String content) {
         this.content = content;
         return this;
@@ -27,6 +28,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentType")
     public String contentType;
+
     public Attachment withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -38,6 +40,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filename")
     public String filename;
+
     public Attachment withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -53,9 +56,13 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageType")
     public String pageType;
+
     public Attachment withPageType(String pageType) {
         this.pageType = pageType;
         return this;
     }
     
+    public Attachment(@JsonProperty("content") String content) {
+        this.content = content;
+  }
 }

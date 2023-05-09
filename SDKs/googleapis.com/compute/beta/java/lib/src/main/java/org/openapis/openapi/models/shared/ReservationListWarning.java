@@ -18,6 +18,7 @@ public class ReservationListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public ReservationListWarningCodeEnum code;
+
     public ReservationListWarning withCode(ReservationListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class ReservationListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ReservationListWarningData[] data;
+
     public ReservationListWarning withData(ReservationListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class ReservationListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ReservationListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ReservationListWarning(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV1Request {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetV1Request withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -16,6 +18,7 @@ public class GetV1Request {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public GetV1Request withFields(String fields) {
         this.fields = fields;
         return this;
@@ -23,9 +26,13 @@ public class GetV1Request {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ip_address")
     public String ipAddress;
+
     public GetV1Request withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
     }
     
+    public GetV1Request(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

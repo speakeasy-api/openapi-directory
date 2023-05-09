@@ -15,6 +15,7 @@ public class UiTemplateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentSha256")
     public String contentSha256;
+
     public UiTemplateInfo withContentSha256(String contentSha256) {
         this.contentSha256 = contentSha256;
         return this;
@@ -23,9 +24,11 @@ public class UiTemplateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public UiTemplateInfo withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public UiTemplateInfo(){}
 }

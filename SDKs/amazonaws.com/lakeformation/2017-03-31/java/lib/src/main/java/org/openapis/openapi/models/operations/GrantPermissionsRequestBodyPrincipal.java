@@ -15,9 +15,11 @@ public class GrantPermissionsRequestBodyPrincipal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataLakePrincipalIdentifier")
     public String dataLakePrincipalIdentifier;
+
     public GrantPermissionsRequestBodyPrincipal withDataLakePrincipalIdentifier(String dataLakePrincipalIdentifier) {
         this.dataLakePrincipalIdentifier = dataLakePrincipalIdentifier;
         return this;
     }
     
+    public GrantPermissionsRequestBodyPrincipal(){}
 }

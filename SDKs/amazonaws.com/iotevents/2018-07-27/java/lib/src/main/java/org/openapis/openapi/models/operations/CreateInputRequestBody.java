@@ -14,6 +14,7 @@ public class CreateInputRequestBody {
      */
     @JsonProperty("inputDefinition")
     public CreateInputRequestBodyInputDefinition inputDefinition;
+
     public CreateInputRequestBody withInputDefinition(CreateInputRequestBodyInputDefinition inputDefinition) {
         this.inputDefinition = inputDefinition;
         return this;
@@ -25,6 +26,7 @@ public class CreateInputRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputDescription")
     public String inputDescription;
+
     public CreateInputRequestBody withInputDescription(String inputDescription) {
         this.inputDescription = inputDescription;
         return this;
@@ -35,6 +37,7 @@ public class CreateInputRequestBody {
      */
     @JsonProperty("inputName")
     public String inputName;
+
     public CreateInputRequestBody withInputName(String inputName) {
         this.inputName = inputName;
         return this;
@@ -46,9 +49,14 @@ public class CreateInputRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateInputRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateInputRequestBody(@JsonProperty("inputDefinition") CreateInputRequestBodyInputDefinition inputDefinition, @JsonProperty("inputName") String inputName) {
+        this.inputDefinition = inputDefinition;
+        this.inputName = inputName;
+  }
 }

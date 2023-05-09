@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeWorkflowExecutionResponse {
     
     public String contentType;
+
     public DescribeWorkflowExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeWorkflowExecutionResponse {
      */
     
     public Object operationNotPermittedFault;
+
     public DescribeWorkflowExecutionResponse withOperationNotPermittedFault(Object operationNotPermittedFault) {
         this.operationNotPermittedFault = operationNotPermittedFault;
         return this;
@@ -26,6 +29,7 @@ public class DescribeWorkflowExecutionResponse {
     
     
     public Integer statusCode;
+
     public DescribeWorkflowExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DescribeWorkflowExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeWorkflowExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class DescribeWorkflowExecutionResponse {
      */
     
     public Object unknownResourceFault;
+
     public DescribeWorkflowExecutionResponse withUnknownResourceFault(Object unknownResourceFault) {
         this.unknownResourceFault = unknownResourceFault;
         return this;
@@ -53,9 +59,14 @@ public class DescribeWorkflowExecutionResponse {
      */
     
     public org.openapis.openapi.models.shared.WorkflowExecutionDetail workflowExecutionDetail;
+
     public DescribeWorkflowExecutionResponse withWorkflowExecutionDetail(org.openapis.openapi.models.shared.WorkflowExecutionDetail workflowExecutionDetail) {
         this.workflowExecutionDetail = workflowExecutionDetail;
         return this;
     }
     
+    public DescribeWorkflowExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

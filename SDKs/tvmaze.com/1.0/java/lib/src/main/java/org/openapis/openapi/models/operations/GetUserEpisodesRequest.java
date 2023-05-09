@@ -12,9 +12,11 @@ public class GetUserEpisodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=show_id")
     public Long showId;
+
     public GetUserEpisodesRequest withShowId(Long showId) {
         this.showId = showId;
         return this;
     }
     
+    public GetUserEpisodesRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelKeyDeletionResponse {
@@ -12,6 +13,7 @@ public class CancelKeyDeletionResponse {
      */
     
     public org.openapis.openapi.models.shared.CancelKeyDeletionResponse cancelKeyDeletionResponse;
+
     public CancelKeyDeletionResponse withCancelKeyDeletionResponse(org.openapis.openapi.models.shared.CancelKeyDeletionResponse cancelKeyDeletionResponse) {
         this.cancelKeyDeletionResponse = cancelKeyDeletionResponse;
         return this;
@@ -19,6 +21,7 @@ public class CancelKeyDeletionResponse {
     
     
     public String contentType;
+
     public CancelKeyDeletionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CancelKeyDeletionResponse {
      */
     
     public Object dependencyTimeoutException;
+
     public CancelKeyDeletionResponse withDependencyTimeoutException(Object dependencyTimeoutException) {
         this.dependencyTimeoutException = dependencyTimeoutException;
         return this;
@@ -39,6 +43,7 @@ public class CancelKeyDeletionResponse {
      */
     
     public Object invalidArnException;
+
     public CancelKeyDeletionResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -49,6 +54,7 @@ public class CancelKeyDeletionResponse {
      */
     
     public Object kmsInternalException;
+
     public CancelKeyDeletionResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -59,6 +65,7 @@ public class CancelKeyDeletionResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public CancelKeyDeletionResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -69,6 +76,7 @@ public class CancelKeyDeletionResponse {
      */
     
     public Object notFoundException;
+
     public CancelKeyDeletionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +84,7 @@ public class CancelKeyDeletionResponse {
     
     
     public Integer statusCode;
+
     public CancelKeyDeletionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class CancelKeyDeletionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelKeyDeletionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CancelKeyDeletionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

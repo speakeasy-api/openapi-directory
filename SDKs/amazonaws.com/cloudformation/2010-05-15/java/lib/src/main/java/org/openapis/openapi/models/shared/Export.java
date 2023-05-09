@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Export {
     
     public String exportingStackId;
+
     public Export withExportingStackId(String exportingStackId) {
         this.exportingStackId = exportingStackId;
         return this;
@@ -19,6 +20,7 @@ public class Export {
     
     
     public String name;
+
     public Export withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,11 @@ public class Export {
     
     
     public String value;
+
     public Export withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Export(){}
 }

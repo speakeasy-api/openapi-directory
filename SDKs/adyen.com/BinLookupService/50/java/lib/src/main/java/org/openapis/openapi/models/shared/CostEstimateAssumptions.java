@@ -15,6 +15,7 @@ public class CostEstimateAssumptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assume3DSecureAuthenticated")
     public Boolean assume3DSecureAuthenticated;
+
     public CostEstimateAssumptions withAssume3DSecureAuthenticated(Boolean assume3DSecureAuthenticated) {
         this.assume3DSecureAuthenticated = assume3DSecureAuthenticated;
         return this;
@@ -26,6 +27,7 @@ public class CostEstimateAssumptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assumeLevel3Data")
     public Boolean assumeLevel3Data;
+
     public CostEstimateAssumptions withAssumeLevel3Data(Boolean assumeLevel3Data) {
         this.assumeLevel3Data = assumeLevel3Data;
         return this;
@@ -37,9 +39,11 @@ public class CostEstimateAssumptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installments")
     public Integer installments;
+
     public CostEstimateAssumptions withInstallments(Integer installments) {
         this.installments = installments;
         return this;
     }
     
+    public CostEstimateAssumptions(){}
 }

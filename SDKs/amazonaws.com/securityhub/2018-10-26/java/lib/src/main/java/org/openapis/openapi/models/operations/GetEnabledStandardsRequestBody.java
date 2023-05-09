@@ -15,6 +15,7 @@ public class GetEnabledStandardsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetEnabledStandardsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +27,7 @@ public class GetEnabledStandardsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetEnabledStandardsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +39,11 @@ public class GetEnabledStandardsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StandardsSubscriptionArns")
     public String[] standardsSubscriptionArns;
+
     public GetEnabledStandardsRequestBody withStandardsSubscriptionArns(String[] standardsSubscriptionArns) {
         this.standardsSubscriptionArns = standardsSubscriptionArns;
         return this;
     }
     
+    public GetEnabledStandardsRequestBody(){}
 }

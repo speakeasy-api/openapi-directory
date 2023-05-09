@@ -15,9 +15,11 @@ public class OrdersAcknowledgeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationId")
     public String operationId;
+
     public OrdersAcknowledgeRequest withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
     }
     
+    public OrdersAcknowledgeRequest(){}
 }

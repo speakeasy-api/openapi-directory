@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetIpamDiscoveredAccountsResultIpamDiscoveredAccountsFailureReason {
     
     public GetIpamDiscoveredAccountsResultIpamDiscoveredAccountsFailureReasonCodeEnum code;
+
     public GetIpamDiscoveredAccountsResultIpamDiscoveredAccountsFailureReason withCode(GetIpamDiscoveredAccountsResultIpamDiscoveredAccountsFailureReasonCodeEnum code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class GetIpamDiscoveredAccountsResultIpamDiscoveredAccountsFailureReason 
     
     
     public String message;
+
     public GetIpamDiscoveredAccountsResultIpamDiscoveredAccountsFailureReason withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GetIpamDiscoveredAccountsResultIpamDiscoveredAccountsFailureReason(){}
 }

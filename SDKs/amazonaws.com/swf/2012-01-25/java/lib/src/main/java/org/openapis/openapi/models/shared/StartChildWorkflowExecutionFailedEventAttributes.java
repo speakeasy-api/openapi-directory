@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartChildWorkflowExecutionFailedEventAttributes {
     @JsonProperty("cause")
     public StartChildWorkflowExecutionFailedCauseEnum cause;
+
     public StartChildWorkflowExecutionFailedEventAttributes withCause(StartChildWorkflowExecutionFailedCauseEnum cause) {
         this.cause = cause;
         return this;
@@ -22,6 +23,7 @@ public class StartChildWorkflowExecutionFailedEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("control")
     public String control;
+
     public StartChildWorkflowExecutionFailedEventAttributes withControl(String control) {
         this.control = control;
         return this;
@@ -29,6 +31,7 @@ public class StartChildWorkflowExecutionFailedEventAttributes {
     
     @JsonProperty("decisionTaskCompletedEventId")
     public Long decisionTaskCompletedEventId;
+
     public StartChildWorkflowExecutionFailedEventAttributes withDecisionTaskCompletedEventId(Long decisionTaskCompletedEventId) {
         this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
         return this;
@@ -36,6 +39,7 @@ public class StartChildWorkflowExecutionFailedEventAttributes {
     
     @JsonProperty("initiatedEventId")
     public Long initiatedEventId;
+
     public StartChildWorkflowExecutionFailedEventAttributes withInitiatedEventId(Long initiatedEventId) {
         this.initiatedEventId = initiatedEventId;
         return this;
@@ -43,6 +47,7 @@ public class StartChildWorkflowExecutionFailedEventAttributes {
     
     @JsonProperty("workflowId")
     public String workflowId;
+
     public StartChildWorkflowExecutionFailedEventAttributes withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
@@ -50,9 +55,17 @@ public class StartChildWorkflowExecutionFailedEventAttributes {
     
     @JsonProperty("workflowType")
     public WorkflowType workflowType;
+
     public StartChildWorkflowExecutionFailedEventAttributes withWorkflowType(WorkflowType workflowType) {
         this.workflowType = workflowType;
         return this;
     }
     
+    public StartChildWorkflowExecutionFailedEventAttributes(@JsonProperty("cause") StartChildWorkflowExecutionFailedCauseEnum cause, @JsonProperty("decisionTaskCompletedEventId") Long decisionTaskCompletedEventId, @JsonProperty("initiatedEventId") Long initiatedEventId, @JsonProperty("workflowId") String workflowId, @JsonProperty("workflowType") WorkflowType workflowType) {
+        this.cause = cause;
+        this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
+        this.initiatedEventId = initiatedEventId;
+        this.workflowId = workflowId;
+        this.workflowType = workflowType;
+  }
 }

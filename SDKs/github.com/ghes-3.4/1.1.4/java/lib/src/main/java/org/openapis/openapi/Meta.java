@@ -53,11 +53,9 @@ public class Meta {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetaGetResponse res = new org.openapis.openapi.models.operations.MetaGetResponse() {{
+        org.openapis.openapi.models.operations.MetaGetResponse res = new org.openapis.openapi.models.operations.MetaGetResponse(contentType, httpRes.statusCode()) {{
             apiOverview = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class Meta {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetaGetOctocatResponse res = new org.openapis.openapi.models.operations.MetaGetOctocatResponse() {{
+        org.openapis.openapi.models.operations.MetaGetOctocatResponse res = new org.openapis.openapi.models.operations.MetaGetOctocatResponse(contentType, httpRes.statusCode()) {{
             metaGetOctocat200ApplicationOctocatStreamString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -139,11 +135,9 @@ public class Meta {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetaGetZenResponse res = new org.openapis.openapi.models.operations.MetaGetZenResponse() {{
+        org.openapis.openapi.models.operations.MetaGetZenResponse res = new org.openapis.openapi.models.operations.MetaGetZenResponse(contentType, httpRes.statusCode()) {{
             metaGetZen200TextPlainString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -177,11 +171,9 @@ public class Meta {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetaRootResponse res = new org.openapis.openapi.models.operations.MetaRootResponse() {{
+        org.openapis.openapi.models.operations.MetaRootResponse res = new org.openapis.openapi.models.operations.MetaRootResponse(contentType, httpRes.statusCode()) {{
             root = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

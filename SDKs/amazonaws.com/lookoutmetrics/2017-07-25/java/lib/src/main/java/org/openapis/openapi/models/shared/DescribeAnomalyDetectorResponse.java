@@ -20,6 +20,7 @@ public class DescribeAnomalyDetectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyDetectorArn")
     public String anomalyDetectorArn;
+
     public DescribeAnomalyDetectorResponse withAnomalyDetectorArn(String anomalyDetectorArn) {
         this.anomalyDetectorArn = anomalyDetectorArn;
         return this;
@@ -28,6 +29,7 @@ public class DescribeAnomalyDetectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyDetectorConfig")
     public AnomalyDetectorConfigSummary anomalyDetectorConfig;
+
     public DescribeAnomalyDetectorResponse withAnomalyDetectorConfig(AnomalyDetectorConfigSummary anomalyDetectorConfig) {
         this.anomalyDetectorConfig = anomalyDetectorConfig;
         return this;
@@ -36,6 +38,7 @@ public class DescribeAnomalyDetectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyDetectorDescription")
     public String anomalyDetectorDescription;
+
     public DescribeAnomalyDetectorResponse withAnomalyDetectorDescription(String anomalyDetectorDescription) {
         this.anomalyDetectorDescription = anomalyDetectorDescription;
         return this;
@@ -44,6 +47,7 @@ public class DescribeAnomalyDetectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyDetectorName")
     public String anomalyDetectorName;
+
     public DescribeAnomalyDetectorResponse withAnomalyDetectorName(String anomalyDetectorName) {
         this.anomalyDetectorName = anomalyDetectorName;
         return this;
@@ -54,6 +58,7 @@ public class DescribeAnomalyDetectorResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeAnomalyDetectorResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -62,6 +67,7 @@ public class DescribeAnomalyDetectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public DescribeAnomalyDetectorResponse withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -70,6 +76,7 @@ public class DescribeAnomalyDetectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureType")
     public AnomalyDetectorFailureTypeEnum failureType;
+
     public DescribeAnomalyDetectorResponse withFailureType(AnomalyDetectorFailureTypeEnum failureType) {
         this.failureType = failureType;
         return this;
@@ -78,6 +85,7 @@ public class DescribeAnomalyDetectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyArn")
     public String kmsKeyArn;
+
     public DescribeAnomalyDetectorResponse withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
@@ -88,6 +96,7 @@ public class DescribeAnomalyDetectorResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationTime")
     public OffsetDateTime lastModificationTime;
+
     public DescribeAnomalyDetectorResponse withLastModificationTime(OffsetDateTime lastModificationTime) {
         this.lastModificationTime = lastModificationTime;
         return this;
@@ -96,9 +105,11 @@ public class DescribeAnomalyDetectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public AnomalyDetectorStatusEnum status;
+
     public DescribeAnomalyDetectorResponse withStatus(AnomalyDetectorStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DescribeAnomalyDetectorResponse(){}
 }

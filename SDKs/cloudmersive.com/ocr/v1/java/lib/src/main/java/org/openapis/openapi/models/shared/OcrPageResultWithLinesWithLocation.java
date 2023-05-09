@@ -18,6 +18,7 @@ public class OcrPageResultWithLinesWithLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lines")
     public OcrLineElement[] lines;
+
     public OcrPageResultWithLinesWithLocation withLines(OcrLineElement[] lines) {
         this.lines = lines;
         return this;
@@ -29,6 +30,7 @@ public class OcrPageResultWithLinesWithLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageNumber")
     public Integer pageNumber;
+
     public OcrPageResultWithLinesWithLocation withPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -40,9 +42,11 @@ public class OcrPageResultWithLinesWithLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Successful")
     public Boolean successful;
+
     public OcrPageResultWithLinesWithLocation withSuccessful(Boolean successful) {
         this.successful = successful;
         return this;
     }
     
+    public OcrPageResultWithLinesWithLocation(){}
 }

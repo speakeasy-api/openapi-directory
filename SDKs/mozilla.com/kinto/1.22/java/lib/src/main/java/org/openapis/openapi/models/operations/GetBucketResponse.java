@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBucketResponse {
     
     public String contentType;
+
     public GetBucketResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetBucketResponse {
      */
     
     public GetBucketErrorSchema errorSchema;
+
     public GetBucketResponse withErrorSchema(GetBucketErrorSchema errorSchema) {
         this.errorSchema = errorSchema;
         return this;
@@ -26,6 +29,7 @@ public class GetBucketResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetBucketResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -36,6 +40,7 @@ public class GetBucketResponse {
      */
     
     public GetBucketObjectSchema objectSchema;
+
     public GetBucketResponse withObjectSchema(GetBucketObjectSchema objectSchema) {
         this.objectSchema = objectSchema;
         return this;
@@ -43,6 +48,7 @@ public class GetBucketResponse {
     
     
     public Integer statusCode;
+
     public GetBucketResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class GetBucketResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBucketResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetBucketResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

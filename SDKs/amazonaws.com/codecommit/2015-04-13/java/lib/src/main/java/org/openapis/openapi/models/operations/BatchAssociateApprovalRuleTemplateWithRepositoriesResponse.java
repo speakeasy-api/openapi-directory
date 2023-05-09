@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchAssociateApprovalRuleTemplateWithRepositoriesResponse {
@@ -12,6 +13,7 @@ public class BatchAssociateApprovalRuleTemplateWithRepositoriesResponse {
      */
     
     public Object approvalRuleTemplateDoesNotExistException;
+
     public BatchAssociateApprovalRuleTemplateWithRepositoriesResponse withApprovalRuleTemplateDoesNotExistException(Object approvalRuleTemplateDoesNotExistException) {
         this.approvalRuleTemplateDoesNotExistException = approvalRuleTemplateDoesNotExistException;
         return this;
@@ -22,6 +24,7 @@ public class BatchAssociateApprovalRuleTemplateWithRepositoriesResponse {
      */
     
     public Object approvalRuleTemplateNameRequiredException;
+
     public BatchAssociateApprovalRuleTemplateWithRepositoriesResponse withApprovalRuleTemplateNameRequiredException(Object approvalRuleTemplateNameRequiredException) {
         this.approvalRuleTemplateNameRequiredException = approvalRuleTemplateNameRequiredException;
         return this;
@@ -32,6 +35,7 @@ public class BatchAssociateApprovalRuleTemplateWithRepositoriesResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchAssociateApprovalRuleTemplateWithRepositoriesOutput batchAssociateApprovalRuleTemplateWithRepositoriesOutput;
+
     public BatchAssociateApprovalRuleTemplateWithRepositoriesResponse withBatchAssociateApprovalRuleTemplateWithRepositoriesOutput(org.openapis.openapi.models.shared.BatchAssociateApprovalRuleTemplateWithRepositoriesOutput batchAssociateApprovalRuleTemplateWithRepositoriesOutput) {
         this.batchAssociateApprovalRuleTemplateWithRepositoriesOutput = batchAssociateApprovalRuleTemplateWithRepositoriesOutput;
         return this;
@@ -39,6 +43,7 @@ public class BatchAssociateApprovalRuleTemplateWithRepositoriesResponse {
     
     
     public String contentType;
+
     public BatchAssociateApprovalRuleTemplateWithRepositoriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class BatchAssociateApprovalRuleTemplateWithRepositoriesResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public BatchAssociateApprovalRuleTemplateWithRepositoriesResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -59,6 +65,7 @@ public class BatchAssociateApprovalRuleTemplateWithRepositoriesResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public BatchAssociateApprovalRuleTemplateWithRepositoriesResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -69,6 +76,7 @@ public class BatchAssociateApprovalRuleTemplateWithRepositoriesResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public BatchAssociateApprovalRuleTemplateWithRepositoriesResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -79,6 +87,7 @@ public class BatchAssociateApprovalRuleTemplateWithRepositoriesResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public BatchAssociateApprovalRuleTemplateWithRepositoriesResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -89,6 +98,7 @@ public class BatchAssociateApprovalRuleTemplateWithRepositoriesResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public BatchAssociateApprovalRuleTemplateWithRepositoriesResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -99,6 +109,7 @@ public class BatchAssociateApprovalRuleTemplateWithRepositoriesResponse {
      */
     
     public Object invalidApprovalRuleTemplateNameException;
+
     public BatchAssociateApprovalRuleTemplateWithRepositoriesResponse withInvalidApprovalRuleTemplateNameException(Object invalidApprovalRuleTemplateNameException) {
         this.invalidApprovalRuleTemplateNameException = invalidApprovalRuleTemplateNameException;
         return this;
@@ -109,6 +120,7 @@ public class BatchAssociateApprovalRuleTemplateWithRepositoriesResponse {
      */
     
     public Object maximumRepositoryNamesExceededException;
+
     public BatchAssociateApprovalRuleTemplateWithRepositoriesResponse withMaximumRepositoryNamesExceededException(Object maximumRepositoryNamesExceededException) {
         this.maximumRepositoryNamesExceededException = maximumRepositoryNamesExceededException;
         return this;
@@ -119,6 +131,7 @@ public class BatchAssociateApprovalRuleTemplateWithRepositoriesResponse {
      */
     
     public Object repositoryNamesRequiredException;
+
     public BatchAssociateApprovalRuleTemplateWithRepositoriesResponse withRepositoryNamesRequiredException(Object repositoryNamesRequiredException) {
         this.repositoryNamesRequiredException = repositoryNamesRequiredException;
         return this;
@@ -126,6 +139,7 @@ public class BatchAssociateApprovalRuleTemplateWithRepositoriesResponse {
     
     
     public Integer statusCode;
+
     public BatchAssociateApprovalRuleTemplateWithRepositoriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,9 +147,14 @@ public class BatchAssociateApprovalRuleTemplateWithRepositoriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchAssociateApprovalRuleTemplateWithRepositoriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchAssociateApprovalRuleTemplateWithRepositoriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

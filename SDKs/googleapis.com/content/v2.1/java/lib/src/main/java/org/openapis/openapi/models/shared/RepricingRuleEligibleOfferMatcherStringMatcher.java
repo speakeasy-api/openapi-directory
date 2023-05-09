@@ -18,9 +18,11 @@ public class RepricingRuleEligibleOfferMatcherStringMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strAttributes")
     public String[] strAttributes;
+
     public RepricingRuleEligibleOfferMatcherStringMatcher withStrAttributes(String[] strAttributes) {
         this.strAttributes = strAttributes;
         return this;
     }
     
+    public RepricingRuleEligibleOfferMatcherStringMatcher(){}
 }

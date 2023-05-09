@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIndustriesRequest {
@@ -12,9 +13,13 @@ public class GetIndustriesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customerId")
     public Long customerId;
+
     public GetIndustriesRequest withCustomerId(Long customerId) {
         this.customerId = customerId;
         return this;
     }
     
+    public GetIndustriesRequest(@JsonProperty("customerId") Long customerId) {
+        this.customerId = customerId;
+  }
 }

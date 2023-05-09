@@ -15,6 +15,7 @@ public class ListCodeSigningConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeSigningConfigs")
     public CodeSigningConfig[] codeSigningConfigs;
+
     public ListCodeSigningConfigsResponse withCodeSigningConfigs(CodeSigningConfig[] codeSigningConfigs) {
         this.codeSigningConfigs = codeSigningConfigs;
         return this;
@@ -23,9 +24,11 @@ public class ListCodeSigningConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public ListCodeSigningConfigsResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
     }
     
+    public ListCodeSigningConfigsResponse(){}
 }

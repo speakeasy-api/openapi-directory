@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeApplicationRequest {
     @JsonProperty("ApplicationName")
     public String applicationName;
+
     public DescribeApplicationRequest withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
     }
     
+    public DescribeApplicationRequest(@JsonProperty("ApplicationName") String applicationName) {
+        this.applicationName = applicationName;
+  }
 }

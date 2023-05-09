@@ -15,9 +15,11 @@ public class RecrawlPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecrawlBehavior")
     public RecrawlBehaviorEnum recrawlBehavior;
+
     public RecrawlPolicy withRecrawlBehavior(RecrawlBehaviorEnum recrawlBehavior) {
         this.recrawlBehavior = recrawlBehavior;
         return this;
     }
     
+    public RecrawlPolicy(){}
 }

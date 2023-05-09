@@ -12,6 +12,7 @@ public class ListDelegatedAdministratorsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListDelegatedAdministratorsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListDelegatedAdministratorsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDelegatedAdministratorsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,9 +30,11 @@ public class ListDelegatedAdministratorsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServicePrincipal")
     public String servicePrincipal;
+
     public ListDelegatedAdministratorsRequest withServicePrincipal(String servicePrincipal) {
         this.servicePrincipal = servicePrincipal;
         return this;
     }
     
+    public ListDelegatedAdministratorsRequest(){}
 }

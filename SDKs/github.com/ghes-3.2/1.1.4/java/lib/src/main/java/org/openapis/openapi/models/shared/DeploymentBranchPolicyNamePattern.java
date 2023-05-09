@@ -15,9 +15,13 @@ public class DeploymentBranchPolicyNamePattern {
      */
     @JsonProperty("name")
     public String name;
+
     public DeploymentBranchPolicyNamePattern withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DeploymentBranchPolicyNamePattern(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddCallBroadcastRecipientsResponse {
@@ -12,6 +13,7 @@ public class AddCallBroadcastRecipientsResponse {
      */
     
     public org.openapis.openapi.models.shared.CallList callList;
+
     public AddCallBroadcastRecipientsResponse withCallList(org.openapis.openapi.models.shared.CallList callList) {
         this.callList = callList;
         return this;
@@ -19,6 +21,7 @@ public class AddCallBroadcastRecipientsResponse {
     
     
     public String contentType;
+
     public AddCallBroadcastRecipientsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AddCallBroadcastRecipientsResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public AddCallBroadcastRecipientsResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -36,6 +40,7 @@ public class AddCallBroadcastRecipientsResponse {
     
     
     public Integer statusCode;
+
     public AddCallBroadcastRecipientsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class AddCallBroadcastRecipientsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddCallBroadcastRecipientsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AddCallBroadcastRecipientsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

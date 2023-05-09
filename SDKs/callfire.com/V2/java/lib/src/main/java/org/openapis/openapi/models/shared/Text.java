@@ -18,6 +18,7 @@ public class Text {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, String> attributes;
+
     public Text withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -29,6 +30,7 @@ public class Text {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchId")
     public Long batchId;
+
     public Text withBatchId(Long batchId) {
         this.batchId = batchId;
         return this;
@@ -40,6 +42,7 @@ public class Text {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignId")
     public Long campaignId;
+
     public Text withCampaignId(Long campaignId) {
         this.campaignId = campaignId;
         return this;
@@ -51,6 +54,7 @@ public class Text {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact")
     public Contact contact;
+
     public Text withContact(Contact contact) {
         this.contact = contact;
         return this;
@@ -62,6 +66,7 @@ public class Text {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created")
     public Long created;
+
     public Text withCreated(Long created) {
         this.created = created;
         return this;
@@ -73,6 +78,7 @@ public class Text {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalTextResult")
     public TextFinalTextResultEnum finalTextResult;
+
     public Text withFinalTextResult(TextFinalTextResultEnum finalTextResult) {
         this.finalTextResult = finalTextResult;
         return this;
@@ -84,6 +90,7 @@ public class Text {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromNumber")
     public String fromNumber;
+
     public Text withFromNumber(String fromNumber) {
         this.fromNumber = fromNumber;
         return this;
@@ -95,6 +102,7 @@ public class Text {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Text withId(Long id) {
         this.id = id;
         return this;
@@ -106,6 +114,7 @@ public class Text {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inbound")
     public Boolean inbound;
+
     public Text withInbound(Boolean inbound) {
         this.inbound = inbound;
         return this;
@@ -117,6 +126,7 @@ public class Text {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public String[] labels;
+
     public Text withLabels(String[] labels) {
         this.labels = labels;
         return this;
@@ -128,6 +138,7 @@ public class Text {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("media")
     public Media[] media;
+
     public Text withMedia(Media[] media) {
         this.media = media;
         return this;
@@ -139,6 +150,7 @@ public class Text {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public Text withMessage(String message) {
         this.message = message;
         return this;
@@ -150,6 +162,7 @@ public class Text {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modified")
     public Long modified;
+
     public Text withModified(Long modified) {
         this.modified = modified;
         return this;
@@ -161,6 +174,7 @@ public class Text {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("records")
     public TextRecord[] records;
+
     public Text withRecords(TextRecord[] records) {
         this.records = records;
         return this;
@@ -172,6 +186,7 @@ public class Text {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public TextStateEnum state;
+
     public Text withState(TextStateEnum state) {
         this.state = state;
         return this;
@@ -183,9 +198,11 @@ public class Text {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toNumber")
     public String toNumber;
+
     public Text withToNumber(String toNumber) {
         this.toNumber = toNumber;
         return this;
     }
     
+    public Text(){}
 }

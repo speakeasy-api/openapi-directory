@@ -48,10 +48,8 @@ public class DeveloperAccountsFindAndModifyDeveloperAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDeveloperAccountsDeveloperAccountIdResponse res = new org.openapis.openapi.models.operations.DeleteDeveloperAccountsDeveloperAccountIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteDeveloperAccountsDeveloperAccountIdResponse res = new org.openapis.openapi.models.operations.DeleteDeveloperAccountsDeveloperAccountIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -89,11 +87,9 @@ public class DeveloperAccountsFindAndModifyDeveloperAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDeveloperAccountsResponse res = new org.openapis.openapi.models.operations.GetDeveloperAccountsResponse() {{
+        org.openapis.openapi.models.operations.GetDeveloperAccountsResponse res = new org.openapis.openapi.models.operations.GetDeveloperAccountsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400) {
@@ -129,11 +125,9 @@ public class DeveloperAccountsFindAndModifyDeveloperAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDeveloperAccountsDeveloperAccountIdResponse res = new org.openapis.openapi.models.operations.GetDeveloperAccountsDeveloperAccountIdResponse() {{
+        org.openapis.openapi.models.operations.GetDeveloperAccountsDeveloperAccountIdResponse res = new org.openapis.openapi.models.operations.GetDeveloperAccountsDeveloperAccountIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 404) {
@@ -175,11 +169,9 @@ public class DeveloperAccountsFindAndModifyDeveloperAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchDeveloperAccountsDeveloperAccountIdResponse res = new org.openapis.openapi.models.operations.PatchDeveloperAccountsDeveloperAccountIdResponse() {{
+        org.openapis.openapi.models.operations.PatchDeveloperAccountsDeveloperAccountIdResponse res = new org.openapis.openapi.models.operations.PatchDeveloperAccountsDeveloperAccountIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 404) {
@@ -221,11 +213,9 @@ public class DeveloperAccountsFindAndModifyDeveloperAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostDeveloperAccountsDeveloperAccountIdResponse res = new org.openapis.openapi.models.operations.PostDeveloperAccountsDeveloperAccountIdResponse() {{
+        org.openapis.openapi.models.operations.PostDeveloperAccountsDeveloperAccountIdResponse res = new org.openapis.openapi.models.operations.PostDeveloperAccountsDeveloperAccountIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400) {

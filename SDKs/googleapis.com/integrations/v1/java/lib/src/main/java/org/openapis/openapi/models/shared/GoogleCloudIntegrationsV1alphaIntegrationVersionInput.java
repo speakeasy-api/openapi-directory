@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databasePersistencePolicy")
     public GoogleCloudIntegrationsV1alphaIntegrationVersionDatabasePersistencePolicyEnum databasePersistencePolicy;
+
     public GoogleCloudIntegrationsV1alphaIntegrationVersionInput withDatabasePersistencePolicy(GoogleCloudIntegrationsV1alphaIntegrationVersionDatabasePersistencePolicyEnum databasePersistencePolicy) {
         this.databasePersistencePolicy = databasePersistencePolicy;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudIntegrationsV1alphaIntegrationVersionInput withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCatcherConfigs")
     public GoogleCloudIntegrationsV1alphaErrorCatcherConfig[] errorCatcherConfigs;
+
     public GoogleCloudIntegrationsV1alphaIntegrationVersionInput withErrorCatcherConfigs(GoogleCloudIntegrationsV1alphaErrorCatcherConfig[] errorCatcherConfigs) {
         this.errorCatcherConfigs = errorCatcherConfigs;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integrationParameters")
     public GoogleCloudIntegrationsV1alphaIntegrationParameter[] integrationParameters;
+
     public GoogleCloudIntegrationsV1alphaIntegrationVersionInput withIntegrationParameters(GoogleCloudIntegrationsV1alphaIntegrationParameter[] integrationParameters) {
         this.integrationParameters = integrationParameters;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integrationParametersInternal")
     public EnterpriseCrmFrontendsEventbusProtoWorkflowParameters integrationParametersInternal;
+
     public GoogleCloudIntegrationsV1alphaIntegrationVersionInput withIntegrationParametersInternal(EnterpriseCrmFrontendsEventbusProtoWorkflowParameters integrationParametersInternal) {
         this.integrationParametersInternal = integrationParametersInternal;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifierEmail")
     public String lastModifierEmail;
+
     public GoogleCloudIntegrationsV1alphaIntegrationVersionInput withLastModifierEmail(String lastModifierEmail) {
         this.lastModifierEmail = lastModifierEmail;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lockHolder")
     public String lockHolder;
+
     public GoogleCloudIntegrationsV1alphaIntegrationVersionInput withLockHolder(String lockHolder) {
         this.lockHolder = lockHolder;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origin")
     public GoogleCloudIntegrationsV1alphaIntegrationVersionOriginEnum origin;
+
     public GoogleCloudIntegrationsV1alphaIntegrationVersionInput withOrigin(GoogleCloudIntegrationsV1alphaIntegrationVersionOriginEnum origin) {
         this.origin = origin;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentTemplateId")
     public String parentTemplateId;
+
     public GoogleCloudIntegrationsV1alphaIntegrationVersionInput withParentTemplateId(String parentTemplateId) {
         this.parentTemplateId = parentTemplateId;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runAsServiceAccount")
     public String runAsServiceAccount;
+
     public GoogleCloudIntegrationsV1alphaIntegrationVersionInput withRunAsServiceAccount(String runAsServiceAccount) {
         this.runAsServiceAccount = runAsServiceAccount;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotNumber")
     public String snapshotNumber;
+
     public GoogleCloudIntegrationsV1alphaIntegrationVersionInput withSnapshotNumber(String snapshotNumber) {
         this.snapshotNumber = snapshotNumber;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskConfigs")
     public GoogleCloudIntegrationsV1alphaTaskConfig[] taskConfigs;
+
     public GoogleCloudIntegrationsV1alphaIntegrationVersionInput withTaskConfigs(GoogleCloudIntegrationsV1alphaTaskConfig[] taskConfigs) {
         this.taskConfigs = taskConfigs;
         return this;
@@ -150,6 +162,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskConfigsInternal")
     public EnterpriseCrmFrontendsEventbusProtoTaskConfig[] taskConfigsInternal;
+
     public GoogleCloudIntegrationsV1alphaIntegrationVersionInput withTaskConfigsInternal(EnterpriseCrmFrontendsEventbusProtoTaskConfig[] taskConfigsInternal) {
         this.taskConfigsInternal = taskConfigsInternal;
         return this;
@@ -158,6 +171,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teardown")
     public EnterpriseCrmEventbusProtoTeardown teardown;
+
     public GoogleCloudIntegrationsV1alphaIntegrationVersionInput withTeardown(EnterpriseCrmEventbusProtoTeardown teardown) {
         this.teardown = teardown;
         return this;
@@ -169,6 +183,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerConfigs")
     public GoogleCloudIntegrationsV1alphaTriggerConfig[] triggerConfigs;
+
     public GoogleCloudIntegrationsV1alphaIntegrationVersionInput withTriggerConfigs(GoogleCloudIntegrationsV1alphaTriggerConfig[] triggerConfigs) {
         this.triggerConfigs = triggerConfigs;
         return this;
@@ -180,6 +195,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerConfigsInternal")
     public EnterpriseCrmFrontendsEventbusProtoTriggerConfig[] triggerConfigsInternal;
+
     public GoogleCloudIntegrationsV1alphaIntegrationVersionInput withTriggerConfigsInternal(EnterpriseCrmFrontendsEventbusProtoTriggerConfig[] triggerConfigsInternal) {
         this.triggerConfigsInternal = triggerConfigsInternal;
         return this;
@@ -191,9 +207,11 @@ public class GoogleCloudIntegrationsV1alphaIntegrationVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userLabel")
     public String userLabel;
+
     public GoogleCloudIntegrationsV1alphaIntegrationVersionInput withUserLabel(String userLabel) {
         this.userLabel = userLabel;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaIntegrationVersionInput(){}
 }

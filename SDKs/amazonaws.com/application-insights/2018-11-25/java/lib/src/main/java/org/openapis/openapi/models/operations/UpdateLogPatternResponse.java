@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateLogPatternResponse {
     
     public String contentType;
+
     public UpdateLogPatternResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateLogPatternResponse {
      */
     
     public Object internalServerException;
+
     public UpdateLogPatternResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -26,6 +29,7 @@ public class UpdateLogPatternResponse {
     
     
     public Integer statusCode;
+
     public UpdateLogPatternResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class UpdateLogPatternResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateLogPatternResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateLogPatternResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateLogPatternResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -53,6 +59,7 @@ public class UpdateLogPatternResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateLogPatternResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateLogPatternResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateLogPatternResponse updateLogPatternResponse;
+
     public UpdateLogPatternResponse withUpdateLogPatternResponse(org.openapis.openapi.models.shared.UpdateLogPatternResponse updateLogPatternResponse) {
         this.updateLogPatternResponse = updateLogPatternResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateLogPatternResponse {
      */
     
     public Object validationException;
+
     public UpdateLogPatternResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateLogPatternResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

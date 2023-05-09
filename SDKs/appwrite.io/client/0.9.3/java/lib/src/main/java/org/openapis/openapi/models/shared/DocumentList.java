@@ -15,6 +15,7 @@ public class DocumentList {
      */
     @JsonProperty("documents")
     public java.util.Map<String, Object>[] documents;
+
     public DocumentList withDocuments(java.util.Map<String, Object>[] documents) {
         this.documents = documents;
         return this;
@@ -25,9 +26,14 @@ public class DocumentList {
      */
     @JsonProperty("sum")
     public Integer sum;
+
     public DocumentList withSum(Integer sum) {
         this.sum = sum;
         return this;
     }
     
+    public DocumentList(@JsonProperty("documents") java.util.Map<String, Object>[] documents, @JsonProperty("sum") Integer sum) {
+        this.documents = documents;
+        this.sum = sum;
+  }
 }

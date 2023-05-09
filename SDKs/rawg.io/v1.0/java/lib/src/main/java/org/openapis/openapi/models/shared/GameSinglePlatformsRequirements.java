@@ -12,6 +12,7 @@ public class GameSinglePlatformsRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimum")
     public String minimum;
+
     public GameSinglePlatformsRequirements withMinimum(String minimum) {
         this.minimum = minimum;
         return this;
@@ -20,9 +21,11 @@ public class GameSinglePlatformsRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommended")
     public String recommended;
+
     public GameSinglePlatformsRequirements withRecommended(String recommended) {
         this.recommended = recommended;
         return this;
     }
     
+    public GameSinglePlatformsRequirements(){}
 }

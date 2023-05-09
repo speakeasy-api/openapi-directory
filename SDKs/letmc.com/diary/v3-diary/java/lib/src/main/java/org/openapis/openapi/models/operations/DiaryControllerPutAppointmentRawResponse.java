@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DiaryControllerPutAppointmentRawResponse {
     
     public String contentType;
+
     public DiaryControllerPutAppointmentRawResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DiaryControllerPutAppointmentRawResponse {
      */
     
     public String diaryControllerPutAppointmentRaw200ApplicationJSONString;
+
     public DiaryControllerPutAppointmentRawResponse withDiaryControllerPutAppointmentRaw200ApplicationJSONString(String diaryControllerPutAppointmentRaw200ApplicationJSONString) {
         this.diaryControllerPutAppointmentRaw200ApplicationJSONString = diaryControllerPutAppointmentRaw200ApplicationJSONString;
         return this;
@@ -29,6 +32,7 @@ public class DiaryControllerPutAppointmentRawResponse {
      */
     
     public String diaryControllerPutAppointmentRaw200ApplicationXMLString;
+
     public DiaryControllerPutAppointmentRawResponse withDiaryControllerPutAppointmentRaw200ApplicationXMLString(String diaryControllerPutAppointmentRaw200ApplicationXMLString) {
         this.diaryControllerPutAppointmentRaw200ApplicationXMLString = diaryControllerPutAppointmentRaw200ApplicationXMLString;
         return this;
@@ -39,6 +43,7 @@ public class DiaryControllerPutAppointmentRawResponse {
      */
     
     public String diaryControllerPutAppointmentRaw200TextJSONString;
+
     public DiaryControllerPutAppointmentRawResponse withDiaryControllerPutAppointmentRaw200TextJSONString(String diaryControllerPutAppointmentRaw200TextJSONString) {
         this.diaryControllerPutAppointmentRaw200TextJSONString = diaryControllerPutAppointmentRaw200TextJSONString;
         return this;
@@ -49,6 +54,7 @@ public class DiaryControllerPutAppointmentRawResponse {
      */
     
     public String diaryControllerPutAppointmentRaw200TextXMLString;
+
     public DiaryControllerPutAppointmentRawResponse withDiaryControllerPutAppointmentRaw200TextXMLString(String diaryControllerPutAppointmentRaw200TextXMLString) {
         this.diaryControllerPutAppointmentRaw200TextXMLString = diaryControllerPutAppointmentRaw200TextXMLString;
         return this;
@@ -56,6 +62,7 @@ public class DiaryControllerPutAppointmentRawResponse {
     
     
     public Integer statusCode;
+
     public DiaryControllerPutAppointmentRawResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DiaryControllerPutAppointmentRawResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DiaryControllerPutAppointmentRawResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DiaryControllerPutAppointmentRawResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

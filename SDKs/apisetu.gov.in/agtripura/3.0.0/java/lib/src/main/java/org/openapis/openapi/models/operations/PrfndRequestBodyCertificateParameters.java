@@ -12,6 +12,7 @@ public class PrfndRequestBodyCertificateParameters {
      */
     @JsonProperty("AC_NO")
     public String acNo;
+
     public PrfndRequestBodyCertificateParameters withAcNo(String acNo) {
         this.acNo = acNo;
         return this;
@@ -22,9 +23,14 @@ public class PrfndRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public PrfndRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
     }
     
+    public PrfndRequestBodyCertificateParameters(@JsonProperty("AC_NO") String acNo, @JsonProperty("DOB") String dob) {
+        this.acNo = acNo;
+        this.dob = dob;
+  }
 }

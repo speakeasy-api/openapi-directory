@@ -63,11 +63,9 @@ public class RequestTag {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApodResponse res = new org.openapis.openapi.models.operations.GetApodResponse() {{
+        org.openapis.openapi.models.operations.GetApodResponse res = new org.openapis.openapi.models.operations.GetApodResponse(contentType, httpRes.statusCode()) {{
             getApod200ApplicationJSONAnies = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

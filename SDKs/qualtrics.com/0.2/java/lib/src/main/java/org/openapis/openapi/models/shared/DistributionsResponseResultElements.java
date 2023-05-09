@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DistributionsResponseResultElements {
     @JsonProperty("createdDate")
     public String createdDate;
+
     public DistributionsResponseResultElements withCreatedDate(String createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -16,6 +17,7 @@ public class DistributionsResponseResultElements {
     
     @JsonProperty("customHeaders")
     public java.util.Map<String, Object> customHeaders;
+
     public DistributionsResponseResultElements withCustomHeaders(java.util.Map<String, Object> customHeaders) {
         this.customHeaders = customHeaders;
         return this;
@@ -23,6 +25,7 @@ public class DistributionsResponseResultElements {
     
     @JsonProperty("embeddedData")
     public Object embeddedData;
+
     public DistributionsResponseResultElements withEmbeddedData(Object embeddedData) {
         this.embeddedData = embeddedData;
         return this;
@@ -30,6 +33,7 @@ public class DistributionsResponseResultElements {
     
     @JsonProperty("headers")
     public DistributionsResponseResultElementsHeaders headers;
+
     public DistributionsResponseResultElements withHeaders(DistributionsResponseResultElementsHeaders headers) {
         this.headers = headers;
         return this;
@@ -37,6 +41,7 @@ public class DistributionsResponseResultElements {
     
     @JsonProperty("id")
     public String id;
+
     public DistributionsResponseResultElements withId(String id) {
         this.id = id;
         return this;
@@ -44,6 +49,7 @@ public class DistributionsResponseResultElements {
     
     @JsonProperty("message")
     public DistributionsResponseResultElementsMessage message;
+
     public DistributionsResponseResultElements withMessage(DistributionsResponseResultElementsMessage message) {
         this.message = message;
         return this;
@@ -51,6 +57,7 @@ public class DistributionsResponseResultElements {
     
     @JsonProperty("modifiedDate")
     public String modifiedDate;
+
     public DistributionsResponseResultElements withModifiedDate(String modifiedDate) {
         this.modifiedDate = modifiedDate;
         return this;
@@ -58,6 +65,7 @@ public class DistributionsResponseResultElements {
     
     @JsonProperty("organizationId")
     public String organizationId;
+
     public DistributionsResponseResultElements withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -65,6 +73,7 @@ public class DistributionsResponseResultElements {
     
     @JsonProperty("ownerId")
     public String ownerId;
+
     public DistributionsResponseResultElements withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -72,6 +81,7 @@ public class DistributionsResponseResultElements {
     
     @JsonProperty("parentDistributionId")
     public Object parentDistributionId;
+
     public DistributionsResponseResultElements withParentDistributionId(Object parentDistributionId) {
         this.parentDistributionId = parentDistributionId;
         return this;
@@ -79,6 +89,7 @@ public class DistributionsResponseResultElements {
     
     @JsonProperty("recipients")
     public DistributionsResponseResultElementsRecipients recipients;
+
     public DistributionsResponseResultElements withRecipients(DistributionsResponseResultElementsRecipients recipients) {
         this.recipients = recipients;
         return this;
@@ -86,6 +97,7 @@ public class DistributionsResponseResultElements {
     
     @JsonProperty("requestStatus")
     public String requestStatus;
+
     public DistributionsResponseResultElements withRequestStatus(String requestStatus) {
         this.requestStatus = requestStatus;
         return this;
@@ -93,6 +105,7 @@ public class DistributionsResponseResultElements {
     
     @JsonProperty("requestType")
     public String requestType;
+
     public DistributionsResponseResultElements withRequestType(String requestType) {
         this.requestType = requestType;
         return this;
@@ -100,6 +113,7 @@ public class DistributionsResponseResultElements {
     
     @JsonProperty("sendDate")
     public String sendDate;
+
     public DistributionsResponseResultElements withSendDate(String sendDate) {
         this.sendDate = sendDate;
         return this;
@@ -107,6 +121,7 @@ public class DistributionsResponseResultElements {
     
     @JsonProperty("stats")
     public DistributionsResponseResultElementsStats stats;
+
     public DistributionsResponseResultElements withStats(DistributionsResponseResultElementsStats stats) {
         this.stats = stats;
         return this;
@@ -114,9 +129,28 @@ public class DistributionsResponseResultElements {
     
     @JsonProperty("surveyLink")
     public DistributionsResponseResultElementsSurveyLink surveyLink;
+
     public DistributionsResponseResultElements withSurveyLink(DistributionsResponseResultElementsSurveyLink surveyLink) {
         this.surveyLink = surveyLink;
         return this;
     }
     
+    public DistributionsResponseResultElements(@JsonProperty("createdDate") String createdDate, @JsonProperty("customHeaders") java.util.Map<String, Object> customHeaders, @JsonProperty("embeddedData") Object embeddedData, @JsonProperty("headers") DistributionsResponseResultElementsHeaders headers, @JsonProperty("id") String id, @JsonProperty("message") DistributionsResponseResultElementsMessage message, @JsonProperty("modifiedDate") String modifiedDate, @JsonProperty("organizationId") String organizationId, @JsonProperty("ownerId") String ownerId, @JsonProperty("parentDistributionId") Object parentDistributionId, @JsonProperty("recipients") DistributionsResponseResultElementsRecipients recipients, @JsonProperty("requestStatus") String requestStatus, @JsonProperty("requestType") String requestType, @JsonProperty("sendDate") String sendDate, @JsonProperty("stats") DistributionsResponseResultElementsStats stats, @JsonProperty("surveyLink") DistributionsResponseResultElementsSurveyLink surveyLink) {
+        this.createdDate = createdDate;
+        this.customHeaders = customHeaders;
+        this.embeddedData = embeddedData;
+        this.headers = headers;
+        this.id = id;
+        this.message = message;
+        this.modifiedDate = modifiedDate;
+        this.organizationId = organizationId;
+        this.ownerId = ownerId;
+        this.parentDistributionId = parentDistributionId;
+        this.recipients = recipients;
+        this.requestStatus = requestStatus;
+        this.requestType = requestType;
+        this.sendDate = sendDate;
+        this.stats = stats;
+        this.surveyLink = surveyLink;
+  }
 }

@@ -18,6 +18,7 @@ public class DownloadAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public DownloadAccountResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class DownloadAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public DownloadAccountResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class DownloadAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("users")
     public UserInfo[] users;
+
     public DownloadAccountResponse withUsers(UserInfo[] users) {
         this.users = users;
         return this;
     }
     
+    public DownloadAccountResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LineCombinationsBySeasonRequest {
@@ -12,6 +13,7 @@ public class LineCombinationsBySeasonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public LineCombinationsBySeasonFormatEnum format;
+
     public LineCombinationsBySeasonRequest withFormat(LineCombinationsBySeasonFormatEnum format) {
         this.format = format;
         return this;
@@ -24,9 +26,14 @@ public class LineCombinationsBySeasonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=season")
     public String season;
+
     public LineCombinationsBySeasonRequest withSeason(String season) {
         this.season = season;
         return this;
     }
     
+    public LineCombinationsBySeasonRequest(@JsonProperty("format") LineCombinationsBySeasonFormatEnum format, @JsonProperty("season") String season) {
+        this.format = format;
+        this.season = season;
+  }
 }

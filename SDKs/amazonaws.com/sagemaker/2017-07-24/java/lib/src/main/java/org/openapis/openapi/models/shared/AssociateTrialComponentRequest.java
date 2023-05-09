@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssociateTrialComponentRequest {
     @JsonProperty("TrialComponentName")
     public String trialComponentName;
+
     public AssociateTrialComponentRequest withTrialComponentName(String trialComponentName) {
         this.trialComponentName = trialComponentName;
         return this;
@@ -16,9 +17,14 @@ public class AssociateTrialComponentRequest {
     
     @JsonProperty("TrialName")
     public String trialName;
+
     public AssociateTrialComponentRequest withTrialName(String trialName) {
         this.trialName = trialName;
         return this;
     }
     
+    public AssociateTrialComponentRequest(@JsonProperty("TrialComponentName") String trialComponentName, @JsonProperty("TrialName") String trialName) {
+        this.trialComponentName = trialComponentName;
+        this.trialName = trialName;
+  }
 }

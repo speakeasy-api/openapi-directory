@@ -12,6 +12,7 @@ public class PlaceGetByGeoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=activeOnly")
     public Boolean activeOnly;
+
     public PlaceGetByGeoRequest withActiveOnly(Boolean activeOnly) {
         this.activeOnly = activeOnly;
         return this;
@@ -22,6 +23,7 @@ public class PlaceGetByGeoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=categories")
     public String[] categories;
+
     public PlaceGetByGeoRequest withCategories(String[] categories) {
         this.categories = categories;
         return this;
@@ -32,6 +34,7 @@ public class PlaceGetByGeoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeChildren")
     public Boolean includeChildren;
+
     public PlaceGetByGeoRequest withIncludeChildren(Boolean includeChildren) {
         this.includeChildren = includeChildren;
         return this;
@@ -42,6 +45,7 @@ public class PlaceGetByGeoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=numberOfPlacesToReturn")
     public Integer numberOfPlacesToReturn;
+
     public PlaceGetByGeoRequest withNumberOfPlacesToReturn(Integer numberOfPlacesToReturn) {
         this.numberOfPlacesToReturn = numberOfPlacesToReturn;
         return this;
@@ -49,6 +53,7 @@ public class PlaceGetByGeoRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=placeGeo.lat")
     public Double placeGeoLat;
+
     public PlaceGetByGeoRequest withPlaceGeoLat(Double placeGeoLat) {
         this.placeGeoLat = placeGeoLat;
         return this;
@@ -56,6 +61,7 @@ public class PlaceGetByGeoRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=placeGeo.lon")
     public Double placeGeoLon;
+
     public PlaceGetByGeoRequest withPlaceGeoLon(Double placeGeoLon) {
         this.placeGeoLon = placeGeoLon;
         return this;
@@ -63,6 +69,7 @@ public class PlaceGetByGeoRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=placeGeo.neLat")
     public Double placeGeoNeLat;
+
     public PlaceGetByGeoRequest withPlaceGeoNeLat(Double placeGeoNeLat) {
         this.placeGeoNeLat = placeGeoNeLat;
         return this;
@@ -70,6 +77,7 @@ public class PlaceGetByGeoRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=placeGeo.neLon")
     public Double placeGeoNeLon;
+
     public PlaceGetByGeoRequest withPlaceGeoNeLon(Double placeGeoNeLon) {
         this.placeGeoNeLon = placeGeoNeLon;
         return this;
@@ -77,6 +85,7 @@ public class PlaceGetByGeoRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=placeGeo.swLat")
     public Double placeGeoSwLat;
+
     public PlaceGetByGeoRequest withPlaceGeoSwLat(Double placeGeoSwLat) {
         this.placeGeoSwLat = placeGeoSwLat;
         return this;
@@ -84,6 +93,7 @@ public class PlaceGetByGeoRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=placeGeo.swLon")
     public Double placeGeoSwLon;
+
     public PlaceGetByGeoRequest withPlaceGeoSwLon(Double placeGeoSwLon) {
         this.placeGeoSwLon = placeGeoSwLon;
         return this;
@@ -94,6 +104,7 @@ public class PlaceGetByGeoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
     public Double radius;
+
     public PlaceGetByGeoRequest withRadius(Double radius) {
         this.radius = radius;
         return this;
@@ -104,9 +115,11 @@ public class PlaceGetByGeoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String[] type;
+
     public PlaceGetByGeoRequest withType(String[] type) {
         this.type = type;
         return this;
     }
     
+    public PlaceGetByGeoRequest(){}
 }

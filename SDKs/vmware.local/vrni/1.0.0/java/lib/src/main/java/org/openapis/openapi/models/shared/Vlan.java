@@ -12,6 +12,7 @@ public class Vlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("begin")
     public Long begin;
+
     public Vlan withBegin(Long begin) {
         this.begin = begin;
         return this;
@@ -20,9 +21,11 @@ public class Vlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end")
     public Long end;
+
     public Vlan withEnd(Long end) {
         this.end = end;
         return this;
     }
     
+    public Vlan(){}
 }

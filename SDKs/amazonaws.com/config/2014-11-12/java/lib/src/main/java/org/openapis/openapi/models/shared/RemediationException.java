@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class RemediationException {
     @JsonProperty("ConfigRuleName")
     public String configRuleName;
+
     public RemediationException withConfigRuleName(String configRuleName) {
         this.configRuleName = configRuleName;
         return this;
@@ -29,6 +30,7 @@ public class RemediationException {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpirationTime")
     public OffsetDateTime expirationTime;
+
     public RemediationException withExpirationTime(OffsetDateTime expirationTime) {
         this.expirationTime = expirationTime;
         return this;
@@ -37,6 +39,7 @@ public class RemediationException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public RemediationException withMessage(String message) {
         this.message = message;
         return this;
@@ -44,6 +47,7 @@ public class RemediationException {
     
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public RemediationException withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -51,9 +55,15 @@ public class RemediationException {
     
     @JsonProperty("ResourceType")
     public String resourceType;
+
     public RemediationException withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public RemediationException(@JsonProperty("ConfigRuleName") String configRuleName, @JsonProperty("ResourceId") String resourceId, @JsonProperty("ResourceType") String resourceType) {
+        this.configRuleName = configRuleName;
+        this.resourceId = resourceId;
+        this.resourceType = resourceType;
+  }
 }

@@ -15,6 +15,7 @@ public class SettingsChangeRequest {
      */
     @JsonProperty("targetUrl")
     public String targetUrl;
+
     public SettingsChangeRequest withTargetUrl(String targetUrl) {
         this.targetUrl = targetUrl;
         return this;
@@ -25,9 +26,14 @@ public class SettingsChangeRequest {
      */
     @JsonProperty("throttling")
     public ThrottlingSettings throttling;
+
     public SettingsChangeRequest withThrottling(ThrottlingSettings throttling) {
         this.throttling = throttling;
         return this;
     }
     
+    public SettingsChangeRequest(@JsonProperty("targetUrl") String targetUrl, @JsonProperty("throttling") ThrottlingSettings throttling) {
+        this.targetUrl = targetUrl;
+        this.throttling = throttling;
+  }
 }

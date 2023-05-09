@@ -20,6 +20,7 @@ public class PlaceOrderRequestBodyShippingDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressId")
     public String addressId;
+
     public PlaceOrderRequestBodyShippingDataAddress withAddressId(String addressId) {
         this.addressId = addressId;
         return this;
@@ -31,6 +32,7 @@ public class PlaceOrderRequestBodyShippingDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressType")
     public String addressType;
+
     public PlaceOrderRequestBodyShippingDataAddress withAddressType(String addressType) {
         this.addressType = addressType;
         return this;
@@ -42,6 +44,7 @@ public class PlaceOrderRequestBodyShippingDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public PlaceOrderRequestBodyShippingDataAddress withCity(String city) {
         this.city = city;
         return this;
@@ -53,6 +56,7 @@ public class PlaceOrderRequestBodyShippingDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complement")
     public String complement;
+
     public PlaceOrderRequestBodyShippingDataAddress withComplement(String complement) {
         this.complement = complement;
         return this;
@@ -64,6 +68,7 @@ public class PlaceOrderRequestBodyShippingDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public PlaceOrderRequestBodyShippingDataAddress withCountry(String country) {
         this.country = country;
         return this;
@@ -75,6 +80,7 @@ public class PlaceOrderRequestBodyShippingDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geoCoordinates")
     public Double[] geoCoordinates;
+
     public PlaceOrderRequestBodyShippingDataAddress withGeoCoordinates(Double[] geoCoordinates) {
         this.geoCoordinates = geoCoordinates;
         return this;
@@ -86,6 +92,7 @@ public class PlaceOrderRequestBodyShippingDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("neighborhood")
     public String neighborhood;
+
     public PlaceOrderRequestBodyShippingDataAddress withNeighborhood(String neighborhood) {
         this.neighborhood = neighborhood;
         return this;
@@ -97,6 +104,7 @@ public class PlaceOrderRequestBodyShippingDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public PlaceOrderRequestBodyShippingDataAddress withNumber(String number) {
         this.number = number;
         return this;
@@ -108,6 +116,7 @@ public class PlaceOrderRequestBodyShippingDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public PlaceOrderRequestBodyShippingDataAddress withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -119,6 +128,7 @@ public class PlaceOrderRequestBodyShippingDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receiverName")
     public String receiverName;
+
     public PlaceOrderRequestBodyShippingDataAddress withReceiverName(String receiverName) {
         this.receiverName = receiverName;
         return this;
@@ -130,6 +140,7 @@ public class PlaceOrderRequestBodyShippingDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public PlaceOrderRequestBodyShippingDataAddress withReference(String reference) {
         this.reference = reference;
         return this;
@@ -141,6 +152,7 @@ public class PlaceOrderRequestBodyShippingDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public PlaceOrderRequestBodyShippingDataAddress withState(String state) {
         this.state = state;
         return this;
@@ -152,9 +164,11 @@ public class PlaceOrderRequestBodyShippingDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("street")
     public String street;
+
     public PlaceOrderRequestBodyShippingDataAddress withStreet(String street) {
         this.street = street;
         return this;
     }
     
+    public PlaceOrderRequestBodyShippingDataAddress(){}
 }

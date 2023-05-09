@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOpenIdTokenForDeveloperIdentityResponse {
     
     public String contentType;
+
     public GetOpenIdTokenForDeveloperIdentityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetOpenIdTokenForDeveloperIdentityResponse {
      */
     
     public Object developerUserAlreadyRegisteredException;
+
     public GetOpenIdTokenForDeveloperIdentityResponse withDeveloperUserAlreadyRegisteredException(Object developerUserAlreadyRegisteredException) {
         this.developerUserAlreadyRegisteredException = developerUserAlreadyRegisteredException;
         return this;
@@ -29,6 +32,7 @@ public class GetOpenIdTokenForDeveloperIdentityResponse {
      */
     
     public org.openapis.openapi.models.shared.GetOpenIdTokenForDeveloperIdentityResponse getOpenIdTokenForDeveloperIdentityResponse;
+
     public GetOpenIdTokenForDeveloperIdentityResponse withGetOpenIdTokenForDeveloperIdentityResponse(org.openapis.openapi.models.shared.GetOpenIdTokenForDeveloperIdentityResponse getOpenIdTokenForDeveloperIdentityResponse) {
         this.getOpenIdTokenForDeveloperIdentityResponse = getOpenIdTokenForDeveloperIdentityResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetOpenIdTokenForDeveloperIdentityResponse {
      */
     
     public Object internalErrorException;
+
     public GetOpenIdTokenForDeveloperIdentityResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class GetOpenIdTokenForDeveloperIdentityResponse {
      */
     
     public Object invalidParameterException;
+
     public GetOpenIdTokenForDeveloperIdentityResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class GetOpenIdTokenForDeveloperIdentityResponse {
      */
     
     public Object notAuthorizedException;
+
     public GetOpenIdTokenForDeveloperIdentityResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -66,6 +73,7 @@ public class GetOpenIdTokenForDeveloperIdentityResponse {
     
     
     public Integer statusCode;
+
     public GetOpenIdTokenForDeveloperIdentityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetOpenIdTokenForDeveloperIdentityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOpenIdTokenForDeveloperIdentityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class GetOpenIdTokenForDeveloperIdentityResponse {
      */
     
     public Object resourceConflictException;
+
     public GetOpenIdTokenForDeveloperIdentityResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -93,6 +103,7 @@ public class GetOpenIdTokenForDeveloperIdentityResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetOpenIdTokenForDeveloperIdentityResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,9 +114,14 @@ public class GetOpenIdTokenForDeveloperIdentityResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetOpenIdTokenForDeveloperIdentityResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetOpenIdTokenForDeveloperIdentityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

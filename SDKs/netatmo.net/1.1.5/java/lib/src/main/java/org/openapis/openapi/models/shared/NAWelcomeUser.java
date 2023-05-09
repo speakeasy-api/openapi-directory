@@ -15,6 +15,7 @@ public class NAWelcomeUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lang")
     public String lang;
+
     public NAWelcomeUser withLang(String lang) {
         this.lang = lang;
         return this;
@@ -26,9 +27,11 @@ public class NAWelcomeUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reg_locale")
     public String regLocale;
+
     public NAWelcomeUser withRegLocale(String regLocale) {
         this.regLocale = regLocale;
         return this;
     }
     
+    public NAWelcomeUser(){}
 }

@@ -18,7 +18,8 @@ public enum ScalingActivityStatusCodeEnum {
     WAITING_FOR_INSTANCE_WARMUP("WaitingForInstanceWarmup"),
     SUCCESSFUL("Successful"),
     FAILED("Failed"),
-    CANCELLED("Cancelled");
+    CANCELLED("Cancelled"),
+    WAITING_FOR_CONNECTION_DRAINING("WaitingForConnectionDraining");
 
     @JsonValue
     public final String value;

@@ -20,6 +20,7 @@ public class GetClusterSessionCredentialsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Credentials")
     public Credentials credentials;
+
     public GetClusterSessionCredentialsOutput withCredentials(Credentials credentials) {
         this.credentials = credentials;
         return this;
@@ -30,9 +31,11 @@ public class GetClusterSessionCredentialsOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpiresAt")
     public OffsetDateTime expiresAt;
+
     public GetClusterSessionCredentialsOutput withExpiresAt(OffsetDateTime expiresAt) {
         this.expiresAt = expiresAt;
         return this;
     }
     
+    public GetClusterSessionCredentialsOutput(){}
 }

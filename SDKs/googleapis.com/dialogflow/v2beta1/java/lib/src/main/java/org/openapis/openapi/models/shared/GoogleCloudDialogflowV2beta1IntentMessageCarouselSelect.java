@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItem[] items;
+
     public GoogleCloudDialogflowV2beta1IntentMessageCarouselSelect withItems(GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItem[] items) {
         this.items = items;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1IntentMessageCarouselSelect(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ModifySpotFleetRequestRequest - Contains the parameters for ModifySpotFleetRequest.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifySpotFleetRequestRequest {
     
     public String context;
+
     public ModifySpotFleetRequestRequest withContext(String context) {
         this.context = context;
         return this;
@@ -19,6 +20,7 @@ public class ModifySpotFleetRequestRequest {
     
     
     public ModifySpotFleetRequestRequestExcessCapacityTerminationPolicyEnum excessCapacityTerminationPolicy;
+
     public ModifySpotFleetRequestRequest withExcessCapacityTerminationPolicy(ModifySpotFleetRequestRequestExcessCapacityTerminationPolicyEnum excessCapacityTerminationPolicy) {
         this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
         return this;
@@ -26,6 +28,7 @@ public class ModifySpotFleetRequestRequest {
     
     
     public ModifySpotFleetRequestRequestLaunchTemplateConfigs[] launchTemplateConfigs;
+
     public ModifySpotFleetRequestRequest withLaunchTemplateConfigs(ModifySpotFleetRequestRequestLaunchTemplateConfigs[] launchTemplateConfigs) {
         this.launchTemplateConfigs = launchTemplateConfigs;
         return this;
@@ -33,6 +36,7 @@ public class ModifySpotFleetRequestRequest {
     
     
     public Long onDemandTargetCapacity;
+
     public ModifySpotFleetRequestRequest withOnDemandTargetCapacity(Long onDemandTargetCapacity) {
         this.onDemandTargetCapacity = onDemandTargetCapacity;
         return this;
@@ -40,6 +44,7 @@ public class ModifySpotFleetRequestRequest {
     
     
     public String spotFleetRequestId;
+
     public ModifySpotFleetRequestRequest withSpotFleetRequestId(String spotFleetRequestId) {
         this.spotFleetRequestId = spotFleetRequestId;
         return this;
@@ -47,9 +52,13 @@ public class ModifySpotFleetRequestRequest {
     
     
     public Long targetCapacity;
+
     public ModifySpotFleetRequestRequest withTargetCapacity(Long targetCapacity) {
         this.targetCapacity = targetCapacity;
         return this;
     }
     
+    public ModifySpotFleetRequestRequest(@JsonProperty("SpotFleetRequestId") String spotFleetRequestId) {
+        this.spotFleetRequestId = spotFleetRequestId;
+  }
 }

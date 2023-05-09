@@ -18,9 +18,11 @@ public class LocalNvmeSsdBlockConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localSsdCount")
     public Integer localSsdCount;
+
     public LocalNvmeSsdBlockConfig withLocalSsdCount(Integer localSsdCount) {
         this.localSsdCount = localSsdCount;
         return this;
     }
     
+    public LocalNvmeSsdBlockConfig(){}
 }

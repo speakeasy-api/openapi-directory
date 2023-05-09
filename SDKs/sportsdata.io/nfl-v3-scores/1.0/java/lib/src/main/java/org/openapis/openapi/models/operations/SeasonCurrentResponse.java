@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SeasonCurrentResponse {
     
     public String contentType;
+
     public SeasonCurrentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SeasonCurrentResponse {
     
     
     public Long seasonCurrent200ApplicationJSONInteger;
+
     public SeasonCurrentResponse withSeasonCurrent200ApplicationJSONInteger(Long seasonCurrent200ApplicationJSONInteger) {
         this.seasonCurrent200ApplicationJSONInteger = seasonCurrent200ApplicationJSONInteger;
         return this;
@@ -23,6 +26,7 @@ public class SeasonCurrentResponse {
     
     
     public Integer statusCode;
+
     public SeasonCurrentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class SeasonCurrentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SeasonCurrentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SeasonCurrentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

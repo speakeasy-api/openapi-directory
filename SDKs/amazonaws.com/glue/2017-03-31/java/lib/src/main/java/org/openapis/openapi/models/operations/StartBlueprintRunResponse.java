@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartBlueprintRunResponse {
     
     public String contentType;
+
     public StartBlueprintRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartBlueprintRunResponse {
      */
     
     public Object entityNotFoundException;
+
     public StartBlueprintRunResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class StartBlueprintRunResponse {
      */
     
     public Object illegalBlueprintStateException;
+
     public StartBlueprintRunResponse withIllegalBlueprintStateException(Object illegalBlueprintStateException) {
         this.illegalBlueprintStateException = illegalBlueprintStateException;
         return this;
@@ -39,6 +43,7 @@ public class StartBlueprintRunResponse {
      */
     
     public Object internalServiceException;
+
     public StartBlueprintRunResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class StartBlueprintRunResponse {
      */
     
     public Object invalidInputException;
+
     public StartBlueprintRunResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class StartBlueprintRunResponse {
      */
     
     public Object operationTimeoutException;
+
     public StartBlueprintRunResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -69,6 +76,7 @@ public class StartBlueprintRunResponse {
      */
     
     public Object resourceNumberLimitExceededException;
+
     public StartBlueprintRunResponse withResourceNumberLimitExceededException(Object resourceNumberLimitExceededException) {
         this.resourceNumberLimitExceededException = resourceNumberLimitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class StartBlueprintRunResponse {
      */
     
     public org.openapis.openapi.models.shared.StartBlueprintRunResponse startBlueprintRunResponse;
+
     public StartBlueprintRunResponse withStartBlueprintRunResponse(org.openapis.openapi.models.shared.StartBlueprintRunResponse startBlueprintRunResponse) {
         this.startBlueprintRunResponse = startBlueprintRunResponse;
         return this;
@@ -86,6 +95,7 @@ public class StartBlueprintRunResponse {
     
     
     public Integer statusCode;
+
     public StartBlueprintRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class StartBlueprintRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartBlueprintRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartBlueprintRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

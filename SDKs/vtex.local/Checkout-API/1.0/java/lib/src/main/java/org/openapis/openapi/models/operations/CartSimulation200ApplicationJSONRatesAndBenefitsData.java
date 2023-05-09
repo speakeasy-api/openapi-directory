@@ -18,6 +18,7 @@ public class CartSimulation200ApplicationJSONRatesAndBenefitsData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rateAndBenefitsIdentifiers")
     public Object[] rateAndBenefitsIdentifiers;
+
     public CartSimulation200ApplicationJSONRatesAndBenefitsData withRateAndBenefitsIdentifiers(Object[] rateAndBenefitsIdentifiers) {
         this.rateAndBenefitsIdentifiers = rateAndBenefitsIdentifiers;
         return this;
@@ -29,9 +30,11 @@ public class CartSimulation200ApplicationJSONRatesAndBenefitsData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teaser")
     public Object[] teaser;
+
     public CartSimulation200ApplicationJSONRatesAndBenefitsData withTeaser(Object[] teaser) {
         this.teaser = teaser;
         return this;
     }
     
+    public CartSimulation200ApplicationJSONRatesAndBenefitsData(){}
 }

@@ -12,9 +12,11 @@ public class GetContainerServicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public GetContainerServicesRequest withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public GetContainerServicesRequest(){}
 }

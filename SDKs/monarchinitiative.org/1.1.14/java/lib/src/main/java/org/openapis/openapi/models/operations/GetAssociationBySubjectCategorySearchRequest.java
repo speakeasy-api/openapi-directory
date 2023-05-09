@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssociationBySubjectCategorySearchRequest {
@@ -12,6 +13,7 @@ public class GetAssociationBySubjectCategorySearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=evidence")
     public String evidence;
+
     public GetAssociationBySubjectCategorySearchRequest withEvidence(String evidence) {
         this.evidence = evidence;
         return this;
@@ -22,6 +24,7 @@ public class GetAssociationBySubjectCategorySearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_automatic_assertions")
     public Boolean excludeAutomaticAssertions;
+
     public GetAssociationBySubjectCategorySearchRequest withExcludeAutomaticAssertions(Boolean excludeAutomaticAssertions) {
         this.excludeAutomaticAssertions = excludeAutomaticAssertions;
         return this;
@@ -32,6 +35,7 @@ public class GetAssociationBySubjectCategorySearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=object_taxon")
     public String objectTaxon;
+
     public GetAssociationBySubjectCategorySearchRequest withObjectTaxon(String objectTaxon) {
         this.objectTaxon = objectTaxon;
         return this;
@@ -42,6 +46,7 @@ public class GetAssociationBySubjectCategorySearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=relation")
     public String relation;
+
     public GetAssociationBySubjectCategorySearchRequest withRelation(String relation) {
         this.relation = relation;
         return this;
@@ -52,6 +57,7 @@ public class GetAssociationBySubjectCategorySearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
     public Long rows;
+
     public GetAssociationBySubjectCategorySearchRequest withRows(Long rows) {
         this.rows = rows;
         return this;
@@ -62,6 +68,7 @@ public class GetAssociationBySubjectCategorySearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public Long start;
+
     public GetAssociationBySubjectCategorySearchRequest withStart(Long start) {
         this.start = start;
         return this;
@@ -72,6 +79,7 @@ public class GetAssociationBySubjectCategorySearchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subject_category")
     public String subjectCategory;
+
     public GetAssociationBySubjectCategorySearchRequest withSubjectCategory(String subjectCategory) {
         this.subjectCategory = subjectCategory;
         return this;
@@ -82,6 +90,7 @@ public class GetAssociationBySubjectCategorySearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subject_taxon")
     public String subjectTaxon;
+
     public GetAssociationBySubjectCategorySearchRequest withSubjectTaxon(String subjectTaxon) {
         this.subjectTaxon = subjectTaxon;
         return this;
@@ -92,6 +101,7 @@ public class GetAssociationBySubjectCategorySearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unselect_evidence")
     public Boolean unselectEvidence;
+
     public GetAssociationBySubjectCategorySearchRequest withUnselectEvidence(Boolean unselectEvidence) {
         this.unselectEvidence = unselectEvidence;
         return this;
@@ -102,9 +112,13 @@ public class GetAssociationBySubjectCategorySearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=use_compact_associations")
     public Boolean useCompactAssociations;
+
     public GetAssociationBySubjectCategorySearchRequest withUseCompactAssociations(Boolean useCompactAssociations) {
         this.useCompactAssociations = useCompactAssociations;
         return this;
     }
     
+    public GetAssociationBySubjectCategorySearchRequest(@JsonProperty("subject_category") String subjectCategory) {
+        this.subjectCategory = subjectCategory;
+  }
 }

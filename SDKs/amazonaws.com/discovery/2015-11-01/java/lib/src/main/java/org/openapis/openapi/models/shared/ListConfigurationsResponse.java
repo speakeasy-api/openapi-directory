@@ -15,6 +15,7 @@ public class ListConfigurationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurations")
     public java.util.Map<String, String>[] configurations;
+
     public ListConfigurationsResponse withConfigurations(java.util.Map<String, String>[] configurations) {
         this.configurations = configurations;
         return this;
@@ -23,9 +24,11 @@ public class ListConfigurationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListConfigurationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListConfigurationsResponse(){}
 }

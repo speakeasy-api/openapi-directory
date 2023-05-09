@@ -15,6 +15,7 @@ public class CodeReferenceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeBranches")
     public String[] activeBranches;
+
     public CodeReferenceRequest withActiveBranches(String[] activeBranches) {
         this.activeBranches = activeBranches;
         return this;
@@ -25,6 +26,7 @@ public class CodeReferenceRequest {
      */
     @JsonProperty("branch")
     public String branch;
+
     public CodeReferenceRequest withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -36,6 +38,7 @@ public class CodeReferenceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitHash")
     public String commitHash;
+
     public CodeReferenceRequest withCommitHash(String commitHash) {
         this.commitHash = commitHash;
         return this;
@@ -47,6 +50,7 @@ public class CodeReferenceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitUrl")
     public String commitUrl;
+
     public CodeReferenceRequest withCommitUrl(String commitUrl) {
         this.commitUrl = commitUrl;
         return this;
@@ -57,6 +61,7 @@ public class CodeReferenceRequest {
      */
     @JsonProperty("configId")
     public String configId;
+
     public CodeReferenceRequest withConfigId(String configId) {
         this.configId = configId;
         return this;
@@ -68,6 +73,7 @@ public class CodeReferenceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flagReferences")
     public FlagReference[] flagReferences;
+
     public CodeReferenceRequest withFlagReferences(FlagReference[] flagReferences) {
         this.flagReferences = flagReferences;
         return this;
@@ -78,6 +84,7 @@ public class CodeReferenceRequest {
      */
     @JsonProperty("repository")
     public String repository;
+
     public CodeReferenceRequest withRepository(String repository) {
         this.repository = repository;
         return this;
@@ -89,9 +96,15 @@ public class CodeReferenceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploader")
     public String uploader;
+
     public CodeReferenceRequest withUploader(String uploader) {
         this.uploader = uploader;
         return this;
     }
     
+    public CodeReferenceRequest(@JsonProperty("branch") String branch, @JsonProperty("configId") String configId, @JsonProperty("repository") String repository) {
+        this.branch = branch;
+        this.configId = configId;
+        this.repository = repository;
+  }
 }

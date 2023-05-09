@@ -18,6 +18,7 @@ public class EnterprisesSendTestPushNotificationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageId")
     public String messageId;
+
     public EnterprisesSendTestPushNotificationResponse withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
@@ -29,9 +30,11 @@ public class EnterprisesSendTestPushNotificationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topicName")
     public String topicName;
+
     public EnterprisesSendTestPushNotificationResponse withTopicName(String topicName) {
         this.topicName = topicName;
         return this;
     }
     
+    public EnterprisesSendTestPushNotificationResponse(){}
 }

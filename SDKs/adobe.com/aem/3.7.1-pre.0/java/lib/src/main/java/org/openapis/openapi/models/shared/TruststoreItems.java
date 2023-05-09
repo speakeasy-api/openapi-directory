@@ -15,6 +15,7 @@ public class TruststoreItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias")
     public String alias;
+
     public TruststoreItems withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -23,6 +24,7 @@ public class TruststoreItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entryType")
     public String entryType;
+
     public TruststoreItems withEntryType(String entryType) {
         this.entryType = entryType;
         return this;
@@ -34,6 +36,7 @@ public class TruststoreItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuer")
     public String issuer;
+
     public TruststoreItems withIssuer(String issuer) {
         this.issuer = issuer;
         return this;
@@ -45,6 +48,7 @@ public class TruststoreItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notAfter")
     public String notAfter;
+
     public TruststoreItems withNotAfter(String notAfter) {
         this.notAfter = notAfter;
         return this;
@@ -56,6 +60,7 @@ public class TruststoreItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notBefore")
     public String notBefore;
+
     public TruststoreItems withNotBefore(String notBefore) {
         this.notBefore = notBefore;
         return this;
@@ -67,6 +72,7 @@ public class TruststoreItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serialNumber")
     public Long serialNumber;
+
     public TruststoreItems withSerialNumber(Long serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -78,9 +84,11 @@ public class TruststoreItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject")
     public String subject;
+
     public TruststoreItems withSubject(String subject) {
         this.subject = subject;
         return this;
     }
     
+    public TruststoreItems(){}
 }

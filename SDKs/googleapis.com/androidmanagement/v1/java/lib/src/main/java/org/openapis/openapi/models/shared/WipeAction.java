@@ -18,6 +18,7 @@ public class WipeAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preserveFrp")
     public Boolean preserveFrp;
+
     public WipeAction withPreserveFrp(Boolean preserveFrp) {
         this.preserveFrp = preserveFrp;
         return this;
@@ -29,9 +30,11 @@ public class WipeAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wipeAfterDays")
     public Integer wipeAfterDays;
+
     public WipeAction withWipeAfterDays(Integer wipeAfterDays) {
         this.wipeAfterDays = wipeAfterDays;
         return this;
     }
     
+    public WipeAction(){}
 }

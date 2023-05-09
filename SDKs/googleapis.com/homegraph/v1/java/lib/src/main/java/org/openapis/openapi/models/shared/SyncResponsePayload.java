@@ -18,6 +18,7 @@ public class SyncResponsePayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentUserId")
     public String agentUserId;
+
     public SyncResponsePayload withAgentUserId(String agentUserId) {
         this.agentUserId = agentUserId;
         return this;
@@ -29,9 +30,11 @@ public class SyncResponsePayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devices")
     public Device[] devices;
+
     public SyncResponsePayload withDevices(Device[] devices) {
         this.devices = devices;
         return this;
     }
     
+    public SyncResponsePayload(){}
 }

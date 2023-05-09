@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelStatementResponse {
@@ -12,6 +13,7 @@ public class CancelStatementResponse {
      */
     
     public Object accessDeniedException;
+
     public CancelStatementResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CancelStatementResponse {
      */
     
     public java.util.Map<String, Object> cancelStatementResponse;
+
     public CancelStatementResponse withCancelStatementResponse(java.util.Map<String, Object> cancelStatementResponse) {
         this.cancelStatementResponse = cancelStatementResponse;
         return this;
@@ -29,6 +32,7 @@ public class CancelStatementResponse {
     
     
     public String contentType;
+
     public CancelStatementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CancelStatementResponse {
      */
     
     public Object entityNotFoundException;
+
     public CancelStatementResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class CancelStatementResponse {
      */
     
     public Object illegalSessionStateException;
+
     public CancelStatementResponse withIllegalSessionStateException(Object illegalSessionStateException) {
         this.illegalSessionStateException = illegalSessionStateException;
         return this;
@@ -59,6 +65,7 @@ public class CancelStatementResponse {
      */
     
     public Object internalServiceException;
+
     public CancelStatementResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class CancelStatementResponse {
      */
     
     public Object invalidInputException;
+
     public CancelStatementResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -79,6 +87,7 @@ public class CancelStatementResponse {
      */
     
     public Object operationTimeoutException;
+
     public CancelStatementResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -86,6 +95,7 @@ public class CancelStatementResponse {
     
     
     public Integer statusCode;
+
     public CancelStatementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class CancelStatementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelStatementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CancelStatementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

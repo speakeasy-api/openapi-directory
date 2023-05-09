@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExportECSServiceRecommendationsResponse {
@@ -12,6 +13,7 @@ public class ExportECSServiceRecommendationsResponse {
      */
     
     public Object accessDeniedException;
+
     public ExportECSServiceRecommendationsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ExportECSServiceRecommendationsResponse {
     
     
     public String contentType;
+
     public ExportECSServiceRecommendationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ExportECSServiceRecommendationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ExportECSServiceRecommendationsResponse exportECSServiceRecommendationsResponse;
+
     public ExportECSServiceRecommendationsResponse withExportECSServiceRecommendationsResponse(org.openapis.openapi.models.shared.ExportECSServiceRecommendationsResponse exportECSServiceRecommendationsResponse) {
         this.exportECSServiceRecommendationsResponse = exportECSServiceRecommendationsResponse;
         return this;
@@ -39,6 +43,7 @@ public class ExportECSServiceRecommendationsResponse {
      */
     
     public Object internalServerException;
+
     public ExportECSServiceRecommendationsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ExportECSServiceRecommendationsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ExportECSServiceRecommendationsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class ExportECSServiceRecommendationsResponse {
      */
     
     public Object limitExceededException;
+
     public ExportECSServiceRecommendationsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class ExportECSServiceRecommendationsResponse {
      */
     
     public Object missingAuthenticationToken;
+
     public ExportECSServiceRecommendationsResponse withMissingAuthenticationToken(Object missingAuthenticationToken) {
         this.missingAuthenticationToken = missingAuthenticationToken;
         return this;
@@ -79,6 +87,7 @@ public class ExportECSServiceRecommendationsResponse {
      */
     
     public Object optInRequiredException;
+
     public ExportECSServiceRecommendationsResponse withOptInRequiredException(Object optInRequiredException) {
         this.optInRequiredException = optInRequiredException;
         return this;
@@ -86,6 +95,7 @@ public class ExportECSServiceRecommendationsResponse {
     
     
     public Integer statusCode;
+
     public ExportECSServiceRecommendationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class ExportECSServiceRecommendationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExportECSServiceRecommendationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class ExportECSServiceRecommendationsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ExportECSServiceRecommendationsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -113,9 +125,14 @@ public class ExportECSServiceRecommendationsResponse {
      */
     
     public Object throttlingException;
+
     public ExportECSServiceRecommendationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ExportECSServiceRecommendationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

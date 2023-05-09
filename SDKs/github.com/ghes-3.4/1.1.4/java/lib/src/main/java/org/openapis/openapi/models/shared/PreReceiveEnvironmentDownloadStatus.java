@@ -15,6 +15,7 @@ public class PreReceiveEnvironmentDownloadStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloaded_at")
     public String downloadedAt;
+
     public PreReceiveEnvironmentDownloadStatus withDownloadedAt(String downloadedAt) {
         this.downloadedAt = downloadedAt;
         return this;
@@ -23,6 +24,7 @@ public class PreReceiveEnvironmentDownloadStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public PreReceiveEnvironmentDownloadStatus withMessage(String message) {
         this.message = message;
         return this;
@@ -31,6 +33,7 @@ public class PreReceiveEnvironmentDownloadStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public PreReceiveEnvironmentDownloadStatus withState(String state) {
         this.state = state;
         return this;
@@ -39,9 +42,11 @@ public class PreReceiveEnvironmentDownloadStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public PreReceiveEnvironmentDownloadStatus withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public PreReceiveEnvironmentDownloadStatus(){}
 }

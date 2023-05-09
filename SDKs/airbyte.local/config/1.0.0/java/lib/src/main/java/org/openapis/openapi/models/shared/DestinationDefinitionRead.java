@@ -16,6 +16,7 @@ import java.time.LocalDate;
 public class DestinationDefinitionRead {
     @JsonProperty("destinationDefinitionId")
     public String destinationDefinitionId;
+
     public DestinationDefinitionRead withDestinationDefinitionId(String destinationDefinitionId) {
         this.destinationDefinitionId = destinationDefinitionId;
         return this;
@@ -23,6 +24,7 @@ public class DestinationDefinitionRead {
     
     @JsonProperty("dockerImageTag")
     public String dockerImageTag;
+
     public DestinationDefinitionRead withDockerImageTag(String dockerImageTag) {
         this.dockerImageTag = dockerImageTag;
         return this;
@@ -30,6 +32,7 @@ public class DestinationDefinitionRead {
     
     @JsonProperty("dockerRepository")
     public String dockerRepository;
+
     public DestinationDefinitionRead withDockerRepository(String dockerRepository) {
         this.dockerRepository = dockerRepository;
         return this;
@@ -37,6 +40,7 @@ public class DestinationDefinitionRead {
     
     @JsonProperty("documentationUrl")
     public String documentationUrl;
+
     public DestinationDefinitionRead withDocumentationUrl(String documentationUrl) {
         this.documentationUrl = documentationUrl;
         return this;
@@ -45,6 +49,7 @@ public class DestinationDefinitionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public String icon;
+
     public DestinationDefinitionRead withIcon(String icon) {
         this.icon = icon;
         return this;
@@ -52,6 +57,7 @@ public class DestinationDefinitionRead {
     
     @JsonProperty("name")
     public String name;
+
     public DestinationDefinitionRead withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +68,7 @@ public class DestinationDefinitionRead {
      */
     @JsonProperty("normalizationConfig")
     public NormalizationDestinationDefinitionConfig normalizationConfig;
+
     public DestinationDefinitionRead withNormalizationConfig(NormalizationDestinationDefinitionConfig normalizationConfig) {
         this.normalizationConfig = normalizationConfig;
         return this;
@@ -73,6 +80,7 @@ public class DestinationDefinitionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocolVersion")
     public String protocolVersion;
+
     public DestinationDefinitionRead withProtocolVersion(String protocolVersion) {
         this.protocolVersion = protocolVersion;
         return this;
@@ -85,6 +93,7 @@ public class DestinationDefinitionRead {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("releaseDate")
     public LocalDate releaseDate;
+
     public DestinationDefinitionRead withReleaseDate(LocalDate releaseDate) {
         this.releaseDate = releaseDate;
         return this;
@@ -93,6 +102,7 @@ public class DestinationDefinitionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("releaseStage")
     public ReleaseStageEnum releaseStage;
+
     public DestinationDefinitionRead withReleaseStage(ReleaseStageEnum releaseStage) {
         this.releaseStage = releaseStage;
         return this;
@@ -104,6 +114,7 @@ public class DestinationDefinitionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceRequirements")
     public ActorDefinitionResourceRequirements resourceRequirements;
+
     public DestinationDefinitionRead withResourceRequirements(ActorDefinitionResourceRequirements resourceRequirements) {
         this.resourceRequirements = resourceRequirements;
         return this;
@@ -114,9 +125,19 @@ public class DestinationDefinitionRead {
      */
     @JsonProperty("supportsDbt")
     public Boolean supportsDbt;
+
     public DestinationDefinitionRead withSupportsDbt(Boolean supportsDbt) {
         this.supportsDbt = supportsDbt;
         return this;
     }
     
+    public DestinationDefinitionRead(@JsonProperty("destinationDefinitionId") String destinationDefinitionId, @JsonProperty("dockerImageTag") String dockerImageTag, @JsonProperty("dockerRepository") String dockerRepository, @JsonProperty("documentationUrl") String documentationUrl, @JsonProperty("name") String name, @JsonProperty("normalizationConfig") NormalizationDestinationDefinitionConfig normalizationConfig, @JsonProperty("supportsDbt") Boolean supportsDbt) {
+        this.destinationDefinitionId = destinationDefinitionId;
+        this.dockerImageTag = dockerImageTag;
+        this.dockerRepository = dockerRepository;
+        this.documentationUrl = documentationUrl;
+        this.name = name;
+        this.normalizationConfig = normalizationConfig;
+        this.supportsDbt = supportsDbt;
+  }
 }

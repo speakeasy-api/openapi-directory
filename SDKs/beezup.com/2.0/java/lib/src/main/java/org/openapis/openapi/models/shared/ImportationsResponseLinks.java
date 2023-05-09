@@ -12,6 +12,7 @@ public class ImportationsResponseLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public LinksImportationGetReportingsLink self;
+
     public ImportationsResponseLinks withSelf(LinksImportationGetReportingsLink self) {
         this.self = self;
         return this;
@@ -20,9 +21,11 @@ public class ImportationsResponseLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public LinksImportationStartManualUpdateLink start;
+
     public ImportationsResponseLinks withStart(LinksImportationStartManualUpdateLink start) {
         this.start = start;
         return this;
     }
     
+    public ImportationsResponseLinks(){}
 }

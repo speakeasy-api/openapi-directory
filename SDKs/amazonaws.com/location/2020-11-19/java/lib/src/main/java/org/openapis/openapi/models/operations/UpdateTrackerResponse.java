@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateTrackerResponse {
@@ -12,6 +13,7 @@ public class UpdateTrackerResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateTrackerResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateTrackerResponse {
     
     
     public String contentType;
+
     public UpdateTrackerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateTrackerResponse {
      */
     
     public Object internalServerException;
+
     public UpdateTrackerResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateTrackerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateTrackerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateTrackerResponse {
     
     
     public Integer statusCode;
+
     public UpdateTrackerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateTrackerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateTrackerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateTrackerResponse {
      */
     
     public Object throttlingException;
+
     public UpdateTrackerResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateTrackerResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateTrackerResponse updateTrackerResponse;
+
     public UpdateTrackerResponse withUpdateTrackerResponse(org.openapis.openapi.models.shared.UpdateTrackerResponse updateTrackerResponse) {
         this.updateTrackerResponse = updateTrackerResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateTrackerResponse {
      */
     
     public Object validationException;
+
     public UpdateTrackerResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateTrackerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -33,7 +33,24 @@ public enum SubscriptionCreateRequestEventTypeEnum {
     CONVERSATION_DELETION("conversation.deletion"),
     CONVERSATION_NEW_MESSAGE("conversation.newMessage"),
     CONVERSATION_PRIVACY_DELETION("conversation.privacyDeletion"),
-    CONVERSATION_PROPERTY_CHANGE("conversation.propertyChange");
+    CONVERSATION_PROPERTY_CHANGE("conversation.propertyChange"),
+    CONTACT_MERGE("contact.merge"),
+    COMPANY_MERGE("company.merge"),
+    DEAL_MERGE("deal.merge"),
+    TICKET_MERGE("ticket.merge"),
+    PRODUCT_MERGE("product.merge"),
+    LINE_ITEM_MERGE("line_item.merge"),
+    CONTACT_RESTORE("contact.restore"),
+    COMPANY_RESTORE("company.restore"),
+    DEAL_RESTORE("deal.restore"),
+    TICKET_RESTORE("ticket.restore"),
+    PRODUCT_RESTORE("product.restore"),
+    LINE_ITEM_RESTORE("line_item.restore"),
+    CONTACT_ASSOCIATION_CHANGE("contact.associationChange"),
+    COMPANY_ASSOCIATION_CHANGE("company.associationChange"),
+    DEAL_ASSOCIATION_CHANGE("deal.associationChange"),
+    TICKET_ASSOCIATION_CHANGE("ticket.associationChange"),
+    LINE_ITEM_ASSOCIATION_CHANGE("line_item.associationChange");
 
     @JsonValue
     public final String value;

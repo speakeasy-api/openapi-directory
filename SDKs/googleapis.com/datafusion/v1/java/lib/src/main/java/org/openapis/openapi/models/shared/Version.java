@@ -18,6 +18,7 @@ public class Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableFeatures")
     public String[] availableFeatures;
+
     public Version withAvailableFeatures(String[] availableFeatures) {
         this.availableFeatures = availableFeatures;
         return this;
@@ -29,6 +30,7 @@ public class Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultVersion")
     public Boolean defaultVersion;
+
     public Version withDefaultVersion(Boolean defaultVersion) {
         this.defaultVersion = defaultVersion;
         return this;
@@ -40,6 +42,7 @@ public class Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public VersionTypeEnum type;
+
     public Version withType(VersionTypeEnum type) {
         this.type = type;
         return this;
@@ -51,9 +54,11 @@ public class Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionNumber")
     public String versionNumber;
+
     public Version withVersionNumber(String versionNumber) {
         this.versionNumber = versionNumber;
         return this;
     }
     
+    public Version(){}
 }

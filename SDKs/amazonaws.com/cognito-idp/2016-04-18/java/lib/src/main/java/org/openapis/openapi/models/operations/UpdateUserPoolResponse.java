@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateUserPoolResponse {
@@ -12,6 +13,7 @@ public class UpdateUserPoolResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateUserPoolResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateUserPoolResponse {
     
     
     public String contentType;
+
     public UpdateUserPoolResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateUserPoolResponse {
      */
     
     public Object internalErrorException;
+
     public UpdateUserPoolResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateUserPoolResponse {
      */
     
     public Object invalidEmailRoleAccessPolicyException;
+
     public UpdateUserPoolResponse withInvalidEmailRoleAccessPolicyException(Object invalidEmailRoleAccessPolicyException) {
         this.invalidEmailRoleAccessPolicyException = invalidEmailRoleAccessPolicyException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateUserPoolResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateUserPoolResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateUserPoolResponse {
      */
     
     public Object invalidSmsRoleAccessPolicyException;
+
     public UpdateUserPoolResponse withInvalidSmsRoleAccessPolicyException(Object invalidSmsRoleAccessPolicyException) {
         this.invalidSmsRoleAccessPolicyException = invalidSmsRoleAccessPolicyException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateUserPoolResponse {
      */
     
     public Object invalidSmsRoleTrustRelationshipException;
+
     public UpdateUserPoolResponse withInvalidSmsRoleTrustRelationshipException(Object invalidSmsRoleTrustRelationshipException) {
         this.invalidSmsRoleTrustRelationshipException = invalidSmsRoleTrustRelationshipException;
         return this;
@@ -79,6 +87,7 @@ public class UpdateUserPoolResponse {
      */
     
     public Object notAuthorizedException;
+
     public UpdateUserPoolResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -86,6 +95,7 @@ public class UpdateUserPoolResponse {
     
     
     public Integer statusCode;
+
     public UpdateUserPoolResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class UpdateUserPoolResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateUserPoolResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class UpdateUserPoolResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateUserPoolResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,6 +125,7 @@ public class UpdateUserPoolResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateUserPoolResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -123,6 +136,7 @@ public class UpdateUserPoolResponse {
      */
     
     public java.util.Map<String, Object> updateUserPoolResponse;
+
     public UpdateUserPoolResponse withUpdateUserPoolResponse(java.util.Map<String, Object> updateUserPoolResponse) {
         this.updateUserPoolResponse = updateUserPoolResponse;
         return this;
@@ -133,6 +147,7 @@ public class UpdateUserPoolResponse {
      */
     
     public Object userImportInProgressException;
+
     public UpdateUserPoolResponse withUserImportInProgressException(Object userImportInProgressException) {
         this.userImportInProgressException = userImportInProgressException;
         return this;
@@ -143,9 +158,14 @@ public class UpdateUserPoolResponse {
      */
     
     public Object userPoolTaggingException;
+
     public UpdateUserPoolResponse withUserPoolTaggingException(Object userPoolTaggingException) {
         this.userPoolTaggingException = userPoolTaggingException;
         return this;
     }
     
+    public UpdateUserPoolResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

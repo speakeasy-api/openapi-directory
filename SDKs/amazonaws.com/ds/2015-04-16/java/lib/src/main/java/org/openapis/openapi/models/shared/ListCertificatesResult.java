@@ -15,6 +15,7 @@ public class ListCertificatesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificatesInfo")
     public CertificateInfo[] certificatesInfo;
+
     public ListCertificatesResult withCertificatesInfo(CertificateInfo[] certificatesInfo) {
         this.certificatesInfo = certificatesInfo;
         return this;
@@ -23,9 +24,11 @@ public class ListCertificatesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCertificatesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCertificatesResult(){}
 }

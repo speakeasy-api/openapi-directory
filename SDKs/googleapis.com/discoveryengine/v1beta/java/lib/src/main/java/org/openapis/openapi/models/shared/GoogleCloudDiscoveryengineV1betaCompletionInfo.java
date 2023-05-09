@@ -18,6 +18,7 @@ public class GoogleCloudDiscoveryengineV1betaCompletionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectedPosition")
     public Integer selectedPosition;
+
     public GoogleCloudDiscoveryengineV1betaCompletionInfo withSelectedPosition(Integer selectedPosition) {
         this.selectedPosition = selectedPosition;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDiscoveryengineV1betaCompletionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectedSuggestion")
     public String selectedSuggestion;
+
     public GoogleCloudDiscoveryengineV1betaCompletionInfo withSelectedSuggestion(String selectedSuggestion) {
         this.selectedSuggestion = selectedSuggestion;
         return this;
     }
     
+    public GoogleCloudDiscoveryengineV1betaCompletionInfo(){}
 }

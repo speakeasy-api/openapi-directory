@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaOidcToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audience")
     public String audience;
+
     public GoogleCloudIntegrationsV1alphaOidcToken withAudience(String audience) {
         this.audience = audience;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaOidcToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccountEmail")
     public String serviceAccountEmail;
+
     public GoogleCloudIntegrationsV1alphaOidcToken withServiceAccountEmail(String serviceAccountEmail) {
         this.serviceAccountEmail = serviceAccountEmail;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaOidcToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public GoogleCloudIntegrationsV1alphaOidcToken withToken(String token) {
         this.token = token;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudIntegrationsV1alphaOidcToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenExpireTime")
     public String tokenExpireTime;
+
     public GoogleCloudIntegrationsV1alphaOidcToken withTokenExpireTime(String tokenExpireTime) {
         this.tokenExpireTime = tokenExpireTime;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaOidcToken(){}
 }

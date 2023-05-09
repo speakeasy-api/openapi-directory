@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteQuerySuggestionsBlockListRequest {
     @JsonProperty("Id")
     public String id;
+
     public DeleteQuerySuggestionsBlockListRequest withId(String id) {
         this.id = id;
         return this;
@@ -16,9 +17,14 @@ public class DeleteQuerySuggestionsBlockListRequest {
     
     @JsonProperty("IndexId")
     public String indexId;
+
     public DeleteQuerySuggestionsBlockListRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
     }
     
+    public DeleteQuerySuggestionsBlockListRequest(@JsonProperty("Id") String id, @JsonProperty("IndexId") String indexId) {
+        this.id = id;
+        this.indexId = indexId;
+  }
 }

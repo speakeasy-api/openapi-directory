@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteUserPoolDomainResponse {
     
     public String contentType;
+
     public DeleteUserPoolDomainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteUserPoolDomainResponse {
      */
     
     public java.util.Map<String, Object> deleteUserPoolDomainResponse;
+
     public DeleteUserPoolDomainResponse withDeleteUserPoolDomainResponse(java.util.Map<String, Object> deleteUserPoolDomainResponse) {
         this.deleteUserPoolDomainResponse = deleteUserPoolDomainResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteUserPoolDomainResponse {
      */
     
     public Object internalErrorException;
+
     public DeleteUserPoolDomainResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteUserPoolDomainResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteUserPoolDomainResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteUserPoolDomainResponse {
      */
     
     public Object notAuthorizedException;
+
     public DeleteUserPoolDomainResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteUserPoolDomainResponse {
     
     
     public Integer statusCode;
+
     public DeleteUserPoolDomainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteUserPoolDomainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteUserPoolDomainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteUserPoolDomainResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteUserPoolDomainResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeleteUserPoolDomainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class AwsOpenSearchServiceDomainClusterConfigZoneAwarenessConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZoneCount")
     public Long availabilityZoneCount;
+
     public AwsOpenSearchServiceDomainClusterConfigZoneAwarenessConfigDetails withAvailabilityZoneCount(Long availabilityZoneCount) {
         this.availabilityZoneCount = availabilityZoneCount;
         return this;
     }
     
+    public AwsOpenSearchServiceDomainClusterConfigZoneAwarenessConfigDetails(){}
 }

@@ -9,11 +9,12 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * SeedUrlConfiguration - &lt;p&gt;Provides the configuration information for the seed or starting point URLs to crawl.&lt;/p&gt; &lt;p&gt; &lt;i&gt;When selecting websites to index, you must adhere to the &lt;a href="https://aws.amazon.com/aup/"&gt;Amazon Acceptable Use Policy&lt;/a&gt; and all other Amazon terms. Remember that you must only use Amazon Kendra Web Crawler to index your own webpages, or webpages that you have authorization to index.&lt;/i&gt; &lt;/p&gt;
+ * SeedUrlConfiguration - &lt;p&gt;Provides the configuration information for the seed or starting point URLs to crawl.&lt;/p&gt; &lt;p&gt; &lt;i&gt;When selecting websites to index, you must adhere to the &lt;a href="https://aws.amazon.com/aup/"&gt;Amazon Acceptable Use Policy&lt;/a&gt; and all other Amazon terms. Remember that you must only use Amazon Kendra Web Crawler to index your own web pages, or web pages that you have authorization to index.&lt;/i&gt; &lt;/p&gt;
  */
 public class SeedUrlConfiguration {
     @JsonProperty("SeedUrls")
     public String[] seedUrls;
+
     public SeedUrlConfiguration withSeedUrls(String[] seedUrls) {
         this.seedUrls = seedUrls;
         return this;
@@ -22,9 +23,13 @@ public class SeedUrlConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WebCrawlerMode")
     public WebCrawlerModeEnum webCrawlerMode;
+
     public SeedUrlConfiguration withWebCrawlerMode(WebCrawlerModeEnum webCrawlerMode) {
         this.webCrawlerMode = webCrawlerMode;
         return this;
     }
     
+    public SeedUrlConfiguration(@JsonProperty("SeedUrls") String[] seedUrls) {
+        this.seedUrls = seedUrls;
+  }
 }

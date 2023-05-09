@@ -18,6 +18,7 @@ public class PostPrimaryIpsCreatePrimaryIPRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignee_id")
     public Long assigneeId;
+
     public PostPrimaryIpsCreatePrimaryIPRequest withAssigneeId(Long assigneeId) {
         this.assigneeId = assigneeId;
         return this;
@@ -28,6 +29,7 @@ public class PostPrimaryIpsCreatePrimaryIPRequest {
      */
     @JsonProperty("assignee_type")
     public PostPrimaryIpsCreatePrimaryIPRequestAssigneeTypeEnum assigneeType;
+
     public PostPrimaryIpsCreatePrimaryIPRequest withAssigneeType(PostPrimaryIpsCreatePrimaryIPRequestAssigneeTypeEnum assigneeType) {
         this.assigneeType = assigneeType;
         return this;
@@ -39,6 +41,7 @@ public class PostPrimaryIpsCreatePrimaryIPRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auto_delete")
     public Boolean autoDelete;
+
     public PostPrimaryIpsCreatePrimaryIPRequest withAutoDelete(Boolean autoDelete) {
         this.autoDelete = autoDelete;
         return this;
@@ -50,6 +53,7 @@ public class PostPrimaryIpsCreatePrimaryIPRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datacenter")
     public String datacenter;
+
     public PostPrimaryIpsCreatePrimaryIPRequest withDatacenter(String datacenter) {
         this.datacenter = datacenter;
         return this;
@@ -61,6 +65,7 @@ public class PostPrimaryIpsCreatePrimaryIPRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, Object> labels;
+
     public PostPrimaryIpsCreatePrimaryIPRequest withLabels(java.util.Map<String, Object> labels) {
         this.labels = labels;
         return this;
@@ -68,6 +73,7 @@ public class PostPrimaryIpsCreatePrimaryIPRequest {
     
     @JsonProperty("name")
     public String name;
+
     public PostPrimaryIpsCreatePrimaryIPRequest withName(String name) {
         this.name = name;
         return this;
@@ -78,9 +84,15 @@ public class PostPrimaryIpsCreatePrimaryIPRequest {
      */
     @JsonProperty("type")
     public PostPrimaryIpsCreatePrimaryIPRequestTypeEnum type;
+
     public PostPrimaryIpsCreatePrimaryIPRequest withType(PostPrimaryIpsCreatePrimaryIPRequestTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PostPrimaryIpsCreatePrimaryIPRequest(@JsonProperty("assignee_type") PostPrimaryIpsCreatePrimaryIPRequestAssigneeTypeEnum assigneeType, @JsonProperty("name") String name, @JsonProperty("type") PostPrimaryIpsCreatePrimaryIPRequestTypeEnum type) {
+        this.assigneeType = assigneeType;
+        this.name = name;
+        this.type = type;
+  }
 }

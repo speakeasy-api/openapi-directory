@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2CharacterMaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("charactersToIgnore")
     public GooglePrivacyDlpV2CharsToIgnore[] charactersToIgnore;
+
     public GooglePrivacyDlpV2CharacterMaskConfig withCharactersToIgnore(GooglePrivacyDlpV2CharsToIgnore[] charactersToIgnore) {
         this.charactersToIgnore = charactersToIgnore;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2CharacterMaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maskingCharacter")
     public String maskingCharacter;
+
     public GooglePrivacyDlpV2CharacterMaskConfig withMaskingCharacter(String maskingCharacter) {
         this.maskingCharacter = maskingCharacter;
         return this;
@@ -40,6 +42,7 @@ public class GooglePrivacyDlpV2CharacterMaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberToMask")
     public Integer numberToMask;
+
     public GooglePrivacyDlpV2CharacterMaskConfig withNumberToMask(Integer numberToMask) {
         this.numberToMask = numberToMask;
         return this;
@@ -51,9 +54,11 @@ public class GooglePrivacyDlpV2CharacterMaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reverseOrder")
     public Boolean reverseOrder;
+
     public GooglePrivacyDlpV2CharacterMaskConfig withReverseOrder(Boolean reverseOrder) {
         this.reverseOrder = reverseOrder;
         return this;
     }
     
+    public GooglePrivacyDlpV2CharacterMaskConfig(){}
 }

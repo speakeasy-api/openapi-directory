@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateDBSubnetGroupResult {
     
     public DBSubnetGroup dbSubnetGroup;
+
     public CreateDBSubnetGroupResult withDBSubnetGroup(DBSubnetGroup dbSubnetGroup) {
         this.dbSubnetGroup = dbSubnetGroup;
         return this;
     }
     
+    public CreateDBSubnetGroupResult(){}
 }

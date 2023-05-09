@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfirmPaymentOfTransaction1RequestBody {
@@ -12,6 +13,7 @@ public class ConfirmPaymentOfTransaction1RequestBody {
      */
     @SpeakeasyMetadata("form:name=confirmTransaction")
     public String confirmTransaction;
+
     public ConfirmPaymentOfTransaction1RequestBody withConfirmTransaction(String confirmTransaction) {
         this.confirmTransaction = confirmTransaction;
         return this;
@@ -22,9 +24,14 @@ public class ConfirmPaymentOfTransaction1RequestBody {
      */
     @SpeakeasyMetadata("form:name=transaction_id")
     public String transactionId;
+
     public ConfirmPaymentOfTransaction1RequestBody withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public ConfirmPaymentOfTransaction1RequestBody(@JsonProperty("confirmTransaction") String confirmTransaction, @JsonProperty("transaction_id") String transactionId) {
+        this.confirmTransaction = confirmTransaction;
+        this.transactionId = transactionId;
+  }
 }

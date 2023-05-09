@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateImagePermissionsResponse {
     
     public String contentType;
+
     public UpdateImagePermissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateImagePermissionsResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateImagePermissionsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -26,6 +29,7 @@ public class UpdateImagePermissionsResponse {
     
     
     public Integer statusCode;
+
     public UpdateImagePermissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class UpdateImagePermissionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateImagePermissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateImagePermissionsResponse {
      */
     
     public Object resourceNotAvailableException;
+
     public UpdateImagePermissionsResponse withResourceNotAvailableException(Object resourceNotAvailableException) {
         this.resourceNotAvailableException = resourceNotAvailableException;
         return this;
@@ -53,6 +59,7 @@ public class UpdateImagePermissionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateImagePermissionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,9 +70,14 @@ public class UpdateImagePermissionsResponse {
      */
     
     public java.util.Map<String, Object> updateImagePermissionsResult;
+
     public UpdateImagePermissionsResponse withUpdateImagePermissionsResult(java.util.Map<String, Object> updateImagePermissionsResult) {
         this.updateImagePermissionsResult = updateImagePermissionsResult;
         return this;
     }
     
+    public UpdateImagePermissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

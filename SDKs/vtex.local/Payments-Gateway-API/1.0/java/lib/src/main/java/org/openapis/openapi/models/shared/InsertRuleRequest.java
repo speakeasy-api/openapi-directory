@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InsertRuleRequest {
     @JsonProperty("antifraud")
     public Antifraud antifraud;
+
     public InsertRuleRequest withAntifraud(Antifraud antifraud) {
         this.antifraud = antifraud;
         return this;
@@ -16,6 +17,7 @@ public class InsertRuleRequest {
     
     @JsonProperty("beginDate")
     public String beginDate;
+
     public InsertRuleRequest withBeginDate(String beginDate) {
         this.beginDate = beginDate;
         return this;
@@ -23,6 +25,7 @@ public class InsertRuleRequest {
     
     @JsonProperty("condition")
     public String condition;
+
     public InsertRuleRequest withCondition(String condition) {
         this.condition = condition;
         return this;
@@ -30,6 +33,7 @@ public class InsertRuleRequest {
     
     @JsonProperty("connector")
     public Connector connector;
+
     public InsertRuleRequest withConnector(Connector connector) {
         this.connector = connector;
         return this;
@@ -37,6 +41,7 @@ public class InsertRuleRequest {
     
     @JsonProperty("country")
     public String country;
+
     public InsertRuleRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -44,6 +49,7 @@ public class InsertRuleRequest {
     
     @JsonProperty("dateIntervals")
     public String dateIntervals;
+
     public InsertRuleRequest withDateIntervals(String dateIntervals) {
         this.dateIntervals = dateIntervals;
         return this;
@@ -51,6 +57,7 @@ public class InsertRuleRequest {
     
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public InsertRuleRequest withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -58,6 +65,7 @@ public class InsertRuleRequest {
     
     @JsonProperty("endDate")
     public String endDate;
+
     public InsertRuleRequest withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -65,6 +73,7 @@ public class InsertRuleRequest {
     
     @JsonProperty("installmentOptions")
     public String installmentOptions;
+
     public InsertRuleRequest withInstallmentOptions(String installmentOptions) {
         this.installmentOptions = installmentOptions;
         return this;
@@ -72,6 +81,7 @@ public class InsertRuleRequest {
     
     @JsonProperty("installmentsService")
     public String installmentsService;
+
     public InsertRuleRequest withInstallmentsService(String installmentsService) {
         this.installmentsService = installmentsService;
         return this;
@@ -79,6 +89,7 @@ public class InsertRuleRequest {
     
     @JsonProperty("isDefault")
     public Boolean isDefault;
+
     public InsertRuleRequest withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -86,6 +97,7 @@ public class InsertRuleRequest {
     
     @JsonProperty("isSelfAuthorized")
     public String isSelfAuthorized;
+
     public InsertRuleRequest withIsSelfAuthorized(String isSelfAuthorized) {
         this.isSelfAuthorized = isSelfAuthorized;
         return this;
@@ -93,6 +105,7 @@ public class InsertRuleRequest {
     
     @JsonProperty("issuer")
     public Issuer issuer;
+
     public InsertRuleRequest withIssuer(Issuer issuer) {
         this.issuer = issuer;
         return this;
@@ -100,6 +113,7 @@ public class InsertRuleRequest {
     
     @JsonProperty("multiMerchantList")
     public String multiMerchantList;
+
     public InsertRuleRequest withMultiMerchantList(String multiMerchantList) {
         this.multiMerchantList = multiMerchantList;
         return this;
@@ -107,6 +121,7 @@ public class InsertRuleRequest {
     
     @JsonProperty("name")
     public String name;
+
     public InsertRuleRequest withName(String name) {
         this.name = name;
         return this;
@@ -114,6 +129,7 @@ public class InsertRuleRequest {
     
     @JsonProperty("paymentSystem")
     public PaymentSystem paymentSystem;
+
     public InsertRuleRequest withPaymentSystem(PaymentSystem paymentSystem) {
         this.paymentSystem = paymentSystem;
         return this;
@@ -121,6 +137,7 @@ public class InsertRuleRequest {
     
     @JsonProperty("requiresAuthentication")
     public String requiresAuthentication;
+
     public InsertRuleRequest withRequiresAuthentication(String requiresAuthentication) {
         this.requiresAuthentication = requiresAuthentication;
         return this;
@@ -128,9 +145,30 @@ public class InsertRuleRequest {
     
     @JsonProperty("salesChannels")
     public SalesChannel[] salesChannels;
+
     public InsertRuleRequest withSalesChannels(SalesChannel[] salesChannels) {
         this.salesChannels = salesChannels;
         return this;
     }
     
+    public InsertRuleRequest(@JsonProperty("antifraud") Antifraud antifraud, @JsonProperty("beginDate") String beginDate, @JsonProperty("condition") String condition, @JsonProperty("connector") Connector connector, @JsonProperty("country") String country, @JsonProperty("dateIntervals") String dateIntervals, @JsonProperty("enabled") Boolean enabled, @JsonProperty("endDate") String endDate, @JsonProperty("installmentOptions") String installmentOptions, @JsonProperty("installmentsService") String installmentsService, @JsonProperty("isDefault") Boolean isDefault, @JsonProperty("isSelfAuthorized") String isSelfAuthorized, @JsonProperty("issuer") Issuer issuer, @JsonProperty("multiMerchantList") String multiMerchantList, @JsonProperty("name") String name, @JsonProperty("paymentSystem") PaymentSystem paymentSystem, @JsonProperty("requiresAuthentication") String requiresAuthentication, @JsonProperty("salesChannels") SalesChannel[] salesChannels) {
+        this.antifraud = antifraud;
+        this.beginDate = beginDate;
+        this.condition = condition;
+        this.connector = connector;
+        this.country = country;
+        this.dateIntervals = dateIntervals;
+        this.enabled = enabled;
+        this.endDate = endDate;
+        this.installmentOptions = installmentOptions;
+        this.installmentsService = installmentsService;
+        this.isDefault = isDefault;
+        this.isSelfAuthorized = isSelfAuthorized;
+        this.issuer = issuer;
+        this.multiMerchantList = multiMerchantList;
+        this.name = name;
+        this.paymentSystem = paymentSystem;
+        this.requiresAuthentication = requiresAuthentication;
+        this.salesChannels = salesChannels;
+  }
 }

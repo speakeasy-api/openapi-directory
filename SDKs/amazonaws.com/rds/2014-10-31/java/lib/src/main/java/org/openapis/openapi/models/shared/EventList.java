@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class EventList {
     
     public OffsetDateTime date;
+
     public EventList withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -19,6 +20,7 @@ public class EventList {
     
     
     public String[] eventCategories;
+
     public EventList withEventCategories(String[] eventCategories) {
         this.eventCategories = eventCategories;
         return this;
@@ -26,6 +28,7 @@ public class EventList {
     
     
     public String message;
+
     public EventList withMessage(String message) {
         this.message = message;
         return this;
@@ -33,6 +36,7 @@ public class EventList {
     
     
     public String sourceArn;
+
     public EventList withSourceArn(String sourceArn) {
         this.sourceArn = sourceArn;
         return this;
@@ -40,6 +44,7 @@ public class EventList {
     
     
     public String sourceIdentifier;
+
     public EventList withSourceIdentifier(String sourceIdentifier) {
         this.sourceIdentifier = sourceIdentifier;
         return this;
@@ -47,9 +52,11 @@ public class EventList {
     
     
     public SourceTypeEnum sourceType;
+
     public EventList withSourceType(SourceTypeEnum sourceType) {
         this.sourceType = sourceType;
         return this;
     }
     
+    public EventList(){}
 }

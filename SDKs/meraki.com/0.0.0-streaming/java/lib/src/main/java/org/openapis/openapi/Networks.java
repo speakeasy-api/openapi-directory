@@ -59,10 +59,8 @@ public class Networks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BindNetworkResponse res = new org.openapis.openapi.models.operations.BindNetworkResponse() {{
+        org.openapis.openapi.models.operations.BindNetworkResponse res = new org.openapis.openapi.models.operations.BindNetworkResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,11 +96,9 @@ public class Networks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CombineOrganizationNetworksResponse res = new org.openapis.openapi.models.operations.CombineOrganizationNetworksResponse() {{
+        org.openapis.openapi.models.operations.CombineOrganizationNetworksResponse res = new org.openapis.openapi.models.operations.CombineOrganizationNetworksResponse(contentType, httpRes.statusCode()) {{
             combineOrganizationNetworks200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -143,11 +139,9 @@ public class Networks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateOrganizationNetworkResponse res = new org.openapis.openapi.models.operations.CreateOrganizationNetworkResponse() {{
+        org.openapis.openapi.models.operations.CreateOrganizationNetworkResponse res = new org.openapis.openapi.models.operations.CreateOrganizationNetworkResponse(contentType, httpRes.statusCode()) {{
             createOrganizationNetwork201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -183,10 +177,8 @@ public class Networks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteNetworkResponse res = new org.openapis.openapi.models.operations.DeleteNetworkResponse() {{
+        org.openapis.openapi.models.operations.DeleteNetworkResponse res = new org.openapis.openapi.models.operations.DeleteNetworkResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -217,11 +209,9 @@ public class Networks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkResponse res = new org.openapis.openapi.models.operations.GetNetworkResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkResponse res = new org.openapis.openapi.models.operations.GetNetworkResponse(contentType, httpRes.statusCode()) {{
             getNetwork200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -263,11 +253,9 @@ public class Networks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkAirMarshalResponse res = new org.openapis.openapi.models.operations.GetNetworkAirMarshalResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkAirMarshalResponse res = new org.openapis.openapi.models.operations.GetNetworkAirMarshalResponse(contentType, httpRes.statusCode()) {{
             getNetworkAirMarshal200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -303,11 +291,9 @@ public class Networks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSiteToSiteVpnResponse res = new org.openapis.openapi.models.operations.GetNetworkSiteToSiteVpnResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSiteToSiteVpnResponse res = new org.openapis.openapi.models.operations.GetNetworkSiteToSiteVpnResponse(contentType, httpRes.statusCode()) {{
             getNetworkSiteToSiteVpn200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -349,11 +335,9 @@ public class Networks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkTrafficResponse res = new org.openapis.openapi.models.operations.GetNetworkTrafficResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkTrafficResponse res = new org.openapis.openapi.models.operations.GetNetworkTrafficResponse(contentType, httpRes.statusCode()) {{
             getNetworkTraffic200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -395,11 +379,9 @@ public class Networks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrganizationNetworksResponse res = new org.openapis.openapi.models.operations.GetOrganizationNetworksResponse() {{
+        org.openapis.openapi.models.operations.GetOrganizationNetworksResponse res = new org.openapis.openapi.models.operations.GetOrganizationNetworksResponse(contentType, httpRes.statusCode()) {{
             getOrganizationNetworks200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -435,11 +417,9 @@ public class Networks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SplitNetworkResponse res = new org.openapis.openapi.models.operations.SplitNetworkResponse() {{
+        org.openapis.openapi.models.operations.SplitNetworkResponse res = new org.openapis.openapi.models.operations.SplitNetworkResponse(contentType, httpRes.statusCode()) {{
             splitNetwork200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -475,10 +455,8 @@ public class Networks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UnbindNetworkResponse res = new org.openapis.openapi.models.operations.UnbindNetworkResponse() {{
+        org.openapis.openapi.models.operations.UnbindNetworkResponse res = new org.openapis.openapi.models.operations.UnbindNetworkResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -511,11 +489,9 @@ public class Networks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkResponse res = new org.openapis.openapi.models.operations.UpdateNetworkResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkResponse res = new org.openapis.openapi.models.operations.UpdateNetworkResponse(contentType, httpRes.statusCode()) {{
             updateNetwork200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -556,11 +532,9 @@ public class Networks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkSiteToSiteVpnResponse res = new org.openapis.openapi.models.operations.UpdateNetworkSiteToSiteVpnResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkSiteToSiteVpnResponse res = new org.openapis.openapi.models.operations.UpdateNetworkSiteToSiteVpnResponse(contentType, httpRes.statusCode()) {{
             updateNetworkSiteToSiteVpn200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

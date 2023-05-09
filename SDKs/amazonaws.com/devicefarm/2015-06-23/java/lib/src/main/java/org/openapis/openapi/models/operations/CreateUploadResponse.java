@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateUploadResponse {
@@ -12,6 +13,7 @@ public class CreateUploadResponse {
      */
     
     public Object argumentException;
+
     public CreateUploadResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class CreateUploadResponse {
     
     
     public String contentType;
+
     public CreateUploadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateUploadResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateUploadResult createUploadResult;
+
     public CreateUploadResponse withCreateUploadResult(org.openapis.openapi.models.shared.CreateUploadResult createUploadResult) {
         this.createUploadResult = createUploadResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateUploadResponse {
      */
     
     public Object limitExceededException;
+
     public CreateUploadResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateUploadResponse {
      */
     
     public Object notFoundException;
+
     public CreateUploadResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class CreateUploadResponse {
      */
     
     public Object serviceAccountException;
+
     public CreateUploadResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -66,6 +73,7 @@ public class CreateUploadResponse {
     
     
     public Integer statusCode;
+
     public CreateUploadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CreateUploadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateUploadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateUploadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

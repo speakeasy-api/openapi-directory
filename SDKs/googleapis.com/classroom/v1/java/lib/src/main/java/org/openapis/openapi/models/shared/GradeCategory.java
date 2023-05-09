@@ -18,6 +18,7 @@ public class GradeCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultGradeDenominator")
     public Integer defaultGradeDenominator;
+
     public GradeCategory withDefaultGradeDenominator(Integer defaultGradeDenominator) {
         this.defaultGradeDenominator = defaultGradeDenominator;
         return this;
@@ -29,6 +30,7 @@ public class GradeCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GradeCategory withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class GradeCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GradeCategory withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class GradeCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     public Integer weight;
+
     public GradeCategory withWeight(Integer weight) {
         this.weight = weight;
         return this;
     }
     
+    public GradeCategory(){}
 }

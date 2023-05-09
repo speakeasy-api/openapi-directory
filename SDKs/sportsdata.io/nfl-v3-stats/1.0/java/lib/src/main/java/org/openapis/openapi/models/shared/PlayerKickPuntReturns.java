@@ -12,6 +12,7 @@ public class PlayerKickPuntReturns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPoints")
     public Double fantasyPoints;
+
     public PlayerKickPuntReturns withFantasyPoints(Double fantasyPoints) {
         this.fantasyPoints = fantasyPoints;
         return this;
@@ -20,6 +21,7 @@ public class PlayerKickPuntReturns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPosition")
     public String fantasyPosition;
+
     public PlayerKickPuntReturns withFantasyPosition(String fantasyPosition) {
         this.fantasyPosition = fantasyPosition;
         return this;
@@ -28,6 +30,7 @@ public class PlayerKickPuntReturns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumblesLost")
     public Long fumblesLost;
+
     public PlayerKickPuntReturns withFumblesLost(Long fumblesLost) {
         this.fumblesLost = fumblesLost;
         return this;
@@ -36,6 +39,7 @@ public class PlayerKickPuntReturns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickReturnLong")
     public Long kickReturnLong;
+
     public PlayerKickPuntReturns withKickReturnLong(Long kickReturnLong) {
         this.kickReturnLong = kickReturnLong;
         return this;
@@ -44,6 +48,7 @@ public class PlayerKickPuntReturns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickReturnTouchdowns")
     public Long kickReturnTouchdowns;
+
     public PlayerKickPuntReturns withKickReturnTouchdowns(Long kickReturnTouchdowns) {
         this.kickReturnTouchdowns = kickReturnTouchdowns;
         return this;
@@ -52,6 +57,7 @@ public class PlayerKickPuntReturns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickReturnYards")
     public Long kickReturnYards;
+
     public PlayerKickPuntReturns withKickReturnYards(Long kickReturnYards) {
         this.kickReturnYards = kickReturnYards;
         return this;
@@ -60,6 +66,7 @@ public class PlayerKickPuntReturns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickReturnYardsPerAttempt")
     public Double kickReturnYardsPerAttempt;
+
     public PlayerKickPuntReturns withKickReturnYardsPerAttempt(Double kickReturnYardsPerAttempt) {
         this.kickReturnYardsPerAttempt = kickReturnYardsPerAttempt;
         return this;
@@ -68,6 +75,7 @@ public class PlayerKickPuntReturns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickReturns")
     public Long kickReturns;
+
     public PlayerKickPuntReturns withKickReturns(Long kickReturns) {
         this.kickReturns = kickReturns;
         return this;
@@ -76,6 +84,7 @@ public class PlayerKickPuntReturns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public PlayerKickPuntReturns withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +93,7 @@ public class PlayerKickPuntReturns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Number")
     public Long number;
+
     public PlayerKickPuntReturns withNumber(Long number) {
         this.number = number;
         return this;
@@ -92,6 +102,7 @@ public class PlayerKickPuntReturns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerGameID")
     public Long playerGameID;
+
     public PlayerKickPuntReturns withPlayerGameID(Long playerGameID) {
         this.playerGameID = playerGameID;
         return this;
@@ -100,6 +111,7 @@ public class PlayerKickPuntReturns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public PlayerKickPuntReturns withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -108,6 +120,7 @@ public class PlayerKickPuntReturns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Position")
     public String position;
+
     public PlayerKickPuntReturns withPosition(String position) {
         this.position = position;
         return this;
@@ -116,6 +129,7 @@ public class PlayerKickPuntReturns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PositionCategory")
     public String positionCategory;
+
     public PlayerKickPuntReturns withPositionCategory(String positionCategory) {
         this.positionCategory = positionCategory;
         return this;
@@ -124,6 +138,7 @@ public class PlayerKickPuntReturns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntReturnLong")
     public Long puntReturnLong;
+
     public PlayerKickPuntReturns withPuntReturnLong(Long puntReturnLong) {
         this.puntReturnLong = puntReturnLong;
         return this;
@@ -132,6 +147,7 @@ public class PlayerKickPuntReturns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntReturnTouchdowns")
     public Long puntReturnTouchdowns;
+
     public PlayerKickPuntReturns withPuntReturnTouchdowns(Long puntReturnTouchdowns) {
         this.puntReturnTouchdowns = puntReturnTouchdowns;
         return this;
@@ -140,6 +156,7 @@ public class PlayerKickPuntReturns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntReturnYards")
     public Long puntReturnYards;
+
     public PlayerKickPuntReturns withPuntReturnYards(Long puntReturnYards) {
         this.puntReturnYards = puntReturnYards;
         return this;
@@ -148,6 +165,7 @@ public class PlayerKickPuntReturns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntReturnYardsPerAttempt")
     public Double puntReturnYardsPerAttempt;
+
     public PlayerKickPuntReturns withPuntReturnYardsPerAttempt(Double puntReturnYardsPerAttempt) {
         this.puntReturnYardsPerAttempt = puntReturnYardsPerAttempt;
         return this;
@@ -156,6 +174,7 @@ public class PlayerKickPuntReturns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntReturns")
     public Long puntReturns;
+
     public PlayerKickPuntReturns withPuntReturns(Long puntReturns) {
         this.puntReturns = puntReturns;
         return this;
@@ -164,6 +183,7 @@ public class PlayerKickPuntReturns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShortName")
     public String shortName;
+
     public PlayerKickPuntReturns withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -172,6 +192,7 @@ public class PlayerKickPuntReturns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public PlayerKickPuntReturns withTeam(String team) {
         this.team = team;
         return this;
@@ -180,9 +201,11 @@ public class PlayerKickPuntReturns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Updated")
     public String updated;
+
     public PlayerKickPuntReturns withUpdated(String updated) {
         this.updated = updated;
         return this;
     }
     
+    public PlayerKickPuntReturns(){}
 }

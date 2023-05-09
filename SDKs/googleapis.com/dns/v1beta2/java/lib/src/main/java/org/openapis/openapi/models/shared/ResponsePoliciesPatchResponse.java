@@ -18,6 +18,7 @@ public class ResponsePoliciesPatchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("header")
     public ResponseHeader header;
+
     public ResponsePoliciesPatchResponse withHeader(ResponseHeader header) {
         this.header = header;
         return this;
@@ -29,9 +30,11 @@ public class ResponsePoliciesPatchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responsePolicy")
     public ResponsePolicy responsePolicy;
+
     public ResponsePoliciesPatchResponse withResponsePolicy(ResponsePolicy responsePolicy) {
         this.responsePolicy = responsePolicy;
         return this;
     }
     
+    public ResponsePoliciesPatchResponse(){}
 }

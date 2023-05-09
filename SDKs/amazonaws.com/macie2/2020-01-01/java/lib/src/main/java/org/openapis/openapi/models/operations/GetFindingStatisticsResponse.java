@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFindingStatisticsResponse {
@@ -12,6 +13,7 @@ public class GetFindingStatisticsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetFindingStatisticsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetFindingStatisticsResponse {
      */
     
     public Object conflictException;
+
     public GetFindingStatisticsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class GetFindingStatisticsResponse {
     
     
     public String contentType;
+
     public GetFindingStatisticsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetFindingStatisticsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetFindingStatisticsResponse getFindingStatisticsResponse;
+
     public GetFindingStatisticsResponse withGetFindingStatisticsResponse(org.openapis.openapi.models.shared.GetFindingStatisticsResponse getFindingStatisticsResponse) {
         this.getFindingStatisticsResponse = getFindingStatisticsResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetFindingStatisticsResponse {
      */
     
     public Object internalServerException;
+
     public GetFindingStatisticsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class GetFindingStatisticsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetFindingStatisticsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetFindingStatisticsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public GetFindingStatisticsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class GetFindingStatisticsResponse {
     
     
     public Integer statusCode;
+
     public GetFindingStatisticsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetFindingStatisticsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFindingStatisticsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class GetFindingStatisticsResponse {
      */
     
     public Object throttlingException;
+
     public GetFindingStatisticsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class GetFindingStatisticsResponse {
      */
     
     public Object validationException;
+
     public GetFindingStatisticsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetFindingStatisticsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

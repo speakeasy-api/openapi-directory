@@ -18,6 +18,7 @@ public class PositionedObjectPositioningSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layoutSuggested")
     public Boolean layoutSuggested;
+
     public PositionedObjectPositioningSuggestionState withLayoutSuggested(Boolean layoutSuggested) {
         this.layoutSuggested = layoutSuggested;
         return this;
@@ -29,6 +30,7 @@ public class PositionedObjectPositioningSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leftOffsetSuggested")
     public Boolean leftOffsetSuggested;
+
     public PositionedObjectPositioningSuggestionState withLeftOffsetSuggested(Boolean leftOffsetSuggested) {
         this.leftOffsetSuggested = leftOffsetSuggested;
         return this;
@@ -40,9 +42,11 @@ public class PositionedObjectPositioningSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topOffsetSuggested")
     public Boolean topOffsetSuggested;
+
     public PositionedObjectPositioningSuggestionState withTopOffsetSuggested(Boolean topOffsetSuggested) {
         this.topOffsetSuggested = topOffsetSuggested;
         return this;
     }
     
+    public PositionedObjectPositioningSuggestionState(){}
 }

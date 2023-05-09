@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GenderFullGeoRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=countryIso2")
     public String countryIso2;
+
     public GenderFullGeoRequest withCountryIso2(String countryIso2) {
         this.countryIso2 = countryIso2;
         return this;
@@ -16,9 +18,14 @@ public class GenderFullGeoRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fullName")
     public String fullName;
+
     public GenderFullGeoRequest withFullName(String fullName) {
         this.fullName = fullName;
         return this;
     }
     
+    public GenderFullGeoRequest(@JsonProperty("countryIso2") String countryIso2, @JsonProperty("fullName") String fullName) {
+        this.countryIso2 = countryIso2;
+        this.fullName = fullName;
+  }
 }

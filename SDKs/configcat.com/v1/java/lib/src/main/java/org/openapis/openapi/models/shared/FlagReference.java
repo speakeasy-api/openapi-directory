@@ -12,6 +12,7 @@ public class FlagReference {
      */
     @JsonProperty("references")
     public ReferenceLines[] references;
+
     public FlagReference withReferences(ReferenceLines[] references) {
         this.references = references;
         return this;
@@ -22,9 +23,14 @@ public class FlagReference {
      */
     @JsonProperty("settingId")
     public Integer settingId;
+
     public FlagReference withSettingId(Integer settingId) {
         this.settingId = settingId;
         return this;
     }
     
+    public FlagReference(@JsonProperty("references") ReferenceLines[] references, @JsonProperty("settingId") Integer settingId) {
+        this.references = references;
+        this.settingId = settingId;
+  }
 }

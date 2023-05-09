@@ -18,6 +18,7 @@ public class CompositeTypesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compositeTypes")
     public CompositeType[] compositeTypes;
+
     public CompositeTypesListResponse withCompositeTypes(CompositeType[] compositeTypes) {
         this.compositeTypes = compositeTypes;
         return this;
@@ -29,9 +30,11 @@ public class CompositeTypesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public CompositeTypesListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public CompositeTypesListResponse(){}
 }

@@ -18,6 +18,7 @@ public class FormFieldSetEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("form_fields")
     public FormFieldEntity[] formFields;
+
     public FormFieldSetEntity withFormFields(FormFieldEntity[] formFields) {
         this.formFields = formFields;
         return this;
@@ -29,6 +30,7 @@ public class FormFieldSetEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("form_layout")
     public Integer[] formLayout;
+
     public FormFieldSetEntity withFormLayout(Integer[] formLayout) {
         this.formLayout = formLayout;
         return this;
@@ -40,6 +42,7 @@ public class FormFieldSetEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public FormFieldSetEntity withId(Integer id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class FormFieldSetEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skip_company")
     public Boolean skipCompany;
+
     public FormFieldSetEntity withSkipCompany(Boolean skipCompany) {
         this.skipCompany = skipCompany;
         return this;
@@ -62,6 +66,7 @@ public class FormFieldSetEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skip_email")
     public Boolean skipEmail;
+
     public FormFieldSetEntity withSkipEmail(Boolean skipEmail) {
         this.skipEmail = skipEmail;
         return this;
@@ -73,6 +78,7 @@ public class FormFieldSetEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skip_name")
     public Boolean skipName;
+
     public FormFieldSetEntity withSkipName(Boolean skipName) {
         this.skipName = skipName;
         return this;
@@ -84,9 +90,11 @@ public class FormFieldSetEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public FormFieldSetEntity withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public FormFieldSetEntity(){}
 }

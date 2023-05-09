@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ListTemplatesDesignerTemplatesGetRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListTemplatesDesignerTemplatesGetRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -16,9 +17,11 @@ public class ListTemplatesDesignerTemplatesGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public ListTemplatesDesignerTemplatesGetRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
     }
     
+    public ListTemplatesDesignerTemplatesGetRequest(){}
 }

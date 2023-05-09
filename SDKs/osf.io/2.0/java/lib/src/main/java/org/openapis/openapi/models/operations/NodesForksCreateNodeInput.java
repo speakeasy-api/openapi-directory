@@ -12,6 +12,7 @@ public class NodesForksCreateNodeInput {
      */
     @JsonProperty("attributes")
     public NodesForksCreateNodeAttributesInput attributes;
+
     public NodesForksCreateNodeInput withAttributes(NodesForksCreateNodeAttributesInput attributes) {
         this.attributes = attributes;
         return this;
@@ -22,9 +23,14 @@ public class NodesForksCreateNodeInput {
      */
     @JsonProperty("type")
     public String type;
+
     public NodesForksCreateNodeInput withType(String type) {
         this.type = type;
         return this;
     }
     
+    public NodesForksCreateNodeInput(@JsonProperty("attributes") NodesForksCreateNodeAttributesInput attributes, @JsonProperty("type") String type) {
+        this.attributes = attributes;
+        this.type = type;
+  }
 }

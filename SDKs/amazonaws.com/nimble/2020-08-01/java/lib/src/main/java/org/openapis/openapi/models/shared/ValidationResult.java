@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ValidationResult {
     @JsonProperty("state")
     public LaunchProfileValidationStateEnum state;
+
     public ValidationResult withState(LaunchProfileValidationStateEnum state) {
         this.state = state;
         return this;
@@ -19,6 +20,7 @@ public class ValidationResult {
     
     @JsonProperty("statusCode")
     public LaunchProfileValidationStatusCodeEnum statusCode;
+
     public ValidationResult withStatusCode(LaunchProfileValidationStatusCodeEnum statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -26,6 +28,7 @@ public class ValidationResult {
     
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public ValidationResult withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -33,9 +36,16 @@ public class ValidationResult {
     
     @JsonProperty("type")
     public LaunchProfileValidationTypeEnum type;
+
     public ValidationResult withType(LaunchProfileValidationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ValidationResult(@JsonProperty("state") LaunchProfileValidationStateEnum state, @JsonProperty("statusCode") LaunchProfileValidationStatusCodeEnum statusCode, @JsonProperty("statusMessage") String statusMessage, @JsonProperty("type") LaunchProfileValidationTypeEnum type) {
+        this.state = state;
+        this.statusCode = statusCode;
+        this.statusMessage = statusMessage;
+        this.type = type;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeIamInstanceProfileAssociationsResult {
     
     public DescribeIamInstanceProfileAssociationsResultIamInstanceProfileAssociations[] iamInstanceProfileAssociations;
+
     public DescribeIamInstanceProfileAssociationsResult withIamInstanceProfileAssociations(DescribeIamInstanceProfileAssociationsResultIamInstanceProfileAssociations[] iamInstanceProfileAssociations) {
         this.iamInstanceProfileAssociations = iamInstanceProfileAssociations;
         return this;
@@ -19,9 +20,11 @@ public class DescribeIamInstanceProfileAssociationsResult {
     
     
     public String nextToken;
+
     public DescribeIamInstanceProfileAssociationsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeIamInstanceProfileAssociationsResult(){}
 }

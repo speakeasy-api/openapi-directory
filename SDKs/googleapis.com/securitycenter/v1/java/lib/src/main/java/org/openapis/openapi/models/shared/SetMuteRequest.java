@@ -18,9 +18,11 @@ public class SetMuteRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mute")
     public SetMuteRequestMuteEnum mute;
+
     public SetMuteRequest withMute(SetMuteRequestMuteEnum mute) {
         this.mute = mute;
         return this;
     }
     
+    public SetMuteRequest(){}
 }

@@ -15,6 +15,7 @@ public class GetInventoryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Entities")
     public InventoryResultEntity[] entities;
+
     public GetInventoryResult withEntities(InventoryResultEntity[] entities) {
         this.entities = entities;
         return this;
@@ -23,9 +24,11 @@ public class GetInventoryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetInventoryResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetInventoryResult(){}
 }

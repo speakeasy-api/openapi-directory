@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutInlinePolicyToPermissionSetRequest {
     @JsonProperty("InlinePolicy")
     public String inlinePolicy;
+
     public PutInlinePolicyToPermissionSetRequest withInlinePolicy(String inlinePolicy) {
         this.inlinePolicy = inlinePolicy;
         return this;
@@ -16,6 +17,7 @@ public class PutInlinePolicyToPermissionSetRequest {
     
     @JsonProperty("InstanceArn")
     public String instanceArn;
+
     public PutInlinePolicyToPermissionSetRequest withInstanceArn(String instanceArn) {
         this.instanceArn = instanceArn;
         return this;
@@ -23,9 +25,15 @@ public class PutInlinePolicyToPermissionSetRequest {
     
     @JsonProperty("PermissionSetArn")
     public String permissionSetArn;
+
     public PutInlinePolicyToPermissionSetRequest withPermissionSetArn(String permissionSetArn) {
         this.permissionSetArn = permissionSetArn;
         return this;
     }
     
+    public PutInlinePolicyToPermissionSetRequest(@JsonProperty("InlinePolicy") String inlinePolicy, @JsonProperty("InstanceArn") String instanceArn, @JsonProperty("PermissionSetArn") String permissionSetArn) {
+        this.inlinePolicy = inlinePolicy;
+        this.instanceArn = instanceArn;
+        this.permissionSetArn = permissionSetArn;
+  }
 }

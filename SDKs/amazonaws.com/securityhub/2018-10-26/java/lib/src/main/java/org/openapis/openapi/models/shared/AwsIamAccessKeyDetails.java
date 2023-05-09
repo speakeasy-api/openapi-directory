@@ -15,6 +15,7 @@ public class AwsIamAccessKeyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessKeyId")
     public String accessKeyId;
+
     public AwsIamAccessKeyDetails withAccessKeyId(String accessKeyId) {
         this.accessKeyId = accessKeyId;
         return this;
@@ -23,6 +24,7 @@ public class AwsIamAccessKeyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public AwsIamAccessKeyDetails withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -31,6 +33,7 @@ public class AwsIamAccessKeyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedAt")
     public String createdAt;
+
     public AwsIamAccessKeyDetails withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -39,6 +42,7 @@ public class AwsIamAccessKeyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrincipalId")
     public String principalId;
+
     public AwsIamAccessKeyDetails withPrincipalId(String principalId) {
         this.principalId = principalId;
         return this;
@@ -47,6 +51,7 @@ public class AwsIamAccessKeyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrincipalName")
     public String principalName;
+
     public AwsIamAccessKeyDetails withPrincipalName(String principalName) {
         this.principalName = principalName;
         return this;
@@ -55,6 +60,7 @@ public class AwsIamAccessKeyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrincipalType")
     public String principalType;
+
     public AwsIamAccessKeyDetails withPrincipalType(String principalType) {
         this.principalType = principalType;
         return this;
@@ -63,6 +69,7 @@ public class AwsIamAccessKeyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionContext")
     public AwsIamAccessKeySessionContext sessionContext;
+
     public AwsIamAccessKeyDetails withSessionContext(AwsIamAccessKeySessionContext sessionContext) {
         this.sessionContext = sessionContext;
         return this;
@@ -71,6 +78,7 @@ public class AwsIamAccessKeyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public AwsIamAccessKeyStatusEnum status;
+
     public AwsIamAccessKeyDetails withStatus(AwsIamAccessKeyStatusEnum status) {
         this.status = status;
         return this;
@@ -79,9 +87,11 @@ public class AwsIamAccessKeyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserName")
     public String userName;
+
     public AwsIamAccessKeyDetails withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public AwsIamAccessKeyDetails(){}
 }

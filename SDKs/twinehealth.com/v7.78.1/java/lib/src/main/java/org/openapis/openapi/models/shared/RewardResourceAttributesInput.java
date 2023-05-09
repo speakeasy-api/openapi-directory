@@ -15,6 +15,7 @@ public class RewardResourceAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_thread")
     public String thread;
+
     public RewardResourceAttributesInput withThread(String thread) {
         this.thread = thread;
         return this;
@@ -25,6 +26,7 @@ public class RewardResourceAttributesInput {
      */
     @JsonProperty("allocated_at")
     public String allocatedAt;
+
     public RewardResourceAttributesInput withAllocatedAt(String allocatedAt) {
         this.allocatedAt = allocatedAt;
         return this;
@@ -35,6 +37,7 @@ public class RewardResourceAttributesInput {
      */
     @JsonProperty("allocated_value")
     public Double allocatedValue;
+
     public RewardResourceAttributesInput withAllocatedValue(Double allocatedValue) {
         this.allocatedValue = allocatedValue;
         return this;
@@ -45,6 +48,7 @@ public class RewardResourceAttributesInput {
      */
     @JsonProperty("description")
     public String description;
+
     public RewardResourceAttributesInput withDescription(String description) {
         this.description = description;
         return this;
@@ -56,9 +60,15 @@ public class RewardResourceAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_at")
     public String targetAt;
+
     public RewardResourceAttributesInput withTargetAt(String targetAt) {
         this.targetAt = targetAt;
         return this;
     }
     
+    public RewardResourceAttributesInput(@JsonProperty("allocated_at") String allocatedAt, @JsonProperty("allocated_value") Double allocatedValue, @JsonProperty("description") String description) {
+        this.allocatedAt = allocatedAt;
+        this.allocatedValue = allocatedValue;
+        this.description = description;
+  }
 }

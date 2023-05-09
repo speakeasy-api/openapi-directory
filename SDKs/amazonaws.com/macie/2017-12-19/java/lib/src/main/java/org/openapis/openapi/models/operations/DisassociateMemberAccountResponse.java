@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateMemberAccountResponse {
     
     public String contentType;
+
     public DisassociateMemberAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateMemberAccountResponse {
      */
     
     public Object internalException;
+
     public DisassociateMemberAccountResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateMemberAccountResponse {
      */
     
     public Object invalidInputException;
+
     public DisassociateMemberAccountResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -36,6 +40,7 @@ public class DisassociateMemberAccountResponse {
     
     
     public Integer statusCode;
+
     public DisassociateMemberAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DisassociateMemberAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateMemberAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisassociateMemberAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

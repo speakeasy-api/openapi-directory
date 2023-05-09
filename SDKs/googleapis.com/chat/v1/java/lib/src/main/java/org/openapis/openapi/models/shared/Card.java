@@ -18,6 +18,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardActions")
     public CardAction[] cardActions;
+
     public Card withCardActions(CardAction[] cardActions) {
         this.cardActions = cardActions;
         return this;
@@ -26,6 +27,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("header")
     public CardHeader header;
+
     public Card withHeader(CardHeader header) {
         this.header = header;
         return this;
@@ -37,6 +39,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Card withName(String name) {
         this.name = name;
         return this;
@@ -48,9 +51,11 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sections")
     public Section[] sections;
+
     public Card withSections(Section[] sections) {
         this.sections = sections;
         return this;
     }
     
+    public Card(){}
 }

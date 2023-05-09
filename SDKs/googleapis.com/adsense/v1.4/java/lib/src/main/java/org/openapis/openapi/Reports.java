@@ -58,11 +58,9 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseReportsGenerateResponse res = new org.openapis.openapi.models.operations.AdsenseReportsGenerateResponse() {{
+        org.openapis.openapi.models.operations.AdsenseReportsGenerateResponse res = new org.openapis.openapi.models.operations.AdsenseReportsGenerateResponse(contentType, httpRes.statusCode()) {{
             adsenseReportsGenerateResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseReportsSavedGenerateResponse res = new org.openapis.openapi.models.operations.AdsenseReportsSavedGenerateResponse() {{
+        org.openapis.openapi.models.operations.AdsenseReportsSavedGenerateResponse res = new org.openapis.openapi.models.operations.AdsenseReportsSavedGenerateResponse(contentType, httpRes.statusCode()) {{
             adsenseReportsGenerateResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -150,11 +146,9 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseReportsSavedListResponse res = new org.openapis.openapi.models.operations.AdsenseReportsSavedListResponse() {{
+        org.openapis.openapi.models.operations.AdsenseReportsSavedListResponse res = new org.openapis.openapi.models.operations.AdsenseReportsSavedListResponse(contentType, httpRes.statusCode()) {{
             savedReports = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

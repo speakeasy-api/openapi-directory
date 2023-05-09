@@ -19,6 +19,7 @@ public class Call {
      */
     @JsonProperty("accountId")
     public Long accountId;
+
     public Call withAccountId(Long accountId) {
         this.accountId = accountId;
         return this;
@@ -31,6 +32,7 @@ public class Call {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("answerTime")
     public LocalDate answerTime;
+
     public Call withAnswerTime(LocalDate answerTime) {
         this.answerTime = answerTime;
         return this;
@@ -42,6 +44,7 @@ public class Call {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callerId")
     public String callerId;
+
     public Call withCallerId(String callerId) {
         this.callerId = callerId;
         return this;
@@ -52,6 +55,7 @@ public class Call {
      */
     @JsonProperty("direction")
     public CallDirectionEnum direction;
+
     public Call withDirection(CallDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -62,6 +66,7 @@ public class Call {
      */
     @JsonProperty("duration")
     public Long duration;
+
     public Call withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -74,6 +79,7 @@ public class Call {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("endTime")
     public LocalDate endTime;
+
     public Call withEndTime(LocalDate endTime) {
         this.endTime = endTime;
         return this;
@@ -85,6 +91,7 @@ public class Call {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalId")
     public String externalId;
+
     public Call withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -95,6 +102,7 @@ public class Call {
      */
     @JsonProperty("id")
     public Long id;
+
     public Call withId(Long id) {
         this.id = id;
         return this;
@@ -105,6 +113,7 @@ public class Call {
      */
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public Call withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -116,6 +125,7 @@ public class Call {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("startTime")
     public LocalDate startTime;
+
     public Call withStartTime(LocalDate startTime) {
         this.startTime = startTime;
         return this;
@@ -126,6 +136,7 @@ public class Call {
      */
     @JsonProperty("state")
     public CallStateEnum state;
+
     public Call withState(CallStateEnum state) {
         this.state = state;
         return this;
@@ -136,6 +147,7 @@ public class Call {
      */
     @JsonProperty("type")
     public CallTypeEnum type;
+
     public Call withType(CallTypeEnum type) {
         this.type = type;
         return this;
@@ -146,6 +158,7 @@ public class Call {
      */
     @JsonProperty("uciId")
     public Long uciId;
+
     public Call withUciId(Long uciId) {
         this.uciId = uciId;
         return this;
@@ -156,9 +169,22 @@ public class Call {
      */
     @JsonProperty("userId")
     public Long userId;
+
     public Call withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public Call(@JsonProperty("accountId") Long accountId, @JsonProperty("direction") CallDirectionEnum direction, @JsonProperty("duration") Long duration, @JsonProperty("id") Long id, @JsonProperty("phoneNumber") String phoneNumber, @JsonProperty("startTime") LocalDate startTime, @JsonProperty("state") CallStateEnum state, @JsonProperty("type") CallTypeEnum type, @JsonProperty("uciId") Long uciId, @JsonProperty("userId") Long userId) {
+        this.accountId = accountId;
+        this.direction = direction;
+        this.duration = duration;
+        this.id = id;
+        this.phoneNumber = phoneNumber;
+        this.startTime = startTime;
+        this.state = state;
+        this.type = type;
+        this.uciId = uciId;
+        this.userId = userId;
+  }
 }

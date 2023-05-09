@@ -3,48 +3,46 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.BatchCheckLayerAvailabilityXAmzTargetEnum;
 import org.openapis.openapi.models.operations.BatchCheckLayerAvailabilityRequest;
 import org.openapis.openapi.models.operations.BatchCheckLayerAvailabilityResponse;
+import org.openapis.openapi.models.operations.BatchCheckLayerAvailabilityXAmzTargetEnum;
 import org.openapis.openapi.models.shared.BatchCheckLayerAvailabilityRequest;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            BatchCheckLayerAvailabilityRequest req = new BatchCheckLayerAvailabilityRequest() {{
-                batchCheckLayerAvailabilityRequest = new BatchCheckLayerAvailabilityRequest() {{
-                    layerDigests = new String[]{{
-                        add("provident"),
-                        add("distinctio"),
-                        add("quibusdam"),
-                    }};
-                    registryId = "unde";
-                    repositoryName = "nulla";
-                }};
-                xAmzAlgorithm = "corrupti";
-                xAmzContentSha256 = "illum";
-                xAmzCredential = "vel";
-                xAmzDate = "error";
-                xAmzSecurityToken = "deserunt";
-                xAmzSignature = "suscipit";
-                xAmzSignedHeaders = "iure";
-                xAmzTarget = "AmazonEC2ContainerRegistry_V20150921.BatchCheckLayerAvailability";
-            }}            
+            BatchCheckLayerAvailabilityRequest req = new BatchCheckLayerAvailabilityRequest(                new BatchCheckLayerAvailabilityRequest(                new String[]{{
+                                                add("distinctio"),
+                                                add("quibusdam"),
+                                                add("unde"),
+                                            }}, "nulla") {{
+                                registryId = "corrupti";
+                            }};, BatchCheckLayerAvailabilityXAmzTargetEnum.AMAZON_EC2_CONTAINER_REGISTRY_V20150921_BATCH_CHECK_LAYER_AVAILABILITY) {{
+                xAmzAlgorithm = "illum";
+                xAmzContentSha256 = "vel";
+                xAmzCredential = "error";
+                xAmzDate = "deserunt";
+                xAmzSecurityToken = "suscipit";
+                xAmzSignature = "iure";
+                xAmzSignedHeaders = "magnam";
+            }};            
 
             BatchCheckLayerAvailabilityResponse res = sdk.batchCheckLayerAvailability(req);
 
-            if (res.batchCheckLayerAvailabilityResponse.isPresent()) {
+            if (res.batchCheckLayerAvailabilityResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

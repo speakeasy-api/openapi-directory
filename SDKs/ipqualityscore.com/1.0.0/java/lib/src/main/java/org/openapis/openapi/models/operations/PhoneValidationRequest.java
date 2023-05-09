@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PhoneValidationRequest {
@@ -12,6 +13,7 @@ public class PhoneValidationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=USER_PHONE_HERE")
     public String userPhoneHere;
+
     public PhoneValidationRequest withUserPhoneHere(String userPhoneHere) {
         this.userPhoneHere = userPhoneHere;
         return this;
@@ -22,6 +24,7 @@ public class PhoneValidationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=YOUR_API_KEY_HERE")
     public String yourApiKeyHere;
+
     public PhoneValidationRequest withYourApiKeyHere(String yourApiKeyHere) {
         this.yourApiKeyHere = yourApiKeyHere;
         return this;
@@ -32,9 +35,14 @@ public class PhoneValidationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public PhoneValidationRequest withCountry(String country) {
         this.country = country;
         return this;
     }
     
+    public PhoneValidationRequest(@JsonProperty("USER_PHONE_HERE") String userPhoneHere, @JsonProperty("YOUR_API_KEY_HERE") String yourApiKeyHere) {
+        this.userPhoneHere = userPhoneHere;
+        this.yourApiKeyHere = yourApiKeyHere;
+  }
 }

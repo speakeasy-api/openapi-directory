@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateBackupResponse {
@@ -12,6 +13,7 @@ public class CreateBackupResponse {
      */
     
     public Object backupInUseException;
+
     public CreateBackupResponse withBackupInUseException(Object backupInUseException) {
         this.backupInUseException = backupInUseException;
         return this;
@@ -19,6 +21,7 @@ public class CreateBackupResponse {
     
     
     public String contentType;
+
     public CreateBackupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateBackupResponse {
      */
     
     public Object continuousBackupsUnavailableException;
+
     public CreateBackupResponse withContinuousBackupsUnavailableException(Object continuousBackupsUnavailableException) {
         this.continuousBackupsUnavailableException = continuousBackupsUnavailableException;
         return this;
@@ -39,6 +43,7 @@ public class CreateBackupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateBackupOutput createBackupOutput;
+
     public CreateBackupResponse withCreateBackupOutput(org.openapis.openapi.models.shared.CreateBackupOutput createBackupOutput) {
         this.createBackupOutput = createBackupOutput;
         return this;
@@ -49,6 +54,7 @@ public class CreateBackupResponse {
      */
     
     public Object internalServerError;
+
     public CreateBackupResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class CreateBackupResponse {
      */
     
     public Object limitExceededException;
+
     public CreateBackupResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateBackupResponse {
     
     
     public Integer statusCode;
+
     public CreateBackupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateBackupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateBackupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateBackupResponse {
      */
     
     public Object tableInUseException;
+
     public CreateBackupResponse withTableInUseException(Object tableInUseException) {
         this.tableInUseException = tableInUseException;
         return this;
@@ -93,9 +103,14 @@ public class CreateBackupResponse {
      */
     
     public Object tableNotFoundException;
+
     public CreateBackupResponse withTableNotFoundException(Object tableNotFoundException) {
         this.tableNotFoundException = tableNotFoundException;
         return this;
     }
     
+    public CreateBackupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

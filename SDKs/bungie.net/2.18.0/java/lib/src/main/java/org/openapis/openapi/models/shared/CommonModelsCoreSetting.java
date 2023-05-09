@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class CommonModelsCoreSetting {
     
     public CommonModelsCoreSetting[] childSettings;
+
     public CommonModelsCoreSetting withChildSettings(CommonModelsCoreSetting[] childSettings) {
         this.childSettings = childSettings;
         return this;
@@ -16,6 +17,7 @@ public class CommonModelsCoreSetting {
     
     
     public String displayName;
+
     public CommonModelsCoreSetting withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -23,6 +25,7 @@ public class CommonModelsCoreSetting {
     
     
     public String identifier;
+
     public CommonModelsCoreSetting withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -30,6 +33,7 @@ public class CommonModelsCoreSetting {
     
     
     public String imagePath;
+
     public CommonModelsCoreSetting withImagePath(String imagePath) {
         this.imagePath = imagePath;
         return this;
@@ -37,6 +41,7 @@ public class CommonModelsCoreSetting {
     
     
     public Boolean isDefault;
+
     public CommonModelsCoreSetting withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -44,9 +49,11 @@ public class CommonModelsCoreSetting {
     
     
     public String summary;
+
     public CommonModelsCoreSetting withSummary(String summary) {
         this.summary = summary;
         return this;
     }
     
+    public CommonModelsCoreSetting(){}
 }

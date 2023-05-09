@@ -15,6 +15,7 @@ public class Graph {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("edges")
     public Edge[] edges;
+
     public Graph withEdges(Edge[] edges) {
         this.edges = edges;
         return this;
@@ -26,9 +27,11 @@ public class Graph {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodes")
     public Node[] nodes;
+
     public Graph withNodes(Node[] nodes) {
         this.nodes = nodes;
         return this;
     }
     
+    public Graph(){}
 }

@@ -12,9 +12,13 @@ public class PostPortfolioAnalysisTrackingError200ApplicationJSONPortfolios {
      */
     @JsonProperty("portfolioTrackingError")
     public Double portfolioTrackingError;
+
     public PostPortfolioAnalysisTrackingError200ApplicationJSONPortfolios withPortfolioTrackingError(Double portfolioTrackingError) {
         this.portfolioTrackingError = portfolioTrackingError;
         return this;
     }
     
+    public PostPortfolioAnalysisTrackingError200ApplicationJSONPortfolios(@JsonProperty("portfolioTrackingError") Double portfolioTrackingError) {
+        this.portfolioTrackingError = portfolioTrackingError;
+  }
 }

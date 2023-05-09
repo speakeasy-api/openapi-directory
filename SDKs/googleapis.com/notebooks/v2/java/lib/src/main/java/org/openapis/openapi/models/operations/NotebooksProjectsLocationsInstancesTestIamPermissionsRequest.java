@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NotebooksProjectsLocationsInstancesTestIamPermissionsRequest {
@@ -12,6 +13,7 @@ public class NotebooksProjectsLocationsInstancesTestIamPermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public NotebooksProjectsLocationsInstancesTestIamPermissionsRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class NotebooksProjectsLocationsInstancesTestIamPermissionsRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TestIamPermissionsRequest testIamPermissionsRequest;
+
     public NotebooksProjectsLocationsInstancesTestIamPermissionsRequest withTestIamPermissionsRequest(org.openapis.openapi.models.shared.TestIamPermissionsRequest testIamPermissionsRequest) {
         this.testIamPermissionsRequest = testIamPermissionsRequest;
         return this;
@@ -29,6 +32,7 @@ public class NotebooksProjectsLocationsInstancesTestIamPermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public NotebooksProjectsLocationsInstancesTestIamPermissionsRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class NotebooksProjectsLocationsInstancesTestIamPermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public NotebooksProjectsLocationsInstancesTestIamPermissionsRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class NotebooksProjectsLocationsInstancesTestIamPermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public NotebooksProjectsLocationsInstancesTestIamPermissionsRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class NotebooksProjectsLocationsInstancesTestIamPermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public NotebooksProjectsLocationsInstancesTestIamPermissionsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class NotebooksProjectsLocationsInstancesTestIamPermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public NotebooksProjectsLocationsInstancesTestIamPermissionsRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class NotebooksProjectsLocationsInstancesTestIamPermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public NotebooksProjectsLocationsInstancesTestIamPermissionsRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class NotebooksProjectsLocationsInstancesTestIamPermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public NotebooksProjectsLocationsInstancesTestIamPermissionsRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -99,6 +109,7 @@ public class NotebooksProjectsLocationsInstancesTestIamPermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public NotebooksProjectsLocationsInstancesTestIamPermissionsRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -109,6 +120,7 @@ public class NotebooksProjectsLocationsInstancesTestIamPermissionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resource")
     public String resource;
+
     public NotebooksProjectsLocationsInstancesTestIamPermissionsRequest withResource(String resource) {
         this.resource = resource;
         return this;
@@ -119,6 +131,7 @@ public class NotebooksProjectsLocationsInstancesTestIamPermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public NotebooksProjectsLocationsInstancesTestIamPermissionsRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -129,9 +142,13 @@ public class NotebooksProjectsLocationsInstancesTestIamPermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public NotebooksProjectsLocationsInstancesTestIamPermissionsRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public NotebooksProjectsLocationsInstancesTestIamPermissionsRequest(@JsonProperty("resource") String resource) {
+        this.resource = resource;
+  }
 }

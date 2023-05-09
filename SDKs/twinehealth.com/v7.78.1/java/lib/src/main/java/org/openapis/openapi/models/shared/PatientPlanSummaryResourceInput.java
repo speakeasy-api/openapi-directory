@@ -12,6 +12,7 @@ public class PatientPlanSummaryResourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public PatientPlanSummaryResourceAttributesInput attributes;
+
     public PatientPlanSummaryResourceInput withAttributes(PatientPlanSummaryResourceAttributesInput attributes) {
         this.attributes = attributes;
         return this;
@@ -19,6 +20,7 @@ public class PatientPlanSummaryResourceInput {
     
     @JsonProperty("id")
     public String id;
+
     public PatientPlanSummaryResourceInput withId(String id) {
         this.id = id;
         return this;
@@ -27,6 +29,7 @@ public class PatientPlanSummaryResourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationships")
     public PatientPlanSummaryResourceRelationships relationships;
+
     public PatientPlanSummaryResourceInput withRelationships(PatientPlanSummaryResourceRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -34,9 +37,14 @@ public class PatientPlanSummaryResourceInput {
     
     @JsonProperty("type")
     public PatientPlanSummaryResourceTypeEnum type;
+
     public PatientPlanSummaryResourceInput withType(PatientPlanSummaryResourceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PatientPlanSummaryResourceInput(@JsonProperty("id") String id, @JsonProperty("type") PatientPlanSummaryResourceTypeEnum type) {
+        this.id = id;
+        this.type = type;
+  }
 }

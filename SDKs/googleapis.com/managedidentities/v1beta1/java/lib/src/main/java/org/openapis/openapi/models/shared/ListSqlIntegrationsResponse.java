@@ -18,6 +18,7 @@ public class ListSqlIntegrationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListSqlIntegrationsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListSqlIntegrationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sqlIntegrations")
     public SqlIntegration[] sqlIntegrations;
+
     public ListSqlIntegrationsResponse withSqlIntegrations(SqlIntegration[] sqlIntegrations) {
         this.sqlIntegrations = sqlIntegrations;
         return this;
@@ -40,9 +42,11 @@ public class ListSqlIntegrationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListSqlIntegrationsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListSqlIntegrationsResponse(){}
 }

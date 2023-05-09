@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MetalsSpotRatioSummaryGETRequest {
@@ -12,6 +13,7 @@ public class MetalsSpotRatioSummaryGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public MetalsSpotRatioSummaryGETFormatEnum format;
+
     public MetalsSpotRatioSummaryGETRequest withFormat(MetalsSpotRatioSummaryGETFormatEnum format) {
         this.format = format;
         return this;
@@ -22,9 +24,13 @@ public class MetalsSpotRatioSummaryGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pairs")
     public String pairs;
+
     public MetalsSpotRatioSummaryGETRequest withPairs(String pairs) {
         this.pairs = pairs;
         return this;
     }
     
+    public MetalsSpotRatioSummaryGETRequest(@JsonProperty("pairs") String pairs) {
+        this.pairs = pairs;
+  }
 }

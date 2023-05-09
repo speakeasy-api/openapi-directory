@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateScriptRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Script script;
+
     public UpdateScriptRequest withScript(org.openapis.openapi.models.shared.Script script) {
         this.script = script;
         return this;
@@ -19,9 +21,13 @@ public class UpdateScriptRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scriptId")
     public String scriptId;
+
     public UpdateScriptRequest withScriptId(String scriptId) {
         this.scriptId = scriptId;
         return this;
     }
     
+    public UpdateScriptRequest(@JsonProperty("scriptId") String scriptId) {
+        this.scriptId = scriptId;
+  }
 }

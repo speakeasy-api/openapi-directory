@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateResourceDataSyncResponse {
     
     public String contentType;
+
     public UpdateResourceDataSyncResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateResourceDataSyncResponse {
      */
     
     public Object internalServerError;
+
     public UpdateResourceDataSyncResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class UpdateResourceDataSyncResponse {
      */
     
     public Object resourceDataSyncConflictException;
+
     public UpdateResourceDataSyncResponse withResourceDataSyncConflictException(Object resourceDataSyncConflictException) {
         this.resourceDataSyncConflictException = resourceDataSyncConflictException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateResourceDataSyncResponse {
     
     
     public Integer statusCode;
+
     public UpdateResourceDataSyncResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateResourceDataSyncResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateResourceDataSyncResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateResourceDataSyncResponse {
      */
     
     public Object resourceDataSyncInvalidConfigurationException;
+
     public UpdateResourceDataSyncResponse withResourceDataSyncInvalidConfigurationException(Object resourceDataSyncInvalidConfigurationException) {
         this.resourceDataSyncInvalidConfigurationException = resourceDataSyncInvalidConfigurationException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateResourceDataSyncResponse {
      */
     
     public Object resourceDataSyncNotFoundException;
+
     public UpdateResourceDataSyncResponse withResourceDataSyncNotFoundException(Object resourceDataSyncNotFoundException) {
         this.resourceDataSyncNotFoundException = resourceDataSyncNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateResourceDataSyncResponse {
      */
     
     public java.util.Map<String, Object> updateResourceDataSyncResult;
+
     public UpdateResourceDataSyncResponse withUpdateResourceDataSyncResult(java.util.Map<String, Object> updateResourceDataSyncResult) {
         this.updateResourceDataSyncResult = updateResourceDataSyncResult;
         return this;
     }
     
+    public UpdateResourceDataSyncResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

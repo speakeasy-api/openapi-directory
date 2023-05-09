@@ -57,15 +57,13 @@ public class PeerDetection {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPeersListResponse res = new org.openapis.openapi.models.operations.GetPeersListResponse() {{
+        org.openapis.openapi.models.operations.GetPeersListResponse res = new org.openapis.openapi.models.operations.GetPeersListResponse(contentType, httpRes.statusCode()) {{
             body = null;
             getPeersList400WildcardString = null;
             getPeersList401WildcardString = null;
             getPeersList404WildcardString = null;
             getPeersList409WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

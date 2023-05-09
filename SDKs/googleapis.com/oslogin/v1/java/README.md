@@ -16,14 +16,13 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
+import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileRequest;
+import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileResponse;
+import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileSecurity;
 import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileSecurityOption1;
 import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileSecurityOption2;
 import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileSecurityOption3;
 import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileSecurityOption4;
-import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileSecurity;
-import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileRequest;
-import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -33,14 +32,13 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            OsloginUsersGetLoginProfileRequest req = new OsloginUsersGetLoginProfileRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                callback = "quibusdam";
-                fields = "unde";
-                key = "nulla";
-                name = "corrupti";
+            OsloginUsersGetLoginProfileRequest req = new OsloginUsersGetLoginProfileRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
+                callback = "unde";
+                fields = "nulla";
+                key = "corrupti";
                 oauthToken = "illum";
                 prettyPrint = false;
                 projectId = "vel";
@@ -48,21 +46,23 @@ public class Application {
                 systemId = "deserunt";
                 uploadType = "suscipit";
                 uploadProtocol = "iure";
-            }}            
+            }};            
 
             OsloginUsersGetLoginProfileResponse res = sdk.users.osloginUsersGetLoginProfile(req, new OsloginUsersGetLoginProfileSecurity() {{
-                option1 = new OsloginUsersGetLoginProfileSecurityOption1() {{
+                option1 = new OsloginUsersGetLoginProfileSecurityOption1("magnam", "debitis") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.loginProfile.isPresent()) {
+            if (res.loginProfile != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -70,14 +70,14 @@ public class Application {
 ## Available Resources and Operations
 
 
-### users
+### [users](docs/users/README.md)
 
-* `osloginUsersGetLoginProfile` - Retrieves the profile information used for logging in to a virtual machine on Google Compute Engine.
-* `osloginUsersImportSshPublicKey` - Adds an SSH public key and returns the profile information. Default POSIX account information is set when no username and UID exist as part of the login profile.
-* `osloginUsersSshPublicKeysCreate` - Create an SSH public key
-* `osloginUsersSshPublicKeysDelete` - Deletes an SSH public key.
-* `osloginUsersSshPublicKeysGet` - Retrieves an SSH public key.
-* `osloginUsersSshPublicKeysPatch` - Updates an SSH public key and returns the profile information. This method supports patch semantics.
+* [osloginUsersGetLoginProfile](docs/users/README.md#osloginusersgetloginprofile) - Retrieves the profile information used for logging in to a virtual machine on Google Compute Engine.
+* [osloginUsersImportSshPublicKey](docs/users/README.md#osloginusersimportsshpublickey) - Adds an SSH public key and returns the profile information. Default POSIX account information is set when no username and UID exist as part of the login profile.
+* [osloginUsersSshPublicKeysCreate](docs/users/README.md#osloginuserssshpublickeyscreate) - Create an SSH public key
+* [osloginUsersSshPublicKeysDelete](docs/users/README.md#osloginuserssshpublickeysdelete) - Deletes an SSH public key.
+* [osloginUsersSshPublicKeysGet](docs/users/README.md#osloginuserssshpublickeysget) - Retrieves an SSH public key.
+* [osloginUsersSshPublicKeysPatch](docs/users/README.md#osloginuserssshpublickeyspatch) - Updates an SSH public key and returns the profile information. This method supports patch semantics.
 <!-- End SDK Available Operations -->
 
 ### Maturity

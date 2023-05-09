@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudchannelAccountsCustomersEntitlementsLookupOfferResponse {
     
     public String contentType;
+
     public CloudchannelAccountsCustomersEntitlementsLookupOfferResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudchannelAccountsCustomersEntitlementsLookupOfferResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudChannelV1Offer googleCloudChannelV1Offer;
+
     public CloudchannelAccountsCustomersEntitlementsLookupOfferResponse withGoogleCloudChannelV1Offer(org.openapis.openapi.models.shared.GoogleCloudChannelV1Offer googleCloudChannelV1Offer) {
         this.googleCloudChannelV1Offer = googleCloudChannelV1Offer;
         return this;
@@ -26,6 +29,7 @@ public class CloudchannelAccountsCustomersEntitlementsLookupOfferResponse {
     
     
     public Integer statusCode;
+
     public CloudchannelAccountsCustomersEntitlementsLookupOfferResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudchannelAccountsCustomersEntitlementsLookupOfferResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudchannelAccountsCustomersEntitlementsLookupOfferResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudchannelAccountsCustomersEntitlementsLookupOfferResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

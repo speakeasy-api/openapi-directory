@@ -15,6 +15,7 @@ public class ListStreamsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterBy")
     public ListStreamsRequestBodyFilterBy filterBy;
+
     public ListStreamsRequestBody withFilterBy(ListStreamsRequestBodyFilterBy filterBy) {
         this.filterBy = filterBy;
         return this;
@@ -26,6 +27,7 @@ public class ListStreamsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListStreamsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +39,11 @@ public class ListStreamsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListStreamsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListStreamsRequestBody(){}
 }

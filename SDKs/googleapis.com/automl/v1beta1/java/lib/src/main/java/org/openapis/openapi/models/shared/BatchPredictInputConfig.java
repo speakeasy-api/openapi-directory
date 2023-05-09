@@ -18,6 +18,7 @@ public class BatchPredictInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bigquerySource")
     public BigQuerySource bigquerySource;
+
     public BatchPredictInputConfig withBigquerySource(BigQuerySource bigquerySource) {
         this.bigquerySource = bigquerySource;
         return this;
@@ -29,9 +30,11 @@ public class BatchPredictInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsSource")
     public GcsSource gcsSource;
+
     public BatchPredictInputConfig withGcsSource(GcsSource gcsSource) {
         this.gcsSource = gcsSource;
         return this;
     }
     
+    public BatchPredictInputConfig(){}
 }

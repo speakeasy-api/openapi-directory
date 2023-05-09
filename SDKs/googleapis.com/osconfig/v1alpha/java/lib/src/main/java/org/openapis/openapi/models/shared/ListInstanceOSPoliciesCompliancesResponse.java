@@ -18,6 +18,7 @@ public class ListInstanceOSPoliciesCompliancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceOsPoliciesCompliances")
     public InstanceOSPoliciesCompliance[] instanceOsPoliciesCompliances;
+
     public ListInstanceOSPoliciesCompliancesResponse withInstanceOsPoliciesCompliances(InstanceOSPoliciesCompliance[] instanceOsPoliciesCompliances) {
         this.instanceOsPoliciesCompliances = instanceOsPoliciesCompliances;
         return this;
@@ -29,9 +30,11 @@ public class ListInstanceOSPoliciesCompliancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListInstanceOSPoliciesCompliancesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListInstanceOSPoliciesCompliancesResponse(){}
 }

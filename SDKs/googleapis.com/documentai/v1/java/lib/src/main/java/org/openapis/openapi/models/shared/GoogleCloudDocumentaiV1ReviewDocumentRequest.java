@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleCloudDocumentaiV1ReviewDocumentRequest - Request message for review document method.
+ * GoogleCloudDocumentaiV1ReviewDocumentRequest - Request message for the ReviewDocument method.
  */
 public class GoogleCloudDocumentaiV1ReviewDocumentRequest {
     /**
@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1ReviewDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentSchema")
     public GoogleCloudDocumentaiV1DocumentSchema documentSchema;
+
     public GoogleCloudDocumentaiV1ReviewDocumentRequest withDocumentSchema(GoogleCloudDocumentaiV1DocumentSchema documentSchema) {
         this.documentSchema = documentSchema;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1ReviewDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableSchemaValidation")
     public Boolean enableSchemaValidation;
+
     public GoogleCloudDocumentaiV1ReviewDocumentRequest withEnableSchemaValidation(Boolean enableSchemaValidation) {
         this.enableSchemaValidation = enableSchemaValidation;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1ReviewDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inlineDocument")
     public GoogleCloudDocumentaiV1Document inlineDocument;
+
     public GoogleCloudDocumentaiV1ReviewDocumentRequest withInlineDocument(GoogleCloudDocumentaiV1Document inlineDocument) {
         this.inlineDocument = inlineDocument;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDocumentaiV1ReviewDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public GoogleCloudDocumentaiV1ReviewDocumentRequestPriorityEnum priority;
+
     public GoogleCloudDocumentaiV1ReviewDocumentRequest withPriority(GoogleCloudDocumentaiV1ReviewDocumentRequestPriorityEnum priority) {
         this.priority = priority;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1ReviewDocumentRequest(){}
 }

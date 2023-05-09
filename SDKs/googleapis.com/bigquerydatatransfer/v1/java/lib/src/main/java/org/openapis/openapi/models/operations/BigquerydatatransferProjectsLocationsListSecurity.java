@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class BigquerydatatransferProjectsLocationsListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public BigquerydatatransferProjectsLocationsListSecurityOption1 option1;
+
     public BigquerydatatransferProjectsLocationsListSecurity withOption1(BigquerydatatransferProjectsLocationsListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class BigquerydatatransferProjectsLocationsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigquerydatatransferProjectsLocationsListSecurityOption2 option2;
+
     public BigquerydatatransferProjectsLocationsListSecurity withOption2(BigquerydatatransferProjectsLocationsListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class BigquerydatatransferProjectsLocationsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigquerydatatransferProjectsLocationsListSecurityOption3 option3;
+
     public BigquerydatatransferProjectsLocationsListSecurity withOption3(BigquerydatatransferProjectsLocationsListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public BigquerydatatransferProjectsLocationsListSecurity(){}
 }

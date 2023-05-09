@@ -18,6 +18,7 @@ public class QueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public QueryResponsePayload payload;
+
     public QueryResponse withPayload(QueryResponsePayload payload) {
         this.payload = payload;
         return this;
@@ -29,9 +30,11 @@ public class QueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public QueryResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public QueryResponse(){}
 }

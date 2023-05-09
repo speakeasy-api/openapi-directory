@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DirectoryServiceAuthenticationRequest {
     
     public String directoryId;
+
     public DirectoryServiceAuthenticationRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
     }
     
+    public DirectoryServiceAuthenticationRequest(){}
 }

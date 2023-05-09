@@ -18,9 +18,11 @@ public class SourceHierarchyDatasets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetTemplate")
     public DatasetTemplate datasetTemplate;
+
     public SourceHierarchyDatasets withDatasetTemplate(DatasetTemplate datasetTemplate) {
         this.datasetTemplate = datasetTemplate;
         return this;
     }
     
+    public SourceHierarchyDatasets(){}
 }

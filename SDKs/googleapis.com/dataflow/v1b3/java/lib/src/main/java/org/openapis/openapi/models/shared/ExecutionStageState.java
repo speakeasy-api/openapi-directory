@@ -18,6 +18,7 @@ public class ExecutionStageState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentStateTime")
     public String currentStateTime;
+
     public ExecutionStageState withCurrentStateTime(String currentStateTime) {
         this.currentStateTime = currentStateTime;
         return this;
@@ -29,6 +30,7 @@ public class ExecutionStageState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionStageName")
     public String executionStageName;
+
     public ExecutionStageState withExecutionStageName(String executionStageName) {
         this.executionStageName = executionStageName;
         return this;
@@ -40,9 +42,11 @@ public class ExecutionStageState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionStageState")
     public ExecutionStageStateExecutionStageStateEnum executionStageState;
+
     public ExecutionStageState withExecutionStageState(ExecutionStageStateExecutionStageStateEnum executionStageState) {
         this.executionStageState = executionStageState;
         return this;
     }
     
+    public ExecutionStageState(){}
 }

@@ -22,6 +22,7 @@ public class Filter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public Filter withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -30,6 +31,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetGroupArn")
     public String datasetGroupArn;
+
     public Filter withDatasetGroupArn(String datasetGroupArn) {
         this.datasetGroupArn = datasetGroupArn;
         return this;
@@ -38,6 +40,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public Filter withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -46,6 +49,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterArn")
     public String filterArn;
+
     public Filter withFilterArn(String filterArn) {
         this.filterArn = filterArn;
         return this;
@@ -54,6 +58,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterExpression")
     public String filterExpression;
+
     public Filter withFilterExpression(String filterExpression) {
         this.filterExpression = filterExpression;
         return this;
@@ -64,6 +69,7 @@ public class Filter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public Filter withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -72,6 +78,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Filter withName(String name) {
         this.name = name;
         return this;
@@ -80,9 +87,11 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Filter withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public Filter(){}
 }

@@ -18,6 +18,7 @@ public class ScriptError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("column")
     public String column;
+
     public ScriptError withColumn(String column) {
         this.column = column;
         return this;
@@ -29,6 +30,7 @@ public class ScriptError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public ScriptErrorErrorCodeEnum errorCode;
+
     public ScriptError withErrorCode(ScriptErrorErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -40,6 +42,7 @@ public class ScriptError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public ScriptError withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -51,9 +54,11 @@ public class ScriptError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line")
     public String line;
+
     public ScriptError withLine(String line) {
         this.line = line;
         return this;
     }
     
+    public ScriptError(){}
 }

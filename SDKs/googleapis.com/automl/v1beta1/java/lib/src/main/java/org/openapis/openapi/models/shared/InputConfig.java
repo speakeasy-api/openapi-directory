@@ -18,6 +18,7 @@ public class InputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bigquerySource")
     public BigQuerySource bigquerySource;
+
     public InputConfig withBigquerySource(BigQuerySource bigquerySource) {
         this.bigquerySource = bigquerySource;
         return this;
@@ -29,6 +30,7 @@ public class InputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsSource")
     public GcsSource gcsSource;
+
     public InputConfig withGcsSource(GcsSource gcsSource) {
         this.gcsSource = gcsSource;
         return this;
@@ -40,9 +42,11 @@ public class InputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("params")
     public java.util.Map<String, String> params;
+
     public InputConfig withParams(java.util.Map<String, String> params) {
         this.params = params;
         return this;
     }
     
+    public InputConfig(){}
 }

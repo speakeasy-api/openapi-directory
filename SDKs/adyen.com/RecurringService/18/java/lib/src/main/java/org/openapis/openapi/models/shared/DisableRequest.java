@@ -20,6 +20,7 @@ public class DisableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contract")
     public String contract;
+
     public DisableRequest withContract(String contract) {
         this.contract = contract;
         return this;
@@ -30,6 +31,7 @@ public class DisableRequest {
      */
     @JsonProperty("merchantAccount")
     public String merchantAccount;
+
     public DisableRequest withMerchantAccount(String merchantAccount) {
         this.merchantAccount = merchantAccount;
         return this;
@@ -43,6 +45,7 @@ public class DisableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurringDetailReference")
     public String recurringDetailReference;
+
     public DisableRequest withRecurringDetailReference(String recurringDetailReference) {
         this.recurringDetailReference = recurringDetailReference;
         return this;
@@ -55,9 +58,14 @@ public class DisableRequest {
      */
     @JsonProperty("shopperReference")
     public String shopperReference;
+
     public DisableRequest withShopperReference(String shopperReference) {
         this.shopperReference = shopperReference;
         return this;
     }
     
+    public DisableRequest(@JsonProperty("merchantAccount") String merchantAccount, @JsonProperty("shopperReference") String shopperReference) {
+        this.merchantAccount = merchantAccount;
+        this.shopperReference = shopperReference;
+  }
 }

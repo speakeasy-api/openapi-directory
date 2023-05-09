@@ -18,6 +18,7 @@ public class DuplicateObjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public DuplicateObjectRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -29,9 +30,11 @@ public class DuplicateObjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectIds")
     public java.util.Map<String, String> objectIds;
+
     public DuplicateObjectRequest withObjectIds(java.util.Map<String, String> objectIds) {
         this.objectIds = objectIds;
         return this;
     }
     
+    public DuplicateObjectRequest(){}
 }

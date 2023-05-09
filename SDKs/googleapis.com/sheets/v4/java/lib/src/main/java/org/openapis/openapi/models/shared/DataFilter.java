@@ -18,6 +18,7 @@ public class DataFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("a1Range")
     public String a1Range;
+
     public DataFilter withA1Range(String a1Range) {
         this.a1Range = a1Range;
         return this;
@@ -29,6 +30,7 @@ public class DataFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("developerMetadataLookup")
     public DeveloperMetadataLookup developerMetadataLookup;
+
     public DataFilter withDeveloperMetadataLookup(DeveloperMetadataLookup developerMetadataLookup) {
         this.developerMetadataLookup = developerMetadataLookup;
         return this;
@@ -40,9 +42,11 @@ public class DataFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gridRange")
     public GridRange gridRange;
+
     public DataFilter withGridRange(GridRange gridRange) {
         this.gridRange = gridRange;
         return this;
     }
     
+    public DataFilter(){}
 }

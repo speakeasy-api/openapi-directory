@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AmplitudeSourceProperties {
     @JsonProperty("object")
     public String object;
+
     public AmplitudeSourceProperties withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public AmplitudeSourceProperties(@JsonProperty("object") String object) {
+        this.object = object;
+  }
 }

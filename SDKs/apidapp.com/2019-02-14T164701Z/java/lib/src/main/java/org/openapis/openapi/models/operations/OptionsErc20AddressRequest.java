@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OptionsErc20AddressRequest {
@@ -12,9 +13,13 @@ public class OptionsErc20AddressRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=address")
     public String address;
+
     public OptionsErc20AddressRequest withAddress(String address) {
         this.address = address;
         return this;
     }
     
+    public OptionsErc20AddressRequest(@JsonProperty("address") String address) {
+        this.address = address;
+  }
 }

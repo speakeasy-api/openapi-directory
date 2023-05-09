@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InferenceRecommendation {
     @JsonProperty("EndpointConfiguration")
     public EndpointOutputConfiguration endpointConfiguration;
+
     public InferenceRecommendation withEndpointConfiguration(EndpointOutputConfiguration endpointConfiguration) {
         this.endpointConfiguration = endpointConfiguration;
         return this;
@@ -21,6 +22,7 @@ public class InferenceRecommendation {
     
     @JsonProperty("Metrics")
     public RecommendationMetrics metrics;
+
     public InferenceRecommendation withMetrics(RecommendationMetrics metrics) {
         this.metrics = metrics;
         return this;
@@ -28,6 +30,7 @@ public class InferenceRecommendation {
     
     @JsonProperty("ModelConfiguration")
     public ModelConfiguration modelConfiguration;
+
     public InferenceRecommendation withModelConfiguration(ModelConfiguration modelConfiguration) {
         this.modelConfiguration = modelConfiguration;
         return this;
@@ -36,9 +39,15 @@ public class InferenceRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommendationId")
     public String recommendationId;
+
     public InferenceRecommendation withRecommendationId(String recommendationId) {
         this.recommendationId = recommendationId;
         return this;
     }
     
+    public InferenceRecommendation(@JsonProperty("EndpointConfiguration") EndpointOutputConfiguration endpointConfiguration, @JsonProperty("Metrics") RecommendationMetrics metrics, @JsonProperty("ModelConfiguration") ModelConfiguration modelConfiguration) {
+        this.endpointConfiguration = endpointConfiguration;
+        this.metrics = metrics;
+        this.modelConfiguration = modelConfiguration;
+  }
 }

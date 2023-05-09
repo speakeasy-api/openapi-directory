@@ -15,6 +15,7 @@ public class SyncResourceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public ErrorDetails error;
+
     public SyncResourceStatus withError(ErrorDetails error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class SyncResourceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public SyncResourceStateEnum state;
+
     public SyncResourceStatus withState(SyncResourceStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public SyncResourceStatus(){}
 }

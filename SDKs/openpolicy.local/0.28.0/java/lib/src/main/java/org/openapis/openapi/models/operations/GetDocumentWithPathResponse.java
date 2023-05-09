@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDocumentWithPathResponse {
@@ -12,6 +13,7 @@ public class GetDocumentWithPathResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundred fourHundred;
+
     public GetDocumentWithPathResponse withFourHundred(org.openapis.openapi.models.shared.FourHundred fourHundred) {
         this.fourHundred = fourHundred;
         return this;
@@ -19,6 +21,7 @@ public class GetDocumentWithPathResponse {
     
     
     public String contentType;
+
     public GetDocumentWithPathResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetDocumentWithPathResponse {
     
     
     public Integer statusCode;
+
     public GetDocumentWithPathResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetDocumentWithPathResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDocumentWithPathResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetDocumentWithPathResponse {
      */
     
     public GetDocumentWithPath200ApplicationJSON getDocumentWithPath200ApplicationJSONObject;
+
     public GetDocumentWithPathResponse withGetDocumentWithPath200ApplicationJSONObject(GetDocumentWithPath200ApplicationJSON getDocumentWithPath200ApplicationJSONObject) {
         this.getDocumentWithPath200ApplicationJSONObject = getDocumentWithPath200ApplicationJSONObject;
         return this;
     }
     
+    public GetDocumentWithPathResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

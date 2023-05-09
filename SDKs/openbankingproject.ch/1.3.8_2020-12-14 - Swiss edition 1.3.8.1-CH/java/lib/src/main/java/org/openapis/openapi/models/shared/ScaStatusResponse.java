@@ -18,6 +18,7 @@ public class ScaStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("psuMessage")
     public String psuMessage;
+
     public ScaStatusResponse withPsuMessage(String psuMessage) {
         this.psuMessage = psuMessage;
         return this;
@@ -55,6 +56,7 @@ public class ScaStatusResponse {
      */
     @JsonProperty("scaStatus")
     public ScaStatusEnum scaStatus;
+
     public ScaStatusResponse withScaStatus(ScaStatusEnum scaStatus) {
         this.scaStatus = scaStatus;
         return this;
@@ -69,9 +71,13 @@ public class ScaStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trustedBeneficiaryFlag")
     public Boolean trustedBeneficiaryFlag;
+
     public ScaStatusResponse withTrustedBeneficiaryFlag(Boolean trustedBeneficiaryFlag) {
         this.trustedBeneficiaryFlag = trustedBeneficiaryFlag;
         return this;
     }
     
+    public ScaStatusResponse(@JsonProperty("scaStatus") ScaStatusEnum scaStatus) {
+        this.scaStatus = scaStatus;
+  }
 }

@@ -15,6 +15,7 @@ public class DocumentResponse {
      */
     @JsonProperty("Href")
     public String href;
+
     public DocumentResponse withHref(String href) {
         this.href = href;
         return this;
@@ -25,9 +26,14 @@ public class DocumentResponse {
      */
     @JsonProperty("Id")
     public String id;
+
     public DocumentResponse withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DocumentResponse(@JsonProperty("Href") String href, @JsonProperty("Id") String id) {
+        this.href = href;
+        this.id = id;
+  }
 }

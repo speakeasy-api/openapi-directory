@@ -15,6 +15,7 @@ public class EnterpriseCrmFrontendsEventbusProtoParameterValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("booleanArray")
     public EnterpriseCrmFrontendsEventbusProtoBooleanParameterArray booleanArray;
+
     public EnterpriseCrmFrontendsEventbusProtoParameterValueType withBooleanArray(EnterpriseCrmFrontendsEventbusProtoBooleanParameterArray booleanArray) {
         this.booleanArray = booleanArray;
         return this;
@@ -23,6 +24,7 @@ public class EnterpriseCrmFrontendsEventbusProtoParameterValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("booleanValue")
     public Boolean booleanValue;
+
     public EnterpriseCrmFrontendsEventbusProtoParameterValueType withBooleanValue(Boolean booleanValue) {
         this.booleanValue = booleanValue;
         return this;
@@ -31,6 +33,7 @@ public class EnterpriseCrmFrontendsEventbusProtoParameterValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleArray")
     public EnterpriseCrmFrontendsEventbusProtoDoubleParameterArray doubleArray;
+
     public EnterpriseCrmFrontendsEventbusProtoParameterValueType withDoubleArray(EnterpriseCrmFrontendsEventbusProtoDoubleParameterArray doubleArray) {
         this.doubleArray = doubleArray;
         return this;
@@ -39,6 +42,7 @@ public class EnterpriseCrmFrontendsEventbusProtoParameterValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleValue")
     public Double doubleValue;
+
     public EnterpriseCrmFrontendsEventbusProtoParameterValueType withDoubleValue(Double doubleValue) {
         this.doubleValue = doubleValue;
         return this;
@@ -47,6 +51,7 @@ public class EnterpriseCrmFrontendsEventbusProtoParameterValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intArray")
     public EnterpriseCrmFrontendsEventbusProtoIntParameterArray intArray;
+
     public EnterpriseCrmFrontendsEventbusProtoParameterValueType withIntArray(EnterpriseCrmFrontendsEventbusProtoIntParameterArray intArray) {
         this.intArray = intArray;
         return this;
@@ -55,6 +60,7 @@ public class EnterpriseCrmFrontendsEventbusProtoParameterValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intValue")
     public String intValue;
+
     public EnterpriseCrmFrontendsEventbusProtoParameterValueType withIntValue(String intValue) {
         this.intValue = intValue;
         return this;
@@ -63,6 +69,7 @@ public class EnterpriseCrmFrontendsEventbusProtoParameterValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jsonValue")
     public String jsonValue;
+
     public EnterpriseCrmFrontendsEventbusProtoParameterValueType withJsonValue(String jsonValue) {
         this.jsonValue = jsonValue;
         return this;
@@ -71,6 +78,7 @@ public class EnterpriseCrmFrontendsEventbusProtoParameterValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protoArray")
     public EnterpriseCrmFrontendsEventbusProtoProtoParameterArray protoArray;
+
     public EnterpriseCrmFrontendsEventbusProtoParameterValueType withProtoArray(EnterpriseCrmFrontendsEventbusProtoProtoParameterArray protoArray) {
         this.protoArray = protoArray;
         return this;
@@ -79,6 +87,7 @@ public class EnterpriseCrmFrontendsEventbusProtoParameterValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protoValue")
     public java.util.Map<String, Object> protoValue;
+
     public EnterpriseCrmFrontendsEventbusProtoParameterValueType withProtoValue(java.util.Map<String, Object> protoValue) {
         this.protoValue = protoValue;
         return this;
@@ -87,6 +96,7 @@ public class EnterpriseCrmFrontendsEventbusProtoParameterValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serializedObjectValue")
     public EnterpriseCrmFrontendsEventbusProtoSerializedObjectParameter serializedObjectValue;
+
     public EnterpriseCrmFrontendsEventbusProtoParameterValueType withSerializedObjectValue(EnterpriseCrmFrontendsEventbusProtoSerializedObjectParameter serializedObjectValue) {
         this.serializedObjectValue = serializedObjectValue;
         return this;
@@ -95,6 +105,7 @@ public class EnterpriseCrmFrontendsEventbusProtoParameterValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringArray")
     public EnterpriseCrmFrontendsEventbusProtoStringParameterArray stringArray;
+
     public EnterpriseCrmFrontendsEventbusProtoParameterValueType withStringArray(EnterpriseCrmFrontendsEventbusProtoStringParameterArray stringArray) {
         this.stringArray = stringArray;
         return this;
@@ -103,9 +114,11 @@ public class EnterpriseCrmFrontendsEventbusProtoParameterValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValue")
     public String stringValue;
+
     public EnterpriseCrmFrontendsEventbusProtoParameterValueType withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
     }
     
+    public EnterpriseCrmFrontendsEventbusProtoParameterValueType(){}
 }

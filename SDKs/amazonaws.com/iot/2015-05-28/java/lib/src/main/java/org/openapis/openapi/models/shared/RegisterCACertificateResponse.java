@@ -15,6 +15,7 @@ public class RegisterCACertificateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateArn")
     public String certificateArn;
+
     public RegisterCACertificateResponse withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -23,9 +24,11 @@ public class RegisterCACertificateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateId")
     public String certificateId;
+
     public RegisterCACertificateResponse withCertificateId(String certificateId) {
         this.certificateId = certificateId;
         return this;
     }
     
+    public RegisterCACertificateResponse(){}
 }

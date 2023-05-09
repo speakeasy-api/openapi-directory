@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DataflowProjectsJobsMessagesListRequest {
@@ -12,6 +13,7 @@ public class DataflowProjectsJobsMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DataflowProjectsJobsMessagesListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DataflowProjectsJobsMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DataflowProjectsJobsMessagesListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DataflowProjectsJobsMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DataflowProjectsJobsMessagesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class DataflowProjectsJobsMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DataflowProjectsJobsMessagesListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class DataflowProjectsJobsMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endTime")
     public String endTime;
+
     public DataflowProjectsJobsMessagesListRequest withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -62,6 +68,7 @@ public class DataflowProjectsJobsMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DataflowProjectsJobsMessagesListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class DataflowProjectsJobsMessagesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
     public String jobId;
+
     public DataflowProjectsJobsMessagesListRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -82,6 +90,7 @@ public class DataflowProjectsJobsMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DataflowProjectsJobsMessagesListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class DataflowProjectsJobsMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location")
     public String location;
+
     public DataflowProjectsJobsMessagesListRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -102,6 +112,7 @@ public class DataflowProjectsJobsMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minimumImportance")
     public DataflowProjectsJobsMessagesListMinimumImportanceEnum minimumImportance;
+
     public DataflowProjectsJobsMessagesListRequest withMinimumImportance(DataflowProjectsJobsMessagesListMinimumImportanceEnum minimumImportance) {
         this.minimumImportance = minimumImportance;
         return this;
@@ -112,6 +123,7 @@ public class DataflowProjectsJobsMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DataflowProjectsJobsMessagesListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -122,6 +134,7 @@ public class DataflowProjectsJobsMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public DataflowProjectsJobsMessagesListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -132,6 +145,7 @@ public class DataflowProjectsJobsMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public DataflowProjectsJobsMessagesListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -142,6 +156,7 @@ public class DataflowProjectsJobsMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DataflowProjectsJobsMessagesListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -152,6 +167,7 @@ public class DataflowProjectsJobsMessagesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public DataflowProjectsJobsMessagesListRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -162,6 +178,7 @@ public class DataflowProjectsJobsMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DataflowProjectsJobsMessagesListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -172,6 +189,7 @@ public class DataflowProjectsJobsMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startTime")
     public String startTime;
+
     public DataflowProjectsJobsMessagesListRequest withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -182,6 +200,7 @@ public class DataflowProjectsJobsMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DataflowProjectsJobsMessagesListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -192,9 +211,14 @@ public class DataflowProjectsJobsMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DataflowProjectsJobsMessagesListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DataflowProjectsJobsMessagesListRequest(@JsonProperty("jobId") String jobId, @JsonProperty("projectId") String projectId) {
+        this.jobId = jobId;
+        this.projectId = projectId;
+  }
 }

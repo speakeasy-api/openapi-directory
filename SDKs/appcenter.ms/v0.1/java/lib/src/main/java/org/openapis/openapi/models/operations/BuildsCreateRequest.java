@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BuildsCreateRequest {
@@ -12,6 +13,7 @@ public class BuildsCreateRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public BuildsCreateRequestBody requestBody;
+
     public BuildsCreateRequest withRequestBody(BuildsCreateRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class BuildsCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public BuildsCreateRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -32,6 +35,7 @@ public class BuildsCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branch")
     public String branch;
+
     public BuildsCreateRequest withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -42,9 +46,15 @@ public class BuildsCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public BuildsCreateRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public BuildsCreateRequest(@JsonProperty("app_name") String appName, @JsonProperty("branch") String branch, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.branch = branch;
+        this.ownerName = ownerName;
+  }
 }

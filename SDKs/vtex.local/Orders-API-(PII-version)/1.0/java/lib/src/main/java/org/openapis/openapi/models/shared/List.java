@@ -12,6 +12,7 @@ public class List {
      */
     @JsonProperty("ShippingEstimatedDate")
     public String shippingEstimatedDate;
+
     public List withShippingEstimatedDate(String shippingEstimatedDate) {
         this.shippingEstimatedDate = shippingEstimatedDate;
         return this;
@@ -22,6 +23,7 @@ public class List {
      */
     @JsonProperty("ShippingEstimatedDateMax")
     public String shippingEstimatedDateMax;
+
     public List withShippingEstimatedDateMax(String shippingEstimatedDateMax) {
         this.shippingEstimatedDateMax = shippingEstimatedDateMax;
         return this;
@@ -32,6 +34,7 @@ public class List {
      */
     @JsonProperty("ShippingEstimatedDateMin")
     public String shippingEstimatedDateMin;
+
     public List withShippingEstimatedDateMin(String shippingEstimatedDateMin) {
         this.shippingEstimatedDateMin = shippingEstimatedDateMin;
         return this;
@@ -42,6 +45,7 @@ public class List {
      */
     @JsonProperty("affiliateId")
     public String affiliateId;
+
     public List withAffiliateId(String affiliateId) {
         this.affiliateId = affiliateId;
         return this;
@@ -52,6 +56,7 @@ public class List {
      */
     @JsonProperty("authorizedDate")
     public String authorizedDate;
+
     public List withAuthorizedDate(String authorizedDate) {
         this.authorizedDate = authorizedDate;
         return this;
@@ -62,6 +67,7 @@ public class List {
      */
     @JsonProperty("callCenterOperatorName")
     public String callCenterOperatorName;
+
     public List withCallCenterOperatorName(String callCenterOperatorName) {
         this.callCenterOperatorName = callCenterOperatorName;
         return this;
@@ -72,6 +78,7 @@ public class List {
      */
     @JsonProperty("clientName")
     public String clientName;
+
     public List withClientName(String clientName) {
         this.clientName = clientName;
         return this;
@@ -82,6 +89,7 @@ public class List {
      */
     @JsonProperty("creationDate")
     public String creationDate;
+
     public List withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -92,6 +100,7 @@ public class List {
      */
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public List withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -102,6 +111,7 @@ public class List {
      */
     @JsonProperty("items")
     public String items;
+
     public List withItems(String items) {
         this.items = items;
         return this;
@@ -112,6 +122,7 @@ public class List {
      */
     @JsonProperty("lastMessageUnread")
     public String lastMessageUnread;
+
     public List withLastMessageUnread(String lastMessageUnread) {
         this.lastMessageUnread = lastMessageUnread;
         return this;
@@ -122,6 +133,7 @@ public class List {
      */
     @JsonProperty("listId")
     public String listId;
+
     public List withListId(String listId) {
         this.listId = listId;
         return this;
@@ -132,6 +144,7 @@ public class List {
      */
     @JsonProperty("listType")
     public String listType;
+
     public List withListType(String listType) {
         this.listType = listType;
         return this;
@@ -142,6 +155,7 @@ public class List {
      */
     @JsonProperty("marketPlaceOrderId")
     public String marketPlaceOrderId;
+
     public List withMarketPlaceOrderId(String marketPlaceOrderId) {
         this.marketPlaceOrderId = marketPlaceOrderId;
         return this;
@@ -152,6 +166,7 @@ public class List {
      */
     @JsonProperty("orderId")
     public String orderId;
+
     public List withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -162,6 +177,7 @@ public class List {
      */
     @JsonProperty("orderIsComplete")
     public Boolean orderIsComplete;
+
     public List withOrderIsComplete(Boolean orderIsComplete) {
         this.orderIsComplete = orderIsComplete;
         return this;
@@ -172,6 +188,7 @@ public class List {
      */
     @JsonProperty("origin")
     public String origin;
+
     public List withOrigin(String origin) {
         this.origin = origin;
         return this;
@@ -182,6 +199,7 @@ public class List {
      */
     @JsonProperty("paymentNames")
     public String paymentNames;
+
     public List withPaymentNames(String paymentNames) {
         this.paymentNames = paymentNames;
         return this;
@@ -192,6 +210,7 @@ public class List {
      */
     @JsonProperty("salesChannel")
     public String salesChannel;
+
     public List withSalesChannel(String salesChannel) {
         this.salesChannel = salesChannel;
         return this;
@@ -202,6 +221,7 @@ public class List {
      */
     @JsonProperty("sequence")
     public String sequence;
+
     public List withSequence(String sequence) {
         this.sequence = sequence;
         return this;
@@ -212,6 +232,7 @@ public class List {
      */
     @JsonProperty("status")
     public String status;
+
     public List withStatus(String status) {
         this.status = status;
         return this;
@@ -222,6 +243,7 @@ public class List {
      */
     @JsonProperty("statusDescription")
     public String statusDescription;
+
     public List withStatusDescription(String statusDescription) {
         this.statusDescription = statusDescription;
         return this;
@@ -232,6 +254,7 @@ public class List {
      */
     @JsonProperty("totalItems")
     public Integer totalItems;
+
     public List withTotalItems(Integer totalItems) {
         this.totalItems = totalItems;
         return this;
@@ -242,6 +265,7 @@ public class List {
      */
     @JsonProperty("totalValue")
     public Integer totalValue;
+
     public List withTotalValue(Integer totalValue) {
         this.totalValue = totalValue;
         return this;
@@ -252,6 +276,7 @@ public class List {
      */
     @JsonProperty("workflowInErrorState")
     public Boolean workflowInErrorState;
+
     public List withWorkflowInErrorState(Boolean workflowInErrorState) {
         this.workflowInErrorState = workflowInErrorState;
         return this;
@@ -262,9 +287,38 @@ public class List {
      */
     @JsonProperty("workflowInRetry")
     public Boolean workflowInRetry;
+
     public List withWorkflowInRetry(Boolean workflowInRetry) {
         this.workflowInRetry = workflowInRetry;
         return this;
     }
     
+    public List(@JsonProperty("ShippingEstimatedDate") String shippingEstimatedDate, @JsonProperty("ShippingEstimatedDateMax") String shippingEstimatedDateMax, @JsonProperty("ShippingEstimatedDateMin") String shippingEstimatedDateMin, @JsonProperty("affiliateId") String affiliateId, @JsonProperty("authorizedDate") String authorizedDate, @JsonProperty("callCenterOperatorName") String callCenterOperatorName, @JsonProperty("clientName") String clientName, @JsonProperty("creationDate") String creationDate, @JsonProperty("currencyCode") String currencyCode, @JsonProperty("items") String items, @JsonProperty("lastMessageUnread") String lastMessageUnread, @JsonProperty("listId") String listId, @JsonProperty("listType") String listType, @JsonProperty("marketPlaceOrderId") String marketPlaceOrderId, @JsonProperty("orderId") String orderId, @JsonProperty("orderIsComplete") Boolean orderIsComplete, @JsonProperty("origin") String origin, @JsonProperty("paymentNames") String paymentNames, @JsonProperty("salesChannel") String salesChannel, @JsonProperty("sequence") String sequence, @JsonProperty("status") String status, @JsonProperty("statusDescription") String statusDescription, @JsonProperty("totalItems") Integer totalItems, @JsonProperty("totalValue") Integer totalValue, @JsonProperty("workflowInErrorState") Boolean workflowInErrorState, @JsonProperty("workflowInRetry") Boolean workflowInRetry) {
+        this.shippingEstimatedDate = shippingEstimatedDate;
+        this.shippingEstimatedDateMax = shippingEstimatedDateMax;
+        this.shippingEstimatedDateMin = shippingEstimatedDateMin;
+        this.affiliateId = affiliateId;
+        this.authorizedDate = authorizedDate;
+        this.callCenterOperatorName = callCenterOperatorName;
+        this.clientName = clientName;
+        this.creationDate = creationDate;
+        this.currencyCode = currencyCode;
+        this.items = items;
+        this.lastMessageUnread = lastMessageUnread;
+        this.listId = listId;
+        this.listType = listType;
+        this.marketPlaceOrderId = marketPlaceOrderId;
+        this.orderId = orderId;
+        this.orderIsComplete = orderIsComplete;
+        this.origin = origin;
+        this.paymentNames = paymentNames;
+        this.salesChannel = salesChannel;
+        this.sequence = sequence;
+        this.status = status;
+        this.statusDescription = statusDescription;
+        this.totalItems = totalItems;
+        this.totalValue = totalValue;
+        this.workflowInErrorState = workflowInErrorState;
+        this.workflowInRetry = workflowInRetry;
+  }
 }

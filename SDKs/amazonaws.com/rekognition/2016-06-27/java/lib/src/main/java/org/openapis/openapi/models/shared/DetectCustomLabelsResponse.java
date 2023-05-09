@@ -15,9 +15,11 @@ public class DetectCustomLabelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomLabels")
     public CustomLabel[] customLabels;
+
     public DetectCustomLabelsResponse withCustomLabels(CustomLabel[] customLabels) {
         this.customLabels = customLabels;
         return this;
     }
     
+    public DetectCustomLabelsResponse(){}
 }

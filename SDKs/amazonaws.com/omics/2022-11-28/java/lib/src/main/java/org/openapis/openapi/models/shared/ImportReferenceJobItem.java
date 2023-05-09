@@ -22,6 +22,7 @@ public class ImportReferenceJobItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completionTime")
     public OffsetDateTime completionTime;
+
     public ImportReferenceJobItem withCompletionTime(OffsetDateTime completionTime) {
         this.completionTime = completionTime;
         return this;
@@ -31,6 +32,7 @@ public class ImportReferenceJobItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public ImportReferenceJobItem withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class ImportReferenceJobItem {
     
     @JsonProperty("id")
     public String id;
+
     public ImportReferenceJobItem withId(String id) {
         this.id = id;
         return this;
@@ -45,6 +48,7 @@ public class ImportReferenceJobItem {
     
     @JsonProperty("referenceStoreId")
     public String referenceStoreId;
+
     public ImportReferenceJobItem withReferenceStoreId(String referenceStoreId) {
         this.referenceStoreId = referenceStoreId;
         return this;
@@ -52,6 +56,7 @@ public class ImportReferenceJobItem {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public ImportReferenceJobItem withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -59,9 +64,17 @@ public class ImportReferenceJobItem {
     
     @JsonProperty("status")
     public ReferenceImportJobStatusEnum status;
+
     public ImportReferenceJobItem withStatus(ReferenceImportJobStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ImportReferenceJobItem(@JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("id") String id, @JsonProperty("referenceStoreId") String referenceStoreId, @JsonProperty("roleArn") String roleArn, @JsonProperty("status") ReferenceImportJobStatusEnum status) {
+        this.creationTime = creationTime;
+        this.id = id;
+        this.referenceStoreId = referenceStoreId;
+        this.roleArn = roleArn;
+        this.status = status;
+  }
 }

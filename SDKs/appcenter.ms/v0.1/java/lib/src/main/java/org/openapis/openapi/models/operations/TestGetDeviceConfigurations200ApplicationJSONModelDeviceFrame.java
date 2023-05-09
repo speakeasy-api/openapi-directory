@@ -12,6 +12,7 @@ public class TestGetDeviceConfigurations200ApplicationJSONModelDeviceFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("full")
     public TestGetDeviceConfigurations200ApplicationJSONModelDeviceFrameFull full;
+
     public TestGetDeviceConfigurations200ApplicationJSONModelDeviceFrame withFull(TestGetDeviceConfigurations200ApplicationJSONModelDeviceFrameFull full) {
         this.full = full;
         return this;
@@ -20,9 +21,11 @@ public class TestGetDeviceConfigurations200ApplicationJSONModelDeviceFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grid")
     public TestGetDeviceConfigurations200ApplicationJSONModelDeviceFrameGrid grid;
+
     public TestGetDeviceConfigurations200ApplicationJSONModelDeviceFrame withGrid(TestGetDeviceConfigurations200ApplicationJSONModelDeviceFrameGrid grid) {
         this.grid = grid;
         return this;
     }
     
+    public TestGetDeviceConfigurations200ApplicationJSONModelDeviceFrame(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSqlInjectionMatchSetResponse {
     
     public String contentType;
+
     public GetSqlInjectionMatchSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSqlInjectionMatchSetResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSqlInjectionMatchSetResponse getSqlInjectionMatchSetResponse;
+
     public GetSqlInjectionMatchSetResponse withGetSqlInjectionMatchSetResponse(org.openapis.openapi.models.shared.GetSqlInjectionMatchSetResponse getSqlInjectionMatchSetResponse) {
         this.getSqlInjectionMatchSetResponse = getSqlInjectionMatchSetResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetSqlInjectionMatchSetResponse {
     
     
     public Integer statusCode;
+
     public GetSqlInjectionMatchSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetSqlInjectionMatchSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSqlInjectionMatchSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class GetSqlInjectionMatchSetResponse {
      */
     
     public Object wafInternalErrorException;
+
     public GetSqlInjectionMatchSetResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class GetSqlInjectionMatchSetResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public GetSqlInjectionMatchSetResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -63,9 +70,14 @@ public class GetSqlInjectionMatchSetResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public GetSqlInjectionMatchSetResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
     }
     
+    public GetSqlInjectionMatchSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

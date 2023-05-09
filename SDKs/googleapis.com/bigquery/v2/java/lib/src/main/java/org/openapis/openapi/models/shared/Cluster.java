@@ -18,6 +18,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("centroidId")
     public String centroidId;
+
     public Cluster withCentroidId(String centroidId) {
         this.centroidId = centroidId;
         return this;
@@ -29,6 +30,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public String count;
+
     public Cluster withCount(String count) {
         this.count = count;
         return this;
@@ -40,9 +42,11 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("featureValues")
     public FeatureValue[] featureValues;
+
     public Cluster withFeatureValues(FeatureValue[] featureValues) {
         this.featureValues = featureValues;
         return this;
     }
     
+    public Cluster(){}
 }

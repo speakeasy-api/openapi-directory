@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListJobsByStatusResponse {
@@ -12,6 +13,7 @@ public class ListJobsByStatusResponse {
      */
     
     public Object accessDeniedException;
+
     public ListJobsByStatusResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListJobsByStatusResponse {
     
     
     public String contentType;
+
     public ListJobsByStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListJobsByStatusResponse {
      */
     
     public Object incompatibleVersionException;
+
     public ListJobsByStatusResponse withIncompatibleVersionException(Object incompatibleVersionException) {
         this.incompatibleVersionException = incompatibleVersionException;
         return this;
@@ -39,6 +43,7 @@ public class ListJobsByStatusResponse {
      */
     
     public Object internalServiceException;
+
     public ListJobsByStatusResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class ListJobsByStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.ListJobsByStatusResponse listJobsByStatusResponse;
+
     public ListJobsByStatusResponse withListJobsByStatusResponse(org.openapis.openapi.models.shared.ListJobsByStatusResponse listJobsByStatusResponse) {
         this.listJobsByStatusResponse = listJobsByStatusResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListJobsByStatusResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListJobsByStatusResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ListJobsByStatusResponse {
     
     
     public Integer statusCode;
+
     public ListJobsByStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListJobsByStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListJobsByStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class ListJobsByStatusResponse {
      */
     
     public Object validationException;
+
     public ListJobsByStatusResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListJobsByStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

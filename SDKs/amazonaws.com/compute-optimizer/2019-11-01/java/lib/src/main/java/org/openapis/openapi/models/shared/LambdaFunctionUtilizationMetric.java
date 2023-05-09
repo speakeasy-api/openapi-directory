@@ -15,6 +15,7 @@ public class LambdaFunctionUtilizationMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public LambdaFunctionMetricNameEnum name;
+
     public LambdaFunctionUtilizationMetric withName(LambdaFunctionMetricNameEnum name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class LambdaFunctionUtilizationMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statistic")
     public LambdaFunctionMetricStatisticEnum statistic;
+
     public LambdaFunctionUtilizationMetric withStatistic(LambdaFunctionMetricStatisticEnum statistic) {
         this.statistic = statistic;
         return this;
@@ -31,9 +33,11 @@ public class LambdaFunctionUtilizationMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public LambdaFunctionUtilizationMetric withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public LambdaFunctionUtilizationMetric(){}
 }

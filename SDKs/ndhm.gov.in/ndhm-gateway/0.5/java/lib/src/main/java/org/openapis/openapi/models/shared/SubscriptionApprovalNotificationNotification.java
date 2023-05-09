@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SubscriptionApprovalNotificationNotification {
     @JsonProperty("status")
     public SubscriptionStatusEnum status;
+
     public SubscriptionApprovalNotificationNotification withStatus(SubscriptionStatusEnum status) {
         this.status = status;
         return this;
@@ -19,6 +20,7 @@ public class SubscriptionApprovalNotificationNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscription")
     public HIUSubscription subscription;
+
     public SubscriptionApprovalNotificationNotification withSubscription(HIUSubscription subscription) {
         this.subscription = subscription;
         return this;
@@ -27,9 +29,13 @@ public class SubscriptionApprovalNotificationNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriptionRequestId")
     public String subscriptionRequestId;
+
     public SubscriptionApprovalNotificationNotification withSubscriptionRequestId(String subscriptionRequestId) {
         this.subscriptionRequestId = subscriptionRequestId;
         return this;
     }
     
+    public SubscriptionApprovalNotificationNotification(@JsonProperty("status") SubscriptionStatusEnum status) {
+        this.status = status;
+  }
 }

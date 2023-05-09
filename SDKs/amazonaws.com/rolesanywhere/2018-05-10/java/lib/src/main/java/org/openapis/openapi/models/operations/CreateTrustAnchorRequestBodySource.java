@@ -15,6 +15,7 @@ public class CreateTrustAnchorRequestBodySource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceData")
     public org.openapis.openapi.models.shared.SourceData sourceData;
+
     public CreateTrustAnchorRequestBodySource withSourceData(org.openapis.openapi.models.shared.SourceData sourceData) {
         this.sourceData = sourceData;
         return this;
@@ -23,9 +24,11 @@ public class CreateTrustAnchorRequestBodySource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceType")
     public org.openapis.openapi.models.shared.TrustAnchorTypeEnum sourceType;
+
     public CreateTrustAnchorRequestBodySource withSourceType(org.openapis.openapi.models.shared.TrustAnchorTypeEnum sourceType) {
         this.sourceType = sourceType;
         return this;
     }
     
+    public CreateTrustAnchorRequestBodySource(){}
 }

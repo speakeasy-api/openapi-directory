@@ -18,6 +18,7 @@ public class GetFlightOffersQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public GetFlightOffersQuery withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -28,6 +29,7 @@ public class GetFlightOffersQuery {
      */
     @JsonProperty("originDestinations")
     public OriginDestination[] originDestinations;
+
     public GetFlightOffersQuery withOriginDestinations(OriginDestination[] originDestinations) {
         this.originDestinations = originDestinations;
         return this;
@@ -36,6 +38,7 @@ public class GetFlightOffersQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchCriteria")
     public SearchCriteria searchCriteria;
+
     public GetFlightOffersQuery withSearchCriteria(SearchCriteria searchCriteria) {
         this.searchCriteria = searchCriteria;
         return this;
@@ -46,6 +49,7 @@ public class GetFlightOffersQuery {
      */
     @JsonProperty("sources")
     public FlightOfferSourceEnum[] sources;
+
     public GetFlightOffersQuery withSources(FlightOfferSourceEnum[] sources) {
         this.sources = sources;
         return this;
@@ -53,9 +57,15 @@ public class GetFlightOffersQuery {
     
     @JsonProperty("travelers")
     public Traveler[] travelers;
+
     public GetFlightOffersQuery withTravelers(Traveler[] travelers) {
         this.travelers = travelers;
         return this;
     }
     
+    public GetFlightOffersQuery(@JsonProperty("originDestinations") OriginDestination[] originDestinations, @JsonProperty("sources") FlightOfferSourceEnum[] sources, @JsonProperty("travelers") Traveler[] travelers) {
+        this.originDestinations = originDestinations;
+        this.sources = sources;
+        this.travelers = travelers;
+  }
 }

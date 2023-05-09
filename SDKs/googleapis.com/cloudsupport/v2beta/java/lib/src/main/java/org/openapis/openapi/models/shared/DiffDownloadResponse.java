@@ -18,9 +18,11 @@ public class DiffDownloadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectLocation")
     public CompositeMedia objectLocation;
+
     public DiffDownloadResponse withObjectLocation(CompositeMedia objectLocation) {
         this.objectLocation = objectLocation;
         return this;
     }
     
+    public DiffDownloadResponse(){}
 }

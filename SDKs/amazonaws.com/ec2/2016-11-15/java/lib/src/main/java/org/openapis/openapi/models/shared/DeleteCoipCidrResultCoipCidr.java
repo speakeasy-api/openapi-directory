@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteCoipCidrResultCoipCidr {
     
     public String cidr;
+
     public DeleteCoipCidrResultCoipCidr withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -19,6 +20,7 @@ public class DeleteCoipCidrResultCoipCidr {
     
     
     public String coipPoolId;
+
     public DeleteCoipCidrResultCoipCidr withCoipPoolId(String coipPoolId) {
         this.coipPoolId = coipPoolId;
         return this;
@@ -26,9 +28,11 @@ public class DeleteCoipCidrResultCoipCidr {
     
     
     public String localGatewayRouteTableId;
+
     public DeleteCoipCidrResultCoipCidr withLocalGatewayRouteTableId(String localGatewayRouteTableId) {
         this.localGatewayRouteTableId = localGatewayRouteTableId;
         return this;
     }
     
+    public DeleteCoipCidrResultCoipCidr(){}
 }

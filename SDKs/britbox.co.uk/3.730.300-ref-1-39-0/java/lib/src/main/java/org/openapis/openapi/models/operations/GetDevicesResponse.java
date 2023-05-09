@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDevicesResponse {
@@ -12,6 +13,7 @@ public class GetDevicesResponse {
      */
     
     public org.openapis.openapi.models.shared.AccountDevices accountDevices;
+
     public GetDevicesResponse withAccountDevices(org.openapis.openapi.models.shared.AccountDevices accountDevices) {
         this.accountDevices = accountDevices;
         return this;
@@ -19,6 +21,7 @@ public class GetDevicesResponse {
     
     
     public String contentType;
+
     public GetDevicesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetDevicesResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public GetDevicesResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class GetDevicesResponse {
     
     
     public Integer statusCode;
+
     public GetDevicesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetDevicesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDevicesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDevicesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

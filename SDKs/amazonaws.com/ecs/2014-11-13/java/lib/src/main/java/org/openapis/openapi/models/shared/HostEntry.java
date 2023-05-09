@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HostEntry {
     @JsonProperty("hostname")
     public String hostname;
+
     public HostEntry withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -19,9 +20,14 @@ public class HostEntry {
     
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public HostEntry withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
     }
     
+    public HostEntry(@JsonProperty("hostname") String hostname, @JsonProperty("ipAddress") String ipAddress) {
+        this.hostname = hostname;
+        this.ipAddress = ipAddress;
+  }
 }

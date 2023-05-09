@@ -18,6 +18,7 @@ public class Prediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boundingBox")
     public BoundingBox boundingBox;
+
     public Prediction withBoundingBox(BoundingBox boundingBox) {
         this.boundingBox = boundingBox;
         return this;
@@ -29,6 +30,7 @@ public class Prediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("probability")
     public Float probability;
+
     public Prediction withProbability(Float probability) {
         this.probability = probability;
         return this;
@@ -40,6 +42,7 @@ public class Prediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagId")
     public String tagId;
+
     public Prediction withTagId(String tagId) {
         this.tagId = tagId;
         return this;
@@ -51,9 +54,11 @@ public class Prediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagName")
     public String tagName;
+
     public Prediction withTagName(String tagName) {
         this.tagName = tagName;
         return this;
     }
     
+    public Prediction(){}
 }

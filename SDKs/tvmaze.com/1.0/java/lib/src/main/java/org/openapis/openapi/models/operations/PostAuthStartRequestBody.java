@@ -15,6 +15,7 @@ public class PostAuthStartRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public PostAuthStartRequestBody withEmail(String email) {
         this.email = email;
         return this;
@@ -26,9 +27,11 @@ public class PostAuthStartRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email_confirmation")
     public Boolean emailConfirmation;
+
     public PostAuthStartRequestBody withEmailConfirmation(Boolean emailConfirmation) {
         this.emailConfirmation = emailConfirmation;
         return this;
     }
     
+    public PostAuthStartRequestBody(){}
 }

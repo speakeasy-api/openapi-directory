@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRecoveryInstanceResponse {
@@ -12,6 +13,7 @@ public class DeleteRecoveryInstanceResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteRecoveryInstanceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteRecoveryInstanceResponse {
      */
     
     public Object conflictException;
+
     public DeleteRecoveryInstanceResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteRecoveryInstanceResponse {
     
     
     public String contentType;
+
     public DeleteRecoveryInstanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteRecoveryInstanceResponse {
      */
     
     public Object internalServerException;
+
     public DeleteRecoveryInstanceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteRecoveryInstanceResponse {
     
     
     public Integer statusCode;
+
     public DeleteRecoveryInstanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteRecoveryInstanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRecoveryInstanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteRecoveryInstanceResponse {
      */
     
     public Object throttlingException;
+
     public DeleteRecoveryInstanceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteRecoveryInstanceResponse {
      */
     
     public Object uninitializedAccountException;
+
     public DeleteRecoveryInstanceResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
     }
     
+    public DeleteRecoveryInstanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

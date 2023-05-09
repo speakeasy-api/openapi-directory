@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AndroidpublisherReviewsGetResponse {
     
     public String contentType;
+
     public AndroidpublisherReviewsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AndroidpublisherReviewsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.Review review;
+
     public AndroidpublisherReviewsGetResponse withReview(org.openapis.openapi.models.shared.Review review) {
         this.review = review;
         return this;
@@ -26,6 +29,7 @@ public class AndroidpublisherReviewsGetResponse {
     
     
     public Integer statusCode;
+
     public AndroidpublisherReviewsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AndroidpublisherReviewsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AndroidpublisherReviewsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AndroidpublisherReviewsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

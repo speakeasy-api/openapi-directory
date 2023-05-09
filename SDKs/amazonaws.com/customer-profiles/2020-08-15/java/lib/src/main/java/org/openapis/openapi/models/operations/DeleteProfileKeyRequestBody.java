@@ -12,6 +12,7 @@ public class DeleteProfileKeyRequestBody {
      */
     @JsonProperty("KeyName")
     public String keyName;
+
     public DeleteProfileKeyRequestBody withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -22,6 +23,7 @@ public class DeleteProfileKeyRequestBody {
      */
     @JsonProperty("ProfileId")
     public String profileId;
+
     public DeleteProfileKeyRequestBody withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -32,9 +34,15 @@ public class DeleteProfileKeyRequestBody {
      */
     @JsonProperty("Values")
     public String[] values;
+
     public DeleteProfileKeyRequestBody withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DeleteProfileKeyRequestBody(@JsonProperty("KeyName") String keyName, @JsonProperty("ProfileId") String profileId, @JsonProperty("Values") String[] values) {
+        this.keyName = keyName;
+        this.profileId = profileId;
+        this.values = values;
+  }
 }

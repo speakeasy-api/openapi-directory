@@ -15,6 +15,7 @@ public class Alert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Alert withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class Alert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDismissible")
     public Boolean isDismissible;
+
     public Alert withIsDismissible(Boolean isDismissible) {
         this.isDismissible = isDismissible;
         return this;
@@ -37,6 +39,7 @@ public class Alert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Alert withKind(String kind) {
         this.kind = kind;
         return this;
@@ -48,6 +51,7 @@ public class Alert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public Alert withMessage(String message) {
         this.message = message;
         return this;
@@ -59,6 +63,7 @@ public class Alert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public String severity;
+
     public Alert withSeverity(String severity) {
         this.severity = severity;
         return this;
@@ -70,9 +75,11 @@ public class Alert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Alert withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Alert(){}
 }

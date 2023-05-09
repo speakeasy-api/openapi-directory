@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateTrafficMirrorTargetResultTrafficMirrorTarget {
     
     public String description;
+
     public CreateTrafficMirrorTargetResultTrafficMirrorTarget withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class CreateTrafficMirrorTargetResultTrafficMirrorTarget {
     
     
     public String gatewayLoadBalancerEndpointId;
+
     public CreateTrafficMirrorTargetResultTrafficMirrorTarget withGatewayLoadBalancerEndpointId(String gatewayLoadBalancerEndpointId) {
         this.gatewayLoadBalancerEndpointId = gatewayLoadBalancerEndpointId;
         return this;
@@ -26,6 +28,7 @@ public class CreateTrafficMirrorTargetResultTrafficMirrorTarget {
     
     
     public String networkInterfaceId;
+
     public CreateTrafficMirrorTargetResultTrafficMirrorTarget withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -33,6 +36,7 @@ public class CreateTrafficMirrorTargetResultTrafficMirrorTarget {
     
     
     public String networkLoadBalancerArn;
+
     public CreateTrafficMirrorTargetResultTrafficMirrorTarget withNetworkLoadBalancerArn(String networkLoadBalancerArn) {
         this.networkLoadBalancerArn = networkLoadBalancerArn;
         return this;
@@ -40,6 +44,7 @@ public class CreateTrafficMirrorTargetResultTrafficMirrorTarget {
     
     
     public String ownerId;
+
     public CreateTrafficMirrorTargetResultTrafficMirrorTarget withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -47,6 +52,7 @@ public class CreateTrafficMirrorTargetResultTrafficMirrorTarget {
     
     
     public CreateTrafficMirrorTargetResultTrafficMirrorTargetTags[] tags;
+
     public CreateTrafficMirrorTargetResultTrafficMirrorTarget withTags(CreateTrafficMirrorTargetResultTrafficMirrorTargetTags[] tags) {
         this.tags = tags;
         return this;
@@ -54,6 +60,7 @@ public class CreateTrafficMirrorTargetResultTrafficMirrorTarget {
     
     
     public String trafficMirrorTargetId;
+
     public CreateTrafficMirrorTargetResultTrafficMirrorTarget withTrafficMirrorTargetId(String trafficMirrorTargetId) {
         this.trafficMirrorTargetId = trafficMirrorTargetId;
         return this;
@@ -61,9 +68,11 @@ public class CreateTrafficMirrorTargetResultTrafficMirrorTarget {
     
     
     public CreateTrafficMirrorTargetResultTrafficMirrorTargetTypeEnum type;
+
     public CreateTrafficMirrorTargetResultTrafficMirrorTarget withType(CreateTrafficMirrorTargetResultTrafficMirrorTargetTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateTrafficMirrorTargetResultTrafficMirrorTarget(){}
 }

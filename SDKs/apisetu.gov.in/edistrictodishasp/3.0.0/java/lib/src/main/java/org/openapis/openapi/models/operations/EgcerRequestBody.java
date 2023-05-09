@@ -15,6 +15,7 @@ public class EgcerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public EgcerRequestBodyCertificateParameters certificateParameters;
+
     public EgcerRequestBody withCertificateParameters(EgcerRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class EgcerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public EgcerRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class EgcerRequestBody {
      */
     @JsonProperty("format")
     public EgcerRequestBodyFormatEnum format;
+
     public EgcerRequestBody withFormat(EgcerRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class EgcerRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public EgcerRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public EgcerRequestBody(@JsonProperty("format") EgcerRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

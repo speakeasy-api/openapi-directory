@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeBatchInferenceJobResponse {
     
     public String contentType;
+
     public DescribeBatchInferenceJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeBatchInferenceJobResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeBatchInferenceJobResponse describeBatchInferenceJobResponse;
+
     public DescribeBatchInferenceJobResponse withDescribeBatchInferenceJobResponse(org.openapis.openapi.models.shared.DescribeBatchInferenceJobResponse describeBatchInferenceJobResponse) {
         this.describeBatchInferenceJobResponse = describeBatchInferenceJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeBatchInferenceJobResponse {
      */
     
     public Object invalidInputException;
+
     public DescribeBatchInferenceJobResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeBatchInferenceJobResponse {
     
     
     public Integer statusCode;
+
     public DescribeBatchInferenceJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeBatchInferenceJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeBatchInferenceJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeBatchInferenceJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeBatchInferenceJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeBatchInferenceJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

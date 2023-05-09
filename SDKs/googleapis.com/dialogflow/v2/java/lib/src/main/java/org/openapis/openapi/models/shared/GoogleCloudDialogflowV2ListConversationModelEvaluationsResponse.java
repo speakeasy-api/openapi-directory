@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2ListConversationModelEvaluationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversationModelEvaluations")
     public GoogleCloudDialogflowV2ConversationModelEvaluation[] conversationModelEvaluations;
+
     public GoogleCloudDialogflowV2ListConversationModelEvaluationsResponse withConversationModelEvaluations(GoogleCloudDialogflowV2ConversationModelEvaluation[] conversationModelEvaluations) {
         this.conversationModelEvaluations = conversationModelEvaluations;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2ListConversationModelEvaluationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDialogflowV2ListConversationModelEvaluationsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudDialogflowV2ListConversationModelEvaluationsResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SsaByDistanceUsV1SsaDistanceQueryPostRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SSAByDistance ssaByDistance;
+
     public SsaByDistanceUsV1SsaDistanceQueryPostRequest withSSAByDistance(org.openapis.openapi.models.shared.SSAByDistance ssaByDistance) {
         this.ssaByDistance = ssaByDistance;
         return this;
@@ -16,9 +18,13 @@ public class SsaByDistanceUsV1SsaDistanceQueryPostRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public SsaByDistanceUsV1SsaDistanceQueryPostRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public SsaByDistanceUsV1SsaDistanceQueryPostRequest(@JsonProperty("SSAByDistance") org.openapis.openapi.models.shared.SSAByDistance ssaByDistance) {
+        this.ssaByDistance = ssaByDistance;
+  }
 }

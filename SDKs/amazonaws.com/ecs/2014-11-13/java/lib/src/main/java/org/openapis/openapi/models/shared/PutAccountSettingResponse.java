@@ -15,9 +15,11 @@ public class PutAccountSettingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setting")
     public Setting setting;
+
     public PutAccountSettingResponse withSetting(Setting setting) {
         this.setting = setting;
         return this;
     }
     
+    public PutAccountSettingResponse(){}
 }

@@ -15,6 +15,7 @@ public class BaseL2Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_id")
     public String entityId;
+
     public BaseL2Network withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -23,6 +24,7 @@ public class BaseL2Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_type")
     public EntityTypeEnum entityType;
+
     public BaseL2Network withEntityType(EntityTypeEnum entityType) {
         this.entityType = entityType;
         return this;
@@ -31,6 +33,7 @@ public class BaseL2Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gateways")
     public String[] gateways;
+
     public BaseL2Network withGateways(String[] gateways) {
         this.gateways = gateways;
         return this;
@@ -39,6 +42,7 @@ public class BaseL2Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BaseL2Network withName(String name) {
         this.name = name;
         return this;
@@ -47,9 +51,11 @@ public class BaseL2Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network_addresses")
     public String[] networkAddresses;
+
     public BaseL2Network withNetworkAddresses(String[] networkAddresses) {
         this.networkAddresses = networkAddresses;
         return this;
     }
     
+    public BaseL2Network(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutLifecycleEventHookExecutionStatusResponse {
     
     public String contentType;
+
     public PutLifecycleEventHookExecutionStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutLifecycleEventHookExecutionStatusResponse {
      */
     
     public Object deploymentDoesNotExistException;
+
     public PutLifecycleEventHookExecutionStatusResponse withDeploymentDoesNotExistException(Object deploymentDoesNotExistException) {
         this.deploymentDoesNotExistException = deploymentDoesNotExistException;
         return this;
@@ -29,6 +32,7 @@ public class PutLifecycleEventHookExecutionStatusResponse {
      */
     
     public Object deploymentIdRequiredException;
+
     public PutLifecycleEventHookExecutionStatusResponse withDeploymentIdRequiredException(Object deploymentIdRequiredException) {
         this.deploymentIdRequiredException = deploymentIdRequiredException;
         return this;
@@ -39,6 +43,7 @@ public class PutLifecycleEventHookExecutionStatusResponse {
      */
     
     public Object invalidDeploymentIdException;
+
     public PutLifecycleEventHookExecutionStatusResponse withInvalidDeploymentIdException(Object invalidDeploymentIdException) {
         this.invalidDeploymentIdException = invalidDeploymentIdException;
         return this;
@@ -49,6 +54,7 @@ public class PutLifecycleEventHookExecutionStatusResponse {
      */
     
     public Object invalidLifecycleEventHookExecutionIdException;
+
     public PutLifecycleEventHookExecutionStatusResponse withInvalidLifecycleEventHookExecutionIdException(Object invalidLifecycleEventHookExecutionIdException) {
         this.invalidLifecycleEventHookExecutionIdException = invalidLifecycleEventHookExecutionIdException;
         return this;
@@ -59,6 +65,7 @@ public class PutLifecycleEventHookExecutionStatusResponse {
      */
     
     public Object invalidLifecycleEventHookExecutionStatusException;
+
     public PutLifecycleEventHookExecutionStatusResponse withInvalidLifecycleEventHookExecutionStatusException(Object invalidLifecycleEventHookExecutionStatusException) {
         this.invalidLifecycleEventHookExecutionStatusException = invalidLifecycleEventHookExecutionStatusException;
         return this;
@@ -69,6 +76,7 @@ public class PutLifecycleEventHookExecutionStatusResponse {
      */
     
     public Object lifecycleEventAlreadyCompletedException;
+
     public PutLifecycleEventHookExecutionStatusResponse withLifecycleEventAlreadyCompletedException(Object lifecycleEventAlreadyCompletedException) {
         this.lifecycleEventAlreadyCompletedException = lifecycleEventAlreadyCompletedException;
         return this;
@@ -79,6 +87,7 @@ public class PutLifecycleEventHookExecutionStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.PutLifecycleEventHookExecutionStatusOutput putLifecycleEventHookExecutionStatusOutput;
+
     public PutLifecycleEventHookExecutionStatusResponse withPutLifecycleEventHookExecutionStatusOutput(org.openapis.openapi.models.shared.PutLifecycleEventHookExecutionStatusOutput putLifecycleEventHookExecutionStatusOutput) {
         this.putLifecycleEventHookExecutionStatusOutput = putLifecycleEventHookExecutionStatusOutput;
         return this;
@@ -86,6 +95,7 @@ public class PutLifecycleEventHookExecutionStatusResponse {
     
     
     public Integer statusCode;
+
     public PutLifecycleEventHookExecutionStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class PutLifecycleEventHookExecutionStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutLifecycleEventHookExecutionStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class PutLifecycleEventHookExecutionStatusResponse {
      */
     
     public Object unsupportedActionForDeploymentTypeException;
+
     public PutLifecycleEventHookExecutionStatusResponse withUnsupportedActionForDeploymentTypeException(Object unsupportedActionForDeploymentTypeException) {
         this.unsupportedActionForDeploymentTypeException = unsupportedActionForDeploymentTypeException;
         return this;
     }
     
+    public PutLifecycleEventHookExecutionStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

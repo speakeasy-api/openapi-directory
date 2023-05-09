@@ -18,9 +18,11 @@ public class HeaderOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("header")
     public Header header;
+
     public HeaderOverride withHeader(Header header) {
         this.header = header;
         return this;
     }
     
+    public HeaderOverride(){}
 }

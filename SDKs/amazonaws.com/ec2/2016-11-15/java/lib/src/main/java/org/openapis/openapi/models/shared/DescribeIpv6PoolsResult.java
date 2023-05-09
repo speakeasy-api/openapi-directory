@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeIpv6PoolsResult {
     
     public DescribeIpv6PoolsResultIpv6Pools[] ipv6Pools;
+
     public DescribeIpv6PoolsResult withIpv6Pools(DescribeIpv6PoolsResultIpv6Pools[] ipv6Pools) {
         this.ipv6Pools = ipv6Pools;
         return this;
@@ -19,9 +20,11 @@ public class DescribeIpv6PoolsResult {
     
     
     public String nextToken;
+
     public DescribeIpv6PoolsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeIpv6PoolsResult(){}
 }

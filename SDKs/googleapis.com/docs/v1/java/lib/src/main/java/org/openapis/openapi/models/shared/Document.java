@@ -18,6 +18,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public Body body;
+
     public Document withBody(Body body) {
         this.body = body;
         return this;
@@ -29,6 +30,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentId")
     public String documentId;
+
     public Document withDocumentId(String documentId) {
         this.documentId = documentId;
         return this;
@@ -40,6 +42,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentStyle")
     public DocumentStyle documentStyle;
+
     public Document withDocumentStyle(DocumentStyle documentStyle) {
         this.documentStyle = documentStyle;
         return this;
@@ -51,6 +54,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("footers")
     public java.util.Map<String, Footer> footers;
+
     public Document withFooters(java.util.Map<String, Footer> footers) {
         this.footers = footers;
         return this;
@@ -62,6 +66,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("footnotes")
     public java.util.Map<String, Footnote> footnotes;
+
     public Document withFootnotes(java.util.Map<String, Footnote> footnotes) {
         this.footnotes = footnotes;
         return this;
@@ -73,6 +78,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public java.util.Map<String, Header> headers;
+
     public Document withHeaders(java.util.Map<String, Header> headers) {
         this.headers = headers;
         return this;
@@ -84,6 +90,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inlineObjects")
     public java.util.Map<String, InlineObject> inlineObjects;
+
     public Document withInlineObjects(java.util.Map<String, InlineObject> inlineObjects) {
         this.inlineObjects = inlineObjects;
         return this;
@@ -95,6 +102,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lists")
     public java.util.Map<String, List> lists;
+
     public Document withLists(java.util.Map<String, List> lists) {
         this.lists = lists;
         return this;
@@ -106,6 +114,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namedRanges")
     public java.util.Map<String, NamedRanges> namedRanges;
+
     public Document withNamedRanges(java.util.Map<String, NamedRanges> namedRanges) {
         this.namedRanges = namedRanges;
         return this;
@@ -117,6 +126,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namedStyles")
     public NamedStyles namedStyles;
+
     public Document withNamedStyles(NamedStyles namedStyles) {
         this.namedStyles = namedStyles;
         return this;
@@ -128,6 +138,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("positionedObjects")
     public java.util.Map<String, PositionedObject> positionedObjects;
+
     public Document withPositionedObjects(java.util.Map<String, PositionedObject> positionedObjects) {
         this.positionedObjects = positionedObjects;
         return this;
@@ -139,6 +150,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionId")
     public String revisionId;
+
     public Document withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
@@ -150,6 +162,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedDocumentStyleChanges")
     public java.util.Map<String, SuggestedDocumentStyle> suggestedDocumentStyleChanges;
+
     public Document withSuggestedDocumentStyleChanges(java.util.Map<String, SuggestedDocumentStyle> suggestedDocumentStyleChanges) {
         this.suggestedDocumentStyleChanges = suggestedDocumentStyleChanges;
         return this;
@@ -161,6 +174,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedNamedStylesChanges")
     public java.util.Map<String, SuggestedNamedStyles> suggestedNamedStylesChanges;
+
     public Document withSuggestedNamedStylesChanges(java.util.Map<String, SuggestedNamedStyles> suggestedNamedStylesChanges) {
         this.suggestedNamedStylesChanges = suggestedNamedStylesChanges;
         return this;
@@ -172,6 +186,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestionsViewMode")
     public DocumentSuggestionsViewModeEnum suggestionsViewMode;
+
     public Document withSuggestionsViewMode(DocumentSuggestionsViewModeEnum suggestionsViewMode) {
         this.suggestionsViewMode = suggestionsViewMode;
         return this;
@@ -183,9 +198,11 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Document withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Document(){}
 }

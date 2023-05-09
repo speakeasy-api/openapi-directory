@@ -4,6 +4,7 @@
 
 package org.openapis.openapi;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
@@ -61,11 +62,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeResponse(contentType, httpRes.statusCode()) {{
             googleCloudIdentitytoolkitV2FinalizeMfaEnrollmentResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +108,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentStartResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentStartResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentStartResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentStartResponse(contentType, httpRes.statusCode()) {{
             googleCloudIdentitytoolkitV2StartMfaEnrollmentResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -157,11 +154,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentWithdrawResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentWithdrawResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentWithdrawResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentWithdrawResponse(contentType, httpRes.statusCode()) {{
             googleCloudIdentitytoolkitV2WithdrawMfaResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -205,11 +200,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaSignInFinalizeResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaSignInFinalizeResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaSignInFinalizeResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaSignInFinalizeResponse(contentType, httpRes.statusCode()) {{
             googleCloudIdentitytoolkitV2FinalizeMfaSignInResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -253,11 +246,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaSignInStartResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaSignInStartResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaSignInStartResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaSignInStartResponse(contentType, httpRes.statusCode()) {{
             googleCloudIdentitytoolkitV2StartMfaSignInResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -265,6 +256,236 @@ public class Accounts {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitV2StartMfaSignInResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitV2StartMfaSignInResponse.class);
                 res.googleCloudIdentitytoolkitV2StartMfaSignInResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Finishes enrolling a passkey credential for the user.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.IdentitytoolkitAccountsPasskeyEnrollmentFinalizeResponse identitytoolkitAccountsPasskeyEnrollmentFinalize(org.openapis.openapi.models.operations.IdentitytoolkitAccountsPasskeyEnrollmentFinalizeRequest request, org.openapis.openapi.models.operations.IdentitytoolkitAccountsPasskeyEnrollmentFinalizeSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/accounts/passkeyEnrollment:finalize");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIdentitytoolkitV2FinalizePasskeyEnrollmentRequest", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitAccountsPasskeyEnrollmentFinalizeRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.IdentitytoolkitAccountsPasskeyEnrollmentFinalizeResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitAccountsPasskeyEnrollmentFinalizeResponse(contentType, httpRes.statusCode()) {{
+            googleCloudIdentitytoolkitV2FinalizePasskeyEnrollmentResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitV2FinalizePasskeyEnrollmentResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitV2FinalizePasskeyEnrollmentResponse.class);
+                res.googleCloudIdentitytoolkitV2FinalizePasskeyEnrollmentResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Step one of the passkey enrollment process. Returns a challenge and parameters for creation of the passkey credential.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.IdentitytoolkitAccountsPasskeyEnrollmentStartResponse identitytoolkitAccountsPasskeyEnrollmentStart(org.openapis.openapi.models.operations.IdentitytoolkitAccountsPasskeyEnrollmentStartRequest request, org.openapis.openapi.models.operations.IdentitytoolkitAccountsPasskeyEnrollmentStartSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/accounts/passkeyEnrollment:start");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIdentitytoolkitV2StartPasskeyEnrollmentRequest", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitAccountsPasskeyEnrollmentStartRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.IdentitytoolkitAccountsPasskeyEnrollmentStartResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitAccountsPasskeyEnrollmentStartResponse(contentType, httpRes.statusCode()) {{
+            googleCloudIdentitytoolkitV2StartPasskeyEnrollmentResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitV2StartPasskeyEnrollmentResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitV2StartPasskeyEnrollmentResponse.class);
+                res.googleCloudIdentitytoolkitV2StartPasskeyEnrollmentResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Verifies the passkey assertion and signs the user in.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.IdentitytoolkitAccountsPasskeySignInFinalizeResponse identitytoolkitAccountsPasskeySignInFinalize(org.openapis.openapi.models.operations.IdentitytoolkitAccountsPasskeySignInFinalizeRequest request, org.openapis.openapi.models.operations.IdentitytoolkitAccountsPasskeySignInFinalizeSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/accounts/passkeySignIn:finalize");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIdentitytoolkitV2FinalizePasskeySignInRequest", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitAccountsPasskeySignInFinalizeRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.IdentitytoolkitAccountsPasskeySignInFinalizeResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitAccountsPasskeySignInFinalizeResponse(contentType, httpRes.statusCode()) {{
+            googleCloudIdentitytoolkitV2FinalizePasskeySignInResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitV2FinalizePasskeySignInResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitV2FinalizePasskeySignInResponse.class);
+                res.googleCloudIdentitytoolkitV2FinalizePasskeySignInResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Creates and returns the passkey challenge
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.IdentitytoolkitAccountsPasskeySignInStartResponse identitytoolkitAccountsPasskeySignInStart(org.openapis.openapi.models.operations.IdentitytoolkitAccountsPasskeySignInStartRequest request, org.openapis.openapi.models.operations.IdentitytoolkitAccountsPasskeySignInStartSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/accounts/passkeySignIn:start");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIdentitytoolkitV2StartPasskeySignInRequest", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitAccountsPasskeySignInStartRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.IdentitytoolkitAccountsPasskeySignInStartResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitAccountsPasskeySignInStartResponse(contentType, httpRes.statusCode()) {{
+            googleCloudIdentitytoolkitV2StartPasskeySignInResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitV2StartPasskeySignInResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitV2StartPasskeySignInResponse.class);
+                res.googleCloudIdentitytoolkitV2StartPasskeySignInResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Revokes a user's token from an Identity Provider (IdP). This is done by manually providing an IdP credential, and the token types for revocation. An [API key](https://cloud.google.com/docs/authentication/api-keys) is required in the request in order to identify the Google Cloud project.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.IdentitytoolkitAccountsRevokeTokenResponse identitytoolkitAccountsRevokeToken(org.openapis.openapi.models.operations.IdentitytoolkitAccountsRevokeTokenRequest request, org.openapis.openapi.models.operations.IdentitytoolkitAccountsRevokeTokenSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/accounts:revokeToken");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIdentitytoolkitV2RevokeTokenRequest", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitAccountsRevokeTokenRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.IdentitytoolkitAccountsRevokeTokenResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitAccountsRevokeTokenResponse(contentType, httpRes.statusCode()) {{
+            googleCloudIdentitytoolkitV2RevokeTokenResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.googleCloudIdentitytoolkitV2RevokeTokenResponse = out;
             }
         }
 

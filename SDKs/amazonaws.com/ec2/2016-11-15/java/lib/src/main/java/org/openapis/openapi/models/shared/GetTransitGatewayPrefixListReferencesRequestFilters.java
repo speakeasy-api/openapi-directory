@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetTransitGatewayPrefixListReferencesRequestFilters {
     
     public String name;
+
     public GetTransitGatewayPrefixListReferencesRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class GetTransitGatewayPrefixListReferencesRequestFilters {
     
     
     public String[] values;
+
     public GetTransitGatewayPrefixListReferencesRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public GetTransitGatewayPrefixListReferencesRequestFilters(){}
 }

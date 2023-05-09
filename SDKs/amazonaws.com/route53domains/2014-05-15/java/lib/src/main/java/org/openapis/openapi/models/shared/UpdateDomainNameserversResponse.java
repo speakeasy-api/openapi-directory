@@ -15,9 +15,11 @@ public class UpdateDomainNameserversResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperationId")
     public String operationId;
+
     public UpdateDomainNameserversResponse withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
     }
     
+    public UpdateDomainNameserversResponse(){}
 }

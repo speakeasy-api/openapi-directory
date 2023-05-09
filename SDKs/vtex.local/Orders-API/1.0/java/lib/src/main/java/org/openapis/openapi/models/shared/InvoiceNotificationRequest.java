@@ -15,6 +15,7 @@ public class InvoiceNotificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("courier")
     public String courier;
+
     public InvoiceNotificationRequest withCourier(String courier) {
         this.courier = courier;
         return this;
@@ -26,6 +27,7 @@ public class InvoiceNotificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dispatchedDate")
     public String dispatchedDate;
+
     public InvoiceNotificationRequest withDispatchedDate(String dispatchedDate) {
         this.dispatchedDate = dispatchedDate;
         return this;
@@ -37,6 +39,7 @@ public class InvoiceNotificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("embeddedInvoice")
     public String embeddedInvoice;
+
     public InvoiceNotificationRequest withEmbeddedInvoice(String embeddedInvoice) {
         this.embeddedInvoice = embeddedInvoice;
         return this;
@@ -45,6 +48,7 @@ public class InvoiceNotificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoiceKey")
     public String invoiceKey;
+
     public InvoiceNotificationRequest withInvoiceKey(String invoiceKey) {
         this.invoiceKey = invoiceKey;
         return this;
@@ -55,6 +59,7 @@ public class InvoiceNotificationRequest {
      */
     @JsonProperty("invoiceNumber")
     public String invoiceNumber;
+
     public InvoiceNotificationRequest withInvoiceNumber(String invoiceNumber) {
         this.invoiceNumber = invoiceNumber;
         return this;
@@ -66,6 +71,7 @@ public class InvoiceNotificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoiceUrl")
     public String invoiceUrl;
+
     public InvoiceNotificationRequest withInvoiceUrl(String invoiceUrl) {
         this.invoiceUrl = invoiceUrl;
         return this;
@@ -76,6 +82,7 @@ public class InvoiceNotificationRequest {
      */
     @JsonProperty("invoiceValue")
     public String invoiceValue;
+
     public InvoiceNotificationRequest withInvoiceValue(String invoiceValue) {
         this.invoiceValue = invoiceValue;
         return this;
@@ -86,6 +93,7 @@ public class InvoiceNotificationRequest {
      */
     @JsonProperty("issuanceDate")
     public String issuanceDate;
+
     public InvoiceNotificationRequest withIssuanceDate(String issuanceDate) {
         this.issuanceDate = issuanceDate;
         return this;
@@ -96,6 +104,7 @@ public class InvoiceNotificationRequest {
      */
     @JsonProperty("items")
     public Item1[] items;
+
     public InvoiceNotificationRequest withItems(Item1[] items) {
         this.items = items;
         return this;
@@ -107,6 +116,7 @@ public class InvoiceNotificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingNumber")
     public String trackingNumber;
+
     public InvoiceNotificationRequest withTrackingNumber(String trackingNumber) {
         this.trackingNumber = trackingNumber;
         return this;
@@ -118,6 +128,7 @@ public class InvoiceNotificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingUrl")
     public String trackingUrl;
+
     public InvoiceNotificationRequest withTrackingUrl(String trackingUrl) {
         this.trackingUrl = trackingUrl;
         return this;
@@ -128,9 +139,17 @@ public class InvoiceNotificationRequest {
      */
     @JsonProperty("type")
     public String type;
+
     public InvoiceNotificationRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public InvoiceNotificationRequest(@JsonProperty("invoiceNumber") String invoiceNumber, @JsonProperty("invoiceValue") String invoiceValue, @JsonProperty("issuanceDate") String issuanceDate, @JsonProperty("items") Item1[] items, @JsonProperty("type") String type) {
+        this.invoiceNumber = invoiceNumber;
+        this.invoiceValue = invoiceValue;
+        this.issuanceDate = issuanceDate;
+        this.items = items;
+        this.type = type;
+  }
 }

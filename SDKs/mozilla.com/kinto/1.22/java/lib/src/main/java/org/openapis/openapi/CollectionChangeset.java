@@ -47,10 +47,8 @@ public class CollectionChangeset {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCollectionChangesetResponse res = new org.openapis.openapi.models.operations.GetCollectionChangesetResponse() {{
+        org.openapis.openapi.models.operations.GetCollectionChangesetResponse res = new org.openapis.openapi.models.operations.GetCollectionChangesetResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

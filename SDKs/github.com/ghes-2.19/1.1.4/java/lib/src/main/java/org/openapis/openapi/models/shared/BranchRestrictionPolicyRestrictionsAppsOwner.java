@@ -12,6 +12,7 @@ public class BranchRestrictionPolicyRestrictionsAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatar_url")
     public String avatarUrl;
+
     public BranchRestrictionPolicyRestrictionsAppsOwner withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -20,6 +21,7 @@ public class BranchRestrictionPolicyRestrictionsAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public BranchRestrictionPolicyRestrictionsAppsOwner withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class BranchRestrictionPolicyRestrictionsAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events_url")
     public String eventsUrl;
+
     public BranchRestrictionPolicyRestrictionsAppsOwner withEventsUrl(String eventsUrl) {
         this.eventsUrl = eventsUrl;
         return this;
@@ -36,6 +39,7 @@ public class BranchRestrictionPolicyRestrictionsAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hooks_url")
     public String hooksUrl;
+
     public BranchRestrictionPolicyRestrictionsAppsOwner withHooksUrl(String hooksUrl) {
         this.hooksUrl = hooksUrl;
         return this;
@@ -44,6 +48,7 @@ public class BranchRestrictionPolicyRestrictionsAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Double id;
+
     public BranchRestrictionPolicyRestrictionsAppsOwner withId(Double id) {
         this.id = id;
         return this;
@@ -52,6 +57,7 @@ public class BranchRestrictionPolicyRestrictionsAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issues_url")
     public String issuesUrl;
+
     public BranchRestrictionPolicyRestrictionsAppsOwner withIssuesUrl(String issuesUrl) {
         this.issuesUrl = issuesUrl;
         return this;
@@ -60,6 +66,7 @@ public class BranchRestrictionPolicyRestrictionsAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("login")
     public String login;
+
     public BranchRestrictionPolicyRestrictionsAppsOwner withLogin(String login) {
         this.login = login;
         return this;
@@ -68,6 +75,7 @@ public class BranchRestrictionPolicyRestrictionsAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members_url")
     public String membersUrl;
+
     public BranchRestrictionPolicyRestrictionsAppsOwner withMembersUrl(String membersUrl) {
         this.membersUrl = membersUrl;
         return this;
@@ -76,6 +84,7 @@ public class BranchRestrictionPolicyRestrictionsAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("node_id")
     public String nodeId;
+
     public BranchRestrictionPolicyRestrictionsAppsOwner withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -84,6 +93,7 @@ public class BranchRestrictionPolicyRestrictionsAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_members_url")
     public String publicMembersUrl;
+
     public BranchRestrictionPolicyRestrictionsAppsOwner withPublicMembersUrl(String publicMembersUrl) {
         this.publicMembersUrl = publicMembersUrl;
         return this;
@@ -92,6 +102,7 @@ public class BranchRestrictionPolicyRestrictionsAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repos_url")
     public String reposUrl;
+
     public BranchRestrictionPolicyRestrictionsAppsOwner withReposUrl(String reposUrl) {
         this.reposUrl = reposUrl;
         return this;
@@ -100,9 +111,11 @@ public class BranchRestrictionPolicyRestrictionsAppsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public BranchRestrictionPolicyRestrictionsAppsOwner withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public BranchRestrictionPolicyRestrictionsAppsOwner(){}
 }

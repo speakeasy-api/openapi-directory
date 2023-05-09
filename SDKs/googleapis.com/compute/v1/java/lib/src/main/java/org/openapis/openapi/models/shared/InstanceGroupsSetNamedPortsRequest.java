@@ -15,6 +15,7 @@ public class InstanceGroupsSetNamedPortsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public InstanceGroupsSetNamedPortsRequest withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -26,9 +27,11 @@ public class InstanceGroupsSetNamedPortsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namedPorts")
     public NamedPort[] namedPorts;
+
     public InstanceGroupsSetNamedPortsRequest withNamedPorts(NamedPort[] namedPorts) {
         this.namedPorts = namedPorts;
         return this;
     }
     
+    public InstanceGroupsSetNamedPortsRequest(){}
 }

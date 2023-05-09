@@ -15,6 +15,7 @@ public class ErrorModel {
      */
     @JsonProperty("detail")
     public String detail;
+
     public ErrorModel withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -25,9 +26,14 @@ public class ErrorModel {
      */
     @JsonProperty("status")
     public Integer status;
+
     public ErrorModel withStatus(Integer status) {
         this.status = status;
         return this;
     }
     
+    public ErrorModel(@JsonProperty("detail") String detail, @JsonProperty("status") Integer status) {
+        this.detail = detail;
+        this.status = status;
+  }
 }

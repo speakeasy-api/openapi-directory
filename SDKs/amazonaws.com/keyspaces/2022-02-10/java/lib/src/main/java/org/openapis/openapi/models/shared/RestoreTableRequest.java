@@ -17,6 +17,7 @@ public class RestoreTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacitySpecificationOverride")
     public CapacitySpecification capacitySpecificationOverride;
+
     public RestoreTableRequest withCapacitySpecificationOverride(CapacitySpecification capacitySpecificationOverride) {
         this.capacitySpecificationOverride = capacitySpecificationOverride;
         return this;
@@ -25,6 +26,7 @@ public class RestoreTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionSpecificationOverride")
     public EncryptionSpecification encryptionSpecificationOverride;
+
     public RestoreTableRequest withEncryptionSpecificationOverride(EncryptionSpecification encryptionSpecificationOverride) {
         this.encryptionSpecificationOverride = encryptionSpecificationOverride;
         return this;
@@ -33,6 +35,7 @@ public class RestoreTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pointInTimeRecoveryOverride")
     public PointInTimeRecovery pointInTimeRecoveryOverride;
+
     public RestoreTableRequest withPointInTimeRecoveryOverride(PointInTimeRecovery pointInTimeRecoveryOverride) {
         this.pointInTimeRecoveryOverride = pointInTimeRecoveryOverride;
         return this;
@@ -43,6 +46,7 @@ public class RestoreTableRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("restoreTimestamp")
     public OffsetDateTime restoreTimestamp;
+
     public RestoreTableRequest withRestoreTimestamp(OffsetDateTime restoreTimestamp) {
         this.restoreTimestamp = restoreTimestamp;
         return this;
@@ -50,6 +54,7 @@ public class RestoreTableRequest {
     
     @JsonProperty("sourceKeyspaceName")
     public String sourceKeyspaceName;
+
     public RestoreTableRequest withSourceKeyspaceName(String sourceKeyspaceName) {
         this.sourceKeyspaceName = sourceKeyspaceName;
         return this;
@@ -57,6 +62,7 @@ public class RestoreTableRequest {
     
     @JsonProperty("sourceTableName")
     public String sourceTableName;
+
     public RestoreTableRequest withSourceTableName(String sourceTableName) {
         this.sourceTableName = sourceTableName;
         return this;
@@ -65,6 +71,7 @@ public class RestoreTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagsOverride")
     public Tag[] tagsOverride;
+
     public RestoreTableRequest withTagsOverride(Tag[] tagsOverride) {
         this.tagsOverride = tagsOverride;
         return this;
@@ -72,6 +79,7 @@ public class RestoreTableRequest {
     
     @JsonProperty("targetKeyspaceName")
     public String targetKeyspaceName;
+
     public RestoreTableRequest withTargetKeyspaceName(String targetKeyspaceName) {
         this.targetKeyspaceName = targetKeyspaceName;
         return this;
@@ -79,9 +87,16 @@ public class RestoreTableRequest {
     
     @JsonProperty("targetTableName")
     public String targetTableName;
+
     public RestoreTableRequest withTargetTableName(String targetTableName) {
         this.targetTableName = targetTableName;
         return this;
     }
     
+    public RestoreTableRequest(@JsonProperty("sourceKeyspaceName") String sourceKeyspaceName, @JsonProperty("sourceTableName") String sourceTableName, @JsonProperty("targetKeyspaceName") String targetKeyspaceName, @JsonProperty("targetTableName") String targetTableName) {
+        this.sourceKeyspaceName = sourceKeyspaceName;
+        this.sourceTableName = sourceTableName;
+        this.targetKeyspaceName = targetKeyspaceName;
+        this.targetTableName = targetTableName;
+  }
 }

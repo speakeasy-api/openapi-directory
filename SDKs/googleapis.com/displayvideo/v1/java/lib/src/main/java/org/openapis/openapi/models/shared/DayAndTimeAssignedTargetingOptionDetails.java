@@ -18,6 +18,7 @@ public class DayAndTimeAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dayOfWeek")
     public DayAndTimeAssignedTargetingOptionDetailsDayOfWeekEnum dayOfWeek;
+
     public DayAndTimeAssignedTargetingOptionDetails withDayOfWeek(DayAndTimeAssignedTargetingOptionDetailsDayOfWeekEnum dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
         return this;
@@ -29,6 +30,7 @@ public class DayAndTimeAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endHour")
     public Integer endHour;
+
     public DayAndTimeAssignedTargetingOptionDetails withEndHour(Integer endHour) {
         this.endHour = endHour;
         return this;
@@ -40,6 +42,7 @@ public class DayAndTimeAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startHour")
     public Integer startHour;
+
     public DayAndTimeAssignedTargetingOptionDetails withStartHour(Integer startHour) {
         this.startHour = startHour;
         return this;
@@ -51,9 +54,11 @@ public class DayAndTimeAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZoneResolution")
     public DayAndTimeAssignedTargetingOptionDetailsTimeZoneResolutionEnum timeZoneResolution;
+
     public DayAndTimeAssignedTargetingOptionDetails withTimeZoneResolution(DayAndTimeAssignedTargetingOptionDetailsTimeZoneResolutionEnum timeZoneResolution) {
         this.timeZoneResolution = timeZoneResolution;
         return this;
     }
     
+    public DayAndTimeAssignedTargetingOptionDetails(){}
 }

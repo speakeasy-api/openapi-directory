@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRecommendedRulesResponse {
@@ -12,6 +13,7 @@ public class ListRecommendedRulesResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiError apiError;
+
     public ListRecommendedRulesResponse withApiError(org.openapis.openapi.models.shared.ApiError apiError) {
         this.apiError = apiError;
         return this;
@@ -19,6 +21,7 @@ public class ListRecommendedRulesResponse {
     
     
     public String contentType;
+
     public ListRecommendedRulesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListRecommendedRulesResponse {
      */
     
     public org.openapis.openapi.models.shared.RecommendedRules recommendedRules;
+
     public ListRecommendedRulesResponse withRecommendedRules(org.openapis.openapi.models.shared.RecommendedRules recommendedRules) {
         this.recommendedRules = recommendedRules;
         return this;
@@ -36,6 +40,7 @@ public class ListRecommendedRulesResponse {
     
     
     public Integer statusCode;
+
     public ListRecommendedRulesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ListRecommendedRulesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRecommendedRulesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListRecommendedRulesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

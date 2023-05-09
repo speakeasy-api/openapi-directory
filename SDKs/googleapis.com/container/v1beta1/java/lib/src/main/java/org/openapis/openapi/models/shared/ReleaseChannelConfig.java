@@ -18,6 +18,7 @@ public class ReleaseChannelConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableVersions")
     public AvailableVersion[] availableVersions;
+
     public ReleaseChannelConfig withAvailableVersions(AvailableVersion[] availableVersions) {
         this.availableVersions = availableVersions;
         return this;
@@ -29,6 +30,7 @@ public class ReleaseChannelConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
     public ReleaseChannelConfigChannelEnum channel;
+
     public ReleaseChannelConfig withChannel(ReleaseChannelConfigChannelEnum channel) {
         this.channel = channel;
         return this;
@@ -40,6 +42,7 @@ public class ReleaseChannelConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultVersion")
     public String defaultVersion;
+
     public ReleaseChannelConfig withDefaultVersion(String defaultVersion) {
         this.defaultVersion = defaultVersion;
         return this;
@@ -51,9 +54,11 @@ public class ReleaseChannelConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validVersions")
     public String[] validVersions;
+
     public ReleaseChannelConfig withValidVersions(String[] validVersions) {
         this.validVersions = validVersions;
         return this;
     }
     
+    public ReleaseChannelConfig(){}
 }

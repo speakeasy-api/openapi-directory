@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETMapsUsingGET1Request {
@@ -12,9 +13,13 @@ public class GETMapsUsingGET1Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accId")
     public String accId;
+
     public GETMapsUsingGET1Request withAccId(String accId) {
         this.accId = accId;
         return this;
     }
     
+    public GETMapsUsingGET1Request(@JsonProperty("accId") String accId) {
+        this.accId = accId;
+  }
 }

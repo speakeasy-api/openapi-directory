@@ -18,6 +18,7 @@ public class GoogleCloudAssuredworkloadsV1WorkloadResourceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudAssuredworkloadsV1WorkloadResourceSettings withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudAssuredworkloadsV1WorkloadResourceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceId")
     public String resourceId;
+
     public GoogleCloudAssuredworkloadsV1WorkloadResourceSettings withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudAssuredworkloadsV1WorkloadResourceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceTypeEnum resourceType;
+
     public GoogleCloudAssuredworkloadsV1WorkloadResourceSettings withResourceType(GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public GoogleCloudAssuredworkloadsV1WorkloadResourceSettings(){}
 }

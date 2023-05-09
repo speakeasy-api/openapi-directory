@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CalculateRouteSummary {
     @JsonProperty("DataSource")
     public String dataSource;
+
     public CalculateRouteSummary withDataSource(String dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -19,6 +20,7 @@ public class CalculateRouteSummary {
     
     @JsonProperty("Distance")
     public Double distance;
+
     public CalculateRouteSummary withDistance(Double distance) {
         this.distance = distance;
         return this;
@@ -26,6 +28,7 @@ public class CalculateRouteSummary {
     
     @JsonProperty("DistanceUnit")
     public DistanceUnitEnum distanceUnit;
+
     public CalculateRouteSummary withDistanceUnit(DistanceUnitEnum distanceUnit) {
         this.distanceUnit = distanceUnit;
         return this;
@@ -33,6 +36,7 @@ public class CalculateRouteSummary {
     
     @JsonProperty("DurationSeconds")
     public Double durationSeconds;
+
     public CalculateRouteSummary withDurationSeconds(Double durationSeconds) {
         this.durationSeconds = durationSeconds;
         return this;
@@ -40,9 +44,17 @@ public class CalculateRouteSummary {
     
     @JsonProperty("RouteBBox")
     public Double[] routeBBox;
+
     public CalculateRouteSummary withRouteBBox(Double[] routeBBox) {
         this.routeBBox = routeBBox;
         return this;
     }
     
+    public CalculateRouteSummary(@JsonProperty("DataSource") String dataSource, @JsonProperty("Distance") Double distance, @JsonProperty("DistanceUnit") DistanceUnitEnum distanceUnit, @JsonProperty("DurationSeconds") Double durationSeconds, @JsonProperty("RouteBBox") Double[] routeBBox) {
+        this.dataSource = dataSource;
+        this.distance = distance;
+        this.distanceUnit = distanceUnit;
+        this.durationSeconds = durationSeconds;
+        this.routeBBox = routeBBox;
+  }
 }

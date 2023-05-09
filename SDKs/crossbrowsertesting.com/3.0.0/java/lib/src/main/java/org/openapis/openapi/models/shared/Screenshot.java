@@ -12,9 +12,11 @@ public class Screenshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("screenshot_id")
     public Long screenshotId;
+
     public Screenshot withScreenshotId(Long screenshotId) {
         this.screenshotId = screenshotId;
         return this;
     }
     
+    public Screenshot(){}
 }

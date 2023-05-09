@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAccountInstitutionReviewCurationIdCommentsRequest {
@@ -12,6 +13,7 @@ public class PostAccountInstitutionReviewCurationIdCommentsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CurationCommentCreate curationCommentCreate;
+
     public PostAccountInstitutionReviewCurationIdCommentsRequest withCurationCommentCreate(org.openapis.openapi.models.shared.CurationCommentCreate curationCommentCreate) {
         this.curationCommentCreate = curationCommentCreate;
         return this;
@@ -22,9 +24,14 @@ public class PostAccountInstitutionReviewCurationIdCommentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=curation_id")
     public Long curationId;
+
     public PostAccountInstitutionReviewCurationIdCommentsRequest withCurationId(Long curationId) {
         this.curationId = curationId;
         return this;
     }
     
+    public PostAccountInstitutionReviewCurationIdCommentsRequest(@JsonProperty("CurationCommentCreate") org.openapis.openapi.models.shared.CurationCommentCreate curationCommentCreate, @JsonProperty("curation_id") Long curationId) {
+        this.curationCommentCreate = curationCommentCreate;
+        this.curationId = curationId;
+  }
 }

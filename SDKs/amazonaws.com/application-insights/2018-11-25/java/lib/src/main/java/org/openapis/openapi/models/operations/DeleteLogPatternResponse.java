@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteLogPatternResponse {
@@ -12,6 +13,7 @@ public class DeleteLogPatternResponse {
      */
     
     public Object badRequestException;
+
     public DeleteLogPatternResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteLogPatternResponse {
     
     
     public String contentType;
+
     public DeleteLogPatternResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteLogPatternResponse {
      */
     
     public java.util.Map<String, Object> deleteLogPatternResponse;
+
     public DeleteLogPatternResponse withDeleteLogPatternResponse(java.util.Map<String, Object> deleteLogPatternResponse) {
         this.deleteLogPatternResponse = deleteLogPatternResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteLogPatternResponse {
      */
     
     public Object internalServerException;
+
     public DeleteLogPatternResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteLogPatternResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteLogPatternResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteLogPatternResponse {
     
     
     public Integer statusCode;
+
     public DeleteLogPatternResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteLogPatternResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteLogPatternResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteLogPatternResponse {
      */
     
     public Object validationException;
+
     public DeleteLogPatternResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteLogPatternResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

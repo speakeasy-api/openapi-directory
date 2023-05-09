@@ -12,9 +12,11 @@ public class IsochroneResponsePolygonProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucket")
     public Integer bucket;
+
     public IsochroneResponsePolygonProperties withBucket(Integer bucket) {
         this.bucket = bucket;
         return this;
     }
     
+    public IsochroneResponsePolygonProperties(){}
 }

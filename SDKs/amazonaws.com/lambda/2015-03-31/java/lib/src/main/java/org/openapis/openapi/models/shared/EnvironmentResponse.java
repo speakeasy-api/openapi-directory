@@ -15,6 +15,7 @@ public class EnvironmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Error")
     public EnvironmentError error;
+
     public EnvironmentResponse withError(EnvironmentError error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class EnvironmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Variables")
     public java.util.Map<String, String> variables;
+
     public EnvironmentResponse withVariables(java.util.Map<String, String> variables) {
         this.variables = variables;
         return this;
     }
     
+    public EnvironmentResponse(){}
 }

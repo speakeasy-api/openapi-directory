@@ -15,9 +15,11 @@ public class DQStopJobOnFailureOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StopJobOnFailureTiming")
     public DQStopJobOnFailureTimingEnum stopJobOnFailureTiming;
+
     public DQStopJobOnFailureOptions withStopJobOnFailureTiming(DQStopJobOnFailureTimingEnum stopJobOnFailureTiming) {
         this.stopJobOnFailureTiming = stopJobOnFailureTiming;
         return this;
     }
     
+    public DQStopJobOnFailureOptions(){}
 }

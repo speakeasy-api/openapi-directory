@@ -15,6 +15,7 @@ public class CreateJobTemplateRequestBodyJobTemplateData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationOverrides")
     public org.openapis.openapi.models.shared.ParametricConfigurationOverrides configurationOverrides;
+
     public CreateJobTemplateRequestBodyJobTemplateData withConfigurationOverrides(org.openapis.openapi.models.shared.ParametricConfigurationOverrides configurationOverrides) {
         this.configurationOverrides = configurationOverrides;
         return this;
@@ -23,6 +24,7 @@ public class CreateJobTemplateRequestBodyJobTemplateData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionRoleArn")
     public String executionRoleArn;
+
     public CreateJobTemplateRequestBodyJobTemplateData withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -34,6 +36,7 @@ public class CreateJobTemplateRequestBodyJobTemplateData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobDriver")
     public org.openapis.openapi.models.shared.JobDriver jobDriver;
+
     public CreateJobTemplateRequestBodyJobTemplateData withJobDriver(org.openapis.openapi.models.shared.JobDriver jobDriver) {
         this.jobDriver = jobDriver;
         return this;
@@ -42,6 +45,7 @@ public class CreateJobTemplateRequestBodyJobTemplateData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobTags")
     public java.util.Map<String, String> jobTags;
+
     public CreateJobTemplateRequestBodyJobTemplateData withJobTags(java.util.Map<String, String> jobTags) {
         this.jobTags = jobTags;
         return this;
@@ -50,6 +54,7 @@ public class CreateJobTemplateRequestBodyJobTemplateData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameterConfiguration")
     public java.util.Map<String, org.openapis.openapi.models.shared.TemplateParameterConfiguration> parameterConfiguration;
+
     public CreateJobTemplateRequestBodyJobTemplateData withParameterConfiguration(java.util.Map<String, org.openapis.openapi.models.shared.TemplateParameterConfiguration> parameterConfiguration) {
         this.parameterConfiguration = parameterConfiguration;
         return this;
@@ -58,9 +63,11 @@ public class CreateJobTemplateRequestBodyJobTemplateData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("releaseLabel")
     public String releaseLabel;
+
     public CreateJobTemplateRequestBodyJobTemplateData withReleaseLabel(String releaseLabel) {
         this.releaseLabel = releaseLabel;
         return this;
     }
     
+    public CreateJobTemplateRequestBodyJobTemplateData(){}
 }

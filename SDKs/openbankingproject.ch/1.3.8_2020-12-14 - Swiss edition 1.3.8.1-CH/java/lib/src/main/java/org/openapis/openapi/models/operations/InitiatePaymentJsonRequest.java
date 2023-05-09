@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InitiatePaymentJsonRequest {
@@ -14,6 +15,7 @@ public class InitiatePaymentJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Consent-ID")
     public String consentID;
+
     public InitiatePaymentJsonRequest withConsentID(String consentID) {
         this.consentID = consentID;
         return this;
@@ -24,6 +26,7 @@ public class InitiatePaymentJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Digest")
     public String digest;
+
     public InitiatePaymentJsonRequest withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -35,6 +38,7 @@ public class InitiatePaymentJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept")
     public String psuAccept;
+
     public InitiatePaymentJsonRequest withPSUAccept(String psuAccept) {
         this.psuAccept = psuAccept;
         return this;
@@ -46,6 +50,7 @@ public class InitiatePaymentJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Charset")
     public String psuAcceptCharset;
+
     public InitiatePaymentJsonRequest withPSUAcceptCharset(String psuAcceptCharset) {
         this.psuAcceptCharset = psuAcceptCharset;
         return this;
@@ -57,6 +62,7 @@ public class InitiatePaymentJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Encoding")
     public String psuAcceptEncoding;
+
     public InitiatePaymentJsonRequest withPSUAcceptEncoding(String psuAcceptEncoding) {
         this.psuAcceptEncoding = psuAcceptEncoding;
         return this;
@@ -68,6 +74,7 @@ public class InitiatePaymentJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Language")
     public String psuAcceptLanguage;
+
     public InitiatePaymentJsonRequest withPSUAcceptLanguage(String psuAcceptLanguage) {
         this.psuAcceptLanguage = psuAcceptLanguage;
         return this;
@@ -79,6 +86,7 @@ public class InitiatePaymentJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Corporate-ID")
     public String psuCorporateID;
+
     public InitiatePaymentJsonRequest withPSUCorporateID(String psuCorporateID) {
         this.psuCorporateID = psuCorporateID;
         return this;
@@ -90,6 +98,7 @@ public class InitiatePaymentJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Corporate-ID-Type")
     public String psuCorporateIDType;
+
     public InitiatePaymentJsonRequest withPSUCorporateIDType(String psuCorporateIDType) {
         this.psuCorporateIDType = psuCorporateIDType;
         return this;
@@ -103,6 +112,7 @@ public class InitiatePaymentJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Device-ID")
     public String psuDeviceID;
+
     public InitiatePaymentJsonRequest withPSUDeviceID(String psuDeviceID) {
         this.psuDeviceID = psuDeviceID;
         return this;
@@ -114,6 +124,7 @@ public class InitiatePaymentJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Geo-Location")
     public String psuGeoLocation;
+
     public InitiatePaymentJsonRequest withPSUGeoLocation(String psuGeoLocation) {
         this.psuGeoLocation = psuGeoLocation;
         return this;
@@ -131,6 +142,7 @@ public class InitiatePaymentJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Http-Method")
     public org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod;
+
     public InitiatePaymentJsonRequest withPSUHttpMethod(org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod) {
         this.psuHttpMethod = psuHttpMethod;
         return this;
@@ -149,6 +161,7 @@ public class InitiatePaymentJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-ID")
     public String psuId;
+
     public InitiatePaymentJsonRequest withPsuId(String psuId) {
         this.psuId = psuId;
         return this;
@@ -162,6 +175,7 @@ public class InitiatePaymentJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-ID-Type")
     public String psuIDType;
+
     public InitiatePaymentJsonRequest withPSUIDType(String psuIDType) {
         this.psuIDType = psuIDType;
         return this;
@@ -174,6 +188,7 @@ public class InitiatePaymentJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Address")
     public String psuIPAddress;
+
     public InitiatePaymentJsonRequest withPSUIPAddress(String psuIPAddress) {
         this.psuIPAddress = psuIPAddress;
         return this;
@@ -185,6 +200,7 @@ public class InitiatePaymentJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Port")
     public String psuIPPort;
+
     public InitiatePaymentJsonRequest withPSUIPPort(String psuIPPort) {
         this.psuIPPort = psuIPPort;
         return this;
@@ -196,6 +212,7 @@ public class InitiatePaymentJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-User-Agent")
     public String psuUserAgent;
+
     public InitiatePaymentJsonRequest withPSUUserAgent(String psuUserAgent) {
         this.psuUserAgent = psuUserAgent;
         return this;
@@ -227,6 +244,7 @@ public class InitiatePaymentJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public Object requestBody;
+
     public InitiatePaymentJsonRequest withRequestBody(Object requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -238,6 +256,7 @@ public class InitiatePaymentJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Signature")
     public String signature;
+
     public InitiatePaymentJsonRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -251,6 +270,7 @@ public class InitiatePaymentJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Brand-Logging-Information")
     public String tppBrandLoggingInformation;
+
     public InitiatePaymentJsonRequest withTPPBrandLoggingInformation(String tppBrandLoggingInformation) {
         this.tppBrandLoggingInformation = tppBrandLoggingInformation;
         return this;
@@ -268,6 +288,7 @@ public class InitiatePaymentJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Explicit-Authorisation-Preferred")
     public Boolean tppExplicitAuthorisationPreferred;
+
     public InitiatePaymentJsonRequest withTPPExplicitAuthorisationPreferred(Boolean tppExplicitAuthorisationPreferred) {
         this.tppExplicitAuthorisationPreferred = tppExplicitAuthorisationPreferred;
         return this;
@@ -280,6 +301,7 @@ public class InitiatePaymentJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Nok-Redirect-URI")
     public String tppNokRedirectURI;
+
     public InitiatePaymentJsonRequest withTPPNokRedirectURI(String tppNokRedirectURI) {
         this.tppNokRedirectURI = tppNokRedirectURI;
         return this;
@@ -304,6 +326,7 @@ public class InitiatePaymentJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Notification-Content-Preferred")
     public String tppNotificationContentPreferred;
+
     public InitiatePaymentJsonRequest withTPPNotificationContentPreferred(String tppNotificationContentPreferred) {
         this.tppNotificationContentPreferred = tppNotificationContentPreferred;
         return this;
@@ -323,6 +346,7 @@ public class InitiatePaymentJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Notification-URI")
     public String tppNotificationURI;
+
     public InitiatePaymentJsonRequest withTPPNotificationURI(String tppNotificationURI) {
         this.tppNotificationURI = tppNotificationURI;
         return this;
@@ -338,6 +362,7 @@ public class InitiatePaymentJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Redirect-Preferred")
     public Boolean tppRedirectPreferred;
+
     public InitiatePaymentJsonRequest withTPPRedirectPreferred(Boolean tppRedirectPreferred) {
         this.tppRedirectPreferred = tppRedirectPreferred;
         return this;
@@ -356,6 +381,7 @@ public class InitiatePaymentJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Redirect-URI")
     public String tppRedirectURI;
+
     public InitiatePaymentJsonRequest withTPPRedirectURI(String tppRedirectURI) {
         this.tppRedirectURI = tppRedirectURI;
         return this;
@@ -374,6 +400,7 @@ public class InitiatePaymentJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Rejection-NoFunds-Preferred")
     public Boolean tppRejectionNoFundsPreferred;
+
     public InitiatePaymentJsonRequest withTPPRejectionNoFundsPreferred(Boolean tppRejectionNoFundsPreferred) {
         this.tppRejectionNoFundsPreferred = tppRejectionNoFundsPreferred;
         return this;
@@ -386,6 +413,7 @@ public class InitiatePaymentJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Signature-Certificate")
     public String tppSignatureCertificate;
+
     public InitiatePaymentJsonRequest withTPPSignatureCertificate(String tppSignatureCertificate) {
         this.tppSignatureCertificate = tppSignatureCertificate;
         return this;
@@ -396,6 +424,7 @@ public class InitiatePaymentJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Request-ID")
     public String xRequestID;
+
     public InitiatePaymentJsonRequest withXRequestID(String xRequestID) {
         this.xRequestID = xRequestID;
         return this;
@@ -426,6 +455,7 @@ public class InitiatePaymentJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payment-product")
     public org.openapis.openapi.models.shared.PaymentProductEnum paymentProduct;
+
     public InitiatePaymentJsonRequest withPaymentProduct(org.openapis.openapi.models.shared.PaymentProductEnum paymentProduct) {
         this.paymentProduct = paymentProduct;
         return this;
@@ -442,9 +472,17 @@ public class InitiatePaymentJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payment-service")
     public org.openapis.openapi.models.shared.PaymentServiceEnum paymentService;
+
     public InitiatePaymentJsonRequest withPaymentService(org.openapis.openapi.models.shared.PaymentServiceEnum paymentService) {
         this.paymentService = paymentService;
         return this;
     }
     
+    public InitiatePaymentJsonRequest(@JsonProperty("PSU-IP-Address") String psuIPAddress, @JsonProperty("RequestBody") Object requestBody, @JsonProperty("X-Request-ID") String xRequestID, @JsonProperty("payment-product") org.openapis.openapi.models.shared.PaymentProductEnum paymentProduct, @JsonProperty("payment-service") org.openapis.openapi.models.shared.PaymentServiceEnum paymentService) {
+        this.psuIPAddress = psuIPAddress;
+        this.requestBody = requestBody;
+        this.xRequestID = xRequestID;
+        this.paymentProduct = paymentProduct;
+        this.paymentService = paymentService;
+  }
 }

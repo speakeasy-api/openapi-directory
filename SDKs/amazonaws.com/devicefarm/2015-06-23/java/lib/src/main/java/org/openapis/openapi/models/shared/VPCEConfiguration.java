@@ -15,6 +15,7 @@ public class VPCEConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public VPCEConfiguration withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class VPCEConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceDnsName")
     public String serviceDnsName;
+
     public VPCEConfiguration withServiceDnsName(String serviceDnsName) {
         this.serviceDnsName = serviceDnsName;
         return this;
@@ -31,6 +33,7 @@ public class VPCEConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpceConfigurationDescription")
     public String vpceConfigurationDescription;
+
     public VPCEConfiguration withVpceConfigurationDescription(String vpceConfigurationDescription) {
         this.vpceConfigurationDescription = vpceConfigurationDescription;
         return this;
@@ -39,6 +42,7 @@ public class VPCEConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpceConfigurationName")
     public String vpceConfigurationName;
+
     public VPCEConfiguration withVpceConfigurationName(String vpceConfigurationName) {
         this.vpceConfigurationName = vpceConfigurationName;
         return this;
@@ -47,9 +51,11 @@ public class VPCEConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpceServiceName")
     public String vpceServiceName;
+
     public VPCEConfiguration withVpceServiceName(String vpceServiceName) {
         this.vpceServiceName = vpceServiceName;
         return this;
     }
     
+    public VPCEConfiguration(){}
 }

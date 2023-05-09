@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateLensReviewResponse {
@@ -12,6 +13,7 @@ public class UpdateLensReviewResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateLensReviewResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateLensReviewResponse {
      */
     
     public Object conflictException;
+
     public UpdateLensReviewResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateLensReviewResponse {
     
     
     public String contentType;
+
     public UpdateLensReviewResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateLensReviewResponse {
      */
     
     public Object internalServerException;
+
     public UpdateLensReviewResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateLensReviewResponse {
     
     
     public Integer statusCode;
+
     public UpdateLensReviewResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateLensReviewResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateLensReviewResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateLensReviewResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateLensReviewResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateLensReviewResponse {
      */
     
     public Object throttlingException;
+
     public UpdateLensReviewResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateLensReviewResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateLensReviewOutput updateLensReviewOutput;
+
     public UpdateLensReviewResponse withUpdateLensReviewOutput(org.openapis.openapi.models.shared.UpdateLensReviewOutput updateLensReviewOutput) {
         this.updateLensReviewOutput = updateLensReviewOutput;
         return this;
@@ -93,9 +103,14 @@ public class UpdateLensReviewResponse {
      */
     
     public Object validationException;
+
     public UpdateLensReviewResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateLensReviewResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

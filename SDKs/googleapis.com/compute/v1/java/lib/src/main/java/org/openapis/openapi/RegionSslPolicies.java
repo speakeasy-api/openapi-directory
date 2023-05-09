@@ -59,11 +59,9 @@ public class RegionSslPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionSslPoliciesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeRegionSslPoliciesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionSslPoliciesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeRegionSslPoliciesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class RegionSslPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionSslPoliciesGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionSslPoliciesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionSslPoliciesGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionSslPoliciesGetResponse(contentType, httpRes.statusCode()) {{
             sslPolicy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class RegionSslPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionSslPoliciesInsertResponse res = new org.openapis.openapi.models.operations.ComputeRegionSslPoliciesInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionSslPoliciesInsertResponse res = new org.openapis.openapi.models.operations.ComputeRegionSslPoliciesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class RegionSslPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionSslPoliciesListResponse res = new org.openapis.openapi.models.operations.ComputeRegionSslPoliciesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionSslPoliciesListResponse res = new org.openapis.openapi.models.operations.ComputeRegionSslPoliciesListResponse(contentType, httpRes.statusCode()) {{
             sslPoliciesList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class RegionSslPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionSslPoliciesListAvailableFeaturesResponse res = new org.openapis.openapi.models.operations.ComputeRegionSslPoliciesListAvailableFeaturesResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionSslPoliciesListAvailableFeaturesResponse res = new org.openapis.openapi.models.operations.ComputeRegionSslPoliciesListAvailableFeaturesResponse(contentType, httpRes.statusCode()) {{
             sslPoliciesListAvailableFeaturesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +283,9 @@ public class RegionSslPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionSslPoliciesPatchResponse res = new org.openapis.openapi.models.operations.ComputeRegionSslPoliciesPatchResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionSslPoliciesPatchResponse res = new org.openapis.openapi.models.operations.ComputeRegionSslPoliciesPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

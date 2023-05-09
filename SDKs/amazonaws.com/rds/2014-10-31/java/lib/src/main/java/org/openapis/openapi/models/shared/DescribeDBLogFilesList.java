@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeDBLogFilesList {
     
     public Long lastWritten;
+
     public DescribeDBLogFilesList withLastWritten(Long lastWritten) {
         this.lastWritten = lastWritten;
         return this;
@@ -19,6 +20,7 @@ public class DescribeDBLogFilesList {
     
     
     public String logFileName;
+
     public DescribeDBLogFilesList withLogFileName(String logFileName) {
         this.logFileName = logFileName;
         return this;
@@ -26,9 +28,11 @@ public class DescribeDBLogFilesList {
     
     
     public Long size;
+
     public DescribeDBLogFilesList withSize(Long size) {
         this.size = size;
         return this;
     }
     
+    public DescribeDBLogFilesList(){}
 }

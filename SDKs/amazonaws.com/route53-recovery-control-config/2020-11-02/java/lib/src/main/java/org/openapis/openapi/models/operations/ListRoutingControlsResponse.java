@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRoutingControlsResponse {
@@ -12,6 +13,7 @@ public class ListRoutingControlsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListRoutingControlsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListRoutingControlsResponse {
     
     
     public String contentType;
+
     public ListRoutingControlsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListRoutingControlsResponse {
      */
     
     public Object internalServerException;
+
     public ListRoutingControlsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListRoutingControlsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRoutingControlsResponse listRoutingControlsResponse;
+
     public ListRoutingControlsResponse withListRoutingControlsResponse(org.openapis.openapi.models.shared.ListRoutingControlsResponse listRoutingControlsResponse) {
         this.listRoutingControlsResponse = listRoutingControlsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListRoutingControlsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListRoutingControlsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListRoutingControlsResponse {
     
     
     public Integer statusCode;
+
     public ListRoutingControlsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListRoutingControlsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRoutingControlsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListRoutingControlsResponse {
      */
     
     public Object throttlingException;
+
     public ListRoutingControlsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListRoutingControlsResponse {
      */
     
     public Object validationException;
+
     public ListRoutingControlsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListRoutingControlsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

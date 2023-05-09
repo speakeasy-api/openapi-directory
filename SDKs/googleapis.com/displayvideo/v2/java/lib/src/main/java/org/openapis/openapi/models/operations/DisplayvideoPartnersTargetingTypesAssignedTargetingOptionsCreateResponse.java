@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsCreateResponse {
@@ -12,6 +13,7 @@ public class DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsCreateRes
      */
     
     public org.openapis.openapi.models.shared.AssignedTargetingOption assignedTargetingOption;
+
     public DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsCreateResponse withAssignedTargetingOption(org.openapis.openapi.models.shared.AssignedTargetingOption assignedTargetingOption) {
         this.assignedTargetingOption = assignedTargetingOption;
         return this;
@@ -19,6 +21,7 @@ public class DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsCreateRes
     
     
     public String contentType;
+
     public DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsCreateRes
     
     
     public Integer statusCode;
+
     public DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsCreateRes
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

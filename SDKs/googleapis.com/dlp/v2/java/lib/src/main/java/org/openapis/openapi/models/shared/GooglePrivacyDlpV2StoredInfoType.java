@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2StoredInfoType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentVersion")
     public GooglePrivacyDlpV2StoredInfoTypeVersion currentVersion;
+
     public GooglePrivacyDlpV2StoredInfoType withCurrentVersion(GooglePrivacyDlpV2StoredInfoTypeVersion currentVersion) {
         this.currentVersion = currentVersion;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2StoredInfoType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GooglePrivacyDlpV2StoredInfoType withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class GooglePrivacyDlpV2StoredInfoType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pendingVersions")
     public GooglePrivacyDlpV2StoredInfoTypeVersion[] pendingVersions;
+
     public GooglePrivacyDlpV2StoredInfoType withPendingVersions(GooglePrivacyDlpV2StoredInfoTypeVersion[] pendingVersions) {
         this.pendingVersions = pendingVersions;
         return this;
     }
     
+    public GooglePrivacyDlpV2StoredInfoType(){}
 }

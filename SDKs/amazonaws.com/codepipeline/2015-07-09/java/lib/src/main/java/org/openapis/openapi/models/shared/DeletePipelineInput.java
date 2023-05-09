@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeletePipelineInput {
     @JsonProperty("name")
     public String name;
+
     public DeletePipelineInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DeletePipelineInput(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

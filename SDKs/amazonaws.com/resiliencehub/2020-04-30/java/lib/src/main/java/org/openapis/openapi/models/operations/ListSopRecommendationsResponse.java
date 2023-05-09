@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSopRecommendationsResponse {
@@ -12,6 +13,7 @@ public class ListSopRecommendationsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListSopRecommendationsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListSopRecommendationsResponse {
      */
     
     public Object conflictException;
+
     public ListSopRecommendationsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ListSopRecommendationsResponse {
     
     
     public String contentType;
+
     public ListSopRecommendationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListSopRecommendationsResponse {
      */
     
     public Object internalServerException;
+
     public ListSopRecommendationsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ListSopRecommendationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSopRecommendationsResponse listSopRecommendationsResponse;
+
     public ListSopRecommendationsResponse withListSopRecommendationsResponse(org.openapis.openapi.models.shared.ListSopRecommendationsResponse listSopRecommendationsResponse) {
         this.listSopRecommendationsResponse = listSopRecommendationsResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListSopRecommendationsResponse {
     
     
     public Integer statusCode;
+
     public ListSopRecommendationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListSopRecommendationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSopRecommendationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListSopRecommendationsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListSopRecommendationsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class ListSopRecommendationsResponse {
      */
     
     public Object throttlingException;
+
     public ListSopRecommendationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class ListSopRecommendationsResponse {
      */
     
     public Object validationException;
+
     public ListSopRecommendationsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListSopRecommendationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

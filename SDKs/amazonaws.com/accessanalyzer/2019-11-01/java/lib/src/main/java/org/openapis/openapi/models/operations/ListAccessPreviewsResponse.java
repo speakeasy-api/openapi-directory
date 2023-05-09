@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAccessPreviewsResponse {
@@ -12,6 +13,7 @@ public class ListAccessPreviewsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListAccessPreviewsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListAccessPreviewsResponse {
     
     
     public String contentType;
+
     public ListAccessPreviewsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListAccessPreviewsResponse {
      */
     
     public Object internalServerException;
+
     public ListAccessPreviewsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListAccessPreviewsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAccessPreviewsResponse listAccessPreviewsResponse;
+
     public ListAccessPreviewsResponse withListAccessPreviewsResponse(org.openapis.openapi.models.shared.ListAccessPreviewsResponse listAccessPreviewsResponse) {
         this.listAccessPreviewsResponse = listAccessPreviewsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListAccessPreviewsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListAccessPreviewsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListAccessPreviewsResponse {
     
     
     public Integer statusCode;
+
     public ListAccessPreviewsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListAccessPreviewsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAccessPreviewsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListAccessPreviewsResponse {
      */
     
     public Object throttlingException;
+
     public ListAccessPreviewsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListAccessPreviewsResponse {
      */
     
     public Object validationException;
+
     public ListAccessPreviewsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListAccessPreviewsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

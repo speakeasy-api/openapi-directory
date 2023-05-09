@@ -18,6 +18,7 @@ public class CampaignFlight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plannedDates")
     public DateRange plannedDates;
+
     public CampaignFlight withPlannedDates(DateRange plannedDates) {
         this.plannedDates = plannedDates;
         return this;
@@ -29,9 +30,11 @@ public class CampaignFlight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plannedSpendAmountMicros")
     public String plannedSpendAmountMicros;
+
     public CampaignFlight withPlannedSpendAmountMicros(String plannedSpendAmountMicros) {
         this.plannedSpendAmountMicros = plannedSpendAmountMicros;
         return this;
     }
     
+    public CampaignFlight(){}
 }

@@ -18,9 +18,11 @@ public class CreateSinglePaymentIntentRequestBodyServiceProviderParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bank_account_id")
     public String bankAccountId;
+
     public CreateSinglePaymentIntentRequestBodyServiceProviderParams withBankAccountId(String bankAccountId) {
         this.bankAccountId = bankAccountId;
         return this;
     }
     
+    public CreateSinglePaymentIntentRequestBodyServiceProviderParams(){}
 }

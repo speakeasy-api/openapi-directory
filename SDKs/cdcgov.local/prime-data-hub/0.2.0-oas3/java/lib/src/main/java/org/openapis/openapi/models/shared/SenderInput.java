@@ -15,6 +15,7 @@ public class SenderInput {
      */
     @JsonProperty("description")
     public String description;
+
     public SenderInput withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class SenderInput {
      */
     @JsonProperty("format")
     public SenderFormatEnum format;
+
     public SenderInput withFormat(SenderFormatEnum format) {
         this.format = format;
         return this;
@@ -35,6 +37,7 @@ public class SenderInput {
      */
     @JsonProperty("name")
     public String name;
+
     public SenderInput withName(String name) {
         this.name = name;
         return this;
@@ -45,6 +48,7 @@ public class SenderInput {
      */
     @JsonProperty("schema")
     public String schema;
+
     public SenderInput withSchema(String schema) {
         this.schema = schema;
         return this;
@@ -55,9 +59,17 @@ public class SenderInput {
      */
     @JsonProperty("topic")
     public String topic;
+
     public SenderInput withTopic(String topic) {
         this.topic = topic;
         return this;
     }
     
+    public SenderInput(@JsonProperty("description") String description, @JsonProperty("format") SenderFormatEnum format, @JsonProperty("name") String name, @JsonProperty("schema") String schema, @JsonProperty("topic") String topic) {
+        this.description = description;
+        this.format = format;
+        this.name = name;
+        this.schema = schema;
+        this.topic = topic;
+  }
 }

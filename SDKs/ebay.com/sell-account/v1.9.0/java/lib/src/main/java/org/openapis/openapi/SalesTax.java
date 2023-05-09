@@ -58,10 +58,8 @@ public class SalesTax {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateOrReplaceSalesTaxResponse res = new org.openapis.openapi.models.operations.CreateOrReplaceSalesTaxResponse() {{
+        org.openapis.openapi.models.operations.CreateOrReplaceSalesTaxResponse res = new org.openapis.openapi.models.operations.CreateOrReplaceSalesTaxResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -92,10 +90,8 @@ public class SalesTax {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSalesTaxResponse res = new org.openapis.openapi.models.operations.DeleteSalesTaxResponse() {{
+        org.openapis.openapi.models.operations.DeleteSalesTaxResponse res = new org.openapis.openapi.models.operations.DeleteSalesTaxResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -126,11 +122,9 @@ public class SalesTax {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSalesTaxResponse res = new org.openapis.openapi.models.operations.GetSalesTaxResponse() {{
+        org.openapis.openapi.models.operations.GetSalesTaxResponse res = new org.openapis.openapi.models.operations.GetSalesTaxResponse(contentType, httpRes.statusCode()) {{
             salesTax = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -174,11 +168,9 @@ public class SalesTax {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSalesTaxesResponse res = new org.openapis.openapi.models.operations.GetSalesTaxesResponse() {{
+        org.openapis.openapi.models.operations.GetSalesTaxesResponse res = new org.openapis.openapi.models.operations.GetSalesTaxesResponse(contentType, httpRes.statusCode()) {{
             salesTaxes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

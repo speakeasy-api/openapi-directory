@@ -15,9 +15,11 @@ public class SegmentQueryFilterListModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public SegmentQueryFilterModel[] filters;
+
     public SegmentQueryFilterListModel withFilters(SegmentQueryFilterModel[] filters) {
         this.filters = filters;
         return this;
     }
     
+    public SegmentQueryFilterListModel(){}
 }

@@ -13,6 +13,7 @@ public class PostUsersIdUserConnectionsIdConnectionRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=active")
     public Boolean active;
+
     public PostUsersIdUserConnectionsIdConnectionRequestBody withActive(Boolean active) {
         this.active = active;
         return this;
@@ -23,6 +24,7 @@ public class PostUsersIdUserConnectionsIdConnectionRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=decoupled")
     public Boolean decoupled;
+
     public PostUsersIdUserConnectionsIdConnectionRequestBody withDecoupled(Boolean decoupled) {
         this.decoupled = decoupled;
         return this;
@@ -33,6 +35,7 @@ public class PostUsersIdUserConnectionsIdConnectionRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=expire")
     public OffsetDateTime expire;
+
     public PostUsersIdUserConnectionsIdConnectionRequestBody withExpire(OffsetDateTime expire) {
         this.expire = expire;
         return this;
@@ -43,6 +46,7 @@ public class PostUsersIdUserConnectionsIdConnectionRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=login")
     public String login;
+
     public PostUsersIdUserConnectionsIdConnectionRequestBody withLogin(String login) {
         this.login = login;
         return this;
@@ -53,9 +57,11 @@ public class PostUsersIdUserConnectionsIdConnectionRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=password")
     public String password;
+
     public PostUsersIdUserConnectionsIdConnectionRequestBody withPassword(String password) {
         this.password = password;
         return this;
     }
     
+    public PostUsersIdUserConnectionsIdConnectionRequestBody(){}
 }

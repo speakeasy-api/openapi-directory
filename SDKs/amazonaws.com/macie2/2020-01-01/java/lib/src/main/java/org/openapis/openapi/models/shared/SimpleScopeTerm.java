@@ -15,6 +15,7 @@ public class SimpleScopeTerm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparator")
     public JobComparatorEnum comparator;
+
     public SimpleScopeTerm withComparator(JobComparatorEnum comparator) {
         this.comparator = comparator;
         return this;
@@ -23,6 +24,7 @@ public class SimpleScopeTerm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public ScopeFilterKeyEnum key;
+
     public SimpleScopeTerm withKey(ScopeFilterKeyEnum key) {
         this.key = key;
         return this;
@@ -31,9 +33,11 @@ public class SimpleScopeTerm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public SimpleScopeTerm withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public SimpleScopeTerm(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImageOcrPhotoToTextResponse {
     
     public byte[] body;
+
     public ImageOcrPhotoToTextResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class ImageOcrPhotoToTextResponse {
     
     
     public String contentType;
+
     public ImageOcrPhotoToTextResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ImageOcrPhotoToTextResponse {
      */
     
     public org.openapis.openapi.models.shared.ImageToTextResponse imageToTextResponse;
+
     public ImageOcrPhotoToTextResponse withImageToTextResponse(org.openapis.openapi.models.shared.ImageToTextResponse imageToTextResponse) {
         this.imageToTextResponse = imageToTextResponse;
         return this;
@@ -33,6 +37,7 @@ public class ImageOcrPhotoToTextResponse {
     
     
     public Integer statusCode;
+
     public ImageOcrPhotoToTextResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class ImageOcrPhotoToTextResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImageOcrPhotoToTextResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ImageOcrPhotoToTextResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

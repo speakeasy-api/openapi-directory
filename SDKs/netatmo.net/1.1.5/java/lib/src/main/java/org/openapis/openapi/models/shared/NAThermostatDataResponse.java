@@ -15,6 +15,7 @@ public class NAThermostatDataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public NAThermostatDataBody body;
+
     public NAThermostatDataResponse withBody(NAThermostatDataBody body) {
         this.body = body;
         return this;
@@ -23,6 +24,7 @@ public class NAThermostatDataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public NAThermostatDataResponse withStatus(String status) {
         this.status = status;
         return this;
@@ -31,6 +33,7 @@ public class NAThermostatDataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time_exec")
     public Double timeExec;
+
     public NAThermostatDataResponse withTimeExec(Double timeExec) {
         this.timeExec = timeExec;
         return this;
@@ -39,9 +42,11 @@ public class NAThermostatDataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time_server")
     public Integer timeServer;
+
     public NAThermostatDataResponse withTimeServer(Integer timeServer) {
         this.timeServer = timeServer;
         return this;
     }
     
+    public NAThermostatDataResponse(){}
 }

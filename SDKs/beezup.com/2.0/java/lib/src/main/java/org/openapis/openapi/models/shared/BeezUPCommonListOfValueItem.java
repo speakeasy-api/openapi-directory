@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BeezUPCommonListOfValueItem {
     @JsonProperty("codeIdentifier")
     public String codeIdentifier;
+
     public BeezUPCommonListOfValueItem withCodeIdentifier(String codeIdentifier) {
         this.codeIdentifier = codeIdentifier;
         return this;
@@ -21,6 +22,7 @@ public class BeezUPCommonListOfValueItem {
     
     @JsonProperty("intIdentifier")
     public Integer intIdentifier;
+
     public BeezUPCommonListOfValueItem withIntIdentifier(Integer intIdentifier) {
         this.intIdentifier = intIdentifier;
         return this;
@@ -29,6 +31,7 @@ public class BeezUPCommonListOfValueItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public Integer position;
+
     public BeezUPCommonListOfValueItem withPosition(Integer position) {
         this.position = position;
         return this;
@@ -37,9 +40,14 @@ public class BeezUPCommonListOfValueItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translationText")
     public String translationText;
+
     public BeezUPCommonListOfValueItem withTranslationText(String translationText) {
         this.translationText = translationText;
         return this;
     }
     
+    public BeezUPCommonListOfValueItem(@JsonProperty("codeIdentifier") String codeIdentifier, @JsonProperty("intIdentifier") Integer intIdentifier) {
+        this.codeIdentifier = codeIdentifier;
+        this.intIdentifier = intIdentifier;
+  }
 }

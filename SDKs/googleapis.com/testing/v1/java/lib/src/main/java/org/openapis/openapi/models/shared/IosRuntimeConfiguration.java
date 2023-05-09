@@ -18,6 +18,7 @@ public class IosRuntimeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locales")
     public Locale[] locales;
+
     public IosRuntimeConfiguration withLocales(Locale[] locales) {
         this.locales = locales;
         return this;
@@ -29,9 +30,11 @@ public class IosRuntimeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orientations")
     public Orientation[] orientations;
+
     public IosRuntimeConfiguration withOrientations(Orientation[] orientations) {
         this.orientations = orientations;
         return this;
     }
     
+    public IosRuntimeConfiguration(){}
 }

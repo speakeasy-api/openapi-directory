@@ -22,6 +22,7 @@ public class Condition {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("after")
     public OffsetDateTime after;
+
     public Condition withAfter(OffsetDateTime after) {
         this.after = after;
         return this;
@@ -32,6 +33,7 @@ public class Condition {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("before")
     public OffsetDateTime before;
+
     public Condition withBefore(OffsetDateTime before) {
         this.before = before;
         return this;
@@ -40,9 +42,11 @@ public class Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("equals")
     public AttributeValueList equals;
+
     public Condition withEquals(AttributeValueList equals) {
         this.equals = equals;
         return this;
     }
     
+    public Condition(){}
 }

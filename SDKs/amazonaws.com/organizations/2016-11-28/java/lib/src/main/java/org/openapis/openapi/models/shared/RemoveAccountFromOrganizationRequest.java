@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RemoveAccountFromOrganizationRequest {
     @JsonProperty("AccountId")
     public String accountId;
+
     public RemoveAccountFromOrganizationRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
     }
     
+    public RemoveAccountFromOrganizationRequest(@JsonProperty("AccountId") String accountId) {
+        this.accountId = accountId;
+  }
 }

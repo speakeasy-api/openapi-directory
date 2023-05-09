@@ -18,9 +18,11 @@ public class InstancesFailoverRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failoverContext")
     public FailoverContext failoverContext;
+
     public InstancesFailoverRequest withFailoverContext(FailoverContext failoverContext) {
         this.failoverContext = failoverContext;
         return this;
     }
     
+    public InstancesFailoverRequest(){}
 }

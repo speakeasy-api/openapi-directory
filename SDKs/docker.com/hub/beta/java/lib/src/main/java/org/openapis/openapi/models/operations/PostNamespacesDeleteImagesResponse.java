@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostNamespacesDeleteImagesResponse {
     
     public String contentType;
+
     public PostNamespacesDeleteImagesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostNamespacesDeleteImagesResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public PostNamespacesDeleteImagesResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -29,6 +32,7 @@ public class PostNamespacesDeleteImagesResponse {
      */
     
     public org.openapis.openapi.models.shared.PostNamespacesDeleteImagesResponseError postNamespacesDeleteImagesResponseError;
+
     public PostNamespacesDeleteImagesResponse withPostNamespacesDeleteImagesResponseError(org.openapis.openapi.models.shared.PostNamespacesDeleteImagesResponseError postNamespacesDeleteImagesResponseError) {
         this.postNamespacesDeleteImagesResponseError = postNamespacesDeleteImagesResponseError;
         return this;
@@ -39,6 +43,7 @@ public class PostNamespacesDeleteImagesResponse {
      */
     
     public org.openapis.openapi.models.shared.PostNamespacesDeleteImagesResponseSuccess postNamespacesDeleteImagesResponseSuccess;
+
     public PostNamespacesDeleteImagesResponse withPostNamespacesDeleteImagesResponseSuccess(org.openapis.openapi.models.shared.PostNamespacesDeleteImagesResponseSuccess postNamespacesDeleteImagesResponseSuccess) {
         this.postNamespacesDeleteImagesResponseSuccess = postNamespacesDeleteImagesResponseSuccess;
         return this;
@@ -46,6 +51,7 @@ public class PostNamespacesDeleteImagesResponse {
     
     
     public Integer statusCode;
+
     public PostNamespacesDeleteImagesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class PostNamespacesDeleteImagesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostNamespacesDeleteImagesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostNamespacesDeleteImagesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

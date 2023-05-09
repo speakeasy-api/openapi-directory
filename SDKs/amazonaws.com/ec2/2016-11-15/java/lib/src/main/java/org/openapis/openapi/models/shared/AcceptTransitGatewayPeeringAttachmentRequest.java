@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AcceptTransitGatewayPeeringAttachmentRequest {
     
     public Boolean dryRun;
+
     public AcceptTransitGatewayPeeringAttachmentRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class AcceptTransitGatewayPeeringAttachmentRequest {
     
     
     public String transitGatewayAttachmentId;
+
     public AcceptTransitGatewayPeeringAttachmentRequest withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
     }
     
+    public AcceptTransitGatewayPeeringAttachmentRequest(@JsonProperty("TransitGatewayAttachmentId") String transitGatewayAttachmentId) {
+        this.transitGatewayAttachmentId = transitGatewayAttachmentId;
+  }
 }

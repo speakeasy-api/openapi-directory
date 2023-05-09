@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boostAction")
     public GoogleCloudRetailV2RuleBoostAction boostAction;
+
     public GoogleCloudRetailV2Rule withBoostAction(GoogleCloudRetailV2RuleBoostAction boostAction) {
         this.boostAction = boostAction;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public GoogleCloudRetailV2Condition condition;
+
     public GoogleCloudRetailV2Rule withCondition(GoogleCloudRetailV2Condition condition) {
         this.condition = condition;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRetailV2Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doNotAssociateAction")
     public GoogleCloudRetailV2RuleDoNotAssociateAction doNotAssociateAction;
+
     public GoogleCloudRetailV2Rule withDoNotAssociateAction(GoogleCloudRetailV2RuleDoNotAssociateAction doNotAssociateAction) {
         this.doNotAssociateAction = doNotAssociateAction;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRetailV2Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterAction")
     public GoogleCloudRetailV2RuleFilterAction filterAction;
+
     public GoogleCloudRetailV2Rule withFilterAction(GoogleCloudRetailV2RuleFilterAction filterAction) {
         this.filterAction = filterAction;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudRetailV2Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreAction")
     public GoogleCloudRetailV2RuleIgnoreAction ignoreAction;
+
     public GoogleCloudRetailV2Rule withIgnoreAction(GoogleCloudRetailV2RuleIgnoreAction ignoreAction) {
         this.ignoreAction = ignoreAction;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudRetailV2Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onewaySynonymsAction")
     public GoogleCloudRetailV2RuleOnewaySynonymsAction onewaySynonymsAction;
+
     public GoogleCloudRetailV2Rule withOnewaySynonymsAction(GoogleCloudRetailV2RuleOnewaySynonymsAction onewaySynonymsAction) {
         this.onewaySynonymsAction = onewaySynonymsAction;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudRetailV2Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirectAction")
     public GoogleCloudRetailV2RuleRedirectAction redirectAction;
+
     public GoogleCloudRetailV2Rule withRedirectAction(GoogleCloudRetailV2RuleRedirectAction redirectAction) {
         this.redirectAction = redirectAction;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudRetailV2Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replacementAction")
     public GoogleCloudRetailV2RuleReplacementAction replacementAction;
+
     public GoogleCloudRetailV2Rule withReplacementAction(GoogleCloudRetailV2RuleReplacementAction replacementAction) {
         this.replacementAction = replacementAction;
         return this;
@@ -106,9 +114,11 @@ public class GoogleCloudRetailV2Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("twowaySynonymsAction")
     public GoogleCloudRetailV2RuleTwowaySynonymsAction twowaySynonymsAction;
+
     public GoogleCloudRetailV2Rule withTwowaySynonymsAction(GoogleCloudRetailV2RuleTwowaySynonymsAction twowaySynonymsAction) {
         this.twowaySynonymsAction = twowaySynonymsAction;
         return this;
     }
     
+    public GoogleCloudRetailV2Rule(){}
 }

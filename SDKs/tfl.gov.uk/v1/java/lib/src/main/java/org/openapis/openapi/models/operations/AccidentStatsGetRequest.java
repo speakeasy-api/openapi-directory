@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccidentStatsGetRequest {
@@ -12,9 +13,13 @@ public class AccidentStatsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=year")
     public Integer year;
+
     public AccidentStatsGetRequest withYear(Integer year) {
         this.year = year;
         return this;
     }
     
+    public AccidentStatsGetRequest(@JsonProperty("year") Integer year) {
+        this.year = year;
+  }
 }

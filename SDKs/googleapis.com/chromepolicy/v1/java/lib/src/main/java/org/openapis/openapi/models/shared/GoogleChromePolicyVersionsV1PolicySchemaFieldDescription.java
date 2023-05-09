@@ -18,6 +18,7 @@ public class GoogleChromePolicyVersionsV1PolicySchemaFieldDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultValue")
     public Object defaultValue;
+
     public GoogleChromePolicyVersionsV1PolicySchemaFieldDescription withDefaultValue(Object defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -29,6 +30,7 @@ public class GoogleChromePolicyVersionsV1PolicySchemaFieldDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleChromePolicyVersionsV1PolicySchemaFieldDescription withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GoogleChromePolicyVersionsV1PolicySchemaFieldDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public GoogleChromePolicyVersionsV1PolicySchemaFieldDescription withField(String field) {
         this.field = field;
         return this;
@@ -51,6 +54,7 @@ public class GoogleChromePolicyVersionsV1PolicySchemaFieldDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldConstraints")
     public GoogleChromePolicyVersionsV1FieldConstraints fieldConstraints;
+
     public GoogleChromePolicyVersionsV1PolicySchemaFieldDescription withFieldConstraints(GoogleChromePolicyVersionsV1FieldConstraints fieldConstraints) {
         this.fieldConstraints = fieldConstraints;
         return this;
@@ -62,6 +66,7 @@ public class GoogleChromePolicyVersionsV1PolicySchemaFieldDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldDependencies")
     public GoogleChromePolicyVersionsV1PolicySchemaFieldDependencies[] fieldDependencies;
+
     public GoogleChromePolicyVersionsV1PolicySchemaFieldDescription withFieldDependencies(GoogleChromePolicyVersionsV1PolicySchemaFieldDependencies[] fieldDependencies) {
         this.fieldDependencies = fieldDependencies;
         return this;
@@ -73,6 +78,7 @@ public class GoogleChromePolicyVersionsV1PolicySchemaFieldDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldDescription")
     public String fieldDescription;
+
     public GoogleChromePolicyVersionsV1PolicySchemaFieldDescription withFieldDescription(String fieldDescription) {
         this.fieldDescription = fieldDescription;
         return this;
@@ -84,6 +90,7 @@ public class GoogleChromePolicyVersionsV1PolicySchemaFieldDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputConstraint")
     public String inputConstraint;
+
     public GoogleChromePolicyVersionsV1PolicySchemaFieldDescription withInputConstraint(String inputConstraint) {
         this.inputConstraint = inputConstraint;
         return this;
@@ -95,6 +102,7 @@ public class GoogleChromePolicyVersionsV1PolicySchemaFieldDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("knownValueDescriptions")
     public GoogleChromePolicyVersionsV1PolicySchemaFieldKnownValueDescription[] knownValueDescriptions;
+
     public GoogleChromePolicyVersionsV1PolicySchemaFieldDescription withKnownValueDescriptions(GoogleChromePolicyVersionsV1PolicySchemaFieldKnownValueDescription[] knownValueDescriptions) {
         this.knownValueDescriptions = knownValueDescriptions;
         return this;
@@ -106,6 +114,7 @@ public class GoogleChromePolicyVersionsV1PolicySchemaFieldDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleChromePolicyVersionsV1PolicySchemaFieldDescription withName(String name) {
         this.name = name;
         return this;
@@ -117,6 +126,7 @@ public class GoogleChromePolicyVersionsV1PolicySchemaFieldDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nestedFieldDescriptions")
     public GoogleChromePolicyVersionsV1PolicySchemaFieldDescription[] nestedFieldDescriptions;
+
     public GoogleChromePolicyVersionsV1PolicySchemaFieldDescription withNestedFieldDescriptions(GoogleChromePolicyVersionsV1PolicySchemaFieldDescription[] nestedFieldDescriptions) {
         this.nestedFieldDescriptions = nestedFieldDescriptions;
         return this;
@@ -128,9 +138,11 @@ public class GoogleChromePolicyVersionsV1PolicySchemaFieldDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiredItems")
     public GoogleChromePolicyVersionsV1PolicySchemaRequiredItems[] requiredItems;
+
     public GoogleChromePolicyVersionsV1PolicySchemaFieldDescription withRequiredItems(GoogleChromePolicyVersionsV1PolicySchemaRequiredItems[] requiredItems) {
         this.requiredItems = requiredItems;
         return this;
     }
     
+    public GoogleChromePolicyVersionsV1PolicySchemaFieldDescription(){}
 }

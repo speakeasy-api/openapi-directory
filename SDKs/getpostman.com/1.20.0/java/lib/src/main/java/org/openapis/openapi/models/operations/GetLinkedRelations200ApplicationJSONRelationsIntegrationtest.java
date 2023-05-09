@@ -12,6 +12,7 @@ public class GetLinkedRelations200ApplicationJSONRelationsIntegrationtest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("521b0486-ab91-4d3a-9189-43c9380a0533")
     public GetLinkedRelations200ApplicationJSONRelationsIntegrationtest521b0486Ab914d3a918943c9380a0533 fiveHundredAndTwentyOneb0486Ab914d3a918943c9380a0533;
+
     public GetLinkedRelations200ApplicationJSONRelationsIntegrationtest withFiveHundredAndTwentyOneb0486Ab914d3a918943c9380a0533(GetLinkedRelations200ApplicationJSONRelationsIntegrationtest521b0486Ab914d3a918943c9380a0533 fiveHundredAndTwentyOneb0486Ab914d3a918943c9380a0533) {
         this.fiveHundredAndTwentyOneb0486Ab914d3a918943c9380a0533 = fiveHundredAndTwentyOneb0486Ab914d3a918943c9380a0533;
         return this;
@@ -20,9 +21,11 @@ public class GetLinkedRelations200ApplicationJSONRelationsIntegrationtest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("a236b715-e682-460b-97b6-c1db24f7612e")
     public GetLinkedRelations200ApplicationJSONRelationsIntegrationtestA236b715E682460b97b6C1db24f7612e a236b715E682460b97b6C1db24f7612e;
+
     public GetLinkedRelations200ApplicationJSONRelationsIntegrationtest withA236b715E682460b97b6C1db24f7612e(GetLinkedRelations200ApplicationJSONRelationsIntegrationtestA236b715E682460b97b6C1db24f7612e a236b715E682460b97b6C1db24f7612e) {
         this.a236b715E682460b97b6C1db24f7612e = a236b715E682460b97b6C1db24f7612e;
         return this;
     }
     
+    public GetLinkedRelations200ApplicationJSONRelationsIntegrationtest(){}
 }

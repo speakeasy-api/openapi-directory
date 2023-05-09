@@ -18,6 +18,7 @@ public class PageBackgroundFill {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyState")
     public PageBackgroundFillPropertyStateEnum propertyState;
+
     public PageBackgroundFill withPropertyState(PageBackgroundFillPropertyStateEnum propertyState) {
         this.propertyState = propertyState;
         return this;
@@ -29,6 +30,7 @@ public class PageBackgroundFill {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("solidFill")
     public SolidFill solidFill;
+
     public PageBackgroundFill withSolidFill(SolidFill solidFill) {
         this.solidFill = solidFill;
         return this;
@@ -40,9 +42,11 @@ public class PageBackgroundFill {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stretchedPictureFill")
     public StretchedPictureFill stretchedPictureFill;
+
     public PageBackgroundFill withStretchedPictureFill(StretchedPictureFill stretchedPictureFill) {
         this.stretchedPictureFill = stretchedPictureFill;
         return this;
     }
     
+    public PageBackgroundFill(){}
 }

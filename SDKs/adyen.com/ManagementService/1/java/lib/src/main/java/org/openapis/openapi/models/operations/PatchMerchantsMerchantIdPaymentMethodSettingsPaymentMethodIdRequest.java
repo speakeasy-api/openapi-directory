@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdatePaymentMethodInfo updatePaymentMethodInfo;
+
     public PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdRequest withUpdatePaymentMethodInfo(org.openapis.openapi.models.shared.UpdatePaymentMethodInfo updatePaymentMethodInfo) {
         this.updatePaymentMethodInfo = updatePaymentMethodInfo;
         return this;
@@ -19,6 +21,7 @@ public class PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdRequest
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
     public String merchantId;
+
     public PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdRequest withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -29,9 +32,14 @@ public class PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdRequest
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=paymentMethodId")
     public String paymentMethodId;
+
     public PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdRequest withPaymentMethodId(String paymentMethodId) {
         this.paymentMethodId = paymentMethodId;
         return this;
     }
     
+    public PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdRequest(@JsonProperty("merchantId") String merchantId, @JsonProperty("paymentMethodId") String paymentMethodId) {
+        this.merchantId = merchantId;
+        this.paymentMethodId = paymentMethodId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetExportThermalPrintBelegeBelegUuidRequest {
@@ -12,6 +13,7 @@ public class GetExportThermalPrintBelegeBelegUuidRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=belegUuid")
     public String belegUuid;
+
     public GetExportThermalPrintBelegeBelegUuidRequest withBelegUuid(String belegUuid) {
         this.belegUuid = belegUuid;
         return this;
@@ -22,6 +24,7 @@ public class GetExportThermalPrintBelegeBelegUuidRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dialect")
     public GetExportThermalPrintBelegeBelegUuidDialectEnum dialect;
+
     public GetExportThermalPrintBelegeBelegUuidRequest withDialect(GetExportThermalPrintBelegeBelegUuidDialectEnum dialect) {
         this.dialect = dialect;
         return this;
@@ -32,6 +35,7 @@ public class GetExportThermalPrintBelegeBelegUuidRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=encoding")
     public GetExportThermalPrintBelegeBelegUuidEncodingEnum encoding;
+
     public GetExportThermalPrintBelegeBelegUuidRequest withEncoding(GetExportThermalPrintBelegeBelegUuidEncodingEnum encoding) {
         this.encoding = encoding;
         return this;
@@ -42,6 +46,7 @@ public class GetExportThermalPrintBelegeBelegUuidRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=qr")
     public Boolean qr;
+
     public GetExportThermalPrintBelegeBelegUuidRequest withQr(Boolean qr) {
         this.qr = qr;
         return this;
@@ -52,9 +57,13 @@ public class GetExportThermalPrintBelegeBelegUuidRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=width")
     public Long width;
+
     public GetExportThermalPrintBelegeBelegUuidRequest withWidth(Long width) {
         this.width = width;
         return this;
     }
     
+    public GetExportThermalPrintBelegeBelegUuidRequest(@JsonProperty("belegUuid") String belegUuid) {
+        this.belegUuid = belegUuid;
+  }
 }

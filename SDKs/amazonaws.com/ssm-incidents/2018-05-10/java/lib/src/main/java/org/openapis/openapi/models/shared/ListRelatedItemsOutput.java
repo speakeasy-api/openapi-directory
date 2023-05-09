@@ -15,6 +15,7 @@ public class ListRelatedItemsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListRelatedItemsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListRelatedItemsOutput {
     
     @JsonProperty("relatedItems")
     public RelatedItem[] relatedItems;
+
     public ListRelatedItemsOutput withRelatedItems(RelatedItem[] relatedItems) {
         this.relatedItems = relatedItems;
         return this;
     }
     
+    public ListRelatedItemsOutput(@JsonProperty("relatedItems") RelatedItem[] relatedItems) {
+        this.relatedItems = relatedItems;
+  }
 }

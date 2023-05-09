@@ -12,6 +12,7 @@ public class UpdateDomainRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppSecurityGroupManagement")
     public AppSecurityGroupManagementEnum appSecurityGroupManagement;
+
     public UpdateDomainRequest withAppSecurityGroupManagement(AppSecurityGroupManagementEnum appSecurityGroupManagement) {
         this.appSecurityGroupManagement = appSecurityGroupManagement;
         return this;
@@ -20,6 +21,7 @@ public class UpdateDomainRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultSpaceSettings")
     public DefaultSpaceSettings defaultSpaceSettings;
+
     public UpdateDomainRequest withDefaultSpaceSettings(DefaultSpaceSettings defaultSpaceSettings) {
         this.defaultSpaceSettings = defaultSpaceSettings;
         return this;
@@ -28,6 +30,7 @@ public class UpdateDomainRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultUserSettings")
     public UserSettings defaultUserSettings;
+
     public UpdateDomainRequest withDefaultUserSettings(UserSettings defaultUserSettings) {
         this.defaultUserSettings = defaultUserSettings;
         return this;
@@ -35,6 +38,7 @@ public class UpdateDomainRequest {
     
     @JsonProperty("DomainId")
     public String domainId;
+
     public UpdateDomainRequest withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -43,9 +47,13 @@ public class UpdateDomainRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainSettingsForUpdate")
     public DomainSettingsForUpdate domainSettingsForUpdate;
+
     public UpdateDomainRequest withDomainSettingsForUpdate(DomainSettingsForUpdate domainSettingsForUpdate) {
         this.domainSettingsForUpdate = domainSettingsForUpdate;
         return this;
     }
     
+    public UpdateDomainRequest(@JsonProperty("DomainId") String domainId) {
+        this.domainId = domainId;
+  }
 }

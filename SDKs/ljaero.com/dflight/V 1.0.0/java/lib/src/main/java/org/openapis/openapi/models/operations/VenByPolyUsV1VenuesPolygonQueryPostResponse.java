@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VenByPolyUsV1VenuesPolygonQueryPostResponse {
     
     public String contentType;
+
     public VenByPolyUsV1VenuesPolygonQueryPostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class VenByPolyUsV1VenuesPolygonQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public VenByPolyUsV1VenuesPolygonQueryPostResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -26,6 +29,7 @@ public class VenByPolyUsV1VenuesPolygonQueryPostResponse {
     
     
     public Integer statusCode;
+
     public VenByPolyUsV1VenuesPolygonQueryPostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class VenByPolyUsV1VenuesPolygonQueryPostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VenByPolyUsV1VenuesPolygonQueryPostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class VenByPolyUsV1VenuesPolygonQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.VenuePolyResponse venuePolyResponse;
+
     public VenByPolyUsV1VenuesPolygonQueryPostResponse withVenuePolyResponse(org.openapis.openapi.models.shared.VenuePolyResponse venuePolyResponse) {
         this.venuePolyResponse = venuePolyResponse;
         return this;
     }
     
+    public VenByPolyUsV1VenuesPolygonQueryPostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

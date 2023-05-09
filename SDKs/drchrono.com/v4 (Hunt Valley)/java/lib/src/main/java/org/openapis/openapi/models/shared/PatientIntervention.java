@@ -18,6 +18,7 @@ public class PatientIntervention {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public PatientIntervention withCode(String code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class PatientIntervention {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code_system")
     public String codeSystem;
+
     public PatientIntervention withCodeSystem(String codeSystem) {
         this.codeSystem = codeSystem;
         return this;
@@ -37,6 +39,7 @@ public class PatientIntervention {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public PatientIntervention withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -44,6 +47,7 @@ public class PatientIntervention {
     
     @JsonProperty("doctor")
     public Long doctor;
+
     public PatientIntervention withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -52,6 +56,7 @@ public class PatientIntervention {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effective_time")
     public String effectiveTime;
+
     public PatientIntervention withEffectiveTime(String effectiveTime) {
         this.effectiveTime = effectiveTime;
         return this;
@@ -60,6 +65,7 @@ public class PatientIntervention {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public PatientIntervention withId(Long id) {
         this.id = id;
         return this;
@@ -71,6 +77,7 @@ public class PatientIntervention {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PatientIntervention withName(String name) {
         this.name = name;
         return this;
@@ -78,6 +85,7 @@ public class PatientIntervention {
     
     @JsonProperty("patient")
     public Long patient;
+
     public PatientIntervention withPatient(Long patient) {
         this.patient = patient;
         return this;
@@ -89,6 +97,7 @@ public class PatientIntervention {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value_code")
     public String valueCode;
+
     public PatientIntervention withValueCode(String valueCode) {
         this.valueCode = valueCode;
         return this;
@@ -100,6 +109,7 @@ public class PatientIntervention {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value_code_system")
     public String valueCodeSystem;
+
     public PatientIntervention withValueCodeSystem(String valueCodeSystem) {
         this.valueCodeSystem = valueCodeSystem;
         return this;
@@ -111,9 +121,14 @@ public class PatientIntervention {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value_name")
     public String valueName;
+
     public PatientIntervention withValueName(String valueName) {
         this.valueName = valueName;
         return this;
     }
     
+    public PatientIntervention(@JsonProperty("doctor") Long doctor, @JsonProperty("patient") Long patient) {
+        this.doctor = doctor;
+        this.patient = patient;
+  }
 }

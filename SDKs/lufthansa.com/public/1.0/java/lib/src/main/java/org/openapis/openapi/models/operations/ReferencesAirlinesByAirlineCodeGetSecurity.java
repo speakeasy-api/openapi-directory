@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReferencesAirlinesByAirlineCodeGetSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String auth;
+
     public ReferencesAirlinesByAirlineCodeGetSecurity withAuth(String auth) {
         this.auth = auth;
         return this;
     }
     
+    public ReferencesAirlinesByAirlineCodeGetSecurity(@JsonProperty("auth") String auth) {
+        this.auth = auth;
+  }
 }

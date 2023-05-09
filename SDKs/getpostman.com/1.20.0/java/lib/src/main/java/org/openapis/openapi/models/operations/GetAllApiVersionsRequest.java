@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllApiVersionsRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiId")
     public String apiId;
+
     public GetAllApiVersionsRequest withApiId(String apiId) {
         this.apiId = apiId;
         return this;
     }
     
+    public GetAllApiVersionsRequest(@JsonProperty("apiId") String apiId) {
+        this.apiId = apiId;
+  }
 }

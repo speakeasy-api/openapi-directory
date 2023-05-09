@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WebACL {
     @JsonProperty("DefaultAction")
     public WafAction defaultAction;
+
     public WebACL withDefaultAction(WafAction defaultAction) {
         this.defaultAction = defaultAction;
         return this;
@@ -22,6 +23,7 @@ public class WebACL {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricName")
     public String metricName;
+
     public WebACL withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -30,6 +32,7 @@ public class WebACL {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public WebACL withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +40,7 @@ public class WebACL {
     
     @JsonProperty("Rules")
     public ActivatedRule[] rules;
+
     public WebACL withRules(ActivatedRule[] rules) {
         this.rules = rules;
         return this;
@@ -45,6 +49,7 @@ public class WebACL {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WebACLArn")
     public String webACLArn;
+
     public WebACL withWebACLArn(String webACLArn) {
         this.webACLArn = webACLArn;
         return this;
@@ -52,9 +57,15 @@ public class WebACL {
     
     @JsonProperty("WebACLId")
     public String webACLId;
+
     public WebACL withWebACLId(String webACLId) {
         this.webACLId = webACLId;
         return this;
     }
     
+    public WebACL(@JsonProperty("DefaultAction") WafAction defaultAction, @JsonProperty("Rules") ActivatedRule[] rules, @JsonProperty("WebACLId") String webACLId) {
+        this.defaultAction = defaultAction;
+        this.rules = rules;
+        this.webACLId = webACLId;
+  }
 }

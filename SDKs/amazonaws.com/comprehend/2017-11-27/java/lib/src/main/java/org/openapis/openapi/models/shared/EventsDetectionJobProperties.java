@@ -20,6 +20,7 @@ public class EventsDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public EventsDetectionJobProperties withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -30,6 +31,7 @@ public class EventsDetectionJobProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public EventsDetectionJobProperties withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -38,6 +40,7 @@ public class EventsDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputDataConfig")
     public InputDataConfig inputDataConfig;
+
     public EventsDetectionJobProperties withInputDataConfig(InputDataConfig inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -46,6 +49,7 @@ public class EventsDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobArn")
     public String jobArn;
+
     public EventsDetectionJobProperties withJobArn(String jobArn) {
         this.jobArn = jobArn;
         return this;
@@ -54,6 +58,7 @@ public class EventsDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public EventsDetectionJobProperties withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -62,6 +67,7 @@ public class EventsDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public EventsDetectionJobProperties withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -70,6 +76,7 @@ public class EventsDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public EventsDetectionJobProperties withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -78,6 +85,7 @@ public class EventsDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public EventsDetectionJobProperties withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -86,6 +94,7 @@ public class EventsDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public EventsDetectionJobProperties withMessage(String message) {
         this.message = message;
         return this;
@@ -94,6 +103,7 @@ public class EventsDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputDataConfig")
     public OutputDataConfig outputDataConfig;
+
     public EventsDetectionJobProperties withOutputDataConfig(OutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
@@ -104,6 +114,7 @@ public class EventsDetectionJobProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmitTime")
     public OffsetDateTime submitTime;
+
     public EventsDetectionJobProperties withSubmitTime(OffsetDateTime submitTime) {
         this.submitTime = submitTime;
         return this;
@@ -112,9 +123,11 @@ public class EventsDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetEventTypes")
     public String[] targetEventTypes;
+
     public EventsDetectionJobProperties withTargetEventTypes(String[] targetEventTypes) {
         this.targetEventTypes = targetEventTypes;
         return this;
     }
     
+    public EventsDetectionJobProperties(){}
 }

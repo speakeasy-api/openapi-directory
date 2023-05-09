@@ -15,6 +15,7 @@ public class OBWriteDomesticConsent4Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Authorisation")
     public OBWriteDomesticConsent4DataAuthorisation authorisation;
+
     public OBWriteDomesticConsent4Data withAuthorisation(OBWriteDomesticConsent4DataAuthorisation authorisation) {
         this.authorisation = authorisation;
         return this;
@@ -25,6 +26,7 @@ public class OBWriteDomesticConsent4Data {
      */
     @JsonProperty("Initiation")
     public OBWriteDomesticConsent4DataInitiation initiation;
+
     public OBWriteDomesticConsent4Data withInitiation(OBWriteDomesticConsent4DataInitiation initiation) {
         this.initiation = initiation;
         return this;
@@ -36,6 +38,7 @@ public class OBWriteDomesticConsent4Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadRefundAccount")
     public OBWriteDomesticConsent4DataReadRefundAccountEnum readRefundAccount;
+
     public OBWriteDomesticConsent4Data withReadRefundAccount(OBWriteDomesticConsent4DataReadRefundAccountEnum readRefundAccount) {
         this.readRefundAccount = readRefundAccount;
         return this;
@@ -47,9 +50,13 @@ public class OBWriteDomesticConsent4Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SCASupportData")
     public OBSCASupportData1 scaSupportData;
+
     public OBWriteDomesticConsent4Data withSCASupportData(OBSCASupportData1 scaSupportData) {
         this.scaSupportData = scaSupportData;
         return this;
     }
     
+    public OBWriteDomesticConsent4Data(@JsonProperty("Initiation") OBWriteDomesticConsent4DataInitiation initiation) {
+        this.initiation = initiation;
+  }
 }

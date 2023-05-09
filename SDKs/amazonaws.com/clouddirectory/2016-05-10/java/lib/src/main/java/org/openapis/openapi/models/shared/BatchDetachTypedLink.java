@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchDetachTypedLink {
     @JsonProperty("TypedLinkSpecifier")
     public TypedLinkSpecifier typedLinkSpecifier;
+
     public BatchDetachTypedLink withTypedLinkSpecifier(TypedLinkSpecifier typedLinkSpecifier) {
         this.typedLinkSpecifier = typedLinkSpecifier;
         return this;
     }
     
+    public BatchDetachTypedLink(@JsonProperty("TypedLinkSpecifier") TypedLinkSpecifier typedLinkSpecifier) {
+        this.typedLinkSpecifier = typedLinkSpecifier;
+  }
 }

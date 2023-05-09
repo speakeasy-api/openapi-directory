@@ -52,10 +52,8 @@ public class ChargeStations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteChargeStationResponse res = new org.openapis.openapi.models.operations.DeleteChargeStationResponse() {{
+        org.openapis.openapi.models.operations.DeleteChargeStationResponse res = new org.openapis.openapi.models.operations.DeleteChargeStationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400) {
@@ -91,10 +89,8 @@ public class ChargeStations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChargeStationResponse res = new org.openapis.openapi.models.operations.GetChargeStationResponse() {{
+        org.openapis.openapi.models.operations.GetChargeStationResponse res = new org.openapis.openapi.models.operations.GetChargeStationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -130,10 +126,8 @@ public class ChargeStations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChargeStationConnectorsResponse res = new org.openapis.openapi.models.operations.GetChargeStationConnectorsResponse() {{
+        org.openapis.openapi.models.operations.GetChargeStationConnectorsResponse res = new org.openapis.openapi.models.operations.GetChargeStationConnectorsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400) {
@@ -169,10 +163,8 @@ public class ChargeStations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChargeStationsResponse res = new org.openapis.openapi.models.operations.GetChargeStationsResponse() {{
+        org.openapis.openapi.models.operations.GetChargeStationsResponse res = new org.openapis.openapi.models.operations.GetChargeStationsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -207,11 +199,9 @@ public class ChargeStations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchChargeStationResponse res = new org.openapis.openapi.models.operations.PatchChargeStationResponse() {{
+        org.openapis.openapi.models.operations.PatchChargeStationResponse res = new org.openapis.openapi.models.operations.PatchChargeStationResponse(contentType, httpRes.statusCode()) {{
             patchChargeStation200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -253,11 +243,9 @@ public class ChargeStations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostChargeStationsResponse res = new org.openapis.openapi.models.operations.PostChargeStationsResponse() {{
+        org.openapis.openapi.models.operations.PostChargeStationsResponse res = new org.openapis.openapi.models.operations.PostChargeStationsResponse(contentType, httpRes.statusCode()) {{
             postChargeStations201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TeamsAddOrUpdateProjectPermissionsInOrgResponse {
     
     public String contentType;
+
     public TeamsAddOrUpdateProjectPermissionsInOrgResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TeamsAddOrUpdateProjectPermissionsInOrgResponse {
     
     
     public Integer statusCode;
+
     public TeamsAddOrUpdateProjectPermissionsInOrgResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TeamsAddOrUpdateProjectPermissionsInOrgResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TeamsAddOrUpdateProjectPermissionsInOrgResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class TeamsAddOrUpdateProjectPermissionsInOrgResponse {
      */
     
     public TeamsAddOrUpdateProjectPermissionsInOrg403ApplicationJSON teamsAddOrUpdateProjectPermissionsInOrg403ApplicationJSONObject;
+
     public TeamsAddOrUpdateProjectPermissionsInOrgResponse withTeamsAddOrUpdateProjectPermissionsInOrg403ApplicationJSONObject(TeamsAddOrUpdateProjectPermissionsInOrg403ApplicationJSON teamsAddOrUpdateProjectPermissionsInOrg403ApplicationJSONObject) {
         this.teamsAddOrUpdateProjectPermissionsInOrg403ApplicationJSONObject = teamsAddOrUpdateProjectPermissionsInOrg403ApplicationJSONObject;
         return this;
     }
     
+    public TeamsAddOrUpdateProjectPermissionsInOrgResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

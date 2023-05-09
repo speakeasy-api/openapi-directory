@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePredictorBacktestExportJobResponse {
     
     public String contentType;
+
     public DeletePredictorBacktestExportJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeletePredictorBacktestExportJobResponse {
      */
     
     public Object invalidInputException;
+
     public DeletePredictorBacktestExportJobResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -29,6 +32,7 @@ public class DeletePredictorBacktestExportJobResponse {
      */
     
     public Object resourceInUseException;
+
     public DeletePredictorBacktestExportJobResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -39,6 +43,7 @@ public class DeletePredictorBacktestExportJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeletePredictorBacktestExportJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeletePredictorBacktestExportJobResponse {
     
     
     public Integer statusCode;
+
     public DeletePredictorBacktestExportJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DeletePredictorBacktestExportJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePredictorBacktestExportJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeletePredictorBacktestExportJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

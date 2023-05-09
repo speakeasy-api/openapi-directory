@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutResourceSetResponse {
     @JsonProperty("ResourceSet")
     public ResourceSet resourceSet;
+
     public PutResourceSetResponse withResourceSet(ResourceSet resourceSet) {
         this.resourceSet = resourceSet;
         return this;
@@ -19,9 +20,14 @@ public class PutResourceSetResponse {
     
     @JsonProperty("ResourceSetArn")
     public String resourceSetArn;
+
     public PutResourceSetResponse withResourceSetArn(String resourceSetArn) {
         this.resourceSetArn = resourceSetArn;
         return this;
     }
     
+    public PutResourceSetResponse(@JsonProperty("ResourceSet") ResourceSet resourceSet, @JsonProperty("ResourceSetArn") String resourceSetArn) {
+        this.resourceSet = resourceSet;
+        this.resourceSetArn = resourceSetArn;
+  }
 }

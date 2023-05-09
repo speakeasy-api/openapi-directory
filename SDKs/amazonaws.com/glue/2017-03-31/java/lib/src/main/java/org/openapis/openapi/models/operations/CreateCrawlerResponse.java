@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateCrawlerResponse {
@@ -12,6 +13,7 @@ public class CreateCrawlerResponse {
      */
     
     public Object alreadyExistsException;
+
     public CreateCrawlerResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -19,6 +21,7 @@ public class CreateCrawlerResponse {
     
     
     public String contentType;
+
     public CreateCrawlerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateCrawlerResponse {
      */
     
     public java.util.Map<String, Object> createCrawlerResponse;
+
     public CreateCrawlerResponse withCreateCrawlerResponse(java.util.Map<String, Object> createCrawlerResponse) {
         this.createCrawlerResponse = createCrawlerResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateCrawlerResponse {
      */
     
     public Object invalidInputException;
+
     public CreateCrawlerResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class CreateCrawlerResponse {
      */
     
     public Object operationTimeoutException;
+
     public CreateCrawlerResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -59,6 +65,7 @@ public class CreateCrawlerResponse {
      */
     
     public Object resourceNumberLimitExceededException;
+
     public CreateCrawlerResponse withResourceNumberLimitExceededException(Object resourceNumberLimitExceededException) {
         this.resourceNumberLimitExceededException = resourceNumberLimitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateCrawlerResponse {
     
     
     public Integer statusCode;
+
     public CreateCrawlerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CreateCrawlerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateCrawlerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateCrawlerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PostApiV1AccountsRequestBody {
     /**
@@ -12,6 +12,7 @@ public class PostApiV1AccountsRequestBody {
      */
     
     public Boolean agreement;
+
     public PostApiV1AccountsRequestBody withAgreement(Boolean agreement) {
         this.agreement = agreement;
         return this;
@@ -22,6 +23,7 @@ public class PostApiV1AccountsRequestBody {
      */
     
     public String email;
+
     public PostApiV1AccountsRequestBody withEmail(String email) {
         this.email = email;
         return this;
@@ -32,6 +34,7 @@ public class PostApiV1AccountsRequestBody {
      */
     
     public String locale;
+
     public PostApiV1AccountsRequestBody withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -42,6 +45,7 @@ public class PostApiV1AccountsRequestBody {
      */
     
     public String password;
+
     public PostApiV1AccountsRequestBody withPassword(String password) {
         this.password = password;
         return this;
@@ -52,6 +56,7 @@ public class PostApiV1AccountsRequestBody {
      */
     
     public String reason;
+
     public PostApiV1AccountsRequestBody withReason(String reason) {
         this.reason = reason;
         return this;
@@ -62,9 +67,17 @@ public class PostApiV1AccountsRequestBody {
      */
     
     public String username;
+
     public PostApiV1AccountsRequestBody withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public PostApiV1AccountsRequestBody(@JsonProperty("username") String username, @JsonProperty("password") String password, @JsonProperty("agreement") Boolean agreement, @JsonProperty("email") String email, @JsonProperty("locale") String locale) {
+        this.username = username;
+        this.password = password;
+        this.agreement = agreement;
+        this.email = email;
+        this.locale = locale;
+  }
 }

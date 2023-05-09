@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -14,6 +15,7 @@ public class GetElectioneeringRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetElectioneeringRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,10 +24,17 @@ public class GetElectioneeringRequest {
     /**
      * A unique identifier assigned to each candidate registered with the FEC.
      * If a person runs for several offices, that person will have separate candidate IDs for each office.
+     * First character indicates office - [P]residential, [H]ouse, [S]enate].
+     * Second character is the last digit of the two-year period the ID was created.
+     * Third and fourth is the candidate state. Presidential IDs don't have state.
+     * Fifth and sixth is the district when the candidate first ran. This does not change if the
+     * candidate/member's district changes during re-districting. Presidential IDs don't have districts.
+     * The rest is sequence.
      * 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=candidate_id")
     public String[] candidateId;
+
     public GetElectioneeringRequest withCandidateId(String[] candidateId) {
         this.candidateId = candidateId;
         return this;
@@ -37,6 +46,7 @@ public class GetElectioneeringRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_id")
     public String[] committeeId;
+
     public GetElectioneeringRequest withCommitteeId(String[] committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -44,6 +54,7 @@ public class GetElectioneeringRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public GetElectioneeringRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +65,7 @@ public class GetElectioneeringRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_index")
     public Integer lastIndex;
+
     public GetElectioneeringRequest withLastIndex(Integer lastIndex) {
         this.lastIndex = lastIndex;
         return this;
@@ -64,6 +76,7 @@ public class GetElectioneeringRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_amount")
     public String maxAmount;
+
     public GetElectioneeringRequest withMaxAmount(String maxAmount) {
         this.maxAmount = maxAmount;
         return this;
@@ -74,6 +87,7 @@ public class GetElectioneeringRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_date")
     public LocalDate maxDate;
+
     public GetElectioneeringRequest withMaxDate(LocalDate maxDate) {
         this.maxDate = maxDate;
         return this;
@@ -84,6 +98,7 @@ public class GetElectioneeringRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_amount")
     public String minAmount;
+
     public GetElectioneeringRequest withMinAmount(String minAmount) {
         this.minAmount = minAmount;
         return this;
@@ -94,6 +109,7 @@ public class GetElectioneeringRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_date")
     public LocalDate minDate;
+
     public GetElectioneeringRequest withMinDate(LocalDate minDate) {
         this.minDate = minDate;
         return this;
@@ -104,6 +120,7 @@ public class GetElectioneeringRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetElectioneeringRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -114,6 +131,7 @@ public class GetElectioneeringRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetElectioneeringRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -128,6 +146,7 @@ public class GetElectioneeringRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=report_year")
     public Integer[] reportYear;
+
     public GetElectioneeringRequest withReportYear(Integer[] reportYear) {
         this.reportYear = reportYear;
         return this;
@@ -139,6 +158,7 @@ public class GetElectioneeringRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetElectioneeringRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -149,6 +169,7 @@ public class GetElectioneeringRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetElectioneeringRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -159,6 +180,7 @@ public class GetElectioneeringRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetElectioneeringRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -169,9 +191,13 @@ public class GetElectioneeringRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetElectioneeringRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
     }
     
+    public GetElectioneeringRequest(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

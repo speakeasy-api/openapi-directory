@@ -15,6 +15,7 @@ public class PlayReadyDrm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Format")
     public String format;
+
     public PlayReadyDrm withFormat(String format) {
         this.format = format;
         return this;
@@ -23,6 +24,7 @@ public class PlayReadyDrm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InitializationVector")
     public String initializationVector;
+
     public PlayReadyDrm withInitializationVector(String initializationVector) {
         this.initializationVector = initializationVector;
         return this;
@@ -31,6 +33,7 @@ public class PlayReadyDrm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public PlayReadyDrm withKey(String key) {
         this.key = key;
         return this;
@@ -39,6 +42,7 @@ public class PlayReadyDrm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyId")
     public String keyId;
+
     public PlayReadyDrm withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -47,6 +51,7 @@ public class PlayReadyDrm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyMd5")
     public String keyMd5;
+
     public PlayReadyDrm withKeyMd5(String keyMd5) {
         this.keyMd5 = keyMd5;
         return this;
@@ -55,9 +60,11 @@ public class PlayReadyDrm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseAcquisitionUrl")
     public String licenseAcquisitionUrl;
+
     public PlayReadyDrm withLicenseAcquisitionUrl(String licenseAcquisitionUrl) {
         this.licenseAcquisitionUrl = licenseAcquisitionUrl;
         return this;
     }
     
+    public PlayReadyDrm(){}
 }

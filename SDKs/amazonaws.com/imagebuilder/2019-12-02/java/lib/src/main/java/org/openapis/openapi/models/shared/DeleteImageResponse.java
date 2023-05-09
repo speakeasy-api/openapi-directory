@@ -15,6 +15,7 @@ public class DeleteImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageBuildVersionArn")
     public String imageBuildVersionArn;
+
     public DeleteImageResponse withImageBuildVersionArn(String imageBuildVersionArn) {
         this.imageBuildVersionArn = imageBuildVersionArn;
         return this;
@@ -23,9 +24,11 @@ public class DeleteImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public DeleteImageResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public DeleteImageResponse(){}
 }

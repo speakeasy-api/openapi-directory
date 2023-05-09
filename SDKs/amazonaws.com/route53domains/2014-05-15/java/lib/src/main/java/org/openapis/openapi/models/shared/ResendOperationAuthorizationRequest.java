@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResendOperationAuthorizationRequest {
     @JsonProperty("OperationId")
     public String operationId;
+
     public ResendOperationAuthorizationRequest withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
     }
     
+    public ResendOperationAuthorizationRequest(@JsonProperty("OperationId") String operationId) {
+        this.operationId = operationId;
+  }
 }

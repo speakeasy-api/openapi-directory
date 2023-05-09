@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeSuggestersRequest - Container for the parameters to the &lt;code&gt;&lt;a&gt;DescribeSuggester&lt;/a&gt;&lt;/code&gt; operation. Specifies the name of the domain you want to describe. To restrict the response to particular suggesters, specify the names of the suggesters you want to describe. To show the active configuration and exclude any pending changes, set the &lt;code&gt;Deployed&lt;/code&gt; option to &lt;code&gt;true&lt;/code&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSuggestersRequest {
     
     public Boolean deployed;
+
     public DescribeSuggestersRequest withDeployed(Boolean deployed) {
         this.deployed = deployed;
         return this;
@@ -19,6 +20,7 @@ public class DescribeSuggestersRequest {
     
     
     public String domainName;
+
     public DescribeSuggestersRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -26,9 +28,13 @@ public class DescribeSuggestersRequest {
     
     
     public String[] suggesterNames;
+
     public DescribeSuggestersRequest withSuggesterNames(String[] suggesterNames) {
         this.suggesterNames = suggesterNames;
         return this;
     }
     
+    public DescribeSuggestersRequest(@JsonProperty("DomainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

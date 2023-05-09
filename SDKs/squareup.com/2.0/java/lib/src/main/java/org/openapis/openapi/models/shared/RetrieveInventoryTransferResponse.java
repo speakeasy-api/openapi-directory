@@ -18,6 +18,7 @@ public class RetrieveInventoryTransferResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public RetrieveInventoryTransferResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -30,9 +31,11 @@ public class RetrieveInventoryTransferResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transfer")
     public InventoryTransfer transfer;
+
     public RetrieveInventoryTransferResponse withTransfer(InventoryTransfer transfer) {
         this.transfer = transfer;
         return this;
     }
     
+    public RetrieveInventoryTransferResponse(){}
 }

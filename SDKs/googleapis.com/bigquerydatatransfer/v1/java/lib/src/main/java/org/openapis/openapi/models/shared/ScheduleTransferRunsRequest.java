@@ -18,6 +18,7 @@ public class ScheduleTransferRunsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public ScheduleTransferRunsRequest withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -29,9 +30,11 @@ public class ScheduleTransferRunsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public ScheduleTransferRunsRequest withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public ScheduleTransferRunsRequest(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteCacheSubnetGroupMessage - Represents the input of a &lt;code&gt;DeleteCacheSubnetGroup&lt;/code&gt; operation.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DeleteCacheSubnetGroupMessage {
     
     public String cacheSubnetGroupName;
+
     public DeleteCacheSubnetGroupMessage withCacheSubnetGroupName(String cacheSubnetGroupName) {
         this.cacheSubnetGroupName = cacheSubnetGroupName;
         return this;
     }
     
+    public DeleteCacheSubnetGroupMessage(@JsonProperty("CacheSubnetGroupName") String cacheSubnetGroupName) {
+        this.cacheSubnetGroupName = cacheSubnetGroupName;
+  }
 }

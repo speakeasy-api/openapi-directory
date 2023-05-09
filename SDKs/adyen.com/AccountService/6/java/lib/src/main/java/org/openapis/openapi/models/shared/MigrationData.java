@@ -20,6 +20,7 @@ public class MigrationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountHolderId")
     public String accountHolderId;
+
     public MigrationData withAccountHolderId(String accountHolderId) {
         this.accountHolderId = accountHolderId;
         return this;
@@ -31,6 +32,7 @@ public class MigrationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balancePlatform")
     public String balancePlatform;
+
     public MigrationData withBalancePlatform(String balancePlatform) {
         this.balancePlatform = balancePlatform;
         return this;
@@ -42,6 +44,7 @@ public class MigrationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("migrated")
     public Boolean migrated;
+
     public MigrationData withMigrated(Boolean migrated) {
         this.migrated = migrated;
         return this;
@@ -53,6 +56,7 @@ public class MigrationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("migratedAccounts")
     public MigratedAccounts[] migratedAccounts;
+
     public MigrationData withMigratedAccounts(MigratedAccounts[] migratedAccounts) {
         this.migratedAccounts = migratedAccounts;
         return this;
@@ -64,6 +68,7 @@ public class MigrationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("migratedStores")
     public MigratedStores[] migratedStores;
+
     public MigrationData withMigratedStores(MigratedStores[] migratedStores) {
         this.migratedStores = migratedStores;
         return this;
@@ -77,9 +82,11 @@ public class MigrationData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("migrationDate")
     public OffsetDateTime migrationDate;
+
     public MigrationData withMigrationDate(OffsetDateTime migrationDate) {
         this.migrationDate = migrationDate;
         return this;
     }
     
+    public MigrationData(){}
 }

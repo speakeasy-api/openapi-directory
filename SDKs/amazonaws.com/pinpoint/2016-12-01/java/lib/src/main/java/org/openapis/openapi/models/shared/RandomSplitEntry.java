@@ -15,6 +15,7 @@ public class RandomSplitEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextActivity")
     public String nextActivity;
+
     public RandomSplitEntry withNextActivity(String nextActivity) {
         this.nextActivity = nextActivity;
         return this;
@@ -23,9 +24,11 @@ public class RandomSplitEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Percentage")
     public Long percentage;
+
     public RandomSplitEntry withPercentage(Long percentage) {
         this.percentage = percentage;
         return this;
     }
     
+    public RandomSplitEntry(){}
 }

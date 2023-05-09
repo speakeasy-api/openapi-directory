@@ -10,15 +10,15 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * OrderApiGetListArticleTitleSourceEnum - The source field for the article title. 0 = Order Position (default), 1 = Article Title, 2 = Article Invoice Text
  */
 public enum OrderApiGetListArticleTitleSourceEnum {
-    ZERO("0"),
-    ONE("1"),
-    TWO("2"),
-    THREE("3");
+    ZERO(0),
+    ONE(1),
+    TWO(2),
+    THREE(3);
 
     @JsonValue
-    public final String value;
+    public final Integer value;
 
-    private OrderApiGetListArticleTitleSourceEnum(String value) {
+    private OrderApiGetListArticleTitleSourceEnum(Integer value) {
         this.value = value;
     }
 }

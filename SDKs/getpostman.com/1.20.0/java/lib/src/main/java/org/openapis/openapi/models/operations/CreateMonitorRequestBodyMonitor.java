@@ -12,6 +12,7 @@ public class CreateMonitorRequestBodyMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collection")
     public String collection;
+
     public CreateMonitorRequestBodyMonitor withCollection(String collection) {
         this.collection = collection;
         return this;
@@ -20,6 +21,7 @@ public class CreateMonitorRequestBodyMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public String environment;
+
     public CreateMonitorRequestBodyMonitor withEnvironment(String environment) {
         this.environment = environment;
         return this;
@@ -28,6 +30,7 @@ public class CreateMonitorRequestBodyMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateMonitorRequestBodyMonitor withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +39,11 @@ public class CreateMonitorRequestBodyMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public CreateMonitorRequestBodyMonitorSchedule schedule;
+
     public CreateMonitorRequestBodyMonitor withSchedule(CreateMonitorRequestBodyMonitorSchedule schedule) {
         this.schedule = schedule;
         return this;
     }
     
+    public CreateMonitorRequestBodyMonitor(){}
 }

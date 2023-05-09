@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsRaceEthnicityZip5Request {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firstName")
     public String firstName;
+
     public UsRaceEthnicityZip5Request withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -16,6 +18,7 @@ public class UsRaceEthnicityZip5Request {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=lastName")
     public String lastName;
+
     public UsRaceEthnicityZip5Request withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -23,9 +26,15 @@ public class UsRaceEthnicityZip5Request {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zip5Code")
     public String zip5Code;
+
     public UsRaceEthnicityZip5Request withZip5Code(String zip5Code) {
         this.zip5Code = zip5Code;
         return this;
     }
     
+    public UsRaceEthnicityZip5Request(@JsonProperty("firstName") String firstName, @JsonProperty("lastName") String lastName, @JsonProperty("zip5Code") String zip5Code) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.zip5Code = zip5Code;
+  }
 }

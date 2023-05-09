@@ -15,6 +15,7 @@ public class SavingsPlanOfferingFilterElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public SavingsPlanOfferingFilterAttributeEnum name;
+
     public SavingsPlanOfferingFilterElement withName(SavingsPlanOfferingFilterAttributeEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class SavingsPlanOfferingFilterElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public SavingsPlanOfferingFilterElement withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public SavingsPlanOfferingFilterElement(){}
 }

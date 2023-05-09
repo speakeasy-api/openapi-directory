@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OBTransactionCashBalance {
     @JsonProperty("Amount")
     public OBActiveOrHistoricCurrencyAndAmount amount;
+
     public OBTransactionCashBalance withAmount(OBActiveOrHistoricCurrencyAndAmount amount) {
         this.amount = amount;
         return this;
@@ -19,6 +20,7 @@ public class OBTransactionCashBalance {
     
     @JsonProperty("CreditDebitIndicator")
     public OBCreditDebitCodeEnum creditDebitIndicator;
+
     public OBTransactionCashBalance withCreditDebitIndicator(OBCreditDebitCodeEnum creditDebitIndicator) {
         this.creditDebitIndicator = creditDebitIndicator;
         return this;
@@ -26,9 +28,15 @@ public class OBTransactionCashBalance {
     
     @JsonProperty("Type")
     public OBBalanceType1CodeEnum type;
+
     public OBTransactionCashBalance withType(OBBalanceType1CodeEnum type) {
         this.type = type;
         return this;
     }
     
+    public OBTransactionCashBalance(@JsonProperty("Amount") OBActiveOrHistoricCurrencyAndAmount amount, @JsonProperty("CreditDebitIndicator") OBCreditDebitCodeEnum creditDebitIndicator, @JsonProperty("Type") OBBalanceType1CodeEnum type) {
+        this.amount = amount;
+        this.creditDebitIndicator = creditDebitIndicator;
+        this.type = type;
+  }
 }

@@ -22,6 +22,7 @@ public class ProductionVariantStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public ProductionVariantStatus withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -29,6 +30,7 @@ public class ProductionVariantStatus {
     
     @JsonProperty("Status")
     public VariantStatusEnum status;
+
     public ProductionVariantStatus withStatus(VariantStatusEnum status) {
         this.status = status;
         return this;
@@ -37,9 +39,13 @@ public class ProductionVariantStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public ProductionVariantStatus withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public ProductionVariantStatus(@JsonProperty("Status") VariantStatusEnum status) {
+        this.status = status;
+  }
 }

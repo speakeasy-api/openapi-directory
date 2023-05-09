@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopDeploymentResponse {
     
     public String contentType;
+
     public StopDeploymentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopDeploymentResponse {
      */
     
     public Object deploymentAlreadyCompletedException;
+
     public StopDeploymentResponse withDeploymentAlreadyCompletedException(Object deploymentAlreadyCompletedException) {
         this.deploymentAlreadyCompletedException = deploymentAlreadyCompletedException;
         return this;
@@ -29,6 +32,7 @@ public class StopDeploymentResponse {
      */
     
     public Object deploymentDoesNotExistException;
+
     public StopDeploymentResponse withDeploymentDoesNotExistException(Object deploymentDoesNotExistException) {
         this.deploymentDoesNotExistException = deploymentDoesNotExistException;
         return this;
@@ -39,6 +43,7 @@ public class StopDeploymentResponse {
      */
     
     public Object deploymentGroupDoesNotExistException;
+
     public StopDeploymentResponse withDeploymentGroupDoesNotExistException(Object deploymentGroupDoesNotExistException) {
         this.deploymentGroupDoesNotExistException = deploymentGroupDoesNotExistException;
         return this;
@@ -49,6 +54,7 @@ public class StopDeploymentResponse {
      */
     
     public Object deploymentIdRequiredException;
+
     public StopDeploymentResponse withDeploymentIdRequiredException(Object deploymentIdRequiredException) {
         this.deploymentIdRequiredException = deploymentIdRequiredException;
         return this;
@@ -59,6 +65,7 @@ public class StopDeploymentResponse {
      */
     
     public Object invalidDeploymentIdException;
+
     public StopDeploymentResponse withInvalidDeploymentIdException(Object invalidDeploymentIdException) {
         this.invalidDeploymentIdException = invalidDeploymentIdException;
         return this;
@@ -66,6 +73,7 @@ public class StopDeploymentResponse {
     
     
     public Integer statusCode;
+
     public StopDeploymentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class StopDeploymentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopDeploymentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class StopDeploymentResponse {
      */
     
     public org.openapis.openapi.models.shared.StopDeploymentOutput stopDeploymentOutput;
+
     public StopDeploymentResponse withStopDeploymentOutput(org.openapis.openapi.models.shared.StopDeploymentOutput stopDeploymentOutput) {
         this.stopDeploymentOutput = stopDeploymentOutput;
         return this;
@@ -93,9 +103,14 @@ public class StopDeploymentResponse {
      */
     
     public Object unsupportedActionForDeploymentTypeException;
+
     public StopDeploymentResponse withUnsupportedActionForDeploymentTypeException(Object unsupportedActionForDeploymentTypeException) {
         this.unsupportedActionForDeploymentTypeException = unsupportedActionForDeploymentTypeException;
         return this;
     }
     
+    public StopDeploymentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

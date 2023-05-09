@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteClusterSnapshotMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteClusterSnapshotMessage {
     
     public String snapshotClusterIdentifier;
+
     public DeleteClusterSnapshotMessage withSnapshotClusterIdentifier(String snapshotClusterIdentifier) {
         this.snapshotClusterIdentifier = snapshotClusterIdentifier;
         return this;
@@ -19,9 +20,13 @@ public class DeleteClusterSnapshotMessage {
     
     
     public String snapshotIdentifier;
+
     public DeleteClusterSnapshotMessage withSnapshotIdentifier(String snapshotIdentifier) {
         this.snapshotIdentifier = snapshotIdentifier;
         return this;
     }
     
+    public DeleteClusterSnapshotMessage(@JsonProperty("SnapshotIdentifier") String snapshotIdentifier) {
+        this.snapshotIdentifier = snapshotIdentifier;
+  }
 }

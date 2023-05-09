@@ -14,6 +14,7 @@ public class PEMCertificates {
      */
     @JsonProperty("certificate")
     public String certificate;
+
     public PEMCertificates withCertificate(String certificate) {
         this.certificate = certificate;
         return this;
@@ -25,6 +26,7 @@ public class PEMCertificates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cross")
     public String cross;
+
     public PEMCertificates withCross(String cross) {
         this.cross = cross;
         return this;
@@ -36,6 +38,7 @@ public class PEMCertificates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intermediate")
     public String intermediate;
+
     public PEMCertificates withIntermediate(String intermediate) {
         this.intermediate = intermediate;
         return this;
@@ -47,9 +50,13 @@ public class PEMCertificates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("root")
     public String root;
+
     public PEMCertificates withRoot(String root) {
         this.root = root;
         return this;
     }
     
+    public PEMCertificates(@JsonProperty("certificate") String certificate) {
+        this.certificate = certificate;
+  }
 }

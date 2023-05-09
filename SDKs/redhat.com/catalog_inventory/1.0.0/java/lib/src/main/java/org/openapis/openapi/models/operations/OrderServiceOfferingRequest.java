@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderServiceOfferingRequest {
@@ -12,6 +13,7 @@ public class OrderServiceOfferingRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.OrderParametersServiceOfferingInput orderParametersServiceOfferingInput;
+
     public OrderServiceOfferingRequest withOrderParametersServiceOfferingInput(org.openapis.openapi.models.shared.OrderParametersServiceOfferingInput orderParametersServiceOfferingInput) {
         this.orderParametersServiceOfferingInput = orderParametersServiceOfferingInput;
         return this;
@@ -22,9 +24,14 @@ public class OrderServiceOfferingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public OrderServiceOfferingRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public OrderServiceOfferingRequest(@JsonProperty("OrderParametersServiceOfferingInput") org.openapis.openapi.models.shared.OrderParametersServiceOfferingInput orderParametersServiceOfferingInput, @JsonProperty("id") String id) {
+        this.orderParametersServiceOfferingInput = orderParametersServiceOfferingInput;
+        this.id = id;
+  }
 }

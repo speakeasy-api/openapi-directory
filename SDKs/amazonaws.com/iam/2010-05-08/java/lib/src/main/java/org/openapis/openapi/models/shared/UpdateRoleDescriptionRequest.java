@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateRoleDescriptionRequest {
     
     public String description;
+
     public UpdateRoleDescriptionRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -16,9 +17,14 @@ public class UpdateRoleDescriptionRequest {
     
     
     public String roleName;
+
     public UpdateRoleDescriptionRequest withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
     }
     
+    public UpdateRoleDescriptionRequest(@JsonProperty("Description") String description, @JsonProperty("RoleName") String roleName) {
+        this.description = description;
+        this.roleName = roleName;
+  }
 }

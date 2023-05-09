@@ -12,6 +12,7 @@ public class TopicSentimentOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TopicSentimentOutput withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class TopicSentimentOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public TopicSentimentOutput withLanguage(String language) {
         this.language = language;
         return this;
@@ -28,6 +30,7 @@ public class TopicSentimentOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sentiments")
     public Sentiment[] sentiments;
+
     public TopicSentimentOutput withSentiments(Sentiment[] sentiments) {
         this.sentiments = sentiments;
         return this;
@@ -36,6 +39,7 @@ public class TopicSentimentOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public TopicSentimentOutput withText(String text) {
         this.text = text;
         return this;
@@ -44,6 +48,7 @@ public class TopicSentimentOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topicSentiments")
     public TopicSentiment[] topicSentiments;
+
     public TopicSentimentOutput withTopicSentiments(TopicSentiment[] topicSentiments) {
         this.topicSentiments = topicSentiments;
         return this;
@@ -52,9 +57,11 @@ public class TopicSentimentOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topics")
     public Topic[] topics;
+
     public TopicSentimentOutput withTopics(Topic[] topics) {
         this.topics = topics;
         return this;
     }
     
+    public TopicSentimentOutput(){}
 }

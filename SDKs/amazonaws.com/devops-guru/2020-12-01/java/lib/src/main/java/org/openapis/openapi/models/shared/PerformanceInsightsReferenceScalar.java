@@ -15,9 +15,11 @@ public class PerformanceInsightsReferenceScalar {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public Double value;
+
     public PerformanceInsightsReferenceScalar withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public PerformanceInsightsReferenceScalar(){}
 }

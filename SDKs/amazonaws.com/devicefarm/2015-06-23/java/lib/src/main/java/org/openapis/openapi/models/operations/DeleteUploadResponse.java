@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteUploadResponse {
@@ -12,6 +13,7 @@ public class DeleteUploadResponse {
      */
     
     public Object argumentException;
+
     public DeleteUploadResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteUploadResponse {
     
     
     public String contentType;
+
     public DeleteUploadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteUploadResponse {
      */
     
     public java.util.Map<String, Object> deleteUploadResult;
+
     public DeleteUploadResponse withDeleteUploadResult(java.util.Map<String, Object> deleteUploadResult) {
         this.deleteUploadResult = deleteUploadResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteUploadResponse {
      */
     
     public Object limitExceededException;
+
     public DeleteUploadResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteUploadResponse {
      */
     
     public Object notFoundException;
+
     public DeleteUploadResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteUploadResponse {
      */
     
     public Object serviceAccountException;
+
     public DeleteUploadResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteUploadResponse {
     
     
     public Integer statusCode;
+
     public DeleteUploadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteUploadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteUploadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteUploadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

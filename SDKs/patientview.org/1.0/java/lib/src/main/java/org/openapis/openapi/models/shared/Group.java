@@ -17,6 +17,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address1")
     public String address1;
+
     public Group withAddress1(String address1) {
         this.address1 = address1;
         return this;
@@ -25,6 +26,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address2")
     public String address2;
+
     public Group withAddress2(String address2) {
         this.address2 = address2;
         return this;
@@ -33,6 +35,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address3")
     public String address3;
+
     public Group withAddress3(String address3) {
         this.address3 = address3;
         return this;
@@ -41,6 +44,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childGroups")
     public Group[] childGroups;
+
     public Group withChildGroups(Group[] childGroups) {
         this.childGroups = childGroups;
         return this;
@@ -49,6 +53,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public Group withCode(String code) {
         this.code = code;
         return this;
@@ -57,6 +62,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactPoints")
     public ContactPoint[] contactPoints;
+
     public Group withContactPoints(ContactPoint[] contactPoints) {
         this.contactPoints = contactPoints;
         return this;
@@ -67,6 +73,7 @@ public class Group {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public Group withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -75,6 +82,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fhirResourceId")
     public String fhirResourceId;
+
     public Group withFhirResourceId(String fhirResourceId) {
         this.fhirResourceId = fhirResourceId;
         return this;
@@ -83,6 +91,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupFeatures")
     public GroupFeature[] groupFeatures;
+
     public Group withGroupFeatures(GroupFeature[] groupFeatures) {
         this.groupFeatures = groupFeatures;
         return this;
@@ -91,6 +100,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupType")
     public Lookup groupType;
+
     public Group withGroupType(Lookup groupType) {
         this.groupType = groupType;
         return this;
@@ -99,6 +109,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Group withId(Long id) {
         this.id = id;
         return this;
@@ -109,6 +120,7 @@ public class Group {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastImportDate")
     public OffsetDateTime lastImportDate;
+
     public Group withLastImportDate(OffsetDateTime lastImportDate) {
         this.lastImportDate = lastImportDate;
         return this;
@@ -119,6 +131,7 @@ public class Group {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdate")
     public OffsetDateTime lastUpdate;
+
     public Group withLastUpdate(OffsetDateTime lastUpdate) {
         this.lastUpdate = lastUpdate;
         return this;
@@ -127,6 +140,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public Link[] links;
+
     public Group withLinks(Link[] links) {
         this.links = links;
         return this;
@@ -135,6 +149,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations")
     public Location[] locations;
+
     public Group withLocations(Location[] locations) {
         this.locations = locations;
         return this;
@@ -143,6 +158,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Group withName(String name) {
         this.name = name;
         return this;
@@ -151,6 +167,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentGroups")
     public Group[] parentGroups;
+
     public Group withParentGroups(Group[] parentGroups) {
         this.parentGroups = parentGroups;
         return this;
@@ -159,6 +176,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postcode")
     public String postcode;
+
     public Group withPostcode(String postcode) {
         this.postcode = postcode;
         return this;
@@ -167,6 +185,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sftpUser")
     public String sftpUser;
+
     public Group withSftpUser(String sftpUser) {
         this.sftpUser = sftpUser;
         return this;
@@ -175,6 +194,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortName")
     public String shortName;
+
     public Group withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -183,6 +203,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visible")
     public Boolean visible;
+
     public Group withVisible(Boolean visible) {
         this.visible = visible;
         return this;
@@ -191,9 +212,11 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibleToJoin")
     public Boolean visibleToJoin;
+
     public Group withVisibleToJoin(Boolean visibleToJoin) {
         this.visibleToJoin = visibleToJoin;
         return this;
     }
     
+    public Group(){}
 }

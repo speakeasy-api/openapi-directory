@@ -18,6 +18,7 @@ public class RotateChallengesRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessToken")
     public String accessToken;
+
     public RotateChallengesRequestInput withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -29,6 +30,7 @@ public class RotateChallengesRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keepExpiredRecords")
     public Boolean keepExpiredRecords;
+
     public RotateChallengesRequestInput withKeepExpiredRecords(Boolean keepExpiredRecords) {
         this.keepExpiredRecords = keepExpiredRecords;
         return this;
@@ -40,6 +42,7 @@ public class RotateChallengesRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recordsToAdd")
     public AcmeTxtRecordInput[] recordsToAdd;
+
     public RotateChallengesRequestInput withRecordsToAdd(AcmeTxtRecordInput[] recordsToAdd) {
         this.recordsToAdd = recordsToAdd;
         return this;
@@ -51,9 +54,11 @@ public class RotateChallengesRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recordsToRemove")
     public AcmeTxtRecordInput[] recordsToRemove;
+
     public RotateChallengesRequestInput withRecordsToRemove(AcmeTxtRecordInput[] recordsToRemove) {
         this.recordsToRemove = recordsToRemove;
         return this;
     }
     
+    public RotateChallengesRequestInput(){}
 }

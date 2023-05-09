@@ -15,6 +15,7 @@ public class RecentCaseCommunications {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("communications")
     public Communication[] communications;
+
     public RecentCaseCommunications withCommunications(Communication[] communications) {
         this.communications = communications;
         return this;
@@ -23,9 +24,11 @@ public class RecentCaseCommunications {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public RecentCaseCommunications withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public RecentCaseCommunications(){}
 }

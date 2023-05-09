@@ -12,6 +12,7 @@ public class UpdateCallRequestTransferAnswerUrl {
      */
     @JsonProperty("action")
     public RequestTransferActionParamEnum action;
+
     public UpdateCallRequestTransferAnswerUrl withAction(RequestTransferActionParamEnum action) {
         this.action = action;
         return this;
@@ -19,9 +20,14 @@ public class UpdateCallRequestTransferAnswerUrl {
     
     @JsonProperty("destination")
     public UpdateCallRequestTransferAnswerUrlDestination destination;
+
     public UpdateCallRequestTransferAnswerUrl withDestination(UpdateCallRequestTransferAnswerUrlDestination destination) {
         this.destination = destination;
         return this;
     }
     
+    public UpdateCallRequestTransferAnswerUrl(@JsonProperty("action") RequestTransferActionParamEnum action, @JsonProperty("destination") UpdateCallRequestTransferAnswerUrlDestination destination) {
+        this.action = action;
+        this.destination = destination;
+  }
 }

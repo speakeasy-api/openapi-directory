@@ -12,6 +12,7 @@ public class InlineResponse200Currency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency_code")
     public String currencyCode;
+
     public InlineResponse200Currency withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -20,9 +21,11 @@ public class InlineResponse200Currency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency_name")
     public String currencyName;
+
     public InlineResponse200Currency withCurrencyName(String currencyName) {
         this.currencyName = currencyName;
         return this;
     }
     
+    public InlineResponse200Currency(){}
 }

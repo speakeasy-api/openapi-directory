@@ -18,6 +18,7 @@ public class Addon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public Addon withId(Integer id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class Addon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Addon withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Addon(){}
 }

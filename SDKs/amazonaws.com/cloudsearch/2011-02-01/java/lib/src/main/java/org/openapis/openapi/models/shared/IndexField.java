@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * IndexField - Defines a field in the index, including its name, type, and the source of its data. The &lt;code&gt;IndexFieldType&lt;/code&gt; indicates which of the options will be present. It is invalid to specify options for a type other than the &lt;code&gt;IndexFieldType&lt;/code&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class IndexField {
     
     public String indexFieldName;
+
     public IndexField withIndexFieldName(String indexFieldName) {
         this.indexFieldName = indexFieldName;
         return this;
@@ -19,6 +20,7 @@ public class IndexField {
     
     
     public IndexFieldTypeEnum indexFieldType;
+
     public IndexField withIndexFieldType(IndexFieldTypeEnum indexFieldType) {
         this.indexFieldType = indexFieldType;
         return this;
@@ -26,6 +28,7 @@ public class IndexField {
     
     
     public LiteralOptions literalOptions;
+
     public IndexField withLiteralOptions(LiteralOptions literalOptions) {
         this.literalOptions = literalOptions;
         return this;
@@ -33,6 +36,7 @@ public class IndexField {
     
     
     public SourceAttribute[] sourceAttributes;
+
     public IndexField withSourceAttributes(SourceAttribute[] sourceAttributes) {
         this.sourceAttributes = sourceAttributes;
         return this;
@@ -40,6 +44,7 @@ public class IndexField {
     
     
     public TextOptions textOptions;
+
     public IndexField withTextOptions(TextOptions textOptions) {
         this.textOptions = textOptions;
         return this;
@@ -47,9 +52,14 @@ public class IndexField {
     
     
     public UIntOptions uIntOptions;
+
     public IndexField withUIntOptions(UIntOptions uIntOptions) {
         this.uIntOptions = uIntOptions;
         return this;
     }
     
+    public IndexField(@JsonProperty("IndexFieldName") String indexFieldName, @JsonProperty("IndexFieldType") IndexFieldTypeEnum indexFieldType) {
+        this.indexFieldName = indexFieldName;
+        this.indexFieldType = indexFieldType;
+  }
 }

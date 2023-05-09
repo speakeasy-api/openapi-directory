@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFindingsReportAccountSummaryResponse {
     
     public String contentType;
+
     public GetFindingsReportAccountSummaryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetFindingsReportAccountSummaryResponse {
      */
     
     public org.openapis.openapi.models.shared.GetFindingsReportAccountSummaryResponse getFindingsReportAccountSummaryResponse;
+
     public GetFindingsReportAccountSummaryResponse withGetFindingsReportAccountSummaryResponse(org.openapis.openapi.models.shared.GetFindingsReportAccountSummaryResponse getFindingsReportAccountSummaryResponse) {
         this.getFindingsReportAccountSummaryResponse = getFindingsReportAccountSummaryResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetFindingsReportAccountSummaryResponse {
      */
     
     public Object internalServerException;
+
     public GetFindingsReportAccountSummaryResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class GetFindingsReportAccountSummaryResponse {
     
     
     public Integer statusCode;
+
     public GetFindingsReportAccountSummaryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetFindingsReportAccountSummaryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFindingsReportAccountSummaryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class GetFindingsReportAccountSummaryResponse {
      */
     
     public Object throttlingException;
+
     public GetFindingsReportAccountSummaryResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,9 +70,14 @@ public class GetFindingsReportAccountSummaryResponse {
      */
     
     public Object validationException;
+
     public GetFindingsReportAccountSummaryResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetFindingsReportAccountSummaryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

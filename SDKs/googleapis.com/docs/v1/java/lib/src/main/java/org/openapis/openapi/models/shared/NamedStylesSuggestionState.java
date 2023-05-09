@@ -18,9 +18,11 @@ public class NamedStylesSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stylesSuggestionStates")
     public NamedStyleSuggestionState[] stylesSuggestionStates;
+
     public NamedStylesSuggestionState withStylesSuggestionStates(NamedStyleSuggestionState[] stylesSuggestionStates) {
         this.stylesSuggestionStates = stylesSuggestionStates;
         return this;
     }
     
+    public NamedStylesSuggestionState(){}
 }

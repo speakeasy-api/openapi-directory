@@ -15,6 +15,7 @@ public class EdgeStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorStatistics")
     public ErrorStatistics errorStatistics;
+
     public EdgeStatistics withErrorStatistics(ErrorStatistics errorStatistics) {
         this.errorStatistics = errorStatistics;
         return this;
@@ -23,6 +24,7 @@ public class EdgeStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FaultStatistics")
     public FaultStatistics faultStatistics;
+
     public EdgeStatistics withFaultStatistics(FaultStatistics faultStatistics) {
         this.faultStatistics = faultStatistics;
         return this;
@@ -31,6 +33,7 @@ public class EdgeStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OkCount")
     public Long okCount;
+
     public EdgeStatistics withOkCount(Long okCount) {
         this.okCount = okCount;
         return this;
@@ -39,6 +42,7 @@ public class EdgeStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalCount")
     public Long totalCount;
+
     public EdgeStatistics withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -47,9 +51,11 @@ public class EdgeStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalResponseTime")
     public Double totalResponseTime;
+
     public EdgeStatistics withTotalResponseTime(Double totalResponseTime) {
         this.totalResponseTime = totalResponseTime;
         return this;
     }
     
+    public EdgeStatistics(){}
 }

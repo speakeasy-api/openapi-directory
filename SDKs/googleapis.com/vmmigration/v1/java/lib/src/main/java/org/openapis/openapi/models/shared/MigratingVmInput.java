@@ -18,6 +18,7 @@ public class MigratingVmInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsSourceVmDetails")
     public AwsSourceVmDetails awsSourceVmDetails;
+
     public MigratingVmInput withAwsSourceVmDetails(AwsSourceVmDetails awsSourceVmDetails) {
         this.awsSourceVmDetails = awsSourceVmDetails;
         return this;
@@ -29,6 +30,7 @@ public class MigratingVmInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeEngineTargetDefaults")
     public ComputeEngineTargetDefaultsInput computeEngineTargetDefaults;
+
     public MigratingVmInput withComputeEngineTargetDefaults(ComputeEngineTargetDefaultsInput computeEngineTargetDefaults) {
         this.computeEngineTargetDefaults = computeEngineTargetDefaults;
         return this;
@@ -40,6 +42,7 @@ public class MigratingVmInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentSyncInfo")
     public ReplicationCycleInput currentSyncInfo;
+
     public MigratingVmInput withCurrentSyncInfo(ReplicationCycleInput currentSyncInfo) {
         this.currentSyncInfo = currentSyncInfo;
         return this;
@@ -51,6 +54,7 @@ public class MigratingVmInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public MigratingVmInput withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +66,7 @@ public class MigratingVmInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public MigratingVmInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -73,6 +78,7 @@ public class MigratingVmInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Status error;
+
     public MigratingVmInput withError(Status error) {
         this.error = error;
         return this;
@@ -84,6 +90,7 @@ public class MigratingVmInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public MigratingVmInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -95,6 +102,7 @@ public class MigratingVmInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastReplicationCycle")
     public ReplicationCycleInput lastReplicationCycle;
+
     public MigratingVmInput withLastReplicationCycle(ReplicationCycleInput lastReplicationCycle) {
         this.lastReplicationCycle = lastReplicationCycle;
         return this;
@@ -106,6 +114,7 @@ public class MigratingVmInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastSync")
     public ReplicationSync lastSync;
+
     public MigratingVmInput withLastSync(ReplicationSync lastSync) {
         this.lastSync = lastSync;
         return this;
@@ -117,6 +126,7 @@ public class MigratingVmInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public SchedulePolicy policy;
+
     public MigratingVmInput withPolicy(SchedulePolicy policy) {
         this.policy = policy;
         return this;
@@ -128,9 +138,11 @@ public class MigratingVmInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceVmId")
     public String sourceVmId;
+
     public MigratingVmInput withSourceVmId(String sourceVmId) {
         this.sourceVmId = sourceVmId;
         return this;
     }
     
+    public MigratingVmInput(){}
 }

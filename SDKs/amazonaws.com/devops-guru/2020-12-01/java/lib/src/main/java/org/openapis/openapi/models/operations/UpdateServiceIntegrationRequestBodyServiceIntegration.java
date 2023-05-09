@@ -15,6 +15,7 @@ public class UpdateServiceIntegrationRequestBodyServiceIntegration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogsAnomalyDetection")
     public org.openapis.openapi.models.shared.LogsAnomalyDetectionIntegrationConfig logsAnomalyDetection;
+
     public UpdateServiceIntegrationRequestBodyServiceIntegration withLogsAnomalyDetection(org.openapis.openapi.models.shared.LogsAnomalyDetectionIntegrationConfig logsAnomalyDetection) {
         this.logsAnomalyDetection = logsAnomalyDetection;
         return this;
@@ -26,9 +27,11 @@ public class UpdateServiceIntegrationRequestBodyServiceIntegration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpsCenter")
     public org.openapis.openapi.models.shared.OpsCenterIntegrationConfig opsCenter;
+
     public UpdateServiceIntegrationRequestBodyServiceIntegration withOpsCenter(org.openapis.openapi.models.shared.OpsCenterIntegrationConfig opsCenter) {
         this.opsCenter = opsCenter;
         return this;
     }
     
+    public UpdateServiceIntegrationRequestBodyServiceIntegration(){}
 }

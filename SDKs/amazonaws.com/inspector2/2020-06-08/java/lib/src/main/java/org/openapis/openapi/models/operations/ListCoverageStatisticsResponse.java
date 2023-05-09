@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCoverageStatisticsResponse {
     
     public String contentType;
+
     public ListCoverageStatisticsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListCoverageStatisticsResponse {
      */
     
     public Object internalServerException;
+
     public ListCoverageStatisticsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListCoverageStatisticsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCoverageStatisticsResponse listCoverageStatisticsResponse;
+
     public ListCoverageStatisticsResponse withListCoverageStatisticsResponse(org.openapis.openapi.models.shared.ListCoverageStatisticsResponse listCoverageStatisticsResponse) {
         this.listCoverageStatisticsResponse = listCoverageStatisticsResponse;
         return this;
@@ -36,6 +40,7 @@ public class ListCoverageStatisticsResponse {
     
     
     public Integer statusCode;
+
     public ListCoverageStatisticsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListCoverageStatisticsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCoverageStatisticsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class ListCoverageStatisticsResponse {
      */
     
     public Object throttlingException;
+
     public ListCoverageStatisticsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,9 +70,14 @@ public class ListCoverageStatisticsResponse {
      */
     
     public Object validationException;
+
     public ListCoverageStatisticsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListCoverageStatisticsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

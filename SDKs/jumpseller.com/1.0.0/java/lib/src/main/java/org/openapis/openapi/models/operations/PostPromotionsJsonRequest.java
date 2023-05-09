@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostPromotionsJsonRequest {
@@ -12,6 +13,7 @@ public class PostPromotionsJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PromotionEdit promotionEdit;
+
     public PostPromotionsJsonRequest withPromotionEdit(org.openapis.openapi.models.shared.PromotionEdit promotionEdit) {
         this.promotionEdit = promotionEdit;
         return this;
@@ -22,6 +24,7 @@ public class PostPromotionsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public PostPromotionsJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -32,9 +35,15 @@ public class PostPromotionsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public PostPromotionsJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public PostPromotionsJsonRequest(@JsonProperty("PromotionEdit") org.openapis.openapi.models.shared.PromotionEdit promotionEdit, @JsonProperty("authtoken") String authtoken, @JsonProperty("login") String login) {
+        this.promotionEdit = promotionEdit;
+        this.authtoken = authtoken;
+        this.login = login;
+  }
 }

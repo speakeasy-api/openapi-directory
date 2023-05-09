@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2Dictionary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudStoragePath")
     public GooglePrivacyDlpV2CloudStoragePath cloudStoragePath;
+
     public GooglePrivacyDlpV2Dictionary withCloudStoragePath(GooglePrivacyDlpV2CloudStoragePath cloudStoragePath) {
         this.cloudStoragePath = cloudStoragePath;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2Dictionary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wordList")
     public GooglePrivacyDlpV2WordList wordList;
+
     public GooglePrivacyDlpV2Dictionary withWordList(GooglePrivacyDlpV2WordList wordList) {
         this.wordList = wordList;
         return this;
     }
     
+    public GooglePrivacyDlpV2Dictionary(){}
 }

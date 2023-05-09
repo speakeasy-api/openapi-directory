@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutConformancePackResponse {
@@ -12,6 +13,7 @@ public class PutConformancePackResponse {
      */
     
     public Object conformancePackTemplateValidationException;
+
     public PutConformancePackResponse withConformancePackTemplateValidationException(Object conformancePackTemplateValidationException) {
         this.conformancePackTemplateValidationException = conformancePackTemplateValidationException;
         return this;
@@ -19,6 +21,7 @@ public class PutConformancePackResponse {
     
     
     public String contentType;
+
     public PutConformancePackResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutConformancePackResponse {
      */
     
     public Object insufficientPermissionsException;
+
     public PutConformancePackResponse withInsufficientPermissionsException(Object insufficientPermissionsException) {
         this.insufficientPermissionsException = insufficientPermissionsException;
         return this;
@@ -39,6 +43,7 @@ public class PutConformancePackResponse {
      */
     
     public Object invalidParameterValueException;
+
     public PutConformancePackResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class PutConformancePackResponse {
      */
     
     public Object maxNumberOfConformancePacksExceededException;
+
     public PutConformancePackResponse withMaxNumberOfConformancePacksExceededException(Object maxNumberOfConformancePacksExceededException) {
         this.maxNumberOfConformancePacksExceededException = maxNumberOfConformancePacksExceededException;
         return this;
@@ -59,6 +65,7 @@ public class PutConformancePackResponse {
      */
     
     public org.openapis.openapi.models.shared.PutConformancePackResponse putConformancePackResponse;
+
     public PutConformancePackResponse withPutConformancePackResponse(org.openapis.openapi.models.shared.PutConformancePackResponse putConformancePackResponse) {
         this.putConformancePackResponse = putConformancePackResponse;
         return this;
@@ -66,6 +73,7 @@ public class PutConformancePackResponse {
     
     
     public Integer statusCode;
+
     public PutConformancePackResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class PutConformancePackResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutConformancePackResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class PutConformancePackResponse {
      */
     
     public Object resourceInUseException;
+
     public PutConformancePackResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
     }
     
+    public PutConformancePackResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

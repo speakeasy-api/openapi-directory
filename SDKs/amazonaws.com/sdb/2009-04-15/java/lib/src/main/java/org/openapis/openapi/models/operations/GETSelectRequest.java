@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSelectRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AWSAccessKeyId")
     public String awsAccessKeyId;
+
     public GETSelectRequest withAWSAccessKeyId(String awsAccessKeyId) {
         this.awsAccessKeyId = awsAccessKeyId;
         return this;
@@ -16,6 +18,7 @@ public class GETSelectRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETSelectActionEnum action;
+
     public GETSelectRequest withAction(GETSelectActionEnum action) {
         this.action = action;
         return this;
@@ -26,6 +29,7 @@ public class GETSelectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConsistentRead")
     public Boolean consistentRead;
+
     public GETSelectRequest withConsistentRead(Boolean consistentRead) {
         this.consistentRead = consistentRead;
         return this;
@@ -36,6 +40,7 @@ public class GETSelectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public GETSelectRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -46,6 +51,7 @@ public class GETSelectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SelectExpression")
     public String selectExpression;
+
     public GETSelectRequest withSelectExpression(String selectExpression) {
         this.selectExpression = selectExpression;
         return this;
@@ -53,6 +59,7 @@ public class GETSelectRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Signature")
     public String signature;
+
     public GETSelectRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -60,6 +67,7 @@ public class GETSelectRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureMethod")
     public String signatureMethod;
+
     public GETSelectRequest withSignatureMethod(String signatureMethod) {
         this.signatureMethod = signatureMethod;
         return this;
@@ -67,6 +75,7 @@ public class GETSelectRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureVersion")
     public String signatureVersion;
+
     public GETSelectRequest withSignatureVersion(String signatureVersion) {
         this.signatureVersion = signatureVersion;
         return this;
@@ -74,6 +83,7 @@ public class GETSelectRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Timestamp")
     public String timestamp;
+
     public GETSelectRequest withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -81,9 +91,20 @@ public class GETSelectRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETSelectVersionEnum version;
+
     public GETSelectRequest withVersion(GETSelectVersionEnum version) {
         this.version = version;
         return this;
     }
     
+    public GETSelectRequest(@JsonProperty("AWSAccessKeyId") String awsAccessKeyId, @JsonProperty("Action") GETSelectActionEnum action, @JsonProperty("SelectExpression") String selectExpression, @JsonProperty("Signature") String signature, @JsonProperty("SignatureMethod") String signatureMethod, @JsonProperty("SignatureVersion") String signatureVersion, @JsonProperty("Timestamp") String timestamp, @JsonProperty("Version") GETSelectVersionEnum version) {
+        this.awsAccessKeyId = awsAccessKeyId;
+        this.action = action;
+        this.selectExpression = selectExpression;
+        this.signature = signature;
+        this.signatureMethod = signatureMethod;
+        this.signatureVersion = signatureVersion;
+        this.timestamp = timestamp;
+        this.version = version;
+  }
 }

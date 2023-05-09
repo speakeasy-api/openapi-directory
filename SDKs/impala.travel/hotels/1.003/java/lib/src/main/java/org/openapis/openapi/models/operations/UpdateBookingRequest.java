@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateBookingRequest {
@@ -12,6 +13,7 @@ public class UpdateBookingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bookingId")
     public String bookingId;
+
     public UpdateBookingRequest withBookingId(String bookingId) {
         this.bookingId = bookingId;
         return this;
@@ -22,9 +24,13 @@ public class UpdateBookingRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateBookingRequest updateBookingRequest;
+
     public UpdateBookingRequest withUpdateBookingRequest(org.openapis.openapi.models.shared.UpdateBookingRequest updateBookingRequest) {
         this.updateBookingRequest = updateBookingRequest;
         return this;
     }
     
+    public UpdateBookingRequest(@JsonProperty("bookingId") String bookingId) {
+        this.bookingId = bookingId;
+  }
 }

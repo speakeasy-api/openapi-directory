@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StoreCreationWithMerchantCodeRequest {
     @JsonProperty("address")
     public StoreLocation address;
+
     public StoreCreationWithMerchantCodeRequest withAddress(StoreLocation address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class StoreCreationWithMerchantCodeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessLineIds")
     public String[] businessLineIds;
+
     public StoreCreationWithMerchantCodeRequest withBusinessLineIds(String[] businessLineIds) {
         this.businessLineIds = businessLineIds;
         return this;
@@ -33,6 +35,7 @@ public class StoreCreationWithMerchantCodeRequest {
      */
     @JsonProperty("description")
     public String description;
+
     public StoreCreationWithMerchantCodeRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +47,7 @@ public class StoreCreationWithMerchantCodeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalReferenceId")
     public String externalReferenceId;
+
     public StoreCreationWithMerchantCodeRequest withExternalReferenceId(String externalReferenceId) {
         this.externalReferenceId = externalReferenceId;
         return this;
@@ -54,6 +58,7 @@ public class StoreCreationWithMerchantCodeRequest {
      */
     @JsonProperty("merchantId")
     public String merchantId;
+
     public StoreCreationWithMerchantCodeRequest withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -64,6 +69,7 @@ public class StoreCreationWithMerchantCodeRequest {
      */
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public StoreCreationWithMerchantCodeRequest withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -76,6 +82,7 @@ public class StoreCreationWithMerchantCodeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public StoreCreationWithMerchantCodeRequest withReference(String reference) {
         this.reference = reference;
         return this;
@@ -87,6 +94,7 @@ public class StoreCreationWithMerchantCodeRequest {
      */
     @JsonProperty("shopperStatement")
     public String shopperStatement;
+
     public StoreCreationWithMerchantCodeRequest withShopperStatement(String shopperStatement) {
         this.shopperStatement = shopperStatement;
         return this;
@@ -95,9 +103,17 @@ public class StoreCreationWithMerchantCodeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("splitConfiguration")
     public StoreSplitConfiguration splitConfiguration;
+
     public StoreCreationWithMerchantCodeRequest withSplitConfiguration(StoreSplitConfiguration splitConfiguration) {
         this.splitConfiguration = splitConfiguration;
         return this;
     }
     
+    public StoreCreationWithMerchantCodeRequest(@JsonProperty("address") StoreLocation address, @JsonProperty("description") String description, @JsonProperty("merchantId") String merchantId, @JsonProperty("phoneNumber") String phoneNumber, @JsonProperty("shopperStatement") String shopperStatement) {
+        this.address = address;
+        this.description = description;
+        this.merchantId = merchantId;
+        this.phoneNumber = phoneNumber;
+        this.shopperStatement = shopperStatement;
+  }
 }

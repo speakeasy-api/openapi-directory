@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExtensionCtrlGetAccountExtensionsResponse {
     
     public String contentType;
+
     public ExtensionCtrlGetAccountExtensionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ExtensionCtrlGetAccountExtensionsResponse {
      */
     
     public org.openapis.openapi.models.shared.EndUserRouteHalResponse endUserRouteHalResponse;
+
     public ExtensionCtrlGetAccountExtensionsResponse withEndUserRouteHalResponse(org.openapis.openapi.models.shared.EndUserRouteHalResponse endUserRouteHalResponse) {
         this.endUserRouteHalResponse = endUserRouteHalResponse;
         return this;
@@ -26,6 +29,7 @@ public class ExtensionCtrlGetAccountExtensionsResponse {
     
     
     public Integer statusCode;
+
     public ExtensionCtrlGetAccountExtensionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ExtensionCtrlGetAccountExtensionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExtensionCtrlGetAccountExtensionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class ExtensionCtrlGetAccountExtensionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationErrorsResponse validationErrorsResponse;
+
     public ExtensionCtrlGetAccountExtensionsResponse withValidationErrorsResponse(org.openapis.openapi.models.shared.ValidationErrorsResponse validationErrorsResponse) {
         this.validationErrorsResponse = validationErrorsResponse;
         return this;
     }
     
+    public ExtensionCtrlGetAccountExtensionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

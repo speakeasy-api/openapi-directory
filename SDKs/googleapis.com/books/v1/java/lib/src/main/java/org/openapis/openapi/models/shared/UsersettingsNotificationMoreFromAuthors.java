@@ -12,9 +12,11 @@ public class UsersettingsNotificationMoreFromAuthors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opted_state")
     public String optedState;
+
     public UsersettingsNotificationMoreFromAuthors withOptedState(String optedState) {
         this.optedState = optedState;
         return this;
     }
     
+    public UsersettingsNotificationMoreFromAuthors(){}
 }

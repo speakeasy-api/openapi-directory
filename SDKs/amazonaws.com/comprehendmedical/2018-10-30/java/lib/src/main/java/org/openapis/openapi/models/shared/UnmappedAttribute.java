@@ -15,6 +15,7 @@ public class UnmappedAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attribute")
     public Attribute attribute;
+
     public UnmappedAttribute withAttribute(Attribute attribute) {
         this.attribute = attribute;
         return this;
@@ -23,9 +24,11 @@ public class UnmappedAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public EntityTypeEnum type;
+
     public UnmappedAttribute withType(EntityTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public UnmappedAttribute(){}
 }

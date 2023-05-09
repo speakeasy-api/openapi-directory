@@ -53,11 +53,9 @@ public class TransferInstruments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteTransferInstrumentsIdResponse res = new org.openapis.openapi.models.operations.DeleteTransferInstrumentsIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteTransferInstrumentsIdResponse res = new org.openapis.openapi.models.operations.DeleteTransferInstrumentsIdResponse(contentType, httpRes.statusCode()) {{
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -96,12 +94,10 @@ public class TransferInstruments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTransferInstrumentsIdResponse res = new org.openapis.openapi.models.operations.GetTransferInstrumentsIdResponse() {{
+        org.openapis.openapi.models.operations.GetTransferInstrumentsIdResponse res = new org.openapis.openapi.models.operations.GetTransferInstrumentsIdResponse(contentType, httpRes.statusCode()) {{
             transferInstrument = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,12 +143,10 @@ public class TransferInstruments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchTransferInstrumentsIdResponse res = new org.openapis.openapi.models.operations.PatchTransferInstrumentsIdResponse() {{
+        org.openapis.openapi.models.operations.PatchTransferInstrumentsIdResponse res = new org.openapis.openapi.models.operations.PatchTransferInstrumentsIdResponse(contentType, httpRes.statusCode()) {{
             transferInstrument = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,12 +196,10 @@ public class TransferInstruments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostTransferInstrumentsResponse res = new org.openapis.openapi.models.operations.PostTransferInstrumentsResponse() {{
+        org.openapis.openapi.models.operations.PostTransferInstrumentsResponse res = new org.openapis.openapi.models.operations.PostTransferInstrumentsResponse(contentType, httpRes.statusCode()) {{
             transferInstrument = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

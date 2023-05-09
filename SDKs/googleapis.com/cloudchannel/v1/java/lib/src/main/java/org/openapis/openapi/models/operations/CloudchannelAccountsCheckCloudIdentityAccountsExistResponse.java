@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudchannelAccountsCheckCloudIdentityAccountsExistResponse {
     
     public String contentType;
+
     public CloudchannelAccountsCheckCloudIdentityAccountsExistResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudchannelAccountsCheckCloudIdentityAccountsExistResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudChannelV1CheckCloudIdentityAccountsExistResponse googleCloudChannelV1CheckCloudIdentityAccountsExistResponse;
+
     public CloudchannelAccountsCheckCloudIdentityAccountsExistResponse withGoogleCloudChannelV1CheckCloudIdentityAccountsExistResponse(org.openapis.openapi.models.shared.GoogleCloudChannelV1CheckCloudIdentityAccountsExistResponse googleCloudChannelV1CheckCloudIdentityAccountsExistResponse) {
         this.googleCloudChannelV1CheckCloudIdentityAccountsExistResponse = googleCloudChannelV1CheckCloudIdentityAccountsExistResponse;
         return this;
@@ -26,6 +29,7 @@ public class CloudchannelAccountsCheckCloudIdentityAccountsExistResponse {
     
     
     public Integer statusCode;
+
     public CloudchannelAccountsCheckCloudIdentityAccountsExistResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudchannelAccountsCheckCloudIdentityAccountsExistResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudchannelAccountsCheckCloudIdentityAccountsExistResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudchannelAccountsCheckCloudIdentityAccountsExistResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

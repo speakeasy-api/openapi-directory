@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PatchTransferInstrumentsIdResponse {
     
     public String contentType;
+
     public PatchTransferInstrumentsIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PatchTransferInstrumentsIdResponse {
     
     
     public Integer statusCode;
+
     public PatchTransferInstrumentsIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PatchTransferInstrumentsIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PatchTransferInstrumentsIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PatchTransferInstrumentsIdResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public PatchTransferInstrumentsIdResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -43,9 +48,14 @@ public class PatchTransferInstrumentsIdResponse {
      */
     
     public org.openapis.openapi.models.shared.TransferInstrument transferInstrument;
+
     public PatchTransferInstrumentsIdResponse withTransferInstrument(org.openapis.openapi.models.shared.TransferInstrument transferInstrument) {
         this.transferInstrument = transferInstrument;
         return this;
     }
     
+    public PatchTransferInstrumentsIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class CompleteQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completionResults")
     public CompletionResult[] completionResults;
+
     public CompleteQueryResponse withCompletionResults(CompletionResult[] completionResults) {
         this.completionResults = completionResults;
         return this;
@@ -29,9 +30,11 @@ public class CompleteQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public ResponseMetadata metadata;
+
     public CompleteQueryResponse withMetadata(ResponseMetadata metadata) {
         this.metadata = metadata;
         return this;
     }
     
+    public CompleteQueryResponse(){}
 }

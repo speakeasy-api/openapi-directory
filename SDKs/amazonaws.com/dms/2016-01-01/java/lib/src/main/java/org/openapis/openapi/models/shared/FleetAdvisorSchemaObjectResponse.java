@@ -15,6 +15,7 @@ public class FleetAdvisorSchemaObjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeLineCount")
     public Long codeLineCount;
+
     public FleetAdvisorSchemaObjectResponse withCodeLineCount(Long codeLineCount) {
         this.codeLineCount = codeLineCount;
         return this;
@@ -23,6 +24,7 @@ public class FleetAdvisorSchemaObjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeSize")
     public Long codeSize;
+
     public FleetAdvisorSchemaObjectResponse withCodeSize(Long codeSize) {
         this.codeSize = codeSize;
         return this;
@@ -31,6 +33,7 @@ public class FleetAdvisorSchemaObjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfObjects")
     public Long numberOfObjects;
+
     public FleetAdvisorSchemaObjectResponse withNumberOfObjects(Long numberOfObjects) {
         this.numberOfObjects = numberOfObjects;
         return this;
@@ -39,6 +42,7 @@ public class FleetAdvisorSchemaObjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectType")
     public String objectType;
+
     public FleetAdvisorSchemaObjectResponse withObjectType(String objectType) {
         this.objectType = objectType;
         return this;
@@ -47,9 +51,11 @@ public class FleetAdvisorSchemaObjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaId")
     public String schemaId;
+
     public FleetAdvisorSchemaObjectResponse withSchemaId(String schemaId) {
         this.schemaId = schemaId;
         return this;
     }
     
+    public FleetAdvisorSchemaObjectResponse(){}
 }

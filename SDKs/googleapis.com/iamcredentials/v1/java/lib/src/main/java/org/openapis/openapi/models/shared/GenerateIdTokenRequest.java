@@ -15,6 +15,7 @@ public class GenerateIdTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audience")
     public String audience;
+
     public GenerateIdTokenRequest withAudience(String audience) {
         this.audience = audience;
         return this;
@@ -26,6 +27,7 @@ public class GenerateIdTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delegates")
     public String[] delegates;
+
     public GenerateIdTokenRequest withDelegates(String[] delegates) {
         this.delegates = delegates;
         return this;
@@ -37,9 +39,11 @@ public class GenerateIdTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeEmail")
     public Boolean includeEmail;
+
     public GenerateIdTokenRequest withIncludeEmail(Boolean includeEmail) {
         this.includeEmail = includeEmail;
         return this;
     }
     
+    public GenerateIdTokenRequest(){}
 }

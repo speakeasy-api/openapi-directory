@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostScenariosIdEventsResponse {
     
     public String contentType;
+
     public PostScenariosIdEventsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostScenariosIdEventsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public PostScenariosIdEventsResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class PostScenariosIdEventsResponse {
      */
     
     public org.openapis.openapi.models.shared.Event event;
+
     public PostScenariosIdEventsResponse withEvent(org.openapis.openapi.models.shared.Event event) {
         this.event = event;
         return this;
@@ -36,6 +40,7 @@ public class PostScenariosIdEventsResponse {
     
     
     public Integer statusCode;
+
     public PostScenariosIdEventsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostScenariosIdEventsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostScenariosIdEventsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostScenariosIdEventsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

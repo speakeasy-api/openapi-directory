@@ -14,6 +14,7 @@ public class UpdateReplicationSetRequestBody {
      */
     @JsonProperty("actions")
     public org.openapis.openapi.models.shared.UpdateReplicationSetAction[] actions;
+
     public UpdateReplicationSetRequestBody withActions(org.openapis.openapi.models.shared.UpdateReplicationSetAction[] actions) {
         this.actions = actions;
         return this;
@@ -24,6 +25,7 @@ public class UpdateReplicationSetRequestBody {
      */
     @JsonProperty("arn")
     public String arn;
+
     public UpdateReplicationSetRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
@@ -35,9 +37,14 @@ public class UpdateReplicationSetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateReplicationSetRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     
+    public UpdateReplicationSetRequestBody(@JsonProperty("actions") org.openapis.openapi.models.shared.UpdateReplicationSetAction[] actions, @JsonProperty("arn") String arn) {
+        this.actions = actions;
+        this.arn = arn;
+  }
 }

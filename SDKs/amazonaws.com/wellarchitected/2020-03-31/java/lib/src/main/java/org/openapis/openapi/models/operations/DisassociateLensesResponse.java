@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateLensesResponse {
@@ -12,6 +13,7 @@ public class DisassociateLensesResponse {
      */
     
     public Object accessDeniedException;
+
     public DisassociateLensesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DisassociateLensesResponse {
      */
     
     public Object conflictException;
+
     public DisassociateLensesResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateLensesResponse {
     
     
     public String contentType;
+
     public DisassociateLensesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateLensesResponse {
      */
     
     public Object internalServerException;
+
     public DisassociateLensesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DisassociateLensesResponse {
     
     
     public Integer statusCode;
+
     public DisassociateLensesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DisassociateLensesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateLensesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DisassociateLensesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateLensesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DisassociateLensesResponse {
      */
     
     public Object throttlingException;
+
     public DisassociateLensesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DisassociateLensesResponse {
      */
     
     public Object validationException;
+
     public DisassociateLensesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DisassociateLensesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

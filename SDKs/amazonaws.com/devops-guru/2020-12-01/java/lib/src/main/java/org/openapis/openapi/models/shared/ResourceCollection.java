@@ -15,6 +15,7 @@ public class ResourceCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudFormation")
     public CloudFormationCollection cloudFormation;
+
     public ResourceCollection withCloudFormation(CloudFormationCollection cloudFormation) {
         this.cloudFormation = cloudFormation;
         return this;
@@ -23,9 +24,11 @@ public class ResourceCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public TagCollection[] tags;
+
     public ResourceCollection withTags(TagCollection[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ResourceCollection(){}
 }

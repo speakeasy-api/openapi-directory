@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddTimerScriptRequest {
@@ -12,6 +13,7 @@ public class AddTimerScriptRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public AddTimerScriptRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,6 +24,7 @@ public class AddTimerScriptRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=arg")
     public String arg;
+
     public AddTimerScriptRequest withArg(String arg) {
         this.arg = arg;
         return this;
@@ -32,6 +35,7 @@ public class AddTimerScriptRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=interval")
     public Integer interval;
+
     public AddTimerScriptRequest withInterval(Integer interval) {
         this.interval = interval;
         return this;
@@ -42,9 +46,16 @@ public class AddTimerScriptRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=script")
     public String script;
+
     public AddTimerScriptRequest withScript(String script) {
         this.script = script;
         return this;
     }
     
+    public AddTimerScriptRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("arg") String arg, @JsonProperty("interval") Integer interval, @JsonProperty("script") String script) {
+        this.agentNum = agentNum;
+        this.arg = arg;
+        this.interval = interval;
+        this.script = script;
+  }
 }

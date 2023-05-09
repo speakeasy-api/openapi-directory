@@ -15,9 +15,11 @@ public class AddFollowersForProjectRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.AddFollowersRequest data;
+
     public AddFollowersForProjectRequestBody withData(org.openapis.openapi.models.shared.AddFollowersRequest data) {
         this.data = data;
         return this;
     }
     
+    public AddFollowersForProjectRequestBody(){}
 }

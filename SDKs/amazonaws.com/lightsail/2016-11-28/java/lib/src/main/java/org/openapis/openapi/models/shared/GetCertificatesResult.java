@@ -15,9 +15,11 @@ public class GetCertificatesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificates")
     public CertificateSummary[] certificates;
+
     public GetCertificatesResult withCertificates(CertificateSummary[] certificates) {
         this.certificates = certificates;
         return this;
     }
     
+    public GetCertificatesResult(){}
 }

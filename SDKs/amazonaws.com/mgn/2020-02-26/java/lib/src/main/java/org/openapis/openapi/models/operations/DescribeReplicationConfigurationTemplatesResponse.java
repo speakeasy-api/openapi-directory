@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeReplicationConfigurationTemplatesResponse {
     
     public String contentType;
+
     public DescribeReplicationConfigurationTemplatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeReplicationConfigurationTemplatesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeReplicationConfigurationTemplatesResponse describeReplicationConfigurationTemplatesResponse;
+
     public DescribeReplicationConfigurationTemplatesResponse withDescribeReplicationConfigurationTemplatesResponse(org.openapis.openapi.models.shared.DescribeReplicationConfigurationTemplatesResponse describeReplicationConfigurationTemplatesResponse) {
         this.describeReplicationConfigurationTemplatesResponse = describeReplicationConfigurationTemplatesResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeReplicationConfigurationTemplatesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeReplicationConfigurationTemplatesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeReplicationConfigurationTemplatesResponse {
     
     
     public Integer statusCode;
+
     public DescribeReplicationConfigurationTemplatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeReplicationConfigurationTemplatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeReplicationConfigurationTemplatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class DescribeReplicationConfigurationTemplatesResponse {
      */
     
     public Object uninitializedAccountException;
+
     public DescribeReplicationConfigurationTemplatesResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
@@ -63,9 +70,14 @@ public class DescribeReplicationConfigurationTemplatesResponse {
      */
     
     public Object validationException;
+
     public DescribeReplicationConfigurationTemplatesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeReplicationConfigurationTemplatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

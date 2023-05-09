@@ -14,6 +14,7 @@ public class CreateDeploymentRequestBody {
      */
     @JsonProperty("applicationVersion")
     public Long applicationVersion;
+
     public CreateDeploymentRequestBody withApplicationVersion(Long applicationVersion) {
         this.applicationVersion = applicationVersion;
         return this;
@@ -25,6 +26,7 @@ public class CreateDeploymentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateDeploymentRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -35,9 +37,14 @@ public class CreateDeploymentRequestBody {
      */
     @JsonProperty("environmentId")
     public String environmentId;
+
     public CreateDeploymentRequestBody withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
     }
     
+    public CreateDeploymentRequestBody(@JsonProperty("applicationVersion") Long applicationVersion, @JsonProperty("environmentId") String environmentId) {
+        this.applicationVersion = applicationVersion;
+        this.environmentId = environmentId;
+  }
 }

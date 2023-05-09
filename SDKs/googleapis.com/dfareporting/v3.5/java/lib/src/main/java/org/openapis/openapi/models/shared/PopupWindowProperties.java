@@ -18,6 +18,7 @@ public class PopupWindowProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimension")
     public Size dimension;
+
     public PopupWindowProperties withDimension(Size dimension) {
         this.dimension = dimension;
         return this;
@@ -29,6 +30,7 @@ public class PopupWindowProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public OffsetPosition offset;
+
     public PopupWindowProperties withOffset(OffsetPosition offset) {
         this.offset = offset;
         return this;
@@ -40,6 +42,7 @@ public class PopupWindowProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("positionType")
     public PopupWindowPropertiesPositionTypeEnum positionType;
+
     public PopupWindowProperties withPositionType(PopupWindowPropertiesPositionTypeEnum positionType) {
         this.positionType = positionType;
         return this;
@@ -51,6 +54,7 @@ public class PopupWindowProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("showAddressBar")
     public Boolean showAddressBar;
+
     public PopupWindowProperties withShowAddressBar(Boolean showAddressBar) {
         this.showAddressBar = showAddressBar;
         return this;
@@ -62,6 +66,7 @@ public class PopupWindowProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("showMenuBar")
     public Boolean showMenuBar;
+
     public PopupWindowProperties withShowMenuBar(Boolean showMenuBar) {
         this.showMenuBar = showMenuBar;
         return this;
@@ -73,6 +78,7 @@ public class PopupWindowProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("showScrollBar")
     public Boolean showScrollBar;
+
     public PopupWindowProperties withShowScrollBar(Boolean showScrollBar) {
         this.showScrollBar = showScrollBar;
         return this;
@@ -84,6 +90,7 @@ public class PopupWindowProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("showStatusBar")
     public Boolean showStatusBar;
+
     public PopupWindowProperties withShowStatusBar(Boolean showStatusBar) {
         this.showStatusBar = showStatusBar;
         return this;
@@ -95,6 +102,7 @@ public class PopupWindowProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("showToolBar")
     public Boolean showToolBar;
+
     public PopupWindowProperties withShowToolBar(Boolean showToolBar) {
         this.showToolBar = showToolBar;
         return this;
@@ -106,9 +114,11 @@ public class PopupWindowProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public PopupWindowProperties withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PopupWindowProperties(){}
 }

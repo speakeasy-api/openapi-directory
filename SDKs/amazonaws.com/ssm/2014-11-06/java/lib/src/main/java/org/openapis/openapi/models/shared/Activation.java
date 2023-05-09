@@ -20,6 +20,7 @@ public class Activation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActivationId")
     public String activationId;
+
     public Activation withActivationId(String activationId) {
         this.activationId = activationId;
         return this;
@@ -30,6 +31,7 @@ public class Activation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedDate")
     public OffsetDateTime createdDate;
+
     public Activation withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -38,6 +40,7 @@ public class Activation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultInstanceName")
     public String defaultInstanceName;
+
     public Activation withDefaultInstanceName(String defaultInstanceName) {
         this.defaultInstanceName = defaultInstanceName;
         return this;
@@ -46,6 +49,7 @@ public class Activation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Activation withDescription(String description) {
         this.description = description;
         return this;
@@ -56,6 +60,7 @@ public class Activation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpirationDate")
     public OffsetDateTime expirationDate;
+
     public Activation withExpirationDate(OffsetDateTime expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -64,6 +69,7 @@ public class Activation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Expired")
     public Boolean expired;
+
     public Activation withExpired(Boolean expired) {
         this.expired = expired;
         return this;
@@ -72,6 +78,7 @@ public class Activation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IamRole")
     public String iamRole;
+
     public Activation withIamRole(String iamRole) {
         this.iamRole = iamRole;
         return this;
@@ -80,6 +87,7 @@ public class Activation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistrationLimit")
     public Long registrationLimit;
+
     public Activation withRegistrationLimit(Long registrationLimit) {
         this.registrationLimit = registrationLimit;
         return this;
@@ -88,6 +96,7 @@ public class Activation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistrationsCount")
     public Long registrationsCount;
+
     public Activation withRegistrationsCount(Long registrationsCount) {
         this.registrationsCount = registrationsCount;
         return this;
@@ -96,9 +105,11 @@ public class Activation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public Activation withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public Activation(){}
 }

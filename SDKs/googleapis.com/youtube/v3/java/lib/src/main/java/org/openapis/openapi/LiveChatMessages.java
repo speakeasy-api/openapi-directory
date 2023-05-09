@@ -60,10 +60,8 @@ public class LiveChatMessages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeLiveChatMessagesDeleteResponse res = new org.openapis.openapi.models.operations.YoutubeLiveChatMessagesDeleteResponse() {{
+        org.openapis.openapi.models.operations.YoutubeLiveChatMessagesDeleteResponse res = new org.openapis.openapi.models.operations.YoutubeLiveChatMessagesDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,11 +100,9 @@ public class LiveChatMessages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeLiveChatMessagesInsertResponse res = new org.openapis.openapi.models.operations.YoutubeLiveChatMessagesInsertResponse() {{
+        org.openapis.openapi.models.operations.YoutubeLiveChatMessagesInsertResponse res = new org.openapis.openapi.models.operations.YoutubeLiveChatMessagesInsertResponse(contentType, httpRes.statusCode()) {{
             liveChatMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,11 +144,9 @@ public class LiveChatMessages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeLiveChatMessagesListResponse res = new org.openapis.openapi.models.operations.YoutubeLiveChatMessagesListResponse() {{
+        org.openapis.openapi.models.operations.YoutubeLiveChatMessagesListResponse res = new org.openapis.openapi.models.operations.YoutubeLiveChatMessagesListResponse(contentType, httpRes.statusCode()) {{
             liveChatMessageListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

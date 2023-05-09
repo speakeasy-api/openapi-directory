@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ShadowModelVariantConfig {
     @JsonProperty("SamplingPercentage")
     public Long samplingPercentage;
+
     public ShadowModelVariantConfig withSamplingPercentage(Long samplingPercentage) {
         this.samplingPercentage = samplingPercentage;
         return this;
@@ -19,9 +20,14 @@ public class ShadowModelVariantConfig {
     
     @JsonProperty("ShadowModelVariantName")
     public String shadowModelVariantName;
+
     public ShadowModelVariantConfig withShadowModelVariantName(String shadowModelVariantName) {
         this.shadowModelVariantName = shadowModelVariantName;
         return this;
     }
     
+    public ShadowModelVariantConfig(@JsonProperty("SamplingPercentage") Long samplingPercentage, @JsonProperty("ShadowModelVariantName") String shadowModelVariantName) {
+        this.samplingPercentage = samplingPercentage;
+        this.shadowModelVariantName = shadowModelVariantName;
+  }
 }

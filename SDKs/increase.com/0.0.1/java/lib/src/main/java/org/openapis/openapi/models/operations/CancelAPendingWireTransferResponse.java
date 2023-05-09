@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelAPendingWireTransferResponse {
     
     public String contentType;
+
     public CancelAPendingWireTransferResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CancelAPendingWireTransferResponse {
     
     
     public Integer statusCode;
+
     public CancelAPendingWireTransferResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CancelAPendingWireTransferResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelAPendingWireTransferResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CancelAPendingWireTransferResponse {
      */
     
     public Object error;
+
     public CancelAPendingWireTransferResponse withError(Object error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class CancelAPendingWireTransferResponse {
      */
     
     public org.openapis.openapi.models.shared.WireTransfer wireTransfer;
+
     public CancelAPendingWireTransferResponse withWireTransfer(org.openapis.openapi.models.shared.WireTransfer wireTransfer) {
         this.wireTransfer = wireTransfer;
         return this;
     }
     
+    public CancelAPendingWireTransferResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

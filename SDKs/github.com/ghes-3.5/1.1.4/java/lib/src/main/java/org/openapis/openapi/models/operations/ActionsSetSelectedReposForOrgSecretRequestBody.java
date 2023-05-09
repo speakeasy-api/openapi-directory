@@ -12,9 +12,13 @@ public class ActionsSetSelectedReposForOrgSecretRequestBody {
      */
     @JsonProperty("selected_repository_ids")
     public Long[] selectedRepositoryIds;
+
     public ActionsSetSelectedReposForOrgSecretRequestBody withSelectedRepositoryIds(Long[] selectedRepositoryIds) {
         this.selectedRepositoryIds = selectedRepositoryIds;
         return this;
     }
     
+    public ActionsSetSelectedReposForOrgSecretRequestBody(@JsonProperty("selected_repository_ids") Long[] selectedRepositoryIds) {
+        this.selectedRepositoryIds = selectedRepositoryIds;
+  }
 }

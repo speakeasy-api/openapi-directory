@@ -18,6 +18,7 @@ public class Deal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billedBuyer")
     public String billedBuyer;
+
     public Deal withBilledBuyer(String billedBuyer) {
         this.billedBuyer = billedBuyer;
         return this;
@@ -29,6 +30,7 @@ public class Deal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyer")
     public String buyer;
+
     public Deal withBuyer(String buyer) {
         this.buyer = buyer;
         return this;
@@ -40,6 +42,7 @@ public class Deal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client")
     public String client;
+
     public Deal withClient(String client) {
         this.client = client;
         return this;
@@ -51,6 +54,7 @@ public class Deal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Deal withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -62,6 +66,7 @@ public class Deal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeRequirements")
     public CreativeRequirements creativeRequirements;
+
     public Deal withCreativeRequirements(CreativeRequirements creativeRequirements) {
         this.creativeRequirements = creativeRequirements;
         return this;
@@ -73,6 +78,7 @@ public class Deal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dealType")
     public DealDealTypeEnum dealType;
+
     public Deal withDealType(DealDealTypeEnum dealType) {
         this.dealType = dealType;
         return this;
@@ -84,6 +90,7 @@ public class Deal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryControl")
     public DeliveryControl deliveryControl;
+
     public Deal withDeliveryControl(DeliveryControl deliveryControl) {
         this.deliveryControl = deliveryControl;
         return this;
@@ -95,6 +102,7 @@ public class Deal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Deal withDescription(String description) {
         this.description = description;
         return this;
@@ -106,6 +114,7 @@ public class Deal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Deal withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -117,6 +126,7 @@ public class Deal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimatedGrossSpend")
     public Money estimatedGrossSpend;
+
     public Deal withEstimatedGrossSpend(Money estimatedGrossSpend) {
         this.estimatedGrossSpend = estimatedGrossSpend;
         return this;
@@ -128,6 +138,7 @@ public class Deal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flightEndTime")
     public String flightEndTime;
+
     public Deal withFlightEndTime(String flightEndTime) {
         this.flightEndTime = flightEndTime;
         return this;
@@ -139,6 +150,7 @@ public class Deal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flightStartTime")
     public String flightStartTime;
+
     public Deal withFlightStartTime(String flightStartTime) {
         this.flightStartTime = flightStartTime;
         return this;
@@ -150,6 +162,7 @@ public class Deal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Deal withName(String name) {
         this.name = name;
         return this;
@@ -161,6 +174,7 @@ public class Deal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferredDealTerms")
     public PreferredDealTerms preferredDealTerms;
+
     public Deal withPreferredDealTerms(PreferredDealTerms preferredDealTerms) {
         this.preferredDealTerms = preferredDealTerms;
         return this;
@@ -172,6 +186,7 @@ public class Deal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateAuctionTerms")
     public PrivateAuctionTerms privateAuctionTerms;
+
     public Deal withPrivateAuctionTerms(PrivateAuctionTerms privateAuctionTerms) {
         this.privateAuctionTerms = privateAuctionTerms;
         return this;
@@ -183,6 +198,7 @@ public class Deal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("programmaticGuaranteedTerms")
     public ProgrammaticGuaranteedTerms programmaticGuaranteedTerms;
+
     public Deal withProgrammaticGuaranteedTerms(ProgrammaticGuaranteedTerms programmaticGuaranteedTerms) {
         this.programmaticGuaranteedTerms = programmaticGuaranteedTerms;
         return this;
@@ -194,6 +210,7 @@ public class Deal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proposalRevision")
     public String proposalRevision;
+
     public Deal withProposalRevision(String proposalRevision) {
         this.proposalRevision = proposalRevision;
         return this;
@@ -205,6 +222,7 @@ public class Deal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisherProfile")
     public String publisherProfile;
+
     public Deal withPublisherProfile(String publisherProfile) {
         this.publisherProfile = publisherProfile;
         return this;
@@ -216,6 +234,7 @@ public class Deal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellerTimeZone")
     public TimeZone sellerTimeZone;
+
     public Deal withSellerTimeZone(TimeZone sellerTimeZone) {
         this.sellerTimeZone = sellerTimeZone;
         return this;
@@ -227,6 +246,7 @@ public class Deal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targeting")
     public MarketplaceTargeting targeting;
+
     public Deal withTargeting(MarketplaceTargeting targeting) {
         this.targeting = targeting;
         return this;
@@ -238,9 +258,11 @@ public class Deal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Deal withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Deal(){}
 }

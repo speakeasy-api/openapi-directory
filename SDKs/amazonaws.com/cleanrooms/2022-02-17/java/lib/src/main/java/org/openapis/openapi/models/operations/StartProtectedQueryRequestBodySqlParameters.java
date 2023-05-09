@@ -15,9 +15,11 @@ public class StartProtectedQueryRequestBodySqlParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryString")
     public String queryString;
+
     public StartProtectedQueryRequestBodySqlParameters withQueryString(String queryString) {
         this.queryString = queryString;
         return this;
     }
     
+    public StartProtectedQueryRequestBodySqlParameters(){}
 }

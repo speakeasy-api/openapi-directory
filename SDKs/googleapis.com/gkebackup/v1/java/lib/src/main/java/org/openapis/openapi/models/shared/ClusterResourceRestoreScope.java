@@ -18,9 +18,11 @@ public class ClusterResourceRestoreScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectedGroupKinds")
     public GroupKind[] selectedGroupKinds;
+
     public ClusterResourceRestoreScope withSelectedGroupKinds(GroupKind[] selectedGroupKinds) {
         this.selectedGroupKinds = selectedGroupKinds;
         return this;
     }
     
+    public ClusterResourceRestoreScope(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CopyBackupResponse {
@@ -12,6 +13,7 @@ public class CopyBackupResponse {
      */
     
     public Object backupNotFound;
+
     public CopyBackupResponse withBackupNotFound(Object backupNotFound) {
         this.backupNotFound = backupNotFound;
         return this;
@@ -22,6 +24,7 @@ public class CopyBackupResponse {
      */
     
     public Object badRequest;
+
     public CopyBackupResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -29,6 +32,7 @@ public class CopyBackupResponse {
     
     
     public String contentType;
+
     public CopyBackupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CopyBackupResponse {
      */
     
     public org.openapis.openapi.models.shared.CopyBackupResponse copyBackupResponse;
+
     public CopyBackupResponse withCopyBackupResponse(org.openapis.openapi.models.shared.CopyBackupResponse copyBackupResponse) {
         this.copyBackupResponse = copyBackupResponse;
         return this;
@@ -49,6 +54,7 @@ public class CopyBackupResponse {
      */
     
     public Object incompatibleParameterError;
+
     public CopyBackupResponse withIncompatibleParameterError(Object incompatibleParameterError) {
         this.incompatibleParameterError = incompatibleParameterError;
         return this;
@@ -59,6 +65,7 @@ public class CopyBackupResponse {
      */
     
     public Object incompatibleRegionForMultiAZ;
+
     public CopyBackupResponse withIncompatibleRegionForMultiAZ(Object incompatibleRegionForMultiAZ) {
         this.incompatibleRegionForMultiAZ = incompatibleRegionForMultiAZ;
         return this;
@@ -69,6 +76,7 @@ public class CopyBackupResponse {
      */
     
     public Object internalServerError;
+
     public CopyBackupResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -79,6 +87,7 @@ public class CopyBackupResponse {
      */
     
     public Object invalidDestinationKmsKey;
+
     public CopyBackupResponse withInvalidDestinationKmsKey(Object invalidDestinationKmsKey) {
         this.invalidDestinationKmsKey = invalidDestinationKmsKey;
         return this;
@@ -89,6 +98,7 @@ public class CopyBackupResponse {
      */
     
     public Object invalidRegion;
+
     public CopyBackupResponse withInvalidRegion(Object invalidRegion) {
         this.invalidRegion = invalidRegion;
         return this;
@@ -99,6 +109,7 @@ public class CopyBackupResponse {
      */
     
     public Object invalidSourceKmsKey;
+
     public CopyBackupResponse withInvalidSourceKmsKey(Object invalidSourceKmsKey) {
         this.invalidSourceKmsKey = invalidSourceKmsKey;
         return this;
@@ -106,6 +117,7 @@ public class CopyBackupResponse {
     
     
     public Integer statusCode;
+
     public CopyBackupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class CopyBackupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CopyBackupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class CopyBackupResponse {
      */
     
     public Object serviceLimitExceeded;
+
     public CopyBackupResponse withServiceLimitExceeded(Object serviceLimitExceeded) {
         this.serviceLimitExceeded = serviceLimitExceeded;
         return this;
@@ -133,6 +147,7 @@ public class CopyBackupResponse {
      */
     
     public Object sourceBackupUnavailable;
+
     public CopyBackupResponse withSourceBackupUnavailable(Object sourceBackupUnavailable) {
         this.sourceBackupUnavailable = sourceBackupUnavailable;
         return this;
@@ -143,9 +158,14 @@ public class CopyBackupResponse {
      */
     
     public Object unsupportedOperation;
+
     public CopyBackupResponse withUnsupportedOperation(Object unsupportedOperation) {
         this.unsupportedOperation = unsupportedOperation;
         return this;
     }
     
+    public CopyBackupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0CommonValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("booleanValue")
     public Boolean booleanValue;
+
     public GoogleAdsSearchads360V0CommonValue withBooleanValue(Boolean booleanValue) {
         this.booleanValue = booleanValue;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAdsSearchads360V0CommonValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleValue")
     public Double doubleValue;
+
     public GoogleAdsSearchads360V0CommonValue withDoubleValue(Double doubleValue) {
         this.doubleValue = doubleValue;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAdsSearchads360V0CommonValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floatValue")
     public Float floatValue;
+
     public GoogleAdsSearchads360V0CommonValue withFloatValue(Float floatValue) {
         this.floatValue = floatValue;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAdsSearchads360V0CommonValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("int64Value")
     public String int64Value;
+
     public GoogleAdsSearchads360V0CommonValue withInt64Value(String int64Value) {
         this.int64Value = int64Value;
         return this;
@@ -62,9 +66,11 @@ public class GoogleAdsSearchads360V0CommonValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValue")
     public String stringValue;
+
     public GoogleAdsSearchads360V0CommonValue withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
     }
     
+    public GoogleAdsSearchads360V0CommonValue(){}
 }

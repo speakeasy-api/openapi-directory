@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SnsDestination {
     @JsonProperty("TopicArn")
     public String topicArn;
+
     public SnsDestination withTopicArn(String topicArn) {
         this.topicArn = topicArn;
         return this;
     }
     
+    public SnsDestination(@JsonProperty("TopicArn") String topicArn) {
+        this.topicArn = topicArn;
+  }
 }

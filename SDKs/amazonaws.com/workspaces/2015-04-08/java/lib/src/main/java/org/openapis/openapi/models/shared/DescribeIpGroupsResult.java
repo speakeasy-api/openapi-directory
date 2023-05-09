@@ -15,6 +15,7 @@ public class DescribeIpGroupsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeIpGroupsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeIpGroupsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Result")
     public WorkspacesIpGroup[] result;
+
     public DescribeIpGroupsResult withResult(WorkspacesIpGroup[] result) {
         this.result = result;
         return this;
     }
     
+    public DescribeIpGroupsResult(){}
 }

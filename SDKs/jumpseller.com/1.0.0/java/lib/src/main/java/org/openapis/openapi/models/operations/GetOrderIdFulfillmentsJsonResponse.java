@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOrderIdFulfillmentsJsonResponse {
     
     public String contentType;
+
     public GetOrderIdFulfillmentsJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetOrderIdFulfillmentsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.Fulfillment[] fulfillments;
+
     public GetOrderIdFulfillmentsJsonResponse withFulfillments(org.openapis.openapi.models.shared.Fulfillment[] fulfillments) {
         this.fulfillments = fulfillments;
         return this;
@@ -29,6 +32,7 @@ public class GetOrderIdFulfillmentsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public GetOrderIdFulfillmentsJsonResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -36,6 +40,7 @@ public class GetOrderIdFulfillmentsJsonResponse {
     
     
     public Integer statusCode;
+
     public GetOrderIdFulfillmentsJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetOrderIdFulfillmentsJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOrderIdFulfillmentsJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetOrderIdFulfillmentsJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

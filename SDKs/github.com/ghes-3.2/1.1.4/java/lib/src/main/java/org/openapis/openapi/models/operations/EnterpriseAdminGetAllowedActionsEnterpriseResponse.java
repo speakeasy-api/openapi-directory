@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnterpriseAdminGetAllowedActionsEnterpriseResponse {
     
     public String contentType;
+
     public EnterpriseAdminGetAllowedActionsEnterpriseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EnterpriseAdminGetAllowedActionsEnterpriseResponse {
     
     
     public Integer statusCode;
+
     public EnterpriseAdminGetAllowedActionsEnterpriseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EnterpriseAdminGetAllowedActionsEnterpriseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnterpriseAdminGetAllowedActionsEnterpriseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class EnterpriseAdminGetAllowedActionsEnterpriseResponse {
      */
     
     public org.openapis.openapi.models.shared.SelectedActions selectedActions;
+
     public EnterpriseAdminGetAllowedActionsEnterpriseResponse withSelectedActions(org.openapis.openapi.models.shared.SelectedActions selectedActions) {
         this.selectedActions = selectedActions;
         return this;
     }
     
+    public EnterpriseAdminGetAllowedActionsEnterpriseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

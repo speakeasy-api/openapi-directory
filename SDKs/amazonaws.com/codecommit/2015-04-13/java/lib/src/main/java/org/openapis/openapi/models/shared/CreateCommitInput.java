@@ -12,6 +12,7 @@ public class CreateCommitInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorName")
     public String authorName;
+
     public CreateCommitInput withAuthorName(String authorName) {
         this.authorName = authorName;
         return this;
@@ -19,6 +20,7 @@ public class CreateCommitInput {
     
     @JsonProperty("branchName")
     public String branchName;
+
     public CreateCommitInput withBranchName(String branchName) {
         this.branchName = branchName;
         return this;
@@ -27,6 +29,7 @@ public class CreateCommitInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitMessage")
     public String commitMessage;
+
     public CreateCommitInput withCommitMessage(String commitMessage) {
         this.commitMessage = commitMessage;
         return this;
@@ -35,6 +38,7 @@ public class CreateCommitInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteFiles")
     public DeleteFileEntry[] deleteFiles;
+
     public CreateCommitInput withDeleteFiles(DeleteFileEntry[] deleteFiles) {
         this.deleteFiles = deleteFiles;
         return this;
@@ -43,6 +47,7 @@ public class CreateCommitInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public CreateCommitInput withEmail(String email) {
         this.email = email;
         return this;
@@ -51,6 +56,7 @@ public class CreateCommitInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keepEmptyFolders")
     public Boolean keepEmptyFolders;
+
     public CreateCommitInput withKeepEmptyFolders(Boolean keepEmptyFolders) {
         this.keepEmptyFolders = keepEmptyFolders;
         return this;
@@ -59,6 +65,7 @@ public class CreateCommitInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentCommitId")
     public String parentCommitId;
+
     public CreateCommitInput withParentCommitId(String parentCommitId) {
         this.parentCommitId = parentCommitId;
         return this;
@@ -67,6 +74,7 @@ public class CreateCommitInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("putFiles")
     public PutFileEntry[] putFiles;
+
     public CreateCommitInput withPutFiles(PutFileEntry[] putFiles) {
         this.putFiles = putFiles;
         return this;
@@ -74,6 +82,7 @@ public class CreateCommitInput {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public CreateCommitInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -82,9 +91,14 @@ public class CreateCommitInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setFileModes")
     public SetFileModeEntry[] setFileModes;
+
     public CreateCommitInput withSetFileModes(SetFileModeEntry[] setFileModes) {
         this.setFileModes = setFileModes;
         return this;
     }
     
+    public CreateCommitInput(@JsonProperty("branchName") String branchName, @JsonProperty("repositoryName") String repositoryName) {
+        this.branchName = branchName;
+        this.repositoryName = repositoryName;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTasksResponse {
@@ -12,6 +13,7 @@ public class ListTasksResponse {
      */
     
     public Object clientException;
+
     public ListTasksResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -22,6 +24,7 @@ public class ListTasksResponse {
      */
     
     public Object clusterNotFoundException;
+
     public ListTasksResponse withClusterNotFoundException(Object clusterNotFoundException) {
         this.clusterNotFoundException = clusterNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class ListTasksResponse {
     
     
     public String contentType;
+
     public ListTasksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListTasksResponse {
      */
     
     public Object invalidParameterException;
+
     public ListTasksResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class ListTasksResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTasksResponse listTasksResponse;
+
     public ListTasksResponse withListTasksResponse(org.openapis.openapi.models.shared.ListTasksResponse listTasksResponse) {
         this.listTasksResponse = listTasksResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListTasksResponse {
      */
     
     public Object serverException;
+
     public ListTasksResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -69,6 +76,7 @@ public class ListTasksResponse {
      */
     
     public Object serviceNotFoundException;
+
     public ListTasksResponse withServiceNotFoundException(Object serviceNotFoundException) {
         this.serviceNotFoundException = serviceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class ListTasksResponse {
     
     
     public Integer statusCode;
+
     public ListTasksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ListTasksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTasksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListTasksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

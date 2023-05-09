@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TransferBalance401ApplicationJSON {
     @JsonProperty("detail")
     public String detail;
+
     public TransferBalance401ApplicationJSON withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -19,6 +20,7 @@ public class TransferBalance401ApplicationJSON {
     
     @JsonProperty("instance")
     public String instance;
+
     public TransferBalance401ApplicationJSON withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -26,6 +28,7 @@ public class TransferBalance401ApplicationJSON {
     
     @JsonProperty("title")
     public String title;
+
     public TransferBalance401ApplicationJSON withTitle(String title) {
         this.title = title;
         return this;
@@ -33,9 +36,16 @@ public class TransferBalance401ApplicationJSON {
     
     @JsonProperty("type")
     public String type;
+
     public TransferBalance401ApplicationJSON withType(String type) {
         this.type = type;
         return this;
     }
     
+    public TransferBalance401ApplicationJSON(@JsonProperty("detail") String detail, @JsonProperty("instance") String instance, @JsonProperty("title") String title, @JsonProperty("type") String type) {
+        this.detail = detail;
+        this.instance = instance;
+        this.title = title;
+        this.type = type;
+  }
 }

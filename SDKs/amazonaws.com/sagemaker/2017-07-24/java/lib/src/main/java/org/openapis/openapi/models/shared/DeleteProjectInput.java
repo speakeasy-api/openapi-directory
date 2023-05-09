@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteProjectInput {
     @JsonProperty("ProjectName")
     public String projectName;
+
     public DeleteProjectInput withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
     }
     
+    public DeleteProjectInput(@JsonProperty("ProjectName") String projectName) {
+        this.projectName = projectName;
+  }
 }

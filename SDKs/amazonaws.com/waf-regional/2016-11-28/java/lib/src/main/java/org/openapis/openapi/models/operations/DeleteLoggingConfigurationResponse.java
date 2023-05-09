@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteLoggingConfigurationResponse {
     
     public String contentType;
+
     public DeleteLoggingConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteLoggingConfigurationResponse {
      */
     
     public java.util.Map<String, Object> deleteLoggingConfigurationResponse;
+
     public DeleteLoggingConfigurationResponse withDeleteLoggingConfigurationResponse(java.util.Map<String, Object> deleteLoggingConfigurationResponse) {
         this.deleteLoggingConfigurationResponse = deleteLoggingConfigurationResponse;
         return this;
@@ -26,6 +29,7 @@ public class DeleteLoggingConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DeleteLoggingConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeleteLoggingConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteLoggingConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class DeleteLoggingConfigurationResponse {
      */
     
     public Object wafInternalErrorException;
+
     public DeleteLoggingConfigurationResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class DeleteLoggingConfigurationResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public DeleteLoggingConfigurationResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
@@ -63,9 +70,14 @@ public class DeleteLoggingConfigurationResponse {
      */
     
     public Object wafStaleDataException;
+
     public DeleteLoggingConfigurationResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
     }
     
+    public DeleteLoggingConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteEnvironmentResponse {
@@ -12,6 +13,7 @@ public class DeleteEnvironmentResponse {
      */
     
     public Object badRequestException;
+
     public DeleteEnvironmentResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteEnvironmentResponse {
      */
     
     public Object conflictException;
+
     public DeleteEnvironmentResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteEnvironmentResponse {
     
     
     public String contentType;
+
     public DeleteEnvironmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteEnvironmentResponse {
      */
     
     public java.util.Map<String, Object> deleteEnvironmentResult;
+
     public DeleteEnvironmentResponse withDeleteEnvironmentResult(java.util.Map<String, Object> deleteEnvironmentResult) {
         this.deleteEnvironmentResult = deleteEnvironmentResult;
         return this;
@@ -49,6 +54,7 @@ public class DeleteEnvironmentResponse {
      */
     
     public Object forbiddenException;
+
     public DeleteEnvironmentResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteEnvironmentResponse {
      */
     
     public Object internalServerErrorException;
+
     public DeleteEnvironmentResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteEnvironmentResponse {
      */
     
     public Object limitExceededException;
+
     public DeleteEnvironmentResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteEnvironmentResponse {
      */
     
     public Object notFoundException;
+
     public DeleteEnvironmentResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -86,6 +95,7 @@ public class DeleteEnvironmentResponse {
     
     
     public Integer statusCode;
+
     public DeleteEnvironmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DeleteEnvironmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteEnvironmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DeleteEnvironmentResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteEnvironmentResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteEnvironmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

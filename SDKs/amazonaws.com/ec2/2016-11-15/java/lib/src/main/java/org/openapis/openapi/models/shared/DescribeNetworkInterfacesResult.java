@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkInterfacesResult {
     
     public DescribeNetworkInterfacesResultNetworkInterfaces[] networkInterfaces;
+
     public DescribeNetworkInterfacesResult withNetworkInterfaces(DescribeNetworkInterfacesResultNetworkInterfaces[] networkInterfaces) {
         this.networkInterfaces = networkInterfaces;
         return this;
@@ -19,9 +20,11 @@ public class DescribeNetworkInterfacesResult {
     
     
     public String nextToken;
+
     public DescribeNetworkInterfacesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeNetworkInterfacesResult(){}
 }

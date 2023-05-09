@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetcurrencyrateRequest {
@@ -12,6 +13,7 @@ public class GetcurrencyrateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
     public String license;
+
     public GetcurrencyrateRequest withLicense(String license) {
         this.license = license;
         return this;
@@ -22,9 +24,14 @@ public class GetcurrencyrateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=symbol")
     public String symbol;
+
     public GetcurrencyrateRequest withSymbol(String symbol) {
         this.symbol = symbol;
         return this;
     }
     
+    public GetcurrencyrateRequest(@JsonProperty("license") String license, @JsonProperty("symbol") String symbol) {
+        this.license = license;
+        this.symbol = symbol;
+  }
 }

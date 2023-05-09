@@ -15,6 +15,7 @@ public class GetDedicatedIpsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DedicatedIps")
     public DedicatedIp[] dedicatedIps;
+
     public GetDedicatedIpsResponse withDedicatedIps(DedicatedIp[] dedicatedIps) {
         this.dedicatedIps = dedicatedIps;
         return this;
@@ -23,9 +24,11 @@ public class GetDedicatedIpsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetDedicatedIpsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetDedicatedIpsResponse(){}
 }

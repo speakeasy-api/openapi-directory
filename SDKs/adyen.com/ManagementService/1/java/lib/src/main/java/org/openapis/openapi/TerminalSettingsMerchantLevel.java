@@ -66,12 +66,10 @@ public class TerminalSettingsMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalLogosResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalLogosResponse() {{
+        org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalLogosResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalLogosResponse(contentType, httpRes.statusCode()) {{
             logo = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -121,12 +119,10 @@ public class TerminalSettingsMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalSettingsResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalSettingsResponse() {{
+        org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalSettingsResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalSettingsResponse(contentType, httpRes.statusCode()) {{
             terminalSettings = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -187,12 +183,10 @@ public class TerminalSettingsMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchMerchantsMerchantIdTerminalLogosResponse res = new org.openapis.openapi.models.operations.PatchMerchantsMerchantIdTerminalLogosResponse() {{
+        org.openapis.openapi.models.operations.PatchMerchantsMerchantIdTerminalLogosResponse res = new org.openapis.openapi.models.operations.PatchMerchantsMerchantIdTerminalLogosResponse(contentType, httpRes.statusCode()) {{
             logo = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,12 +242,10 @@ public class TerminalSettingsMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchMerchantsMerchantIdTerminalSettingsResponse res = new org.openapis.openapi.models.operations.PatchMerchantsMerchantIdTerminalSettingsResponse() {{
+        org.openapis.openapi.models.operations.PatchMerchantsMerchantIdTerminalSettingsResponse res = new org.openapis.openapi.models.operations.PatchMerchantsMerchantIdTerminalSettingsResponse(contentType, httpRes.statusCode()) {{
             terminalSettings = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

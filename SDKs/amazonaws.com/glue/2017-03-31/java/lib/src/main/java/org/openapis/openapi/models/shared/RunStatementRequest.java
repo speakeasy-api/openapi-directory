@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RunStatementRequest {
     @JsonProperty("Code")
     public String code;
+
     public RunStatementRequest withCode(String code) {
         this.code = code;
         return this;
@@ -19,6 +20,7 @@ public class RunStatementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestOrigin")
     public String requestOrigin;
+
     public RunStatementRequest withRequestOrigin(String requestOrigin) {
         this.requestOrigin = requestOrigin;
         return this;
@@ -26,9 +28,14 @@ public class RunStatementRequest {
     
     @JsonProperty("SessionId")
     public String sessionId;
+
     public RunStatementRequest withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
     
+    public RunStatementRequest(@JsonProperty("Code") String code, @JsonProperty("SessionId") String sessionId) {
+        this.code = code;
+        this.sessionId = sessionId;
+  }
 }

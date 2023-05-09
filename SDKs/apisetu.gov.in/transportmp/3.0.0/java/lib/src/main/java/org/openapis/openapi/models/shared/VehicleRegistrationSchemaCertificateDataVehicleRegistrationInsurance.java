@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class VehicleRegistrationSchemaCertificateDataVehicleRegistrationInsurance {
     
     public String companyName;
+
     public VehicleRegistrationSchemaCertificateDataVehicleRegistrationInsurance withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -16,6 +17,7 @@ public class VehicleRegistrationSchemaCertificateDataVehicleRegistrationInsuranc
     
     
     public String policyNo;
+
     public VehicleRegistrationSchemaCertificateDataVehicleRegistrationInsurance withPolicyNo(String policyNo) {
         this.policyNo = policyNo;
         return this;
@@ -23,9 +25,11 @@ public class VehicleRegistrationSchemaCertificateDataVehicleRegistrationInsuranc
     
     
     public String validTill;
+
     public VehicleRegistrationSchemaCertificateDataVehicleRegistrationInsurance withValidTill(String validTill) {
         this.validTill = validTill;
         return this;
     }
     
+    public VehicleRegistrationSchemaCertificateDataVehicleRegistrationInsurance(){}
 }

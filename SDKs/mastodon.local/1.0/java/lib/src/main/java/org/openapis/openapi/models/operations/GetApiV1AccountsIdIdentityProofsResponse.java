@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApiV1AccountsIdIdentityProofsResponse {
     
     public String contentType;
+
     public GetApiV1AccountsIdIdentityProofsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetApiV1AccountsIdIdentityProofsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetApiV1AccountsIdIdentityProofsResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class GetApiV1AccountsIdIdentityProofsResponse {
      */
     
     public org.openapis.openapi.models.shared.IdentityProof[] identityProofs;
+
     public GetApiV1AccountsIdIdentityProofsResponse withIdentityProofs(org.openapis.openapi.models.shared.IdentityProof[] identityProofs) {
         this.identityProofs = identityProofs;
         return this;
@@ -36,6 +40,7 @@ public class GetApiV1AccountsIdIdentityProofsResponse {
     
     
     public Integer statusCode;
+
     public GetApiV1AccountsIdIdentityProofsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetApiV1AccountsIdIdentityProofsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApiV1AccountsIdIdentityProofsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetApiV1AccountsIdIdentityProofsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

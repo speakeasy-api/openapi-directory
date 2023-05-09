@@ -15,6 +15,7 @@ public class ConfigSSH {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public ConfigSSH withPort(Integer port) {
         this.port = port;
         return this;
@@ -23,9 +24,11 @@ public class ConfigSSH {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public ConfigSSH withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ConfigSSH(){}
 }

@@ -23,6 +23,7 @@ public class CatalogCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cover_asset")
     public CatalogCollectionItem coverAsset;
+
     public CatalogCollection withCoverAsset(CatalogCollectionItem coverAsset) {
         this.coverAsset = coverAsset;
         return this;
@@ -32,6 +33,7 @@ public class CatalogCollection {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_time")
     public OffsetDateTime createdTime;
+
     public CatalogCollection withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -39,6 +41,7 @@ public class CatalogCollection {
     
     @JsonProperty("id")
     public String id;
+
     public CatalogCollection withId(String id) {
         this.id = id;
         return this;
@@ -46,6 +49,7 @@ public class CatalogCollection {
     
     @JsonProperty("name")
     public String name;
+
     public CatalogCollection withName(String name) {
         this.name = name;
         return this;
@@ -56,6 +60,7 @@ public class CatalogCollection {
      */
     @JsonProperty("role_assignments")
     public CatalogCollectionRoleAssignments roleAssignments;
+
     public CatalogCollection withRoleAssignments(CatalogCollectionRoleAssignments roleAssignments) {
         this.roleAssignments = roleAssignments;
         return this;
@@ -63,6 +68,7 @@ public class CatalogCollection {
     
     @JsonProperty("total_item_count")
     public Double totalItemCount;
+
     public CatalogCollection withTotalItemCount(Double totalItemCount) {
         this.totalItemCount = totalItemCount;
         return this;
@@ -72,6 +78,7 @@ public class CatalogCollection {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_time")
     public OffsetDateTime updatedTime;
+
     public CatalogCollection withUpdatedTime(OffsetDateTime updatedTime) {
         this.updatedTime = updatedTime;
         return this;
@@ -79,9 +86,19 @@ public class CatalogCollection {
     
     @JsonProperty("visibility")
     public CatalogCollectionVisibilityEnum visibility;
+
     public CatalogCollection withVisibility(CatalogCollectionVisibilityEnum visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public CatalogCollection(@JsonProperty("created_time") OffsetDateTime createdTime, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("role_assignments") CatalogCollectionRoleAssignments roleAssignments, @JsonProperty("total_item_count") Double totalItemCount, @JsonProperty("updated_time") OffsetDateTime updatedTime, @JsonProperty("visibility") CatalogCollectionVisibilityEnum visibility) {
+        this.createdTime = createdTime;
+        this.id = id;
+        this.name = name;
+        this.roleAssignments = roleAssignments;
+        this.totalItemCount = totalItemCount;
+        this.updatedTime = updatedTime;
+        this.visibility = visibility;
+  }
 }

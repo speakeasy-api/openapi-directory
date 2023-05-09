@@ -18,6 +18,7 @@ public class LocationList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserId")
     public String advertiserId;
+
     public LocationList withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -29,6 +30,7 @@ public class LocationList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public LocationList withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class LocationList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationListId")
     public String locationListId;
+
     public LocationList withLocationListId(String locationListId) {
         this.locationListId = locationListId;
         return this;
@@ -51,6 +54,7 @@ public class LocationList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationType")
     public LocationListLocationTypeEnum locationType;
+
     public LocationList withLocationType(LocationListLocationTypeEnum locationType) {
         this.locationType = locationType;
         return this;
@@ -62,9 +66,11 @@ public class LocationList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LocationList withName(String name) {
         this.name = name;
         return this;
     }
     
+    public LocationList(){}
 }

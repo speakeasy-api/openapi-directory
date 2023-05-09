@@ -18,6 +18,7 @@ public class ListAccessLevelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessLevels")
     public AccessLevel[] accessLevels;
+
     public ListAccessLevelsResponse withAccessLevels(AccessLevel[] accessLevels) {
         this.accessLevels = accessLevels;
         return this;
@@ -29,9 +30,11 @@ public class ListAccessLevelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListAccessLevelsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListAccessLevelsResponse(){}
 }

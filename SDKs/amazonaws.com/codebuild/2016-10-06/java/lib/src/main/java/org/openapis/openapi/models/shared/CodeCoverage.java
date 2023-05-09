@@ -20,6 +20,7 @@ public class CodeCoverage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branchCoveragePercentage")
     public Double branchCoveragePercentage;
+
     public CodeCoverage withBranchCoveragePercentage(Double branchCoveragePercentage) {
         this.branchCoveragePercentage = branchCoveragePercentage;
         return this;
@@ -28,6 +29,7 @@ public class CodeCoverage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branchesCovered")
     public Long branchesCovered;
+
     public CodeCoverage withBranchesCovered(Long branchesCovered) {
         this.branchesCovered = branchesCovered;
         return this;
@@ -36,6 +38,7 @@ public class CodeCoverage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branchesMissed")
     public Long branchesMissed;
+
     public CodeCoverage withBranchesMissed(Long branchesMissed) {
         this.branchesMissed = branchesMissed;
         return this;
@@ -46,6 +49,7 @@ public class CodeCoverage {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expired")
     public OffsetDateTime expired;
+
     public CodeCoverage withExpired(OffsetDateTime expired) {
         this.expired = expired;
         return this;
@@ -54,6 +58,7 @@ public class CodeCoverage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filePath")
     public String filePath;
+
     public CodeCoverage withFilePath(String filePath) {
         this.filePath = filePath;
         return this;
@@ -62,6 +67,7 @@ public class CodeCoverage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CodeCoverage withId(String id) {
         this.id = id;
         return this;
@@ -70,6 +76,7 @@ public class CodeCoverage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineCoveragePercentage")
     public Double lineCoveragePercentage;
+
     public CodeCoverage withLineCoveragePercentage(Double lineCoveragePercentage) {
         this.lineCoveragePercentage = lineCoveragePercentage;
         return this;
@@ -78,6 +85,7 @@ public class CodeCoverage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linesCovered")
     public Long linesCovered;
+
     public CodeCoverage withLinesCovered(Long linesCovered) {
         this.linesCovered = linesCovered;
         return this;
@@ -86,6 +94,7 @@ public class CodeCoverage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linesMissed")
     public Long linesMissed;
+
     public CodeCoverage withLinesMissed(Long linesMissed) {
         this.linesMissed = linesMissed;
         return this;
@@ -94,9 +103,11 @@ public class CodeCoverage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportARN")
     public String reportARN;
+
     public CodeCoverage withReportARN(String reportARN) {
         this.reportARN = reportARN;
         return this;
     }
     
+    public CodeCoverage(){}
 }

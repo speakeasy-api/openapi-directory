@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BooksVolumesRecommendedRateResponse {
@@ -12,6 +13,7 @@ public class BooksVolumesRecommendedRateResponse {
      */
     
     public org.openapis.openapi.models.shared.BooksVolumesRecommendedRateResponse booksVolumesRecommendedRateResponse;
+
     public BooksVolumesRecommendedRateResponse withBooksVolumesRecommendedRateResponse(org.openapis.openapi.models.shared.BooksVolumesRecommendedRateResponse booksVolumesRecommendedRateResponse) {
         this.booksVolumesRecommendedRateResponse = booksVolumesRecommendedRateResponse;
         return this;
@@ -19,6 +21,7 @@ public class BooksVolumesRecommendedRateResponse {
     
     
     public String contentType;
+
     public BooksVolumesRecommendedRateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class BooksVolumesRecommendedRateResponse {
     
     
     public Integer statusCode;
+
     public BooksVolumesRecommendedRateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BooksVolumesRecommendedRateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BooksVolumesRecommendedRateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BooksVolumesRecommendedRateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

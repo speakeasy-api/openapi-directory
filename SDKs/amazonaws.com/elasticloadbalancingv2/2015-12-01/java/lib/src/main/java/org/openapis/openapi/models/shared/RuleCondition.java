@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RuleCondition {
     
     public String field;
+
     public RuleCondition withField(String field) {
         this.field = field;
         return this;
@@ -19,6 +20,7 @@ public class RuleCondition {
     
     
     public HostHeaderConditionConfig hostHeaderConfig;
+
     public RuleCondition withHostHeaderConfig(HostHeaderConditionConfig hostHeaderConfig) {
         this.hostHeaderConfig = hostHeaderConfig;
         return this;
@@ -26,6 +28,7 @@ public class RuleCondition {
     
     
     public HttpHeaderConditionConfig httpHeaderConfig;
+
     public RuleCondition withHttpHeaderConfig(HttpHeaderConditionConfig httpHeaderConfig) {
         this.httpHeaderConfig = httpHeaderConfig;
         return this;
@@ -33,6 +36,7 @@ public class RuleCondition {
     
     
     public HttpRequestMethodConditionConfig httpRequestMethodConfig;
+
     public RuleCondition withHttpRequestMethodConfig(HttpRequestMethodConditionConfig httpRequestMethodConfig) {
         this.httpRequestMethodConfig = httpRequestMethodConfig;
         return this;
@@ -40,6 +44,7 @@ public class RuleCondition {
     
     
     public PathPatternConditionConfig pathPatternConfig;
+
     public RuleCondition withPathPatternConfig(PathPatternConditionConfig pathPatternConfig) {
         this.pathPatternConfig = pathPatternConfig;
         return this;
@@ -47,6 +52,7 @@ public class RuleCondition {
     
     
     public QueryStringConditionConfig queryStringConfig;
+
     public RuleCondition withQueryStringConfig(QueryStringConditionConfig queryStringConfig) {
         this.queryStringConfig = queryStringConfig;
         return this;
@@ -54,6 +60,7 @@ public class RuleCondition {
     
     
     public SourceIpConditionConfig sourceIpConfig;
+
     public RuleCondition withSourceIpConfig(SourceIpConditionConfig sourceIpConfig) {
         this.sourceIpConfig = sourceIpConfig;
         return this;
@@ -61,9 +68,11 @@ public class RuleCondition {
     
     
     public String[] values;
+
     public RuleCondition withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public RuleCondition(){}
 }

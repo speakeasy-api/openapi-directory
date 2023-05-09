@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1TransferEligibility {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudChannelV1TransferEligibility withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudChannelV1TransferEligibility {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ineligibilityReason")
     public GoogleCloudChannelV1TransferEligibilityIneligibilityReasonEnum ineligibilityReason;
+
     public GoogleCloudChannelV1TransferEligibility withIneligibilityReason(GoogleCloudChannelV1TransferEligibilityIneligibilityReasonEnum ineligibilityReason) {
         this.ineligibilityReason = ineligibilityReason;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudChannelV1TransferEligibility {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isEligible")
     public Boolean isEligible;
+
     public GoogleCloudChannelV1TransferEligibility withIsEligible(Boolean isEligible) {
         this.isEligible = isEligible;
         return this;
     }
     
+    public GoogleCloudChannelV1TransferEligibility(){}
 }

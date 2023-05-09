@@ -15,9 +15,11 @@ public class CreateAnalyzerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public CreateAnalyzerResponse withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public CreateAnalyzerResponse(){}
 }

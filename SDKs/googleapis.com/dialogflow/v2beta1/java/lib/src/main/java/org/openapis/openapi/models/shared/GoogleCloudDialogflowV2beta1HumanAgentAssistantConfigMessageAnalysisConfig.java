@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableEntityExtraction")
     public Boolean enableEntityExtraction;
+
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfig withEnableEntityExtraction(Boolean enableEntityExtraction) {
         this.enableEntityExtraction = enableEntityExtraction;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableSentimentAnalysis")
     public Boolean enableSentimentAnalysis;
+
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfig withEnableSentimentAnalysis(Boolean enableSentimentAnalysis) {
         this.enableSentimentAnalysis = enableSentimentAnalysis;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfig(){}
 }

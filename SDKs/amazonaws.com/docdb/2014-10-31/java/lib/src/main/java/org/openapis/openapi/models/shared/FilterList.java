@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * FilterList - &lt;p&gt;A named set of filter values, used to return a more specific list of results. You can use a filter to match a set of resources by specific criteria, such as IDs.&lt;/p&gt; &lt;p&gt;Wildcards are not supported in filters.&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class FilterList {
     
     public String name;
+
     public FilterList withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class FilterList {
     
     
     public String[] values;
+
     public FilterList withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public FilterList(@JsonProperty("Name") String name, @JsonProperty("Values") String[] values) {
+        this.name = name;
+        this.values = values;
+  }
 }

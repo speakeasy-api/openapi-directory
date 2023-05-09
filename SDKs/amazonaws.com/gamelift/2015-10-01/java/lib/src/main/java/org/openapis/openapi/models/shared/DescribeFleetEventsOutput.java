@@ -15,6 +15,7 @@ public class DescribeFleetEventsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Events")
     public Event[] events;
+
     public DescribeFleetEventsOutput withEvents(Event[] events) {
         this.events = events;
         return this;
@@ -23,9 +24,11 @@ public class DescribeFleetEventsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeFleetEventsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeFleetEventsOutput(){}
 }

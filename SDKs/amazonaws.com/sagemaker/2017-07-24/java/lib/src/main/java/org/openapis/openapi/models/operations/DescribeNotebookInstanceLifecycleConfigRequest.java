@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeNotebookInstanceLifecycleConfigRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DescribeNotebookInstanceLifecycleConfigInput describeNotebookInstanceLifecycleConfigInput;
+
     public DescribeNotebookInstanceLifecycleConfigRequest withDescribeNotebookInstanceLifecycleConfigInput(org.openapis.openapi.models.shared.DescribeNotebookInstanceLifecycleConfigInput describeNotebookInstanceLifecycleConfigInput) {
         this.describeNotebookInstanceLifecycleConfigInput = describeNotebookInstanceLifecycleConfigInput;
         return this;
@@ -16,6 +18,7 @@ public class DescribeNotebookInstanceLifecycleConfigRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DescribeNotebookInstanceLifecycleConfigRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class DescribeNotebookInstanceLifecycleConfigRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DescribeNotebookInstanceLifecycleConfigRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class DescribeNotebookInstanceLifecycleConfigRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DescribeNotebookInstanceLifecycleConfigRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class DescribeNotebookInstanceLifecycleConfigRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DescribeNotebookInstanceLifecycleConfigRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class DescribeNotebookInstanceLifecycleConfigRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DescribeNotebookInstanceLifecycleConfigRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class DescribeNotebookInstanceLifecycleConfigRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DescribeNotebookInstanceLifecycleConfigRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class DescribeNotebookInstanceLifecycleConfigRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DescribeNotebookInstanceLifecycleConfigRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class DescribeNotebookInstanceLifecycleConfigRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public DescribeNotebookInstanceLifecycleConfigXAmzTargetEnum xAmzTarget;
+
     public DescribeNotebookInstanceLifecycleConfigRequest withXAmzTarget(DescribeNotebookInstanceLifecycleConfigXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public DescribeNotebookInstanceLifecycleConfigRequest(@JsonProperty("DescribeNotebookInstanceLifecycleConfigInput") org.openapis.openapi.models.shared.DescribeNotebookInstanceLifecycleConfigInput describeNotebookInstanceLifecycleConfigInput, @JsonProperty("X-Amz-Target") DescribeNotebookInstanceLifecycleConfigXAmzTargetEnum xAmzTarget) {
+        this.describeNotebookInstanceLifecycleConfigInput = describeNotebookInstanceLifecycleConfigInput;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

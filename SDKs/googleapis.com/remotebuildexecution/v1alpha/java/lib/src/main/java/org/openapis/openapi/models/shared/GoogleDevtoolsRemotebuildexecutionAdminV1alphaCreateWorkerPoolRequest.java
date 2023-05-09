@@ -18,6 +18,7 @@ public class GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateWorkerPoolReque
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateWorkerPoolRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -29,6 +30,7 @@ public class GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateWorkerPoolReque
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("poolId")
     public String poolId;
+
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateWorkerPoolRequest withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
@@ -40,9 +42,11 @@ public class GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateWorkerPoolReque
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerPool")
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool workerPool;
+
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateWorkerPoolRequest withWorkerPool(GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool workerPool) {
         this.workerPool = workerPool;
         return this;
     }
     
+    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateWorkerPoolRequest(){}
 }

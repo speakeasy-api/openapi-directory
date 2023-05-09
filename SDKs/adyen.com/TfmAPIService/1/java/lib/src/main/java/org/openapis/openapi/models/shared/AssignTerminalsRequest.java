@@ -14,6 +14,7 @@ public class AssignTerminalsRequest {
      */
     @JsonProperty("companyAccount")
     public String companyAccount;
+
     public AssignTerminalsRequest withCompanyAccount(String companyAccount) {
         this.companyAccount = companyAccount;
         return this;
@@ -25,6 +26,7 @@ public class AssignTerminalsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantAccount")
     public String merchantAccount;
+
     public AssignTerminalsRequest withMerchantAccount(String merchantAccount) {
         this.merchantAccount = merchantAccount;
         return this;
@@ -40,6 +42,7 @@ public class AssignTerminalsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantInventory")
     public Boolean merchantInventory;
+
     public AssignTerminalsRequest withMerchantInventory(Boolean merchantInventory) {
         this.merchantInventory = merchantInventory;
         return this;
@@ -51,6 +54,7 @@ public class AssignTerminalsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("store")
     public String store;
+
     public AssignTerminalsRequest withStore(String store) {
         this.store = store;
         return this;
@@ -63,9 +67,14 @@ public class AssignTerminalsRequest {
      */
     @JsonProperty("terminals")
     public String[] terminals;
+
     public AssignTerminalsRequest withTerminals(String[] terminals) {
         this.terminals = terminals;
         return this;
     }
     
+    public AssignTerminalsRequest(@JsonProperty("companyAccount") String companyAccount, @JsonProperty("terminals") String[] terminals) {
+        this.companyAccount = companyAccount;
+        this.terminals = terminals;
+  }
 }

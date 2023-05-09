@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVolumeStatusRequest {
     
     public Boolean dryRun;
+
     public DescribeVolumeStatusRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeVolumeStatusRequest {
     
     
     public DescribeVolumeStatusRequestFilters[] filters;
+
     public DescribeVolumeStatusRequest withFilters(DescribeVolumeStatusRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeVolumeStatusRequest {
     
     
     public Long maxResults;
+
     public DescribeVolumeStatusRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class DescribeVolumeStatusRequest {
     
     
     public String nextToken;
+
     public DescribeVolumeStatusRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +41,11 @@ public class DescribeVolumeStatusRequest {
     
     
     public String[] volumeIds;
+
     public DescribeVolumeStatusRequest withVolumeIds(String[] volumeIds) {
         this.volumeIds = volumeIds;
         return this;
     }
     
+    public DescribeVolumeStatusRequest(){}
 }

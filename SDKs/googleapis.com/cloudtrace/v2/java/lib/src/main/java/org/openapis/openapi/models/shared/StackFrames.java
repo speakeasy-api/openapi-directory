@@ -18,6 +18,7 @@ public class StackFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("droppedFramesCount")
     public Integer droppedFramesCount;
+
     public StackFrames withDroppedFramesCount(Integer droppedFramesCount) {
         this.droppedFramesCount = droppedFramesCount;
         return this;
@@ -29,9 +30,11 @@ public class StackFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frame")
     public StackFrame[] frame;
+
     public StackFrames withFrame(StackFrame[] frame) {
         this.frame = frame;
         return this;
     }
     
+    public StackFrames(){}
 }

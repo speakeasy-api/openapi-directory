@@ -15,6 +15,7 @@ public class JobFlowDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AmiVersion")
     public String amiVersion;
+
     public JobFlowDetail withAmiVersion(String amiVersion) {
         this.amiVersion = amiVersion;
         return this;
@@ -23,6 +24,7 @@ public class JobFlowDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoScalingRole")
     public String autoScalingRole;
+
     public JobFlowDetail withAutoScalingRole(String autoScalingRole) {
         this.autoScalingRole = autoScalingRole;
         return this;
@@ -31,6 +33,7 @@ public class JobFlowDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BootstrapActions")
     public BootstrapActionDetail[] bootstrapActions;
+
     public JobFlowDetail withBootstrapActions(BootstrapActionDetail[] bootstrapActions) {
         this.bootstrapActions = bootstrapActions;
         return this;
@@ -38,6 +41,7 @@ public class JobFlowDetail {
     
     @JsonProperty("ExecutionStatusDetail")
     public JobFlowExecutionStatusDetail executionStatusDetail;
+
     public JobFlowDetail withExecutionStatusDetail(JobFlowExecutionStatusDetail executionStatusDetail) {
         this.executionStatusDetail = executionStatusDetail;
         return this;
@@ -45,6 +49,7 @@ public class JobFlowDetail {
     
     @JsonProperty("Instances")
     public JobFlowInstancesDetail instances;
+
     public JobFlowDetail withInstances(JobFlowInstancesDetail instances) {
         this.instances = instances;
         return this;
@@ -52,6 +57,7 @@ public class JobFlowDetail {
     
     @JsonProperty("JobFlowId")
     public String jobFlowId;
+
     public JobFlowDetail withJobFlowId(String jobFlowId) {
         this.jobFlowId = jobFlowId;
         return this;
@@ -60,6 +66,7 @@ public class JobFlowDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobFlowRole")
     public String jobFlowRole;
+
     public JobFlowDetail withJobFlowRole(String jobFlowRole) {
         this.jobFlowRole = jobFlowRole;
         return this;
@@ -68,6 +75,7 @@ public class JobFlowDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogEncryptionKmsKeyId")
     public String logEncryptionKmsKeyId;
+
     public JobFlowDetail withLogEncryptionKmsKeyId(String logEncryptionKmsKeyId) {
         this.logEncryptionKmsKeyId = logEncryptionKmsKeyId;
         return this;
@@ -76,6 +84,7 @@ public class JobFlowDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogUri")
     public String logUri;
+
     public JobFlowDetail withLogUri(String logUri) {
         this.logUri = logUri;
         return this;
@@ -83,6 +92,7 @@ public class JobFlowDetail {
     
     @JsonProperty("Name")
     public String name;
+
     public JobFlowDetail withName(String name) {
         this.name = name;
         return this;
@@ -91,6 +101,7 @@ public class JobFlowDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScaleDownBehavior")
     public ScaleDownBehaviorEnum scaleDownBehavior;
+
     public JobFlowDetail withScaleDownBehavior(ScaleDownBehaviorEnum scaleDownBehavior) {
         this.scaleDownBehavior = scaleDownBehavior;
         return this;
@@ -99,6 +110,7 @@ public class JobFlowDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceRole")
     public String serviceRole;
+
     public JobFlowDetail withServiceRole(String serviceRole) {
         this.serviceRole = serviceRole;
         return this;
@@ -107,6 +119,7 @@ public class JobFlowDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Steps")
     public StepDetail[] steps;
+
     public JobFlowDetail withSteps(StepDetail[] steps) {
         this.steps = steps;
         return this;
@@ -115,6 +128,7 @@ public class JobFlowDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportedProducts")
     public String[] supportedProducts;
+
     public JobFlowDetail withSupportedProducts(String[] supportedProducts) {
         this.supportedProducts = supportedProducts;
         return this;
@@ -123,9 +137,16 @@ public class JobFlowDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VisibleToAllUsers")
     public Boolean visibleToAllUsers;
+
     public JobFlowDetail withVisibleToAllUsers(Boolean visibleToAllUsers) {
         this.visibleToAllUsers = visibleToAllUsers;
         return this;
     }
     
+    public JobFlowDetail(@JsonProperty("ExecutionStatusDetail") JobFlowExecutionStatusDetail executionStatusDetail, @JsonProperty("Instances") JobFlowInstancesDetail instances, @JsonProperty("JobFlowId") String jobFlowId, @JsonProperty("Name") String name) {
+        this.executionStatusDetail = executionStatusDetail;
+        this.instances = instances;
+        this.jobFlowId = jobFlowId;
+        this.name = name;
+  }
 }

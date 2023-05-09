@@ -18,6 +18,7 @@ public class ResourceLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximum")
     public String maximum;
+
     public ResourceLimit withMaximum(String maximum) {
         this.maximum = maximum;
         return this;
@@ -29,6 +30,7 @@ public class ResourceLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimum")
     public String minimum;
+
     public ResourceLimit withMinimum(String minimum) {
         this.minimum = minimum;
         return this;
@@ -40,9 +42,11 @@ public class ResourceLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public String resourceType;
+
     public ResourceLimit withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ResourceLimit(){}
 }

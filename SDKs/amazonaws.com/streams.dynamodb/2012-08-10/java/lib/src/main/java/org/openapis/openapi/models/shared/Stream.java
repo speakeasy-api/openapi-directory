@@ -15,6 +15,7 @@ public class Stream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamArn")
     public String streamArn;
+
     public Stream withStreamArn(String streamArn) {
         this.streamArn = streamArn;
         return this;
@@ -23,6 +24,7 @@ public class Stream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamLabel")
     public String streamLabel;
+
     public Stream withStreamLabel(String streamLabel) {
         this.streamLabel = streamLabel;
         return this;
@@ -31,9 +33,11 @@ public class Stream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableName")
     public String tableName;
+
     public Stream withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public Stream(){}
 }

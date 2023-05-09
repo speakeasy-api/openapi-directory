@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -15,6 +16,7 @@ public class UsersNodesListNodeAttributes {
      */
     
     public UsersNodesListNodeAttributesCategoryEnum category;
+
     public UsersNodesListNodeAttributes withCategory(UsersNodesListNodeAttributesCategoryEnum category) {
         this.category = category;
         return this;
@@ -25,6 +27,7 @@ public class UsersNodesListNodeAttributes {
      */
     
     public Boolean collection;
+
     public UsersNodesListNodeAttributes withCollection(Boolean collection) {
         this.collection = collection;
         return this;
@@ -35,6 +38,7 @@ public class UsersNodesListNodeAttributes {
      */
     
     public Boolean currentUserCanComment;
+
     public UsersNodesListNodeAttributes withCurrentUserCanComment(Boolean currentUserCanComment) {
         this.currentUserCanComment = currentUserCanComment;
         return this;
@@ -45,6 +49,7 @@ public class UsersNodesListNodeAttributes {
      */
     
     public String[] currentUserPermissions;
+
     public UsersNodesListNodeAttributes withCurrentUserPermissions(String[] currentUserPermissions) {
         this.currentUserPermissions = currentUserPermissions;
         return this;
@@ -55,6 +60,7 @@ public class UsersNodesListNodeAttributes {
      */
     
     public OffsetDateTime dateCreated;
+
     public UsersNodesListNodeAttributes withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -65,6 +71,7 @@ public class UsersNodesListNodeAttributes {
      */
     
     public OffsetDateTime dateModified;
+
     public UsersNodesListNodeAttributes withDateModified(OffsetDateTime dateModified) {
         this.dateModified = dateModified;
         return this;
@@ -75,6 +82,7 @@ public class UsersNodesListNodeAttributes {
      */
     
     public String description;
+
     public UsersNodesListNodeAttributes withDescription(String description) {
         this.description = description;
         return this;
@@ -85,6 +93,7 @@ public class UsersNodesListNodeAttributes {
      */
     
     public Boolean fork;
+
     public UsersNodesListNodeAttributes withFork(Boolean fork) {
         this.fork = fork;
         return this;
@@ -95,6 +104,7 @@ public class UsersNodesListNodeAttributes {
      */
     
     public OffsetDateTime forkedDate;
+
     public UsersNodesListNodeAttributes withForkedDate(OffsetDateTime forkedDate) {
         this.forkedDate = forkedDate;
         return this;
@@ -105,6 +115,7 @@ public class UsersNodesListNodeAttributes {
      */
     
     public String nodeLicense;
+
     public UsersNodesListNodeAttributes withNodeLicense(String nodeLicense) {
         this.nodeLicense = nodeLicense;
         return this;
@@ -115,6 +126,7 @@ public class UsersNodesListNodeAttributes {
      */
     
     public Boolean preprint;
+
     public UsersNodesListNodeAttributes withPreprint(Boolean preprint) {
         this.preprint = preprint;
         return this;
@@ -125,6 +137,7 @@ public class UsersNodesListNodeAttributes {
      */
     
     public Boolean public_;
+
     public UsersNodesListNodeAttributes withPublic(Boolean public_) {
         this.public_ = public_;
         return this;
@@ -135,6 +148,7 @@ public class UsersNodesListNodeAttributes {
      */
     
     public Boolean registration;
+
     public UsersNodesListNodeAttributes withRegistration(Boolean registration) {
         this.registration = registration;
         return this;
@@ -145,6 +159,7 @@ public class UsersNodesListNodeAttributes {
      */
     
     public String[] tags;
+
     public UsersNodesListNodeAttributes withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -155,6 +170,7 @@ public class UsersNodesListNodeAttributes {
      */
     
     public String templateFrom;
+
     public UsersNodesListNodeAttributes withTemplateFrom(String templateFrom) {
         this.templateFrom = templateFrom;
         return this;
@@ -165,9 +181,14 @@ public class UsersNodesListNodeAttributes {
      */
     
     public String title;
+
     public UsersNodesListNodeAttributes withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public UsersNodesListNodeAttributes(@JsonProperty("category") UsersNodesListNodeAttributesCategoryEnum category, @JsonProperty("title") String title) {
+        this.category = category;
+        this.title = title;
+  }
 }

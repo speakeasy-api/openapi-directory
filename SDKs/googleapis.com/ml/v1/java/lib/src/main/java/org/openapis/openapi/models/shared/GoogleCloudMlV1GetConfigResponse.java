@@ -15,6 +15,7 @@ public class GoogleCloudMlV1GetConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public GoogleCloudMlV1Config config;
+
     public GoogleCloudMlV1GetConfigResponse withConfig(GoogleCloudMlV1Config config) {
         this.config = config;
         return this;
@@ -26,6 +27,7 @@ public class GoogleCloudMlV1GetConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccount")
     public String serviceAccount;
+
     public GoogleCloudMlV1GetConfigResponse withServiceAccount(String serviceAccount) {
         this.serviceAccount = serviceAccount;
         return this;
@@ -37,9 +39,11 @@ public class GoogleCloudMlV1GetConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccountProject")
     public String serviceAccountProject;
+
     public GoogleCloudMlV1GetConfigResponse withServiceAccountProject(String serviceAccountProject) {
         this.serviceAccountProject = serviceAccountProject;
         return this;
     }
     
+    public GoogleCloudMlV1GetConfigResponse(){}
 }

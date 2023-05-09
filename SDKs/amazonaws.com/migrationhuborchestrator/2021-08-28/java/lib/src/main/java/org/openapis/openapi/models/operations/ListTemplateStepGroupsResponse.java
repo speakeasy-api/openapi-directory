@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTemplateStepGroupsResponse {
@@ -12,6 +13,7 @@ public class ListTemplateStepGroupsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListTemplateStepGroupsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListTemplateStepGroupsResponse {
     
     
     public String contentType;
+
     public ListTemplateStepGroupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListTemplateStepGroupsResponse {
      */
     
     public Object internalServerException;
+
     public ListTemplateStepGroupsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListTemplateStepGroupsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTemplateStepGroupsResponse listTemplateStepGroupsResponse;
+
     public ListTemplateStepGroupsResponse withListTemplateStepGroupsResponse(org.openapis.openapi.models.shared.ListTemplateStepGroupsResponse listTemplateStepGroupsResponse) {
         this.listTemplateStepGroupsResponse = listTemplateStepGroupsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListTemplateStepGroupsResponse {
     
     
     public Integer statusCode;
+
     public ListTemplateStepGroupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListTemplateStepGroupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTemplateStepGroupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListTemplateStepGroupsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListTemplateStepGroupsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class ListTemplateStepGroupsResponse {
      */
     
     public Object throttlingException;
+
     public ListTemplateStepGroupsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListTemplateStepGroupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

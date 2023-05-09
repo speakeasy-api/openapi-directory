@@ -15,9 +15,11 @@ public class GetVirtualMachineOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VirtualMachine")
     public VirtualMachineDetails virtualMachine;
+
     public GetVirtualMachineOutput withVirtualMachine(VirtualMachineDetails virtualMachine) {
         this.virtualMachine = virtualMachine;
         return this;
     }
     
+    public GetVirtualMachineOutput(){}
 }

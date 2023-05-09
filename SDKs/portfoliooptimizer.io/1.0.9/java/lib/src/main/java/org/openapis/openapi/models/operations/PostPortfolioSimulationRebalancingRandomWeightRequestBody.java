@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostPortfolioSimulationRebalancingRandomWeightRequestBody {
     @JsonProperty("assets")
     public PostPortfolioSimulationRebalancingRandomWeightRequestBodyAssets[] assets;
+
     public PostPortfolioSimulationRebalancingRandomWeightRequestBody withAssets(PostPortfolioSimulationRebalancingRandomWeightRequestBodyAssets[] assets) {
         this.assets = assets;
         return this;
@@ -22,9 +23,13 @@ public class PostPortfolioSimulationRebalancingRandomWeightRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portfolios")
     public Long portfolios;
+
     public PostPortfolioSimulationRebalancingRandomWeightRequestBody withPortfolios(Long portfolios) {
         this.portfolios = portfolios;
         return this;
     }
     
+    public PostPortfolioSimulationRebalancingRandomWeightRequestBody(@JsonProperty("assets") PostPortfolioSimulationRebalancingRandomWeightRequestBodyAssets[] assets) {
+        this.assets = assets;
+  }
 }

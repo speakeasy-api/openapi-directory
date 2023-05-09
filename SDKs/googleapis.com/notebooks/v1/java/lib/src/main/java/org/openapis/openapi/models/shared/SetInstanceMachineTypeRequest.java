@@ -18,9 +18,11 @@ public class SetInstanceMachineTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineType")
     public String machineType;
+
     public SetInstanceMachineTypeRequest withMachineType(String machineType) {
         this.machineType = machineType;
         return this;
     }
     
+    public SetInstanceMachineTypeRequest(){}
 }

@@ -18,6 +18,7 @@ public class NameMatchCandidateOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidateName")
     public String candidateName;
+
     public NameMatchCandidateOut withCandidateName(String candidateName) {
         this.candidateName = candidateName;
         return this;
@@ -29,6 +30,7 @@ public class NameMatchCandidateOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predScoreFamilyName")
     public Double predScoreFamilyName;
+
     public NameMatchCandidateOut withPredScoreFamilyName(Double predScoreFamilyName) {
         this.predScoreFamilyName = predScoreFamilyName;
         return this;
@@ -40,6 +42,7 @@ public class NameMatchCandidateOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predScoreGivenName")
     public Double predScoreGivenName;
+
     public NameMatchCandidateOut withPredScoreGivenName(Double predScoreGivenName) {
         this.predScoreGivenName = predScoreGivenName;
         return this;
@@ -51,9 +54,11 @@ public class NameMatchCandidateOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("probability")
     public Double probability;
+
     public NameMatchCandidateOut withProbability(Double probability) {
         this.probability = probability;
         return this;
     }
     
+    public NameMatchCandidateOut(){}
 }

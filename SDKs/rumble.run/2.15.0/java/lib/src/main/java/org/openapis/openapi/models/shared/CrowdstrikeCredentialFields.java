@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CrowdstrikeCredentialFields {
     @JsonProperty("api_url")
     public String apiUrl;
+
     public CrowdstrikeCredentialFields withApiUrl(String apiUrl) {
         this.apiUrl = apiUrl;
         return this;
@@ -16,6 +17,7 @@ public class CrowdstrikeCredentialFields {
     
     @JsonProperty("client_id")
     public String clientId;
+
     public CrowdstrikeCredentialFields withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -23,9 +25,15 @@ public class CrowdstrikeCredentialFields {
     
     @JsonProperty("client_secret")
     public String clientSecret;
+
     public CrowdstrikeCredentialFields withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
     }
     
+    public CrowdstrikeCredentialFields(@JsonProperty("api_url") String apiUrl, @JsonProperty("client_id") String clientId, @JsonProperty("client_secret") String clientSecret) {
+        this.apiUrl = apiUrl;
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
+  }
 }

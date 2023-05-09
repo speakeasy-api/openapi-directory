@@ -18,9 +18,11 @@ public class GoogleCloudVisionV1p2beta1BatchAnnotateImagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responses")
     public GoogleCloudVisionV1p2beta1AnnotateImageResponse[] responses;
+
     public GoogleCloudVisionV1p2beta1BatchAnnotateImagesResponse withResponses(GoogleCloudVisionV1p2beta1AnnotateImageResponse[] responses) {
         this.responses = responses;
         return this;
     }
     
+    public GoogleCloudVisionV1p2beta1BatchAnnotateImagesResponse(){}
 }

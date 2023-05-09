@@ -31,10 +31,11 @@ public class Kyc {
 
     /**
      * &lt;span class="tablenote"&gt;&lt;b&gt;Note:&lt;/b&gt;This method was originally created to see which onboarding requirements were still pending for sellers being onboarded for eBay managed payments, but now that all seller accounts are onboarded globally, this method should now just returne an empty payload with a &lt;code&gt;204 No Content&lt;/code&gt; HTTP status code. &lt;/span&gt;
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetKYCResponse getKYC() throws Exception {
+    public org.openapis.openapi.models.operations.GetKYCResponse getKYC(org.openapis.openapi.models.operations.GetKYCSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/kyc");
         
@@ -43,16 +44,15 @@ public class Kyc {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetKYCResponse res = new org.openapis.openapi.models.operations.GetKYCResponse() {{
+        org.openapis.openapi.models.operations.GetKYCResponse res = new org.openapis.openapi.models.operations.GetKYCResponse(contentType, httpRes.statusCode()) {{
             kycResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

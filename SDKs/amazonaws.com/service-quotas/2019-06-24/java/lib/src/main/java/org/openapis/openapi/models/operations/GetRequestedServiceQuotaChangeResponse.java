@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRequestedServiceQuotaChangeResponse {
@@ -12,6 +13,7 @@ public class GetRequestedServiceQuotaChangeResponse {
      */
     
     public Object accessDeniedException;
+
     public GetRequestedServiceQuotaChangeResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetRequestedServiceQuotaChangeResponse {
     
     
     public String contentType;
+
     public GetRequestedServiceQuotaChangeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetRequestedServiceQuotaChangeResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRequestedServiceQuotaChangeResponse getRequestedServiceQuotaChangeResponse;
+
     public GetRequestedServiceQuotaChangeResponse withGetRequestedServiceQuotaChangeResponse(org.openapis.openapi.models.shared.GetRequestedServiceQuotaChangeResponse getRequestedServiceQuotaChangeResponse) {
         this.getRequestedServiceQuotaChangeResponse = getRequestedServiceQuotaChangeResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetRequestedServiceQuotaChangeResponse {
      */
     
     public Object illegalArgumentException;
+
     public GetRequestedServiceQuotaChangeResponse withIllegalArgumentException(Object illegalArgumentException) {
         this.illegalArgumentException = illegalArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class GetRequestedServiceQuotaChangeResponse {
      */
     
     public Object noSuchResourceException;
+
     public GetRequestedServiceQuotaChangeResponse withNoSuchResourceException(Object noSuchResourceException) {
         this.noSuchResourceException = noSuchResourceException;
         return this;
@@ -59,6 +65,7 @@ public class GetRequestedServiceQuotaChangeResponse {
      */
     
     public Object serviceException;
+
     public GetRequestedServiceQuotaChangeResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class GetRequestedServiceQuotaChangeResponse {
     
     
     public Integer statusCode;
+
     public GetRequestedServiceQuotaChangeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetRequestedServiceQuotaChangeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRequestedServiceQuotaChangeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class GetRequestedServiceQuotaChangeResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetRequestedServiceQuotaChangeResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetRequestedServiceQuotaChangeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

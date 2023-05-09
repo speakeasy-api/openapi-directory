@@ -53,4 +53,8 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetDocumentIdAspectIdCi
 lib/src/main/java/org/openapis/openapi/models/operations/GetSearchAspectIDFullsearchAspectIDEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSearchAspectIdFullsearchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSearchAspectIdFullsearchResponse.java
+docs/sdk/README.md
+docs/content/README.md
+docs/document/README.md
+docs/search/README.md
 USAGE.md

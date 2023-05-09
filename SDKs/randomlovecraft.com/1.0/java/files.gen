@@ -44,4 +44,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetSpecificSentence200A
 lib/src/main/java/org/openapis/openapi/models/operations/GetSpecificSentenceResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Book.java
 lib/src/main/java/org/openapis/openapi/models/shared/Sentence.java
+docs/sdk/README.md
+docs/books/README.md
+docs/sentences/README.md
 USAGE.md

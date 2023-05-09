@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ChromepolicyCustomersPolicySchemasListResponse {
     
     public String contentType;
+
     public ChromepolicyCustomersPolicySchemasListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ChromepolicyCustomersPolicySchemasListResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleChromePolicyVersionsV1ListPolicySchemasResponse googleChromePolicyVersionsV1ListPolicySchemasResponse;
+
     public ChromepolicyCustomersPolicySchemasListResponse withGoogleChromePolicyVersionsV1ListPolicySchemasResponse(org.openapis.openapi.models.shared.GoogleChromePolicyVersionsV1ListPolicySchemasResponse googleChromePolicyVersionsV1ListPolicySchemasResponse) {
         this.googleChromePolicyVersionsV1ListPolicySchemasResponse = googleChromePolicyVersionsV1ListPolicySchemasResponse;
         return this;
@@ -26,6 +29,7 @@ public class ChromepolicyCustomersPolicySchemasListResponse {
     
     
     public Integer statusCode;
+
     public ChromepolicyCustomersPolicySchemasListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ChromepolicyCustomersPolicySchemasListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ChromepolicyCustomersPolicySchemasListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ChromepolicyCustomersPolicySchemasListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

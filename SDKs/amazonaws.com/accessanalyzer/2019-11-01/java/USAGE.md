@@ -3,34 +3,31 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.ApplyArchiveRuleRequestBody;
 import org.openapis.openapi.models.operations.ApplyArchiveRuleRequest;
+import org.openapis.openapi.models.operations.ApplyArchiveRuleRequestBody;
 import org.openapis.openapi.models.operations.ApplyArchiveRuleResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            ApplyArchiveRuleRequest req = new ApplyArchiveRuleRequest() {{
-                requestBody = new ApplyArchiveRuleRequestBody() {{
-                    analyzerArn = "corrupti";
-                    clientToken = "provident";
-                    ruleName = "distinctio";
-                }};
-                xAmzAlgorithm = "quibusdam";
-                xAmzContentSha256 = "unde";
-                xAmzCredential = "nulla";
-                xAmzDate = "corrupti";
-                xAmzSecurityToken = "illum";
-                xAmzSignature = "vel";
-                xAmzSignedHeaders = "error";
-            }}            
+            ApplyArchiveRuleRequest req = new ApplyArchiveRuleRequest(                new ApplyArchiveRuleRequestBody("provident", "distinctio") {{
+                                clientToken = "quibusdam";
+                            }};) {{
+                xAmzAlgorithm = "unde";
+                xAmzContentSha256 = "nulla";
+                xAmzCredential = "corrupti";
+                xAmzDate = "illum";
+                xAmzSecurityToken = "vel";
+                xAmzSignature = "error";
+                xAmzSignedHeaders = "deserunt";
+            }};            
 
             ApplyArchiveRuleResponse res = sdk.applyArchiveRule(req);
 
@@ -40,5 +37,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -15,9 +15,11 @@ public class GetTableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Table")
     public Table table;
+
     public GetTableResponse withTable(Table table) {
         this.table = table;
         return this;
     }
     
+    public GetTableResponse(){}
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DocsDocumentsGetSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DocsDocumentsGetSecurityOption1 option1;
+
     public DocsDocumentsGetSecurity withOption1(DocsDocumentsGetSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class DocsDocumentsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DocsDocumentsGetSecurityOption2 option2;
+
     public DocsDocumentsGetSecurity withOption2(DocsDocumentsGetSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class DocsDocumentsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DocsDocumentsGetSecurityOption3 option3;
+
     public DocsDocumentsGetSecurity withOption3(DocsDocumentsGetSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class DocsDocumentsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DocsDocumentsGetSecurityOption4 option4;
+
     public DocsDocumentsGetSecurity withOption4(DocsDocumentsGetSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,9 +41,11 @@ public class DocsDocumentsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DocsDocumentsGetSecurityOption5 option5;
+
     public DocsDocumentsGetSecurity withOption5(DocsDocumentsGetSecurityOption5 option5) {
         this.option5 = option5;
         return this;
     }
     
+    public DocsDocumentsGetSecurity(){}
 }

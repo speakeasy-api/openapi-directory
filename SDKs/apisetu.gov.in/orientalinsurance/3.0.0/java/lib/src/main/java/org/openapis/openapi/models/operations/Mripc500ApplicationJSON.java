@@ -15,6 +15,7 @@ public class Mripc500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Mripc500ApplicationJSONErrorEnum error;
+
     public Mripc500ApplicationJSON withError(Mripc500ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Mripc500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Mripc500ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Mripc500ApplicationJSON withErrorDescription(Mripc500ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Mripc500ApplicationJSON(){}
 }

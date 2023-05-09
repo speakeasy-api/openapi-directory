@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyDefinitionsRecordsSchemaRecordStateBlock {
     
     public Integer featuredPriority;
+
     public DestinyDefinitionsRecordsSchemaRecordStateBlock withFeaturedPriority(Integer featuredPriority) {
         this.featuredPriority = featuredPriority;
         return this;
@@ -16,9 +17,11 @@ public class DestinyDefinitionsRecordsSchemaRecordStateBlock {
     
     
     public String obscuredString;
+
     public DestinyDefinitionsRecordsSchemaRecordStateBlock withObscuredString(String obscuredString) {
         this.obscuredString = obscuredString;
         return this;
     }
     
+    public DestinyDefinitionsRecordsSchemaRecordStateBlock(){}
 }

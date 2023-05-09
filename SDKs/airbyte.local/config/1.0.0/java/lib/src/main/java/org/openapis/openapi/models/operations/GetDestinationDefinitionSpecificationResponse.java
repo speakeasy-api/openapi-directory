@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDestinationDefinitionSpecificationResponse {
     
     public String contentType;
+
     public GetDestinationDefinitionSpecificationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDestinationDefinitionSpecificationResponse {
      */
     
     public org.openapis.openapi.models.shared.DestinationDefinitionSpecificationRead destinationDefinitionSpecificationRead;
+
     public GetDestinationDefinitionSpecificationResponse withDestinationDefinitionSpecificationRead(org.openapis.openapi.models.shared.DestinationDefinitionSpecificationRead destinationDefinitionSpecificationRead) {
         this.destinationDefinitionSpecificationRead = destinationDefinitionSpecificationRead;
         return this;
@@ -29,6 +32,7 @@ public class GetDestinationDefinitionSpecificationResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo;
+
     public GetDestinationDefinitionSpecificationResponse withInvalidInputExceptionInfo(org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo) {
         this.invalidInputExceptionInfo = invalidInputExceptionInfo;
         return this;
@@ -39,6 +43,7 @@ public class GetDestinationDefinitionSpecificationResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo;
+
     public GetDestinationDefinitionSpecificationResponse withNotFoundKnownExceptionInfo(org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo) {
         this.notFoundKnownExceptionInfo = notFoundKnownExceptionInfo;
         return this;
@@ -46,6 +51,7 @@ public class GetDestinationDefinitionSpecificationResponse {
     
     
     public Integer statusCode;
+
     public GetDestinationDefinitionSpecificationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class GetDestinationDefinitionSpecificationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDestinationDefinitionSpecificationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDestinationDefinitionSpecificationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

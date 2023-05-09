@@ -12,6 +12,7 @@ public class UpdateMultiNodeInventory200ApplicationJSONNodesErrorsCauses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public UpdateMultiNodeInventory200ApplicationJSONNodesErrorsCauses withCode(String code) {
         this.code = code;
         return this;
@@ -20,6 +21,7 @@ public class UpdateMultiNodeInventory200ApplicationJSONNodesErrorsCauses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateMultiNodeInventory200ApplicationJSONNodesErrorsCauses withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class UpdateMultiNodeInventory200ApplicationJSONNodesErrorsCauses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public UpdateMultiNodeInventory200ApplicationJSONNodesErrorsCauses withField(String field) {
         this.field = field;
         return this;
@@ -36,9 +39,11 @@ public class UpdateMultiNodeInventory200ApplicationJSONNodesErrorsCauses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public UpdateMultiNodeInventory200ApplicationJSONNodesErrorsCauses withType(String type) {
         this.type = type;
         return this;
     }
     
+    public UpdateMultiNodeInventory200ApplicationJSONNodesErrorsCauses(){}
 }

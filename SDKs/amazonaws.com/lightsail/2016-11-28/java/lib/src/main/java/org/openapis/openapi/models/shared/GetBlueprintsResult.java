@@ -15,6 +15,7 @@ public class GetBlueprintsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blueprints")
     public Blueprint[] blueprints;
+
     public GetBlueprintsResult withBlueprints(Blueprint[] blueprints) {
         this.blueprints = blueprints;
         return this;
@@ -23,9 +24,11 @@ public class GetBlueprintsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GetBlueprintsResult withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GetBlueprintsResult(){}
 }

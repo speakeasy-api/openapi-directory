@@ -42,4 +42,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/Error.java
 lib/src/main/java/org/openapis/openapi/models/shared/DeleteStatus.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateStatus.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateStatus.java
+docs/sdk/README.md
 USAGE.md

@@ -12,6 +12,7 @@ public class PlayMediaControlCommandSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookmarkTrack")
     public Boolean bookmarkTrack;
+
     public PlayMediaControlCommandSet withBookmarkTrack(Boolean bookmarkTrack) {
         this.bookmarkTrack = bookmarkTrack;
         return this;
@@ -20,6 +21,7 @@ public class PlayMediaControlCommandSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dislikeTrack")
     public Boolean dislikeTrack;
+
     public PlayMediaControlCommandSet withDislikeTrack(Boolean dislikeTrack) {
         this.dislikeTrack = dislikeTrack;
         return this;
@@ -28,6 +30,7 @@ public class PlayMediaControlCommandSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("likeTrack")
     public Boolean likeTrack;
+
     public PlayMediaControlCommandSet withLikeTrack(Boolean likeTrack) {
         this.likeTrack = likeTrack;
         return this;
@@ -36,6 +39,7 @@ public class PlayMediaControlCommandSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextTrack")
     public Boolean nextTrack;
+
     public PlayMediaControlCommandSet withNextTrack(Boolean nextTrack) {
         this.nextTrack = nextTrack;
         return this;
@@ -44,6 +48,7 @@ public class PlayMediaControlCommandSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferSkipBackward")
     public Boolean preferSkipBackward;
+
     public PlayMediaControlCommandSet withPreferSkipBackward(Boolean preferSkipBackward) {
         this.preferSkipBackward = preferSkipBackward;
         return this;
@@ -52,6 +57,7 @@ public class PlayMediaControlCommandSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferSkipForward")
     public Boolean preferSkipForward;
+
     public PlayMediaControlCommandSet withPreferSkipForward(Boolean preferSkipForward) {
         this.preferSkipForward = preferSkipForward;
         return this;
@@ -60,6 +66,7 @@ public class PlayMediaControlCommandSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previousTrack")
     public Boolean previousTrack;
+
     public PlayMediaControlCommandSet withPreviousTrack(Boolean previousTrack) {
         this.previousTrack = previousTrack;
         return this;
@@ -68,6 +75,7 @@ public class PlayMediaControlCommandSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seekToPlaybackPosition")
     public Boolean seekToPlaybackPosition;
+
     public PlayMediaControlCommandSet withSeekToPlaybackPosition(Boolean seekToPlaybackPosition) {
         this.seekToPlaybackPosition = seekToPlaybackPosition;
         return this;
@@ -76,6 +84,7 @@ public class PlayMediaControlCommandSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipBackward")
     public Boolean skipBackward;
+
     public PlayMediaControlCommandSet withSkipBackward(Boolean skipBackward) {
         this.skipBackward = skipBackward;
         return this;
@@ -84,9 +93,11 @@ public class PlayMediaControlCommandSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipForward")
     public Boolean skipForward;
+
     public PlayMediaControlCommandSet withSkipForward(Boolean skipForward) {
         this.skipForward = skipForward;
         return this;
     }
     
+    public PlayMediaControlCommandSet(){}
 }

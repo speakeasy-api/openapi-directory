@@ -12,6 +12,7 @@ public class PatientPlanSummaryResourceAttributesWindowOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_actions")
     public String[] actions;
+
     public PatientPlanSummaryResourceAttributesWindowOrder withActions(String[] actions) {
         this.actions = actions;
         return this;
@@ -20,9 +21,11 @@ public class PatientPlanSummaryResourceAttributesWindowOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public PatientPlanSummaryResourceAttributesWindowOrder withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PatientPlanSummaryResourceAttributesWindowOrder(){}
 }

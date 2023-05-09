@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListTagsForDomainRequest {
     @JsonProperty("DomainName")
     public String domainName;
+
     public ListTagsForDomainRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public ListTagsForDomainRequest(@JsonProperty("DomainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceCreditSpecificationsRequest {
     
     public Boolean dryRun;
+
     public DescribeInstanceCreditSpecificationsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeInstanceCreditSpecificationsRequest {
     
     
     public DescribeInstanceCreditSpecificationsRequestFilters[] filters;
+
     public DescribeInstanceCreditSpecificationsRequest withFilters(DescribeInstanceCreditSpecificationsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeInstanceCreditSpecificationsRequest {
     
     
     public String[] instanceIds;
+
     public DescribeInstanceCreditSpecificationsRequest withInstanceIds(String[] instanceIds) {
         this.instanceIds = instanceIds;
         return this;
@@ -30,6 +33,7 @@ public class DescribeInstanceCreditSpecificationsRequest {
     
     
     public Long maxResults;
+
     public DescribeInstanceCreditSpecificationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +41,11 @@ public class DescribeInstanceCreditSpecificationsRequest {
     
     
     public String nextToken;
+
     public DescribeInstanceCreditSpecificationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeInstanceCreditSpecificationsRequest(){}
 }

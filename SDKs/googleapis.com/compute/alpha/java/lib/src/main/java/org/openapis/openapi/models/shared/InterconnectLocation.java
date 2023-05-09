@@ -18,6 +18,7 @@ public class InterconnectLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public InterconnectLocation withAddress(String address) {
         this.address = address;
         return this;
@@ -29,8 +30,33 @@ public class InterconnectLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availabilityZone")
     public String availabilityZone;
+
     public InterconnectLocation withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
+        return this;
+    }
+    
+    /**
+     * [Output only] List of features available at this interconnect location, which can take one of the following values: - MACSEC 
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("availableFeatures")
+    public InterconnectLocationAvailableFeaturesEnum[] availableFeatures;
+
+    public InterconnectLocation withAvailableFeatures(InterconnectLocationAvailableFeaturesEnum[] availableFeatures) {
+        this.availableFeatures = availableFeatures;
+        return this;
+    }
+    
+    /**
+     * [Output only] List of link types available at this interconnect location, which can take one of the following values: - LINK_TYPE_ETHERNET_10G_LR - LINK_TYPE_ETHERNET_100G_LR 
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("availableLinkTypes")
+    public InterconnectLocationAvailableLinkTypesEnum[] availableLinkTypes;
+
+    public InterconnectLocation withAvailableLinkTypes(InterconnectLocationAvailableLinkTypesEnum[] availableLinkTypes) {
+        this.availableLinkTypes = availableLinkTypes;
         return this;
     }
     
@@ -40,6 +66,7 @@ public class InterconnectLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public InterconnectLocation withCity(String city) {
         this.city = city;
         return this;
@@ -51,6 +78,7 @@ public class InterconnectLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("continent")
     public InterconnectLocationContinentEnum continent;
+
     public InterconnectLocation withContinent(InterconnectLocationContinentEnum continent) {
         this.continent = continent;
         return this;
@@ -62,6 +90,7 @@ public class InterconnectLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public InterconnectLocation withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -73,6 +102,7 @@ public class InterconnectLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public InterconnectLocation withDescription(String description) {
         this.description = description;
         return this;
@@ -84,6 +114,7 @@ public class InterconnectLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facilityProvider")
     public String facilityProvider;
+
     public InterconnectLocation withFacilityProvider(String facilityProvider) {
         this.facilityProvider = facilityProvider;
         return this;
@@ -95,6 +126,7 @@ public class InterconnectLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facilityProviderFacilityId")
     public String facilityProviderFacilityId;
+
     public InterconnectLocation withFacilityProviderFacilityId(String facilityProviderFacilityId) {
         this.facilityProviderFacilityId = facilityProviderFacilityId;
         return this;
@@ -106,6 +138,7 @@ public class InterconnectLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public InterconnectLocation withId(String id) {
         this.id = id;
         return this;
@@ -117,6 +150,7 @@ public class InterconnectLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public InterconnectLocation withKind(String kind) {
         this.kind = kind;
         return this;
@@ -128,6 +162,7 @@ public class InterconnectLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public InterconnectLocation withName(String name) {
         this.name = name;
         return this;
@@ -139,6 +174,7 @@ public class InterconnectLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peeringdbFacilityId")
     public String peeringdbFacilityId;
+
     public InterconnectLocation withPeeringdbFacilityId(String peeringdbFacilityId) {
         this.peeringdbFacilityId = peeringdbFacilityId;
         return this;
@@ -150,6 +186,7 @@ public class InterconnectLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionInfos")
     public InterconnectLocationRegionInfo[] regionInfos;
+
     public InterconnectLocation withRegionInfos(InterconnectLocationRegionInfo[] regionInfos) {
         this.regionInfos = regionInfos;
         return this;
@@ -161,6 +198,7 @@ public class InterconnectLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public InterconnectLocation withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -172,6 +210,7 @@ public class InterconnectLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLinkWithId")
     public String selfLinkWithId;
+
     public InterconnectLocation withSelfLinkWithId(String selfLinkWithId) {
         this.selfLinkWithId = selfLinkWithId;
         return this;
@@ -183,6 +222,7 @@ public class InterconnectLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public InterconnectLocationStatusEnum status;
+
     public InterconnectLocation withStatus(InterconnectLocationStatusEnum status) {
         this.status = status;
         return this;
@@ -194,9 +234,11 @@ public class InterconnectLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportsPzs")
     public Boolean supportsPzs;
+
     public InterconnectLocation withSupportsPzs(Boolean supportsPzs) {
         this.supportsPzs = supportsPzs;
         return this;
     }
     
+    public InterconnectLocation(){}
 }

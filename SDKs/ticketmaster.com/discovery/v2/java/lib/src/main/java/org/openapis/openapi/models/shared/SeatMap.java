@@ -15,9 +15,11 @@ public class SeatMap {
      */
     
     public String staticUrl;
+
     public SeatMap withStaticUrl(String staticUrl) {
         this.staticUrl = staticUrl;
         return this;
     }
     
+    public SeatMap(){}
 }

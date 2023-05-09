@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdatepartialinvoiceSendTrackingNumber {
     @JsonProperty("date")
     public String date;
+
     public UpdatepartialinvoiceSendTrackingNumber withDate(String date) {
         this.date = date;
         return this;
@@ -19,6 +20,7 @@ public class UpdatepartialinvoiceSendTrackingNumber {
     
     @JsonProperty("orderId")
     public String orderId;
+
     public UpdatepartialinvoiceSendTrackingNumber withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -26,9 +28,15 @@ public class UpdatepartialinvoiceSendTrackingNumber {
     
     @JsonProperty("receipt")
     public String receipt;
+
     public UpdatepartialinvoiceSendTrackingNumber withReceipt(String receipt) {
         this.receipt = receipt;
         return this;
     }
     
+    public UpdatepartialinvoiceSendTrackingNumber(@JsonProperty("date") String date, @JsonProperty("orderId") String orderId, @JsonProperty("receipt") String receipt) {
+        this.date = date;
+        this.orderId = orderId;
+        this.receipt = receipt;
+  }
 }

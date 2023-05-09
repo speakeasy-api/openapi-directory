@@ -17,6 +17,7 @@ public class AugmentationData {
      */
     @JsonProperty("changes")
     public Change[] changes;
+
     public AugmentationData withChanges(Change[] changes) {
         this.changes = changes;
         return this;
@@ -27,6 +28,7 @@ public class AugmentationData {
      */
     @JsonProperty("relatedEntityId")
     public String relatedEntityId;
+
     public AugmentationData withRelatedEntityId(String relatedEntityId) {
         this.relatedEntityId = relatedEntityId;
         return this;
@@ -37,6 +39,7 @@ public class AugmentationData {
      */
     @JsonProperty("relatedEntityType")
     public AugmentationDataRelatedEntityTypeEnum relatedEntityType;
+
     public AugmentationData withRelatedEntityType(AugmentationDataRelatedEntityTypeEnum relatedEntityType) {
         this.relatedEntityType = relatedEntityType;
         return this;
@@ -48,6 +51,7 @@ public class AugmentationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Float score;
+
     public AugmentationData withScore(Float score) {
         this.score = score;
         return this;
@@ -58,6 +62,7 @@ public class AugmentationData {
      */
     @JsonProperty("source")
     public String source;
+
     public AugmentationData withSource(String source) {
         this.source = source;
         return this;
@@ -68,9 +73,17 @@ public class AugmentationData {
      */
     @JsonProperty("versionNumber")
     public Long versionNumber;
+
     public AugmentationData withVersionNumber(Long versionNumber) {
         this.versionNumber = versionNumber;
         return this;
     }
     
+    public AugmentationData(@JsonProperty("changes") Change[] changes, @JsonProperty("relatedEntityId") String relatedEntityId, @JsonProperty("relatedEntityType") AugmentationDataRelatedEntityTypeEnum relatedEntityType, @JsonProperty("source") String source, @JsonProperty("versionNumber") Long versionNumber) {
+        this.changes = changes;
+        this.relatedEntityId = relatedEntityId;
+        this.relatedEntityType = relatedEntityType;
+        this.source = source;
+        this.versionNumber = versionNumber;
+  }
 }

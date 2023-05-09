@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetListRequest {
@@ -12,6 +13,7 @@ public class GetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
     public String device;
+
     public GetListRequest withDevice(String device) {
         this.device = device;
         return this;
@@ -42,6 +44,7 @@ public class GetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public GetListRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -52,6 +55,7 @@ public class GetListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetListRequest withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class GetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=item_type")
     public org.openapis.openapi.models.shared.ItemTypeEnum itemType;
+
     public GetListRequest withItemType(org.openapis.openapi.models.shared.ItemTypeEnum itemType) {
         this.itemType = itemType;
         return this;
@@ -82,6 +87,7 @@ public class GetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetListRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -92,6 +98,7 @@ public class GetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_rating")
     public String maxRating;
+
     public GetListRequest withMaxRating(String maxRating) {
         this.maxRating = maxRating;
         return this;
@@ -102,6 +109,7 @@ public class GetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public org.openapis.openapi.models.shared.ListOrderEnum order;
+
     public GetListRequest withOrder(org.openapis.openapi.models.shared.ListOrderEnum order) {
         this.order = order;
         return this;
@@ -112,6 +120,7 @@ public class GetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_by")
     public org.openapis.openapi.models.shared.ListOrderByEnum orderBy;
+
     public GetListRequest withOrderBy(org.openapis.openapi.models.shared.ListOrderByEnum orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -122,6 +131,7 @@ public class GetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetListRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -132,6 +142,7 @@ public class GetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Integer pageSize;
+
     public GetListRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -142,6 +153,7 @@ public class GetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=param")
     public String param;
+
     public GetListRequest withParam(String param) {
         this.param = param;
         return this;
@@ -152,6 +164,7 @@ public class GetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=segments")
     public String[] segments;
+
     public GetListRequest withSegments(String[] segments) {
         this.segments = segments;
         return this;
@@ -162,9 +175,13 @@ public class GetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sub")
     public String sub;
+
     public GetListRequest withSub(String sub) {
         this.sub = sub;
         return this;
     }
     
+    public GetListRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

@@ -18,9 +18,11 @@ public class ImageClassificationDatasetMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classificationType")
     public ImageClassificationDatasetMetadataClassificationTypeEnum classificationType;
+
     public ImageClassificationDatasetMetadata withClassificationType(ImageClassificationDatasetMetadataClassificationTypeEnum classificationType) {
         this.classificationType = classificationType;
         return this;
     }
     
+    public ImageClassificationDatasetMetadata(){}
 }

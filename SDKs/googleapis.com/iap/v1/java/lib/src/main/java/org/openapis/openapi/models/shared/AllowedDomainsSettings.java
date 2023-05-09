@@ -18,6 +18,7 @@ public class AllowedDomainsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domains")
     public String[] domains;
+
     public AllowedDomainsSettings withDomains(String[] domains) {
         this.domains = domains;
         return this;
@@ -29,9 +30,11 @@ public class AllowedDomainsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enable")
     public Boolean enable;
+
     public AllowedDomainsSettings withEnable(Boolean enable) {
         this.enable = enable;
         return this;
     }
     
+    public AllowedDomainsSettings(){}
 }

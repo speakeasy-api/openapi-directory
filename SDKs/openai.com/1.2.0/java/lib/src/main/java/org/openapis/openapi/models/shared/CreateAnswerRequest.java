@@ -18,6 +18,7 @@ public class CreateAnswerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
     public String[] documents;
+
     public CreateAnswerRequest withDocuments(String[] documents) {
         this.documents = documents;
         return this;
@@ -28,6 +29,7 @@ public class CreateAnswerRequest {
      */
     @JsonProperty("examples")
     public String[][] examples;
+
     public CreateAnswerRequest withExamples(String[][] examples) {
         this.examples = examples;
         return this;
@@ -38,6 +40,7 @@ public class CreateAnswerRequest {
      */
     @JsonProperty("examples_context")
     public String examplesContext;
+
     public CreateAnswerRequest withExamplesContext(String examplesContext) {
         this.examplesContext = examplesContext;
         return this;
@@ -49,6 +52,7 @@ public class CreateAnswerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expand")
     public Object[] expand;
+
     public CreateAnswerRequest withExpand(Object[] expand) {
         this.expand = expand;
         return this;
@@ -63,6 +67,7 @@ public class CreateAnswerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file")
     public String file;
+
     public CreateAnswerRequest withFile(String file) {
         this.file = file;
         return this;
@@ -79,6 +84,7 @@ public class CreateAnswerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logit_bias")
     public java.util.Map<String, Object> logitBias;
+
     public CreateAnswerRequest withLogitBias(java.util.Map<String, Object> logitBias) {
         this.logitBias = logitBias;
         return this;
@@ -95,6 +101,7 @@ public class CreateAnswerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logprobs")
     public Long logprobs;
+
     public CreateAnswerRequest withLogprobs(Long logprobs) {
         this.logprobs = logprobs;
         return this;
@@ -106,6 +113,7 @@ public class CreateAnswerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_rerank")
     public Long maxRerank;
+
     public CreateAnswerRequest withMaxRerank(Long maxRerank) {
         this.maxRerank = maxRerank;
         return this;
@@ -117,6 +125,7 @@ public class CreateAnswerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_tokens")
     public Long maxTokens;
+
     public CreateAnswerRequest withMaxTokens(Long maxTokens) {
         this.maxTokens = maxTokens;
         return this;
@@ -127,6 +136,7 @@ public class CreateAnswerRequest {
      */
     @JsonProperty("model")
     public String model;
+
     public CreateAnswerRequest withModel(String model) {
         this.model = model;
         return this;
@@ -138,6 +148,7 @@ public class CreateAnswerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("n")
     public Long n;
+
     public CreateAnswerRequest withN(Long n) {
         this.n = n;
         return this;
@@ -148,6 +159,7 @@ public class CreateAnswerRequest {
      */
     @JsonProperty("question")
     public String question;
+
     public CreateAnswerRequest withQuestion(String question) {
         this.question = question;
         return this;
@@ -162,6 +174,7 @@ public class CreateAnswerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("return_metadata")
     public Boolean returnMetadata;
+
     public CreateAnswerRequest withReturnMetadata(Boolean returnMetadata) {
         this.returnMetadata = returnMetadata;
         return this;
@@ -173,6 +186,7 @@ public class CreateAnswerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("return_prompt")
     public Boolean returnPrompt;
+
     public CreateAnswerRequest withReturnPrompt(Boolean returnPrompt) {
         this.returnPrompt = returnPrompt;
         return this;
@@ -184,6 +198,7 @@ public class CreateAnswerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("search_model")
     public String searchModel;
+
     public CreateAnswerRequest withSearchModel(String searchModel) {
         this.searchModel = searchModel;
         return this;
@@ -196,6 +211,7 @@ public class CreateAnswerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stop")
     public Object stop;
+
     public CreateAnswerRequest withStop(Object stop) {
         this.stop = stop;
         return this;
@@ -207,6 +223,7 @@ public class CreateAnswerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("temperature")
     public Double temperature;
+
     public CreateAnswerRequest withTemperature(Double temperature) {
         this.temperature = temperature;
         return this;
@@ -219,9 +236,16 @@ public class CreateAnswerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public String user;
+
     public CreateAnswerRequest withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public CreateAnswerRequest(@JsonProperty("examples") String[][] examples, @JsonProperty("examples_context") String examplesContext, @JsonProperty("model") String model, @JsonProperty("question") String question) {
+        this.examples = examples;
+        this.examplesContext = examplesContext;
+        this.model = model;
+        this.question = question;
+  }
 }

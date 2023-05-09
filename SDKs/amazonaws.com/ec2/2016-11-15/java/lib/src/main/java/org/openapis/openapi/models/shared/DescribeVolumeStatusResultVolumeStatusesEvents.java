@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeVolumeStatusResultVolumeStatusesEvents {
     
     public String description;
+
     public DescribeVolumeStatusResultVolumeStatusesEvents withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class DescribeVolumeStatusResultVolumeStatusesEvents {
     
     
     public String eventId;
+
     public DescribeVolumeStatusResultVolumeStatusesEvents withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeVolumeStatusResultVolumeStatusesEvents {
     
     
     public String eventType;
+
     public DescribeVolumeStatusResultVolumeStatusesEvents withEventType(String eventType) {
         this.eventType = eventType;
         return this;
@@ -33,6 +36,7 @@ public class DescribeVolumeStatusResultVolumeStatusesEvents {
     
     
     public String instanceId;
+
     public DescribeVolumeStatusResultVolumeStatusesEvents withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -40,6 +44,7 @@ public class DescribeVolumeStatusResultVolumeStatusesEvents {
     
     
     public OffsetDateTime notAfter;
+
     public DescribeVolumeStatusResultVolumeStatusesEvents withNotAfter(OffsetDateTime notAfter) {
         this.notAfter = notAfter;
         return this;
@@ -47,9 +52,11 @@ public class DescribeVolumeStatusResultVolumeStatusesEvents {
     
     
     public OffsetDateTime notBefore;
+
     public DescribeVolumeStatusResultVolumeStatusesEvents withNotBefore(OffsetDateTime notBefore) {
         this.notBefore = notBefore;
         return this;
     }
     
+    public DescribeVolumeStatusResultVolumeStatusesEvents(){}
 }

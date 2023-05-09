@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProductRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public GetProductRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -16,6 +18,7 @@ public class GetProductRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationUuid")
     public String organizationUuid;
+
     public GetProductRequest withOrganizationUuid(String organizationUuid) {
         this.organizationUuid = organizationUuid;
         return this;
@@ -23,9 +26,14 @@ public class GetProductRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productUuid")
     public String productUuid;
+
     public GetProductRequest withProductUuid(String productUuid) {
         this.productUuid = productUuid;
         return this;
     }
     
+    public GetProductRequest(@JsonProperty("organizationUuid") String organizationUuid, @JsonProperty("productUuid") String productUuid) {
+        this.organizationUuid = organizationUuid;
+        this.productUuid = productUuid;
+  }
 }

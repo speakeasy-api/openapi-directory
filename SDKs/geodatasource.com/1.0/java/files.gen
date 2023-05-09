@@ -32,4 +32,5 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetCityFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCityRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCityResponse.java
+docs/sdk/README.md
 USAGE.md

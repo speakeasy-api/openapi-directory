@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GitCreateRefResponse {
     
     public String contentType;
+
     public GitCreateRefResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GitCreateRefResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GitCreateRefResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GitCreateRefResponse {
     
     
     public Integer statusCode;
+
     public GitCreateRefResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GitCreateRefResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GitCreateRefResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GitCreateRefResponse {
      */
     
     public org.openapis.openapi.models.shared.GitRef gitRef;
+
     public GitCreateRefResponse withGitRef(org.openapis.openapi.models.shared.GitRef gitRef) {
         this.gitRef = gitRef;
         return this;
@@ -50,9 +56,14 @@ public class GitCreateRefResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public GitCreateRefResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public GitCreateRefResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

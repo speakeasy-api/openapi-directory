@@ -17,6 +17,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public Location withAddress(String address) {
         this.address = address;
         return this;
@@ -27,6 +28,7 @@ public class Location {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public Location withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -35,6 +37,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public Location withEmail(String email) {
         this.email = email;
         return this;
@@ -43,6 +46,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Location withId(Long id) {
         this.id = id;
         return this;
@@ -51,6 +55,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public Location withLabel(String label) {
         this.label = label;
         return this;
@@ -61,6 +66,7 @@ public class Location {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdate")
     public OffsetDateTime lastUpdate;
+
     public Location withLastUpdate(OffsetDateTime lastUpdate) {
         this.lastUpdate = lastUpdate;
         return this;
@@ -69,6 +75,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Location withName(String name) {
         this.name = name;
         return this;
@@ -77,6 +84,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public Location withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -85,9 +93,11 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web")
     public String web;
+
     public Location withWeb(String web) {
         this.web = web;
         return this;
     }
     
+    public Location(){}
 }

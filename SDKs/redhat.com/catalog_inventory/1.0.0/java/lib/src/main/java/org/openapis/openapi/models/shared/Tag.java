@@ -12,9 +12,11 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
+
     public Tag withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public Tag(){}
 }

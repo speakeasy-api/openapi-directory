@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteProductsIdAttachmentsAttachmentIdJsonResponse {
     
     public String contentType;
+
     public DeleteProductsIdAttachmentsAttachmentIdJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteProductsIdAttachmentsAttachmentIdJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public DeleteProductsIdAttachmentsAttachmentIdJsonResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -26,6 +29,7 @@ public class DeleteProductsIdAttachmentsAttachmentIdJsonResponse {
     
     
     public Integer statusCode;
+
     public DeleteProductsIdAttachmentsAttachmentIdJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeleteProductsIdAttachmentsAttachmentIdJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteProductsIdAttachmentsAttachmentIdJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class DeleteProductsIdAttachmentsAttachmentIdJsonResponse {
      */
     
     public String deleteProductsIdAttachmentsAttachmentIdJSON200ApplicationJSONString;
+
     public DeleteProductsIdAttachmentsAttachmentIdJsonResponse withDeleteProductsIdAttachmentsAttachmentIdJSON200ApplicationJSONString(String deleteProductsIdAttachmentsAttachmentIdJSON200ApplicationJSONString) {
         this.deleteProductsIdAttachmentsAttachmentIdJSON200ApplicationJSONString = deleteProductsIdAttachmentsAttachmentIdJSON200ApplicationJSONString;
         return this;
     }
     
+    public DeleteProductsIdAttachmentsAttachmentIdJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

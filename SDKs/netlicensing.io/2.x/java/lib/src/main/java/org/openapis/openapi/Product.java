@@ -60,12 +60,10 @@ public class Product {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateProductResponse res = new org.openapis.openapi.models.operations.CreateProductResponse() {{
+        org.openapis.openapi.models.operations.CreateProductResponse res = new org.openapis.openapi.models.operations.CreateProductResponse(contentType, httpRes.statusCode()) {{
             netlicensing = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -114,12 +112,10 @@ public class Product {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteProductResponse res = new org.openapis.openapi.models.operations.DeleteProductResponse() {{
+        org.openapis.openapi.models.operations.DeleteProductResponse res = new org.openapis.openapi.models.operations.DeleteProductResponse(contentType, httpRes.statusCode()) {{
             netlicensing = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -142,10 +138,11 @@ public class Product {
     /**
      * List Products
      * Return a list of all configured Products for the current Vendor
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListProductsResponse listProducts() throws Exception {
+    public org.openapis.openapi.models.operations.ListProductsResponse listProducts(org.openapis.openapi.models.operations.ListProductsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/product");
         
@@ -154,17 +151,16 @@ public class Product {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListProductsResponse res = new org.openapis.openapi.models.operations.ListProductsResponse() {{
+        org.openapis.openapi.models.operations.ListProductsResponse res = new org.openapis.openapi.models.operations.ListProductsResponse(contentType, httpRes.statusCode()) {{
             netlicensings = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -207,12 +203,10 @@ public class Product {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProductNumberResponse res = new org.openapis.openapi.models.operations.ProductNumberResponse() {{
+        org.openapis.openapi.models.operations.ProductNumberResponse res = new org.openapis.openapi.models.operations.ProductNumberResponse(contentType, httpRes.statusCode()) {{
             netlicensing = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -257,12 +251,10 @@ public class Product {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateProductResponse res = new org.openapis.openapi.models.operations.UpdateProductResponse() {{
+        org.openapis.openapi.models.operations.UpdateProductResponse res = new org.openapis.openapi.models.operations.UpdateProductResponse(contentType, httpRes.statusCode()) {{
             netlicensing = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class ListIdentityProviderConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityProviderConfigs")
     public IdentityProviderConfig[] identityProviderConfigs;
+
     public ListIdentityProviderConfigsResponse withIdentityProviderConfigs(IdentityProviderConfig[] identityProviderConfigs) {
         this.identityProviderConfigs = identityProviderConfigs;
         return this;
@@ -23,9 +24,11 @@ public class ListIdentityProviderConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListIdentityProviderConfigsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListIdentityProviderConfigsResponse(){}
 }

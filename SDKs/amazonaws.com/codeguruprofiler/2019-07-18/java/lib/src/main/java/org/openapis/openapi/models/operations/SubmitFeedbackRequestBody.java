@@ -15,6 +15,7 @@ public class SubmitFeedbackRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public SubmitFeedbackRequestBody withComment(String comment) {
         this.comment = comment;
         return this;
@@ -25,9 +26,13 @@ public class SubmitFeedbackRequestBody {
      */
     @JsonProperty("type")
     public SubmitFeedbackRequestBodyTypeEnum type;
+
     public SubmitFeedbackRequestBody withType(SubmitFeedbackRequestBodyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SubmitFeedbackRequestBody(@JsonProperty("type") SubmitFeedbackRequestBodyTypeEnum type) {
+        this.type = type;
+  }
 }

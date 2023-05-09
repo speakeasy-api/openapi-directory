@@ -18,6 +18,7 @@ public class AssetType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accumulatedDepreciationAccountId")
     public String accumulatedDepreciationAccountId;
+
     public AssetType withAccumulatedDepreciationAccountId(String accumulatedDepreciationAccountId) {
         this.accumulatedDepreciationAccountId = accumulatedDepreciationAccountId;
         return this;
@@ -29,6 +30,7 @@ public class AssetType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetTypeId")
     public String assetTypeId;
+
     public AssetType withAssetTypeId(String assetTypeId) {
         this.assetTypeId = assetTypeId;
         return this;
@@ -39,6 +41,7 @@ public class AssetType {
      */
     @JsonProperty("assetTypeName")
     public String assetTypeName;
+
     public AssetType withAssetTypeName(String assetTypeName) {
         this.assetTypeName = assetTypeName;
         return this;
@@ -46,6 +49,7 @@ public class AssetType {
     
     @JsonProperty("bookDepreciationSetting")
     public BookDepreciationSetting bookDepreciationSetting;
+
     public AssetType withBookDepreciationSetting(BookDepreciationSetting bookDepreciationSetting) {
         this.bookDepreciationSetting = bookDepreciationSetting;
         return this;
@@ -57,6 +61,7 @@ public class AssetType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("depreciationExpenseAccountId")
     public String depreciationExpenseAccountId;
+
     public AssetType withDepreciationExpenseAccountId(String depreciationExpenseAccountId) {
         this.depreciationExpenseAccountId = depreciationExpenseAccountId;
         return this;
@@ -68,20 +73,26 @@ public class AssetType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixedAssetAccountId")
     public String fixedAssetAccountId;
+
     public AssetType withFixedAssetAccountId(String fixedAssetAccountId) {
         this.fixedAssetAccountId = fixedAssetAccountId;
         return this;
     }
     
     /**
-     * All asset types that have accumulated depreciation for any assets that use them are deemed \u2018locked\u2019 and cannot be removed.
+     * All asset types that have accumulated depreciation for any assets that use them are deemed ‘locked’ and cannot be removed.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locks")
     public Long locks;
+
     public AssetType withLocks(Long locks) {
         this.locks = locks;
         return this;
     }
     
+    public AssetType(@JsonProperty("assetTypeName") String assetTypeName, @JsonProperty("bookDepreciationSetting") BookDepreciationSetting bookDepreciationSetting) {
+        this.assetTypeName = assetTypeName;
+        this.bookDepreciationSetting = bookDepreciationSetting;
+  }
 }

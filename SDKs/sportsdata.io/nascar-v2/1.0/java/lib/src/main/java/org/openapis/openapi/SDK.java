@@ -130,6 +130,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -154,11 +159,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriverDetailsResponse res = new org.openapis.openapi.models.operations.DriverDetailsResponse() {{
+        org.openapis.openapi.models.operations.DriverDetailsResponse res = new org.openapis.openapi.models.operations.DriverDetailsResponse(contentType, httpRes.statusCode()) {{
             driver = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +196,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriverRaceProjectionsEntryListResponse res = new org.openapis.openapi.models.operations.DriverRaceProjectionsEntryListResponse() {{
+        org.openapis.openapi.models.operations.DriverRaceProjectionsEntryListResponse res = new org.openapis.openapi.models.operations.DriverRaceProjectionsEntryListResponse(contentType, httpRes.statusCode()) {{
             driverRaceProjections = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -232,11 +233,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriversResponse res = new org.openapis.openapi.models.operations.DriversResponse() {{
+        org.openapis.openapi.models.operations.DriversResponse res = new org.openapis.openapi.models.operations.DriversResponse(contentType, httpRes.statusCode()) {{
             drivers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -271,11 +270,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RaceResultsResponse res = new org.openapis.openapi.models.operations.RaceResultsResponse() {{
+        org.openapis.openapi.models.operations.RaceResultsResponse res = new org.openapis.openapi.models.operations.RaceResultsResponse(contentType, httpRes.statusCode()) {{
             raceResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -310,11 +307,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RacesScheduleResponse res = new org.openapis.openapi.models.operations.RacesScheduleResponse() {{
+        org.openapis.openapi.models.operations.RacesScheduleResponse res = new org.openapis.openapi.models.operations.RacesScheduleResponse(contentType, httpRes.statusCode()) {{
             races = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -349,11 +344,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SeriesResponse res = new org.openapis.openapi.models.operations.SeriesResponse() {{
+        org.openapis.openapi.models.operations.SeriesResponse res = new org.openapis.openapi.models.operations.SeriesResponse(contentType, httpRes.statusCode()) {{
             series = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SortCondition {
     @JsonProperty("Name")
     public ListDomainsAttributeNameEnum name;
+
     public SortCondition withName(ListDomainsAttributeNameEnum name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class SortCondition {
     
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public SortCondition withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public SortCondition(@JsonProperty("Name") ListDomainsAttributeNameEnum name, @JsonProperty("SortOrder") SortOrderEnum sortOrder) {
+        this.name = name;
+        this.sortOrder = sortOrder;
+  }
 }

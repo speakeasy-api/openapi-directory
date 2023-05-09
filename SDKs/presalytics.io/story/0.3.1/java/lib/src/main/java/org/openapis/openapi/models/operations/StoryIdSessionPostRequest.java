@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoryIdSessionPostRequest {
@@ -12,6 +13,7 @@ public class StoryIdSessionPostRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateSessionRequest createSessionRequest;
+
     public StoryIdSessionPostRequest withCreateSessionRequest(org.openapis.openapi.models.shared.CreateSessionRequest createSessionRequest) {
         this.createSessionRequest = createSessionRequest;
         return this;
@@ -22,9 +24,14 @@ public class StoryIdSessionPostRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public StoryIdSessionPostRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public StoryIdSessionPostRequest(@JsonProperty("create_session_request") org.openapis.openapi.models.shared.CreateSessionRequest createSessionRequest, @JsonProperty("id") String id) {
+        this.createSessionRequest = createSessionRequest;
+        this.id = id;
+  }
 }

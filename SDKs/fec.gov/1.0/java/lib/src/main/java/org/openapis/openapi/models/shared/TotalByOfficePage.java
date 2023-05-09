@@ -12,6 +12,7 @@ public class TotalByOfficePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public OffsetInfo pagination;
+
     public TotalByOfficePage withPagination(OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class TotalByOfficePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public TotalByOffice[] results;
+
     public TotalByOfficePage withResults(TotalByOffice[] results) {
         this.results = results;
         return this;
     }
     
+    public TotalByOfficePage(){}
 }

@@ -15,6 +15,7 @@ public class PatientHealthResultResourceRelationshipsPatientDataMetaQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groups")
     public String[] groups;
+
     public PatientHealthResultResourceRelationshipsPatientDataMetaQuery withGroups(String[] groups) {
         this.groups = groups;
         return this;
@@ -22,6 +23,7 @@ public class PatientHealthResultResourceRelationshipsPatientDataMetaQuery {
     
     @JsonProperty("identifier")
     public PatientHealthResultResourceRelationshipsPatientDataMetaQueryIdentifier identifier;
+
     public PatientHealthResultResourceRelationshipsPatientDataMetaQuery withIdentifier(PatientHealthResultResourceRelationshipsPatientDataMetaQueryIdentifier identifier) {
         this.identifier = identifier;
         return this;
@@ -30,9 +32,13 @@ public class PatientHealthResultResourceRelationshipsPatientDataMetaQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public String organization;
+
     public PatientHealthResultResourceRelationshipsPatientDataMetaQuery withOrganization(String organization) {
         this.organization = organization;
         return this;
     }
     
+    public PatientHealthResultResourceRelationshipsPatientDataMetaQuery(@JsonProperty("identifier") PatientHealthResultResourceRelationshipsPatientDataMetaQueryIdentifier identifier) {
+        this.identifier = identifier;
+  }
 }

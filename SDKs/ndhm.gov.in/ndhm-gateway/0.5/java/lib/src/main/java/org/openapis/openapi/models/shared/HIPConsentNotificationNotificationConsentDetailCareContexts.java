@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HIPConsentNotificationNotificationConsentDetailCareContexts {
     @JsonProperty("careContextReference")
     public String careContextReference;
+
     public HIPConsentNotificationNotificationConsentDetailCareContexts withCareContextReference(String careContextReference) {
         this.careContextReference = careContextReference;
         return this;
@@ -16,9 +17,14 @@ public class HIPConsentNotificationNotificationConsentDetailCareContexts {
     
     @JsonProperty("patientReference")
     public String patientReference;
+
     public HIPConsentNotificationNotificationConsentDetailCareContexts withPatientReference(String patientReference) {
         this.patientReference = patientReference;
         return this;
     }
     
+    public HIPConsentNotificationNotificationConsentDetailCareContexts(@JsonProperty("careContextReference") String careContextReference, @JsonProperty("patientReference") String patientReference) {
+        this.careContextReference = careContextReference;
+        this.patientReference = patientReference;
+  }
 }

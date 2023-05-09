@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SettleGiftCardTransactionResponse {
     
     public String contentType;
+
     public SettleGiftCardTransactionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SettleGiftCardTransactionResponse {
     
     
     public Integer statusCode;
+
     public SettleGiftCardTransactionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SettleGiftCardTransactionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SettleGiftCardTransactionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -30,9 +34,14 @@ public class SettleGiftCardTransactionResponse {
     
     
     public org.openapis.openapi.models.shared.Response6 response6;
+
     public SettleGiftCardTransactionResponse withResponse6(org.openapis.openapi.models.shared.Response6 response6) {
         this.response6 = response6;
         return this;
     }
     
+    public SettleGiftCardTransactionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class UnclaimDevicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unclaims")
     public PartnerUnclaim[] unclaims;
+
     public UnclaimDevicesRequest withUnclaims(PartnerUnclaim[] unclaims) {
         this.unclaims = unclaims;
         return this;
     }
     
+    public UnclaimDevicesRequest(){}
 }

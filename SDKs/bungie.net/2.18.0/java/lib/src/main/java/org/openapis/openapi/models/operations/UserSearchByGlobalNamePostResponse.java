@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UserSearchByGlobalNamePostResponse {
     
     public byte[] body;
+
     public UserSearchByGlobalNamePostResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class UserSearchByGlobalNamePostResponse {
     
     
     public String contentType;
+
     public UserSearchByGlobalNamePostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class UserSearchByGlobalNamePostResponse {
     
     
     public Integer statusCode;
+
     public UserSearchByGlobalNamePostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class UserSearchByGlobalNamePostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UserSearchByGlobalNamePostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UserSearchByGlobalNamePostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

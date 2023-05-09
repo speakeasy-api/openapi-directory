@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ContentNewsArticleRssResponse {
     
     public String categoryFilter;
+
     public ContentNewsArticleRssResponse withCategoryFilter(String categoryFilter) {
         this.categoryFilter = categoryFilter;
         return this;
@@ -16,6 +17,7 @@ public class ContentNewsArticleRssResponse {
     
     
     public Integer currentPaginationToken;
+
     public ContentNewsArticleRssResponse withCurrentPaginationToken(Integer currentPaginationToken) {
         this.currentPaginationToken = currentPaginationToken;
         return this;
@@ -23,6 +25,7 @@ public class ContentNewsArticleRssResponse {
     
     
     public ContentNewsArticleRssItem[] newsArticles;
+
     public ContentNewsArticleRssResponse withNewsArticles(ContentNewsArticleRssItem[] newsArticles) {
         this.newsArticles = newsArticles;
         return this;
@@ -30,6 +33,7 @@ public class ContentNewsArticleRssResponse {
     
     
     public Integer nextPaginationToken;
+
     public ContentNewsArticleRssResponse withNextPaginationToken(Integer nextPaginationToken) {
         this.nextPaginationToken = nextPaginationToken;
         return this;
@@ -37,9 +41,11 @@ public class ContentNewsArticleRssResponse {
     
     
     public Integer resultCountThisPage;
+
     public ContentNewsArticleRssResponse withResultCountThisPage(Integer resultCountThisPage) {
         this.resultCountThisPage = resultCountThisPage;
         return this;
     }
     
+    public ContentNewsArticleRssResponse(){}
 }

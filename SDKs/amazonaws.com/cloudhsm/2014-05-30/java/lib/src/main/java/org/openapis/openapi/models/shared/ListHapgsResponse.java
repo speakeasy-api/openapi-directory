@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListHapgsResponse {
     @JsonProperty("HapgList")
     public String[] hapgList;
+
     public ListHapgsResponse withHapgList(String[] hapgList) {
         this.hapgList = hapgList;
         return this;
@@ -22,9 +23,13 @@ public class ListHapgsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListHapgsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListHapgsResponse(@JsonProperty("HapgList") String[] hapgList) {
+        this.hapgList = hapgList;
+  }
 }

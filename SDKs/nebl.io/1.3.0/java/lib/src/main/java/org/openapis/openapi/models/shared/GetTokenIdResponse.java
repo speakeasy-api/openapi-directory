@@ -18,6 +18,7 @@ public class GetTokenIdResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenId")
     public String tokenId;
+
     public GetTokenIdResponse withTokenId(String tokenId) {
         this.tokenId = tokenId;
         return this;
@@ -29,9 +30,11 @@ public class GetTokenIdResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenName")
     public String tokenName;
+
     public GetTokenIdResponse withTokenName(String tokenName) {
         this.tokenName = tokenName;
         return this;
     }
     
+    public GetTokenIdResponse(){}
 }

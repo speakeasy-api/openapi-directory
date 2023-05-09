@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OmMetersResponse {
     
     public String contentType;
+
     public OmMetersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class OmMetersResponse {
     
     
     public Integer statusCode;
+
     public OmMetersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class OmMetersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OmMetersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class OmMetersResponse {
      */
     
     public org.openapis.openapi.models.shared.Ommeters[] ommeters;
+
     public OmMetersResponse withOmmeters(org.openapis.openapi.models.shared.Ommeters[] ommeters) {
         this.ommeters = ommeters;
         return this;
     }
     
+    public OmMetersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

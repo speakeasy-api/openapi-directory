@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2beta1TelephonyDtmfEvents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dtmfEvents")
     public GoogleCloudDialogflowV2beta1TelephonyDtmfEventsDtmfEventsEnum[] dtmfEvents;
+
     public GoogleCloudDialogflowV2beta1TelephonyDtmfEvents withDtmfEvents(GoogleCloudDialogflowV2beta1TelephonyDtmfEventsDtmfEventsEnum[] dtmfEvents) {
         this.dtmfEvents = dtmfEvents;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1TelephonyDtmfEvents(){}
 }

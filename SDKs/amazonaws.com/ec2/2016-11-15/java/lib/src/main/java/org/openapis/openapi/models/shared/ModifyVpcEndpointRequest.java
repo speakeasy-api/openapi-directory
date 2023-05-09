@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyVpcEndpointRequest {
     
     public String[] addRouteTableIds;
+
     public ModifyVpcEndpointRequest withAddRouteTableIds(String[] addRouteTableIds) {
         this.addRouteTableIds = addRouteTableIds;
         return this;
@@ -16,6 +17,7 @@ public class ModifyVpcEndpointRequest {
     
     
     public String[] addSecurityGroupIds;
+
     public ModifyVpcEndpointRequest withAddSecurityGroupIds(String[] addSecurityGroupIds) {
         this.addSecurityGroupIds = addSecurityGroupIds;
         return this;
@@ -23,6 +25,7 @@ public class ModifyVpcEndpointRequest {
     
     
     public String[] addSubnetIds;
+
     public ModifyVpcEndpointRequest withAddSubnetIds(String[] addSubnetIds) {
         this.addSubnetIds = addSubnetIds;
         return this;
@@ -30,6 +33,7 @@ public class ModifyVpcEndpointRequest {
     
     
     public DnsOptionsSpecification dnsOptions;
+
     public ModifyVpcEndpointRequest withDnsOptions(DnsOptionsSpecification dnsOptions) {
         this.dnsOptions = dnsOptions;
         return this;
@@ -37,6 +41,7 @@ public class ModifyVpcEndpointRequest {
     
     
     public Boolean dryRun;
+
     public ModifyVpcEndpointRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -44,6 +49,7 @@ public class ModifyVpcEndpointRequest {
     
     
     public IpAddressTypeEnum ipAddressType;
+
     public ModifyVpcEndpointRequest withIpAddressType(IpAddressTypeEnum ipAddressType) {
         this.ipAddressType = ipAddressType;
         return this;
@@ -51,6 +57,7 @@ public class ModifyVpcEndpointRequest {
     
     
     public String policyDocument;
+
     public ModifyVpcEndpointRequest withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
@@ -58,6 +65,7 @@ public class ModifyVpcEndpointRequest {
     
     
     public Boolean privateDnsEnabled;
+
     public ModifyVpcEndpointRequest withPrivateDnsEnabled(Boolean privateDnsEnabled) {
         this.privateDnsEnabled = privateDnsEnabled;
         return this;
@@ -65,6 +73,7 @@ public class ModifyVpcEndpointRequest {
     
     
     public String[] removeRouteTableIds;
+
     public ModifyVpcEndpointRequest withRemoveRouteTableIds(String[] removeRouteTableIds) {
         this.removeRouteTableIds = removeRouteTableIds;
         return this;
@@ -72,6 +81,7 @@ public class ModifyVpcEndpointRequest {
     
     
     public String[] removeSecurityGroupIds;
+
     public ModifyVpcEndpointRequest withRemoveSecurityGroupIds(String[] removeSecurityGroupIds) {
         this.removeSecurityGroupIds = removeSecurityGroupIds;
         return this;
@@ -79,6 +89,7 @@ public class ModifyVpcEndpointRequest {
     
     
     public String[] removeSubnetIds;
+
     public ModifyVpcEndpointRequest withRemoveSubnetIds(String[] removeSubnetIds) {
         this.removeSubnetIds = removeSubnetIds;
         return this;
@@ -86,6 +97,7 @@ public class ModifyVpcEndpointRequest {
     
     
     public Boolean resetPolicy;
+
     public ModifyVpcEndpointRequest withResetPolicy(Boolean resetPolicy) {
         this.resetPolicy = resetPolicy;
         return this;
@@ -93,9 +105,13 @@ public class ModifyVpcEndpointRequest {
     
     
     public String vpcEndpointId;
+
     public ModifyVpcEndpointRequest withVpcEndpointId(String vpcEndpointId) {
         this.vpcEndpointId = vpcEndpointId;
         return this;
     }
     
+    public ModifyVpcEndpointRequest(@JsonProperty("VpcEndpointId") String vpcEndpointId) {
+        this.vpcEndpointId = vpcEndpointId;
+  }
 }

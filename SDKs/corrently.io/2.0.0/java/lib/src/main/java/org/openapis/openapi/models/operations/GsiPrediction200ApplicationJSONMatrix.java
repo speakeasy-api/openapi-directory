@@ -18,9 +18,11 @@ public class GsiPrediction200ApplicationJSONMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("h0")
     public GsiPrediction200ApplicationJSONMatrixH0 h0;
+
     public GsiPrediction200ApplicationJSONMatrix withH0(GsiPrediction200ApplicationJSONMatrixH0 h0) {
         this.h0 = h0;
         return this;
     }
     
+    public GsiPrediction200ApplicationJSONMatrix(){}
 }

@@ -15,6 +15,7 @@ public class BatchListAttachedIndices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public BatchListAttachedIndices withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -23,6 +24,7 @@ public class BatchListAttachedIndices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public BatchListAttachedIndices withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -30,9 +32,13 @@ public class BatchListAttachedIndices {
     
     @JsonProperty("TargetReference")
     public ObjectReference targetReference;
+
     public BatchListAttachedIndices withTargetReference(ObjectReference targetReference) {
         this.targetReference = targetReference;
         return this;
     }
     
+    public BatchListAttachedIndices(@JsonProperty("TargetReference") ObjectReference targetReference) {
+        this.targetReference = targetReference;
+  }
 }

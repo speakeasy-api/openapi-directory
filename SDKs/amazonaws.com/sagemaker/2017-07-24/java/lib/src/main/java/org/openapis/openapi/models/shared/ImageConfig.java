@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ImageConfig {
     @JsonProperty("RepositoryAccessMode")
     public RepositoryAccessModeEnum repositoryAccessMode;
+
     public ImageConfig withRepositoryAccessMode(RepositoryAccessModeEnum repositoryAccessMode) {
         this.repositoryAccessMode = repositoryAccessMode;
         return this;
@@ -22,9 +23,13 @@ public class ImageConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RepositoryAuthConfig")
     public RepositoryAuthConfig repositoryAuthConfig;
+
     public ImageConfig withRepositoryAuthConfig(RepositoryAuthConfig repositoryAuthConfig) {
         this.repositoryAuthConfig = repositoryAuthConfig;
         return this;
     }
     
+    public ImageConfig(@JsonProperty("RepositoryAccessMode") RepositoryAccessModeEnum repositoryAccessMode) {
+        this.repositoryAccessMode = repositoryAccessMode;
+  }
 }

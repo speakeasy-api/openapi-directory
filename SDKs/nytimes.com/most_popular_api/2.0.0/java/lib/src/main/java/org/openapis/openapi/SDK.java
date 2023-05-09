@@ -117,6 +117,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -142,7 +147,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETMostemailedSectionTimePeriodJsonResponse res = new org.openapis.openapi.models.operations.GETMostemailedSectionTimePeriodJsonResponse() {{
+        org.openapis.openapi.models.operations.GETMostemailedSectionTimePeriodJsonResponse res = new org.openapis.openapi.models.operations.GETMostemailedSectionTimePeriodJsonResponse(contentType, httpRes.statusCode()) {{
             getMostemailedSectionTimePeriodJSON200ApplicationJSONObject = null;
             body = null;
             body = null;
@@ -150,8 +155,6 @@ public class SDK {
             body = null;
             getMostemailedSectionTimePeriodJSON403ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -213,12 +216,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETMostsharedSectionTimePeriodJsonResponse res = new org.openapis.openapi.models.operations.GETMostsharedSectionTimePeriodJsonResponse() {{
+        org.openapis.openapi.models.operations.GETMostsharedSectionTimePeriodJsonResponse res = new org.openapis.openapi.models.operations.GETMostsharedSectionTimePeriodJsonResponse(contentType, httpRes.statusCode()) {{
             getMostsharedSectionTimePeriodJSON200ApplicationJSONObject = null;
             getMostsharedSectionTimePeriodJSON400ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -261,11 +262,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETMostviewedSectionTimePeriodJsonResponse res = new org.openapis.openapi.models.operations.GETMostviewedSectionTimePeriodJsonResponse() {{
+        org.openapis.openapi.models.operations.GETMostviewedSectionTimePeriodJsonResponse res = new org.openapis.openapi.models.operations.GETMostviewedSectionTimePeriodJsonResponse(contentType, httpRes.statusCode()) {{
             getMostviewedSectionTimePeriodJSON200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

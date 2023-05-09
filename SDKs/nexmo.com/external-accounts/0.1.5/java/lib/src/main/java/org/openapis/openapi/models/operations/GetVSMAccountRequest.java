@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVSMAccountRequest {
@@ -12,9 +13,13 @@ public class GetVSMAccountRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=external_id")
     public String externalId;
+
     public GetVSMAccountRequest withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
     }
     
+    public GetVSMAccountRequest(@JsonProperty("external_id") String externalId) {
+        this.externalId = externalId;
+  }
 }

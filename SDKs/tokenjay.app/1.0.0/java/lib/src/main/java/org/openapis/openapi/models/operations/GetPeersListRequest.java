@@ -12,6 +12,7 @@ public class GetPeersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=closedApi")
     public Boolean closedApi;
+
     public GetPeersListRequest withClosedApi(Boolean closedApi) {
         this.closedApi = closedApi;
         return this;
@@ -19,6 +20,7 @@ public class GetPeersListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetPeersListRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -29,9 +31,11 @@ public class GetPeersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unreachable")
     public Boolean unreachable;
+
     public GetPeersListRequest withUnreachable(Boolean unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public GetPeersListRequest(){}
 }

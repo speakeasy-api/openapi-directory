@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateFHIRDatastoreResponse {
     @JsonProperty("DatastoreArn")
     public String datastoreArn;
+
     public CreateFHIRDatastoreResponse withDatastoreArn(String datastoreArn) {
         this.datastoreArn = datastoreArn;
         return this;
@@ -19,6 +20,7 @@ public class CreateFHIRDatastoreResponse {
     
     @JsonProperty("DatastoreEndpoint")
     public String datastoreEndpoint;
+
     public CreateFHIRDatastoreResponse withDatastoreEndpoint(String datastoreEndpoint) {
         this.datastoreEndpoint = datastoreEndpoint;
         return this;
@@ -26,6 +28,7 @@ public class CreateFHIRDatastoreResponse {
     
     @JsonProperty("DatastoreId")
     public String datastoreId;
+
     public CreateFHIRDatastoreResponse withDatastoreId(String datastoreId) {
         this.datastoreId = datastoreId;
         return this;
@@ -33,9 +36,16 @@ public class CreateFHIRDatastoreResponse {
     
     @JsonProperty("DatastoreStatus")
     public DatastoreStatusEnum datastoreStatus;
+
     public CreateFHIRDatastoreResponse withDatastoreStatus(DatastoreStatusEnum datastoreStatus) {
         this.datastoreStatus = datastoreStatus;
         return this;
     }
     
+    public CreateFHIRDatastoreResponse(@JsonProperty("DatastoreArn") String datastoreArn, @JsonProperty("DatastoreEndpoint") String datastoreEndpoint, @JsonProperty("DatastoreId") String datastoreId, @JsonProperty("DatastoreStatus") DatastoreStatusEnum datastoreStatus) {
+        this.datastoreArn = datastoreArn;
+        this.datastoreEndpoint = datastoreEndpoint;
+        this.datastoreId = datastoreId;
+        this.datastoreStatus = datastoreStatus;
+  }
 }

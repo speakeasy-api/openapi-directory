@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetSessionRequest {
     @JsonProperty("Id")
     public String id;
+
     public GetSessionRequest withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,13 @@ public class GetSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestOrigin")
     public String requestOrigin;
+
     public GetSessionRequest withRequestOrigin(String requestOrigin) {
         this.requestOrigin = requestOrigin;
         return this;
     }
     
+    public GetSessionRequest(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

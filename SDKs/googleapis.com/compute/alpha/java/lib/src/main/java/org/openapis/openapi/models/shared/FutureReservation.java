@@ -18,6 +18,7 @@ public class FutureReservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public FutureReservation withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -29,6 +30,7 @@ public class FutureReservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public FutureReservation withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class FutureReservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public FutureReservation withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class FutureReservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public FutureReservation withKind(String kind) {
         this.kind = kind;
         return this;
@@ -62,6 +66,7 @@ public class FutureReservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FutureReservation withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class FutureReservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namePrefix")
     public String namePrefix;
+
     public FutureReservation withNamePrefix(String namePrefix) {
         this.namePrefix = namePrefix;
         return this;
@@ -84,6 +90,7 @@ public class FutureReservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("planningStatus")
     public FutureReservationPlanningStatusEnum planningStatus;
+
     public FutureReservation withPlanningStatus(FutureReservationPlanningStatusEnum planningStatus) {
         this.planningStatus = planningStatus;
         return this;
@@ -95,6 +102,7 @@ public class FutureReservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public FutureReservation withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -106,6 +114,7 @@ public class FutureReservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLinkWithId")
     public String selfLinkWithId;
+
     public FutureReservation withSelfLinkWithId(String selfLinkWithId) {
         this.selfLinkWithId = selfLinkWithId;
         return this;
@@ -117,6 +126,7 @@ public class FutureReservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shareSettings")
     public ShareSettings shareSettings;
+
     public FutureReservation withShareSettings(ShareSettings shareSettings) {
         this.shareSettings = shareSettings;
         return this;
@@ -125,6 +135,7 @@ public class FutureReservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("specificSkuProperties")
     public FutureReservationSpecificSKUProperties specificSkuProperties;
+
     public FutureReservation withSpecificSkuProperties(FutureReservationSpecificSKUProperties specificSkuProperties) {
         this.specificSkuProperties = specificSkuProperties;
         return this;
@@ -136,6 +147,7 @@ public class FutureReservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public FutureReservationStatus status;
+
     public FutureReservation withStatus(FutureReservationStatus status) {
         this.status = status;
         return this;
@@ -144,6 +156,7 @@ public class FutureReservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeWindow")
     public FutureReservationTimeWindow timeWindow;
+
     public FutureReservation withTimeWindow(FutureReservationTimeWindow timeWindow) {
         this.timeWindow = timeWindow;
         return this;
@@ -155,9 +168,11 @@ public class FutureReservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public FutureReservation withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public FutureReservation(){}
 }

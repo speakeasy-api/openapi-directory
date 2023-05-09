@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DetectStackSetDriftOutput {
     
     public String operationId;
+
     public DetectStackSetDriftOutput withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
     }
     
+    public DetectStackSetDriftOutput(){}
 }

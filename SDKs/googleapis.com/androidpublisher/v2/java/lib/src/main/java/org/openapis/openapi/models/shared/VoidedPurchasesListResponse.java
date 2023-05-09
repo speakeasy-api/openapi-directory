@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class VoidedPurchasesListResponse {
     
     public PageInfo pageInfo;
+
     public VoidedPurchasesListResponse withPageInfo(PageInfo pageInfo) {
         this.pageInfo = pageInfo;
         return this;
@@ -19,6 +20,7 @@ public class VoidedPurchasesListResponse {
     
     
     public TokenPagination tokenPagination;
+
     public VoidedPurchasesListResponse withTokenPagination(TokenPagination tokenPagination) {
         this.tokenPagination = tokenPagination;
         return this;
@@ -26,9 +28,11 @@ public class VoidedPurchasesListResponse {
     
     
     public VoidedPurchase[] voidedPurchases;
+
     public VoidedPurchasesListResponse withVoidedPurchases(VoidedPurchase[] voidedPurchases) {
         this.voidedPurchases = voidedPurchases;
         return this;
     }
     
+    public VoidedPurchasesListResponse(){}
 }

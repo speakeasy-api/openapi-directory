@@ -18,9 +18,11 @@ public class ReviewsReplyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public ReviewReplyResult result;
+
     public ReviewsReplyResponse withResult(ReviewReplyResult result) {
         this.result = result;
         return this;
     }
     
+    public ReviewsReplyResponse(){}
 }

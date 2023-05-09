@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateMonitorRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateMonitorRequestBody requestBody;
+
     public UpdateMonitorRequest withRequestBody(UpdateMonitorRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,9 +18,13 @@ public class UpdateMonitorRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=monitor_uid")
     public String monitorUid;
+
     public UpdateMonitorRequest withMonitorUid(String monitorUid) {
         this.monitorUid = monitorUid;
         return this;
     }
     
+    public UpdateMonitorRequest(@JsonProperty("monitor_uid") String monitorUid) {
+        this.monitorUid = monitorUid;
+  }
 }

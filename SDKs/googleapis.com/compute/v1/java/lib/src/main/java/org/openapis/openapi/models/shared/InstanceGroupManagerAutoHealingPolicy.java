@@ -15,6 +15,7 @@ public class InstanceGroupManagerAutoHealingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthCheck")
     public String healthCheck;
+
     public InstanceGroupManagerAutoHealingPolicy withHealthCheck(String healthCheck) {
         this.healthCheck = healthCheck;
         return this;
@@ -26,9 +27,11 @@ public class InstanceGroupManagerAutoHealingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialDelaySec")
     public Integer initialDelaySec;
+
     public InstanceGroupManagerAutoHealingPolicy withInitialDelaySec(Integer initialDelaySec) {
         this.initialDelaySec = initialDelaySec;
         return this;
     }
     
+    public InstanceGroupManagerAutoHealingPolicy(){}
 }

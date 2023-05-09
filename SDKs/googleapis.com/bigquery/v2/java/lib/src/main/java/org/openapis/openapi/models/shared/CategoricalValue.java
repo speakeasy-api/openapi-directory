@@ -18,9 +18,11 @@ public class CategoricalValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryCounts")
     public CategoryCount[] categoryCounts;
+
     public CategoricalValue withCategoryCounts(CategoryCount[] categoryCounts) {
         this.categoryCounts = categoryCounts;
         return this;
     }
     
+    public CategoricalValue(){}
 }

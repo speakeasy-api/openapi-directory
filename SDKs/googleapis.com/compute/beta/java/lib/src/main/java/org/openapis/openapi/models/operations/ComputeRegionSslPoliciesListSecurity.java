@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeRegionSslPoliciesListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionSslPoliciesListSecurityOption1 option1;
+
     public ComputeRegionSslPoliciesListSecurity withOption1(ComputeRegionSslPoliciesListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeRegionSslPoliciesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionSslPoliciesListSecurityOption2 option2;
+
     public ComputeRegionSslPoliciesListSecurity withOption2(ComputeRegionSslPoliciesListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeRegionSslPoliciesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionSslPoliciesListSecurityOption3 option3;
+
     public ComputeRegionSslPoliciesListSecurity withOption3(ComputeRegionSslPoliciesListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeRegionSslPoliciesListSecurity(){}
 }

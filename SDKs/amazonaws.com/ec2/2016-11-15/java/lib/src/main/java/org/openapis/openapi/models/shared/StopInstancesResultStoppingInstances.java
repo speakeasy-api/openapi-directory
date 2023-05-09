@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class StopInstancesResultStoppingInstances {
     
     public StopInstancesResultStoppingInstancesCurrentState currentState;
+
     public StopInstancesResultStoppingInstances withCurrentState(StopInstancesResultStoppingInstancesCurrentState currentState) {
         this.currentState = currentState;
         return this;
@@ -19,6 +20,7 @@ public class StopInstancesResultStoppingInstances {
     
     
     public String instanceId;
+
     public StopInstancesResultStoppingInstances withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -26,9 +28,11 @@ public class StopInstancesResultStoppingInstances {
     
     
     public StopInstancesResultStoppingInstancesPreviousState previousState;
+
     public StopInstancesResultStoppingInstances withPreviousState(StopInstancesResultStoppingInstancesPreviousState previousState) {
         this.previousState = previousState;
         return this;
     }
     
+    public StopInstancesResultStoppingInstances(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AuthorizeSecurityGroupEgressResultSecurityGroupRules {
     
     public String cidrIpv4;
+
     public AuthorizeSecurityGroupEgressResultSecurityGroupRules withCidrIpv4(String cidrIpv4) {
         this.cidrIpv4 = cidrIpv4;
         return this;
@@ -19,6 +20,7 @@ public class AuthorizeSecurityGroupEgressResultSecurityGroupRules {
     
     
     public String cidrIpv6;
+
     public AuthorizeSecurityGroupEgressResultSecurityGroupRules withCidrIpv6(String cidrIpv6) {
         this.cidrIpv6 = cidrIpv6;
         return this;
@@ -26,6 +28,7 @@ public class AuthorizeSecurityGroupEgressResultSecurityGroupRules {
     
     
     public String description;
+
     public AuthorizeSecurityGroupEgressResultSecurityGroupRules withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +36,7 @@ public class AuthorizeSecurityGroupEgressResultSecurityGroupRules {
     
     
     public Long fromPort;
+
     public AuthorizeSecurityGroupEgressResultSecurityGroupRules withFromPort(Long fromPort) {
         this.fromPort = fromPort;
         return this;
@@ -40,6 +44,7 @@ public class AuthorizeSecurityGroupEgressResultSecurityGroupRules {
     
     
     public String groupId;
+
     public AuthorizeSecurityGroupEgressResultSecurityGroupRules withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -47,6 +52,7 @@ public class AuthorizeSecurityGroupEgressResultSecurityGroupRules {
     
     
     public String groupOwnerId;
+
     public AuthorizeSecurityGroupEgressResultSecurityGroupRules withGroupOwnerId(String groupOwnerId) {
         this.groupOwnerId = groupOwnerId;
         return this;
@@ -54,6 +60,7 @@ public class AuthorizeSecurityGroupEgressResultSecurityGroupRules {
     
     
     public String ipProtocol;
+
     public AuthorizeSecurityGroupEgressResultSecurityGroupRules withIpProtocol(String ipProtocol) {
         this.ipProtocol = ipProtocol;
         return this;
@@ -61,6 +68,7 @@ public class AuthorizeSecurityGroupEgressResultSecurityGroupRules {
     
     
     public Boolean isEgress;
+
     public AuthorizeSecurityGroupEgressResultSecurityGroupRules withIsEgress(Boolean isEgress) {
         this.isEgress = isEgress;
         return this;
@@ -68,6 +76,7 @@ public class AuthorizeSecurityGroupEgressResultSecurityGroupRules {
     
     
     public String prefixListId;
+
     public AuthorizeSecurityGroupEgressResultSecurityGroupRules withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
@@ -75,6 +84,7 @@ public class AuthorizeSecurityGroupEgressResultSecurityGroupRules {
     
     
     public AuthorizeSecurityGroupEgressResultSecurityGroupRulesReferencedGroupInfo referencedGroupInfo;
+
     public AuthorizeSecurityGroupEgressResultSecurityGroupRules withReferencedGroupInfo(AuthorizeSecurityGroupEgressResultSecurityGroupRulesReferencedGroupInfo referencedGroupInfo) {
         this.referencedGroupInfo = referencedGroupInfo;
         return this;
@@ -82,6 +92,7 @@ public class AuthorizeSecurityGroupEgressResultSecurityGroupRules {
     
     
     public String securityGroupRuleId;
+
     public AuthorizeSecurityGroupEgressResultSecurityGroupRules withSecurityGroupRuleId(String securityGroupRuleId) {
         this.securityGroupRuleId = securityGroupRuleId;
         return this;
@@ -89,6 +100,7 @@ public class AuthorizeSecurityGroupEgressResultSecurityGroupRules {
     
     
     public AuthorizeSecurityGroupEgressResultSecurityGroupRulesTags[] tags;
+
     public AuthorizeSecurityGroupEgressResultSecurityGroupRules withTags(AuthorizeSecurityGroupEgressResultSecurityGroupRulesTags[] tags) {
         this.tags = tags;
         return this;
@@ -96,9 +108,11 @@ public class AuthorizeSecurityGroupEgressResultSecurityGroupRules {
     
     
     public Long toPort;
+
     public AuthorizeSecurityGroupEgressResultSecurityGroupRules withToPort(Long toPort) {
         this.toPort = toPort;
         return this;
     }
     
+    public AuthorizeSecurityGroupEgressResultSecurityGroupRules(){}
 }

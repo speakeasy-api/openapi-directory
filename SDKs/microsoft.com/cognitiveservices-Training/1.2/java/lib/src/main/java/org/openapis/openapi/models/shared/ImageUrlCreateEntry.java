@@ -12,6 +12,7 @@ public class ImageUrlCreateEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagIds")
     public String[] tagIds;
+
     public ImageUrlCreateEntry withTagIds(String[] tagIds) {
         this.tagIds = tagIds;
         return this;
@@ -20,9 +21,11 @@ public class ImageUrlCreateEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public ImageUrlCreateEntry withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ImageUrlCreateEntry(){}
 }

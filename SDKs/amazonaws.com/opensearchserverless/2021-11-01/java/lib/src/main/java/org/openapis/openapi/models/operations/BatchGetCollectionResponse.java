@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetCollectionResponse {
@@ -12,6 +13,7 @@ public class BatchGetCollectionResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetCollectionResponse batchGetCollectionResponse;
+
     public BatchGetCollectionResponse withBatchGetCollectionResponse(org.openapis.openapi.models.shared.BatchGetCollectionResponse batchGetCollectionResponse) {
         this.batchGetCollectionResponse = batchGetCollectionResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchGetCollectionResponse {
     
     
     public String contentType;
+
     public BatchGetCollectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetCollectionResponse {
      */
     
     public Object internalServerException;
+
     public BatchGetCollectionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class BatchGetCollectionResponse {
     
     
     public Integer statusCode;
+
     public BatchGetCollectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class BatchGetCollectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetCollectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class BatchGetCollectionResponse {
      */
     
     public Object validationException;
+
     public BatchGetCollectionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchGetCollectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

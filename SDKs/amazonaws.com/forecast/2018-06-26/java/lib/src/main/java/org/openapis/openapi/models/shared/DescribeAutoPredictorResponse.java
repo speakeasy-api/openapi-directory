@@ -22,6 +22,7 @@ public class DescribeAutoPredictorResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeAutoPredictorResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class DescribeAutoPredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataConfig")
     public DataConfig dataConfig;
+
     public DescribeAutoPredictorResponse withDataConfig(DataConfig dataConfig) {
         this.dataConfig = dataConfig;
         return this;
@@ -38,6 +40,7 @@ public class DescribeAutoPredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetImportJobArns")
     public String[] datasetImportJobArns;
+
     public DescribeAutoPredictorResponse withDatasetImportJobArns(String[] datasetImportJobArns) {
         this.datasetImportJobArns = datasetImportJobArns;
         return this;
@@ -49,6 +52,7 @@ public class DescribeAutoPredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionConfig")
     public EncryptionConfig encryptionConfig;
+
     public DescribeAutoPredictorResponse withEncryptionConfig(EncryptionConfig encryptionConfig) {
         this.encryptionConfig = encryptionConfig;
         return this;
@@ -57,6 +61,7 @@ public class DescribeAutoPredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedTimeRemainingInMinutes")
     public Long estimatedTimeRemainingInMinutes;
+
     public DescribeAutoPredictorResponse withEstimatedTimeRemainingInMinutes(Long estimatedTimeRemainingInMinutes) {
         this.estimatedTimeRemainingInMinutes = estimatedTimeRemainingInMinutes;
         return this;
@@ -65,6 +70,7 @@ public class DescribeAutoPredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExplainabilityInfo")
     public ExplainabilityInfo explainabilityInfo;
+
     public DescribeAutoPredictorResponse withExplainabilityInfo(ExplainabilityInfo explainabilityInfo) {
         this.explainabilityInfo = explainabilityInfo;
         return this;
@@ -73,6 +79,7 @@ public class DescribeAutoPredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastDimensions")
     public String[] forecastDimensions;
+
     public DescribeAutoPredictorResponse withForecastDimensions(String[] forecastDimensions) {
         this.forecastDimensions = forecastDimensions;
         return this;
@@ -81,6 +88,7 @@ public class DescribeAutoPredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastFrequency")
     public String forecastFrequency;
+
     public DescribeAutoPredictorResponse withForecastFrequency(String forecastFrequency) {
         this.forecastFrequency = forecastFrequency;
         return this;
@@ -89,6 +97,7 @@ public class DescribeAutoPredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastHorizon")
     public Long forecastHorizon;
+
     public DescribeAutoPredictorResponse withForecastHorizon(Long forecastHorizon) {
         this.forecastHorizon = forecastHorizon;
         return this;
@@ -97,6 +106,7 @@ public class DescribeAutoPredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastTypes")
     public String[] forecastTypes;
+
     public DescribeAutoPredictorResponse withForecastTypes(String[] forecastTypes) {
         this.forecastTypes = forecastTypes;
         return this;
@@ -107,6 +117,7 @@ public class DescribeAutoPredictorResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationTime")
     public OffsetDateTime lastModificationTime;
+
     public DescribeAutoPredictorResponse withLastModificationTime(OffsetDateTime lastModificationTime) {
         this.lastModificationTime = lastModificationTime;
         return this;
@@ -115,6 +126,7 @@ public class DescribeAutoPredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public DescribeAutoPredictorResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -123,6 +135,7 @@ public class DescribeAutoPredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitorInfo")
     public MonitorInfo monitorInfo;
+
     public DescribeAutoPredictorResponse withMonitorInfo(MonitorInfo monitorInfo) {
         this.monitorInfo = monitorInfo;
         return this;
@@ -131,6 +144,7 @@ public class DescribeAutoPredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptimizationMetric")
     public OptimizationMetricEnum optimizationMetric;
+
     public DescribeAutoPredictorResponse withOptimizationMetric(OptimizationMetricEnum optimizationMetric) {
         this.optimizationMetric = optimizationMetric;
         return this;
@@ -139,6 +153,7 @@ public class DescribeAutoPredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredictorArn")
     public String predictorArn;
+
     public DescribeAutoPredictorResponse withPredictorArn(String predictorArn) {
         this.predictorArn = predictorArn;
         return this;
@@ -147,6 +162,7 @@ public class DescribeAutoPredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredictorName")
     public String predictorName;
+
     public DescribeAutoPredictorResponse withPredictorName(String predictorName) {
         this.predictorName = predictorName;
         return this;
@@ -155,6 +171,7 @@ public class DescribeAutoPredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReferencePredictorSummary")
     public ReferencePredictorSummary referencePredictorSummary;
+
     public DescribeAutoPredictorResponse withReferencePredictorSummary(ReferencePredictorSummary referencePredictorSummary) {
         this.referencePredictorSummary = referencePredictorSummary;
         return this;
@@ -163,6 +180,7 @@ public class DescribeAutoPredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public DescribeAutoPredictorResponse withStatus(String status) {
         this.status = status;
         return this;
@@ -171,9 +189,11 @@ public class DescribeAutoPredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeAlignmentBoundary")
     public TimeAlignmentBoundary timeAlignmentBoundary;
+
     public DescribeAutoPredictorResponse withTimeAlignmentBoundary(TimeAlignmentBoundary timeAlignmentBoundary) {
         this.timeAlignmentBoundary = timeAlignmentBoundary;
         return this;
     }
     
+    public DescribeAutoPredictorResponse(){}
 }

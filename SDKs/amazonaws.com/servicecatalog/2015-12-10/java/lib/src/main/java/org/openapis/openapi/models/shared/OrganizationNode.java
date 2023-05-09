@@ -15,6 +15,7 @@ public class OrganizationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public OrganizationNodeTypeEnum type;
+
     public OrganizationNode withType(OrganizationNodeTypeEnum type) {
         this.type = type;
         return this;
@@ -23,9 +24,11 @@ public class OrganizationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public OrganizationNode withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public OrganizationNode(){}
 }

@@ -15,9 +15,11 @@ public class UpdateSensitivityInspectionTemplateRequestBodyExcludes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedDataIdentifierIds")
     public String[] managedDataIdentifierIds;
+
     public UpdateSensitivityInspectionTemplateRequestBodyExcludes withManagedDataIdentifierIds(String[] managedDataIdentifierIds) {
         this.managedDataIdentifierIds = managedDataIdentifierIds;
         return this;
     }
     
+    public UpdateSensitivityInspectionTemplateRequestBodyExcludes(){}
 }

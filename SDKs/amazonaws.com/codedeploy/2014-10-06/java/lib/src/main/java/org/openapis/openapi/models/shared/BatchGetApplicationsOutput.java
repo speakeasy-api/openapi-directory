@@ -15,9 +15,11 @@ public class BatchGetApplicationsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationsInfo")
     public ApplicationInfo[] applicationsInfo;
+
     public BatchGetApplicationsOutput withApplicationsInfo(ApplicationInfo[] applicationsInfo) {
         this.applicationsInfo = applicationsInfo;
         return this;
     }
     
+    public BatchGetApplicationsOutput(){}
 }

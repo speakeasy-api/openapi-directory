@@ -15,9 +15,11 @@ public class CreateDatastoreRequestBodyDatastorePartitions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partitions")
     public org.openapis.openapi.models.shared.DatastorePartition[] partitions;
+
     public CreateDatastoreRequestBodyDatastorePartitions withPartitions(org.openapis.openapi.models.shared.DatastorePartition[] partitions) {
         this.partitions = partitions;
         return this;
     }
     
+    public CreateDatastoreRequestBodyDatastorePartitions(){}
 }

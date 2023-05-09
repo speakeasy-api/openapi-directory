@@ -56,11 +56,9 @@ public class Chains {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessChainsGetResponse res = new org.openapis.openapi.models.operations.MybusinessChainsGetResponse() {{
+        org.openapis.openapi.models.operations.MybusinessChainsGetResponse res = new org.openapis.openapi.models.operations.MybusinessChainsGetResponse(contentType, httpRes.statusCode()) {{
             chain = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,11 +98,9 @@ public class Chains {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessChainsSearchResponse res = new org.openapis.openapi.models.operations.MybusinessChainsSearchResponse() {{
+        org.openapis.openapi.models.operations.MybusinessChainsSearchResponse res = new org.openapis.openapi.models.operations.MybusinessChainsSearchResponse(contentType, httpRes.statusCode()) {{
             searchChainsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

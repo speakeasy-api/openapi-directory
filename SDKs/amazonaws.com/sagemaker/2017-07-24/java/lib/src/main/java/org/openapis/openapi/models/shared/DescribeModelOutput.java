@@ -20,6 +20,7 @@ public class DescribeModelOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Containers")
     public ContainerDefinition[] containers;
+
     public DescribeModelOutput withContainers(ContainerDefinition[] containers) {
         this.containers = containers;
         return this;
@@ -29,6 +30,7 @@ public class DescribeModelOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeModelOutput withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -37,6 +39,7 @@ public class DescribeModelOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableNetworkIsolation")
     public Boolean enableNetworkIsolation;
+
     public DescribeModelOutput withEnableNetworkIsolation(Boolean enableNetworkIsolation) {
         this.enableNetworkIsolation = enableNetworkIsolation;
         return this;
@@ -44,6 +47,7 @@ public class DescribeModelOutput {
     
     @JsonProperty("ExecutionRoleArn")
     public String executionRoleArn;
+
     public DescribeModelOutput withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -52,6 +56,7 @@ public class DescribeModelOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceExecutionConfig")
     public InferenceExecutionConfig inferenceExecutionConfig;
+
     public DescribeModelOutput withInferenceExecutionConfig(InferenceExecutionConfig inferenceExecutionConfig) {
         this.inferenceExecutionConfig = inferenceExecutionConfig;
         return this;
@@ -59,6 +64,7 @@ public class DescribeModelOutput {
     
     @JsonProperty("ModelArn")
     public String modelArn;
+
     public DescribeModelOutput withModelArn(String modelArn) {
         this.modelArn = modelArn;
         return this;
@@ -66,6 +72,7 @@ public class DescribeModelOutput {
     
     @JsonProperty("ModelName")
     public String modelName;
+
     public DescribeModelOutput withModelName(String modelName) {
         this.modelName = modelName;
         return this;
@@ -74,6 +81,7 @@ public class DescribeModelOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrimaryContainer")
     public ContainerDefinition primaryContainer;
+
     public DescribeModelOutput withPrimaryContainer(ContainerDefinition primaryContainer) {
         this.primaryContainer = primaryContainer;
         return this;
@@ -82,9 +90,16 @@ public class DescribeModelOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public VpcConfig vpcConfig;
+
     public DescribeModelOutput withVpcConfig(VpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public DescribeModelOutput(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("ExecutionRoleArn") String executionRoleArn, @JsonProperty("ModelArn") String modelArn, @JsonProperty("ModelName") String modelName) {
+        this.creationTime = creationTime;
+        this.executionRoleArn = executionRoleArn;
+        this.modelArn = modelArn;
+        this.modelName = modelName;
+  }
 }

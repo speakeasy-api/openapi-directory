@@ -12,6 +12,7 @@ public class UserorderdetailsItemMetadataItems {
      */
     @JsonProperty("AssemblyOptions")
     public UserorderdetailsItemMetadataItemsAssemblyOptions[] assemblyOptions;
+
     public UserorderdetailsItemMetadataItems withAssemblyOptions(UserorderdetailsItemMetadataItemsAssemblyOptions[] assemblyOptions) {
         this.assemblyOptions = assemblyOptions;
         return this;
@@ -22,6 +23,7 @@ public class UserorderdetailsItemMetadataItems {
      */
     @JsonProperty("DetailUrl")
     public String detailUrl;
+
     public UserorderdetailsItemMetadataItems withDetailUrl(String detailUrl) {
         this.detailUrl = detailUrl;
         return this;
@@ -32,6 +34,7 @@ public class UserorderdetailsItemMetadataItems {
      */
     @JsonProperty("Ean")
     public String ean;
+
     public UserorderdetailsItemMetadataItems withEan(String ean) {
         this.ean = ean;
         return this;
@@ -42,6 +45,7 @@ public class UserorderdetailsItemMetadataItems {
      */
     @JsonProperty("Id")
     public String id;
+
     public UserorderdetailsItemMetadataItems withId(String id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class UserorderdetailsItemMetadataItems {
      */
     @JsonProperty("ImageUrl")
     public String imageUrl;
+
     public UserorderdetailsItemMetadataItems withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -62,6 +67,7 @@ public class UserorderdetailsItemMetadataItems {
      */
     @JsonProperty("Name")
     public String name;
+
     public UserorderdetailsItemMetadataItems withName(String name) {
         this.name = name;
         return this;
@@ -72,6 +78,7 @@ public class UserorderdetailsItemMetadataItems {
      */
     @JsonProperty("ProductId")
     public String productId;
+
     public UserorderdetailsItemMetadataItems withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -82,6 +89,7 @@ public class UserorderdetailsItemMetadataItems {
      */
     @JsonProperty("RefId")
     public String refId;
+
     public UserorderdetailsItemMetadataItems withRefId(String refId) {
         this.refId = refId;
         return this;
@@ -92,6 +100,7 @@ public class UserorderdetailsItemMetadataItems {
      */
     @JsonProperty("Seller")
     public String seller;
+
     public UserorderdetailsItemMetadataItems withSeller(String seller) {
         this.seller = seller;
         return this;
@@ -102,9 +111,22 @@ public class UserorderdetailsItemMetadataItems {
      */
     @JsonProperty("SkuName")
     public String skuName;
+
     public UserorderdetailsItemMetadataItems withSkuName(String skuName) {
         this.skuName = skuName;
         return this;
     }
     
+    public UserorderdetailsItemMetadataItems(@JsonProperty("AssemblyOptions") UserorderdetailsItemMetadataItemsAssemblyOptions[] assemblyOptions, @JsonProperty("DetailUrl") String detailUrl, @JsonProperty("Ean") String ean, @JsonProperty("Id") String id, @JsonProperty("ImageUrl") String imageUrl, @JsonProperty("Name") String name, @JsonProperty("ProductId") String productId, @JsonProperty("RefId") String refId, @JsonProperty("Seller") String seller, @JsonProperty("SkuName") String skuName) {
+        this.assemblyOptions = assemblyOptions;
+        this.detailUrl = detailUrl;
+        this.ean = ean;
+        this.id = id;
+        this.imageUrl = imageUrl;
+        this.name = name;
+        this.productId = productId;
+        this.refId = refId;
+        this.seller = seller;
+        this.skuName = skuName;
+  }
 }

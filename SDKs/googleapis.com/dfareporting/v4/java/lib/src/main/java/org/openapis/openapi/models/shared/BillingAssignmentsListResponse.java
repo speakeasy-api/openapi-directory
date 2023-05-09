@@ -18,6 +18,7 @@ public class BillingAssignmentsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingAssignments")
     public BillingAssignment[] billingAssignments;
+
     public BillingAssignmentsListResponse withBillingAssignments(BillingAssignment[] billingAssignments) {
         this.billingAssignments = billingAssignments;
         return this;
@@ -29,9 +30,11 @@ public class BillingAssignmentsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public BillingAssignmentsListResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public BillingAssignmentsListResponse(){}
 }

@@ -15,6 +15,7 @@ public class UpdateAlertRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Action")
     public UpdateAlertRequestBodyAction action;
+
     public UpdateAlertRequestBody withAction(UpdateAlertRequestBodyAction action) {
         this.action = action;
         return this;
@@ -25,6 +26,7 @@ public class UpdateAlertRequestBody {
      */
     @JsonProperty("AlertArn")
     public String alertArn;
+
     public UpdateAlertRequestBody withAlertArn(String alertArn) {
         this.alertArn = alertArn;
         return this;
@@ -36,6 +38,7 @@ public class UpdateAlertRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlertDescription")
     public String alertDescription;
+
     public UpdateAlertRequestBody withAlertDescription(String alertDescription) {
         this.alertDescription = alertDescription;
         return this;
@@ -47,6 +50,7 @@ public class UpdateAlertRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlertFilters")
     public UpdateAlertRequestBodyAlertFilters alertFilters;
+
     public UpdateAlertRequestBody withAlertFilters(UpdateAlertRequestBodyAlertFilters alertFilters) {
         this.alertFilters = alertFilters;
         return this;
@@ -58,9 +62,13 @@ public class UpdateAlertRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlertSensitivityThreshold")
     public Long alertSensitivityThreshold;
+
     public UpdateAlertRequestBody withAlertSensitivityThreshold(Long alertSensitivityThreshold) {
         this.alertSensitivityThreshold = alertSensitivityThreshold;
         return this;
     }
     
+    public UpdateAlertRequestBody(@JsonProperty("AlertArn") String alertArn) {
+        this.alertArn = alertArn;
+  }
 }

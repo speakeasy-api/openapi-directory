@@ -15,6 +15,7 @@ public class ManagedZoneServiceDirectoryConfigNamespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletionTime")
     public String deletionTime;
+
     public ManagedZoneServiceDirectoryConfigNamespace withDeletionTime(String deletionTime) {
         this.deletionTime = deletionTime;
         return this;
@@ -23,6 +24,7 @@ public class ManagedZoneServiceDirectoryConfigNamespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ManagedZoneServiceDirectoryConfigNamespace withKind(String kind) {
         this.kind = kind;
         return this;
@@ -34,9 +36,11 @@ public class ManagedZoneServiceDirectoryConfigNamespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceUrl")
     public String namespaceUrl;
+
     public ManagedZoneServiceDirectoryConfigNamespace withNamespaceUrl(String namespaceUrl) {
         this.namespaceUrl = namespaceUrl;
         return this;
     }
     
+    public ManagedZoneServiceDirectoryConfigNamespace(){}
 }

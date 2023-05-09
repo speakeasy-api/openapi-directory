@@ -12,6 +12,7 @@ public class ListWordSenses200ApplicationJSONFamilies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public Double key;
+
     public ListWordSenses200ApplicationJSONFamilies withKey(Double key) {
         this.key = key;
         return this;
@@ -20,6 +21,7 @@ public class ListWordSenses200ApplicationJSONFamilies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public java.util.Map<String, Object> value;
+
     public ListWordSenses200ApplicationJSONFamilies withValue(java.util.Map<String, Object> value) {
         this.value = value;
         return this;
@@ -28,9 +30,11 @@ public class ListWordSenses200ApplicationJSONFamilies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definition")
     public String definition;
+
     public ListWordSenses200ApplicationJSONFamilies withDefinition(String definition) {
         this.definition = definition;
         return this;
     }
     
+    public ListWordSenses200ApplicationJSONFamilies(){}
 }

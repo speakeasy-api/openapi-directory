@@ -18,6 +18,7 @@ public class InsertionOrderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bidStrategy")
     public BiddingStrategy bidStrategy;
+
     public InsertionOrderInput withBidStrategy(BiddingStrategy bidStrategy) {
         this.bidStrategy = bidStrategy;
         return this;
@@ -29,6 +30,7 @@ public class InsertionOrderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billableOutcome")
     public InsertionOrderBillableOutcomeEnum billableOutcome;
+
     public InsertionOrderInput withBillableOutcome(InsertionOrderBillableOutcomeEnum billableOutcome) {
         this.billableOutcome = billableOutcome;
         return this;
@@ -40,6 +42,7 @@ public class InsertionOrderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("budget")
     public InsertionOrderBudget budget;
+
     public InsertionOrderInput withBudget(InsertionOrderBudget budget) {
         this.budget = budget;
         return this;
@@ -51,6 +54,7 @@ public class InsertionOrderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignId")
     public String campaignId;
+
     public InsertionOrderInput withCampaignId(String campaignId) {
         this.campaignId = campaignId;
         return this;
@@ -62,6 +66,7 @@ public class InsertionOrderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public InsertionOrderInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -73,6 +78,7 @@ public class InsertionOrderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityStatus")
     public InsertionOrderEntityStatusEnum entityStatus;
+
     public InsertionOrderInput withEntityStatus(InsertionOrderEntityStatusEnum entityStatus) {
         this.entityStatus = entityStatus;
         return this;
@@ -84,6 +90,7 @@ public class InsertionOrderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequencyCap")
     public FrequencyCap frequencyCap;
+
     public InsertionOrderInput withFrequencyCap(FrequencyCap frequencyCap) {
         this.frequencyCap = frequencyCap;
         return this;
@@ -95,6 +102,7 @@ public class InsertionOrderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insertionOrderType")
     public InsertionOrderInsertionOrderTypeEnum insertionOrderType;
+
     public InsertionOrderInput withInsertionOrderType(InsertionOrderInsertionOrderTypeEnum insertionOrderType) {
         this.insertionOrderType = insertionOrderType;
         return this;
@@ -106,6 +114,7 @@ public class InsertionOrderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integrationDetails")
     public IntegrationDetails integrationDetails;
+
     public InsertionOrderInput withIntegrationDetails(IntegrationDetails integrationDetails) {
         this.integrationDetails = integrationDetails;
         return this;
@@ -117,6 +126,7 @@ public class InsertionOrderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pacing")
     public Pacing pacing;
+
     public InsertionOrderInput withPacing(Pacing pacing) {
         this.pacing = pacing;
         return this;
@@ -128,6 +138,7 @@ public class InsertionOrderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partnerCosts")
     public PartnerCost[] partnerCosts;
+
     public InsertionOrderInput withPartnerCosts(PartnerCost[] partnerCosts) {
         this.partnerCosts = partnerCosts;
         return this;
@@ -139,9 +150,11 @@ public class InsertionOrderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performanceGoal")
     public PerformanceGoal performanceGoal;
+
     public InsertionOrderInput withPerformanceGoal(PerformanceGoal performanceGoal) {
         this.performanceGoal = performanceGoal;
         return this;
     }
     
+    public InsertionOrderInput(){}
 }

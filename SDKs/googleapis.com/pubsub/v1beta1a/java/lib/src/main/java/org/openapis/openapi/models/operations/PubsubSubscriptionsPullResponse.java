@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PubsubSubscriptionsPullResponse {
     
     public String contentType;
+
     public PubsubSubscriptionsPullResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PubsubSubscriptionsPullResponse {
      */
     
     public org.openapis.openapi.models.shared.PullResponse pullResponse;
+
     public PubsubSubscriptionsPullResponse withPullResponse(org.openapis.openapi.models.shared.PullResponse pullResponse) {
         this.pullResponse = pullResponse;
         return this;
@@ -26,6 +29,7 @@ public class PubsubSubscriptionsPullResponse {
     
     
     public Integer statusCode;
+
     public PubsubSubscriptionsPullResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PubsubSubscriptionsPullResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PubsubSubscriptionsPullResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PubsubSubscriptionsPullResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

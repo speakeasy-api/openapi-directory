@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateScalingPlanResponse {
@@ -12,6 +13,7 @@ public class UpdateScalingPlanResponse {
      */
     
     public Object concurrentUpdateException;
+
     public UpdateScalingPlanResponse withConcurrentUpdateException(Object concurrentUpdateException) {
         this.concurrentUpdateException = concurrentUpdateException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateScalingPlanResponse {
     
     
     public String contentType;
+
     public UpdateScalingPlanResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateScalingPlanResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateScalingPlanResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateScalingPlanResponse {
      */
     
     public Object objectNotFoundException;
+
     public UpdateScalingPlanResponse withObjectNotFoundException(Object objectNotFoundException) {
         this.objectNotFoundException = objectNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateScalingPlanResponse {
     
     
     public Integer statusCode;
+
     public UpdateScalingPlanResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateScalingPlanResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateScalingPlanResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateScalingPlanResponse {
      */
     
     public java.util.Map<String, Object> updateScalingPlanResponse;
+
     public UpdateScalingPlanResponse withUpdateScalingPlanResponse(java.util.Map<String, Object> updateScalingPlanResponse) {
         this.updateScalingPlanResponse = updateScalingPlanResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateScalingPlanResponse {
      */
     
     public Object validationException;
+
     public UpdateScalingPlanResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateScalingPlanResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

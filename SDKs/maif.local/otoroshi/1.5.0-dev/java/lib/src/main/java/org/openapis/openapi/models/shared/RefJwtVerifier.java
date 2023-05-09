@@ -15,6 +15,7 @@ public class RefJwtVerifier {
      */
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public RefJwtVerifier withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -25,6 +26,7 @@ public class RefJwtVerifier {
      */
     @JsonProperty("id")
     public String id;
+
     public RefJwtVerifier withId(String id) {
         this.id = id;
         return this;
@@ -35,9 +37,15 @@ public class RefJwtVerifier {
      */
     @JsonProperty("type")
     public String type;
+
     public RefJwtVerifier withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RefJwtVerifier(@JsonProperty("enabled") Boolean enabled, @JsonProperty("id") String id, @JsonProperty("type") String type) {
+        this.enabled = enabled;
+        this.id = id;
+        this.type = type;
+  }
 }

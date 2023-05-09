@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPrincipalThingsResponse {
     
     public String contentType;
+
     public ListPrincipalThingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListPrincipalThingsResponse {
      */
     
     public Object internalFailureException;
+
     public ListPrincipalThingsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListPrincipalThingsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListPrincipalThingsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListPrincipalThingsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPrincipalThingsResponse listPrincipalThingsResponse;
+
     public ListPrincipalThingsResponse withListPrincipalThingsResponse(org.openapis.openapi.models.shared.ListPrincipalThingsResponse listPrincipalThingsResponse) {
         this.listPrincipalThingsResponse = listPrincipalThingsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListPrincipalThingsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListPrincipalThingsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class ListPrincipalThingsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListPrincipalThingsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class ListPrincipalThingsResponse {
     
     
     public Integer statusCode;
+
     public ListPrincipalThingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListPrincipalThingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPrincipalThingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ListPrincipalThingsResponse {
      */
     
     public Object throttlingException;
+
     public ListPrincipalThingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class ListPrincipalThingsResponse {
      */
     
     public Object unauthorizedException;
+
     public ListPrincipalThingsResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListPrincipalThingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

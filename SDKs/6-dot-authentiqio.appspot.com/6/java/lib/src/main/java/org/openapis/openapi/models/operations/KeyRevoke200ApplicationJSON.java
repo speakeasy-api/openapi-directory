@@ -18,9 +18,11 @@ public class KeyRevoke200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public KeyRevoke200ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public KeyRevoke200ApplicationJSON(){}
 }

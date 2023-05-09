@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCustomerAddressRequest {
@@ -12,6 +13,7 @@ public class UpdateCustomerAddressRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public UpdateCustomerAddressRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class UpdateCustomerAddressRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public UpdateCustomerAddressRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class UpdateCustomerAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_schema")
     public String schema;
+
     public UpdateCustomerAddressRequest withSchema(String schema) {
         this.schema = schema;
         return this;
@@ -39,6 +43,7 @@ public class UpdateCustomerAddressRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateUpdateAddressRequests createUpdateAddressRequests;
+
     public UpdateCustomerAddressRequest withCreateUpdateAddressRequests(org.openapis.openapi.models.shared.CreateUpdateAddressRequests createUpdateAddressRequests) {
         this.createUpdateAddressRequests = createUpdateAddressRequests;
         return this;
@@ -49,9 +54,16 @@ public class UpdateCustomerAddressRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public UpdateCustomerAddressRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UpdateCustomerAddressRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("createUpdateAddressRequests") org.openapis.openapi.models.shared.CreateUpdateAddressRequests createUpdateAddressRequests, @JsonProperty("id") String id) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.createUpdateAddressRequests = createUpdateAddressRequests;
+        this.id = id;
+  }
 }

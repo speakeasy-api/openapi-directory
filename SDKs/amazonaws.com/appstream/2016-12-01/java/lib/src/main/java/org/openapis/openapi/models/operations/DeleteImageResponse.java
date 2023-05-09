@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteImageResponse {
@@ -12,6 +13,7 @@ public class DeleteImageResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteImageResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteImageResponse {
     
     
     public String contentType;
+
     public DeleteImageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteImageResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteImageResult deleteImageResult;
+
     public DeleteImageResponse withDeleteImageResult(org.openapis.openapi.models.shared.DeleteImageResult deleteImageResult) {
         this.deleteImageResult = deleteImageResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteImageResponse {
      */
     
     public Object operationNotPermittedException;
+
     public DeleteImageResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteImageResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteImageResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteImageResponse {
     
     
     public Integer statusCode;
+
     public DeleteImageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteImageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteImageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteImageResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteImageResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeleteImageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

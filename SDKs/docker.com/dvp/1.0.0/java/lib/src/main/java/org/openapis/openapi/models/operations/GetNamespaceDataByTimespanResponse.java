@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNamespaceDataByTimespanResponse {
     
     public String contentType;
+
     public GetNamespaceDataByTimespanResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetNamespaceDataByTimespanResponse {
      */
     
     public org.openapis.openapi.models.shared.ResponseData responseData;
+
     public GetNamespaceDataByTimespanResponse withResponseData(org.openapis.openapi.models.shared.ResponseData responseData) {
         this.responseData = responseData;
         return this;
@@ -26,6 +29,7 @@ public class GetNamespaceDataByTimespanResponse {
     
     
     public Integer statusCode;
+
     public GetNamespaceDataByTimespanResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetNamespaceDataByTimespanResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNamespaceDataByTimespanResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetNamespaceDataByTimespanResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

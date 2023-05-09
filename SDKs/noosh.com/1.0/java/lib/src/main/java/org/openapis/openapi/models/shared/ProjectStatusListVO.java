@@ -15,6 +15,7 @@ public class ProjectStatusListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public ProjectStatusSimpleVO[] results;
+
     public ProjectStatusListVO withResults(ProjectStatusSimpleVO[] results) {
         this.results = results;
         return this;
@@ -23,6 +24,7 @@ public class ProjectStatusListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public ProjectStatusListVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -31,9 +33,11 @@ public class ProjectStatusListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public ProjectStatusListVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public ProjectStatusListVO(){}
 }

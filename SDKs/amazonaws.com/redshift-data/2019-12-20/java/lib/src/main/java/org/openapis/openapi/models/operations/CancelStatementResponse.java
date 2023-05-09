@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelStatementResponse {
@@ -12,6 +13,7 @@ public class CancelStatementResponse {
      */
     
     public org.openapis.openapi.models.shared.CancelStatementResponse cancelStatementResponse;
+
     public CancelStatementResponse withCancelStatementResponse(org.openapis.openapi.models.shared.CancelStatementResponse cancelStatementResponse) {
         this.cancelStatementResponse = cancelStatementResponse;
         return this;
@@ -19,6 +21,7 @@ public class CancelStatementResponse {
     
     
     public String contentType;
+
     public CancelStatementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CancelStatementResponse {
      */
     
     public Object databaseConnectionException;
+
     public CancelStatementResponse withDatabaseConnectionException(Object databaseConnectionException) {
         this.databaseConnectionException = databaseConnectionException;
         return this;
@@ -39,6 +43,7 @@ public class CancelStatementResponse {
      */
     
     public Object internalServerException;
+
     public CancelStatementResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CancelStatementResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CancelStatementResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CancelStatementResponse {
     
     
     public Integer statusCode;
+
     public CancelStatementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CancelStatementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelStatementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CancelStatementResponse {
      */
     
     public Object validationException;
+
     public CancelStatementResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CancelStatementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

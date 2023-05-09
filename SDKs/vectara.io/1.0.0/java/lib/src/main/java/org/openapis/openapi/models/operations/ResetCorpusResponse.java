@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ResetCorpusResponse {
     
     public String contentType;
+
     public ResetCorpusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ResetCorpusResponse {
     
     
     public Integer statusCode;
+
     public ResetCorpusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ResetCorpusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ResetCorpusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ResetCorpusResponse {
      */
     
     public org.openapis.openapi.models.shared.AdminResetCorpusResponse adminResetCorpusResponse;
+
     public ResetCorpusResponse withAdminResetCorpusResponse(org.openapis.openapi.models.shared.AdminResetCorpusResponse adminResetCorpusResponse) {
         this.adminResetCorpusResponse = adminResetCorpusResponse;
         return this;
@@ -43,9 +48,14 @@ public class ResetCorpusResponse {
      */
     
     public org.openapis.openapi.models.shared.GooglerpcStatus googlerpcStatus;
+
     public ResetCorpusResponse withGooglerpcStatus(org.openapis.openapi.models.shared.GooglerpcStatus googlerpcStatus) {
         this.googlerpcStatus = googlerpcStatus;
         return this;
     }
     
+    public ResetCorpusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

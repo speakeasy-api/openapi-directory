@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVerifiedAccessEndpointsRequest {
     
     public Boolean dryRun;
+
     public DescribeVerifiedAccessEndpointsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeVerifiedAccessEndpointsRequest {
     
     
     public DescribeVerifiedAccessEndpointsRequestFilters[] filters;
+
     public DescribeVerifiedAccessEndpointsRequest withFilters(DescribeVerifiedAccessEndpointsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeVerifiedAccessEndpointsRequest {
     
     
     public Long maxResults;
+
     public DescribeVerifiedAccessEndpointsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class DescribeVerifiedAccessEndpointsRequest {
     
     
     public String nextToken;
+
     public DescribeVerifiedAccessEndpointsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,6 +41,7 @@ public class DescribeVerifiedAccessEndpointsRequest {
     
     
     public String[] verifiedAccessEndpointIds;
+
     public DescribeVerifiedAccessEndpointsRequest withVerifiedAccessEndpointIds(String[] verifiedAccessEndpointIds) {
         this.verifiedAccessEndpointIds = verifiedAccessEndpointIds;
         return this;
@@ -44,6 +49,7 @@ public class DescribeVerifiedAccessEndpointsRequest {
     
     
     public String verifiedAccessGroupId;
+
     public DescribeVerifiedAccessEndpointsRequest withVerifiedAccessGroupId(String verifiedAccessGroupId) {
         this.verifiedAccessGroupId = verifiedAccessGroupId;
         return this;
@@ -51,9 +57,11 @@ public class DescribeVerifiedAccessEndpointsRequest {
     
     
     public String verifiedAccessInstanceId;
+
     public DescribeVerifiedAccessEndpointsRequest withVerifiedAccessInstanceId(String verifiedAccessInstanceId) {
         this.verifiedAccessInstanceId = verifiedAccessInstanceId;
         return this;
     }
     
+    public DescribeVerifiedAccessEndpointsRequest(){}
 }

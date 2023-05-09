@@ -15,9 +15,13 @@ public class PostLoadBalancers201ApplicationJSONLoadBalancerAlgorithm {
      */
     @JsonProperty("type")
     public PostLoadBalancers201ApplicationJSONLoadBalancerAlgorithmTypeEnum type;
+
     public PostLoadBalancers201ApplicationJSONLoadBalancerAlgorithm withType(PostLoadBalancers201ApplicationJSONLoadBalancerAlgorithmTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PostLoadBalancers201ApplicationJSONLoadBalancerAlgorithm(@JsonProperty("type") PostLoadBalancers201ApplicationJSONLoadBalancerAlgorithmTypeEnum type) {
+        this.type = type;
+  }
 }

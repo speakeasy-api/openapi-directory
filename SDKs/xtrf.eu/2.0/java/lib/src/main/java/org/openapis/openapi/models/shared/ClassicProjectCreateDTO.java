@@ -18,6 +18,7 @@ public class ClassicProjectCreateDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoriesIds")
     public Long[] categoriesIds;
+
     public ClassicProjectCreateDTO withCategoriesIds(Long[] categoriesIds) {
         this.categoriesIds = categoriesIds;
         return this;
@@ -25,6 +26,7 @@ public class ClassicProjectCreateDTO {
     
     @JsonProperty("customerId")
     public Long customerId;
+
     public ClassicProjectCreateDTO withCustomerId(Long customerId) {
         this.customerId = customerId;
         return this;
@@ -33,6 +35,7 @@ public class ClassicProjectCreateDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dates")
     public ProjectDatesDTO dates;
+
     public ClassicProjectCreateDTO withDates(ProjectDatesDTO dates) {
         this.dates = dates;
         return this;
@@ -44,6 +47,7 @@ public class ClassicProjectCreateDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputFiles")
     public TaskFileDTO[] inputFiles;
+
     public ClassicProjectCreateDTO withInputFiles(TaskFileDTO[] inputFiles) {
         this.inputFiles = inputFiles;
         return this;
@@ -52,6 +56,7 @@ public class ClassicProjectCreateDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instructions")
     public InstructionsDTO instructions;
+
     public ClassicProjectCreateDTO withInstructions(InstructionsDTO instructions) {
         this.instructions = instructions;
         return this;
@@ -60,6 +65,7 @@ public class ClassicProjectCreateDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ClassicProjectCreateDTO withName(String name) {
         this.name = name;
         return this;
@@ -71,6 +77,7 @@ public class ClassicProjectCreateDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("people")
     public ClassicPeopleDTO people;
+
     public ClassicProjectCreateDTO withPeople(ClassicPeopleDTO people) {
         this.people = people;
         return this;
@@ -78,6 +85,7 @@ public class ClassicProjectCreateDTO {
     
     @JsonProperty("serviceId")
     public Long serviceId;
+
     public ClassicProjectCreateDTO withServiceId(Long serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -86,6 +94,7 @@ public class ClassicProjectCreateDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceLanguageId")
     public Long sourceLanguageId;
+
     public ClassicProjectCreateDTO withSourceLanguageId(Long sourceLanguageId) {
         this.sourceLanguageId = sourceLanguageId;
         return this;
@@ -93,6 +102,7 @@ public class ClassicProjectCreateDTO {
     
     @JsonProperty("specializationId")
     public Long specializationId;
+
     public ClassicProjectCreateDTO withSpecializationId(Long specializationId) {
         this.specializationId = specializationId;
         return this;
@@ -101,9 +111,15 @@ public class ClassicProjectCreateDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetLanguagesIds")
     public Long[] targetLanguagesIds;
+
     public ClassicProjectCreateDTO withTargetLanguagesIds(Long[] targetLanguagesIds) {
         this.targetLanguagesIds = targetLanguagesIds;
         return this;
     }
     
+    public ClassicProjectCreateDTO(@JsonProperty("customerId") Long customerId, @JsonProperty("serviceId") Long serviceId, @JsonProperty("specializationId") Long specializationId) {
+        this.customerId = customerId;
+        this.serviceId = serviceId;
+        this.specializationId = specializationId;
+  }
 }

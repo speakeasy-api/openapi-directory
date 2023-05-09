@@ -15,6 +15,7 @@ public class GetPotHoldings200ApplicationJSONHoldings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additional_external_details")
     public java.util.Map<String, Object> additionalExternalDetails;
+
     public GetPotHoldings200ApplicationJSONHoldings withAdditionalExternalDetails(java.util.Map<String, Object> additionalExternalDetails) {
         this.additionalExternalDetails = additionalExternalDetails;
         return this;
@@ -26,6 +27,7 @@ public class GetPotHoldings200ApplicationJSONHoldings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("average_book_cost")
     public String averageBookCost;
+
     public GetPotHoldings200ApplicationJSONHoldings withAverageBookCost(String averageBookCost) {
         this.averageBookCost = averageBookCost;
         return this;
@@ -37,6 +39,7 @@ public class GetPotHoldings200ApplicationJSONHoldings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cost_of_holding")
     public String costOfHolding;
+
     public GetPotHoldings200ApplicationJSONHoldings withCostOfHolding(String costOfHolding) {
         this.costOfHolding = costOfHolding;
         return this;
@@ -47,6 +50,7 @@ public class GetPotHoldings200ApplicationJSONHoldings {
      */
     @JsonProperty("currency")
     public String currency;
+
     public GetPotHoldings200ApplicationJSONHoldings withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -58,6 +62,7 @@ public class GetPotHoldings200ApplicationJSONHoldings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("free_quantity")
     public String freeQuantity;
+
     public GetPotHoldings200ApplicationJSONHoldings withFreeQuantity(String freeQuantity) {
         this.freeQuantity = freeQuantity;
         return this;
@@ -68,6 +73,7 @@ public class GetPotHoldings200ApplicationJSONHoldings {
      */
     @JsonProperty("free_value")
     public String freeValue;
+
     public GetPotHoldings200ApplicationJSONHoldings withFreeValue(String freeValue) {
         this.freeValue = freeValue;
         return this;
@@ -78,6 +84,7 @@ public class GetPotHoldings200ApplicationJSONHoldings {
      */
     @JsonProperty("investment_product_id")
     public String investmentProductId;
+
     public GetPotHoldings200ApplicationJSONHoldings withInvestmentProductId(String investmentProductId) {
         this.investmentProductId = investmentProductId;
         return this;
@@ -89,6 +96,7 @@ public class GetPotHoldings200ApplicationJSONHoldings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("investment_product_name")
     public String investmentProductName;
+
     public GetPotHoldings200ApplicationJSONHoldings withInvestmentProductName(String investmentProductName) {
         this.investmentProductName = investmentProductName;
         return this;
@@ -100,6 +108,7 @@ public class GetPotHoldings200ApplicationJSONHoldings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locked_quantity")
     public String lockedQuantity;
+
     public GetPotHoldings200ApplicationJSONHoldings withLockedQuantity(String lockedQuantity) {
         this.lockedQuantity = lockedQuantity;
         return this;
@@ -110,6 +119,7 @@ public class GetPotHoldings200ApplicationJSONHoldings {
      */
     @JsonProperty("locked_value")
     public String lockedValue;
+
     public GetPotHoldings200ApplicationJSONHoldings withLockedValue(String lockedValue) {
         this.lockedValue = lockedValue;
         return this;
@@ -121,6 +131,7 @@ public class GetPotHoldings200ApplicationJSONHoldings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public String price;
+
     public GetPotHoldings200ApplicationJSONHoldings withPrice(String price) {
         this.price = price;
         return this;
@@ -132,6 +143,7 @@ public class GetPotHoldings200ApplicationJSONHoldings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price_date")
     public String priceDate;
+
     public GetPotHoldings200ApplicationJSONHoldings withPriceDate(String priceDate) {
         this.priceDate = priceDate;
         return this;
@@ -143,6 +155,7 @@ public class GetPotHoldings200ApplicationJSONHoldings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settled_cash_position")
     public String settledCashPosition;
+
     public GetPotHoldings200ApplicationJSONHoldings withSettledCashPosition(String settledCashPosition) {
         this.settledCashPosition = settledCashPosition;
         return this;
@@ -154,6 +167,7 @@ public class GetPotHoldings200ApplicationJSONHoldings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_quantity")
     public String totalQuantity;
+
     public GetPotHoldings200ApplicationJSONHoldings withTotalQuantity(String totalQuantity) {
         this.totalQuantity = totalQuantity;
         return this;
@@ -164,9 +178,17 @@ public class GetPotHoldings200ApplicationJSONHoldings {
      */
     @JsonProperty("total_value")
     public String totalValue;
+
     public GetPotHoldings200ApplicationJSONHoldings withTotalValue(String totalValue) {
         this.totalValue = totalValue;
         return this;
     }
     
+    public GetPotHoldings200ApplicationJSONHoldings(@JsonProperty("currency") String currency, @JsonProperty("free_value") String freeValue, @JsonProperty("investment_product_id") String investmentProductId, @JsonProperty("locked_value") String lockedValue, @JsonProperty("total_value") String totalValue) {
+        this.currency = currency;
+        this.freeValue = freeValue;
+        this.investmentProductId = investmentProductId;
+        this.lockedValue = lockedValue;
+        this.totalValue = totalValue;
+  }
 }

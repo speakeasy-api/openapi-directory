@@ -12,6 +12,7 @@ public class DescribeServicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public DescribeServicesRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -20,9 +21,11 @@ public class DescribeServicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceCodeList")
     public String[] serviceCodeList;
+
     public DescribeServicesRequest withServiceCodeList(String[] serviceCodeList) {
         this.serviceCodeList = serviceCodeList;
         return this;
     }
     
+    public DescribeServicesRequest(){}
 }

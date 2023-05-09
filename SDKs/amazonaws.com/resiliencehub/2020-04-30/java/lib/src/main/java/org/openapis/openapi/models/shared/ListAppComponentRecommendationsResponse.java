@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListAppComponentRecommendationsResponse {
     @JsonProperty("componentRecommendations")
     public ComponentRecommendation[] componentRecommendations;
+
     public ListAppComponentRecommendationsResponse withComponentRecommendations(ComponentRecommendation[] componentRecommendations) {
         this.componentRecommendations = componentRecommendations;
         return this;
@@ -22,9 +23,13 @@ public class ListAppComponentRecommendationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAppComponentRecommendationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAppComponentRecommendationsResponse(@JsonProperty("componentRecommendations") ComponentRecommendation[] componentRecommendations) {
+        this.componentRecommendations = componentRecommendations;
+  }
 }

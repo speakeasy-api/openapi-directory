@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class NtcerResponse {
     
     public String contentType;
+
     public NtcerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class NtcerResponse {
     
     
     public Integer statusCode;
+
     public NtcerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class NtcerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public NtcerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class NtcerResponse {
      */
     
     public Ntcer400ApplicationJSON ntcer400ApplicationJSONObject;
+
     public NtcerResponse withNtcer400ApplicationJSONObject(Ntcer400ApplicationJSON ntcer400ApplicationJSONObject) {
         this.ntcer400ApplicationJSONObject = ntcer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class NtcerResponse {
      */
     
     public Ntcer401ApplicationJSON ntcer401ApplicationJSONObject;
+
     public NtcerResponse withNtcer401ApplicationJSONObject(Ntcer401ApplicationJSON ntcer401ApplicationJSONObject) {
         this.ntcer401ApplicationJSONObject = ntcer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class NtcerResponse {
      */
     
     public Ntcer404ApplicationJSON ntcer404ApplicationJSONObject;
+
     public NtcerResponse withNtcer404ApplicationJSONObject(Ntcer404ApplicationJSON ntcer404ApplicationJSONObject) {
         this.ntcer404ApplicationJSONObject = ntcer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class NtcerResponse {
      */
     
     public Ntcer500ApplicationJSON ntcer500ApplicationJSONObject;
+
     public NtcerResponse withNtcer500ApplicationJSONObject(Ntcer500ApplicationJSON ntcer500ApplicationJSONObject) {
         this.ntcer500ApplicationJSONObject = ntcer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class NtcerResponse {
      */
     
     public Ntcer502ApplicationJSON ntcer502ApplicationJSONObject;
+
     public NtcerResponse withNtcer502ApplicationJSONObject(Ntcer502ApplicationJSON ntcer502ApplicationJSONObject) {
         this.ntcer502ApplicationJSONObject = ntcer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class NtcerResponse {
      */
     
     public Ntcer503ApplicationJSON ntcer503ApplicationJSONObject;
+
     public NtcerResponse withNtcer503ApplicationJSONObject(Ntcer503ApplicationJSON ntcer503ApplicationJSONObject) {
         this.ntcer503ApplicationJSONObject = ntcer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class NtcerResponse {
      */
     
     public Ntcer504ApplicationJSON ntcer504ApplicationJSONObject;
+
     public NtcerResponse withNtcer504ApplicationJSONObject(Ntcer504ApplicationJSON ntcer504ApplicationJSONObject) {
         this.ntcer504ApplicationJSONObject = ntcer504ApplicationJSONObject;
         return this;
     }
     
+    public NtcerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

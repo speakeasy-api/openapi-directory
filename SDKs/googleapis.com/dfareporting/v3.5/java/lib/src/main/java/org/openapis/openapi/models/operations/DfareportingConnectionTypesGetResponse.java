@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DfareportingConnectionTypesGetResponse {
@@ -12,6 +13,7 @@ public class DfareportingConnectionTypesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.ConnectionType connectionType;
+
     public DfareportingConnectionTypesGetResponse withConnectionType(org.openapis.openapi.models.shared.ConnectionType connectionType) {
         this.connectionType = connectionType;
         return this;
@@ -19,6 +21,7 @@ public class DfareportingConnectionTypesGetResponse {
     
     
     public String contentType;
+
     public DfareportingConnectionTypesGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DfareportingConnectionTypesGetResponse {
     
     
     public Integer statusCode;
+
     public DfareportingConnectionTypesGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DfareportingConnectionTypesGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DfareportingConnectionTypesGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DfareportingConnectionTypesGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

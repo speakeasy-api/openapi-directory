@@ -18,6 +18,7 @@ public class ErrorInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public ErrorInfo withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -29,6 +30,7 @@ public class ErrorInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadatas")
     public java.util.Map<String, String> metadatas;
+
     public ErrorInfo withMetadatas(java.util.Map<String, String> metadatas) {
         this.metadatas = metadatas;
         return this;
@@ -40,9 +42,11 @@ public class ErrorInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public ErrorInfo withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public ErrorInfo(){}
 }

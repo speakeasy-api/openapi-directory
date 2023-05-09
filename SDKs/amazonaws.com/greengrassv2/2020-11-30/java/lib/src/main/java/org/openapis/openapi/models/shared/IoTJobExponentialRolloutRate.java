@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IoTJobExponentialRolloutRate {
     @JsonProperty("baseRatePerMinute")
     public Long baseRatePerMinute;
+
     public IoTJobExponentialRolloutRate withBaseRatePerMinute(Long baseRatePerMinute) {
         this.baseRatePerMinute = baseRatePerMinute;
         return this;
@@ -19,6 +20,7 @@ public class IoTJobExponentialRolloutRate {
     
     @JsonProperty("incrementFactor")
     public Double incrementFactor;
+
     public IoTJobExponentialRolloutRate withIncrementFactor(Double incrementFactor) {
         this.incrementFactor = incrementFactor;
         return this;
@@ -26,9 +28,15 @@ public class IoTJobExponentialRolloutRate {
     
     @JsonProperty("rateIncreaseCriteria")
     public IoTJobRateIncreaseCriteria rateIncreaseCriteria;
+
     public IoTJobExponentialRolloutRate withRateIncreaseCriteria(IoTJobRateIncreaseCriteria rateIncreaseCriteria) {
         this.rateIncreaseCriteria = rateIncreaseCriteria;
         return this;
     }
     
+    public IoTJobExponentialRolloutRate(@JsonProperty("baseRatePerMinute") Long baseRatePerMinute, @JsonProperty("incrementFactor") Double incrementFactor, @JsonProperty("rateIncreaseCriteria") IoTJobRateIncreaseCriteria rateIncreaseCriteria) {
+        this.baseRatePerMinute = baseRatePerMinute;
+        this.incrementFactor = incrementFactor;
+        this.rateIncreaseCriteria = rateIncreaseCriteria;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClientApiNewFormRequest {
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.ClientCreateApiModel clientCreateApiModel;
+
     public ClientApiNewFormRequest withClientCreateApiModel(org.openapis.openapi.models.shared.ClientCreateApiModel clientCreateApiModel) {
         this.clientCreateApiModel = clientCreateApiModel;
         return this;
@@ -16,6 +18,7 @@ public class ClientApiNewFormRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
     public String xAuthKey;
+
     public ClientApiNewFormRequest withXAuthKey(String xAuthKey) {
         this.xAuthKey = xAuthKey;
         return this;
@@ -23,9 +26,15 @@ public class ClientApiNewFormRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
     public String xAuthSecret;
+
     public ClientApiNewFormRequest withXAuthSecret(String xAuthSecret) {
         this.xAuthSecret = xAuthSecret;
         return this;
     }
     
+    public ClientApiNewFormRequest(@JsonProperty("ClientCreateApiModel") org.openapis.openapi.models.shared.ClientCreateApiModel clientCreateApiModel, @JsonProperty("x-auth-key") String xAuthKey, @JsonProperty("x-auth-secret") String xAuthSecret) {
+        this.clientCreateApiModel = clientCreateApiModel;
+        this.xAuthKey = xAuthKey;
+        this.xAuthSecret = xAuthSecret;
+  }
 }

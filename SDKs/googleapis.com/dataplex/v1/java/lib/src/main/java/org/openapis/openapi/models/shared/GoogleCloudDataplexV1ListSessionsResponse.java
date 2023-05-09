@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1ListSessionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDataplexV1ListSessionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDataplexV1ListSessionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessions")
     public GoogleCloudDataplexV1Session[] sessions;
+
     public GoogleCloudDataplexV1ListSessionsResponse withSessions(GoogleCloudDataplexV1Session[] sessions) {
         this.sessions = sessions;
         return this;
     }
     
+    public GoogleCloudDataplexV1ListSessionsResponse(){}
 }

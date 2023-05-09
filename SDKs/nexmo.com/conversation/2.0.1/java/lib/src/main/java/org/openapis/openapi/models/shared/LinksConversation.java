@@ -12,9 +12,11 @@ public class LinksConversation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public LinksConversationSelf self;
+
     public LinksConversation withSelf(LinksConversationSelf self) {
         this.self = self;
         return this;
     }
     
+    public LinksConversation(){}
 }

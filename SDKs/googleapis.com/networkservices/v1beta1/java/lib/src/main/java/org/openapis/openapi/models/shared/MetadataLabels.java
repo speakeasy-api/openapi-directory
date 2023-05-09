@@ -18,6 +18,7 @@ public class MetadataLabels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelName")
     public String labelName;
+
     public MetadataLabels withLabelName(String labelName) {
         this.labelName = labelName;
         return this;
@@ -29,9 +30,11 @@ public class MetadataLabels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelValue")
     public String labelValue;
+
     public MetadataLabels withLabelValue(String labelValue) {
         this.labelValue = labelValue;
         return this;
     }
     
+    public MetadataLabels(){}
 }

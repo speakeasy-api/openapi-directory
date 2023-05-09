@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVCustomPricesRulesPriceAssociationIdRequest {
@@ -12,6 +13,7 @@ public class GetVCustomPricesRulesPriceAssociationIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetVCustomPricesRulesPriceAssociationIdRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetVCustomPricesRulesPriceAssociationIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetVCustomPricesRulesPriceAssociationIdRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,9 +35,15 @@ public class GetVCustomPricesRulesPriceAssociationIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=priceAssociationId")
     public Long priceAssociationId;
+
     public GetVCustomPricesRulesPriceAssociationIdRequest withPriceAssociationId(Long priceAssociationId) {
         this.priceAssociationId = priceAssociationId;
         return this;
     }
     
+    public GetVCustomPricesRulesPriceAssociationIdRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("priceAssociationId") Long priceAssociationId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.priceAssociationId = priceAssociationId;
+  }
 }

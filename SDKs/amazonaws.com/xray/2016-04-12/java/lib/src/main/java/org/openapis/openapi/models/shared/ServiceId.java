@@ -15,6 +15,7 @@ public class ServiceId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public ServiceId withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +24,7 @@ public class ServiceId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ServiceId withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class ServiceId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Names")
     public String[] names;
+
     public ServiceId withNames(String[] names) {
         this.names = names;
         return this;
@@ -39,9 +42,11 @@ public class ServiceId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public ServiceId withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ServiceId(){}
 }

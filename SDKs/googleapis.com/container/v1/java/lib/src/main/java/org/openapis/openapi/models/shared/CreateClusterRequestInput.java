@@ -18,6 +18,7 @@ public class CreateClusterRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster")
     public ClusterInput cluster;
+
     public CreateClusterRequestInput withCluster(ClusterInput cluster) {
         this.cluster = cluster;
         return this;
@@ -29,6 +30,7 @@ public class CreateClusterRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public CreateClusterRequestInput withParent(String parent) {
         this.parent = parent;
         return this;
@@ -40,6 +42,7 @@ public class CreateClusterRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public CreateClusterRequestInput withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -51,9 +54,11 @@ public class CreateClusterRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public CreateClusterRequestInput withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public CreateClusterRequestInput(){}
 }

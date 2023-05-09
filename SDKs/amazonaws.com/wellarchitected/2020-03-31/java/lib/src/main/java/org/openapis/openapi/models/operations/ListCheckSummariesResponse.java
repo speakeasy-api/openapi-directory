@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCheckSummariesResponse {
@@ -12,6 +13,7 @@ public class ListCheckSummariesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListCheckSummariesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListCheckSummariesResponse {
     
     
     public String contentType;
+
     public ListCheckSummariesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListCheckSummariesResponse {
      */
     
     public Object internalServerException;
+
     public ListCheckSummariesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListCheckSummariesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCheckSummariesOutput listCheckSummariesOutput;
+
     public ListCheckSummariesResponse withListCheckSummariesOutput(org.openapis.openapi.models.shared.ListCheckSummariesOutput listCheckSummariesOutput) {
         this.listCheckSummariesOutput = listCheckSummariesOutput;
         return this;
@@ -49,6 +54,7 @@ public class ListCheckSummariesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListCheckSummariesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListCheckSummariesResponse {
     
     
     public Integer statusCode;
+
     public ListCheckSummariesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListCheckSummariesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCheckSummariesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListCheckSummariesResponse {
      */
     
     public Object throttlingException;
+
     public ListCheckSummariesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListCheckSummariesResponse {
      */
     
     public Object validationException;
+
     public ListCheckSummariesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListCheckSummariesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

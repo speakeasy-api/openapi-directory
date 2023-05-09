@@ -18,6 +18,7 @@ public class KeywordAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyword")
     public String keyword;
+
     public KeywordAssignedTargetingOptionDetails withKeyword(String keyword) {
         this.keyword = keyword;
         return this;
@@ -29,9 +30,11 @@ public class KeywordAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("negative")
     public Boolean negative;
+
     public KeywordAssignedTargetingOptionDetails withNegative(Boolean negative) {
         this.negative = negative;
         return this;
     }
     
+    public KeywordAssignedTargetingOptionDetails(){}
 }

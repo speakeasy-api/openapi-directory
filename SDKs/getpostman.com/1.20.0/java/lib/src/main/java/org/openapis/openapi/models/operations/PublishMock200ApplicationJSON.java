@@ -15,9 +15,11 @@ public class PublishMock200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mock")
     public PublishMock200ApplicationJSONMock mock;
+
     public PublishMock200ApplicationJSON withMock(PublishMock200ApplicationJSONMock mock) {
         this.mock = mock;
         return this;
     }
     
+    public PublishMock200ApplicationJSON(){}
 }

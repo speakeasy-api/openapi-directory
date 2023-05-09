@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdatePipeResponse {
@@ -12,6 +13,7 @@ public class UpdatePipeResponse {
      */
     
     public Object conflictException;
+
     public UpdatePipeResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UpdatePipeResponse {
     
     
     public String contentType;
+
     public UpdatePipeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdatePipeResponse {
      */
     
     public Object internalException;
+
     public UpdatePipeResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class UpdatePipeResponse {
      */
     
     public Object notFoundException;
+
     public UpdatePipeResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdatePipeResponse {
     
     
     public Integer statusCode;
+
     public UpdatePipeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdatePipeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdatePipeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdatePipeResponse {
      */
     
     public Object throttlingException;
+
     public UpdatePipeResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdatePipeResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdatePipeResponse updatePipeResponse;
+
     public UpdatePipeResponse withUpdatePipeResponse(org.openapis.openapi.models.shared.UpdatePipeResponse updatePipeResponse) {
         this.updatePipeResponse = updatePipeResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdatePipeResponse {
      */
     
     public Object validationException;
+
     public UpdatePipeResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdatePipeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

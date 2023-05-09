@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteRolePolicyRequest {
     
     public String policyName;
+
     public DeleteRolePolicyRequest withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -16,9 +17,14 @@ public class DeleteRolePolicyRequest {
     
     
     public String roleName;
+
     public DeleteRolePolicyRequest withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
     }
     
+    public DeleteRolePolicyRequest(@JsonProperty("PolicyName") String policyName, @JsonProperty("RoleName") String roleName) {
+        this.policyName = policyName;
+        this.roleName = roleName;
+  }
 }

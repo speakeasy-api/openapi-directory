@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OverridePullRequestApprovalRulesResponse {
     
     public String contentType;
+
     public OverridePullRequestApprovalRulesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class OverridePullRequestApprovalRulesResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public OverridePullRequestApprovalRulesResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -29,6 +32,7 @@ public class OverridePullRequestApprovalRulesResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public OverridePullRequestApprovalRulesResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -39,6 +43,7 @@ public class OverridePullRequestApprovalRulesResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public OverridePullRequestApprovalRulesResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -49,6 +54,7 @@ public class OverridePullRequestApprovalRulesResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public OverridePullRequestApprovalRulesResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class OverridePullRequestApprovalRulesResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public OverridePullRequestApprovalRulesResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -69,6 +76,7 @@ public class OverridePullRequestApprovalRulesResponse {
      */
     
     public Object invalidOverrideStatusException;
+
     public OverridePullRequestApprovalRulesResponse withInvalidOverrideStatusException(Object invalidOverrideStatusException) {
         this.invalidOverrideStatusException = invalidOverrideStatusException;
         return this;
@@ -79,6 +87,7 @@ public class OverridePullRequestApprovalRulesResponse {
      */
     
     public Object invalidPullRequestIdException;
+
     public OverridePullRequestApprovalRulesResponse withInvalidPullRequestIdException(Object invalidPullRequestIdException) {
         this.invalidPullRequestIdException = invalidPullRequestIdException;
         return this;
@@ -89,6 +98,7 @@ public class OverridePullRequestApprovalRulesResponse {
      */
     
     public Object invalidRevisionIdException;
+
     public OverridePullRequestApprovalRulesResponse withInvalidRevisionIdException(Object invalidRevisionIdException) {
         this.invalidRevisionIdException = invalidRevisionIdException;
         return this;
@@ -99,6 +109,7 @@ public class OverridePullRequestApprovalRulesResponse {
      */
     
     public Object overrideAlreadySetException;
+
     public OverridePullRequestApprovalRulesResponse withOverrideAlreadySetException(Object overrideAlreadySetException) {
         this.overrideAlreadySetException = overrideAlreadySetException;
         return this;
@@ -109,6 +120,7 @@ public class OverridePullRequestApprovalRulesResponse {
      */
     
     public Object overrideStatusRequiredException;
+
     public OverridePullRequestApprovalRulesResponse withOverrideStatusRequiredException(Object overrideStatusRequiredException) {
         this.overrideStatusRequiredException = overrideStatusRequiredException;
         return this;
@@ -119,6 +131,7 @@ public class OverridePullRequestApprovalRulesResponse {
      */
     
     public Object pullRequestAlreadyClosedException;
+
     public OverridePullRequestApprovalRulesResponse withPullRequestAlreadyClosedException(Object pullRequestAlreadyClosedException) {
         this.pullRequestAlreadyClosedException = pullRequestAlreadyClosedException;
         return this;
@@ -129,6 +142,7 @@ public class OverridePullRequestApprovalRulesResponse {
      */
     
     public Object pullRequestDoesNotExistException;
+
     public OverridePullRequestApprovalRulesResponse withPullRequestDoesNotExistException(Object pullRequestDoesNotExistException) {
         this.pullRequestDoesNotExistException = pullRequestDoesNotExistException;
         return this;
@@ -139,6 +153,7 @@ public class OverridePullRequestApprovalRulesResponse {
      */
     
     public Object pullRequestIdRequiredException;
+
     public OverridePullRequestApprovalRulesResponse withPullRequestIdRequiredException(Object pullRequestIdRequiredException) {
         this.pullRequestIdRequiredException = pullRequestIdRequiredException;
         return this;
@@ -149,6 +164,7 @@ public class OverridePullRequestApprovalRulesResponse {
      */
     
     public Object revisionIdRequiredException;
+
     public OverridePullRequestApprovalRulesResponse withRevisionIdRequiredException(Object revisionIdRequiredException) {
         this.revisionIdRequiredException = revisionIdRequiredException;
         return this;
@@ -156,6 +172,7 @@ public class OverridePullRequestApprovalRulesResponse {
     
     
     public Integer statusCode;
+
     public OverridePullRequestApprovalRulesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -163,6 +180,7 @@ public class OverridePullRequestApprovalRulesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OverridePullRequestApprovalRulesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -173,9 +191,14 @@ public class OverridePullRequestApprovalRulesResponse {
      */
     
     public Object revisionNotCurrentException;
+
     public OverridePullRequestApprovalRulesResponse withRevisionNotCurrentException(Object revisionNotCurrentException) {
         this.revisionNotCurrentException = revisionNotCurrentException;
         return this;
     }
     
+    public OverridePullRequestApprovalRulesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class CreateComputerResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Computer")
     public Computer computer;
+
     public CreateComputerResult withComputer(Computer computer) {
         this.computer = computer;
         return this;
     }
     
+    public CreateComputerResult(){}
 }

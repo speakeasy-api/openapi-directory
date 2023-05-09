@@ -15,9 +15,11 @@ public class TableReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("glue")
     public GlueTableReference glue;
+
     public TableReference withGlue(GlueTableReference glue) {
         this.glue = glue;
         return this;
     }
     
+    public TableReference(){}
 }

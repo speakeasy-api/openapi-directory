@@ -15,6 +15,7 @@ public class FileCacheLustreConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentType")
     public FileCacheLustreDeploymentTypeEnum deploymentType;
+
     public FileCacheLustreConfiguration withDeploymentType(FileCacheLustreDeploymentTypeEnum deploymentType) {
         this.deploymentType = deploymentType;
         return this;
@@ -23,6 +24,7 @@ public class FileCacheLustreConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogConfiguration")
     public LustreLogConfiguration logConfiguration;
+
     public FileCacheLustreConfiguration withLogConfiguration(LustreLogConfiguration logConfiguration) {
         this.logConfiguration = logConfiguration;
         return this;
@@ -31,6 +33,7 @@ public class FileCacheLustreConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetadataConfiguration")
     public FileCacheLustreMetadataConfiguration metadataConfiguration;
+
     public FileCacheLustreConfiguration withMetadataConfiguration(FileCacheLustreMetadataConfiguration metadataConfiguration) {
         this.metadataConfiguration = metadataConfiguration;
         return this;
@@ -39,6 +42,7 @@ public class FileCacheLustreConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MountName")
     public String mountName;
+
     public FileCacheLustreConfiguration withMountName(String mountName) {
         this.mountName = mountName;
         return this;
@@ -47,6 +51,7 @@ public class FileCacheLustreConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PerUnitStorageThroughput")
     public Long perUnitStorageThroughput;
+
     public FileCacheLustreConfiguration withPerUnitStorageThroughput(Long perUnitStorageThroughput) {
         this.perUnitStorageThroughput = perUnitStorageThroughput;
         return this;
@@ -58,9 +63,11 @@ public class FileCacheLustreConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WeeklyMaintenanceStartTime")
     public String weeklyMaintenanceStartTime;
+
     public FileCacheLustreConfiguration withWeeklyMaintenanceStartTime(String weeklyMaintenanceStartTime) {
         this.weeklyMaintenanceStartTime = weeklyMaintenanceStartTime;
         return this;
     }
     
+    public FileCacheLustreConfiguration(){}
 }

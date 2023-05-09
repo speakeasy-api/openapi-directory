@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeConnectorEntityResponse {
@@ -12,6 +13,7 @@ public class DescribeConnectorEntityResponse {
      */
     
     public Object connectorAuthenticationException;
+
     public DescribeConnectorEntityResponse withConnectorAuthenticationException(Object connectorAuthenticationException) {
         this.connectorAuthenticationException = connectorAuthenticationException;
         return this;
@@ -22,6 +24,7 @@ public class DescribeConnectorEntityResponse {
      */
     
     public Object connectorServerException;
+
     public DescribeConnectorEntityResponse withConnectorServerException(Object connectorServerException) {
         this.connectorServerException = connectorServerException;
         return this;
@@ -29,6 +32,7 @@ public class DescribeConnectorEntityResponse {
     
     
     public String contentType;
+
     public DescribeConnectorEntityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DescribeConnectorEntityResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeConnectorEntityResponse describeConnectorEntityResponse;
+
     public DescribeConnectorEntityResponse withDescribeConnectorEntityResponse(org.openapis.openapi.models.shared.DescribeConnectorEntityResponse describeConnectorEntityResponse) {
         this.describeConnectorEntityResponse = describeConnectorEntityResponse;
         return this;
@@ -49,6 +54,7 @@ public class DescribeConnectorEntityResponse {
      */
     
     public Object internalServerException;
+
     public DescribeConnectorEntityResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeConnectorEntityResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeConnectorEntityResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeConnectorEntityResponse {
     
     
     public Integer statusCode;
+
     public DescribeConnectorEntityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeConnectorEntityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeConnectorEntityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DescribeConnectorEntityResponse {
      */
     
     public Object validationException;
+
     public DescribeConnectorEntityResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeConnectorEntityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleChromeManagementV1BootPerformanceReport - Boot performance report of a device. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceBootMode](https://chromeenterprise.google/policies/#ReportDeviceBootMode) * Data Collection Frequency: On every boot up event * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: Yes * Reported for affiliated users only: N/A
+ * GoogleChromeManagementV1BootPerformanceReport - Boot performance report of a device. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceBootMode](https://chromeenterprise.google/policies/#ReportDeviceBootMode) * Data Collection Frequency: On every boot up event * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: Yes * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_OS_REPORT
  */
 public class GoogleChromeManagementV1BootPerformanceReport {
     /**
@@ -18,6 +18,7 @@ public class GoogleChromeManagementV1BootPerformanceReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bootUpDuration")
     public String bootUpDuration;
+
     public GoogleChromeManagementV1BootPerformanceReport withBootUpDuration(String bootUpDuration) {
         this.bootUpDuration = bootUpDuration;
         return this;
@@ -29,6 +30,7 @@ public class GoogleChromeManagementV1BootPerformanceReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bootUpTime")
     public String bootUpTime;
+
     public GoogleChromeManagementV1BootPerformanceReport withBootUpTime(String bootUpTime) {
         this.bootUpTime = bootUpTime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleChromeManagementV1BootPerformanceReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportTime")
     public String reportTime;
+
     public GoogleChromeManagementV1BootPerformanceReport withReportTime(String reportTime) {
         this.reportTime = reportTime;
         return this;
@@ -51,6 +54,7 @@ public class GoogleChromeManagementV1BootPerformanceReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shutdownDuration")
     public String shutdownDuration;
+
     public GoogleChromeManagementV1BootPerformanceReport withShutdownDuration(String shutdownDuration) {
         this.shutdownDuration = shutdownDuration;
         return this;
@@ -62,6 +66,7 @@ public class GoogleChromeManagementV1BootPerformanceReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shutdownReason")
     public GoogleChromeManagementV1BootPerformanceReportShutdownReasonEnum shutdownReason;
+
     public GoogleChromeManagementV1BootPerformanceReport withShutdownReason(GoogleChromeManagementV1BootPerformanceReportShutdownReasonEnum shutdownReason) {
         this.shutdownReason = shutdownReason;
         return this;
@@ -73,9 +78,11 @@ public class GoogleChromeManagementV1BootPerformanceReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shutdownTime")
     public String shutdownTime;
+
     public GoogleChromeManagementV1BootPerformanceReport withShutdownTime(String shutdownTime) {
         this.shutdownTime = shutdownTime;
         return this;
     }
     
+    public GoogleChromeManagementV1BootPerformanceReport(){}
 }

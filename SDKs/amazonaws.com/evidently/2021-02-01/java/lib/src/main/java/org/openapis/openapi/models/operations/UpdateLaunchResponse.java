@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateLaunchResponse {
@@ -12,6 +13,7 @@ public class UpdateLaunchResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateLaunchResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateLaunchResponse {
      */
     
     public Object conflictException;
+
     public UpdateLaunchResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateLaunchResponse {
     
     
     public String contentType;
+
     public UpdateLaunchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class UpdateLaunchResponse {
     
     
     public Integer statusCode;
+
     public UpdateLaunchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateLaunchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateLaunchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateLaunchResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateLaunchResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateLaunchResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateLaunchResponse updateLaunchResponse;
+
     public UpdateLaunchResponse withUpdateLaunchResponse(org.openapis.openapi.models.shared.UpdateLaunchResponse updateLaunchResponse) {
         this.updateLaunchResponse = updateLaunchResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateLaunchResponse {
      */
     
     public Object validationException;
+
     public UpdateLaunchResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateLaunchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

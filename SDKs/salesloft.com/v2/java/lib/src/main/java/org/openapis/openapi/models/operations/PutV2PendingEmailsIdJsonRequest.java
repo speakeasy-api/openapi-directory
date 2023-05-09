@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutV2PendingEmailsIdJsonRequest {
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public PutV2PendingEmailsIdJsonRequestBody requestBody;
+
     public PutV2PendingEmailsIdJsonRequest withRequestBody(PutV2PendingEmailsIdJsonRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class PutV2PendingEmailsIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PutV2PendingEmailsIdJsonRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PutV2PendingEmailsIdJsonRequest(@JsonProperty("RequestBody") PutV2PendingEmailsIdJsonRequestBody requestBody, @JsonProperty("id") String id) {
+        this.requestBody = requestBody;
+        this.id = id;
+  }
 }

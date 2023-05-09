@@ -12,6 +12,7 @@ public class GetReturnsReturnsArrayV2ReturnV2RmaItemV2Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public GetReturnsReturnsArrayV2ReturnV2RmaItemV2Item withId(Long id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class GetReturnsReturnsArrayV2ReturnV2RmaItemV2Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public String sku;
+
     public GetReturnsReturnsArrayV2ReturnV2RmaItemV2Item withSku(String sku) {
         this.sku = sku;
         return this;
     }
     
+    public GetReturnsReturnsArrayV2ReturnV2RmaItemV2Item(){}
 }

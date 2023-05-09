@@ -18,6 +18,7 @@ public class VectaraindexingCustomDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public VectaraindexingCustomDimension withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class VectaraindexingCustomDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public VectaraindexingCustomDimension withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public VectaraindexingCustomDimension(){}
 }

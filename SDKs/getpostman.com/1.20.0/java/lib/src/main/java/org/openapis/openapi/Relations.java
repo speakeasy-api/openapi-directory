@@ -102,11 +102,9 @@ public class Relations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateRelationsResponse res = new org.openapis.openapi.models.operations.CreateRelationsResponse() {{
+        org.openapis.openapi.models.operations.CreateRelationsResponse res = new org.openapis.openapi.models.operations.CreateRelationsResponse(contentType, httpRes.statusCode()) {{
             createRelations200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -145,11 +143,9 @@ public class Relations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContractTestRelationsResponse res = new org.openapis.openapi.models.operations.GetContractTestRelationsResponse() {{
+        org.openapis.openapi.models.operations.GetContractTestRelationsResponse res = new org.openapis.openapi.models.operations.GetContractTestRelationsResponse(contentType, httpRes.statusCode()) {{
             getContractTestRelations200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -188,11 +184,9 @@ public class Relations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDocumentationRelationsResponse res = new org.openapis.openapi.models.operations.GetDocumentationRelationsResponse() {{
+        org.openapis.openapi.models.operations.GetDocumentationRelationsResponse res = new org.openapis.openapi.models.operations.GetDocumentationRelationsResponse(contentType, httpRes.statusCode()) {{
             getDocumentationRelations200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -231,11 +225,9 @@ public class Relations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEnvironmentRelationsResponse res = new org.openapis.openapi.models.operations.GetEnvironmentRelationsResponse() {{
+        org.openapis.openapi.models.operations.GetEnvironmentRelationsResponse res = new org.openapis.openapi.models.operations.GetEnvironmentRelationsResponse(contentType, httpRes.statusCode()) {{
             getEnvironmentRelations200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -274,11 +266,9 @@ public class Relations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIntegrationTestRelationsResponse res = new org.openapis.openapi.models.operations.GetIntegrationTestRelationsResponse() {{
+        org.openapis.openapi.models.operations.GetIntegrationTestRelationsResponse res = new org.openapis.openapi.models.operations.GetIntegrationTestRelationsResponse(contentType, httpRes.statusCode()) {{
             getIntegrationTestRelations200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -317,11 +307,9 @@ public class Relations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLinkedRelationsResponse res = new org.openapis.openapi.models.operations.GetLinkedRelationsResponse() {{
+        org.openapis.openapi.models.operations.GetLinkedRelationsResponse res = new org.openapis.openapi.models.operations.GetLinkedRelationsResponse(contentType, httpRes.statusCode()) {{
             getLinkedRelations200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -360,11 +348,9 @@ public class Relations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMonitorRelationsResponse res = new org.openapis.openapi.models.operations.GetMonitorRelationsResponse() {{
+        org.openapis.openapi.models.operations.GetMonitorRelationsResponse res = new org.openapis.openapi.models.operations.GetMonitorRelationsResponse(contentType, httpRes.statusCode()) {{
             getMonitorRelations200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -403,11 +389,9 @@ public class Relations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTestSuiteRelationsResponse res = new org.openapis.openapi.models.operations.GetTestSuiteRelationsResponse() {{
+        org.openapis.openapi.models.operations.GetTestSuiteRelationsResponse res = new org.openapis.openapi.models.operations.GetTestSuiteRelationsResponse(contentType, httpRes.statusCode()) {{
             getTestSuiteRelations200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -445,12 +429,10 @@ public class Relations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SyncRelationsWithSchemaResponse res = new org.openapis.openapi.models.operations.SyncRelationsWithSchemaResponse() {{
+        org.openapis.openapi.models.operations.SyncRelationsWithSchemaResponse res = new org.openapis.openapi.models.operations.SyncRelationsWithSchemaResponse(contentType, httpRes.statusCode()) {{
             syncRelationsWithSchema200ApplicationJSONObject = null;
             syncRelationsWithSchema400ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

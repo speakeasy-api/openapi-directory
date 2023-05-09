@@ -65,12 +65,10 @@ public class Images {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNamespacesRepositoriesImagesResponse res = new org.openapis.openapi.models.operations.GetNamespacesRepositoriesImagesResponse() {{
+        org.openapis.openapi.models.operations.GetNamespacesRepositoriesImagesResponse res = new org.openapis.openapi.models.operations.GetNamespacesRepositoriesImagesResponse(contentType, httpRes.statusCode()) {{
             getNamespaceRepositoryImagesResponse = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -120,12 +118,10 @@ public class Images {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNamespacesRepositoriesImagesSummaryResponse res = new org.openapis.openapi.models.operations.GetNamespacesRepositoriesImagesSummaryResponse() {{
+        org.openapis.openapi.models.operations.GetNamespacesRepositoriesImagesSummaryResponse res = new org.openapis.openapi.models.operations.GetNamespacesRepositoriesImagesSummaryResponse(contentType, httpRes.statusCode()) {{
             getNamespaceRepositoryImagesSummaryResponse = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -173,12 +169,10 @@ public class Images {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNamespacesRepositoriesImagesTagsResponse res = new org.openapis.openapi.models.operations.GetNamespacesRepositoriesImagesTagsResponse() {{
+        org.openapis.openapi.models.operations.GetNamespacesRepositoriesImagesTagsResponse res = new org.openapis.openapi.models.operations.GetNamespacesRepositoriesImagesTagsResponse(contentType, httpRes.statusCode()) {{
             getNamespaceRepositoryImagesTagsResponse = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -234,13 +228,11 @@ public class Images {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostNamespacesDeleteImagesResponse res = new org.openapis.openapi.models.operations.PostNamespacesDeleteImagesResponse() {{
+        org.openapis.openapi.models.operations.PostNamespacesDeleteImagesResponse res = new org.openapis.openapi.models.operations.PostNamespacesDeleteImagesResponse(contentType, httpRes.statusCode()) {{
             postNamespacesDeleteImagesResponseSuccess = null;
             postNamespacesDeleteImagesResponseError = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

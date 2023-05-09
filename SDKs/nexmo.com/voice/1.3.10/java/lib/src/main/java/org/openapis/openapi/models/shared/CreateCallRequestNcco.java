@@ -15,6 +15,7 @@ public class CreateCallRequestNcco {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event_method")
     public CreateCallRequestNccoEventMethodEnum eventMethod;
+
     public CreateCallRequestNcco withEventMethod(CreateCallRequestNccoEventMethodEnum eventMethod) {
         this.eventMethod = eventMethod;
         return this;
@@ -32,6 +33,7 @@ public class CreateCallRequestNcco {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event_url")
     public String[] eventUrl;
+
     public CreateCallRequestNcco withEventUrl(String[] eventUrl) {
         this.eventUrl = eventUrl;
         return this;
@@ -42,6 +44,7 @@ public class CreateCallRequestNcco {
      */
     @JsonProperty("from")
     public EndpointPhoneFrom from;
+
     public CreateCallRequestNcco withFrom(EndpointPhoneFrom from) {
         this.from = from;
         return this;
@@ -53,6 +56,7 @@ public class CreateCallRequestNcco {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("length_timer")
     public Long lengthTimer;
+
     public CreateCallRequestNcco withLengthTimer(Long lengthTimer) {
         this.lengthTimer = lengthTimer;
         return this;
@@ -64,6 +68,7 @@ public class CreateCallRequestNcco {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machine_detection")
     public CreateCallRequestNccoMachineDetectionEnum machineDetection;
+
     public CreateCallRequestNcco withMachineDetection(CreateCallRequestNccoMachineDetectionEnum machineDetection) {
         this.machineDetection = machineDetection;
         return this;
@@ -75,6 +80,7 @@ public class CreateCallRequestNcco {
      */
     @JsonProperty("ncco")
     public java.util.Map<String, Object>[] ncco;
+
     public CreateCallRequestNcco withNcco(java.util.Map<String, Object>[] ncco) {
         this.ncco = ncco;
         return this;
@@ -86,6 +92,7 @@ public class CreateCallRequestNcco {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("random_from_number")
     public Boolean randomFromNumber;
+
     public CreateCallRequestNcco withRandomFromNumber(Boolean randomFromNumber) {
         this.randomFromNumber = randomFromNumber;
         return this;
@@ -97,6 +104,7 @@ public class CreateCallRequestNcco {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ringing_timer")
     public Long ringingTimer;
+
     public CreateCallRequestNcco withRingingTimer(Long ringingTimer) {
         this.ringingTimer = ringingTimer;
         return this;
@@ -104,9 +112,15 @@ public class CreateCallRequestNcco {
     
     @JsonProperty("to")
     public Object[] to;
+
     public CreateCallRequestNcco withTo(Object[] to) {
         this.to = to;
         return this;
     }
     
+    public CreateCallRequestNcco(@JsonProperty("from") EndpointPhoneFrom from, @JsonProperty("ncco") java.util.Map<String, Object>[] ncco, @JsonProperty("to") Object[] to) {
+        this.from = from;
+        this.ncco = ncco;
+        this.to = to;
+  }
 }

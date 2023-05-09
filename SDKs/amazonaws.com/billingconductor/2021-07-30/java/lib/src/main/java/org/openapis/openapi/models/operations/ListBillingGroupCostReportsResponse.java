@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListBillingGroupCostReportsResponse {
@@ -12,6 +13,7 @@ public class ListBillingGroupCostReportsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListBillingGroupCostReportsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListBillingGroupCostReportsResponse {
     
     
     public String contentType;
+
     public ListBillingGroupCostReportsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListBillingGroupCostReportsResponse {
      */
     
     public Object internalServerException;
+
     public ListBillingGroupCostReportsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListBillingGroupCostReportsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListBillingGroupCostReportsOutput listBillingGroupCostReportsOutput;
+
     public ListBillingGroupCostReportsResponse withListBillingGroupCostReportsOutput(org.openapis.openapi.models.shared.ListBillingGroupCostReportsOutput listBillingGroupCostReportsOutput) {
         this.listBillingGroupCostReportsOutput = listBillingGroupCostReportsOutput;
         return this;
@@ -49,6 +54,7 @@ public class ListBillingGroupCostReportsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListBillingGroupCostReportsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListBillingGroupCostReportsResponse {
     
     
     public Integer statusCode;
+
     public ListBillingGroupCostReportsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListBillingGroupCostReportsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListBillingGroupCostReportsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListBillingGroupCostReportsResponse {
      */
     
     public Object throttlingException;
+
     public ListBillingGroupCostReportsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListBillingGroupCostReportsResponse {
      */
     
     public Object validationException;
+
     public ListBillingGroupCostReportsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListBillingGroupCostReportsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

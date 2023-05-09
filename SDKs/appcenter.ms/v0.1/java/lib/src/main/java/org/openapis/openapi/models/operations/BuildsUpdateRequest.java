@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BuildsUpdateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public BuildsUpdateRequestBody requestBody;
+
     public BuildsUpdateRequest withRequestBody(BuildsUpdateRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class BuildsUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public BuildsUpdateRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -29,6 +32,7 @@ public class BuildsUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=build_id")
     public Long buildId;
+
     public BuildsUpdateRequest withBuildId(Long buildId) {
         this.buildId = buildId;
         return this;
@@ -39,9 +43,16 @@ public class BuildsUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public BuildsUpdateRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public BuildsUpdateRequest(@JsonProperty("RequestBody") BuildsUpdateRequestBody requestBody, @JsonProperty("app_name") String appName, @JsonProperty("build_id") Long buildId, @JsonProperty("owner_name") String ownerName) {
+        this.requestBody = requestBody;
+        this.appName = appName;
+        this.buildId = buildId;
+        this.ownerName = ownerName;
+  }
 }

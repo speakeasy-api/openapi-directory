@@ -22,6 +22,7 @@ public class WorkerConfigurationRevisionDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public WorkerConfigurationRevisionDescription withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class WorkerConfigurationRevisionDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public WorkerConfigurationRevisionDescription withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class WorkerConfigurationRevisionDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertiesFileContent")
     public String propertiesFileContent;
+
     public WorkerConfigurationRevisionDescription withPropertiesFileContent(String propertiesFileContent) {
         this.propertiesFileContent = propertiesFileContent;
         return this;
@@ -46,9 +49,11 @@ public class WorkerConfigurationRevisionDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revision")
     public Long revision;
+
     public WorkerConfigurationRevisionDescription withRevision(Long revision) {
         this.revision = revision;
         return this;
     }
     
+    public WorkerConfigurationRevisionDescription(){}
 }

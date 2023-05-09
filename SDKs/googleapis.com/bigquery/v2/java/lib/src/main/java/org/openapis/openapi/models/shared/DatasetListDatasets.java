@@ -12,6 +12,7 @@ public class DatasetListDatasets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetReference")
     public DatasetReference datasetReference;
+
     public DatasetListDatasets withDatasetReference(DatasetReference datasetReference) {
         this.datasetReference = datasetReference;
         return this;
@@ -23,6 +24,7 @@ public class DatasetListDatasets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("friendlyName")
     public String friendlyName;
+
     public DatasetListDatasets withFriendlyName(String friendlyName) {
         this.friendlyName = friendlyName;
         return this;
@@ -34,6 +36,7 @@ public class DatasetListDatasets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DatasetListDatasets withId(String id) {
         this.id = id;
         return this;
@@ -45,6 +48,7 @@ public class DatasetListDatasets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public DatasetListDatasets withKind(String kind) {
         this.kind = kind;
         return this;
@@ -56,6 +60,7 @@ public class DatasetListDatasets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public DatasetListDatasets withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -67,9 +72,11 @@ public class DatasetListDatasets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public DatasetListDatasets withLocation(String location) {
         this.location = location;
         return this;
     }
     
+    public DatasetListDatasets(){}
 }

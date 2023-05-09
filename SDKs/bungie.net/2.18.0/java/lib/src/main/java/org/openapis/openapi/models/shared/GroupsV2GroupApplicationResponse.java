@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class GroupsV2GroupApplicationResponse {
     
     public Integer resolution;
+
     public GroupsV2GroupApplicationResponse withResolution(Integer resolution) {
         this.resolution = resolution;
         return this;
     }
     
+    public GroupsV2GroupApplicationResponse(){}
 }

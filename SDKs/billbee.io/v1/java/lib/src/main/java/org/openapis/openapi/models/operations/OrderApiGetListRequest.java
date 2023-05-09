@@ -13,6 +13,7 @@ public class OrderApiGetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=articleTitleSource")
     public OrderApiGetListArticleTitleSourceEnum articleTitleSource;
+
     public OrderApiGetListRequest withArticleTitleSource(OrderApiGetListArticleTitleSourceEnum articleTitleSource) {
         this.articleTitleSource = articleTitleSource;
         return this;
@@ -23,6 +24,7 @@ public class OrderApiGetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludeTags")
     public Boolean excludeTags;
+
     public OrderApiGetListRequest withExcludeTags(Boolean excludeTags) {
         this.excludeTags = excludeTags;
         return this;
@@ -33,6 +35,7 @@ public class OrderApiGetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxOrderDate")
     public OffsetDateTime maxOrderDate;
+
     public OrderApiGetListRequest withMaxOrderDate(OffsetDateTime maxOrderDate) {
         this.maxOrderDate = maxOrderDate;
         return this;
@@ -43,6 +46,7 @@ public class OrderApiGetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minOrderDate")
     public OffsetDateTime minOrderDate;
+
     public OrderApiGetListRequest withMinOrderDate(OffsetDateTime minOrderDate) {
         this.minOrderDate = minOrderDate;
         return this;
@@ -53,6 +57,7 @@ public class OrderApiGetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minimumBillBeeOrderId")
     public Long minimumBillBeeOrderId;
+
     public OrderApiGetListRequest withMinimumBillBeeOrderId(Long minimumBillBeeOrderId) {
         this.minimumBillBeeOrderId = minimumBillBeeOrderId;
         return this;
@@ -63,6 +68,7 @@ public class OrderApiGetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modifiedAtMax")
     public OffsetDateTime modifiedAtMax;
+
     public OrderApiGetListRequest withModifiedAtMax(OffsetDateTime modifiedAtMax) {
         this.modifiedAtMax = modifiedAtMax;
         return this;
@@ -73,6 +79,7 @@ public class OrderApiGetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modifiedAtMin")
     public OffsetDateTime modifiedAtMin;
+
     public OrderApiGetListRequest withModifiedAtMin(OffsetDateTime modifiedAtMin) {
         this.modifiedAtMin = modifiedAtMin;
         return this;
@@ -83,6 +90,7 @@ public class OrderApiGetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderStateId")
     public Integer[] orderStateId;
+
     public OrderApiGetListRequest withOrderStateId(Integer[] orderStateId) {
         this.orderStateId = orderStateId;
         return this;
@@ -93,6 +101,7 @@ public class OrderApiGetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public OrderApiGetListRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -103,6 +112,7 @@ public class OrderApiGetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Integer pageSize;
+
     public OrderApiGetListRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -113,6 +123,7 @@ public class OrderApiGetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=shopId")
     public Long[] shopId;
+
     public OrderApiGetListRequest withShopId(Long[] shopId) {
         this.shopId = shopId;
         return this;
@@ -123,9 +134,11 @@ public class OrderApiGetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
     public String[] tag;
+
     public OrderApiGetListRequest withTag(String[] tag) {
         this.tag = tag;
         return this;
     }
     
+    public OrderApiGetListRequest(){}
 }

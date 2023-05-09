@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetReservationCoverageResponse {
     
     public String contentType;
+
     public GetReservationCoverageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetReservationCoverageResponse {
      */
     
     public Object dataUnavailableException;
+
     public GetReservationCoverageResponse withDataUnavailableException(Object dataUnavailableException) {
         this.dataUnavailableException = dataUnavailableException;
         return this;
@@ -29,6 +32,7 @@ public class GetReservationCoverageResponse {
      */
     
     public org.openapis.openapi.models.shared.GetReservationCoverageResponse getReservationCoverageResponse;
+
     public GetReservationCoverageResponse withGetReservationCoverageResponse(org.openapis.openapi.models.shared.GetReservationCoverageResponse getReservationCoverageResponse) {
         this.getReservationCoverageResponse = getReservationCoverageResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetReservationCoverageResponse {
      */
     
     public Object invalidNextTokenException;
+
     public GetReservationCoverageResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class GetReservationCoverageResponse {
      */
     
     public Object limitExceededException;
+
     public GetReservationCoverageResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class GetReservationCoverageResponse {
     
     
     public Integer statusCode;
+
     public GetReservationCoverageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetReservationCoverageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetReservationCoverageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetReservationCoverageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

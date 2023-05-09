@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetImportJobResponse {
@@ -12,6 +13,7 @@ public class GetImportJobResponse {
      */
     
     public Object badRequestException;
+
     public GetImportJobResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetImportJobResponse {
     
     
     public String contentType;
+
     public GetImportJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetImportJobResponse {
      */
     
     public org.openapis.openapi.models.shared.GetImportJobResponse getImportJobResponse;
+
     public GetImportJobResponse withGetImportJobResponse(org.openapis.openapi.models.shared.GetImportJobResponse getImportJobResponse) {
         this.getImportJobResponse = getImportJobResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetImportJobResponse {
      */
     
     public Object notFoundException;
+
     public GetImportJobResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetImportJobResponse {
     
     
     public Integer statusCode;
+
     public GetImportJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetImportJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetImportJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetImportJobResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetImportJobResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetImportJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

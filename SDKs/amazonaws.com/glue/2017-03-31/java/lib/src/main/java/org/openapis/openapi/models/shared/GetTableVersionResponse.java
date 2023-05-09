@@ -15,9 +15,11 @@ public class GetTableVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableVersion")
     public TableVersion tableVersion;
+
     public GetTableVersionResponse withTableVersion(TableVersion tableVersion) {
         this.tableVersion = tableVersion;
         return this;
     }
     
+    public GetTableVersionResponse(){}
 }

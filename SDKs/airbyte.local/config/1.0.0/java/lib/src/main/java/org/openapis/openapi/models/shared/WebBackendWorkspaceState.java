@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WebBackendWorkspaceState {
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public WebBackendWorkspaceState withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public WebBackendWorkspaceState(@JsonProperty("workspaceId") String workspaceId) {
+        this.workspaceId = workspaceId;
+  }
 }

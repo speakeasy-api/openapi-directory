@@ -15,6 +15,7 @@ public class GetDocument200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locals")
     public GetDocument200ApplicationJSONExplanationLocals[] locals;
+
     public GetDocument200ApplicationJSONExplanation withLocals(GetDocument200ApplicationJSONExplanationLocals[] locals) {
         this.locals = locals;
         return this;
@@ -27,6 +28,7 @@ public class GetDocument200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("node")
     public GetDocument200ApplicationJSONExplanationNode node;
+
     public GetDocument200ApplicationJSONExplanation withNode(GetDocument200ApplicationJSONExplanationNode node) {
         this.node = node;
         return this;
@@ -47,6 +49,7 @@ public class GetDocument200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("op")
     public GetDocument200ApplicationJSONExplanationOpEnum op;
+
     public GetDocument200ApplicationJSONExplanation withOp(GetDocument200ApplicationJSONExplanationOpEnum op) {
         this.op = op;
         return this;
@@ -60,6 +63,7 @@ public class GetDocument200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     public Double parentId;
+
     public GetDocument200ApplicationJSONExplanation withParentId(Double parentId) {
         this.parentId = parentId;
         return this;
@@ -71,6 +75,7 @@ public class GetDocument200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query_id")
     public Double queryId;
+
     public GetDocument200ApplicationJSONExplanation withQueryId(Double queryId) {
         this.queryId = queryId;
         return this;
@@ -82,9 +87,11 @@ public class GetDocument200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GetDocument200ApplicationJSONExplanationTypeEnum type;
+
     public GetDocument200ApplicationJSONExplanation withType(GetDocument200ApplicationJSONExplanationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetDocument200ApplicationJSONExplanation(){}
 }

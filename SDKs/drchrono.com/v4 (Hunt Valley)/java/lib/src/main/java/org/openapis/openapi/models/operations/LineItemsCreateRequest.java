@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class LineItemsCreateRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointment")
     public Long appointment;
+
     public LineItemsCreateRequest withAppointment(Long appointment) {
         this.appointment = appointment;
         return this;
@@ -16,6 +17,7 @@ public class LineItemsCreateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public LineItemsCreateRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -23,6 +25,7 @@ public class LineItemsCreateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=office")
     public Long office;
+
     public LineItemsCreateRequest withOffice(Long office) {
         this.office = office;
         return this;
@@ -30,6 +33,7 @@ public class LineItemsCreateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
     public Long patient;
+
     public LineItemsCreateRequest withPatient(Long patient) {
         this.patient = patient;
         return this;
@@ -37,6 +41,7 @@ public class LineItemsCreateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=posted_date")
     public String postedDate;
+
     public LineItemsCreateRequest withPostedDate(String postedDate) {
         this.postedDate = postedDate;
         return this;
@@ -44,6 +49,7 @@ public class LineItemsCreateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service_date")
     public String serviceDate;
+
     public LineItemsCreateRequest withServiceDate(String serviceDate) {
         this.serviceDate = serviceDate;
         return this;
@@ -51,9 +57,11 @@ public class LineItemsCreateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public LineItemsCreateRequest withSince(String since) {
         this.since = since;
         return this;
     }
     
+    public LineItemsCreateRequest(){}
 }

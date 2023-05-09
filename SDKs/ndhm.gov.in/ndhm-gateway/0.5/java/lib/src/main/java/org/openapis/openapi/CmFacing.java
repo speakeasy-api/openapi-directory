@@ -87,13 +87,11 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05CareContextsDiscoverJsonResponse res = new org.openapis.openapi.models.operations.PostV05CareContextsDiscoverJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05CareContextsDiscoverJsonResponse res = new org.openapis.openapi.models.operations.PostV05CareContextsDiscoverJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -163,13 +161,11 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05CareContextsDiscoverRawResponse res = new org.openapis.openapi.models.operations.PostV05CareContextsDiscoverRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05CareContextsDiscoverRawResponse res = new org.openapis.openapi.models.operations.PostV05CareContextsDiscoverRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -233,13 +229,11 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05CareContextsOnDiscoverJsonResponse res = new org.openapis.openapi.models.operations.PostV05CareContextsOnDiscoverJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05CareContextsOnDiscoverJsonResponse res = new org.openapis.openapi.models.operations.PostV05CareContextsOnDiscoverJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -303,13 +297,11 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05CareContextsOnDiscoverRawResponse res = new org.openapis.openapi.models.operations.PostV05CareContextsOnDiscoverRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05CareContextsOnDiscoverRawResponse res = new org.openapis.openapi.models.operations.PostV05CareContextsOnDiscoverRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -373,12 +365,10 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05ConsentRequestsOnInitJsonResponse res = new org.openapis.openapi.models.operations.PostV05ConsentRequestsOnInitJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05ConsentRequestsOnInitJsonResponse res = new org.openapis.openapi.models.operations.PostV05ConsentRequestsOnInitJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -435,12 +425,10 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05ConsentRequestsOnInitRawResponse res = new org.openapis.openapi.models.operations.PostV05ConsentRequestsOnInitRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05ConsentRequestsOnInitRawResponse res = new org.openapis.openapi.models.operations.PostV05ConsentRequestsOnInitRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -495,12 +483,10 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05ConsentRequestsOnStatusJsonResponse res = new org.openapis.openapi.models.operations.PostV05ConsentRequestsOnStatusJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05ConsentRequestsOnStatusJsonResponse res = new org.openapis.openapi.models.operations.PostV05ConsentRequestsOnStatusJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -555,12 +541,10 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05ConsentRequestsOnStatusRawResponse res = new org.openapis.openapi.models.operations.PostV05ConsentRequestsOnStatusRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05ConsentRequestsOnStatusRawResponse res = new org.openapis.openapi.models.operations.PostV05ConsentRequestsOnStatusRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -618,12 +602,10 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05ConsentsHipNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05ConsentsHipNotifyJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05ConsentsHipNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05ConsentsHipNotifyJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -681,12 +663,10 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05ConsentsHipNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05ConsentsHipNotifyRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05ConsentsHipNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05ConsentsHipNotifyRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -745,12 +725,10 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05ConsentsHiuNotifyResponse res = new org.openapis.openapi.models.operations.PostV05ConsentsHiuNotifyResponse() {{
+        org.openapis.openapi.models.operations.PostV05ConsentsHiuNotifyResponse res = new org.openapis.openapi.models.operations.PostV05ConsentsHiuNotifyResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -806,12 +784,10 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05ConsentsOnFetchJsonResponse res = new org.openapis.openapi.models.operations.PostV05ConsentsOnFetchJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05ConsentsOnFetchJsonResponse res = new org.openapis.openapi.models.operations.PostV05ConsentsOnFetchJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -867,12 +843,10 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05ConsentsOnFetchRawResponse res = new org.openapis.openapi.models.operations.PostV05ConsentsOnFetchRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05ConsentsOnFetchRawResponse res = new org.openapis.openapi.models.operations.PostV05ConsentsOnFetchRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -930,12 +904,10 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05HealthInformationCmOnRequestJsonResponse res = new org.openapis.openapi.models.operations.PostV05HealthInformationCmOnRequestJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05HealthInformationCmOnRequestJsonResponse res = new org.openapis.openapi.models.operations.PostV05HealthInformationCmOnRequestJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -993,12 +965,10 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05HealthInformationCmOnRequestRawResponse res = new org.openapis.openapi.models.operations.PostV05HealthInformationCmOnRequestRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05HealthInformationCmOnRequestRawResponse res = new org.openapis.openapi.models.operations.PostV05HealthInformationCmOnRequestRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1053,12 +1023,10 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05HealthInformationHipRequestJsonResponse res = new org.openapis.openapi.models.operations.PostV05HealthInformationHipRequestJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05HealthInformationHipRequestJsonResponse res = new org.openapis.openapi.models.operations.PostV05HealthInformationHipRequestJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1113,12 +1081,10 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05HealthInformationHipRequestRawResponse res = new org.openapis.openapi.models.operations.PostV05HealthInformationHipRequestRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05HealthInformationHipRequestRawResponse res = new org.openapis.openapi.models.operations.PostV05HealthInformationHipRequestRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1173,12 +1139,10 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05LinksLinkConfirmJsonResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkConfirmJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05LinksLinkConfirmJsonResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkConfirmJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1233,12 +1197,10 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05LinksLinkConfirmRawResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkConfirmRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05LinksLinkConfirmRawResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkConfirmRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1298,12 +1260,10 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05LinksLinkInitJsonResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkInitJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05LinksLinkInitJsonResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkInitJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1363,12 +1323,10 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05LinksLinkInitRawResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkInitRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05LinksLinkInitRawResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkInitRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1424,12 +1382,10 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05LinksLinkOnAddContextsJsonResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkOnAddContextsJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05LinksLinkOnAddContextsJsonResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkOnAddContextsJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1485,12 +1441,10 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05LinksLinkOnAddContextsRawResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkOnAddContextsRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05LinksLinkOnAddContextsRawResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkOnAddContextsRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1549,13 +1503,11 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05PatientsOnFindJsonResponse res = new org.openapis.openapi.models.operations.PostV05PatientsOnFindJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05PatientsOnFindJsonResponse res = new org.openapis.openapi.models.operations.PostV05PatientsOnFindJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1621,13 +1573,11 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05PatientsOnFindRawResponse res = new org.openapis.openapi.models.operations.PostV05PatientsOnFindRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05PatientsOnFindRawResponse res = new org.openapis.openapi.models.operations.PostV05PatientsOnFindRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1706,13 +1656,11 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05PatientsProfileShareJsonResponse res = new org.openapis.openapi.models.operations.PostV05PatientsProfileShareJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05PatientsProfileShareJsonResponse res = new org.openapis.openapi.models.operations.PostV05PatientsProfileShareJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1791,13 +1739,11 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05PatientsProfileShareRawResponse res = new org.openapis.openapi.models.operations.PostV05PatientsProfileShareRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05PatientsProfileShareRawResponse res = new org.openapis.openapi.models.operations.PostV05PatientsProfileShareRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1860,13 +1806,11 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05PatientsSmsOnNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05PatientsSmsOnNotifyJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05PatientsSmsOnNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05PatientsSmsOnNotifyJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1929,13 +1873,11 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05PatientsSmsOnNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05PatientsSmsOnNotifyRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05PatientsSmsOnNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05PatientsSmsOnNotifyRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1997,12 +1939,10 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05SubscriptionRequestsCmOnInitResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionRequestsCmOnInitResponse() {{
+        org.openapis.openapi.models.operations.PostV05SubscriptionRequestsCmOnInitResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionRequestsCmOnInitResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -2057,12 +1997,10 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05SubscriptionRequestsHiuNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionRequestsHiuNotifyJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05SubscriptionRequestsHiuNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionRequestsHiuNotifyJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -2117,12 +2055,10 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05SubscriptionRequestsHiuNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionRequestsHiuNotifyRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05SubscriptionRequestsHiuNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionRequestsHiuNotifyRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -2179,12 +2115,10 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05SubscriptionsHiuNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionsHiuNotifyJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05SubscriptionsHiuNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionsHiuNotifyJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -2241,12 +2175,10 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05SubscriptionsHiuNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionsHiuNotifyRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05SubscriptionsHiuNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionsHiuNotifyRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -2305,12 +2237,10 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthNotifyJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthNotifyJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -2369,12 +2299,10 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthNotifyRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthNotifyRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -2432,12 +2360,10 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthOnConfirmJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnConfirmJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthOnConfirmJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnConfirmJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -2495,12 +2421,10 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthOnConfirmRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnConfirmRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthOnConfirmRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnConfirmRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -2559,13 +2483,11 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthOnFetchModesJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnFetchModesJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthOnFetchModesJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnFetchModesJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -2631,13 +2553,11 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthOnFetchModesRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnFetchModesRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthOnFetchModesRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnFetchModesRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -2730,12 +2650,10 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthOnInitJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnInitJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthOnInitJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnInitJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -2821,12 +2739,10 @@ public class CmFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthOnInitRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnInitRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthOnInitRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnInitRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {

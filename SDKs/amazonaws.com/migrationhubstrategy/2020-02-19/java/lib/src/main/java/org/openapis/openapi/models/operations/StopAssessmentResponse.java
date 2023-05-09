@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopAssessmentResponse {
@@ -12,6 +13,7 @@ public class StopAssessmentResponse {
      */
     
     public Object accessDeniedException;
+
     public StopAssessmentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class StopAssessmentResponse {
     
     
     public String contentType;
+
     public StopAssessmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StopAssessmentResponse {
      */
     
     public Object internalServerException;
+
     public StopAssessmentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class StopAssessmentResponse {
     
     
     public Integer statusCode;
+
     public StopAssessmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class StopAssessmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopAssessmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class StopAssessmentResponse {
      */
     
     public java.util.Map<String, Object> stopAssessmentResponse;
+
     public StopAssessmentResponse withStopAssessmentResponse(java.util.Map<String, Object> stopAssessmentResponse) {
         this.stopAssessmentResponse = stopAssessmentResponse;
         return this;
@@ -63,6 +70,7 @@ public class StopAssessmentResponse {
      */
     
     public Object throttlingException;
+
     public StopAssessmentResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class StopAssessmentResponse {
      */
     
     public Object validationException;
+
     public StopAssessmentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StopAssessmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class CommonModelsCoreSettingsConfiguration {
     
     public CommonModelsCoreSetting[] clanBannerDecalColors;
+
     public CommonModelsCoreSettingsConfiguration withClanBannerDecalColors(CommonModelsCoreSetting[] clanBannerDecalColors) {
         this.clanBannerDecalColors = clanBannerDecalColors;
         return this;
@@ -16,6 +17,7 @@ public class CommonModelsCoreSettingsConfiguration {
     
     
     public CommonModelsCoreSetting[] clanBannerDecals;
+
     public CommonModelsCoreSettingsConfiguration withClanBannerDecals(CommonModelsCoreSetting[] clanBannerDecals) {
         this.clanBannerDecals = clanBannerDecals;
         return this;
@@ -23,6 +25,7 @@ public class CommonModelsCoreSettingsConfiguration {
     
     
     public CommonModelsCoreSetting[] clanBannerGonfalonColors;
+
     public CommonModelsCoreSettingsConfiguration withClanBannerGonfalonColors(CommonModelsCoreSetting[] clanBannerGonfalonColors) {
         this.clanBannerGonfalonColors = clanBannerGonfalonColors;
         return this;
@@ -30,6 +33,7 @@ public class CommonModelsCoreSettingsConfiguration {
     
     
     public CommonModelsCoreSetting[] clanBannerGonfalonDetailColors;
+
     public CommonModelsCoreSettingsConfiguration withClanBannerGonfalonDetailColors(CommonModelsCoreSetting[] clanBannerGonfalonDetailColors) {
         this.clanBannerGonfalonDetailColors = clanBannerGonfalonDetailColors;
         return this;
@@ -37,6 +41,7 @@ public class CommonModelsCoreSettingsConfiguration {
     
     
     public CommonModelsCoreSetting[] clanBannerGonfalonDetails;
+
     public CommonModelsCoreSettingsConfiguration withClanBannerGonfalonDetails(CommonModelsCoreSetting[] clanBannerGonfalonDetails) {
         this.clanBannerGonfalonDetails = clanBannerGonfalonDetails;
         return this;
@@ -44,6 +49,7 @@ public class CommonModelsCoreSettingsConfiguration {
     
     
     public CommonModelsCoreSetting[] clanBannerGonfalons;
+
     public CommonModelsCoreSettingsConfiguration withClanBannerGonfalons(CommonModelsCoreSetting[] clanBannerGonfalons) {
         this.clanBannerGonfalons = clanBannerGonfalons;
         return this;
@@ -51,6 +57,7 @@ public class CommonModelsCoreSettingsConfiguration {
     
     
     public CommonModelsCoreSetting[] clanBannerStandards;
+
     public CommonModelsCoreSettingsConfiguration withClanBannerStandards(CommonModelsCoreSetting[] clanBannerStandards) {
         this.clanBannerStandards = clanBannerStandards;
         return this;
@@ -58,6 +65,7 @@ public class CommonModelsCoreSettingsConfiguration {
     
     
     public CommonModelsCoreSetting defaultGroupTheme;
+
     public CommonModelsCoreSettingsConfiguration withDefaultGroupTheme(CommonModelsCoreSetting defaultGroupTheme) {
         this.defaultGroupTheme = defaultGroupTheme;
         return this;
@@ -65,6 +73,7 @@ public class CommonModelsCoreSettingsConfiguration {
     
     
     public CommonModelsDestiny2CoreSettings destiny2CoreSettings;
+
     public CommonModelsCoreSettingsConfiguration withDestiny2CoreSettings(CommonModelsDestiny2CoreSettings destiny2CoreSettings) {
         this.destiny2CoreSettings = destiny2CoreSettings;
         return this;
@@ -72,6 +81,7 @@ public class CommonModelsCoreSettingsConfiguration {
     
     
     public CommonModelsCoreSetting[] destinyMembershipTypes;
+
     public CommonModelsCoreSettingsConfiguration withDestinyMembershipTypes(CommonModelsCoreSetting[] destinyMembershipTypes) {
         this.destinyMembershipTypes = destinyMembershipTypes;
         return this;
@@ -82,6 +92,7 @@ public class CommonModelsCoreSettingsConfiguration {
      */
     
     public UserEmailSettings emailSettings;
+
     public CommonModelsCoreSettingsConfiguration withEmailSettings(UserEmailSettings emailSettings) {
         this.emailSettings = emailSettings;
         return this;
@@ -89,6 +100,7 @@ public class CommonModelsCoreSettingsConfiguration {
     
     
     public String environment;
+
     public CommonModelsCoreSettingsConfiguration withEnvironment(String environment) {
         this.environment = environment;
         return this;
@@ -96,6 +108,7 @@ public class CommonModelsCoreSettingsConfiguration {
     
     
     public CommonModelsCoreSetting[] fireteamActivities;
+
     public CommonModelsCoreSettingsConfiguration withFireteamActivities(CommonModelsCoreSetting[] fireteamActivities) {
         this.fireteamActivities = fireteamActivities;
         return this;
@@ -103,6 +116,7 @@ public class CommonModelsCoreSettingsConfiguration {
     
     
     public CommonModelsCoreSetting[] forumCategories;
+
     public CommonModelsCoreSettingsConfiguration withForumCategories(CommonModelsCoreSetting[] forumCategories) {
         this.forumCategories = forumCategories;
         return this;
@@ -110,6 +124,7 @@ public class CommonModelsCoreSettingsConfiguration {
     
     
     public CommonModelsCoreSetting[] groupAvatars;
+
     public CommonModelsCoreSettingsConfiguration withGroupAvatars(CommonModelsCoreSetting[] groupAvatars) {
         this.groupAvatars = groupAvatars;
         return this;
@@ -117,6 +132,7 @@ public class CommonModelsCoreSettingsConfiguration {
     
     
     public CommonModelsCoreSetting[] ignoreReasons;
+
     public CommonModelsCoreSettingsConfiguration withIgnoreReasons(CommonModelsCoreSetting[] ignoreReasons) {
         this.ignoreReasons = ignoreReasons;
         return this;
@@ -124,6 +140,7 @@ public class CommonModelsCoreSettingsConfiguration {
     
     
     public CommonModelsCoreSetting[] recruitmentActivities;
+
     public CommonModelsCoreSettingsConfiguration withRecruitmentActivities(CommonModelsCoreSetting[] recruitmentActivities) {
         this.recruitmentActivities = recruitmentActivities;
         return this;
@@ -131,6 +148,7 @@ public class CommonModelsCoreSettingsConfiguration {
     
     
     public CommonModelsCoreSetting[] recruitmentMiscTags;
+
     public CommonModelsCoreSettingsConfiguration withRecruitmentMiscTags(CommonModelsCoreSetting[] recruitmentMiscTags) {
         this.recruitmentMiscTags = recruitmentMiscTags;
         return this;
@@ -138,6 +156,7 @@ public class CommonModelsCoreSettingsConfiguration {
     
     
     public CommonModelsCoreSetting[] recruitmentPlatformTags;
+
     public CommonModelsCoreSettingsConfiguration withRecruitmentPlatformTags(CommonModelsCoreSetting[] recruitmentPlatformTags) {
         this.recruitmentPlatformTags = recruitmentPlatformTags;
         return this;
@@ -145,6 +164,7 @@ public class CommonModelsCoreSettingsConfiguration {
     
     
     public CommonModelsCoreSetting[] systemContentLocales;
+
     public CommonModelsCoreSettingsConfiguration withSystemContentLocales(CommonModelsCoreSetting[] systemContentLocales) {
         this.systemContentLocales = systemContentLocales;
         return this;
@@ -152,6 +172,7 @@ public class CommonModelsCoreSettingsConfiguration {
     
     
     public java.util.Map<String, CommonModelsCoreSystem> systems;
+
     public CommonModelsCoreSettingsConfiguration withSystems(java.util.Map<String, CommonModelsCoreSystem> systems) {
         this.systems = systems;
         return this;
@@ -159,9 +180,11 @@ public class CommonModelsCoreSettingsConfiguration {
     
     
     public CommonModelsCoreSetting[] userContentLocales;
+
     public CommonModelsCoreSettingsConfiguration withUserContentLocales(CommonModelsCoreSetting[] userContentLocales) {
         this.userContentLocales = userContentLocales;
         return this;
     }
     
+    public CommonModelsCoreSettingsConfiguration(){}
 }

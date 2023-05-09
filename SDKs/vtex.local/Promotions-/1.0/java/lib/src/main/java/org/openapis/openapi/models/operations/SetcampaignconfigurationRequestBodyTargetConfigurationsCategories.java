@@ -18,6 +18,7 @@ public class SetcampaignconfigurationRequestBodyTargetConfigurationsCategories {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SetcampaignconfigurationRequestBodyTargetConfigurationsCategories withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class SetcampaignconfigurationRequestBodyTargetConfigurationsCategories {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SetcampaignconfigurationRequestBodyTargetConfigurationsCategories withName(String name) {
         this.name = name;
         return this;
     }
     
+    public SetcampaignconfigurationRequestBodyTargetConfigurationsCategories(){}
 }

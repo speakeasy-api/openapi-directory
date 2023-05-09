@@ -15,6 +15,7 @@ public class Wtrbl400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Wtrbl400ApplicationJSONErrorEnum error;
+
     public Wtrbl400ApplicationJSON withError(Wtrbl400ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Wtrbl400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Wtrbl400ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Wtrbl400ApplicationJSON withErrorDescription(Wtrbl400ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Wtrbl400ApplicationJSON(){}
 }

@@ -18,6 +18,7 @@ public class SortRangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public GridRange range;
+
     public SortRangeRequest withRange(GridRange range) {
         this.range = range;
         return this;
@@ -29,9 +30,11 @@ public class SortRangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortSpecs")
     public SortSpec[] sortSpecs;
+
     public SortRangeRequest withSortSpecs(SortSpec[] sortSpecs) {
         this.sortSpecs = sortSpecs;
         return this;
     }
     
+    public SortRangeRequest(){}
 }

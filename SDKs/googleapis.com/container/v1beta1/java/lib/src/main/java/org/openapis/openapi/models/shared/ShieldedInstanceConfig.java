@@ -18,6 +18,7 @@ public class ShieldedInstanceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableIntegrityMonitoring")
     public Boolean enableIntegrityMonitoring;
+
     public ShieldedInstanceConfig withEnableIntegrityMonitoring(Boolean enableIntegrityMonitoring) {
         this.enableIntegrityMonitoring = enableIntegrityMonitoring;
         return this;
@@ -29,9 +30,11 @@ public class ShieldedInstanceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableSecureBoot")
     public Boolean enableSecureBoot;
+
     public ShieldedInstanceConfig withEnableSecureBoot(Boolean enableSecureBoot) {
         this.enableSecureBoot = enableSecureBoot;
         return this;
     }
     
+    public ShieldedInstanceConfig(){}
 }

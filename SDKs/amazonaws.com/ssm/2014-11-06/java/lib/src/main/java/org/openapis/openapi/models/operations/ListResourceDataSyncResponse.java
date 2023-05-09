@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListResourceDataSyncResponse {
     
     public String contentType;
+
     public ListResourceDataSyncResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListResourceDataSyncResponse {
      */
     
     public Object internalServerError;
+
     public ListResourceDataSyncResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class ListResourceDataSyncResponse {
      */
     
     public Object invalidNextToken;
+
     public ListResourceDataSyncResponse withInvalidNextToken(Object invalidNextToken) {
         this.invalidNextToken = invalidNextToken;
         return this;
@@ -39,6 +43,7 @@ public class ListResourceDataSyncResponse {
      */
     
     public org.openapis.openapi.models.shared.ListResourceDataSyncResult listResourceDataSyncResult;
+
     public ListResourceDataSyncResponse withListResourceDataSyncResult(org.openapis.openapi.models.shared.ListResourceDataSyncResult listResourceDataSyncResult) {
         this.listResourceDataSyncResult = listResourceDataSyncResult;
         return this;
@@ -49,6 +54,7 @@ public class ListResourceDataSyncResponse {
      */
     
     public Object resourceDataSyncInvalidConfigurationException;
+
     public ListResourceDataSyncResponse withResourceDataSyncInvalidConfigurationException(Object resourceDataSyncInvalidConfigurationException) {
         this.resourceDataSyncInvalidConfigurationException = resourceDataSyncInvalidConfigurationException;
         return this;
@@ -56,6 +62,7 @@ public class ListResourceDataSyncResponse {
     
     
     public Integer statusCode;
+
     public ListResourceDataSyncResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListResourceDataSyncResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListResourceDataSyncResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListResourceDataSyncResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

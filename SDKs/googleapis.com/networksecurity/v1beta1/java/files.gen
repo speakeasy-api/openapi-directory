@@ -157,6 +157,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/Location.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListOperationsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ServerTlsPolicy.java
 lib/src/main/java/org/openapis/openapi/models/shared/ServerTlsPolicyInput.java
+lib/src/main/java/org/openapis/openapi/models/shared/MTLSPolicyClientValidationModeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/MTLSPolicy.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleIamV1Policy.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleIamV1Binding.java
@@ -174,4 +175,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListTlsInspectionPoliciesRe
 lib/src/main/java/org/openapis/openapi/models/shared/UrlListInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/UrlList.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListUrlListsResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchDeleteImageRequest {
     @JsonProperty("imageIds")
     public ImageIdentifier[] imageIds;
+
     public BatchDeleteImageRequest withImageIds(ImageIdentifier[] imageIds) {
         this.imageIds = imageIds;
         return this;
@@ -19,6 +20,7 @@ public class BatchDeleteImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public BatchDeleteImageRequest withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -26,9 +28,14 @@ public class BatchDeleteImageRequest {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public BatchDeleteImageRequest withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public BatchDeleteImageRequest(@JsonProperty("imageIds") ImageIdentifier[] imageIds, @JsonProperty("repositoryName") String repositoryName) {
+        this.imageIds = imageIds;
+        this.repositoryName = repositoryName;
+  }
 }

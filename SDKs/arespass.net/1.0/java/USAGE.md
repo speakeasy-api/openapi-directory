@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetAboutRequest;
 import org.openapis.openapi.models.operations.GetAboutResponse;
 
@@ -15,15 +14,17 @@ public class Application {
 
             GetAboutRequest req = new GetAboutRequest() {{
                 outputFormat = "corrupti";
-            }}            
+            }};            
 
             GetAboutResponse res = sdk.getAbout(req);
 
-            if (res.about.isPresent()) {
+            if (res.about != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

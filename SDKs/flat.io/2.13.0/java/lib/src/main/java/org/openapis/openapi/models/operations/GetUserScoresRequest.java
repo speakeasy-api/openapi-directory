@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserScoresRequest {
@@ -12,6 +13,7 @@ public class GetUserScoresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent")
     public String parent;
+
     public GetUserScoresRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -23,9 +25,13 @@ public class GetUserScoresRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user")
     public String user;
+
     public GetUserScoresRequest withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public GetUserScoresRequest(@JsonProperty("user") String user) {
+        this.user = user;
+  }
 }

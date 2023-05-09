@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DisassociateTransitGatewayPolicyTableResultAssociation {
     
     public String resourceId;
+
     public DisassociateTransitGatewayPolicyTableResultAssociation withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -19,6 +20,7 @@ public class DisassociateTransitGatewayPolicyTableResultAssociation {
     
     
     public DisassociateTransitGatewayPolicyTableResultAssociationResourceTypeEnum resourceType;
+
     public DisassociateTransitGatewayPolicyTableResultAssociation withResourceType(DisassociateTransitGatewayPolicyTableResultAssociationResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -26,6 +28,7 @@ public class DisassociateTransitGatewayPolicyTableResultAssociation {
     
     
     public DisassociateTransitGatewayPolicyTableResultAssociationStateEnum state;
+
     public DisassociateTransitGatewayPolicyTableResultAssociation withState(DisassociateTransitGatewayPolicyTableResultAssociationStateEnum state) {
         this.state = state;
         return this;
@@ -33,6 +36,7 @@ public class DisassociateTransitGatewayPolicyTableResultAssociation {
     
     
     public String transitGatewayAttachmentId;
+
     public DisassociateTransitGatewayPolicyTableResultAssociation withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
@@ -40,9 +44,11 @@ public class DisassociateTransitGatewayPolicyTableResultAssociation {
     
     
     public String transitGatewayPolicyTableId;
+
     public DisassociateTransitGatewayPolicyTableResultAssociation withTransitGatewayPolicyTableId(String transitGatewayPolicyTableId) {
         this.transitGatewayPolicyTableId = transitGatewayPolicyTableId;
         return this;
     }
     
+    public DisassociateTransitGatewayPolicyTableResultAssociation(){}
 }

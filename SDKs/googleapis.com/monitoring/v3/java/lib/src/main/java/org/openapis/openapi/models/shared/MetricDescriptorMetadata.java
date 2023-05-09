@@ -18,6 +18,7 @@ public class MetricDescriptorMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ingestDelay")
     public String ingestDelay;
+
     public MetricDescriptorMetadata withIngestDelay(String ingestDelay) {
         this.ingestDelay = ingestDelay;
         return this;
@@ -29,6 +30,7 @@ public class MetricDescriptorMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchStage")
     public MetricDescriptorMetadataLaunchStageEnum launchStage;
+
     public MetricDescriptorMetadata withLaunchStage(MetricDescriptorMetadataLaunchStageEnum launchStage) {
         this.launchStage = launchStage;
         return this;
@@ -40,9 +42,11 @@ public class MetricDescriptorMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("samplePeriod")
     public String samplePeriod;
+
     public MetricDescriptorMetadata withSamplePeriod(String samplePeriod) {
         this.samplePeriod = samplePeriod;
         return this;
     }
     
+    public MetricDescriptorMetadata(){}
 }

@@ -15,6 +15,7 @@ public class Mutan404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Mutan404ApplicationJSONErrorEnum error;
+
     public Mutan404ApplicationJSON withError(Mutan404ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Mutan404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Mutan404ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Mutan404ApplicationJSON withErrorDescription(Mutan404ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Mutan404ApplicationJSON(){}
 }

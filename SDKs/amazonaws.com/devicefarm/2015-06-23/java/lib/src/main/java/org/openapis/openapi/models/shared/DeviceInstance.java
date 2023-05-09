@@ -15,6 +15,7 @@ public class DeviceInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public DeviceInstance withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class DeviceInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceArn")
     public String deviceArn;
+
     public DeviceInstance withDeviceArn(String deviceArn) {
         this.deviceArn = deviceArn;
         return this;
@@ -31,6 +33,7 @@ public class DeviceInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceProfile")
     public InstanceProfile instanceProfile;
+
     public DeviceInstance withInstanceProfile(InstanceProfile instanceProfile) {
         this.instanceProfile = instanceProfile;
         return this;
@@ -39,6 +42,7 @@ public class DeviceInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public String[] labels;
+
     public DeviceInstance withLabels(String[] labels) {
         this.labels = labels;
         return this;
@@ -47,6 +51,7 @@ public class DeviceInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public InstanceStatusEnum status;
+
     public DeviceInstance withStatus(InstanceStatusEnum status) {
         this.status = status;
         return this;
@@ -55,9 +60,11 @@ public class DeviceInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("udid")
     public String udid;
+
     public DeviceInstance withUdid(String udid) {
         this.udid = udid;
         return this;
     }
     
+    public DeviceInstance(){}
 }

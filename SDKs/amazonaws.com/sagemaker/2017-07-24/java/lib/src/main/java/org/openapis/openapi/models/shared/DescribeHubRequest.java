@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeHubRequest {
     @JsonProperty("HubName")
     public String hubName;
+
     public DescribeHubRequest withHubName(String hubName) {
         this.hubName = hubName;
         return this;
     }
     
+    public DescribeHubRequest(@JsonProperty("HubName") String hubName) {
+        this.hubName = hubName;
+  }
 }

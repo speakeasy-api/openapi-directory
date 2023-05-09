@@ -15,6 +15,7 @@ public class ListPluginsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListPluginsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListPluginsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plugins")
     public PluginSummary[] plugins;
+
     public ListPluginsResponse withPlugins(PluginSummary[] plugins) {
         this.plugins = plugins;
         return this;
     }
     
+    public ListPluginsResponse(){}
 }

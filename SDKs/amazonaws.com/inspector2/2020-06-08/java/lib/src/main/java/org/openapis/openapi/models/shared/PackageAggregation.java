@@ -15,6 +15,7 @@ public class PackageAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageNames")
     public StringFilter[] packageNames;
+
     public PackageAggregation withPackageNames(StringFilter[] packageNames) {
         this.packageNames = packageNames;
         return this;
@@ -23,6 +24,7 @@ public class PackageAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortBy")
     public PackageSortByEnum sortBy;
+
     public PackageAggregation withSortBy(PackageSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -31,9 +33,11 @@ public class PackageAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public SortOrderEnum sortOrder;
+
     public PackageAggregation withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public PackageAggregation(){}
 }

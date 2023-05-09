@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DialogflowProjectsLocationsConversationDatasetsListResponse {
     
     public String contentType;
+
     public DialogflowProjectsLocationsConversationDatasetsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DialogflowProjectsLocationsConversationDatasetsListResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudDialogflowV2ListConversationDatasetsResponse googleCloudDialogflowV2ListConversationDatasetsResponse;
+
     public DialogflowProjectsLocationsConversationDatasetsListResponse withGoogleCloudDialogflowV2ListConversationDatasetsResponse(org.openapis.openapi.models.shared.GoogleCloudDialogflowV2ListConversationDatasetsResponse googleCloudDialogflowV2ListConversationDatasetsResponse) {
         this.googleCloudDialogflowV2ListConversationDatasetsResponse = googleCloudDialogflowV2ListConversationDatasetsResponse;
         return this;
@@ -26,6 +29,7 @@ public class DialogflowProjectsLocationsConversationDatasetsListResponse {
     
     
     public Integer statusCode;
+
     public DialogflowProjectsLocationsConversationDatasetsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DialogflowProjectsLocationsConversationDatasetsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DialogflowProjectsLocationsConversationDatasetsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DialogflowProjectsLocationsConversationDatasetsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

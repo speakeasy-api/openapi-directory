@@ -12,6 +12,7 @@ public class OffersItemsItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author")
     public String author;
+
     public OffersItemsItems withAuthor(String author) {
         this.author = author;
         return this;
@@ -20,6 +21,7 @@ public class OffersItemsItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canonicalVolumeLink")
     public String canonicalVolumeLink;
+
     public OffersItemsItems withCanonicalVolumeLink(String canonicalVolumeLink) {
         this.canonicalVolumeLink = canonicalVolumeLink;
         return this;
@@ -28,6 +30,7 @@ public class OffersItemsItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coverUrl")
     public String coverUrl;
+
     public OffersItemsItems withCoverUrl(String coverUrl) {
         this.coverUrl = coverUrl;
         return this;
@@ -36,6 +39,7 @@ public class OffersItemsItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public OffersItemsItems withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +48,7 @@ public class OffersItemsItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public OffersItemsItems withTitle(String title) {
         this.title = title;
         return this;
@@ -52,9 +57,11 @@ public class OffersItemsItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeId")
     public String volumeId;
+
     public OffersItemsItems withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public OffersItemsItems(){}
 }

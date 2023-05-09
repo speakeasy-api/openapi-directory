@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateInvestorRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateInvestorUpdateRequestBodyForInvestorInput requestBody;
+
     public UpdateInvestorRequest withRequestBody(UpdateInvestorUpdateRequestBodyForInvestorInput requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class UpdateInvestorRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=investor_id")
     public String investorId;
+
     public UpdateInvestorRequest withInvestorId(String investorId) {
         this.investorId = investorId;
         return this;
@@ -29,9 +32,15 @@ public class UpdateInvestorRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public UpdateInvestorRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public UpdateInvestorRequest(@JsonProperty("RequestBody") UpdateInvestorUpdateRequestBodyForInvestorInput requestBody, @JsonProperty("investor_id") String investorId, @JsonProperty("x-api-key") String xApiKey) {
+        this.requestBody = requestBody;
+        this.investorId = investorId;
+        this.xApiKey = xApiKey;
+  }
 }

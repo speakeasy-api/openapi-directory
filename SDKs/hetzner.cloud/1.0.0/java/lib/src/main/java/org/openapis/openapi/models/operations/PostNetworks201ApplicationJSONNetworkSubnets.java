@@ -14,6 +14,7 @@ public class PostNetworks201ApplicationJSONNetworkSubnets {
      */
     @JsonProperty("gateway")
     public String gateway;
+
     public PostNetworks201ApplicationJSONNetworkSubnets withGateway(String gateway) {
         this.gateway = gateway;
         return this;
@@ -25,6 +26,7 @@ public class PostNetworks201ApplicationJSONNetworkSubnets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip_range")
     public String ipRange;
+
     public PostNetworks201ApplicationJSONNetworkSubnets withIpRange(String ipRange) {
         this.ipRange = ipRange;
         return this;
@@ -35,6 +37,7 @@ public class PostNetworks201ApplicationJSONNetworkSubnets {
      */
     @JsonProperty("network_zone")
     public String networkZone;
+
     public PostNetworks201ApplicationJSONNetworkSubnets withNetworkZone(String networkZone) {
         this.networkZone = networkZone;
         return this;
@@ -45,9 +48,15 @@ public class PostNetworks201ApplicationJSONNetworkSubnets {
      */
     @JsonProperty("type")
     public PostNetworks201ApplicationJSONNetworkSubnetsTypeEnum type;
+
     public PostNetworks201ApplicationJSONNetworkSubnets withType(PostNetworks201ApplicationJSONNetworkSubnetsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PostNetworks201ApplicationJSONNetworkSubnets(@JsonProperty("gateway") String gateway, @JsonProperty("network_zone") String networkZone, @JsonProperty("type") PostNetworks201ApplicationJSONNetworkSubnetsTypeEnum type) {
+        this.gateway = gateway;
+        this.networkZone = networkZone;
+        this.type = type;
+  }
 }

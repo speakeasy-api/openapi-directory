@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PolicyInformation {
     @JsonProperty("CertPolicyId")
     public String certPolicyId;
+
     public PolicyInformation withCertPolicyId(String certPolicyId) {
         this.certPolicyId = certPolicyId;
         return this;
@@ -22,9 +23,13 @@ public class PolicyInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyQualifiers")
     public PolicyQualifierInfo[] policyQualifiers;
+
     public PolicyInformation withPolicyQualifiers(PolicyQualifierInfo[] policyQualifiers) {
         this.policyQualifiers = policyQualifiers;
         return this;
     }
     
+    public PolicyInformation(@JsonProperty("CertPolicyId") String certPolicyId) {
+        this.certPolicyId = certPolicyId;
+  }
 }

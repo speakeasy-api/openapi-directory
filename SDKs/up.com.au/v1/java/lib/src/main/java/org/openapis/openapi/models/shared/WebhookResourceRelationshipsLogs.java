@@ -12,9 +12,11 @@ public class WebhookResourceRelationshipsLogs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public WebhookResourceRelationshipsLogsLinks links;
+
     public WebhookResourceRelationshipsLogs withLinks(WebhookResourceRelationshipsLogsLinks links) {
         this.links = links;
         return this;
     }
     
+    public WebhookResourceRelationshipsLogs(){}
 }

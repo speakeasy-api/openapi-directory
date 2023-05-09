@@ -15,9 +15,11 @@ public class OSUpdateSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OSVersion")
     public OSVersionEnum osVersion;
+
     public OSUpdateSettings withOSVersion(OSVersionEnum osVersion) {
         this.osVersion = osVersion;
         return this;
     }
     
+    public OSUpdateSettings(){}
 }

@@ -15,9 +15,11 @@ public class CreateProjectBrief201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.ProjectBriefResponse data;
+
     public CreateProjectBrief201ApplicationJSON withData(org.openapis.openapi.models.shared.ProjectBriefResponse data) {
         this.data = data;
         return this;
     }
     
+    public CreateProjectBrief201ApplicationJSON(){}
 }

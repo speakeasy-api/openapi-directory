@@ -12,6 +12,7 @@ public class ListResourceRequestsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListResourceRequestsInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListResourceRequestsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListResourceRequestsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,9 +30,11 @@ public class ListResourceRequestsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceRequestStatusFilter")
     public ResourceRequestStatusFilter resourceRequestStatusFilter;
+
     public ListResourceRequestsInput withResourceRequestStatusFilter(ResourceRequestStatusFilter resourceRequestStatusFilter) {
         this.resourceRequestStatusFilter = resourceRequestStatusFilter;
         return this;
     }
     
+    public ListResourceRequestsInput(){}
 }

@@ -15,6 +15,7 @@ public class DatabaseConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AclConfiguration")
     public AclConfiguration aclConfiguration;
+
     public DatabaseConfiguration withAclConfiguration(AclConfiguration aclConfiguration) {
         this.aclConfiguration = aclConfiguration;
         return this;
@@ -22,6 +23,7 @@ public class DatabaseConfiguration {
     
     @JsonProperty("ColumnConfiguration")
     public ColumnConfiguration columnConfiguration;
+
     public DatabaseConfiguration withColumnConfiguration(ColumnConfiguration columnConfiguration) {
         this.columnConfiguration = columnConfiguration;
         return this;
@@ -29,6 +31,7 @@ public class DatabaseConfiguration {
     
     @JsonProperty("ConnectionConfiguration")
     public ConnectionConfiguration connectionConfiguration;
+
     public DatabaseConfiguration withConnectionConfiguration(ConnectionConfiguration connectionConfiguration) {
         this.connectionConfiguration = connectionConfiguration;
         return this;
@@ -36,6 +39,7 @@ public class DatabaseConfiguration {
     
     @JsonProperty("DatabaseEngineType")
     public DatabaseEngineTypeEnum databaseEngineType;
+
     public DatabaseConfiguration withDatabaseEngineType(DatabaseEngineTypeEnum databaseEngineType) {
         this.databaseEngineType = databaseEngineType;
         return this;
@@ -44,6 +48,7 @@ public class DatabaseConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SqlConfiguration")
     public SqlConfiguration sqlConfiguration;
+
     public DatabaseConfiguration withSqlConfiguration(SqlConfiguration sqlConfiguration) {
         this.sqlConfiguration = sqlConfiguration;
         return this;
@@ -55,9 +60,15 @@ public class DatabaseConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfiguration")
     public DataSourceVpcConfiguration vpcConfiguration;
+
     public DatabaseConfiguration withVpcConfiguration(DataSourceVpcConfiguration vpcConfiguration) {
         this.vpcConfiguration = vpcConfiguration;
         return this;
     }
     
+    public DatabaseConfiguration(@JsonProperty("ColumnConfiguration") ColumnConfiguration columnConfiguration, @JsonProperty("ConnectionConfiguration") ConnectionConfiguration connectionConfiguration, @JsonProperty("DatabaseEngineType") DatabaseEngineTypeEnum databaseEngineType) {
+        this.columnConfiguration = columnConfiguration;
+        this.connectionConfiguration = connectionConfiguration;
+        this.databaseEngineType = databaseEngineType;
+  }
 }

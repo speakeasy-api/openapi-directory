@@ -15,9 +15,11 @@ public class CreateConnectorDefinitionRequestBodyInitialVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Connectors")
     public org.openapis.openapi.models.shared.Connector[] connectors;
+
     public CreateConnectorDefinitionRequestBodyInitialVersion withConnectors(org.openapis.openapi.models.shared.Connector[] connectors) {
         this.connectors = connectors;
         return this;
     }
     
+    public CreateConnectorDefinitionRequestBodyInitialVersion(){}
 }

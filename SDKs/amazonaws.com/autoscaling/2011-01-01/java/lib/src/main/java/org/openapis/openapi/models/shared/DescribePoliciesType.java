@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribePoliciesType {
     
     public String autoScalingGroupName;
+
     public DescribePoliciesType withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -16,6 +17,7 @@ public class DescribePoliciesType {
     
     
     public Long maxRecords;
+
     public DescribePoliciesType withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -23,6 +25,7 @@ public class DescribePoliciesType {
     
     
     public String nextToken;
+
     public DescribePoliciesType withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -30,6 +33,7 @@ public class DescribePoliciesType {
     
     
     public String[] policyNames;
+
     public DescribePoliciesType withPolicyNames(String[] policyNames) {
         this.policyNames = policyNames;
         return this;
@@ -37,9 +41,11 @@ public class DescribePoliciesType {
     
     
     public String[] policyTypes;
+
     public DescribePoliciesType withPolicyTypes(String[] policyTypes) {
         this.policyTypes = policyTypes;
         return this;
     }
     
+    public DescribePoliciesType(){}
 }

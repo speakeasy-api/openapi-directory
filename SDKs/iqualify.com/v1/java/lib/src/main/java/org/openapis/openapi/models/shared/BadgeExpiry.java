@@ -19,6 +19,7 @@ public class BadgeExpiry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expirationDate")
     public OffsetDateTime expirationDate;
+
     public BadgeExpiry withExpirationDate(OffsetDateTime expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -27,6 +28,7 @@ public class BadgeExpiry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires")
     public Boolean expires;
+
     public BadgeExpiry withExpires(Boolean expires) {
         this.expires = expires;
         return this;
@@ -35,6 +37,7 @@ public class BadgeExpiry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiryType")
     public BadgeExpiryExpiryTypeEnum expiryType;
+
     public BadgeExpiry withExpiryType(BadgeExpiryExpiryTypeEnum expiryType) {
         this.expiryType = expiryType;
         return this;
@@ -43,6 +46,7 @@ public class BadgeExpiry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeframeAmount")
     public Double timeframeAmount;
+
     public BadgeExpiry withTimeframeAmount(Double timeframeAmount) {
         this.timeframeAmount = timeframeAmount;
         return this;
@@ -51,9 +55,11 @@ public class BadgeExpiry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeframeUnit")
     public BadgeExpiryTimeframeUnitEnum timeframeUnit;
+
     public BadgeExpiry withTimeframeUnit(BadgeExpiryTimeframeUnitEnum timeframeUnit) {
         this.timeframeUnit = timeframeUnit;
         return this;
     }
     
+    public BadgeExpiry(){}
 }

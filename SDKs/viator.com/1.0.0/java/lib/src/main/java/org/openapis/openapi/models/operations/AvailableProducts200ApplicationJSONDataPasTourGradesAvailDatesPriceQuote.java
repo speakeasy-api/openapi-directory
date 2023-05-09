@@ -18,6 +18,7 @@ public class AvailableProducts200ApplicationJSONDataPasTourGradesAvailDatesPrice
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generalRetailPrice")
     public String generalRetailPrice;
+
     public AvailableProducts200ApplicationJSONDataPasTourGradesAvailDatesPriceQuote withGeneralRetailPrice(String generalRetailPrice) {
         this.generalRetailPrice = generalRetailPrice;
         return this;
@@ -29,6 +30,7 @@ public class AvailableProducts200ApplicationJSONDataPasTourGradesAvailDatesPrice
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantNetPrice")
     public String merchantNetPrice;
+
     public AvailableProducts200ApplicationJSONDataPasTourGradesAvailDatesPriceQuote withMerchantNetPrice(String merchantNetPrice) {
         this.merchantNetPrice = merchantNetPrice;
         return this;
@@ -40,9 +42,11 @@ public class AvailableProducts200ApplicationJSONDataPasTourGradesAvailDatesPrice
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retailPrice")
     public String retailPrice;
+
     public AvailableProducts200ApplicationJSONDataPasTourGradesAvailDatesPriceQuote withRetailPrice(String retailPrice) {
         this.retailPrice = retailPrice;
         return this;
     }
     
+    public AvailableProducts200ApplicationJSONDataPasTourGradesAvailDatesPriceQuote(){}
 }

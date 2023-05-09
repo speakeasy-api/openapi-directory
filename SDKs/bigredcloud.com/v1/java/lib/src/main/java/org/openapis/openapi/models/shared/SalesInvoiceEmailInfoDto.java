@@ -12,6 +12,7 @@ public class SalesInvoiceEmailInfoDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bccAddresses")
     public String[] bccAddresses;
+
     public SalesInvoiceEmailInfoDto withBccAddresses(String[] bccAddresses) {
         this.bccAddresses = bccAddresses;
         return this;
@@ -20,6 +21,7 @@ public class SalesInvoiceEmailInfoDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageBody")
     public String messageBody;
+
     public SalesInvoiceEmailInfoDto withMessageBody(String messageBody) {
         this.messageBody = messageBody;
         return this;
@@ -28,6 +30,7 @@ public class SalesInvoiceEmailInfoDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salesInvoiceId")
     public Long salesInvoiceId;
+
     public SalesInvoiceEmailInfoDto withSalesInvoiceId(Long salesInvoiceId) {
         this.salesInvoiceId = salesInvoiceId;
         return this;
@@ -36,9 +39,11 @@ public class SalesInvoiceEmailInfoDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toAddress")
     public String toAddress;
+
     public SalesInvoiceEmailInfoDto withToAddress(String toAddress) {
         this.toAddress = toAddress;
         return this;
     }
     
+    public SalesInvoiceEmailInfoDto(){}
 }

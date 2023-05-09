@@ -15,6 +15,7 @@ public class McfDataRowsConversionPathValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interactionType")
     public String interactionType;
+
     public McfDataRowsConversionPathValue withInteractionType(String interactionType) {
         this.interactionType = interactionType;
         return this;
@@ -26,9 +27,11 @@ public class McfDataRowsConversionPathValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeValue")
     public String nodeValue;
+
     public McfDataRowsConversionPathValue withNodeValue(String nodeValue) {
         this.nodeValue = nodeValue;
         return this;
     }
     
+    public McfDataRowsConversionPathValue(){}
 }

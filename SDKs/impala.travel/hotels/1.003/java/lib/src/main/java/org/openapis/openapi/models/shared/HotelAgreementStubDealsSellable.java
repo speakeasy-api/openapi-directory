@@ -18,9 +18,11 @@ public class HotelAgreementStubDealsSellable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remaining")
     public Double remaining;
+
     public HotelAgreementStubDealsSellable withRemaining(Double remaining) {
         this.remaining = remaining;
         return this;
     }
     
+    public HotelAgreementStubDealsSellable(){}
 }

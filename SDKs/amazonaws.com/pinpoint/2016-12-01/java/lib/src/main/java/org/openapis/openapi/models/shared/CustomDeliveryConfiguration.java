@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CustomDeliveryConfiguration {
     @JsonProperty("DeliveryUri")
     public String deliveryUri;
+
     public CustomDeliveryConfiguration withDeliveryUri(String deliveryUri) {
         this.deliveryUri = deliveryUri;
         return this;
@@ -22,9 +23,13 @@ public class CustomDeliveryConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointTypes")
     public EndpointTypesElementEnum[] endpointTypes;
+
     public CustomDeliveryConfiguration withEndpointTypes(EndpointTypesElementEnum[] endpointTypes) {
         this.endpointTypes = endpointTypes;
         return this;
     }
     
+    public CustomDeliveryConfiguration(@JsonProperty("DeliveryUri") String deliveryUri) {
+        this.deliveryUri = deliveryUri;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETChatHeadUsingGETResponse {
     
     public String contentType;
+
     public GETChatHeadUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GETChatHeadUsingGETResponse {
     
     
     public Integer statusCode;
+
     public GETChatHeadUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GETChatHeadUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETChatHeadUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GETChatHeadUsingGETResponse {
      */
     
     public GETChatHeadUsingGET200ApplicationJSON getChatHeadUsingGET200ApplicationJSONObject;
+
     public GETChatHeadUsingGETResponse withGETChatHeadUsingGET200ApplicationJSONObject(GETChatHeadUsingGET200ApplicationJSON getChatHeadUsingGET200ApplicationJSONObject) {
         this.getChatHeadUsingGET200ApplicationJSONObject = getChatHeadUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GETChatHeadUsingGETResponse {
      */
     
     public GETChatHeadUsingGET400ApplicationJSON getChatHeadUsingGET400ApplicationJSONObject;
+
     public GETChatHeadUsingGETResponse withGETChatHeadUsingGET400ApplicationJSONObject(GETChatHeadUsingGET400ApplicationJSON getChatHeadUsingGET400ApplicationJSONObject) {
         this.getChatHeadUsingGET400ApplicationJSONObject = getChatHeadUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GETChatHeadUsingGETResponse {
      */
     
     public GETChatHeadUsingGET401ApplicationJSON getChatHeadUsingGET401ApplicationJSONObject;
+
     public GETChatHeadUsingGETResponse withGETChatHeadUsingGET401ApplicationJSONObject(GETChatHeadUsingGET401ApplicationJSON getChatHeadUsingGET401ApplicationJSONObject) {
         this.getChatHeadUsingGET401ApplicationJSONObject = getChatHeadUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class GETChatHeadUsingGETResponse {
      */
     
     public GETChatHeadUsingGET500ApplicationJSON getChatHeadUsingGET500ApplicationJSONObject;
+
     public GETChatHeadUsingGETResponse withGETChatHeadUsingGET500ApplicationJSONObject(GETChatHeadUsingGET500ApplicationJSON getChatHeadUsingGET500ApplicationJSONObject) {
         this.getChatHeadUsingGET500ApplicationJSONObject = getChatHeadUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public GETChatHeadUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1TaskInfrastructureSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batch")
     public GoogleCloudDataplexV1TaskInfrastructureSpecBatchComputeResources batch;
+
     public GoogleCloudDataplexV1TaskInfrastructureSpec withBatch(GoogleCloudDataplexV1TaskInfrastructureSpecBatchComputeResources batch) {
         this.batch = batch;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1TaskInfrastructureSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerImage")
     public GoogleCloudDataplexV1TaskInfrastructureSpecContainerImageRuntime containerImage;
+
     public GoogleCloudDataplexV1TaskInfrastructureSpec withContainerImage(GoogleCloudDataplexV1TaskInfrastructureSpecContainerImageRuntime containerImage) {
         this.containerImage = containerImage;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDataplexV1TaskInfrastructureSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcNetwork")
     public GoogleCloudDataplexV1TaskInfrastructureSpecVpcNetwork vpcNetwork;
+
     public GoogleCloudDataplexV1TaskInfrastructureSpec withVpcNetwork(GoogleCloudDataplexV1TaskInfrastructureSpecVpcNetwork vpcNetwork) {
         this.vpcNetwork = vpcNetwork;
         return this;
     }
     
+    public GoogleCloudDataplexV1TaskInfrastructureSpec(){}
 }

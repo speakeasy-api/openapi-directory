@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssetTagsWithSearch {
     @JsonProperty("search")
     public String search;
+
     public AssetTagsWithSearch withSearch(String search) {
         this.search = search;
         return this;
@@ -19,9 +20,14 @@ public class AssetTagsWithSearch {
     
     @JsonProperty("tags")
     public String tags;
+
     public AssetTagsWithSearch withTags(String tags) {
         this.tags = tags;
         return this;
     }
     
+    public AssetTagsWithSearch(@JsonProperty("search") String search, @JsonProperty("tags") String tags) {
+        this.search = search;
+        this.tags = tags;
+  }
 }

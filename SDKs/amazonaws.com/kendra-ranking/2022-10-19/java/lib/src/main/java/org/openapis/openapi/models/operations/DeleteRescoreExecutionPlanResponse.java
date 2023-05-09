@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRescoreExecutionPlanResponse {
@@ -12,6 +13,7 @@ public class DeleteRescoreExecutionPlanResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteRescoreExecutionPlanResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteRescoreExecutionPlanResponse {
      */
     
     public Object conflictException;
+
     public DeleteRescoreExecutionPlanResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteRescoreExecutionPlanResponse {
     
     
     public String contentType;
+
     public DeleteRescoreExecutionPlanResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteRescoreExecutionPlanResponse {
      */
     
     public Object internalServerException;
+
     public DeleteRescoreExecutionPlanResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteRescoreExecutionPlanResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteRescoreExecutionPlanResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteRescoreExecutionPlanResponse {
     
     
     public Integer statusCode;
+
     public DeleteRescoreExecutionPlanResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteRescoreExecutionPlanResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRescoreExecutionPlanResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteRescoreExecutionPlanResponse {
      */
     
     public Object throttlingException;
+
     public DeleteRescoreExecutionPlanResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteRescoreExecutionPlanResponse {
      */
     
     public Object validationException;
+
     public DeleteRescoreExecutionPlanResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteRescoreExecutionPlanResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

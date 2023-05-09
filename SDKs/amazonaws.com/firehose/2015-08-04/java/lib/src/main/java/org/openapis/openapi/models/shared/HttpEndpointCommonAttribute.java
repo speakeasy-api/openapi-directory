@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HttpEndpointCommonAttribute {
     @JsonProperty("AttributeName")
     public String attributeName;
+
     public HttpEndpointCommonAttribute withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -19,9 +20,14 @@ public class HttpEndpointCommonAttribute {
     
     @JsonProperty("AttributeValue")
     public String attributeValue;
+
     public HttpEndpointCommonAttribute withAttributeValue(String attributeValue) {
         this.attributeValue = attributeValue;
         return this;
     }
     
+    public HttpEndpointCommonAttribute(@JsonProperty("AttributeName") String attributeName, @JsonProperty("AttributeValue") String attributeValue) {
+        this.attributeName = attributeName;
+        this.attributeValue = attributeValue;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * MetricDataQuery - &lt;p&gt;The metric data to return. Also defines whether this call is returning data for one metric only, or whether it is performing a math expression on the values of returned metric statistics to create a new time series. A time series is a series of data points, each of which is associated with a timestamp.&lt;/p&gt; &lt;p&gt;For more information and examples, see &lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/predictive-scaling-customized-metric-specification.html"&gt;Advanced predictive scaling policy configurations using custom metrics&lt;/a&gt; in the &lt;i&gt;Amazon EC2 Auto Scaling User Guide&lt;/i&gt;.&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class MetricDataQuery {
     
     public String expression;
+
     public MetricDataQuery withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -19,6 +20,7 @@ public class MetricDataQuery {
     
     
     public String id;
+
     public MetricDataQuery withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +28,7 @@ public class MetricDataQuery {
     
     
     public String label;
+
     public MetricDataQuery withLabel(String label) {
         this.label = label;
         return this;
@@ -33,6 +36,7 @@ public class MetricDataQuery {
     
     
     public MetricStat metricStat;
+
     public MetricDataQuery withMetricStat(MetricStat metricStat) {
         this.metricStat = metricStat;
         return this;
@@ -40,9 +44,13 @@ public class MetricDataQuery {
     
     
     public Boolean returnData;
+
     public MetricDataQuery withReturnData(Boolean returnData) {
         this.returnData = returnData;
         return this;
     }
     
+    public MetricDataQuery(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

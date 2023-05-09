@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateContributorInsightsResponse {
     
     public String contentType;
+
     public UpdateContributorInsightsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateContributorInsightsResponse {
      */
     
     public Object internalServerError;
+
     public UpdateContributorInsightsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -26,6 +29,7 @@ public class UpdateContributorInsightsResponse {
     
     
     public Integer statusCode;
+
     public UpdateContributorInsightsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class UpdateContributorInsightsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateContributorInsightsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateContributorInsightsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateContributorInsightsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -53,9 +59,14 @@ public class UpdateContributorInsightsResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateContributorInsightsOutput updateContributorInsightsOutput;
+
     public UpdateContributorInsightsResponse withUpdateContributorInsightsOutput(org.openapis.openapi.models.shared.UpdateContributorInsightsOutput updateContributorInsightsOutput) {
         this.updateContributorInsightsOutput = updateContributorInsightsOutput;
         return this;
     }
     
+    public UpdateContributorInsightsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

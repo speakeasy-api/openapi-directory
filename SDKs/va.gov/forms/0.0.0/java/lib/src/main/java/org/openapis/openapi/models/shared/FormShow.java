@@ -15,6 +15,7 @@ public class FormShow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public FormShowAttributes attributes;
+
     public FormShow withAttributes(FormShowAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -26,6 +27,7 @@ public class FormShow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public FormShow withId(String id) {
         this.id = id;
         return this;
@@ -37,9 +39,11 @@ public class FormShow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public FormShow withType(String type) {
         this.type = type;
         return this;
     }
     
+    public FormShow(){}
 }

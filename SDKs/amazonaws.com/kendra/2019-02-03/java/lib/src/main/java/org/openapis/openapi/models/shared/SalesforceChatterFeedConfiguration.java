@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SalesforceChatterFeedConfiguration {
     @JsonProperty("DocumentDataFieldName")
     public String documentDataFieldName;
+
     public SalesforceChatterFeedConfiguration withDocumentDataFieldName(String documentDataFieldName) {
         this.documentDataFieldName = documentDataFieldName;
         return this;
@@ -22,6 +23,7 @@ public class SalesforceChatterFeedConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentTitleFieldName")
     public String documentTitleFieldName;
+
     public SalesforceChatterFeedConfiguration withDocumentTitleFieldName(String documentTitleFieldName) {
         this.documentTitleFieldName = documentTitleFieldName;
         return this;
@@ -30,6 +32,7 @@ public class SalesforceChatterFeedConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldMappings")
     public DataSourceToIndexFieldMapping[] fieldMappings;
+
     public SalesforceChatterFeedConfiguration withFieldMappings(DataSourceToIndexFieldMapping[] fieldMappings) {
         this.fieldMappings = fieldMappings;
         return this;
@@ -38,9 +41,13 @@ public class SalesforceChatterFeedConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeFilterTypes")
     public SalesforceChatterFeedIncludeFilterTypeEnum[] includeFilterTypes;
+
     public SalesforceChatterFeedConfiguration withIncludeFilterTypes(SalesforceChatterFeedIncludeFilterTypeEnum[] includeFilterTypes) {
         this.includeFilterTypes = includeFilterTypes;
         return this;
     }
     
+    public SalesforceChatterFeedConfiguration(@JsonProperty("DocumentDataFieldName") String documentDataFieldName) {
+        this.documentDataFieldName = documentDataFieldName;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartTaskResponse {
@@ -12,6 +13,7 @@ public class StartTaskResponse {
      */
     
     public Object clientException;
+
     public StartTaskResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -22,6 +24,7 @@ public class StartTaskResponse {
      */
     
     public Object clusterNotFoundException;
+
     public StartTaskResponse withClusterNotFoundException(Object clusterNotFoundException) {
         this.clusterNotFoundException = clusterNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class StartTaskResponse {
     
     
     public String contentType;
+
     public StartTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartTaskResponse {
      */
     
     public Object invalidParameterException;
+
     public StartTaskResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class StartTaskResponse {
      */
     
     public Object serverException;
+
     public StartTaskResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -59,6 +65,7 @@ public class StartTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.StartTaskResponse startTaskResponse;
+
     public StartTaskResponse withStartTaskResponse(org.openapis.openapi.models.shared.StartTaskResponse startTaskResponse) {
         this.startTaskResponse = startTaskResponse;
         return this;
@@ -66,6 +73,7 @@ public class StartTaskResponse {
     
     
     public Integer statusCode;
+
     public StartTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class StartTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

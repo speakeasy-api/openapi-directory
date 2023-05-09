@@ -23,6 +23,7 @@ public class RiskEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public RiskEvaluation withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -34,9 +35,11 @@ public class RiskEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("risk_level")
     public String riskLevel;
+
     public RiskEvaluation withRiskLevel(String riskLevel) {
         this.riskLevel = riskLevel;
         return this;
     }
     
+    public RiskEvaluation(){}
 }

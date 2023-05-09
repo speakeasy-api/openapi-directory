@@ -12,9 +12,13 @@ public class GetObjectInformationRequestBody {
      */
     @JsonProperty("ObjectReference")
     public GetObjectInformationRequestBodyObjectReference objectReference;
+
     public GetObjectInformationRequestBody withObjectReference(GetObjectInformationRequestBodyObjectReference objectReference) {
         this.objectReference = objectReference;
         return this;
     }
     
+    public GetObjectInformationRequestBody(@JsonProperty("ObjectReference") GetObjectInformationRequestBodyObjectReference objectReference) {
+        this.objectReference = objectReference;
+  }
 }

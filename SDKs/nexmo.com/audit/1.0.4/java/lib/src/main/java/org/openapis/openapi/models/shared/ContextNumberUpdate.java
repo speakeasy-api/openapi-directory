@@ -18,6 +18,7 @@ public class ContextNumberUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public ContextNumberUpdate withCountry(String country) {
         this.country = country;
         return this;
@@ -29,6 +30,7 @@ public class ContextNumberUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("http")
     public String http;
+
     public ContextNumberUpdate withHttp(String http) {
         this.http = http;
         return this;
@@ -40,6 +42,7 @@ public class ContextNumberUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("msisdn")
     public String msisdn;
+
     public ContextNumberUpdate withMsisdn(String msisdn) {
         this.msisdn = msisdn;
         return this;
@@ -51,6 +54,7 @@ public class ContextNumberUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voice-type")
     public ContextNumberUpdateVoiceTypeEnum voiceType;
+
     public ContextNumberUpdate withVoiceType(ContextNumberUpdateVoiceTypeEnum voiceType) {
         this.voiceType = voiceType;
         return this;
@@ -62,9 +66,11 @@ public class ContextNumberUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voice-value")
     public String voiceValue;
+
     public ContextNumberUpdate withVoiceValue(String voiceValue) {
         this.voiceValue = voiceValue;
         return this;
     }
     
+    public ContextNumberUpdate(){}
 }

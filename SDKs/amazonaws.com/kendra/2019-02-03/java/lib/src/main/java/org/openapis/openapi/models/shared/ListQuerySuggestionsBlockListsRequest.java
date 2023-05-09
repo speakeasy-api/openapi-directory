@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListQuerySuggestionsBlockListsRequest {
     @JsonProperty("IndexId")
     public String indexId;
+
     public ListQuerySuggestionsBlockListsRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
@@ -19,6 +20,7 @@ public class ListQuerySuggestionsBlockListsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListQuerySuggestionsBlockListsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class ListQuerySuggestionsBlockListsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListQuerySuggestionsBlockListsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListQuerySuggestionsBlockListsRequest(@JsonProperty("IndexId") String indexId) {
+        this.indexId = indexId;
+  }
 }

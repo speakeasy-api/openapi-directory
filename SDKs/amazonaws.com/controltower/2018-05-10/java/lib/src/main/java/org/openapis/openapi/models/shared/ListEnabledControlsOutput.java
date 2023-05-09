@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListEnabledControlsOutput {
     @JsonProperty("enabledControls")
     public EnabledControlSummary[] enabledControls;
+
     public ListEnabledControlsOutput withEnabledControls(EnabledControlSummary[] enabledControls) {
         this.enabledControls = enabledControls;
         return this;
@@ -22,9 +23,13 @@ public class ListEnabledControlsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListEnabledControlsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEnabledControlsOutput(@JsonProperty("enabledControls") EnabledControlSummary[] enabledControls) {
+        this.enabledControls = enabledControls;
+  }
 }

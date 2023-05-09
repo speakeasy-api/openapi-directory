@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDiscountRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DiscountRequest discountRequest;
+
     public UpdateDiscountRequest withDiscountRequest(org.openapis.openapi.models.shared.DiscountRequest discountRequest) {
         this.discountRequest = discountRequest;
         return this;
@@ -16,6 +18,7 @@ public class UpdateDiscountRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
     public String ifMatch;
+
     public UpdateDiscountRequest withIfMatch(String ifMatch) {
         this.ifMatch = ifMatch;
         return this;
@@ -23,6 +26,7 @@ public class UpdateDiscountRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discountUuid")
     public String discountUuid;
+
     public UpdateDiscountRequest withDiscountUuid(String discountUuid) {
         this.discountUuid = discountUuid;
         return this;
@@ -30,9 +34,15 @@ public class UpdateDiscountRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationUuid")
     public String organizationUuid;
+
     public UpdateDiscountRequest withOrganizationUuid(String organizationUuid) {
         this.organizationUuid = organizationUuid;
         return this;
     }
     
+    public UpdateDiscountRequest(@JsonProperty("DiscountRequest") org.openapis.openapi.models.shared.DiscountRequest discountRequest, @JsonProperty("discountUuid") String discountUuid, @JsonProperty("organizationUuid") String organizationUuid) {
+        this.discountRequest = discountRequest;
+        this.discountUuid = discountUuid;
+        this.organizationUuid = organizationUuid;
+  }
 }

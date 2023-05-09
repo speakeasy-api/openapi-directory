@@ -85,4 +85,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Reference.java
 lib/src/main/java/org/openapis/openapi/models/shared/ExecuteSqlQueryResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ExecuteSqlQueryRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Query.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

@@ -58,12 +58,10 @@ public class Credit {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCreditResponse res = new org.openapis.openapi.models.operations.GetCreditResponse() {{
+        org.openapis.openapi.models.operations.GetCreditResponse res = new org.openapis.openapi.models.operations.GetCreditResponse(contentType, httpRes.statusCode()) {{
             creditResponse = null;
             erreur = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

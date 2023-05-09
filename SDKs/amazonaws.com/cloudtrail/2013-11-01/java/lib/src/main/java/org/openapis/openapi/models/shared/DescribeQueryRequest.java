@@ -12,6 +12,7 @@ public class DescribeQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventDataStore")
     public String eventDataStore;
+
     public DescribeQueryRequest withEventDataStore(String eventDataStore) {
         this.eventDataStore = eventDataStore;
         return this;
@@ -19,9 +20,13 @@ public class DescribeQueryRequest {
     
     @JsonProperty("QueryId")
     public String queryId;
+
     public DescribeQueryRequest withQueryId(String queryId) {
         this.queryId = queryId;
         return this;
     }
     
+    public DescribeQueryRequest(@JsonProperty("QueryId") String queryId) {
+        this.queryId = queryId;
+  }
 }

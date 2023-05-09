@@ -12,9 +12,11 @@ public class SendMessagesRequestMedia {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public SendMessagesRequestMedia withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public SendMessagesRequestMedia(){}
 }

@@ -19,6 +19,7 @@ public class CalculateLoyaltyPointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public CalculateLoyaltyPointsResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -30,9 +31,11 @@ public class CalculateLoyaltyPointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("points")
     public Long points;
+
     public CalculateLoyaltyPointsResponse withPoints(Long points) {
         this.points = points;
         return this;
     }
     
+    public CalculateLoyaltyPointsResponse(){}
 }

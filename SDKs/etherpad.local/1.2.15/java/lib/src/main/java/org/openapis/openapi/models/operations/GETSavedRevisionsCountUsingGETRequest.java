@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETSavedRevisionsCountUsingGETRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=padID")
     public String padID;
+
     public GETSavedRevisionsCountUsingGETRequest withPadID(String padID) {
         this.padID = padID;
         return this;
     }
     
+    public GETSavedRevisionsCountUsingGETRequest(){}
 }

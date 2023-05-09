@@ -12,6 +12,7 @@ public class GetConsumerV1ServicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allLocations")
     public Boolean allLocations;
+
     public GetConsumerV1ServicesRequest withAllLocations(Boolean allLocations) {
         this.allLocations = allLocations;
         return this;
@@ -22,6 +23,7 @@ public class GetConsumerV1ServicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=defaultService")
     public Boolean defaultService;
+
     public GetConsumerV1ServicesRequest withDefaultService(Boolean defaultService) {
         this.defaultService = defaultService;
         return this;
@@ -32,6 +34,7 @@ public class GetConsumerV1ServicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetConsumerV1ServicesRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -42,6 +45,7 @@ public class GetConsumerV1ServicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationId")
     public String locationId;
+
     public GetConsumerV1ServicesRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -52,6 +56,7 @@ public class GetConsumerV1ServicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GetConsumerV1ServicesRequest withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +67,7 @@ public class GetConsumerV1ServicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public GetConsumerV1ServicesRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -72,6 +78,7 @@ public class GetConsumerV1ServicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scope")
     public org.openapis.openapi.models.shared.ServicesScopeEnum scope;
+
     public GetConsumerV1ServicesRequest withScope(org.openapis.openapi.models.shared.ServicesScopeEnum scope) {
         this.scope = scope;
         return this;
@@ -82,6 +89,7 @@ public class GetConsumerV1ServicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceGroupId")
     public Integer serviceGroupId;
+
     public GetConsumerV1ServicesRequest withServiceGroupId(Integer serviceGroupId) {
         this.serviceGroupId = serviceGroupId;
         return this;
@@ -92,6 +100,7 @@ public class GetConsumerV1ServicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceId")
     public String serviceId;
+
     public GetConsumerV1ServicesRequest withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -102,6 +111,7 @@ public class GetConsumerV1ServicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortDescending")
     public Boolean sortDescending;
+
     public GetConsumerV1ServicesRequest withSortDescending(Boolean sortDescending) {
         this.sortDescending = sortDescending;
         return this;
@@ -112,9 +122,11 @@ public class GetConsumerV1ServicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
     public org.openapis.openapi.models.shared.ServiceSortOrderEnum sortOrder;
+
     public GetConsumerV1ServicesRequest withSortOrder(org.openapis.openapi.models.shared.ServiceSortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public GetConsumerV1ServicesRequest(){}
 }

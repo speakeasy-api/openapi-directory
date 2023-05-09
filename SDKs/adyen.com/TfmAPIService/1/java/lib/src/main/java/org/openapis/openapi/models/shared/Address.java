@@ -12,6 +12,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public Address withCity(String city) {
         this.city = city;
         return this;
@@ -20,6 +21,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCode")
     public String countryCode;
+
     public Address withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -28,6 +30,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public Address withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -36,6 +39,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateOrProvince")
     public String stateOrProvince;
+
     public Address withStateOrProvince(String stateOrProvince) {
         this.stateOrProvince = stateOrProvince;
         return this;
@@ -44,6 +48,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streetAddress")
     public String streetAddress;
+
     public Address withStreetAddress(String streetAddress) {
         this.streetAddress = streetAddress;
         return this;
@@ -52,9 +57,11 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streetAddress2")
     public String streetAddress2;
+
     public Address withStreetAddress2(String streetAddress2) {
         this.streetAddress2 = streetAddress2;
         return this;
     }
     
+    public Address(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostReportsRequest {
@@ -12,6 +13,7 @@ public class PostReportsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=baseline")
     public Long baseline;
+
     public PostReportsRequest withBaseline(Long baseline) {
         this.baseline = baseline;
         return this;
@@ -22,6 +24,7 @@ public class PostReportsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=report_date")
     public Long reportDate;
+
     public PostReportsRequest withReportDate(Long reportDate) {
         this.reportDate = reportDate;
         return this;
@@ -32,6 +35,7 @@ public class PostReportsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=report_hash")
     public String reportHash;
+
     public PostReportsRequest withReportHash(String reportHash) {
         this.reportHash = reportHash;
         return this;
@@ -42,9 +46,14 @@ public class PostReportsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sample")
     public Long sample;
+
     public PostReportsRequest withSample(Long sample) {
         this.sample = sample;
         return this;
     }
     
+    public PostReportsRequest(@JsonProperty("report_hash") String reportHash, @JsonProperty("sample") Long sample) {
+        this.reportHash = reportHash;
+        this.sample = sample;
+  }
 }

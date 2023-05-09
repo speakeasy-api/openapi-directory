@@ -15,6 +15,7 @@ public class GetAllinvestorAccounts200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("investor_accounts")
     public GetAllinvestorAccounts200ApplicationJSONInvestorAccounts[] investorAccounts;
+
     public GetAllinvestorAccounts200ApplicationJSON withInvestorAccounts(GetAllinvestorAccounts200ApplicationJSONInvestorAccounts[] investorAccounts) {
         this.investorAccounts = investorAccounts;
         return this;
@@ -23,9 +24,11 @@ public class GetAllinvestorAccounts200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next_page_available")
     public Boolean nextPageAvailable;
+
     public GetAllinvestorAccounts200ApplicationJSON withNextPageAvailable(Boolean nextPageAvailable) {
         this.nextPageAvailable = nextPageAvailable;
         return this;
     }
     
+    public GetAllinvestorAccounts200ApplicationJSON(){}
 }

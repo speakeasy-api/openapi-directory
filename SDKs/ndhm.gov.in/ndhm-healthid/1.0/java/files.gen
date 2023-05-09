@@ -317,4 +317,15 @@ lib/src/main/java/org/openapis/openapi/models/shared/SearchByMobileRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/TagRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/DistrictDTO.java
 lib/src/main/java/org/openapis/openapi/models/shared/StatesDTO.java
+docs/sdk/README.md
+docs/authentication/README.md
+docs/forgothealthidnumber/README.md
+docs/healthfacility/README.md
+docs/integratedprograms/README.md
+docs/profile/README.md
+docs/registrationwithaadhaar/README.md
+docs/registrationwithmobilenumber/README.md
+docs/search/README.md
+docs/tags/README.md
+docs/utility/README.md
 USAGE.md

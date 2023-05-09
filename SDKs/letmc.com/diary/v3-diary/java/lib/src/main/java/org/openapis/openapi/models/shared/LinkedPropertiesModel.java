@@ -18,6 +18,7 @@ public class LinkedPropertiesModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Address1")
     public String address1;
+
     public LinkedPropertiesModel withAddress1(String address1) {
         this.address1 = address1;
         return this;
@@ -29,6 +30,7 @@ public class LinkedPropertiesModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Address2")
     public String address2;
+
     public LinkedPropertiesModel withAddress2(String address2) {
         this.address2 = address2;
         return this;
@@ -40,6 +42,7 @@ public class LinkedPropertiesModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Address3")
     public String address3;
+
     public LinkedPropertiesModel withAddress3(String address3) {
         this.address3 = address3;
         return this;
@@ -51,6 +54,7 @@ public class LinkedPropertiesModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Address4")
     public String address4;
+
     public LinkedPropertiesModel withAddress4(String address4) {
         this.address4 = address4;
         return this;
@@ -62,6 +66,7 @@ public class LinkedPropertiesModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddressFlatRoomNumber")
     public String addressFlatRoomNumber;
+
     public LinkedPropertiesModel withAddressFlatRoomNumber(String addressFlatRoomNumber) {
         this.addressFlatRoomNumber = addressFlatRoomNumber;
         return this;
@@ -73,6 +78,7 @@ public class LinkedPropertiesModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddressNumber")
     public String addressNumber;
+
     public LinkedPropertiesModel withAddressNumber(String addressNumber) {
         this.addressNumber = addressNumber;
         return this;
@@ -84,6 +90,7 @@ public class LinkedPropertiesModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ETag")
     public String eTag;
+
     public LinkedPropertiesModel withETag(String eTag) {
         this.eTag = eTag;
         return this;
@@ -95,6 +102,7 @@ public class LinkedPropertiesModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestTenancy")
     public LatestTenancyModel latestTenancy;
+
     public LinkedPropertiesModel withLatestTenancy(LatestTenancyModel latestTenancy) {
         this.latestTenancy = latestTenancy;
         return this;
@@ -106,6 +114,7 @@ public class LinkedPropertiesModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MainLandlord")
     public LinkedLandlordModel mainLandlord;
+
     public LinkedPropertiesModel withMainLandlord(LinkedLandlordModel mainLandlord) {
         this.mainLandlord = mainLandlord;
         return this;
@@ -117,6 +126,7 @@ public class LinkedPropertiesModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OID")
     public String oid;
+
     public LinkedPropertiesModel withOid(String oid) {
         this.oid = oid;
         return this;
@@ -128,9 +138,11 @@ public class LinkedPropertiesModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Postcode")
     public String postcode;
+
     public LinkedPropertiesModel withPostcode(String postcode) {
         this.postcode = postcode;
         return this;
     }
     
+    public LinkedPropertiesModel(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListArtifactsResponse {
@@ -12,6 +13,7 @@ public class ListArtifactsResponse {
      */
     
     public Object argumentException;
+
     public ListArtifactsResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class ListArtifactsResponse {
     
     
     public String contentType;
+
     public ListArtifactsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListArtifactsResponse {
      */
     
     public Object limitExceededException;
+
     public ListArtifactsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class ListArtifactsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListArtifactsResult listArtifactsResult;
+
     public ListArtifactsResponse withListArtifactsResult(org.openapis.openapi.models.shared.ListArtifactsResult listArtifactsResult) {
         this.listArtifactsResult = listArtifactsResult;
         return this;
@@ -49,6 +54,7 @@ public class ListArtifactsResponse {
      */
     
     public Object notFoundException;
+
     public ListArtifactsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class ListArtifactsResponse {
      */
     
     public Object serviceAccountException;
+
     public ListArtifactsResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -66,6 +73,7 @@ public class ListArtifactsResponse {
     
     
     public Integer statusCode;
+
     public ListArtifactsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListArtifactsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListArtifactsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListArtifactsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

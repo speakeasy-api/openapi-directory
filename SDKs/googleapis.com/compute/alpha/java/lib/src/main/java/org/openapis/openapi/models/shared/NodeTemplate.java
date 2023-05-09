@@ -15,6 +15,7 @@ public class NodeTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accelerators")
     public AcceleratorConfig[] accelerators;
+
     public NodeTemplate withAccelerators(AcceleratorConfig[] accelerators) {
         this.accelerators = accelerators;
         return this;
@@ -26,6 +27,7 @@ public class NodeTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuOvercommitType")
     public NodeTemplateCpuOvercommitTypeEnum cpuOvercommitType;
+
     public NodeTemplate withCpuOvercommitType(NodeTemplateCpuOvercommitTypeEnum cpuOvercommitType) {
         this.cpuOvercommitType = cpuOvercommitType;
         return this;
@@ -37,6 +39,7 @@ public class NodeTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public NodeTemplate withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -48,6 +51,7 @@ public class NodeTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public NodeTemplate withDescription(String description) {
         this.description = description;
         return this;
@@ -56,6 +60,7 @@ public class NodeTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disks")
     public LocalDisk[] disks;
+
     public NodeTemplate withDisks(LocalDisk[] disks) {
         this.disks = disks;
         return this;
@@ -67,6 +72,7 @@ public class NodeTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public NodeTemplate withId(String id) {
         this.id = id;
         return this;
@@ -78,6 +84,7 @@ public class NodeTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public NodeTemplate withKind(String kind) {
         this.kind = kind;
         return this;
@@ -89,6 +96,7 @@ public class NodeTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NodeTemplate withName(String name) {
         this.name = name;
         return this;
@@ -100,6 +108,7 @@ public class NodeTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeAffinityLabels")
     public java.util.Map<String, String> nodeAffinityLabels;
+
     public NodeTemplate withNodeAffinityLabels(java.util.Map<String, String> nodeAffinityLabels) {
         this.nodeAffinityLabels = nodeAffinityLabels;
         return this;
@@ -111,6 +120,7 @@ public class NodeTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeType")
     public String nodeType;
+
     public NodeTemplate withNodeType(String nodeType) {
         this.nodeType = nodeType;
         return this;
@@ -119,6 +129,7 @@ public class NodeTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeTypeFlexibility")
     public NodeTemplateNodeTypeFlexibility nodeTypeFlexibility;
+
     public NodeTemplate withNodeTypeFlexibility(NodeTemplateNodeTypeFlexibility nodeTypeFlexibility) {
         this.nodeTypeFlexibility = nodeTypeFlexibility;
         return this;
@@ -130,6 +141,7 @@ public class NodeTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public NodeTemplate withRegion(String region) {
         this.region = region;
         return this;
@@ -141,6 +153,7 @@ public class NodeTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public NodeTemplate withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -152,6 +165,7 @@ public class NodeTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLinkWithId")
     public String selfLinkWithId;
+
     public NodeTemplate withSelfLinkWithId(String selfLinkWithId) {
         this.selfLinkWithId = selfLinkWithId;
         return this;
@@ -160,6 +174,7 @@ public class NodeTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverBinding")
     public ServerBinding serverBinding;
+
     public NodeTemplate withServerBinding(ServerBinding serverBinding) {
         this.serverBinding = serverBinding;
         return this;
@@ -171,6 +186,7 @@ public class NodeTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public NodeTemplateStatusEnum status;
+
     public NodeTemplate withStatus(NodeTemplateStatusEnum status) {
         this.status = status;
         return this;
@@ -182,9 +198,11 @@ public class NodeTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public NodeTemplate withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public NodeTemplate(){}
 }

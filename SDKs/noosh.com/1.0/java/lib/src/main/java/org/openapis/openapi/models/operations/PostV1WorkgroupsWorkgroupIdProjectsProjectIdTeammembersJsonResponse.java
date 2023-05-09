@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonResponse {
     
     public byte[] body;
+
     public PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonResponse
     
     
     public String contentType;
+
     public PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonResponse
      */
     
     public org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO;
+
     public PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonResponse withHTTPStatusVO(org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO) {
         this.httpStatusVO = httpStatusVO;
         return this;
@@ -33,6 +37,7 @@ public class PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonResponse
     
     
     public Integer statusCode;
+
     public PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonResponse
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonResponse
      */
     
     public org.openapis.openapi.models.shared.TeamMemberBaseInfVO teamMemberBaseInfVO;
+
     public PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonResponse withTeamMemberBaseInfVO(org.openapis.openapi.models.shared.TeamMemberBaseInfVO teamMemberBaseInfVO) {
         this.teamMemberBaseInfVO = teamMemberBaseInfVO;
         return this;
     }
     
+    public PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

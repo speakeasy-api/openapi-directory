@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateEndpointAccessMessage {
     
     public String clusterIdentifier;
+
     public CreateEndpointAccessMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -16,6 +17,7 @@ public class CreateEndpointAccessMessage {
     
     
     public String endpointName;
+
     public CreateEndpointAccessMessage withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -23,6 +25,7 @@ public class CreateEndpointAccessMessage {
     
     
     public String resourceOwner;
+
     public CreateEndpointAccessMessage withResourceOwner(String resourceOwner) {
         this.resourceOwner = resourceOwner;
         return this;
@@ -30,6 +33,7 @@ public class CreateEndpointAccessMessage {
     
     
     public String subnetGroupName;
+
     public CreateEndpointAccessMessage withSubnetGroupName(String subnetGroupName) {
         this.subnetGroupName = subnetGroupName;
         return this;
@@ -37,9 +41,14 @@ public class CreateEndpointAccessMessage {
     
     
     public String[] vpcSecurityGroupIds;
+
     public CreateEndpointAccessMessage withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
     }
     
+    public CreateEndpointAccessMessage(@JsonProperty("EndpointName") String endpointName, @JsonProperty("SubnetGroupName") String subnetGroupName) {
+        this.endpointName = endpointName;
+        this.subnetGroupName = subnetGroupName;
+  }
 }

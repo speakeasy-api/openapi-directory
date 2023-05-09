@@ -18,6 +18,7 @@ public class AdSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adSourceId")
     public String adSourceId;
+
     public AdSource withAdSourceId(String adSourceId) {
         this.adSourceId = adSourceId;
         return this;
@@ -29,6 +30,7 @@ public class AdSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AdSource withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class AdSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public AdSource withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public AdSource(){}
 }

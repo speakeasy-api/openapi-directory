@@ -15,6 +15,7 @@ public class BatchListPolicyAttachments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public BatchListPolicyAttachments withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -23,6 +24,7 @@ public class BatchListPolicyAttachments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public BatchListPolicyAttachments withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -30,9 +32,13 @@ public class BatchListPolicyAttachments {
     
     @JsonProperty("PolicyReference")
     public ObjectReference policyReference;
+
     public BatchListPolicyAttachments withPolicyReference(ObjectReference policyReference) {
         this.policyReference = policyReference;
         return this;
     }
     
+    public BatchListPolicyAttachments(@JsonProperty("PolicyReference") ObjectReference policyReference) {
+        this.policyReference = policyReference;
+  }
 }

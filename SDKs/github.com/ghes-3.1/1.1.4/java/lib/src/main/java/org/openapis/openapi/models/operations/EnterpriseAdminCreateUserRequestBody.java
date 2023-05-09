@@ -17,6 +17,7 @@ public class EnterpriseAdminCreateUserRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public EnterpriseAdminCreateUserRequestBody withEmail(String email) {
         this.email = email;
         return this;
@@ -27,9 +28,13 @@ public class EnterpriseAdminCreateUserRequestBody {
      */
     @JsonProperty("login")
     public String login;
+
     public EnterpriseAdminCreateUserRequestBody withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public EnterpriseAdminCreateUserRequestBody(@JsonProperty("login") String login) {
+        this.login = login;
+  }
 }

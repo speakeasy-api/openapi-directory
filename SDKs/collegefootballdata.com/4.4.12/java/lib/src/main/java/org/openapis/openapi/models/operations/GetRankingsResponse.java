@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRankingsResponse {
     
     public String contentType;
+
     public GetRankingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetRankingsResponse {
      */
     
     public org.openapis.openapi.models.shared.RankingWeek[] rankingWeeks;
+
     public GetRankingsResponse withRankingWeeks(org.openapis.openapi.models.shared.RankingWeek[] rankingWeeks) {
         this.rankingWeeks = rankingWeeks;
         return this;
@@ -26,6 +29,7 @@ public class GetRankingsResponse {
     
     
     public Integer statusCode;
+
     public GetRankingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetRankingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRankingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetRankingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeRegionSslPoliciesListResponse {
     
     public String contentType;
+
     public ComputeRegionSslPoliciesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeRegionSslPoliciesListResponse {
      */
     
     public org.openapis.openapi.models.shared.SslPoliciesList sslPoliciesList;
+
     public ComputeRegionSslPoliciesListResponse withSslPoliciesList(org.openapis.openapi.models.shared.SslPoliciesList sslPoliciesList) {
         this.sslPoliciesList = sslPoliciesList;
         return this;
@@ -26,6 +29,7 @@ public class ComputeRegionSslPoliciesListResponse {
     
     
     public Integer statusCode;
+
     public ComputeRegionSslPoliciesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeRegionSslPoliciesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeRegionSslPoliciesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeRegionSslPoliciesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

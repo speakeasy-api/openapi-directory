@@ -15,9 +15,11 @@ public class TestResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groups")
     public GroupResult[] groups;
+
     public TestResult withGroups(GroupResult[] groups) {
         this.groups = groups;
         return this;
     }
     
+    public TestResult(){}
 }

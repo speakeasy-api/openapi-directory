@@ -15,6 +15,7 @@ public class UpdateStudioComponentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration")
     public UpdateStudioComponentRequestBodyConfiguration configuration;
+
     public UpdateStudioComponentRequestBody withConfiguration(UpdateStudioComponentRequestBodyConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -26,6 +27,7 @@ public class UpdateStudioComponentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateStudioComponentRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -37,6 +39,7 @@ public class UpdateStudioComponentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2SecurityGroupIds")
     public String[] ec2SecurityGroupIds;
+
     public UpdateStudioComponentRequestBody withEc2SecurityGroupIds(String[] ec2SecurityGroupIds) {
         this.ec2SecurityGroupIds = ec2SecurityGroupIds;
         return this;
@@ -48,6 +51,7 @@ public class UpdateStudioComponentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initializationScripts")
     public org.openapis.openapi.models.shared.StudioComponentInitializationScript[] initializationScripts;
+
     public UpdateStudioComponentRequestBody withInitializationScripts(org.openapis.openapi.models.shared.StudioComponentInitializationScript[] initializationScripts) {
         this.initializationScripts = initializationScripts;
         return this;
@@ -59,6 +63,7 @@ public class UpdateStudioComponentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateStudioComponentRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -70,6 +75,7 @@ public class UpdateStudioComponentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeRoleArn")
     public String runtimeRoleArn;
+
     public UpdateStudioComponentRequestBody withRuntimeRoleArn(String runtimeRoleArn) {
         this.runtimeRoleArn = runtimeRoleArn;
         return this;
@@ -81,6 +87,7 @@ public class UpdateStudioComponentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scriptParameters")
     public org.openapis.openapi.models.shared.ScriptParameterKeyValue[] scriptParameters;
+
     public UpdateStudioComponentRequestBody withScriptParameters(org.openapis.openapi.models.shared.ScriptParameterKeyValue[] scriptParameters) {
         this.scriptParameters = scriptParameters;
         return this;
@@ -92,6 +99,7 @@ public class UpdateStudioComponentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secureInitializationRoleArn")
     public String secureInitializationRoleArn;
+
     public UpdateStudioComponentRequestBody withSecureInitializationRoleArn(String secureInitializationRoleArn) {
         this.secureInitializationRoleArn = secureInitializationRoleArn;
         return this;
@@ -103,6 +111,7 @@ public class UpdateStudioComponentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtype")
     public UpdateStudioComponentRequestBodySubtypeEnum subtype;
+
     public UpdateStudioComponentRequestBody withSubtype(UpdateStudioComponentRequestBodySubtypeEnum subtype) {
         this.subtype = subtype;
         return this;
@@ -114,9 +123,11 @@ public class UpdateStudioComponentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public UpdateStudioComponentRequestBodyTypeEnum type;
+
     public UpdateStudioComponentRequestBody withType(UpdateStudioComponentRequestBodyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public UpdateStudioComponentRequestBody(){}
 }

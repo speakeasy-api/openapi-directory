@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociatePersonasFromEntitiesResponse {
@@ -12,6 +13,7 @@ public class DisassociatePersonasFromEntitiesResponse {
      */
     
     public Object accessDeniedException;
+
     public DisassociatePersonasFromEntitiesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DisassociatePersonasFromEntitiesResponse {
     
     
     public String contentType;
+
     public DisassociatePersonasFromEntitiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DisassociatePersonasFromEntitiesResponse {
      */
     
     public org.openapis.openapi.models.shared.DisassociatePersonasFromEntitiesResponse disassociatePersonasFromEntitiesResponse;
+
     public DisassociatePersonasFromEntitiesResponse withDisassociatePersonasFromEntitiesResponse(org.openapis.openapi.models.shared.DisassociatePersonasFromEntitiesResponse disassociatePersonasFromEntitiesResponse) {
         this.disassociatePersonasFromEntitiesResponse = disassociatePersonasFromEntitiesResponse;
         return this;
@@ -39,6 +43,7 @@ public class DisassociatePersonasFromEntitiesResponse {
      */
     
     public Object internalServerException;
+
     public DisassociatePersonasFromEntitiesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DisassociatePersonasFromEntitiesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociatePersonasFromEntitiesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DisassociatePersonasFromEntitiesResponse {
     
     
     public Integer statusCode;
+
     public DisassociatePersonasFromEntitiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DisassociatePersonasFromEntitiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociatePersonasFromEntitiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DisassociatePersonasFromEntitiesResponse {
      */
     
     public Object throttlingException;
+
     public DisassociatePersonasFromEntitiesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DisassociatePersonasFromEntitiesResponse {
      */
     
     public Object validationException;
+
     public DisassociatePersonasFromEntitiesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DisassociatePersonasFromEntitiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -16,45 +16,37 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CreateGiftCardRequest;
 import org.openapis.openapi.models.operations.CreateGiftCardResponse;
 import org.openapis.openapi.models.shared.CreateGiftCardRequest;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti", "provident") {{
                     appKey = "YOUR_API_KEY_HERE";
                     appToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CreateGiftCardRequest req = new CreateGiftCardRequest() {{
-                accept = "corrupti";
-                contentType = "provident";
-                createGiftCardRequest = new CreateGiftCardRequest() {{
-                    caption = "rewards program";
-                    expiringDate = "2020-09-01T13:15:30Z";
-                    multipleCredits = false;
-                    multipleRedemptions = false;
-                    profileId = "1234";
-                    relationName = "insert example here";
-                    restrictedToOwner = false;
-                }};
-                xVTEXAPIAppKey = "distinctio";
-                xVTEXAPIAppToken = "quibusdam";
-            }}            
+            CreateGiftCardRequest req = new CreateGiftCardRequest("distinctio", "quibusdam",                 new CreateGiftCardRequest("rewards program", "2020-09-01T13:15:30Z", "1234", "insert example here") {{
+                                multipleCredits = false;
+                                multipleRedemptions = false;
+                                restrictedToOwner = false;
+                            }};, "unde", "nulla");            
 
             CreateGiftCardResponse res = sdk.giftCard.createGiftCard(req);
 
-            if (res.response.isPresent()) {
+            if (res.response != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -62,22 +54,22 @@ public class Application {
 ## Available Resources and Operations
 
 
-### giftCard
+### [giftCard](docs/giftcard/README.md)
 
-* `createGiftCard` - Create GiftCard
-* `getGiftCardbyID` - Get GiftCard by ID
-* `getGiftCardusingJSON` - Get GiftCard using JSON
+* [createGiftCard](docs/giftcard/README.md#creategiftcard) - Create GiftCard
+* [getGiftCardbyID](docs/giftcard/README.md#getgiftcardbyid) - Get GiftCard by ID
+* [getGiftCardusingJSON](docs/giftcard/README.md#getgiftcardusingjson) - Get GiftCard using JSON
 
-### transaction
+### [transaction](docs/transaction/README.md)
 
-* `cancelGiftCardTransaction` - Cancel GiftCard Transaction
-* `createGiftCardTransaction` - Create GiftCard Transaction
-* `getGiftCardTransactionbyID` - Get GiftCard Transaction by ID
-* `getGiftCardTransactions` - Get GiftCard Transactions
-* `getTransactionAuthorizations` - Get Transaction Authorizations
-* `getTransactionCancellations` - Get Transaction Cancellations
-* `getTransactionSettlements` - Get Transaction Settlements
-* `settleGiftCardTransaction` - Settle GiftCard Transaction
+* [cancelGiftCardTransaction](docs/transaction/README.md#cancelgiftcardtransaction) - Cancel GiftCard Transaction
+* [createGiftCardTransaction](docs/transaction/README.md#creategiftcardtransaction) - Create GiftCard Transaction
+* [getGiftCardTransactionbyID](docs/transaction/README.md#getgiftcardtransactionbyid) - Get GiftCard Transaction by ID
+* [getGiftCardTransactions](docs/transaction/README.md#getgiftcardtransactions) - Get GiftCard Transactions
+* [getTransactionAuthorizations](docs/transaction/README.md#gettransactionauthorizations) - Get Transaction Authorizations
+* [getTransactionCancellations](docs/transaction/README.md#gettransactioncancellations) - Get Transaction Cancellations
+* [getTransactionSettlements](docs/transaction/README.md#gettransactionsettlements) - Get Transaction Settlements
+* [settleGiftCardTransaction](docs/transaction/README.md#settlegiftcardtransaction) - Settle GiftCard Transaction
 <!-- End SDK Available Operations -->
 
 ### Maturity

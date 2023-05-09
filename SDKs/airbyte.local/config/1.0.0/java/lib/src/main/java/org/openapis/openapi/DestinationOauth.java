@@ -59,13 +59,11 @@ public class DestinationOauth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CompleteDestinationOAuthResponse res = new org.openapis.openapi.models.operations.CompleteDestinationOAuthResponse() {{
+        org.openapis.openapi.models.operations.CompleteDestinationOAuthResponse res = new org.openapis.openapi.models.operations.CompleteDestinationOAuthResponse(contentType, httpRes.statusCode()) {{
             completeOAuthResponse = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -118,13 +116,11 @@ public class DestinationOauth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDestinationOAuthConsentResponse res = new org.openapis.openapi.models.operations.GetDestinationOAuthConsentResponse() {{
+        org.openapis.openapi.models.operations.GetDestinationOAuthConsentResponse res = new org.openapis.openapi.models.operations.GetDestinationOAuthConsentResponse(contentType, httpRes.statusCode()) {{
             oAuthConsentRead = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -177,12 +173,10 @@ public class DestinationOauth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetInstancewideDestinationOauthParamsResponse res = new org.openapis.openapi.models.operations.SetInstancewideDestinationOauthParamsResponse() {{
+        org.openapis.openapi.models.operations.SetInstancewideDestinationOauthParamsResponse res = new org.openapis.openapi.models.operations.SetInstancewideDestinationOauthParamsResponse(contentType, httpRes.statusCode()) {{
             knownExceptionInfo = null;
             notFoundKnownExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

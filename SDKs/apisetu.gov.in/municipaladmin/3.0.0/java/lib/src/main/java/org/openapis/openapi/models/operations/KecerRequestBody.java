@@ -15,6 +15,7 @@ public class KecerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public KecerRequestBodyCertificateParameters certificateParameters;
+
     public KecerRequestBody withCertificateParameters(KecerRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class KecerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public KecerRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class KecerRequestBody {
      */
     @JsonProperty("format")
     public KecerRequestBodyFormatEnum format;
+
     public KecerRequestBody withFormat(KecerRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class KecerRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public KecerRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public KecerRequestBody(@JsonProperty("format") KecerRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

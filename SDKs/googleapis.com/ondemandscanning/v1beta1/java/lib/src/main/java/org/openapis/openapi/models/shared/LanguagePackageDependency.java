@@ -15,6 +15,7 @@ public class LanguagePackageDependency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("package")
     public String package_;
+
     public LanguagePackageDependency withPackage(String package_) {
         this.package_ = package_;
         return this;
@@ -23,9 +24,11 @@ public class LanguagePackageDependency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public LanguagePackageDependency withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public LanguagePackageDependency(){}
 }

@@ -12,6 +12,7 @@ public class UpdateCollection403ApplicationJSONError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public UpdateCollection403ApplicationJSONError withMessage(String message) {
         this.message = message;
         return this;
@@ -20,9 +21,11 @@ public class UpdateCollection403ApplicationJSONError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateCollection403ApplicationJSONError withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateCollection403ApplicationJSONError(){}
 }

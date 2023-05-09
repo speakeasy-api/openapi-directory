@@ -18,9 +18,11 @@ public class GoogleCloudIntegrationsV1alphaGetClientMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public GoogleCloudIntegrationsV1alphaProjectProperties properties;
+
     public GoogleCloudIntegrationsV1alphaGetClientMetadataResponse withProperties(GoogleCloudIntegrationsV1alphaProjectProperties properties) {
         this.properties = properties;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaGetClientMetadataResponse(){}
 }

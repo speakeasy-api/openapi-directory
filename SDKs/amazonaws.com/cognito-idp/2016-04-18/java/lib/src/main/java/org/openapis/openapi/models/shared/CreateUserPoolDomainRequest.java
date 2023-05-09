@@ -12,6 +12,7 @@ public class CreateUserPoolDomainRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomDomainConfig")
     public CustomDomainConfigType customDomainConfig;
+
     public CreateUserPoolDomainRequest withCustomDomainConfig(CustomDomainConfigType customDomainConfig) {
         this.customDomainConfig = customDomainConfig;
         return this;
@@ -19,6 +20,7 @@ public class CreateUserPoolDomainRequest {
     
     @JsonProperty("Domain")
     public String domain;
+
     public CreateUserPoolDomainRequest withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -26,9 +28,14 @@ public class CreateUserPoolDomainRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public CreateUserPoolDomainRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
     }
     
+    public CreateUserPoolDomainRequest(@JsonProperty("Domain") String domain, @JsonProperty("UserPoolId") String userPoolId) {
+        this.domain = domain;
+        this.userPoolId = userPoolId;
+  }
 }

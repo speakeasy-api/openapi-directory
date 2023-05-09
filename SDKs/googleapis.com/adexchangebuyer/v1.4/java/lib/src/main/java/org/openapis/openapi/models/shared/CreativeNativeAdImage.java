@@ -15,6 +15,7 @@ public class CreativeNativeAdImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Integer height;
+
     public CreativeNativeAdImage withHeight(Integer height) {
         this.height = height;
         return this;
@@ -23,6 +24,7 @@ public class CreativeNativeAdImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public CreativeNativeAdImage withUrl(String url) {
         this.url = url;
         return this;
@@ -31,9 +33,11 @@ public class CreativeNativeAdImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Integer width;
+
     public CreativeNativeAdImage withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public CreativeNativeAdImage(){}
 }

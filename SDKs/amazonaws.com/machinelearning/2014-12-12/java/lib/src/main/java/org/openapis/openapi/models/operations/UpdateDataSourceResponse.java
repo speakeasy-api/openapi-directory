@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDataSourceResponse {
     
     public String contentType;
+
     public UpdateDataSourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDataSourceResponse {
      */
     
     public Object internalServerException;
+
     public UpdateDataSourceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDataSourceResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateDataSourceResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDataSourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateDataSourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateDataSourceResponse {
     
     
     public Integer statusCode;
+
     public UpdateDataSourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateDataSourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDataSourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class UpdateDataSourceResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateDataSourceOutput updateDataSourceOutput;
+
     public UpdateDataSourceResponse withUpdateDataSourceOutput(org.openapis.openapi.models.shared.UpdateDataSourceOutput updateDataSourceOutput) {
         this.updateDataSourceOutput = updateDataSourceOutput;
         return this;
     }
     
+    public UpdateDataSourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

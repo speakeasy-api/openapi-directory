@@ -16,9 +16,8 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetCertificatePdfSecurity;
 import org.openapis.openapi.models.operations.GetCertificatePdfResponse;
+import org.openapis.openapi.models.operations.GetCertificatePdfSecurity;
 import org.openapis.openapi.models.shared.CertificateRequest;
 
 public class Application {
@@ -30,9 +29,9 @@ public class Application {
             org.openapis.openapi.models.shared.CertificateRequest req = new CertificateRequest() {{
                 beneficiaryId = "corrupti";
                 mobile = "(786) 858-4663 x4280";
-            }}            
+            }};            
 
-            GetCertificatePdfResponse res = sdk.certificate.getCertificatePdf(req, new GetCertificatePdfSecurity() {{
+            GetCertificatePdfResponse res = sdk.certificate.getCertificatePdf(req, new GetCertificatePdfSecurity("delectus") {{
                 certAuth = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
@@ -42,6 +41,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -49,9 +50,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### certificate
+### [certificate](docs/certificate/README.md)
 
-* `getCertificatePdf` - Download the certificate in pdf format
+* [getCertificatePdf](docs/certificate/README.md#getcertificatepdf) - Download the certificate in pdf format
 <!-- End SDK Available Operations -->
 
 ### Maturity

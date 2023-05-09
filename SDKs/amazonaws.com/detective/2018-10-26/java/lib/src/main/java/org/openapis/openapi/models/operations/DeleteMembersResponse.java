@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteMembersResponse {
@@ -12,6 +13,7 @@ public class DeleteMembersResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteMembersResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteMembersResponse {
      */
     
     public Object conflictException;
+
     public DeleteMembersResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteMembersResponse {
     
     
     public String contentType;
+
     public DeleteMembersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteMembersResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteMembersResponse deleteMembersResponse;
+
     public DeleteMembersResponse withDeleteMembersResponse(org.openapis.openapi.models.shared.DeleteMembersResponse deleteMembersResponse) {
         this.deleteMembersResponse = deleteMembersResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteMembersResponse {
      */
     
     public Object internalServerException;
+
     public DeleteMembersResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteMembersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteMembersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteMembersResponse {
     
     
     public Integer statusCode;
+
     public DeleteMembersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteMembersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteMembersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DeleteMembersResponse {
      */
     
     public Object validationException;
+
     public DeleteMembersResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteMembersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

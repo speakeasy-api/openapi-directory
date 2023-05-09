@@ -15,6 +15,7 @@ public class DescribeEntitlementsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Entitlements")
     public Entitlement[] entitlements;
+
     public DescribeEntitlementsResult withEntitlements(Entitlement[] entitlements) {
         this.entitlements = entitlements;
         return this;
@@ -23,9 +24,11 @@ public class DescribeEntitlementsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeEntitlementsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeEntitlementsResult(){}
 }

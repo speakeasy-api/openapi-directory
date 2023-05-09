@@ -15,6 +15,7 @@ public class DescribeEndpointSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointSettings")
     public EndpointSetting[] endpointSettings;
+
     public DescribeEndpointSettingsResponse withEndpointSettings(EndpointSetting[] endpointSettings) {
         this.endpointSettings = endpointSettings;
         return this;
@@ -23,9 +24,11 @@ public class DescribeEndpointSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public DescribeEndpointSettingsResponse withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public DescribeEndpointSettingsResponse(){}
 }

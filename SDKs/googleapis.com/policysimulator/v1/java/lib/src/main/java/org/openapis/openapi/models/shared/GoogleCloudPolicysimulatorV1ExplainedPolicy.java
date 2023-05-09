@@ -18,6 +18,7 @@ public class GoogleCloudPolicysimulatorV1ExplainedPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("access")
     public GoogleCloudPolicysimulatorV1ExplainedPolicyAccessEnum access;
+
     public GoogleCloudPolicysimulatorV1ExplainedPolicy withAccess(GoogleCloudPolicysimulatorV1ExplainedPolicyAccessEnum access) {
         this.access = access;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudPolicysimulatorV1ExplainedPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bindingExplanations")
     public GoogleCloudPolicysimulatorV1BindingExplanation[] bindingExplanations;
+
     public GoogleCloudPolicysimulatorV1ExplainedPolicy withBindingExplanations(GoogleCloudPolicysimulatorV1BindingExplanation[] bindingExplanations) {
         this.bindingExplanations = bindingExplanations;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudPolicysimulatorV1ExplainedPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullResourceName")
     public String fullResourceName;
+
     public GoogleCloudPolicysimulatorV1ExplainedPolicy withFullResourceName(String fullResourceName) {
         this.fullResourceName = fullResourceName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudPolicysimulatorV1ExplainedPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public GoogleIamV1Policy policy;
+
     public GoogleCloudPolicysimulatorV1ExplainedPolicy withPolicy(GoogleIamV1Policy policy) {
         this.policy = policy;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudPolicysimulatorV1ExplainedPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relevance")
     public GoogleCloudPolicysimulatorV1ExplainedPolicyRelevanceEnum relevance;
+
     public GoogleCloudPolicysimulatorV1ExplainedPolicy withRelevance(GoogleCloudPolicysimulatorV1ExplainedPolicyRelevanceEnum relevance) {
         this.relevance = relevance;
         return this;
     }
     
+    public GoogleCloudPolicysimulatorV1ExplainedPolicy(){}
 }

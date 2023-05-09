@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LogConfig {
     @JsonProperty("cloudWatchLogsRoleArn")
     public String cloudWatchLogsRoleArn;
+
     public LogConfig withCloudWatchLogsRoleArn(String cloudWatchLogsRoleArn) {
         this.cloudWatchLogsRoleArn = cloudWatchLogsRoleArn;
         return this;
@@ -22,6 +23,7 @@ public class LogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludeVerboseContent")
     public Boolean excludeVerboseContent;
+
     public LogConfig withExcludeVerboseContent(Boolean excludeVerboseContent) {
         this.excludeVerboseContent = excludeVerboseContent;
         return this;
@@ -29,9 +31,14 @@ public class LogConfig {
     
     @JsonProperty("fieldLogLevel")
     public FieldLogLevelEnum fieldLogLevel;
+
     public LogConfig withFieldLogLevel(FieldLogLevelEnum fieldLogLevel) {
         this.fieldLogLevel = fieldLogLevel;
         return this;
     }
     
+    public LogConfig(@JsonProperty("cloudWatchLogsRoleArn") String cloudWatchLogsRoleArn, @JsonProperty("fieldLogLevel") FieldLogLevelEnum fieldLogLevel) {
+        this.cloudWatchLogsRoleArn = cloudWatchLogsRoleArn;
+        this.fieldLogLevel = fieldLogLevel;
+  }
 }

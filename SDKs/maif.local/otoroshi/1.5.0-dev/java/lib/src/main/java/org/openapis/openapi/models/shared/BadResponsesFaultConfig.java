@@ -15,6 +15,7 @@ public class BadResponsesFaultConfig {
      */
     @JsonProperty("ratio")
     public Double ratio;
+
     public BadResponsesFaultConfig withRatio(Double ratio) {
         this.ratio = ratio;
         return this;
@@ -25,9 +26,14 @@ public class BadResponsesFaultConfig {
      */
     @JsonProperty("responses")
     public BadResponse[] responses;
+
     public BadResponsesFaultConfig withResponses(BadResponse[] responses) {
         this.responses = responses;
         return this;
     }
     
+    public BadResponsesFaultConfig(@JsonProperty("ratio") Double ratio, @JsonProperty("responses") BadResponse[] responses) {
+        this.ratio = ratio;
+        this.responses = responses;
+  }
 }

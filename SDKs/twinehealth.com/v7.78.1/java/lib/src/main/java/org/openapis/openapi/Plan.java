@@ -61,12 +61,10 @@ public class Plan {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchPatientPlanSummariesResponse res = new org.openapis.openapi.models.operations.FetchPatientPlanSummariesResponse() {{
+        org.openapis.openapi.models.operations.FetchPatientPlanSummariesResponse res = new org.openapis.openapi.models.operations.FetchPatientPlanSummariesResponse(contentType, httpRes.statusCode()) {{
             fetchPatientPlanSummariesResponse = null;
             fetchErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -114,12 +112,10 @@ public class Plan {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchPatientPlanSummaryResponse res = new org.openapis.openapi.models.operations.FetchPatientPlanSummaryResponse() {{
+        org.openapis.openapi.models.operations.FetchPatientPlanSummaryResponse res = new org.openapis.openapi.models.operations.FetchPatientPlanSummaryResponse(contentType, httpRes.statusCode()) {{
             fetchPatientPlanSummaryResponse = null;
             fetchErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -166,12 +162,10 @@ public class Plan {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePatientPlanSummaryResponse res = new org.openapis.openapi.models.operations.UpdatePatientPlanSummaryResponse() {{
+        org.openapis.openapi.models.operations.UpdatePatientPlanSummaryResponse res = new org.openapis.openapi.models.operations.UpdatePatientPlanSummaryResponse(contentType, httpRes.statusCode()) {{
             updatePatientPlanSummaryResponse = null;
             createOrUpdateErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

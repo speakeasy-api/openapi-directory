@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUserPropertiesResponse {
     
     public String contentType;
+
     public GetUserPropertiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetUserPropertiesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetUserPropertiesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetUserPropertiesResponse {
     
     
     public Integer statusCode;
+
     public GetUserPropertiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetUserPropertiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUserPropertiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetUserPropertiesResponse {
      */
     
     public GetUserProperties200ApplicationJSON getUserProperties200ApplicationJSONObject;
+
     public GetUserPropertiesResponse withGetUserProperties200ApplicationJSONObject(GetUserProperties200ApplicationJSON getUserProperties200ApplicationJSONObject) {
         this.getUserProperties200ApplicationJSONObject = getUserProperties200ApplicationJSONObject;
         return this;
@@ -50,6 +56,7 @@ public class GetUserPropertiesResponse {
      */
     
     public GetUserProperties400ApplicationJSON getUserProperties400ApplicationJSONObject;
+
     public GetUserPropertiesResponse withGetUserProperties400ApplicationJSONObject(GetUserProperties400ApplicationJSON getUserProperties400ApplicationJSONObject) {
         this.getUserProperties400ApplicationJSONObject = getUserProperties400ApplicationJSONObject;
         return this;
@@ -60,6 +67,7 @@ public class GetUserPropertiesResponse {
      */
     
     public GetUserProperties401ApplicationJSON getUserProperties401ApplicationJSONObject;
+
     public GetUserPropertiesResponse withGetUserProperties401ApplicationJSONObject(GetUserProperties401ApplicationJSON getUserProperties401ApplicationJSONObject) {
         this.getUserProperties401ApplicationJSONObject = getUserProperties401ApplicationJSONObject;
         return this;
@@ -70,6 +78,7 @@ public class GetUserPropertiesResponse {
      */
     
     public GetUserProperties403ApplicationJSON getUserProperties403ApplicationJSONObject;
+
     public GetUserPropertiesResponse withGetUserProperties403ApplicationJSONObject(GetUserProperties403ApplicationJSON getUserProperties403ApplicationJSONObject) {
         this.getUserProperties403ApplicationJSONObject = getUserProperties403ApplicationJSONObject;
         return this;
@@ -80,6 +89,7 @@ public class GetUserPropertiesResponse {
      */
     
     public GetUserProperties429ApplicationJSON getUserProperties429ApplicationJSONObject;
+
     public GetUserPropertiesResponse withGetUserProperties429ApplicationJSONObject(GetUserProperties429ApplicationJSON getUserProperties429ApplicationJSONObject) {
         this.getUserProperties429ApplicationJSONObject = getUserProperties429ApplicationJSONObject;
         return this;
@@ -90,9 +100,14 @@ public class GetUserPropertiesResponse {
      */
     
     public GetUserProperties500ApplicationJSON getUserProperties500ApplicationJSONObject;
+
     public GetUserPropertiesResponse withGetUserProperties500ApplicationJSONObject(GetUserProperties500ApplicationJSON getUserProperties500ApplicationJSONObject) {
         this.getUserProperties500ApplicationJSONObject = getUserProperties500ApplicationJSONObject;
         return this;
     }
     
+    public GetUserPropertiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

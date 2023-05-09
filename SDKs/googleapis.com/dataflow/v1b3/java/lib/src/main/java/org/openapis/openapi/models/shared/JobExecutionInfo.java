@@ -18,9 +18,11 @@ public class JobExecutionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stages")
     public java.util.Map<String, JobExecutionStageInfo> stages;
+
     public JobExecutionInfo withStages(java.util.Map<String, JobExecutionStageInfo> stages) {
         this.stages = stages;
         return this;
     }
     
+    public JobExecutionInfo(){}
 }

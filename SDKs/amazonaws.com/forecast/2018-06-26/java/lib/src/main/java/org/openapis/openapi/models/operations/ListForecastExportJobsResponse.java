@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListForecastExportJobsResponse {
     
     public String contentType;
+
     public ListForecastExportJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListForecastExportJobsResponse {
      */
     
     public Object invalidInputException;
+
     public ListForecastExportJobsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -29,6 +32,7 @@ public class ListForecastExportJobsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListForecastExportJobsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListForecastExportJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListForecastExportJobsResponse listForecastExportJobsResponse;
+
     public ListForecastExportJobsResponse withListForecastExportJobsResponse(org.openapis.openapi.models.shared.ListForecastExportJobsResponse listForecastExportJobsResponse) {
         this.listForecastExportJobsResponse = listForecastExportJobsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListForecastExportJobsResponse {
     
     
     public Integer statusCode;
+
     public ListForecastExportJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListForecastExportJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListForecastExportJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListForecastExportJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

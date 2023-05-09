@@ -15,6 +15,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationDomain")
     public String destinationDomain;
+
     public Network withDestinationDomain(String destinationDomain) {
         this.destinationDomain = destinationDomain;
         return this;
@@ -23,6 +24,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationIpV4")
     public String destinationIpV4;
+
     public Network withDestinationIpV4(String destinationIpV4) {
         this.destinationIpV4 = destinationIpV4;
         return this;
@@ -31,6 +33,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationIpV6")
     public String destinationIpV6;
+
     public Network withDestinationIpV6(String destinationIpV6) {
         this.destinationIpV6 = destinationIpV6;
         return this;
@@ -39,6 +42,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationPort")
     public Long destinationPort;
+
     public Network withDestinationPort(Long destinationPort) {
         this.destinationPort = destinationPort;
         return this;
@@ -47,6 +51,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Direction")
     public NetworkDirectionEnum direction;
+
     public Network withDirection(NetworkDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -55,6 +60,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpenPortRange")
     public PortRange openPortRange;
+
     public Network withOpenPortRange(PortRange openPortRange) {
         this.openPortRange = openPortRange;
         return this;
@@ -63,6 +69,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Protocol")
     public String protocol;
+
     public Network withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -71,6 +78,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceDomain")
     public String sourceDomain;
+
     public Network withSourceDomain(String sourceDomain) {
         this.sourceDomain = sourceDomain;
         return this;
@@ -79,6 +87,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceIpV4")
     public String sourceIpV4;
+
     public Network withSourceIpV4(String sourceIpV4) {
         this.sourceIpV4 = sourceIpV4;
         return this;
@@ -87,6 +96,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceIpV6")
     public String sourceIpV6;
+
     public Network withSourceIpV6(String sourceIpV6) {
         this.sourceIpV6 = sourceIpV6;
         return this;
@@ -95,6 +105,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceMac")
     public String sourceMac;
+
     public Network withSourceMac(String sourceMac) {
         this.sourceMac = sourceMac;
         return this;
@@ -103,9 +114,11 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourcePort")
     public Long sourcePort;
+
     public Network withSourcePort(Long sourcePort) {
         this.sourcePort = sourcePort;
         return this;
     }
     
+    public Network(){}
 }

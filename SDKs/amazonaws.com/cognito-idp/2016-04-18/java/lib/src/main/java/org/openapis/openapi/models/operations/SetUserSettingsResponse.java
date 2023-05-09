@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetUserSettingsResponse {
     
     public String contentType;
+
     public SetUserSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SetUserSettingsResponse {
      */
     
     public Object forbiddenException;
+
     public SetUserSettingsResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -29,6 +32,7 @@ public class SetUserSettingsResponse {
      */
     
     public Object internalErrorException;
+
     public SetUserSettingsResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class SetUserSettingsResponse {
      */
     
     public Object invalidParameterException;
+
     public SetUserSettingsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class SetUserSettingsResponse {
      */
     
     public Object notAuthorizedException;
+
     public SetUserSettingsResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -59,6 +65,7 @@ public class SetUserSettingsResponse {
      */
     
     public Object passwordResetRequiredException;
+
     public SetUserSettingsResponse withPasswordResetRequiredException(Object passwordResetRequiredException) {
         this.passwordResetRequiredException = passwordResetRequiredException;
         return this;
@@ -69,6 +76,7 @@ public class SetUserSettingsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SetUserSettingsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class SetUserSettingsResponse {
      */
     
     public java.util.Map<String, Object> setUserSettingsResponse;
+
     public SetUserSettingsResponse withSetUserSettingsResponse(java.util.Map<String, Object> setUserSettingsResponse) {
         this.setUserSettingsResponse = setUserSettingsResponse;
         return this;
@@ -86,6 +95,7 @@ public class SetUserSettingsResponse {
     
     
     public Integer statusCode;
+
     public SetUserSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class SetUserSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetUserSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class SetUserSettingsResponse {
      */
     
     public Object userNotConfirmedException;
+
     public SetUserSettingsResponse withUserNotConfirmedException(Object userNotConfirmedException) {
         this.userNotConfirmedException = userNotConfirmedException;
         return this;
@@ -113,9 +125,14 @@ public class SetUserSettingsResponse {
      */
     
     public Object userNotFoundException;
+
     public SetUserSettingsResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
     }
     
+    public SetUserSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

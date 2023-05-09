@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DisassociateConnectionFromLagRequest {
     @JsonProperty("connectionId")
     public String connectionId;
+
     public DisassociateConnectionFromLagRequest withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -16,9 +17,14 @@ public class DisassociateConnectionFromLagRequest {
     
     @JsonProperty("lagId")
     public String lagId;
+
     public DisassociateConnectionFromLagRequest withLagId(String lagId) {
         this.lagId = lagId;
         return this;
     }
     
+    public DisassociateConnectionFromLagRequest(@JsonProperty("connectionId") String connectionId, @JsonProperty("lagId") String lagId) {
+        this.connectionId = connectionId;
+        this.lagId = lagId;
+  }
 }

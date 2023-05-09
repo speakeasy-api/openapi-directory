@@ -18,6 +18,7 @@ public class ActivityActorName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("familyName")
     public String familyName;
+
     public ActivityActorName withFamilyName(String familyName) {
         this.familyName = familyName;
         return this;
@@ -29,9 +30,11 @@ public class ActivityActorName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("givenName")
     public String givenName;
+
     public ActivityActorName withGivenName(String givenName) {
         this.givenName = givenName;
         return this;
     }
     
+    public ActivityActorName(){}
 }

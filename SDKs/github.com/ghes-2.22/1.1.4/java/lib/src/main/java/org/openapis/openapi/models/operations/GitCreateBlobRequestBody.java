@@ -14,6 +14,7 @@ public class GitCreateBlobRequestBody {
      */
     @JsonProperty("content")
     public String content;
+
     public GitCreateBlobRequestBody withContent(String content) {
         this.content = content;
         return this;
@@ -25,9 +26,13 @@ public class GitCreateBlobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encoding")
     public String encoding;
+
     public GitCreateBlobRequestBody withEncoding(String encoding) {
         this.encoding = encoding;
         return this;
     }
     
+    public GitCreateBlobRequestBody(@JsonProperty("content") String content) {
+        this.content = content;
+  }
 }

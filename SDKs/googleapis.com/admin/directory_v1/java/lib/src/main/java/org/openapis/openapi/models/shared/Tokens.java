@@ -18,6 +18,7 @@ public class Tokens {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Tokens withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class Tokens {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Token[] items;
+
     public Tokens withItems(Token[] items) {
         this.items = items;
         return this;
@@ -40,9 +42,11 @@ public class Tokens {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Tokens withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public Tokens(){}
 }

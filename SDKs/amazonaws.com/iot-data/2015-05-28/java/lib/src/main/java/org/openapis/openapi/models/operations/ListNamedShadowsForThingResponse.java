@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListNamedShadowsForThingResponse {
     
     public String contentType;
+
     public ListNamedShadowsForThingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListNamedShadowsForThingResponse {
      */
     
     public Object internalFailureException;
+
     public ListNamedShadowsForThingResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListNamedShadowsForThingResponse {
      */
     
     public Object invalidRequestException;
+
     public ListNamedShadowsForThingResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListNamedShadowsForThingResponse {
      */
     
     public org.openapis.openapi.models.shared.ListNamedShadowsForThingResponse listNamedShadowsForThingResponse;
+
     public ListNamedShadowsForThingResponse withListNamedShadowsForThingResponse(org.openapis.openapi.models.shared.ListNamedShadowsForThingResponse listNamedShadowsForThingResponse) {
         this.listNamedShadowsForThingResponse = listNamedShadowsForThingResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListNamedShadowsForThingResponse {
      */
     
     public Object methodNotAllowedException;
+
     public ListNamedShadowsForThingResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -59,6 +65,7 @@ public class ListNamedShadowsForThingResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListNamedShadowsForThingResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ListNamedShadowsForThingResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListNamedShadowsForThingResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class ListNamedShadowsForThingResponse {
     
     
     public Integer statusCode;
+
     public ListNamedShadowsForThingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListNamedShadowsForThingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListNamedShadowsForThingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListNamedShadowsForThingResponse {
      */
     
     public Object throttlingException;
+
     public ListNamedShadowsForThingResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class ListNamedShadowsForThingResponse {
      */
     
     public Object unauthorizedException;
+
     public ListNamedShadowsForThingResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListNamedShadowsForThingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

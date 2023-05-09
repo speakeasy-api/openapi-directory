@@ -15,9 +15,11 @@ public class UpdateAccountSettingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacityLimits")
     public CapacityLimits capacityLimits;
+
     public UpdateAccountSettingsRequest withCapacityLimits(CapacityLimits capacityLimits) {
         this.capacityLimits = capacityLimits;
         return this;
     }
     
+    public UpdateAccountSettingsRequest(){}
 }

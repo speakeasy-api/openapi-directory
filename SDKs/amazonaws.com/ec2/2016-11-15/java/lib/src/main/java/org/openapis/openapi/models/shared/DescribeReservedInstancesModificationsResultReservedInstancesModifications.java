@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeReservedInstancesModificationsResultReservedInstancesModifications {
     
     public String clientToken;
+
     public DescribeReservedInstancesModificationsResultReservedInstancesModifications withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class DescribeReservedInstancesModificationsResultReservedInstancesModifi
     
     
     public OffsetDateTime createDate;
+
     public DescribeReservedInstancesModificationsResultReservedInstancesModifications withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -26,6 +28,7 @@ public class DescribeReservedInstancesModificationsResultReservedInstancesModifi
     
     
     public OffsetDateTime effectiveDate;
+
     public DescribeReservedInstancesModificationsResultReservedInstancesModifications withEffectiveDate(OffsetDateTime effectiveDate) {
         this.effectiveDate = effectiveDate;
         return this;
@@ -33,6 +36,7 @@ public class DescribeReservedInstancesModificationsResultReservedInstancesModifi
     
     
     public DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResults[] modificationResults;
+
     public DescribeReservedInstancesModificationsResultReservedInstancesModifications withModificationResults(DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResults[] modificationResults) {
         this.modificationResults = modificationResults;
         return this;
@@ -40,6 +44,7 @@ public class DescribeReservedInstancesModificationsResultReservedInstancesModifi
     
     
     public DescribeReservedInstancesModificationsResultReservedInstancesModificationsReservedInstancesIds[] reservedInstancesIds;
+
     public DescribeReservedInstancesModificationsResultReservedInstancesModifications withReservedInstancesIds(DescribeReservedInstancesModificationsResultReservedInstancesModificationsReservedInstancesIds[] reservedInstancesIds) {
         this.reservedInstancesIds = reservedInstancesIds;
         return this;
@@ -47,6 +52,7 @@ public class DescribeReservedInstancesModificationsResultReservedInstancesModifi
     
     
     public String reservedInstancesModificationId;
+
     public DescribeReservedInstancesModificationsResultReservedInstancesModifications withReservedInstancesModificationId(String reservedInstancesModificationId) {
         this.reservedInstancesModificationId = reservedInstancesModificationId;
         return this;
@@ -54,6 +60,7 @@ public class DescribeReservedInstancesModificationsResultReservedInstancesModifi
     
     
     public String status;
+
     public DescribeReservedInstancesModificationsResultReservedInstancesModifications withStatus(String status) {
         this.status = status;
         return this;
@@ -61,6 +68,7 @@ public class DescribeReservedInstancesModificationsResultReservedInstancesModifi
     
     
     public String statusMessage;
+
     public DescribeReservedInstancesModificationsResultReservedInstancesModifications withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -68,9 +76,11 @@ public class DescribeReservedInstancesModificationsResultReservedInstancesModifi
     
     
     public OffsetDateTime updateDate;
+
     public DescribeReservedInstancesModificationsResultReservedInstancesModifications withUpdateDate(OffsetDateTime updateDate) {
         this.updateDate = updateDate;
         return this;
     }
     
+    public DescribeReservedInstancesModificationsResultReservedInstancesModifications(){}
 }

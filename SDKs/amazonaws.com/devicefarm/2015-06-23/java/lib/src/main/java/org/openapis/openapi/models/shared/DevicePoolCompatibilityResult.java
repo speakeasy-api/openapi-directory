@@ -15,6 +15,7 @@ public class DevicePoolCompatibilityResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compatible")
     public Boolean compatible;
+
     public DevicePoolCompatibilityResult withCompatible(Boolean compatible) {
         this.compatible = compatible;
         return this;
@@ -23,6 +24,7 @@ public class DevicePoolCompatibilityResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device")
     public Device device;
+
     public DevicePoolCompatibilityResult withDevice(Device device) {
         this.device = device;
         return this;
@@ -31,9 +33,11 @@ public class DevicePoolCompatibilityResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("incompatibilityMessages")
     public IncompatibilityMessage[] incompatibilityMessages;
+
     public DevicePoolCompatibilityResult withIncompatibilityMessages(IncompatibilityMessage[] incompatibilityMessages) {
         this.incompatibilityMessages = incompatibilityMessages;
         return this;
     }
     
+    public DevicePoolCompatibilityResult(){}
 }

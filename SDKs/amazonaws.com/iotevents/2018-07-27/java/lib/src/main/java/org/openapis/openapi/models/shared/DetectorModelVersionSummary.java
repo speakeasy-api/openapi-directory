@@ -22,6 +22,7 @@ public class DetectorModelVersionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public DetectorModelVersionSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class DetectorModelVersionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectorModelArn")
     public String detectorModelArn;
+
     public DetectorModelVersionSummary withDetectorModelArn(String detectorModelArn) {
         this.detectorModelArn = detectorModelArn;
         return this;
@@ -38,6 +40,7 @@ public class DetectorModelVersionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectorModelName")
     public String detectorModelName;
+
     public DetectorModelVersionSummary withDetectorModelName(String detectorModelName) {
         this.detectorModelName = detectorModelName;
         return this;
@@ -46,6 +49,7 @@ public class DetectorModelVersionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectorModelVersion")
     public String detectorModelVersion;
+
     public DetectorModelVersionSummary withDetectorModelVersion(String detectorModelVersion) {
         this.detectorModelVersion = detectorModelVersion;
         return this;
@@ -54,6 +58,7 @@ public class DetectorModelVersionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluationMethod")
     public EvaluationMethodEnum evaluationMethod;
+
     public DetectorModelVersionSummary withEvaluationMethod(EvaluationMethodEnum evaluationMethod) {
         this.evaluationMethod = evaluationMethod;
         return this;
@@ -64,6 +69,7 @@ public class DetectorModelVersionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public DetectorModelVersionSummary withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -72,6 +78,7 @@ public class DetectorModelVersionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public DetectorModelVersionSummary withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -80,9 +87,11 @@ public class DetectorModelVersionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public DetectorModelVersionStatusEnum status;
+
     public DetectorModelVersionSummary withStatus(DetectorModelVersionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DetectorModelVersionSummary(){}
 }

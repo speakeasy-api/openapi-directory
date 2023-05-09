@@ -22,6 +22,7 @@ public class DatasetSchema {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public DatasetSchema withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -30,6 +31,7 @@ public class DatasetSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public DomainEnum domain;
+
     public DatasetSchema withDomain(DomainEnum domain) {
         this.domain = domain;
         return this;
@@ -40,6 +42,7 @@ public class DatasetSchema {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public DatasetSchema withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -48,6 +51,7 @@ public class DatasetSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DatasetSchema withName(String name) {
         this.name = name;
         return this;
@@ -56,6 +60,7 @@ public class DatasetSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public String schema;
+
     public DatasetSchema withSchema(String schema) {
         this.schema = schema;
         return this;
@@ -64,9 +69,11 @@ public class DatasetSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaArn")
     public String schemaArn;
+
     public DatasetSchema withSchemaArn(String schemaArn) {
         this.schemaArn = schemaArn;
         return this;
     }
     
+    public DatasetSchema(){}
 }

@@ -12,6 +12,7 @@ public class AcceptQualificationRequestRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IntegerValue")
     public Long integerValue;
+
     public AcceptQualificationRequestRequest withIntegerValue(Long integerValue) {
         this.integerValue = integerValue;
         return this;
@@ -19,9 +20,13 @@ public class AcceptQualificationRequestRequest {
     
     @JsonProperty("QualificationRequestId")
     public String qualificationRequestId;
+
     public AcceptQualificationRequestRequest withQualificationRequestId(String qualificationRequestId) {
         this.qualificationRequestId = qualificationRequestId;
         return this;
     }
     
+    public AcceptQualificationRequestRequest(@JsonProperty("QualificationRequestId") String qualificationRequestId) {
+        this.qualificationRequestId = qualificationRequestId;
+  }
 }

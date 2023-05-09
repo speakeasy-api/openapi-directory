@@ -18,6 +18,7 @@ public class IssueTokenRequestMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public IssueTokenRequestMetadata withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class IssueTokenRequestMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptions")
     public IssueTokenRequestMetadataEncryptions[] encryptions;
+
     public IssueTokenRequestMetadata withEncryptions(IssueTokenRequestMetadataEncryptions[] encryptions) {
         this.encryptions = encryptions;
         return this;
@@ -40,6 +42,7 @@ public class IssueTokenRequestMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuer")
     public String issuer;
+
     public IssueTokenRequestMetadata withIssuer(String issuer) {
         this.issuer = issuer;
         return this;
@@ -51,6 +54,7 @@ public class IssueTokenRequestMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public IssueTokenRequestMetadataRules rules;
+
     public IssueTokenRequestMetadata withRules(IssueTokenRequestMetadataRules rules) {
         this.rules = rules;
         return this;
@@ -62,6 +66,7 @@ public class IssueTokenRequestMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenName")
     public String tokenName;
+
     public IssueTokenRequestMetadata withTokenName(String tokenName) {
         this.tokenName = tokenName;
         return this;
@@ -70,6 +75,7 @@ public class IssueTokenRequestMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urls")
     public IssueTokenRequestMetadataUrls[] urls;
+
     public IssueTokenRequestMetadata withUrls(IssueTokenRequestMetadataUrls[] urls) {
         this.urls = urls;
         return this;
@@ -81,9 +87,11 @@ public class IssueTokenRequestMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userData")
     public IssueTokenRequestMetadataUserData userData;
+
     public IssueTokenRequestMetadata withUserData(IssueTokenRequestMetadataUserData userData) {
         this.userData = userData;
         return this;
     }
     
+    public IssueTokenRequestMetadata(){}
 }

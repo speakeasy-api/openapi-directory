@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IdentitytoolkitRelyingpartyGetOobConfirmationCodeResponse {
     
     public String contentType;
+
     public IdentitytoolkitRelyingpartyGetOobConfirmationCodeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IdentitytoolkitRelyingpartyGetOobConfirmationCodeResponse {
      */
     
     public org.openapis.openapi.models.shared.GetOobConfirmationCodeResponse getOobConfirmationCodeResponse;
+
     public IdentitytoolkitRelyingpartyGetOobConfirmationCodeResponse withGetOobConfirmationCodeResponse(org.openapis.openapi.models.shared.GetOobConfirmationCodeResponse getOobConfirmationCodeResponse) {
         this.getOobConfirmationCodeResponse = getOobConfirmationCodeResponse;
         return this;
@@ -26,6 +29,7 @@ public class IdentitytoolkitRelyingpartyGetOobConfirmationCodeResponse {
     
     
     public Integer statusCode;
+
     public IdentitytoolkitRelyingpartyGetOobConfirmationCodeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IdentitytoolkitRelyingpartyGetOobConfirmationCodeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IdentitytoolkitRelyingpartyGetOobConfirmationCodeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IdentitytoolkitRelyingpartyGetOobConfirmationCodeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

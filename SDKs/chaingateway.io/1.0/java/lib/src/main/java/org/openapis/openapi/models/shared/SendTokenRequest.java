@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SendTokenRequest {
     @JsonProperty("amount")
     public Integer amount;
+
     public SendTokenRequest withAmount(Integer amount) {
         this.amount = amount;
         return this;
@@ -16,6 +17,7 @@ public class SendTokenRequest {
     
     @JsonProperty("contractaddress")
     public String contractaddress;
+
     public SendTokenRequest withContractaddress(String contractaddress) {
         this.contractaddress = contractaddress;
         return this;
@@ -23,6 +25,7 @@ public class SendTokenRequest {
     
     @JsonProperty("from")
     public String from;
+
     public SendTokenRequest withFrom(String from) {
         this.from = from;
         return this;
@@ -30,6 +33,7 @@ public class SendTokenRequest {
     
     @JsonProperty("identifier")
     public String identifier;
+
     public SendTokenRequest withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -37,6 +41,7 @@ public class SendTokenRequest {
     
     @JsonProperty("password")
     public String password;
+
     public SendTokenRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -44,9 +49,18 @@ public class SendTokenRequest {
     
     @JsonProperty("to")
     public String to;
+
     public SendTokenRequest withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public SendTokenRequest(@JsonProperty("amount") Integer amount, @JsonProperty("contractaddress") String contractaddress, @JsonProperty("from") String from, @JsonProperty("identifier") String identifier, @JsonProperty("password") String password, @JsonProperty("to") String to) {
+        this.amount = amount;
+        this.contractaddress = contractaddress;
+        this.from = from;
+        this.identifier = identifier;
+        this.password = password;
+        this.to = to;
+  }
 }

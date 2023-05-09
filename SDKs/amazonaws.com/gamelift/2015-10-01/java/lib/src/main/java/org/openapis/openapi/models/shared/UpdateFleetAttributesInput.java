@@ -12,6 +12,7 @@ public class UpdateFleetAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnywhereConfiguration")
     public AnywhereConfiguration anywhereConfiguration;
+
     public UpdateFleetAttributesInput withAnywhereConfiguration(AnywhereConfiguration anywhereConfiguration) {
         this.anywhereConfiguration = anywhereConfiguration;
         return this;
@@ -20,6 +21,7 @@ public class UpdateFleetAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateFleetAttributesInput withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class UpdateFleetAttributesInput {
     
     @JsonProperty("FleetId")
     public String fleetId;
+
     public UpdateFleetAttributesInput withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -35,6 +38,7 @@ public class UpdateFleetAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricGroups")
     public String[] metricGroups;
+
     public UpdateFleetAttributesInput withMetricGroups(String[] metricGroups) {
         this.metricGroups = metricGroups;
         return this;
@@ -43,6 +47,7 @@ public class UpdateFleetAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateFleetAttributesInput withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +56,7 @@ public class UpdateFleetAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NewGameSessionProtectionPolicy")
     public ProtectionPolicyEnum newGameSessionProtectionPolicy;
+
     public UpdateFleetAttributesInput withNewGameSessionProtectionPolicy(ProtectionPolicyEnum newGameSessionProtectionPolicy) {
         this.newGameSessionProtectionPolicy = newGameSessionProtectionPolicy;
         return this;
@@ -59,9 +65,13 @@ public class UpdateFleetAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceCreationLimitPolicy")
     public ResourceCreationLimitPolicy resourceCreationLimitPolicy;
+
     public UpdateFleetAttributesInput withResourceCreationLimitPolicy(ResourceCreationLimitPolicy resourceCreationLimitPolicy) {
         this.resourceCreationLimitPolicy = resourceCreationLimitPolicy;
         return this;
     }
     
+    public UpdateFleetAttributesInput(@JsonProperty("FleetId") String fleetId) {
+        this.fleetId = fleetId;
+  }
 }

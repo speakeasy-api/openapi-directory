@@ -12,6 +12,7 @@ public class TaxRateUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default")
     public Boolean default_;
+
     public TaxRateUpdateRequest withDefault(Boolean default_) {
         this.default_ = default_;
         return this;
@@ -20,6 +21,7 @@ public class TaxRateUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public TaxRateUpdateRequest withLabel(String label) {
         this.label = label;
         return this;
@@ -28,9 +30,11 @@ public class TaxRateUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage")
     public Double percentage;
+
     public TaxRateUpdateRequest withPercentage(Double percentage) {
         this.percentage = percentage;
         return this;
     }
     
+    public TaxRateUpdateRequest(){}
 }

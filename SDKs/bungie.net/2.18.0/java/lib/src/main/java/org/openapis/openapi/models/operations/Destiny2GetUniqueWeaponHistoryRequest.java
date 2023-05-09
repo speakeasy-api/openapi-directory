@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetUniqueWeaponHistoryRequest {
@@ -12,6 +13,7 @@ public class Destiny2GetUniqueWeaponHistoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=characterId")
     public Long characterId;
+
     public Destiny2GetUniqueWeaponHistoryRequest withCharacterId(Long characterId) {
         this.characterId = characterId;
         return this;
@@ -22,6 +24,7 @@ public class Destiny2GetUniqueWeaponHistoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinyMembershipId")
     public Long destinyMembershipId;
+
     public Destiny2GetUniqueWeaponHistoryRequest withDestinyMembershipId(Long destinyMembershipId) {
         this.destinyMembershipId = destinyMembershipId;
         return this;
@@ -32,9 +35,15 @@ public class Destiny2GetUniqueWeaponHistoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
     public Integer membershipType;
+
     public Destiny2GetUniqueWeaponHistoryRequest withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
     }
     
+    public Destiny2GetUniqueWeaponHistoryRequest(@JsonProperty("characterId") Long characterId, @JsonProperty("destinyMembershipId") Long destinyMembershipId, @JsonProperty("membershipType") Integer membershipType) {
+        this.characterId = characterId;
+        this.destinyMembershipId = destinyMembershipId;
+        this.membershipType = membershipType;
+  }
 }

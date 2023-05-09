@@ -15,6 +15,7 @@ public class WeightedQuantileLoss {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LossValue")
     public Double lossValue;
+
     public WeightedQuantileLoss withLossValue(Double lossValue) {
         this.lossValue = lossValue;
         return this;
@@ -23,9 +24,11 @@ public class WeightedQuantileLoss {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Quantile")
     public Double quantile;
+
     public WeightedQuantileLoss withQuantile(Double quantile) {
         this.quantile = quantile;
         return this;
     }
     
+    public WeightedQuantileLoss(){}
 }

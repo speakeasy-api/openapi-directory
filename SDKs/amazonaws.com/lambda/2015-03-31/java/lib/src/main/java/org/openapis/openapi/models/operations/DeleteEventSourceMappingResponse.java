@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteEventSourceMappingResponse {
     
     public String contentType;
+
     public DeleteEventSourceMappingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteEventSourceMappingResponse {
      */
     
     public org.openapis.openapi.models.shared.EventSourceMappingConfiguration eventSourceMappingConfiguration;
+
     public DeleteEventSourceMappingResponse withEventSourceMappingConfiguration(org.openapis.openapi.models.shared.EventSourceMappingConfiguration eventSourceMappingConfiguration) {
         this.eventSourceMappingConfiguration = eventSourceMappingConfiguration;
         return this;
@@ -29,6 +32,7 @@ public class DeleteEventSourceMappingResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DeleteEventSourceMappingResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteEventSourceMappingResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteEventSourceMappingResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteEventSourceMappingResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteEventSourceMappingResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteEventSourceMappingResponse {
      */
     
     public Object serviceException;
+
     public DeleteEventSourceMappingResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteEventSourceMappingResponse {
     
     
     public Integer statusCode;
+
     public DeleteEventSourceMappingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteEventSourceMappingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteEventSourceMappingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DeleteEventSourceMappingResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteEventSourceMappingResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteEventSourceMappingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

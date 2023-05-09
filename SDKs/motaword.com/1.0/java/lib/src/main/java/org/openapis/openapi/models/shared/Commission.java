@@ -17,6 +17,7 @@ public class Commission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Monetary amount;
+
     public Commission withAmount(Monetary amount) {
         this.amount = amount;
         return this;
@@ -30,6 +31,7 @@ public class Commission {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public Commission withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -38,6 +40,7 @@ public class Commission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public Project project;
+
     public Commission withProject(Project project) {
         this.project = project;
         return this;
@@ -46,9 +49,11 @@ public class Commission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CommissionStatusEnum status;
+
     public Commission withStatus(CommissionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public Commission(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsManagementCustomDataSourcesListResponse {
     
     public String contentType;
+
     public AnalyticsManagementCustomDataSourcesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsManagementCustomDataSourcesListResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomDataSources customDataSources;
+
     public AnalyticsManagementCustomDataSourcesListResponse withCustomDataSources(org.openapis.openapi.models.shared.CustomDataSources customDataSources) {
         this.customDataSources = customDataSources;
         return this;
@@ -26,6 +29,7 @@ public class AnalyticsManagementCustomDataSourcesListResponse {
     
     
     public Integer statusCode;
+
     public AnalyticsManagementCustomDataSourcesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AnalyticsManagementCustomDataSourcesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsManagementCustomDataSourcesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsManagementCustomDataSourcesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

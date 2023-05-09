@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PaymentLinkApiDeleteFormResponse {
     
     public byte[] body;
+
     public PaymentLinkApiDeleteFormResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PaymentLinkApiDeleteFormResponse {
     
     
     public String contentType;
+
     public PaymentLinkApiDeleteFormResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PaymentLinkApiDeleteFormResponse {
      */
     
     public Integer paymentLinkApiDeleteForm200ApplicationJSONInt32Integer;
+
     public PaymentLinkApiDeleteFormResponse withPaymentLinkApiDeleteForm200ApplicationJSONInt32Integer(Integer paymentLinkApiDeleteForm200ApplicationJSONInt32Integer) {
         this.paymentLinkApiDeleteForm200ApplicationJSONInt32Integer = paymentLinkApiDeleteForm200ApplicationJSONInt32Integer;
         return this;
@@ -36,6 +40,7 @@ public class PaymentLinkApiDeleteFormResponse {
      */
     
     public Integer paymentLinkApiDeleteForm200TextJSONInt32Integer;
+
     public PaymentLinkApiDeleteFormResponse withPaymentLinkApiDeleteForm200TextJSONInt32Integer(Integer paymentLinkApiDeleteForm200TextJSONInt32Integer) {
         this.paymentLinkApiDeleteForm200TextJSONInt32Integer = paymentLinkApiDeleteForm200TextJSONInt32Integer;
         return this;
@@ -43,6 +48,7 @@ public class PaymentLinkApiDeleteFormResponse {
     
     
     public Integer statusCode;
+
     public PaymentLinkApiDeleteFormResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class PaymentLinkApiDeleteFormResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PaymentLinkApiDeleteFormResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PaymentLinkApiDeleteFormResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

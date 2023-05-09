@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1EventHandlerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event")
     public String event;
+
     public GoogleCloudDialogflowCxV3beta1EventHandlerInput withEvent(String event) {
         this.event = event;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3beta1EventHandlerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetFlow")
     public String targetFlow;
+
     public GoogleCloudDialogflowCxV3beta1EventHandlerInput withTargetFlow(String targetFlow) {
         this.targetFlow = targetFlow;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3beta1EventHandlerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetPage")
     public String targetPage;
+
     public GoogleCloudDialogflowCxV3beta1EventHandlerInput withTargetPage(String targetPage) {
         this.targetPage = targetPage;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDialogflowCxV3beta1EventHandlerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerFulfillment")
     public GoogleCloudDialogflowCxV3beta1FulfillmentInput triggerFulfillment;
+
     public GoogleCloudDialogflowCxV3beta1EventHandlerInput withTriggerFulfillment(GoogleCloudDialogflowCxV3beta1FulfillmentInput triggerFulfillment) {
         this.triggerFulfillment = triggerFulfillment;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1EventHandlerInput(){}
 }

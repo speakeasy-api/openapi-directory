@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTDeleteVirtualMFADeviceResponse {
     
     public byte[] body;
+
     public POSTDeleteVirtualMFADeviceResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTDeleteVirtualMFADeviceResponse {
     
     
     public String contentType;
+
     public POSTDeleteVirtualMFADeviceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTDeleteVirtualMFADeviceResponse {
     
     
     public Integer statusCode;
+
     public POSTDeleteVirtualMFADeviceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTDeleteVirtualMFADeviceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTDeleteVirtualMFADeviceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTDeleteVirtualMFADeviceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

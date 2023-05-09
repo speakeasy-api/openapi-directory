@@ -15,6 +15,7 @@ public class ShotSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confidence")
     public Float confidence;
+
     public ShotSegment withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -23,9 +24,11 @@ public class ShotSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Index")
     public Long index;
+
     public ShotSegment withIndex(Long index) {
         this.index = index;
         return this;
     }
     
+    public ShotSegment(){}
 }

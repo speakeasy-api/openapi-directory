@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StopNotebookExecutionInput {
     @JsonProperty("NotebookExecutionId")
     public String notebookExecutionId;
+
     public StopNotebookExecutionInput withNotebookExecutionId(String notebookExecutionId) {
         this.notebookExecutionId = notebookExecutionId;
         return this;
     }
     
+    public StopNotebookExecutionInput(@JsonProperty("NotebookExecutionId") String notebookExecutionId) {
+        this.notebookExecutionId = notebookExecutionId;
+  }
 }

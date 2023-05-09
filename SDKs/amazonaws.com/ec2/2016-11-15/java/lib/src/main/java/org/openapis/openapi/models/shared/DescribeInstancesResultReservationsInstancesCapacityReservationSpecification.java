@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstancesResultReservationsInstancesCapacityReservationSpecification {
     
     public DescribeInstancesResultReservationsInstancesCapacityReservationSpecificationCapacityReservationPreferenceEnum capacityReservationPreference;
+
     public DescribeInstancesResultReservationsInstancesCapacityReservationSpecification withCapacityReservationPreference(DescribeInstancesResultReservationsInstancesCapacityReservationSpecificationCapacityReservationPreferenceEnum capacityReservationPreference) {
         this.capacityReservationPreference = capacityReservationPreference;
         return this;
@@ -19,9 +20,11 @@ public class DescribeInstancesResultReservationsInstancesCapacityReservationSpec
     
     
     public DescribeInstancesResultReservationsInstancesCapacityReservationSpecificationCapacityReservationTarget capacityReservationTarget;
+
     public DescribeInstancesResultReservationsInstancesCapacityReservationSpecification withCapacityReservationTarget(DescribeInstancesResultReservationsInstancesCapacityReservationSpecificationCapacityReservationTarget capacityReservationTarget) {
         this.capacityReservationTarget = capacityReservationTarget;
         return this;
     }
     
+    public DescribeInstancesResultReservationsInstancesCapacityReservationSpecification(){}
 }

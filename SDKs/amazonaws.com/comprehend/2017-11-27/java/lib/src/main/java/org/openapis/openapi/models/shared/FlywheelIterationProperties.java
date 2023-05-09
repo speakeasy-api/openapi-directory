@@ -22,6 +22,7 @@ public class FlywheelIterationProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public FlywheelIterationProperties withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -32,6 +33,7 @@ public class FlywheelIterationProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public FlywheelIterationProperties withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -40,6 +42,7 @@ public class FlywheelIterationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluatedModelArn")
     public String evaluatedModelArn;
+
     public FlywheelIterationProperties withEvaluatedModelArn(String evaluatedModelArn) {
         this.evaluatedModelArn = evaluatedModelArn;
         return this;
@@ -51,6 +54,7 @@ public class FlywheelIterationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluatedModelMetrics")
     public FlywheelModelEvaluationMetrics evaluatedModelMetrics;
+
     public FlywheelIterationProperties withEvaluatedModelMetrics(FlywheelModelEvaluationMetrics evaluatedModelMetrics) {
         this.evaluatedModelMetrics = evaluatedModelMetrics;
         return this;
@@ -59,6 +63,7 @@ public class FlywheelIterationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationManifestS3Prefix")
     public String evaluationManifestS3Prefix;
+
     public FlywheelIterationProperties withEvaluationManifestS3Prefix(String evaluationManifestS3Prefix) {
         this.evaluationManifestS3Prefix = evaluationManifestS3Prefix;
         return this;
@@ -67,6 +72,7 @@ public class FlywheelIterationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlywheelArn")
     public String flywheelArn;
+
     public FlywheelIterationProperties withFlywheelArn(String flywheelArn) {
         this.flywheelArn = flywheelArn;
         return this;
@@ -75,6 +81,7 @@ public class FlywheelIterationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlywheelIterationId")
     public String flywheelIterationId;
+
     public FlywheelIterationProperties withFlywheelIterationId(String flywheelIterationId) {
         this.flywheelIterationId = flywheelIterationId;
         return this;
@@ -83,6 +90,7 @@ public class FlywheelIterationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public FlywheelIterationProperties withMessage(String message) {
         this.message = message;
         return this;
@@ -91,6 +99,7 @@ public class FlywheelIterationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public FlywheelIterationStatusEnum status;
+
     public FlywheelIterationProperties withStatus(FlywheelIterationStatusEnum status) {
         this.status = status;
         return this;
@@ -99,6 +108,7 @@ public class FlywheelIterationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainedModelArn")
     public String trainedModelArn;
+
     public FlywheelIterationProperties withTrainedModelArn(String trainedModelArn) {
         this.trainedModelArn = trainedModelArn;
         return this;
@@ -107,9 +117,11 @@ public class FlywheelIterationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainedModelMetrics")
     public FlywheelModelEvaluationMetrics trainedModelMetrics;
+
     public FlywheelIterationProperties withTrainedModelMetrics(FlywheelModelEvaluationMetrics trainedModelMetrics) {
         this.trainedModelMetrics = trainedModelMetrics;
         return this;
     }
     
+    public FlywheelIterationProperties(){}
 }

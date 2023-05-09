@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateReportGroupInput {
     @JsonProperty("exportConfig")
     public ReportExportConfig exportConfig;
+
     public CreateReportGroupInput withExportConfig(ReportExportConfig exportConfig) {
         this.exportConfig = exportConfig;
         return this;
@@ -18,6 +19,7 @@ public class CreateReportGroupInput {
     
     @JsonProperty("name")
     public String name;
+
     public CreateReportGroupInput withName(String name) {
         this.name = name;
         return this;
@@ -26,6 +28,7 @@ public class CreateReportGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateReportGroupInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -33,9 +36,15 @@ public class CreateReportGroupInput {
     
     @JsonProperty("type")
     public ReportTypeEnum type;
+
     public CreateReportGroupInput withType(ReportTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateReportGroupInput(@JsonProperty("exportConfig") ReportExportConfig exportConfig, @JsonProperty("name") String name, @JsonProperty("type") ReportTypeEnum type) {
+        this.exportConfig = exportConfig;
+        this.name = name;
+        this.type = type;
+  }
 }

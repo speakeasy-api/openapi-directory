@@ -15,6 +15,7 @@ public class GetComplianceDetailsByResourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceTypes")
     public ComplianceTypeEnum[] complianceTypes;
+
     public GetComplianceDetailsByResourceRequest withComplianceTypes(ComplianceTypeEnum[] complianceTypes) {
         this.complianceTypes = complianceTypes;
         return this;
@@ -23,6 +24,7 @@ public class GetComplianceDetailsByResourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetComplianceDetailsByResourceRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,6 +33,7 @@ public class GetComplianceDetailsByResourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceEvaluationId")
     public String resourceEvaluationId;
+
     public GetComplianceDetailsByResourceRequest withResourceEvaluationId(String resourceEvaluationId) {
         this.resourceEvaluationId = resourceEvaluationId;
         return this;
@@ -39,6 +42,7 @@ public class GetComplianceDetailsByResourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public GetComplianceDetailsByResourceRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -47,9 +51,11 @@ public class GetComplianceDetailsByResourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public String resourceType;
+
     public GetComplianceDetailsByResourceRequest withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public GetComplianceDetailsByResourceRequest(){}
 }

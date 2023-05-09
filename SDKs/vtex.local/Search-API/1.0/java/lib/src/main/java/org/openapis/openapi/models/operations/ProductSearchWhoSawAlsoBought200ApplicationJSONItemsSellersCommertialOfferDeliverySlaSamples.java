@@ -12,6 +12,7 @@ public class ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellersCommerti
      */
     @JsonProperty("DeliverySlaPerTypes")
     public Object[] deliverySlaPerTypes;
+
     public ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellersCommertialOfferDeliverySlaSamples withDeliverySlaPerTypes(Object[] deliverySlaPerTypes) {
         this.deliverySlaPerTypes = deliverySlaPerTypes;
         return this;
@@ -22,9 +23,14 @@ public class ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellersCommerti
      */
     @JsonProperty("Region")
     public String region;
+
     public ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellersCommertialOfferDeliverySlaSamples withRegion(String region) {
         this.region = region;
         return this;
     }
     
+    public ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellersCommertialOfferDeliverySlaSamples(@JsonProperty("DeliverySlaPerTypes") Object[] deliverySlaPerTypes, @JsonProperty("Region") String region) {
+        this.deliverySlaPerTypes = deliverySlaPerTypes;
+        this.region = region;
+  }
 }

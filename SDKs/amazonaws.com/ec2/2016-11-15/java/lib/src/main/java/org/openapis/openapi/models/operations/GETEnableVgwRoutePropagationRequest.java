@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETEnableVgwRoutePropagationRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETEnableVgwRoutePropagationActionEnum action;
+
     public GETEnableVgwRoutePropagationRequest withAction(GETEnableVgwRoutePropagationActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETEnableVgwRoutePropagationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETEnableVgwRoutePropagationRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETEnableVgwRoutePropagationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GatewayId")
     public String gatewayId;
+
     public GETEnableVgwRoutePropagationRequest withGatewayId(String gatewayId) {
         this.gatewayId = gatewayId;
         return this;
@@ -39,6 +43,7 @@ public class GETEnableVgwRoutePropagationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RouteTableId")
     public String routeTableId;
+
     public GETEnableVgwRoutePropagationRequest withRouteTableId(String routeTableId) {
         this.routeTableId = routeTableId;
         return this;
@@ -46,6 +51,7 @@ public class GETEnableVgwRoutePropagationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETEnableVgwRoutePropagationVersionEnum version;
+
     public GETEnableVgwRoutePropagationRequest withVersion(GETEnableVgwRoutePropagationVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETEnableVgwRoutePropagationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETEnableVgwRoutePropagationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETEnableVgwRoutePropagationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETEnableVgwRoutePropagationRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETEnableVgwRoutePropagationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETEnableVgwRoutePropagationRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETEnableVgwRoutePropagationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETEnableVgwRoutePropagationRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETEnableVgwRoutePropagationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETEnableVgwRoutePropagationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETEnableVgwRoutePropagationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETEnableVgwRoutePropagationRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,16 @@ public class GETEnableVgwRoutePropagationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETEnableVgwRoutePropagationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETEnableVgwRoutePropagationRequest(@JsonProperty("Action") GETEnableVgwRoutePropagationActionEnum action, @JsonProperty("GatewayId") String gatewayId, @JsonProperty("RouteTableId") String routeTableId, @JsonProperty("Version") GETEnableVgwRoutePropagationVersionEnum version) {
+        this.action = action;
+        this.gatewayId = gatewayId;
+        this.routeTableId = routeTableId;
+        this.version = version;
+  }
 }

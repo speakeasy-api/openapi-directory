@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RebootRelationalDatabaseResponse {
@@ -12,6 +13,7 @@ public class RebootRelationalDatabaseResponse {
      */
     
     public Object accessDeniedException;
+
     public RebootRelationalDatabaseResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class RebootRelationalDatabaseResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public RebootRelationalDatabaseResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class RebootRelationalDatabaseResponse {
     
     
     public String contentType;
+
     public RebootRelationalDatabaseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class RebootRelationalDatabaseResponse {
      */
     
     public Object invalidInputException;
+
     public RebootRelationalDatabaseResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class RebootRelationalDatabaseResponse {
      */
     
     public Object notFoundException;
+
     public RebootRelationalDatabaseResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class RebootRelationalDatabaseResponse {
      */
     
     public Object operationFailureException;
+
     public RebootRelationalDatabaseResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -69,6 +76,7 @@ public class RebootRelationalDatabaseResponse {
      */
     
     public org.openapis.openapi.models.shared.RebootRelationalDatabaseResult rebootRelationalDatabaseResult;
+
     public RebootRelationalDatabaseResponse withRebootRelationalDatabaseResult(org.openapis.openapi.models.shared.RebootRelationalDatabaseResult rebootRelationalDatabaseResult) {
         this.rebootRelationalDatabaseResult = rebootRelationalDatabaseResult;
         return this;
@@ -79,6 +87,7 @@ public class RebootRelationalDatabaseResponse {
      */
     
     public Object serviceException;
+
     public RebootRelationalDatabaseResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class RebootRelationalDatabaseResponse {
     
     
     public Integer statusCode;
+
     public RebootRelationalDatabaseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class RebootRelationalDatabaseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RebootRelationalDatabaseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class RebootRelationalDatabaseResponse {
      */
     
     public Object unauthenticatedException;
+
     public RebootRelationalDatabaseResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public RebootRelationalDatabaseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

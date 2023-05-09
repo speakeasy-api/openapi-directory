@@ -15,6 +15,7 @@ public class UsageStatisticsFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparator")
     public UsageStatisticsFilterComparatorEnum comparator;
+
     public UsageStatisticsFilter withComparator(UsageStatisticsFilterComparatorEnum comparator) {
         this.comparator = comparator;
         return this;
@@ -23,6 +24,7 @@ public class UsageStatisticsFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public UsageStatisticsFilterKeyEnum key;
+
     public UsageStatisticsFilter withKey(UsageStatisticsFilterKeyEnum key) {
         this.key = key;
         return this;
@@ -31,9 +33,11 @@ public class UsageStatisticsFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public UsageStatisticsFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public UsageStatisticsFilter(){}
 }

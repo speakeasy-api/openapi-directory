@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SystemPackagesRequest {
@@ -12,6 +13,7 @@ public class SystemPackagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[description]")
     public String filterDescription;
+
     public SystemPackagesRequest withFilterDescription(String filterDescription) {
         this.filterDescription = filterDescription;
         return this;
@@ -22,6 +24,7 @@ public class SystemPackagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[evra]")
     public String filterEvra;
+
     public SystemPackagesRequest withFilterEvra(String filterEvra) {
         this.filterEvra = filterEvra;
         return this;
@@ -32,6 +35,7 @@ public class SystemPackagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[name]")
     public String filterName;
+
     public SystemPackagesRequest withFilterName(String filterName) {
         this.filterName = filterName;
         return this;
@@ -42,6 +46,7 @@ public class SystemPackagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[summary]")
     public String filterSummary;
+
     public SystemPackagesRequest withFilterSummary(String filterSummary) {
         this.filterSummary = filterSummary;
         return this;
@@ -52,6 +57,7 @@ public class SystemPackagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[updatable]")
     public Boolean filterUpdatable;
+
     public SystemPackagesRequest withFilterUpdatable(Boolean filterUpdatable) {
         this.filterUpdatable = filterUpdatable;
         return this;
@@ -62,6 +68,7 @@ public class SystemPackagesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=inventory_id")
     public String inventoryId;
+
     public SystemPackagesRequest withInventoryId(String inventoryId) {
         this.inventoryId = inventoryId;
         return this;
@@ -72,6 +79,7 @@ public class SystemPackagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public SystemPackagesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -82,6 +90,7 @@ public class SystemPackagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public SystemPackagesRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -92,9 +101,13 @@ public class SystemPackagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public SystemPackagesRequest withSearch(String search) {
         this.search = search;
         return this;
     }
     
+    public SystemPackagesRequest(@JsonProperty("inventory_id") String inventoryId) {
+        this.inventoryId = inventoryId;
+  }
 }

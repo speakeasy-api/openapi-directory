@@ -18,6 +18,7 @@ public class MetricBenchmark {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adjustment")
     public String adjustment;
+
     public MetricBenchmark withAdjustment(String adjustment) {
         this.adjustment = adjustment;
         return this;
@@ -29,6 +30,7 @@ public class MetricBenchmark {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basis")
     public String basis;
+
     public MetricBenchmark withBasis(String basis) {
         this.basis = basis;
         return this;
@@ -40,6 +42,7 @@ public class MetricBenchmark {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public BenchmarkMetadata metadata;
+
     public MetricBenchmark withMetadata(BenchmarkMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -51,9 +54,11 @@ public class MetricBenchmark {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rating")
     public String rating;
+
     public MetricBenchmark withRating(String rating) {
         this.rating = rating;
         return this;
     }
     
+    public MetricBenchmark(){}
 }

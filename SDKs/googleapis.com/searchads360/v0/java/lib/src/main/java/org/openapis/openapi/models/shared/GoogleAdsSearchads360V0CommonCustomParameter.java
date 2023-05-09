@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0CommonCustomParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public GoogleAdsSearchads360V0CommonCustomParameter withKey(String key) {
         this.key = key;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAdsSearchads360V0CommonCustomParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GoogleAdsSearchads360V0CommonCustomParameter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GoogleAdsSearchads360V0CommonCustomParameter(){}
 }

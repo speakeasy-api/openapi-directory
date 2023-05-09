@@ -15,6 +15,7 @@ public class CreateCaseRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateCaseRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class CreateCaseRequestBody {
      */
     @JsonProperty("fields")
     public org.openapis.openapi.models.shared.FieldValue[] fields;
+
     public CreateCaseRequestBody withFields(org.openapis.openapi.models.shared.FieldValue[] fields) {
         this.fields = fields;
         return this;
@@ -35,9 +37,14 @@ public class CreateCaseRequestBody {
      */
     @JsonProperty("templateId")
     public String templateId;
+
     public CreateCaseRequestBody withTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
     
+    public CreateCaseRequestBody(@JsonProperty("fields") org.openapis.openapi.models.shared.FieldValue[] fields, @JsonProperty("templateId") String templateId) {
+        this.fields = fields;
+        this.templateId = templateId;
+  }
 }

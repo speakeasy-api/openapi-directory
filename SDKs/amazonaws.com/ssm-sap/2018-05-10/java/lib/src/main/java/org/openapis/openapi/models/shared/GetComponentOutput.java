@@ -15,9 +15,11 @@ public class GetComponentOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Component")
     public Component component;
+
     public GetComponentOutput withComponent(Component component) {
         this.component = component;
         return this;
     }
     
+    public GetComponentOutput(){}
 }

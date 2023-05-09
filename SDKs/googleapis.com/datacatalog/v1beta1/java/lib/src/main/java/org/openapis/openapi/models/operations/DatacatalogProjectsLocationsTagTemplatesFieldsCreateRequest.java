@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest {
@@ -12,6 +13,7 @@ public class DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GoogleCloudDatacatalogV1beta1TagTemplateFieldInput googleCloudDatacatalogV1beta1TagTemplateFieldInput;
+
     public DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest withGoogleCloudDatacatalogV1beta1TagTemplateFieldInput(org.openapis.openapi.models.shared.GoogleCloudDatacatalogV1beta1TagTemplateFieldInput googleCloudDatacatalogV1beta1TagTemplateFieldInput) {
         this.googleCloudDatacatalogV1beta1TagTemplateFieldInput = googleCloudDatacatalogV1beta1TagTemplateFieldInput;
         return this;
@@ -29,6 +32,7 @@ public class DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -99,6 +109,7 @@ public class DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tagTemplateFieldId")
     public String tagTemplateFieldId;
+
     public DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest withTagTemplateFieldId(String tagTemplateFieldId) {
         this.tagTemplateFieldId = tagTemplateFieldId;
         return this;
@@ -129,6 +142,7 @@ public class DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,9 +153,13 @@ public class DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

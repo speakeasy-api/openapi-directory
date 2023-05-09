@@ -20,6 +20,7 @@ public class WebhookDeliveryLogResourceAttributes {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public WebhookDeliveryLogResourceAttributes withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -31,6 +32,7 @@ public class WebhookDeliveryLogResourceAttributes {
      */
     @JsonProperty("deliveryStatus")
     public WebhookDeliveryStatusEnumEnum deliveryStatus;
+
     public WebhookDeliveryLogResourceAttributes withDeliveryStatus(WebhookDeliveryStatusEnumEnum deliveryStatus) {
         this.deliveryStatus = deliveryStatus;
         return this;
@@ -42,6 +44,7 @@ public class WebhookDeliveryLogResourceAttributes {
      */
     @JsonProperty("request")
     public WebhookDeliveryLogResourceAttributesRequest request;
+
     public WebhookDeliveryLogResourceAttributes withRequest(WebhookDeliveryLogResourceAttributesRequest request) {
         this.request = request;
         return this;
@@ -53,9 +56,16 @@ public class WebhookDeliveryLogResourceAttributes {
      */
     @JsonProperty("response")
     public WebhookDeliveryLogResourceAttributesResponse response;
+
     public WebhookDeliveryLogResourceAttributes withResponse(WebhookDeliveryLogResourceAttributesResponse response) {
         this.response = response;
         return this;
     }
     
+    public WebhookDeliveryLogResourceAttributes(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("deliveryStatus") WebhookDeliveryStatusEnumEnum deliveryStatus, @JsonProperty("request") WebhookDeliveryLogResourceAttributesRequest request, @JsonProperty("response") WebhookDeliveryLogResourceAttributesResponse response) {
+        this.createdAt = createdAt;
+        this.deliveryStatus = deliveryStatus;
+        this.request = request;
+        this.response = response;
+  }
 }

@@ -15,6 +15,7 @@ public class CreateAliasModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinations")
     public DestinationModel[] destinations;
+
     public CreateAliasModel withDestinations(DestinationModel[] destinations) {
         this.destinations = destinations;
         return this;
@@ -23,6 +24,7 @@ public class CreateAliasModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metatags")
     public MetaTagModel[] metatags;
+
     public CreateAliasModel withMetatags(MetaTagModel[] metatags) {
         this.metatags = metatags;
         return this;
@@ -31,9 +33,11 @@ public class CreateAliasModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snippets")
     public SnippetModel[] snippets;
+
     public CreateAliasModel withSnippets(SnippetModel[] snippets) {
         this.snippets = snippets;
         return this;
     }
     
+    public CreateAliasModel(){}
 }

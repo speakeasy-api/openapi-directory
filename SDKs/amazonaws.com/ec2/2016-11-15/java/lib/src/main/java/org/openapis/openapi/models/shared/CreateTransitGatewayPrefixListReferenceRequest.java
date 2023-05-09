@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateTransitGatewayPrefixListReferenceRequest {
     
     public Boolean blackhole;
+
     public CreateTransitGatewayPrefixListReferenceRequest withBlackhole(Boolean blackhole) {
         this.blackhole = blackhole;
         return this;
@@ -16,6 +17,7 @@ public class CreateTransitGatewayPrefixListReferenceRequest {
     
     
     public Boolean dryRun;
+
     public CreateTransitGatewayPrefixListReferenceRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class CreateTransitGatewayPrefixListReferenceRequest {
     
     
     public String prefixListId;
+
     public CreateTransitGatewayPrefixListReferenceRequest withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
@@ -30,6 +33,7 @@ public class CreateTransitGatewayPrefixListReferenceRequest {
     
     
     public String transitGatewayAttachmentId;
+
     public CreateTransitGatewayPrefixListReferenceRequest withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
@@ -37,9 +41,14 @@ public class CreateTransitGatewayPrefixListReferenceRequest {
     
     
     public String transitGatewayRouteTableId;
+
     public CreateTransitGatewayPrefixListReferenceRequest withTransitGatewayRouteTableId(String transitGatewayRouteTableId) {
         this.transitGatewayRouteTableId = transitGatewayRouteTableId;
         return this;
     }
     
+    public CreateTransitGatewayPrefixListReferenceRequest(@JsonProperty("PrefixListId") String prefixListId, @JsonProperty("TransitGatewayRouteTableId") String transitGatewayRouteTableId) {
+        this.prefixListId = prefixListId;
+        this.transitGatewayRouteTableId = transitGatewayRouteTableId;
+  }
 }

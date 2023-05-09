@@ -12,9 +12,13 @@ public class PostPortfolioAnalysisSharpeRatioProbabilistic200ApplicationJSONPort
      */
     @JsonProperty("portfolioProbabilisticSharpeRatio")
     public Double portfolioProbabilisticSharpeRatio;
+
     public PostPortfolioAnalysisSharpeRatioProbabilistic200ApplicationJSONPortfolios withPortfolioProbabilisticSharpeRatio(Double portfolioProbabilisticSharpeRatio) {
         this.portfolioProbabilisticSharpeRatio = portfolioProbabilisticSharpeRatio;
         return this;
     }
     
+    public PostPortfolioAnalysisSharpeRatioProbabilistic200ApplicationJSONPortfolios(@JsonProperty("portfolioProbabilisticSharpeRatio") Double portfolioProbabilisticSharpeRatio) {
+        this.portfolioProbabilisticSharpeRatio = portfolioProbabilisticSharpeRatio;
+  }
 }

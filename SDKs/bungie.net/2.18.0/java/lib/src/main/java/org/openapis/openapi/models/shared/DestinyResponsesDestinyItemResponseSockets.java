@@ -17,6 +17,7 @@ public class DestinyResponsesDestinyItemResponseSockets {
      */
     
     public DestinyEntitiesItemsDestinyItemSocketsComponent data;
+
     public DestinyResponsesDestinyItemResponseSockets withData(DestinyEntitiesItemsDestinyItemSocketsComponent data) {
         this.data = data;
         return this;
@@ -27,6 +28,7 @@ public class DestinyResponsesDestinyItemResponseSockets {
      */
     
     public Boolean disabled;
+
     public DestinyResponsesDestinyItemResponseSockets withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -34,9 +36,11 @@ public class DestinyResponsesDestinyItemResponseSockets {
     
     
     public Integer privacy;
+
     public DestinyResponsesDestinyItemResponseSockets withPrivacy(Integer privacy) {
         this.privacy = privacy;
         return this;
     }
     
+    public DestinyResponsesDestinyItemResponseSockets(){}
 }

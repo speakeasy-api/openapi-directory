@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListConnectorEntitiesResponse {
     @JsonProperty("connectorEntityMap")
     public java.util.Map<String, ConnectorEntity[]> connectorEntityMap;
+
     public ListConnectorEntitiesResponse withConnectorEntityMap(java.util.Map<String, ConnectorEntity[]> connectorEntityMap) {
         this.connectorEntityMap = connectorEntityMap;
         return this;
@@ -22,9 +23,13 @@ public class ListConnectorEntitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListConnectorEntitiesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListConnectorEntitiesResponse(@JsonProperty("connectorEntityMap") java.util.Map<String, ConnectorEntity[]> connectorEntityMap) {
+        this.connectorEntityMap = connectorEntityMap;
+  }
 }

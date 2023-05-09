@@ -18,6 +18,7 @@ public class GoogleCloudMlV1AutoScaling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxNodes")
     public Integer maxNodes;
+
     public GoogleCloudMlV1AutoScaling withMaxNodes(Integer maxNodes) {
         this.maxNodes = maxNodes;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudMlV1AutoScaling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public GoogleCloudMlV1MetricSpec[] metrics;
+
     public GoogleCloudMlV1AutoScaling withMetrics(GoogleCloudMlV1MetricSpec[] metrics) {
         this.metrics = metrics;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudMlV1AutoScaling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minNodes")
     public Integer minNodes;
+
     public GoogleCloudMlV1AutoScaling withMinNodes(Integer minNodes) {
         this.minNodes = minNodes;
         return this;
     }
     
+    public GoogleCloudMlV1AutoScaling(){}
 }

@@ -15,6 +15,7 @@ public class ListSamplesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListSamplesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListSamplesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("samples")
     public Sample[] samples;
+
     public ListSamplesResult withSamples(Sample[] samples) {
         this.samples = samples;
         return this;
     }
     
+    public ListSamplesResult(){}
 }

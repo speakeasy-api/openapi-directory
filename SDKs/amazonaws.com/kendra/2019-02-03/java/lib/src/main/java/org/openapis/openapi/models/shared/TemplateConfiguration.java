@@ -15,9 +15,11 @@ public class TemplateConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Template")
     public java.util.Map<String, Object> template;
+
     public TemplateConfiguration withTemplate(java.util.Map<String, Object> template) {
         this.template = template;
         return this;
     }
     
+    public TemplateConfiguration(){}
 }

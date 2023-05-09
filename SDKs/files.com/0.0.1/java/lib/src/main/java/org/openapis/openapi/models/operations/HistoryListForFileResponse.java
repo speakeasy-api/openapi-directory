@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class HistoryListForFileResponse {
@@ -12,6 +13,7 @@ public class HistoryListForFileResponse {
      */
     
     public org.openapis.openapi.models.shared.ActionEntity[] actionEntities;
+
     public HistoryListForFileResponse withActionEntities(org.openapis.openapi.models.shared.ActionEntity[] actionEntities) {
         this.actionEntities = actionEntities;
         return this;
@@ -19,6 +21,7 @@ public class HistoryListForFileResponse {
     
     
     public String contentType;
+
     public HistoryListForFileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class HistoryListForFileResponse {
     
     
     public Integer statusCode;
+
     public HistoryListForFileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class HistoryListForFileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public HistoryListForFileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public HistoryListForFileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

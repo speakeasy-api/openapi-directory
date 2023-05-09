@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateApprovalRuleTemplateNameOutput {
     @JsonProperty("approvalRuleTemplate")
     public ApprovalRuleTemplate approvalRuleTemplate;
+
     public UpdateApprovalRuleTemplateNameOutput withApprovalRuleTemplate(ApprovalRuleTemplate approvalRuleTemplate) {
         this.approvalRuleTemplate = approvalRuleTemplate;
         return this;
     }
     
+    public UpdateApprovalRuleTemplateNameOutput(@JsonProperty("approvalRuleTemplate") ApprovalRuleTemplate approvalRuleTemplate) {
+        this.approvalRuleTemplate = approvalRuleTemplate;
+  }
 }

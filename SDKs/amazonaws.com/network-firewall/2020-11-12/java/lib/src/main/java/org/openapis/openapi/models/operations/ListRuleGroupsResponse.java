@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRuleGroupsResponse {
     
     public String contentType;
+
     public ListRuleGroupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListRuleGroupsResponse {
      */
     
     public Object internalServerError;
+
     public ListRuleGroupsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class ListRuleGroupsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListRuleGroupsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListRuleGroupsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRuleGroupsResponse listRuleGroupsResponse;
+
     public ListRuleGroupsResponse withListRuleGroupsResponse(org.openapis.openapi.models.shared.ListRuleGroupsResponse listRuleGroupsResponse) {
         this.listRuleGroupsResponse = listRuleGroupsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListRuleGroupsResponse {
     
     
     public Integer statusCode;
+
     public ListRuleGroupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListRuleGroupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRuleGroupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListRuleGroupsResponse {
      */
     
     public Object throttlingException;
+
     public ListRuleGroupsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListRuleGroupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

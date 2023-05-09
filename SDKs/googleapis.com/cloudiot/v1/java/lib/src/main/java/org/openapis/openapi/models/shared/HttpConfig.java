@@ -18,9 +18,11 @@ public class HttpConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpEnabledState")
     public HttpConfigHttpEnabledStateEnum httpEnabledState;
+
     public HttpConfig withHttpEnabledState(HttpConfigHttpEnabledStateEnum httpEnabledState) {
         this.httpEnabledState = httpEnabledState;
         return this;
     }
     
+    public HttpConfig(){}
 }

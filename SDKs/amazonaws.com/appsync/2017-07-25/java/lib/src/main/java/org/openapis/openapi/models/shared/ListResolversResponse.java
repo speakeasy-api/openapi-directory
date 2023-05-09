@@ -15,6 +15,7 @@ public class ListResolversResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListResolversResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListResolversResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolvers")
     public Resolver[] resolvers;
+
     public ListResolversResponse withResolvers(Resolver[] resolvers) {
         this.resolvers = resolvers;
         return this;
     }
     
+    public ListResolversResponse(){}
 }

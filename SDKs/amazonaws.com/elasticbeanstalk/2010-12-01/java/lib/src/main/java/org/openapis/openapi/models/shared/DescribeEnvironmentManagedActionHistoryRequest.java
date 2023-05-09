@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeEnvironmentManagedActionHistoryRequest {
     
     public String environmentId;
+
     public DescribeEnvironmentManagedActionHistoryRequest withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeEnvironmentManagedActionHistoryRequest {
     
     
     public String environmentName;
+
     public DescribeEnvironmentManagedActionHistoryRequest withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -26,6 +28,7 @@ public class DescribeEnvironmentManagedActionHistoryRequest {
     
     
     public Long maxItems;
+
     public DescribeEnvironmentManagedActionHistoryRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -33,9 +36,11 @@ public class DescribeEnvironmentManagedActionHistoryRequest {
     
     
     public String nextToken;
+
     public DescribeEnvironmentManagedActionHistoryRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeEnvironmentManagedActionHistoryRequest(){}
 }

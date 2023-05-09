@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeprecateActivityTypeInput {
     @JsonProperty("activityType")
     public ActivityType activityType;
+
     public DeprecateActivityTypeInput withActivityType(ActivityType activityType) {
         this.activityType = activityType;
         return this;
@@ -16,9 +17,14 @@ public class DeprecateActivityTypeInput {
     
     @JsonProperty("domain")
     public String domain;
+
     public DeprecateActivityTypeInput withDomain(String domain) {
         this.domain = domain;
         return this;
     }
     
+    public DeprecateActivityTypeInput(@JsonProperty("activityType") ActivityType activityType, @JsonProperty("domain") String domain) {
+        this.activityType = activityType;
+        this.domain = domain;
+  }
 }

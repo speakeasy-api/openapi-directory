@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BooleanColumnStatisticsData {
     @JsonProperty("NumberOfFalses")
     public Long numberOfFalses;
+
     public BooleanColumnStatisticsData withNumberOfFalses(Long numberOfFalses) {
         this.numberOfFalses = numberOfFalses;
         return this;
@@ -19,6 +20,7 @@ public class BooleanColumnStatisticsData {
     
     @JsonProperty("NumberOfNulls")
     public Long numberOfNulls;
+
     public BooleanColumnStatisticsData withNumberOfNulls(Long numberOfNulls) {
         this.numberOfNulls = numberOfNulls;
         return this;
@@ -26,9 +28,15 @@ public class BooleanColumnStatisticsData {
     
     @JsonProperty("NumberOfTrues")
     public Long numberOfTrues;
+
     public BooleanColumnStatisticsData withNumberOfTrues(Long numberOfTrues) {
         this.numberOfTrues = numberOfTrues;
         return this;
     }
     
+    public BooleanColumnStatisticsData(@JsonProperty("NumberOfFalses") Long numberOfFalses, @JsonProperty("NumberOfNulls") Long numberOfNulls, @JsonProperty("NumberOfTrues") Long numberOfTrues) {
+        this.numberOfFalses = numberOfFalses;
+        this.numberOfNulls = numberOfNulls;
+        this.numberOfTrues = numberOfTrues;
+  }
 }

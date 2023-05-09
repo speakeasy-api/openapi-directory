@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteConnectionResponse {
     
     public String contentType;
+
     public DeleteConnectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteConnectionResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteConnectionResponse deleteConnectionResponse;
+
     public DeleteConnectionResponse withDeleteConnectionResponse(org.openapis.openapi.models.shared.DeleteConnectionResponse deleteConnectionResponse) {
         this.deleteConnectionResponse = deleteConnectionResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteConnectionResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DeleteConnectionResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteConnectionResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteConnectionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteConnectionResponse {
     
     
     public Integer statusCode;
+
     public DeleteConnectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteConnectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteConnectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteConnectionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteConnectionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeleteConnectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

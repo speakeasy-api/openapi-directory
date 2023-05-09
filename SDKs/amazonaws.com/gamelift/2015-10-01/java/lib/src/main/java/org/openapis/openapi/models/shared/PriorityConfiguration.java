@@ -15,6 +15,7 @@ public class PriorityConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationOrder")
     public String[] locationOrder;
+
     public PriorityConfiguration withLocationOrder(String[] locationOrder) {
         this.locationOrder = locationOrder;
         return this;
@@ -23,9 +24,11 @@ public class PriorityConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PriorityOrder")
     public PriorityTypeEnum[] priorityOrder;
+
     public PriorityConfiguration withPriorityOrder(PriorityTypeEnum[] priorityOrder) {
         this.priorityOrder = priorityOrder;
         return this;
     }
     
+    public PriorityConfiguration(){}
 }

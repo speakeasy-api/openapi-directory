@@ -18,6 +18,7 @@ public class ClusterMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hdfsMetrics")
     public java.util.Map<String, String> hdfsMetrics;
+
     public ClusterMetrics withHdfsMetrics(java.util.Map<String, String> hdfsMetrics) {
         this.hdfsMetrics = hdfsMetrics;
         return this;
@@ -29,9 +30,11 @@ public class ClusterMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yarnMetrics")
     public java.util.Map<String, String> yarnMetrics;
+
     public ClusterMetrics withYarnMetrics(java.util.Map<String, String> yarnMetrics) {
         this.yarnMetrics = yarnMetrics;
         return this;
     }
     
+    public ClusterMetrics(){}
 }

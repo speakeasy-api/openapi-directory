@@ -15,6 +15,7 @@ public class JobExecutionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public JobExecutionStatusEnum status;
+
     public JobExecutionState withStatus(JobExecutionStatusEnum status) {
         this.status = status;
         return this;
@@ -23,6 +24,7 @@ public class JobExecutionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusDetails")
     public java.util.Map<String, String> statusDetails;
+
     public JobExecutionState withStatusDetails(java.util.Map<String, String> statusDetails) {
         this.statusDetails = statusDetails;
         return this;
@@ -31,9 +33,11 @@ public class JobExecutionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionNumber")
     public Long versionNumber;
+
     public JobExecutionState withVersionNumber(Long versionNumber) {
         this.versionNumber = versionNumber;
         return this;
     }
     
+    public JobExecutionState(){}
 }

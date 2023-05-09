@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2IntentBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intents")
     public GoogleCloudDialogflowV2IntentInput[] intents;
+
     public GoogleCloudDialogflowV2IntentBatchInput withIntents(GoogleCloudDialogflowV2IntentInput[] intents) {
         this.intents = intents;
         return this;
     }
     
+    public GoogleCloudDialogflowV2IntentBatchInput(){}
 }

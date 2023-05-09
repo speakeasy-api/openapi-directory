@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAuditStreamConfigurationResponse {
     
     public String contentType;
+
     public UpdateAuditStreamConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAuditStreamConfigurationResponse {
      */
     
     public Object internalServerErrorException;
+
     public UpdateAuditStreamConfigurationResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAuditStreamConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateAuditStreamConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateAuditStreamConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateAuditStreamConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateAuditStreamConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateAuditStreamConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateAuditStreamConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAuditStreamConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateAuditStreamConfigurationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateAuditStreamConfigurationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateAuditStreamConfigurationResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateAuditStreamConfigurationResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateAuditStreamConfigurationResponse {
      */
     
     public java.util.Map<String, Object> updateAuditStreamConfigurationResponse;
+
     public UpdateAuditStreamConfigurationResponse withUpdateAuditStreamConfigurationResponse(java.util.Map<String, Object> updateAuditStreamConfigurationResponse) {
         this.updateAuditStreamConfigurationResponse = updateAuditStreamConfigurationResponse;
         return this;
     }
     
+    public UpdateAuditStreamConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

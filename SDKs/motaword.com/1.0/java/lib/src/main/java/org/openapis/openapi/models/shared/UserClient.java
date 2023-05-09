@@ -12,6 +12,7 @@ public class UserClient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corporate")
     public UserClientCorporate corporate;
+
     public UserClient withCorporate(UserClientCorporate corporate) {
         this.corporate = corporate;
         return this;
@@ -20,6 +21,7 @@ public class UserClient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nps")
     public Float nps;
+
     public UserClient withNps(Float nps) {
         this.nps = nps;
         return this;
@@ -28,9 +30,11 @@ public class UserClient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjects")
     public java.util.Map<String, Long> subjects;
+
     public UserClient withSubjects(java.util.Map<String, Long> subjects) {
         this.subjects = subjects;
         return this;
     }
     
+    public UserClient(){}
 }

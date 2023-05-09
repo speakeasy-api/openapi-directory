@@ -18,9 +18,11 @@ public class MeshCertificates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableCertificates")
     public Boolean enableCertificates;
+
     public MeshCertificates withEnableCertificates(Boolean enableCertificates) {
         this.enableCertificates = enableCertificates;
         return this;
     }
     
+    public MeshCertificates(){}
 }

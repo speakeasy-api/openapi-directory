@@ -15,6 +15,7 @@ public class ExperimentStopCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public ExperimentStopCondition withSource(String source) {
         this.source = source;
         return this;
@@ -23,9 +24,11 @@ public class ExperimentStopCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ExperimentStopCondition withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ExperimentStopCondition(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BknocResponse {
     
     public String contentType;
+
     public BknocResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class BknocResponse {
     
     
     public Integer statusCode;
+
     public BknocResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class BknocResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BknocResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class BknocResponse {
      */
     
     public Bknoc400ApplicationJSON bknoc400ApplicationJSONObject;
+
     public BknocResponse withBknoc400ApplicationJSONObject(Bknoc400ApplicationJSON bknoc400ApplicationJSONObject) {
         this.bknoc400ApplicationJSONObject = bknoc400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class BknocResponse {
      */
     
     public Bknoc401ApplicationJSON bknoc401ApplicationJSONObject;
+
     public BknocResponse withBknoc401ApplicationJSONObject(Bknoc401ApplicationJSON bknoc401ApplicationJSONObject) {
         this.bknoc401ApplicationJSONObject = bknoc401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class BknocResponse {
      */
     
     public Bknoc404ApplicationJSON bknoc404ApplicationJSONObject;
+
     public BknocResponse withBknoc404ApplicationJSONObject(Bknoc404ApplicationJSON bknoc404ApplicationJSONObject) {
         this.bknoc404ApplicationJSONObject = bknoc404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class BknocResponse {
      */
     
     public Bknoc500ApplicationJSON bknoc500ApplicationJSONObject;
+
     public BknocResponse withBknoc500ApplicationJSONObject(Bknoc500ApplicationJSON bknoc500ApplicationJSONObject) {
         this.bknoc500ApplicationJSONObject = bknoc500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class BknocResponse {
      */
     
     public Bknoc502ApplicationJSON bknoc502ApplicationJSONObject;
+
     public BknocResponse withBknoc502ApplicationJSONObject(Bknoc502ApplicationJSON bknoc502ApplicationJSONObject) {
         this.bknoc502ApplicationJSONObject = bknoc502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class BknocResponse {
      */
     
     public Bknoc503ApplicationJSON bknoc503ApplicationJSONObject;
+
     public BknocResponse withBknoc503ApplicationJSONObject(Bknoc503ApplicationJSON bknoc503ApplicationJSONObject) {
         this.bknoc503ApplicationJSONObject = bknoc503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class BknocResponse {
      */
     
     public Bknoc504ApplicationJSON bknoc504ApplicationJSONObject;
+
     public BknocResponse withBknoc504ApplicationJSONObject(Bknoc504ApplicationJSON bknoc504ApplicationJSONObject) {
         this.bknoc504ApplicationJSONObject = bknoc504ApplicationJSONObject;
         return this;
     }
     
+    public BknocResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

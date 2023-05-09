@@ -15,9 +15,11 @@ public class UploadMultipartPartRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public UploadMultipartPartRequestBody withBody(String body) {
         this.body = body;
         return this;
     }
     
+    public UploadMultipartPartRequestBody(){}
 }

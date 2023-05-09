@@ -18,6 +18,7 @@ public class PhaseConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage")
     public Integer percentage;
+
     public PhaseConfig withPercentage(Integer percentage) {
         this.percentage = percentage;
         return this;
@@ -29,6 +30,7 @@ public class PhaseConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phaseId")
     public String phaseId;
+
     public PhaseConfig withPhaseId(String phaseId) {
         this.phaseId = phaseId;
         return this;
@@ -40,6 +42,7 @@ public class PhaseConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profiles")
     public String[] profiles;
+
     public PhaseConfig withProfiles(String[] profiles) {
         this.profiles = profiles;
         return this;
@@ -51,9 +54,11 @@ public class PhaseConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verify")
     public Boolean verify;
+
     public PhaseConfig withVerify(Boolean verify) {
         this.verify = verify;
         return this;
     }
     
+    public PhaseConfig(){}
 }

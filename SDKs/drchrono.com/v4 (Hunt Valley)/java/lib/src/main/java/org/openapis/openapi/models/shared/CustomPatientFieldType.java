@@ -18,6 +18,7 @@ public class CustomPatientFieldType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowed_values")
     public String allowedValues;
+
     public CustomPatientFieldType withAllowedValues(String allowedValues) {
         this.allowedValues = allowedValues;
         return this;
@@ -29,6 +30,7 @@ public class CustomPatientFieldType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archived")
     public Boolean archived;
+
     public CustomPatientFieldType withArchived(Boolean archived) {
         this.archived = archived;
         return this;
@@ -37,6 +39,7 @@ public class CustomPatientFieldType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CustomPatientFieldType withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +47,7 @@ public class CustomPatientFieldType {
     
     @JsonProperty("doctor")
     public Long doctor;
+
     public CustomPatientFieldType withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -52,6 +56,7 @@ public class CustomPatientFieldType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public CustomPatientFieldType withId(Long id) {
         this.id = id;
         return this;
@@ -59,6 +64,7 @@ public class CustomPatientFieldType {
     
     @JsonProperty("name")
     public String name;
+
     public CustomPatientFieldType withName(String name) {
         this.name = name;
         return this;
@@ -70,9 +76,14 @@ public class CustomPatientFieldType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template_name")
     public String templateName;
+
     public CustomPatientFieldType withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public CustomPatientFieldType(@JsonProperty("doctor") Long doctor, @JsonProperty("name") String name) {
+        this.doctor = doctor;
+        this.name = name;
+  }
 }

@@ -15,6 +15,7 @@ public class BackendAPIAuthType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mode")
     public BackendAPIAuthTypeModeEnum mode;
+
     public BackendAPIAuthType withMode(BackendAPIAuthTypeModeEnum mode) {
         this.mode = mode;
         return this;
@@ -23,9 +24,11 @@ public class BackendAPIAuthType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Settings")
     public BackendAPIAuthTypeSettings settings;
+
     public BackendAPIAuthType withSettings(BackendAPIAuthTypeSettings settings) {
         this.settings = settings;
         return this;
     }
     
+    public BackendAPIAuthType(){}
 }

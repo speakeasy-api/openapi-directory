@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TagResourcesResponse {
     
     public String contentType;
+
     public TagResourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TagResourcesResponse {
      */
     
     public Object internalServiceException;
+
     public TagResourcesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class TagResourcesResponse {
      */
     
     public Object invalidParameterException;
+
     public TagResourcesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -36,6 +40,7 @@ public class TagResourcesResponse {
     
     
     public Integer statusCode;
+
     public TagResourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class TagResourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TagResourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class TagResourcesResponse {
      */
     
     public org.openapis.openapi.models.shared.TagResourcesOutput tagResourcesOutput;
+
     public TagResourcesResponse withTagResourcesOutput(org.openapis.openapi.models.shared.TagResourcesOutput tagResourcesOutput) {
         this.tagResourcesOutput = tagResourcesOutput;
         return this;
@@ -63,9 +70,14 @@ public class TagResourcesResponse {
      */
     
     public Object throttledException;
+
     public TagResourcesResponse withThrottledException(Object throttledException) {
         this.throttledException = throttledException;
         return this;
     }
     
+    public TagResourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

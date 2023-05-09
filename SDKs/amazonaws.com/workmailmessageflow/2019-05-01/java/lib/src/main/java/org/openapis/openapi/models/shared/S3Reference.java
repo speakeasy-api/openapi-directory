@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class S3Reference {
     @JsonProperty("bucket")
     public String bucket;
+
     public S3Reference withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -21,6 +22,7 @@ public class S3Reference {
     
     @JsonProperty("key")
     public String key;
+
     public S3Reference withKey(String key) {
         this.key = key;
         return this;
@@ -29,9 +31,14 @@ public class S3Reference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectVersion")
     public String objectVersion;
+
     public S3Reference withObjectVersion(String objectVersion) {
         this.objectVersion = objectVersion;
         return this;
     }
     
+    public S3Reference(@JsonProperty("bucket") String bucket, @JsonProperty("key") String key) {
+        this.bucket = bucket;
+        this.key = key;
+  }
 }

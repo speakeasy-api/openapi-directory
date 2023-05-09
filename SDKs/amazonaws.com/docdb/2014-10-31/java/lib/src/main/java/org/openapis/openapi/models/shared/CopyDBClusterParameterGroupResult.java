@@ -15,9 +15,11 @@ public class CopyDBClusterParameterGroupResult {
      */
     
     public DBClusterParameterGroup dbClusterParameterGroup;
+
     public CopyDBClusterParameterGroupResult withDBClusterParameterGroup(DBClusterParameterGroup dbClusterParameterGroup) {
         this.dbClusterParameterGroup = dbClusterParameterGroup;
         return this;
     }
     
+    public CopyDBClusterParameterGroupResult(){}
 }

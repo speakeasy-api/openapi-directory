@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssistantData {
     @JsonProperty("assistantArn")
     public String assistantArn;
+
     public AssistantData withAssistantArn(String assistantArn) {
         this.assistantArn = assistantArn;
         return this;
@@ -21,6 +22,7 @@ public class AssistantData {
     
     @JsonProperty("assistantId")
     public String assistantId;
+
     public AssistantData withAssistantId(String assistantId) {
         this.assistantId = assistantId;
         return this;
@@ -29,6 +31,7 @@ public class AssistantData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AssistantData withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +39,7 @@ public class AssistantData {
     
     @JsonProperty("name")
     public String name;
+
     public AssistantData withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +48,7 @@ public class AssistantData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverSideEncryptionConfiguration")
     public ServerSideEncryptionConfiguration serverSideEncryptionConfiguration;
+
     public AssistantData withServerSideEncryptionConfiguration(ServerSideEncryptionConfiguration serverSideEncryptionConfiguration) {
         this.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
         return this;
@@ -51,6 +56,7 @@ public class AssistantData {
     
     @JsonProperty("status")
     public AssistantStatusEnum status;
+
     public AssistantData withStatus(AssistantStatusEnum status) {
         this.status = status;
         return this;
@@ -59,6 +65,7 @@ public class AssistantData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public AssistantData withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -66,9 +73,17 @@ public class AssistantData {
     
     @JsonProperty("type")
     public AssistantTypeEnum type;
+
     public AssistantData withType(AssistantTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AssistantData(@JsonProperty("assistantArn") String assistantArn, @JsonProperty("assistantId") String assistantId, @JsonProperty("name") String name, @JsonProperty("status") AssistantStatusEnum status, @JsonProperty("type") AssistantTypeEnum type) {
+        this.assistantArn = assistantArn;
+        this.assistantId = assistantId;
+        this.name = name;
+        this.status = status;
+        this.type = type;
+  }
 }

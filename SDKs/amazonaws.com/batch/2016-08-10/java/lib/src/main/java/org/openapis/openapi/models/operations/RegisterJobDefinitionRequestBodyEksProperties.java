@@ -15,9 +15,11 @@ public class RegisterJobDefinitionRequestBodyEksProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("podProperties")
     public org.openapis.openapi.models.shared.EksPodProperties podProperties;
+
     public RegisterJobDefinitionRequestBodyEksProperties withPodProperties(org.openapis.openapi.models.shared.EksPodProperties podProperties) {
         this.podProperties = podProperties;
         return this;
     }
     
+    public RegisterJobDefinitionRequestBodyEksProperties(){}
 }

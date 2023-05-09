@@ -15,9 +15,11 @@ public class UserPoolPolicyType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PasswordPolicy")
     public PasswordPolicyType passwordPolicy;
+
     public UserPoolPolicyType withPasswordPolicy(PasswordPolicyType passwordPolicy) {
         this.passwordPolicy = passwordPolicy;
         return this;
     }
     
+    public UserPoolPolicyType(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCustomTypeRequest {
@@ -12,6 +13,7 @@ public class DeleteCustomTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public DeleteCustomTypeCountryEnum country;
+
     public DeleteCustomTypeRequest withCountry(DeleteCustomTypeCountryEnum country) {
         this.country = country;
         return this;
@@ -22,9 +24,13 @@ public class DeleteCustomTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String type;
+
     public DeleteCustomTypeRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public DeleteCustomTypeRequest(@JsonProperty("type") String type) {
+        this.type = type;
+  }
 }

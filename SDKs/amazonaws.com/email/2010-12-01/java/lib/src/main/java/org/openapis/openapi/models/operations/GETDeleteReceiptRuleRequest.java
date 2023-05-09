@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteReceiptRuleRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeleteReceiptRuleActionEnum action;
+
     public GETDeleteReceiptRuleRequest withAction(GETDeleteReceiptRuleActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDeleteReceiptRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RuleName")
     public String ruleName;
+
     public GETDeleteReceiptRuleRequest withRuleName(String ruleName) {
         this.ruleName = ruleName;
         return this;
@@ -29,6 +32,7 @@ public class GETDeleteReceiptRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RuleSetName")
     public String ruleSetName;
+
     public GETDeleteReceiptRuleRequest withRuleSetName(String ruleSetName) {
         this.ruleSetName = ruleSetName;
         return this;
@@ -36,6 +40,7 @@ public class GETDeleteReceiptRuleRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeleteReceiptRuleVersionEnum version;
+
     public GETDeleteReceiptRuleRequest withVersion(GETDeleteReceiptRuleVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETDeleteReceiptRuleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeleteReceiptRuleRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETDeleteReceiptRuleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeleteReceiptRuleRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETDeleteReceiptRuleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeleteReceiptRuleRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETDeleteReceiptRuleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeleteReceiptRuleRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETDeleteReceiptRuleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeleteReceiptRuleRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETDeleteReceiptRuleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeleteReceiptRuleRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETDeleteReceiptRuleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeleteReceiptRuleRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeleteReceiptRuleRequest(@JsonProperty("Action") GETDeleteReceiptRuleActionEnum action, @JsonProperty("RuleName") String ruleName, @JsonProperty("RuleSetName") String ruleSetName, @JsonProperty("Version") GETDeleteReceiptRuleVersionEnum version) {
+        this.action = action;
+        this.ruleName = ruleName;
+        this.ruleSetName = ruleSetName;
+        this.version = version;
+  }
 }

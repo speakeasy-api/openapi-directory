@@ -12,6 +12,7 @@ public class SkcerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public SkcerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,6 +23,7 @@ public class SkcerRequestBodyCertificateParameters {
      */
     @JsonProperty("certificateType")
     public String certificateType;
+
     public SkcerRequestBodyCertificateParameters withCertificateType(String certificateType) {
         this.certificateType = certificateType;
         return this;
@@ -32,9 +34,15 @@ public class SkcerRequestBodyCertificateParameters {
      */
     @JsonProperty("username")
     public String username;
+
     public SkcerRequestBodyCertificateParameters withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public SkcerRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("certificateType") String certificateType, @JsonProperty("username") String username) {
+        this.fullName = fullName;
+        this.certificateType = certificateType;
+        this.username = username;
+  }
 }

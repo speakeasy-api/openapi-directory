@@ -15,6 +15,7 @@ public class AwsEcsServiceDeploymentConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentCircuitBreaker")
     public AwsEcsServiceDeploymentConfigurationDeploymentCircuitBreakerDetails deploymentCircuitBreaker;
+
     public AwsEcsServiceDeploymentConfigurationDetails withDeploymentCircuitBreaker(AwsEcsServiceDeploymentConfigurationDeploymentCircuitBreakerDetails deploymentCircuitBreaker) {
         this.deploymentCircuitBreaker = deploymentCircuitBreaker;
         return this;
@@ -23,6 +24,7 @@ public class AwsEcsServiceDeploymentConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumPercent")
     public Long maximumPercent;
+
     public AwsEcsServiceDeploymentConfigurationDetails withMaximumPercent(Long maximumPercent) {
         this.maximumPercent = maximumPercent;
         return this;
@@ -31,9 +33,11 @@ public class AwsEcsServiceDeploymentConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinimumHealthyPercent")
     public Long minimumHealthyPercent;
+
     public AwsEcsServiceDeploymentConfigurationDetails withMinimumHealthyPercent(Long minimumHealthyPercent) {
         this.minimumHealthyPercent = minimumHealthyPercent;
         return this;
     }
     
+    public AwsEcsServiceDeploymentConfigurationDetails(){}
 }

@@ -12,6 +12,7 @@ public class StartContentModerationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public StartContentModerationRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -20,6 +21,7 @@ public class StartContentModerationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobTag")
     public String jobTag;
+
     public StartContentModerationRequest withJobTag(String jobTag) {
         this.jobTag = jobTag;
         return this;
@@ -28,6 +30,7 @@ public class StartContentModerationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinConfidence")
     public Float minConfidence;
+
     public StartContentModerationRequest withMinConfidence(Float minConfidence) {
         this.minConfidence = minConfidence;
         return this;
@@ -36,6 +39,7 @@ public class StartContentModerationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationChannel")
     public NotificationChannel notificationChannel;
+
     public StartContentModerationRequest withNotificationChannel(NotificationChannel notificationChannel) {
         this.notificationChannel = notificationChannel;
         return this;
@@ -43,9 +47,13 @@ public class StartContentModerationRequest {
     
     @JsonProperty("Video")
     public Video video;
+
     public StartContentModerationRequest withVideo(Video video) {
         this.video = video;
         return this;
     }
     
+    public StartContentModerationRequest(@JsonProperty("Video") Video video) {
+        this.video = video;
+  }
 }

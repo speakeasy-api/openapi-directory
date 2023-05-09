@@ -18,9 +18,11 @@ public class KeyUpdate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public KeyUpdate200ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public KeyUpdate200ApplicationJSON(){}
 }

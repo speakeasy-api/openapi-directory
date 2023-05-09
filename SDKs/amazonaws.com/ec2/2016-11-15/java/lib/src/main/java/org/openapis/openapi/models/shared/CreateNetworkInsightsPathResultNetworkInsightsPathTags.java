@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateNetworkInsightsPathResultNetworkInsightsPathTags {
     
     public String key;
+
     public CreateNetworkInsightsPathResultNetworkInsightsPathTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CreateNetworkInsightsPathResultNetworkInsightsPathTags {
     
     
     public String value;
+
     public CreateNetworkInsightsPathResultNetworkInsightsPathTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateNetworkInsightsPathResultNetworkInsightsPathTags(){}
 }

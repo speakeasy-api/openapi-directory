@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RuleSummary {
     @JsonProperty("Name")
     public String name;
+
     public RuleSummary withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class RuleSummary {
     
     @JsonProperty("RuleId")
     public String ruleId;
+
     public RuleSummary withRuleId(String ruleId) {
         this.ruleId = ruleId;
         return this;
     }
     
+    public RuleSummary(@JsonProperty("Name") String name, @JsonProperty("RuleId") String ruleId) {
+        this.name = name;
+        this.ruleId = ruleId;
+  }
 }

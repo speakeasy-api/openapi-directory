@@ -55,11 +55,9 @@ public class PatrowlEngine {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CleanScanPageResponse res = new org.openapis.openapi.models.operations.CleanScanPageResponse() {{
+        org.openapis.openapi.models.operations.CleanScanPageResponse res = new org.openapis.openapi.models.operations.CleanScanPageResponse(contentType, httpRes.statusCode()) {{
             apiResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -93,11 +91,9 @@ public class PatrowlEngine {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CleanScansPageResponse res = new org.openapis.openapi.models.operations.CleanScansPageResponse() {{
+        org.openapis.openapi.models.operations.CleanScansPageResponse res = new org.openapis.openapi.models.operations.CleanScansPageResponse(contentType, httpRes.statusCode()) {{
             apiResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -132,11 +128,9 @@ public class PatrowlEngine {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFindingPageResponse res = new org.openapis.openapi.models.operations.GetFindingPageResponse() {{
+        org.openapis.openapi.models.operations.GetFindingPageResponse res = new org.openapis.openapi.models.operations.GetFindingPageResponse(contentType, httpRes.statusCode()) {{
             findings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -176,11 +170,9 @@ public class PatrowlEngine {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartScanPageResponse res = new org.openapis.openapi.models.operations.StartScanPageResponse() {{
+        org.openapis.openapi.models.operations.StartScanPageResponse res = new org.openapis.openapi.models.operations.StartScanPageResponse(contentType, httpRes.statusCode()) {{
             apiResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -215,11 +207,9 @@ public class PatrowlEngine {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StatusScanPageResponse res = new org.openapis.openapi.models.operations.StatusScanPageResponse() {{
+        org.openapis.openapi.models.operations.StatusScanPageResponse res = new org.openapis.openapi.models.operations.StatusScanPageResponse(contentType, httpRes.statusCode()) {{
             apiResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -253,11 +243,9 @@ public class PatrowlEngine {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StatusScansPageResponse res = new org.openapis.openapi.models.operations.StatusScansPageResponse() {{
+        org.openapis.openapi.models.operations.StatusScansPageResponse res = new org.openapis.openapi.models.operations.StatusScansPageResponse(contentType, httpRes.statusCode()) {{
             apiResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -292,11 +280,9 @@ public class PatrowlEngine {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopScanPageResponse res = new org.openapis.openapi.models.operations.StopScanPageResponse() {{
+        org.openapis.openapi.models.operations.StopScanPageResponse res = new org.openapis.openapi.models.operations.StopScanPageResponse(contentType, httpRes.statusCode()) {{
             apiResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -330,11 +316,9 @@ public class PatrowlEngine {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopScansPageResponse res = new org.openapis.openapi.models.operations.StopScansPageResponse() {{
+        org.openapis.openapi.models.operations.StopScansPageResponse res = new org.openapis.openapi.models.operations.StopScansPageResponse(contentType, httpRes.statusCode()) {{
             apiResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -368,11 +352,9 @@ public class PatrowlEngine {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDefaultPageResponse res = new org.openapis.openapi.models.operations.GetDefaultPageResponse() {{
+        org.openapis.openapi.models.operations.GetDefaultPageResponse res = new org.openapis.openapi.models.operations.GetDefaultPageResponse(contentType, httpRes.statusCode()) {{
             apiResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -406,11 +388,9 @@ public class PatrowlEngine {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInfoPageResponse res = new org.openapis.openapi.models.operations.GetInfoPageResponse() {{
+        org.openapis.openapi.models.operations.GetInfoPageResponse res = new org.openapis.openapi.models.operations.GetInfoPageResponse(contentType, httpRes.statusCode()) {{
             apiResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -444,10 +424,8 @@ public class PatrowlEngine {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLivenessPageResponse res = new org.openapis.openapi.models.operations.GetLivenessPageResponse() {{
+        org.openapis.openapi.models.operations.GetLivenessPageResponse res = new org.openapis.openapi.models.operations.GetLivenessPageResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -476,10 +454,8 @@ public class PatrowlEngine {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReadinessPageResponse res = new org.openapis.openapi.models.operations.GetReadinessPageResponse() {{
+        org.openapis.openapi.models.operations.GetReadinessPageResponse res = new org.openapis.openapi.models.operations.GetReadinessPageResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -508,10 +484,8 @@ public class PatrowlEngine {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTestPageResponse res = new org.openapis.openapi.models.operations.GetTestPageResponse() {{
+        org.openapis.openapi.models.operations.GetTestPageResponse res = new org.openapis.openapi.models.operations.GetTestPageResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -540,11 +514,9 @@ public class PatrowlEngine {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReloadConfigurationPageResponse res = new org.openapis.openapi.models.operations.ReloadConfigurationPageResponse() {{
+        org.openapis.openapi.models.operations.ReloadConfigurationPageResponse res = new org.openapis.openapi.models.operations.ReloadConfigurationPageResponse(contentType, httpRes.statusCode()) {{
             apiResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetResourceInput {
     @JsonProperty("Identifier")
     public String identifier;
+
     public GetResourceInput withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -19,6 +20,7 @@ public class GetResourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public GetResourceInput withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -26,6 +28,7 @@ public class GetResourceInput {
     
     @JsonProperty("TypeName")
     public String typeName;
+
     public GetResourceInput withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
@@ -34,9 +37,14 @@ public class GetResourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TypeVersionId")
     public String typeVersionId;
+
     public GetResourceInput withTypeVersionId(String typeVersionId) {
         this.typeVersionId = typeVersionId;
         return this;
     }
     
+    public GetResourceInput(@JsonProperty("Identifier") String identifier, @JsonProperty("TypeName") String typeName) {
+        this.identifier = identifier;
+        this.typeName = typeName;
+  }
 }

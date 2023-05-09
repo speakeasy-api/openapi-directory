@@ -18,6 +18,7 @@ public class ModifyLabelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ModifyLabelsRequest withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class ModifyLabelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelModifications")
     public LabelModification[] labelModifications;
+
     public ModifyLabelsRequest withLabelModifications(LabelModification[] labelModifications) {
         this.labelModifications = labelModifications;
         return this;
     }
     
+    public ModifyLabelsRequest(){}
 }

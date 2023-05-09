@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class MemberSummary {
     @JsonProperty("abilities")
     public MemberAbilityEnum[] abilities;
+
     public MemberSummary withAbilities(MemberAbilityEnum[] abilities) {
         this.abilities = abilities;
         return this;
@@ -26,6 +27,7 @@ public class MemberSummary {
     
     @JsonProperty("accountId")
     public String accountId;
+
     public MemberSummary withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -35,6 +37,7 @@ public class MemberSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createTime")
     public OffsetDateTime createTime;
+
     public MemberSummary withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -42,6 +45,7 @@ public class MemberSummary {
     
     @JsonProperty("displayName")
     public String displayName;
+
     public MemberSummary withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -50,6 +54,7 @@ public class MemberSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("membershipArn")
     public String membershipArn;
+
     public MemberSummary withMembershipArn(String membershipArn) {
         this.membershipArn = membershipArn;
         return this;
@@ -58,6 +63,7 @@ public class MemberSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("membershipId")
     public String membershipId;
+
     public MemberSummary withMembershipId(String membershipId) {
         this.membershipId = membershipId;
         return this;
@@ -65,6 +71,7 @@ public class MemberSummary {
     
     @JsonProperty("status")
     public MemberStatusEnum status;
+
     public MemberSummary withStatus(MemberStatusEnum status) {
         this.status = status;
         return this;
@@ -74,9 +81,18 @@ public class MemberSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateTime")
     public OffsetDateTime updateTime;
+
     public MemberSummary withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public MemberSummary(@JsonProperty("abilities") MemberAbilityEnum[] abilities, @JsonProperty("accountId") String accountId, @JsonProperty("createTime") OffsetDateTime createTime, @JsonProperty("displayName") String displayName, @JsonProperty("status") MemberStatusEnum status, @JsonProperty("updateTime") OffsetDateTime updateTime) {
+        this.abilities = abilities;
+        this.accountId = accountId;
+        this.createTime = createTime;
+        this.displayName = displayName;
+        this.status = status;
+        this.updateTime = updateTime;
+  }
 }

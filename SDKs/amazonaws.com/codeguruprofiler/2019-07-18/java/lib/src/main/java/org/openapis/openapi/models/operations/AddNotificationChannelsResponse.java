@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddNotificationChannelsResponse {
@@ -12,6 +13,7 @@ public class AddNotificationChannelsResponse {
      */
     
     public org.openapis.openapi.models.shared.AddNotificationChannelsResponse addNotificationChannelsResponse;
+
     public AddNotificationChannelsResponse withAddNotificationChannelsResponse(org.openapis.openapi.models.shared.AddNotificationChannelsResponse addNotificationChannelsResponse) {
         this.addNotificationChannelsResponse = addNotificationChannelsResponse;
         return this;
@@ -22,6 +24,7 @@ public class AddNotificationChannelsResponse {
      */
     
     public Object conflictException;
+
     public AddNotificationChannelsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class AddNotificationChannelsResponse {
     
     
     public String contentType;
+
     public AddNotificationChannelsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AddNotificationChannelsResponse {
      */
     
     public Object internalServerException;
+
     public AddNotificationChannelsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class AddNotificationChannelsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AddNotificationChannelsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class AddNotificationChannelsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public AddNotificationChannelsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class AddNotificationChannelsResponse {
     
     
     public Integer statusCode;
+
     public AddNotificationChannelsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class AddNotificationChannelsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddNotificationChannelsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class AddNotificationChannelsResponse {
      */
     
     public Object throttlingException;
+
     public AddNotificationChannelsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class AddNotificationChannelsResponse {
      */
     
     public Object validationException;
+
     public AddNotificationChannelsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AddNotificationChannelsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

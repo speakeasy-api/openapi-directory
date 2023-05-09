@@ -18,9 +18,11 @@ public class IntegerList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elements")
     public SplitInt64[] elements;
+
     public IntegerList withElements(SplitInt64[] elements) {
         this.elements = elements;
         return this;
     }
     
+    public IntegerList(){}
 }

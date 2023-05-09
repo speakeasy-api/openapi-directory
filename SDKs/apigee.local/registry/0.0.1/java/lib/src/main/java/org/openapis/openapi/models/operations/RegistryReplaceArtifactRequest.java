@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryReplaceArtifactRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ArtifactInput artifactInput;
+
     public RegistryReplaceArtifactRequest withArtifactInput(org.openapis.openapi.models.shared.ArtifactInput artifactInput) {
         this.artifactInput = artifactInput;
         return this;
@@ -19,6 +21,7 @@ public class RegistryReplaceArtifactRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifact")
     public String artifact;
+
     public RegistryReplaceArtifactRequest withArtifact(String artifact) {
         this.artifact = artifact;
         return this;
@@ -29,6 +32,7 @@ public class RegistryReplaceArtifactRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
     public String location;
+
     public RegistryReplaceArtifactRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -39,9 +43,16 @@ public class RegistryReplaceArtifactRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public RegistryReplaceArtifactRequest withProject(String project) {
         this.project = project;
         return this;
     }
     
+    public RegistryReplaceArtifactRequest(@JsonProperty("ArtifactInput") org.openapis.openapi.models.shared.ArtifactInput artifactInput, @JsonProperty("artifact") String artifact, @JsonProperty("location") String location, @JsonProperty("project") String project) {
+        this.artifactInput = artifactInput;
+        this.artifact = artifact;
+        this.location = location;
+        this.project = project;
+  }
 }

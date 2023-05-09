@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p1beta1TextAnnotationTextProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedBreak")
     public GoogleCloudVisionV1p1beta1TextAnnotationDetectedBreak detectedBreak;
+
     public GoogleCloudVisionV1p1beta1TextAnnotationTextProperty withDetectedBreak(GoogleCloudVisionV1p1beta1TextAnnotationDetectedBreak detectedBreak) {
         this.detectedBreak = detectedBreak;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudVisionV1p1beta1TextAnnotationTextProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedLanguages")
     public GoogleCloudVisionV1p1beta1TextAnnotationDetectedLanguage[] detectedLanguages;
+
     public GoogleCloudVisionV1p1beta1TextAnnotationTextProperty withDetectedLanguages(GoogleCloudVisionV1p1beta1TextAnnotationDetectedLanguage[] detectedLanguages) {
         this.detectedLanguages = detectedLanguages;
         return this;
     }
     
+    public GoogleCloudVisionV1p1beta1TextAnnotationTextProperty(){}
 }

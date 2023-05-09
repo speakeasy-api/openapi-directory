@@ -18,6 +18,7 @@ public class CopyBackupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backupId")
     public String backupId;
+
     public CopyBackupRequest withBackupId(String backupId) {
         this.backupId = backupId;
         return this;
@@ -29,6 +30,7 @@ public class CopyBackupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public CopyBackupRequest withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -40,9 +42,11 @@ public class CopyBackupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceBackup")
     public String sourceBackup;
+
     public CopyBackupRequest withSourceBackup(String sourceBackup) {
         this.sourceBackup = sourceBackup;
         return this;
     }
     
+    public CopyBackupRequest(){}
 }

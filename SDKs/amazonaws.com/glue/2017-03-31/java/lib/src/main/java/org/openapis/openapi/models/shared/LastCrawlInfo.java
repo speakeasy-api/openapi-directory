@@ -20,6 +20,7 @@ public class LastCrawlInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public LastCrawlInfo withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -28,6 +29,7 @@ public class LastCrawlInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogGroup")
     public String logGroup;
+
     public LastCrawlInfo withLogGroup(String logGroup) {
         this.logGroup = logGroup;
         return this;
@@ -36,6 +38,7 @@ public class LastCrawlInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogStream")
     public String logStream;
+
     public LastCrawlInfo withLogStream(String logStream) {
         this.logStream = logStream;
         return this;
@@ -44,6 +47,7 @@ public class LastCrawlInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessagePrefix")
     public String messagePrefix;
+
     public LastCrawlInfo withMessagePrefix(String messagePrefix) {
         this.messagePrefix = messagePrefix;
         return this;
@@ -54,6 +58,7 @@ public class LastCrawlInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public LastCrawlInfo withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -62,9 +67,11 @@ public class LastCrawlInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public LastCrawlStatusEnum status;
+
     public LastCrawlInfo withStatus(LastCrawlStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public LastCrawlInfo(){}
 }

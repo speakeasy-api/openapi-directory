@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeStemmingOptionsRequest {
     /**
@@ -12,9 +12,13 @@ public class DescribeStemmingOptionsRequest {
      */
     
     public String domainName;
+
     public DescribeStemmingOptionsRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public DescribeStemmingOptionsRequest(@JsonProperty("DomainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

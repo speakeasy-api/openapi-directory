@@ -18,6 +18,7 @@ public class GkeCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster")
     public String cluster;
+
     public GkeCluster withCluster(String cluster) {
         this.cluster = cluster;
         return this;
@@ -29,9 +30,11 @@ public class GkeCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internalIp")
     public Boolean internalIp;
+
     public GkeCluster withInternalIp(Boolean internalIp) {
         this.internalIp = internalIp;
         return this;
     }
     
+    public GkeCluster(){}
 }

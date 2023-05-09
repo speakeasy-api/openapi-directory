@@ -15,6 +15,7 @@ public class DestinyEntitiesVendorsDestinyVendorCategory {
      */
     
     public Integer displayCategoryIndex;
+
     public DestinyEntitiesVendorsDestinyVendorCategory withDisplayCategoryIndex(Integer displayCategoryIndex) {
         this.displayCategoryIndex = displayCategoryIndex;
         return this;
@@ -25,9 +26,11 @@ public class DestinyEntitiesVendorsDestinyVendorCategory {
      */
     
     public Integer[] itemIndexes;
+
     public DestinyEntitiesVendorsDestinyVendorCategory withItemIndexes(Integer[] itemIndexes) {
         this.itemIndexes = itemIndexes;
         return this;
     }
     
+    public DestinyEntitiesVendorsDestinyVendorCategory(){}
 }

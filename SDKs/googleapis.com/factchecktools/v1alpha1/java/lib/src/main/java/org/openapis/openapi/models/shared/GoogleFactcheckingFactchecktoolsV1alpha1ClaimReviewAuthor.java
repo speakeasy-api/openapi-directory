@@ -18,6 +18,7 @@ public class GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewAuthor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUrl")
     public String imageUrl;
+
     public GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewAuthor withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -29,9 +30,11 @@ public class GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewAuthor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewAuthor withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewAuthor(){}
 }

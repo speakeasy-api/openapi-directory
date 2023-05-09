@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteAppRequest {
     @JsonProperty("AppName")
     public String appName;
+
     public DeleteAppRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -18,6 +19,7 @@ public class DeleteAppRequest {
     
     @JsonProperty("AppType")
     public AppTypeEnum appType;
+
     public DeleteAppRequest withAppType(AppTypeEnum appType) {
         this.appType = appType;
         return this;
@@ -25,6 +27,7 @@ public class DeleteAppRequest {
     
     @JsonProperty("DomainId")
     public String domainId;
+
     public DeleteAppRequest withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -33,6 +36,7 @@ public class DeleteAppRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpaceName")
     public String spaceName;
+
     public DeleteAppRequest withSpaceName(String spaceName) {
         this.spaceName = spaceName;
         return this;
@@ -41,9 +45,15 @@ public class DeleteAppRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserProfileName")
     public String userProfileName;
+
     public DeleteAppRequest withUserProfileName(String userProfileName) {
         this.userProfileName = userProfileName;
         return this;
     }
     
+    public DeleteAppRequest(@JsonProperty("AppName") String appName, @JsonProperty("AppType") AppTypeEnum appType, @JsonProperty("DomainId") String domainId) {
+        this.appName = appName;
+        this.appType = appType;
+        this.domainId = domainId;
+  }
 }

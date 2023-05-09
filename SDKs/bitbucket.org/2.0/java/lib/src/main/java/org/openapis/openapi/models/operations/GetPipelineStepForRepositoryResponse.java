@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPipelineStepForRepositoryResponse {
     
     public String contentType;
+
     public GetPipelineStepForRepositoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetPipelineStepForRepositoryResponse {
     
     
     public Integer statusCode;
+
     public GetPipelineStepForRepositoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetPipelineStepForRepositoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPipelineStepForRepositoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetPipelineStepForRepositoryResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public GetPipelineStepForRepositoryResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class GetPipelineStepForRepositoryResponse {
      */
     
     public java.util.Map<String, Object> pipelineStep;
+
     public GetPipelineStepForRepositoryResponse withPipelineStep(java.util.Map<String, Object> pipelineStep) {
         this.pipelineStep = pipelineStep;
         return this;
     }
     
+    public GetPipelineStepForRepositoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

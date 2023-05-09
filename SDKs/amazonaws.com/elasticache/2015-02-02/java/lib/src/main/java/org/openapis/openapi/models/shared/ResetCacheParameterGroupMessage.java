@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ResetCacheParameterGroupMessage - Represents the input of a &lt;code&gt;ResetCacheParameterGroup&lt;/code&gt; operation.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ResetCacheParameterGroupMessage {
     
     public String cacheParameterGroupName;
+
     public ResetCacheParameterGroupMessage withCacheParameterGroupName(String cacheParameterGroupName) {
         this.cacheParameterGroupName = cacheParameterGroupName;
         return this;
@@ -19,6 +20,7 @@ public class ResetCacheParameterGroupMessage {
     
     
     public ParameterNameValueList[] parameterNameValues;
+
     public ResetCacheParameterGroupMessage withParameterNameValues(ParameterNameValueList[] parameterNameValues) {
         this.parameterNameValues = parameterNameValues;
         return this;
@@ -26,9 +28,13 @@ public class ResetCacheParameterGroupMessage {
     
     
     public Boolean resetAllParameters;
+
     public ResetCacheParameterGroupMessage withResetAllParameters(Boolean resetAllParameters) {
         this.resetAllParameters = resetAllParameters;
         return this;
     }
     
+    public ResetCacheParameterGroupMessage(@JsonProperty("CacheParameterGroupName") String cacheParameterGroupName) {
+        this.cacheParameterGroupName = cacheParameterGroupName;
+  }
 }

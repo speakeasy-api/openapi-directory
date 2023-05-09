@@ -15,6 +15,7 @@ public class GetInventoryItemInventoryArrayV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public GetInventoryItemInventoryArrayV2ItemInventoryV2[] data;
+
     public GetInventoryItemInventoryArrayV2 withData(GetInventoryItemInventoryArrayV2ItemInventoryV2[] data) {
         this.data = data;
         return this;
@@ -23,9 +24,11 @@ public class GetInventoryItemInventoryArrayV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public GetInventoryItemInventoryArrayV2Meta meta;
+
     public GetInventoryItemInventoryArrayV2 withMeta(GetInventoryItemInventoryArrayV2Meta meta) {
         this.meta = meta;
         return this;
     }
     
+    public GetInventoryItemInventoryArrayV2(){}
 }

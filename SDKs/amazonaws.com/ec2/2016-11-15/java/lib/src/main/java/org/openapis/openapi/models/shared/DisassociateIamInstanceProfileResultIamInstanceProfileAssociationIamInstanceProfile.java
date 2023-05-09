@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DisassociateIamInstanceProfileResultIamInstanceProfileAssociationIamInstanceProfile {
     
     public String arn;
+
     public DisassociateIamInstanceProfileResultIamInstanceProfileAssociationIamInstanceProfile withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,9 +20,11 @@ public class DisassociateIamInstanceProfileResultIamInstanceProfileAssociationIa
     
     
     public String id;
+
     public DisassociateIamInstanceProfileResultIamInstanceProfileAssociationIamInstanceProfile withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DisassociateIamInstanceProfileResultIamInstanceProfileAssociationIamInstanceProfile(){}
 }

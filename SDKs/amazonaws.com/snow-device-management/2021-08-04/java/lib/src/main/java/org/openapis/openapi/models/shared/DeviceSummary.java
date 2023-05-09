@@ -15,6 +15,7 @@ public class DeviceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedWithJob")
     public String associatedWithJob;
+
     public DeviceSummary withAssociatedWithJob(String associatedWithJob) {
         this.associatedWithJob = associatedWithJob;
         return this;
@@ -23,6 +24,7 @@ public class DeviceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedDeviceArn")
     public String managedDeviceArn;
+
     public DeviceSummary withManagedDeviceArn(String managedDeviceArn) {
         this.managedDeviceArn = managedDeviceArn;
         return this;
@@ -31,6 +33,7 @@ public class DeviceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedDeviceId")
     public String managedDeviceId;
+
     public DeviceSummary withManagedDeviceId(String managedDeviceId) {
         this.managedDeviceId = managedDeviceId;
         return this;
@@ -39,9 +42,11 @@ public class DeviceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public DeviceSummary withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public DeviceSummary(){}
 }

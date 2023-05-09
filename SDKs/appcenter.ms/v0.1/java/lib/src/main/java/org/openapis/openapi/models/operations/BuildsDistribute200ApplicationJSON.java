@@ -18,6 +18,7 @@ public class BuildsDistribute200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public BuildsDistribute200ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
@@ -29,9 +30,11 @@ public class BuildsDistribute200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upload_id")
     public String uploadId;
+
     public BuildsDistribute200ApplicationJSON withUploadId(String uploadId) {
         this.uploadId = uploadId;
         return this;
     }
     
+    public BuildsDistribute200ApplicationJSON(){}
 }

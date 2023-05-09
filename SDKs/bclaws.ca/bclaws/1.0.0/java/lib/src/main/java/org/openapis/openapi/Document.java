@@ -47,10 +47,8 @@ public class Document {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdResponse res = new org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdResponse() {{
+        org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdResponse res = new org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -80,10 +78,8 @@ public class Document {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringResponse res = new org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringResponse() {{
+        org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringResponse res = new org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -113,10 +109,8 @@ public class Document {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlResponse res = new org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlResponse() {{
+        org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlResponse res = new org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -146,10 +140,8 @@ public class Document {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlSearchSearchStringResponse res = new org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlSearchSearchStringResponse() {{
+        org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlSearchSearchStringResponse res = new org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlSearchSearchStringResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

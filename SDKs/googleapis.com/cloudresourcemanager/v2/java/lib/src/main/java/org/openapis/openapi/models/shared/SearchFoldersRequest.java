@@ -18,6 +18,7 @@ public class SearchFoldersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public SearchFoldersRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -29,6 +30,7 @@ public class SearchFoldersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public SearchFoldersRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -40,9 +42,11 @@ public class SearchFoldersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public SearchFoldersRequest withQuery(String query) {
         this.query = query;
         return this;
     }
     
+    public SearchFoldersRequest(){}
 }

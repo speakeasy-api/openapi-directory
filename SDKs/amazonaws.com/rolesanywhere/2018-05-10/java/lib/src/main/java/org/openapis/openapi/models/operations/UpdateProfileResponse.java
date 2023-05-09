@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateProfileResponse {
@@ -12,6 +13,7 @@ public class UpdateProfileResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateProfileResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateProfileResponse {
     
     
     public String contentType;
+
     public UpdateProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateProfileResponse {
      */
     
     public org.openapis.openapi.models.shared.ProfileDetailResponse profileDetailResponse;
+
     public UpdateProfileResponse withProfileDetailResponse(org.openapis.openapi.models.shared.ProfileDetailResponse profileDetailResponse) {
         this.profileDetailResponse = profileDetailResponse;
         return this;
@@ -39,6 +43,7 @@ public class UpdateProfileResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateProfileResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateProfileResponse {
     
     
     public Integer statusCode;
+
     public UpdateProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class UpdateProfileResponse {
      */
     
     public Object validationException;
+
     public UpdateProfileResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

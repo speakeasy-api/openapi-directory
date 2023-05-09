@@ -18,6 +18,7 @@ public class BulkMuteFindingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public BulkMuteFindingsRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -29,9 +30,11 @@ public class BulkMuteFindingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("muteAnnotation")
     public String muteAnnotation;
+
     public BulkMuteFindingsRequest withMuteAnnotation(String muteAnnotation) {
         this.muteAnnotation = muteAnnotation;
         return this;
     }
     
+    public BulkMuteFindingsRequest(){}
 }

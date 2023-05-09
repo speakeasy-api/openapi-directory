@@ -50,11 +50,9 @@ public class AnalyticsReports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteReportFilterResponse res = new org.openapis.openapi.models.operations.DeleteReportFilterResponse() {{
+        org.openapis.openapi.models.operations.DeleteReportFilterResponse res = new org.openapis.openapi.models.operations.DeleteReportFilterResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -90,12 +88,10 @@ public class AnalyticsReports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReportFilterResponse res = new org.openapis.openapi.models.operations.GetReportFilterResponse() {{
+        org.openapis.openapi.models.operations.GetReportFilterResponse res = new org.openapis.openapi.models.operations.GetReportFilterResponse(contentType, httpRes.statusCode()) {{
             reportFilter = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -136,12 +132,10 @@ public class AnalyticsReports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReportFiltersResponse res = new org.openapis.openapi.models.operations.GetReportFiltersResponse() {{
+        org.openapis.openapi.models.operations.GetReportFiltersResponse res = new org.openapis.openapi.models.operations.GetReportFiltersResponse(contentType, httpRes.statusCode()) {{
             reportFilterList = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -187,11 +181,9 @@ public class AnalyticsReports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SaveReportFilterResponse res = new org.openapis.openapi.models.operations.SaveReportFilterResponse() {{
+        org.openapis.openapi.models.operations.SaveReportFilterResponse res = new org.openapis.openapi.models.operations.SaveReportFilterResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

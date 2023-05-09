@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("absoluteTopImpressionPercentage")
     public Double absoluteTopImpressionPercentage;
+
     public GoogleAdsSearchads360V0CommonMetrics withAbsoluteTopImpressionPercentage(Double absoluteTopImpressionPercentage) {
         this.absoluteTopImpressionPercentage = absoluteTopImpressionPercentage;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allConversions")
     public Double allConversions;
+
     public GoogleAdsSearchads360V0CommonMetrics withAllConversions(Double allConversions) {
         this.allConversions = allConversions;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allConversionsByConversionDate")
     public Double allConversionsByConversionDate;
+
     public GoogleAdsSearchads360V0CommonMetrics withAllConversionsByConversionDate(Double allConversionsByConversionDate) {
         this.allConversionsByConversionDate = allConversionsByConversionDate;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allConversionsFromClickToCall")
     public Double allConversionsFromClickToCall;
+
     public GoogleAdsSearchads360V0CommonMetrics withAllConversionsFromClickToCall(Double allConversionsFromClickToCall) {
         this.allConversionsFromClickToCall = allConversionsFromClickToCall;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allConversionsFromDirections")
     public Double allConversionsFromDirections;
+
     public GoogleAdsSearchads360V0CommonMetrics withAllConversionsFromDirections(Double allConversionsFromDirections) {
         this.allConversionsFromDirections = allConversionsFromDirections;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allConversionsFromInteractionsRate")
     public Double allConversionsFromInteractionsRate;
+
     public GoogleAdsSearchads360V0CommonMetrics withAllConversionsFromInteractionsRate(Double allConversionsFromInteractionsRate) {
         this.allConversionsFromInteractionsRate = allConversionsFromInteractionsRate;
         return this;
@@ -84,6 +90,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allConversionsFromInteractionsValuePerInteraction")
     public Double allConversionsFromInteractionsValuePerInteraction;
+
     public GoogleAdsSearchads360V0CommonMetrics withAllConversionsFromInteractionsValuePerInteraction(Double allConversionsFromInteractionsValuePerInteraction) {
         this.allConversionsFromInteractionsValuePerInteraction = allConversionsFromInteractionsValuePerInteraction;
         return this;
@@ -95,6 +102,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allConversionsFromMenu")
     public Double allConversionsFromMenu;
+
     public GoogleAdsSearchads360V0CommonMetrics withAllConversionsFromMenu(Double allConversionsFromMenu) {
         this.allConversionsFromMenu = allConversionsFromMenu;
         return this;
@@ -106,6 +114,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allConversionsFromOrder")
     public Double allConversionsFromOrder;
+
     public GoogleAdsSearchads360V0CommonMetrics withAllConversionsFromOrder(Double allConversionsFromOrder) {
         this.allConversionsFromOrder = allConversionsFromOrder;
         return this;
@@ -117,6 +126,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allConversionsFromOtherEngagement")
     public Double allConversionsFromOtherEngagement;
+
     public GoogleAdsSearchads360V0CommonMetrics withAllConversionsFromOtherEngagement(Double allConversionsFromOtherEngagement) {
         this.allConversionsFromOtherEngagement = allConversionsFromOtherEngagement;
         return this;
@@ -128,6 +138,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allConversionsFromStoreVisit")
     public Double allConversionsFromStoreVisit;
+
     public GoogleAdsSearchads360V0CommonMetrics withAllConversionsFromStoreVisit(Double allConversionsFromStoreVisit) {
         this.allConversionsFromStoreVisit = allConversionsFromStoreVisit;
         return this;
@@ -139,6 +150,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allConversionsFromStoreWebsite")
     public Double allConversionsFromStoreWebsite;
+
     public GoogleAdsSearchads360V0CommonMetrics withAllConversionsFromStoreWebsite(Double allConversionsFromStoreWebsite) {
         this.allConversionsFromStoreWebsite = allConversionsFromStoreWebsite;
         return this;
@@ -150,6 +162,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allConversionsValue")
     public Double allConversionsValue;
+
     public GoogleAdsSearchads360V0CommonMetrics withAllConversionsValue(Double allConversionsValue) {
         this.allConversionsValue = allConversionsValue;
         return this;
@@ -161,6 +174,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allConversionsValueByConversionDate")
     public Double allConversionsValueByConversionDate;
+
     public GoogleAdsSearchads360V0CommonMetrics withAllConversionsValueByConversionDate(Double allConversionsValueByConversionDate) {
         this.allConversionsValueByConversionDate = allConversionsValueByConversionDate;
         return this;
@@ -172,6 +186,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allConversionsValuePerCost")
     public Double allConversionsValuePerCost;
+
     public GoogleAdsSearchads360V0CommonMetrics withAllConversionsValuePerCost(Double allConversionsValuePerCost) {
         this.allConversionsValuePerCost = allConversionsValuePerCost;
         return this;
@@ -183,6 +198,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("averageCost")
     public Double averageCost;
+
     public GoogleAdsSearchads360V0CommonMetrics withAverageCost(Double averageCost) {
         this.averageCost = averageCost;
         return this;
@@ -194,6 +210,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("averageCpc")
     public Double averageCpc;
+
     public GoogleAdsSearchads360V0CommonMetrics withAverageCpc(Double averageCpc) {
         this.averageCpc = averageCpc;
         return this;
@@ -205,6 +222,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("averageCpm")
     public Double averageCpm;
+
     public GoogleAdsSearchads360V0CommonMetrics withAverageCpm(Double averageCpm) {
         this.averageCpm = averageCpm;
         return this;
@@ -216,6 +234,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clicks")
     public String clicks;
+
     public GoogleAdsSearchads360V0CommonMetrics withClicks(String clicks) {
         this.clicks = clicks;
         return this;
@@ -227,6 +246,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientAccountConversions")
     public Double clientAccountConversions;
+
     public GoogleAdsSearchads360V0CommonMetrics withClientAccountConversions(Double clientAccountConversions) {
         this.clientAccountConversions = clientAccountConversions;
         return this;
@@ -238,6 +258,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientAccountConversionsValue")
     public Double clientAccountConversionsValue;
+
     public GoogleAdsSearchads360V0CommonMetrics withClientAccountConversionsValue(Double clientAccountConversionsValue) {
         this.clientAccountConversionsValue = clientAccountConversionsValue;
         return this;
@@ -249,6 +270,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientAccountViewThroughConversions")
     public String clientAccountViewThroughConversions;
+
     public GoogleAdsSearchads360V0CommonMetrics withClientAccountViewThroughConversions(String clientAccountViewThroughConversions) {
         this.clientAccountViewThroughConversions = clientAccountViewThroughConversions;
         return this;
@@ -260,6 +282,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentBudgetLostImpressionShare")
     public Double contentBudgetLostImpressionShare;
+
     public GoogleAdsSearchads360V0CommonMetrics withContentBudgetLostImpressionShare(Double contentBudgetLostImpressionShare) {
         this.contentBudgetLostImpressionShare = contentBudgetLostImpressionShare;
         return this;
@@ -271,6 +294,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentImpressionShare")
     public Double contentImpressionShare;
+
     public GoogleAdsSearchads360V0CommonMetrics withContentImpressionShare(Double contentImpressionShare) {
         this.contentImpressionShare = contentImpressionShare;
         return this;
@@ -282,6 +306,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentRankLostImpressionShare")
     public Double contentRankLostImpressionShare;
+
     public GoogleAdsSearchads360V0CommonMetrics withContentRankLostImpressionShare(Double contentRankLostImpressionShare) {
         this.contentRankLostImpressionShare = contentRankLostImpressionShare;
         return this;
@@ -293,6 +318,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversions")
     public Double conversions;
+
     public GoogleAdsSearchads360V0CommonMetrics withConversions(Double conversions) {
         this.conversions = conversions;
         return this;
@@ -304,6 +330,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversionsByConversionDate")
     public Double conversionsByConversionDate;
+
     public GoogleAdsSearchads360V0CommonMetrics withConversionsByConversionDate(Double conversionsByConversionDate) {
         this.conversionsByConversionDate = conversionsByConversionDate;
         return this;
@@ -315,6 +342,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversionsFromInteractionsRate")
     public Double conversionsFromInteractionsRate;
+
     public GoogleAdsSearchads360V0CommonMetrics withConversionsFromInteractionsRate(Double conversionsFromInteractionsRate) {
         this.conversionsFromInteractionsRate = conversionsFromInteractionsRate;
         return this;
@@ -326,6 +354,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversionsFromInteractionsValuePerInteraction")
     public Double conversionsFromInteractionsValuePerInteraction;
+
     public GoogleAdsSearchads360V0CommonMetrics withConversionsFromInteractionsValuePerInteraction(Double conversionsFromInteractionsValuePerInteraction) {
         this.conversionsFromInteractionsValuePerInteraction = conversionsFromInteractionsValuePerInteraction;
         return this;
@@ -337,6 +366,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversionsValue")
     public Double conversionsValue;
+
     public GoogleAdsSearchads360V0CommonMetrics withConversionsValue(Double conversionsValue) {
         this.conversionsValue = conversionsValue;
         return this;
@@ -348,6 +378,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversionsValueByConversionDate")
     public Double conversionsValueByConversionDate;
+
     public GoogleAdsSearchads360V0CommonMetrics withConversionsValueByConversionDate(Double conversionsValueByConversionDate) {
         this.conversionsValueByConversionDate = conversionsValueByConversionDate;
         return this;
@@ -359,6 +390,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversionsValuePerCost")
     public Double conversionsValuePerCost;
+
     public GoogleAdsSearchads360V0CommonMetrics withConversionsValuePerCost(Double conversionsValuePerCost) {
         this.conversionsValuePerCost = conversionsValuePerCost;
         return this;
@@ -370,6 +402,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costMicros")
     public String costMicros;
+
     public GoogleAdsSearchads360V0CommonMetrics withCostMicros(String costMicros) {
         this.costMicros = costMicros;
         return this;
@@ -381,6 +414,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costPerAllConversions")
     public Double costPerAllConversions;
+
     public GoogleAdsSearchads360V0CommonMetrics withCostPerAllConversions(Double costPerAllConversions) {
         this.costPerAllConversions = costPerAllConversions;
         return this;
@@ -392,6 +426,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costPerConversion")
     public Double costPerConversion;
+
     public GoogleAdsSearchads360V0CommonMetrics withCostPerConversion(Double costPerConversion) {
         this.costPerConversion = costPerConversion;
         return this;
@@ -403,6 +438,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costPerCurrentModelAttributedConversion")
     public Double costPerCurrentModelAttributedConversion;
+
     public GoogleAdsSearchads360V0CommonMetrics withCostPerCurrentModelAttributedConversion(Double costPerCurrentModelAttributedConversion) {
         this.costPerCurrentModelAttributedConversion = costPerCurrentModelAttributedConversion;
         return this;
@@ -414,6 +450,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crossDeviceConversions")
     public Double crossDeviceConversions;
+
     public GoogleAdsSearchads360V0CommonMetrics withCrossDeviceConversions(Double crossDeviceConversions) {
         this.crossDeviceConversions = crossDeviceConversions;
         return this;
@@ -425,6 +462,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crossDeviceConversionsValue")
     public Double crossDeviceConversionsValue;
+
     public GoogleAdsSearchads360V0CommonMetrics withCrossDeviceConversionsValue(Double crossDeviceConversionsValue) {
         this.crossDeviceConversionsValue = crossDeviceConversionsValue;
         return this;
@@ -436,6 +474,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ctr")
     public Double ctr;
+
     public GoogleAdsSearchads360V0CommonMetrics withCtr(Double ctr) {
         this.ctr = ctr;
         return this;
@@ -447,6 +486,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("historicalCreativeQualityScore")
     public GoogleAdsSearchads360V0CommonMetricsHistoricalCreativeQualityScoreEnum historicalCreativeQualityScore;
+
     public GoogleAdsSearchads360V0CommonMetrics withHistoricalCreativeQualityScore(GoogleAdsSearchads360V0CommonMetricsHistoricalCreativeQualityScoreEnum historicalCreativeQualityScore) {
         this.historicalCreativeQualityScore = historicalCreativeQualityScore;
         return this;
@@ -458,6 +498,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("historicalLandingPageQualityScore")
     public GoogleAdsSearchads360V0CommonMetricsHistoricalLandingPageQualityScoreEnum historicalLandingPageQualityScore;
+
     public GoogleAdsSearchads360V0CommonMetrics withHistoricalLandingPageQualityScore(GoogleAdsSearchads360V0CommonMetricsHistoricalLandingPageQualityScoreEnum historicalLandingPageQualityScore) {
         this.historicalLandingPageQualityScore = historicalLandingPageQualityScore;
         return this;
@@ -469,6 +510,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("historicalQualityScore")
     public String historicalQualityScore;
+
     public GoogleAdsSearchads360V0CommonMetrics withHistoricalQualityScore(String historicalQualityScore) {
         this.historicalQualityScore = historicalQualityScore;
         return this;
@@ -480,6 +522,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("historicalSearchPredictedCtr")
     public GoogleAdsSearchads360V0CommonMetricsHistoricalSearchPredictedCtrEnum historicalSearchPredictedCtr;
+
     public GoogleAdsSearchads360V0CommonMetrics withHistoricalSearchPredictedCtr(GoogleAdsSearchads360V0CommonMetricsHistoricalSearchPredictedCtrEnum historicalSearchPredictedCtr) {
         this.historicalSearchPredictedCtr = historicalSearchPredictedCtr;
         return this;
@@ -491,6 +534,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("impressions")
     public String impressions;
+
     public GoogleAdsSearchads360V0CommonMetrics withImpressions(String impressions) {
         this.impressions = impressions;
         return this;
@@ -502,6 +546,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interactionEventTypes")
     public GoogleAdsSearchads360V0CommonMetricsInteractionEventTypesEnum[] interactionEventTypes;
+
     public GoogleAdsSearchads360V0CommonMetrics withInteractionEventTypes(GoogleAdsSearchads360V0CommonMetricsInteractionEventTypesEnum[] interactionEventTypes) {
         this.interactionEventTypes = interactionEventTypes;
         return this;
@@ -513,6 +558,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interactionRate")
     public Double interactionRate;
+
     public GoogleAdsSearchads360V0CommonMetrics withInteractionRate(Double interactionRate) {
         this.interactionRate = interactionRate;
         return this;
@@ -524,6 +570,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interactions")
     public String interactions;
+
     public GoogleAdsSearchads360V0CommonMetrics withInteractions(String interactions) {
         this.interactions = interactions;
         return this;
@@ -535,6 +582,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidClickRate")
     public Double invalidClickRate;
+
     public GoogleAdsSearchads360V0CommonMetrics withInvalidClickRate(Double invalidClickRate) {
         this.invalidClickRate = invalidClickRate;
         return this;
@@ -546,6 +594,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidClicks")
     public String invalidClicks;
+
     public GoogleAdsSearchads360V0CommonMetrics withInvalidClicks(String invalidClicks) {
         this.invalidClicks = invalidClicks;
         return this;
@@ -557,6 +606,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobileFriendlyClicksPercentage")
     public Double mobileFriendlyClicksPercentage;
+
     public GoogleAdsSearchads360V0CommonMetrics withMobileFriendlyClicksPercentage(Double mobileFriendlyClicksPercentage) {
         this.mobileFriendlyClicksPercentage = mobileFriendlyClicksPercentage;
         return this;
@@ -568,6 +618,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchAbsoluteTopImpressionShare")
     public Double searchAbsoluteTopImpressionShare;
+
     public GoogleAdsSearchads360V0CommonMetrics withSearchAbsoluteTopImpressionShare(Double searchAbsoluteTopImpressionShare) {
         this.searchAbsoluteTopImpressionShare = searchAbsoluteTopImpressionShare;
         return this;
@@ -579,6 +630,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchBudgetLostAbsoluteTopImpressionShare")
     public Double searchBudgetLostAbsoluteTopImpressionShare;
+
     public GoogleAdsSearchads360V0CommonMetrics withSearchBudgetLostAbsoluteTopImpressionShare(Double searchBudgetLostAbsoluteTopImpressionShare) {
         this.searchBudgetLostAbsoluteTopImpressionShare = searchBudgetLostAbsoluteTopImpressionShare;
         return this;
@@ -590,6 +642,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchBudgetLostImpressionShare")
     public Double searchBudgetLostImpressionShare;
+
     public GoogleAdsSearchads360V0CommonMetrics withSearchBudgetLostImpressionShare(Double searchBudgetLostImpressionShare) {
         this.searchBudgetLostImpressionShare = searchBudgetLostImpressionShare;
         return this;
@@ -601,6 +654,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchBudgetLostTopImpressionShare")
     public Double searchBudgetLostTopImpressionShare;
+
     public GoogleAdsSearchads360V0CommonMetrics withSearchBudgetLostTopImpressionShare(Double searchBudgetLostTopImpressionShare) {
         this.searchBudgetLostTopImpressionShare = searchBudgetLostTopImpressionShare;
         return this;
@@ -612,6 +666,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchClickShare")
     public Double searchClickShare;
+
     public GoogleAdsSearchads360V0CommonMetrics withSearchClickShare(Double searchClickShare) {
         this.searchClickShare = searchClickShare;
         return this;
@@ -623,6 +678,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchExactMatchImpressionShare")
     public Double searchExactMatchImpressionShare;
+
     public GoogleAdsSearchads360V0CommonMetrics withSearchExactMatchImpressionShare(Double searchExactMatchImpressionShare) {
         this.searchExactMatchImpressionShare = searchExactMatchImpressionShare;
         return this;
@@ -634,6 +690,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchImpressionShare")
     public Double searchImpressionShare;
+
     public GoogleAdsSearchads360V0CommonMetrics withSearchImpressionShare(Double searchImpressionShare) {
         this.searchImpressionShare = searchImpressionShare;
         return this;
@@ -645,6 +702,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchRankLostAbsoluteTopImpressionShare")
     public Double searchRankLostAbsoluteTopImpressionShare;
+
     public GoogleAdsSearchads360V0CommonMetrics withSearchRankLostAbsoluteTopImpressionShare(Double searchRankLostAbsoluteTopImpressionShare) {
         this.searchRankLostAbsoluteTopImpressionShare = searchRankLostAbsoluteTopImpressionShare;
         return this;
@@ -656,6 +714,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchRankLostImpressionShare")
     public Double searchRankLostImpressionShare;
+
     public GoogleAdsSearchads360V0CommonMetrics withSearchRankLostImpressionShare(Double searchRankLostImpressionShare) {
         this.searchRankLostImpressionShare = searchRankLostImpressionShare;
         return this;
@@ -667,6 +726,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchRankLostTopImpressionShare")
     public Double searchRankLostTopImpressionShare;
+
     public GoogleAdsSearchads360V0CommonMetrics withSearchRankLostTopImpressionShare(Double searchRankLostTopImpressionShare) {
         this.searchRankLostTopImpressionShare = searchRankLostTopImpressionShare;
         return this;
@@ -678,6 +738,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchTopImpressionShare")
     public Double searchTopImpressionShare;
+
     public GoogleAdsSearchads360V0CommonMetrics withSearchTopImpressionShare(Double searchTopImpressionShare) {
         this.searchTopImpressionShare = searchTopImpressionShare;
         return this;
@@ -689,6 +750,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topImpressionPercentage")
     public Double topImpressionPercentage;
+
     public GoogleAdsSearchads360V0CommonMetrics withTopImpressionPercentage(Double topImpressionPercentage) {
         this.topImpressionPercentage = topImpressionPercentage;
         return this;
@@ -700,6 +762,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valuePerAllConversions")
     public Double valuePerAllConversions;
+
     public GoogleAdsSearchads360V0CommonMetrics withValuePerAllConversions(Double valuePerAllConversions) {
         this.valuePerAllConversions = valuePerAllConversions;
         return this;
@@ -711,6 +774,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valuePerAllConversionsByConversionDate")
     public Double valuePerAllConversionsByConversionDate;
+
     public GoogleAdsSearchads360V0CommonMetrics withValuePerAllConversionsByConversionDate(Double valuePerAllConversionsByConversionDate) {
         this.valuePerAllConversionsByConversionDate = valuePerAllConversionsByConversionDate;
         return this;
@@ -722,6 +786,7 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valuePerConversion")
     public Double valuePerConversion;
+
     public GoogleAdsSearchads360V0CommonMetrics withValuePerConversion(Double valuePerConversion) {
         this.valuePerConversion = valuePerConversion;
         return this;
@@ -733,9 +798,23 @@ public class GoogleAdsSearchads360V0CommonMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valuePerConversionsByConversionDate")
     public Double valuePerConversionsByConversionDate;
+
     public GoogleAdsSearchads360V0CommonMetrics withValuePerConversionsByConversionDate(Double valuePerConversionsByConversionDate) {
         this.valuePerConversionsByConversionDate = valuePerConversionsByConversionDate;
         return this;
     }
     
+    /**
+     * Clicks that Search Ads 360 has successfully recorded and forwarded to an advertiser's landing page.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("visits")
+    public Double visits;
+
+    public GoogleAdsSearchads360V0CommonMetrics withVisits(Double visits) {
+        this.visits = visits;
+        return this;
+    }
+    
+    public GoogleAdsSearchads360V0CommonMetrics(){}
 }

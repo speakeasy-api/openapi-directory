@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetVendorRequest {
@@ -12,6 +13,7 @@ public class Destiny2GetVendorRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=characterId")
     public Long characterId;
+
     public Destiny2GetVendorRequest withCharacterId(Long characterId) {
         this.characterId = characterId;
         return this;
@@ -22,6 +24,7 @@ public class Destiny2GetVendorRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=components")
     public Integer[] components;
+
     public Destiny2GetVendorRequest withComponents(Integer[] components) {
         this.components = components;
         return this;
@@ -32,6 +35,7 @@ public class Destiny2GetVendorRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinyMembershipId")
     public Long destinyMembershipId;
+
     public Destiny2GetVendorRequest withDestinyMembershipId(Long destinyMembershipId) {
         this.destinyMembershipId = destinyMembershipId;
         return this;
@@ -42,6 +46,7 @@ public class Destiny2GetVendorRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
     public Integer membershipType;
+
     public Destiny2GetVendorRequest withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
@@ -52,9 +57,16 @@ public class Destiny2GetVendorRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vendorHash")
     public Long vendorHash;
+
     public Destiny2GetVendorRequest withVendorHash(Long vendorHash) {
         this.vendorHash = vendorHash;
         return this;
     }
     
+    public Destiny2GetVendorRequest(@JsonProperty("characterId") Long characterId, @JsonProperty("destinyMembershipId") Long destinyMembershipId, @JsonProperty("membershipType") Integer membershipType, @JsonProperty("vendorHash") Long vendorHash) {
+        this.characterId = characterId;
+        this.destinyMembershipId = destinyMembershipId;
+        this.membershipType = membershipType;
+        this.vendorHash = vendorHash;
+  }
 }

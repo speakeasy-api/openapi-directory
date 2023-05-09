@@ -14,6 +14,7 @@ public class UpdateAllowListRequestBody {
      */
     @JsonProperty("criteria")
     public UpdateAllowListRequestBodyCriteria criteria;
+
     public UpdateAllowListRequestBody withCriteria(UpdateAllowListRequestBodyCriteria criteria) {
         this.criteria = criteria;
         return this;
@@ -25,6 +26,7 @@ public class UpdateAllowListRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateAllowListRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -35,9 +37,14 @@ public class UpdateAllowListRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public UpdateAllowListRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateAllowListRequestBody(@JsonProperty("criteria") UpdateAllowListRequestBodyCriteria criteria, @JsonProperty("name") String name) {
+        this.criteria = criteria;
+        this.name = name;
+  }
 }

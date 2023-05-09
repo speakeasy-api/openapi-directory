@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetServiceTemplateInput {
     @JsonProperty("name")
     public String name;
+
     public GetServiceTemplateInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetServiceTemplateInput(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

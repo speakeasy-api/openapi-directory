@@ -15,9 +15,11 @@ public class BatchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actions")
     public BatchRequestAction[] actions;
+
     public BatchRequest withActions(BatchRequestAction[] actions) {
         this.actions = actions;
         return this;
     }
     
+    public BatchRequest(){}
 }

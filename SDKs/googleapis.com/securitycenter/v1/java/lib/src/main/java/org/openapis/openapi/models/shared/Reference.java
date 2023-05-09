@@ -18,6 +18,7 @@ public class Reference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public Reference withSource(String source) {
         this.source = source;
         return this;
@@ -29,9 +30,11 @@ public class Reference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public Reference withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public Reference(){}
 }

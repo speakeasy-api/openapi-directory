@@ -15,6 +15,7 @@ public class BiEngineStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accelerationMode")
     public String accelerationMode;
+
     public BiEngineStatistics withAccelerationMode(String accelerationMode) {
         this.accelerationMode = accelerationMode;
         return this;
@@ -26,6 +27,7 @@ public class BiEngineStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("biEngineMode")
     public String biEngineMode;
+
     public BiEngineStatistics withBiEngineMode(String biEngineMode) {
         this.biEngineMode = biEngineMode;
         return this;
@@ -37,9 +39,11 @@ public class BiEngineStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("biEngineReasons")
     public BiEngineReason[] biEngineReasons;
+
     public BiEngineStatistics withBiEngineReasons(BiEngineReason[] biEngineReasons) {
         this.biEngineReasons = biEngineReasons;
         return this;
     }
     
+    public BiEngineStatistics(){}
 }

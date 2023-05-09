@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetDataQualityResultRequest {
     @JsonProperty("ResultIds")
     public String[] resultIds;
+
     public BatchGetDataQualityResultRequest withResultIds(String[] resultIds) {
         this.resultIds = resultIds;
         return this;
     }
     
+    public BatchGetDataQualityResultRequest(@JsonProperty("ResultIds") String[] resultIds) {
+        this.resultIds = resultIds;
+  }
 }

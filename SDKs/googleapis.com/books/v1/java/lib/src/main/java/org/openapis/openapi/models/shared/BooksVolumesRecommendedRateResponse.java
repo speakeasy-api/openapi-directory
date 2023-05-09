@@ -15,9 +15,11 @@ public class BooksVolumesRecommendedRateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consistency_token")
     public String consistencyToken;
+
     public BooksVolumesRecommendedRateResponse withConsistencyToken(String consistencyToken) {
         this.consistencyToken = consistencyToken;
         return this;
     }
     
+    public BooksVolumesRecommendedRateResponse(){}
 }

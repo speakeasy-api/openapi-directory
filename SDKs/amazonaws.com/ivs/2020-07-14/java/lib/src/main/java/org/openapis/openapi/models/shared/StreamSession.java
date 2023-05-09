@@ -20,6 +20,7 @@ public class StreamSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
     public Channel channel;
+
     public StreamSession withChannel(Channel channel) {
         this.channel = channel;
         return this;
@@ -30,6 +31,7 @@ public class StreamSession {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public StreamSession withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -38,6 +40,7 @@ public class StreamSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ingestConfiguration")
     public IngestConfiguration ingestConfiguration;
+
     public StreamSession withIngestConfiguration(IngestConfiguration ingestConfiguration) {
         this.ingestConfiguration = ingestConfiguration;
         return this;
@@ -46,6 +49,7 @@ public class StreamSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recordingConfiguration")
     public RecordingConfiguration recordingConfiguration;
+
     public StreamSession withRecordingConfiguration(RecordingConfiguration recordingConfiguration) {
         this.recordingConfiguration = recordingConfiguration;
         return this;
@@ -56,6 +60,7 @@ public class StreamSession {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public StreamSession withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -64,6 +69,7 @@ public class StreamSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamId")
     public String streamId;
+
     public StreamSession withStreamId(String streamId) {
         this.streamId = streamId;
         return this;
@@ -72,9 +78,11 @@ public class StreamSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("truncatedEvents")
     public StreamEvent[] truncatedEvents;
+
     public StreamSession withTruncatedEvents(StreamEvent[] truncatedEvents) {
         this.truncatedEvents = truncatedEvents;
         return this;
     }
     
+    public StreamSession(){}
 }

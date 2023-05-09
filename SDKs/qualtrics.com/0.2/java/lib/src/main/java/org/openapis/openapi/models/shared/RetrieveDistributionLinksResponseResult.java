@@ -12,6 +12,7 @@ public class RetrieveDistributionLinksResponseResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elements")
     public RetrieveDistributionLinksResponseResultElements[] elements;
+
     public RetrieveDistributionLinksResponseResult withElements(RetrieveDistributionLinksResponseResultElements[] elements) {
         this.elements = elements;
         return this;
@@ -20,9 +21,11 @@ public class RetrieveDistributionLinksResponseResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPage")
     public Object nextPage;
+
     public RetrieveDistributionLinksResponseResult withNextPage(Object nextPage) {
         this.nextPage = nextPage;
         return this;
     }
     
+    public RetrieveDistributionLinksResponseResult(){}
 }

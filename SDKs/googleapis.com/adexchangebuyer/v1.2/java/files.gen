@@ -63,4 +63,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/CreativeFilteringReasonsRea
 lib/src/main/java/org/openapis/openapi/models/shared/CreativeFilteringReasons.java
 lib/src/main/java/org/openapis/openapi/models/shared/Creative.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreativesList.java
+docs/sdk/README.md
+docs/accounts/README.md
+docs/creatives/README.md
 USAGE.md

@@ -15,6 +15,7 @@ public class CreateFileSystemRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZoneName")
     public String availabilityZoneName;
+
     public CreateFileSystemRequestBody withAvailabilityZoneName(String availabilityZoneName) {
         this.availabilityZoneName = availabilityZoneName;
         return this;
@@ -26,6 +27,7 @@ public class CreateFileSystemRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Backup")
     public Boolean backup;
+
     public CreateFileSystemRequestBody withBackup(Boolean backup) {
         this.backup = backup;
         return this;
@@ -36,6 +38,7 @@ public class CreateFileSystemRequestBody {
      */
     @JsonProperty("CreationToken")
     public String creationToken;
+
     public CreateFileSystemRequestBody withCreationToken(String creationToken) {
         this.creationToken = creationToken;
         return this;
@@ -47,6 +50,7 @@ public class CreateFileSystemRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Encrypted")
     public Boolean encrypted;
+
     public CreateFileSystemRequestBody withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -58,6 +62,7 @@ public class CreateFileSystemRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public CreateFileSystemRequestBody withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -69,6 +74,7 @@ public class CreateFileSystemRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PerformanceMode")
     public CreateFileSystemRequestBodyPerformanceModeEnum performanceMode;
+
     public CreateFileSystemRequestBody withPerformanceMode(CreateFileSystemRequestBodyPerformanceModeEnum performanceMode) {
         this.performanceMode = performanceMode;
         return this;
@@ -80,6 +86,7 @@ public class CreateFileSystemRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedThroughputInMibps")
     public Double provisionedThroughputInMibps;
+
     public CreateFileSystemRequestBody withProvisionedThroughputInMibps(Double provisionedThroughputInMibps) {
         this.provisionedThroughputInMibps = provisionedThroughputInMibps;
         return this;
@@ -91,6 +98,7 @@ public class CreateFileSystemRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateFileSystemRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
@@ -102,9 +110,13 @@ public class CreateFileSystemRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThroughputMode")
     public CreateFileSystemRequestBodyThroughputModeEnum throughputMode;
+
     public CreateFileSystemRequestBody withThroughputMode(CreateFileSystemRequestBodyThroughputModeEnum throughputMode) {
         this.throughputMode = throughputMode;
         return this;
     }
     
+    public CreateFileSystemRequestBody(@JsonProperty("CreationToken") String creationToken) {
+        this.creationToken = creationToken;
+  }
 }

@@ -15,6 +15,7 @@ public class ListTrustStoresResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListTrustStoresResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListTrustStoresResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trustStores")
     public TrustStoreSummary[] trustStores;
+
     public ListTrustStoresResponse withTrustStores(TrustStoreSummary[] trustStores) {
         this.trustStores = trustStores;
         return this;
     }
     
+    public ListTrustStoresResponse(){}
 }

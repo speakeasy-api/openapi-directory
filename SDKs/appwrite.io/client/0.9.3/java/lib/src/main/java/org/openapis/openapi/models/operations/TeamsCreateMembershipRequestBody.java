@@ -14,6 +14,7 @@ public class TeamsCreateMembershipRequestBody {
      */
     @JsonProperty("email")
     public String email;
+
     public TeamsCreateMembershipRequestBody withEmail(String email) {
         this.email = email;
         return this;
@@ -25,6 +26,7 @@ public class TeamsCreateMembershipRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TeamsCreateMembershipRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -35,6 +37,7 @@ public class TeamsCreateMembershipRequestBody {
      */
     @JsonProperty("roles")
     public String[] roles;
+
     public TeamsCreateMembershipRequestBody withRoles(String[] roles) {
         this.roles = roles;
         return this;
@@ -45,9 +48,15 @@ public class TeamsCreateMembershipRequestBody {
      */
     @JsonProperty("url")
     public String url;
+
     public TeamsCreateMembershipRequestBody withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public TeamsCreateMembershipRequestBody(@JsonProperty("email") String email, @JsonProperty("roles") String[] roles, @JsonProperty("url") String url) {
+        this.email = email;
+        this.roles = roles;
+        this.url = url;
+  }
 }

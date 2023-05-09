@@ -15,6 +15,7 @@ public class BatchDetectSentimentItemResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Index")
     public Long index;
+
     public BatchDetectSentimentItemResult withIndex(Long index) {
         this.index = index;
         return this;
@@ -23,6 +24,7 @@ public class BatchDetectSentimentItemResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sentiment")
     public SentimentTypeEnum sentiment;
+
     public BatchDetectSentimentItemResult withSentiment(SentimentTypeEnum sentiment) {
         this.sentiment = sentiment;
         return this;
@@ -31,9 +33,11 @@ public class BatchDetectSentimentItemResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SentimentScore")
     public SentimentScore sentimentScore;
+
     public BatchDetectSentimentItemResult withSentimentScore(SentimentScore sentimentScore) {
         this.sentimentScore = sentimentScore;
         return this;
     }
     
+    public BatchDetectSentimentItemResult(){}
 }

@@ -18,6 +18,7 @@ public class RevisionCheckResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiVersion")
     public String apiVersion;
+
     public RevisionCheckResponse withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -29,6 +30,7 @@ public class RevisionCheckResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public RevisionCheckResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class RevisionCheckResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionStatus")
     public RevisionCheckResponseRevisionStatusEnum revisionStatus;
+
     public RevisionCheckResponse withRevisionStatus(RevisionCheckResponseRevisionStatusEnum revisionStatus) {
         this.revisionStatus = revisionStatus;
         return this;
     }
     
+    public RevisionCheckResponse(){}
 }

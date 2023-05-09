@@ -20,6 +20,7 @@ public class UsageDailySnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api_usage_available")
     public Boolean apiUsageAvailable;
+
     public UsageDailySnapshotEntity withApiUsageAvailable(Boolean apiUsageAvailable) {
         this.apiUsageAvailable = apiUsageAvailable;
         return this;
@@ -31,6 +32,7 @@ public class UsageDailySnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_storage")
     public Integer currentStorage;
+
     public UsageDailySnapshotEntity withCurrentStorage(Integer currentStorage) {
         this.currentStorage = currentStorage;
         return this;
@@ -43,6 +45,7 @@ public class UsageDailySnapshotEntity {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("date")
     public LocalDate date;
+
     public UsageDailySnapshotEntity withDate(LocalDate date) {
         this.date = date;
         return this;
@@ -54,6 +57,7 @@ public class UsageDailySnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted_files_counted_in_minimum")
     public Integer deletedFilesCountedInMinimum;
+
     public UsageDailySnapshotEntity withDeletedFilesCountedInMinimum(Integer deletedFilesCountedInMinimum) {
         this.deletedFilesCountedInMinimum = deletedFilesCountedInMinimum;
         return this;
@@ -65,6 +69,7 @@ public class UsageDailySnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted_files_storage")
     public Integer deletedFilesStorage;
+
     public UsageDailySnapshotEntity withDeletedFilesStorage(Integer deletedFilesStorage) {
         this.deletedFilesStorage = deletedFilesStorage;
         return this;
@@ -76,6 +81,7 @@ public class UsageDailySnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public UsageDailySnapshotEntity withId(Integer id) {
         this.id = id;
         return this;
@@ -87,6 +93,7 @@ public class UsageDailySnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("read_api_usage")
     public Integer readApiUsage;
+
     public UsageDailySnapshotEntity withReadApiUsage(Integer readApiUsage) {
         this.readApiUsage = readApiUsage;
         return this;
@@ -98,6 +105,7 @@ public class UsageDailySnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("root_storage")
     public Integer rootStorage;
+
     public UsageDailySnapshotEntity withRootStorage(Integer rootStorage) {
         this.rootStorage = rootStorage;
         return this;
@@ -109,6 +117,7 @@ public class UsageDailySnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage_by_top_level_dir")
     public java.util.Map<String, Object> usageByTopLevelDir;
+
     public UsageDailySnapshotEntity withUsageByTopLevelDir(java.util.Map<String, Object> usageByTopLevelDir) {
         this.usageByTopLevelDir = usageByTopLevelDir;
         return this;
@@ -120,6 +129,7 @@ public class UsageDailySnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_count")
     public Integer userCount;
+
     public UsageDailySnapshotEntity withUserCount(Integer userCount) {
         this.userCount = userCount;
         return this;
@@ -131,9 +141,11 @@ public class UsageDailySnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("write_api_usage")
     public Integer writeApiUsage;
+
     public UsageDailySnapshotEntity withWriteApiUsage(Integer writeApiUsage) {
         this.writeApiUsage = writeApiUsage;
         return this;
     }
     
+    public UsageDailySnapshotEntity(){}
 }

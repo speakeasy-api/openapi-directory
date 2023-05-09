@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateRoleRequest {
     
     public String assumeRolePolicyDocument;
+
     public CreateRoleRequest withAssumeRolePolicyDocument(String assumeRolePolicyDocument) {
         this.assumeRolePolicyDocument = assumeRolePolicyDocument;
         return this;
@@ -16,6 +17,7 @@ public class CreateRoleRequest {
     
     
     public String description;
+
     public CreateRoleRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +25,7 @@ public class CreateRoleRequest {
     
     
     public Long maxSessionDuration;
+
     public CreateRoleRequest withMaxSessionDuration(Long maxSessionDuration) {
         this.maxSessionDuration = maxSessionDuration;
         return this;
@@ -30,6 +33,7 @@ public class CreateRoleRequest {
     
     
     public String path;
+
     public CreateRoleRequest withPath(String path) {
         this.path = path;
         return this;
@@ -37,6 +41,7 @@ public class CreateRoleRequest {
     
     
     public String permissionsBoundary;
+
     public CreateRoleRequest withPermissionsBoundary(String permissionsBoundary) {
         this.permissionsBoundary = permissionsBoundary;
         return this;
@@ -44,6 +49,7 @@ public class CreateRoleRequest {
     
     
     public String roleName;
+
     public CreateRoleRequest withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
@@ -51,9 +57,14 @@ public class CreateRoleRequest {
     
     
     public Tag[] tags;
+
     public CreateRoleRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateRoleRequest(@JsonProperty("AssumeRolePolicyDocument") String assumeRolePolicyDocument, @JsonProperty("RoleName") String roleName) {
+        this.assumeRolePolicyDocument = assumeRolePolicyDocument;
+        this.roleName = roleName;
+  }
 }

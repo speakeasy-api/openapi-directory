@@ -12,9 +12,11 @@ public class SeldonMessageList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seldonMessages")
     public SeldonMessage[] seldonMessages;
+
     public SeldonMessageList withSeldonMessages(SeldonMessage[] seldonMessages) {
         this.seldonMessages = seldonMessages;
         return this;
     }
     
+    public SeldonMessageList(){}
 }

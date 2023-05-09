@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TravelTimeGetCompareOverlayRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=compareType")
     public String compareType;
+
     public TravelTimeGetCompareOverlayRequest withCompareType(String compareType) {
         this.compareType = compareType;
         return this;
@@ -16,6 +18,7 @@ public class TravelTimeGetCompareOverlayRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=compareValue")
     public String compareValue;
+
     public TravelTimeGetCompareOverlayRequest withCompareValue(String compareValue) {
         this.compareValue = compareValue;
         return this;
@@ -26,6 +29,7 @@ public class TravelTimeGetCompareOverlayRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public TravelTimeGetCompareOverlayDirectionEnum direction;
+
     public TravelTimeGetCompareOverlayRequest withDirection(TravelTimeGetCompareOverlayDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -36,6 +40,7 @@ public class TravelTimeGetCompareOverlayRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=height")
     public Integer height;
+
     public TravelTimeGetCompareOverlayRequest withHeight(Integer height) {
         this.height = height;
         return this;
@@ -46,6 +51,7 @@ public class TravelTimeGetCompareOverlayRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mapCenterLat")
     public Double mapCenterLat;
+
     public TravelTimeGetCompareOverlayRequest withMapCenterLat(Double mapCenterLat) {
         this.mapCenterLat = mapCenterLat;
         return this;
@@ -56,6 +62,7 @@ public class TravelTimeGetCompareOverlayRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mapCenterLon")
     public Double mapCenterLon;
+
     public TravelTimeGetCompareOverlayRequest withMapCenterLon(Double mapCenterLon) {
         this.mapCenterLon = mapCenterLon;
         return this;
@@ -66,6 +73,7 @@ public class TravelTimeGetCompareOverlayRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modeId")
     public String modeId;
+
     public TravelTimeGetCompareOverlayRequest withModeId(String modeId) {
         this.modeId = modeId;
         return this;
@@ -76,6 +84,7 @@ public class TravelTimeGetCompareOverlayRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pinLat")
     public Double pinLat;
+
     public TravelTimeGetCompareOverlayRequest withPinLat(Double pinLat) {
         this.pinLat = pinLat;
         return this;
@@ -86,6 +95,7 @@ public class TravelTimeGetCompareOverlayRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pinLon")
     public Double pinLon;
+
     public TravelTimeGetCompareOverlayRequest withPinLon(Double pinLon) {
         this.pinLon = pinLon;
         return this;
@@ -96,6 +106,7 @@ public class TravelTimeGetCompareOverlayRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scenarioTitle")
     public String scenarioTitle;
+
     public TravelTimeGetCompareOverlayRequest withScenarioTitle(String scenarioTitle) {
         this.scenarioTitle = scenarioTitle;
         return this;
@@ -106,6 +117,7 @@ public class TravelTimeGetCompareOverlayRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeOfDayId")
     public String timeOfDayId;
+
     public TravelTimeGetCompareOverlayRequest withTimeOfDayId(String timeOfDayId) {
         this.timeOfDayId = timeOfDayId;
         return this;
@@ -116,6 +128,7 @@ public class TravelTimeGetCompareOverlayRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=travelTimeInterval")
     public Integer travelTimeInterval;
+
     public TravelTimeGetCompareOverlayRequest withTravelTimeInterval(Integer travelTimeInterval) {
         this.travelTimeInterval = travelTimeInterval;
         return this;
@@ -126,6 +139,7 @@ public class TravelTimeGetCompareOverlayRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=width")
     public Integer width;
+
     public TravelTimeGetCompareOverlayRequest withWidth(Integer width) {
         this.width = width;
         return this;
@@ -136,9 +150,26 @@ public class TravelTimeGetCompareOverlayRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=z")
     public Integer z;
+
     public TravelTimeGetCompareOverlayRequest withZ(Integer z) {
         this.z = z;
         return this;
     }
     
+    public TravelTimeGetCompareOverlayRequest(@JsonProperty("compareType") String compareType, @JsonProperty("compareValue") String compareValue, @JsonProperty("direction") TravelTimeGetCompareOverlayDirectionEnum direction, @JsonProperty("height") Integer height, @JsonProperty("mapCenterLat") Double mapCenterLat, @JsonProperty("mapCenterLon") Double mapCenterLon, @JsonProperty("modeId") String modeId, @JsonProperty("pinLat") Double pinLat, @JsonProperty("pinLon") Double pinLon, @JsonProperty("scenarioTitle") String scenarioTitle, @JsonProperty("timeOfDayId") String timeOfDayId, @JsonProperty("travelTimeInterval") Integer travelTimeInterval, @JsonProperty("width") Integer width, @JsonProperty("z") Integer z) {
+        this.compareType = compareType;
+        this.compareValue = compareValue;
+        this.direction = direction;
+        this.height = height;
+        this.mapCenterLat = mapCenterLat;
+        this.mapCenterLon = mapCenterLon;
+        this.modeId = modeId;
+        this.pinLat = pinLat;
+        this.pinLon = pinLon;
+        this.scenarioTitle = scenarioTitle;
+        this.timeOfDayId = timeOfDayId;
+        this.travelTimeInterval = travelTimeInterval;
+        this.width = width;
+        this.z = z;
+  }
 }

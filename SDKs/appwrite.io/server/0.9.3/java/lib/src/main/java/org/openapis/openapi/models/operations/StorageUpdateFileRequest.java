@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageUpdateFileRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public StorageUpdateFileRequestBody requestBody;
+
     public StorageUpdateFileRequest withRequestBody(StorageUpdateFileRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class StorageUpdateFileRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
     public String fileId;
+
     public StorageUpdateFileRequest withFileId(String fileId) {
         this.fileId = fileId;
         return this;
     }
     
+    public StorageUpdateFileRequest(@JsonProperty("fileId") String fileId) {
+        this.fileId = fileId;
+  }
 }

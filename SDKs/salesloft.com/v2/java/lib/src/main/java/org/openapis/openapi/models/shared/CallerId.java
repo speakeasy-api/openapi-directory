@@ -12,6 +12,7 @@ public class CallerId {
      */
     
     public String accountName;
+
     public CallerId withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -22,6 +23,7 @@ public class CallerId {
      */
     
     public String displayName;
+
     public CallerId withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +31,7 @@ public class CallerId {
     
     
     public EmbeddedResource person;
+
     public CallerId withPerson(EmbeddedResource person) {
         this.person = person;
         return this;
@@ -39,9 +42,11 @@ public class CallerId {
      */
     
     public String title;
+
     public CallerId withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public CallerId(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeReservedNodeExchangeStatusRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeReservedNodeExchangeStatusActionEnum action;
+
     public GETDescribeReservedNodeExchangeStatusRequest withAction(GETDescribeReservedNodeExchangeStatusActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDescribeReservedNodeExchangeStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public GETDescribeReservedNodeExchangeStatusRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -29,6 +32,7 @@ public class GETDescribeReservedNodeExchangeStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
     public Long maxRecords;
+
     public GETDescribeReservedNodeExchangeStatusRequest withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -39,6 +43,7 @@ public class GETDescribeReservedNodeExchangeStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReservedNodeExchangeRequestId")
     public String reservedNodeExchangeRequestId;
+
     public GETDescribeReservedNodeExchangeStatusRequest withReservedNodeExchangeRequestId(String reservedNodeExchangeRequestId) {
         this.reservedNodeExchangeRequestId = reservedNodeExchangeRequestId;
         return this;
@@ -49,6 +54,7 @@ public class GETDescribeReservedNodeExchangeStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReservedNodeId")
     public String reservedNodeId;
+
     public GETDescribeReservedNodeExchangeStatusRequest withReservedNodeId(String reservedNodeId) {
         this.reservedNodeId = reservedNodeId;
         return this;
@@ -56,6 +62,7 @@ public class GETDescribeReservedNodeExchangeStatusRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeReservedNodeExchangeStatusVersionEnum version;
+
     public GETDescribeReservedNodeExchangeStatusRequest withVersion(GETDescribeReservedNodeExchangeStatusVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETDescribeReservedNodeExchangeStatusRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeReservedNodeExchangeStatusRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETDescribeReservedNodeExchangeStatusRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeReservedNodeExchangeStatusRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETDescribeReservedNodeExchangeStatusRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeReservedNodeExchangeStatusRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETDescribeReservedNodeExchangeStatusRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeReservedNodeExchangeStatusRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETDescribeReservedNodeExchangeStatusRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeReservedNodeExchangeStatusRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETDescribeReservedNodeExchangeStatusRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeReservedNodeExchangeStatusRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,14 @@ public class GETDescribeReservedNodeExchangeStatusRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeReservedNodeExchangeStatusRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeReservedNodeExchangeStatusRequest(@JsonProperty("Action") GETDescribeReservedNodeExchangeStatusActionEnum action, @JsonProperty("Version") GETDescribeReservedNodeExchangeStatusVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

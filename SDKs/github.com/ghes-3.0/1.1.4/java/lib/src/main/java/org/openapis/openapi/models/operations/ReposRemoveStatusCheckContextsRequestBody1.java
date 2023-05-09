@@ -12,9 +12,13 @@ public class ReposRemoveStatusCheckContextsRequestBody1 {
      */
     @JsonProperty("contexts")
     public String[] contexts;
+
     public ReposRemoveStatusCheckContextsRequestBody1 withContexts(String[] contexts) {
         this.contexts = contexts;
         return this;
     }
     
+    public ReposRemoveStatusCheckContextsRequestBody1(@JsonProperty("contexts") String[] contexts) {
+        this.contexts = contexts;
+  }
 }

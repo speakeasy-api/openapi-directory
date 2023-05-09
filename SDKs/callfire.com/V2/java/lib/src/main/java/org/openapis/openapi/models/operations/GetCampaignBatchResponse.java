@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCampaignBatchResponse {
@@ -12,6 +13,7 @@ public class GetCampaignBatchResponse {
      */
     
     public org.openapis.openapi.models.shared.Batch batch;
+
     public GetCampaignBatchResponse withBatch(org.openapis.openapi.models.shared.Batch batch) {
         this.batch = batch;
         return this;
@@ -19,6 +21,7 @@ public class GetCampaignBatchResponse {
     
     
     public String contentType;
+
     public GetCampaignBatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetCampaignBatchResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public GetCampaignBatchResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -36,6 +40,7 @@ public class GetCampaignBatchResponse {
     
     
     public Integer statusCode;
+
     public GetCampaignBatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetCampaignBatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCampaignBatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCampaignBatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

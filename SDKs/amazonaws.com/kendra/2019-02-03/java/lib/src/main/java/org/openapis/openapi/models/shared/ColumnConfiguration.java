@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ColumnConfiguration {
     @JsonProperty("ChangeDetectingColumns")
     public String[] changeDetectingColumns;
+
     public ColumnConfiguration withChangeDetectingColumns(String[] changeDetectingColumns) {
         this.changeDetectingColumns = changeDetectingColumns;
         return this;
@@ -21,6 +22,7 @@ public class ColumnConfiguration {
     
     @JsonProperty("DocumentDataColumnName")
     public String documentDataColumnName;
+
     public ColumnConfiguration withDocumentDataColumnName(String documentDataColumnName) {
         this.documentDataColumnName = documentDataColumnName;
         return this;
@@ -28,6 +30,7 @@ public class ColumnConfiguration {
     
     @JsonProperty("DocumentIdColumnName")
     public String documentIdColumnName;
+
     public ColumnConfiguration withDocumentIdColumnName(String documentIdColumnName) {
         this.documentIdColumnName = documentIdColumnName;
         return this;
@@ -36,6 +39,7 @@ public class ColumnConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentTitleColumnName")
     public String documentTitleColumnName;
+
     public ColumnConfiguration withDocumentTitleColumnName(String documentTitleColumnName) {
         this.documentTitleColumnName = documentTitleColumnName;
         return this;
@@ -44,9 +48,15 @@ public class ColumnConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldMappings")
     public DataSourceToIndexFieldMapping[] fieldMappings;
+
     public ColumnConfiguration withFieldMappings(DataSourceToIndexFieldMapping[] fieldMappings) {
         this.fieldMappings = fieldMappings;
         return this;
     }
     
+    public ColumnConfiguration(@JsonProperty("ChangeDetectingColumns") String[] changeDetectingColumns, @JsonProperty("DocumentDataColumnName") String documentDataColumnName, @JsonProperty("DocumentIdColumnName") String documentIdColumnName) {
+        this.changeDetectingColumns = changeDetectingColumns;
+        this.documentDataColumnName = documentDataColumnName;
+        this.documentIdColumnName = documentIdColumnName;
+  }
 }

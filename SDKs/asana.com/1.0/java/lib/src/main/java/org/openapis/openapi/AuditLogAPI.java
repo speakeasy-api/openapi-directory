@@ -81,12 +81,10 @@ public class AuditLogAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAuditLogEventsResponse res = new org.openapis.openapi.models.operations.GetAuditLogEventsResponse() {{
+        org.openapis.openapi.models.operations.GetAuditLogEventsResponse res = new org.openapis.openapi.models.operations.GetAuditLogEventsResponse(contentType, httpRes.statusCode()) {{
             getAuditLogEvents200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

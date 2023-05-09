@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutRetentionConfigurationRequest {
     @JsonProperty("RetentionPeriodInDays")
     public Long retentionPeriodInDays;
+
     public PutRetentionConfigurationRequest withRetentionPeriodInDays(Long retentionPeriodInDays) {
         this.retentionPeriodInDays = retentionPeriodInDays;
         return this;
     }
     
+    public PutRetentionConfigurationRequest(@JsonProperty("RetentionPeriodInDays") Long retentionPeriodInDays) {
+        this.retentionPeriodInDays = retentionPeriodInDays;
+  }
 }

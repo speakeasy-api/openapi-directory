@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PANVerificationRecordSchemaCertificateDataPANVerificationRecord {
     
     public String num;
+
     public PANVerificationRecordSchemaCertificateDataPANVerificationRecord withNum(String num) {
         this.num = num;
         return this;
@@ -16,9 +17,14 @@ public class PANVerificationRecordSchemaCertificateDataPANVerificationRecord {
     
     
     public String verifiedOn;
+
     public PANVerificationRecordSchemaCertificateDataPANVerificationRecord withVerifiedOn(String verifiedOn) {
         this.verifiedOn = verifiedOn;
         return this;
     }
     
+    public PANVerificationRecordSchemaCertificateDataPANVerificationRecord(@JsonProperty("num") String num, @JsonProperty("verifiedOn") String verifiedOn) {
+        this.num = num;
+        this.verifiedOn = verifiedOn;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetDomainDetailRequest {
     @JsonProperty("DomainName")
     public String domainName;
+
     public GetDomainDetailRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public GetDomainDetailRequest(@JsonProperty("DomainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

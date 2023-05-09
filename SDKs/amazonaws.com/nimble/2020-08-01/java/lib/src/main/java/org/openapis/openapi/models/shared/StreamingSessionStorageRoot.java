@@ -15,6 +15,7 @@ public class StreamingSessionStorageRoot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linux")
     public String linux;
+
     public StreamingSessionStorageRoot withLinux(String linux) {
         this.linux = linux;
         return this;
@@ -23,9 +24,11 @@ public class StreamingSessionStorageRoot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("windows")
     public String windows;
+
     public StreamingSessionStorageRoot withWindows(String windows) {
         this.windows = windows;
         return this;
     }
     
+    public StreamingSessionStorageRoot(){}
 }

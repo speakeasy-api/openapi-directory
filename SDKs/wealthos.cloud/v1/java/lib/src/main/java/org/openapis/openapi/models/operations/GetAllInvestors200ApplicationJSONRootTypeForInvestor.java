@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class GetAllInvestors200ApplicationJSONRootTypeForInvestor {
     @JsonProperty("address")
     public GetAllInvestors200ApplicationJSONRootTypeForInvestorAddress address;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor withAddress(GetAllInvestors200ApplicationJSONRootTypeForInvestorAddress address) {
         this.address = address;
         return this;
@@ -30,6 +31,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bank_accounts")
     public String[] bankAccounts;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor withBankAccounts(String[] bankAccounts) {
         this.bankAccounts = bankAccounts;
         return this;
@@ -40,6 +42,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestor {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -47,6 +50,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestor {
     
     @JsonProperty("date_of_birth")
     public GetAllInvestors200ApplicationJSONRootTypeForInvestorDateOfBirth dateOfBirth;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor withDateOfBirth(GetAllInvestors200ApplicationJSONRootTypeForInvestorDateOfBirth dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
@@ -55,6 +59,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dealing_status")
     public GetAllInvestors200ApplicationJSONRootTypeForInvestorDealingStatusEnum dealingStatus;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor withDealingStatus(GetAllInvestors200ApplicationJSONRootTypeForInvestorDealingStatusEnum dealingStatus) {
         this.dealingStatus = dealingStatus;
         return this;
@@ -63,6 +68,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor withEmail(String email) {
         this.email = email;
         return this;
@@ -74,6 +80,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employment_status")
     public GetAllInvestors200ApplicationJSONRootTypeForInvestorEmploymentStatusEnum employmentStatus;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor withEmploymentStatus(GetAllInvestors200ApplicationJSONRootTypeForInvestorEmploymentStatusEnum employmentStatus) {
         this.employmentStatus = employmentStatus;
         return this;
@@ -85,6 +92,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expression_of_wish")
     public GetAllInvestors200ApplicationJSONRootTypeForInvestorExpressionOfWish expressionOfWish;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor withExpressionOfWish(GetAllInvestors200ApplicationJSONRootTypeForInvestorExpressionOfWish expressionOfWish) {
         this.expressionOfWish = expressionOfWish;
         return this;
@@ -92,6 +100,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestor {
     
     @JsonProperty("first_name")
     public String firstName;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -100,6 +109,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public String gender;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor withGender(String gender) {
         this.gender = gender;
         return this;
@@ -108,6 +118,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("home_number")
     public String homeNumber;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor withHomeNumber(String homeNumber) {
         this.homeNumber = homeNumber;
         return this;
@@ -116,6 +127,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_numbers")
     public GetAllInvestors200ApplicationJSONRootTypeForInvestorIdNumbers[] idNumbers;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor withIdNumbers(GetAllInvestors200ApplicationJSONRootTypeForInvestorIdNumbers[] idNumbers) {
         this.idNumbers = idNumbers;
         return this;
@@ -123,6 +135,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestor {
     
     @JsonProperty("investor_id")
     public String investorId;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor withInvestorId(String investorId) {
         this.investorId = investorId;
         return this;
@@ -131,6 +144,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kyc_aml_status")
     public GetAllInvestors200ApplicationJSONRootTypeForInvestorKycAmlStatusEnum kycAmlStatus;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor withKycAmlStatus(GetAllInvestors200ApplicationJSONRootTypeForInvestorKycAmlStatusEnum kycAmlStatus) {
         this.kycAmlStatus = kycAmlStatus;
         return this;
@@ -141,6 +155,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestor {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("kyc_aml_status_last_updated")
     public OffsetDateTime kycAmlStatusLastUpdated;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor withKycAmlStatusLastUpdated(OffsetDateTime kycAmlStatusLastUpdated) {
         this.kycAmlStatusLastUpdated = kycAmlStatusLastUpdated;
         return this;
@@ -148,6 +163,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestor {
     
     @JsonProperty("last_name")
     public String lastName;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -159,6 +175,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lta_protection_details")
     public GetAllInvestors200ApplicationJSONRootTypeForInvestorLtaProtectionDetails[] ltaProtectionDetails;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor withLtaProtectionDetails(GetAllInvestors200ApplicationJSONRootTypeForInvestorLtaProtectionDetails[] ltaProtectionDetails) {
         this.ltaProtectionDetails = ltaProtectionDetails;
         return this;
@@ -167,6 +184,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mifid_tax_id")
     public String mifidTaxId;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor withMifidTaxId(String mifidTaxId) {
         this.mifidTaxId = mifidTaxId;
         return this;
@@ -175,6 +193,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobile_number")
     public String mobileNumber;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor withMobileNumber(String mobileNumber) {
         this.mobileNumber = mobileNumber;
         return this;
@@ -186,6 +205,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mpaa_triggered")
     public Boolean mpaaTriggered;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor withMpaaTriggered(Boolean mpaaTriggered) {
         this.mpaaTriggered = mpaaTriggered;
         return this;
@@ -197,6 +217,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mpaa_triggered_date")
     public String mpaaTriggeredDate;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor withMpaaTriggeredDate(String mpaaTriggeredDate) {
         this.mpaaTriggeredDate = mpaaTriggeredDate;
         return this;
@@ -207,6 +228,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestor {
      */
     @JsonProperty("nationality")
     public String nationality;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor withNationality(String nationality) {
         this.nationality = nationality;
         return this;
@@ -215,6 +237,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("office_number")
     public String officeNumber;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor withOfficeNumber(String officeNumber) {
         this.officeNumber = officeNumber;
         return this;
@@ -223,6 +246,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_version")
     public Long referenceVersion;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor withReferenceVersion(Long referenceVersion) {
         this.referenceVersion = referenceVersion;
         return this;
@@ -234,6 +258,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retirement_age")
     public Double retirementAge;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor withRetirementAge(Double retirementAge) {
         this.retirementAge = retirementAge;
         return this;
@@ -242,6 +267,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GetAllInvestors200ApplicationJSONRootTypeForInvestorStatusEnum status;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor withStatus(GetAllInvestors200ApplicationJSONRootTypeForInvestorStatusEnum status) {
         this.status = status;
         return this;
@@ -249,6 +275,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestor {
     
     @JsonProperty("tax_id")
     public String taxId;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor withTaxId(String taxId) {
         this.taxId = taxId;
         return this;
@@ -260,6 +287,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_residence")
     public GetAllInvestors200ApplicationJSONRootTypeForInvestorTaxResidenceEnum taxResidence;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor withTaxResidence(GetAllInvestors200ApplicationJSONRootTypeForInvestorTaxResidenceEnum taxResidence) {
         this.taxResidence = taxResidence;
         return this;
@@ -267,6 +295,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestor {
     
     @JsonProperty("tax_residency_compliant")
     public Boolean taxResidencyCompliant;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor withTaxResidencyCompliant(Boolean taxResidencyCompliant) {
         this.taxResidencyCompliant = taxResidencyCompliant;
         return this;
@@ -275,6 +304,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor withTitle(String title) {
         this.title = title;
         return this;
@@ -285,9 +315,20 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestor {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public GetAllInvestors200ApplicationJSONRootTypeForInvestor(@JsonProperty("address") GetAllInvestors200ApplicationJSONRootTypeForInvestorAddress address, @JsonProperty("date_of_birth") GetAllInvestors200ApplicationJSONRootTypeForInvestorDateOfBirth dateOfBirth, @JsonProperty("first_name") String firstName, @JsonProperty("investor_id") String investorId, @JsonProperty("last_name") String lastName, @JsonProperty("nationality") String nationality, @JsonProperty("tax_id") String taxId, @JsonProperty("tax_residency_compliant") Boolean taxResidencyCompliant) {
+        this.address = address;
+        this.dateOfBirth = dateOfBirth;
+        this.firstName = firstName;
+        this.investorId = investorId;
+        this.lastName = lastName;
+        this.nationality = nationality;
+        this.taxId = taxId;
+        this.taxResidencyCompliant = taxResidencyCompliant;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateExtendedSourceServerResponse {
@@ -12,6 +13,7 @@ public class CreateExtendedSourceServerResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateExtendedSourceServerResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateExtendedSourceServerResponse {
     
     
     public String contentType;
+
     public CreateExtendedSourceServerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateExtendedSourceServerResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateExtendedSourceServerResponse createExtendedSourceServerResponse;
+
     public CreateExtendedSourceServerResponse withCreateExtendedSourceServerResponse(org.openapis.openapi.models.shared.CreateExtendedSourceServerResponse createExtendedSourceServerResponse) {
         this.createExtendedSourceServerResponse = createExtendedSourceServerResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateExtendedSourceServerResponse {
      */
     
     public Object internalServerException;
+
     public CreateExtendedSourceServerResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CreateExtendedSourceServerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateExtendedSourceServerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CreateExtendedSourceServerResponse {
     
     
     public Integer statusCode;
+
     public CreateExtendedSourceServerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateExtendedSourceServerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateExtendedSourceServerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateExtendedSourceServerResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateExtendedSourceServerResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class CreateExtendedSourceServerResponse {
      */
     
     public Object throttlingException;
+
     public CreateExtendedSourceServerResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,6 +103,7 @@ public class CreateExtendedSourceServerResponse {
      */
     
     public Object uninitializedAccountException;
+
     public CreateExtendedSourceServerResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
@@ -103,9 +114,14 @@ public class CreateExtendedSourceServerResponse {
      */
     
     public Object validationException;
+
     public CreateExtendedSourceServerResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateExtendedSourceServerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

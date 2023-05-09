@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSensitiveDataOccurrencesResponse {
@@ -12,6 +13,7 @@ public class GetSensitiveDataOccurrencesResponse {
      */
     
     public Object accessDeniedException;
+
     public GetSensitiveDataOccurrencesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetSensitiveDataOccurrencesResponse {
     
     
     public String contentType;
+
     public GetSensitiveDataOccurrencesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetSensitiveDataOccurrencesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSensitiveDataOccurrencesResponse getSensitiveDataOccurrencesResponse;
+
     public GetSensitiveDataOccurrencesResponse withGetSensitiveDataOccurrencesResponse(org.openapis.openapi.models.shared.GetSensitiveDataOccurrencesResponse getSensitiveDataOccurrencesResponse) {
         this.getSensitiveDataOccurrencesResponse = getSensitiveDataOccurrencesResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetSensitiveDataOccurrencesResponse {
      */
     
     public Object internalServerException;
+
     public GetSensitiveDataOccurrencesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetSensitiveDataOccurrencesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetSensitiveDataOccurrencesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetSensitiveDataOccurrencesResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public GetSensitiveDataOccurrencesResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class GetSensitiveDataOccurrencesResponse {
     
     
     public Integer statusCode;
+
     public GetSensitiveDataOccurrencesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetSensitiveDataOccurrencesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSensitiveDataOccurrencesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class GetSensitiveDataOccurrencesResponse {
      */
     
     public Object throttlingException;
+
     public GetSensitiveDataOccurrencesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class GetSensitiveDataOccurrencesResponse {
      */
     
     public Object unprocessableEntityException;
+
     public GetSensitiveDataOccurrencesResponse withUnprocessableEntityException(Object unprocessableEntityException) {
         this.unprocessableEntityException = unprocessableEntityException;
         return this;
     }
     
+    public GetSensitiveDataOccurrencesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

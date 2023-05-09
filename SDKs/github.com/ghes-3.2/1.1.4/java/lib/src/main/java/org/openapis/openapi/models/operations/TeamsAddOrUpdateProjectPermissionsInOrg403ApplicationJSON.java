@@ -15,6 +15,7 @@ public class TeamsAddOrUpdateProjectPermissionsInOrg403ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentation_url")
     public String documentationUrl;
+
     public TeamsAddOrUpdateProjectPermissionsInOrg403ApplicationJSON withDocumentationUrl(String documentationUrl) {
         this.documentationUrl = documentationUrl;
         return this;
@@ -23,9 +24,11 @@ public class TeamsAddOrUpdateProjectPermissionsInOrg403ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public TeamsAddOrUpdateProjectPermissionsInOrg403ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public TeamsAddOrUpdateProjectPermissionsInOrg403ApplicationJSON(){}
 }

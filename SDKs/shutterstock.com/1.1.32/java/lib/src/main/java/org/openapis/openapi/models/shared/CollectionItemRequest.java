@@ -15,9 +15,13 @@ public class CollectionItemRequest {
      */
     @JsonProperty("items")
     public CollectionItem[] items;
+
     public CollectionItemRequest withItems(CollectionItem[] items) {
         this.items = items;
         return this;
     }
     
+    public CollectionItemRequest(@JsonProperty("items") CollectionItem[] items) {
+        this.items = items;
+  }
 }

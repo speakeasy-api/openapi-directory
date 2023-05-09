@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Ec2ReplaceRouteTableAssociationAction {
     @JsonProperty("AssociationId")
     public ActionTarget associationId;
+
     public Ec2ReplaceRouteTableAssociationAction withAssociationId(ActionTarget associationId) {
         this.associationId = associationId;
         return this;
@@ -22,6 +23,7 @@ public class Ec2ReplaceRouteTableAssociationAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Ec2ReplaceRouteTableAssociationAction withDescription(String description) {
         this.description = description;
         return this;
@@ -29,9 +31,14 @@ public class Ec2ReplaceRouteTableAssociationAction {
     
     @JsonProperty("RouteTableId")
     public ActionTarget routeTableId;
+
     public Ec2ReplaceRouteTableAssociationAction withRouteTableId(ActionTarget routeTableId) {
         this.routeTableId = routeTableId;
         return this;
     }
     
+    public Ec2ReplaceRouteTableAssociationAction(@JsonProperty("AssociationId") ActionTarget associationId, @JsonProperty("RouteTableId") ActionTarget routeTableId) {
+        this.associationId = associationId;
+        this.routeTableId = routeTableId;
+  }
 }

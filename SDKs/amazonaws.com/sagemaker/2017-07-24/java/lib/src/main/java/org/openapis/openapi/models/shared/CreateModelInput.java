@@ -12,6 +12,7 @@ public class CreateModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Containers")
     public ContainerDefinition[] containers;
+
     public CreateModelInput withContainers(ContainerDefinition[] containers) {
         this.containers = containers;
         return this;
@@ -20,6 +21,7 @@ public class CreateModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableNetworkIsolation")
     public Boolean enableNetworkIsolation;
+
     public CreateModelInput withEnableNetworkIsolation(Boolean enableNetworkIsolation) {
         this.enableNetworkIsolation = enableNetworkIsolation;
         return this;
@@ -27,6 +29,7 @@ public class CreateModelInput {
     
     @JsonProperty("ExecutionRoleArn")
     public String executionRoleArn;
+
     public CreateModelInput withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -35,6 +38,7 @@ public class CreateModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceExecutionConfig")
     public InferenceExecutionConfig inferenceExecutionConfig;
+
     public CreateModelInput withInferenceExecutionConfig(InferenceExecutionConfig inferenceExecutionConfig) {
         this.inferenceExecutionConfig = inferenceExecutionConfig;
         return this;
@@ -42,6 +46,7 @@ public class CreateModelInput {
     
     @JsonProperty("ModelName")
     public String modelName;
+
     public CreateModelInput withModelName(String modelName) {
         this.modelName = modelName;
         return this;
@@ -50,6 +55,7 @@ public class CreateModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrimaryContainer")
     public ContainerDefinition primaryContainer;
+
     public CreateModelInput withPrimaryContainer(ContainerDefinition primaryContainer) {
         this.primaryContainer = primaryContainer;
         return this;
@@ -58,6 +64,7 @@ public class CreateModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateModelInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -66,9 +73,14 @@ public class CreateModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public VpcConfig vpcConfig;
+
     public CreateModelInput withVpcConfig(VpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public CreateModelInput(@JsonProperty("ExecutionRoleArn") String executionRoleArn, @JsonProperty("ModelName") String modelName) {
+        this.executionRoleArn = executionRoleArn;
+        this.modelName = modelName;
+  }
 }

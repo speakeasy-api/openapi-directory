@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPayItemsResponse {
@@ -12,6 +13,7 @@ public class GetPayItemsResponse {
      */
     
     public org.openapis.openapi.models.shared.APIException apiException;
+
     public GetPayItemsResponse withAPIException(org.openapis.openapi.models.shared.APIException apiException) {
         this.apiException = apiException;
         return this;
@@ -19,6 +21,7 @@ public class GetPayItemsResponse {
     
     
     public String contentType;
+
     public GetPayItemsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetPayItemsResponse {
      */
     
     public org.openapis.openapi.models.shared.PayItems payItems;
+
     public GetPayItemsResponse withPayItems(org.openapis.openapi.models.shared.PayItems payItems) {
         this.payItems = payItems;
         return this;
@@ -36,6 +40,7 @@ public class GetPayItemsResponse {
     
     
     public Integer statusCode;
+
     public GetPayItemsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetPayItemsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPayItemsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPayItemsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

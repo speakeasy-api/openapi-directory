@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeAwsNetworkPerformanceMetricSubscriptionsResult {
     
     public String nextToken;
+
     public DescribeAwsNetworkPerformanceMetricSubscriptionsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class DescribeAwsNetworkPerformanceMetricSubscriptionsResult {
     
     
     public DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptions[] subscriptions;
+
     public DescribeAwsNetworkPerformanceMetricSubscriptionsResult withSubscriptions(DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptions[] subscriptions) {
         this.subscriptions = subscriptions;
         return this;
     }
     
+    public DescribeAwsNetworkPerformanceMetricSubscriptionsResult(){}
 }

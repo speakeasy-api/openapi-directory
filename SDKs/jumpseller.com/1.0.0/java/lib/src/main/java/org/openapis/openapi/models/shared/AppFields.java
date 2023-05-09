@@ -15,6 +15,7 @@ public class AppFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author")
     public String author;
+
     public AppFields withAuthor(String author) {
         this.author = author;
         return this;
@@ -26,6 +27,7 @@ public class AppFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public AppFields withCode(String code) {
         this.code = code;
         return this;
@@ -37,6 +39,7 @@ public class AppFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AppFields withDescription(String description) {
         this.description = description;
         return this;
@@ -48,6 +51,7 @@ public class AppFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("js")
     public Boolean js;
+
     public AppFields withJs(Boolean js) {
         this.js = js;
         return this;
@@ -59,6 +63,7 @@ public class AppFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AppFields withName(String name) {
         this.name = name;
         return this;
@@ -70,9 +75,11 @@ public class AppFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public String page;
+
     public AppFields withPage(String page) {
         this.page = page;
         return this;
     }
     
+    public AppFields(){}
 }

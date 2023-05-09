@@ -20,6 +20,7 @@ public class StartContinuousExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSource")
     public DataSourceEnum dataSource;
+
     public StartContinuousExportResponse withDataSource(DataSourceEnum dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -28,6 +29,7 @@ public class StartContinuousExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportId")
     public String exportId;
+
     public StartContinuousExportResponse withExportId(String exportId) {
         this.exportId = exportId;
         return this;
@@ -36,6 +38,7 @@ public class StartContinuousExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Bucket")
     public String s3Bucket;
+
     public StartContinuousExportResponse withS3Bucket(String s3Bucket) {
         this.s3Bucket = s3Bucket;
         return this;
@@ -44,6 +47,7 @@ public class StartContinuousExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaStorageConfig")
     public java.util.Map<String, String> schemaStorageConfig;
+
     public StartContinuousExportResponse withSchemaStorageConfig(java.util.Map<String, String> schemaStorageConfig) {
         this.schemaStorageConfig = schemaStorageConfig;
         return this;
@@ -54,9 +58,11 @@ public class StartContinuousExportResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public StartContinuousExportResponse withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public StartContinuousExportResponse(){}
 }

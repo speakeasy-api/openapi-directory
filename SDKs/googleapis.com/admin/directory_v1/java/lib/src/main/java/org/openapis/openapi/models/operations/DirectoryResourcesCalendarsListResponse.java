@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DirectoryResourcesCalendarsListResponse {
@@ -12,6 +13,7 @@ public class DirectoryResourcesCalendarsListResponse {
      */
     
     public org.openapis.openapi.models.shared.CalendarResources calendarResources;
+
     public DirectoryResourcesCalendarsListResponse withCalendarResources(org.openapis.openapi.models.shared.CalendarResources calendarResources) {
         this.calendarResources = calendarResources;
         return this;
@@ -19,6 +21,7 @@ public class DirectoryResourcesCalendarsListResponse {
     
     
     public String contentType;
+
     public DirectoryResourcesCalendarsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DirectoryResourcesCalendarsListResponse {
     
     
     public Integer statusCode;
+
     public DirectoryResourcesCalendarsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DirectoryResourcesCalendarsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DirectoryResourcesCalendarsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DirectoryResourcesCalendarsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

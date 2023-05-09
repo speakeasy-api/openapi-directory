@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SubDomainSetting {
     @JsonProperty("branchName")
     public String branchName;
+
     public SubDomainSetting withBranchName(String branchName) {
         this.branchName = branchName;
         return this;
@@ -19,9 +20,14 @@ public class SubDomainSetting {
     
     @JsonProperty("prefix")
     public String prefix;
+
     public SubDomainSetting withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
     
+    public SubDomainSetting(@JsonProperty("branchName") String branchName, @JsonProperty("prefix") String prefix) {
+        this.branchName = branchName;
+        this.prefix = prefix;
+  }
 }

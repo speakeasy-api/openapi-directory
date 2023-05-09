@@ -15,9 +15,11 @@ public class UpdateJourneyStateRequestBodyJourneyStateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public org.openapis.openapi.models.shared.StateEnum state;
+
     public UpdateJourneyStateRequestBodyJourneyStateRequest withState(org.openapis.openapi.models.shared.StateEnum state) {
         this.state = state;
         return this;
     }
     
+    public UpdateJourneyStateRequestBodyJourneyStateRequest(){}
 }

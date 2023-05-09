@@ -15,9 +15,13 @@ public class Jwt {
      */
     @JsonProperty("jwt")
     public String jwt;
+
     public Jwt withJwt(String jwt) {
         this.jwt = jwt;
         return this;
     }
     
+    public Jwt(@JsonProperty("jwt") String jwt) {
+        this.jwt = jwt;
+  }
 }

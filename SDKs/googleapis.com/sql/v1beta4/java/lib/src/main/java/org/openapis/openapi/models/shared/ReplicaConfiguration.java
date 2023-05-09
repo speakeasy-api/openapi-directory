@@ -18,6 +18,7 @@ public class ReplicaConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failoverTarget")
     public Boolean failoverTarget;
+
     public ReplicaConfiguration withFailoverTarget(Boolean failoverTarget) {
         this.failoverTarget = failoverTarget;
         return this;
@@ -29,6 +30,7 @@ public class ReplicaConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ReplicaConfiguration withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class ReplicaConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mysqlReplicaConfiguration")
     public MySqlReplicaConfiguration mysqlReplicaConfiguration;
+
     public ReplicaConfiguration withMysqlReplicaConfiguration(MySqlReplicaConfiguration mysqlReplicaConfiguration) {
         this.mysqlReplicaConfiguration = mysqlReplicaConfiguration;
         return this;
     }
     
+    public ReplicaConfiguration(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RenameCategoryRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.RenameCategoryRequest renameCategoryRequest;
+
     public RenameCategoryRequest withRenameCategoryRequest(org.openapis.openapi.models.shared.RenameCategoryRequest renameCategoryRequest) {
         this.renameCategoryRequest = renameCategoryRequest;
         return this;
@@ -16,6 +18,7 @@ public class RenameCategoryRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=categoryUuid")
     public String categoryUuid;
+
     public RenameCategoryRequest withCategoryUuid(String categoryUuid) {
         this.categoryUuid = categoryUuid;
         return this;
@@ -23,9 +26,15 @@ public class RenameCategoryRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationUuid")
     public String organizationUuid;
+
     public RenameCategoryRequest withOrganizationUuid(String organizationUuid) {
         this.organizationUuid = organizationUuid;
         return this;
     }
     
+    public RenameCategoryRequest(@JsonProperty("RenameCategoryRequest") org.openapis.openapi.models.shared.RenameCategoryRequest renameCategoryRequest, @JsonProperty("categoryUuid") String categoryUuid, @JsonProperty("organizationUuid") String organizationUuid) {
+        this.renameCategoryRequest = renameCategoryRequest;
+        this.categoryUuid = categoryUuid;
+        this.organizationUuid = organizationUuid;
+  }
 }

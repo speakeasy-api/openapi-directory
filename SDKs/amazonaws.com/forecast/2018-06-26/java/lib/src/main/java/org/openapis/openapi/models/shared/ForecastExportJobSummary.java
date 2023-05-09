@@ -22,6 +22,7 @@ public class ForecastExportJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public ForecastExportJobSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class ForecastExportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Destination")
     public DataDestination destination;
+
     public ForecastExportJobSummary withDestination(DataDestination destination) {
         this.destination = destination;
         return this;
@@ -38,6 +40,7 @@ public class ForecastExportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastExportJobArn")
     public String forecastExportJobArn;
+
     public ForecastExportJobSummary withForecastExportJobArn(String forecastExportJobArn) {
         this.forecastExportJobArn = forecastExportJobArn;
         return this;
@@ -46,6 +49,7 @@ public class ForecastExportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastExportJobName")
     public String forecastExportJobName;
+
     public ForecastExportJobSummary withForecastExportJobName(String forecastExportJobName) {
         this.forecastExportJobName = forecastExportJobName;
         return this;
@@ -56,6 +60,7 @@ public class ForecastExportJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationTime")
     public OffsetDateTime lastModificationTime;
+
     public ForecastExportJobSummary withLastModificationTime(OffsetDateTime lastModificationTime) {
         this.lastModificationTime = lastModificationTime;
         return this;
@@ -64,6 +69,7 @@ public class ForecastExportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public ForecastExportJobSummary withMessage(String message) {
         this.message = message;
         return this;
@@ -72,9 +78,11 @@ public class ForecastExportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public ForecastExportJobSummary withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ForecastExportJobSummary(){}
 }

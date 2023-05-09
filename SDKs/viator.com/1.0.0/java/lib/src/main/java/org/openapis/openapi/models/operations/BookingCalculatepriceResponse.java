@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BookingCalculatepriceResponse {
     
     public String contentType;
+
     public BookingCalculatepriceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class BookingCalculatepriceResponse {
     
     
     public Integer statusCode;
+
     public BookingCalculatepriceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class BookingCalculatepriceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BookingCalculatepriceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class BookingCalculatepriceResponse {
      */
     
     public BookingCalculateprice200ApplicationJSON bookingCalculateprice200ApplicationJSONObject;
+
     public BookingCalculatepriceResponse withBookingCalculateprice200ApplicationJSONObject(BookingCalculateprice200ApplicationJSON bookingCalculateprice200ApplicationJSONObject) {
         this.bookingCalculateprice200ApplicationJSONObject = bookingCalculateprice200ApplicationJSONObject;
         return this;
     }
     
+    public BookingCalculatepriceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

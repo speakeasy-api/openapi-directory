@@ -15,6 +15,7 @@ public class RejectGrantResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GrantArn")
     public String grantArn;
+
     public RejectGrantResponse withGrantArn(String grantArn) {
         this.grantArn = grantArn;
         return this;
@@ -23,6 +24,7 @@ public class RejectGrantResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public GrantStatusEnum status;
+
     public RejectGrantResponse withStatus(GrantStatusEnum status) {
         this.status = status;
         return this;
@@ -31,9 +33,11 @@ public class RejectGrantResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public RejectGrantResponse withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public RejectGrantResponse(){}
 }

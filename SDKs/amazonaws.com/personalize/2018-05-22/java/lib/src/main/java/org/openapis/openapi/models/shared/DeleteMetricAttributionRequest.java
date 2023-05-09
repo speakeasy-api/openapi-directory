@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteMetricAttributionRequest {
     @JsonProperty("metricAttributionArn")
     public String metricAttributionArn;
+
     public DeleteMetricAttributionRequest withMetricAttributionArn(String metricAttributionArn) {
         this.metricAttributionArn = metricAttributionArn;
         return this;
     }
     
+    public DeleteMetricAttributionRequest(@JsonProperty("metricAttributionArn") String metricAttributionArn) {
+        this.metricAttributionArn = metricAttributionArn;
+  }
 }

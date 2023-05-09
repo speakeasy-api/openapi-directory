@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeStreamSummaryResponse {
@@ -12,6 +13,7 @@ public class DescribeStreamSummaryResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeStreamSummaryResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeStreamSummaryResponse {
     
     
     public String contentType;
+
     public DescribeStreamSummaryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeStreamSummaryResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeStreamSummaryOutput describeStreamSummaryOutput;
+
     public DescribeStreamSummaryResponse withDescribeStreamSummaryOutput(org.openapis.openapi.models.shared.DescribeStreamSummaryOutput describeStreamSummaryOutput) {
         this.describeStreamSummaryOutput = describeStreamSummaryOutput;
         return this;
@@ -39,6 +43,7 @@ public class DescribeStreamSummaryResponse {
      */
     
     public Object invalidArgumentException;
+
     public DescribeStreamSummaryResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeStreamSummaryResponse {
      */
     
     public Object limitExceededException;
+
     public DescribeStreamSummaryResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeStreamSummaryResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeStreamSummaryResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeStreamSummaryResponse {
     
     
     public Integer statusCode;
+
     public DescribeStreamSummaryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeStreamSummaryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeStreamSummaryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeStreamSummaryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

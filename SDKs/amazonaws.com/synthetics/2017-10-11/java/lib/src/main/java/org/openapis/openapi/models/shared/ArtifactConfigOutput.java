@@ -15,9 +15,11 @@ public class ArtifactConfigOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Encryption")
     public S3EncryptionConfig s3Encryption;
+
     public ArtifactConfigOutput withS3Encryption(S3EncryptionConfig s3Encryption) {
         this.s3Encryption = s3Encryption;
         return this;
     }
     
+    public ArtifactConfigOutput(){}
 }

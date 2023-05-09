@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteFleetLocationsResponse {
     
     public String contentType;
+
     public DeleteFleetLocationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteFleetLocationsResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteFleetLocationsOutput deleteFleetLocationsOutput;
+
     public DeleteFleetLocationsResponse withDeleteFleetLocationsOutput(org.openapis.openapi.models.shared.DeleteFleetLocationsOutput deleteFleetLocationsOutput) {
         this.deleteFleetLocationsOutput = deleteFleetLocationsOutput;
         return this;
@@ -29,6 +32,7 @@ public class DeleteFleetLocationsResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteFleetLocationsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteFleetLocationsResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteFleetLocationsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteFleetLocationsResponse {
      */
     
     public Object notFoundException;
+
     public DeleteFleetLocationsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteFleetLocationsResponse {
     
     
     public Integer statusCode;
+
     public DeleteFleetLocationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteFleetLocationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteFleetLocationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteFleetLocationsResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteFleetLocationsResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteFleetLocationsResponse {
      */
     
     public Object unsupportedRegionException;
+
     public DeleteFleetLocationsResponse withUnsupportedRegionException(Object unsupportedRegionException) {
         this.unsupportedRegionException = unsupportedRegionException;
         return this;
     }
     
+    public DeleteFleetLocationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class DetectMitigationActionsTaskStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionsExecuted")
     public Long actionsExecuted;
+
     public DetectMitigationActionsTaskStatistics withActionsExecuted(Long actionsExecuted) {
         this.actionsExecuted = actionsExecuted;
         return this;
@@ -23,6 +24,7 @@ public class DetectMitigationActionsTaskStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionsFailed")
     public Long actionsFailed;
+
     public DetectMitigationActionsTaskStatistics withActionsFailed(Long actionsFailed) {
         this.actionsFailed = actionsFailed;
         return this;
@@ -31,9 +33,11 @@ public class DetectMitigationActionsTaskStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionsSkipped")
     public Long actionsSkipped;
+
     public DetectMitigationActionsTaskStatistics withActionsSkipped(Long actionsSkipped) {
         this.actionsSkipped = actionsSkipped;
         return this;
     }
     
+    public DetectMitigationActionsTaskStatistics(){}
 }

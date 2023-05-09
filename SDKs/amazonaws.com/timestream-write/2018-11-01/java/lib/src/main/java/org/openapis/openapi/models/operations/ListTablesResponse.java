@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTablesResponse {
@@ -12,6 +13,7 @@ public class ListTablesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListTablesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListTablesResponse {
     
     
     public String contentType;
+
     public ListTablesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListTablesResponse {
      */
     
     public Object internalServerException;
+
     public ListTablesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListTablesResponse {
      */
     
     public Object invalidEndpointException;
+
     public ListTablesResponse withInvalidEndpointException(Object invalidEndpointException) {
         this.invalidEndpointException = invalidEndpointException;
         return this;
@@ -49,6 +54,7 @@ public class ListTablesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTablesResponse listTablesResponse;
+
     public ListTablesResponse withListTablesResponse(org.openapis.openapi.models.shared.ListTablesResponse listTablesResponse) {
         this.listTablesResponse = listTablesResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListTablesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListTablesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ListTablesResponse {
     
     
     public Integer statusCode;
+
     public ListTablesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListTablesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTablesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ListTablesResponse {
      */
     
     public Object throttlingException;
+
     public ListTablesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class ListTablesResponse {
      */
     
     public Object validationException;
+
     public ListTablesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListTablesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

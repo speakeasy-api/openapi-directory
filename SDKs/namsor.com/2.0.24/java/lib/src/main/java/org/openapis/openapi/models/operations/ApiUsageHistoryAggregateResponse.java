@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ApiUsageHistoryAggregateResponse {
@@ -12,6 +13,7 @@ public class ApiUsageHistoryAggregateResponse {
      */
     
     public org.openapis.openapi.models.shared.APIUsageAggregatedOut apiUsageAggregatedOut;
+
     public ApiUsageHistoryAggregateResponse withAPIUsageAggregatedOut(org.openapis.openapi.models.shared.APIUsageAggregatedOut apiUsageAggregatedOut) {
         this.apiUsageAggregatedOut = apiUsageAggregatedOut;
         return this;
@@ -19,6 +21,7 @@ public class ApiUsageHistoryAggregateResponse {
     
     
     public String contentType;
+
     public ApiUsageHistoryAggregateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ApiUsageHistoryAggregateResponse {
     
     
     public Integer statusCode;
+
     public ApiUsageHistoryAggregateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ApiUsageHistoryAggregateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ApiUsageHistoryAggregateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ApiUsageHistoryAggregateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

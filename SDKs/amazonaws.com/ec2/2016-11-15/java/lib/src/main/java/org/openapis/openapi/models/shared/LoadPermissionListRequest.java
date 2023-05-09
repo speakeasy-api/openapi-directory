@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class LoadPermissionListRequest {
     
     public PermissionGroupEnum group;
+
     public LoadPermissionListRequest withGroup(PermissionGroupEnum group) {
         this.group = group;
         return this;
@@ -19,9 +20,11 @@ public class LoadPermissionListRequest {
     
     
     public String userId;
+
     public LoadPermissionListRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public LoadPermissionListRequest(){}
 }

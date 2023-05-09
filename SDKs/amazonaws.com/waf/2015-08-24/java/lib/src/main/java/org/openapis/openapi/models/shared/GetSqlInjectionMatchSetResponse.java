@@ -15,9 +15,11 @@ public class GetSqlInjectionMatchSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SqlInjectionMatchSet")
     public SqlInjectionMatchSet sqlInjectionMatchSet;
+
     public GetSqlInjectionMatchSetResponse withSqlInjectionMatchSet(SqlInjectionMatchSet sqlInjectionMatchSet) {
         this.sqlInjectionMatchSet = sqlInjectionMatchSet;
         return this;
     }
     
+    public GetSqlInjectionMatchSetResponse(){}
 }

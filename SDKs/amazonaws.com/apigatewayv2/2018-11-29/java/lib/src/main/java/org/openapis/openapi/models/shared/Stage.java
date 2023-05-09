@@ -20,6 +20,7 @@ public class Stage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessLogSettings")
     public StageAccessLogSettings accessLogSettings;
+
     public Stage withAccessLogSettings(StageAccessLogSettings accessLogSettings) {
         this.accessLogSettings = accessLogSettings;
         return this;
@@ -28,6 +29,7 @@ public class Stage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiGatewayManaged")
     public Boolean apiGatewayManaged;
+
     public Stage withApiGatewayManaged(Boolean apiGatewayManaged) {
         this.apiGatewayManaged = apiGatewayManaged;
         return this;
@@ -36,6 +38,7 @@ public class Stage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoDeploy")
     public Boolean autoDeploy;
+
     public Stage withAutoDeploy(Boolean autoDeploy) {
         this.autoDeploy = autoDeploy;
         return this;
@@ -44,6 +47,7 @@ public class Stage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientCertificateId")
     public String clientCertificateId;
+
     public Stage withClientCertificateId(String clientCertificateId) {
         this.clientCertificateId = clientCertificateId;
         return this;
@@ -54,6 +58,7 @@ public class Stage {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedDate")
     public OffsetDateTime createdDate;
+
     public Stage withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -62,6 +67,7 @@ public class Stage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultRouteSettings")
     public StageDefaultRouteSettings defaultRouteSettings;
+
     public Stage withDefaultRouteSettings(StageDefaultRouteSettings defaultRouteSettings) {
         this.defaultRouteSettings = defaultRouteSettings;
         return this;
@@ -70,6 +76,7 @@ public class Stage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentId")
     public String deploymentId;
+
     public Stage withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -78,6 +85,7 @@ public class Stage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Stage withDescription(String description) {
         this.description = description;
         return this;
@@ -86,6 +94,7 @@ public class Stage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastDeploymentStatusMessage")
     public String lastDeploymentStatusMessage;
+
     public Stage withLastDeploymentStatusMessage(String lastDeploymentStatusMessage) {
         this.lastDeploymentStatusMessage = lastDeploymentStatusMessage;
         return this;
@@ -96,6 +105,7 @@ public class Stage {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedDate")
     public OffsetDateTime lastUpdatedDate;
+
     public Stage withLastUpdatedDate(OffsetDateTime lastUpdatedDate) {
         this.lastUpdatedDate = lastUpdatedDate;
         return this;
@@ -104,6 +114,7 @@ public class Stage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RouteSettings")
     public java.util.Map<String, RouteSettings> routeSettings;
+
     public Stage withRouteSettings(java.util.Map<String, RouteSettings> routeSettings) {
         this.routeSettings = routeSettings;
         return this;
@@ -111,6 +122,7 @@ public class Stage {
     
     @JsonProperty("StageName")
     public String stageName;
+
     public Stage withStageName(String stageName) {
         this.stageName = stageName;
         return this;
@@ -119,6 +131,7 @@ public class Stage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StageVariables")
     public java.util.Map<String, String> stageVariables;
+
     public Stage withStageVariables(java.util.Map<String, String> stageVariables) {
         this.stageVariables = stageVariables;
         return this;
@@ -127,9 +140,13 @@ public class Stage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public Stage withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public Stage(@JsonProperty("StageName") String stageName) {
+        this.stageName = stageName;
+  }
 }

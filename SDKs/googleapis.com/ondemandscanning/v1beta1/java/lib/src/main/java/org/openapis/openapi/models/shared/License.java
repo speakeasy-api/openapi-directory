@@ -18,6 +18,7 @@ public class License {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public String comments;
+
     public License withComments(String comments) {
         this.comments = comments;
         return this;
@@ -29,9 +30,11 @@ public class License {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expression")
     public String expression;
+
     public License withExpression(String expression) {
         this.expression = expression;
         return this;
     }
     
+    public License(){}
 }

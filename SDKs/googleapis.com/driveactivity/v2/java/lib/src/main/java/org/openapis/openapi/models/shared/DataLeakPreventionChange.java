@@ -18,9 +18,11 @@ public class DataLeakPreventionChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public DataLeakPreventionChangeTypeEnum type;
+
     public DataLeakPreventionChange withType(DataLeakPreventionChangeTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DataLeakPreventionChange(){}
 }

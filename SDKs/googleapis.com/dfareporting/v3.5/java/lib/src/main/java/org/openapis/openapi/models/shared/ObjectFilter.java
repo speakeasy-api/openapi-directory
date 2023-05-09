@@ -18,6 +18,7 @@ public class ObjectFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ObjectFilter withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class ObjectFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectIds")
     public String[] objectIds;
+
     public ObjectFilter withObjectIds(String[] objectIds) {
         this.objectIds = objectIds;
         return this;
@@ -40,9 +42,11 @@ public class ObjectFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ObjectFilterStatusEnum status;
+
     public ObjectFilter withStatus(ObjectFilterStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ObjectFilter(){}
 }

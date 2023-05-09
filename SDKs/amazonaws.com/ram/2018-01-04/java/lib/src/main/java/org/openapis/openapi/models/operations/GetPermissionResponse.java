@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPermissionResponse {
     
     public String contentType;
+
     public GetPermissionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPermissionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPermissionResponse getPermissionResponse;
+
     public GetPermissionResponse withGetPermissionResponse(org.openapis.openapi.models.shared.GetPermissionResponse getPermissionResponse) {
         this.getPermissionResponse = getPermissionResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetPermissionResponse {
      */
     
     public Object invalidParameterException;
+
     public GetPermissionResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class GetPermissionResponse {
      */
     
     public Object malformedArnException;
+
     public GetPermissionResponse withMalformedArnException(Object malformedArnException) {
         this.malformedArnException = malformedArnException;
         return this;
@@ -49,6 +54,7 @@ public class GetPermissionResponse {
      */
     
     public Object operationNotPermittedException;
+
     public GetPermissionResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -59,6 +65,7 @@ public class GetPermissionResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetPermissionResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class GetPermissionResponse {
     
     
     public Integer statusCode;
+
     public GetPermissionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetPermissionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPermissionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class GetPermissionResponse {
      */
     
     public Object serverInternalException;
+
     public GetPermissionResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -93,9 +103,14 @@ public class GetPermissionResponse {
      */
     
     public Object unknownResourceException;
+
     public GetPermissionResponse withUnknownResourceException(Object unknownResourceException) {
         this.unknownResourceException = unknownResourceException;
         return this;
     }
     
+    public GetPermissionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

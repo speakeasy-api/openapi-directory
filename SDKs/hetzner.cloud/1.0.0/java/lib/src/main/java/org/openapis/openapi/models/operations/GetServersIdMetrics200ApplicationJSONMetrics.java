@@ -12,6 +12,7 @@ public class GetServersIdMetrics200ApplicationJSONMetrics {
      */
     @JsonProperty("end")
     public String end;
+
     public GetServersIdMetrics200ApplicationJSONMetrics withEnd(String end) {
         this.end = end;
         return this;
@@ -22,6 +23,7 @@ public class GetServersIdMetrics200ApplicationJSONMetrics {
      */
     @JsonProperty("start")
     public String start;
+
     public GetServersIdMetrics200ApplicationJSONMetrics withStart(String start) {
         this.start = start;
         return this;
@@ -32,6 +34,7 @@ public class GetServersIdMetrics200ApplicationJSONMetrics {
      */
     @JsonProperty("step")
     public Double step;
+
     public GetServersIdMetrics200ApplicationJSONMetrics withStep(Double step) {
         this.step = step;
         return this;
@@ -42,9 +45,16 @@ public class GetServersIdMetrics200ApplicationJSONMetrics {
      */
     @JsonProperty("time_series")
     public java.util.Map<String, GetServersIdMetrics200ApplicationJSONMetricsTimeSeries> timeSeries;
+
     public GetServersIdMetrics200ApplicationJSONMetrics withTimeSeries(java.util.Map<String, GetServersIdMetrics200ApplicationJSONMetricsTimeSeries> timeSeries) {
         this.timeSeries = timeSeries;
         return this;
     }
     
+    public GetServersIdMetrics200ApplicationJSONMetrics(@JsonProperty("end") String end, @JsonProperty("start") String start, @JsonProperty("step") Double step, @JsonProperty("time_series") java.util.Map<String, GetServersIdMetrics200ApplicationJSONMetricsTimeSeries> timeSeries) {
+        this.end = end;
+        this.start = start;
+        this.step = step;
+        this.timeSeries = timeSeries;
+  }
 }

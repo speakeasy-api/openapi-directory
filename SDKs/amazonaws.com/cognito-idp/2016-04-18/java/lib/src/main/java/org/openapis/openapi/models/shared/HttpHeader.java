@@ -15,6 +15,7 @@ public class HttpHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headerName")
     public String headerName;
+
     public HttpHeader withHeaderName(String headerName) {
         this.headerName = headerName;
         return this;
@@ -23,9 +24,11 @@ public class HttpHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headerValue")
     public String headerValue;
+
     public HttpHeader withHeaderValue(String headerValue) {
         this.headerValue = headerValue;
         return this;
     }
     
+    public HttpHeader(){}
 }

@@ -12,6 +12,7 @@ public class GetApiActivityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetApiActivityRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -22,9 +23,11 @@ public class GetApiActivityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public GetApiActivityRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetApiActivityRequest(){}
 }

@@ -18,6 +18,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Domain withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Domain withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permission")
     public DomainPermissionEnum permission;
+
     public Domain withPermission(DomainPermissionEnum permission) {
         this.permission = permission;
         return this;
     }
     
+    public Domain(){}
 }

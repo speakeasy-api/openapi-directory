@@ -15,9 +15,11 @@ public class DescribeAppsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Apps")
     public App[] apps;
+
     public DescribeAppsResult withApps(App[] apps) {
         this.apps = apps;
         return this;
     }
     
+    public DescribeAppsResult(){}
 }

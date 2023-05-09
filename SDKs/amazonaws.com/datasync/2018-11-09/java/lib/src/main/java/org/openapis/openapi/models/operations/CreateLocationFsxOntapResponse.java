@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateLocationFsxOntapResponse {
     
     public String contentType;
+
     public CreateLocationFsxOntapResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateLocationFsxOntapResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateLocationFsxOntapResponse createLocationFsxOntapResponse;
+
     public CreateLocationFsxOntapResponse withCreateLocationFsxOntapResponse(org.openapis.openapi.models.shared.CreateLocationFsxOntapResponse createLocationFsxOntapResponse) {
         this.createLocationFsxOntapResponse = createLocationFsxOntapResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateLocationFsxOntapResponse {
      */
     
     public Object internalException;
+
     public CreateLocationFsxOntapResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class CreateLocationFsxOntapResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateLocationFsxOntapResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class CreateLocationFsxOntapResponse {
     
     
     public Integer statusCode;
+
     public CreateLocationFsxOntapResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class CreateLocationFsxOntapResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateLocationFsxOntapResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateLocationFsxOntapResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

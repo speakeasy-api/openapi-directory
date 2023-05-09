@@ -15,9 +15,13 @@ public class CashInResponse {
      */
     @JsonProperty("success")
     public Boolean success;
+
     public CashInResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public CashInResponse(@JsonProperty("success") Boolean success) {
+        this.success = success;
+  }
 }

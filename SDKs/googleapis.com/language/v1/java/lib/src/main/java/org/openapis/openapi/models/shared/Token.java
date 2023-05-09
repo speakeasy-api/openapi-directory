@@ -18,6 +18,7 @@ public class Token {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dependencyEdge")
     public DependencyEdge dependencyEdge;
+
     public Token withDependencyEdge(DependencyEdge dependencyEdge) {
         this.dependencyEdge = dependencyEdge;
         return this;
@@ -29,6 +30,7 @@ public class Token {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lemma")
     public String lemma;
+
     public Token withLemma(String lemma) {
         this.lemma = lemma;
         return this;
@@ -40,6 +42,7 @@ public class Token {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partOfSpeech")
     public PartOfSpeech partOfSpeech;
+
     public Token withPartOfSpeech(PartOfSpeech partOfSpeech) {
         this.partOfSpeech = partOfSpeech;
         return this;
@@ -51,9 +54,11 @@ public class Token {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public TextSpan text;
+
     public Token withText(TextSpan text) {
         this.text = text;
         return this;
     }
     
+    public Token(){}
 }

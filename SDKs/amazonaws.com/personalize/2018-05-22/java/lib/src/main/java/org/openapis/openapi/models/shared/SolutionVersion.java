@@ -22,6 +22,7 @@ public class SolutionVersion {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public SolutionVersion withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -30,6 +31,7 @@ public class SolutionVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetGroupArn")
     public String datasetGroupArn;
+
     public SolutionVersion withDatasetGroupArn(String datasetGroupArn) {
         this.datasetGroupArn = datasetGroupArn;
         return this;
@@ -38,6 +40,7 @@ public class SolutionVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventType")
     public String eventType;
+
     public SolutionVersion withEventType(String eventType) {
         this.eventType = eventType;
         return this;
@@ -46,6 +49,7 @@ public class SolutionVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public SolutionVersion withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -56,6 +60,7 @@ public class SolutionVersion {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public SolutionVersion withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -64,6 +69,7 @@ public class SolutionVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SolutionVersion withName(String name) {
         this.name = name;
         return this;
@@ -72,6 +78,7 @@ public class SolutionVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performAutoML")
     public Boolean performAutoML;
+
     public SolutionVersion withPerformAutoML(Boolean performAutoML) {
         this.performAutoML = performAutoML;
         return this;
@@ -80,6 +87,7 @@ public class SolutionVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performHPO")
     public Boolean performHPO;
+
     public SolutionVersion withPerformHPO(Boolean performHPO) {
         this.performHPO = performHPO;
         return this;
@@ -88,6 +96,7 @@ public class SolutionVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipeArn")
     public String recipeArn;
+
     public SolutionVersion withRecipeArn(String recipeArn) {
         this.recipeArn = recipeArn;
         return this;
@@ -96,6 +105,7 @@ public class SolutionVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("solutionArn")
     public String solutionArn;
+
     public SolutionVersion withSolutionArn(String solutionArn) {
         this.solutionArn = solutionArn;
         return this;
@@ -104,6 +114,7 @@ public class SolutionVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("solutionConfig")
     public SolutionConfig solutionConfig;
+
     public SolutionVersion withSolutionConfig(SolutionConfig solutionConfig) {
         this.solutionConfig = solutionConfig;
         return this;
@@ -112,6 +123,7 @@ public class SolutionVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("solutionVersionArn")
     public String solutionVersionArn;
+
     public SolutionVersion withSolutionVersionArn(String solutionVersionArn) {
         this.solutionVersionArn = solutionVersionArn;
         return this;
@@ -120,6 +132,7 @@ public class SolutionVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public SolutionVersion withStatus(String status) {
         this.status = status;
         return this;
@@ -128,6 +141,7 @@ public class SolutionVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainingHours")
     public Double trainingHours;
+
     public SolutionVersion withTrainingHours(Double trainingHours) {
         this.trainingHours = trainingHours;
         return this;
@@ -136,6 +150,7 @@ public class SolutionVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainingMode")
     public TrainingModeEnum trainingMode;
+
     public SolutionVersion withTrainingMode(TrainingModeEnum trainingMode) {
         this.trainingMode = trainingMode;
         return this;
@@ -144,9 +159,11 @@ public class SolutionVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tunedHPOParams")
     public TunedHPOParams tunedHPOParams;
+
     public SolutionVersion withTunedHPOParams(TunedHPOParams tunedHPOParams) {
         this.tunedHPOParams = tunedHPOParams;
         return this;
     }
     
+    public SolutionVersion(){}
 }

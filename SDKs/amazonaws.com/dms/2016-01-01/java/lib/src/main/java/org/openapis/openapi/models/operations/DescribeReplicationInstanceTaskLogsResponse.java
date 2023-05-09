@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeReplicationInstanceTaskLogsResponse {
     
     public String contentType;
+
     public DescribeReplicationInstanceTaskLogsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeReplicationInstanceTaskLogsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeReplicationInstanceTaskLogsResponse describeReplicationInstanceTaskLogsResponse;
+
     public DescribeReplicationInstanceTaskLogsResponse withDescribeReplicationInstanceTaskLogsResponse(org.openapis.openapi.models.shared.DescribeReplicationInstanceTaskLogsResponse describeReplicationInstanceTaskLogsResponse) {
         this.describeReplicationInstanceTaskLogsResponse = describeReplicationInstanceTaskLogsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeReplicationInstanceTaskLogsResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public DescribeReplicationInstanceTaskLogsResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -39,6 +43,7 @@ public class DescribeReplicationInstanceTaskLogsResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public DescribeReplicationInstanceTaskLogsResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
@@ -46,6 +51,7 @@ public class DescribeReplicationInstanceTaskLogsResponse {
     
     
     public Integer statusCode;
+
     public DescribeReplicationInstanceTaskLogsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeReplicationInstanceTaskLogsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeReplicationInstanceTaskLogsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeReplicationInstanceTaskLogsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

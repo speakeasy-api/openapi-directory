@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRfqRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
     public String projectId;
+
     public GetRfqRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -16,6 +18,7 @@ public class GetRfqRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rfq_id")
     public String rfqId;
+
     public GetRfqRequest withRfqId(String rfqId) {
         this.rfqId = rfqId;
         return this;
@@ -23,9 +26,15 @@ public class GetRfqRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
     public String workgroupId;
+
     public GetRfqRequest withWorkgroupId(String workgroupId) {
         this.workgroupId = workgroupId;
         return this;
     }
     
+    public GetRfqRequest(@JsonProperty("project_id") String projectId, @JsonProperty("rfq_id") String rfqId, @JsonProperty("workgroup_id") String workgroupId) {
+        this.projectId = projectId;
+        this.rfqId = rfqId;
+        this.workgroupId = workgroupId;
+  }
 }

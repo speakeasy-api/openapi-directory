@@ -17,6 +17,7 @@ public class PullRequestHeadRepo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_forking")
     public Boolean allowForking;
+
     public PullRequestHeadRepo withAllowForking(Boolean allowForking) {
         this.allowForking = allowForking;
         return this;
@@ -25,6 +26,7 @@ public class PullRequestHeadRepo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_merge_commit")
     public Boolean allowMergeCommit;
+
     public PullRequestHeadRepo withAllowMergeCommit(Boolean allowMergeCommit) {
         this.allowMergeCommit = allowMergeCommit;
         return this;
@@ -33,6 +35,7 @@ public class PullRequestHeadRepo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_rebase_merge")
     public Boolean allowRebaseMerge;
+
     public PullRequestHeadRepo withAllowRebaseMerge(Boolean allowRebaseMerge) {
         this.allowRebaseMerge = allowRebaseMerge;
         return this;
@@ -41,6 +44,7 @@ public class PullRequestHeadRepo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_squash_merge")
     public Boolean allowSquashMerge;
+
     public PullRequestHeadRepo withAllowSquashMerge(Boolean allowSquashMerge) {
         this.allowSquashMerge = allowSquashMerge;
         return this;
@@ -49,6 +53,7 @@ public class PullRequestHeadRepo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("anonymous_access_enabled")
     public Boolean anonymousAccessEnabled;
+
     public PullRequestHeadRepo withAnonymousAccessEnabled(Boolean anonymousAccessEnabled) {
         this.anonymousAccessEnabled = anonymousAccessEnabled;
         return this;
@@ -56,6 +61,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("archive_url")
     public String archiveUrl;
+
     public PullRequestHeadRepo withArchiveUrl(String archiveUrl) {
         this.archiveUrl = archiveUrl;
         return this;
@@ -63,6 +69,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("archived")
     public Boolean archived;
+
     public PullRequestHeadRepo withArchived(Boolean archived) {
         this.archived = archived;
         return this;
@@ -70,6 +77,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("assignees_url")
     public String assigneesUrl;
+
     public PullRequestHeadRepo withAssigneesUrl(String assigneesUrl) {
         this.assigneesUrl = assigneesUrl;
         return this;
@@ -77,6 +85,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("blobs_url")
     public String blobsUrl;
+
     public PullRequestHeadRepo withBlobsUrl(String blobsUrl) {
         this.blobsUrl = blobsUrl;
         return this;
@@ -84,6 +93,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("branches_url")
     public String branchesUrl;
+
     public PullRequestHeadRepo withBranchesUrl(String branchesUrl) {
         this.branchesUrl = branchesUrl;
         return this;
@@ -91,6 +101,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("clone_url")
     public String cloneUrl;
+
     public PullRequestHeadRepo withCloneUrl(String cloneUrl) {
         this.cloneUrl = cloneUrl;
         return this;
@@ -98,6 +109,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("collaborators_url")
     public String collaboratorsUrl;
+
     public PullRequestHeadRepo withCollaboratorsUrl(String collaboratorsUrl) {
         this.collaboratorsUrl = collaboratorsUrl;
         return this;
@@ -105,6 +117,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("comments_url")
     public String commentsUrl;
+
     public PullRequestHeadRepo withCommentsUrl(String commentsUrl) {
         this.commentsUrl = commentsUrl;
         return this;
@@ -112,6 +125,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("commits_url")
     public String commitsUrl;
+
     public PullRequestHeadRepo withCommitsUrl(String commitsUrl) {
         this.commitsUrl = commitsUrl;
         return this;
@@ -119,6 +133,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("compare_url")
     public String compareUrl;
+
     public PullRequestHeadRepo withCompareUrl(String compareUrl) {
         this.compareUrl = compareUrl;
         return this;
@@ -126,6 +141,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("contents_url")
     public String contentsUrl;
+
     public PullRequestHeadRepo withContentsUrl(String contentsUrl) {
         this.contentsUrl = contentsUrl;
         return this;
@@ -133,6 +149,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("contributors_url")
     public String contributorsUrl;
+
     public PullRequestHeadRepo withContributorsUrl(String contributorsUrl) {
         this.contributorsUrl = contributorsUrl;
         return this;
@@ -142,6 +159,7 @@ public class PullRequestHeadRepo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public PullRequestHeadRepo withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -149,6 +167,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("default_branch")
     public String defaultBranch;
+
     public PullRequestHeadRepo withDefaultBranch(String defaultBranch) {
         this.defaultBranch = defaultBranch;
         return this;
@@ -156,6 +175,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("deployments_url")
     public String deploymentsUrl;
+
     public PullRequestHeadRepo withDeploymentsUrl(String deploymentsUrl) {
         this.deploymentsUrl = deploymentsUrl;
         return this;
@@ -163,6 +183,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("description")
     public String description;
+
     public PullRequestHeadRepo withDescription(String description) {
         this.description = description;
         return this;
@@ -170,6 +191,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("disabled")
     public Boolean disabled;
+
     public PullRequestHeadRepo withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -177,6 +199,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("downloads_url")
     public String downloadsUrl;
+
     public PullRequestHeadRepo withDownloadsUrl(String downloadsUrl) {
         this.downloadsUrl = downloadsUrl;
         return this;
@@ -184,6 +207,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("events_url")
     public String eventsUrl;
+
     public PullRequestHeadRepo withEventsUrl(String eventsUrl) {
         this.eventsUrl = eventsUrl;
         return this;
@@ -191,6 +215,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("fork")
     public Boolean fork;
+
     public PullRequestHeadRepo withFork(Boolean fork) {
         this.fork = fork;
         return this;
@@ -198,6 +223,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("forks")
     public Long forks;
+
     public PullRequestHeadRepo withForks(Long forks) {
         this.forks = forks;
         return this;
@@ -205,6 +231,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("forks_count")
     public Long forksCount;
+
     public PullRequestHeadRepo withForksCount(Long forksCount) {
         this.forksCount = forksCount;
         return this;
@@ -212,6 +239,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("forks_url")
     public String forksUrl;
+
     public PullRequestHeadRepo withForksUrl(String forksUrl) {
         this.forksUrl = forksUrl;
         return this;
@@ -219,6 +247,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("full_name")
     public String fullName;
+
     public PullRequestHeadRepo withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -226,6 +255,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("git_commits_url")
     public String gitCommitsUrl;
+
     public PullRequestHeadRepo withGitCommitsUrl(String gitCommitsUrl) {
         this.gitCommitsUrl = gitCommitsUrl;
         return this;
@@ -233,6 +263,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("git_refs_url")
     public String gitRefsUrl;
+
     public PullRequestHeadRepo withGitRefsUrl(String gitRefsUrl) {
         this.gitRefsUrl = gitRefsUrl;
         return this;
@@ -240,6 +271,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("git_tags_url")
     public String gitTagsUrl;
+
     public PullRequestHeadRepo withGitTagsUrl(String gitTagsUrl) {
         this.gitTagsUrl = gitTagsUrl;
         return this;
@@ -247,6 +279,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("git_url")
     public String gitUrl;
+
     public PullRequestHeadRepo withGitUrl(String gitUrl) {
         this.gitUrl = gitUrl;
         return this;
@@ -254,6 +287,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("has_downloads")
     public Boolean hasDownloads;
+
     public PullRequestHeadRepo withHasDownloads(Boolean hasDownloads) {
         this.hasDownloads = hasDownloads;
         return this;
@@ -261,6 +295,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("has_issues")
     public Boolean hasIssues;
+
     public PullRequestHeadRepo withHasIssues(Boolean hasIssues) {
         this.hasIssues = hasIssues;
         return this;
@@ -268,6 +303,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("has_pages")
     public Boolean hasPages;
+
     public PullRequestHeadRepo withHasPages(Boolean hasPages) {
         this.hasPages = hasPages;
         return this;
@@ -275,6 +311,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("has_projects")
     public Boolean hasProjects;
+
     public PullRequestHeadRepo withHasProjects(Boolean hasProjects) {
         this.hasProjects = hasProjects;
         return this;
@@ -282,6 +319,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("has_wiki")
     public Boolean hasWiki;
+
     public PullRequestHeadRepo withHasWiki(Boolean hasWiki) {
         this.hasWiki = hasWiki;
         return this;
@@ -289,6 +327,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("homepage")
     public String homepage;
+
     public PullRequestHeadRepo withHomepage(String homepage) {
         this.homepage = homepage;
         return this;
@@ -296,6 +335,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("hooks_url")
     public String hooksUrl;
+
     public PullRequestHeadRepo withHooksUrl(String hooksUrl) {
         this.hooksUrl = hooksUrl;
         return this;
@@ -303,6 +343,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public PullRequestHeadRepo withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -310,6 +351,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("id")
     public Long id;
+
     public PullRequestHeadRepo withId(Long id) {
         this.id = id;
         return this;
@@ -317,6 +359,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("issue_comment_url")
     public String issueCommentUrl;
+
     public PullRequestHeadRepo withIssueCommentUrl(String issueCommentUrl) {
         this.issueCommentUrl = issueCommentUrl;
         return this;
@@ -324,6 +367,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("issue_events_url")
     public String issueEventsUrl;
+
     public PullRequestHeadRepo withIssueEventsUrl(String issueEventsUrl) {
         this.issueEventsUrl = issueEventsUrl;
         return this;
@@ -331,6 +375,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("issues_url")
     public String issuesUrl;
+
     public PullRequestHeadRepo withIssuesUrl(String issuesUrl) {
         this.issuesUrl = issuesUrl;
         return this;
@@ -338,6 +383,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("keys_url")
     public String keysUrl;
+
     public PullRequestHeadRepo withKeysUrl(String keysUrl) {
         this.keysUrl = keysUrl;
         return this;
@@ -345,6 +391,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("labels_url")
     public String labelsUrl;
+
     public PullRequestHeadRepo withLabelsUrl(String labelsUrl) {
         this.labelsUrl = labelsUrl;
         return this;
@@ -352,6 +399,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("language")
     public String language;
+
     public PullRequestHeadRepo withLanguage(String language) {
         this.language = language;
         return this;
@@ -359,6 +407,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("languages_url")
     public String languagesUrl;
+
     public PullRequestHeadRepo withLanguagesUrl(String languagesUrl) {
         this.languagesUrl = languagesUrl;
         return this;
@@ -366,6 +415,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("license")
     public PullRequestHeadRepoLicense license;
+
     public PullRequestHeadRepo withLicense(PullRequestHeadRepoLicense license) {
         this.license = license;
         return this;
@@ -374,6 +424,7 @@ public class PullRequestHeadRepo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("master_branch")
     public String masterBranch;
+
     public PullRequestHeadRepo withMasterBranch(String masterBranch) {
         this.masterBranch = masterBranch;
         return this;
@@ -381,6 +432,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("merges_url")
     public String mergesUrl;
+
     public PullRequestHeadRepo withMergesUrl(String mergesUrl) {
         this.mergesUrl = mergesUrl;
         return this;
@@ -388,6 +440,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("milestones_url")
     public String milestonesUrl;
+
     public PullRequestHeadRepo withMilestonesUrl(String milestonesUrl) {
         this.milestonesUrl = milestonesUrl;
         return this;
@@ -395,6 +448,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("mirror_url")
     public String mirrorUrl;
+
     public PullRequestHeadRepo withMirrorUrl(String mirrorUrl) {
         this.mirrorUrl = mirrorUrl;
         return this;
@@ -402,6 +456,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("name")
     public String name;
+
     public PullRequestHeadRepo withName(String name) {
         this.name = name;
         return this;
@@ -409,6 +464,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public PullRequestHeadRepo withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -416,6 +472,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("notifications_url")
     public String notificationsUrl;
+
     public PullRequestHeadRepo withNotificationsUrl(String notificationsUrl) {
         this.notificationsUrl = notificationsUrl;
         return this;
@@ -423,6 +480,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("open_issues")
     public Long openIssues;
+
     public PullRequestHeadRepo withOpenIssues(Long openIssues) {
         this.openIssues = openIssues;
         return this;
@@ -430,6 +488,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("open_issues_count")
     public Long openIssuesCount;
+
     public PullRequestHeadRepo withOpenIssuesCount(Long openIssuesCount) {
         this.openIssuesCount = openIssuesCount;
         return this;
@@ -437,6 +496,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("owner")
     public PullRequestHeadRepoOwner owner;
+
     public PullRequestHeadRepo withOwner(PullRequestHeadRepoOwner owner) {
         this.owner = owner;
         return this;
@@ -445,6 +505,7 @@ public class PullRequestHeadRepo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public PullRequestHeadRepoPermissions permissions;
+
     public PullRequestHeadRepo withPermissions(PullRequestHeadRepoPermissions permissions) {
         this.permissions = permissions;
         return this;
@@ -452,6 +513,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("private")
     public Boolean private_;
+
     public PullRequestHeadRepo withPrivate(Boolean private_) {
         this.private_ = private_;
         return this;
@@ -459,6 +521,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("pulls_url")
     public String pullsUrl;
+
     public PullRequestHeadRepo withPullsUrl(String pullsUrl) {
         this.pullsUrl = pullsUrl;
         return this;
@@ -468,6 +531,7 @@ public class PullRequestHeadRepo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("pushed_at")
     public OffsetDateTime pushedAt;
+
     public PullRequestHeadRepo withPushedAt(OffsetDateTime pushedAt) {
         this.pushedAt = pushedAt;
         return this;
@@ -475,6 +539,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("releases_url")
     public String releasesUrl;
+
     public PullRequestHeadRepo withReleasesUrl(String releasesUrl) {
         this.releasesUrl = releasesUrl;
         return this;
@@ -482,6 +547,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("size")
     public Long size;
+
     public PullRequestHeadRepo withSize(Long size) {
         this.size = size;
         return this;
@@ -489,6 +555,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("ssh_url")
     public String sshUrl;
+
     public PullRequestHeadRepo withSshUrl(String sshUrl) {
         this.sshUrl = sshUrl;
         return this;
@@ -496,6 +563,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("stargazers_count")
     public Long stargazersCount;
+
     public PullRequestHeadRepo withStargazersCount(Long stargazersCount) {
         this.stargazersCount = stargazersCount;
         return this;
@@ -503,6 +571,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("stargazers_url")
     public String stargazersUrl;
+
     public PullRequestHeadRepo withStargazersUrl(String stargazersUrl) {
         this.stargazersUrl = stargazersUrl;
         return this;
@@ -510,6 +579,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("statuses_url")
     public String statusesUrl;
+
     public PullRequestHeadRepo withStatusesUrl(String statusesUrl) {
         this.statusesUrl = statusesUrl;
         return this;
@@ -517,6 +587,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("subscribers_url")
     public String subscribersUrl;
+
     public PullRequestHeadRepo withSubscribersUrl(String subscribersUrl) {
         this.subscribersUrl = subscribersUrl;
         return this;
@@ -524,6 +595,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("subscription_url")
     public String subscriptionUrl;
+
     public PullRequestHeadRepo withSubscriptionUrl(String subscriptionUrl) {
         this.subscriptionUrl = subscriptionUrl;
         return this;
@@ -531,6 +603,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("svn_url")
     public String svnUrl;
+
     public PullRequestHeadRepo withSvnUrl(String svnUrl) {
         this.svnUrl = svnUrl;
         return this;
@@ -538,6 +611,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("tags_url")
     public String tagsUrl;
+
     public PullRequestHeadRepo withTagsUrl(String tagsUrl) {
         this.tagsUrl = tagsUrl;
         return this;
@@ -545,6 +619,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("teams_url")
     public String teamsUrl;
+
     public PullRequestHeadRepo withTeamsUrl(String teamsUrl) {
         this.teamsUrl = teamsUrl;
         return this;
@@ -553,6 +628,7 @@ public class PullRequestHeadRepo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topics")
     public String[] topics;
+
     public PullRequestHeadRepo withTopics(String[] topics) {
         this.topics = topics;
         return this;
@@ -560,6 +636,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("trees_url")
     public String treesUrl;
+
     public PullRequestHeadRepo withTreesUrl(String treesUrl) {
         this.treesUrl = treesUrl;
         return this;
@@ -569,6 +646,7 @@ public class PullRequestHeadRepo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public PullRequestHeadRepo withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -576,6 +654,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("url")
     public String url;
+
     public PullRequestHeadRepo withUrl(String url) {
         this.url = url;
         return this;
@@ -583,6 +662,7 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("watchers")
     public Long watchers;
+
     public PullRequestHeadRepo withWatchers(Long watchers) {
         this.watchers = watchers;
         return this;
@@ -590,9 +670,85 @@ public class PullRequestHeadRepo {
     
     @JsonProperty("watchers_count")
     public Long watchersCount;
+
     public PullRequestHeadRepo withWatchersCount(Long watchersCount) {
         this.watchersCount = watchersCount;
         return this;
     }
     
+    public PullRequestHeadRepo(@JsonProperty("archive_url") String archiveUrl, @JsonProperty("archived") Boolean archived, @JsonProperty("assignees_url") String assigneesUrl, @JsonProperty("blobs_url") String blobsUrl, @JsonProperty("branches_url") String branchesUrl, @JsonProperty("clone_url") String cloneUrl, @JsonProperty("collaborators_url") String collaboratorsUrl, @JsonProperty("comments_url") String commentsUrl, @JsonProperty("commits_url") String commitsUrl, @JsonProperty("compare_url") String compareUrl, @JsonProperty("contents_url") String contentsUrl, @JsonProperty("contributors_url") String contributorsUrl, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("default_branch") String defaultBranch, @JsonProperty("deployments_url") String deploymentsUrl, @JsonProperty("description") String description, @JsonProperty("disabled") Boolean disabled, @JsonProperty("downloads_url") String downloadsUrl, @JsonProperty("events_url") String eventsUrl, @JsonProperty("fork") Boolean fork, @JsonProperty("forks") Long forks, @JsonProperty("forks_count") Long forksCount, @JsonProperty("forks_url") String forksUrl, @JsonProperty("full_name") String fullName, @JsonProperty("git_commits_url") String gitCommitsUrl, @JsonProperty("git_refs_url") String gitRefsUrl, @JsonProperty("git_tags_url") String gitTagsUrl, @JsonProperty("git_url") String gitUrl, @JsonProperty("has_downloads") Boolean hasDownloads, @JsonProperty("has_issues") Boolean hasIssues, @JsonProperty("has_pages") Boolean hasPages, @JsonProperty("has_projects") Boolean hasProjects, @JsonProperty("has_wiki") Boolean hasWiki, @JsonProperty("homepage") String homepage, @JsonProperty("hooks_url") String hooksUrl, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("issue_comment_url") String issueCommentUrl, @JsonProperty("issue_events_url") String issueEventsUrl, @JsonProperty("issues_url") String issuesUrl, @JsonProperty("keys_url") String keysUrl, @JsonProperty("labels_url") String labelsUrl, @JsonProperty("language") String language, @JsonProperty("languages_url") String languagesUrl, @JsonProperty("license") PullRequestHeadRepoLicense license, @JsonProperty("merges_url") String mergesUrl, @JsonProperty("milestones_url") String milestonesUrl, @JsonProperty("mirror_url") String mirrorUrl, @JsonProperty("name") String name, @JsonProperty("node_id") String nodeId, @JsonProperty("notifications_url") String notificationsUrl, @JsonProperty("open_issues") Long openIssues, @JsonProperty("open_issues_count") Long openIssuesCount, @JsonProperty("owner") PullRequestHeadRepoOwner owner, @JsonProperty("private") Boolean private_, @JsonProperty("pulls_url") String pullsUrl, @JsonProperty("pushed_at") OffsetDateTime pushedAt, @JsonProperty("releases_url") String releasesUrl, @JsonProperty("size") Long size, @JsonProperty("ssh_url") String sshUrl, @JsonProperty("stargazers_count") Long stargazersCount, @JsonProperty("stargazers_url") String stargazersUrl, @JsonProperty("statuses_url") String statusesUrl, @JsonProperty("subscribers_url") String subscribersUrl, @JsonProperty("subscription_url") String subscriptionUrl, @JsonProperty("svn_url") String svnUrl, @JsonProperty("tags_url") String tagsUrl, @JsonProperty("teams_url") String teamsUrl, @JsonProperty("trees_url") String treesUrl, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("url") String url, @JsonProperty("watchers") Long watchers, @JsonProperty("watchers_count") Long watchersCount) {
+        this.archiveUrl = archiveUrl;
+        this.archived = archived;
+        this.assigneesUrl = assigneesUrl;
+        this.blobsUrl = blobsUrl;
+        this.branchesUrl = branchesUrl;
+        this.cloneUrl = cloneUrl;
+        this.collaboratorsUrl = collaboratorsUrl;
+        this.commentsUrl = commentsUrl;
+        this.commitsUrl = commitsUrl;
+        this.compareUrl = compareUrl;
+        this.contentsUrl = contentsUrl;
+        this.contributorsUrl = contributorsUrl;
+        this.createdAt = createdAt;
+        this.defaultBranch = defaultBranch;
+        this.deploymentsUrl = deploymentsUrl;
+        this.description = description;
+        this.disabled = disabled;
+        this.downloadsUrl = downloadsUrl;
+        this.eventsUrl = eventsUrl;
+        this.fork = fork;
+        this.forks = forks;
+        this.forksCount = forksCount;
+        this.forksUrl = forksUrl;
+        this.fullName = fullName;
+        this.gitCommitsUrl = gitCommitsUrl;
+        this.gitRefsUrl = gitRefsUrl;
+        this.gitTagsUrl = gitTagsUrl;
+        this.gitUrl = gitUrl;
+        this.hasDownloads = hasDownloads;
+        this.hasIssues = hasIssues;
+        this.hasPages = hasPages;
+        this.hasProjects = hasProjects;
+        this.hasWiki = hasWiki;
+        this.homepage = homepage;
+        this.hooksUrl = hooksUrl;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.issueCommentUrl = issueCommentUrl;
+        this.issueEventsUrl = issueEventsUrl;
+        this.issuesUrl = issuesUrl;
+        this.keysUrl = keysUrl;
+        this.labelsUrl = labelsUrl;
+        this.language = language;
+        this.languagesUrl = languagesUrl;
+        this.license = license;
+        this.mergesUrl = mergesUrl;
+        this.milestonesUrl = milestonesUrl;
+        this.mirrorUrl = mirrorUrl;
+        this.name = name;
+        this.nodeId = nodeId;
+        this.notificationsUrl = notificationsUrl;
+        this.openIssues = openIssues;
+        this.openIssuesCount = openIssuesCount;
+        this.owner = owner;
+        this.private_ = private_;
+        this.pullsUrl = pullsUrl;
+        this.pushedAt = pushedAt;
+        this.releasesUrl = releasesUrl;
+        this.size = size;
+        this.sshUrl = sshUrl;
+        this.stargazersCount = stargazersCount;
+        this.stargazersUrl = stargazersUrl;
+        this.statusesUrl = statusesUrl;
+        this.subscribersUrl = subscribersUrl;
+        this.subscriptionUrl = subscriptionUrl;
+        this.svnUrl = svnUrl;
+        this.tagsUrl = tagsUrl;
+        this.teamsUrl = teamsUrl;
+        this.treesUrl = treesUrl;
+        this.updatedAt = updatedAt;
+        this.url = url;
+        this.watchers = watchers;
+        this.watchersCount = watchersCount;
+  }
 }

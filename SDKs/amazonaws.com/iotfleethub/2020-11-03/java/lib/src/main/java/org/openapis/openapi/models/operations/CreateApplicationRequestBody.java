@@ -15,6 +15,7 @@ public class CreateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationDescription")
     public String applicationDescription;
+
     public CreateApplicationRequestBody withApplicationDescription(String applicationDescription) {
         this.applicationDescription = applicationDescription;
         return this;
@@ -25,6 +26,7 @@ public class CreateApplicationRequestBody {
      */
     @JsonProperty("applicationName")
     public String applicationName;
+
     public CreateApplicationRequestBody withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -36,6 +38,7 @@ public class CreateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateApplicationRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -46,6 +49,7 @@ public class CreateApplicationRequestBody {
      */
     @JsonProperty("roleArn")
     public String roleArn;
+
     public CreateApplicationRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -57,9 +61,14 @@ public class CreateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateApplicationRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateApplicationRequestBody(@JsonProperty("applicationName") String applicationName, @JsonProperty("roleArn") String roleArn) {
+        this.applicationName = applicationName;
+        this.roleArn = roleArn;
+  }
 }

@@ -15,6 +15,7 @@ public class BillingAggregatedInformationGetAllDefaultApplicationJSONError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public BillingAggregatedInformationGetAllDefaultApplicationJSONErrorCodeEnum code;
+
     public BillingAggregatedInformationGetAllDefaultApplicationJSONError withCode(BillingAggregatedInformationGetAllDefaultApplicationJSONErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -26,9 +27,11 @@ public class BillingAggregatedInformationGetAllDefaultApplicationJSONError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public BillingAggregatedInformationGetAllDefaultApplicationJSONError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public BillingAggregatedInformationGetAllDefaultApplicationJSONError(){}
 }

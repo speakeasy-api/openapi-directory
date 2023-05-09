@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListConformancePackComplianceScoresResponse {
     @JsonProperty("ConformancePackComplianceScores")
     public ConformancePackComplianceScore[] conformancePackComplianceScores;
+
     public ListConformancePackComplianceScoresResponse withConformancePackComplianceScores(ConformancePackComplianceScore[] conformancePackComplianceScores) {
         this.conformancePackComplianceScores = conformancePackComplianceScores;
         return this;
@@ -22,9 +23,13 @@ public class ListConformancePackComplianceScoresResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListConformancePackComplianceScoresResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListConformancePackComplianceScoresResponse(@JsonProperty("ConformancePackComplianceScores") ConformancePackComplianceScore[] conformancePackComplianceScores) {
+        this.conformancePackComplianceScores = conformancePackComplianceScores;
+  }
 }

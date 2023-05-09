@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class NodesChildrenListNode {
     /**
@@ -12,6 +12,7 @@ public class NodesChildrenListNode {
      */
     
     public NodesChildrenListNodeAttributes attributes;
+
     public NodesChildrenListNode withAttributes(NodesChildrenListNodeAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class NodesChildrenListNode {
      */
     
     public String id;
+
     public NodesChildrenListNode withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class NodesChildrenListNode {
      */
     
     public NodesChildrenListNodeLinks links;
+
     public NodesChildrenListNode withLinks(NodesChildrenListNodeLinks links) {
         this.links = links;
         return this;
@@ -42,6 +45,7 @@ public class NodesChildrenListNode {
      */
     
     public NodesChildrenListNodeRelationships relationships;
+
     public NodesChildrenListNode withRelationships(NodesChildrenListNodeRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -52,9 +56,14 @@ public class NodesChildrenListNode {
      */
     
     public String type;
+
     public NodesChildrenListNode withType(String type) {
         this.type = type;
         return this;
     }
     
+    public NodesChildrenListNode(@JsonProperty("attributes") NodesChildrenListNodeAttributes attributes, @JsonProperty("type") String type) {
+        this.attributes = attributes;
+        this.type = type;
+  }
 }

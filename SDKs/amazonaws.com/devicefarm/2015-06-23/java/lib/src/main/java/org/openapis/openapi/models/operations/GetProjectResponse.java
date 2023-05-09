@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetProjectResponse {
@@ -12,6 +13,7 @@ public class GetProjectResponse {
      */
     
     public Object argumentException;
+
     public GetProjectResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class GetProjectResponse {
     
     
     public String contentType;
+
     public GetProjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.GetProjectResult getProjectResult;
+
     public GetProjectResponse withGetProjectResult(org.openapis.openapi.models.shared.GetProjectResult getProjectResult) {
         this.getProjectResult = getProjectResult;
         return this;
@@ -39,6 +43,7 @@ public class GetProjectResponse {
      */
     
     public Object limitExceededException;
+
     public GetProjectResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class GetProjectResponse {
      */
     
     public Object notFoundException;
+
     public GetProjectResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetProjectResponse {
      */
     
     public Object serviceAccountException;
+
     public GetProjectResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -66,6 +73,7 @@ public class GetProjectResponse {
     
     
     public Integer statusCode;
+
     public GetProjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetProjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetProjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetProjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPermissionPolicyResponse {
     
     public String contentType;
+
     public GetPermissionPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPermissionPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPermissionPolicyResponse getPermissionPolicyResponse;
+
     public GetPermissionPolicyResponse withGetPermissionPolicyResponse(org.openapis.openapi.models.shared.GetPermissionPolicyResponse getPermissionPolicyResponse) {
         this.getPermissionPolicyResponse = getPermissionPolicyResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetPermissionPolicyResponse {
     
     
     public Integer statusCode;
+
     public GetPermissionPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetPermissionPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPermissionPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class GetPermissionPolicyResponse {
      */
     
     public Object wafInternalErrorException;
+
     public GetPermissionPolicyResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,9 +59,14 @@ public class GetPermissionPolicyResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public GetPermissionPolicyResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
     }
     
+    public GetPermissionPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

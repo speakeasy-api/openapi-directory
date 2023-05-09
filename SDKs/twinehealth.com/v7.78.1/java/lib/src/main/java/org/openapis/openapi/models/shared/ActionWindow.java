@@ -12,6 +12,7 @@ public class ActionWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_id")
     public String id;
+
     public ActionWindow withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class ActionWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ActionWindow withTitle(String title) {
         this.title = title;
         return this;
@@ -27,9 +29,13 @@ public class ActionWindow {
     
     @JsonProperty("type")
     public String type;
+
     public ActionWindow withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ActionWindow(@JsonProperty("type") String type) {
+        this.type = type;
+  }
 }

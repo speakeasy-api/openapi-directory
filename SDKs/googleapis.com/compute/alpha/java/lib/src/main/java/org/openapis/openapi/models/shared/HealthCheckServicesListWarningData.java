@@ -15,6 +15,7 @@ public class HealthCheckServicesListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public HealthCheckServicesListWarningData withKey(String key) {
         this.key = key;
         return this;
@@ -26,9 +27,11 @@ public class HealthCheckServicesListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public HealthCheckServicesListWarningData withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public HealthCheckServicesListWarningData(){}
 }

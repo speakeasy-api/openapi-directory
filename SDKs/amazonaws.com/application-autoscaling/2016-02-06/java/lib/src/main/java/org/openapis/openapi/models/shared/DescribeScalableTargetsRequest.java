@@ -12,6 +12,7 @@ public class DescribeScalableTargetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeScalableTargetsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class DescribeScalableTargetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeScalableTargetsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,6 +30,7 @@ public class DescribeScalableTargetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceIds")
     public String[] resourceIds;
+
     public DescribeScalableTargetsRequest withResourceIds(String[] resourceIds) {
         this.resourceIds = resourceIds;
         return this;
@@ -36,6 +39,7 @@ public class DescribeScalableTargetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScalableDimension")
     public ScalableDimensionEnum scalableDimension;
+
     public DescribeScalableTargetsRequest withScalableDimension(ScalableDimensionEnum scalableDimension) {
         this.scalableDimension = scalableDimension;
         return this;
@@ -43,9 +47,13 @@ public class DescribeScalableTargetsRequest {
     
     @JsonProperty("ServiceNamespace")
     public ServiceNamespaceEnum serviceNamespace;
+
     public DescribeScalableTargetsRequest withServiceNamespace(ServiceNamespaceEnum serviceNamespace) {
         this.serviceNamespace = serviceNamespace;
         return this;
     }
     
+    public DescribeScalableTargetsRequest(@JsonProperty("ServiceNamespace") ServiceNamespaceEnum serviceNamespace) {
+        this.serviceNamespace = serviceNamespace;
+  }
 }

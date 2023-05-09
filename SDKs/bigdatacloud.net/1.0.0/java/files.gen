@@ -33,4 +33,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/IpGeolocationWithConfid
 lib/src/main/java/org/openapis/openapi/models/operations/IpGeolocationWithConfidenceAreaAndHazardReportApiResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/IpGeolocationWithConfidenceAreaApiRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/IpGeolocationWithConfidenceAreaApiResponse.java
+docs/sdk/README.md
 USAGE.md

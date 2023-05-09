@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * OpenHours - The time when journey allow to send messages. QuietTime should be configured first and SendingSchedule should be set to true.
+ * OpenHours - Specifies the times when message are allowed to be sent to endpoints.
  */
 public class OpenHours {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CUSTOM")
     public java.util.Map<String, OpenHoursRule[]> custom;
+
     public OpenHours withCustom(java.util.Map<String, OpenHoursRule[]> custom) {
         this.custom = custom;
         return this;
@@ -23,6 +24,7 @@ public class OpenHours {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EMAIL")
     public java.util.Map<String, OpenHoursRule[]> email;
+
     public OpenHours withEmail(java.util.Map<String, OpenHoursRule[]> email) {
         this.email = email;
         return this;
@@ -31,6 +33,7 @@ public class OpenHours {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PUSH")
     public java.util.Map<String, OpenHoursRule[]> push;
+
     public OpenHours withPush(java.util.Map<String, OpenHoursRule[]> push) {
         this.push = push;
         return this;
@@ -39,6 +42,7 @@ public class OpenHours {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SMS")
     public java.util.Map<String, OpenHoursRule[]> sms;
+
     public OpenHours withSms(java.util.Map<String, OpenHoursRule[]> sms) {
         this.sms = sms;
         return this;
@@ -47,9 +51,11 @@ public class OpenHours {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VOICE")
     public java.util.Map<String, OpenHoursRule[]> voice;
+
     public OpenHours withVoice(java.util.Map<String, OpenHoursRule[]> voice) {
         this.voice = voice;
         return this;
     }
     
+    public OpenHours(){}
 }

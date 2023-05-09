@@ -15,6 +15,7 @@ public class DeleteApplicationInputProcessingConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationARN")
     public String applicationARN;
+
     public DeleteApplicationInputProcessingConfigurationResponse withApplicationARN(String applicationARN) {
         this.applicationARN = applicationARN;
         return this;
@@ -23,9 +24,11 @@ public class DeleteApplicationInputProcessingConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationVersionId")
     public Long applicationVersionId;
+
     public DeleteApplicationInputProcessingConfigurationResponse withApplicationVersionId(Long applicationVersionId) {
         this.applicationVersionId = applicationVersionId;
         return this;
     }
     
+    public DeleteApplicationInputProcessingConfigurationResponse(){}
 }

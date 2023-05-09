@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CategoriesAllRequest;
 import org.openapis.openapi.models.operations.CategoriesAllResponse;
 
@@ -13,19 +12,20 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CategoriesAllRequest req = new CategoriesAllRequest() {{
-                cursor = "corrupti";
-                ecosystemId = "provident";
-                limit = 715190;
-            }}            
+            CategoriesAllRequest req = new CategoriesAllRequest("corrupti") {{
+                cursor = "provident";
+                limit = 715190L;
+            }};            
 
             CategoriesAllResponse res = sdk.category.categoriesAll(req);
 
-            if (res.getCategoriesResponse.isPresent()) {
+            if (res.getCategoriesResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

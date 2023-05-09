@@ -18,9 +18,11 @@ public class GoogleCloudRetailV2RejoinUserEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userEventRejoinScope")
     public GoogleCloudRetailV2RejoinUserEventsRequestUserEventRejoinScopeEnum userEventRejoinScope;
+
     public GoogleCloudRetailV2RejoinUserEventsRequest withUserEventRejoinScope(GoogleCloudRetailV2RejoinUserEventsRequestUserEventRejoinScopeEnum userEventRejoinScope) {
         this.userEventRejoinScope = userEventRejoinScope;
         return this;
     }
     
+    public GoogleCloudRetailV2RejoinUserEventsRequest(){}
 }

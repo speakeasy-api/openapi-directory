@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetBlobInput {
     @JsonProperty("blobId")
     public String blobId;
+
     public GetBlobInput withBlobId(String blobId) {
         this.blobId = blobId;
         return this;
@@ -19,9 +20,14 @@ public class GetBlobInput {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public GetBlobInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public GetBlobInput(@JsonProperty("blobId") String blobId, @JsonProperty("repositoryName") String repositoryName) {
+        this.blobId = blobId;
+        this.repositoryName = repositoryName;
+  }
 }

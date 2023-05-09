@@ -58,14 +58,12 @@ public class Road {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RoadDisruptedStreetsResponse res = new org.openapis.openapi.models.operations.RoadDisruptedStreetsResponse() {{
+        org.openapis.openapi.models.operations.RoadDisruptedStreetsResponse res = new org.openapis.openapi.models.operations.RoadDisruptedStreetsResponse(contentType, httpRes.statusCode()) {{
             systemObject = null;
             systemObject = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -118,15 +116,13 @@ public class Road {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RoadDisruptionResponse res = new org.openapis.openapi.models.operations.RoadDisruptionResponse() {{
+        org.openapis.openapi.models.operations.RoadDisruptionResponse res = new org.openapis.openapi.models.operations.RoadDisruptionResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesRoadDisruptions = null;
             tflApiPresentationEntitiesRoadDisruptions = null;
             tflApiPresentationEntitiesRoadDisruptions = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -184,15 +180,13 @@ public class Road {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RoadDisruptionByIdResponse res = new org.openapis.openapi.models.operations.RoadDisruptionByIdResponse() {{
+        org.openapis.openapi.models.operations.RoadDisruptionByIdResponse res = new org.openapis.openapi.models.operations.RoadDisruptionByIdResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesRoadDisruption = null;
             tflApiPresentationEntitiesRoadDisruption = null;
             tflApiPresentationEntitiesRoadDisruption = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -243,14 +237,12 @@ public class Road {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RoadGetResponse res = new org.openapis.openapi.models.operations.RoadGetResponse() {{
+        org.openapis.openapi.models.operations.RoadGetResponse res = new org.openapis.openapi.models.operations.RoadGetResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesRoadCorridors = null;
             tflApiPresentationEntitiesRoadCorridors = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,14 +288,12 @@ public class Road {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RoadMetaCategoriesResponse res = new org.openapis.openapi.models.operations.RoadMetaCategoriesResponse() {{
+        org.openapis.openapi.models.operations.RoadMetaCategoriesResponse res = new org.openapis.openapi.models.operations.RoadMetaCategoriesResponse(contentType, httpRes.statusCode()) {{
             roadMetaCategories200ApplicationJSONStrings = null;
             body = null;
             body = null;
             roadMetaCategories200TextJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -349,14 +339,12 @@ public class Road {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RoadMetaSeveritiesResponse res = new org.openapis.openapi.models.operations.RoadMetaSeveritiesResponse() {{
+        org.openapis.openapi.models.operations.RoadMetaSeveritiesResponse res = new org.openapis.openapi.models.operations.RoadMetaSeveritiesResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesStatusSeverities = null;
             tflApiPresentationEntitiesStatusSeverities = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -409,14 +397,12 @@ public class Road {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RoadStatusResponse res = new org.openapis.openapi.models.operations.RoadStatusResponse() {{
+        org.openapis.openapi.models.operations.RoadStatusResponse res = new org.openapis.openapi.models.operations.RoadStatusResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesRoadCorridors = null;
             tflApiPresentationEntitiesRoadCorridors = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -463,14 +449,12 @@ public class Road {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRoadIdsResponse res = new org.openapis.openapi.models.operations.GetRoadIdsResponse() {{
+        org.openapis.openapi.models.operations.GetRoadIdsResponse res = new org.openapis.openapi.models.operations.GetRoadIdsResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesRoadCorridors = null;
             tflApiPresentationEntitiesRoadCorridors = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class ListSatellitesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListSatellitesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListSatellitesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("satellites")
     public SatelliteListItem[] satellites;
+
     public ListSatellitesResponse withSatellites(SatelliteListItem[] satellites) {
         this.satellites = satellites;
         return this;
     }
     
+    public ListSatellitesResponse(){}
 }

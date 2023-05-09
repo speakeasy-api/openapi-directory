@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConnectedDevice {
     @JsonProperty("device")
     public Device device;
+
     public ConnectedDevice withDevice(Device device) {
         this.device = device;
         return this;
@@ -16,9 +17,14 @@ public class ConnectedDevice {
     
     @JsonProperty("enabled_profiles")
     public Integer enabledProfiles;
+
     public ConnectedDevice withEnabledProfiles(Integer enabledProfiles) {
         this.enabledProfiles = enabledProfiles;
         return this;
     }
     
+    public ConnectedDevice(@JsonProperty("device") Device device, @JsonProperty("enabled_profiles") Integer enabledProfiles) {
+        this.device = device;
+        this.enabledProfiles = enabledProfiles;
+  }
 }

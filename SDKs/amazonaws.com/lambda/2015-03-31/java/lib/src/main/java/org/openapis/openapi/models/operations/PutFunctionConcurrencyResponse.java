@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutFunctionConcurrencyResponse {
@@ -12,6 +13,7 @@ public class PutFunctionConcurrencyResponse {
      */
     
     public org.openapis.openapi.models.shared.Concurrency concurrency;
+
     public PutFunctionConcurrencyResponse withConcurrency(org.openapis.openapi.models.shared.Concurrency concurrency) {
         this.concurrency = concurrency;
         return this;
@@ -19,6 +21,7 @@ public class PutFunctionConcurrencyResponse {
     
     
     public String contentType;
+
     public PutFunctionConcurrencyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutFunctionConcurrencyResponse {
      */
     
     public Object invalidParameterValueException;
+
     public PutFunctionConcurrencyResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class PutFunctionConcurrencyResponse {
      */
     
     public Object resourceConflictException;
+
     public PutFunctionConcurrencyResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -49,6 +54,7 @@ public class PutFunctionConcurrencyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutFunctionConcurrencyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class PutFunctionConcurrencyResponse {
      */
     
     public Object serviceException;
+
     public PutFunctionConcurrencyResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class PutFunctionConcurrencyResponse {
     
     
     public Integer statusCode;
+
     public PutFunctionConcurrencyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class PutFunctionConcurrencyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutFunctionConcurrencyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class PutFunctionConcurrencyResponse {
      */
     
     public Object tooManyRequestsException;
+
     public PutFunctionConcurrencyResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public PutFunctionConcurrencyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

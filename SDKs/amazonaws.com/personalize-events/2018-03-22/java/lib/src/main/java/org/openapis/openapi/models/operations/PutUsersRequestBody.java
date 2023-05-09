@@ -12,6 +12,7 @@ public class PutUsersRequestBody {
      */
     @JsonProperty("datasetArn")
     public String datasetArn;
+
     public PutUsersRequestBody withDatasetArn(String datasetArn) {
         this.datasetArn = datasetArn;
         return this;
@@ -22,9 +23,14 @@ public class PutUsersRequestBody {
      */
     @JsonProperty("users")
     public org.openapis.openapi.models.shared.User[] users;
+
     public PutUsersRequestBody withUsers(org.openapis.openapi.models.shared.User[] users) {
         this.users = users;
         return this;
     }
     
+    public PutUsersRequestBody(@JsonProperty("datasetArn") String datasetArn, @JsonProperty("users") org.openapis.openapi.models.shared.User[] users) {
+        this.datasetArn = datasetArn;
+        this.users = users;
+  }
 }

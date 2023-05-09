@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesMatchedStop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessibilitySummary")
     public String accessibilitySummary;
+
     public TflApiPresentationEntitiesMatchedStop withAccessibilitySummary(String accessibilitySummary) {
         this.accessibilitySummary = accessibilitySummary;
         return this;
@@ -20,6 +21,7 @@ public class TflApiPresentationEntitiesMatchedStop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direction")
     public String direction;
+
     public TflApiPresentationEntitiesMatchedStop withDirection(String direction) {
         this.direction = direction;
         return this;
@@ -28,6 +30,7 @@ public class TflApiPresentationEntitiesMatchedStop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasDisruption")
     public Boolean hasDisruption;
+
     public TflApiPresentationEntitiesMatchedStop withHasDisruption(Boolean hasDisruption) {
         this.hasDisruption = hasDisruption;
         return this;
@@ -36,6 +39,7 @@ public class TflApiPresentationEntitiesMatchedStop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icsId")
     public String icsId;
+
     public TflApiPresentationEntitiesMatchedStop withIcsId(String icsId) {
         this.icsId = icsId;
         return this;
@@ -44,6 +48,7 @@ public class TflApiPresentationEntitiesMatchedStop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TflApiPresentationEntitiesMatchedStop withId(String id) {
         this.id = id;
         return this;
@@ -52,6 +57,7 @@ public class TflApiPresentationEntitiesMatchedStop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lat")
     public Double lat;
+
     public TflApiPresentationEntitiesMatchedStop withLat(Double lat) {
         this.lat = lat;
         return this;
@@ -60,6 +66,7 @@ public class TflApiPresentationEntitiesMatchedStop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lines")
     public TflApiPresentationEntitiesIdentifier[] lines;
+
     public TflApiPresentationEntitiesMatchedStop withLines(TflApiPresentationEntitiesIdentifier[] lines) {
         this.lines = lines;
         return this;
@@ -68,6 +75,7 @@ public class TflApiPresentationEntitiesMatchedStop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lon")
     public Double lon;
+
     public TflApiPresentationEntitiesMatchedStop withLon(Double lon) {
         this.lon = lon;
         return this;
@@ -76,6 +84,7 @@ public class TflApiPresentationEntitiesMatchedStop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modes")
     public String[] modes;
+
     public TflApiPresentationEntitiesMatchedStop withModes(String[] modes) {
         this.modes = modes;
         return this;
@@ -84,6 +93,7 @@ public class TflApiPresentationEntitiesMatchedStop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TflApiPresentationEntitiesMatchedStop withName(String name) {
         this.name = name;
         return this;
@@ -92,6 +102,7 @@ public class TflApiPresentationEntitiesMatchedStop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentId")
     public String parentId;
+
     public TflApiPresentationEntitiesMatchedStop withParentId(String parentId) {
         this.parentId = parentId;
         return this;
@@ -100,6 +111,7 @@ public class TflApiPresentationEntitiesMatchedStop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routeId")
     public Integer routeId;
+
     public TflApiPresentationEntitiesMatchedStop withRouteId(Integer routeId) {
         this.routeId = routeId;
         return this;
@@ -108,6 +120,7 @@ public class TflApiPresentationEntitiesMatchedStop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stationId")
     public String stationId;
+
     public TflApiPresentationEntitiesMatchedStop withStationId(String stationId) {
         this.stationId = stationId;
         return this;
@@ -116,6 +129,7 @@ public class TflApiPresentationEntitiesMatchedStop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Boolean status;
+
     public TflApiPresentationEntitiesMatchedStop withStatus(Boolean status) {
         this.status = status;
         return this;
@@ -124,6 +138,7 @@ public class TflApiPresentationEntitiesMatchedStop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stopLetter")
     public String stopLetter;
+
     public TflApiPresentationEntitiesMatchedStop withStopLetter(String stopLetter) {
         this.stopLetter = stopLetter;
         return this;
@@ -132,6 +147,7 @@ public class TflApiPresentationEntitiesMatchedStop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stopType")
     public String stopType;
+
     public TflApiPresentationEntitiesMatchedStop withStopType(String stopType) {
         this.stopType = stopType;
         return this;
@@ -140,6 +156,7 @@ public class TflApiPresentationEntitiesMatchedStop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topMostParentId")
     public String topMostParentId;
+
     public TflApiPresentationEntitiesMatchedStop withTopMostParentId(String topMostParentId) {
         this.topMostParentId = topMostParentId;
         return this;
@@ -148,6 +165,7 @@ public class TflApiPresentationEntitiesMatchedStop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("towards")
     public String towards;
+
     public TflApiPresentationEntitiesMatchedStop withTowards(String towards) {
         this.towards = towards;
         return this;
@@ -156,6 +174,7 @@ public class TflApiPresentationEntitiesMatchedStop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public TflApiPresentationEntitiesMatchedStop withUrl(String url) {
         this.url = url;
         return this;
@@ -164,9 +183,11 @@ public class TflApiPresentationEntitiesMatchedStop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public TflApiPresentationEntitiesMatchedStop withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public TflApiPresentationEntitiesMatchedStop(){}
 }

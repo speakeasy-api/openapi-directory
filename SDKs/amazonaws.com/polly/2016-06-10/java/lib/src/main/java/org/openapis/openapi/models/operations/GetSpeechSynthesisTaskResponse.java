@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSpeechSynthesisTaskResponse {
     
     public String contentType;
+
     public GetSpeechSynthesisTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSpeechSynthesisTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSpeechSynthesisTaskOutput getSpeechSynthesisTaskOutput;
+
     public GetSpeechSynthesisTaskResponse withGetSpeechSynthesisTaskOutput(org.openapis.openapi.models.shared.GetSpeechSynthesisTaskOutput getSpeechSynthesisTaskOutput) {
         this.getSpeechSynthesisTaskOutput = getSpeechSynthesisTaskOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetSpeechSynthesisTaskResponse {
      */
     
     public Object invalidTaskIdException;
+
     public GetSpeechSynthesisTaskResponse withInvalidTaskIdException(Object invalidTaskIdException) {
         this.invalidTaskIdException = invalidTaskIdException;
         return this;
@@ -36,6 +40,7 @@ public class GetSpeechSynthesisTaskResponse {
     
     
     public Integer statusCode;
+
     public GetSpeechSynthesisTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetSpeechSynthesisTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSpeechSynthesisTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class GetSpeechSynthesisTaskResponse {
      */
     
     public Object serviceFailureException;
+
     public GetSpeechSynthesisTaskResponse withServiceFailureException(Object serviceFailureException) {
         this.serviceFailureException = serviceFailureException;
         return this;
@@ -63,9 +70,14 @@ public class GetSpeechSynthesisTaskResponse {
      */
     
     public Object synthesisTaskNotFoundException;
+
     public GetSpeechSynthesisTaskResponse withSynthesisTaskNotFoundException(Object synthesisTaskNotFoundException) {
         this.synthesisTaskNotFoundException = synthesisTaskNotFoundException;
         return this;
     }
     
+    public GetSpeechSynthesisTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

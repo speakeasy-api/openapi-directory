@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteProfileRequest {
     @JsonProperty("ProfileId")
     public String profileId;
+
     public DeleteProfileRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
     }
     
+    public DeleteProfileRequest(@JsonProperty("ProfileId") String profileId) {
+        this.profileId = profileId;
+  }
 }

@@ -15,9 +15,11 @@ public class DescribeNotificationConfigurationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationConfiguration")
     public NotificationConfiguration notificationConfiguration;
+
     public DescribeNotificationConfigurationOutput withNotificationConfiguration(NotificationConfiguration notificationConfiguration) {
         this.notificationConfiguration = notificationConfiguration;
         return this;
     }
     
+    public DescribeNotificationConfigurationOutput(){}
 }

@@ -12,6 +12,7 @@ public class WebfontsWebfontsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public WebfontsWebfontsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +23,7 @@ public class WebfontsWebfontsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public WebfontsWebfontsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +34,7 @@ public class WebfontsWebfontsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public WebfontsWebfontsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,8 +45,31 @@ public class WebfontsWebfontsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public WebfontsWebfontsListRequest withCallback(String callback) {
         this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Controls the font urls in `Webfont.files`, by default, static ttf fonts are sent.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=capability")
+    public WebfontsWebfontsListCapabilityEnum[] capability;
+
+    public WebfontsWebfontsListRequest withCapability(WebfontsWebfontsListCapabilityEnum[] capability) {
+        this.capability = capability;
+        return this;
+    }
+    
+    /**
+     * Filters by Webfont.family, using literal match. If not set, returns all families
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=family")
+    public String[] family;
+
+    public WebfontsWebfontsListRequest withFamily(String[] family) {
+        this.family = family;
         return this;
     }
     
@@ -52,6 +78,7 @@ public class WebfontsWebfontsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public WebfontsWebfontsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +89,7 @@ public class WebfontsWebfontsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public WebfontsWebfontsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +100,7 @@ public class WebfontsWebfontsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public WebfontsWebfontsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +111,7 @@ public class WebfontsWebfontsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public WebfontsWebfontsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -92,6 +122,7 @@ public class WebfontsWebfontsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public WebfontsWebfontsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -102,8 +133,20 @@ public class WebfontsWebfontsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public WebfontsWebfontsListSortEnum sort;
+
     public WebfontsWebfontsListRequest withSort(WebfontsWebfontsListSortEnum sort) {
         this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Filters by Webfont.subset, if subset is found in Webfont.subsets. If not set, returns all families.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subset")
+    public String subset;
+
+    public WebfontsWebfontsListRequest withSubset(String subset) {
+        this.subset = subset;
         return this;
     }
     
@@ -112,6 +155,7 @@ public class WebfontsWebfontsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public WebfontsWebfontsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -122,9 +166,11 @@ public class WebfontsWebfontsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public WebfontsWebfontsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public WebfontsWebfontsListRequest(){}
 }

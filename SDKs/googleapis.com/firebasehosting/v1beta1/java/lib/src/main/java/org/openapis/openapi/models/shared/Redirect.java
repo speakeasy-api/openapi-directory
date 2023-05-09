@@ -18,6 +18,7 @@ public class Redirect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("glob")
     public String glob;
+
     public Redirect withGlob(String glob) {
         this.glob = glob;
         return this;
@@ -29,6 +30,7 @@ public class Redirect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public Redirect withLocation(String location) {
         this.location = location;
         return this;
@@ -40,6 +42,7 @@ public class Redirect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regex")
     public String regex;
+
     public Redirect withRegex(String regex) {
         this.regex = regex;
         return this;
@@ -51,9 +54,11 @@ public class Redirect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusCode")
     public Integer statusCode;
+
     public Redirect withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     
+    public Redirect(){}
 }

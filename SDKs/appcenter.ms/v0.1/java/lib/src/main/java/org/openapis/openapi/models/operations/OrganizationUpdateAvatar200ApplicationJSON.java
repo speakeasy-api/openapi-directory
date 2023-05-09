@@ -18,6 +18,7 @@ public class OrganizationUpdateAvatar200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatar_url")
     public String avatarUrl;
+
     public OrganizationUpdateAvatar200ApplicationJSON withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -28,6 +29,7 @@ public class OrganizationUpdateAvatar200ApplicationJSON {
      */
     @JsonProperty("created_at")
     public String createdAt;
+
     public OrganizationUpdateAvatar200ApplicationJSON withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class OrganizationUpdateAvatar200ApplicationJSON {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public OrganizationUpdateAvatar200ApplicationJSON withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -48,6 +51,7 @@ public class OrganizationUpdateAvatar200ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public OrganizationUpdateAvatar200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -58,6 +62,7 @@ public class OrganizationUpdateAvatar200ApplicationJSON {
      */
     @JsonProperty("name")
     public String name;
+
     public OrganizationUpdateAvatar200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -68,6 +73,7 @@ public class OrganizationUpdateAvatar200ApplicationJSON {
      */
     @JsonProperty("origin")
     public OrganizationUpdateAvatar200ApplicationJSONOriginEnum origin;
+
     public OrganizationUpdateAvatar200ApplicationJSON withOrigin(OrganizationUpdateAvatar200ApplicationJSONOriginEnum origin) {
         this.origin = origin;
         return this;
@@ -78,9 +84,18 @@ public class OrganizationUpdateAvatar200ApplicationJSON {
      */
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public OrganizationUpdateAvatar200ApplicationJSON withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public OrganizationUpdateAvatar200ApplicationJSON(@JsonProperty("created_at") String createdAt, @JsonProperty("display_name") String displayName, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("origin") OrganizationUpdateAvatar200ApplicationJSONOriginEnum origin, @JsonProperty("updated_at") String updatedAt) {
+        this.createdAt = createdAt;
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+        this.origin = origin;
+        this.updatedAt = updatedAt;
+  }
 }

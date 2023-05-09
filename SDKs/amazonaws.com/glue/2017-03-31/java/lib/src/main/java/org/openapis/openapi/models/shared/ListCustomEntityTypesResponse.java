@@ -15,6 +15,7 @@ public class ListCustomEntityTypesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomEntityTypes")
     public CustomEntityType[] customEntityTypes;
+
     public ListCustomEntityTypesResponse withCustomEntityTypes(CustomEntityType[] customEntityTypes) {
         this.customEntityTypes = customEntityTypes;
         return this;
@@ -23,9 +24,11 @@ public class ListCustomEntityTypesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCustomEntityTypesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCustomEntityTypesResponse(){}
 }

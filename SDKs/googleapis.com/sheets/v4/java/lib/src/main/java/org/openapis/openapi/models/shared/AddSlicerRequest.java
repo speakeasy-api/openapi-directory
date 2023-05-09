@@ -18,9 +18,11 @@ public class AddSlicerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slicer")
     public Slicer slicer;
+
     public AddSlicerRequest withSlicer(Slicer slicer) {
         this.slicer = slicer;
         return this;
     }
     
+    public AddSlicerRequest(){}
 }

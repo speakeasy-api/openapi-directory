@@ -15,6 +15,7 @@ public class AwsWafRuleGroupRulesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Action")
     public AwsWafRuleGroupRulesActionDetails action;
+
     public AwsWafRuleGroupRulesDetails withAction(AwsWafRuleGroupRulesActionDetails action) {
         this.action = action;
         return this;
@@ -23,6 +24,7 @@ public class AwsWafRuleGroupRulesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Priority")
     public Long priority;
+
     public AwsWafRuleGroupRulesDetails withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -31,6 +33,7 @@ public class AwsWafRuleGroupRulesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleId")
     public String ruleId;
+
     public AwsWafRuleGroupRulesDetails withRuleId(String ruleId) {
         this.ruleId = ruleId;
         return this;
@@ -39,9 +42,11 @@ public class AwsWafRuleGroupRulesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public AwsWafRuleGroupRulesDetails withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AwsWafRuleGroupRulesDetails(){}
 }

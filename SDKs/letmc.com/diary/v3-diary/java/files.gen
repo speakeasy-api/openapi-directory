@@ -79,6 +79,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/LinkedPropertiesModel.java
 lib/src/main/java/org/openapis/openapi/models/shared/LinkedLandlordModel.java
 lib/src/main/java/org/openapis/openapi/models/shared/LatestTenancyModel.java
 lib/src/main/java/org/openapis/openapi/models/shared/LinkedTenantModel.java
+lib/src/main/java/org/openapis/openapi/models/shared/LinkedGuestModel.java
 lib/src/main/java/org/openapis/openapi/models/shared/DiaryAppointmentTypeModelResults.java
 lib/src/main/java/org/openapis/openapi/models/shared/DiaryAppointmentTypeModelSystemTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/DiaryAppointmentTypeModel.java
@@ -88,4 +89,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/DiaryGuestDetails.java
 lib/src/main/java/org/openapis/openapi/models/shared/GuestDiaryParametersResultsModel.java
 lib/src/main/java/org/openapis/openapi/models/shared/BaseHypermediaLink.java
 lib/src/main/java/org/openapis/openapi/models/shared/GuestDiaryParametersModel.java
+docs/sdk/README.md
+docs/companycontroller/README.md
+docs/diarycontroller/README.md
 USAGE.md

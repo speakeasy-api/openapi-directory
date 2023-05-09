@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces {
     
     public Boolean associateCarrierIpAddress;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces withAssociateCarrierIpAddress(Boolean associateCarrierIpAddress) {
         this.associateCarrierIpAddress = associateCarrierIpAddress;
         return this;
@@ -19,6 +20,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces {
     
     
     public Boolean associatePublicIpAddress;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces withAssociatePublicIpAddress(Boolean associatePublicIpAddress) {
         this.associatePublicIpAddress = associatePublicIpAddress;
         return this;
@@ -26,6 +28,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces {
     
     
     public Boolean deleteOnTermination;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces withDeleteOnTermination(Boolean deleteOnTermination) {
         this.deleteOnTermination = deleteOnTermination;
         return this;
@@ -33,6 +36,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces {
     
     
     public String description;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +44,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces {
     
     
     public Long deviceIndex;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces withDeviceIndex(Long deviceIndex) {
         this.deviceIndex = deviceIndex;
         return this;
@@ -47,6 +52,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces {
     
     
     public String[] groups;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces withGroups(String[] groups) {
         this.groups = groups;
         return this;
@@ -54,6 +60,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces {
     
     
     public String interfaceType;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces withInterfaceType(String interfaceType) {
         this.interfaceType = interfaceType;
         return this;
@@ -61,6 +68,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces {
     
     
     public Long ipv4PrefixCount;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces withIpv4PrefixCount(Long ipv4PrefixCount) {
         this.ipv4PrefixCount = ipv4PrefixCount;
         return this;
@@ -68,6 +76,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces {
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfacesIpv4Prefixes[] ipv4Prefixes;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces withIpv4Prefixes(GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfacesIpv4Prefixes[] ipv4Prefixes) {
         this.ipv4Prefixes = ipv4Prefixes;
         return this;
@@ -75,6 +84,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces {
     
     
     public Long ipv6AddressCount;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces withIpv6AddressCount(Long ipv6AddressCount) {
         this.ipv6AddressCount = ipv6AddressCount;
         return this;
@@ -82,6 +92,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces {
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfacesIpv6Addresses[] ipv6Addresses;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces withIpv6Addresses(GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfacesIpv6Addresses[] ipv6Addresses) {
         this.ipv6Addresses = ipv6Addresses;
         return this;
@@ -89,6 +100,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces {
     
     
     public Long ipv6PrefixCount;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces withIpv6PrefixCount(Long ipv6PrefixCount) {
         this.ipv6PrefixCount = ipv6PrefixCount;
         return this;
@@ -96,6 +108,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces {
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfacesIpv6Prefixes[] ipv6Prefixes;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces withIpv6Prefixes(GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfacesIpv6Prefixes[] ipv6Prefixes) {
         this.ipv6Prefixes = ipv6Prefixes;
         return this;
@@ -103,6 +116,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces {
     
     
     public Long networkCardIndex;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces withNetworkCardIndex(Long networkCardIndex) {
         this.networkCardIndex = networkCardIndex;
         return this;
@@ -110,6 +124,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces {
     
     
     public String networkInterfaceId;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -117,6 +132,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces {
     
     
     public String privateIpAddress;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces withPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
@@ -124,6 +140,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces {
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfacesPrivateIpAddresses[] privateIpAddresses;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces withPrivateIpAddresses(GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfacesPrivateIpAddresses[] privateIpAddresses) {
         this.privateIpAddresses = privateIpAddresses;
         return this;
@@ -131,6 +148,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces {
     
     
     public Long secondaryPrivateIpAddressCount;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces withSecondaryPrivateIpAddressCount(Long secondaryPrivateIpAddressCount) {
         this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
         return this;
@@ -138,9 +156,11 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces {
     
     
     public String subnetId;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
     }
     
+    public GetLaunchTemplateDataResultLaunchTemplateDataNetworkInterfaces(){}
 }

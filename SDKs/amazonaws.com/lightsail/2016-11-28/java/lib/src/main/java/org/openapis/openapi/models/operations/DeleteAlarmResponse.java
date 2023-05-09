@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAlarmResponse {
@@ -12,6 +13,7 @@ public class DeleteAlarmResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteAlarmResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAlarmResponse {
     
     
     public String contentType;
+
     public DeleteAlarmResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAlarmResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteAlarmResult deleteAlarmResult;
+
     public DeleteAlarmResponse withDeleteAlarmResult(org.openapis.openapi.models.shared.DeleteAlarmResult deleteAlarmResult) {
         this.deleteAlarmResult = deleteAlarmResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAlarmResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteAlarmResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteAlarmResponse {
      */
     
     public Object notFoundException;
+
     public DeleteAlarmResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteAlarmResponse {
      */
     
     public Object operationFailureException;
+
     public DeleteAlarmResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteAlarmResponse {
      */
     
     public Object serviceException;
+
     public DeleteAlarmResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteAlarmResponse {
     
     
     public Integer statusCode;
+
     public DeleteAlarmResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteAlarmResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAlarmResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class DeleteAlarmResponse {
      */
     
     public Object unauthenticatedException;
+
     public DeleteAlarmResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public DeleteAlarmResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

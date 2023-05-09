@@ -15,6 +15,7 @@ public class DescribeConnectorsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorTypes")
     public org.openapis.openapi.models.shared.ConnectorTypeEnum[] connectorTypes;
+
     public DescribeConnectorsRequestBody withConnectorTypes(org.openapis.openapi.models.shared.ConnectorTypeEnum[] connectorTypes) {
         this.connectorTypes = connectorTypes;
         return this;
@@ -26,6 +27,7 @@ public class DescribeConnectorsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public DescribeConnectorsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +39,11 @@ public class DescribeConnectorsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeConnectorsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeConnectorsRequestBody(){}
 }

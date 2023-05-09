@@ -23,6 +23,7 @@ public class GetTerminalDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bluetoothIp")
     public String bluetoothIp;
+
     public GetTerminalDetailsResponse withBluetoothIp(String bluetoothIp) {
         this.bluetoothIp = bluetoothIp;
         return this;
@@ -34,6 +35,7 @@ public class GetTerminalDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bluetoothMac")
     public String bluetoothMac;
+
     public GetTerminalDetailsResponse withBluetoothMac(String bluetoothMac) {
         this.bluetoothMac = bluetoothMac;
         return this;
@@ -44,6 +46,7 @@ public class GetTerminalDetailsResponse {
      */
     @JsonProperty("companyAccount")
     public String companyAccount;
+
     public GetTerminalDetailsResponse withCompanyAccount(String companyAccount) {
         this.companyAccount = companyAccount;
         return this;
@@ -55,6 +58,7 @@ public class GetTerminalDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public GetTerminalDetailsResponse withCountry(String country) {
         this.country = country;
         return this;
@@ -66,6 +70,7 @@ public class GetTerminalDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceModel")
     public String deviceModel;
+
     public GetTerminalDetailsResponse withDeviceModel(String deviceModel) {
         this.deviceModel = deviceModel;
         return this;
@@ -77,6 +82,7 @@ public class GetTerminalDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dhcpEnabled")
     public Boolean dhcpEnabled;
+
     public GetTerminalDetailsResponse withDhcpEnabled(Boolean dhcpEnabled) {
         this.dhcpEnabled = dhcpEnabled;
         return this;
@@ -88,6 +94,7 @@ public class GetTerminalDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayLabel")
     public String displayLabel;
+
     public GetTerminalDetailsResponse withDisplayLabel(String displayLabel) {
         this.displayLabel = displayLabel;
         return this;
@@ -99,6 +106,7 @@ public class GetTerminalDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ethernetIp")
     public String ethernetIp;
+
     public GetTerminalDetailsResponse withEthernetIp(String ethernetIp) {
         this.ethernetIp = ethernetIp;
         return this;
@@ -110,6 +118,7 @@ public class GetTerminalDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ethernetMac")
     public String ethernetMac;
+
     public GetTerminalDetailsResponse withEthernetMac(String ethernetMac) {
         this.ethernetMac = ethernetMac;
         return this;
@@ -121,6 +130,7 @@ public class GetTerminalDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firmwareVersion")
     public String firmwareVersion;
+
     public GetTerminalDetailsResponse withFirmwareVersion(String firmwareVersion) {
         this.firmwareVersion = firmwareVersion;
         return this;
@@ -132,6 +142,7 @@ public class GetTerminalDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iccid")
     public String iccid;
+
     public GetTerminalDetailsResponse withIccid(String iccid) {
         this.iccid = iccid;
         return this;
@@ -145,6 +156,7 @@ public class GetTerminalDetailsResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastActivityDateTime")
     public OffsetDateTime lastActivityDateTime;
+
     public GetTerminalDetailsResponse withLastActivityDateTime(OffsetDateTime lastActivityDateTime) {
         this.lastActivityDateTime = lastActivityDateTime;
         return this;
@@ -158,6 +170,7 @@ public class GetTerminalDetailsResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastTransactionDateTime")
     public OffsetDateTime lastTransactionDateTime;
+
     public GetTerminalDetailsResponse withLastTransactionDateTime(OffsetDateTime lastTransactionDateTime) {
         this.lastTransactionDateTime = lastTransactionDateTime;
         return this;
@@ -173,6 +186,7 @@ public class GetTerminalDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkNegotiation")
     public String linkNegotiation;
+
     public GetTerminalDetailsResponse withLinkNegotiation(String linkNegotiation) {
         this.linkNegotiation = linkNegotiation;
         return this;
@@ -184,6 +198,7 @@ public class GetTerminalDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantAccount")
     public String merchantAccount;
+
     public GetTerminalDetailsResponse withMerchantAccount(String merchantAccount) {
         this.merchantAccount = merchantAccount;
         return this;
@@ -199,6 +214,7 @@ public class GetTerminalDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantInventory")
     public Boolean merchantInventory;
+
     public GetTerminalDetailsResponse withMerchantInventory(Boolean merchantInventory) {
         this.merchantInventory = merchantInventory;
         return this;
@@ -210,6 +226,7 @@ public class GetTerminalDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permanentTerminalId")
     public String permanentTerminalId;
+
     public GetTerminalDetailsResponse withPermanentTerminalId(String permanentTerminalId) {
         this.permanentTerminalId = permanentTerminalId;
         return this;
@@ -221,6 +238,7 @@ public class GetTerminalDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serialNumber")
     public String serialNumber;
+
     public GetTerminalDetailsResponse withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -232,6 +250,7 @@ public class GetTerminalDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("simStatus")
     public String simStatus;
+
     public GetTerminalDetailsResponse withSimStatus(String simStatus) {
         this.simStatus = simStatus;
         return this;
@@ -243,6 +262,7 @@ public class GetTerminalDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("store")
     public String store;
+
     public GetTerminalDetailsResponse withStore(String store) {
         this.store = store;
         return this;
@@ -251,6 +271,7 @@ public class GetTerminalDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeDetails")
     public Store storeDetails;
+
     public GetTerminalDetailsResponse withStoreDetails(Store storeDetails) {
         this.storeDetails = storeDetails;
         return this;
@@ -261,6 +282,7 @@ public class GetTerminalDetailsResponse {
      */
     @JsonProperty("terminal")
     public String terminal;
+
     public GetTerminalDetailsResponse withTerminal(String terminal) {
         this.terminal = terminal;
         return this;
@@ -278,6 +300,7 @@ public class GetTerminalDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terminalStatus")
     public GetTerminalDetailsResponseTerminalStatusEnum terminalStatus;
+
     public GetTerminalDetailsResponse withTerminalStatus(GetTerminalDetailsResponseTerminalStatusEnum terminalStatus) {
         this.terminalStatus = terminalStatus;
         return this;
@@ -289,6 +312,7 @@ public class GetTerminalDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wifiIp")
     public String wifiIp;
+
     public GetTerminalDetailsResponse withWifiIp(String wifiIp) {
         this.wifiIp = wifiIp;
         return this;
@@ -300,9 +324,14 @@ public class GetTerminalDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wifiMac")
     public String wifiMac;
+
     public GetTerminalDetailsResponse withWifiMac(String wifiMac) {
         this.wifiMac = wifiMac;
         return this;
     }
     
+    public GetTerminalDetailsResponse(@JsonProperty("companyAccount") String companyAccount, @JsonProperty("terminal") String terminal) {
+        this.companyAccount = companyAccount;
+        this.terminal = terminal;
+  }
 }

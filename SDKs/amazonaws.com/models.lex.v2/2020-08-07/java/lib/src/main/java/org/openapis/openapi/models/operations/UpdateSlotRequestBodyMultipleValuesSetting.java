@@ -15,9 +15,11 @@ public class UpdateSlotRequestBodyMultipleValuesSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowMultipleValues")
     public Boolean allowMultipleValues;
+
     public UpdateSlotRequestBodyMultipleValuesSetting withAllowMultipleValues(Boolean allowMultipleValues) {
         this.allowMultipleValues = allowMultipleValues;
         return this;
     }
     
+    public UpdateSlotRequestBodyMultipleValuesSetting(){}
 }

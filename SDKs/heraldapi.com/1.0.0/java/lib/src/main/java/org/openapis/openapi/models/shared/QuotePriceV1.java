@@ -15,9 +15,11 @@ public class QuotePriceV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("premium_before_taxes_and_fees")
     public Double premiumBeforeTaxesAndFees;
+
     public QuotePriceV1 withPremiumBeforeTaxesAndFees(Double premiumBeforeTaxesAndFees) {
         this.premiumBeforeTaxesAndFees = premiumBeforeTaxesAndFees;
         return this;
     }
     
+    public QuotePriceV1(){}
 }

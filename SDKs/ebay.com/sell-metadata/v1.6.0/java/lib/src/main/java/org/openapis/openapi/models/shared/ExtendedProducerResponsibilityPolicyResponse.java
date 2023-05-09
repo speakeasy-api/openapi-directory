@@ -18,6 +18,7 @@ public class ExtendedProducerResponsibilityPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extendedProducerResponsibilities")
     public ExtendedProducerResponsibilityPolicy[] extendedProducerResponsibilities;
+
     public ExtendedProducerResponsibilityPolicyResponse withExtendedProducerResponsibilities(ExtendedProducerResponsibilityPolicy[] extendedProducerResponsibilities) {
         this.extendedProducerResponsibilities = extendedProducerResponsibilities;
         return this;
@@ -29,9 +30,11 @@ public class ExtendedProducerResponsibilityPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warnings")
     public Error[] warnings;
+
     public ExtendedProducerResponsibilityPolicyResponse withWarnings(Error[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public ExtendedProducerResponsibilityPolicyResponse(){}
 }

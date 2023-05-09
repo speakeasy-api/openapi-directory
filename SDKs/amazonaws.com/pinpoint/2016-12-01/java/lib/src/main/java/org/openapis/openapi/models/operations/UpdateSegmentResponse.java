@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateSegmentResponse {
@@ -12,6 +13,7 @@ public class UpdateSegmentResponse {
      */
     
     public Object badRequestException;
+
     public UpdateSegmentResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateSegmentResponse {
     
     
     public String contentType;
+
     public UpdateSegmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateSegmentResponse {
      */
     
     public Object forbiddenException;
+
     public UpdateSegmentResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateSegmentResponse {
      */
     
     public Object internalServerErrorException;
+
     public UpdateSegmentResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateSegmentResponse {
      */
     
     public Object methodNotAllowedException;
+
     public UpdateSegmentResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateSegmentResponse {
      */
     
     public Object notFoundException;
+
     public UpdateSegmentResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateSegmentResponse {
      */
     
     public Object payloadTooLargeException;
+
     public UpdateSegmentResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateSegmentResponse {
     
     
     public Integer statusCode;
+
     public UpdateSegmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateSegmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateSegmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateSegmentResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateSegmentResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateSegmentResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateSegmentResponse updateSegmentResponse;
+
     public UpdateSegmentResponse withUpdateSegmentResponse(org.openapis.openapi.models.shared.UpdateSegmentResponse updateSegmentResponse) {
         this.updateSegmentResponse = updateSegmentResponse;
         return this;
     }
     
+    public UpdateSegmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

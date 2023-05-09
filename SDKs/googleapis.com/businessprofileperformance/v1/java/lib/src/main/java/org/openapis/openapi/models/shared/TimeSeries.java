@@ -18,9 +18,11 @@ public class TimeSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datedValues")
     public DatedValue[] datedValues;
+
     public TimeSeries withDatedValues(DatedValue[] datedValues) {
         this.datedValues = datedValues;
         return this;
     }
     
+    public TimeSeries(){}
 }

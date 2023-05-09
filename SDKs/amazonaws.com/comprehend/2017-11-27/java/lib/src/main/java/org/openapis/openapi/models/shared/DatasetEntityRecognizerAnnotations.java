@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DatasetEntityRecognizerAnnotations {
     @JsonProperty("S3Uri")
     public String s3Uri;
+
     public DatasetEntityRecognizerAnnotations withS3Uri(String s3Uri) {
         this.s3Uri = s3Uri;
         return this;
     }
     
+    public DatasetEntityRecognizerAnnotations(@JsonProperty("S3Uri") String s3Uri) {
+        this.s3Uri = s3Uri;
+  }
 }

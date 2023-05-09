@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DisassociateIamInstanceProfileResultIamInstanceProfileAssociation {
     
     public String associationId;
+
     public DisassociateIamInstanceProfileResultIamInstanceProfileAssociation withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -19,6 +20,7 @@ public class DisassociateIamInstanceProfileResultIamInstanceProfileAssociation {
     
     
     public DisassociateIamInstanceProfileResultIamInstanceProfileAssociationIamInstanceProfile iamInstanceProfile;
+
     public DisassociateIamInstanceProfileResultIamInstanceProfileAssociation withIamInstanceProfile(DisassociateIamInstanceProfileResultIamInstanceProfileAssociationIamInstanceProfile iamInstanceProfile) {
         this.iamInstanceProfile = iamInstanceProfile;
         return this;
@@ -26,6 +28,7 @@ public class DisassociateIamInstanceProfileResultIamInstanceProfileAssociation {
     
     
     public String instanceId;
+
     public DisassociateIamInstanceProfileResultIamInstanceProfileAssociation withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -33,6 +36,7 @@ public class DisassociateIamInstanceProfileResultIamInstanceProfileAssociation {
     
     
     public DisassociateIamInstanceProfileResultIamInstanceProfileAssociationStateEnum state;
+
     public DisassociateIamInstanceProfileResultIamInstanceProfileAssociation withState(DisassociateIamInstanceProfileResultIamInstanceProfileAssociationStateEnum state) {
         this.state = state;
         return this;
@@ -40,9 +44,11 @@ public class DisassociateIamInstanceProfileResultIamInstanceProfileAssociation {
     
     
     public OffsetDateTime timestamp;
+
     public DisassociateIamInstanceProfileResultIamInstanceProfileAssociation withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public DisassociateIamInstanceProfileResultIamInstanceProfileAssociation(){}
 }

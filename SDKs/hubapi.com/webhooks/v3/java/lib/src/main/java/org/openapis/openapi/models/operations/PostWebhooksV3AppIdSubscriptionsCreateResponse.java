@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostWebhooksV3AppIdSubscriptionsCreateResponse {
     
     public byte[] body;
+
     public PostWebhooksV3AppIdSubscriptionsCreateResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PostWebhooksV3AppIdSubscriptionsCreateResponse {
     
     
     public String contentType;
+
     public PostWebhooksV3AppIdSubscriptionsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class PostWebhooksV3AppIdSubscriptionsCreateResponse {
     
     
     public Integer statusCode;
+
     public PostWebhooksV3AppIdSubscriptionsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class PostWebhooksV3AppIdSubscriptionsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostWebhooksV3AppIdSubscriptionsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class PostWebhooksV3AppIdSubscriptionsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.SubscriptionResponse subscriptionResponse;
+
     public PostWebhooksV3AppIdSubscriptionsCreateResponse withSubscriptionResponse(org.openapis.openapi.models.shared.SubscriptionResponse subscriptionResponse) {
         this.subscriptionResponse = subscriptionResponse;
         return this;
     }
     
+    public PostWebhooksV3AppIdSubscriptionsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

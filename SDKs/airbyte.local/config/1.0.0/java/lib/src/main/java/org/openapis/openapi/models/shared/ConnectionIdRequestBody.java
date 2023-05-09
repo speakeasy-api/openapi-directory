@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConnectionIdRequestBody {
     @JsonProperty("connectionId")
     public String connectionId;
+
     public ConnectionIdRequestBody withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
     }
     
+    public ConnectionIdRequestBody(@JsonProperty("connectionId") String connectionId) {
+        this.connectionId = connectionId;
+  }
 }

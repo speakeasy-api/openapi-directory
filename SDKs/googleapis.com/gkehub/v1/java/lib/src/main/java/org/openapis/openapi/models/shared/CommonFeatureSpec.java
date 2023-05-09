@@ -18,6 +18,7 @@ public class CommonFeatureSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appdevexperience")
     public java.util.Map<String, Object> appdevexperience;
+
     public CommonFeatureSpec withAppdevexperience(java.util.Map<String, Object> appdevexperience) {
         this.appdevexperience = appdevexperience;
         return this;
@@ -29,6 +30,7 @@ public class CommonFeatureSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fleetobservability")
     public java.util.Map<String, Object> fleetobservability;
+
     public CommonFeatureSpec withFleetobservability(java.util.Map<String, Object> fleetobservability) {
         this.fleetobservability = fleetobservability;
         return this;
@@ -40,9 +42,11 @@ public class CommonFeatureSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiclusteringress")
     public MultiClusterIngressFeatureSpec multiclusteringress;
+
     public CommonFeatureSpec withMulticlusteringress(MultiClusterIngressFeatureSpec multiclusteringress) {
         this.multiclusteringress = multiclusteringress;
         return this;
     }
     
+    public CommonFeatureSpec(){}
 }

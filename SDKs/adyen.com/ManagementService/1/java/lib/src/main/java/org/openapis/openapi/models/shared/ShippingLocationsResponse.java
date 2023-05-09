@@ -18,9 +18,11 @@ public class ShippingLocationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ShippingLocation[] data;
+
     public ShippingLocationsResponse withData(ShippingLocation[] data) {
         this.data = data;
         return this;
     }
     
+    public ShippingLocationsResponse(){}
 }

@@ -20,6 +20,7 @@ public class Recipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("algorithmArn")
     public String algorithmArn;
+
     public Recipe withAlgorithmArn(String algorithmArn) {
         this.algorithmArn = algorithmArn;
         return this;
@@ -30,6 +31,7 @@ public class Recipe {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public Recipe withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -38,6 +40,7 @@ public class Recipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Recipe withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class Recipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("featureTransformationArn")
     public String featureTransformationArn;
+
     public Recipe withFeatureTransformationArn(String featureTransformationArn) {
         this.featureTransformationArn = featureTransformationArn;
         return this;
@@ -56,6 +60,7 @@ public class Recipe {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public Recipe withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -64,6 +69,7 @@ public class Recipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Recipe withName(String name) {
         this.name = name;
         return this;
@@ -72,6 +78,7 @@ public class Recipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipeArn")
     public String recipeArn;
+
     public Recipe withRecipeArn(String recipeArn) {
         this.recipeArn = recipeArn;
         return this;
@@ -80,6 +87,7 @@ public class Recipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipeType")
     public String recipeType;
+
     public Recipe withRecipeType(String recipeType) {
         this.recipeType = recipeType;
         return this;
@@ -88,9 +96,11 @@ public class Recipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Recipe withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public Recipe(){}
 }

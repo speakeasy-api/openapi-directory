@@ -15,6 +15,7 @@ public class DateFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DateRange")
     public DateRange dateRange;
+
     public DateFilter withDateRange(DateRange dateRange) {
         this.dateRange = dateRange;
         return this;
@@ -23,6 +24,7 @@ public class DateFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("End")
     public String end;
+
     public DateFilter withEnd(String end) {
         this.end = end;
         return this;
@@ -31,9 +33,11 @@ public class DateFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Start")
     public String start;
+
     public DateFilter withStart(String start) {
         this.start = start;
         return this;
     }
     
+    public DateFilter(){}
 }

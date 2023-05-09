@@ -18,6 +18,7 @@ public class BillingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public Integer accountId;
+
     public BillingInfo withAccountId(Integer accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class BillingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountName")
     public String accountName;
+
     public BillingInfo withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -40,6 +42,7 @@ public class BillingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingId")
     public String[] billingId;
+
     public BillingInfo withBillingId(String[] billingId) {
         this.billingId = billingId;
         return this;
@@ -51,9 +54,11 @@ public class BillingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public BillingInfo withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public BillingInfo(){}
 }

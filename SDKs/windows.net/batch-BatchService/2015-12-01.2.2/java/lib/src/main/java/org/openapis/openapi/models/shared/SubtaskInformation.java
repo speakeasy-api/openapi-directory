@@ -25,6 +25,7 @@ public class SubtaskInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public SubtaskInformation withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -36,6 +37,7 @@ public class SubtaskInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exitCode")
     public Integer exitCode;
+
     public SubtaskInformation withExitCode(Integer exitCode) {
         this.exitCode = exitCode;
         return this;
@@ -47,6 +49,7 @@ public class SubtaskInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public SubtaskInformation withId(Integer id) {
         this.id = id;
         return this;
@@ -58,6 +61,7 @@ public class SubtaskInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeInfo")
     public ComputeNodeInformation nodeInfo;
+
     public SubtaskInformation withNodeInfo(ComputeNodeInformation nodeInfo) {
         this.nodeInfo = nodeInfo;
         return this;
@@ -69,6 +73,7 @@ public class SubtaskInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previousState")
     public SubtaskInformationPreviousStateEnum previousState;
+
     public SubtaskInformation withPreviousState(SubtaskInformationPreviousStateEnum previousState) {
         this.previousState = previousState;
         return this;
@@ -82,6 +87,7 @@ public class SubtaskInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("previousStateTransitionTime")
     public OffsetDateTime previousStateTransitionTime;
+
     public SubtaskInformation withPreviousStateTransitionTime(OffsetDateTime previousStateTransitionTime) {
         this.previousStateTransitionTime = previousStateTransitionTime;
         return this;
@@ -93,6 +99,7 @@ public class SubtaskInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedulingError")
     public TaskSchedulingError schedulingError;
+
     public SubtaskInformation withSchedulingError(TaskSchedulingError schedulingError) {
         this.schedulingError = schedulingError;
         return this;
@@ -106,6 +113,7 @@ public class SubtaskInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public SubtaskInformation withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -117,6 +125,7 @@ public class SubtaskInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public SubtaskInformationStateEnum state;
+
     public SubtaskInformation withState(SubtaskInformationStateEnum state) {
         this.state = state;
         return this;
@@ -130,9 +139,11 @@ public class SubtaskInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("stateTransitionTime")
     public OffsetDateTime stateTransitionTime;
+
     public SubtaskInformation withStateTransitionTime(OffsetDateTime stateTransitionTime) {
         this.stateTransitionTime = stateTransitionTime;
         return this;
     }
     
+    public SubtaskInformation(){}
 }

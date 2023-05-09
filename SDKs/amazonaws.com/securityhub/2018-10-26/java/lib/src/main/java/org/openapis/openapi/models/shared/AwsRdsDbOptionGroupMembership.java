@@ -15,6 +15,7 @@ public class AwsRdsDbOptionGroupMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptionGroupName")
     public String optionGroupName;
+
     public AwsRdsDbOptionGroupMembership withOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
         return this;
@@ -23,9 +24,11 @@ public class AwsRdsDbOptionGroupMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public AwsRdsDbOptionGroupMembership withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public AwsRdsDbOptionGroupMembership(){}
 }

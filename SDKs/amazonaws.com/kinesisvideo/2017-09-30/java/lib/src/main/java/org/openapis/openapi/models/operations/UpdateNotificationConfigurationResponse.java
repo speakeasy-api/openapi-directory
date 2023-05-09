@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateNotificationConfigurationResponse {
@@ -12,6 +13,7 @@ public class UpdateNotificationConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateNotificationConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateNotificationConfigurationResponse {
      */
     
     public Object clientLimitExceededException;
+
     public UpdateNotificationConfigurationResponse withClientLimitExceededException(Object clientLimitExceededException) {
         this.clientLimitExceededException = clientLimitExceededException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateNotificationConfigurationResponse {
     
     
     public String contentType;
+
     public UpdateNotificationConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateNotificationConfigurationResponse {
      */
     
     public Object invalidArgumentException;
+
     public UpdateNotificationConfigurationResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateNotificationConfigurationResponse {
      */
     
     public Object noDataRetentionException;
+
     public UpdateNotificationConfigurationResponse withNoDataRetentionException(Object noDataRetentionException) {
         this.noDataRetentionException = noDataRetentionException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateNotificationConfigurationResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateNotificationConfigurationResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateNotificationConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateNotificationConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateNotificationConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateNotificationConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateNotificationConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateNotificationConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdateNotificationConfigurationResponse {
      */
     
     public java.util.Map<String, Object> updateNotificationConfigurationOutput;
+
     public UpdateNotificationConfigurationResponse withUpdateNotificationConfigurationOutput(java.util.Map<String, Object> updateNotificationConfigurationOutput) {
         this.updateNotificationConfigurationOutput = updateNotificationConfigurationOutput;
         return this;
     }
     
+    public UpdateNotificationConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

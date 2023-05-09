@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Featurization {
     @JsonProperty("AttributeName")
     public String attributeName;
+
     public Featurization withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -22,9 +23,13 @@ public class Featurization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeaturizationPipeline")
     public FeaturizationMethod[] featurizationPipeline;
+
     public Featurization withFeaturizationPipeline(FeaturizationMethod[] featurizationPipeline) {
         this.featurizationPipeline = featurizationPipeline;
         return this;
     }
     
+    public Featurization(@JsonProperty("AttributeName") String attributeName) {
+        this.attributeName = attributeName;
+  }
 }

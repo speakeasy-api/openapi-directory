@@ -20,6 +20,7 @@ public class GetDataQualityRulesetEvaluationRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalRunOptions")
     public DataQualityEvaluationRunAdditionalRunOptions additionalRunOptions;
+
     public GetDataQualityRulesetEvaluationRunResponse withAdditionalRunOptions(DataQualityEvaluationRunAdditionalRunOptions additionalRunOptions) {
         this.additionalRunOptions = additionalRunOptions;
         return this;
@@ -30,6 +31,7 @@ public class GetDataQualityRulesetEvaluationRunResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CompletedOn")
     public OffsetDateTime completedOn;
+
     public GetDataQualityRulesetEvaluationRunResponse withCompletedOn(OffsetDateTime completedOn) {
         this.completedOn = completedOn;
         return this;
@@ -38,6 +40,7 @@ public class GetDataQualityRulesetEvaluationRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSource")
     public DataSource dataSource;
+
     public GetDataQualityRulesetEvaluationRunResponse withDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -46,6 +49,7 @@ public class GetDataQualityRulesetEvaluationRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorString")
     public String errorString;
+
     public GetDataQualityRulesetEvaluationRunResponse withErrorString(String errorString) {
         this.errorString = errorString;
         return this;
@@ -54,6 +58,7 @@ public class GetDataQualityRulesetEvaluationRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionTime")
     public Long executionTime;
+
     public GetDataQualityRulesetEvaluationRunResponse withExecutionTime(Long executionTime) {
         this.executionTime = executionTime;
         return this;
@@ -64,6 +69,7 @@ public class GetDataQualityRulesetEvaluationRunResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedOn")
     public OffsetDateTime lastModifiedOn;
+
     public GetDataQualityRulesetEvaluationRunResponse withLastModifiedOn(OffsetDateTime lastModifiedOn) {
         this.lastModifiedOn = lastModifiedOn;
         return this;
@@ -72,6 +78,7 @@ public class GetDataQualityRulesetEvaluationRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfWorkers")
     public Long numberOfWorkers;
+
     public GetDataQualityRulesetEvaluationRunResponse withNumberOfWorkers(Long numberOfWorkers) {
         this.numberOfWorkers = numberOfWorkers;
         return this;
@@ -80,6 +87,7 @@ public class GetDataQualityRulesetEvaluationRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultIds")
     public String[] resultIds;
+
     public GetDataQualityRulesetEvaluationRunResponse withResultIds(String[] resultIds) {
         this.resultIds = resultIds;
         return this;
@@ -88,6 +96,7 @@ public class GetDataQualityRulesetEvaluationRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Role")
     public String role;
+
     public GetDataQualityRulesetEvaluationRunResponse withRole(String role) {
         this.role = role;
         return this;
@@ -96,6 +105,7 @@ public class GetDataQualityRulesetEvaluationRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RulesetNames")
     public String[] rulesetNames;
+
     public GetDataQualityRulesetEvaluationRunResponse withRulesetNames(String[] rulesetNames) {
         this.rulesetNames = rulesetNames;
         return this;
@@ -104,6 +114,7 @@ public class GetDataQualityRulesetEvaluationRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RunId")
     public String runId;
+
     public GetDataQualityRulesetEvaluationRunResponse withRunId(String runId) {
         this.runId = runId;
         return this;
@@ -114,6 +125,7 @@ public class GetDataQualityRulesetEvaluationRunResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartedOn")
     public OffsetDateTime startedOn;
+
     public GetDataQualityRulesetEvaluationRunResponse withStartedOn(OffsetDateTime startedOn) {
         this.startedOn = startedOn;
         return this;
@@ -122,6 +134,7 @@ public class GetDataQualityRulesetEvaluationRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public TaskStatusTypeEnum status;
+
     public GetDataQualityRulesetEvaluationRunResponse withStatus(TaskStatusTypeEnum status) {
         this.status = status;
         return this;
@@ -130,9 +143,11 @@ public class GetDataQualityRulesetEvaluationRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timeout")
     public Long timeout;
+
     public GetDataQualityRulesetEvaluationRunResponse withTimeout(Long timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public GetDataQualityRulesetEvaluationRunResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetChannelCatalogFilterOperatorsResponse {
@@ -12,6 +13,7 @@ public class GetChannelCatalogFilterOperatorsResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetChannelCatalogFilterOperatorsResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetChannelCatalogFilterOperatorsResponse {
     
     
     public String contentType;
+
     public GetChannelCatalogFilterOperatorsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetChannelCatalogFilterOperatorsResponse {
     
     
     public Integer statusCode;
+
     public GetChannelCatalogFilterOperatorsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetChannelCatalogFilterOperatorsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetChannelCatalogFilterOperatorsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetChannelCatalogFilterOperatorsResponse {
      */
     
     public org.openapis.openapi.models.shared.FilterOperator[] filterOperators;
+
     public GetChannelCatalogFilterOperatorsResponse withFilterOperators(org.openapis.openapi.models.shared.FilterOperator[] filterOperators) {
         this.filterOperators = filterOperators;
         return this;
     }
     
+    public GetChannelCatalogFilterOperatorsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

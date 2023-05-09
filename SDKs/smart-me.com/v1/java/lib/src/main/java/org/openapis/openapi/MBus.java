@@ -58,14 +58,12 @@ public class MBus {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MBusPostFormResponse res = new org.openapis.openapi.models.operations.MBusPostFormResponse() {{
+        org.openapis.openapi.models.operations.MBusPostFormResponse res = new org.openapis.openapi.models.operations.MBusPostFormResponse(contentType, httpRes.statusCode()) {{
             object = null;
             object = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -121,14 +119,12 @@ public class MBus {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MBusPostJsonResponse res = new org.openapis.openapi.models.operations.MBusPostJsonResponse() {{
+        org.openapis.openapi.models.operations.MBusPostJsonResponse res = new org.openapis.openapi.models.operations.MBusPostJsonResponse(contentType, httpRes.statusCode()) {{
             object = null;
             object = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -184,14 +180,12 @@ public class MBus {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MBusPostRawResponse res = new org.openapis.openapi.models.operations.MBusPostRawResponse() {{
+        org.openapis.openapi.models.operations.MBusPostRawResponse res = new org.openapis.openapi.models.operations.MBusPostRawResponse(contentType, httpRes.statusCode()) {{
             object = null;
             object = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class StoresCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intune_details")
     public StoresCreateRequestBodyIntuneDetails intuneDetails;
+
     public StoresCreateRequestBody withIntuneDetails(StoresCreateRequestBodyIntuneDetails intuneDetails) {
         this.intuneDetails = intuneDetails;
         return this;
@@ -26,6 +27,7 @@ public class StoresCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public StoresCreateRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +39,7 @@ public class StoresCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_connection_id")
     public String serviceConnectionId;
+
     public StoresCreateRequestBody withServiceConnectionId(String serviceConnectionId) {
         this.serviceConnectionId = serviceConnectionId;
         return this;
@@ -48,6 +51,7 @@ public class StoresCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("track")
     public StoresCreateRequestBodyTrackEnum track;
+
     public StoresCreateRequestBody withTrack(StoresCreateRequestBodyTrackEnum track) {
         this.track = track;
         return this;
@@ -59,9 +63,11 @@ public class StoresCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public StoresCreateRequestBodyTypeEnum type;
+
     public StoresCreateRequestBody withType(StoresCreateRequestBodyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public StoresCreateRequestBody(){}
 }

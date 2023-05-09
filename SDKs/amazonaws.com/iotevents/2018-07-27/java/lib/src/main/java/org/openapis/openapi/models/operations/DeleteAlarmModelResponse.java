@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAlarmModelResponse {
     
     public String contentType;
+
     public DeleteAlarmModelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAlarmModelResponse {
      */
     
     public java.util.Map<String, Object> deleteAlarmModelResponse;
+
     public DeleteAlarmModelResponse withDeleteAlarmModelResponse(java.util.Map<String, Object> deleteAlarmModelResponse) {
         this.deleteAlarmModelResponse = deleteAlarmModelResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAlarmModelResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteAlarmModelResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAlarmModelResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteAlarmModelResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteAlarmModelResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteAlarmModelResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteAlarmModelResponse {
     
     
     public Integer statusCode;
+
     public DeleteAlarmModelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteAlarmModelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAlarmModelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteAlarmModelResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteAlarmModelResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -83,6 +92,7 @@ public class DeleteAlarmModelResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteAlarmModelResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteAlarmModelResponse {
      */
     
     public Object throttlingException;
+
     public DeleteAlarmModelResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteAlarmModelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

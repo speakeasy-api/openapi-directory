@@ -18,6 +18,7 @@ public class TextLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayText")
     public String displayText;
+
     public TextLink withDisplayText(String displayText) {
         this.displayText = displayText;
         return this;
@@ -29,9 +30,11 @@ public class TextLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public TextLink withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public TextLink(){}
 }

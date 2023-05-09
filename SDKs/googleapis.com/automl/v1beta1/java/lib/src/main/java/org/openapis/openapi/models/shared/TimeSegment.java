@@ -18,6 +18,7 @@ public class TimeSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTimeOffset")
     public String endTimeOffset;
+
     public TimeSegment withEndTimeOffset(String endTimeOffset) {
         this.endTimeOffset = endTimeOffset;
         return this;
@@ -29,9 +30,11 @@ public class TimeSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTimeOffset")
     public String startTimeOffset;
+
     public TimeSegment withStartTimeOffset(String startTimeOffset) {
         this.startTimeOffset = startTimeOffset;
         return this;
     }
     
+    public TimeSegment(){}
 }

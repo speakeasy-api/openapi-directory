@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSchemasResponse {
     
     public String contentType;
+
     public ListSchemasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListSchemasResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListSchemasResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -29,6 +32,7 @@ public class ListSchemasResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSchemasResponse listSchemasResponse;
+
     public ListSchemasResponse withListSchemasResponse(org.openapis.openapi.models.shared.ListSchemasResponse listSchemasResponse) {
         this.listSchemasResponse = listSchemasResponse;
         return this;
@@ -36,6 +40,7 @@ public class ListSchemasResponse {
     
     
     public Integer statusCode;
+
     public ListSchemasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ListSchemasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSchemasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListSchemasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

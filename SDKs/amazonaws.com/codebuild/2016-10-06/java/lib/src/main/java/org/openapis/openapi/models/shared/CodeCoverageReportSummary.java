@@ -15,6 +15,7 @@ public class CodeCoverageReportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branchCoveragePercentage")
     public Double branchCoveragePercentage;
+
     public CodeCoverageReportSummary withBranchCoveragePercentage(Double branchCoveragePercentage) {
         this.branchCoveragePercentage = branchCoveragePercentage;
         return this;
@@ -23,6 +24,7 @@ public class CodeCoverageReportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branchesCovered")
     public Long branchesCovered;
+
     public CodeCoverageReportSummary withBranchesCovered(Long branchesCovered) {
         this.branchesCovered = branchesCovered;
         return this;
@@ -31,6 +33,7 @@ public class CodeCoverageReportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branchesMissed")
     public Long branchesMissed;
+
     public CodeCoverageReportSummary withBranchesMissed(Long branchesMissed) {
         this.branchesMissed = branchesMissed;
         return this;
@@ -39,6 +42,7 @@ public class CodeCoverageReportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineCoveragePercentage")
     public Double lineCoveragePercentage;
+
     public CodeCoverageReportSummary withLineCoveragePercentage(Double lineCoveragePercentage) {
         this.lineCoveragePercentage = lineCoveragePercentage;
         return this;
@@ -47,6 +51,7 @@ public class CodeCoverageReportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linesCovered")
     public Long linesCovered;
+
     public CodeCoverageReportSummary withLinesCovered(Long linesCovered) {
         this.linesCovered = linesCovered;
         return this;
@@ -55,9 +60,11 @@ public class CodeCoverageReportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linesMissed")
     public Long linesMissed;
+
     public CodeCoverageReportSummary withLinesMissed(Long linesMissed) {
         this.linesMissed = linesMissed;
         return this;
     }
     
+    public CodeCoverageReportSummary(){}
 }

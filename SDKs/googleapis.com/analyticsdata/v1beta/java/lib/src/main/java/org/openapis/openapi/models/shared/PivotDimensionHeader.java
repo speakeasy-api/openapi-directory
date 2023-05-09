@@ -18,9 +18,11 @@ public class PivotDimensionHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionValues")
     public DimensionValue[] dimensionValues;
+
     public PivotDimensionHeader withDimensionValues(DimensionValue[] dimensionValues) {
         this.dimensionValues = dimensionValues;
         return this;
     }
     
+    public PivotDimensionHeader(){}
 }

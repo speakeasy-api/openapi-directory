@@ -18,6 +18,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Asset withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Asset withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceProperties")
     public java.util.Map<String, Object> resourceProperties;
+
     public Asset withResourceProperties(java.util.Map<String, Object> resourceProperties) {
         this.resourceProperties = resourceProperties;
         return this;
@@ -51,6 +54,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityCenterProperties")
     public SecurityCenterProperties securityCenterProperties;
+
     public Asset withSecurityCenterProperties(SecurityCenterProperties securityCenterProperties) {
         this.securityCenterProperties = securityCenterProperties;
         return this;
@@ -62,6 +66,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityMarks")
     public GoogleCloudSecuritycenterV1beta1SecurityMarks securityMarks;
+
     public Asset withSecurityMarks(GoogleCloudSecuritycenterV1beta1SecurityMarks securityMarks) {
         this.securityMarks = securityMarks;
         return this;
@@ -73,9 +78,11 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Asset withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Asset(){}
 }

@@ -18,9 +18,11 @@ public class NetworkSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ingressTrafficAllowed")
     public NetworkSettingsIngressTrafficAllowedEnum ingressTrafficAllowed;
+
     public NetworkSettings withIngressTrafficAllowed(NetworkSettingsIngressTrafficAllowedEnum ingressTrafficAllowed) {
         this.ingressTrafficAllowed = ingressTrafficAllowed;
         return this;
     }
     
+    public NetworkSettings(){}
 }

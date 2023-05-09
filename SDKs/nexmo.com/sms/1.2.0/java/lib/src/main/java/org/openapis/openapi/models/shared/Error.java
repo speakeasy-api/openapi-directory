@@ -18,6 +18,7 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message-count")
     public String messageCount;
+
     public Error withMessageCount(String messageCount) {
         this.messageCount = messageCount;
         return this;
@@ -26,9 +27,11 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messages")
     public ErrorMessage[] messages;
+
     public Error withMessages(ErrorMessage[] messages) {
         this.messages = messages;
         return this;
     }
     
+    public Error(){}
 }

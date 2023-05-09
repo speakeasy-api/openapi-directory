@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CancelSpotFleetRequestsRequest - Contains the parameters for CancelSpotFleetRequests.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CancelSpotFleetRequestsRequest {
     
     public Boolean dryRun;
+
     public CancelSpotFleetRequestsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -19,6 +20,7 @@ public class CancelSpotFleetRequestsRequest {
     
     
     public String[] spotFleetRequestIds;
+
     public CancelSpotFleetRequestsRequest withSpotFleetRequestIds(String[] spotFleetRequestIds) {
         this.spotFleetRequestIds = spotFleetRequestIds;
         return this;
@@ -26,9 +28,14 @@ public class CancelSpotFleetRequestsRequest {
     
     
     public Boolean terminateInstances;
+
     public CancelSpotFleetRequestsRequest withTerminateInstances(Boolean terminateInstances) {
         this.terminateInstances = terminateInstances;
         return this;
     }
     
+    public CancelSpotFleetRequestsRequest(@JsonProperty("SpotFleetRequestIds") String[] spotFleetRequestIds, @JsonProperty("TerminateInstances") Boolean terminateInstances) {
+        this.spotFleetRequestIds = spotFleetRequestIds;
+        this.terminateInstances = terminateInstances;
+  }
 }

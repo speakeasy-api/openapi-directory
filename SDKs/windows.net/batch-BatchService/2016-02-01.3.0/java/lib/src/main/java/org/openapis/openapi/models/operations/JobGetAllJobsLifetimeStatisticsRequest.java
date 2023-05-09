@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class JobGetAllJobsLifetimeStatisticsRequest {
@@ -12,6 +13,7 @@ public class JobGetAllJobsLifetimeStatisticsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public JobGetAllJobsLifetimeStatisticsRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -22,6 +24,7 @@ public class JobGetAllJobsLifetimeStatisticsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public JobGetAllJobsLifetimeStatisticsRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -32,6 +35,7 @@ public class JobGetAllJobsLifetimeStatisticsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public JobGetAllJobsLifetimeStatisticsRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -42,6 +46,7 @@ public class JobGetAllJobsLifetimeStatisticsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public JobGetAllJobsLifetimeStatisticsRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -52,9 +57,13 @@ public class JobGetAllJobsLifetimeStatisticsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public JobGetAllJobsLifetimeStatisticsRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public JobGetAllJobsLifetimeStatisticsRequest(@JsonProperty("api-version") String apiVersion) {
+        this.apiVersion = apiVersion;
+  }
 }

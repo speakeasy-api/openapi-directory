@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CopySnapshotToNewGameUsingPOSTResponse {
     
     public String contentType;
+
     public CopySnapshotToNewGameUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CopySnapshotToNewGameUsingPOSTResponse {
      */
     
     public org.openapis.openapi.models.shared.MessageModel messageModel;
+
     public CopySnapshotToNewGameUsingPOSTResponse withMessageModel(org.openapis.openapi.models.shared.MessageModel messageModel) {
         this.messageModel = messageModel;
         return this;
@@ -29,6 +32,7 @@ public class CopySnapshotToNewGameUsingPOSTResponse {
      */
     
     public org.openapis.openapi.models.shared.SnapshotCreationSuccessModel snapshotCreationSuccessModel;
+
     public CopySnapshotToNewGameUsingPOSTResponse withSnapshotCreationSuccessModel(org.openapis.openapi.models.shared.SnapshotCreationSuccessModel snapshotCreationSuccessModel) {
         this.snapshotCreationSuccessModel = snapshotCreationSuccessModel;
         return this;
@@ -36,6 +40,7 @@ public class CopySnapshotToNewGameUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public CopySnapshotToNewGameUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CopySnapshotToNewGameUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CopySnapshotToNewGameUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CopySnapshotToNewGameUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

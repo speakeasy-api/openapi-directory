@@ -12,6 +12,7 @@ public class UpdatereservationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connector")
     public Long connector;
+
     public UpdatereservationRequestBody withConnector(Long connector) {
         this.connector = connector;
         return this;
@@ -20,6 +21,7 @@ public class UpdatereservationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("driver")
     public String driver;
+
     public UpdatereservationRequestBody withDriver(String driver) {
         this.driver = driver;
         return this;
@@ -28,6 +30,7 @@ public class UpdatereservationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDate")
     public String endDate;
+
     public UpdatereservationRequestBody withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -36,9 +39,11 @@ public class UpdatereservationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evse")
     public Long evse;
+
     public UpdatereservationRequestBody withEvse(Long evse) {
         this.evse = evse;
         return this;
     }
     
+    public UpdatereservationRequestBody(){}
 }

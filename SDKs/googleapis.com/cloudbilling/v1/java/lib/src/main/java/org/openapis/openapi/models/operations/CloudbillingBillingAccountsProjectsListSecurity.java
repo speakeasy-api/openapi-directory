@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CloudbillingBillingAccountsProjectsListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public CloudbillingBillingAccountsProjectsListSecurityOption1 option1;
+
     public CloudbillingBillingAccountsProjectsListSecurity withOption1(CloudbillingBillingAccountsProjectsListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class CloudbillingBillingAccountsProjectsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public CloudbillingBillingAccountsProjectsListSecurityOption2 option2;
+
     public CloudbillingBillingAccountsProjectsListSecurity withOption2(CloudbillingBillingAccountsProjectsListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class CloudbillingBillingAccountsProjectsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public CloudbillingBillingAccountsProjectsListSecurityOption3 option3;
+
     public CloudbillingBillingAccountsProjectsListSecurity withOption3(CloudbillingBillingAccountsProjectsListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public CloudbillingBillingAccountsProjectsListSecurity(){}
 }

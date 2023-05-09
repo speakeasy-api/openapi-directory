@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteHsmResponse {
@@ -12,6 +13,7 @@ public class DeleteHsmResponse {
      */
     
     public Object cloudHsmAccessDeniedException;
+
     public DeleteHsmResponse withCloudHsmAccessDeniedException(Object cloudHsmAccessDeniedException) {
         this.cloudHsmAccessDeniedException = cloudHsmAccessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteHsmResponse {
      */
     
     public Object cloudHsmInternalFailureException;
+
     public DeleteHsmResponse withCloudHsmInternalFailureException(Object cloudHsmInternalFailureException) {
         this.cloudHsmInternalFailureException = cloudHsmInternalFailureException;
         return this;
@@ -32,6 +35,7 @@ public class DeleteHsmResponse {
      */
     
     public Object cloudHsmInvalidRequestException;
+
     public DeleteHsmResponse withCloudHsmInvalidRequestException(Object cloudHsmInvalidRequestException) {
         this.cloudHsmInvalidRequestException = cloudHsmInvalidRequestException;
         return this;
@@ -42,6 +46,7 @@ public class DeleteHsmResponse {
      */
     
     public Object cloudHsmResourceNotFoundException;
+
     public DeleteHsmResponse withCloudHsmResourceNotFoundException(Object cloudHsmResourceNotFoundException) {
         this.cloudHsmResourceNotFoundException = cloudHsmResourceNotFoundException;
         return this;
@@ -52,6 +57,7 @@ public class DeleteHsmResponse {
      */
     
     public Object cloudHsmServiceException;
+
     public DeleteHsmResponse withCloudHsmServiceException(Object cloudHsmServiceException) {
         this.cloudHsmServiceException = cloudHsmServiceException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteHsmResponse {
     
     
     public String contentType;
+
     public DeleteHsmResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -69,6 +76,7 @@ public class DeleteHsmResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteHsmResponse deleteHsmResponse;
+
     public DeleteHsmResponse withDeleteHsmResponse(org.openapis.openapi.models.shared.DeleteHsmResponse deleteHsmResponse) {
         this.deleteHsmResponse = deleteHsmResponse;
         return this;
@@ -76,6 +84,7 @@ public class DeleteHsmResponse {
     
     
     public Integer statusCode;
+
     public DeleteHsmResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DeleteHsmResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteHsmResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteHsmResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

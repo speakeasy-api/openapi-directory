@@ -15,6 +15,7 @@ public class UpdateRoleAliasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleAlias")
     public String roleAlias;
+
     public UpdateRoleAliasResponse withRoleAlias(String roleAlias) {
         this.roleAlias = roleAlias;
         return this;
@@ -23,9 +24,11 @@ public class UpdateRoleAliasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleAliasArn")
     public String roleAliasArn;
+
     public UpdateRoleAliasResponse withRoleAliasArn(String roleAliasArn) {
         this.roleAliasArn = roleAliasArn;
         return this;
     }
     
+    public UpdateRoleAliasResponse(){}
 }

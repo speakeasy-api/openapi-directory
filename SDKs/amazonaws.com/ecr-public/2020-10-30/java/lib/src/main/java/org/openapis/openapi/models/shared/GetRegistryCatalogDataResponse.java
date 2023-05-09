@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetRegistryCatalogDataResponse {
     @JsonProperty("registryCatalogData")
     public RegistryCatalogData registryCatalogData;
+
     public GetRegistryCatalogDataResponse withRegistryCatalogData(RegistryCatalogData registryCatalogData) {
         this.registryCatalogData = registryCatalogData;
         return this;
     }
     
+    public GetRegistryCatalogDataResponse(@JsonProperty("registryCatalogData") RegistryCatalogData registryCatalogData) {
+        this.registryCatalogData = registryCatalogData;
+  }
 }

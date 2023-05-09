@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAddressByPostalCodeRequest {
@@ -12,6 +13,7 @@ public class GetAddressByPostalCodeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetAddressByPostalCodeRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetAddressByPostalCodeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetAddressByPostalCodeRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class GetAddressByPostalCodeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=countryCode")
     public String countryCode;
+
     public GetAddressByPostalCodeRequest withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -42,9 +46,16 @@ public class GetAddressByPostalCodeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=postalCode")
     public String postalCode;
+
     public GetAddressByPostalCodeRequest withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
     }
     
+    public GetAddressByPostalCodeRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("countryCode") String countryCode, @JsonProperty("postalCode") String postalCode) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.countryCode = countryCode;
+        this.postalCode = postalCode;
+  }
 }

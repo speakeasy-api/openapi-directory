@@ -52,12 +52,10 @@ public class CategoryRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersIdCategoryRulesResponse res = new org.openapis.openapi.models.operations.GetUsersIdCategoryRulesResponse() {{
+        org.openapis.openapi.models.operations.GetUsersIdCategoryRulesResponse res = new org.openapis.openapi.models.operations.GetUsersIdCategoryRulesResponse(contentType, httpRes.statusCode()) {{
             categoryRules = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,12 +100,10 @@ public class CategoryRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCategoriesIdCategoryRulesResponse res = new org.openapis.openapi.models.operations.PostCategoriesIdCategoryRulesResponse() {{
+        org.openapis.openapi.models.operations.PostCategoriesIdCategoryRulesResponse res = new org.openapis.openapi.models.operations.PostCategoriesIdCategoryRulesResponse(contentType, httpRes.statusCode()) {{
             categoryRule = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

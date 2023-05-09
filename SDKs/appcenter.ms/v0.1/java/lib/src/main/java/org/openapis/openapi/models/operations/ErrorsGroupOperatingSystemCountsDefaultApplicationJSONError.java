@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ErrorsGroupOperatingSystemCountsDefaultApplicationJSONError {
     @JsonProperty("code")
     public ErrorsGroupOperatingSystemCountsDefaultApplicationJSONErrorCodeEnum code;
+
     public ErrorsGroupOperatingSystemCountsDefaultApplicationJSONError withCode(ErrorsGroupOperatingSystemCountsDefaultApplicationJSONErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -16,9 +17,14 @@ public class ErrorsGroupOperatingSystemCountsDefaultApplicationJSONError {
     
     @JsonProperty("message")
     public String message;
+
     public ErrorsGroupOperatingSystemCountsDefaultApplicationJSONError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ErrorsGroupOperatingSystemCountsDefaultApplicationJSONError(@JsonProperty("code") ErrorsGroupOperatingSystemCountsDefaultApplicationJSONErrorCodeEnum code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

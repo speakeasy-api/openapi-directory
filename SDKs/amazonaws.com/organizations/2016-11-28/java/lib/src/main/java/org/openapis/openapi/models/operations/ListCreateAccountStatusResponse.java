@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCreateAccountStatusResponse {
@@ -12,6 +13,7 @@ public class ListCreateAccountStatusResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public ListCreateAccountStatusResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class ListCreateAccountStatusResponse {
      */
     
     public Object accessDeniedException;
+
     public ListCreateAccountStatusResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -29,6 +32,7 @@ public class ListCreateAccountStatusResponse {
     
     
     public String contentType;
+
     public ListCreateAccountStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListCreateAccountStatusResponse {
      */
     
     public Object invalidInputException;
+
     public ListCreateAccountStatusResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class ListCreateAccountStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCreateAccountStatusResponse listCreateAccountStatusResponse;
+
     public ListCreateAccountStatusResponse withListCreateAccountStatusResponse(org.openapis.openapi.models.shared.ListCreateAccountStatusResponse listCreateAccountStatusResponse) {
         this.listCreateAccountStatusResponse = listCreateAccountStatusResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListCreateAccountStatusResponse {
      */
     
     public Object serviceException;
+
     public ListCreateAccountStatusResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class ListCreateAccountStatusResponse {
     
     
     public Integer statusCode;
+
     public ListCreateAccountStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListCreateAccountStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCreateAccountStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ListCreateAccountStatusResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListCreateAccountStatusResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -93,9 +103,14 @@ public class ListCreateAccountStatusResponse {
      */
     
     public Object unsupportedAPIEndpointException;
+
     public ListCreateAccountStatusResponse withUnsupportedAPIEndpointException(Object unsupportedAPIEndpointException) {
         this.unsupportedAPIEndpointException = unsupportedAPIEndpointException;
         return this;
     }
     
+    public ListCreateAccountStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class PutConfigurationSetSuppressionOptionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuppressedReasons")
     public org.openapis.openapi.models.shared.SuppressionListReasonEnum[] suppressedReasons;
+
     public PutConfigurationSetSuppressionOptionsRequestBody withSuppressedReasons(org.openapis.openapi.models.shared.SuppressionListReasonEnum[] suppressedReasons) {
         this.suppressedReasons = suppressedReasons;
         return this;
     }
     
+    public PutConfigurationSetSuppressionOptionsRequestBody(){}
 }

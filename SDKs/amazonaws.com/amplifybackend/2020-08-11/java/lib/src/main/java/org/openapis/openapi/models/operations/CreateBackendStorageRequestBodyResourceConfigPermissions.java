@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateBackendStorageRequestBodyResourceConfigPermissions {
     @JsonProperty("Authenticated")
     public org.openapis.openapi.models.shared.AuthenticatedElementEnum[] authenticated;
+
     public CreateBackendStorageRequestBodyResourceConfigPermissions withAuthenticated(org.openapis.openapi.models.shared.AuthenticatedElementEnum[] authenticated) {
         this.authenticated = authenticated;
         return this;
@@ -22,9 +23,13 @@ public class CreateBackendStorageRequestBodyResourceConfigPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnAuthenticated")
     public org.openapis.openapi.models.shared.UnAuthenticatedElementEnum[] unAuthenticated;
+
     public CreateBackendStorageRequestBodyResourceConfigPermissions withUnAuthenticated(org.openapis.openapi.models.shared.UnAuthenticatedElementEnum[] unAuthenticated) {
         this.unAuthenticated = unAuthenticated;
         return this;
     }
     
+    public CreateBackendStorageRequestBodyResourceConfigPermissions(@JsonProperty("Authenticated") org.openapis.openapi.models.shared.AuthenticatedElementEnum[] authenticated) {
+        this.authenticated = authenticated;
+  }
 }

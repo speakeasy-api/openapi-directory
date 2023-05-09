@@ -15,6 +15,7 @@ public class DebugSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionEnabled")
     public Boolean sessionEnabled;
+
     public DebugSession withSessionEnabled(Boolean sessionEnabled) {
         this.sessionEnabled = sessionEnabled;
         return this;
@@ -23,9 +24,11 @@ public class DebugSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionTarget")
     public String sessionTarget;
+
     public DebugSession withSessionTarget(String sessionTarget) {
         this.sessionTarget = sessionTarget;
         return this;
     }
     
+    public DebugSession(){}
 }

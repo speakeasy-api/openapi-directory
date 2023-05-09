@@ -12,6 +12,7 @@ public class RootV1ScoringsConsolidatedDaily200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccelerationScore")
     public Double accelerationScore;
+
     public RootV1ScoringsConsolidatedDaily200ApplicationJSONResult withAccelerationScore(Double accelerationScore) {
         this.accelerationScore = accelerationScore;
         return this;
@@ -20,6 +21,7 @@ public class RootV1ScoringsConsolidatedDaily200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppId")
     public String appId;
+
     public RootV1ScoringsConsolidatedDaily200ApplicationJSONResult withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -28,6 +30,7 @@ public class RootV1ScoringsConsolidatedDaily200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BrakingScore")
     public Double brakingScore;
+
     public RootV1ScoringsConsolidatedDaily200ApplicationJSONResult withBrakingScore(Double brakingScore) {
         this.brakingScore = brakingScore;
         return this;
@@ -36,6 +39,7 @@ public class RootV1ScoringsConsolidatedDaily200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompanyId")
     public String companyId;
+
     public RootV1ScoringsConsolidatedDaily200ApplicationJSONResult withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -44,6 +48,7 @@ public class RootV1ScoringsConsolidatedDaily200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CorneringScore")
     public Double corneringScore;
+
     public RootV1ScoringsConsolidatedDaily200ApplicationJSONResult withCorneringScore(Double corneringScore) {
         this.corneringScore = corneringScore;
         return this;
@@ -52,6 +57,7 @@ public class RootV1ScoringsConsolidatedDaily200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceToken")
     public String deviceToken;
+
     public RootV1ScoringsConsolidatedDaily200ApplicationJSONResult withDeviceToken(String deviceToken) {
         this.deviceToken = deviceToken;
         return this;
@@ -60,6 +66,7 @@ public class RootV1ScoringsConsolidatedDaily200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DistractedScore")
     public Double distractedScore;
+
     public RootV1ScoringsConsolidatedDaily200ApplicationJSONResult withDistractedScore(Double distractedScore) {
         this.distractedScore = distractedScore;
         return this;
@@ -68,6 +75,7 @@ public class RootV1ScoringsConsolidatedDaily200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public RootV1ScoringsConsolidatedDaily200ApplicationJSONResult withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -76,6 +84,7 @@ public class RootV1ScoringsConsolidatedDaily200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OverallScore")
     public Double overallScore;
+
     public RootV1ScoringsConsolidatedDaily200ApplicationJSONResult withOverallScore(Double overallScore) {
         this.overallScore = overallScore;
         return this;
@@ -84,6 +93,7 @@ public class RootV1ScoringsConsolidatedDaily200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReportDate")
     public String reportDate;
+
     public RootV1ScoringsConsolidatedDaily200ApplicationJSONResult withReportDate(String reportDate) {
         this.reportDate = reportDate;
         return this;
@@ -92,9 +102,11 @@ public class RootV1ScoringsConsolidatedDaily200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpeedingScore")
     public Double speedingScore;
+
     public RootV1ScoringsConsolidatedDaily200ApplicationJSONResult withSpeedingScore(Double speedingScore) {
         this.speedingScore = speedingScore;
         return this;
     }
     
+    public RootV1ScoringsConsolidatedDaily200ApplicationJSONResult(){}
 }

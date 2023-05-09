@@ -18,6 +18,7 @@ public class Key {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partitionId")
     public PartitionId partitionId;
+
     public Key withPartitionId(PartitionId partitionId) {
         this.partitionId = partitionId;
         return this;
@@ -29,9 +30,11 @@ public class Key {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public PathElement[] path;
+
     public Key withPath(PathElement[] path) {
         this.path = path;
         return this;
     }
     
+    public Key(){}
 }

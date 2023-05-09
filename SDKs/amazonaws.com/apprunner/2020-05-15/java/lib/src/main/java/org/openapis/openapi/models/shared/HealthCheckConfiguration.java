@@ -15,6 +15,7 @@ public class HealthCheckConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HealthyThreshold")
     public Long healthyThreshold;
+
     public HealthCheckConfiguration withHealthyThreshold(Long healthyThreshold) {
         this.healthyThreshold = healthyThreshold;
         return this;
@@ -23,6 +24,7 @@ public class HealthCheckConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Interval")
     public Long interval;
+
     public HealthCheckConfiguration withInterval(Long interval) {
         this.interval = interval;
         return this;
@@ -31,6 +33,7 @@ public class HealthCheckConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Path")
     public String path;
+
     public HealthCheckConfiguration withPath(String path) {
         this.path = path;
         return this;
@@ -39,6 +42,7 @@ public class HealthCheckConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Protocol")
     public HealthCheckProtocolEnum protocol;
+
     public HealthCheckConfiguration withProtocol(HealthCheckProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -47,6 +51,7 @@ public class HealthCheckConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timeout")
     public Long timeout;
+
     public HealthCheckConfiguration withTimeout(Long timeout) {
         this.timeout = timeout;
         return this;
@@ -55,9 +60,11 @@ public class HealthCheckConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnhealthyThreshold")
     public Long unhealthyThreshold;
+
     public HealthCheckConfiguration withUnhealthyThreshold(Long unhealthyThreshold) {
         this.unhealthyThreshold = unhealthyThreshold;
         return this;
     }
     
+    public HealthCheckConfiguration(){}
 }

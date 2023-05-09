@@ -15,6 +15,7 @@ public class AwsRdsDbClusterAssociatedRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public AwsRdsDbClusterAssociatedRole withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -23,9 +24,11 @@ public class AwsRdsDbClusterAssociatedRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public AwsRdsDbClusterAssociatedRole withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public AwsRdsDbClusterAssociatedRole(){}
 }

@@ -15,6 +15,7 @@ public class RegisterApplicationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Application")
     public Application application;
+
     public RegisterApplicationOutput withApplication(Application application) {
         this.application = application;
         return this;
@@ -23,9 +24,11 @@ public class RegisterApplicationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperationId")
     public String operationId;
+
     public RegisterApplicationOutput withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
     }
     
+    public RegisterApplicationOutput(){}
 }

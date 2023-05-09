@@ -15,9 +15,11 @@ public class Os {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullString")
     public String fullString;
+
     public Os withFullString(String fullString) {
         this.fullString = fullString;
         return this;
     }
     
+    public Os(){}
 }

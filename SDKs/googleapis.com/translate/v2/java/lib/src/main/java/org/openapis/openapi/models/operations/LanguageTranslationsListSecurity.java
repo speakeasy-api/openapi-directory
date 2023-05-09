@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class LanguageTranslationsListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public LanguageTranslationsListSecurityOption1 option1;
+
     public LanguageTranslationsListSecurity withOption1(LanguageTranslationsListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class LanguageTranslationsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public LanguageTranslationsListSecurityOption2 option2;
+
     public LanguageTranslationsListSecurity withOption2(LanguageTranslationsListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public LanguageTranslationsListSecurity(){}
 }

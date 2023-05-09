@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DocumentAttributeCondition {
     @JsonProperty("ConditionDocumentAttributeKey")
     public String conditionDocumentAttributeKey;
+
     public DocumentAttributeCondition withConditionDocumentAttributeKey(String conditionDocumentAttributeKey) {
         this.conditionDocumentAttributeKey = conditionDocumentAttributeKey;
         return this;
@@ -22,6 +23,7 @@ public class DocumentAttributeCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConditionOnValue")
     public DocumentAttributeValue conditionOnValue;
+
     public DocumentAttributeCondition withConditionOnValue(DocumentAttributeValue conditionOnValue) {
         this.conditionOnValue = conditionOnValue;
         return this;
@@ -29,9 +31,14 @@ public class DocumentAttributeCondition {
     
     @JsonProperty("Operator")
     public ConditionOperatorEnum operator;
+
     public DocumentAttributeCondition withOperator(ConditionOperatorEnum operator) {
         this.operator = operator;
         return this;
     }
     
+    public DocumentAttributeCondition(@JsonProperty("ConditionDocumentAttributeKey") String conditionDocumentAttributeKey, @JsonProperty("Operator") ConditionOperatorEnum operator) {
+        this.conditionDocumentAttributeKey = conditionDocumentAttributeKey;
+        this.operator = operator;
+  }
 }

@@ -15,6 +15,7 @@ public class GetImportationReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public GetImportationReportResponseDiff categories;
+
     public GetImportationReportResponse withCategories(GetImportationReportResponseDiff categories) {
         this.categories = categories;
         return this;
@@ -23,6 +24,7 @@ public class GetImportationReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columns")
     public GetImportationReportResponseDiff columns;
+
     public GetImportationReportResponse withColumns(GetImportationReportResponseDiff columns) {
         this.columns = columns;
         return this;
@@ -30,6 +32,7 @@ public class GetImportationReportResponse {
     
     @JsonProperty("errors")
     public GetImportationReportResponseError[] errors;
+
     public GetImportationReportResponse withErrors(GetImportationReportResponseError[] errors) {
         this.errors = errors;
         return this;
@@ -40,6 +43,7 @@ public class GetImportationReportResponse {
      */
     @JsonProperty("executionId")
     public String executionId;
+
     public GetImportationReportResponse withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -47,6 +51,7 @@ public class GetImportationReportResponse {
     
     @JsonProperty("importationInfo")
     public GetImportationReportResponseImportationInfo importationInfo;
+
     public GetImportationReportResponse withImportationInfo(GetImportationReportResponseImportationInfo importationInfo) {
         this.importationInfo = importationInfo;
         return this;
@@ -55,6 +60,7 @@ public class GetImportationReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productMetrics")
     public GetImportationReportResponseProductMetrics productMetrics;
+
     public GetImportationReportResponse withProductMetrics(GetImportationReportResponseProductMetrics productMetrics) {
         this.productMetrics = productMetrics;
         return this;
@@ -63,9 +69,15 @@ public class GetImportationReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("products")
     public GetImportationReportResponseDiff products;
+
     public GetImportationReportResponse withProducts(GetImportationReportResponseDiff products) {
         this.products = products;
         return this;
     }
     
+    public GetImportationReportResponse(@JsonProperty("errors") GetImportationReportResponseError[] errors, @JsonProperty("executionId") String executionId, @JsonProperty("importationInfo") GetImportationReportResponseImportationInfo importationInfo) {
+        this.errors = errors;
+        this.executionId = executionId;
+        this.importationInfo = importationInfo;
+  }
 }

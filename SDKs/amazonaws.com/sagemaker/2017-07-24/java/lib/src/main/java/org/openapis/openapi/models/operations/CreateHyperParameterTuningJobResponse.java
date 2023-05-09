@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateHyperParameterTuningJobResponse {
     
     public String contentType;
+
     public CreateHyperParameterTuningJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateHyperParameterTuningJobResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateHyperParameterTuningJobResponse createHyperParameterTuningJobResponse;
+
     public CreateHyperParameterTuningJobResponse withCreateHyperParameterTuningJobResponse(org.openapis.openapi.models.shared.CreateHyperParameterTuningJobResponse createHyperParameterTuningJobResponse) {
         this.createHyperParameterTuningJobResponse = createHyperParameterTuningJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateHyperParameterTuningJobResponse {
      */
     
     public Object resourceInUse;
+
     public CreateHyperParameterTuningJobResponse withResourceInUse(Object resourceInUse) {
         this.resourceInUse = resourceInUse;
         return this;
@@ -36,6 +40,7 @@ public class CreateHyperParameterTuningJobResponse {
     
     
     public Integer statusCode;
+
     public CreateHyperParameterTuningJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class CreateHyperParameterTuningJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateHyperParameterTuningJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class CreateHyperParameterTuningJobResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public CreateHyperParameterTuningJobResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
     }
     
+    public CreateHyperParameterTuningJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

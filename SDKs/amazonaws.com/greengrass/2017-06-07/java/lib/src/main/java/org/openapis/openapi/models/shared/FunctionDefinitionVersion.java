@@ -15,6 +15,7 @@ public class FunctionDefinitionVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultConfig")
     public FunctionDefaultConfig defaultConfig;
+
     public FunctionDefinitionVersion withDefaultConfig(FunctionDefaultConfig defaultConfig) {
         this.defaultConfig = defaultConfig;
         return this;
@@ -23,9 +24,11 @@ public class FunctionDefinitionVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Functions")
     public Function[] functions;
+
     public FunctionDefinitionVersion withFunctions(Function[] functions) {
         this.functions = functions;
         return this;
     }
     
+    public FunctionDefinitionVersion(){}
 }

@@ -12,6 +12,7 @@ public class UpdateCallRequestTransferNccoDestination {
      */
     @JsonProperty("ncco")
     public java.util.Map<String, Object>[] ncco;
+
     public UpdateCallRequestTransferNccoDestination withNcco(java.util.Map<String, Object>[] ncco) {
         this.ncco = ncco;
         return this;
@@ -22,9 +23,14 @@ public class UpdateCallRequestTransferNccoDestination {
      */
     @JsonProperty("type")
     public String type;
+
     public UpdateCallRequestTransferNccoDestination withType(String type) {
         this.type = type;
         return this;
     }
     
+    public UpdateCallRequestTransferNccoDestination(@JsonProperty("ncco") java.util.Map<String, Object>[] ncco, @JsonProperty("type") String type) {
+        this.ncco = ncco;
+        this.type = type;
+  }
 }

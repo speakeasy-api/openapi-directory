@@ -15,9 +15,11 @@ public class AdditionalClientEmailApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Email")
     public String email;
+
     public AdditionalClientEmailApiModel withEmail(String email) {
         this.email = email;
         return this;
     }
     
+    public AdditionalClientEmailApiModel(){}
 }

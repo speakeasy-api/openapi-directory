@@ -12,6 +12,7 @@ public class AdvancedGameStatDefensePassingDowns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explosiveness")
     public Double explosiveness;
+
     public AdvancedGameStatDefensePassingDowns withExplosiveness(Double explosiveness) {
         this.explosiveness = explosiveness;
         return this;
@@ -20,6 +21,7 @@ public class AdvancedGameStatDefensePassingDowns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ppa")
     public Double ppa;
+
     public AdvancedGameStatDefensePassingDowns withPpa(Double ppa) {
         this.ppa = ppa;
         return this;
@@ -28,9 +30,11 @@ public class AdvancedGameStatDefensePassingDowns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("successRate")
     public Double successRate;
+
     public AdvancedGameStatDefensePassingDowns withSuccessRate(Double successRate) {
         this.successRate = successRate;
         return this;
     }
     
+    public AdvancedGameStatDefensePassingDowns(){}
 }

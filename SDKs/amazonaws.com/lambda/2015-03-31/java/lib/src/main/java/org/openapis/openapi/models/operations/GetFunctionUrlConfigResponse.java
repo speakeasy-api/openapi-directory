@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFunctionUrlConfigResponse {
     
     public String contentType;
+
     public GetFunctionUrlConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetFunctionUrlConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.GetFunctionUrlConfigResponse getFunctionUrlConfigResponse;
+
     public GetFunctionUrlConfigResponse withGetFunctionUrlConfigResponse(org.openapis.openapi.models.shared.GetFunctionUrlConfigResponse getFunctionUrlConfigResponse) {
         this.getFunctionUrlConfigResponse = getFunctionUrlConfigResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetFunctionUrlConfigResponse {
      */
     
     public Object invalidParameterValueException;
+
     public GetFunctionUrlConfigResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class GetFunctionUrlConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetFunctionUrlConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetFunctionUrlConfigResponse {
     
     
     public Integer statusCode;
+
     public GetFunctionUrlConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetFunctionUrlConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFunctionUrlConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetFunctionUrlConfigResponse {
      */
     
     public Object serviceException;
+
     public GetFunctionUrlConfigResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -73,9 +81,14 @@ public class GetFunctionUrlConfigResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetFunctionUrlConfigResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetFunctionUrlConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

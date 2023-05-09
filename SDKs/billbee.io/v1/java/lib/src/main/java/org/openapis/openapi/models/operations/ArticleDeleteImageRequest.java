@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArticleDeleteImageRequest {
@@ -12,9 +13,13 @@ public class ArticleDeleteImageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=imageId")
     public Long imageId;
+
     public ArticleDeleteImageRequest withImageId(Long imageId) {
         this.imageId = imageId;
         return this;
     }
     
+    public ArticleDeleteImageRequest(@JsonProperty("imageId") Long imageId) {
+        this.imageId = imageId;
+  }
 }

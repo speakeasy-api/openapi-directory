@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetAttributesRequest {
     
     public String[] attributeNames;
+
     public GetAttributesRequest withAttributeNames(String[] attributeNames) {
         this.attributeNames = attributeNames;
         return this;
@@ -16,6 +17,7 @@ public class GetAttributesRequest {
     
     
     public Boolean consistentRead;
+
     public GetAttributesRequest withConsistentRead(Boolean consistentRead) {
         this.consistentRead = consistentRead;
         return this;
@@ -23,6 +25,7 @@ public class GetAttributesRequest {
     
     
     public String domainName;
+
     public GetAttributesRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -30,9 +33,14 @@ public class GetAttributesRequest {
     
     
     public String itemName;
+
     public GetAttributesRequest withItemName(String itemName) {
         this.itemName = itemName;
         return this;
     }
     
+    public GetAttributesRequest(@JsonProperty("DomainName") String domainName, @JsonProperty("ItemName") String itemName) {
+        this.domainName = domainName;
+        this.itemName = itemName;
+  }
 }

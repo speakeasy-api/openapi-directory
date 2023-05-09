@@ -15,6 +15,7 @@ public class Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentAppl
      */
     
     public String content;
+
     public Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaUserResourceSharingRequestRsNote withContent(String content) {
         this.content = content;
         return this;
@@ -25,6 +26,7 @@ public class Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentAppl
      */
     
     public String createdBy;
+
     public Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaUserResourceSharingRequestRsNote withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -35,9 +37,11 @@ public class Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentAppl
      */
     
     public LocalDate createdDate;
+
     public Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaUserResourceSharingRequestRsNote withCreatedDate(LocalDate createdDate) {
         this.createdDate = createdDate;
         return this;
     }
     
+    public Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaUserResourceSharingRequestRsNote(){}
 }

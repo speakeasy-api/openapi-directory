@@ -15,9 +15,11 @@ public class SsmExternalParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dynamicPath")
     public String dynamicPath;
+
     public SsmExternalParameter withDynamicPath(String dynamicPath) {
         this.dynamicPath = dynamicPath;
         return this;
     }
     
+    public SsmExternalParameter(){}
 }

@@ -15,9 +15,11 @@ public class AllEnvironments200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environments")
     public AllEnvironments200ApplicationJSONEnvironments[] environments;
+
     public AllEnvironments200ApplicationJSON withEnvironments(AllEnvironments200ApplicationJSONEnvironments[] environments) {
         this.environments = environments;
         return this;
     }
     
+    public AllEnvironments200ApplicationJSON(){}
 }

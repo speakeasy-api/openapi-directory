@@ -18,9 +18,11 @@ public class GetApkDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apkDetail")
     public ApkDetail apkDetail;
+
     public GetApkDetailsResponse withApkDetail(ApkDetail apkDetail) {
         this.apkDetail = apkDetail;
         return this;
     }
     
+    public GetApkDetailsResponse(){}
 }

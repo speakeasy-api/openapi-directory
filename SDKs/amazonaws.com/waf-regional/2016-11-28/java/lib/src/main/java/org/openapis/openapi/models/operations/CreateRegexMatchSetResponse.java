@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateRegexMatchSetResponse {
     
     public String contentType;
+
     public CreateRegexMatchSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateRegexMatchSetResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateRegexMatchSetResponse createRegexMatchSetResponse;
+
     public CreateRegexMatchSetResponse withCreateRegexMatchSetResponse(org.openapis.openapi.models.shared.CreateRegexMatchSetResponse createRegexMatchSetResponse) {
         this.createRegexMatchSetResponse = createRegexMatchSetResponse;
         return this;
@@ -26,6 +29,7 @@ public class CreateRegexMatchSetResponse {
     
     
     public Integer statusCode;
+
     public CreateRegexMatchSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CreateRegexMatchSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateRegexMatchSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class CreateRegexMatchSetResponse {
      */
     
     public Object wafDisallowedNameException;
+
     public CreateRegexMatchSetResponse withWAFDisallowedNameException(Object wafDisallowedNameException) {
         this.wafDisallowedNameException = wafDisallowedNameException;
         return this;
@@ -53,6 +59,7 @@ public class CreateRegexMatchSetResponse {
      */
     
     public Object wafInternalErrorException;
+
     public CreateRegexMatchSetResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -63,6 +70,7 @@ public class CreateRegexMatchSetResponse {
      */
     
     public Object wafLimitsExceededException;
+
     public CreateRegexMatchSetResponse withWAFLimitsExceededException(Object wafLimitsExceededException) {
         this.wafLimitsExceededException = wafLimitsExceededException;
         return this;
@@ -73,9 +81,14 @@ public class CreateRegexMatchSetResponse {
      */
     
     public Object wafStaleDataException;
+
     public CreateRegexMatchSetResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
     }
     
+    public CreateRegexMatchSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

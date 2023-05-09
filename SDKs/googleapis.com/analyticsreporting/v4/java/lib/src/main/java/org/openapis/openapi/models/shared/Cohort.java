@@ -18,6 +18,7 @@ public class Cohort {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateRange")
     public DateRange dateRange;
+
     public Cohort withDateRange(DateRange dateRange) {
         this.dateRange = dateRange;
         return this;
@@ -29,6 +30,7 @@ public class Cohort {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Cohort withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class Cohort {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CohortTypeEnum type;
+
     public Cohort withType(CohortTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Cohort(){}
 }

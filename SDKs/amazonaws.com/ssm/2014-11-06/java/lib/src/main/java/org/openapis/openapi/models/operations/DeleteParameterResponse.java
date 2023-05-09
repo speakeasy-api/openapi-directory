@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteParameterResponse {
     
     public String contentType;
+
     public DeleteParameterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteParameterResponse {
      */
     
     public java.util.Map<String, Object> deleteParameterResult;
+
     public DeleteParameterResponse withDeleteParameterResult(java.util.Map<String, Object> deleteParameterResult) {
         this.deleteParameterResult = deleteParameterResult;
         return this;
@@ -29,6 +32,7 @@ public class DeleteParameterResponse {
      */
     
     public Object internalServerError;
+
     public DeleteParameterResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class DeleteParameterResponse {
      */
     
     public Object parameterNotFound;
+
     public DeleteParameterResponse withParameterNotFound(Object parameterNotFound) {
         this.parameterNotFound = parameterNotFound;
         return this;
@@ -46,6 +51,7 @@ public class DeleteParameterResponse {
     
     
     public Integer statusCode;
+
     public DeleteParameterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DeleteParameterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteParameterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteParameterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

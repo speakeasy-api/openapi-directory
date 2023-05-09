@@ -15,6 +15,7 @@ public class GetReportGroupTrendOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawData")
     public ReportWithRawData[] rawData;
+
     public GetReportGroupTrendOutput withRawData(ReportWithRawData[] rawData) {
         this.rawData = rawData;
         return this;
@@ -23,9 +24,11 @@ public class GetReportGroupTrendOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stats")
     public ReportGroupTrendStats stats;
+
     public GetReportGroupTrendOutput withStats(ReportGroupTrendStats stats) {
         this.stats = stats;
         return this;
     }
     
+    public GetReportGroupTrendOutput(){}
 }

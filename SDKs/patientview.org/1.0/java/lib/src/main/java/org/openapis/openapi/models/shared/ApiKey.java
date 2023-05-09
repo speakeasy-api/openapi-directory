@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class ApiKey {
     
     public Boolean expired;
+
     public ApiKey withExpired(Boolean expired) {
         this.expired = expired;
         return this;
@@ -16,6 +17,7 @@ public class ApiKey {
     
     
     public OffsetDateTime expiryDate;
+
     public ApiKey withExpiryDate(OffsetDateTime expiryDate) {
         this.expiryDate = expiryDate;
         return this;
@@ -23,9 +25,11 @@ public class ApiKey {
     
     
     public String key;
+
     public ApiKey withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public ApiKey(){}
 }

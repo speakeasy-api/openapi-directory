@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListScenesResponse {
@@ -12,6 +13,7 @@ public class ListScenesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListScenesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListScenesResponse {
     
     
     public String contentType;
+
     public ListScenesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListScenesResponse {
      */
     
     public Object internalServerException;
+
     public ListScenesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListScenesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListScenesResponse listScenesResponse;
+
     public ListScenesResponse withListScenesResponse(org.openapis.openapi.models.shared.ListScenesResponse listScenesResponse) {
         this.listScenesResponse = listScenesResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListScenesResponse {
     
     
     public Integer statusCode;
+
     public ListScenesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListScenesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListScenesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListScenesResponse {
      */
     
     public Object throttlingException;
+
     public ListScenesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListScenesResponse {
      */
     
     public Object validationException;
+
     public ListScenesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListScenesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class CreateUserPoolClientRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessTokenValidity")
     public Long accessTokenValidity;
+
     public CreateUserPoolClientRequest withAccessTokenValidity(Long accessTokenValidity) {
         this.accessTokenValidity = accessTokenValidity;
         return this;
@@ -23,6 +24,7 @@ public class CreateUserPoolClientRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowedOAuthFlows")
     public OAuthFlowTypeEnum[] allowedOAuthFlows;
+
     public CreateUserPoolClientRequest withAllowedOAuthFlows(OAuthFlowTypeEnum[] allowedOAuthFlows) {
         this.allowedOAuthFlows = allowedOAuthFlows;
         return this;
@@ -31,6 +33,7 @@ public class CreateUserPoolClientRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowedOAuthFlowsUserPoolClient")
     public Boolean allowedOAuthFlowsUserPoolClient;
+
     public CreateUserPoolClientRequest withAllowedOAuthFlowsUserPoolClient(Boolean allowedOAuthFlowsUserPoolClient) {
         this.allowedOAuthFlowsUserPoolClient = allowedOAuthFlowsUserPoolClient;
         return this;
@@ -39,6 +42,7 @@ public class CreateUserPoolClientRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowedOAuthScopes")
     public String[] allowedOAuthScopes;
+
     public CreateUserPoolClientRequest withAllowedOAuthScopes(String[] allowedOAuthScopes) {
         this.allowedOAuthScopes = allowedOAuthScopes;
         return this;
@@ -47,6 +51,7 @@ public class CreateUserPoolClientRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnalyticsConfiguration")
     public AnalyticsConfigurationType analyticsConfiguration;
+
     public CreateUserPoolClientRequest withAnalyticsConfiguration(AnalyticsConfigurationType analyticsConfiguration) {
         this.analyticsConfiguration = analyticsConfiguration;
         return this;
@@ -55,6 +60,7 @@ public class CreateUserPoolClientRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthSessionValidity")
     public Long authSessionValidity;
+
     public CreateUserPoolClientRequest withAuthSessionValidity(Long authSessionValidity) {
         this.authSessionValidity = authSessionValidity;
         return this;
@@ -63,6 +69,7 @@ public class CreateUserPoolClientRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CallbackURLs")
     public String[] callbackURLs;
+
     public CreateUserPoolClientRequest withCallbackURLs(String[] callbackURLs) {
         this.callbackURLs = callbackURLs;
         return this;
@@ -70,6 +77,7 @@ public class CreateUserPoolClientRequest {
     
     @JsonProperty("ClientName")
     public String clientName;
+
     public CreateUserPoolClientRequest withClientName(String clientName) {
         this.clientName = clientName;
         return this;
@@ -78,6 +86,7 @@ public class CreateUserPoolClientRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultRedirectURI")
     public String defaultRedirectURI;
+
     public CreateUserPoolClientRequest withDefaultRedirectURI(String defaultRedirectURI) {
         this.defaultRedirectURI = defaultRedirectURI;
         return this;
@@ -86,6 +95,7 @@ public class CreateUserPoolClientRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnablePropagateAdditionalUserContextData")
     public Boolean enablePropagateAdditionalUserContextData;
+
     public CreateUserPoolClientRequest withEnablePropagateAdditionalUserContextData(Boolean enablePropagateAdditionalUserContextData) {
         this.enablePropagateAdditionalUserContextData = enablePropagateAdditionalUserContextData;
         return this;
@@ -94,6 +104,7 @@ public class CreateUserPoolClientRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableTokenRevocation")
     public Boolean enableTokenRevocation;
+
     public CreateUserPoolClientRequest withEnableTokenRevocation(Boolean enableTokenRevocation) {
         this.enableTokenRevocation = enableTokenRevocation;
         return this;
@@ -102,6 +113,7 @@ public class CreateUserPoolClientRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExplicitAuthFlows")
     public ExplicitAuthFlowsTypeEnum[] explicitAuthFlows;
+
     public CreateUserPoolClientRequest withExplicitAuthFlows(ExplicitAuthFlowsTypeEnum[] explicitAuthFlows) {
         this.explicitAuthFlows = explicitAuthFlows;
         return this;
@@ -110,6 +122,7 @@ public class CreateUserPoolClientRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GenerateSecret")
     public Boolean generateSecret;
+
     public CreateUserPoolClientRequest withGenerateSecret(Boolean generateSecret) {
         this.generateSecret = generateSecret;
         return this;
@@ -118,6 +131,7 @@ public class CreateUserPoolClientRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdTokenValidity")
     public Long idTokenValidity;
+
     public CreateUserPoolClientRequest withIdTokenValidity(Long idTokenValidity) {
         this.idTokenValidity = idTokenValidity;
         return this;
@@ -126,6 +140,7 @@ public class CreateUserPoolClientRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogoutURLs")
     public String[] logoutURLs;
+
     public CreateUserPoolClientRequest withLogoutURLs(String[] logoutURLs) {
         this.logoutURLs = logoutURLs;
         return this;
@@ -134,6 +149,7 @@ public class CreateUserPoolClientRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreventUserExistenceErrors")
     public PreventUserExistenceErrorTypesEnum preventUserExistenceErrors;
+
     public CreateUserPoolClientRequest withPreventUserExistenceErrors(PreventUserExistenceErrorTypesEnum preventUserExistenceErrors) {
         this.preventUserExistenceErrors = preventUserExistenceErrors;
         return this;
@@ -142,6 +158,7 @@ public class CreateUserPoolClientRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadAttributes")
     public String[] readAttributes;
+
     public CreateUserPoolClientRequest withReadAttributes(String[] readAttributes) {
         this.readAttributes = readAttributes;
         return this;
@@ -150,6 +167,7 @@ public class CreateUserPoolClientRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RefreshTokenValidity")
     public Long refreshTokenValidity;
+
     public CreateUserPoolClientRequest withRefreshTokenValidity(Long refreshTokenValidity) {
         this.refreshTokenValidity = refreshTokenValidity;
         return this;
@@ -158,6 +176,7 @@ public class CreateUserPoolClientRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportedIdentityProviders")
     public String[] supportedIdentityProviders;
+
     public CreateUserPoolClientRequest withSupportedIdentityProviders(String[] supportedIdentityProviders) {
         this.supportedIdentityProviders = supportedIdentityProviders;
         return this;
@@ -166,6 +185,7 @@ public class CreateUserPoolClientRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TokenValidityUnits")
     public TokenValidityUnitsType tokenValidityUnits;
+
     public CreateUserPoolClientRequest withTokenValidityUnits(TokenValidityUnitsType tokenValidityUnits) {
         this.tokenValidityUnits = tokenValidityUnits;
         return this;
@@ -173,6 +193,7 @@ public class CreateUserPoolClientRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public CreateUserPoolClientRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
@@ -181,9 +202,14 @@ public class CreateUserPoolClientRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WriteAttributes")
     public String[] writeAttributes;
+
     public CreateUserPoolClientRequest withWriteAttributes(String[] writeAttributes) {
         this.writeAttributes = writeAttributes;
         return this;
     }
     
+    public CreateUserPoolClientRequest(@JsonProperty("ClientName") String clientName, @JsonProperty("UserPoolId") String userPoolId) {
+        this.clientName = clientName;
+        this.userPoolId = userPoolId;
+  }
 }

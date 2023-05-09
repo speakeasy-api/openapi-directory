@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateLensVersionResponse {
@@ -12,6 +13,7 @@ public class CreateLensVersionResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateLensVersionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateLensVersionResponse {
      */
     
     public Object conflictException;
+
     public CreateLensVersionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateLensVersionResponse {
     
     
     public String contentType;
+
     public CreateLensVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateLensVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateLensVersionOutput createLensVersionOutput;
+
     public CreateLensVersionResponse withCreateLensVersionOutput(org.openapis.openapi.models.shared.CreateLensVersionOutput createLensVersionOutput) {
         this.createLensVersionOutput = createLensVersionOutput;
         return this;
@@ -49,6 +54,7 @@ public class CreateLensVersionResponse {
      */
     
     public Object internalServerException;
+
     public CreateLensVersionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateLensVersionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateLensVersionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateLensVersionResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateLensVersionResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateLensVersionResponse {
     
     
     public Integer statusCode;
+
     public CreateLensVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateLensVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateLensVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateLensVersionResponse {
      */
     
     public Object throttlingException;
+
     public CreateLensVersionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateLensVersionResponse {
      */
     
     public Object validationException;
+
     public CreateLensVersionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateLensVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

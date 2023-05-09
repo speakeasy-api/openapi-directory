@@ -12,6 +12,7 @@ public class GetAs2OutgoingMessagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=as2_partner_id")
     public Integer as2PartnerId;
+
     public GetAs2OutgoingMessagesRequest withAs2PartnerId(Integer as2PartnerId) {
         this.as2PartnerId = as2PartnerId;
         return this;
@@ -22,6 +23,7 @@ public class GetAs2OutgoingMessagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetAs2OutgoingMessagesRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -32,6 +34,7 @@ public class GetAs2OutgoingMessagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public java.util.Map<String, Object> filter;
+
     public GetAs2OutgoingMessagesRequest withFilter(java.util.Map<String, Object> filter) {
         this.filter = filter;
         return this;
@@ -42,28 +45,20 @@ public class GetAs2OutgoingMessagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_gt")
     public java.util.Map<String, Object> filterGt;
+
     public GetAs2OutgoingMessagesRequest withFilterGt(java.util.Map<String, Object> filterGt) {
         this.filterGt = filterGt;
         return this;
     }
     
     /**
-     * If set, return records where the specified field is greater than or equal to the supplied value. Valid fields are `created_at`.
+     * If set, return records where the specified field is greater than or equal the supplied value. Valid fields are `created_at`.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_gteq")
     public java.util.Map<String, Object> filterGteq;
+
     public GetAs2OutgoingMessagesRequest withFilterGteq(java.util.Map<String, Object> filterGteq) {
         this.filterGteq = filterGteq;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is equal to the supplied value. Valid fields are `created_at`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_like")
-    public java.util.Map<String, Object> filterLike;
-    public GetAs2OutgoingMessagesRequest withFilterLike(java.util.Map<String, Object> filterLike) {
-        this.filterLike = filterLike;
         return this;
     }
     
@@ -72,16 +67,18 @@ public class GetAs2OutgoingMessagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_lt")
     public java.util.Map<String, Object> filterLt;
+
     public GetAs2OutgoingMessagesRequest withFilterLt(java.util.Map<String, Object> filterLt) {
         this.filterLt = filterLt;
         return this;
     }
     
     /**
-     * If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `created_at`.
+     * If set, return records where the specified field is less than or equal the supplied value. Valid fields are `created_at`.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_lteq")
     public java.util.Map<String, Object> filterLteq;
+
     public GetAs2OutgoingMessagesRequest withFilterLteq(java.util.Map<String, Object> filterLteq) {
         this.filterLteq = filterLteq;
         return this;
@@ -92,6 +89,7 @@ public class GetAs2OutgoingMessagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetAs2OutgoingMessagesRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -102,9 +100,11 @@ public class GetAs2OutgoingMessagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public java.util.Map<String, Object> sortBy;
+
     public GetAs2OutgoingMessagesRequest withSortBy(java.util.Map<String, Object> sortBy) {
         this.sortBy = sortBy;
         return this;
     }
     
+    public GetAs2OutgoingMessagesRequest(){}
 }

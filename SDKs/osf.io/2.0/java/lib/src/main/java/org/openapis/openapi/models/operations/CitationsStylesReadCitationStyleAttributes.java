@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -15,6 +16,7 @@ public class CitationsStylesReadCitationStyleAttributes {
      */
     
     public OffsetDateTime dateParsed;
+
     public CitationsStylesReadCitationStyleAttributes withDateParsed(OffsetDateTime dateParsed) {
         this.dateParsed = dateParsed;
         return this;
@@ -25,6 +27,7 @@ public class CitationsStylesReadCitationStyleAttributes {
      */
     
     public String shortTitle;
+
     public CitationsStylesReadCitationStyleAttributes withShortTitle(String shortTitle) {
         this.shortTitle = shortTitle;
         return this;
@@ -35,6 +38,7 @@ public class CitationsStylesReadCitationStyleAttributes {
      */
     
     public String summary;
+
     public CitationsStylesReadCitationStyleAttributes withSummary(String summary) {
         this.summary = summary;
         return this;
@@ -45,9 +49,14 @@ public class CitationsStylesReadCitationStyleAttributes {
      */
     
     public String title;
+
     public CitationsStylesReadCitationStyleAttributes withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public CitationsStylesReadCitationStyleAttributes(@JsonProperty("date_parsed") OffsetDateTime dateParsed, @JsonProperty("title") String title) {
+        this.dateParsed = dateParsed;
+        this.title = title;
+  }
 }

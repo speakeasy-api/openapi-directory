@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePortalResponse {
@@ -12,6 +13,7 @@ public class CreatePortalResponse {
      */
     
     public Object accessDeniedException;
+
     public CreatePortalResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreatePortalResponse {
      */
     
     public Object conflictException;
+
     public CreatePortalResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreatePortalResponse {
     
     
     public String contentType;
+
     public CreatePortalResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreatePortalResponse {
      */
     
     public org.openapis.openapi.models.shared.CreatePortalResponse createPortalResponse;
+
     public CreatePortalResponse withCreatePortalResponse(org.openapis.openapi.models.shared.CreatePortalResponse createPortalResponse) {
         this.createPortalResponse = createPortalResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreatePortalResponse {
      */
     
     public Object internalServerException;
+
     public CreatePortalResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreatePortalResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreatePortalResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreatePortalResponse {
     
     
     public Integer statusCode;
+
     public CreatePortalResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreatePortalResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePortalResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreatePortalResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreatePortalResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class CreatePortalResponse {
      */
     
     public Object throttlingException;
+
     public CreatePortalResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreatePortalResponse {
      */
     
     public Object validationException;
+
     public CreatePortalResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreatePortalResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

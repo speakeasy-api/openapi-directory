@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteContentResponse {
@@ -12,6 +13,7 @@ public class DeleteContentResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteContentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteContentResponse {
     
     
     public String contentType;
+
     public DeleteContentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteContentResponse {
      */
     
     public java.util.Map<String, Object> deleteContentResponse;
+
     public DeleteContentResponse withDeleteContentResponse(java.util.Map<String, Object> deleteContentResponse) {
         this.deleteContentResponse = deleteContentResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteContentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteContentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteContentResponse {
     
     
     public Integer statusCode;
+
     public DeleteContentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteContentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteContentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteContentResponse {
      */
     
     public Object validationException;
+
     public DeleteContentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteContentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

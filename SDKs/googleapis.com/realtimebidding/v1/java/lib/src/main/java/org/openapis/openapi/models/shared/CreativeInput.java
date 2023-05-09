@@ -18,6 +18,7 @@ public class CreativeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adChoicesDestinationUrl")
     public String adChoicesDestinationUrl;
+
     public CreativeInput withAdChoicesDestinationUrl(String adChoicesDestinationUrl) {
         this.adChoicesDestinationUrl = adChoicesDestinationUrl;
         return this;
@@ -29,6 +30,7 @@ public class CreativeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserName")
     public String advertiserName;
+
     public CreativeInput withAdvertiserName(String advertiserName) {
         this.advertiserName = advertiserName;
         return this;
@@ -40,6 +42,7 @@ public class CreativeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agencyId")
     public String agencyId;
+
     public CreativeInput withAgencyId(String agencyId) {
         this.agencyId = agencyId;
         return this;
@@ -51,6 +54,7 @@ public class CreativeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeId")
     public String creativeId;
+
     public CreativeInput withCreativeId(String creativeId) {
         this.creativeId = creativeId;
         return this;
@@ -62,6 +66,7 @@ public class CreativeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeServingDecision")
     public CreativeServingDecision creativeServingDecision;
+
     public CreativeInput withCreativeServingDecision(CreativeServingDecision creativeServingDecision) {
         this.creativeServingDecision = creativeServingDecision;
         return this;
@@ -73,6 +78,7 @@ public class CreativeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("declaredAttributes")
     public CreativeDeclaredAttributesEnum[] declaredAttributes;
+
     public CreativeInput withDeclaredAttributes(CreativeDeclaredAttributesEnum[] declaredAttributes) {
         this.declaredAttributes = declaredAttributes;
         return this;
@@ -84,6 +90,7 @@ public class CreativeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("declaredClickThroughUrls")
     public String[] declaredClickThroughUrls;
+
     public CreativeInput withDeclaredClickThroughUrls(String[] declaredClickThroughUrls) {
         this.declaredClickThroughUrls = declaredClickThroughUrls;
         return this;
@@ -95,6 +102,7 @@ public class CreativeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("declaredRestrictedCategories")
     public CreativeDeclaredRestrictedCategoriesEnum[] declaredRestrictedCategories;
+
     public CreativeInput withDeclaredRestrictedCategories(CreativeDeclaredRestrictedCategoriesEnum[] declaredRestrictedCategories) {
         this.declaredRestrictedCategories = declaredRestrictedCategories;
         return this;
@@ -106,6 +114,7 @@ public class CreativeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("declaredVendorIds")
     public Integer[] declaredVendorIds;
+
     public CreativeInput withDeclaredVendorIds(Integer[] declaredVendorIds) {
         this.declaredVendorIds = declaredVendorIds;
         return this;
@@ -117,6 +126,7 @@ public class CreativeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html")
     public HtmlContent html;
+
     public CreativeInput withHtml(HtmlContent html) {
         this.html = html;
         return this;
@@ -128,6 +138,7 @@ public class CreativeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("impressionTrackingUrls")
     public String[] impressionTrackingUrls;
+
     public CreativeInput withImpressionTrackingUrls(String[] impressionTrackingUrls) {
         this.impressionTrackingUrls = impressionTrackingUrls;
         return this;
@@ -139,6 +150,7 @@ public class CreativeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("native")
     public NativeContent native_;
+
     public CreativeInput withNative(NativeContent native_) {
         this.native_ = native_;
         return this;
@@ -150,6 +162,7 @@ public class CreativeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renderUrl")
     public String renderUrl;
+
     public CreativeInput withRenderUrl(String renderUrl) {
         this.renderUrl = renderUrl;
         return this;
@@ -161,6 +174,7 @@ public class CreativeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictedCategories")
     public CreativeRestrictedCategoriesEnum[] restrictedCategories;
+
     public CreativeInput withRestrictedCategories(CreativeRestrictedCategoriesEnum[] restrictedCategories) {
         this.restrictedCategories = restrictedCategories;
         return this;
@@ -172,9 +186,11 @@ public class CreativeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("video")
     public VideoContent video;
+
     public CreativeInput withVideo(VideoContent video) {
         this.video = video;
         return this;
     }
     
+    public CreativeInput(){}
 }

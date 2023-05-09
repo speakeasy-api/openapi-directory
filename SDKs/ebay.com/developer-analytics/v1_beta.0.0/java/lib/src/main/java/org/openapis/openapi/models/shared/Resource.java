@@ -18,6 +18,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Resource withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rates")
     public Rate[] rates;
+
     public Resource withRates(Rate[] rates) {
         this.rates = rates;
         return this;
     }
     
+    public Resource(){}
 }

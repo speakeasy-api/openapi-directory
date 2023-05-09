@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAcmeExternalAccountBindingResponse {
     
     public byte[] body;
+
     public GetAcmeExternalAccountBindingResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetAcmeExternalAccountBindingResponse {
     
     
     public String contentType;
+
     public GetAcmeExternalAccountBindingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetAcmeExternalAccountBindingResponse {
      */
     
     public org.openapis.openapi.models.shared.ExternalAccountBinding externalAccountBinding;
+
     public GetAcmeExternalAccountBindingResponse withExternalAccountBinding(org.openapis.openapi.models.shared.ExternalAccountBinding externalAccountBinding) {
         this.externalAccountBinding = externalAccountBinding;
         return this;
@@ -33,6 +37,7 @@ public class GetAcmeExternalAccountBindingResponse {
     
     
     public Integer statusCode;
+
     public GetAcmeExternalAccountBindingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetAcmeExternalAccountBindingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAcmeExternalAccountBindingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAcmeExternalAccountBindingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

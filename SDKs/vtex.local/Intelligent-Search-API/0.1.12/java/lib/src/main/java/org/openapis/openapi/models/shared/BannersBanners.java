@@ -15,6 +15,7 @@ public class BannersBanners {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("area")
     public String area;
+
     public BannersBanners withArea(String area) {
         this.area = area;
         return this;
@@ -26,6 +27,7 @@ public class BannersBanners {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html")
     public String html;
+
     public BannersBanners withHtml(String html) {
         this.html = html;
         return this;
@@ -37,6 +39,7 @@ public class BannersBanners {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public BannersBanners withId(String id) {
         this.id = id;
         return this;
@@ -48,9 +51,11 @@ public class BannersBanners {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BannersBanners withName(String name) {
         this.name = name;
         return this;
     }
     
+    public BannersBanners(){}
 }

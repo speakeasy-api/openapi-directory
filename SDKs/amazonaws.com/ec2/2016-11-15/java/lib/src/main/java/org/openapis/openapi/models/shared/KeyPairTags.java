@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class KeyPairTags {
     
     public String key;
+
     public KeyPairTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class KeyPairTags {
     
     
     public String value;
+
     public KeyPairTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public KeyPairTags(){}
 }

@@ -15,6 +15,7 @@ public class AddOrderDealsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deals")
     public MarketplaceDeal[] deals;
+
     public AddOrderDealsRequest withDeals(MarketplaceDeal[] deals) {
         this.deals = deals;
         return this;
@@ -26,6 +27,7 @@ public class AddOrderDealsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proposalRevisionNumber")
     public String proposalRevisionNumber;
+
     public AddOrderDealsRequest withProposalRevisionNumber(String proposalRevisionNumber) {
         this.proposalRevisionNumber = proposalRevisionNumber;
         return this;
@@ -37,9 +39,11 @@ public class AddOrderDealsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateAction")
     public String updateAction;
+
     public AddOrderDealsRequest withUpdateAction(String updateAction) {
         this.updateAction = updateAction;
         return this;
     }
     
+    public AddOrderDealsRequest(){}
 }

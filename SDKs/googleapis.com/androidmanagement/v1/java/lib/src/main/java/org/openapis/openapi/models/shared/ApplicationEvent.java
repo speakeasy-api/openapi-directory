@@ -18,6 +18,7 @@ public class ApplicationEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public ApplicationEvent withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,9 +30,11 @@ public class ApplicationEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventType")
     public ApplicationEventEventTypeEnum eventType;
+
     public ApplicationEvent withEventType(ApplicationEventEventTypeEnum eventType) {
         this.eventType = eventType;
         return this;
     }
     
+    public ApplicationEvent(){}
 }

@@ -20,6 +20,7 @@ public class WorldSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public WorldSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class WorldSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public WorldSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class WorldSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generationJob")
     public String generationJob;
+
     public WorldSummary withGenerationJob(String generationJob) {
         this.generationJob = generationJob;
         return this;
@@ -46,9 +49,11 @@ public class WorldSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public String template;
+
     public WorldSummary withTemplate(String template) {
         this.template = template;
         return this;
     }
     
+    public WorldSummary(){}
 }

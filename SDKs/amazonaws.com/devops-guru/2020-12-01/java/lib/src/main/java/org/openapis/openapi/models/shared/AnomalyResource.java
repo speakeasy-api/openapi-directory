@@ -15,6 +15,7 @@ public class AnomalyResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AnomalyResource withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class AnomalyResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public AnomalyResource withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AnomalyResource(){}
 }

@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOauthV1RefreshTokensTokenGetRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=token")
     public String token;
+
     public GetOauthV1RefreshTokensTokenGetRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public GetOauthV1RefreshTokensTokenGetRequest(@JsonProperty("token") String token) {
+        this.token = token;
+  }
 }

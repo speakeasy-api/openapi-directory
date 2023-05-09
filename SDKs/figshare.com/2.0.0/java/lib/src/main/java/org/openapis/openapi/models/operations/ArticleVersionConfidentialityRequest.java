@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArticleVersionConfidentialityRequest {
@@ -12,6 +13,7 @@ public class ArticleVersionConfidentialityRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=article_id")
     public Long articleId;
+
     public ArticleVersionConfidentialityRequest withArticleId(Long articleId) {
         this.articleId = articleId;
         return this;
@@ -22,9 +24,14 @@ public class ArticleVersionConfidentialityRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=v_number")
     public Long vNumber;
+
     public ArticleVersionConfidentialityRequest withVNumber(Long vNumber) {
         this.vNumber = vNumber;
         return this;
     }
     
+    public ArticleVersionConfidentialityRequest(@JsonProperty("article_id") Long articleId, @JsonProperty("v_number") Long vNumber) {
+        this.articleId = articleId;
+        this.vNumber = vNumber;
+  }
 }

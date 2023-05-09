@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3RestoreAgentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentContent")
     public String agentContent;
+
     public GoogleCloudDialogflowCxV3RestoreAgentRequest withAgentContent(String agentContent) {
         this.agentContent = agentContent;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3RestoreAgentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentUri")
     public String agentUri;
+
     public GoogleCloudDialogflowCxV3RestoreAgentRequest withAgentUri(String agentUri) {
         this.agentUri = agentUri;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowCxV3RestoreAgentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restoreOption")
     public GoogleCloudDialogflowCxV3RestoreAgentRequestRestoreOptionEnum restoreOption;
+
     public GoogleCloudDialogflowCxV3RestoreAgentRequest withRestoreOption(GoogleCloudDialogflowCxV3RestoreAgentRequestRestoreOptionEnum restoreOption) {
         this.restoreOption = restoreOption;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3RestoreAgentRequest(){}
 }

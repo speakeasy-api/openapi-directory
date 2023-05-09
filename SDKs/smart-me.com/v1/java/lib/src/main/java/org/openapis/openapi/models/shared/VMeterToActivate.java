@@ -20,9 +20,11 @@ public class VMeterToActivate {
     @JsonProperty("SerialNumber")
     @SpeakeasyMetadata("form:name=SerialNumber")
     public String serialNumber;
+
     public VMeterToActivate withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
     }
     
+    public VMeterToActivate(){}
 }

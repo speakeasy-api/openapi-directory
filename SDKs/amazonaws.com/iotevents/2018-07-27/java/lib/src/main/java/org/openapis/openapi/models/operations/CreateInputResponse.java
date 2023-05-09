@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateInputResponse {
     
     public String contentType;
+
     public CreateInputResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateInputResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateInputResponse createInputResponse;
+
     public CreateInputResponse withCreateInputResponse(org.openapis.openapi.models.shared.CreateInputResponse createInputResponse) {
         this.createInputResponse = createInputResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateInputResponse {
      */
     
     public Object internalFailureException;
+
     public CreateInputResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreateInputResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateInputResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateInputResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateInputResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -56,6 +62,7 @@ public class CreateInputResponse {
     
     
     public Integer statusCode;
+
     public CreateInputResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateInputResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateInputResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateInputResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateInputResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -83,9 +92,14 @@ public class CreateInputResponse {
      */
     
     public Object throttlingException;
+
     public CreateInputResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateInputResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

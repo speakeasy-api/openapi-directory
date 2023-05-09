@@ -15,6 +15,7 @@ public class MicerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public MicerRequestBodyCertificateParameters certificateParameters;
+
     public MicerRequestBody withCertificateParameters(MicerRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class MicerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public MicerRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class MicerRequestBody {
      */
     @JsonProperty("format")
     public MicerRequestBodyFormatEnum format;
+
     public MicerRequestBody withFormat(MicerRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class MicerRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public MicerRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public MicerRequestBody(@JsonProperty("format") MicerRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

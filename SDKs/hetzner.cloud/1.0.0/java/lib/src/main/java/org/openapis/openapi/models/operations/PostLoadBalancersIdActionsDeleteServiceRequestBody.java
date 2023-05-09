@@ -12,9 +12,13 @@ public class PostLoadBalancersIdActionsDeleteServiceRequestBody {
      */
     @JsonProperty("listen_port")
     public Double listenPort;
+
     public PostLoadBalancersIdActionsDeleteServiceRequestBody withListenPort(Double listenPort) {
         this.listenPort = listenPort;
         return this;
     }
     
+    public PostLoadBalancersIdActionsDeleteServiceRequestBody(@JsonProperty("listen_port") Double listenPort) {
+        this.listenPort = listenPort;
+  }
 }

@@ -15,9 +15,11 @@ public class GetSectionFormat200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public org.openapis.openapi.models.shared.Article[] results;
+
     public GetSectionFormat200ApplicationJSON withResults(org.openapis.openapi.models.shared.Article[] results) {
         this.results = results;
         return this;
     }
     
+    public GetSectionFormat200ApplicationJSON(){}
 }

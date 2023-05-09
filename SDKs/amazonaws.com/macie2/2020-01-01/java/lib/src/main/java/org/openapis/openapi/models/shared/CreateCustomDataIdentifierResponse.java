@@ -15,9 +15,11 @@ public class CreateCustomDataIdentifierResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customDataIdentifierId")
     public String customDataIdentifierId;
+
     public CreateCustomDataIdentifierResponse withCustomDataIdentifierId(String customDataIdentifierId) {
         this.customDataIdentifierId = customDataIdentifierId;
         return this;
     }
     
+    public CreateCustomDataIdentifierResponse(){}
 }

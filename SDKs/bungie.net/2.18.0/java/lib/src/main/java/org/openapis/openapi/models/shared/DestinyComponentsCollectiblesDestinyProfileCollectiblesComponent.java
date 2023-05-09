@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyComponentsCollectiblesDestinyProfileCollectiblesComponent {
     
     public java.util.Map<String, DestinyComponentsCollectiblesDestinyCollectibleComponent> collectibles;
+
     public DestinyComponentsCollectiblesDestinyProfileCollectiblesComponent withCollectibles(java.util.Map<String, DestinyComponentsCollectiblesDestinyCollectibleComponent> collectibles) {
         this.collectibles = collectibles;
         return this;
@@ -19,6 +20,7 @@ public class DestinyComponentsCollectiblesDestinyProfileCollectiblesComponent {
      */
     
     public Long collectionBadgesRootNodeHash;
+
     public DestinyComponentsCollectiblesDestinyProfileCollectiblesComponent withCollectionBadgesRootNodeHash(Long collectionBadgesRootNodeHash) {
         this.collectionBadgesRootNodeHash = collectionBadgesRootNodeHash;
         return this;
@@ -29,6 +31,7 @@ public class DestinyComponentsCollectiblesDestinyProfileCollectiblesComponent {
      */
     
     public Long collectionCategoriesRootNodeHash;
+
     public DestinyComponentsCollectiblesDestinyProfileCollectiblesComponent withCollectionCategoriesRootNodeHash(Long collectionCategoriesRootNodeHash) {
         this.collectionCategoriesRootNodeHash = collectionCategoriesRootNodeHash;
         return this;
@@ -40,6 +43,7 @@ public class DestinyComponentsCollectiblesDestinyProfileCollectiblesComponent {
      */
     
     public Long[] newnessFlaggedCollectibleHashes;
+
     public DestinyComponentsCollectiblesDestinyProfileCollectiblesComponent withNewnessFlaggedCollectibleHashes(Long[] newnessFlaggedCollectibleHashes) {
         this.newnessFlaggedCollectibleHashes = newnessFlaggedCollectibleHashes;
         return this;
@@ -50,9 +54,11 @@ public class DestinyComponentsCollectiblesDestinyProfileCollectiblesComponent {
      */
     
     public Long[] recentCollectibleHashes;
+
     public DestinyComponentsCollectiblesDestinyProfileCollectiblesComponent withRecentCollectibleHashes(Long[] recentCollectibleHashes) {
         this.recentCollectibleHashes = recentCollectibleHashes;
         return this;
     }
     
+    public DestinyComponentsCollectiblesDestinyProfileCollectiblesComponent(){}
 }

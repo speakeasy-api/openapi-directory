@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetContractsResponse {
@@ -12,6 +13,7 @@ public class GetContractsResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetContractsResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetContractsResponse {
     
     
     public String contentType;
+
     public GetContractsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetContractsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetContractsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetContractsResponse {
     
     
     public Integer statusCode;
+
     public GetContractsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetContractsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetContractsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class GetContractsResponse {
      */
     
     public org.openapis.openapi.models.shared.Contracts contracts;
+
     public GetContractsResponse withContracts(org.openapis.openapi.models.shared.Contracts contracts) {
         this.contracts = contracts;
         return this;
     }
     
+    public GetContractsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

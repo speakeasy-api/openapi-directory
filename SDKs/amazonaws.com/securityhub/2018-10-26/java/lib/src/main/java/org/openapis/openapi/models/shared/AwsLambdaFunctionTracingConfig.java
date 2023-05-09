@@ -15,9 +15,11 @@ public class AwsLambdaFunctionTracingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mode")
     public String mode;
+
     public AwsLambdaFunctionTracingConfig withMode(String mode) {
         this.mode = mode;
         return this;
     }
     
+    public AwsLambdaFunctionTracingConfig(){}
 }

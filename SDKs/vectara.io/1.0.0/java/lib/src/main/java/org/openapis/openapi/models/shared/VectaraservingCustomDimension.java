@@ -15,6 +15,7 @@ public class VectaraservingCustomDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public VectaraservingCustomDimension withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class VectaraservingCustomDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     public Double weight;
+
     public VectaraservingCustomDimension withWeight(Double weight) {
         this.weight = weight;
         return this;
     }
     
+    public VectaraservingCustomDimension(){}
 }

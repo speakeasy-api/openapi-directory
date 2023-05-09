@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLexiconResponse {
     
     public String contentType;
+
     public GetLexiconResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetLexiconResponse {
      */
     
     public org.openapis.openapi.models.shared.GetLexiconOutput getLexiconOutput;
+
     public GetLexiconResponse withGetLexiconOutput(org.openapis.openapi.models.shared.GetLexiconOutput getLexiconOutput) {
         this.getLexiconOutput = getLexiconOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetLexiconResponse {
      */
     
     public Object lexiconNotFoundException;
+
     public GetLexiconResponse withLexiconNotFoundException(Object lexiconNotFoundException) {
         this.lexiconNotFoundException = lexiconNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class GetLexiconResponse {
     
     
     public Integer statusCode;
+
     public GetLexiconResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetLexiconResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLexiconResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class GetLexiconResponse {
      */
     
     public Object serviceFailureException;
+
     public GetLexiconResponse withServiceFailureException(Object serviceFailureException) {
         this.serviceFailureException = serviceFailureException;
         return this;
     }
     
+    public GetLexiconResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

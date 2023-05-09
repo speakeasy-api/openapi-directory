@@ -20,6 +20,7 @@ public class ComponentLatestVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public ComponentLatestVersion withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class ComponentLatestVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentVersion")
     public String componentVersion;
+
     public ComponentLatestVersion withComponentVersion(String componentVersion) {
         this.componentVersion = componentVersion;
         return this;
@@ -38,6 +40,7 @@ public class ComponentLatestVersion {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTimestamp")
     public OffsetDateTime creationTimestamp;
+
     public ComponentLatestVersion withCreationTimestamp(OffsetDateTime creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -46,6 +49,7 @@ public class ComponentLatestVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ComponentLatestVersion withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +58,7 @@ public class ComponentLatestVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platforms")
     public ComponentPlatform[] platforms;
+
     public ComponentLatestVersion withPlatforms(ComponentPlatform[] platforms) {
         this.platforms = platforms;
         return this;
@@ -62,9 +67,11 @@ public class ComponentLatestVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisher")
     public String publisher;
+
     public ComponentLatestVersion withPublisher(String publisher) {
         this.publisher = publisher;
         return this;
     }
     
+    public ComponentLatestVersion(){}
 }

@@ -12,6 +12,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Assists")
     public Long assists;
+
     public PlayerGameProjection withAssists(Long assists) {
         this.assists = assists;
         return this;
@@ -20,6 +21,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssistsPercentage")
     public Double assistsPercentage;
+
     public PlayerGameProjection withAssistsPercentage(Double assistsPercentage) {
         this.assistsPercentage = assistsPercentage;
         return this;
@@ -28,6 +30,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockedShots")
     public Long blockedShots;
+
     public PlayerGameProjection withBlockedShots(Long blockedShots) {
         this.blockedShots = blockedShots;
         return this;
@@ -36,6 +39,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlocksPercentage")
     public Double blocksPercentage;
+
     public PlayerGameProjection withBlocksPercentage(Double blocksPercentage) {
         this.blocksPercentage = blocksPercentage;
         return this;
@@ -44,6 +48,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DateTime")
     public String dateTime;
+
     public PlayerGameProjection withDateTime(String dateTime) {
         this.dateTime = dateTime;
         return this;
@@ -52,6 +57,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Day")
     public String day;
+
     public PlayerGameProjection withDay(String day) {
         this.day = day;
         return this;
@@ -60,6 +66,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefensiveRebounds")
     public Long defensiveRebounds;
+
     public PlayerGameProjection withDefensiveRebounds(Long defensiveRebounds) {
         this.defensiveRebounds = defensiveRebounds;
         return this;
@@ -68,6 +75,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefensiveReboundsPercentage")
     public Double defensiveReboundsPercentage;
+
     public PlayerGameProjection withDefensiveReboundsPercentage(Double defensiveReboundsPercentage) {
         this.defensiveReboundsPercentage = defensiveReboundsPercentage;
         return this;
@@ -76,6 +84,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DraftKingsPosition")
     public String draftKingsPosition;
+
     public PlayerGameProjection withDraftKingsPosition(String draftKingsPosition) {
         this.draftKingsPosition = draftKingsPosition;
         return this;
@@ -84,6 +93,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DraftKingsSalary")
     public Long draftKingsSalary;
+
     public PlayerGameProjection withDraftKingsSalary(Long draftKingsSalary) {
         this.draftKingsSalary = draftKingsSalary;
         return this;
@@ -92,6 +102,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EffectiveFieldGoalsPercentage")
     public Double effectiveFieldGoalsPercentage;
+
     public PlayerGameProjection withEffectiveFieldGoalsPercentage(Double effectiveFieldGoalsPercentage) {
         this.effectiveFieldGoalsPercentage = effectiveFieldGoalsPercentage;
         return this;
@@ -100,6 +111,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FanDuelPosition")
     public String fanDuelPosition;
+
     public PlayerGameProjection withFanDuelPosition(String fanDuelPosition) {
         this.fanDuelPosition = fanDuelPosition;
         return this;
@@ -108,6 +120,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FanDuelSalary")
     public Long fanDuelSalary;
+
     public PlayerGameProjection withFanDuelSalary(Long fanDuelSalary) {
         this.fanDuelSalary = fanDuelSalary;
         return this;
@@ -116,6 +129,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyDataSalary")
     public Long fantasyDataSalary;
+
     public PlayerGameProjection withFantasyDataSalary(Long fantasyDataSalary) {
         this.fantasyDataSalary = fantasyDataSalary;
         return this;
@@ -124,6 +138,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPoints")
     public Double fantasyPoints;
+
     public PlayerGameProjection withFantasyPoints(Double fantasyPoints) {
         this.fantasyPoints = fantasyPoints;
         return this;
@@ -132,6 +147,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsDraftKings")
     public Double fantasyPointsDraftKings;
+
     public PlayerGameProjection withFantasyPointsDraftKings(Double fantasyPointsDraftKings) {
         this.fantasyPointsDraftKings = fantasyPointsDraftKings;
         return this;
@@ -140,6 +156,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsFanDuel")
     public Double fantasyPointsFanDuel;
+
     public PlayerGameProjection withFantasyPointsFanDuel(Double fantasyPointsFanDuel) {
         this.fantasyPointsFanDuel = fantasyPointsFanDuel;
         return this;
@@ -148,6 +165,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsYahoo")
     public Double fantasyPointsYahoo;
+
     public PlayerGameProjection withFantasyPointsYahoo(Double fantasyPointsYahoo) {
         this.fantasyPointsYahoo = fantasyPointsYahoo;
         return this;
@@ -156,6 +174,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalsAttempted")
     public Long fieldGoalsAttempted;
+
     public PlayerGameProjection withFieldGoalsAttempted(Long fieldGoalsAttempted) {
         this.fieldGoalsAttempted = fieldGoalsAttempted;
         return this;
@@ -164,6 +183,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalsMade")
     public Long fieldGoalsMade;
+
     public PlayerGameProjection withFieldGoalsMade(Long fieldGoalsMade) {
         this.fieldGoalsMade = fieldGoalsMade;
         return this;
@@ -172,6 +192,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalsPercentage")
     public Double fieldGoalsPercentage;
+
     public PlayerGameProjection withFieldGoalsPercentage(Double fieldGoalsPercentage) {
         this.fieldGoalsPercentage = fieldGoalsPercentage;
         return this;
@@ -180,6 +201,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FreeThrowsAttempted")
     public Long freeThrowsAttempted;
+
     public PlayerGameProjection withFreeThrowsAttempted(Long freeThrowsAttempted) {
         this.freeThrowsAttempted = freeThrowsAttempted;
         return this;
@@ -188,6 +210,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FreeThrowsMade")
     public Long freeThrowsMade;
+
     public PlayerGameProjection withFreeThrowsMade(Long freeThrowsMade) {
         this.freeThrowsMade = freeThrowsMade;
         return this;
@@ -196,6 +219,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FreeThrowsPercentage")
     public Double freeThrowsPercentage;
+
     public PlayerGameProjection withFreeThrowsPercentage(Double freeThrowsPercentage) {
         this.freeThrowsPercentage = freeThrowsPercentage;
         return this;
@@ -204,6 +228,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameID")
     public Long gameID;
+
     public PlayerGameProjection withGameID(Long gameID) {
         this.gameID = gameID;
         return this;
@@ -212,6 +237,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Games")
     public Long games;
+
     public PlayerGameProjection withGames(Long games) {
         this.games = games;
         return this;
@@ -220,6 +246,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalGameID")
     public Long globalGameID;
+
     public PlayerGameProjection withGlobalGameID(Long globalGameID) {
         this.globalGameID = globalGameID;
         return this;
@@ -228,6 +255,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalOpponentID")
     public Long globalOpponentID;
+
     public PlayerGameProjection withGlobalOpponentID(Long globalOpponentID) {
         this.globalOpponentID = globalOpponentID;
         return this;
@@ -236,6 +264,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalTeamID")
     public Long globalTeamID;
+
     public PlayerGameProjection withGlobalTeamID(Long globalTeamID) {
         this.globalTeamID = globalTeamID;
         return this;
@@ -244,6 +273,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeOrAway")
     public String homeOrAway;
+
     public PlayerGameProjection withHomeOrAway(String homeOrAway) {
         this.homeOrAway = homeOrAway;
         return this;
@@ -252,6 +282,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InjuryBodyPart")
     public String injuryBodyPart;
+
     public PlayerGameProjection withInjuryBodyPart(String injuryBodyPart) {
         this.injuryBodyPart = injuryBodyPart;
         return this;
@@ -260,6 +291,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InjuryNotes")
     public String injuryNotes;
+
     public PlayerGameProjection withInjuryNotes(String injuryNotes) {
         this.injuryNotes = injuryNotes;
         return this;
@@ -268,6 +300,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InjuryStartDate")
     public String injuryStartDate;
+
     public PlayerGameProjection withInjuryStartDate(String injuryStartDate) {
         this.injuryStartDate = injuryStartDate;
         return this;
@@ -276,6 +309,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InjuryStatus")
     public String injuryStatus;
+
     public PlayerGameProjection withInjuryStatus(String injuryStatus) {
         this.injuryStatus = injuryStatus;
         return this;
@@ -284,6 +318,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsGameOver")
     public Boolean isGameOver;
+
     public PlayerGameProjection withIsGameOver(Boolean isGameOver) {
         this.isGameOver = isGameOver;
         return this;
@@ -292,6 +327,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Minutes")
     public Long minutes;
+
     public PlayerGameProjection withMinutes(Long minutes) {
         this.minutes = minutes;
         return this;
@@ -300,6 +336,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public PlayerGameProjection withName(String name) {
         this.name = name;
         return this;
@@ -308,6 +345,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OffensiveRebounds")
     public Long offensiveRebounds;
+
     public PlayerGameProjection withOffensiveRebounds(Long offensiveRebounds) {
         this.offensiveRebounds = offensiveRebounds;
         return this;
@@ -316,6 +354,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OffensiveReboundsPercentage")
     public Double offensiveReboundsPercentage;
+
     public PlayerGameProjection withOffensiveReboundsPercentage(Double offensiveReboundsPercentage) {
         this.offensiveReboundsPercentage = offensiveReboundsPercentage;
         return this;
@@ -324,6 +363,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Opponent")
     public String opponent;
+
     public PlayerGameProjection withOpponent(String opponent) {
         this.opponent = opponent;
         return this;
@@ -332,6 +372,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentID")
     public Long opponentID;
+
     public PlayerGameProjection withOpponentID(Long opponentID) {
         this.opponentID = opponentID;
         return this;
@@ -340,6 +381,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentPositionRank")
     public Long opponentPositionRank;
+
     public PlayerGameProjection withOpponentPositionRank(Long opponentPositionRank) {
         this.opponentPositionRank = opponentPositionRank;
         return this;
@@ -348,6 +390,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentRank")
     public Long opponentRank;
+
     public PlayerGameProjection withOpponentRank(Long opponentRank) {
         this.opponentRank = opponentRank;
         return this;
@@ -356,6 +399,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PersonalFouls")
     public Long personalFouls;
+
     public PlayerGameProjection withPersonalFouls(Long personalFouls) {
         this.personalFouls = personalFouls;
         return this;
@@ -364,6 +408,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerEfficiencyRating")
     public Double playerEfficiencyRating;
+
     public PlayerGameProjection withPlayerEfficiencyRating(Double playerEfficiencyRating) {
         this.playerEfficiencyRating = playerEfficiencyRating;
         return this;
@@ -372,6 +417,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public PlayerGameProjection withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -380,6 +426,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Points")
     public Long points;
+
     public PlayerGameProjection withPoints(Long points) {
         this.points = points;
         return this;
@@ -388,6 +435,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Position")
     public String position;
+
     public PlayerGameProjection withPosition(String position) {
         this.position = position;
         return this;
@@ -396,6 +444,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rebounds")
     public Long rebounds;
+
     public PlayerGameProjection withRebounds(Long rebounds) {
         this.rebounds = rebounds;
         return this;
@@ -404,6 +453,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Season")
     public Long season;
+
     public PlayerGameProjection withSeason(Long season) {
         this.season = season;
         return this;
@@ -412,6 +462,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeasonType")
     public Long seasonType;
+
     public PlayerGameProjection withSeasonType(Long seasonType) {
         this.seasonType = seasonType;
         return this;
@@ -420,6 +471,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatID")
     public Long statID;
+
     public PlayerGameProjection withStatID(Long statID) {
         this.statID = statID;
         return this;
@@ -428,6 +480,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Steals")
     public Long steals;
+
     public PlayerGameProjection withSteals(Long steals) {
         this.steals = steals;
         return this;
@@ -436,6 +489,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StealsPercentage")
     public Double stealsPercentage;
+
     public PlayerGameProjection withStealsPercentage(Double stealsPercentage) {
         this.stealsPercentage = stealsPercentage;
         return this;
@@ -444,6 +498,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public PlayerGameProjection withTeam(String team) {
         this.team = team;
         return this;
@@ -452,6 +507,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamID")
     public Long teamID;
+
     public PlayerGameProjection withTeamID(Long teamID) {
         this.teamID = teamID;
         return this;
@@ -460,6 +516,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThreePointersAttempted")
     public Long threePointersAttempted;
+
     public PlayerGameProjection withThreePointersAttempted(Long threePointersAttempted) {
         this.threePointersAttempted = threePointersAttempted;
         return this;
@@ -468,6 +525,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThreePointersMade")
     public Long threePointersMade;
+
     public PlayerGameProjection withThreePointersMade(Long threePointersMade) {
         this.threePointersMade = threePointersMade;
         return this;
@@ -476,6 +534,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThreePointersPercentage")
     public Double threePointersPercentage;
+
     public PlayerGameProjection withThreePointersPercentage(Double threePointersPercentage) {
         this.threePointersPercentage = threePointersPercentage;
         return this;
@@ -484,6 +543,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalReboundsPercentage")
     public Double totalReboundsPercentage;
+
     public PlayerGameProjection withTotalReboundsPercentage(Double totalReboundsPercentage) {
         this.totalReboundsPercentage = totalReboundsPercentage;
         return this;
@@ -492,6 +552,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrueShootingAttempts")
     public Double trueShootingAttempts;
+
     public PlayerGameProjection withTrueShootingAttempts(Double trueShootingAttempts) {
         this.trueShootingAttempts = trueShootingAttempts;
         return this;
@@ -500,6 +561,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrueShootingPercentage")
     public Double trueShootingPercentage;
+
     public PlayerGameProjection withTrueShootingPercentage(Double trueShootingPercentage) {
         this.trueShootingPercentage = trueShootingPercentage;
         return this;
@@ -508,6 +570,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TurnOversPercentage")
     public Double turnOversPercentage;
+
     public PlayerGameProjection withTurnOversPercentage(Double turnOversPercentage) {
         this.turnOversPercentage = turnOversPercentage;
         return this;
@@ -516,6 +579,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Turnovers")
     public Long turnovers;
+
     public PlayerGameProjection withTurnovers(Long turnovers) {
         this.turnovers = turnovers;
         return this;
@@ -524,6 +588,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoPointersAttempted")
     public Long twoPointersAttempted;
+
     public PlayerGameProjection withTwoPointersAttempted(Long twoPointersAttempted) {
         this.twoPointersAttempted = twoPointersAttempted;
         return this;
@@ -532,6 +597,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoPointersMade")
     public Long twoPointersMade;
+
     public PlayerGameProjection withTwoPointersMade(Long twoPointersMade) {
         this.twoPointersMade = twoPointersMade;
         return this;
@@ -540,6 +606,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoPointersPercentage")
     public Double twoPointersPercentage;
+
     public PlayerGameProjection withTwoPointersPercentage(Double twoPointersPercentage) {
         this.twoPointersPercentage = twoPointersPercentage;
         return this;
@@ -548,6 +615,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Updated")
     public String updated;
+
     public PlayerGameProjection withUpdated(String updated) {
         this.updated = updated;
         return this;
@@ -556,6 +624,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UsageRatePercentage")
     public Double usageRatePercentage;
+
     public PlayerGameProjection withUsageRatePercentage(Double usageRatePercentage) {
         this.usageRatePercentage = usageRatePercentage;
         return this;
@@ -564,6 +633,7 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("YahooPosition")
     public String yahooPosition;
+
     public PlayerGameProjection withYahooPosition(String yahooPosition) {
         this.yahooPosition = yahooPosition;
         return this;
@@ -572,9 +642,11 @@ public class PlayerGameProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("YahooSalary")
     public Long yahooSalary;
+
     public PlayerGameProjection withYahooSalary(Long yahooSalary) {
         this.yahooSalary = yahooSalary;
         return this;
     }
     
+    public PlayerGameProjection(){}
 }

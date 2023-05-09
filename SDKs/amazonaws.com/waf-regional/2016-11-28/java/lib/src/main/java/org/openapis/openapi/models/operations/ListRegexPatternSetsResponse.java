@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRegexPatternSetsResponse {
     
     public String contentType;
+
     public ListRegexPatternSetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListRegexPatternSetsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRegexPatternSetsResponse listRegexPatternSetsResponse;
+
     public ListRegexPatternSetsResponse withListRegexPatternSetsResponse(org.openapis.openapi.models.shared.ListRegexPatternSetsResponse listRegexPatternSetsResponse) {
         this.listRegexPatternSetsResponse = listRegexPatternSetsResponse;
         return this;
@@ -26,6 +29,7 @@ public class ListRegexPatternSetsResponse {
     
     
     public Integer statusCode;
+
     public ListRegexPatternSetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ListRegexPatternSetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRegexPatternSetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class ListRegexPatternSetsResponse {
      */
     
     public Object wafInternalErrorException;
+
     public ListRegexPatternSetsResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,9 +59,14 @@ public class ListRegexPatternSetsResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public ListRegexPatternSetsResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
     }
     
+    public ListRegexPatternSetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

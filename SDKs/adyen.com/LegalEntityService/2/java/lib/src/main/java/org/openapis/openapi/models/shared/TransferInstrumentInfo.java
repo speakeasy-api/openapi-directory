@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TransferInstrumentInfo {
     @JsonProperty("bankAccount")
     public BankAccountInfo bankAccount;
+
     public TransferInstrumentInfo withBankAccount(BankAccountInfo bankAccount) {
         this.bankAccount = bankAccount;
         return this;
@@ -19,6 +20,7 @@ public class TransferInstrumentInfo {
      */
     @JsonProperty("legalEntityId")
     public String legalEntityId;
+
     public TransferInstrumentInfo withLegalEntityId(String legalEntityId) {
         this.legalEntityId = legalEntityId;
         return this;
@@ -31,9 +33,15 @@ public class TransferInstrumentInfo {
      */
     @JsonProperty("type")
     public TransferInstrumentInfoTypeEnum type;
+
     public TransferInstrumentInfo withType(TransferInstrumentInfoTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public TransferInstrumentInfo(@JsonProperty("bankAccount") BankAccountInfo bankAccount, @JsonProperty("legalEntityId") String legalEntityId, @JsonProperty("type") TransferInstrumentInfoTypeEnum type) {
+        this.bankAccount = bankAccount;
+        this.legalEntityId = legalEntityId;
+        this.type = type;
+  }
 }

@@ -31,4 +31,5 @@ lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/PostPerfectpdfApiResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/PerfectpdfApiBody.java
+docs/sdk/README.md
 USAGE.md

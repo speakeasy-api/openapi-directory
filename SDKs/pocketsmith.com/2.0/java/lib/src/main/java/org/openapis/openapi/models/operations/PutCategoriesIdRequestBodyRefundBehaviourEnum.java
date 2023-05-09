@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 public enum PutCategoriesIdRequestBodyRefundBehaviourEnum {
     DEBITS_ARE_DEDUCTIONS("debits_are_deductions"),
     CREDITS_ARE_REFUNDS("credits_are_refunds"),
-    NULL_("null");
+    LESS_THAN_NIL_GREATER_THAN("<nil>");
 
     @JsonValue
     public final String value;

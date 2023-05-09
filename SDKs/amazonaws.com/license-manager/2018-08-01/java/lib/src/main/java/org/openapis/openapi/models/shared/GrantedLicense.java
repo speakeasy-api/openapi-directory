@@ -15,6 +15,7 @@ public class GrantedLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Beneficiary")
     public String beneficiary;
+
     public GrantedLicense withBeneficiary(String beneficiary) {
         this.beneficiary = beneficiary;
         return this;
@@ -23,6 +24,7 @@ public class GrantedLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsumptionConfiguration")
     public ConsumptionConfiguration consumptionConfiguration;
+
     public GrantedLicense withConsumptionConfiguration(ConsumptionConfiguration consumptionConfiguration) {
         this.consumptionConfiguration = consumptionConfiguration;
         return this;
@@ -31,6 +33,7 @@ public class GrantedLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreateTime")
     public String createTime;
+
     public GrantedLicense withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -39,6 +42,7 @@ public class GrantedLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Entitlements")
     public Entitlement[] entitlements;
+
     public GrantedLicense withEntitlements(Entitlement[] entitlements) {
         this.entitlements = entitlements;
         return this;
@@ -47,6 +51,7 @@ public class GrantedLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeRegion")
     public String homeRegion;
+
     public GrantedLicense withHomeRegion(String homeRegion) {
         this.homeRegion = homeRegion;
         return this;
@@ -55,6 +60,7 @@ public class GrantedLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Issuer")
     public IssuerDetails issuer;
+
     public GrantedLicense withIssuer(IssuerDetails issuer) {
         this.issuer = issuer;
         return this;
@@ -63,6 +69,7 @@ public class GrantedLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseArn")
     public String licenseArn;
+
     public GrantedLicense withLicenseArn(String licenseArn) {
         this.licenseArn = licenseArn;
         return this;
@@ -71,6 +78,7 @@ public class GrantedLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseMetadata")
     public Metadata[] licenseMetadata;
+
     public GrantedLicense withLicenseMetadata(Metadata[] licenseMetadata) {
         this.licenseMetadata = licenseMetadata;
         return this;
@@ -79,6 +87,7 @@ public class GrantedLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseName")
     public String licenseName;
+
     public GrantedLicense withLicenseName(String licenseName) {
         this.licenseName = licenseName;
         return this;
@@ -87,6 +96,7 @@ public class GrantedLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductName")
     public String productName;
+
     public GrantedLicense withProductName(String productName) {
         this.productName = productName;
         return this;
@@ -95,6 +105,7 @@ public class GrantedLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductSKU")
     public String productSKU;
+
     public GrantedLicense withProductSKU(String productSKU) {
         this.productSKU = productSKU;
         return this;
@@ -103,6 +114,7 @@ public class GrantedLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReceivedMetadata")
     public ReceivedMetadata receivedMetadata;
+
     public GrantedLicense withReceivedMetadata(ReceivedMetadata receivedMetadata) {
         this.receivedMetadata = receivedMetadata;
         return this;
@@ -111,6 +123,7 @@ public class GrantedLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public LicenseStatusEnum status;
+
     public GrantedLicense withStatus(LicenseStatusEnum status) {
         this.status = status;
         return this;
@@ -119,6 +132,7 @@ public class GrantedLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Validity")
     public DatetimeRange validity;
+
     public GrantedLicense withValidity(DatetimeRange validity) {
         this.validity = validity;
         return this;
@@ -127,9 +141,11 @@ public class GrantedLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public GrantedLicense withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public GrantedLicense(){}
 }

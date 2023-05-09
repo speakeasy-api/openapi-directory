@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WebBackendConnectionReadList {
     @JsonProperty("connections")
     public WebBackendConnectionListItem[] connections;
+
     public WebBackendConnectionReadList withConnections(WebBackendConnectionListItem[] connections) {
         this.connections = connections;
         return this;
     }
     
+    public WebBackendConnectionReadList(@JsonProperty("connections") WebBackendConnectionListItem[] connections) {
+        this.connections = connections;
+  }
 }

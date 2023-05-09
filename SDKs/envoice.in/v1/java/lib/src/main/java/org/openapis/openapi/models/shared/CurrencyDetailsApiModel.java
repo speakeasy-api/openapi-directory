@@ -15,6 +15,7 @@ public class CurrencyDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public CurrencyDetailsApiModel withCode(String code) {
         this.code = code;
         return this;
@@ -26,6 +27,7 @@ public class CurrencyDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public CurrencyDetailsApiModel withId(Integer id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class CurrencyDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CurrencyDetailsApiModel withName(String name) {
         this.name = name;
         return this;
@@ -48,6 +51,7 @@ public class CurrencyDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Symbol")
     public String symbol;
+
     public CurrencyDetailsApiModel withSymbol(String symbol) {
         this.symbol = symbol;
         return this;
@@ -59,9 +63,11 @@ public class CurrencyDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public CurrencyDetailsApiModel withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CurrencyDetailsApiModel(){}
 }

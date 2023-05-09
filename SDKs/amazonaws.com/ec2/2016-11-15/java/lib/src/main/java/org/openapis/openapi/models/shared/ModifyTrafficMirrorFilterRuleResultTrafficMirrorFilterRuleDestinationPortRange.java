@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleDestinationPortRange {
     
     public Long fromPort;
+
     public ModifyTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleDestinationPortRange withFromPort(Long fromPort) {
         this.fromPort = fromPort;
         return this;
@@ -19,9 +20,11 @@ public class ModifyTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleDestinati
     
     
     public Long toPort;
+
     public ModifyTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleDestinationPortRange withToPort(Long toPort) {
         this.toPort = toPort;
         return this;
     }
     
+    public ModifyTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleDestinationPortRange(){}
 }

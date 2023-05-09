@@ -15,6 +15,7 @@ public class GetReservationCoverageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public Expression filter;
+
     public GetReservationCoverageRequest withFilter(Expression filter) {
         this.filter = filter;
         return this;
@@ -23,6 +24,7 @@ public class GetReservationCoverageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Granularity")
     public GranularityEnum granularity;
+
     public GetReservationCoverageRequest withGranularity(GranularityEnum granularity) {
         this.granularity = granularity;
         return this;
@@ -31,6 +33,7 @@ public class GetReservationCoverageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupBy")
     public GroupDefinition[] groupBy;
+
     public GetReservationCoverageRequest withGroupBy(GroupDefinition[] groupBy) {
         this.groupBy = groupBy;
         return this;
@@ -39,6 +42,7 @@ public class GetReservationCoverageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetReservationCoverageRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -47,6 +51,7 @@ public class GetReservationCoverageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metrics")
     public String[] metrics;
+
     public GetReservationCoverageRequest withMetrics(String[] metrics) {
         this.metrics = metrics;
         return this;
@@ -55,6 +60,7 @@ public class GetReservationCoverageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public GetReservationCoverageRequest withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -63,6 +69,7 @@ public class GetReservationCoverageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public SortDefinition sortBy;
+
     public GetReservationCoverageRequest withSortBy(SortDefinition sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -70,9 +77,13 @@ public class GetReservationCoverageRequest {
     
     @JsonProperty("TimePeriod")
     public DateInterval timePeriod;
+
     public GetReservationCoverageRequest withTimePeriod(DateInterval timePeriod) {
         this.timePeriod = timePeriod;
         return this;
     }
     
+    public GetReservationCoverageRequest(@JsonProperty("TimePeriod") DateInterval timePeriod) {
+        this.timePeriod = timePeriod;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsGetResponse {
     
     public String contentType;
+
     public AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsGetRes
      */
     
     public org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1betaMeasurementProtocolSecret googleAnalyticsAdminV1betaMeasurementProtocolSecret;
+
     public AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsGetResponse withGoogleAnalyticsAdminV1betaMeasurementProtocolSecret(org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1betaMeasurementProtocolSecret googleAnalyticsAdminV1betaMeasurementProtocolSecret) {
         this.googleAnalyticsAdminV1betaMeasurementProtocolSecret = googleAnalyticsAdminV1betaMeasurementProtocolSecret;
         return this;
@@ -26,6 +29,7 @@ public class AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsGetRes
     
     
     public Integer statusCode;
+
     public AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsGetRes
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteOpenIDConnectProviderRequest {
     
     public String openIDConnectProviderArn;
+
     public DeleteOpenIDConnectProviderRequest withOpenIDConnectProviderArn(String openIDConnectProviderArn) {
         this.openIDConnectProviderArn = openIDConnectProviderArn;
         return this;
     }
     
+    public DeleteOpenIDConnectProviderRequest(@JsonProperty("OpenIDConnectProviderArn") String openIDConnectProviderArn) {
+        this.openIDConnectProviderArn = openIDConnectProviderArn;
+  }
 }

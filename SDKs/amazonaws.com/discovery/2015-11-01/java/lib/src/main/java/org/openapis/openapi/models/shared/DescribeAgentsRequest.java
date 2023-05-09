@@ -12,6 +12,7 @@ public class DescribeAgentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentIds")
     public String[] agentIds;
+
     public DescribeAgentsRequest withAgentIds(String[] agentIds) {
         this.agentIds = agentIds;
         return this;
@@ -20,6 +21,7 @@ public class DescribeAgentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public Filter[] filters;
+
     public DescribeAgentsRequest withFilters(Filter[] filters) {
         this.filters = filters;
         return this;
@@ -28,6 +30,7 @@ public class DescribeAgentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public DescribeAgentsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +39,11 @@ public class DescribeAgentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeAgentsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeAgentsRequest(){}
 }

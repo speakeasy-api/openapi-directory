@@ -15,6 +15,7 @@ public class UpdateNetworkSsidL3FirewallRulesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowLanAccess")
     public Boolean allowLanAccess;
+
     public UpdateNetworkSsidL3FirewallRulesRequestBody withAllowLanAccess(Boolean allowLanAccess) {
         this.allowLanAccess = allowLanAccess;
         return this;
@@ -26,9 +27,11 @@ public class UpdateNetworkSsidL3FirewallRulesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public UpdateNetworkSsidL3FirewallRulesRequestBodyRules[] rules;
+
     public UpdateNetworkSsidL3FirewallRulesRequestBody withRules(UpdateNetworkSsidL3FirewallRulesRequestBodyRules[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public UpdateNetworkSsidL3FirewallRulesRequestBody(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateResolverDnssecConfigResponse {
@@ -12,6 +13,7 @@ public class UpdateResolverDnssecConfigResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateResolverDnssecConfigResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateResolverDnssecConfigResponse {
     
     
     public String contentType;
+
     public UpdateResolverDnssecConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateResolverDnssecConfigResponse {
      */
     
     public Object internalServiceErrorException;
+
     public UpdateResolverDnssecConfigResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateResolverDnssecConfigResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateResolverDnssecConfigResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateResolverDnssecConfigResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateResolverDnssecConfigResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateResolverDnssecConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateResolverDnssecConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateResolverDnssecConfigResponse {
     
     
     public Integer statusCode;
+
     public UpdateResolverDnssecConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateResolverDnssecConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateResolverDnssecConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateResolverDnssecConfigResponse {
      */
     
     public Object throttlingException;
+
     public UpdateResolverDnssecConfigResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateResolverDnssecConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateResolverDnssecConfigResponse updateResolverDnssecConfigResponse;
+
     public UpdateResolverDnssecConfigResponse withUpdateResolverDnssecConfigResponse(org.openapis.openapi.models.shared.UpdateResolverDnssecConfigResponse updateResolverDnssecConfigResponse) {
         this.updateResolverDnssecConfigResponse = updateResolverDnssecConfigResponse;
         return this;
     }
     
+    public UpdateResolverDnssecConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

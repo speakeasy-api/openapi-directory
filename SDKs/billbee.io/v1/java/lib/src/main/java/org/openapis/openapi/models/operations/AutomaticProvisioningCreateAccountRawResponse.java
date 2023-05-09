@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AutomaticProvisioningCreateAccountRawResponse {
@@ -12,6 +13,7 @@ public class AutomaticProvisioningCreateAccountRawResponse {
      */
     
     public java.util.Map<String, Object> automaticProvisioningCreateAccountRaw200ApplicationJSONObject;
+
     public AutomaticProvisioningCreateAccountRawResponse withAutomaticProvisioningCreateAccountRaw200ApplicationJSONObject(java.util.Map<String, Object> automaticProvisioningCreateAccountRaw200ApplicationJSONObject) {
         this.automaticProvisioningCreateAccountRaw200ApplicationJSONObject = automaticProvisioningCreateAccountRaw200ApplicationJSONObject;
         return this;
@@ -22,6 +24,7 @@ public class AutomaticProvisioningCreateAccountRawResponse {
      */
     
     public java.util.Map<String, Object> automaticProvisioningCreateAccountRaw200TextJSONObject;
+
     public AutomaticProvisioningCreateAccountRawResponse withAutomaticProvisioningCreateAccountRaw200TextJSONObject(java.util.Map<String, Object> automaticProvisioningCreateAccountRaw200TextJSONObject) {
         this.automaticProvisioningCreateAccountRaw200TextJSONObject = automaticProvisioningCreateAccountRaw200TextJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class AutomaticProvisioningCreateAccountRawResponse {
     
     
     public String contentType;
+
     public AutomaticProvisioningCreateAccountRawResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class AutomaticProvisioningCreateAccountRawResponse {
     
     
     public Integer statusCode;
+
     public AutomaticProvisioningCreateAccountRawResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class AutomaticProvisioningCreateAccountRawResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AutomaticProvisioningCreateAccountRawResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AutomaticProvisioningCreateAccountRawResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

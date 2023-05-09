@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeDomainConfigurationResponse {
     
     public String contentType;
+
     public DescribeDomainConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeDomainConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeDomainConfigurationResponse describeDomainConfigurationResponse;
+
     public DescribeDomainConfigurationResponse withDescribeDomainConfigurationResponse(org.openapis.openapi.models.shared.DescribeDomainConfigurationResponse describeDomainConfigurationResponse) {
         this.describeDomainConfigurationResponse = describeDomainConfigurationResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeDomainConfigurationResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeDomainConfigurationResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeDomainConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeDomainConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeDomainConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeDomainConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeDomainConfigurationResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeDomainConfigurationResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeDomainConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DescribeDomainConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeDomainConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeDomainConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DescribeDomainConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public DescribeDomainConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DescribeDomainConfigurationResponse {
      */
     
     public Object unauthorizedException;
+
     public DescribeDomainConfigurationResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DescribeDomainConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

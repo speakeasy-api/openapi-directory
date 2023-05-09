@@ -18,6 +18,7 @@ public class LoyaltyEventAdjustPoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loyalty_program_id")
     public String loyaltyProgramId;
+
     public LoyaltyEventAdjustPoints withLoyaltyProgramId(String loyaltyProgramId) {
         this.loyaltyProgramId = loyaltyProgramId;
         return this;
@@ -28,6 +29,7 @@ public class LoyaltyEventAdjustPoints {
      */
     @JsonProperty("points")
     public Long points;
+
     public LoyaltyEventAdjustPoints withPoints(Long points) {
         this.points = points;
         return this;
@@ -39,9 +41,13 @@ public class LoyaltyEventAdjustPoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public LoyaltyEventAdjustPoints withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public LoyaltyEventAdjustPoints(@JsonProperty("points") Long points) {
+        this.points = points;
+  }
 }

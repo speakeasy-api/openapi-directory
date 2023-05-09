@@ -15,6 +15,7 @@ public class GetComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("component")
     public Component component;
+
     public GetComponentResponse withComponent(Component component) {
         this.component = component;
         return this;
@@ -23,9 +24,11 @@ public class GetComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public GetComponentResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public GetComponentResponse(){}
 }

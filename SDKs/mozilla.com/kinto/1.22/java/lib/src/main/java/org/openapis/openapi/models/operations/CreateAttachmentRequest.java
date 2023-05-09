@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAttachmentRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bucket_id")
     public String bucketId;
+
     public CreateAttachmentRequest withBucketId(String bucketId) {
         this.bucketId = bucketId;
         return this;
@@ -16,6 +18,7 @@ public class CreateAttachmentRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
     public String collectionId;
+
     public CreateAttachmentRequest withCollectionId(String collectionId) {
         this.collectionId = collectionId;
         return this;
@@ -23,9 +26,15 @@ public class CreateAttachmentRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public CreateAttachmentRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public CreateAttachmentRequest(@JsonProperty("bucket_id") String bucketId, @JsonProperty("collection_id") String collectionId, @JsonProperty("id") String id) {
+        this.bucketId = bucketId;
+        this.collectionId = collectionId;
+        this.id = id;
+  }
 }

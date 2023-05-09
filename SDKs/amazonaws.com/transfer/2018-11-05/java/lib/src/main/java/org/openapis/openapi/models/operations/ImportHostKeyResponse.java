@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportHostKeyResponse {
     
     public String contentType;
+
     public ImportHostKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ImportHostKeyResponse {
      */
     
     public org.openapis.openapi.models.shared.ImportHostKeyResponse importHostKeyResponse;
+
     public ImportHostKeyResponse withImportHostKeyResponse(org.openapis.openapi.models.shared.ImportHostKeyResponse importHostKeyResponse) {
         this.importHostKeyResponse = importHostKeyResponse;
         return this;
@@ -29,6 +32,7 @@ public class ImportHostKeyResponse {
      */
     
     public Object internalServiceError;
+
     public ImportHostKeyResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -39,6 +43,7 @@ public class ImportHostKeyResponse {
      */
     
     public Object invalidRequestException;
+
     public ImportHostKeyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ImportHostKeyResponse {
      */
     
     public Object resourceExistsException;
+
     public ImportHostKeyResponse withResourceExistsException(Object resourceExistsException) {
         this.resourceExistsException = resourceExistsException;
         return this;
@@ -59,6 +65,7 @@ public class ImportHostKeyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ImportHostKeyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ImportHostKeyResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ImportHostKeyResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class ImportHostKeyResponse {
     
     
     public Integer statusCode;
+
     public ImportHostKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ImportHostKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportHostKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class ImportHostKeyResponse {
      */
     
     public Object throttlingException;
+
     public ImportHostKeyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ImportHostKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

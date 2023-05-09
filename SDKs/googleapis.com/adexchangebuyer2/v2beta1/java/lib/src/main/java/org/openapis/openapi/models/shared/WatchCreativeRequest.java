@@ -18,9 +18,11 @@ public class WatchCreativeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topic")
     public String topic;
+
     public WatchCreativeRequest withTopic(String topic) {
         this.topic = topic;
         return this;
     }
     
+    public WatchCreativeRequest(){}
 }

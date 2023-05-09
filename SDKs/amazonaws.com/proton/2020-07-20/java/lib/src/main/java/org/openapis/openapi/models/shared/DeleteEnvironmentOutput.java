@@ -15,9 +15,11 @@ public class DeleteEnvironmentOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public Environment environment;
+
     public DeleteEnvironmentOutput withEnvironment(Environment environment) {
         this.environment = environment;
         return this;
     }
     
+    public DeleteEnvironmentOutput(){}
 }

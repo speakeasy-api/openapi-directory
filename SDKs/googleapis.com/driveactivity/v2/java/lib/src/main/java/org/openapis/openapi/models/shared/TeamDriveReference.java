@@ -18,6 +18,7 @@ public class TeamDriveReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TeamDriveReference withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class TeamDriveReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public TeamDriveReference withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public TeamDriveReference(){}
 }

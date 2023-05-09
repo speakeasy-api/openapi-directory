@@ -15,6 +15,7 @@ public class OrderLineItemProductVariantAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimension")
     public String dimension;
+
     public OrderLineItemProductVariantAttribute withDimension(String dimension) {
         this.dimension = dimension;
         return this;
@@ -26,9 +27,11 @@ public class OrderLineItemProductVariantAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public OrderLineItemProductVariantAttribute withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public OrderLineItemProductVariantAttribute(){}
 }

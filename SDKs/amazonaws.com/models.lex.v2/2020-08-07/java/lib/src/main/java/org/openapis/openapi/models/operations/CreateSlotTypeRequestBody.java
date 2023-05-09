@@ -15,6 +15,7 @@ public class CreateSlotTypeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compositeSlotTypeSetting")
     public CreateSlotTypeRequestBodyCompositeSlotTypeSetting compositeSlotTypeSetting;
+
     public CreateSlotTypeRequestBody withCompositeSlotTypeSetting(CreateSlotTypeRequestBodyCompositeSlotTypeSetting compositeSlotTypeSetting) {
         this.compositeSlotTypeSetting = compositeSlotTypeSetting;
         return this;
@@ -26,6 +27,7 @@ public class CreateSlotTypeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateSlotTypeRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -37,6 +39,7 @@ public class CreateSlotTypeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalSourceSetting")
     public CreateSlotTypeRequestBodyExternalSourceSetting externalSourceSetting;
+
     public CreateSlotTypeRequestBody withExternalSourceSetting(CreateSlotTypeRequestBodyExternalSourceSetting externalSourceSetting) {
         this.externalSourceSetting = externalSourceSetting;
         return this;
@@ -48,6 +51,7 @@ public class CreateSlotTypeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentSlotTypeSignature")
     public String parentSlotTypeSignature;
+
     public CreateSlotTypeRequestBody withParentSlotTypeSignature(String parentSlotTypeSignature) {
         this.parentSlotTypeSignature = parentSlotTypeSignature;
         return this;
@@ -58,6 +62,7 @@ public class CreateSlotTypeRequestBody {
      */
     @JsonProperty("slotTypeName")
     public String slotTypeName;
+
     public CreateSlotTypeRequestBody withSlotTypeName(String slotTypeName) {
         this.slotTypeName = slotTypeName;
         return this;
@@ -69,6 +74,7 @@ public class CreateSlotTypeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotTypeValues")
     public org.openapis.openapi.models.shared.SlotTypeValue[] slotTypeValues;
+
     public CreateSlotTypeRequestBody withSlotTypeValues(org.openapis.openapi.models.shared.SlotTypeValue[] slotTypeValues) {
         this.slotTypeValues = slotTypeValues;
         return this;
@@ -80,9 +86,13 @@ public class CreateSlotTypeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueSelectionSetting")
     public CreateSlotTypeRequestBodyValueSelectionSetting valueSelectionSetting;
+
     public CreateSlotTypeRequestBody withValueSelectionSetting(CreateSlotTypeRequestBodyValueSelectionSetting valueSelectionSetting) {
         this.valueSelectionSetting = valueSelectionSetting;
         return this;
     }
     
+    public CreateSlotTypeRequestBody(@JsonProperty("slotTypeName") String slotTypeName) {
+        this.slotTypeName = slotTypeName;
+  }
 }

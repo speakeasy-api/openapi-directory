@@ -15,6 +15,7 @@ public class SuiteRunConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parallelRun")
     public Boolean parallelRun;
+
     public SuiteRunConfiguration withParallelRun(Boolean parallelRun) {
         this.parallelRun = parallelRun;
         return this;
@@ -22,6 +23,7 @@ public class SuiteRunConfiguration {
     
     @JsonProperty("primaryDevice")
     public DeviceUnderTest primaryDevice;
+
     public SuiteRunConfiguration withPrimaryDevice(DeviceUnderTest primaryDevice) {
         this.primaryDevice = primaryDevice;
         return this;
@@ -30,9 +32,13 @@ public class SuiteRunConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectedTestList")
     public String[] selectedTestList;
+
     public SuiteRunConfiguration withSelectedTestList(String[] selectedTestList) {
         this.selectedTestList = selectedTestList;
         return this;
     }
     
+    public SuiteRunConfiguration(@JsonProperty("primaryDevice") DeviceUnderTest primaryDevice) {
+        this.primaryDevice = primaryDevice;
+  }
 }

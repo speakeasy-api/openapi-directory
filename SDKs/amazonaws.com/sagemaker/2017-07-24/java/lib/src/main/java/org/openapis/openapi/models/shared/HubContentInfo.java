@@ -21,6 +21,7 @@ public class HubContentInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public HubContentInfo withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -28,6 +29,7 @@ public class HubContentInfo {
     
     @JsonProperty("DocumentSchemaVersion")
     public String documentSchemaVersion;
+
     public HubContentInfo withDocumentSchemaVersion(String documentSchemaVersion) {
         this.documentSchemaVersion = documentSchemaVersion;
         return this;
@@ -35,6 +37,7 @@ public class HubContentInfo {
     
     @JsonProperty("HubContentArn")
     public String hubContentArn;
+
     public HubContentInfo withHubContentArn(String hubContentArn) {
         this.hubContentArn = hubContentArn;
         return this;
@@ -43,6 +46,7 @@ public class HubContentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HubContentDescription")
     public String hubContentDescription;
+
     public HubContentInfo withHubContentDescription(String hubContentDescription) {
         this.hubContentDescription = hubContentDescription;
         return this;
@@ -51,6 +55,7 @@ public class HubContentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HubContentDisplayName")
     public String hubContentDisplayName;
+
     public HubContentInfo withHubContentDisplayName(String hubContentDisplayName) {
         this.hubContentDisplayName = hubContentDisplayName;
         return this;
@@ -58,6 +63,7 @@ public class HubContentInfo {
     
     @JsonProperty("HubContentName")
     public String hubContentName;
+
     public HubContentInfo withHubContentName(String hubContentName) {
         this.hubContentName = hubContentName;
         return this;
@@ -66,6 +72,7 @@ public class HubContentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HubContentSearchKeywords")
     public String[] hubContentSearchKeywords;
+
     public HubContentInfo withHubContentSearchKeywords(String[] hubContentSearchKeywords) {
         this.hubContentSearchKeywords = hubContentSearchKeywords;
         return this;
@@ -73,6 +80,7 @@ public class HubContentInfo {
     
     @JsonProperty("HubContentStatus")
     public HubContentStatusEnum hubContentStatus;
+
     public HubContentInfo withHubContentStatus(HubContentStatusEnum hubContentStatus) {
         this.hubContentStatus = hubContentStatus;
         return this;
@@ -80,6 +88,7 @@ public class HubContentInfo {
     
     @JsonProperty("HubContentType")
     public HubContentTypeEnum hubContentType;
+
     public HubContentInfo withHubContentType(HubContentTypeEnum hubContentType) {
         this.hubContentType = hubContentType;
         return this;
@@ -87,9 +96,19 @@ public class HubContentInfo {
     
     @JsonProperty("HubContentVersion")
     public String hubContentVersion;
+
     public HubContentInfo withHubContentVersion(String hubContentVersion) {
         this.hubContentVersion = hubContentVersion;
         return this;
     }
     
+    public HubContentInfo(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("DocumentSchemaVersion") String documentSchemaVersion, @JsonProperty("HubContentArn") String hubContentArn, @JsonProperty("HubContentName") String hubContentName, @JsonProperty("HubContentStatus") HubContentStatusEnum hubContentStatus, @JsonProperty("HubContentType") HubContentTypeEnum hubContentType, @JsonProperty("HubContentVersion") String hubContentVersion) {
+        this.creationTime = creationTime;
+        this.documentSchemaVersion = documentSchemaVersion;
+        this.hubContentArn = hubContentArn;
+        this.hubContentName = hubContentName;
+        this.hubContentStatus = hubContentStatus;
+        this.hubContentType = hubContentType;
+        this.hubContentVersion = hubContentVersion;
+  }
 }

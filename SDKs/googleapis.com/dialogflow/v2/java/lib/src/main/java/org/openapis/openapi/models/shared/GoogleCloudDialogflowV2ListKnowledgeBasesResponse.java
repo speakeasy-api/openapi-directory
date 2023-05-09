@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2ListKnowledgeBasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("knowledgeBases")
     public GoogleCloudDialogflowV2KnowledgeBase[] knowledgeBases;
+
     public GoogleCloudDialogflowV2ListKnowledgeBasesResponse withKnowledgeBases(GoogleCloudDialogflowV2KnowledgeBase[] knowledgeBases) {
         this.knowledgeBases = knowledgeBases;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2ListKnowledgeBasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDialogflowV2ListKnowledgeBasesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudDialogflowV2ListKnowledgeBasesResponse(){}
 }

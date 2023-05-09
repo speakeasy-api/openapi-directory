@@ -15,9 +15,11 @@ public class FailoverDBClusterResult {
      */
     
     public DBCluster dbCluster;
+
     public FailoverDBClusterResult withDBCluster(DBCluster dbCluster) {
         this.dbCluster = dbCluster;
         return this;
     }
     
+    public FailoverDBClusterResult(){}
 }

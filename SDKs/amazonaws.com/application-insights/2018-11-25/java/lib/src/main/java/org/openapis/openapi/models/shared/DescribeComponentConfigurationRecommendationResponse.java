@@ -15,9 +15,11 @@ public class DescribeComponentConfigurationRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComponentConfiguration")
     public String componentConfiguration;
+
     public DescribeComponentConfigurationRecommendationResponse withComponentConfiguration(String componentConfiguration) {
         this.componentConfiguration = componentConfiguration;
         return this;
     }
     
+    public DescribeComponentConfigurationRecommendationResponse(){}
 }

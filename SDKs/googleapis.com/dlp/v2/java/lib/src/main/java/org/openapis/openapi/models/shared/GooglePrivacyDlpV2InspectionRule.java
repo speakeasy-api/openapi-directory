@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2InspectionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exclusionRule")
     public GooglePrivacyDlpV2ExclusionRule exclusionRule;
+
     public GooglePrivacyDlpV2InspectionRule withExclusionRule(GooglePrivacyDlpV2ExclusionRule exclusionRule) {
         this.exclusionRule = exclusionRule;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2InspectionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hotwordRule")
     public GooglePrivacyDlpV2HotwordRule hotwordRule;
+
     public GooglePrivacyDlpV2InspectionRule withHotwordRule(GooglePrivacyDlpV2HotwordRule hotwordRule) {
         this.hotwordRule = hotwordRule;
         return this;
     }
     
+    public GooglePrivacyDlpV2InspectionRule(){}
 }

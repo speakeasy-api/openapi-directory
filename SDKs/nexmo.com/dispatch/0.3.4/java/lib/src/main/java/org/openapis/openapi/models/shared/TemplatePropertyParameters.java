@@ -15,9 +15,11 @@ public class TemplatePropertyParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default")
     public String default_;
+
     public TemplatePropertyParameters withDefault(String default_) {
         this.default_ = default_;
         return this;
     }
     
+    public TemplatePropertyParameters(){}
 }

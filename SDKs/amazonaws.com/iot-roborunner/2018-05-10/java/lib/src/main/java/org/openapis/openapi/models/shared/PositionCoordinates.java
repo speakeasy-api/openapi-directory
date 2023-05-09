@@ -15,9 +15,11 @@ public class PositionCoordinates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cartesianCoordinates")
     public CartesianCoordinates cartesianCoordinates;
+
     public PositionCoordinates withCartesianCoordinates(CartesianCoordinates cartesianCoordinates) {
         this.cartesianCoordinates = cartesianCoordinates;
         return this;
     }
     
+    public PositionCoordinates(){}
 }

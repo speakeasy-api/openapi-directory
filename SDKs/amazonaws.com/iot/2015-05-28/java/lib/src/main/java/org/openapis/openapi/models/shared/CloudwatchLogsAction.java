@@ -15,6 +15,7 @@ public class CloudwatchLogsAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchMode")
     public Boolean batchMode;
+
     public CloudwatchLogsAction withBatchMode(Boolean batchMode) {
         this.batchMode = batchMode;
         return this;
@@ -22,6 +23,7 @@ public class CloudwatchLogsAction {
     
     @JsonProperty("logGroupName")
     public String logGroupName;
+
     public CloudwatchLogsAction withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
@@ -29,9 +31,14 @@ public class CloudwatchLogsAction {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public CloudwatchLogsAction withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public CloudwatchLogsAction(@JsonProperty("logGroupName") String logGroupName, @JsonProperty("roleArn") String roleArn) {
+        this.logGroupName = logGroupName;
+        this.roleArn = roleArn;
+  }
 }

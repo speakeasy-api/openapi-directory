@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VerifySearchRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public VerifySearchRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -16,6 +18,7 @@ public class VerifySearchRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_secret")
     public String apiSecret;
+
     public VerifySearchRequest withApiSecret(String apiSecret) {
         this.apiSecret = apiSecret;
         return this;
@@ -26,6 +29,7 @@ public class VerifySearchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public org.openapis.openapi.models.shared.FormatEnum format;
+
     public VerifySearchRequest withFormat(org.openapis.openapi.models.shared.FormatEnum format) {
         this.format = format;
         return this;
@@ -36,6 +40,7 @@ public class VerifySearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=request_id")
     public String requestId;
+
     public VerifySearchRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -46,9 +51,16 @@ public class VerifySearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=request_ids")
     public String[] requestIds;
+
     public VerifySearchRequest withRequestIds(String[] requestIds) {
         this.requestIds = requestIds;
         return this;
     }
     
+    public VerifySearchRequest(@JsonProperty("api_key") String apiKey, @JsonProperty("api_secret") String apiSecret, @JsonProperty("format") org.openapis.openapi.models.shared.FormatEnum format, @JsonProperty("request_id") String requestId) {
+        this.apiKey = apiKey;
+        this.apiSecret = apiSecret;
+        this.format = format;
+        this.requestId = requestId;
+  }
 }

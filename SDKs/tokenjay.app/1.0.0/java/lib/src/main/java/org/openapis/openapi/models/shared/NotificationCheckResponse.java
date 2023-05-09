@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class NotificationCheckResponse {
     
     public String message;
+
     public NotificationCheckResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -19,6 +20,7 @@ public class NotificationCheckResponse {
     
     
     public Long messageTs;
+
     public NotificationCheckResponse withMessageTs(Long messageTs) {
         this.messageTs = messageTs;
         return this;
@@ -26,9 +28,11 @@ public class NotificationCheckResponse {
     
     
     public Integer nextCheck;
+
     public NotificationCheckResponse withNextCheck(Integer nextCheck) {
         this.nextCheck = nextCheck;
         return this;
     }
     
+    public NotificationCheckResponse(){}
 }

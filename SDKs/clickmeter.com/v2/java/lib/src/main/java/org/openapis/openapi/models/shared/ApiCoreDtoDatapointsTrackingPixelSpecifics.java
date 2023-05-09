@@ -12,9 +12,11 @@ public class ApiCoreDtoDatapointsTrackingPixelSpecifics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameterNote")
     public String parameterNote;
+
     public ApiCoreDtoDatapointsTrackingPixelSpecifics withParameterNote(String parameterNote) {
         this.parameterNote = parameterNote;
         return this;
     }
     
+    public ApiCoreDtoDatapointsTrackingPixelSpecifics(){}
 }

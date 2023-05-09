@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class KeySimple {
     @JsonProperty("id")
     public Long id;
+
     public KeySimple withId(Long id) {
         this.id = id;
         return this;
@@ -19,9 +20,14 @@ public class KeySimple {
     
     @JsonProperty("key")
     public String key;
+
     public KeySimple withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public KeySimple(@JsonProperty("id") Long id, @JsonProperty("key") String key) {
+        this.id = id;
+        this.key = key;
+  }
 }

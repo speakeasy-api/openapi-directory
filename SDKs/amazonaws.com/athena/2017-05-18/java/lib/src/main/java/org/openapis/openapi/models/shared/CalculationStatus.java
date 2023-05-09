@@ -22,6 +22,7 @@ public class CalculationStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CompletionDateTime")
     public OffsetDateTime completionDateTime;
+
     public CalculationStatus withCompletionDateTime(OffsetDateTime completionDateTime) {
         this.completionDateTime = completionDateTime;
         return this;
@@ -30,6 +31,7 @@ public class CalculationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public CalculationExecutionStateEnum state;
+
     public CalculationStatus withState(CalculationExecutionStateEnum state) {
         this.state = state;
         return this;
@@ -38,6 +40,7 @@ public class CalculationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateChangeReason")
     public String stateChangeReason;
+
     public CalculationStatus withStateChangeReason(String stateChangeReason) {
         this.stateChangeReason = stateChangeReason;
         return this;
@@ -48,9 +51,11 @@ public class CalculationStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmissionDateTime")
     public OffsetDateTime submissionDateTime;
+
     public CalculationStatus withSubmissionDateTime(OffsetDateTime submissionDateTime) {
         this.submissionDateTime = submissionDateTime;
         return this;
     }
     
+    public CalculationStatus(){}
 }

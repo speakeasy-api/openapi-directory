@@ -15,6 +15,7 @@ public class GetDeployablePatchSnapshotForInstanceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public GetDeployablePatchSnapshotForInstanceResult withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -23,6 +24,7 @@ public class GetDeployablePatchSnapshotForInstanceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Product")
     public String product;
+
     public GetDeployablePatchSnapshotForInstanceResult withProduct(String product) {
         this.product = product;
         return this;
@@ -31,6 +33,7 @@ public class GetDeployablePatchSnapshotForInstanceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnapshotDownloadUrl")
     public String snapshotDownloadUrl;
+
     public GetDeployablePatchSnapshotForInstanceResult withSnapshotDownloadUrl(String snapshotDownloadUrl) {
         this.snapshotDownloadUrl = snapshotDownloadUrl;
         return this;
@@ -39,9 +42,11 @@ public class GetDeployablePatchSnapshotForInstanceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnapshotId")
     public String snapshotId;
+
     public GetDeployablePatchSnapshotForInstanceResult withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
     }
     
+    public GetDeployablePatchSnapshotForInstanceResult(){}
 }

@@ -15,6 +15,7 @@ public class DescribeIdentityProviderConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityProviderSamlMetadata")
     public String identityProviderSamlMetadata;
+
     public DescribeIdentityProviderConfigurationResponse withIdentityProviderSamlMetadata(String identityProviderSamlMetadata) {
         this.identityProviderSamlMetadata = identityProviderSamlMetadata;
         return this;
@@ -23,6 +24,7 @@ public class DescribeIdentityProviderConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityProviderType")
     public IdentityProviderTypeEnum identityProviderType;
+
     public DescribeIdentityProviderConfigurationResponse withIdentityProviderType(IdentityProviderTypeEnum identityProviderType) {
         this.identityProviderType = identityProviderType;
         return this;
@@ -31,9 +33,11 @@ public class DescribeIdentityProviderConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceProviderSamlMetadata")
     public String serviceProviderSamlMetadata;
+
     public DescribeIdentityProviderConfigurationResponse withServiceProviderSamlMetadata(String serviceProviderSamlMetadata) {
         this.serviceProviderSamlMetadata = serviceProviderSamlMetadata;
         return this;
     }
     
+    public DescribeIdentityProviderConfigurationResponse(){}
 }

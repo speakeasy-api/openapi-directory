@@ -21,13 +21,25 @@ public class GetMonitorOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public GetMonitorOutput withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("InternetMeasurementsLogDelivery")
+    public InternetMeasurementsLogDelivery internetMeasurementsLogDelivery;
+
+    public GetMonitorOutput withInternetMeasurementsLogDelivery(InternetMeasurementsLogDelivery internetMeasurementsLogDelivery) {
+        this.internetMeasurementsLogDelivery = internetMeasurementsLogDelivery;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxCityNetworksToMonitor")
     public Long maxCityNetworksToMonitor;
+
     public GetMonitorOutput withMaxCityNetworksToMonitor(Long maxCityNetworksToMonitor) {
         this.maxCityNetworksToMonitor = maxCityNetworksToMonitor;
         return this;
@@ -37,6 +49,7 @@ public class GetMonitorOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ModifiedAt")
     public OffsetDateTime modifiedAt;
+
     public GetMonitorOutput withModifiedAt(OffsetDateTime modifiedAt) {
         this.modifiedAt = modifiedAt;
         return this;
@@ -44,6 +57,7 @@ public class GetMonitorOutput {
     
     @JsonProperty("MonitorArn")
     public String monitorArn;
+
     public GetMonitorOutput withMonitorArn(String monitorArn) {
         this.monitorArn = monitorArn;
         return this;
@@ -51,6 +65,7 @@ public class GetMonitorOutput {
     
     @JsonProperty("MonitorName")
     public String monitorName;
+
     public GetMonitorOutput withMonitorName(String monitorName) {
         this.monitorName = monitorName;
         return this;
@@ -59,6 +74,7 @@ public class GetMonitorOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessingStatus")
     public MonitorProcessingStatusCodeEnum processingStatus;
+
     public GetMonitorOutput withProcessingStatus(MonitorProcessingStatusCodeEnum processingStatus) {
         this.processingStatus = processingStatus;
         return this;
@@ -67,6 +83,7 @@ public class GetMonitorOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessingStatusInfo")
     public String processingStatusInfo;
+
     public GetMonitorOutput withProcessingStatusInfo(String processingStatusInfo) {
         this.processingStatusInfo = processingStatusInfo;
         return this;
@@ -74,6 +91,7 @@ public class GetMonitorOutput {
     
     @JsonProperty("Resources")
     public String[] resources;
+
     public GetMonitorOutput withResources(String[] resources) {
         this.resources = resources;
         return this;
@@ -81,6 +99,7 @@ public class GetMonitorOutput {
     
     @JsonProperty("Status")
     public MonitorConfigStateEnum status;
+
     public GetMonitorOutput withStatus(MonitorConfigStateEnum status) {
         this.status = status;
         return this;
@@ -89,9 +108,27 @@ public class GetMonitorOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public GetMonitorOutput withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TrafficPercentageToMonitor")
+    public Long trafficPercentageToMonitor;
+
+    public GetMonitorOutput withTrafficPercentageToMonitor(Long trafficPercentageToMonitor) {
+        this.trafficPercentageToMonitor = trafficPercentageToMonitor;
+        return this;
+    }
+    
+    public GetMonitorOutput(@JsonProperty("CreatedAt") OffsetDateTime createdAt, @JsonProperty("ModifiedAt") OffsetDateTime modifiedAt, @JsonProperty("MonitorArn") String monitorArn, @JsonProperty("MonitorName") String monitorName, @JsonProperty("Resources") String[] resources, @JsonProperty("Status") MonitorConfigStateEnum status) {
+        this.createdAt = createdAt;
+        this.modifiedAt = modifiedAt;
+        this.monitorArn = monitorArn;
+        this.monitorName = monitorName;
+        this.resources = resources;
+        this.status = status;
+  }
 }

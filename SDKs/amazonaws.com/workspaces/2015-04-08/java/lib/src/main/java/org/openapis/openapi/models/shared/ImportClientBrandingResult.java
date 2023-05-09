@@ -15,6 +15,7 @@ public class ImportClientBrandingResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceTypeAndroid")
     public DefaultClientBrandingAttributes deviceTypeAndroid;
+
     public ImportClientBrandingResult withDeviceTypeAndroid(DefaultClientBrandingAttributes deviceTypeAndroid) {
         this.deviceTypeAndroid = deviceTypeAndroid;
         return this;
@@ -23,6 +24,7 @@ public class ImportClientBrandingResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceTypeIos")
     public IosClientBrandingAttributes deviceTypeIos;
+
     public ImportClientBrandingResult withDeviceTypeIos(IosClientBrandingAttributes deviceTypeIos) {
         this.deviceTypeIos = deviceTypeIos;
         return this;
@@ -31,6 +33,7 @@ public class ImportClientBrandingResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceTypeLinux")
     public DefaultClientBrandingAttributes deviceTypeLinux;
+
     public ImportClientBrandingResult withDeviceTypeLinux(DefaultClientBrandingAttributes deviceTypeLinux) {
         this.deviceTypeLinux = deviceTypeLinux;
         return this;
@@ -39,6 +42,7 @@ public class ImportClientBrandingResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceTypeOsx")
     public DefaultClientBrandingAttributes deviceTypeOsx;
+
     public ImportClientBrandingResult withDeviceTypeOsx(DefaultClientBrandingAttributes deviceTypeOsx) {
         this.deviceTypeOsx = deviceTypeOsx;
         return this;
@@ -47,6 +51,7 @@ public class ImportClientBrandingResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceTypeWeb")
     public DefaultClientBrandingAttributes deviceTypeWeb;
+
     public ImportClientBrandingResult withDeviceTypeWeb(DefaultClientBrandingAttributes deviceTypeWeb) {
         this.deviceTypeWeb = deviceTypeWeb;
         return this;
@@ -55,9 +60,11 @@ public class ImportClientBrandingResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceTypeWindows")
     public DefaultClientBrandingAttributes deviceTypeWindows;
+
     public ImportClientBrandingResult withDeviceTypeWindows(DefaultClientBrandingAttributes deviceTypeWindows) {
         this.deviceTypeWindows = deviceTypeWindows;
         return this;
     }
     
+    public ImportClientBrandingResult(){}
 }

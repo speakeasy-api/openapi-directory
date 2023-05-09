@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProtectiveEquipmentSummarizationAttributes {
     @JsonProperty("MinConfidence")
     public Float minConfidence;
+
     public ProtectiveEquipmentSummarizationAttributes withMinConfidence(Float minConfidence) {
         this.minConfidence = minConfidence;
         return this;
@@ -19,9 +20,14 @@ public class ProtectiveEquipmentSummarizationAttributes {
     
     @JsonProperty("RequiredEquipmentTypes")
     public ProtectiveEquipmentTypeEnum[] requiredEquipmentTypes;
+
     public ProtectiveEquipmentSummarizationAttributes withRequiredEquipmentTypes(ProtectiveEquipmentTypeEnum[] requiredEquipmentTypes) {
         this.requiredEquipmentTypes = requiredEquipmentTypes;
         return this;
     }
     
+    public ProtectiveEquipmentSummarizationAttributes(@JsonProperty("MinConfidence") Float minConfidence, @JsonProperty("RequiredEquipmentTypes") ProtectiveEquipmentTypeEnum[] requiredEquipmentTypes) {
+        this.minConfidence = minConfidence;
+        this.requiredEquipmentTypes = requiredEquipmentTypes;
+  }
 }

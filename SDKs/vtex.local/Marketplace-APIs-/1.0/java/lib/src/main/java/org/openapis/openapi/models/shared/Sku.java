@@ -12,6 +12,7 @@ public class Sku {
      */
     @JsonProperty("eans")
     public String[] eans;
+
     public Sku withEans(String[] eans) {
         this.eans = eans;
         return this;
@@ -22,6 +23,7 @@ public class Sku {
      */
     @JsonProperty("height")
     public Integer height;
+
     public Sku withHeight(Integer height) {
         this.height = height;
         return this;
@@ -29,6 +31,7 @@ public class Sku {
     
     @JsonProperty("images")
     public Object[] images;
+
     public Sku withImages(Object[] images) {
         this.images = images;
         return this;
@@ -39,6 +42,7 @@ public class Sku {
      */
     @JsonProperty("length")
     public Integer length;
+
     public Sku withLength(Integer length) {
         this.length = length;
         return this;
@@ -49,6 +53,7 @@ public class Sku {
      */
     @JsonProperty("measurementUnit")
     public String measurementUnit;
+
     public Sku withMeasurementUnit(String measurementUnit) {
         this.measurementUnit = measurementUnit;
         return this;
@@ -56,6 +61,7 @@ public class Sku {
     
     @JsonProperty("name")
     public String name;
+
     public Sku withName(String name) {
         this.name = name;
         return this;
@@ -66,6 +72,7 @@ public class Sku {
      */
     @JsonProperty("refId")
     public String refId;
+
     public Sku withRefId(String refId) {
         this.refId = refId;
         return this;
@@ -73,6 +80,7 @@ public class Sku {
     
     @JsonProperty("specifications")
     public Specifications specifications;
+
     public Sku withSpecifications(Specifications specifications) {
         this.specifications = specifications;
         return this;
@@ -83,6 +91,7 @@ public class Sku {
      */
     @JsonProperty("unitMultiplier")
     public Integer unitMultiplier;
+
     public Sku withUnitMultiplier(Integer unitMultiplier) {
         this.unitMultiplier = unitMultiplier;
         return this;
@@ -93,6 +102,7 @@ public class Sku {
      */
     @JsonProperty("weight")
     public Integer weight;
+
     public Sku withWeight(Integer weight) {
         this.weight = weight;
         return this;
@@ -103,9 +113,23 @@ public class Sku {
      */
     @JsonProperty("width")
     public Integer width;
+
     public Sku withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public Sku(@JsonProperty("eans") String[] eans, @JsonProperty("height") Integer height, @JsonProperty("images") Object[] images, @JsonProperty("length") Integer length, @JsonProperty("measurementUnit") String measurementUnit, @JsonProperty("name") String name, @JsonProperty("refId") String refId, @JsonProperty("specifications") Specifications specifications, @JsonProperty("unitMultiplier") Integer unitMultiplier, @JsonProperty("weight") Integer weight, @JsonProperty("width") Integer width) {
+        this.eans = eans;
+        this.height = height;
+        this.images = images;
+        this.length = length;
+        this.measurementUnit = measurementUnit;
+        this.name = name;
+        this.refId = refId;
+        this.specifications = specifications;
+        this.unitMultiplier = unitMultiplier;
+        this.weight = weight;
+        this.width = width;
+  }
 }

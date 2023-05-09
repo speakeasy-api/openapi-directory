@@ -15,6 +15,7 @@ public class BRLocalAccountIdentification {
      */
     @JsonProperty("accountNumber")
     public String accountNumber;
+
     public BRLocalAccountIdentification withAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -25,6 +26,7 @@ public class BRLocalAccountIdentification {
      */
     @JsonProperty("bankCode")
     public String bankCode;
+
     public BRLocalAccountIdentification withBankCode(String bankCode) {
         this.bankCode = bankCode;
         return this;
@@ -35,6 +37,7 @@ public class BRLocalAccountIdentification {
      */
     @JsonProperty("branchNumber")
     public String branchNumber;
+
     public BRLocalAccountIdentification withBranchNumber(String branchNumber) {
         this.branchNumber = branchNumber;
         return this;
@@ -45,9 +48,16 @@ public class BRLocalAccountIdentification {
      */
     @JsonProperty("type")
     public BRLocalAccountIdentificationTypeEnum type;
+
     public BRLocalAccountIdentification withType(BRLocalAccountIdentificationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public BRLocalAccountIdentification(@JsonProperty("accountNumber") String accountNumber, @JsonProperty("bankCode") String bankCode, @JsonProperty("branchNumber") String branchNumber, @JsonProperty("type") BRLocalAccountIdentificationTypeEnum type) {
+        this.accountNumber = accountNumber;
+        this.bankCode = bankCode;
+        this.branchNumber = branchNumber;
+        this.type = type;
+  }
 }

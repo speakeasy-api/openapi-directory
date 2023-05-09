@@ -15,6 +15,7 @@ public class WafExpressionSetExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public WafExpressionSetExpression withId(String id) {
         this.id = id;
         return this;
@@ -26,9 +27,11 @@ public class WafExpressionSetExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sensitivity")
     public Integer sensitivity;
+
     public WafExpressionSetExpression withSensitivity(Integer sensitivity) {
         this.sensitivity = sensitivity;
         return this;
     }
     
+    public WafExpressionSetExpression(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EncryptionConfiguration {
     @JsonProperty("KmsKey")
     public String kmsKey;
+
     public EncryptionConfiguration withKmsKey(String kmsKey) {
         this.kmsKey = kmsKey;
         return this;
     }
     
+    public EncryptionConfiguration(@JsonProperty("KmsKey") String kmsKey) {
+        this.kmsKey = kmsKey;
+  }
 }

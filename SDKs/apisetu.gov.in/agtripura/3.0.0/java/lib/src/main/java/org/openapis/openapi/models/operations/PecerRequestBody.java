@@ -15,6 +15,7 @@ public class PecerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public PecerRequestBodyCertificateParameters certificateParameters;
+
     public PecerRequestBody withCertificateParameters(PecerRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class PecerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public PecerRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class PecerRequestBody {
      */
     @JsonProperty("format")
     public PecerRequestBodyFormatEnum format;
+
     public PecerRequestBody withFormat(PecerRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class PecerRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public PecerRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public PecerRequestBody(@JsonProperty("format") PecerRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

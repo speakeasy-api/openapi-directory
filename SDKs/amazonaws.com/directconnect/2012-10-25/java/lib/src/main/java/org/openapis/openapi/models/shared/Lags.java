@@ -15,9 +15,11 @@ public class Lags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lags")
     public Lag[] lags;
+
     public Lags withLags(Lag[] lags) {
         this.lags = lags;
         return this;
     }
     
+    public Lags(){}
 }

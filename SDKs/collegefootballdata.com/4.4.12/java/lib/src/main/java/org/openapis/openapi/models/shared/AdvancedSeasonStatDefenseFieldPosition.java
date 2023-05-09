@@ -12,6 +12,7 @@ public class AdvancedSeasonStatDefenseFieldPosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("averagePredictedPoints")
     public Double averagePredictedPoints;
+
     public AdvancedSeasonStatDefenseFieldPosition withAveragePredictedPoints(Double averagePredictedPoints) {
         this.averagePredictedPoints = averagePredictedPoints;
         return this;
@@ -20,9 +21,11 @@ public class AdvancedSeasonStatDefenseFieldPosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("averageStart")
     public Double averageStart;
+
     public AdvancedSeasonStatDefenseFieldPosition withAverageStart(Double averageStart) {
         this.averageStart = averageStart;
         return this;
     }
     
+    public AdvancedSeasonStatDefenseFieldPosition(){}
 }

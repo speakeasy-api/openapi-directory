@@ -18,6 +18,7 @@ public class OpaqueColor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rgbColor")
     public RgbColor rgbColor;
+
     public OpaqueColor withRgbColor(RgbColor rgbColor) {
         this.rgbColor = rgbColor;
         return this;
@@ -29,9 +30,11 @@ public class OpaqueColor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("themeColor")
     public OpaqueColorThemeColorEnum themeColor;
+
     public OpaqueColor withThemeColor(OpaqueColorThemeColorEnum themeColor) {
         this.themeColor = themeColor;
         return this;
     }
     
+    public OpaqueColor(){}
 }

@@ -12,6 +12,7 @@ public class PaymentInfoCorporate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_api_invoicing")
     public Boolean allowApiInvoicing;
+
     public PaymentInfoCorporate withAllowApiInvoicing(Boolean allowApiInvoicing) {
         this.allowApiInvoicing = allowApiInvoicing;
         return this;
@@ -20,6 +21,7 @@ public class PaymentInfoCorporate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_payment_code")
     public Boolean allowPaymentCode;
+
     public PaymentInfoCorporate withAllowPaymentCode(Boolean allowPaymentCode) {
         this.allowPaymentCode = allowPaymentCode;
         return this;
@@ -28,6 +30,7 @@ public class PaymentInfoCorporate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auto_charge")
     public Boolean autoCharge;
+
     public PaymentInfoCorporate withAutoCharge(Boolean autoCharge) {
         this.autoCharge = autoCharge;
         return this;
@@ -36,6 +39,7 @@ public class PaymentInfoCorporate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billing")
     public BillingAddress billing;
+
     public PaymentInfoCorporate withBilling(BillingAddress billing) {
         this.billing = billing;
         return this;
@@ -44,6 +48,7 @@ public class PaymentInfoCorporate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card")
     public CreditCard card;
+
     public PaymentInfoCorporate withCard(CreditCard card) {
         this.card = card;
         return this;
@@ -52,6 +57,7 @@ public class PaymentInfoCorporate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_email_address")
     public String contactEmailAddress;
+
     public PaymentInfoCorporate withContactEmailAddress(String contactEmailAddress) {
         this.contactEmailAddress = contactEmailAddress;
         return this;
@@ -60,9 +66,11 @@ public class PaymentInfoCorporate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_code")
     public String paymentCode;
+
     public PaymentInfoCorporate withPaymentCode(String paymentCode) {
         this.paymentCode = paymentCode;
         return this;
     }
     
+    public PaymentInfoCorporate(){}
 }

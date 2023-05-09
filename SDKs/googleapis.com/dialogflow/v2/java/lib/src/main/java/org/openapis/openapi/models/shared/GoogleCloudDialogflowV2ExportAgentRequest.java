@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2ExportAgentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentUri")
     public String agentUri;
+
     public GoogleCloudDialogflowV2ExportAgentRequest withAgentUri(String agentUri) {
         this.agentUri = agentUri;
         return this;
     }
     
+    public GoogleCloudDialogflowV2ExportAgentRequest(){}
 }

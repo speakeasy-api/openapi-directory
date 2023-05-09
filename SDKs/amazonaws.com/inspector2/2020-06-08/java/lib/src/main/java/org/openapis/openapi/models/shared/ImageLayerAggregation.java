@@ -15,6 +15,7 @@ public class ImageLayerAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layerHashes")
     public StringFilter[] layerHashes;
+
     public ImageLayerAggregation withLayerHashes(StringFilter[] layerHashes) {
         this.layerHashes = layerHashes;
         return this;
@@ -23,6 +24,7 @@ public class ImageLayerAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositories")
     public StringFilter[] repositories;
+
     public ImageLayerAggregation withRepositories(StringFilter[] repositories) {
         this.repositories = repositories;
         return this;
@@ -31,6 +33,7 @@ public class ImageLayerAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceIds")
     public StringFilter[] resourceIds;
+
     public ImageLayerAggregation withResourceIds(StringFilter[] resourceIds) {
         this.resourceIds = resourceIds;
         return this;
@@ -39,6 +42,7 @@ public class ImageLayerAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortBy")
     public ImageLayerSortByEnum sortBy;
+
     public ImageLayerAggregation withSortBy(ImageLayerSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -47,9 +51,11 @@ public class ImageLayerAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public SortOrderEnum sortOrder;
+
     public ImageLayerAggregation withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ImageLayerAggregation(){}
 }

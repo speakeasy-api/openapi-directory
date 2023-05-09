@@ -15,6 +15,7 @@ public class ListResponsePlansOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListResponsePlansOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListResponsePlansOutput {
     
     @JsonProperty("responsePlanSummaries")
     public ResponsePlanSummary[] responsePlanSummaries;
+
     public ListResponsePlansOutput withResponsePlanSummaries(ResponsePlanSummary[] responsePlanSummaries) {
         this.responsePlanSummaries = responsePlanSummaries;
         return this;
     }
     
+    public ListResponsePlansOutput(@JsonProperty("responsePlanSummaries") ResponsePlanSummary[] responsePlanSummaries) {
+        this.responsePlanSummaries = responsePlanSummaries;
+  }
 }

@@ -15,6 +15,7 @@ public class ExecutionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public ExecutionStatus withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -23,6 +24,7 @@ public class ExecutionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public AnomalyDetectionTaskStatusEnum status;
+
     public ExecutionStatus withStatus(AnomalyDetectionTaskStatusEnum status) {
         this.status = status;
         return this;
@@ -31,9 +33,11 @@ public class ExecutionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timestamp")
     public String timestamp;
+
     public ExecutionStatus withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public ExecutionStatus(){}
 }

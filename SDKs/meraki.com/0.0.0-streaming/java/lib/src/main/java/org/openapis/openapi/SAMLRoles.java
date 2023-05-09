@@ -58,11 +58,9 @@ public class SAMLRoles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateOrganizationSamlRoleResponse res = new org.openapis.openapi.models.operations.CreateOrganizationSamlRoleResponse() {{
+        org.openapis.openapi.models.operations.CreateOrganizationSamlRoleResponse res = new org.openapis.openapi.models.operations.CreateOrganizationSamlRoleResponse(contentType, httpRes.statusCode()) {{
             createOrganizationSamlRole201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -98,11 +96,9 @@ public class SAMLRoles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrganizationSamlRoleResponse res = new org.openapis.openapi.models.operations.GetOrganizationSamlRoleResponse() {{
+        org.openapis.openapi.models.operations.GetOrganizationSamlRoleResponse res = new org.openapis.openapi.models.operations.GetOrganizationSamlRoleResponse(contentType, httpRes.statusCode()) {{
             getOrganizationSamlRole200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -138,11 +134,9 @@ public class SAMLRoles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrganizationSamlRolesResponse res = new org.openapis.openapi.models.operations.GetOrganizationSamlRolesResponse() {{
+        org.openapis.openapi.models.operations.GetOrganizationSamlRolesResponse res = new org.openapis.openapi.models.operations.GetOrganizationSamlRolesResponse(contentType, httpRes.statusCode()) {{
             getOrganizationSamlRoles200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -180,11 +174,9 @@ public class SAMLRoles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateOrganizationSamlRoleResponse res = new org.openapis.openapi.models.operations.UpdateOrganizationSamlRoleResponse() {{
+        org.openapis.openapi.models.operations.UpdateOrganizationSamlRoleResponse res = new org.openapis.openapi.models.operations.UpdateOrganizationSamlRoleResponse(contentType, httpRes.statusCode()) {{
             updateOrganizationSamlRole200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

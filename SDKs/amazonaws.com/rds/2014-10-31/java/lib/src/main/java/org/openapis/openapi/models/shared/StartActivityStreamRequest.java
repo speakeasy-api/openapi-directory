@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class StartActivityStreamRequest {
     
     public Boolean applyImmediately;
+
     public StartActivityStreamRequest withApplyImmediately(Boolean applyImmediately) {
         this.applyImmediately = applyImmediately;
         return this;
@@ -16,6 +17,7 @@ public class StartActivityStreamRequest {
     
     
     public Boolean engineNativeAuditFieldsIncluded;
+
     public StartActivityStreamRequest withEngineNativeAuditFieldsIncluded(Boolean engineNativeAuditFieldsIncluded) {
         this.engineNativeAuditFieldsIncluded = engineNativeAuditFieldsIncluded;
         return this;
@@ -23,6 +25,7 @@ public class StartActivityStreamRequest {
     
     
     public String kmsKeyId;
+
     public StartActivityStreamRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -30,6 +33,7 @@ public class StartActivityStreamRequest {
     
     
     public ActivityStreamModeEnum mode;
+
     public StartActivityStreamRequest withMode(ActivityStreamModeEnum mode) {
         this.mode = mode;
         return this;
@@ -37,9 +41,15 @@ public class StartActivityStreamRequest {
     
     
     public String resourceArn;
+
     public StartActivityStreamRequest withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public StartActivityStreamRequest(@JsonProperty("KmsKeyId") String kmsKeyId, @JsonProperty("Mode") ActivityStreamModeEnum mode, @JsonProperty("ResourceArn") String resourceArn) {
+        this.kmsKeyId = kmsKeyId;
+        this.mode = mode;
+        this.resourceArn = resourceArn;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCustomTaskTypesOfWgResponse {
     
     public byte[] body;
+
     public GetCustomTaskTypesOfWgResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetCustomTaskTypesOfWgResponse {
     
     
     public String contentType;
+
     public GetCustomTaskTypesOfWgResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetCustomTaskTypesOfWgResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO;
+
     public GetCustomTaskTypesOfWgResponse withHTTPStatusVO(org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO) {
         this.httpStatusVO = httpStatusVO;
         return this;
@@ -33,6 +37,7 @@ public class GetCustomTaskTypesOfWgResponse {
     
     
     public Integer statusCode;
+
     public GetCustomTaskTypesOfWgResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetCustomTaskTypesOfWgResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCustomTaskTypesOfWgResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class GetCustomTaskTypesOfWgResponse {
      */
     
     public org.openapis.openapi.models.shared.TaskTypeListVO taskTypeListVO;
+
     public GetCustomTaskTypesOfWgResponse withTaskTypeListVO(org.openapis.openapi.models.shared.TaskTypeListVO taskTypeListVO) {
         this.taskTypeListVO = taskTypeListVO;
         return this;
     }
     
+    public GetCustomTaskTypesOfWgResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

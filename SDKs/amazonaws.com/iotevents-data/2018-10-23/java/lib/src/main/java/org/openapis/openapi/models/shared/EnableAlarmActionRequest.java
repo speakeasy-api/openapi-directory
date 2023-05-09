@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EnableAlarmActionRequest {
     @JsonProperty("alarmModelName")
     public String alarmModelName;
+
     public EnableAlarmActionRequest withAlarmModelName(String alarmModelName) {
         this.alarmModelName = alarmModelName;
         return this;
@@ -22,6 +23,7 @@ public class EnableAlarmActionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyValue")
     public String keyValue;
+
     public EnableAlarmActionRequest withKeyValue(String keyValue) {
         this.keyValue = keyValue;
         return this;
@@ -30,6 +32,7 @@ public class EnableAlarmActionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public EnableAlarmActionRequest withNote(String note) {
         this.note = note;
         return this;
@@ -37,9 +40,14 @@ public class EnableAlarmActionRequest {
     
     @JsonProperty("requestId")
     public String requestId;
+
     public EnableAlarmActionRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public EnableAlarmActionRequest(@JsonProperty("alarmModelName") String alarmModelName, @JsonProperty("requestId") String requestId) {
+        this.alarmModelName = alarmModelName;
+        this.requestId = requestId;
+  }
 }

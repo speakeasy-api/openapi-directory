@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CloudassetAnalyzeOrgPolicyGovernedAssetsRequest {
@@ -12,6 +13,7 @@ public class CloudassetAnalyzeOrgPolicyGovernedAssetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class CloudassetAnalyzeOrgPolicyGovernedAssetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class CloudassetAnalyzeOrgPolicyGovernedAssetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class CloudassetAnalyzeOrgPolicyGovernedAssetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class CloudassetAnalyzeOrgPolicyGovernedAssetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=constraint")
     public String constraint;
+
     public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withConstraint(String constraint) {
         this.constraint = constraint;
         return this;
@@ -62,6 +68,7 @@ public class CloudassetAnalyzeOrgPolicyGovernedAssetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class CloudassetAnalyzeOrgPolicyGovernedAssetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -82,6 +90,7 @@ public class CloudassetAnalyzeOrgPolicyGovernedAssetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class CloudassetAnalyzeOrgPolicyGovernedAssetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +112,7 @@ public class CloudassetAnalyzeOrgPolicyGovernedAssetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -112,6 +123,7 @@ public class CloudassetAnalyzeOrgPolicyGovernedAssetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -122,6 +134,7 @@ public class CloudassetAnalyzeOrgPolicyGovernedAssetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -132,6 +145,7 @@ public class CloudassetAnalyzeOrgPolicyGovernedAssetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -142,6 +156,7 @@ public class CloudassetAnalyzeOrgPolicyGovernedAssetsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scope")
     public String scope;
+
     public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withScope(String scope) {
         this.scope = scope;
         return this;
@@ -152,6 +167,7 @@ public class CloudassetAnalyzeOrgPolicyGovernedAssetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -162,9 +178,13 @@ public class CloudassetAnalyzeOrgPolicyGovernedAssetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest(@JsonProperty("scope") String scope) {
+        this.scope = scope;
+  }
 }

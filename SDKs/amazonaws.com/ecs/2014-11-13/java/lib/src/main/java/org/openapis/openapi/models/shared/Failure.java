@@ -15,6 +15,7 @@ public class Failure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Failure withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class Failure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public Failure withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -31,9 +33,11 @@ public class Failure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public Failure withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public Failure(){}
 }

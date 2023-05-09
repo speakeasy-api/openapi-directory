@@ -3,41 +3,39 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AcceptAdministratorInvitationRequestBody;
 import org.openapis.openapi.models.operations.AcceptAdministratorInvitationRequest;
+import org.openapis.openapi.models.operations.AcceptAdministratorInvitationRequestBody;
 import org.openapis.openapi.models.operations.AcceptAdministratorInvitationResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            AcceptAdministratorInvitationRequest req = new AcceptAdministratorInvitationRequest() {{
-                requestBody = new AcceptAdministratorInvitationRequestBody() {{
-                    administratorId = "corrupti";
-                    invitationId = "provident";
-                }};
-                xAmzAlgorithm = "distinctio";
-                xAmzContentSha256 = "quibusdam";
-                xAmzCredential = "unde";
-                xAmzDate = "nulla";
-                xAmzSecurityToken = "corrupti";
-                xAmzSignature = "illum";
-                xAmzSignedHeaders = "vel";
-            }}            
+            AcceptAdministratorInvitationRequest req = new AcceptAdministratorInvitationRequest(                new AcceptAdministratorInvitationRequestBody("provident", "distinctio");) {{
+                xAmzAlgorithm = "quibusdam";
+                xAmzContentSha256 = "unde";
+                xAmzCredential = "nulla";
+                xAmzDate = "corrupti";
+                xAmzSecurityToken = "illum";
+                xAmzSignature = "vel";
+                xAmzSignedHeaders = "error";
+            }};            
 
             AcceptAdministratorInvitationResponse res = sdk.acceptAdministratorInvitation(req);
 
-            if (res.acceptAdministratorInvitationResponse.isPresent()) {
+            if (res.acceptAdministratorInvitationResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

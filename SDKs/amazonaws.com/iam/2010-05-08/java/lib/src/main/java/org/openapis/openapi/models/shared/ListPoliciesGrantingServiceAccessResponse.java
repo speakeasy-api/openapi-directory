@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ListPoliciesGrantingServiceAccessResponse - Success
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListPoliciesGrantingServiceAccessResponse {
     
     public Boolean isTruncated;
+
     public ListPoliciesGrantingServiceAccessResponse withIsTruncated(Boolean isTruncated) {
         this.isTruncated = isTruncated;
         return this;
@@ -19,6 +20,7 @@ public class ListPoliciesGrantingServiceAccessResponse {
     
     
     public String marker;
+
     public ListPoliciesGrantingServiceAccessResponse withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -26,9 +28,13 @@ public class ListPoliciesGrantingServiceAccessResponse {
     
     
     public ListPoliciesGrantingServiceAccessEntry[] policiesGrantingServiceAccess;
+
     public ListPoliciesGrantingServiceAccessResponse withPoliciesGrantingServiceAccess(ListPoliciesGrantingServiceAccessEntry[] policiesGrantingServiceAccess) {
         this.policiesGrantingServiceAccess = policiesGrantingServiceAccess;
         return this;
     }
     
+    public ListPoliciesGrantingServiceAccessResponse(@JsonProperty("PoliciesGrantingServiceAccess") ListPoliciesGrantingServiceAccessEntry[] policiesGrantingServiceAccess) {
+        this.policiesGrantingServiceAccess = policiesGrantingServiceAccess;
+  }
 }

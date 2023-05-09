@@ -12,9 +12,13 @@ public class PutProvisionedConcurrencyConfigRequestBody {
      */
     @JsonProperty("ProvisionedConcurrentExecutions")
     public Long provisionedConcurrentExecutions;
+
     public PutProvisionedConcurrencyConfigRequestBody withProvisionedConcurrentExecutions(Long provisionedConcurrentExecutions) {
         this.provisionedConcurrentExecutions = provisionedConcurrentExecutions;
         return this;
     }
     
+    public PutProvisionedConcurrencyConfigRequestBody(@JsonProperty("ProvisionedConcurrentExecutions") Long provisionedConcurrentExecutions) {
+        this.provisionedConcurrentExecutions = provisionedConcurrentExecutions;
+  }
 }

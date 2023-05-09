@@ -18,9 +18,11 @@ public class ListFeedsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feeds")
     public Feed[] feeds;
+
     public ListFeedsResponse withFeeds(Feed[] feeds) {
         this.feeds = feeds;
         return this;
     }
     
+    public ListFeedsResponse(){}
 }

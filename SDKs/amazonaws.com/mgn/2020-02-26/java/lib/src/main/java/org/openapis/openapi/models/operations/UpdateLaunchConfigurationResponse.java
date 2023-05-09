@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateLaunchConfigurationResponse {
@@ -12,6 +13,7 @@ public class UpdateLaunchConfigurationResponse {
      */
     
     public Object conflictException;
+
     public UpdateLaunchConfigurationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateLaunchConfigurationResponse {
     
     
     public String contentType;
+
     public UpdateLaunchConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateLaunchConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.LaunchConfiguration launchConfiguration;
+
     public UpdateLaunchConfigurationResponse withLaunchConfiguration(org.openapis.openapi.models.shared.LaunchConfiguration launchConfiguration) {
         this.launchConfiguration = launchConfiguration;
         return this;
@@ -39,6 +43,7 @@ public class UpdateLaunchConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateLaunchConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateLaunchConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateLaunchConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateLaunchConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateLaunchConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateLaunchConfigurationResponse {
      */
     
     public Object uninitializedAccountException;
+
     public UpdateLaunchConfigurationResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateLaunchConfigurationResponse {
      */
     
     public Object validationException;
+
     public UpdateLaunchConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateLaunchConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateApplicationResponse {
@@ -12,6 +13,7 @@ public class UpdateApplicationResponse {
      */
     
     public Object applicationAlreadyExistsException;
+
     public UpdateApplicationResponse withApplicationAlreadyExistsException(Object applicationAlreadyExistsException) {
         this.applicationAlreadyExistsException = applicationAlreadyExistsException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateApplicationResponse {
      */
     
     public Object applicationDoesNotExistException;
+
     public UpdateApplicationResponse withApplicationDoesNotExistException(Object applicationDoesNotExistException) {
         this.applicationDoesNotExistException = applicationDoesNotExistException;
         return this;
@@ -32,6 +35,7 @@ public class UpdateApplicationResponse {
      */
     
     public Object applicationNameRequiredException;
+
     public UpdateApplicationResponse withApplicationNameRequiredException(Object applicationNameRequiredException) {
         this.applicationNameRequiredException = applicationNameRequiredException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateApplicationResponse {
     
     
     public String contentType;
+
     public UpdateApplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class UpdateApplicationResponse {
      */
     
     public Object invalidApplicationNameException;
+
     public UpdateApplicationResponse withInvalidApplicationNameException(Object invalidApplicationNameException) {
         this.invalidApplicationNameException = invalidApplicationNameException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateApplicationResponse {
     
     
     public Integer statusCode;
+
     public UpdateApplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class UpdateApplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateApplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UpdateApplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

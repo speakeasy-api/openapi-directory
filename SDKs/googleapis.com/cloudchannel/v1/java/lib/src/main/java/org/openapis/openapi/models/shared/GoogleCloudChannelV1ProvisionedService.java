@@ -18,17 +18,19 @@ public class GoogleCloudChannelV1ProvisionedService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public GoogleCloudChannelV1ProvisionedService withProductId(String productId) {
         this.productId = productId;
         return this;
     }
     
     /**
-     * Output only. Provisioning ID of the entitlement. For Google Workspace, this is the underlying Subscription ID. For Google Cloud Platform, this is the Billing Account ID of the billing subaccount."
+     * Output only. Provisioning ID of the entitlement. For Google Workspace, this is the underlying Subscription ID. For Google Cloud, this is the Billing Account ID of the billing subaccount."
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisioningId")
     public String provisioningId;
+
     public GoogleCloudChannelV1ProvisionedService withProvisioningId(String provisioningId) {
         this.provisioningId = provisioningId;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudChannelV1ProvisionedService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skuId")
     public String skuId;
+
     public GoogleCloudChannelV1ProvisionedService withSkuId(String skuId) {
         this.skuId = skuId;
         return this;
     }
     
+    public GoogleCloudChannelV1ProvisionedService(){}
 }

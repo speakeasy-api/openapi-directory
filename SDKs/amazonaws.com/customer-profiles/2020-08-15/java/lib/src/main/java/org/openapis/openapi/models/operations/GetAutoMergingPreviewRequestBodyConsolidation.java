@@ -15,9 +15,11 @@ public class GetAutoMergingPreviewRequestBodyConsolidation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MatchingAttributesList")
     public String[][] matchingAttributesList;
+
     public GetAutoMergingPreviewRequestBodyConsolidation withMatchingAttributesList(String[][] matchingAttributesList) {
         this.matchingAttributesList = matchingAttributesList;
         return this;
     }
     
+    public GetAutoMergingPreviewRequestBodyConsolidation(){}
 }

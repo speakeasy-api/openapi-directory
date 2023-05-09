@@ -18,6 +18,7 @@ public class CreativeStatusRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bidCount")
     public MetricValue bidCount;
+
     public CreativeStatusRow withBidCount(MetricValue bidCount) {
         this.bidCount = bidCount;
         return this;
@@ -29,6 +30,7 @@ public class CreativeStatusRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeStatusId")
     public Integer creativeStatusId;
+
     public CreativeStatusRow withCreativeStatusId(Integer creativeStatusId) {
         this.creativeStatusId = creativeStatusId;
         return this;
@@ -40,9 +42,11 @@ public class CreativeStatusRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowDimensions")
     public RowDimensions rowDimensions;
+
     public CreativeStatusRow withRowDimensions(RowDimensions rowDimensions) {
         this.rowDimensions = rowDimensions;
         return this;
     }
     
+    public CreativeStatusRow(){}
 }

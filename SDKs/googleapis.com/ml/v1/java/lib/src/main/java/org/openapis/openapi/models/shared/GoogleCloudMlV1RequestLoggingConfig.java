@@ -18,6 +18,7 @@ public class GoogleCloudMlV1RequestLoggingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bigqueryTableName")
     public String bigqueryTableName;
+
     public GoogleCloudMlV1RequestLoggingConfig withBigqueryTableName(String bigqueryTableName) {
         this.bigqueryTableName = bigqueryTableName;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudMlV1RequestLoggingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("samplingPercentage")
     public Double samplingPercentage;
+
     public GoogleCloudMlV1RequestLoggingConfig withSamplingPercentage(Double samplingPercentage) {
         this.samplingPercentage = samplingPercentage;
         return this;
     }
     
+    public GoogleCloudMlV1RequestLoggingConfig(){}
 }

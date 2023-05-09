@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateTableResponse {
@@ -12,6 +13,7 @@ public class CreateTableResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateTableResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateTableResponse {
      */
     
     public Object conflictException;
+
     public CreateTableResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateTableResponse {
     
     
     public String contentType;
+
     public CreateTableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateTableResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateTableResponse createTableResponse;
+
     public CreateTableResponse withCreateTableResponse(org.openapis.openapi.models.shared.CreateTableResponse createTableResponse) {
         this.createTableResponse = createTableResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateTableResponse {
      */
     
     public Object internalServerException;
+
     public CreateTableResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateTableResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateTableResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateTableResponse {
     
     
     public Integer statusCode;
+
     public CreateTableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateTableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateTableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateTableResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateTableResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class CreateTableResponse {
      */
     
     public Object validationException;
+
     public CreateTableResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateTableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

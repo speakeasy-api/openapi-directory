@@ -22,6 +22,7 @@ public class CreateChatTokenResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("sessionExpirationTime")
     public OffsetDateTime sessionExpirationTime;
+
     public CreateChatTokenResponse withSessionExpirationTime(OffsetDateTime sessionExpirationTime) {
         this.sessionExpirationTime = sessionExpirationTime;
         return this;
@@ -30,6 +31,7 @@ public class CreateChatTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public CreateChatTokenResponse withToken(String token) {
         this.token = token;
         return this;
@@ -40,9 +42,11 @@ public class CreateChatTokenResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("tokenExpirationTime")
     public OffsetDateTime tokenExpirationTime;
+
     public CreateChatTokenResponse withTokenExpirationTime(OffsetDateTime tokenExpirationTime) {
         this.tokenExpirationTime = tokenExpirationTime;
         return this;
     }
     
+    public CreateChatTokenResponse(){}
 }

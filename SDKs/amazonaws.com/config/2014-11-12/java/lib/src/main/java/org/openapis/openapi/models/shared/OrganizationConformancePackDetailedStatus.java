@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class OrganizationConformancePackDetailedStatus {
     @JsonProperty("AccountId")
     public String accountId;
+
     public OrganizationConformancePackDetailedStatus withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -26,6 +27,7 @@ public class OrganizationConformancePackDetailedStatus {
     
     @JsonProperty("ConformancePackName")
     public String conformancePackName;
+
     public OrganizationConformancePackDetailedStatus withConformancePackName(String conformancePackName) {
         this.conformancePackName = conformancePackName;
         return this;
@@ -34,6 +36,7 @@ public class OrganizationConformancePackDetailedStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public OrganizationConformancePackDetailedStatus withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -42,6 +45,7 @@ public class OrganizationConformancePackDetailedStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public OrganizationConformancePackDetailedStatus withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -52,6 +56,7 @@ public class OrganizationConformancePackDetailedStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public OrganizationConformancePackDetailedStatus withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -59,9 +64,15 @@ public class OrganizationConformancePackDetailedStatus {
     
     @JsonProperty("Status")
     public OrganizationResourceDetailedStatusEnum status;
+
     public OrganizationConformancePackDetailedStatus withStatus(OrganizationResourceDetailedStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public OrganizationConformancePackDetailedStatus(@JsonProperty("AccountId") String accountId, @JsonProperty("ConformancePackName") String conformancePackName, @JsonProperty("Status") OrganizationResourceDetailedStatusEnum status) {
+        this.accountId = accountId;
+        this.conformancePackName = conformancePackName;
+        this.status = status;
+  }
 }

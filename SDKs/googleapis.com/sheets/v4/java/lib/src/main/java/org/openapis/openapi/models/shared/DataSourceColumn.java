@@ -18,6 +18,7 @@ public class DataSourceColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formula")
     public String formula;
+
     public DataSourceColumn withFormula(String formula) {
         this.formula = formula;
         return this;
@@ -29,9 +30,11 @@ public class DataSourceColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public DataSourceColumnReference reference;
+
     public DataSourceColumn withReference(DataSourceColumnReference reference) {
         this.reference = reference;
         return this;
     }
     
+    public DataSourceColumn(){}
 }

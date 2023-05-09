@@ -12,6 +12,7 @@ public class DescribeContributorInsightsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexName")
     public String indexName;
+
     public DescribeContributorInsightsInput withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -19,9 +20,13 @@ public class DescribeContributorInsightsInput {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public DescribeContributorInsightsInput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public DescribeContributorInsightsInput(@JsonProperty("TableName") String tableName) {
+        this.tableName = tableName;
+  }
 }

@@ -18,6 +18,7 @@ public class DetectedItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Item[] items;
+
     public DetectedItems withItems(Item[] items) {
         this.items = items;
         return this;
@@ -29,9 +30,11 @@ public class DetectedItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("richResultType")
     public String richResultType;
+
     public DetectedItems withRichResultType(String richResultType) {
         this.richResultType = richResultType;
         return this;
     }
     
+    public DetectedItems(){}
 }

@@ -15,6 +15,7 @@ public class FileLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Location")
     public S3Location s3Location;
+
     public FileLocation withS3Location(S3Location s3Location) {
         this.s3Location = s3Location;
         return this;
@@ -23,9 +24,11 @@ public class FileLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stream")
     public Stream stream;
+
     public FileLocation withStream(Stream stream) {
         this.stream = stream;
         return this;
     }
     
+    public FileLocation(){}
 }

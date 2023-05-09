@@ -19,6 +19,7 @@ public class RetrieveInventoryCountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("counts")
     public InventoryCount[] counts;
+
     public RetrieveInventoryCountResponse withCounts(InventoryCount[] counts) {
         this.counts = counts;
         return this;
@@ -33,6 +34,7 @@ public class RetrieveInventoryCountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public RetrieveInventoryCountResponse withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -44,9 +46,11 @@ public class RetrieveInventoryCountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public RetrieveInventoryCountResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public RetrieveInventoryCountResponse(){}
 }

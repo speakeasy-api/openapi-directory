@@ -58,11 +58,9 @@ public class AccountSummaries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminAccountSummariesListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminAccountSummariesListResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminAccountSummariesListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminAccountSummariesListResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaListAccountSummariesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

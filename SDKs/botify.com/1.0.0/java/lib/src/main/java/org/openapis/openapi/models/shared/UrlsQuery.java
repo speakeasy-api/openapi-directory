@@ -12,6 +12,7 @@ public class UrlsQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String[] fields;
+
     public UrlsQuery withFields(String[] fields) {
         this.fields = fields;
         return this;
@@ -20,6 +21,7 @@ public class UrlsQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public java.util.Map<String, Object> filters;
+
     public UrlsQuery withFilters(java.util.Map<String, Object> filters) {
         this.filters = filters;
         return this;
@@ -28,9 +30,11 @@ public class UrlsQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort")
     public java.util.Map<String, Object>[] sort;
+
     public UrlsQuery withSort(java.util.Map<String, Object>[] sort) {
         this.sort = sort;
         return this;
     }
     
+    public UrlsQuery(){}
 }

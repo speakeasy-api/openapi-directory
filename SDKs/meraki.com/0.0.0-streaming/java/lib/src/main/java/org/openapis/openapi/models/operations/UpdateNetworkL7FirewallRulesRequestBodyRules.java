@@ -15,6 +15,7 @@ public class UpdateNetworkL7FirewallRulesRequestBodyRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public UpdateNetworkL7FirewallRulesRequestBodyRulesPolicyEnum policy;
+
     public UpdateNetworkL7FirewallRulesRequestBodyRules withPolicy(UpdateNetworkL7FirewallRulesRequestBodyRulesPolicyEnum policy) {
         this.policy = policy;
         return this;
@@ -26,6 +27,7 @@ public class UpdateNetworkL7FirewallRulesRequestBodyRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public UpdateNetworkL7FirewallRulesRequestBodyRulesTypeEnum type;
+
     public UpdateNetworkL7FirewallRulesRequestBodyRules withType(UpdateNetworkL7FirewallRulesRequestBodyRulesTypeEnum type) {
         this.type = type;
         return this;
@@ -37,9 +39,11 @@ public class UpdateNetworkL7FirewallRulesRequestBodyRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public UpdateNetworkL7FirewallRulesRequestBodyRules withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public UpdateNetworkL7FirewallRulesRequestBodyRules(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetVPCEConfigurationResponse {
@@ -12,6 +13,7 @@ public class GetVPCEConfigurationResponse {
      */
     
     public Object argumentException;
+
     public GetVPCEConfigurationResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class GetVPCEConfigurationResponse {
     
     
     public String contentType;
+
     public GetVPCEConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetVPCEConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetVPCEConfigurationResult getVPCEConfigurationResult;
+
     public GetVPCEConfigurationResponse withGetVPCEConfigurationResult(org.openapis.openapi.models.shared.GetVPCEConfigurationResult getVPCEConfigurationResult) {
         this.getVPCEConfigurationResult = getVPCEConfigurationResult;
         return this;
@@ -39,6 +43,7 @@ public class GetVPCEConfigurationResponse {
      */
     
     public Object notFoundException;
+
     public GetVPCEConfigurationResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetVPCEConfigurationResponse {
     
     
     public Integer statusCode;
+
     public GetVPCEConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetVPCEConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetVPCEConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetVPCEConfigurationResponse {
      */
     
     public Object serviceAccountException;
+
     public GetVPCEConfigurationResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
     }
     
+    public GetVPCEConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

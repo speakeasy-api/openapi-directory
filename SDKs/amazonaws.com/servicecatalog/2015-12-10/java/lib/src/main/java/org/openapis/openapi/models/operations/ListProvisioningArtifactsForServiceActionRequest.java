@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListProvisioningArtifactsForServiceActionRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ListProvisioningArtifactsForServiceActionInput listProvisioningArtifactsForServiceActionInput;
+
     public ListProvisioningArtifactsForServiceActionRequest withListProvisioningArtifactsForServiceActionInput(org.openapis.openapi.models.shared.ListProvisioningArtifactsForServiceActionInput listProvisioningArtifactsForServiceActionInput) {
         this.listProvisioningArtifactsForServiceActionInput = listProvisioningArtifactsForServiceActionInput;
         return this;
@@ -19,6 +21,7 @@ public class ListProvisioningArtifactsForServiceActionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
     public String pageSize;
+
     public ListProvisioningArtifactsForServiceActionRequest withPageSize(String pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -29,6 +32,7 @@ public class ListProvisioningArtifactsForServiceActionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
     public String pageToken;
+
     public ListProvisioningArtifactsForServiceActionRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -36,6 +40,7 @@ public class ListProvisioningArtifactsForServiceActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListProvisioningArtifactsForServiceActionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class ListProvisioningArtifactsForServiceActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListProvisioningArtifactsForServiceActionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class ListProvisioningArtifactsForServiceActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListProvisioningArtifactsForServiceActionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class ListProvisioningArtifactsForServiceActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListProvisioningArtifactsForServiceActionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class ListProvisioningArtifactsForServiceActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListProvisioningArtifactsForServiceActionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class ListProvisioningArtifactsForServiceActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListProvisioningArtifactsForServiceActionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,6 +88,7 @@ public class ListProvisioningArtifactsForServiceActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListProvisioningArtifactsForServiceActionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -85,9 +96,14 @@ public class ListProvisioningArtifactsForServiceActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public ListProvisioningArtifactsForServiceActionXAmzTargetEnum xAmzTarget;
+
     public ListProvisioningArtifactsForServiceActionRequest withXAmzTarget(ListProvisioningArtifactsForServiceActionXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public ListProvisioningArtifactsForServiceActionRequest(@JsonProperty("ListProvisioningArtifactsForServiceActionInput") org.openapis.openapi.models.shared.ListProvisioningArtifactsForServiceActionInput listProvisioningArtifactsForServiceActionInput, @JsonProperty("X-Amz-Target") ListProvisioningArtifactsForServiceActionXAmzTargetEnum xAmzTarget) {
+        this.listProvisioningArtifactsForServiceActionInput = listProvisioningArtifactsForServiceActionInput;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

@@ -18,6 +18,7 @@ public class AccountResourceAttributes {
      */
     @JsonProperty("accountType")
     public AccountTypeEnumEnum accountType;
+
     public AccountResourceAttributes withAccountType(AccountTypeEnumEnum accountType) {
         this.accountType = accountType;
         return this;
@@ -30,6 +31,7 @@ public class AccountResourceAttributes {
      */
     @JsonProperty("balance")
     public MoneyObject balance;
+
     public AccountResourceAttributes withBalance(MoneyObject balance) {
         this.balance = balance;
         return this;
@@ -43,6 +45,7 @@ public class AccountResourceAttributes {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public AccountResourceAttributes withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -54,6 +57,7 @@ public class AccountResourceAttributes {
      */
     @JsonProperty("displayName")
     public String displayName;
+
     public AccountResourceAttributes withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -65,9 +69,17 @@ public class AccountResourceAttributes {
      */
     @JsonProperty("ownershipType")
     public OwnershipTypeEnumEnum ownershipType;
+
     public AccountResourceAttributes withOwnershipType(OwnershipTypeEnumEnum ownershipType) {
         this.ownershipType = ownershipType;
         return this;
     }
     
+    public AccountResourceAttributes(@JsonProperty("accountType") AccountTypeEnumEnum accountType, @JsonProperty("balance") MoneyObject balance, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("displayName") String displayName, @JsonProperty("ownershipType") OwnershipTypeEnumEnum ownershipType) {
+        this.accountType = accountType;
+        this.balance = balance;
+        this.createdAt = createdAt;
+        this.displayName = displayName;
+        this.ownershipType = ownershipType;
+  }
 }

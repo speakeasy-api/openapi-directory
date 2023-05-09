@@ -15,6 +15,7 @@ public class CloudFormationStackRecordSourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public CloudFormationStackRecordSourceInfo withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class CloudFormationStackRecordSourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CloudFormationStackRecordSourceInfo withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class CloudFormationStackRecordSourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public CloudFormationStackRecordSourceTypeEnum resourceType;
+
     public CloudFormationStackRecordSourceInfo withResourceType(CloudFormationStackRecordSourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public CloudFormationStackRecordSourceInfo(){}
 }

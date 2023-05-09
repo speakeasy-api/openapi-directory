@@ -15,6 +15,7 @@ public class UpdateMeshRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateMeshRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,9 +27,11 @@ public class UpdateMeshRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public UpdateMeshRequestBodySpec spec;
+
     public UpdateMeshRequestBody withSpec(UpdateMeshRequestBodySpec spec) {
         this.spec = spec;
         return this;
     }
     
+    public UpdateMeshRequestBody(){}
 }

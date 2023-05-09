@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TransformSettings {
     @JsonProperty("location")
     public Object location;
+
     public TransformSettings withLocation(Object location) {
         this.location = location;
         return this;
@@ -22,9 +23,14 @@ public class TransformSettings {
      */
     @JsonProperty("mappingSettings")
     public MappingSettings mappingSettings;
+
     public TransformSettings withMappingSettings(MappingSettings mappingSettings) {
         this.mappingSettings = mappingSettings;
         return this;
     }
     
+    public TransformSettings(@JsonProperty("location") Object location, @JsonProperty("mappingSettings") MappingSettings mappingSettings) {
+        this.location = location;
+        this.mappingSettings = mappingSettings;
+  }
 }

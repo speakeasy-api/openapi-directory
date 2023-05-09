@@ -15,9 +15,11 @@ public class GetBlueprintResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Blueprint")
     public Blueprint blueprint;
+
     public GetBlueprintResponse withBlueprint(Blueprint blueprint) {
         this.blueprint = blueprint;
         return this;
     }
     
+    public GetBlueprintResponse(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CardVariants {
     @JsonProperty("firstEdition")
     public Boolean firstEdition;
+
     public CardVariants withFirstEdition(Boolean firstEdition) {
         this.firstEdition = firstEdition;
         return this;
@@ -16,6 +17,7 @@ public class CardVariants {
     
     @JsonProperty("holo")
     public Boolean holo;
+
     public CardVariants withHolo(Boolean holo) {
         this.holo = holo;
         return this;
@@ -23,6 +25,7 @@ public class CardVariants {
     
     @JsonProperty("normal")
     public Boolean normal;
+
     public CardVariants withNormal(Boolean normal) {
         this.normal = normal;
         return this;
@@ -30,6 +33,7 @@ public class CardVariants {
     
     @JsonProperty("reverse")
     public Boolean reverse;
+
     public CardVariants withReverse(Boolean reverse) {
         this.reverse = reverse;
         return this;
@@ -37,9 +41,17 @@ public class CardVariants {
     
     @JsonProperty("wPromo")
     public Boolean wPromo;
+
     public CardVariants withWPromo(Boolean wPromo) {
         this.wPromo = wPromo;
         return this;
     }
     
+    public CardVariants(@JsonProperty("firstEdition") Boolean firstEdition, @JsonProperty("holo") Boolean holo, @JsonProperty("normal") Boolean normal, @JsonProperty("reverse") Boolean reverse, @JsonProperty("wPromo") Boolean wPromo) {
+        this.firstEdition = firstEdition;
+        this.holo = holo;
+        this.normal = normal;
+        this.reverse = reverse;
+        this.wPromo = wPromo;
+  }
 }

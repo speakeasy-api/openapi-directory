@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSubmissionCommentRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AssignmentSubmissionCommentCreation assignmentSubmissionCommentCreation;
+
     public UpdateSubmissionCommentRequest withAssignmentSubmissionCommentCreation(org.openapis.openapi.models.shared.AssignmentSubmissionCommentCreation assignmentSubmissionCommentCreation) {
         this.assignmentSubmissionCommentCreation = assignmentSubmissionCommentCreation;
         return this;
@@ -19,6 +21,7 @@ public class UpdateSubmissionCommentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assignment")
     public String assignment;
+
     public UpdateSubmissionCommentRequest withAssignment(String assignment) {
         this.assignment = assignment;
         return this;
@@ -29,6 +32,7 @@ public class UpdateSubmissionCommentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=class")
     public String class_;
+
     public UpdateSubmissionCommentRequest withClass(String class_) {
         this.class_ = class_;
         return this;
@@ -39,6 +43,7 @@ public class UpdateSubmissionCommentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment")
     public String comment;
+
     public UpdateSubmissionCommentRequest withComment(String comment) {
         this.comment = comment;
         return this;
@@ -49,9 +54,17 @@ public class UpdateSubmissionCommentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=submission")
     public String submission;
+
     public UpdateSubmissionCommentRequest withSubmission(String submission) {
         this.submission = submission;
         return this;
     }
     
+    public UpdateSubmissionCommentRequest(@JsonProperty("AssignmentSubmissionCommentCreation") org.openapis.openapi.models.shared.AssignmentSubmissionCommentCreation assignmentSubmissionCommentCreation, @JsonProperty("assignment") String assignment, @JsonProperty("class") String class_, @JsonProperty("comment") String comment, @JsonProperty("submission") String submission) {
+        this.assignmentSubmissionCommentCreation = assignmentSubmissionCommentCreation;
+        this.assignment = assignment;
+        this.class_ = class_;
+        this.comment = comment;
+        this.submission = submission;
+  }
 }

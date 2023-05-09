@@ -18,9 +18,11 @@ public class Suggestions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String[] data;
+
     public Suggestions withData(String[] data) {
         this.data = data;
         return this;
     }
     
+    public Suggestions(){}
 }

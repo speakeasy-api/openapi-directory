@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SaveaccountconfigResponse {
     
     public String contentType;
+
     public SaveaccountconfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SaveaccountconfigResponse {
      */
     
     public Saveaccountconfig200ApplicationJSON saveaccountconfig200ApplicationJSONObject;
+
     public SaveaccountconfigResponse withSaveaccountconfig200ApplicationJSONObject(Saveaccountconfig200ApplicationJSON saveaccountconfig200ApplicationJSONObject) {
         this.saveaccountconfig200ApplicationJSONObject = saveaccountconfig200ApplicationJSONObject;
         return this;
@@ -26,6 +29,7 @@ public class SaveaccountconfigResponse {
     
     
     public Integer statusCode;
+
     public SaveaccountconfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SaveaccountconfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SaveaccountconfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SaveaccountconfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

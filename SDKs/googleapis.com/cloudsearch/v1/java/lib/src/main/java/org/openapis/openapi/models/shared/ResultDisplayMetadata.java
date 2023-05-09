@@ -15,6 +15,7 @@ public class ResultDisplayMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metalines")
     public ResultDisplayLine[] metalines;
+
     public ResultDisplayMetadata withMetalines(ResultDisplayLine[] metalines) {
         this.metalines = metalines;
         return this;
@@ -26,9 +27,11 @@ public class ResultDisplayMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectTypeLabel")
     public String objectTypeLabel;
+
     public ResultDisplayMetadata withObjectTypeLabel(String objectTypeLabel) {
         this.objectTypeLabel = objectTypeLabel;
         return this;
     }
     
+    public ResultDisplayMetadata(){}
 }

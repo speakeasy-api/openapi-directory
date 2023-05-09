@@ -15,6 +15,7 @@ public class ServiceObservabilityConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObservabilityConfigurationArn")
     public String observabilityConfigurationArn;
+
     public ServiceObservabilityConfiguration withObservabilityConfigurationArn(String observabilityConfigurationArn) {
         this.observabilityConfigurationArn = observabilityConfigurationArn;
         return this;
@@ -22,9 +23,13 @@ public class ServiceObservabilityConfiguration {
     
     @JsonProperty("ObservabilityEnabled")
     public Boolean observabilityEnabled;
+
     public ServiceObservabilityConfiguration withObservabilityEnabled(Boolean observabilityEnabled) {
         this.observabilityEnabled = observabilityEnabled;
         return this;
     }
     
+    public ServiceObservabilityConfiguration(@JsonProperty("ObservabilityEnabled") Boolean observabilityEnabled) {
+        this.observabilityEnabled = observabilityEnabled;
+  }
 }

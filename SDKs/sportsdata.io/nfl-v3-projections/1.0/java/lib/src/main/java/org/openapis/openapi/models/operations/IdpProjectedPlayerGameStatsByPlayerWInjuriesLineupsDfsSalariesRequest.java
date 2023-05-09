@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesRequest {
@@ -12,6 +13,7 @@ public class IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesReque
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesFormatEnum format;
+
     public IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesRequest withFormat(IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesFormatEnum format) {
         this.format = format;
         return this;
@@ -22,6 +24,7 @@ public class IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesReque
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=playerid")
     public String playerid;
+
     public IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesRequest withPlayerid(String playerid) {
         this.playerid = playerid;
         return this;
@@ -34,6 +37,7 @@ public class IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesReque
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=season")
     public String season;
+
     public IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesRequest withSeason(String season) {
         this.season = season;
         return this;
@@ -46,9 +50,16 @@ public class IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesReque
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=week")
     public String week;
+
     public IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesRequest withWeek(String week) {
         this.week = week;
         return this;
     }
     
+    public IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesRequest(@JsonProperty("format") IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesFormatEnum format, @JsonProperty("playerid") String playerid, @JsonProperty("season") String season, @JsonProperty("week") String week) {
+        this.format = format;
+        this.playerid = playerid;
+        this.season = season;
+        this.week = week;
+  }
 }

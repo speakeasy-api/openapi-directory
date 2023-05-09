@@ -55,13 +55,11 @@ public class Notifications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TryNotificationConfigResponse res = new org.openapis.openapi.models.operations.TryNotificationConfigResponse() {{
+        org.openapis.openapi.models.operations.TryNotificationConfigResponse res = new org.openapis.openapi.models.operations.TryNotificationConfigResponse(contentType, httpRes.statusCode()) {{
             notificationRead = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

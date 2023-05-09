@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeTrafficMirrorFiltersResultTrafficMirrorFilters {
     
     public String description;
+
     public DescribeTrafficMirrorFiltersResultTrafficMirrorFilters withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class DescribeTrafficMirrorFiltersResultTrafficMirrorFilters {
     
     
     public DescribeTrafficMirrorFiltersResultTrafficMirrorFiltersEgressFilterRules[] egressFilterRules;
+
     public DescribeTrafficMirrorFiltersResultTrafficMirrorFilters withEgressFilterRules(DescribeTrafficMirrorFiltersResultTrafficMirrorFiltersEgressFilterRules[] egressFilterRules) {
         this.egressFilterRules = egressFilterRules;
         return this;
@@ -26,6 +28,7 @@ public class DescribeTrafficMirrorFiltersResultTrafficMirrorFilters {
     
     
     public DescribeTrafficMirrorFiltersResultTrafficMirrorFiltersIngressFilterRules[] ingressFilterRules;
+
     public DescribeTrafficMirrorFiltersResultTrafficMirrorFilters withIngressFilterRules(DescribeTrafficMirrorFiltersResultTrafficMirrorFiltersIngressFilterRules[] ingressFilterRules) {
         this.ingressFilterRules = ingressFilterRules;
         return this;
@@ -33,6 +36,7 @@ public class DescribeTrafficMirrorFiltersResultTrafficMirrorFilters {
     
     
     public DescribeTrafficMirrorFiltersResultTrafficMirrorFiltersNetworkServicesEnum[] networkServices;
+
     public DescribeTrafficMirrorFiltersResultTrafficMirrorFilters withNetworkServices(DescribeTrafficMirrorFiltersResultTrafficMirrorFiltersNetworkServicesEnum[] networkServices) {
         this.networkServices = networkServices;
         return this;
@@ -40,6 +44,7 @@ public class DescribeTrafficMirrorFiltersResultTrafficMirrorFilters {
     
     
     public DescribeTrafficMirrorFiltersResultTrafficMirrorFiltersTags[] tags;
+
     public DescribeTrafficMirrorFiltersResultTrafficMirrorFilters withTags(DescribeTrafficMirrorFiltersResultTrafficMirrorFiltersTags[] tags) {
         this.tags = tags;
         return this;
@@ -47,9 +52,11 @@ public class DescribeTrafficMirrorFiltersResultTrafficMirrorFilters {
     
     
     public String trafficMirrorFilterId;
+
     public DescribeTrafficMirrorFiltersResultTrafficMirrorFilters withTrafficMirrorFilterId(String trafficMirrorFilterId) {
         this.trafficMirrorFilterId = trafficMirrorFilterId;
         return this;
     }
     
+    public DescribeTrafficMirrorFiltersResultTrafficMirrorFilters(){}
 }

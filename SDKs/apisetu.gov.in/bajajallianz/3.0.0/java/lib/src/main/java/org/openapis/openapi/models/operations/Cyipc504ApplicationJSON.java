@@ -15,6 +15,7 @@ public class Cyipc504ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Cyipc504ApplicationJSONErrorEnum error;
+
     public Cyipc504ApplicationJSON withError(Cyipc504ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Cyipc504ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Cyipc504ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Cyipc504ApplicationJSON withErrorDescription(Cyipc504ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Cyipc504ApplicationJSON(){}
 }

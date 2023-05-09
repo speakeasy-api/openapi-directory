@@ -18,6 +18,7 @@ public class GoogleAppsCardV1OpenLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onClose")
     public GoogleAppsCardV1OpenLinkOnCloseEnum onClose;
+
     public GoogleAppsCardV1OpenLink withOnClose(GoogleAppsCardV1OpenLinkOnCloseEnum onClose) {
         this.onClose = onClose;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsCardV1OpenLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openAs")
     public GoogleAppsCardV1OpenLinkOpenAsEnum openAs;
+
     public GoogleAppsCardV1OpenLink withOpenAs(GoogleAppsCardV1OpenLinkOpenAsEnum openAs) {
         this.openAs = openAs;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAppsCardV1OpenLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public GoogleAppsCardV1OpenLink withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GoogleAppsCardV1OpenLink(){}
 }

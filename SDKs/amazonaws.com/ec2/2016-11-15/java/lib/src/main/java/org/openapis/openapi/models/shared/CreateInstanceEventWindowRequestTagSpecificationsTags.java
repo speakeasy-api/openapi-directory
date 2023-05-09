@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateInstanceEventWindowRequestTagSpecificationsTags {
     
     public String key;
+
     public CreateInstanceEventWindowRequestTagSpecificationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CreateInstanceEventWindowRequestTagSpecificationsTags {
     
     
     public String value;
+
     public CreateInstanceEventWindowRequestTagSpecificationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateInstanceEventWindowRequestTagSpecificationsTags(){}
 }

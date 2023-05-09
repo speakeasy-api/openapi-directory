@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AdjustmentConditionsRulesBookableDateRange {
     @JsonProperty("end")
     public String end;
+
     public AdjustmentConditionsRulesBookableDateRange withEnd(String end) {
         this.end = end;
         return this;
@@ -19,9 +20,14 @@ public class AdjustmentConditionsRulesBookableDateRange {
     
     @JsonProperty("start")
     public String start;
+
     public AdjustmentConditionsRulesBookableDateRange withStart(String start) {
         this.start = start;
         return this;
     }
     
+    public AdjustmentConditionsRulesBookableDateRange(@JsonProperty("end") String end, @JsonProperty("start") String start) {
+        this.end = end;
+        this.start = start;
+  }
 }

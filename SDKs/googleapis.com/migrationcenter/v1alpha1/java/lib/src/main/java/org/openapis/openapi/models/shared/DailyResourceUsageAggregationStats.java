@@ -18,6 +18,7 @@ public class DailyResourceUsageAggregationStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("average")
     public Float average;
+
     public DailyResourceUsageAggregationStats withAverage(Float average) {
         this.average = average;
         return this;
@@ -29,6 +30,7 @@ public class DailyResourceUsageAggregationStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("median")
     public Float median;
+
     public DailyResourceUsageAggregationStats withMedian(Float median) {
         this.median = median;
         return this;
@@ -40,6 +42,7 @@ public class DailyResourceUsageAggregationStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ninteyFifthPercentile")
     public Float ninteyFifthPercentile;
+
     public DailyResourceUsageAggregationStats withNinteyFifthPercentile(Float ninteyFifthPercentile) {
         this.ninteyFifthPercentile = ninteyFifthPercentile;
         return this;
@@ -51,9 +54,11 @@ public class DailyResourceUsageAggregationStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peak")
     public Float peak;
+
     public DailyResourceUsageAggregationStats withPeak(Float peak) {
         this.peak = peak;
         return this;
     }
     
+    public DailyResourceUsageAggregationStats(){}
 }

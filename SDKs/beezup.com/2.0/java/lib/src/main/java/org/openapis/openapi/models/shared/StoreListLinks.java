@@ -15,6 +15,7 @@ public class StoreListLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createStore")
     public LinksCreateStoreLink createStore;
+
     public StoreListLinks withCreateStore(LinksCreateStoreLink createStore) {
         this.createStore = createStore;
         return this;
@@ -23,9 +24,11 @@ public class StoreListLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public LinksGetStoresLink self;
+
     public StoreListLinks withSelf(LinksGetStoresLink self) {
         this.self = self;
         return this;
     }
     
+    public StoreListLinks(){}
 }

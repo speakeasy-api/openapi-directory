@@ -55,7 +55,7 @@ public class APIs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PodocResponse res = new org.openapis.openapi.models.operations.PodocResponse() {{
+        org.openapis.openapi.models.operations.PodocResponse res = new org.openapis.openapi.models.operations.PodocResponse(contentType, httpRes.statusCode()) {{
             podoc400ApplicationJSONObject = null;
             podoc401ApplicationJSONObject = null;
             podoc404ApplicationJSONObject = null;
@@ -64,8 +64,6 @@ public class APIs {
             podoc503ApplicationJSONObject = null;
             podoc504ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

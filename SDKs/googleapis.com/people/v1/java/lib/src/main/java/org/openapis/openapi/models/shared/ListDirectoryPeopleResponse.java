@@ -18,6 +18,7 @@ public class ListDirectoryPeopleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListDirectoryPeopleResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListDirectoryPeopleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextSyncToken")
     public String nextSyncToken;
+
     public ListDirectoryPeopleResponse withNextSyncToken(String nextSyncToken) {
         this.nextSyncToken = nextSyncToken;
         return this;
@@ -40,9 +42,11 @@ public class ListDirectoryPeopleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("people")
     public Person[] people;
+
     public ListDirectoryPeopleResponse withPeople(Person[] people) {
         this.people = people;
         return this;
     }
     
+    public ListDirectoryPeopleResponse(){}
 }

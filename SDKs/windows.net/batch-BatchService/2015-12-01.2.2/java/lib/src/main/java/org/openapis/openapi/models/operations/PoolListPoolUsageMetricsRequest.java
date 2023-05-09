@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class PoolListPoolUsageMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$filter")
     public String dollarFilter;
+
     public PoolListPoolUsageMetricsRequest withDollarFilter(String dollarFilter) {
         this.dollarFilter = dollarFilter;
         return this;
@@ -23,6 +25,7 @@ public class PoolListPoolUsageMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public PoolListPoolUsageMetricsRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -33,6 +36,7 @@ public class PoolListPoolUsageMetricsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public PoolListPoolUsageMetricsRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -43,6 +47,7 @@ public class PoolListPoolUsageMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endtime")
     public OffsetDateTime endtime;
+
     public PoolListPoolUsageMetricsRequest withEndtime(OffsetDateTime endtime) {
         this.endtime = endtime;
         return this;
@@ -53,6 +58,7 @@ public class PoolListPoolUsageMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxresults")
     public Integer maxresults;
+
     public PoolListPoolUsageMetricsRequest withMaxresults(Integer maxresults) {
         this.maxresults = maxresults;
         return this;
@@ -63,6 +69,7 @@ public class PoolListPoolUsageMetricsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public PoolListPoolUsageMetricsRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -73,6 +80,7 @@ public class PoolListPoolUsageMetricsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public PoolListPoolUsageMetricsRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -83,6 +91,7 @@ public class PoolListPoolUsageMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=starttime")
     public OffsetDateTime starttime;
+
     public PoolListPoolUsageMetricsRequest withStarttime(OffsetDateTime starttime) {
         this.starttime = starttime;
         return this;
@@ -93,9 +102,13 @@ public class PoolListPoolUsageMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public PoolListPoolUsageMetricsRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public PoolListPoolUsageMetricsRequest(@JsonProperty("api-version") String apiVersion) {
+        this.apiVersion = apiVersion;
+  }
 }

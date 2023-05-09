@@ -53,4 +53,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/DeliveryErrorErrorClassEnum
 lib/src/main/java/org/openapis/openapi/models/shared/DeliveryErrorErrorTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/DeliveryError.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListTrafficStatsResponse.java
+docs/sdk/README.md
+docs/domains/README.md
 USAGE.md

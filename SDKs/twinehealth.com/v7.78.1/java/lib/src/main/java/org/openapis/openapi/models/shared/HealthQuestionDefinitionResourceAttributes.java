@@ -15,6 +15,7 @@ public class HealthQuestionDefinitionResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public HealthQuestionDefinitionResourceAttributesCategoryEnum category;
+
     public HealthQuestionDefinitionResourceAttributes withCategory(HealthQuestionDefinitionResourceAttributesCategoryEnum category) {
         this.category = category;
         return this;
@@ -26,6 +27,7 @@ public class HealthQuestionDefinitionResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public HealthQuestionDefinitionResourceAttributesFormat format;
+
     public HealthQuestionDefinitionResourceAttributes withFormat(HealthQuestionDefinitionResourceAttributesFormat format) {
         this.format = format;
         return this;
@@ -37,6 +39,7 @@ public class HealthQuestionDefinitionResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requirements")
     public HealthQuestionDefinitionResourceAttributesRequirements[] requirements;
+
     public HealthQuestionDefinitionResourceAttributes withRequirements(HealthQuestionDefinitionResourceAttributesRequirements[] requirements) {
         this.requirements = requirements;
         return this;
@@ -48,9 +51,11 @@ public class HealthQuestionDefinitionResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public HealthQuestionDefinitionResourceAttributes withText(String text) {
         this.text = text;
         return this;
     }
     
+    public HealthQuestionDefinitionResourceAttributes(){}
 }

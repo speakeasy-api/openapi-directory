@@ -15,9 +15,11 @@ public class Accessibility {
      */
     
     public String info;
+
     public Accessibility withInfo(String info) {
         this.info = info;
         return this;
     }
     
+    public Accessibility(){}
 }

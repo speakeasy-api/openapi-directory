@@ -59,13 +59,11 @@ public class SourceOauth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CompleteSourceOAuthResponse res = new org.openapis.openapi.models.operations.CompleteSourceOAuthResponse() {{
+        org.openapis.openapi.models.operations.CompleteSourceOAuthResponse res = new org.openapis.openapi.models.operations.CompleteSourceOAuthResponse(contentType, httpRes.statusCode()) {{
             completeOAuthResponse = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -118,13 +116,11 @@ public class SourceOauth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSourceOAuthConsentResponse res = new org.openapis.openapi.models.operations.GetSourceOAuthConsentResponse() {{
+        org.openapis.openapi.models.operations.GetSourceOAuthConsentResponse res = new org.openapis.openapi.models.operations.GetSourceOAuthConsentResponse(contentType, httpRes.statusCode()) {{
             oAuthConsentRead = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -177,12 +173,10 @@ public class SourceOauth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetInstancewideSourceOauthParamsResponse res = new org.openapis.openapi.models.operations.SetInstancewideSourceOauthParamsResponse() {{
+        org.openapis.openapi.models.operations.SetInstancewideSourceOauthParamsResponse res = new org.openapis.openapi.models.operations.SetInstancewideSourceOauthParamsResponse(contentType, httpRes.statusCode()) {{
             knownExceptionInfo = null;
             notFoundKnownExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ public class CreateTableInput {
      */
     @JsonProperty("KeySchema")
     public KeySchema keySchema;
+
     public CreateTableInput withKeySchema(KeySchema keySchema) {
         this.keySchema = keySchema;
         return this;
@@ -22,6 +23,7 @@ public class CreateTableInput {
      */
     @JsonProperty("ProvisionedThroughput")
     public ProvisionedThroughput provisionedThroughput;
+
     public CreateTableInput withProvisionedThroughput(ProvisionedThroughput provisionedThroughput) {
         this.provisionedThroughput = provisionedThroughput;
         return this;
@@ -29,9 +31,15 @@ public class CreateTableInput {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public CreateTableInput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public CreateTableInput(@JsonProperty("KeySchema") KeySchema keySchema, @JsonProperty("ProvisionedThroughput") ProvisionedThroughput provisionedThroughput, @JsonProperty("TableName") String tableName) {
+        this.keySchema = keySchema;
+        this.provisionedThroughput = provisionedThroughput;
+        this.tableName = tableName;
+  }
 }

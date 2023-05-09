@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteMedicalTranscriptionJobResponse {
@@ -12,6 +13,7 @@ public class DeleteMedicalTranscriptionJobResponse {
      */
     
     public Object badRequestException;
+
     public DeleteMedicalTranscriptionJobResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteMedicalTranscriptionJobResponse {
     
     
     public String contentType;
+
     public DeleteMedicalTranscriptionJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteMedicalTranscriptionJobResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteMedicalTranscriptionJobResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteMedicalTranscriptionJobResponse {
      */
     
     public Object limitExceededException;
+
     public DeleteMedicalTranscriptionJobResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteMedicalTranscriptionJobResponse {
     
     
     public Integer statusCode;
+
     public DeleteMedicalTranscriptionJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DeleteMedicalTranscriptionJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteMedicalTranscriptionJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteMedicalTranscriptionJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

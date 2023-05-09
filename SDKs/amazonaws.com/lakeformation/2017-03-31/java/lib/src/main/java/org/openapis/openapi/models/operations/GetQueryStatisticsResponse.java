@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetQueryStatisticsResponse {
@@ -12,6 +13,7 @@ public class GetQueryStatisticsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetQueryStatisticsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetQueryStatisticsResponse {
     
     
     public String contentType;
+
     public GetQueryStatisticsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetQueryStatisticsResponse {
      */
     
     public Object expiredException;
+
     public GetQueryStatisticsResponse withExpiredException(Object expiredException) {
         this.expiredException = expiredException;
         return this;
@@ -39,6 +43,7 @@ public class GetQueryStatisticsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetQueryStatisticsResponse getQueryStatisticsResponse;
+
     public GetQueryStatisticsResponse withGetQueryStatisticsResponse(org.openapis.openapi.models.shared.GetQueryStatisticsResponse getQueryStatisticsResponse) {
         this.getQueryStatisticsResponse = getQueryStatisticsResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetQueryStatisticsResponse {
      */
     
     public Object internalServiceException;
+
     public GetQueryStatisticsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class GetQueryStatisticsResponse {
      */
     
     public Object invalidInputException;
+
     public GetQueryStatisticsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class GetQueryStatisticsResponse {
      */
     
     public Object statisticsNotReadyYetException;
+
     public GetQueryStatisticsResponse withStatisticsNotReadyYetException(Object statisticsNotReadyYetException) {
         this.statisticsNotReadyYetException = statisticsNotReadyYetException;
         return this;
@@ -76,6 +84,7 @@ public class GetQueryStatisticsResponse {
     
     
     public Integer statusCode;
+
     public GetQueryStatisticsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetQueryStatisticsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetQueryStatisticsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class GetQueryStatisticsResponse {
      */
     
     public Object throttledException;
+
     public GetQueryStatisticsResponse withThrottledException(Object throttledException) {
         this.throttledException = throttledException;
         return this;
     }
     
+    public GetQueryStatisticsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

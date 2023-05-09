@@ -57,4 +57,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListAssetsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListUserAssetsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UserAsset.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListLikedAssetsResponse.java
+docs/sdk/README.md
+docs/assets/README.md
+docs/users/README.md
 USAGE.md

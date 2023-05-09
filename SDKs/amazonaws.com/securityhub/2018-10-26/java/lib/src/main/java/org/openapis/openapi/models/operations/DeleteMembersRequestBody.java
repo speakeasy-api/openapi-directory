@@ -12,9 +12,13 @@ public class DeleteMembersRequestBody {
      */
     @JsonProperty("AccountIds")
     public String[] accountIds;
+
     public DeleteMembersRequestBody withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
     }
     
+    public DeleteMembersRequestBody(@JsonProperty("AccountIds") String[] accountIds) {
+        this.accountIds = accountIds;
+  }
 }

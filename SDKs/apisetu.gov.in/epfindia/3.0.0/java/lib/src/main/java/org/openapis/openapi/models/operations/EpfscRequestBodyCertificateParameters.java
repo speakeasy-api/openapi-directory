@@ -12,6 +12,7 @@ public class EpfscRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public EpfscRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class EpfscRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public EpfscRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -32,9 +34,15 @@ public class EpfscRequestBodyCertificateParameters {
      */
     @JsonProperty("SCNO")
     public String scno;
+
     public EpfscRequestBodyCertificateParameters withScno(String scno) {
         this.scno = scno;
         return this;
     }
     
+    public EpfscRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("SCNO") String scno) {
+        this.dob = dob;
+        this.fullName = fullName;
+        this.scno = scno;
+  }
 }

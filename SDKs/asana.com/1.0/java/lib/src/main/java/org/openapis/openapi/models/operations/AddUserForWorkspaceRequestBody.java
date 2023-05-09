@@ -18,9 +18,11 @@ public class AddUserForWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.WorkspaceAddUserRequest data;
+
     public AddUserForWorkspaceRequestBody withData(org.openapis.openapi.models.shared.WorkspaceAddUserRequest data) {
         this.data = data;
         return this;
     }
     
+    public AddUserForWorkspaceRequestBody(){}
 }

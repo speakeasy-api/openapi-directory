@@ -15,6 +15,7 @@ public class Expiry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("month")
     public String month;
+
     public Expiry withMonth(String month) {
         this.month = month;
         return this;
@@ -26,9 +27,11 @@ public class Expiry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("year")
     public String year;
+
     public Expiry withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public Expiry(){}
 }

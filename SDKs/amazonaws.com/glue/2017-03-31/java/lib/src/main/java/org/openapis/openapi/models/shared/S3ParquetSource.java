@@ -15,6 +15,7 @@ public class S3ParquetSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalOptions")
     public S3DirectSourceAdditionalOptions additionalOptions;
+
     public S3ParquetSource withAdditionalOptions(S3DirectSourceAdditionalOptions additionalOptions) {
         this.additionalOptions = additionalOptions;
         return this;
@@ -23,6 +24,7 @@ public class S3ParquetSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompressionType")
     public ParquetCompressionTypeEnum compressionType;
+
     public S3ParquetSource withCompressionType(ParquetCompressionTypeEnum compressionType) {
         this.compressionType = compressionType;
         return this;
@@ -31,6 +33,7 @@ public class S3ParquetSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Exclusions")
     public String[] exclusions;
+
     public S3ParquetSource withExclusions(String[] exclusions) {
         this.exclusions = exclusions;
         return this;
@@ -39,6 +42,7 @@ public class S3ParquetSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupFiles")
     public String groupFiles;
+
     public S3ParquetSource withGroupFiles(String groupFiles) {
         this.groupFiles = groupFiles;
         return this;
@@ -47,6 +51,7 @@ public class S3ParquetSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupSize")
     public String groupSize;
+
     public S3ParquetSource withGroupSize(String groupSize) {
         this.groupSize = groupSize;
         return this;
@@ -55,6 +60,7 @@ public class S3ParquetSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxBand")
     public Long maxBand;
+
     public S3ParquetSource withMaxBand(Long maxBand) {
         this.maxBand = maxBand;
         return this;
@@ -63,6 +69,7 @@ public class S3ParquetSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxFilesInBand")
     public Long maxFilesInBand;
+
     public S3ParquetSource withMaxFilesInBand(Long maxFilesInBand) {
         this.maxFilesInBand = maxFilesInBand;
         return this;
@@ -70,6 +77,7 @@ public class S3ParquetSource {
     
     @JsonProperty("Name")
     public String name;
+
     public S3ParquetSource withName(String name) {
         this.name = name;
         return this;
@@ -78,6 +86,7 @@ public class S3ParquetSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputSchemas")
     public GlueSchema[] outputSchemas;
+
     public S3ParquetSource withOutputSchemas(GlueSchema[] outputSchemas) {
         this.outputSchemas = outputSchemas;
         return this;
@@ -85,6 +94,7 @@ public class S3ParquetSource {
     
     @JsonProperty("Paths")
     public String[] paths;
+
     public S3ParquetSource withPaths(String[] paths) {
         this.paths = paths;
         return this;
@@ -93,9 +103,14 @@ public class S3ParquetSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Recurse")
     public Boolean recurse;
+
     public S3ParquetSource withRecurse(Boolean recurse) {
         this.recurse = recurse;
         return this;
     }
     
+    public S3ParquetSource(@JsonProperty("Name") String name, @JsonProperty("Paths") String[] paths) {
+        this.name = name;
+        this.paths = paths;
+  }
 }

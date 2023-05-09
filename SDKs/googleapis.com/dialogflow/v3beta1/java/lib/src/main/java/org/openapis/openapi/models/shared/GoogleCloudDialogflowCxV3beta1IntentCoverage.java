@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1IntentCoverage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coverageScore")
     public Float coverageScore;
+
     public GoogleCloudDialogflowCxV3beta1IntentCoverage withCoverageScore(Float coverageScore) {
         this.coverageScore = coverageScore;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3beta1IntentCoverage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intents")
     public GoogleCloudDialogflowCxV3beta1IntentCoverageIntent[] intents;
+
     public GoogleCloudDialogflowCxV3beta1IntentCoverage withIntents(GoogleCloudDialogflowCxV3beta1IntentCoverageIntent[] intents) {
         this.intents = intents;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1IntentCoverage(){}
 }

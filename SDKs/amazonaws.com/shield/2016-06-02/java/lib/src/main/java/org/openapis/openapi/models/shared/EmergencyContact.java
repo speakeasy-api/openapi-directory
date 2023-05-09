@@ -15,6 +15,7 @@ public class EmergencyContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContactNotes")
     public String contactNotes;
+
     public EmergencyContact withContactNotes(String contactNotes) {
         this.contactNotes = contactNotes;
         return this;
@@ -22,6 +23,7 @@ public class EmergencyContact {
     
     @JsonProperty("EmailAddress")
     public String emailAddress;
+
     public EmergencyContact withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -30,9 +32,13 @@ public class EmergencyContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhoneNumber")
     public String phoneNumber;
+
     public EmergencyContact withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public EmergencyContact(@JsonProperty("EmailAddress") String emailAddress) {
+        this.emailAddress = emailAddress;
+  }
 }

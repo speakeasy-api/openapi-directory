@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WeekLastCompletedRequest {
@@ -12,9 +13,13 @@ public class WeekLastCompletedRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public WeekLastCompletedFormatEnum format;
+
     public WeekLastCompletedRequest withFormat(WeekLastCompletedFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public WeekLastCompletedRequest(@JsonProperty("format") WeekLastCompletedFormatEnum format) {
+        this.format = format;
+  }
 }

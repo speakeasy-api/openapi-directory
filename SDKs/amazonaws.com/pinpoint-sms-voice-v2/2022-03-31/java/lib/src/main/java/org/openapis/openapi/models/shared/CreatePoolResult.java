@@ -22,6 +22,7 @@ public class CreatePoolResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTimestamp")
     public OffsetDateTime createdTimestamp;
+
     public CreatePoolResult withCreatedTimestamp(OffsetDateTime createdTimestamp) {
         this.createdTimestamp = createdTimestamp;
         return this;
@@ -30,6 +31,7 @@ public class CreatePoolResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeletionProtectionEnabled")
     public Boolean deletionProtectionEnabled;
+
     public CreatePoolResult withDeletionProtectionEnabled(Boolean deletionProtectionEnabled) {
         this.deletionProtectionEnabled = deletionProtectionEnabled;
         return this;
@@ -38,6 +40,7 @@ public class CreatePoolResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageType")
     public MessageTypeEnum messageType;
+
     public CreatePoolResult withMessageType(MessageTypeEnum messageType) {
         this.messageType = messageType;
         return this;
@@ -46,6 +49,7 @@ public class CreatePoolResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptOutListName")
     public String optOutListName;
+
     public CreatePoolResult withOptOutListName(String optOutListName) {
         this.optOutListName = optOutListName;
         return this;
@@ -54,6 +58,7 @@ public class CreatePoolResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PoolArn")
     public String poolArn;
+
     public CreatePoolResult withPoolArn(String poolArn) {
         this.poolArn = poolArn;
         return this;
@@ -62,6 +67,7 @@ public class CreatePoolResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PoolId")
     public String poolId;
+
     public CreatePoolResult withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
@@ -70,6 +76,7 @@ public class CreatePoolResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SelfManagedOptOutsEnabled")
     public Boolean selfManagedOptOutsEnabled;
+
     public CreatePoolResult withSelfManagedOptOutsEnabled(Boolean selfManagedOptOutsEnabled) {
         this.selfManagedOptOutsEnabled = selfManagedOptOutsEnabled;
         return this;
@@ -78,6 +85,7 @@ public class CreatePoolResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SharedRoutesEnabled")
     public Boolean sharedRoutesEnabled;
+
     public CreatePoolResult withSharedRoutesEnabled(Boolean sharedRoutesEnabled) {
         this.sharedRoutesEnabled = sharedRoutesEnabled;
         return this;
@@ -86,6 +94,7 @@ public class CreatePoolResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public PoolStatusEnum status;
+
     public CreatePoolResult withStatus(PoolStatusEnum status) {
         this.status = status;
         return this;
@@ -94,6 +103,7 @@ public class CreatePoolResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreatePoolResult withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -102,6 +112,7 @@ public class CreatePoolResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoWayChannelArn")
     public String twoWayChannelArn;
+
     public CreatePoolResult withTwoWayChannelArn(String twoWayChannelArn) {
         this.twoWayChannelArn = twoWayChannelArn;
         return this;
@@ -110,9 +121,11 @@ public class CreatePoolResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoWayEnabled")
     public Boolean twoWayEnabled;
+
     public CreatePoolResult withTwoWayEnabled(Boolean twoWayEnabled) {
         this.twoWayEnabled = twoWayEnabled;
         return this;
     }
     
+    public CreatePoolResult(){}
 }

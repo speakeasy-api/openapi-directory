@@ -18,6 +18,7 @@ public class CustomerListDevicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devices")
     public Device[] devices;
+
     public CustomerListDevicesResponse withDevices(Device[] devices) {
         this.devices = devices;
         return this;
@@ -29,9 +30,11 @@ public class CustomerListDevicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public CustomerListDevicesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public CustomerListDevicesResponse(){}
 }

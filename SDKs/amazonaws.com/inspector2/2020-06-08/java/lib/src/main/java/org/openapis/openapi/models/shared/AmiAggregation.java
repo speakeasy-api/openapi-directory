@@ -15,6 +15,7 @@ public class AmiAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amis")
     public StringFilter[] amis;
+
     public AmiAggregation withAmis(StringFilter[] amis) {
         this.amis = amis;
         return this;
@@ -23,6 +24,7 @@ public class AmiAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortBy")
     public AmiSortByEnum sortBy;
+
     public AmiAggregation withSortBy(AmiSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -31,9 +33,11 @@ public class AmiAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public SortOrderEnum sortOrder;
+
     public AmiAggregation withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public AmiAggregation(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BaremetalsolutionProjectsLocationsVolumesSnapshotsCreateResponse {
     
     public String contentType;
+
     public BaremetalsolutionProjectsLocationsVolumesSnapshotsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class BaremetalsolutionProjectsLocationsVolumesSnapshotsCreateResponse {
     
     
     public Integer statusCode;
+
     public BaremetalsolutionProjectsLocationsVolumesSnapshotsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class BaremetalsolutionProjectsLocationsVolumesSnapshotsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BaremetalsolutionProjectsLocationsVolumesSnapshotsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class BaremetalsolutionProjectsLocationsVolumesSnapshotsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.VolumeSnapshot volumeSnapshot;
+
     public BaremetalsolutionProjectsLocationsVolumesSnapshotsCreateResponse withVolumeSnapshot(org.openapis.openapi.models.shared.VolumeSnapshot volumeSnapshot) {
         this.volumeSnapshot = volumeSnapshot;
         return this;
     }
     
+    public BaremetalsolutionProjectsLocationsVolumesSnapshotsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

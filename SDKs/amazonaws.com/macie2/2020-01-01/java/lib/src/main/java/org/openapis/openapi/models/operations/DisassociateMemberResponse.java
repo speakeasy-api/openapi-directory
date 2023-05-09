@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateMemberResponse {
@@ -12,6 +13,7 @@ public class DisassociateMemberResponse {
      */
     
     public Object accessDeniedException;
+
     public DisassociateMemberResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DisassociateMemberResponse {
      */
     
     public Object conflictException;
+
     public DisassociateMemberResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateMemberResponse {
     
     
     public String contentType;
+
     public DisassociateMemberResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateMemberResponse {
      */
     
     public java.util.Map<String, Object> disassociateMemberResponse;
+
     public DisassociateMemberResponse withDisassociateMemberResponse(java.util.Map<String, Object> disassociateMemberResponse) {
         this.disassociateMemberResponse = disassociateMemberResponse;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateMemberResponse {
      */
     
     public Object internalServerException;
+
     public DisassociateMemberResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DisassociateMemberResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateMemberResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DisassociateMemberResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public DisassociateMemberResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class DisassociateMemberResponse {
     
     
     public Integer statusCode;
+
     public DisassociateMemberResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DisassociateMemberResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateMemberResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DisassociateMemberResponse {
      */
     
     public Object throttlingException;
+
     public DisassociateMemberResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class DisassociateMemberResponse {
      */
     
     public Object validationException;
+
     public DisassociateMemberResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DisassociateMemberResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

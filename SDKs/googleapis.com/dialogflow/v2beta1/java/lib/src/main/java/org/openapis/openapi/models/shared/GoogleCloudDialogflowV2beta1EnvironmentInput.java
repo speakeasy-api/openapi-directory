@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1EnvironmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentVersion")
     public String agentVersion;
+
     public GoogleCloudDialogflowV2beta1EnvironmentInput withAgentVersion(String agentVersion) {
         this.agentVersion = agentVersion;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1EnvironmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDialogflowV2beta1EnvironmentInput withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1EnvironmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fulfillment")
     public GoogleCloudDialogflowV2beta1Fulfillment fulfillment;
+
     public GoogleCloudDialogflowV2beta1EnvironmentInput withFulfillment(GoogleCloudDialogflowV2beta1Fulfillment fulfillment) {
         this.fulfillment = fulfillment;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDialogflowV2beta1EnvironmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textToSpeechSettings")
     public GoogleCloudDialogflowV2beta1TextToSpeechSettings textToSpeechSettings;
+
     public GoogleCloudDialogflowV2beta1EnvironmentInput withTextToSpeechSettings(GoogleCloudDialogflowV2beta1TextToSpeechSettings textToSpeechSettings) {
         this.textToSpeechSettings = textToSpeechSettings;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1EnvironmentInput(){}
 }

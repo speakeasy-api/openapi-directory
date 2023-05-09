@@ -18,9 +18,11 @@ public class SearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("person")
     public Person person;
+
     public SearchResult withPerson(Person person) {
         this.person = person;
         return this;
     }
     
+    public SearchResult(){}
 }

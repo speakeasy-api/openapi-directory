@@ -15,9 +15,11 @@ public class BatchSnoozeAlarmResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorEntries")
     public BatchAlarmActionErrorEntry[] errorEntries;
+
     public BatchSnoozeAlarmResponse withErrorEntries(BatchAlarmActionErrorEntry[] errorEntries) {
         this.errorEntries = errorEntries;
         return this;
     }
     
+    public BatchSnoozeAlarmResponse(){}
 }

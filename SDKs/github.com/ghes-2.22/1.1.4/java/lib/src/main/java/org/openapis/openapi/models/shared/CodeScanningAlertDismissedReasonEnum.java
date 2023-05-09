@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * CodeScanningAlertDismissedReasonEnum - **Required when the state is dismissed.** The reason for dismissing or closing the alert. Can be one of: `false positive`, `won't fix`, and `used in tests`.
  */
 public enum CodeScanningAlertDismissedReasonEnum {
-    NULL_("null"),
+    LESS_THAN_NIL_GREATER_THAN("<nil>"),
     FALSE_POSITIVE("false positive"),
     WON_T_FIX("won't fix"),
     USED_IN_TESTS("used in tests");

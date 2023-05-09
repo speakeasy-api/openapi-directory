@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeDataRepositoryTasksResponse {
@@ -12,6 +13,7 @@ public class DescribeDataRepositoryTasksResponse {
      */
     
     public Object badRequest;
+
     public DescribeDataRepositoryTasksResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class DescribeDataRepositoryTasksResponse {
     
     
     public String contentType;
+
     public DescribeDataRepositoryTasksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeDataRepositoryTasksResponse {
      */
     
     public Object dataRepositoryTaskNotFound;
+
     public DescribeDataRepositoryTasksResponse withDataRepositoryTaskNotFound(Object dataRepositoryTaskNotFound) {
         this.dataRepositoryTaskNotFound = dataRepositoryTaskNotFound;
         return this;
@@ -39,6 +43,7 @@ public class DescribeDataRepositoryTasksResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeDataRepositoryTasksResponse describeDataRepositoryTasksResponse;
+
     public DescribeDataRepositoryTasksResponse withDescribeDataRepositoryTasksResponse(org.openapis.openapi.models.shared.DescribeDataRepositoryTasksResponse describeDataRepositoryTasksResponse) {
         this.describeDataRepositoryTasksResponse = describeDataRepositoryTasksResponse;
         return this;
@@ -49,6 +54,7 @@ public class DescribeDataRepositoryTasksResponse {
      */
     
     public Object fileSystemNotFound;
+
     public DescribeDataRepositoryTasksResponse withFileSystemNotFound(Object fileSystemNotFound) {
         this.fileSystemNotFound = fileSystemNotFound;
         return this;
@@ -59,6 +65,7 @@ public class DescribeDataRepositoryTasksResponse {
      */
     
     public Object internalServerError;
+
     public DescribeDataRepositoryTasksResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -66,6 +73,7 @@ public class DescribeDataRepositoryTasksResponse {
     
     
     public Integer statusCode;
+
     public DescribeDataRepositoryTasksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeDataRepositoryTasksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeDataRepositoryTasksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeDataRepositoryTasksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

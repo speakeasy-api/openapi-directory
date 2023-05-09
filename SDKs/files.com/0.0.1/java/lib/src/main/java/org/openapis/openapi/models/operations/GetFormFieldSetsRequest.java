@@ -12,6 +12,7 @@ public class GetFormFieldSetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetFormFieldSetsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -22,6 +23,7 @@ public class GetFormFieldSetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetFormFieldSetsRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -32,9 +34,11 @@ public class GetFormFieldSetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
     public Integer userId;
+
     public GetFormFieldSetsRequest withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetFormFieldSetsRequest(){}
 }

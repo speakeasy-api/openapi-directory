@@ -20,6 +20,7 @@ public class ConnectorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authenticationConfig")
     public AuthenticationConfig authenticationConfig;
+
     public ConnectorConfiguration withAuthenticationConfig(AuthenticationConfig authenticationConfig) {
         this.authenticationConfig = authenticationConfig;
         return this;
@@ -28,6 +29,7 @@ public class ConnectorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canUseAsDestination")
     public Boolean canUseAsDestination;
+
     public ConnectorConfiguration withCanUseAsDestination(Boolean canUseAsDestination) {
         this.canUseAsDestination = canUseAsDestination;
         return this;
@@ -36,6 +38,7 @@ public class ConnectorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canUseAsSource")
     public Boolean canUseAsSource;
+
     public ConnectorConfiguration withCanUseAsSource(Boolean canUseAsSource) {
         this.canUseAsSource = canUseAsSource;
         return this;
@@ -44,6 +47,7 @@ public class ConnectorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorArn")
     public String connectorArn;
+
     public ConnectorConfiguration withConnectorArn(String connectorArn) {
         this.connectorArn = connectorArn;
         return this;
@@ -52,6 +56,7 @@ public class ConnectorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorDescription")
     public String connectorDescription;
+
     public ConnectorConfiguration withConnectorDescription(String connectorDescription) {
         this.connectorDescription = connectorDescription;
         return this;
@@ -60,6 +65,7 @@ public class ConnectorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorLabel")
     public String connectorLabel;
+
     public ConnectorConfiguration withConnectorLabel(String connectorLabel) {
         this.connectorLabel = connectorLabel;
         return this;
@@ -68,6 +74,7 @@ public class ConnectorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorMetadata")
     public ConnectorMetadata connectorMetadata;
+
     public ConnectorConfiguration withConnectorMetadata(ConnectorMetadata connectorMetadata) {
         this.connectorMetadata = connectorMetadata;
         return this;
@@ -76,6 +83,7 @@ public class ConnectorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorModes")
     public String[] connectorModes;
+
     public ConnectorConfiguration withConnectorModes(String[] connectorModes) {
         this.connectorModes = connectorModes;
         return this;
@@ -84,6 +92,7 @@ public class ConnectorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorName")
     public String connectorName;
+
     public ConnectorConfiguration withConnectorName(String connectorName) {
         this.connectorName = connectorName;
         return this;
@@ -92,6 +101,7 @@ public class ConnectorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorOwner")
     public String connectorOwner;
+
     public ConnectorConfiguration withConnectorOwner(String connectorOwner) {
         this.connectorOwner = connectorOwner;
         return this;
@@ -100,6 +110,7 @@ public class ConnectorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorProvisioningConfig")
     public ConnectorProvisioningConfig connectorProvisioningConfig;
+
     public ConnectorConfiguration withConnectorProvisioningConfig(ConnectorProvisioningConfig connectorProvisioningConfig) {
         this.connectorProvisioningConfig = connectorProvisioningConfig;
         return this;
@@ -108,6 +119,7 @@ public class ConnectorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorProvisioningType")
     public ConnectorProvisioningTypeEnum connectorProvisioningType;
+
     public ConnectorConfiguration withConnectorProvisioningType(ConnectorProvisioningTypeEnum connectorProvisioningType) {
         this.connectorProvisioningType = connectorProvisioningType;
         return this;
@@ -116,6 +128,7 @@ public class ConnectorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorRuntimeSettings")
     public ConnectorRuntimeSetting[] connectorRuntimeSettings;
+
     public ConnectorConfiguration withConnectorRuntimeSettings(ConnectorRuntimeSetting[] connectorRuntimeSettings) {
         this.connectorRuntimeSettings = connectorRuntimeSettings;
         return this;
@@ -124,6 +137,7 @@ public class ConnectorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorType")
     public ConnectorTypeEnum connectorType;
+
     public ConnectorConfiguration withConnectorType(ConnectorTypeEnum connectorType) {
         this.connectorType = connectorType;
         return this;
@@ -132,6 +146,7 @@ public class ConnectorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorVersion")
     public String connectorVersion;
+
     public ConnectorConfiguration withConnectorVersion(String connectorVersion) {
         this.connectorVersion = connectorVersion;
         return this;
@@ -140,6 +155,7 @@ public class ConnectorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isPrivateLinkEnabled")
     public Boolean isPrivateLinkEnabled;
+
     public ConnectorConfiguration withIsPrivateLinkEnabled(Boolean isPrivateLinkEnabled) {
         this.isPrivateLinkEnabled = isPrivateLinkEnabled;
         return this;
@@ -148,6 +164,7 @@ public class ConnectorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isPrivateLinkEndpointUrlRequired")
     public Boolean isPrivateLinkEndpointUrlRequired;
+
     public ConnectorConfiguration withIsPrivateLinkEndpointUrlRequired(Boolean isPrivateLinkEndpointUrlRequired) {
         this.isPrivateLinkEndpointUrlRequired = isPrivateLinkEndpointUrlRequired;
         return this;
@@ -156,6 +173,7 @@ public class ConnectorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logoURL")
     public String logoURL;
+
     public ConnectorConfiguration withLogoURL(String logoURL) {
         this.logoURL = logoURL;
         return this;
@@ -166,6 +184,7 @@ public class ConnectorConfiguration {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("registeredAt")
     public OffsetDateTime registeredAt;
+
     public ConnectorConfiguration withRegisteredAt(OffsetDateTime registeredAt) {
         this.registeredAt = registeredAt;
         return this;
@@ -174,6 +193,7 @@ public class ConnectorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registeredBy")
     public String registeredBy;
+
     public ConnectorConfiguration withRegisteredBy(String registeredBy) {
         this.registeredBy = registeredBy;
         return this;
@@ -182,6 +202,7 @@ public class ConnectorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedApiVersions")
     public String[] supportedApiVersions;
+
     public ConnectorConfiguration withSupportedApiVersions(String[] supportedApiVersions) {
         this.supportedApiVersions = supportedApiVersions;
         return this;
@@ -190,6 +211,7 @@ public class ConnectorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedDestinationConnectors")
     public ConnectorTypeEnum[] supportedDestinationConnectors;
+
     public ConnectorConfiguration withSupportedDestinationConnectors(ConnectorTypeEnum[] supportedDestinationConnectors) {
         this.supportedDestinationConnectors = supportedDestinationConnectors;
         return this;
@@ -198,6 +220,7 @@ public class ConnectorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedOperators")
     public OperatorsEnum[] supportedOperators;
+
     public ConnectorConfiguration withSupportedOperators(OperatorsEnum[] supportedOperators) {
         this.supportedOperators = supportedOperators;
         return this;
@@ -206,6 +229,7 @@ public class ConnectorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedSchedulingFrequencies")
     public ScheduleFrequencyTypeEnum[] supportedSchedulingFrequencies;
+
     public ConnectorConfiguration withSupportedSchedulingFrequencies(ScheduleFrequencyTypeEnum[] supportedSchedulingFrequencies) {
         this.supportedSchedulingFrequencies = supportedSchedulingFrequencies;
         return this;
@@ -214,6 +238,7 @@ public class ConnectorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedTriggerTypes")
     public TriggerTypeEnum[] supportedTriggerTypes;
+
     public ConnectorConfiguration withSupportedTriggerTypes(TriggerTypeEnum[] supportedTriggerTypes) {
         this.supportedTriggerTypes = supportedTriggerTypes;
         return this;
@@ -222,9 +247,11 @@ public class ConnectorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedWriteOperations")
     public WriteOperationTypeEnum[] supportedWriteOperations;
+
     public ConnectorConfiguration withSupportedWriteOperations(WriteOperationTypeEnum[] supportedWriteOperations) {
         this.supportedWriteOperations = supportedWriteOperations;
         return this;
     }
     
+    public ConnectorConfiguration(){}
 }

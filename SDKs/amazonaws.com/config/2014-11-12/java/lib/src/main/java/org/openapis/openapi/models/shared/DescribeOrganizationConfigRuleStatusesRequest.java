@@ -12,6 +12,7 @@ public class DescribeOrganizationConfigRuleStatusesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public DescribeOrganizationConfigRuleStatusesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -20,6 +21,7 @@ public class DescribeOrganizationConfigRuleStatusesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeOrganizationConfigRuleStatusesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,9 +30,11 @@ public class DescribeOrganizationConfigRuleStatusesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationConfigRuleNames")
     public String[] organizationConfigRuleNames;
+
     public DescribeOrganizationConfigRuleStatusesRequest withOrganizationConfigRuleNames(String[] organizationConfigRuleNames) {
         this.organizationConfigRuleNames = organizationConfigRuleNames;
         return this;
     }
     
+    public DescribeOrganizationConfigRuleStatusesRequest(){}
 }

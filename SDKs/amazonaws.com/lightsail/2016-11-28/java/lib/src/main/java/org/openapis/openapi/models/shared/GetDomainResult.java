@@ -15,9 +15,11 @@ public class GetDomainResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public Domain domain;
+
     public GetDomainResult withDomain(Domain domain) {
         this.domain = domain;
         return this;
     }
     
+    public GetDomainResult(){}
 }

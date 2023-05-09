@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PostApiV1DomainBlocksRequestBody {
     /**
@@ -12,9 +12,13 @@ public class PostApiV1DomainBlocksRequestBody {
      */
     
     public String domain;
+
     public PostApiV1DomainBlocksRequestBody withDomain(String domain) {
         this.domain = domain;
         return this;
     }
     
+    public PostApiV1DomainBlocksRequestBody(@JsonProperty("domain") String domain) {
+        this.domain = domain;
+  }
 }

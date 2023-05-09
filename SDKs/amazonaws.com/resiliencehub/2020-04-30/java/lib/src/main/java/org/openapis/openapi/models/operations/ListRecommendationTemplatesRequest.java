@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListRecommendationTemplatesRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListRecommendationTemplatesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class ListRecommendationTemplatesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListRecommendationTemplatesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class ListRecommendationTemplatesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListRecommendationTemplatesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class ListRecommendationTemplatesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListRecommendationTemplatesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class ListRecommendationTemplatesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListRecommendationTemplatesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class ListRecommendationTemplatesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListRecommendationTemplatesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class ListRecommendationTemplatesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListRecommendationTemplatesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class ListRecommendationTemplatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assessmentArn")
     public String assessmentArn;
+
     public ListRecommendationTemplatesRequest withAssessmentArn(String assessmentArn) {
         this.assessmentArn = assessmentArn;
         return this;
@@ -71,6 +80,7 @@ public class ListRecommendationTemplatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public ListRecommendationTemplatesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -81,6 +91,7 @@ public class ListRecommendationTemplatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public ListRecommendationTemplatesRequest withName(String name) {
         this.name = name;
         return this;
@@ -91,6 +102,7 @@ public class ListRecommendationTemplatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public ListRecommendationTemplatesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -101,6 +113,7 @@ public class ListRecommendationTemplatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recommendationTemplateArn")
     public String recommendationTemplateArn;
+
     public ListRecommendationTemplatesRequest withRecommendationTemplateArn(String recommendationTemplateArn) {
         this.recommendationTemplateArn = recommendationTemplateArn;
         return this;
@@ -111,6 +124,7 @@ public class ListRecommendationTemplatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reverseOrder")
     public Boolean reverseOrder;
+
     public ListRecommendationTemplatesRequest withReverseOrder(Boolean reverseOrder) {
         this.reverseOrder = reverseOrder;
         return this;
@@ -121,9 +135,13 @@ public class ListRecommendationTemplatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public org.openapis.openapi.models.shared.RecommendationTemplateStatusEnum[] status;
+
     public ListRecommendationTemplatesRequest withStatus(org.openapis.openapi.models.shared.RecommendationTemplateStatusEnum[] status) {
         this.status = status;
         return this;
     }
     
+    public ListRecommendationTemplatesRequest(@JsonProperty("assessmentArn") String assessmentArn) {
+        this.assessmentArn = assessmentArn;
+  }
 }

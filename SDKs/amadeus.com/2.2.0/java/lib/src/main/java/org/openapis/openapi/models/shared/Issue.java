@@ -15,6 +15,7 @@ public class Issue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public Issue withCode(Long code) {
         this.code = code;
         return this;
@@ -26,6 +27,7 @@ public class Issue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public Issue withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -37,6 +39,7 @@ public class Issue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public IssueIssueSource source;
+
     public Issue withSource(IssueIssueSource source) {
         this.source = source;
         return this;
@@ -48,6 +51,7 @@ public class Issue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Long status;
+
     public Issue withStatus(Long status) {
         this.status = status;
         return this;
@@ -59,9 +63,11 @@ public class Issue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Issue withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Issue(){}
 }

@@ -15,6 +15,7 @@ public class AgentConfigurationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentId")
     public String agentId;
+
     public AgentConfigurationStatus withAgentId(String agentId) {
         this.agentId = agentId;
         return this;
@@ -23,6 +24,7 @@ public class AgentConfigurationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AgentConfigurationStatus withDescription(String description) {
         this.description = description;
         return this;
@@ -31,9 +33,11 @@ public class AgentConfigurationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationSucceeded")
     public Boolean operationSucceeded;
+
     public AgentConfigurationStatus withOperationSucceeded(Boolean operationSucceeded) {
         this.operationSucceeded = operationSucceeded;
         return this;
     }
     
+    public AgentConfigurationStatus(){}
 }

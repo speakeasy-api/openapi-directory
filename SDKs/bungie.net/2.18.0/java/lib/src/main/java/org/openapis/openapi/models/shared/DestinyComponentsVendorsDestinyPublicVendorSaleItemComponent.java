@@ -16,6 +16,7 @@ public class DestinyComponentsVendorsDestinyPublicVendorSaleItemComponent {
      */
     
     public Boolean apiPurchasable;
+
     public DestinyComponentsVendorsDestinyPublicVendorSaleItemComponent withApiPurchasable(Boolean apiPurchasable) {
         this.apiPurchasable = apiPurchasable;
         return this;
@@ -26,6 +27,7 @@ public class DestinyComponentsVendorsDestinyPublicVendorSaleItemComponent {
      */
     
     public DestinyDestinyItemQuantity[] costs;
+
     public DestinyComponentsVendorsDestinyPublicVendorSaleItemComponent withCosts(DestinyDestinyItemQuantity[] costs) {
         this.costs = costs;
         return this;
@@ -36,6 +38,7 @@ public class DestinyComponentsVendorsDestinyPublicVendorSaleItemComponent {
      */
     
     public Long itemHash;
+
     public DestinyComponentsVendorsDestinyPublicVendorSaleItemComponent withItemHash(Long itemHash) {
         this.itemHash = itemHash;
         return this;
@@ -47,6 +50,7 @@ public class DestinyComponentsVendorsDestinyPublicVendorSaleItemComponent {
      */
     
     public OffsetDateTime overrideNextRefreshDate;
+
     public DestinyComponentsVendorsDestinyPublicVendorSaleItemComponent withOverrideNextRefreshDate(OffsetDateTime overrideNextRefreshDate) {
         this.overrideNextRefreshDate = overrideNextRefreshDate;
         return this;
@@ -58,6 +62,7 @@ public class DestinyComponentsVendorsDestinyPublicVendorSaleItemComponent {
      */
     
     public Long overrideStyleItemHash;
+
     public DestinyComponentsVendorsDestinyPublicVendorSaleItemComponent withOverrideStyleItemHash(Long overrideStyleItemHash) {
         this.overrideStyleItemHash = overrideStyleItemHash;
         return this;
@@ -68,6 +73,7 @@ public class DestinyComponentsVendorsDestinyPublicVendorSaleItemComponent {
      */
     
     public Integer quantity;
+
     public DestinyComponentsVendorsDestinyPublicVendorSaleItemComponent withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
@@ -79,9 +85,11 @@ public class DestinyComponentsVendorsDestinyPublicVendorSaleItemComponent {
      */
     
     public Integer vendorItemIndex;
+
     public DestinyComponentsVendorsDestinyPublicVendorSaleItemComponent withVendorItemIndex(Integer vendorItemIndex) {
         this.vendorItemIndex = vendorItemIndex;
         return this;
     }
     
+    public DestinyComponentsVendorsDestinyPublicVendorSaleItemComponent(){}
 }

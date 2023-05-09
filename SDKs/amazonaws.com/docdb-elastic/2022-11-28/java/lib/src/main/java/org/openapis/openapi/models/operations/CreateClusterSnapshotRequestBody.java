@@ -14,6 +14,7 @@ public class CreateClusterSnapshotRequestBody {
      */
     @JsonProperty("clusterArn")
     public String clusterArn;
+
     public CreateClusterSnapshotRequestBody withClusterArn(String clusterArn) {
         this.clusterArn = clusterArn;
         return this;
@@ -24,6 +25,7 @@ public class CreateClusterSnapshotRequestBody {
      */
     @JsonProperty("snapshotName")
     public String snapshotName;
+
     public CreateClusterSnapshotRequestBody withSnapshotName(String snapshotName) {
         this.snapshotName = snapshotName;
         return this;
@@ -35,9 +37,14 @@ public class CreateClusterSnapshotRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateClusterSnapshotRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateClusterSnapshotRequestBody(@JsonProperty("clusterArn") String clusterArn, @JsonProperty("snapshotName") String snapshotName) {
+        this.clusterArn = clusterArn;
+        this.snapshotName = snapshotName;
+  }
 }

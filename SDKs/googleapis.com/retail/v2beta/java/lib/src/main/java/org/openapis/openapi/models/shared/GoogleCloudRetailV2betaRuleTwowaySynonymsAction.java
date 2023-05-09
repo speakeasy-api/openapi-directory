@@ -18,9 +18,11 @@ public class GoogleCloudRetailV2betaRuleTwowaySynonymsAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("synonyms")
     public String[] synonyms;
+
     public GoogleCloudRetailV2betaRuleTwowaySynonymsAction withSynonyms(String[] synonyms) {
         this.synonyms = synonyms;
         return this;
     }
     
+    public GoogleCloudRetailV2betaRuleTwowaySynonymsAction(){}
 }

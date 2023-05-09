@@ -15,6 +15,7 @@ public class DQResultsPublishingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchMetricsEnabled")
     public Boolean cloudWatchMetricsEnabled;
+
     public DQResultsPublishingOptions withCloudWatchMetricsEnabled(Boolean cloudWatchMetricsEnabled) {
         this.cloudWatchMetricsEnabled = cloudWatchMetricsEnabled;
         return this;
@@ -23,6 +24,7 @@ public class DQResultsPublishingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationContext")
     public String evaluationContext;
+
     public DQResultsPublishingOptions withEvaluationContext(String evaluationContext) {
         this.evaluationContext = evaluationContext;
         return this;
@@ -31,6 +33,7 @@ public class DQResultsPublishingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultsPublishingEnabled")
     public Boolean resultsPublishingEnabled;
+
     public DQResultsPublishingOptions withResultsPublishingEnabled(Boolean resultsPublishingEnabled) {
         this.resultsPublishingEnabled = resultsPublishingEnabled;
         return this;
@@ -39,9 +42,11 @@ public class DQResultsPublishingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultsS3Prefix")
     public String resultsS3Prefix;
+
     public DQResultsPublishingOptions withResultsS3Prefix(String resultsS3Prefix) {
         this.resultsS3Prefix = resultsS3Prefix;
         return this;
     }
     
+    public DQResultsPublishingOptions(){}
 }

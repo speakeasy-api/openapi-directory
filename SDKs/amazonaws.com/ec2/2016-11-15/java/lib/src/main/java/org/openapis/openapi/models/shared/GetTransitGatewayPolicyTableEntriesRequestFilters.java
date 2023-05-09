@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetTransitGatewayPolicyTableEntriesRequestFilters {
     
     public String name;
+
     public GetTransitGatewayPolicyTableEntriesRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class GetTransitGatewayPolicyTableEntriesRequestFilters {
     
     
     public String[] values;
+
     public GetTransitGatewayPolicyTableEntriesRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public GetTransitGatewayPolicyTableEntriesRequestFilters(){}
 }

@@ -17,6 +17,7 @@ public class DefaultResponseDTOOfInteger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isError")
     public Boolean isError;
+
     public DefaultResponseDTOOfInteger withIsError(Boolean isError) {
         this.isError = isError;
         return this;
@@ -25,6 +26,7 @@ public class DefaultResponseDTOOfInteger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public DefaultResponseDTOOfInteger withMessage(String message) {
         this.message = message;
         return this;
@@ -33,6 +35,7 @@ public class DefaultResponseDTOOfInteger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseException")
     public Object responseException;
+
     public DefaultResponseDTOOfInteger withResponseException(Object responseException) {
         this.responseException = responseException;
         return this;
@@ -41,9 +44,11 @@ public class DefaultResponseDTOOfInteger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public Integer result;
+
     public DefaultResponseDTOOfInteger withResult(Integer result) {
         this.result = result;
         return this;
     }
     
+    public DefaultResponseDTOOfInteger(){}
 }

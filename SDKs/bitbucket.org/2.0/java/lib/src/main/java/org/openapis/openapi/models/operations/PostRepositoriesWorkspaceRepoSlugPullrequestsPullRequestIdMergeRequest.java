@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -31,6 +33,7 @@ public class PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=async")
     public Boolean async;
+
     public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeRequest withAsync(Boolean async) {
         this.async = async;
         return this;
@@ -41,6 +44,7 @@ public class PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeRequ
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pull_request_id")
     public Long pullRequestId;
+
     public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeRequest withPullRequestId(Long pullRequestId) {
         this.pullRequestId = pullRequestId;
         return this;
@@ -53,6 +57,7 @@ public class PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeRequ
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -65,9 +70,15 @@ public class PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeRequ
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeRequest(@JsonProperty("pull_request_id") Long pullRequestId, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.pullRequestId = pullRequestId;
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

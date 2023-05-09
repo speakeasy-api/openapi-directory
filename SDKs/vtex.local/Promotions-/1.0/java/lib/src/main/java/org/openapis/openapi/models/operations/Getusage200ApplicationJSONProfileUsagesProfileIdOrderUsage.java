@@ -18,6 +18,7 @@ public class Getusage200ApplicationJSONProfileUsagesProfileIdOrderUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderId")
     public String orderId;
+
     public Getusage200ApplicationJSONProfileUsagesProfileIdOrderUsage withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -29,9 +30,11 @@ public class Getusage200ApplicationJSONProfileUsagesProfileIdOrderUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usageDateUtc")
     public String usageDateUtc;
+
     public Getusage200ApplicationJSONProfileUsagesProfileIdOrderUsage withUsageDateUtc(String usageDateUtc) {
         this.usageDateUtc = usageDateUtc;
         return this;
     }
     
+    public Getusage200ApplicationJSONProfileUsagesProfileIdOrderUsage(){}
 }

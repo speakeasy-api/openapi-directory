@@ -20,6 +20,7 @@ public class SourceTableDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillingMode")
     public BillingModeEnum billingMode;
+
     public SourceTableDetails withBillingMode(BillingModeEnum billingMode) {
         this.billingMode = billingMode;
         return this;
@@ -28,6 +29,7 @@ public class SourceTableDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ItemCount")
     public Long itemCount;
+
     public SourceTableDetails withItemCount(Long itemCount) {
         this.itemCount = itemCount;
         return this;
@@ -35,6 +37,7 @@ public class SourceTableDetails {
     
     @JsonProperty("KeySchema")
     public KeySchemaElement[] keySchema;
+
     public SourceTableDetails withKeySchema(KeySchemaElement[] keySchema) {
         this.keySchema = keySchema;
         return this;
@@ -42,6 +45,7 @@ public class SourceTableDetails {
     
     @JsonProperty("ProvisionedThroughput")
     public ProvisionedThroughput provisionedThroughput;
+
     public SourceTableDetails withProvisionedThroughput(ProvisionedThroughput provisionedThroughput) {
         this.provisionedThroughput = provisionedThroughput;
         return this;
@@ -50,6 +54,7 @@ public class SourceTableDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableArn")
     public String tableArn;
+
     public SourceTableDetails withTableArn(String tableArn) {
         this.tableArn = tableArn;
         return this;
@@ -59,6 +64,7 @@ public class SourceTableDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TableCreationDateTime")
     public OffsetDateTime tableCreationDateTime;
+
     public SourceTableDetails withTableCreationDateTime(OffsetDateTime tableCreationDateTime) {
         this.tableCreationDateTime = tableCreationDateTime;
         return this;
@@ -66,6 +72,7 @@ public class SourceTableDetails {
     
     @JsonProperty("TableId")
     public String tableId;
+
     public SourceTableDetails withTableId(String tableId) {
         this.tableId = tableId;
         return this;
@@ -73,6 +80,7 @@ public class SourceTableDetails {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public SourceTableDetails withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -81,9 +89,17 @@ public class SourceTableDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableSizeBytes")
     public Long tableSizeBytes;
+
     public SourceTableDetails withTableSizeBytes(Long tableSizeBytes) {
         this.tableSizeBytes = tableSizeBytes;
         return this;
     }
     
+    public SourceTableDetails(@JsonProperty("KeySchema") KeySchemaElement[] keySchema, @JsonProperty("ProvisionedThroughput") ProvisionedThroughput provisionedThroughput, @JsonProperty("TableCreationDateTime") OffsetDateTime tableCreationDateTime, @JsonProperty("TableId") String tableId, @JsonProperty("TableName") String tableName) {
+        this.keySchema = keySchema;
+        this.provisionedThroughput = provisionedThroughput;
+        this.tableCreationDateTime = tableCreationDateTime;
+        this.tableId = tableId;
+        this.tableName = tableName;
+  }
 }

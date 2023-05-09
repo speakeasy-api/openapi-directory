@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLinksTopDomainsResponse {
     
     public String contentType;
+
     public GetLinksTopDomainsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetLinksTopDomainsResponse {
      */
     
     public org.openapis.openapi.models.shared.DefaultPayload defaultPayload;
+
     public GetLinksTopDomainsResponse withDefaultPayload(org.openapis.openapi.models.shared.DefaultPayload defaultPayload) {
         this.defaultPayload = defaultPayload;
         return this;
@@ -26,6 +29,7 @@ public class GetLinksTopDomainsResponse {
     
     
     public Integer statusCode;
+
     public GetLinksTopDomainsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetLinksTopDomainsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLinksTopDomainsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetLinksTopDomainsResponse {
      */
     
     public GetLinksTopDomains200ApplicationJSON getLinksTopDomains200ApplicationJSONObject;
+
     public GetLinksTopDomainsResponse withGetLinksTopDomains200ApplicationJSONObject(GetLinksTopDomains200ApplicationJSON getLinksTopDomains200ApplicationJSONObject) {
         this.getLinksTopDomains200ApplicationJSONObject = getLinksTopDomains200ApplicationJSONObject;
         return this;
     }
     
+    public GetLinksTopDomainsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

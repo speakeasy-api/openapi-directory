@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AppPkgInfoLinks {
     @JsonProperty("appD")
     public LinkType appD;
+
     public AppPkgInfoLinks withAppD(LinkType appD) {
         this.appD = appD;
         return this;
@@ -19,6 +20,7 @@ public class AppPkgInfoLinks {
     
     @JsonProperty("appPkgContent")
     public LinkType appPkgContent;
+
     public AppPkgInfoLinks withAppPkgContent(LinkType appPkgContent) {
         this.appPkgContent = appPkgContent;
         return this;
@@ -26,9 +28,15 @@ public class AppPkgInfoLinks {
     
     @JsonProperty("self")
     public LinkType self;
+
     public AppPkgInfoLinks withSelf(LinkType self) {
         this.self = self;
         return this;
     }
     
+    public AppPkgInfoLinks(@JsonProperty("appD") LinkType appD, @JsonProperty("appPkgContent") LinkType appPkgContent, @JsonProperty("self") LinkType self) {
+        this.appD = appD;
+        this.appPkgContent = appPkgContent;
+        this.self = self;
+  }
 }

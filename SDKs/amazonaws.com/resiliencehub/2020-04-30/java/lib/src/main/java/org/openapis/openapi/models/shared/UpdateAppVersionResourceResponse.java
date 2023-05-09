@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateAppVersionResourceResponse {
     @JsonProperty("appArn")
     public String appArn;
+
     public UpdateAppVersionResourceResponse withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
@@ -21,6 +22,7 @@ public class UpdateAppVersionResourceResponse {
     
     @JsonProperty("appVersion")
     public String appVersion;
+
     public UpdateAppVersionResourceResponse withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
@@ -29,9 +31,14 @@ public class UpdateAppVersionResourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("physicalResource")
     public PhysicalResource physicalResource;
+
     public UpdateAppVersionResourceResponse withPhysicalResource(PhysicalResource physicalResource) {
         this.physicalResource = physicalResource;
         return this;
     }
     
+    public UpdateAppVersionResourceResponse(@JsonProperty("appArn") String appArn, @JsonProperty("appVersion") String appVersion) {
+        this.appArn = appArn;
+        this.appVersion = appVersion;
+  }
 }

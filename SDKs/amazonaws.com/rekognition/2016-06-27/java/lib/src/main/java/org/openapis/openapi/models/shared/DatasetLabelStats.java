@@ -15,6 +15,7 @@ public class DatasetLabelStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BoundingBoxCount")
     public Long boundingBoxCount;
+
     public DatasetLabelStats withBoundingBoxCount(Long boundingBoxCount) {
         this.boundingBoxCount = boundingBoxCount;
         return this;
@@ -23,9 +24,11 @@ public class DatasetLabelStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntryCount")
     public Long entryCount;
+
     public DatasetLabelStats withEntryCount(Long entryCount) {
         this.entryCount = entryCount;
         return this;
     }
     
+    public DatasetLabelStats(){}
 }

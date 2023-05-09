@@ -18,6 +18,7 @@ public class ProcessSignature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoryHashSignature")
     public MemoryHashSignature memoryHashSignature;
+
     public ProcessSignature withMemoryHashSignature(MemoryHashSignature memoryHashSignature) {
         this.memoryHashSignature = memoryHashSignature;
         return this;
@@ -29,9 +30,11 @@ public class ProcessSignature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yaraRuleSignature")
     public YaraRuleSignature yaraRuleSignature;
+
     public ProcessSignature withYaraRuleSignature(YaraRuleSignature yaraRuleSignature) {
         this.yaraRuleSignature = yaraRuleSignature;
         return this;
     }
     
+    public ProcessSignature(){}
 }

@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Security {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Prediction-Key")
     public String apimKey;
+
     public Security withApimKey(String apimKey) {
         this.apimKey = apimKey;
         return this;
     }
     
+    public Security(@JsonProperty("apim_key") String apimKey) {
+        this.apimKey = apimKey;
+  }
 }

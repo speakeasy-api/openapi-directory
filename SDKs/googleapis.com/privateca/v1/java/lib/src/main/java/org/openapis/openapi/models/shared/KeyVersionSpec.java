@@ -18,6 +18,7 @@ public class KeyVersionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("algorithm")
     public KeyVersionSpecAlgorithmEnum algorithm;
+
     public KeyVersionSpec withAlgorithm(KeyVersionSpecAlgorithmEnum algorithm) {
         this.algorithm = algorithm;
         return this;
@@ -29,9 +30,11 @@ public class KeyVersionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudKmsKeyVersion")
     public String cloudKmsKeyVersion;
+
     public KeyVersionSpec withCloudKmsKeyVersion(String cloudKmsKeyVersion) {
         this.cloudKmsKeyVersion = cloudKmsKeyVersion;
         return this;
     }
     
+    public KeyVersionSpec(){}
 }

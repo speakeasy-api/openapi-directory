@@ -18,6 +18,7 @@ public class QueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnHeaders")
     public ResultTableColumnHeader[] columnHeaders;
+
     public QueryResponse withColumnHeaders(ResultTableColumnHeader[] columnHeaders) {
         this.columnHeaders = columnHeaders;
         return this;
@@ -29,6 +30,7 @@ public class QueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Errors errors;
+
     public QueryResponse withErrors(Errors errors) {
         this.errors = errors;
         return this;
@@ -40,6 +42,7 @@ public class QueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public QueryResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,9 +54,11 @@ public class QueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rows")
     public Object[][] rows;
+
     public QueryResponse withRows(Object[][] rows) {
         this.rows = rows;
         return this;
     }
     
+    public QueryResponse(){}
 }

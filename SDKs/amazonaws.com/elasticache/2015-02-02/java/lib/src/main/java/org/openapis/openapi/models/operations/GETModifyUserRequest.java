@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyUserRequest {
@@ -12,6 +13,7 @@ public class GETModifyUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AccessString")
     public String accessString;
+
     public GETModifyUserRequest withAccessString(String accessString) {
         this.accessString = accessString;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyUserRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyUserActionEnum action;
+
     public GETModifyUserRequest withAction(GETModifyUserActionEnum action) {
         this.action = action;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AppendAccessString")
     public String appendAccessString;
+
     public GETModifyUserRequest withAppendAccessString(String appendAccessString) {
         this.appendAccessString = appendAccessString;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AuthenticationMode")
     public GETModifyUserAuthenticationMode authenticationMode;
+
     public GETModifyUserRequest withAuthenticationMode(GETModifyUserAuthenticationMode authenticationMode) {
         this.authenticationMode = authenticationMode;
         return this;
@@ -49,6 +54,7 @@ public class GETModifyUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NoPasswordRequired")
     public Boolean noPasswordRequired;
+
     public GETModifyUserRequest withNoPasswordRequired(Boolean noPasswordRequired) {
         this.noPasswordRequired = noPasswordRequired;
         return this;
@@ -59,6 +65,7 @@ public class GETModifyUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Passwords")
     public String[] passwords;
+
     public GETModifyUserRequest withPasswords(String[] passwords) {
         this.passwords = passwords;
         return this;
@@ -69,6 +76,7 @@ public class GETModifyUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UserId")
     public String userId;
+
     public GETModifyUserRequest withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -76,6 +84,7 @@ public class GETModifyUserRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyUserVersionEnum version;
+
     public GETModifyUserRequest withVersion(GETModifyUserVersionEnum version) {
         this.version = version;
         return this;
@@ -83,6 +92,7 @@ public class GETModifyUserRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyUserRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -90,6 +100,7 @@ public class GETModifyUserRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyUserRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -97,6 +108,7 @@ public class GETModifyUserRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyUserRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -104,6 +116,7 @@ public class GETModifyUserRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyUserRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -111,6 +124,7 @@ public class GETModifyUserRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyUserRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -118,6 +132,7 @@ public class GETModifyUserRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyUserRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -125,9 +140,15 @@ public class GETModifyUserRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyUserRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyUserRequest(@JsonProperty("Action") GETModifyUserActionEnum action, @JsonProperty("UserId") String userId, @JsonProperty("Version") GETModifyUserVersionEnum version) {
+        this.action = action;
+        this.userId = userId;
+        this.version = version;
+  }
 }

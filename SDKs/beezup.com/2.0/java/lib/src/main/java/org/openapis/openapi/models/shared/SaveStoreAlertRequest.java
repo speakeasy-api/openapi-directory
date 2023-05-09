@@ -14,6 +14,7 @@ public class SaveStoreAlertRequest {
      */
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public SaveStoreAlertRequest withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -25,9 +26,13 @@ public class SaveStoreAlertRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public StoreAlertProperty[] properties;
+
     public SaveStoreAlertRequest withProperties(StoreAlertProperty[] properties) {
         this.properties = properties;
         return this;
     }
     
+    public SaveStoreAlertRequest(@JsonProperty("enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

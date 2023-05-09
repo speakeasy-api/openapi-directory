@@ -15,6 +15,7 @@ public class GetTrackingSnippet400ApplicationJSONErrorsParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("header")
     public java.util.Map<String, String> header;
+
     public GetTrackingSnippet400ApplicationJSONErrorsParameters withHeader(java.util.Map<String, String> header) {
         this.header = header;
         return this;
@@ -23,6 +24,7 @@ public class GetTrackingSnippet400ApplicationJSONErrorsParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public java.util.Map<String, String> path;
+
     public GetTrackingSnippet400ApplicationJSONErrorsParameters withPath(java.util.Map<String, String> path) {
         this.path = path;
         return this;
@@ -31,9 +33,11 @@ public class GetTrackingSnippet400ApplicationJSONErrorsParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public java.util.Map<String, String> query;
+
     public GetTrackingSnippet400ApplicationJSONErrorsParameters withQuery(java.util.Map<String, String> query) {
         this.query = query;
         return this;
     }
     
+    public GetTrackingSnippet400ApplicationJSONErrorsParameters(){}
 }

@@ -18,9 +18,11 @@ public class GoogleCloudIdentitytoolkitV2MfaTotpSignInRequestInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verificationCode")
     public String verificationCode;
+
     public GoogleCloudIdentitytoolkitV2MfaTotpSignInRequestInfo withVerificationCode(String verificationCode) {
         this.verificationCode = verificationCode;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitV2MfaTotpSignInRequestInfo(){}
 }

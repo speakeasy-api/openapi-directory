@@ -15,9 +15,11 @@ public class DeleteDBClusterSnapshotResult {
      */
     
     public DBClusterSnapshot dbClusterSnapshot;
+
     public DeleteDBClusterSnapshotResult withDBClusterSnapshot(DBClusterSnapshot dbClusterSnapshot) {
         this.dbClusterSnapshot = dbClusterSnapshot;
         return this;
     }
     
+    public DeleteDBClusterSnapshotResult(){}
 }

@@ -12,9 +12,13 @@ public class DistributionGroupsBulkDeleteAppsRequestBodyApps {
      */
     @JsonProperty("name")
     public String name;
+
     public DistributionGroupsBulkDeleteAppsRequestBodyApps withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DistributionGroupsBulkDeleteAppsRequestBodyApps(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.MarketingEventCompleteRequestParams marketingEventCompleteRequestParams;
+
     public PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteRequest withMarketingEventCompleteRequestParams(org.openapis.openapi.models.shared.MarketingEventCompleteRequestParams marketingEventCompleteRequestParams) {
         this.marketingEventCompleteRequestParams = marketingEventCompleteRequestParams;
         return this;
@@ -16,6 +18,7 @@ public class PostMarketingV3MarketingEventsEventsExternalEventIdCompleteComplete
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=externalAccountId")
     public String externalAccountId;
+
     public PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteRequest withExternalAccountId(String externalAccountId) {
         this.externalAccountId = externalAccountId;
         return this;
@@ -23,9 +26,15 @@ public class PostMarketingV3MarketingEventsEventsExternalEventIdCompleteComplete
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=externalEventId")
     public String externalEventId;
+
     public PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteRequest withExternalEventId(String externalEventId) {
         this.externalEventId = externalEventId;
         return this;
     }
     
+    public PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteRequest(@JsonProperty("MarketingEventCompleteRequestParams") org.openapis.openapi.models.shared.MarketingEventCompleteRequestParams marketingEventCompleteRequestParams, @JsonProperty("externalAccountId") String externalAccountId, @JsonProperty("externalEventId") String externalEventId) {
+        this.marketingEventCompleteRequestParams = marketingEventCompleteRequestParams;
+        this.externalAccountId = externalAccountId;
+        this.externalEventId = externalEventId;
+  }
 }

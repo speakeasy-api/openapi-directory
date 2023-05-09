@@ -18,9 +18,11 @@ public class PauseProposalRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public PauseProposalRequest withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public PauseProposalRequest(){}
 }

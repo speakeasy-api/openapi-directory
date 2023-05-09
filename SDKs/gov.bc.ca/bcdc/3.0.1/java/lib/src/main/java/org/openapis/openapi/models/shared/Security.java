@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class Security {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String githubAccessCode;
+
     public Security withGithubAccessCode(String githubAccessCode) {
         this.githubAccessCode = githubAccessCode;
         return this;
@@ -16,9 +17,11 @@ public class Security {
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=ckan_api_key")
     public String internalApiKey;
+
     public Security withInternalApiKey(String internalApiKey) {
         this.internalApiKey = internalApiKey;
         return this;
     }
     
+    public Security(){}
 }

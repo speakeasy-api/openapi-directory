@@ -61,11 +61,9 @@ public class NodeGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeGroupsAddNodesResponse res = new org.openapis.openapi.models.operations.ComputeNodeGroupsAddNodesResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeGroupsAddNodesResponse res = new org.openapis.openapi.models.operations.ComputeNodeGroupsAddNodesResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class NodeGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeGroupsAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeNodeGroupsAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeGroupsAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeNodeGroupsAggregatedListResponse(contentType, httpRes.statusCode()) {{
             nodeGroupAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class NodeGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeGroupsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeNodeGroupsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeGroupsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeNodeGroupsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class NodeGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeGroupsDeleteNodesResponse res = new org.openapis.openapi.models.operations.ComputeNodeGroupsDeleteNodesResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeGroupsDeleteNodesResponse res = new org.openapis.openapi.models.operations.ComputeNodeGroupsDeleteNodesResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class NodeGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeGroupsGetResponse res = new org.openapis.openapi.models.operations.ComputeNodeGroupsGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeGroupsGetResponse res = new org.openapis.openapi.models.operations.ComputeNodeGroupsGetResponse(contentType, httpRes.statusCode()) {{
             nodeGroup = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +283,9 @@ public class NodeGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeGroupsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeNodeGroupsGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeGroupsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeNodeGroupsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -341,11 +329,9 @@ public class NodeGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeGroupsInsertResponse res = new org.openapis.openapi.models.operations.ComputeNodeGroupsInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeGroupsInsertResponse res = new org.openapis.openapi.models.operations.ComputeNodeGroupsInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -387,11 +373,9 @@ public class NodeGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeGroupsListResponse res = new org.openapis.openapi.models.operations.ComputeNodeGroupsListResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeGroupsListResponse res = new org.openapis.openapi.models.operations.ComputeNodeGroupsListResponse(contentType, httpRes.statusCode()) {{
             nodeGroupList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -433,11 +417,9 @@ public class NodeGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeGroupsListNodesResponse res = new org.openapis.openapi.models.operations.ComputeNodeGroupsListNodesResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeGroupsListNodesResponse res = new org.openapis.openapi.models.operations.ComputeNodeGroupsListNodesResponse(contentType, httpRes.statusCode()) {{
             nodeGroupsListNodes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -481,11 +463,9 @@ public class NodeGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeGroupsPatchResponse res = new org.openapis.openapi.models.operations.ComputeNodeGroupsPatchResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeGroupsPatchResponse res = new org.openapis.openapi.models.operations.ComputeNodeGroupsPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -529,11 +509,9 @@ public class NodeGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeGroupsPerformMaintenanceResponse res = new org.openapis.openapi.models.operations.ComputeNodeGroupsPerformMaintenanceResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeGroupsPerformMaintenanceResponse res = new org.openapis.openapi.models.operations.ComputeNodeGroupsPerformMaintenanceResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -577,11 +555,9 @@ public class NodeGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeGroupsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeNodeGroupsSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeGroupsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeNodeGroupsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -625,11 +601,9 @@ public class NodeGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeGroupsSetNodeTemplateResponse res = new org.openapis.openapi.models.operations.ComputeNodeGroupsSetNodeTemplateResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeGroupsSetNodeTemplateResponse res = new org.openapis.openapi.models.operations.ComputeNodeGroupsSetNodeTemplateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -673,11 +647,9 @@ public class NodeGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeGroupsSimulateMaintenanceEventResponse res = new org.openapis.openapi.models.operations.ComputeNodeGroupsSimulateMaintenanceEventResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeGroupsSimulateMaintenanceEventResponse res = new org.openapis.openapi.models.operations.ComputeNodeGroupsSimulateMaintenanceEventResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -721,11 +693,9 @@ public class NodeGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNodeGroupsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeNodeGroupsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeNodeGroupsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeNodeGroupsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

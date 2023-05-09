@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkDeviceConnectionStatsRequest {
@@ -12,6 +13,7 @@ public class GetNetworkDeviceConnectionStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=apTag")
     public String apTag;
+
     public GetNetworkDeviceConnectionStatsRequest withApTag(String apTag) {
         this.apTag = apTag;
         return this;
@@ -22,6 +24,7 @@ public class GetNetworkDeviceConnectionStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=band")
     public GetNetworkDeviceConnectionStatsBandEnum band;
+
     public GetNetworkDeviceConnectionStatsRequest withBand(GetNetworkDeviceConnectionStatsBandEnum band) {
         this.band = band;
         return this;
@@ -29,6 +32,7 @@ public class GetNetworkDeviceConnectionStatsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
     public String networkId;
+
     public GetNetworkDeviceConnectionStatsRequest withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
@@ -36,6 +40,7 @@ public class GetNetworkDeviceConnectionStatsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
     public String serial;
+
     public GetNetworkDeviceConnectionStatsRequest withSerial(String serial) {
         this.serial = serial;
         return this;
@@ -46,6 +51,7 @@ public class GetNetworkDeviceConnectionStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ssid")
     public Long ssid;
+
     public GetNetworkDeviceConnectionStatsRequest withSsid(Long ssid) {
         this.ssid = ssid;
         return this;
@@ -56,6 +62,7 @@ public class GetNetworkDeviceConnectionStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t0")
     public String t0;
+
     public GetNetworkDeviceConnectionStatsRequest withT0(String t0) {
         this.t0 = t0;
         return this;
@@ -66,6 +73,7 @@ public class GetNetworkDeviceConnectionStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t1")
     public String t1;
+
     public GetNetworkDeviceConnectionStatsRequest withT1(String t1) {
         this.t1 = t1;
         return this;
@@ -76,6 +84,7 @@ public class GetNetworkDeviceConnectionStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timespan")
     public Float timespan;
+
     public GetNetworkDeviceConnectionStatsRequest withTimespan(Float timespan) {
         this.timespan = timespan;
         return this;
@@ -86,9 +95,14 @@ public class GetNetworkDeviceConnectionStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vlan")
     public Long vlan;
+
     public GetNetworkDeviceConnectionStatsRequest withVlan(Long vlan) {
         this.vlan = vlan;
         return this;
     }
     
+    public GetNetworkDeviceConnectionStatsRequest(@JsonProperty("networkId") String networkId, @JsonProperty("serial") String serial) {
+        this.networkId = networkId;
+        this.serial = serial;
+  }
 }

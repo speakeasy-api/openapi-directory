@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetMaintenanceWindowExecutionTaskInvocationRequest {
     @JsonProperty("InvocationId")
     public String invocationId;
+
     public GetMaintenanceWindowExecutionTaskInvocationRequest withInvocationId(String invocationId) {
         this.invocationId = invocationId;
         return this;
@@ -16,6 +17,7 @@ public class GetMaintenanceWindowExecutionTaskInvocationRequest {
     
     @JsonProperty("TaskId")
     public String taskId;
+
     public GetMaintenanceWindowExecutionTaskInvocationRequest withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
@@ -23,9 +25,15 @@ public class GetMaintenanceWindowExecutionTaskInvocationRequest {
     
     @JsonProperty("WindowExecutionId")
     public String windowExecutionId;
+
     public GetMaintenanceWindowExecutionTaskInvocationRequest withWindowExecutionId(String windowExecutionId) {
         this.windowExecutionId = windowExecutionId;
         return this;
     }
     
+    public GetMaintenanceWindowExecutionTaskInvocationRequest(@JsonProperty("InvocationId") String invocationId, @JsonProperty("TaskId") String taskId, @JsonProperty("WindowExecutionId") String windowExecutionId) {
+        this.invocationId = invocationId;
+        this.taskId = taskId;
+        this.windowExecutionId = windowExecutionId;
+  }
 }

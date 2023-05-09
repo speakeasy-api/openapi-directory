@@ -18,6 +18,7 @@ public class RecentJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public RecentJob withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class RecentJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public RecentJob withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public RecentJob(){}
 }

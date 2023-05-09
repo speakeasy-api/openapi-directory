@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1DocumentPageDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Float height;
+
     public GoogleCloudDocumentaiV1DocumentPageDimension withHeight(Float height) {
         this.height = height;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1DocumentPageDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public GoogleCloudDocumentaiV1DocumentPageDimension withUnit(String unit) {
         this.unit = unit;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDocumentaiV1DocumentPageDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Float width;
+
     public GoogleCloudDocumentaiV1DocumentPageDimension withWidth(Float width) {
         this.width = width;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1DocumentPageDimension(){}
 }

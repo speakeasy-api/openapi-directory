@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateTableInput {
     @JsonProperty("AttributeDefinitions")
     public AttributeDefinition[] attributeDefinitions;
+
     public CreateTableInput withAttributeDefinitions(AttributeDefinition[] attributeDefinitions) {
         this.attributeDefinitions = attributeDefinitions;
         return this;
@@ -22,6 +23,7 @@ public class CreateTableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillingMode")
     public BillingModeEnum billingMode;
+
     public CreateTableInput withBillingMode(BillingModeEnum billingMode) {
         this.billingMode = billingMode;
         return this;
@@ -30,6 +32,7 @@ public class CreateTableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeletionProtectionEnabled")
     public Boolean deletionProtectionEnabled;
+
     public CreateTableInput withDeletionProtectionEnabled(Boolean deletionProtectionEnabled) {
         this.deletionProtectionEnabled = deletionProtectionEnabled;
         return this;
@@ -38,6 +41,7 @@ public class CreateTableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalSecondaryIndexes")
     public GlobalSecondaryIndex[] globalSecondaryIndexes;
+
     public CreateTableInput withGlobalSecondaryIndexes(GlobalSecondaryIndex[] globalSecondaryIndexes) {
         this.globalSecondaryIndexes = globalSecondaryIndexes;
         return this;
@@ -45,6 +49,7 @@ public class CreateTableInput {
     
     @JsonProperty("KeySchema")
     public KeySchemaElement[] keySchema;
+
     public CreateTableInput withKeySchema(KeySchemaElement[] keySchema) {
         this.keySchema = keySchema;
         return this;
@@ -53,6 +58,7 @@ public class CreateTableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalSecondaryIndexes")
     public LocalSecondaryIndex[] localSecondaryIndexes;
+
     public CreateTableInput withLocalSecondaryIndexes(LocalSecondaryIndex[] localSecondaryIndexes) {
         this.localSecondaryIndexes = localSecondaryIndexes;
         return this;
@@ -61,6 +67,7 @@ public class CreateTableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedThroughput")
     public ProvisionedThroughput provisionedThroughput;
+
     public CreateTableInput withProvisionedThroughput(ProvisionedThroughput provisionedThroughput) {
         this.provisionedThroughput = provisionedThroughput;
         return this;
@@ -69,6 +76,7 @@ public class CreateTableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SSESpecification")
     public SSESpecification sseSpecification;
+
     public CreateTableInput withSSESpecification(SSESpecification sseSpecification) {
         this.sseSpecification = sseSpecification;
         return this;
@@ -77,6 +85,7 @@ public class CreateTableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamSpecification")
     public StreamSpecification streamSpecification;
+
     public CreateTableInput withStreamSpecification(StreamSpecification streamSpecification) {
         this.streamSpecification = streamSpecification;
         return this;
@@ -85,6 +94,7 @@ public class CreateTableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableClass")
     public TableClassEnum tableClass;
+
     public CreateTableInput withTableClass(TableClassEnum tableClass) {
         this.tableClass = tableClass;
         return this;
@@ -92,6 +102,7 @@ public class CreateTableInput {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public CreateTableInput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -100,9 +111,15 @@ public class CreateTableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateTableInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateTableInput(@JsonProperty("AttributeDefinitions") AttributeDefinition[] attributeDefinitions, @JsonProperty("KeySchema") KeySchemaElement[] keySchema, @JsonProperty("TableName") String tableName) {
+        this.attributeDefinitions = attributeDefinitions;
+        this.keySchema = keySchema;
+        this.tableName = tableName;
+  }
 }

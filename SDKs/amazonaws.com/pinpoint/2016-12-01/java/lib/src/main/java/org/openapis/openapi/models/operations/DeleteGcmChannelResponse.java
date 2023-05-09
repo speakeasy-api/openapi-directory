@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteGcmChannelResponse {
@@ -12,6 +13,7 @@ public class DeleteGcmChannelResponse {
      */
     
     public Object badRequestException;
+
     public DeleteGcmChannelResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteGcmChannelResponse {
     
     
     public String contentType;
+
     public DeleteGcmChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteGcmChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteGcmChannelResponse deleteGcmChannelResponse;
+
     public DeleteGcmChannelResponse withDeleteGcmChannelResponse(org.openapis.openapi.models.shared.DeleteGcmChannelResponse deleteGcmChannelResponse) {
         this.deleteGcmChannelResponse = deleteGcmChannelResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteGcmChannelResponse {
      */
     
     public Object forbiddenException;
+
     public DeleteGcmChannelResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteGcmChannelResponse {
      */
     
     public Object internalServerErrorException;
+
     public DeleteGcmChannelResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteGcmChannelResponse {
      */
     
     public Object methodNotAllowedException;
+
     public DeleteGcmChannelResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteGcmChannelResponse {
      */
     
     public Object notFoundException;
+
     public DeleteGcmChannelResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteGcmChannelResponse {
      */
     
     public Object payloadTooLargeException;
+
     public DeleteGcmChannelResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class DeleteGcmChannelResponse {
     
     
     public Integer statusCode;
+
     public DeleteGcmChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DeleteGcmChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteGcmChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DeleteGcmChannelResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteGcmChannelResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteGcmChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

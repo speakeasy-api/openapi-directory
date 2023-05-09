@@ -15,6 +15,7 @@ public class CalculateRouteRequestBodyCarModeOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvoidFerries")
     public Boolean avoidFerries;
+
     public CalculateRouteRequestBodyCarModeOptions withAvoidFerries(Boolean avoidFerries) {
         this.avoidFerries = avoidFerries;
         return this;
@@ -23,9 +24,11 @@ public class CalculateRouteRequestBodyCarModeOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvoidTolls")
     public Boolean avoidTolls;
+
     public CalculateRouteRequestBodyCarModeOptions withAvoidTolls(Boolean avoidTolls) {
         this.avoidTolls = avoidTolls;
         return this;
     }
     
+    public CalculateRouteRequestBodyCarModeOptions(){}
 }

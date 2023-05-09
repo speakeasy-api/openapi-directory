@@ -20,6 +20,7 @@ public class ResourceGroupViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingNotification")
     public Integer bookingNotification;
+
     public ResourceGroupViewModel withBookingNotification(Integer bookingNotification) {
         this.bookingNotification = bookingNotification;
         return this;
@@ -28,6 +29,7 @@ public class ResourceGroupViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletedStatus")
     public Boolean deletedStatus;
+
     public ResourceGroupViewModel withDeletedStatus(Boolean deletedStatus) {
         this.deletedStatus = deletedStatus;
         return this;
@@ -38,6 +40,7 @@ public class ResourceGroupViewModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("deletedTime")
     public OffsetDateTime deletedTime;
+
     public ResourceGroupViewModel withDeletedTime(OffsetDateTime deletedTime) {
         this.deletedTime = deletedTime;
         return this;
@@ -46,6 +49,7 @@ public class ResourceGroupViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ResourceGroupViewModel withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +58,7 @@ public class ResourceGroupViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public ResourceGroupViewModel withEmail(String email) {
         this.email = email;
         return this;
@@ -62,6 +67,7 @@ public class ResourceGroupViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ResourceGroupViewModel withId(String id) {
         this.id = id;
         return this;
@@ -70,6 +76,7 @@ public class ResourceGroupViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public ResourceGroupViewModel withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -78,6 +85,7 @@ public class ResourceGroupViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ResourceGroupViewModel withName(String name) {
         this.name = name;
         return this;
@@ -86,9 +94,11 @@ public class ResourceGroupViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public ResourceGroupViewModel withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public ResourceGroupViewModel(){}
 }

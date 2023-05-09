@@ -15,6 +15,7 @@ public class EwcerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public EwcerRequestBodyCertificateParameters certificateParameters;
+
     public EwcerRequestBody withCertificateParameters(EwcerRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class EwcerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public EwcerRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class EwcerRequestBody {
      */
     @JsonProperty("format")
     public EwcerRequestBodyFormatEnum format;
+
     public EwcerRequestBody withFormat(EwcerRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class EwcerRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public EwcerRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public EwcerRequestBody(@JsonProperty("format") EwcerRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

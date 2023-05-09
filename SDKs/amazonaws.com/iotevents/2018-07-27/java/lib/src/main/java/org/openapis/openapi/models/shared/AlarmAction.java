@@ -18,6 +18,7 @@ public class AlarmAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dynamoDB")
     public DynamoDBAction dynamoDB;
+
     public AlarmAction withDynamoDB(DynamoDBAction dynamoDB) {
         this.dynamoDB = dynamoDB;
         return this;
@@ -29,6 +30,7 @@ public class AlarmAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dynamoDBv2")
     public DynamoDBv2Action dynamoDBv2;
+
     public AlarmAction withDynamoDBv2(DynamoDBv2Action dynamoDBv2) {
         this.dynamoDBv2 = dynamoDBv2;
         return this;
@@ -40,6 +42,7 @@ public class AlarmAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firehose")
     public FirehoseAction firehose;
+
     public AlarmAction withFirehose(FirehoseAction firehose) {
         this.firehose = firehose;
         return this;
@@ -51,6 +54,7 @@ public class AlarmAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iotEvents")
     public IotEventsAction iotEvents;
+
     public AlarmAction withIotEvents(IotEventsAction iotEvents) {
         this.iotEvents = iotEvents;
         return this;
@@ -62,6 +66,7 @@ public class AlarmAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iotSiteWise")
     public IotSiteWiseAction iotSiteWise;
+
     public AlarmAction withIotSiteWise(IotSiteWiseAction iotSiteWise) {
         this.iotSiteWise = iotSiteWise;
         return this;
@@ -73,6 +78,7 @@ public class AlarmAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iotTopicPublish")
     public IotTopicPublishAction iotTopicPublish;
+
     public AlarmAction withIotTopicPublish(IotTopicPublishAction iotTopicPublish) {
         this.iotTopicPublish = iotTopicPublish;
         return this;
@@ -84,6 +90,7 @@ public class AlarmAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambda")
     public LambdaAction lambda;
+
     public AlarmAction withLambda(LambdaAction lambda) {
         this.lambda = lambda;
         return this;
@@ -95,6 +102,7 @@ public class AlarmAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sns")
     public SNSTopicPublishAction sns;
+
     public AlarmAction withSns(SNSTopicPublishAction sns) {
         this.sns = sns;
         return this;
@@ -106,9 +114,11 @@ public class AlarmAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sqs")
     public SqsAction sqs;
+
     public AlarmAction withSqs(SqsAction sqs) {
         this.sqs = sqs;
         return this;
     }
     
+    public AlarmAction(){}
 }

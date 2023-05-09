@@ -15,9 +15,11 @@ public class SnowconeDeviceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WirelessConnection")
     public WirelessConnection wirelessConnection;
+
     public SnowconeDeviceConfiguration withWirelessConnection(WirelessConnection wirelessConnection) {
         this.wirelessConnection = wirelessConnection;
         return this;
     }
     
+    public SnowconeDeviceConfiguration(){}
 }

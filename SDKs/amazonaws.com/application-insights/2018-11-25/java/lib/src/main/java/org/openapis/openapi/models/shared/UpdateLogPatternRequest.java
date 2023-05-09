@@ -12,6 +12,7 @@ public class UpdateLogPatternRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Pattern")
     public String pattern;
+
     public UpdateLogPatternRequest withPattern(String pattern) {
         this.pattern = pattern;
         return this;
@@ -19,6 +20,7 @@ public class UpdateLogPatternRequest {
     
     @JsonProperty("PatternName")
     public String patternName;
+
     public UpdateLogPatternRequest withPatternName(String patternName) {
         this.patternName = patternName;
         return this;
@@ -26,6 +28,7 @@ public class UpdateLogPatternRequest {
     
     @JsonProperty("PatternSetName")
     public String patternSetName;
+
     public UpdateLogPatternRequest withPatternSetName(String patternSetName) {
         this.patternSetName = patternSetName;
         return this;
@@ -34,6 +37,7 @@ public class UpdateLogPatternRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rank")
     public Long rank;
+
     public UpdateLogPatternRequest withRank(Long rank) {
         this.rank = rank;
         return this;
@@ -41,9 +45,15 @@ public class UpdateLogPatternRequest {
     
     @JsonProperty("ResourceGroupName")
     public String resourceGroupName;
+
     public UpdateLogPatternRequest withResourceGroupName(String resourceGroupName) {
         this.resourceGroupName = resourceGroupName;
         return this;
     }
     
+    public UpdateLogPatternRequest(@JsonProperty("PatternName") String patternName, @JsonProperty("PatternSetName") String patternSetName, @JsonProperty("ResourceGroupName") String resourceGroupName) {
+        this.patternName = patternName;
+        this.patternSetName = patternSetName;
+        this.resourceGroupName = resourceGroupName;
+  }
 }

@@ -15,6 +15,7 @@ public class ListStepsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public ListStepsOutput withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,9 +24,11 @@ public class ListStepsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Steps")
     public StepSummary[] steps;
+
     public ListStepsOutput withSteps(StepSummary[] steps) {
         this.steps = steps;
         return this;
     }
     
+    public ListStepsOutput(){}
 }

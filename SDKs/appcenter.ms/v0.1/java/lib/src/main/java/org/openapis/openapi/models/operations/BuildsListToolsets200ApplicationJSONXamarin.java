@@ -18,6 +18,7 @@ public class BuildsListToolsets200ApplicationJSONXamarin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current")
     public Boolean current;
+
     public BuildsListToolsets200ApplicationJSONXamarin withCurrent(Boolean current) {
         this.current = current;
         return this;
@@ -29,6 +30,7 @@ public class BuildsListToolsets200ApplicationJSONXamarin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monoVersion")
     public String monoVersion;
+
     public BuildsListToolsets200ApplicationJSONXamarin withMonoVersion(String monoVersion) {
         this.monoVersion = monoVersion;
         return this;
@@ -40,6 +42,7 @@ public class BuildsListToolsets200ApplicationJSONXamarin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sdkBundle")
     public String sdkBundle;
+
     public BuildsListToolsets200ApplicationJSONXamarin withSDKBundle(String sdkBundle) {
         this.sdkBundle = sdkBundle;
         return this;
@@ -51,6 +54,7 @@ public class BuildsListToolsets200ApplicationJSONXamarin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stable")
     public Boolean stable;
+
     public BuildsListToolsets200ApplicationJSONXamarin withStable(Boolean stable) {
         this.stable = stable;
         return this;
@@ -62,9 +66,11 @@ public class BuildsListToolsets200ApplicationJSONXamarin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xcodeVersions")
     public String[] xcodeVersions;
+
     public BuildsListToolsets200ApplicationJSONXamarin withXcodeVersions(String[] xcodeVersions) {
         this.xcodeVersions = xcodeVersions;
         return this;
     }
     
+    public BuildsListToolsets200ApplicationJSONXamarin(){}
 }

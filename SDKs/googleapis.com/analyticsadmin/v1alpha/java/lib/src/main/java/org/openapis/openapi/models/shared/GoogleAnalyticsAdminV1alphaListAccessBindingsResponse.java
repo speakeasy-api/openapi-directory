@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaListAccessBindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessBindings")
     public GoogleAnalyticsAdminV1alphaAccessBinding[] accessBindings;
+
     public GoogleAnalyticsAdminV1alphaListAccessBindingsResponse withAccessBindings(GoogleAnalyticsAdminV1alphaAccessBinding[] accessBindings) {
         this.accessBindings = accessBindings;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaListAccessBindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleAnalyticsAdminV1alphaListAccessBindingsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaListAccessBindingsResponse(){}
 }

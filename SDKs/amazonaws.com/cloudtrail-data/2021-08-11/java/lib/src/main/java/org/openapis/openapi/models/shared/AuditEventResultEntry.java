@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AuditEventResultEntry {
     @JsonProperty("eventID")
     public String eventID;
+
     public AuditEventResultEntry withEventID(String eventID) {
         this.eventID = eventID;
         return this;
@@ -19,9 +20,14 @@ public class AuditEventResultEntry {
     
     @JsonProperty("id")
     public String id;
+
     public AuditEventResultEntry withId(String id) {
         this.id = id;
         return this;
     }
     
+    public AuditEventResultEntry(@JsonProperty("eventID") String eventID, @JsonProperty("id") String id) {
+        this.eventID = eventID;
+        this.id = id;
+  }
 }

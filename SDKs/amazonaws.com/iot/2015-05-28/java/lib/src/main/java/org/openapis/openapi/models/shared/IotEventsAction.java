@@ -15,6 +15,7 @@ public class IotEventsAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchMode")
     public Boolean batchMode;
+
     public IotEventsAction withBatchMode(Boolean batchMode) {
         this.batchMode = batchMode;
         return this;
@@ -22,6 +23,7 @@ public class IotEventsAction {
     
     @JsonProperty("inputName")
     public String inputName;
+
     public IotEventsAction withInputName(String inputName) {
         this.inputName = inputName;
         return this;
@@ -30,6 +32,7 @@ public class IotEventsAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageId")
     public String messageId;
+
     public IotEventsAction withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
@@ -37,9 +40,14 @@ public class IotEventsAction {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public IotEventsAction withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public IotEventsAction(@JsonProperty("inputName") String inputName, @JsonProperty("roleArn") String roleArn) {
+        this.inputName = inputName;
+        this.roleArn = roleArn;
+  }
 }

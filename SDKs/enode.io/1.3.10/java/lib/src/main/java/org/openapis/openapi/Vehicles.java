@@ -54,11 +54,9 @@ public class Vehicles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVehicleChargestateResponse res = new org.openapis.openapi.models.operations.GetVehicleChargestateResponse() {{
+        org.openapis.openapi.models.operations.GetVehicleChargestateResponse res = new org.openapis.openapi.models.operations.GetVehicleChargestateResponse(contentType, httpRes.statusCode()) {{
             getVehicleChargestate200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,11 +98,9 @@ public class Vehicles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVehiclesResponse res = new org.openapis.openapi.models.operations.GetVehiclesResponse() {{
+        org.openapis.openapi.models.operations.GetVehiclesResponse res = new org.openapis.openapi.models.operations.GetVehiclesResponse(contentType, httpRes.statusCode()) {{
             onevehicles1Percent7BvehicleIdPercent7DGetResponses200ContentApplication1jsonSchemas = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -146,11 +142,9 @@ public class Vehicles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVehiclesVehicleidResponse res = new org.openapis.openapi.models.operations.GetVehiclesVehicleidResponse() {{
+        org.openapis.openapi.models.operations.GetVehiclesVehicleidResponse res = new org.openapis.openapi.models.operations.GetVehiclesVehicleidResponse(contentType, httpRes.statusCode()) {{
             getVehiclesVehicleid200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -186,11 +180,9 @@ public class Vehicles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVehiclesVehicleidInformationResponse res = new org.openapis.openapi.models.operations.GetVehiclesVehicleidInformationResponse() {{
+        org.openapis.openapi.models.operations.GetVehiclesVehicleidInformationResponse res = new org.openapis.openapi.models.operations.GetVehiclesVehicleidInformationResponse(contentType, httpRes.statusCode()) {{
             getVehiclesVehicleidInformation200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -226,11 +218,9 @@ public class Vehicles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVehiclesVehicleidLocationResponse res = new org.openapis.openapi.models.operations.GetVehiclesVehicleidLocationResponse() {{
+        org.openapis.openapi.models.operations.GetVehiclesVehicleidLocationResponse res = new org.openapis.openapi.models.operations.GetVehiclesVehicleidLocationResponse(contentType, httpRes.statusCode()) {{
             getVehiclesVehicleidLocation200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -266,11 +256,9 @@ public class Vehicles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVehiclesVehicleidOdometerResponse res = new org.openapis.openapi.models.operations.GetVehiclesVehicleidOdometerResponse() {{
+        org.openapis.openapi.models.operations.GetVehiclesVehicleidOdometerResponse res = new org.openapis.openapi.models.operations.GetVehiclesVehicleidOdometerResponse(contentType, httpRes.statusCode()) {{
             getVehiclesVehicleidOdometer200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -306,11 +294,9 @@ public class Vehicles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVehiclesVehicleidSmartchargingpolicyResponse res = new org.openapis.openapi.models.operations.GetVehiclesVehicleidSmartchargingpolicyResponse() {{
+        org.openapis.openapi.models.operations.GetVehiclesVehicleidSmartchargingpolicyResponse res = new org.openapis.openapi.models.operations.GetVehiclesVehicleidSmartchargingpolicyResponse(contentType, httpRes.statusCode()) {{
             onevehicles1Percent7BvehicleIdPercent7D1smartChargingPolicyPutRequestBodyContentApplication1jsonSchema = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -354,10 +340,8 @@ public class Vehicles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostVehiclesVehicleidChargingResponse res = new org.openapis.openapi.models.operations.PostVehiclesVehicleidChargingResponse() {{
+        org.openapis.openapi.models.operations.PostVehiclesVehicleidChargingResponse res = new org.openapis.openapi.models.operations.PostVehiclesVehicleidChargingResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -396,11 +380,9 @@ public class Vehicles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostVehiclesVehicleidWatchResponse res = new org.openapis.openapi.models.operations.PostVehiclesVehicleidWatchResponse() {{
+        org.openapis.openapi.models.operations.PostVehiclesVehicleidWatchResponse res = new org.openapis.openapi.models.operations.PostVehiclesVehicleidWatchResponse(contentType, httpRes.statusCode()) {{
             onevehicles1Percent7BvehicleIdPercent7D1watchPostRequestBodyContentApplication1jsonSchema = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -439,11 +421,9 @@ public class Vehicles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutVehiclesVehicleidSmartchargingpolicyResponse res = new org.openapis.openapi.models.operations.PutVehiclesVehicleidSmartchargingpolicyResponse() {{
+        org.openapis.openapi.models.operations.PutVehiclesVehicleidSmartchargingpolicyResponse res = new org.openapis.openapi.models.operations.PutVehiclesVehicleidSmartchargingpolicyResponse(contentType, httpRes.statusCode()) {{
             onevehicles1Percent7BvehicleIdPercent7D1smartChargingPolicyPutRequestBodyContentApplication1jsonSchema = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

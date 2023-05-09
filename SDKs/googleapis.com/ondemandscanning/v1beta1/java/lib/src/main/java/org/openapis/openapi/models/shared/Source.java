@@ -18,6 +18,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalContexts")
     public SourceContext[] additionalContexts;
+
     public Source withAdditionalContexts(SourceContext[] additionalContexts) {
         this.additionalContexts = additionalContexts;
         return this;
@@ -29,6 +30,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artifactStorageSourceUri")
     public String artifactStorageSourceUri;
+
     public Source withArtifactStorageSourceUri(String artifactStorageSourceUri) {
         this.artifactStorageSourceUri = artifactStorageSourceUri;
         return this;
@@ -40,6 +42,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("context")
     public SourceContext context;
+
     public Source withContext(SourceContext context) {
         this.context = context;
         return this;
@@ -51,9 +54,11 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileHashes")
     public java.util.Map<String, FileHashes> fileHashes;
+
     public Source withFileHashes(java.util.Map<String, FileHashes> fileHashes) {
         this.fileHashes = fileHashes;
         return this;
     }
     
+    public Source(){}
 }

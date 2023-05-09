@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSetupV1LocationsIdServicesRequest {
@@ -12,6 +13,7 @@ public class PostSetupV1LocationsIdServicesRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public String[] requestBody;
+
     public PostSetupV1LocationsIdServicesRequest withRequestBody(String[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,13 @@ public class PostSetupV1LocationsIdServicesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PostSetupV1LocationsIdServicesRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PostSetupV1LocationsIdServicesRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

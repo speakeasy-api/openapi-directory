@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeTasksResponse {
@@ -12,6 +13,7 @@ public class DescribeTasksResponse {
      */
     
     public Object clientException;
+
     public DescribeTasksResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -22,6 +24,7 @@ public class DescribeTasksResponse {
      */
     
     public Object clusterNotFoundException;
+
     public DescribeTasksResponse withClusterNotFoundException(Object clusterNotFoundException) {
         this.clusterNotFoundException = clusterNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class DescribeTasksResponse {
     
     
     public String contentType;
+
     public DescribeTasksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DescribeTasksResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeTasksResponse describeTasksResponse;
+
     public DescribeTasksResponse withDescribeTasksResponse(org.openapis.openapi.models.shared.DescribeTasksResponse describeTasksResponse) {
         this.describeTasksResponse = describeTasksResponse;
         return this;
@@ -49,6 +54,7 @@ public class DescribeTasksResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeTasksResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeTasksResponse {
      */
     
     public Object serverException;
+
     public DescribeTasksResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeTasksResponse {
     
     
     public Integer statusCode;
+
     public DescribeTasksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeTasksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeTasksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeTasksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

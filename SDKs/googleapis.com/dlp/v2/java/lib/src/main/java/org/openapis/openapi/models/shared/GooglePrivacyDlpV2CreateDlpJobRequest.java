@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2CreateDlpJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inspectJob")
     public GooglePrivacyDlpV2InspectJobConfig inspectJob;
+
     public GooglePrivacyDlpV2CreateDlpJobRequest withInspectJob(GooglePrivacyDlpV2InspectJobConfig inspectJob) {
         this.inspectJob = inspectJob;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2CreateDlpJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobId")
     public String jobId;
+
     public GooglePrivacyDlpV2CreateDlpJobRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -40,6 +42,7 @@ public class GooglePrivacyDlpV2CreateDlpJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public GooglePrivacyDlpV2CreateDlpJobRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -51,9 +54,11 @@ public class GooglePrivacyDlpV2CreateDlpJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("riskJob")
     public GooglePrivacyDlpV2RiskAnalysisJobConfig riskJob;
+
     public GooglePrivacyDlpV2CreateDlpJobRequest withRiskJob(GooglePrivacyDlpV2RiskAnalysisJobConfig riskJob) {
         this.riskJob = riskJob;
         return this;
     }
     
+    public GooglePrivacyDlpV2CreateDlpJobRequest(){}
 }

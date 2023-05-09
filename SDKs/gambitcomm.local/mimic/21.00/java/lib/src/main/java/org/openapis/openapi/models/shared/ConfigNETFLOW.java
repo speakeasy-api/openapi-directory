@@ -15,6 +15,7 @@ public class ConfigNETFLOW {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundleflowsets")
     public Integer bundleflowsets;
+
     public ConfigNETFLOW withBundleflowsets(Integer bundleflowsets) {
         this.bundleflowsets = bundleflowsets;
         return this;
@@ -23,6 +24,7 @@ public class ConfigNETFLOW {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collector")
     public String collector;
+
     public ConfigNETFLOW withCollector(String collector) {
         this.collector = collector;
         return this;
@@ -31,6 +33,7 @@ public class ConfigNETFLOW {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectorport")
     public Integer collectorport;
+
     public ConfigNETFLOW withCollectorport(Integer collectorport) {
         this.collectorport = collectorport;
         return this;
@@ -39,9 +42,11 @@ public class ConfigNETFLOW {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filename")
     public String filename;
+
     public ConfigNETFLOW withFilename(String filename) {
         this.filename = filename;
         return this;
     }
     
+    public ConfigNETFLOW(){}
 }

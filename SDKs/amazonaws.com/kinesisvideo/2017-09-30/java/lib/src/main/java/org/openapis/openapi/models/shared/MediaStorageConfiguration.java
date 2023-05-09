@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MediaStorageConfiguration {
     @JsonProperty("Status")
     public MediaStorageConfigurationStatusEnum status;
+
     public MediaStorageConfiguration withStatus(MediaStorageConfigurationStatusEnum status) {
         this.status = status;
         return this;
@@ -22,9 +23,13 @@ public class MediaStorageConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public MediaStorageConfiguration withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
     }
     
+    public MediaStorageConfiguration(@JsonProperty("Status") MediaStorageConfigurationStatusEnum status) {
+        this.status = status;
+  }
 }

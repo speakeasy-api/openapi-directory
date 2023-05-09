@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteRecommendationTemplateResponse {
     @JsonProperty("recommendationTemplateArn")
     public String recommendationTemplateArn;
+
     public DeleteRecommendationTemplateResponse withRecommendationTemplateArn(String recommendationTemplateArn) {
         this.recommendationTemplateArn = recommendationTemplateArn;
         return this;
@@ -19,9 +20,14 @@ public class DeleteRecommendationTemplateResponse {
     
     @JsonProperty("status")
     public RecommendationTemplateStatusEnum status;
+
     public DeleteRecommendationTemplateResponse withStatus(RecommendationTemplateStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DeleteRecommendationTemplateResponse(@JsonProperty("recommendationTemplateArn") String recommendationTemplateArn, @JsonProperty("status") RecommendationTemplateStatusEnum status) {
+        this.recommendationTemplateArn = recommendationTemplateArn;
+        this.status = status;
+  }
 }

@@ -18,6 +18,7 @@ public class PublicDelegatedPrefixAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public PublicDelegatedPrefixAggregatedListWarningCodeEnum code;
+
     public PublicDelegatedPrefixAggregatedListWarning withCode(PublicDelegatedPrefixAggregatedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class PublicDelegatedPrefixAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public PublicDelegatedPrefixAggregatedListWarningData[] data;
+
     public PublicDelegatedPrefixAggregatedListWarning withData(PublicDelegatedPrefixAggregatedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class PublicDelegatedPrefixAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public PublicDelegatedPrefixAggregatedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PublicDelegatedPrefixAggregatedListWarning(){}
 }

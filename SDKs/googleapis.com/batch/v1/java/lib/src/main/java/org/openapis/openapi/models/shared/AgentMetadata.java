@@ -18,6 +18,7 @@ public class AgentMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTime")
     public String creationTime;
+
     public AgentMetadata withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -29,6 +30,7 @@ public class AgentMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creator")
     public String creator;
+
     public AgentMetadata withCreator(String creator) {
         this.creator = creator;
         return this;
@@ -40,6 +42,7 @@ public class AgentMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageVersion")
     public String imageVersion;
+
     public AgentMetadata withImageVersion(String imageVersion) {
         this.imageVersion = imageVersion;
         return this;
@@ -51,6 +54,7 @@ public class AgentMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public String instance;
+
     public AgentMetadata withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -62,6 +66,7 @@ public class AgentMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceId")
     public String instanceId;
+
     public AgentMetadata withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -73,6 +78,7 @@ public class AgentMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instancePreemptionNoticeReceived")
     public Boolean instancePreemptionNoticeReceived;
+
     public AgentMetadata withInstancePreemptionNoticeReceived(Boolean instancePreemptionNoticeReceived) {
         this.instancePreemptionNoticeReceived = instancePreemptionNoticeReceived;
         return this;
@@ -84,6 +90,7 @@ public class AgentMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osRelease")
     public java.util.Map<String, String> osRelease;
+
     public AgentMetadata withOsRelease(java.util.Map<String, String> osRelease) {
         this.osRelease = osRelease;
         return this;
@@ -95,6 +102,7 @@ public class AgentMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public AgentMetadata withVersion(String version) {
         this.version = version;
         return this;
@@ -106,9 +114,11 @@ public class AgentMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public AgentMetadata withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public AgentMetadata(){}
 }

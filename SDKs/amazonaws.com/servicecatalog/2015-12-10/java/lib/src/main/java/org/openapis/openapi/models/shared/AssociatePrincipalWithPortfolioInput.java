@@ -12,6 +12,7 @@ public class AssociatePrincipalWithPortfolioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public AssociatePrincipalWithPortfolioInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,6 +20,7 @@ public class AssociatePrincipalWithPortfolioInput {
     
     @JsonProperty("PortfolioId")
     public String portfolioId;
+
     public AssociatePrincipalWithPortfolioInput withPortfolioId(String portfolioId) {
         this.portfolioId = portfolioId;
         return this;
@@ -26,6 +28,7 @@ public class AssociatePrincipalWithPortfolioInput {
     
     @JsonProperty("PrincipalARN")
     public String principalARN;
+
     public AssociatePrincipalWithPortfolioInput withPrincipalARN(String principalARN) {
         this.principalARN = principalARN;
         return this;
@@ -33,9 +36,15 @@ public class AssociatePrincipalWithPortfolioInput {
     
     @JsonProperty("PrincipalType")
     public PrincipalTypeEnum principalType;
+
     public AssociatePrincipalWithPortfolioInput withPrincipalType(PrincipalTypeEnum principalType) {
         this.principalType = principalType;
         return this;
     }
     
+    public AssociatePrincipalWithPortfolioInput(@JsonProperty("PortfolioId") String portfolioId, @JsonProperty("PrincipalARN") String principalARN, @JsonProperty("PrincipalType") PrincipalTypeEnum principalType) {
+        this.portfolioId = portfolioId;
+        this.principalARN = principalARN;
+        this.principalType = principalType;
+  }
 }

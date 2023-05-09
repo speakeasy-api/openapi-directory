@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OauthAuthorizationsGetOrCreateAuthorizationForAppRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public OauthAuthorizationsGetOrCreateAuthorizationForAppRequestBody requestBody;
+
     public OauthAuthorizationsGetOrCreateAuthorizationForAppRequest withRequestBody(OauthAuthorizationsGetOrCreateAuthorizationForAppRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class OauthAuthorizationsGetOrCreateAuthorizationForAppRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=client_id")
     public String clientId;
+
     public OauthAuthorizationsGetOrCreateAuthorizationForAppRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
     }
     
+    public OauthAuthorizationsGetOrCreateAuthorizationForAppRequest(@JsonProperty("RequestBody") OauthAuthorizationsGetOrCreateAuthorizationForAppRequestBody requestBody, @JsonProperty("client_id") String clientId) {
+        this.requestBody = requestBody;
+        this.clientId = clientId;
+  }
 }

@@ -18,6 +18,7 @@ public class DistributionGroupsGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public DistributionGroupsGet200ApplicationJSON withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -28,6 +29,7 @@ public class DistributionGroupsGet200ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public DistributionGroupsGet200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -38,6 +40,7 @@ public class DistributionGroupsGet200ApplicationJSON {
      */
     @JsonProperty("is_public")
     public Boolean isPublic;
+
     public DistributionGroupsGet200ApplicationJSON withIsPublic(Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
@@ -48,6 +51,7 @@ public class DistributionGroupsGet200ApplicationJSON {
      */
     @JsonProperty("name")
     public String name;
+
     public DistributionGroupsGet200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -58,9 +62,16 @@ public class DistributionGroupsGet200ApplicationJSON {
      */
     @JsonProperty("origin")
     public DistributionGroupsGet200ApplicationJSONOriginEnum origin;
+
     public DistributionGroupsGet200ApplicationJSON withOrigin(DistributionGroupsGet200ApplicationJSONOriginEnum origin) {
         this.origin = origin;
         return this;
     }
     
+    public DistributionGroupsGet200ApplicationJSON(@JsonProperty("id") String id, @JsonProperty("is_public") Boolean isPublic, @JsonProperty("name") String name, @JsonProperty("origin") DistributionGroupsGet200ApplicationJSONOriginEnum origin) {
+        this.id = id;
+        this.isPublic = isPublic;
+        this.name = name;
+        this.origin = origin;
+  }
 }

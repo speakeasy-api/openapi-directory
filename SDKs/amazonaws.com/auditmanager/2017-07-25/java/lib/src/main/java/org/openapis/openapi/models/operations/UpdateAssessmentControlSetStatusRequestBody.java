@@ -12,6 +12,7 @@ public class UpdateAssessmentControlSetStatusRequestBody {
      */
     @JsonProperty("comment")
     public String comment;
+
     public UpdateAssessmentControlSetStatusRequestBody withComment(String comment) {
         this.comment = comment;
         return this;
@@ -22,9 +23,14 @@ public class UpdateAssessmentControlSetStatusRequestBody {
      */
     @JsonProperty("status")
     public UpdateAssessmentControlSetStatusRequestBodyStatusEnum status;
+
     public UpdateAssessmentControlSetStatusRequestBody withStatus(UpdateAssessmentControlSetStatusRequestBodyStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public UpdateAssessmentControlSetStatusRequestBody(@JsonProperty("comment") String comment, @JsonProperty("status") UpdateAssessmentControlSetStatusRequestBodyStatusEnum status) {
+        this.comment = comment;
+        this.status = status;
+  }
 }

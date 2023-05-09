@@ -15,6 +15,7 @@ public class RegistrationsFilesReadFileLinks {
      */
     
     public String delete;
+
     public RegistrationsFilesReadFileLinks withDelete(String delete) {
         this.delete = delete;
         return this;
@@ -25,6 +26,7 @@ public class RegistrationsFilesReadFileLinks {
      */
     
     public String download;
+
     public RegistrationsFilesReadFileLinks withDownload(String download) {
         this.download = download;
         return this;
@@ -35,6 +37,7 @@ public class RegistrationsFilesReadFileLinks {
      */
     
     public String info;
+
     public RegistrationsFilesReadFileLinks withInfo(String info) {
         this.info = info;
         return this;
@@ -45,6 +48,7 @@ public class RegistrationsFilesReadFileLinks {
      */
     
     public String move;
+
     public RegistrationsFilesReadFileLinks withMove(String move) {
         this.move = move;
         return this;
@@ -55,6 +59,7 @@ public class RegistrationsFilesReadFileLinks {
      */
     
     public String newFolder;
+
     public RegistrationsFilesReadFileLinks withNewFolder(String newFolder) {
         this.newFolder = newFolder;
         return this;
@@ -65,6 +70,7 @@ public class RegistrationsFilesReadFileLinks {
      */
     
     public String self;
+
     public RegistrationsFilesReadFileLinks withSelf(String self) {
         this.self = self;
         return this;
@@ -75,9 +81,11 @@ public class RegistrationsFilesReadFileLinks {
      */
     
     public String upload;
+
     public RegistrationsFilesReadFileLinks withUpload(String upload) {
         this.upload = upload;
         return this;
     }
     
+    public RegistrationsFilesReadFileLinks(){}
 }

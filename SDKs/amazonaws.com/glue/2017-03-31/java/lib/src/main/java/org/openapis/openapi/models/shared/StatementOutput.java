@@ -15,6 +15,7 @@ public class StatementOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Data")
     public StatementOutputData data;
+
     public StatementOutput withData(StatementOutputData data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class StatementOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorName")
     public String errorName;
+
     public StatementOutput withErrorName(String errorName) {
         this.errorName = errorName;
         return this;
@@ -31,6 +33,7 @@ public class StatementOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorValue")
     public String errorValue;
+
     public StatementOutput withErrorValue(String errorValue) {
         this.errorValue = errorValue;
         return this;
@@ -39,6 +42,7 @@ public class StatementOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionCount")
     public Long executionCount;
+
     public StatementOutput withExecutionCount(Long executionCount) {
         this.executionCount = executionCount;
         return this;
@@ -47,6 +51,7 @@ public class StatementOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public StatementStateEnum status;
+
     public StatementOutput withStatus(StatementStateEnum status) {
         this.status = status;
         return this;
@@ -55,9 +60,11 @@ public class StatementOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Traceback")
     public String[] traceback;
+
     public StatementOutput withTraceback(String[] traceback) {
         this.traceback = traceback;
         return this;
     }
     
+    public StatementOutput(){}
 }

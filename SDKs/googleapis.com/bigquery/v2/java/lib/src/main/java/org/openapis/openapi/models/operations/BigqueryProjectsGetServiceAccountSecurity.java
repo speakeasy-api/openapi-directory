@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class BigqueryProjectsGetServiceAccountSecurity {
     @SpeakeasyMetadata("security:option=true")
     public BigqueryProjectsGetServiceAccountSecurityOption1 option1;
+
     public BigqueryProjectsGetServiceAccountSecurity withOption1(BigqueryProjectsGetServiceAccountSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class BigqueryProjectsGetServiceAccountSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigqueryProjectsGetServiceAccountSecurityOption2 option2;
+
     public BigqueryProjectsGetServiceAccountSecurity withOption2(BigqueryProjectsGetServiceAccountSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class BigqueryProjectsGetServiceAccountSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigqueryProjectsGetServiceAccountSecurityOption3 option3;
+
     public BigqueryProjectsGetServiceAccountSecurity withOption3(BigqueryProjectsGetServiceAccountSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public BigqueryProjectsGetServiceAccountSecurity(){}
 }

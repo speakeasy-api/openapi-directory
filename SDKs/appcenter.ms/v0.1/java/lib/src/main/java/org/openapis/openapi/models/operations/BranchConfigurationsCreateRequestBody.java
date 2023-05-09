@@ -18,6 +18,7 @@ public class BranchConfigurationsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artifactVersioning")
     public BranchConfigurationsCreateRequestBodyArtifactVersioning artifactVersioning;
+
     public BranchConfigurationsCreateRequestBody withArtifactVersioning(BranchConfigurationsCreateRequestBodyArtifactVersioning artifactVersioning) {
         this.artifactVersioning = artifactVersioning;
         return this;
@@ -26,6 +27,7 @@ public class BranchConfigurationsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("badgeIsEnabled")
     public Boolean badgeIsEnabled;
+
     public BranchConfigurationsCreateRequestBody withBadgeIsEnabled(Boolean badgeIsEnabled) {
         this.badgeIsEnabled = badgeIsEnabled;
         return this;
@@ -37,6 +39,7 @@ public class BranchConfigurationsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloneFromBranch")
     public String cloneFromBranch;
+
     public BranchConfigurationsCreateRequestBody withCloneFromBranch(String cloneFromBranch) {
         this.cloneFromBranch = cloneFromBranch;
         return this;
@@ -45,6 +48,7 @@ public class BranchConfigurationsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signed")
     public Boolean signed;
+
     public BranchConfigurationsCreateRequestBody withSigned(Boolean signed) {
         this.signed = signed;
         return this;
@@ -53,6 +57,7 @@ public class BranchConfigurationsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testsEnabled")
     public Boolean testsEnabled;
+
     public BranchConfigurationsCreateRequestBody withTestsEnabled(Boolean testsEnabled) {
         this.testsEnabled = testsEnabled;
         return this;
@@ -64,6 +69,7 @@ public class BranchConfigurationsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toolsets")
     public BranchConfigurationsCreateRequestBodyToolsets toolsets;
+
     public BranchConfigurationsCreateRequestBody withToolsets(BranchConfigurationsCreateRequestBodyToolsets toolsets) {
         this.toolsets = toolsets;
         return this;
@@ -72,9 +78,11 @@ public class BranchConfigurationsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trigger")
     public BranchConfigurationsCreateRequestBodyTriggerEnum trigger;
+
     public BranchConfigurationsCreateRequestBody withTrigger(BranchConfigurationsCreateRequestBodyTriggerEnum trigger) {
         this.trigger = trigger;
         return this;
     }
     
+    public BranchConfigurationsCreateRequestBody(){}
 }

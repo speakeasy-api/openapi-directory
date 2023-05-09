@@ -18,6 +18,7 @@ public class Fleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("membership")
     public String membership;
+
     public Fleet withMembership(String membership) {
         this.membership = membership;
         return this;
@@ -29,6 +30,7 @@ public class Fleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preRegistered")
     public Boolean preRegistered;
+
     public Fleet withPreRegistered(Boolean preRegistered) {
         this.preRegistered = preRegistered;
         return this;
@@ -40,9 +42,11 @@ public class Fleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public Fleet withProject(String project) {
         this.project = project;
         return this;
     }
     
+    public Fleet(){}
 }

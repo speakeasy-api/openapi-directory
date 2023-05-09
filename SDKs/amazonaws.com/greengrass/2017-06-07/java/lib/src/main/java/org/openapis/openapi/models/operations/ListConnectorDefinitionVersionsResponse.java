@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListConnectorDefinitionVersionsResponse {
@@ -12,6 +13,7 @@ public class ListConnectorDefinitionVersionsResponse {
      */
     
     public Object badRequestException;
+
     public ListConnectorDefinitionVersionsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListConnectorDefinitionVersionsResponse {
     
     
     public String contentType;
+
     public ListConnectorDefinitionVersionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListConnectorDefinitionVersionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListConnectorDefinitionVersionsResponse listConnectorDefinitionVersionsResponse;
+
     public ListConnectorDefinitionVersionsResponse withListConnectorDefinitionVersionsResponse(org.openapis.openapi.models.shared.ListConnectorDefinitionVersionsResponse listConnectorDefinitionVersionsResponse) {
         this.listConnectorDefinitionVersionsResponse = listConnectorDefinitionVersionsResponse;
         return this;
@@ -36,6 +40,7 @@ public class ListConnectorDefinitionVersionsResponse {
     
     
     public Integer statusCode;
+
     public ListConnectorDefinitionVersionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ListConnectorDefinitionVersionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListConnectorDefinitionVersionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListConnectorDefinitionVersionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

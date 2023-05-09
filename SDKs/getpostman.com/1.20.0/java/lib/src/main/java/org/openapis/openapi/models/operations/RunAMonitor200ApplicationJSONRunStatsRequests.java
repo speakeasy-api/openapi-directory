@@ -12,6 +12,7 @@ public class RunAMonitor200ApplicationJSONRunStatsRequests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failed")
     public Double failed;
+
     public RunAMonitor200ApplicationJSONRunStatsRequests withFailed(Double failed) {
         this.failed = failed;
         return this;
@@ -20,9 +21,11 @@ public class RunAMonitor200ApplicationJSONRunStatsRequests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public RunAMonitor200ApplicationJSONRunStatsRequests withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public RunAMonitor200ApplicationJSONRunStatsRequests(){}
 }

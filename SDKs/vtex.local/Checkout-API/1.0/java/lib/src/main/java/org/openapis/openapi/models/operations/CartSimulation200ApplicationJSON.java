@@ -18,6 +18,7 @@ public class CartSimulation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public CartSimulation200ApplicationJSON withCountry(String country) {
         this.country = country;
         return this;
@@ -29,6 +30,7 @@ public class CartSimulation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public CartSimulation200ApplicationJSONItems[] items;
+
     public CartSimulation200ApplicationJSON withItems(CartSimulation200ApplicationJSONItems[] items) {
         this.items = items;
         return this;
@@ -40,6 +42,7 @@ public class CartSimulation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logisticsInfo")
     public CartSimulation200ApplicationJSONLogisticsInfo[] logisticsInfo;
+
     public CartSimulation200ApplicationJSON withLogisticsInfo(CartSimulation200ApplicationJSONLogisticsInfo[] logisticsInfo) {
         this.logisticsInfo = logisticsInfo;
         return this;
@@ -51,6 +54,7 @@ public class CartSimulation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketingData")
     public java.util.Map<String, Object> marketingData;
+
     public CartSimulation200ApplicationJSON withMarketingData(java.util.Map<String, Object> marketingData) {
         this.marketingData = marketingData;
         return this;
@@ -62,6 +66,7 @@ public class CartSimulation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentData")
     public CartSimulation200ApplicationJSONPaymentData paymentData;
+
     public CartSimulation200ApplicationJSON withPaymentData(CartSimulation200ApplicationJSONPaymentData paymentData) {
         this.paymentData = paymentData;
         return this;
@@ -73,6 +78,7 @@ public class CartSimulation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public CartSimulation200ApplicationJSON withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -84,6 +90,7 @@ public class CartSimulation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ratesAndBenefitsData")
     public CartSimulation200ApplicationJSONRatesAndBenefitsData ratesAndBenefitsData;
+
     public CartSimulation200ApplicationJSON withRatesAndBenefitsData(CartSimulation200ApplicationJSONRatesAndBenefitsData ratesAndBenefitsData) {
         this.ratesAndBenefitsData = ratesAndBenefitsData;
         return this;
@@ -95,9 +102,11 @@ public class CartSimulation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectableGifts")
     public Object[] selectableGifts;
+
     public CartSimulation200ApplicationJSON withSelectableGifts(Object[] selectableGifts) {
         this.selectableGifts = selectableGifts;
         return this;
     }
     
+    public CartSimulation200ApplicationJSON(){}
 }

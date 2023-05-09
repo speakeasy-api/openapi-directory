@@ -18,6 +18,7 @@ public class Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentAppl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceLocation location;
+
     public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResource withLocation(Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceLocation location) {
         this.location = location;
         return this;
@@ -29,6 +30,7 @@ public class Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentAppl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request")
     public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceRequest[] request;
+
     public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResource withRequest(Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceRequest[] request) {
         this.request = request;
         return this;
@@ -40,9 +42,11 @@ public class Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentAppl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_metadata")
     public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceResourceMetadata resourceMetadata;
+
     public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResource withResourceMetadata(Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceResourceMetadata resourceMetadata) {
         this.resourceMetadata = resourceMetadata;
         return this;
     }
     
+    public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResource(){}
 }

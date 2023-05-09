@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetRiskConfigurationResponse {
@@ -12,6 +13,7 @@ public class SetRiskConfigurationResponse {
      */
     
     public Object codeDeliveryFailureException;
+
     public SetRiskConfigurationResponse withCodeDeliveryFailureException(Object codeDeliveryFailureException) {
         this.codeDeliveryFailureException = codeDeliveryFailureException;
         return this;
@@ -19,6 +21,7 @@ public class SetRiskConfigurationResponse {
     
     
     public String contentType;
+
     public SetRiskConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SetRiskConfigurationResponse {
      */
     
     public Object internalErrorException;
+
     public SetRiskConfigurationResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class SetRiskConfigurationResponse {
      */
     
     public Object invalidEmailRoleAccessPolicyException;
+
     public SetRiskConfigurationResponse withInvalidEmailRoleAccessPolicyException(Object invalidEmailRoleAccessPolicyException) {
         this.invalidEmailRoleAccessPolicyException = invalidEmailRoleAccessPolicyException;
         return this;
@@ -49,6 +54,7 @@ public class SetRiskConfigurationResponse {
      */
     
     public Object invalidParameterException;
+
     public SetRiskConfigurationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class SetRiskConfigurationResponse {
      */
     
     public Object notAuthorizedException;
+
     public SetRiskConfigurationResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -69,6 +76,7 @@ public class SetRiskConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SetRiskConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class SetRiskConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.SetRiskConfigurationResponse setRiskConfigurationResponse;
+
     public SetRiskConfigurationResponse withSetRiskConfigurationResponse(org.openapis.openapi.models.shared.SetRiskConfigurationResponse setRiskConfigurationResponse) {
         this.setRiskConfigurationResponse = setRiskConfigurationResponse;
         return this;
@@ -86,6 +95,7 @@ public class SetRiskConfigurationResponse {
     
     
     public Integer statusCode;
+
     public SetRiskConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class SetRiskConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetRiskConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class SetRiskConfigurationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public SetRiskConfigurationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -113,9 +125,14 @@ public class SetRiskConfigurationResponse {
      */
     
     public Object userPoolAddOnNotEnabledException;
+
     public SetRiskConfigurationResponse withUserPoolAddOnNotEnabledException(Object userPoolAddOnNotEnabledException) {
         this.userPoolAddOnNotEnabledException = userPoolAddOnNotEnabledException;
         return this;
     }
     
+    public SetRiskConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CopyDBClusterParameterGroupMessage - Represents the input to &lt;a&gt;CopyDBClusterParameterGroup&lt;/a&gt;. 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CopyDBClusterParameterGroupMessage {
     
     public String sourceDBClusterParameterGroupIdentifier;
+
     public CopyDBClusterParameterGroupMessage withSourceDBClusterParameterGroupIdentifier(String sourceDBClusterParameterGroupIdentifier) {
         this.sourceDBClusterParameterGroupIdentifier = sourceDBClusterParameterGroupIdentifier;
         return this;
@@ -19,6 +20,7 @@ public class CopyDBClusterParameterGroupMessage {
     
     
     public TagList[] tags;
+
     public CopyDBClusterParameterGroupMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
@@ -26,6 +28,7 @@ public class CopyDBClusterParameterGroupMessage {
     
     
     public String targetDBClusterParameterGroupDescription;
+
     public CopyDBClusterParameterGroupMessage withTargetDBClusterParameterGroupDescription(String targetDBClusterParameterGroupDescription) {
         this.targetDBClusterParameterGroupDescription = targetDBClusterParameterGroupDescription;
         return this;
@@ -33,9 +36,15 @@ public class CopyDBClusterParameterGroupMessage {
     
     
     public String targetDBClusterParameterGroupIdentifier;
+
     public CopyDBClusterParameterGroupMessage withTargetDBClusterParameterGroupIdentifier(String targetDBClusterParameterGroupIdentifier) {
         this.targetDBClusterParameterGroupIdentifier = targetDBClusterParameterGroupIdentifier;
         return this;
     }
     
+    public CopyDBClusterParameterGroupMessage(@JsonProperty("SourceDBClusterParameterGroupIdentifier") String sourceDBClusterParameterGroupIdentifier, @JsonProperty("TargetDBClusterParameterGroupDescription") String targetDBClusterParameterGroupDescription, @JsonProperty("TargetDBClusterParameterGroupIdentifier") String targetDBClusterParameterGroupIdentifier) {
+        this.sourceDBClusterParameterGroupIdentifier = sourceDBClusterParameterGroupIdentifier;
+        this.targetDBClusterParameterGroupDescription = targetDBClusterParameterGroupDescription;
+        this.targetDBClusterParameterGroupIdentifier = targetDBClusterParameterGroupIdentifier;
+  }
 }

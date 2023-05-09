@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCompaniesCompanyIdUsersRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateCompanyUserRequest createCompanyUserRequest;
+
     public PostCompaniesCompanyIdUsersRequest withCreateCompanyUserRequest(org.openapis.openapi.models.shared.CreateCompanyUserRequest createCompanyUserRequest) {
         this.createCompanyUserRequest = createCompanyUserRequest;
         return this;
@@ -19,9 +21,13 @@ public class PostCompaniesCompanyIdUsersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public PostCompaniesCompanyIdUsersRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
     }
     
+    public PostCompaniesCompanyIdUsersRequest(@JsonProperty("companyId") String companyId) {
+        this.companyId = companyId;
+  }
 }

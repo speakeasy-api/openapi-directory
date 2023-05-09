@@ -58,11 +58,9 @@ public class FileActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FileActionBeginUploadResponse res = new org.openapis.openapi.models.operations.FileActionBeginUploadResponse() {{
+        org.openapis.openapi.models.operations.FileActionBeginUploadResponse res = new org.openapis.openapi.models.operations.FileActionBeginUploadResponse(contentType, httpRes.statusCode()) {{
             fileUploadPartEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class FileActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FileActionCopyResponse res = new org.openapis.openapi.models.operations.FileActionCopyResponse() {{
+        org.openapis.openapi.models.operations.FileActionCopyResponse res = new org.openapis.openapi.models.operations.FileActionCopyResponse(contentType, httpRes.statusCode()) {{
             fileActionEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -151,11 +147,9 @@ public class FileActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FileActionFindResponse res = new org.openapis.openapi.models.operations.FileActionFindResponse() {{
+        org.openapis.openapi.models.operations.FileActionFindResponse res = new org.openapis.openapi.models.operations.FileActionFindResponse(contentType, httpRes.statusCode()) {{
             fileEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -197,11 +191,9 @@ public class FileActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FileActionMoveResponse res = new org.openapis.openapi.models.operations.FileActionMoveResponse() {{
+        org.openapis.openapi.models.operations.FileActionMoveResponse res = new org.openapis.openapi.models.operations.FileActionMoveResponse(contentType, httpRes.statusCode()) {{
             fileActionEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

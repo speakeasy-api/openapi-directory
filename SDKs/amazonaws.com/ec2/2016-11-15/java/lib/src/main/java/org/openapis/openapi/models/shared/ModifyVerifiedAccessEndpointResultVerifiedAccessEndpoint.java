@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 
 
 /**
- * ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint - The Amazon Web Services Verified Access endpoint details.
+ * ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint - The Verified Access endpoint details.
  */
 public class ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     public String applicationDomain;
+
     public ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint withApplicationDomain(String applicationDomain) {
         this.applicationDomain = applicationDomain;
         return this;
@@ -19,6 +20,7 @@ public class ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public ModifyVerifiedAccessEndpointResultVerifiedAccessEndpointAttachmentTypeEnum attachmentType;
+
     public ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint withAttachmentType(ModifyVerifiedAccessEndpointResultVerifiedAccessEndpointAttachmentTypeEnum attachmentType) {
         this.attachmentType = attachmentType;
         return this;
@@ -26,6 +28,7 @@ public class ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public String creationTime;
+
     public ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -33,6 +36,7 @@ public class ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public String deletionTime;
+
     public ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint withDeletionTime(String deletionTime) {
         this.deletionTime = deletionTime;
         return this;
@@ -40,6 +44,7 @@ public class ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public String description;
+
     public ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +52,7 @@ public class ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public String deviceValidationDomain;
+
     public ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint withDeviceValidationDomain(String deviceValidationDomain) {
         this.deviceValidationDomain = deviceValidationDomain;
         return this;
@@ -54,6 +60,7 @@ public class ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public String domainCertificateArn;
+
     public ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint withDomainCertificateArn(String domainCertificateArn) {
         this.domainCertificateArn = domainCertificateArn;
         return this;
@@ -61,6 +68,7 @@ public class ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public String endpointDomain;
+
     public ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint withEndpointDomain(String endpointDomain) {
         this.endpointDomain = endpointDomain;
         return this;
@@ -68,6 +76,7 @@ public class ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public ModifyVerifiedAccessEndpointResultVerifiedAccessEndpointEndpointTypeEnum endpointType;
+
     public ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint withEndpointType(ModifyVerifiedAccessEndpointResultVerifiedAccessEndpointEndpointTypeEnum endpointType) {
         this.endpointType = endpointType;
         return this;
@@ -75,6 +84,7 @@ public class ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public String lastUpdatedTime;
+
     public ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint withLastUpdatedTime(String lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -82,6 +92,7 @@ public class ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public ModifyVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalancerOptions loadBalancerOptions;
+
     public ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint withLoadBalancerOptions(ModifyVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalancerOptions loadBalancerOptions) {
         this.loadBalancerOptions = loadBalancerOptions;
         return this;
@@ -89,6 +100,7 @@ public class ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public ModifyVerifiedAccessEndpointResultVerifiedAccessEndpointNetworkInterfaceOptions networkInterfaceOptions;
+
     public ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint withNetworkInterfaceOptions(ModifyVerifiedAccessEndpointResultVerifiedAccessEndpointNetworkInterfaceOptions networkInterfaceOptions) {
         this.networkInterfaceOptions = networkInterfaceOptions;
         return this;
@@ -96,6 +108,7 @@ public class ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public String[] securityGroupIds;
+
     public ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -103,6 +116,7 @@ public class ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public ModifyVerifiedAccessEndpointResultVerifiedAccessEndpointStatus status;
+
     public ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint withStatus(ModifyVerifiedAccessEndpointResultVerifiedAccessEndpointStatus status) {
         this.status = status;
         return this;
@@ -110,6 +124,7 @@ public class ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public ModifyVerifiedAccessEndpointResultVerifiedAccessEndpointTags[] tags;
+
     public ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint withTags(ModifyVerifiedAccessEndpointResultVerifiedAccessEndpointTags[] tags) {
         this.tags = tags;
         return this;
@@ -117,6 +132,7 @@ public class ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public String verifiedAccessEndpointId;
+
     public ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint withVerifiedAccessEndpointId(String verifiedAccessEndpointId) {
         this.verifiedAccessEndpointId = verifiedAccessEndpointId;
         return this;
@@ -124,6 +140,7 @@ public class ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public String verifiedAccessGroupId;
+
     public ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint withVerifiedAccessGroupId(String verifiedAccessGroupId) {
         this.verifiedAccessGroupId = verifiedAccessGroupId;
         return this;
@@ -131,9 +148,11 @@ public class ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public String verifiedAccessInstanceId;
+
     public ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint withVerifiedAccessInstanceId(String verifiedAccessInstanceId) {
         this.verifiedAccessInstanceId = verifiedAccessInstanceId;
         return this;
     }
     
+    public ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint(){}
 }

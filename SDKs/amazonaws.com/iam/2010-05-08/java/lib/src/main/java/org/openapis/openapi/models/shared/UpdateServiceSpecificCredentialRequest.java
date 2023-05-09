@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateServiceSpecificCredentialRequest {
     
     public String serviceSpecificCredentialId;
+
     public UpdateServiceSpecificCredentialRequest withServiceSpecificCredentialId(String serviceSpecificCredentialId) {
         this.serviceSpecificCredentialId = serviceSpecificCredentialId;
         return this;
@@ -16,6 +17,7 @@ public class UpdateServiceSpecificCredentialRequest {
     
     
     public StatusTypeEnum status;
+
     public UpdateServiceSpecificCredentialRequest withStatus(StatusTypeEnum status) {
         this.status = status;
         return this;
@@ -23,9 +25,14 @@ public class UpdateServiceSpecificCredentialRequest {
     
     
     public String userName;
+
     public UpdateServiceSpecificCredentialRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public UpdateServiceSpecificCredentialRequest(@JsonProperty("ServiceSpecificCredentialId") String serviceSpecificCredentialId, @JsonProperty("Status") StatusTypeEnum status) {
+        this.serviceSpecificCredentialId = serviceSpecificCredentialId;
+        this.status = status;
+  }
 }

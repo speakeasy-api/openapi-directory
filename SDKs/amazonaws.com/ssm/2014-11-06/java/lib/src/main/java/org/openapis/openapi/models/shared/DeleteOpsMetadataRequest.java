@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteOpsMetadataRequest {
     @JsonProperty("OpsMetadataArn")
     public String opsMetadataArn;
+
     public DeleteOpsMetadataRequest withOpsMetadataArn(String opsMetadataArn) {
         this.opsMetadataArn = opsMetadataArn;
         return this;
     }
     
+    public DeleteOpsMetadataRequest(@JsonProperty("OpsMetadataArn") String opsMetadataArn) {
+        this.opsMetadataArn = opsMetadataArn;
+  }
 }

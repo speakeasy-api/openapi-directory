@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeApplicationStateRequest {
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public DescribeApplicationStateRequest withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
     }
     
+    public DescribeApplicationStateRequest(@JsonProperty("ApplicationId") String applicationId) {
+        this.applicationId = applicationId;
+  }
 }

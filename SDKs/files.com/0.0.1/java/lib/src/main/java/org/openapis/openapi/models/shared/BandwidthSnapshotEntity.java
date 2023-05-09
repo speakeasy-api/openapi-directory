@@ -23,6 +23,7 @@ public class BandwidthSnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bytes_received")
     public Double bytesReceived;
+
     public BandwidthSnapshotEntity withBytesReceived(Double bytesReceived) {
         this.bytesReceived = bytesReceived;
         return this;
@@ -34,6 +35,7 @@ public class BandwidthSnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bytes_sent")
     public Double bytesSent;
+
     public BandwidthSnapshotEntity withBytesSent(Double bytesSent) {
         this.bytesSent = bytesSent;
         return this;
@@ -45,6 +47,7 @@ public class BandwidthSnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public BandwidthSnapshotEntity withId(Integer id) {
         this.id = id;
         return this;
@@ -58,6 +61,7 @@ public class BandwidthSnapshotEntity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("logged_at")
     public OffsetDateTime loggedAt;
+
     public BandwidthSnapshotEntity withLoggedAt(OffsetDateTime loggedAt) {
         this.loggedAt = loggedAt;
         return this;
@@ -69,6 +73,7 @@ public class BandwidthSnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests_get")
     public Double requestsGet;
+
     public BandwidthSnapshotEntity withRequestsGet(Double requestsGet) {
         this.requestsGet = requestsGet;
         return this;
@@ -80,6 +85,7 @@ public class BandwidthSnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests_other")
     public Double requestsOther;
+
     public BandwidthSnapshotEntity withRequestsOther(Double requestsOther) {
         this.requestsOther = requestsOther;
         return this;
@@ -91,6 +97,7 @@ public class BandwidthSnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests_put")
     public Double requestsPut;
+
     public BandwidthSnapshotEntity withRequestsPut(Double requestsPut) {
         this.requestsPut = requestsPut;
         return this;
@@ -102,6 +109,7 @@ public class BandwidthSnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sync_bytes_received")
     public Double syncBytesReceived;
+
     public BandwidthSnapshotEntity withSyncBytesReceived(Double syncBytesReceived) {
         this.syncBytesReceived = syncBytesReceived;
         return this;
@@ -113,9 +121,11 @@ public class BandwidthSnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sync_bytes_sent")
     public Double syncBytesSent;
+
     public BandwidthSnapshotEntity withSyncBytesSent(Double syncBytesSent) {
         this.syncBytesSent = syncBytesSent;
         return this;
     }
     
+    public BandwidthSnapshotEntity(){}
 }

@@ -15,6 +15,7 @@ public class CreateChannelRequestBodyChannelStorage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerManagedS3")
     public org.openapis.openapi.models.shared.CustomerManagedChannelS3Storage customerManagedS3;
+
     public CreateChannelRequestBodyChannelStorage withCustomerManagedS3(org.openapis.openapi.models.shared.CustomerManagedChannelS3Storage customerManagedS3) {
         this.customerManagedS3 = customerManagedS3;
         return this;
@@ -23,9 +24,11 @@ public class CreateChannelRequestBodyChannelStorage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceManagedS3")
     public java.util.Map<String, Object> serviceManagedS3;
+
     public CreateChannelRequestBodyChannelStorage withServiceManagedS3(java.util.Map<String, Object> serviceManagedS3) {
         this.serviceManagedS3 = serviceManagedS3;
         return this;
     }
     
+    public CreateChannelRequestBodyChannelStorage(){}
 }

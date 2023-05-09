@@ -18,6 +18,7 @@ public class TestSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidInstrumentationTest")
     public AndroidInstrumentationTest androidInstrumentationTest;
+
     public TestSpecification withAndroidInstrumentationTest(AndroidInstrumentationTest androidInstrumentationTest) {
         this.androidInstrumentationTest = androidInstrumentationTest;
         return this;
@@ -29,6 +30,7 @@ public class TestSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidRoboTest")
     public AndroidRoboTest androidRoboTest;
+
     public TestSpecification withAndroidRoboTest(AndroidRoboTest androidRoboTest) {
         this.androidRoboTest = androidRoboTest;
         return this;
@@ -40,6 +42,7 @@ public class TestSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidTestLoop")
     public AndroidTestLoop androidTestLoop;
+
     public TestSpecification withAndroidTestLoop(AndroidTestLoop androidTestLoop) {
         this.androidTestLoop = androidTestLoop;
         return this;
@@ -51,6 +54,7 @@ public class TestSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disablePerformanceMetrics")
     public Boolean disablePerformanceMetrics;
+
     public TestSpecification withDisablePerformanceMetrics(Boolean disablePerformanceMetrics) {
         this.disablePerformanceMetrics = disablePerformanceMetrics;
         return this;
@@ -62,6 +66,7 @@ public class TestSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableVideoRecording")
     public Boolean disableVideoRecording;
+
     public TestSpecification withDisableVideoRecording(Boolean disableVideoRecording) {
         this.disableVideoRecording = disableVideoRecording;
         return this;
@@ -73,6 +78,7 @@ public class TestSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iosTestLoop")
     public IosTestLoop iosTestLoop;
+
     public TestSpecification withIosTestLoop(IosTestLoop iosTestLoop) {
         this.iosTestLoop = iosTestLoop;
         return this;
@@ -84,6 +90,7 @@ public class TestSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iosTestSetup")
     public IosTestSetup iosTestSetup;
+
     public TestSpecification withIosTestSetup(IosTestSetup iosTestSetup) {
         this.iosTestSetup = iosTestSetup;
         return this;
@@ -95,6 +102,7 @@ public class TestSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iosXcTest")
     public IosXcTest iosXcTest;
+
     public TestSpecification withIosXcTest(IosXcTest iosXcTest) {
         this.iosXcTest = iosXcTest;
         return this;
@@ -106,6 +114,7 @@ public class TestSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testSetup")
     public TestSetup testSetup;
+
     public TestSpecification withTestSetup(TestSetup testSetup) {
         this.testSetup = testSetup;
         return this;
@@ -117,9 +126,11 @@ public class TestSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testTimeout")
     public String testTimeout;
+
     public TestSpecification withTestTimeout(String testTimeout) {
         this.testTimeout = testTimeout;
         return this;
     }
     
+    public TestSpecification(){}
 }

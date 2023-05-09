@@ -15,6 +15,7 @@ public class GatewayPlatform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("greengrass")
     public Greengrass greengrass;
+
     public GatewayPlatform withGreengrass(Greengrass greengrass) {
         this.greengrass = greengrass;
         return this;
@@ -23,9 +24,11 @@ public class GatewayPlatform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("greengrassV2")
     public GreengrassV2 greengrassV2;
+
     public GatewayPlatform withGreengrassV2(GreengrassV2 greengrassV2) {
         this.greengrassV2 = greengrassV2;
         return this;
     }
     
+    public GatewayPlatform(){}
 }

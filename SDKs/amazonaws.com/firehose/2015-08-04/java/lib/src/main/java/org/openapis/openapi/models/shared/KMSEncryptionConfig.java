@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class KMSEncryptionConfig {
     @JsonProperty("AWSKMSKeyARN")
     public String awskmsKeyARN;
+
     public KMSEncryptionConfig withAWSKMSKeyARN(String awskmsKeyARN) {
         this.awskmsKeyARN = awskmsKeyARN;
         return this;
     }
     
+    public KMSEncryptionConfig(@JsonProperty("AWSKMSKeyARN") String awskmsKeyARN) {
+        this.awskmsKeyARN = awskmsKeyARN;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PredefinedLoadMetricSpecification {
     @JsonProperty("PredefinedLoadMetricType")
     public LoadMetricTypeEnum predefinedLoadMetricType;
+
     public PredefinedLoadMetricSpecification withPredefinedLoadMetricType(LoadMetricTypeEnum predefinedLoadMetricType) {
         this.predefinedLoadMetricType = predefinedLoadMetricType;
         return this;
@@ -22,9 +23,13 @@ public class PredefinedLoadMetricSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceLabel")
     public String resourceLabel;
+
     public PredefinedLoadMetricSpecification withResourceLabel(String resourceLabel) {
         this.resourceLabel = resourceLabel;
         return this;
     }
     
+    public PredefinedLoadMetricSpecification(@JsonProperty("PredefinedLoadMetricType") LoadMetricTypeEnum predefinedLoadMetricType) {
+        this.predefinedLoadMetricType = predefinedLoadMetricType;
+  }
 }

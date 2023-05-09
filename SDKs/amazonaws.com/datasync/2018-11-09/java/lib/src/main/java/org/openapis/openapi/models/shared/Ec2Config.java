@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Ec2Config {
     @JsonProperty("SecurityGroupArns")
     public String[] securityGroupArns;
+
     public Ec2Config withSecurityGroupArns(String[] securityGroupArns) {
         this.securityGroupArns = securityGroupArns;
         return this;
@@ -19,9 +20,14 @@ public class Ec2Config {
     
     @JsonProperty("SubnetArn")
     public String subnetArn;
+
     public Ec2Config withSubnetArn(String subnetArn) {
         this.subnetArn = subnetArn;
         return this;
     }
     
+    public Ec2Config(@JsonProperty("SecurityGroupArns") String[] securityGroupArns, @JsonProperty("SubnetArn") String subnetArn) {
+        this.securityGroupArns = securityGroupArns;
+        this.subnetArn = subnetArn;
+  }
 }

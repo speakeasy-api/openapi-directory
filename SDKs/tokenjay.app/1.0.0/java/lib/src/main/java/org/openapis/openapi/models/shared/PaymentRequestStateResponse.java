@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * PaymentRequestStateResponse - OK
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PaymentRequestStateResponse {
     
     public PaymentRequestStateResponsePaymentRequestStateEnum paymentRequestState;
+
     public PaymentRequestStateResponse withPaymentRequestState(PaymentRequestStateResponsePaymentRequestStateEnum paymentRequestState) {
         this.paymentRequestState = paymentRequestState;
         return this;
@@ -19,6 +20,7 @@ public class PaymentRequestStateResponse {
     
     
     public String requestId;
+
     public PaymentRequestStateResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -26,9 +28,14 @@ public class PaymentRequestStateResponse {
     
     
     public String txId;
+
     public PaymentRequestStateResponse withTxId(String txId) {
         this.txId = txId;
         return this;
     }
     
+    public PaymentRequestStateResponse(@JsonProperty("paymentRequestState") PaymentRequestStateResponsePaymentRequestStateEnum paymentRequestState, @JsonProperty("requestId") String requestId) {
+        this.paymentRequestState = paymentRequestState;
+        this.requestId = requestId;
+  }
 }

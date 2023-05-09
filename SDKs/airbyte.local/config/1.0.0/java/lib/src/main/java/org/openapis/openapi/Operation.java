@@ -55,12 +55,10 @@ public class Operation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CheckOperationResponse res = new org.openapis.openapi.models.operations.CheckOperationResponse() {{
+        org.openapis.openapi.models.operations.CheckOperationResponse res = new org.openapis.openapi.models.operations.CheckOperationResponse(contentType, httpRes.statusCode()) {{
             checkOperationRead = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -106,12 +104,10 @@ public class Operation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateOperationResponse res = new org.openapis.openapi.models.operations.CreateOperationResponse() {{
+        org.openapis.openapi.models.operations.CreateOperationResponse res = new org.openapis.openapi.models.operations.CreateOperationResponse(contentType, httpRes.statusCode()) {{
             operationRead = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -157,12 +153,10 @@ public class Operation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteOperationResponse res = new org.openapis.openapi.models.operations.DeleteOperationResponse() {{
+        org.openapis.openapi.models.operations.DeleteOperationResponse res = new org.openapis.openapi.models.operations.DeleteOperationResponse(contentType, httpRes.statusCode()) {{
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -210,13 +204,11 @@ public class Operation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOperationResponse res = new org.openapis.openapi.models.operations.GetOperationResponse() {{
+        org.openapis.openapi.models.operations.GetOperationResponse res = new org.openapis.openapi.models.operations.GetOperationResponse(contentType, httpRes.statusCode()) {{
             operationRead = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -270,13 +262,11 @@ public class Operation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListOperationsForConnectionResponse res = new org.openapis.openapi.models.operations.ListOperationsForConnectionResponse() {{
+        org.openapis.openapi.models.operations.ListOperationsForConnectionResponse res = new org.openapis.openapi.models.operations.ListOperationsForConnectionResponse(contentType, httpRes.statusCode()) {{
             operationReadList = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -329,12 +319,10 @@ public class Operation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateOperationResponse res = new org.openapis.openapi.models.operations.UpdateOperationResponse() {{
+        org.openapis.openapi.models.operations.UpdateOperationResponse res = new org.openapis.openapi.models.operations.UpdateOperationResponse(contentType, httpRes.statusCode()) {{
             operationRead = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

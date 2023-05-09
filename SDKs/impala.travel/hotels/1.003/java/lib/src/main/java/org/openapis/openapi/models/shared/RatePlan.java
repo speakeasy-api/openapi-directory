@@ -18,6 +18,7 @@ public class RatePlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adjustments")
     public RateAdjustment[] adjustments;
+
     public RatePlan withAdjustments(RateAdjustment[] adjustments) {
         this.adjustments = adjustments;
         return this;
@@ -26,6 +27,7 @@ public class RatePlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("components")
     public RateComponent[] components;
+
     public RatePlan withComponents(RateComponent[] components) {
         this.components = components;
         return this;
@@ -36,6 +38,7 @@ public class RatePlan {
      */
     @JsonProperty("conditions")
     public Conditions conditions;
+
     public RatePlan withConditions(Conditions conditions) {
         this.conditions = conditions;
         return this;
@@ -46,6 +49,7 @@ public class RatePlan {
      */
     @JsonProperty("description")
     public String description;
+
     public RatePlan withDescription(String description) {
         this.description = description;
         return this;
@@ -56,6 +60,7 @@ public class RatePlan {
      */
     @JsonProperty("hotelId")
     public String hotelId;
+
     public RatePlan withHotelId(String hotelId) {
         this.hotelId = hotelId;
         return this;
@@ -66,6 +71,7 @@ public class RatePlan {
      */
     @JsonProperty("ratePlanId")
     public Double ratePlanId;
+
     public RatePlan withRatePlanId(Double ratePlanId) {
         this.ratePlanId = ratePlanId;
         return this;
@@ -76,6 +82,7 @@ public class RatePlan {
      */
     @JsonProperty("restrictions")
     public RatePlanRestrictions restrictions;
+
     public RatePlan withRestrictions(RatePlanRestrictions restrictions) {
         this.restrictions = restrictions;
         return this;
@@ -86,9 +93,18 @@ public class RatePlan {
      */
     @JsonProperty("roomTypes")
     public RatePlanRoomType[] roomTypes;
+
     public RatePlan withRoomTypes(RatePlanRoomType[] roomTypes) {
         this.roomTypes = roomTypes;
         return this;
     }
     
+    public RatePlan(@JsonProperty("conditions") Conditions conditions, @JsonProperty("description") String description, @JsonProperty("hotelId") String hotelId, @JsonProperty("ratePlanId") Double ratePlanId, @JsonProperty("restrictions") RatePlanRestrictions restrictions, @JsonProperty("roomTypes") RatePlanRoomType[] roomTypes) {
+        this.conditions = conditions;
+        this.description = description;
+        this.hotelId = hotelId;
+        this.ratePlanId = ratePlanId;
+        this.restrictions = restrictions;
+        this.roomTypes = roomTypes;
+  }
 }

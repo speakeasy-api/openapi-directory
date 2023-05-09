@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ContentDirectoryLinks {
     @JsonProperty("git")
     public String git;
+
     public ContentDirectoryLinks withGit(String git) {
         this.git = git;
         return this;
@@ -16,6 +17,7 @@ public class ContentDirectoryLinks {
     
     @JsonProperty("html")
     public String html;
+
     public ContentDirectoryLinks withHtml(String html) {
         this.html = html;
         return this;
@@ -23,9 +25,15 @@ public class ContentDirectoryLinks {
     
     @JsonProperty("self")
     public String self;
+
     public ContentDirectoryLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public ContentDirectoryLinks(@JsonProperty("git") String git, @JsonProperty("html") String html, @JsonProperty("self") String self) {
+        this.git = git;
+        this.html = html;
+        this.self = self;
+  }
 }

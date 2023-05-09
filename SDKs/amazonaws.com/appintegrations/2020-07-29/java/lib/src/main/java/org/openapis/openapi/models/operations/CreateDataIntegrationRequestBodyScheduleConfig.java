@@ -15,6 +15,7 @@ public class CreateDataIntegrationRequestBodyScheduleConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstExecutionFrom")
     public String firstExecutionFrom;
+
     public CreateDataIntegrationRequestBodyScheduleConfig withFirstExecutionFrom(String firstExecutionFrom) {
         this.firstExecutionFrom = firstExecutionFrom;
         return this;
@@ -23,6 +24,7 @@ public class CreateDataIntegrationRequestBodyScheduleConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Object")
     public String object;
+
     public CreateDataIntegrationRequestBodyScheduleConfig withObject(String object) {
         this.object = object;
         return this;
@@ -31,9 +33,11 @@ public class CreateDataIntegrationRequestBodyScheduleConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleExpression")
     public String scheduleExpression;
+
     public CreateDataIntegrationRequestBodyScheduleConfig withScheduleExpression(String scheduleExpression) {
         this.scheduleExpression = scheduleExpression;
         return this;
     }
     
+    public CreateDataIntegrationRequestBodyScheduleConfig(){}
 }

@@ -22,6 +22,7 @@ public class IpRouteInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("AddedDateTime")
     public OffsetDateTime addedDateTime;
+
     public IpRouteInfo withAddedDateTime(OffsetDateTime addedDateTime) {
         this.addedDateTime = addedDateTime;
         return this;
@@ -30,6 +31,7 @@ public class IpRouteInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CidrIp")
     public String cidrIp;
+
     public IpRouteInfo withCidrIp(String cidrIp) {
         this.cidrIp = cidrIp;
         return this;
@@ -38,6 +40,7 @@ public class IpRouteInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public IpRouteInfo withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class IpRouteInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public IpRouteInfo withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -54,6 +58,7 @@ public class IpRouteInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpRouteStatusMsg")
     public IpRouteStatusMsgEnum ipRouteStatusMsg;
+
     public IpRouteInfo withIpRouteStatusMsg(IpRouteStatusMsgEnum ipRouteStatusMsg) {
         this.ipRouteStatusMsg = ipRouteStatusMsg;
         return this;
@@ -62,9 +67,11 @@ public class IpRouteInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpRouteStatusReason")
     public String ipRouteStatusReason;
+
     public IpRouteInfo withIpRouteStatusReason(String ipRouteStatusReason) {
         this.ipRouteStatusReason = ipRouteStatusReason;
         return this;
     }
     
+    public IpRouteInfo(){}
 }

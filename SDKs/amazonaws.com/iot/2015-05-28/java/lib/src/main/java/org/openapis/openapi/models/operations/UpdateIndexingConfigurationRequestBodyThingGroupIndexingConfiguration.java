@@ -15,6 +15,7 @@ public class UpdateIndexingConfigurationRequestBodyThingGroupIndexingConfigurati
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public org.openapis.openapi.models.shared.Field[] customFields;
+
     public UpdateIndexingConfigurationRequestBodyThingGroupIndexingConfiguration withCustomFields(org.openapis.openapi.models.shared.Field[] customFields) {
         this.customFields = customFields;
         return this;
@@ -23,6 +24,7 @@ public class UpdateIndexingConfigurationRequestBodyThingGroupIndexingConfigurati
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedFields")
     public org.openapis.openapi.models.shared.Field[] managedFields;
+
     public UpdateIndexingConfigurationRequestBodyThingGroupIndexingConfiguration withManagedFields(org.openapis.openapi.models.shared.Field[] managedFields) {
         this.managedFields = managedFields;
         return this;
@@ -31,9 +33,11 @@ public class UpdateIndexingConfigurationRequestBodyThingGroupIndexingConfigurati
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingGroupIndexingMode")
     public org.openapis.openapi.models.shared.ThingGroupIndexingModeEnum thingGroupIndexingMode;
+
     public UpdateIndexingConfigurationRequestBodyThingGroupIndexingConfiguration withThingGroupIndexingMode(org.openapis.openapi.models.shared.ThingGroupIndexingModeEnum thingGroupIndexingMode) {
         this.thingGroupIndexingMode = thingGroupIndexingMode;
         return this;
     }
     
+    public UpdateIndexingConfigurationRequestBodyThingGroupIndexingConfiguration(){}
 }

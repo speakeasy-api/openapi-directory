@@ -15,9 +15,11 @@ public class AllMocks200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mocks")
     public AllMocks200ApplicationJSONMocks[] mocks;
+
     public AllMocks200ApplicationJSON withMocks(AllMocks200ApplicationJSONMocks[] mocks) {
         this.mocks = mocks;
         return this;
     }
     
+    public AllMocks200ApplicationJSON(){}
 }

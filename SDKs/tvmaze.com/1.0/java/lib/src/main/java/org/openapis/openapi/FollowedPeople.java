@@ -51,10 +51,8 @@ public class FollowedPeople {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteUserFollowsPeoplePersonIdResponse res = new org.openapis.openapi.models.operations.DeleteUserFollowsPeoplePersonIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteUserFollowsPeoplePersonIdResponse res = new org.openapis.openapi.models.operations.DeleteUserFollowsPeoplePersonIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {
@@ -90,11 +88,9 @@ public class FollowedPeople {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserFollowsPeopleResponse res = new org.openapis.openapi.models.operations.GetUserFollowsPeopleResponse() {{
+        org.openapis.openapi.models.operations.GetUserFollowsPeopleResponse res = new org.openapis.openapi.models.operations.GetUserFollowsPeopleResponse(contentType, httpRes.statusCode()) {{
             personFollows = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -129,11 +125,9 @@ public class FollowedPeople {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserFollowsPeoplePersonIdResponse res = new org.openapis.openapi.models.operations.GetUserFollowsPeoplePersonIdResponse() {{
+        org.openapis.openapi.models.operations.GetUserFollowsPeoplePersonIdResponse res = new org.openapis.openapi.models.operations.GetUserFollowsPeoplePersonIdResponse(contentType, httpRes.statusCode()) {{
             personFollow = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -170,11 +164,9 @@ public class FollowedPeople {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutUserFollowsPeoplePersonIdResponse res = new org.openapis.openapi.models.operations.PutUserFollowsPeoplePersonIdResponse() {{
+        org.openapis.openapi.models.operations.PutUserFollowsPeoplePersonIdResponse res = new org.openapis.openapi.models.operations.PutUserFollowsPeoplePersonIdResponse(contentType, httpRes.statusCode()) {{
             personFollow = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

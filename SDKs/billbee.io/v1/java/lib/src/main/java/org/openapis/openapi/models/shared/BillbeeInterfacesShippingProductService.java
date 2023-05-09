@@ -12,6 +12,7 @@ public class BillbeeInterfacesShippingProductService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CanBeConfigured")
     public Boolean canBeConfigured;
+
     public BillbeeInterfacesShippingProductService withCanBeConfigured(Boolean canBeConfigured) {
         this.canBeConfigured = canBeConfigured;
         return this;
@@ -20,6 +21,7 @@ public class BillbeeInterfacesShippingProductService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public BillbeeInterfacesShippingProductService withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -28,6 +30,7 @@ public class BillbeeInterfacesShippingProductService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayValue")
     public String displayValue;
+
     public BillbeeInterfacesShippingProductService withDisplayValue(String displayValue) {
         this.displayValue = displayValue;
         return this;
@@ -36,6 +39,7 @@ public class BillbeeInterfacesShippingProductService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PossibleValueLists")
     public SystemCollectionsGenericKeyValuePairSystemStringSystemCollectionsGenericListSystemCollectionsGenericKeyValuePairSystemInt32SystemString[] possibleValueLists;
+
     public BillbeeInterfacesShippingProductService withPossibleValueLists(SystemCollectionsGenericKeyValuePairSystemStringSystemCollectionsGenericListSystemCollectionsGenericKeyValuePairSystemInt32SystemString[] possibleValueLists) {
         this.possibleValueLists = possibleValueLists;
         return this;
@@ -44,6 +48,7 @@ public class BillbeeInterfacesShippingProductService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequiresUserInput")
     public Boolean requiresUserInput;
+
     public BillbeeInterfacesShippingProductService withRequiresUserInput(Boolean requiresUserInput) {
         this.requiresUserInput = requiresUserInput;
         return this;
@@ -52,6 +57,7 @@ public class BillbeeInterfacesShippingProductService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceName")
     public String serviceName;
+
     public BillbeeInterfacesShippingProductService withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -60,9 +66,11 @@ public class BillbeeInterfacesShippingProductService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("typeName")
     public String typeName;
+
     public BillbeeInterfacesShippingProductService withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
     }
     
+    public BillbeeInterfacesShippingProductService(){}
 }

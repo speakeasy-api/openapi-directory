@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeCapacityReservationsResult {
     
     public DescribeCapacityReservationsResultCapacityReservations[] capacityReservations;
+
     public DescribeCapacityReservationsResult withCapacityReservations(DescribeCapacityReservationsResultCapacityReservations[] capacityReservations) {
         this.capacityReservations = capacityReservations;
         return this;
@@ -19,9 +20,11 @@ public class DescribeCapacityReservationsResult {
     
     
     public String nextToken;
+
     public DescribeCapacityReservationsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeCapacityReservationsResult(){}
 }

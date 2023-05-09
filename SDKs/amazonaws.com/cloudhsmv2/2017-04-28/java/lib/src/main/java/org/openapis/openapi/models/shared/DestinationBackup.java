@@ -22,6 +22,7 @@ public class DestinationBackup {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTimestamp")
     public OffsetDateTime createTimestamp;
+
     public DestinationBackup withCreateTimestamp(OffsetDateTime createTimestamp) {
         this.createTimestamp = createTimestamp;
         return this;
@@ -30,6 +31,7 @@ public class DestinationBackup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceBackup")
     public String sourceBackup;
+
     public DestinationBackup withSourceBackup(String sourceBackup) {
         this.sourceBackup = sourceBackup;
         return this;
@@ -38,6 +40,7 @@ public class DestinationBackup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceCluster")
     public String sourceCluster;
+
     public DestinationBackup withSourceCluster(String sourceCluster) {
         this.sourceCluster = sourceCluster;
         return this;
@@ -46,9 +49,11 @@ public class DestinationBackup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceRegion")
     public String sourceRegion;
+
     public DestinationBackup withSourceRegion(String sourceRegion) {
         this.sourceRegion = sourceRegion;
         return this;
     }
     
+    public DestinationBackup(){}
 }

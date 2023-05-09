@@ -18,6 +18,7 @@ public class ValidationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public String result;
+
     public ValidationResult withResult(String result) {
         this.result = result;
         return this;
@@ -29,6 +30,7 @@ public class ValidationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public ValidationResult withSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -40,9 +42,11 @@ public class ValidationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validator")
     public ValidationResultValidatorEnum validator;
+
     public ValidationResult withValidator(ValidationResultValidatorEnum validator) {
         this.validator = validator;
         return this;
     }
     
+    public ValidationResult(){}
 }

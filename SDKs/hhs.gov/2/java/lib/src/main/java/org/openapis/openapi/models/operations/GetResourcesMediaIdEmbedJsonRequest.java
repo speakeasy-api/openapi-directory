@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourcesMediaIdEmbedJsonRequest {
@@ -12,6 +13,7 @@ public class GetResourcesMediaIdEmbedJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=displayMethod")
     public String displayMethod;
+
     public GetResourcesMediaIdEmbedJsonRequest withDisplayMethod(String displayMethod) {
         this.displayMethod = displayMethod;
         return this;
@@ -22,6 +24,7 @@ public class GetResourcesMediaIdEmbedJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=divId")
     public String divId;
+
     public GetResourcesMediaIdEmbedJsonRequest withDivId(String divId) {
         this.divId = divId;
         return this;
@@ -32,6 +35,7 @@ public class GetResourcesMediaIdEmbedJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=excludeDiv")
     public Boolean excludeDiv;
+
     public GetResourcesMediaIdEmbedJsonRequest withExcludeDiv(Boolean excludeDiv) {
         this.excludeDiv = excludeDiv;
         return this;
@@ -42,6 +46,7 @@ public class GetResourcesMediaIdEmbedJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=excludeJquery")
     public Boolean excludeJquery;
+
     public GetResourcesMediaIdEmbedJsonRequest withExcludeJquery(Boolean excludeJquery) {
         this.excludeJquery = excludeJquery;
         return this;
@@ -52,6 +57,7 @@ public class GetResourcesMediaIdEmbedJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=flavor")
     public String flavor;
+
     public GetResourcesMediaIdEmbedJsonRequest withFlavor(String flavor) {
         this.flavor = flavor;
         return this;
@@ -62,6 +68,7 @@ public class GetResourcesMediaIdEmbedJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=height")
     public Integer height;
+
     public GetResourcesMediaIdEmbedJsonRequest withHeight(Integer height) {
         this.height = height;
         return this;
@@ -72,6 +79,7 @@ public class GetResourcesMediaIdEmbedJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetResourcesMediaIdEmbedJsonRequest withId(Long id) {
         this.id = id;
         return this;
@@ -82,6 +90,7 @@ public class GetResourcesMediaIdEmbedJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=iframeName")
     public String iframeName;
+
     public GetResourcesMediaIdEmbedJsonRequest withIframeName(String iframeName) {
         this.iframeName = iframeName;
         return this;
@@ -92,9 +101,13 @@ public class GetResourcesMediaIdEmbedJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=width")
     public Integer width;
+
     public GetResourcesMediaIdEmbedJsonRequest withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public GetResourcesMediaIdEmbedJsonRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

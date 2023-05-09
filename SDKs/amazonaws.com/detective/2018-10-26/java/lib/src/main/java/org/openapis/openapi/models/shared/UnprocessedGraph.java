@@ -15,6 +15,7 @@ public class UnprocessedGraph {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GraphArn")
     public String graphArn;
+
     public UnprocessedGraph withGraphArn(String graphArn) {
         this.graphArn = graphArn;
         return this;
@@ -23,9 +24,11 @@ public class UnprocessedGraph {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reason")
     public String reason;
+
     public UnprocessedGraph withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public UnprocessedGraph(){}
 }

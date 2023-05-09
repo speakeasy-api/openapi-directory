@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateBatchLoadTaskResponse {
@@ -12,6 +13,7 @@ public class CreateBatchLoadTaskResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateBatchLoadTaskResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateBatchLoadTaskResponse {
      */
     
     public Object conflictException;
+
     public CreateBatchLoadTaskResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateBatchLoadTaskResponse {
     
     
     public String contentType;
+
     public CreateBatchLoadTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateBatchLoadTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateBatchLoadTaskResponse createBatchLoadTaskResponse;
+
     public CreateBatchLoadTaskResponse withCreateBatchLoadTaskResponse(org.openapis.openapi.models.shared.CreateBatchLoadTaskResponse createBatchLoadTaskResponse) {
         this.createBatchLoadTaskResponse = createBatchLoadTaskResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateBatchLoadTaskResponse {
      */
     
     public Object internalServerException;
+
     public CreateBatchLoadTaskResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateBatchLoadTaskResponse {
      */
     
     public Object invalidEndpointException;
+
     public CreateBatchLoadTaskResponse withInvalidEndpointException(Object invalidEndpointException) {
         this.invalidEndpointException = invalidEndpointException;
         return this;
@@ -69,6 +76,7 @@ public class CreateBatchLoadTaskResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateBatchLoadTaskResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateBatchLoadTaskResponse {
     
     
     public Integer statusCode;
+
     public CreateBatchLoadTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateBatchLoadTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateBatchLoadTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateBatchLoadTaskResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateBatchLoadTaskResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class CreateBatchLoadTaskResponse {
      */
     
     public Object throttlingException;
+
     public CreateBatchLoadTaskResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -113,9 +125,14 @@ public class CreateBatchLoadTaskResponse {
      */
     
     public Object validationException;
+
     public CreateBatchLoadTaskResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateBatchLoadTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

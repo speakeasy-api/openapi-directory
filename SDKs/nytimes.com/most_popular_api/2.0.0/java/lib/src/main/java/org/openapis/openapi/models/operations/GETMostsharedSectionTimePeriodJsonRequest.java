@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETMostsharedSectionTimePeriodJsonRequest {
@@ -14,6 +15,7 @@ public class GETMostsharedSectionTimePeriodJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=section")
     public org.openapis.openapi.models.shared.SectionEnum section;
+
     public GETMostsharedSectionTimePeriodJsonRequest withSection(org.openapis.openapi.models.shared.SectionEnum section) {
         this.section = section;
         return this;
@@ -24,9 +26,14 @@ public class GETMostsharedSectionTimePeriodJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=time-period")
     public org.openapis.openapi.models.shared.TimePeriodEnum timePeriod;
+
     public GETMostsharedSectionTimePeriodJsonRequest withTimePeriod(org.openapis.openapi.models.shared.TimePeriodEnum timePeriod) {
         this.timePeriod = timePeriod;
         return this;
     }
     
+    public GETMostsharedSectionTimePeriodJsonRequest(@JsonProperty("section") org.openapis.openapi.models.shared.SectionEnum section, @JsonProperty("time-period") org.openapis.openapi.models.shared.TimePeriodEnum timePeriod) {
+        this.section = section;
+        this.timePeriod = timePeriod;
+  }
 }

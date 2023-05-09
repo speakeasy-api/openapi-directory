@@ -15,9 +15,11 @@ public class DocumentsMetadataConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Prefix")
     public String s3Prefix;
+
     public DocumentsMetadataConfiguration withS3Prefix(String s3Prefix) {
         this.s3Prefix = s3Prefix;
         return this;
     }
     
+    public DocumentsMetadataConfiguration(){}
 }

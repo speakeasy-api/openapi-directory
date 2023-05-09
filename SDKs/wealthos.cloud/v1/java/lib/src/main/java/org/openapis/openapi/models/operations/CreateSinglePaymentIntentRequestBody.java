@@ -14,6 +14,7 @@ public class CreateSinglePaymentIntentRequestBody {
      */
     @JsonProperty("amount")
     public String amount;
+
     public CreateSinglePaymentIntentRequestBody withAmount(String amount) {
         this.amount = amount;
         return this;
@@ -25,6 +26,7 @@ public class CreateSinglePaymentIntentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public CreateSinglePaymentIntentRequestBody withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -36,6 +38,7 @@ public class CreateSinglePaymentIntentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("investment_instructions")
     public CreateSinglePaymentIntentRequestBodyInvestmentInstructions[] investmentInstructions;
+
     public CreateSinglePaymentIntentRequestBody withInvestmentInstructions(CreateSinglePaymentIntentRequestBodyInvestmentInstructions[] investmentInstructions) {
         this.investmentInstructions = investmentInstructions;
         return this;
@@ -43,6 +46,7 @@ public class CreateSinglePaymentIntentRequestBody {
     
     @JsonProperty("payment_type")
     public CreateSinglePaymentIntentRequestBodyPaymentTypeEnum paymentType;
+
     public CreateSinglePaymentIntentRequestBody withPaymentType(CreateSinglePaymentIntentRequestBodyPaymentTypeEnum paymentType) {
         this.paymentType = paymentType;
         return this;
@@ -50,6 +54,7 @@ public class CreateSinglePaymentIntentRequestBody {
     
     @JsonProperty("pot_id")
     public String potId;
+
     public CreateSinglePaymentIntentRequestBody withPotId(String potId) {
         this.potId = potId;
         return this;
@@ -57,6 +62,7 @@ public class CreateSinglePaymentIntentRequestBody {
     
     @JsonProperty("purpose")
     public CreateSinglePaymentIntentRequestBodyPurposeEnum purpose;
+
     public CreateSinglePaymentIntentRequestBody withPurpose(CreateSinglePaymentIntentRequestBodyPurposeEnum purpose) {
         this.purpose = purpose;
         return this;
@@ -67,6 +73,7 @@ public class CreateSinglePaymentIntentRequestBody {
      */
     @JsonProperty("request_id")
     public String requestId;
+
     public CreateSinglePaymentIntentRequestBody withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -74,6 +81,7 @@ public class CreateSinglePaymentIntentRequestBody {
     
     @JsonProperty("service_provider")
     public CreateSinglePaymentIntentRequestBodyServiceProviderEnum serviceProvider;
+
     public CreateSinglePaymentIntentRequestBody withServiceProvider(CreateSinglePaymentIntentRequestBodyServiceProviderEnum serviceProvider) {
         this.serviceProvider = serviceProvider;
         return this;
@@ -85,9 +93,18 @@ public class CreateSinglePaymentIntentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_provider_params")
     public CreateSinglePaymentIntentRequestBodyServiceProviderParams serviceProviderParams;
+
     public CreateSinglePaymentIntentRequestBody withServiceProviderParams(CreateSinglePaymentIntentRequestBodyServiceProviderParams serviceProviderParams) {
         this.serviceProviderParams = serviceProviderParams;
         return this;
     }
     
+    public CreateSinglePaymentIntentRequestBody(@JsonProperty("amount") String amount, @JsonProperty("payment_type") CreateSinglePaymentIntentRequestBodyPaymentTypeEnum paymentType, @JsonProperty("pot_id") String potId, @JsonProperty("purpose") CreateSinglePaymentIntentRequestBodyPurposeEnum purpose, @JsonProperty("request_id") String requestId, @JsonProperty("service_provider") CreateSinglePaymentIntentRequestBodyServiceProviderEnum serviceProvider) {
+        this.amount = amount;
+        this.paymentType = paymentType;
+        this.potId = potId;
+        this.purpose = purpose;
+        this.requestId = requestId;
+        this.serviceProvider = serviceProvider;
+  }
 }

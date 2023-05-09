@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMLTransformsResponse {
     
     public String contentType;
+
     public GetMLTransformsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetMLTransformsResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetMLTransformsResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetMLTransformsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetMLTransformsResponse getMLTransformsResponse;
+
     public GetMLTransformsResponse withGetMLTransformsResponse(org.openapis.openapi.models.shared.GetMLTransformsResponse getMLTransformsResponse) {
         this.getMLTransformsResponse = getMLTransformsResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetMLTransformsResponse {
      */
     
     public Object internalServiceException;
+
     public GetMLTransformsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class GetMLTransformsResponse {
      */
     
     public Object invalidInputException;
+
     public GetMLTransformsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetMLTransformsResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetMLTransformsResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class GetMLTransformsResponse {
     
     
     public Integer statusCode;
+
     public GetMLTransformsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetMLTransformsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMLTransformsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetMLTransformsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

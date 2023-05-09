@@ -15,9 +15,11 @@ public class UpdateClassificationScopeRequestBodyS3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludes")
     public org.openapis.openapi.models.shared.S3ClassificationScopeExclusionUpdate excludes;
+
     public UpdateClassificationScopeRequestBodyS3 withExcludes(org.openapis.openapi.models.shared.S3ClassificationScopeExclusionUpdate excludes) {
         this.excludes = excludes;
         return this;
     }
     
+    public UpdateClassificationScopeRequestBodyS3(){}
 }

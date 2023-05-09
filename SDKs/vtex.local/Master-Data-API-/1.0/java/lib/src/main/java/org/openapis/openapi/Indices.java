@@ -60,10 +60,8 @@ public class Indices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteindexbynameResponse res = new org.openapis.openapi.models.operations.DeleteindexbynameResponse() {{
+        org.openapis.openapi.models.operations.DeleteindexbynameResponse res = new org.openapis.openapi.models.operations.DeleteindexbynameResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,10 +100,8 @@ public class Indices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetindexbynameResponse res = new org.openapis.openapi.models.operations.GetindexbynameResponse() {{
+        org.openapis.openapi.models.operations.GetindexbynameResponse res = new org.openapis.openapi.models.operations.GetindexbynameResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -144,10 +140,8 @@ public class Indices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetindicesResponse res = new org.openapis.openapi.models.operations.GetindicesResponse() {{
+        org.openapis.openapi.models.operations.GetindicesResponse res = new org.openapis.openapi.models.operations.GetindicesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -183,10 +177,8 @@ public class Indices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutindicesResponse res = new org.openapis.openapi.models.operations.PutindicesResponse() {{
+        org.openapis.openapi.models.operations.PutindicesResponse res = new org.openapis.openapi.models.operations.PutindicesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

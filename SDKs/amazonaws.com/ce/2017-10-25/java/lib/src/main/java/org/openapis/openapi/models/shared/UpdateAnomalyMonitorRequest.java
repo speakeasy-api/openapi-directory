@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateAnomalyMonitorRequest {
     @JsonProperty("MonitorArn")
     public String monitorArn;
+
     public UpdateAnomalyMonitorRequest withMonitorArn(String monitorArn) {
         this.monitorArn = monitorArn;
         return this;
@@ -19,9 +20,13 @@ public class UpdateAnomalyMonitorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitorName")
     public String monitorName;
+
     public UpdateAnomalyMonitorRequest withMonitorName(String monitorName) {
         this.monitorName = monitorName;
         return this;
     }
     
+    public UpdateAnomalyMonitorRequest(@JsonProperty("MonitorArn") String monitorArn) {
+        this.monitorArn = monitorArn;
+  }
 }

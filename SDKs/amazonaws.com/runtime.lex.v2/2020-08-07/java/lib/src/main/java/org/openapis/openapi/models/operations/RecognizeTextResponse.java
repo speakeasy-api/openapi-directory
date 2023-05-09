@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RecognizeTextResponse {
@@ -12,6 +13,7 @@ public class RecognizeTextResponse {
      */
     
     public Object accessDeniedException;
+
     public RecognizeTextResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class RecognizeTextResponse {
      */
     
     public Object badGatewayException;
+
     public RecognizeTextResponse withBadGatewayException(Object badGatewayException) {
         this.badGatewayException = badGatewayException;
         return this;
@@ -32,6 +35,7 @@ public class RecognizeTextResponse {
      */
     
     public Object conflictException;
+
     public RecognizeTextResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class RecognizeTextResponse {
     
     
     public String contentType;
+
     public RecognizeTextResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class RecognizeTextResponse {
      */
     
     public Object dependencyFailedException;
+
     public RecognizeTextResponse withDependencyFailedException(Object dependencyFailedException) {
         this.dependencyFailedException = dependencyFailedException;
         return this;
@@ -59,6 +65,7 @@ public class RecognizeTextResponse {
      */
     
     public Object internalServerException;
+
     public RecognizeTextResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -69,6 +76,7 @@ public class RecognizeTextResponse {
      */
     
     public org.openapis.openapi.models.shared.RecognizeTextResponse recognizeTextResponse;
+
     public RecognizeTextResponse withRecognizeTextResponse(org.openapis.openapi.models.shared.RecognizeTextResponse recognizeTextResponse) {
         this.recognizeTextResponse = recognizeTextResponse;
         return this;
@@ -76,6 +84,7 @@ public class RecognizeTextResponse {
     
     
     public Integer statusCode;
+
     public RecognizeTextResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class RecognizeTextResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RecognizeTextResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class RecognizeTextResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RecognizeTextResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class RecognizeTextResponse {
      */
     
     public Object throttlingException;
+
     public RecognizeTextResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -113,9 +125,14 @@ public class RecognizeTextResponse {
      */
     
     public Object validationException;
+
     public RecognizeTextResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public RecognizeTextResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

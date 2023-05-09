@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2betaBatchUpdateLabelPermissionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests")
     public GoogleAppsDriveLabelsV2betaUpdateLabelPermissionRequest[] requests;
+
     public GoogleAppsDriveLabelsV2betaBatchUpdateLabelPermissionsRequest withRequests(GoogleAppsDriveLabelsV2betaUpdateLabelPermissionRequest[] requests) {
         this.requests = requests;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAppsDriveLabelsV2betaBatchUpdateLabelPermissionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useAdminAccess")
     public Boolean useAdminAccess;
+
     public GoogleAppsDriveLabelsV2betaBatchUpdateLabelPermissionsRequest withUseAdminAccess(Boolean useAdminAccess) {
         this.useAdminAccess = useAdminAccess;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2betaBatchUpdateLabelPermissionsRequest(){}
 }

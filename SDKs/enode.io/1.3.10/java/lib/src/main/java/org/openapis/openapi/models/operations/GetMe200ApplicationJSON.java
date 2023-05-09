@@ -15,6 +15,7 @@ public class GetMe200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetMe200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -23,9 +24,11 @@ public class GetMe200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedVendors")
     public GetMe200ApplicationJSONLinkedVendors[] linkedVendors;
+
     public GetMe200ApplicationJSON withLinkedVendors(GetMe200ApplicationJSONLinkedVendors[] linkedVendors) {
         this.linkedVendors = linkedVendors;
         return this;
     }
     
+    public GetMe200ApplicationJSON(){}
 }

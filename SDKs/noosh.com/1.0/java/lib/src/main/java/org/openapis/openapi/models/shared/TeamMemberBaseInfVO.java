@@ -15,6 +15,7 @@ public class TeamMemberBaseInfVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public TeamMemberBaseInfVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +24,7 @@ public class TeamMemberBaseInfVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public TeamMemberBaseInfVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
@@ -31,9 +33,11 @@ public class TeamMemberBaseInfVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teammember_id")
     public Long teammemberId;
+
     public TeamMemberBaseInfVO withTeammemberId(Long teammemberId) {
         this.teammemberId = teammemberId;
         return this;
     }
     
+    public TeamMemberBaseInfVO(){}
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyVerifiedAccessGroupResult {
     
     public ModifyVerifiedAccessGroupResultVerifiedAccessGroup verifiedAccessGroup;
+
     public ModifyVerifiedAccessGroupResult withVerifiedAccessGroup(ModifyVerifiedAccessGroupResultVerifiedAccessGroup verifiedAccessGroup) {
         this.verifiedAccessGroup = verifiedAccessGroup;
         return this;
     }
     
+    public ModifyVerifiedAccessGroupResult(){}
 }

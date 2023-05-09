@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSnapshotResponse {
@@ -12,6 +13,7 @@ public class CreateSnapshotResponse {
      */
     
     public Object badRequest;
+
     public CreateSnapshotResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class CreateSnapshotResponse {
     
     
     public String contentType;
+
     public CreateSnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateSnapshotResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSnapshotResponse createSnapshotResponse;
+
     public CreateSnapshotResponse withCreateSnapshotResponse(org.openapis.openapi.models.shared.CreateSnapshotResponse createSnapshotResponse) {
         this.createSnapshotResponse = createSnapshotResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateSnapshotResponse {
      */
     
     public Object internalServerError;
+
     public CreateSnapshotResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class CreateSnapshotResponse {
      */
     
     public Object serviceLimitExceeded;
+
     public CreateSnapshotResponse withServiceLimitExceeded(Object serviceLimitExceeded) {
         this.serviceLimitExceeded = serviceLimitExceeded;
         return this;
@@ -56,6 +62,7 @@ public class CreateSnapshotResponse {
     
     
     public Integer statusCode;
+
     public CreateSnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateSnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CreateSnapshotResponse {
      */
     
     public Object volumeNotFound;
+
     public CreateSnapshotResponse withVolumeNotFound(Object volumeNotFound) {
         this.volumeNotFound = volumeNotFound;
         return this;
     }
     
+    public CreateSnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

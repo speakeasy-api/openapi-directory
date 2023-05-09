@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProcessingResources {
     @JsonProperty("ClusterConfig")
     public ProcessingClusterConfig clusterConfig;
+
     public ProcessingResources withClusterConfig(ProcessingClusterConfig clusterConfig) {
         this.clusterConfig = clusterConfig;
         return this;
     }
     
+    public ProcessingResources(@JsonProperty("ClusterConfig") ProcessingClusterConfig clusterConfig) {
+        this.clusterConfig = clusterConfig;
+  }
 }

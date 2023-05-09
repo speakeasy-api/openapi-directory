@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteConfigRuleRequest {
     @JsonProperty("ConfigRuleName")
     public String configRuleName;
+
     public DeleteConfigRuleRequest withConfigRuleName(String configRuleName) {
         this.configRuleName = configRuleName;
         return this;
     }
     
+    public DeleteConfigRuleRequest(@JsonProperty("ConfigRuleName") String configRuleName) {
+        this.configRuleName = configRuleName;
+  }
 }

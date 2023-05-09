@@ -15,6 +15,7 @@ public class UpdateNetworkOneToOneNatRulesRequestBodyRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedInbound")
     public UpdateNetworkOneToOneNatRulesRequestBodyRulesAllowedInbound[] allowedInbound;
+
     public UpdateNetworkOneToOneNatRulesRequestBodyRules withAllowedInbound(UpdateNetworkOneToOneNatRulesRequestBodyRulesAllowedInbound[] allowedInbound) {
         this.allowedInbound = allowedInbound;
         return this;
@@ -25,6 +26,7 @@ public class UpdateNetworkOneToOneNatRulesRequestBodyRules {
      */
     @JsonProperty("lanIp")
     public String lanIp;
+
     public UpdateNetworkOneToOneNatRulesRequestBodyRules withLanIp(String lanIp) {
         this.lanIp = lanIp;
         return this;
@@ -36,6 +38,7 @@ public class UpdateNetworkOneToOneNatRulesRequestBodyRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateNetworkOneToOneNatRulesRequestBodyRules withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +50,7 @@ public class UpdateNetworkOneToOneNatRulesRequestBodyRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicIp")
     public String publicIp;
+
     public UpdateNetworkOneToOneNatRulesRequestBodyRules withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
@@ -58,9 +62,13 @@ public class UpdateNetworkOneToOneNatRulesRequestBodyRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uplink")
     public UpdateNetworkOneToOneNatRulesRequestBodyRulesUplinkEnum uplink;
+
     public UpdateNetworkOneToOneNatRulesRequestBodyRules withUplink(UpdateNetworkOneToOneNatRulesRequestBodyRulesUplinkEnum uplink) {
         this.uplink = uplink;
         return this;
     }
     
+    public UpdateNetworkOneToOneNatRulesRequestBodyRules(@JsonProperty("lanIp") String lanIp) {
+        this.lanIp = lanIp;
+  }
 }

@@ -15,9 +15,11 @@ public class NetworksUpdatePeeringRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkPeering")
     public NetworkPeering networkPeering;
+
     public NetworksUpdatePeeringRequest withNetworkPeering(NetworkPeering networkPeering) {
         this.networkPeering = networkPeering;
         return this;
     }
     
+    public NetworksUpdatePeeringRequest(){}
 }

@@ -15,9 +15,13 @@ public class UserorderdetailsItemMetadata {
      */
     @JsonProperty("Items")
     public UserorderdetailsItemMetadataItems[] items;
+
     public UserorderdetailsItemMetadata withItems(UserorderdetailsItemMetadataItems[] items) {
         this.items = items;
         return this;
     }
     
+    public UserorderdetailsItemMetadata(@JsonProperty("Items") UserorderdetailsItemMetadataItems[] items) {
+        this.items = items;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Runner {
     @JsonProperty("busy")
     public Boolean busy;
+
     public Runner withBusy(Boolean busy) {
         this.busy = busy;
         return this;
@@ -22,6 +23,7 @@ public class Runner {
      */
     @JsonProperty("id")
     public Long id;
+
     public Runner withId(Long id) {
         this.id = id;
         return this;
@@ -29,6 +31,7 @@ public class Runner {
     
     @JsonProperty("labels")
     public RunnerLabel[] labels;
+
     public Runner withLabels(RunnerLabel[] labels) {
         this.labels = labels;
         return this;
@@ -39,6 +42,7 @@ public class Runner {
      */
     @JsonProperty("name")
     public String name;
+
     public Runner withName(String name) {
         this.name = name;
         return this;
@@ -49,6 +53,7 @@ public class Runner {
      */
     @JsonProperty("os")
     public String os;
+
     public Runner withOs(String os) {
         this.os = os;
         return this;
@@ -59,9 +64,18 @@ public class Runner {
      */
     @JsonProperty("status")
     public String status;
+
     public Runner withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public Runner(@JsonProperty("busy") Boolean busy, @JsonProperty("id") Long id, @JsonProperty("labels") RunnerLabel[] labels, @JsonProperty("name") String name, @JsonProperty("os") String os, @JsonProperty("status") String status) {
+        this.busy = busy;
+        this.id = id;
+        this.labels = labels;
+        this.name = name;
+        this.os = os;
+        this.status = status;
+  }
 }

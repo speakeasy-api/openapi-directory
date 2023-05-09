@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DnsRecord {
     @JsonProperty("TTL")
     public Long ttl;
+
     public DnsRecord withTtl(Long ttl) {
         this.ttl = ttl;
         return this;
@@ -19,9 +20,14 @@ public class DnsRecord {
     
     @JsonProperty("Type")
     public RecordTypeEnum type;
+
     public DnsRecord withType(RecordTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DnsRecord(@JsonProperty("TTL") Long ttl, @JsonProperty("Type") RecordTypeEnum type) {
+        this.ttl = ttl;
+        this.type = type;
+  }
 }

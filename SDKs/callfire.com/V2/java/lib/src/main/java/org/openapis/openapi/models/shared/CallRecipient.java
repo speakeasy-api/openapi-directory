@@ -18,6 +18,7 @@ public class CallRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, String> attributes;
+
     public CallRecipient withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -29,6 +30,7 @@ public class CallRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactId")
     public Long contactId;
+
     public CallRecipient withContactId(Long contactId) {
         this.contactId = contactId;
         return this;
@@ -40,6 +42,7 @@ public class CallRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dialplanXml")
     public String dialplanXml;
+
     public CallRecipient withDialplanXml(String dialplanXml) {
         this.dialplanXml = dialplanXml;
         return this;
@@ -51,6 +54,7 @@ public class CallRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromNumber")
     public String fromNumber;
+
     public CallRecipient withFromNumber(String fromNumber) {
         this.fromNumber = fromNumber;
         return this;
@@ -62,6 +66,7 @@ public class CallRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("liveMessage")
     public String liveMessage;
+
     public CallRecipient withLiveMessage(String liveMessage) {
         this.liveMessage = liveMessage;
         return this;
@@ -73,6 +78,7 @@ public class CallRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("liveMessageSoundId")
     public Long liveMessageSoundId;
+
     public CallRecipient withLiveMessageSoundId(Long liveMessageSoundId) {
         this.liveMessageSoundId = liveMessageSoundId;
         return this;
@@ -84,6 +90,7 @@ public class CallRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineMessage")
     public String machineMessage;
+
     public CallRecipient withMachineMessage(String machineMessage) {
         this.machineMessage = machineMessage;
         return this;
@@ -95,6 +102,7 @@ public class CallRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineMessageSoundId")
     public Long machineMessageSoundId;
+
     public CallRecipient withMachineMessageSoundId(Long machineMessageSoundId) {
         this.machineMessageSoundId = machineMessageSoundId;
         return this;
@@ -106,6 +114,7 @@ public class CallRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public CallRecipient withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -117,6 +126,7 @@ public class CallRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferDigit")
     public String transferDigit;
+
     public CallRecipient withTransferDigit(String transferDigit) {
         this.transferDigit = transferDigit;
         return this;
@@ -128,6 +138,7 @@ public class CallRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferMessage")
     public String transferMessage;
+
     public CallRecipient withTransferMessage(String transferMessage) {
         this.transferMessage = transferMessage;
         return this;
@@ -139,6 +150,7 @@ public class CallRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferMessageSoundId")
     public Long transferMessageSoundId;
+
     public CallRecipient withTransferMessageSoundId(Long transferMessageSoundId) {
         this.transferMessageSoundId = transferMessageSoundId;
         return this;
@@ -150,6 +162,7 @@ public class CallRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferNumber")
     public String transferNumber;
+
     public CallRecipient withTransferNumber(String transferNumber) {
         this.transferNumber = transferNumber;
         return this;
@@ -161,9 +174,11 @@ public class CallRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voice")
     public CallRecipientVoiceEnum voice;
+
     public CallRecipient withVoice(CallRecipientVoiceEnum voice) {
         this.voice = voice;
         return this;
     }
     
+    public CallRecipient(){}
 }

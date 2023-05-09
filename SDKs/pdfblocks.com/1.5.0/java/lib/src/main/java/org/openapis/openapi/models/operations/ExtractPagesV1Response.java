@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExtractPagesV1Response {
     
     public String contentType;
+
     public ExtractPagesV1Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ExtractPagesV1Response {
     
     
     public Integer statusCode;
+
     public ExtractPagesV1Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ExtractPagesV1Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExtractPagesV1Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ExtractPagesV1Response {
      */
     
     public byte[] extractPagesV1200ApplicationPdfBinaryString;
+
     public ExtractPagesV1Response withExtractPagesV1200ApplicationPdfBinaryString(byte[] extractPagesV1200ApplicationPdfBinaryString) {
         this.extractPagesV1200ApplicationPdfBinaryString = extractPagesV1200ApplicationPdfBinaryString;
         return this;
@@ -43,9 +48,14 @@ public class ExtractPagesV1Response {
      */
     
     public ExtractPagesV14XXApplicationProblemPlusJson extractPagesV14XXApplicationProblemPlusJsonObject;
+
     public ExtractPagesV1Response withExtractPagesV14XXApplicationProblemPlusJsonObject(ExtractPagesV14XXApplicationProblemPlusJson extractPagesV14XXApplicationProblemPlusJsonObject) {
         this.extractPagesV14XXApplicationProblemPlusJsonObject = extractPagesV14XXApplicationProblemPlusJsonObject;
         return this;
     }
     
+    public ExtractPagesV1Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -60,10 +60,8 @@ public class Revisions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveRevisionsDeleteResponse res = new org.openapis.openapi.models.operations.DriveRevisionsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DriveRevisionsDeleteResponse res = new org.openapis.openapi.models.operations.DriveRevisionsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,11 +98,9 @@ public class Revisions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveRevisionsGetResponse res = new org.openapis.openapi.models.operations.DriveRevisionsGetResponse() {{
+        org.openapis.openapi.models.operations.DriveRevisionsGetResponse res = new org.openapis.openapi.models.operations.DriveRevisionsGetResponse(contentType, httpRes.statusCode()) {{
             revision = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -146,11 +142,9 @@ public class Revisions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveRevisionsListResponse res = new org.openapis.openapi.models.operations.DriveRevisionsListResponse() {{
+        org.openapis.openapi.models.operations.DriveRevisionsListResponse res = new org.openapis.openapi.models.operations.DriveRevisionsListResponse(contentType, httpRes.statusCode()) {{
             revisionList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -194,11 +188,9 @@ public class Revisions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveRevisionsPatchResponse res = new org.openapis.openapi.models.operations.DriveRevisionsPatchResponse() {{
+        org.openapis.openapi.models.operations.DriveRevisionsPatchResponse res = new org.openapis.openapi.models.operations.DriveRevisionsPatchResponse(contentType, httpRes.statusCode()) {{
             revision = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -242,11 +234,9 @@ public class Revisions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveRevisionsUpdateResponse res = new org.openapis.openapi.models.operations.DriveRevisionsUpdateResponse() {{
+        org.openapis.openapi.models.operations.DriveRevisionsUpdateResponse res = new org.openapis.openapi.models.operations.DriveRevisionsUpdateResponse(contentType, httpRes.statusCode()) {{
             revision = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

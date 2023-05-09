@@ -18,6 +18,7 @@ public class ApproximateReportedProgress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumedParallelism")
     public ReportedParallelism consumedParallelism;
+
     public ApproximateReportedProgress withConsumedParallelism(ReportedParallelism consumedParallelism) {
         this.consumedParallelism = consumedParallelism;
         return this;
@@ -29,6 +30,7 @@ public class ApproximateReportedProgress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fractionConsumed")
     public Double fractionConsumed;
+
     public ApproximateReportedProgress withFractionConsumed(Double fractionConsumed) {
         this.fractionConsumed = fractionConsumed;
         return this;
@@ -40,6 +42,7 @@ public class ApproximateReportedProgress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public Position position;
+
     public ApproximateReportedProgress withPosition(Position position) {
         this.position = position;
         return this;
@@ -51,9 +54,11 @@ public class ApproximateReportedProgress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remainingParallelism")
     public ReportedParallelism remainingParallelism;
+
     public ApproximateReportedProgress withRemainingParallelism(ReportedParallelism remainingParallelism) {
         this.remainingParallelism = remainingParallelism;
         return this;
     }
     
+    public ApproximateReportedProgress(){}
 }

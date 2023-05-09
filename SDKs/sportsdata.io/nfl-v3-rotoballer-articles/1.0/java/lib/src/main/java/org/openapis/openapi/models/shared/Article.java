@@ -12,6 +12,7 @@ public class Article {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArticleID")
     public Long articleID;
+
     public Article withArticleID(Long articleID) {
         this.articleID = articleID;
         return this;
@@ -20,6 +21,7 @@ public class Article {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Author")
     public String author;
+
     public Article withAuthor(String author) {
         this.author = author;
         return this;
@@ -28,6 +30,7 @@ public class Article {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Content")
     public String content;
+
     public Article withContent(String content) {
         this.content = content;
         return this;
@@ -36,6 +39,7 @@ public class Article {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Players")
     public PlayerInfo[] players;
+
     public Article withPlayers(PlayerInfo[] players) {
         this.players = players;
         return this;
@@ -44,6 +48,7 @@ public class Article {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public String source;
+
     public Article withSource(String source) {
         this.source = source;
         return this;
@@ -52,6 +57,7 @@ public class Article {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TermsOfUse")
     public String termsOfUse;
+
     public Article withTermsOfUse(String termsOfUse) {
         this.termsOfUse = termsOfUse;
         return this;
@@ -60,6 +66,7 @@ public class Article {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public Article withTitle(String title) {
         this.title = title;
         return this;
@@ -68,6 +75,7 @@ public class Article {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Updated")
     public String updated;
+
     public Article withUpdated(String updated) {
         this.updated = updated;
         return this;
@@ -76,9 +84,11 @@ public class Article {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public Article withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Article(){}
 }

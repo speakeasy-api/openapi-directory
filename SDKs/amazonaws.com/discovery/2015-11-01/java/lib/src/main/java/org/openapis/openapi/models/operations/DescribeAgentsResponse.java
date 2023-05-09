@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAgentsResponse {
@@ -12,6 +13,7 @@ public class DescribeAgentsResponse {
      */
     
     public Object authorizationErrorException;
+
     public DescribeAgentsResponse withAuthorizationErrorException(Object authorizationErrorException) {
         this.authorizationErrorException = authorizationErrorException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAgentsResponse {
     
     
     public String contentType;
+
     public DescribeAgentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAgentsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAgentsResponse describeAgentsResponse;
+
     public DescribeAgentsResponse withDescribeAgentsResponse(org.openapis.openapi.models.shared.DescribeAgentsResponse describeAgentsResponse) {
         this.describeAgentsResponse = describeAgentsResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAgentsResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public DescribeAgentsResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeAgentsResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeAgentsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeAgentsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DescribeAgentsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeAgentsResponse {
      */
     
     public Object serverInternalErrorException;
+
     public DescribeAgentsResponse withServerInternalErrorException(Object serverInternalErrorException) {
         this.serverInternalErrorException = serverInternalErrorException;
         return this;
@@ -76,6 +84,7 @@ public class DescribeAgentsResponse {
     
     
     public Integer statusCode;
+
     public DescribeAgentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DescribeAgentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAgentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeAgentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

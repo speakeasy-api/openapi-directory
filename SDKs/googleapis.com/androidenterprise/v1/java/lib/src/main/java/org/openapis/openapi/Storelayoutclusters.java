@@ -59,10 +59,8 @@ public class Storelayoutclusters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutclustersDeleteResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutclustersDeleteResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutclustersDeleteResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutclustersDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Storelayoutclusters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutclustersGetResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutclustersGetResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutclustersGetResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutclustersGetResponse(contentType, httpRes.statusCode()) {{
             storeCluster = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Storelayoutclusters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutclustersInsertResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutclustersInsertResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutclustersInsertResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutclustersInsertResponse(contentType, httpRes.statusCode()) {{
             storeCluster = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Storelayoutclusters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutclustersListResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutclustersListResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutclustersListResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutclustersListResponse(contentType, httpRes.statusCode()) {{
             storeLayoutClustersListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class Storelayoutclusters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutclustersUpdateResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutclustersUpdateResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutclustersUpdateResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutclustersUpdateResponse(contentType, httpRes.statusCode()) {{
             storeCluster = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

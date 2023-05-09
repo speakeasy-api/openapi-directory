@@ -12,6 +12,7 @@ public class GetDimensionValuesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Context")
     public ContextEnum context;
+
     public GetDimensionValuesRequest withContext(ContextEnum context) {
         this.context = context;
         return this;
@@ -19,6 +20,7 @@ public class GetDimensionValuesRequest {
     
     @JsonProperty("Dimension")
     public DimensionEnum dimension;
+
     public GetDimensionValuesRequest withDimension(DimensionEnum dimension) {
         this.dimension = dimension;
         return this;
@@ -30,6 +32,7 @@ public class GetDimensionValuesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public Expression filter;
+
     public GetDimensionValuesRequest withFilter(Expression filter) {
         this.filter = filter;
         return this;
@@ -38,6 +41,7 @@ public class GetDimensionValuesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetDimensionValuesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -46,6 +50,7 @@ public class GetDimensionValuesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public GetDimensionValuesRequest withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -54,6 +59,7 @@ public class GetDimensionValuesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SearchString")
     public String searchString;
+
     public GetDimensionValuesRequest withSearchString(String searchString) {
         this.searchString = searchString;
         return this;
@@ -62,6 +68,7 @@ public class GetDimensionValuesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public SortDefinition[] sortBy;
+
     public GetDimensionValuesRequest withSortBy(SortDefinition[] sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -69,9 +76,14 @@ public class GetDimensionValuesRequest {
     
     @JsonProperty("TimePeriod")
     public DateInterval timePeriod;
+
     public GetDimensionValuesRequest withTimePeriod(DateInterval timePeriod) {
         this.timePeriod = timePeriod;
         return this;
     }
     
+    public GetDimensionValuesRequest(@JsonProperty("Dimension") DimensionEnum dimension, @JsonProperty("TimePeriod") DateInterval timePeriod) {
+        this.dimension = dimension;
+        this.timePeriod = timePeriod;
+  }
 }

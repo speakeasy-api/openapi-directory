@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeStackResourceDriftsInput {
     
     public Long maxResults;
+
     public DescribeStackResourceDriftsInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -16,6 +17,7 @@ public class DescribeStackResourceDriftsInput {
     
     
     public String nextToken;
+
     public DescribeStackResourceDriftsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,6 +25,7 @@ public class DescribeStackResourceDriftsInput {
     
     
     public String stackName;
+
     public DescribeStackResourceDriftsInput withStackName(String stackName) {
         this.stackName = stackName;
         return this;
@@ -30,9 +33,13 @@ public class DescribeStackResourceDriftsInput {
     
     
     public StackResourceDriftStatusEnum[] stackResourceDriftStatusFilters;
+
     public DescribeStackResourceDriftsInput withStackResourceDriftStatusFilters(StackResourceDriftStatusEnum[] stackResourceDriftStatusFilters) {
         this.stackResourceDriftStatusFilters = stackResourceDriftStatusFilters;
         return this;
     }
     
+    public DescribeStackResourceDriftsInput(@JsonProperty("StackName") String stackName) {
+        this.stackName = stackName;
+  }
 }

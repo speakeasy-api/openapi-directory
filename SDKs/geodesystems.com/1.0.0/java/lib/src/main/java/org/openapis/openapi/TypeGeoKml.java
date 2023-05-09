@@ -57,10 +57,8 @@ public class TypeGeoKml {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchGeoKmlResponse res = new org.openapis.openapi.models.operations.SearchGeoKmlResponse() {{
+        org.openapis.openapi.models.operations.SearchGeoKmlResponse res = new org.openapis.openapi.models.operations.SearchGeoKmlResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

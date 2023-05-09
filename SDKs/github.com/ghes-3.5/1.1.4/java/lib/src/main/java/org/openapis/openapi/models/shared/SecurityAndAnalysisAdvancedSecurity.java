@@ -12,9 +12,11 @@ public class SecurityAndAnalysisAdvancedSecurity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public SecurityAndAnalysisAdvancedSecurityStatusEnum status;
+
     public SecurityAndAnalysisAdvancedSecurity withStatus(SecurityAndAnalysisAdvancedSecurityStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public SecurityAndAnalysisAdvancedSecurity(){}
 }

@@ -18,6 +18,7 @@ public class NonComplianceDetailCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonComplianceReason")
     public NonComplianceDetailConditionNonComplianceReasonEnum nonComplianceReason;
+
     public NonComplianceDetailCondition withNonComplianceReason(NonComplianceDetailConditionNonComplianceReasonEnum nonComplianceReason) {
         this.nonComplianceReason = nonComplianceReason;
         return this;
@@ -29,6 +30,7 @@ public class NonComplianceDetailCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageName")
     public String packageName;
+
     public NonComplianceDetailCondition withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -40,9 +42,11 @@ public class NonComplianceDetailCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settingName")
     public String settingName;
+
     public NonComplianceDetailCondition withSettingName(String settingName) {
         this.settingName = settingName;
         return this;
     }
     
+    public NonComplianceDetailCondition(){}
 }

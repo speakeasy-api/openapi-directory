@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateNetworkInsightsPathResult {
     
     public CreateNetworkInsightsPathResultNetworkInsightsPath networkInsightsPath;
+
     public CreateNetworkInsightsPathResult withNetworkInsightsPath(CreateNetworkInsightsPathResultNetworkInsightsPath networkInsightsPath) {
         this.networkInsightsPath = networkInsightsPath;
         return this;
     }
     
+    public CreateNetworkInsightsPathResult(){}
 }

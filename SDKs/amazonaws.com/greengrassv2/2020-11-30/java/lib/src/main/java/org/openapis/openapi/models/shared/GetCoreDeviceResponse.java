@@ -20,6 +20,7 @@ public class GetCoreDeviceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("architecture")
     public String architecture;
+
     public GetCoreDeviceResponse withArchitecture(String architecture) {
         this.architecture = architecture;
         return this;
@@ -28,6 +29,7 @@ public class GetCoreDeviceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coreDeviceThingName")
     public String coreDeviceThingName;
+
     public GetCoreDeviceResponse withCoreDeviceThingName(String coreDeviceThingName) {
         this.coreDeviceThingName = coreDeviceThingName;
         return this;
@@ -36,6 +38,7 @@ public class GetCoreDeviceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coreVersion")
     public String coreVersion;
+
     public GetCoreDeviceResponse withCoreVersion(String coreVersion) {
         this.coreVersion = coreVersion;
         return this;
@@ -46,6 +49,7 @@ public class GetCoreDeviceResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastStatusUpdateTimestamp")
     public OffsetDateTime lastStatusUpdateTimestamp;
+
     public GetCoreDeviceResponse withLastStatusUpdateTimestamp(OffsetDateTime lastStatusUpdateTimestamp) {
         this.lastStatusUpdateTimestamp = lastStatusUpdateTimestamp;
         return this;
@@ -54,6 +58,7 @@ public class GetCoreDeviceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public String platform;
+
     public GetCoreDeviceResponse withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -62,6 +67,7 @@ public class GetCoreDeviceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CoreDeviceStatusEnum status;
+
     public GetCoreDeviceResponse withStatus(CoreDeviceStatusEnum status) {
         this.status = status;
         return this;
@@ -70,9 +76,11 @@ public class GetCoreDeviceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetCoreDeviceResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetCoreDeviceResponse(){}
 }

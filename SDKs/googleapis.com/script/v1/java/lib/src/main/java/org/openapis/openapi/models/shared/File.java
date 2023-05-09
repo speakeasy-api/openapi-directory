@@ -18,6 +18,7 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public File withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("functionSet")
     public GoogleAppsScriptTypeFunctionSet functionSet;
+
     public File withFunctionSet(GoogleAppsScriptTypeFunctionSet functionSet) {
         this.functionSet = functionSet;
         return this;
@@ -40,6 +42,7 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifyUser")
     public GoogleAppsScriptTypeUser lastModifyUser;
+
     public File withLastModifyUser(GoogleAppsScriptTypeUser lastModifyUser) {
         this.lastModifyUser = lastModifyUser;
         return this;
@@ -51,6 +54,7 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public File withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public File withSource(String source) {
         this.source = source;
         return this;
@@ -73,6 +78,7 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public FileTypeEnum type;
+
     public File withType(FileTypeEnum type) {
         this.type = type;
         return this;
@@ -84,9 +90,11 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public File withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public File(){}
 }
