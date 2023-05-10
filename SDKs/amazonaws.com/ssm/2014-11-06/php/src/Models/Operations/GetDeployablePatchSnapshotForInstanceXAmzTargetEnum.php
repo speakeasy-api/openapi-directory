@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetDeployablePatchSnapshotForInstanceXAmzTargetEnum: string
 {
     case AMAZON_SSM_GET_DEPLOYABLE_PATCH_SNAPSHOT_FOR_INSTANCE = 'AmazonSSM.GetDeployablePatchSnapshotForInstance';

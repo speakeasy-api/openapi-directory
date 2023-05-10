@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateBGPPeerXAmzTargetEnum: string
 {
     case OVERTURE_SERVICE_CREATE_BGP_PEER = 'OvertureService.CreateBGPPeer';

@@ -10,13 +10,18 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * CanvasAppSettings - The SageMaker Canvas app settings.
+ * CanvasAppSettings - The SageMaker Canvas application settings.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public
  */
 class CanvasAppSettings
 {
+	#[\JMS\Serializer\Annotation\SerializedName('ModelRegisterSettings')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\ModelRegisterSettings')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?ModelRegisterSettings $modelRegisterSettings = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('TimeSeriesForecastingSettings')]
     #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\TimeSeriesForecastingSettings')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -24,6 +29,7 @@ class CanvasAppSettings
     
 	public function __construct()
 	{
+		$this->modelRegisterSettings = null;
 		$this->timeSeriesForecastingSettings = null;
 	}
 }

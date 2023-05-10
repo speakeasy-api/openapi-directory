@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListLicenseManagerReportGeneratorsXAmzTargetEnum: string
 {
     case AWS_LICENSE_MANAGER_LIST_LICENSE_MANAGER_REPORT_GENERATORS = 'AWSLicenseManager.ListLicenseManagerReportGenerators';

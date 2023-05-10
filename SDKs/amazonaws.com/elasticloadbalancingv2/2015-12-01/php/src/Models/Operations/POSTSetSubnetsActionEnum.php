@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTSetSubnetsActionEnum: string
 {
     case SET_SUBNETS = 'SetSubnets';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListSizeConstraintSetsXAmzTargetEnum: string
 {
     case AWSWAF_REGIONAL20161128_LIST_SIZE_CONSTRAINT_SETS = 'AWSWAF_Regional_20161128.ListSizeConstraintSets';

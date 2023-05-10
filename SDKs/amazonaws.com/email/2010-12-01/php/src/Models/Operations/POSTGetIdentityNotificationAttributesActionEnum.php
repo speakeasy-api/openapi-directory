@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTGetIdentityNotificationAttributesActionEnum: string
 {
     case GET_IDENTITY_NOTIFICATION_ATTRIBUTES = 'GetIdentityNotificationAttributes';

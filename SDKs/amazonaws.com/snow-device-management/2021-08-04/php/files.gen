@@ -83,4 +83,5 @@ src/Models/Shared/ListTagsForResourceOutput.php
 src/Models/Shared/ListTasksOutput.php
 src/Models/Shared/TaskSummary.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTPutManagedInsightRulesActionEnum: string
 {
     case PUT_MANAGED_INSIGHT_RULES = 'PutManagedInsightRules';

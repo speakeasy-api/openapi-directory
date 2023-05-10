@@ -70,4 +70,6 @@ src/Models/Shared/SetupBeneficiaryResponse.php
 src/Models/Shared/SetupBeneficiaryRequest.php
 src/Models/Shared/TransferFundsResponse.php
 src/Models/Shared/TransferFundsRequest.php
+docs/sdk/README.md
+docs/general/README.md
 USAGE.md

@@ -27,4 +27,5 @@ src/Models/Operations/PostPostReview400ApplicationJSON.php
 src/Models/Operations/PostPostReview200ApplicationJSON.php
 src/Models/Operations/PostPostReviewResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

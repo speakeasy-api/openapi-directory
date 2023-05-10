@@ -222,4 +222,5 @@ src/Models/Shared/UntagResourceRequest.php
 src/Models/Shared/UpdateInferenceSchedulerRequest.php
 src/Models/Shared/UpdateLabelGroupRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

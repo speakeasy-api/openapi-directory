@@ -30,29 +30,108 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\TranslateProjectsLocationsBatchTranslateDocumentRequest;
+use \OpenAPI\OpenAPI\Models\Shared\XgafvEnum;
+use \OpenAPI\OpenAPI\Models\Shared\BatchTranslateDocumentRequest;
+use \OpenAPI\OpenAPI\Models\Shared\TranslateTextGlossaryConfig;
+use \OpenAPI\OpenAPI\Models\Shared\BatchDocumentInputConfig;
+use \OpenAPI\OpenAPI\Models\Shared\GcsSource;
+use \OpenAPI\OpenAPI\Models\Shared\BatchDocumentOutputConfig;
+use \OpenAPI\OpenAPI\Models\Shared\GcsDestination;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+use \OpenAPI\OpenAPI\Models\Operations\TranslateProjectsLocationsBatchTranslateDocumentSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new TranslateProjectsLocationsBatchTranslateDocumentRequest();
+    $request->dollarXgafv = XgafvEnum::TWO;
+    $request->batchTranslateDocumentRequest = new BatchTranslateDocumentRequest();
+    $request->batchTranslateDocumentRequest->customizedAttribution = 'provident';
+    $request->batchTranslateDocumentRequest->enableShadowRemovalNativePdf = false;
+    $request->batchTranslateDocumentRequest->formatConversions = [
+        'quibusdam' => 'unde',
+        'nulla' => 'corrupti',
+        'illum' => 'vel',
+    ];
+    $request->batchTranslateDocumentRequest->glossaries = [
+        'deserunt' => new TranslateTextGlossaryConfig(),
+        'suscipit' => new TranslateTextGlossaryConfig(),
+        'iure' => new TranslateTextGlossaryConfig(),
+    ];
+    $request->batchTranslateDocumentRequest->inputConfigs = [
+        new BatchDocumentInputConfig(),
+        new BatchDocumentInputConfig(),
+    ];
+    $request->batchTranslateDocumentRequest->models = [
+        'ipsa' => 'delectus',
+        'tempora' => 'suscipit',
+        'molestiae' => 'minus',
+        'placeat' => 'voluptatum',
+    ];
+    $request->batchTranslateDocumentRequest->outputConfig = new BatchDocumentOutputConfig();
+    $request->batchTranslateDocumentRequest->outputConfig->gcsDestination = new GcsDestination();
+    $request->batchTranslateDocumentRequest->outputConfig->gcsDestination->outputUriPrefix = 'iusto';
+    $request->batchTranslateDocumentRequest->sourceLanguageCode = 'excepturi';
+    $request->batchTranslateDocumentRequest->targetLanguageCodes = [
+        'recusandae',
+        'temporibus',
+    ];
+    $request->accessToken = 'ab';
+    $request->alt = AltEnum::MEDIA;
+    $request->callback = 'veritatis';
+    $request->fields = 'deserunt';
+    $request->key = 'perferendis';
+    $request->oauthToken = 'ipsam';
+    $request->parent = 'repellendus';
+    $request->prettyPrint = false;
+    $request->quotaUser = 'sapiente';
+    $request->uploadType = 'quo';
+    $request->uploadProtocol = 'odit';
+
+    $requestSecurity = new TranslateProjectsLocationsBatchTranslateDocumentSecurity();
+    $requestSecurity->oauth2 = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+    $requestSecurity->oauth2c = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+
+    $response = $sdk->projects->translateProjectsLocationsBatchTranslateDocument($request, $requestSecurity);
+
+    if ($response->operation !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `translateProjectsLocationsBatchTranslateDocument` - Translates a large volume of document in asynchronous batch mode. This function provides real-time output as the inputs are being processed. If caller cancels a request, the partial results (for an input file, it's all or nothing) may still be available on the specified output location. This call returns immediately and you can use google.longrunning.Operation.name to poll the status of the call.
-* `translateProjectsLocationsBatchTranslateText` - Translates a large volume of text in asynchronous batch mode. This function provides real-time output as the inputs are being processed. If caller cancels a request, the partial results (for an input file, it's all or nothing) may still be available on the specified output location. This call returns immediately and you can use google.longrunning.Operation.name to poll the status of the call.
-* `translateProjectsLocationsDetectLanguage` - Detects the language of text within a request.
-* `translateProjectsLocationsGetSupportedLanguages` - Returns a list of supported languages for translation.
-* `translateProjectsLocationsGlossariesCreate` - Creates a glossary and returns the long-running operation. Returns NOT_FOUND, if the project doesn't exist.
-* `translateProjectsLocationsGlossariesList` - Lists glossaries in a project. Returns NOT_FOUND, if the project doesn't exist.
-* `translateProjectsLocationsList` - Lists information about the supported locations for this service.
-* `translateProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `translateProjectsLocationsOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-* `translateProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `translateProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-* `translateProjectsLocationsOperationsWait` - Waits until the specified long-running operation is done or reaches at most a specified timeout, returning the latest state. If the operation is already done, the latest state is immediately returned. If the timeout specified is greater than the default HTTP/RPC timeout, the HTTP/RPC timeout is used. If the server does not support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Note that this method is on a best-effort basis. It may return the latest state before the specified timeout (including immediately), meaning even an immediate response is no guarantee that the operation is done.
-* `translateProjectsLocationsTranslateDocument` - Translates documents in synchronous mode.
-* `translateProjectsLocationsTranslateText` - Translates input text and returns translated text.
+* [translateProjectsLocationsBatchTranslateDocument](docs/projects/README.md#translateprojectslocationsbatchtranslatedocument) - Translates a large volume of document in asynchronous batch mode. This function provides real-time output as the inputs are being processed. If caller cancels a request, the partial results (for an input file, it's all or nothing) may still be available on the specified output location. This call returns immediately and you can use google.longrunning.Operation.name to poll the status of the call.
+* [translateProjectsLocationsBatchTranslateText](docs/projects/README.md#translateprojectslocationsbatchtranslatetext) - Translates a large volume of text in asynchronous batch mode. This function provides real-time output as the inputs are being processed. If caller cancels a request, the partial results (for an input file, it's all or nothing) may still be available on the specified output location. This call returns immediately and you can use google.longrunning.Operation.name to poll the status of the call.
+* [translateProjectsLocationsDetectLanguage](docs/projects/README.md#translateprojectslocationsdetectlanguage) - Detects the language of text within a request.
+* [translateProjectsLocationsGetSupportedLanguages](docs/projects/README.md#translateprojectslocationsgetsupportedlanguages) - Returns a list of supported languages for translation.
+* [translateProjectsLocationsGlossariesCreate](docs/projects/README.md#translateprojectslocationsglossariescreate) - Creates a glossary and returns the long-running operation. Returns NOT_FOUND, if the project doesn't exist.
+* [translateProjectsLocationsGlossariesList](docs/projects/README.md#translateprojectslocationsglossarieslist) - Lists glossaries in a project. Returns NOT_FOUND, if the project doesn't exist.
+* [translateProjectsLocationsList](docs/projects/README.md#translateprojectslocationslist) - Lists information about the supported locations for this service.
+* [translateProjectsLocationsOperationsCancel](docs/projects/README.md#translateprojectslocationsoperationscancel) - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+* [translateProjectsLocationsOperationsDelete](docs/projects/README.md#translateprojectslocationsoperationsdelete) - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+* [translateProjectsLocationsOperationsGet](docs/projects/README.md#translateprojectslocationsoperationsget) - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+* [translateProjectsLocationsOperationsList](docs/projects/README.md#translateprojectslocationsoperationslist) - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
+* [translateProjectsLocationsOperationsWait](docs/projects/README.md#translateprojectslocationsoperationswait) - Waits until the specified long-running operation is done or reaches at most a specified timeout, returning the latest state. If the operation is already done, the latest state is immediately returned. If the timeout specified is greater than the default HTTP/RPC timeout, the HTTP/RPC timeout is used. If the server does not support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Note that this method is on a best-effort basis. It may return the latest state before the specified timeout (including immediately), meaning even an immediate response is no guarantee that the operation is done.
+* [translateProjectsLocationsTranslateDocument](docs/projects/README.md#translateprojectslocationstranslatedocument) - Translates documents in synchronous mode.
+* [translateProjectsLocationsTranslateText](docs/projects/README.md#translateprojectslocationstranslatetext) - Translates input text and returns translated text.
 <!-- End SDK Available Operations -->
 
 ### Maturity

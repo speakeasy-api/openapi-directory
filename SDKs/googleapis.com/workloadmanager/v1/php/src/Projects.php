@@ -78,6 +78,160 @@ class Projects
     }
 	
     /**
+     * Lists Executions in a given project and location.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsListRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsListSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsListResponse
+     */
+	public function workloadmanagerProjectsLocationsEvaluationsExecutionsList(
+        \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsListRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsListSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsListResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{parent}/executions', \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsListRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsListRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsListResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->listExecutionsResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListExecutionsResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * List the running result of a single Execution.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsResultsListRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsResultsListSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsResultsListResponse
+     */
+	public function workloadmanagerProjectsLocationsEvaluationsExecutionsResultsList(
+        \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsResultsListRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsResultsListSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsResultsListResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{parent}/results', \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsResultsListRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsResultsListRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsResultsListResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->listExecutionResultsResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListExecutionResultsResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Creates a new Execution in a given project and location.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsRunRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsRunSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsRunResponse
+     */
+	public function workloadmanagerProjectsLocationsEvaluationsExecutionsRun(
+        \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsRunRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsRunSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsRunResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{name}/executions:run', \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsRunRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "runEvaluationRequestInput", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsRunRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsRunResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * List all scanned resources for a single Execution.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsScannedResourcesListRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsScannedResourcesListSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsScannedResourcesListResponse
+     */
+	public function workloadmanagerProjectsLocationsEvaluationsExecutionsScannedResourcesList(
+        \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsScannedResourcesListRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsScannedResourcesListSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsScannedResourcesListResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{parent}/scannedResources', \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsScannedResourcesListRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsScannedResourcesListRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsExecutionsScannedResourcesListResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->listScannedResourcesResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListScannedResourcesResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Lists Evaluations in a given project and location.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsEvaluationsListRequest $request
@@ -341,6 +495,44 @@ class Projects
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->listOperationsResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListOperationsResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Lists rules in a given project.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsRulesListRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsRulesListSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsRulesListResponse
+     */
+	public function workloadmanagerProjectsLocationsRulesList(
+        \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsRulesListRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsRulesListSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsRulesListResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{parent}/rules', \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsRulesListRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsRulesListRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\WorkloadmanagerProjectsLocationsRulesListResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->listRulesResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListRulesResponse', 'json');
             }
         }
 

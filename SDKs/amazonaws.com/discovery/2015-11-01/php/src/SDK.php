@@ -744,11 +744,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DescribeExportConfigurationsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DescribeExportConfigurationsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function describeExportConfigurations(
         \OpenAPI\OpenAPI\Models\Operations\DescribeExportConfigurationsRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DescribeExportConfigurationsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=AWSPoseidonService_V2015_11_01.DescribeExportConfigurations');
         
@@ -1107,11 +1110,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ExportConfigurationsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ExportConfigurationsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function exportConfigurations(
         \OpenAPI\OpenAPI\Models\Operations\ExportConfigurationsRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\ExportConfigurationsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=AWSPoseidonService_V2015_11_01.ExportConfigurations');
         

@@ -138,4 +138,5 @@ src/Models/Shared/ValidateResourcePolicyResponse.php
 src/Models/Shared/ValidationErrorsEntry.php
 src/Models/Shared/ValidateResourcePolicyRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

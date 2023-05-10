@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopFleetXAmzTargetEnum: string
 {
     case PHOTON_ADMIN_PROXY_SERVICE_STOP_FLEET = 'PhotonAdminProxyService.StopFleet';

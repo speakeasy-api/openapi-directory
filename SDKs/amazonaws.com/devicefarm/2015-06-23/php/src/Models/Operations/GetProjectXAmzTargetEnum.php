@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetProjectXAmzTargetEnum: string
 {
     case DEVICE_FARM20150623_GET_PROJECT = 'DeviceFarm_20150623.GetProject';

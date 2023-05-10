@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateMicrosoftADXAmzTargetEnum: string
 {
     case DIRECTORY_SERVICE20150416_CREATE_MICROSOFT_AD = 'DirectoryService_20150416.CreateMicrosoftAD';

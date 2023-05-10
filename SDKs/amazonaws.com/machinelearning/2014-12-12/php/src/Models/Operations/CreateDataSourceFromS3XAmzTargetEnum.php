@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateDataSourceFromS3XAmzTargetEnum: string
 {
     case AMAZON_ML20141212_CREATE_DATA_SOURCE_FROM_S3 = 'AmazonML_20141212.CreateDataSourceFromS3';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeAnomalyDetectorsActionEnum: string
 {
     case DESCRIBE_ANOMALY_DETECTORS = 'DescribeAnomalyDetectors';

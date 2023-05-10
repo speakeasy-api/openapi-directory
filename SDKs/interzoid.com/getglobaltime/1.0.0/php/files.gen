@@ -22,4 +22,6 @@ src/Utils/Utils.php
 src/Models/Operations/GetglobaltimeRequest.php
 src/Models/Operations/Getglobaltime200ApplicationJSON.php
 src/Models/Operations/GetglobaltimeResponse.php
+docs/sdk/README.md
+docs/currentglobaltime/README.md
 USAGE.md

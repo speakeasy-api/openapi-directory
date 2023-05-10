@@ -9,9 +9,9 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Shared;
 
 
-enum TokensTwitchDropHistoryResponseClaimStateEnum: string
+enum TokensTwitchDropHistoryResponseClaimStateEnum: int
 {
-    case ZERO = '0';
-    case ONE = '1';
-    case TWO = '2';
+    case ZERO = 0;
+    case ONE = 1;
+    case TWO = 2;
 }

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeauthorizeDataShareActionEnum: string
 {
     case DEAUTHORIZE_DATA_SHARE = 'DeauthorizeDataShare';

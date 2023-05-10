@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTPurchaseReservedCacheNodesOfferingActionEnum: string
 {
     case PURCHASE_RESERVED_CACHE_NODES_OFFERING = 'PurchaseReservedCacheNodesOffering';

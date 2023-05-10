@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeInstancePatchStatesForPatchGroupXAmzTargetEnum: string
 {
     case AMAZON_SSM_DESCRIBE_INSTANCE_PATCH_STATES_FOR_PATCH_GROUP = 'AmazonSSM.DescribeInstancePatchStatesForPatchGroup';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateRdsDbInstanceXAmzTargetEnum: string
 {
     case OPS_WORKS20130218_UPDATE_RDS_DB_INSTANCE = 'OpsWorks_20130218.UpdateRdsDbInstance';

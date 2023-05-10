@@ -316,4 +316,5 @@ src/Models/Shared/CostAllocationTagStatusEntry.php
 src/Models/Shared/UpdateCostCategoryDefinitionResponse.php
 src/Models/Shared/UpdateCostCategoryDefinitionRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

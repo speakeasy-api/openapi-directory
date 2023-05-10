@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteColumnStatisticsForTableXAmzTargetEnum: string
 {
     case AWS_GLUE_DELETE_COLUMN_STATISTICS_FOR_TABLE = 'AWSGlue.DeleteColumnStatisticsForTable';

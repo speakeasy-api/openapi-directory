@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateTestGridUrlXAmzTargetEnum: string
 {
     case DEVICE_FARM20150623_CREATE_TEST_GRID_URL = 'DeviceFarm_20150623.CreateTestGridUrl';

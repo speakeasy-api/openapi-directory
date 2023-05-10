@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETGETSessionTokenActionEnum: string
 {
     case GET_SESSION_TOKEN = 'GetSessionToken';

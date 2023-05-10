@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ResumeServiceXAmzTargetEnum: string
 {
     case APP_RUNNER_RESUME_SERVICE = 'AppRunner.ResumeService';

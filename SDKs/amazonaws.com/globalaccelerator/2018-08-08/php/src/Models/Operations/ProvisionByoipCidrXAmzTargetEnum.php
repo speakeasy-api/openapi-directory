@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ProvisionByoipCidrXAmzTargetEnum: string
 {
     case GLOBAL_ACCELERATOR_V20180706_PROVISION_BYOIP_CIDR = 'GlobalAccelerator_V20180706.ProvisionByoipCidr';

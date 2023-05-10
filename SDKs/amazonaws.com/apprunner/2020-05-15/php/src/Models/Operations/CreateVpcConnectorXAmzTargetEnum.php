@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateVpcConnectorXAmzTargetEnum: string
 {
     case APP_RUNNER_CREATE_VPC_CONNECTOR = 'AppRunner.CreateVpcConnector';

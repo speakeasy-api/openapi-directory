@@ -278,7 +278,7 @@ class Personal
     }
 	
     /**
-     * Infer the likely gender of a just a fiven name, assuming default 'US' local context. Please use preferably full names and local geographic context for better accuracy.
+     * Infer the likely gender of a name.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GenderRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\GenderSecurity $security
@@ -290,7 +290,7 @@ class Personal
     ): \OpenAPI\OpenAPI\Models\Operations\GenderResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/api2/json/gender/{firstName}', \OpenAPI\OpenAPI\Models\Operations\GenderRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/api2/json/gender/{firstName}/{lastName}', \OpenAPI\OpenAPI\Models\Operations\GenderRequest::class, $request);
         
         $options = ['http_errors' => false];
         
@@ -598,7 +598,7 @@ class Personal
     }
 	
     /**
-     * Infer the likely gender of a name.
+     * Infer the likely gender of a just a fiven name, assuming default 'US' local context. Please use preferably full names and local geographic context for better accuracy.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\Gender1Request $request
      * @param \OpenAPI\OpenAPI\Models\Operations\Gender1Security $security
@@ -610,7 +610,7 @@ class Personal
     ): \OpenAPI\OpenAPI\Models\Operations\Gender1Response
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/api2/json/gender/{firstName}/{lastName}', \OpenAPI\OpenAPI\Models\Operations\Gender1Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/api2/json/gender/{firstName}', \OpenAPI\OpenAPI\Models\Operations\Gender1Request::class, $request);
         
         $options = ['http_errors' => false];
         
@@ -1028,6 +1028,86 @@ class Personal
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->batchFirstLastNameGeoSubclassificationOut = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\BatchFirstLastNameGeoSubclassificationOut', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 400 or $httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 403) {
+        }
+
+        return $response;
+    }
+	
+    /**
+     * [USES 10 UNITS PER NAME] Infer the likely origin of a name at a country subclassification level (state or regeion). Initially, this is only supported for India (ISO2 code 'IN').
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\SubclassificationFullRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\SubclassificationFullSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\SubclassificationFullResponse
+     */
+	public function subclassificationFull(
+        \OpenAPI\OpenAPI\Models\Operations\SubclassificationFullRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\SubclassificationFullSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\SubclassificationFullResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/api2/json/subclassificationFull/{countryIso2}/{fullName}', \OpenAPI\OpenAPI\Models\Operations\SubclassificationFullRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\SubclassificationFullResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->firstLastNameGeoSubclassificationOut = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\FirstLastNameGeoSubclassificationOut', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 403) {
+        }
+
+        return $response;
+    }
+	
+    /**
+     * [USES 10 UNITS PER NAME] Infer the likely origin of a list of up to 100 names at a country subclassification level (state or regeion). Initially, this is only supported for India (ISO2 code 'IN').
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Shared\BatchPersonalNameGeoIn $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\SubclassificationFullBatchSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\SubclassificationFullBatchResponse
+     */
+	public function subclassificationFullBatch(
+        \OpenAPI\OpenAPI\Models\Shared\BatchPersonalNameGeoIn $request,
+        \OpenAPI\OpenAPI\Models\Operations\SubclassificationFullBatchSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\SubclassificationFullBatchResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/api2/json/subclassificationFullBatch');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $options = array_merge_recursive($options, $body);
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\SubclassificationFullBatchResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->batchPersonalNameGeoSubclassificationOut = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\BatchPersonalNameGeoSubclassificationOut', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 400 or $httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 403) {

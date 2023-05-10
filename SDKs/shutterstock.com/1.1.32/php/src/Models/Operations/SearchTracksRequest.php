@@ -23,6 +23,7 @@ class SearchTracksRequest
      * (Deprecated; use bpm_from and bpm_to instead) Show tracks with the specified beats per minute
      * 
      * @var ?int $bpm
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=bpm')]
     public ?int $bpm = null;

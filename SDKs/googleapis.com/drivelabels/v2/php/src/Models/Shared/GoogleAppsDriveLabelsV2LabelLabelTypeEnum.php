@@ -15,4 +15,5 @@ enum GoogleAppsDriveLabelsV2LabelLabelTypeEnum: string
     case LABEL_TYPE_UNSPECIFIED = 'LABEL_TYPE_UNSPECIFIED';
     case SHARED = 'SHARED';
     case ADMIN = 'ADMIN';
+    case GOOGLE_APP = 'GOOGLE_APP';
 }

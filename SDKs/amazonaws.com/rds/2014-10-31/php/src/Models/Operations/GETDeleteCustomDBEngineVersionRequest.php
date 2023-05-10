@@ -15,7 +15,7 @@ class GETDeleteCustomDBEngineVersionRequest
     public GETDeleteCustomDBEngineVersionActionEnum $action;
     
     /**
-     * The database engine. The only supported engine is <code>custom-oracle-ee</code>.
+     * The database engine. The only supported engines are <code>custom-oracle-ee</code> and <code>custom-oracle-ee-cdb</code>.
      * 
      * @var string $engine
      */

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum SignalWorkflowExecutionXAmzTargetEnum: string
 {
     case SIMPLE_WORKFLOW_SERVICE_SIGNAL_WORKFLOW_EXECUTION = 'SimpleWorkflowService.SignalWorkflowExecution';

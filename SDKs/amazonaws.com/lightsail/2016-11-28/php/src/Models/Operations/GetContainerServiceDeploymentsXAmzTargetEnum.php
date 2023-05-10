@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetContainerServiceDeploymentsXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_GET_CONTAINER_SERVICE_DEPLOYMENTS = 'Lightsail_20161128.GetContainerServiceDeployments';

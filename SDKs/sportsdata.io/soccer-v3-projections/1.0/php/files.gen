@@ -44,4 +44,5 @@ src/Models/Shared/PlayoffAggregateScore.php
 src/Models/Shared/Player.php
 src/Models/Shared/PlayerGameProjection.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

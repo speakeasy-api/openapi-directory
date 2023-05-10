@@ -136,4 +136,11 @@ src/Models/Shared/ChannelStatus.php
 src/Models/Shared/Occupancy.php
 src/Models/Shared/SchemeBasicAuth.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/authentication/README.md
+docs/history/README.md
+docs/publishing/README.md
+docs/push/README.md
+docs/stats/README.md
+docs/status/README.md
 USAGE.md

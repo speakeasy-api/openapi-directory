@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetWorkflowRunPropertiesXAmzTargetEnum: string
 {
     case AWS_GLUE_GET_WORKFLOW_RUN_PROPERTIES = 'AWSGlue.GetWorkflowRunProperties';

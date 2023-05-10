@@ -17,9 +17,13 @@ class JapaneseNameKanjiCandidatesRequest
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=japaneseSurnameLatin')]
     public string $japaneseSurnameLatin;
     
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=knownGender')]
+    public string $knownGender;
+    
 	public function __construct()
 	{
 		$this->japaneseGivenNameLatin = "";
 		$this->japaneseSurnameLatin = "";
+		$this->knownGender = "";
 	}
 }

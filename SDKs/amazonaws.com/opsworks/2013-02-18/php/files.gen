@@ -404,4 +404,5 @@ src/Models/Shared/UpdateStackRequest.php
 src/Models/Shared/UpdateUserProfileRequest.php
 src/Models/Shared/UpdateVolumeRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -45,4 +45,6 @@ src/Models/Shared/XgafvEnum.php
 src/Models/Shared/ListProvisioningQuotasResponse.php
 src/Models/Shared/ProvisioningQuota.php
 src/Models/Shared/InstanceQuota.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

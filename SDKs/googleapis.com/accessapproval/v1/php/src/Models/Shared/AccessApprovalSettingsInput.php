@@ -57,11 +57,33 @@ class AccessApprovalSettingsInput
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $notificationEmails = null;
     
+    /**
+     * This preference is communicated to Google personnel when sending an approval request but can be overridden if necessary.
+     * 
+     * @var ?bool $preferNoBroadApprovalRequests
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('preferNoBroadApprovalRequests')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $preferNoBroadApprovalRequests = null;
+    
+    /**
+     * This preference is shared with Google personnel, but can be overridden if said personnel deems necessary. The approver ultimately can set the expiration at approval time.
+     * 
+     * @var ?int $preferredRequestExpirationDays
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('preferredRequestExpirationDays')]
+    #[\JMS\Serializer\Annotation\Type('int')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?int $preferredRequestExpirationDays = null;
+    
 	public function __construct()
 	{
 		$this->activeKeyVersion = null;
 		$this->enrolledServices = null;
 		$this->name = null;
 		$this->notificationEmails = null;
+		$this->preferNoBroadApprovalRequests = null;
+		$this->preferredRequestExpirationDays = null;
 	}
 }

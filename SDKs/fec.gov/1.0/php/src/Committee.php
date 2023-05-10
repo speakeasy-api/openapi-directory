@@ -77,8 +77,7 @@ class Committee
 	
     /**
      * 
-     * Explore a filer's characteristics over time. This can be particularly useful if the
-     * committees change treasurers, designation, or `committee_type`.
+     * Explore a filer's characteristics over time. This can be particularly useful if the committees change treasurers, designation, or `committee_type`.
      * 
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetCandidateCandidateIdCommitteesHistoryRequest $request
@@ -115,8 +114,7 @@ class Committee
 	
     /**
      * 
-     * Explore a filer's characteristics over time. This can be particularly useful if the
-     * committees change treasurers, designation, or `committee_type`.
+     * Explore a filer's characteristics over time. This can be particularly useful if the committees change treasurers, designation, or `committee_type`.
      * 
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetCandidateCandidateIdCommitteesHistoryCycleRequest $request
@@ -191,8 +189,7 @@ class Committee
 	
     /**
      * 
-     * Explore a filer's characteristics over time. This can be particularly useful if the
-     * committees change treasurers, designation, or `committee_type`.
+     * Explore a filer's characteristics over time. This can be particularly useful if the committees change treasurers, designation, or `committee_type`.
      * 
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetCommitteeCommitteeIdHistoryRequest $request
@@ -229,8 +226,7 @@ class Committee
 	
     /**
      * 
-     * Explore a filer's characteristics over time. This can be particularly useful if the
-     * committees change treasurers, designation, or `committee_type`.
+     * Explore a filer's characteristics over time. This can be particularly useful if the committees change treasurers, designation, or `committee_type`.
      * 
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetCommitteeCommitteeIdHistoryCycleRequest $request

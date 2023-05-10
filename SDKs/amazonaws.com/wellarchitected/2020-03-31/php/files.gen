@@ -55,6 +55,9 @@ src/Models/Operations/ExportLensRequest.php
 src/Models/Operations/ExportLensResponse.php
 src/Models/Operations/GetAnswerRequest.php
 src/Models/Operations/GetAnswerResponse.php
+src/Models/Operations/GetConsolidatedReportFormatEnum.php
+src/Models/Operations/GetConsolidatedReportRequest.php
+src/Models/Operations/GetConsolidatedReportResponse.php
 src/Models/Operations/GetLensRequest.php
 src/Models/Operations/GetLensResponse.php
 src/Models/Operations/GetLensReviewRequest.php
@@ -157,6 +160,13 @@ src/Models/Shared/AdditionalResourceTypeEnum.php
 src/Models/Shared/ChoiceAnswer.php
 src/Models/Shared/ChoiceStatusEnum.php
 src/Models/Shared/ChoiceReasonEnum.php
+src/Models/Shared/GetConsolidatedReportOutput.php
+src/Models/Shared/ConsolidatedReportMetric.php
+src/Models/Shared/MetricTypeEnum.php
+src/Models/Shared/LensMetric.php
+src/Models/Shared/PillarMetric.php
+src/Models/Shared/QuestionMetric.php
+src/Models/Shared/BestPractice.php
 src/Models/Shared/GetLensOutput.php
 src/Models/Shared/Lens.php
 src/Models/Shared/GetLensReviewOutput.php
@@ -224,4 +234,5 @@ src/Models/Shared/UpdateWorkloadOutput.php
 src/Models/Shared/UpdateWorkloadShareOutput.php
 src/Models/Shared/WorkloadShare.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

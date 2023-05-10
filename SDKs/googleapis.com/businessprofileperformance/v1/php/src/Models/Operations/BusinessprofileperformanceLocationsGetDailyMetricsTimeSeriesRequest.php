@@ -100,7 +100,7 @@ class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest
     public ?int $dailyRangeStartDateYear = null;
     
     /**
-     * Represents the day of the week. Eg: MONDAY.
+     * Represents the day of the week. Eg: MONDAY. Currently supported DailyMetrics = NONE.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Operations\BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailySubEntityTypeDayOfWeekEnum $dailySubEntityTypeDayOfWeek
      */

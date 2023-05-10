@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetChangeTokenStatusXAmzTargetEnum: string
 {
     case AWSWAF20150824_GET_CHANGE_TOKEN_STATUS = 'AWSWAF_20150824.GetChangeTokenStatus';

@@ -48,6 +48,16 @@ class GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMetadata
     public ?int $taskAttempt = null;
     
     /**
+     * the task label associated with this snapshot. Could be empty.
+     * 
+     * @var ?string $taskLabel
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('taskLabel')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $taskLabel = null;
+    
+    /**
      * The task number associated with this snapshot.
      * 
      * @var ?string $taskNumber
@@ -62,6 +72,7 @@ class GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMetadata
 		$this->executionAttempt = null;
 		$this->task = null;
 		$this->taskAttempt = null;
+		$this->taskLabel = null;
 		$this->taskNumber = null;
 	}
 }

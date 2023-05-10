@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopGUISessionXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_STOP_GUI_SESSION = 'Lightsail_20161128.StopGUISession';

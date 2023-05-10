@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateUserXAmzTargetEnum: string
 {
     case TRANSFER_SERVICE_UPDATE_USER = 'TransferService.UpdateUser';

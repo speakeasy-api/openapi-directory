@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum BatchGetCollectionXAmzTargetEnum: string
 {
     case OPEN_SEARCH_SERVERLESS_BATCH_GET_COLLECTION = 'OpenSearchServerless.BatchGetCollection';

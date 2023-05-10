@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListResolverQueryLogConfigAssociationsXAmzTargetEnum: string
 {
     case ROUTE53_RESOLVER_LIST_RESOLVER_QUERY_LOG_CONFIG_ASSOCIATIONS = 'Route53Resolver.ListResolverQueryLogConfigAssociations';

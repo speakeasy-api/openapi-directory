@@ -36,41 +36,11 @@ class SDK
 	public Groups $groups;
 	
     /**
-     * Manage conversations and messages with other users. <br /><br /> It's important to note that messages are always sent by email to the users.   So it's possible to create a fully functional app using the trash nothing API without using any of the conversations or messages API endpoints.  These API endpoints are useful for developers who want to build a complete messaging interface into their app.
-     * 
-     * 
-     * 
-     * @var Messages $$messages
-     */
-	public Messages $messages;
-	
-    /**
-     * Miscellaneous functionality.
-     * 
-     * @var Misc $$misc
-     */
-	public Misc $misc;
-	
-    /**
-     * Upload, delete and rotate photos.
-     * 
-     * @var Photos $$photos
-     */
-	public Photos $photos;
-	
-    /**
      * Retrieve and update posts.
      * 
      * @var Posts $$posts
      */
 	public Posts $posts;
-	
-    /**
-     * Retrieve and submit stories.
-     * 
-     * @var Stories $$stories
-     */
-	public Stories $stories;
 	
     /**
      * Retrieve and update user data.
@@ -82,7 +52,7 @@ class SDK
 	// SDK private variables namespaced with _ to avoid conflicts with API models
 	private ?\GuzzleHttp\ClientInterface $_defaultClient;
 	private ?\GuzzleHttp\ClientInterface $_securityClient;
-	private ?Models\Shared\Security $_security;
+	
 	private string $_serverUrl;
 	private string $_language = 'php';
 	private string $_sdkVersion = '0.0.1';
@@ -99,12 +69,11 @@ class SDK
 	}
 
 	/**
-	 * @param \GuzzleHttp\ClientInterface|null $client	 
-	 * @param Models\Shared\Security|null $security
+	 * @param \GuzzleHttp\ClientInterface|null $client
 	 * @param string $serverUrl
 	 * @param array<string, string>|null $params
 	 */
-	public function __construct(?\GuzzleHttp\ClientInterface $client, ?Models\Shared\Security $security, string $serverUrl, ?array $params)
+	public function __construct(?\GuzzleHttp\ClientInterface $client, string $serverUrl, ?array $params)
 	{
 		$this->_defaultClient = $client;
 		
@@ -115,11 +84,6 @@ class SDK
 		}
 
 		$this->_securityClient = null;
-		if ($security !== null) {
-			$this->_security = $security;
-			$this->_securityClient = Utils\Utils::configureSecurityClient($this->_defaultClient, $this->_security);
-		}
-		
 		if ($this->_securityClient === null) {
 			$this->_securityClient = $this->_defaultClient;
 		}
@@ -141,43 +105,7 @@ class SDK
 			$this->_genVersion
 		);
 		
-		$this->messages = new Messages(
-			$this->_defaultClient,
-			$this->_securityClient,
-			$this->_serverUrl,
-			$this->_language,
-			$this->_sdkVersion,
-			$this->_genVersion
-		);
-		
-		$this->misc = new Misc(
-			$this->_defaultClient,
-			$this->_securityClient,
-			$this->_serverUrl,
-			$this->_language,
-			$this->_sdkVersion,
-			$this->_genVersion
-		);
-		
-		$this->photos = new Photos(
-			$this->_defaultClient,
-			$this->_securityClient,
-			$this->_serverUrl,
-			$this->_language,
-			$this->_sdkVersion,
-			$this->_genVersion
-		);
-		
 		$this->posts = new Posts(
-			$this->_defaultClient,
-			$this->_securityClient,
-			$this->_serverUrl,
-			$this->_language,
-			$this->_sdkVersion,
-			$this->_genVersion
-		);
-		
-		$this->stories = new Stories(
 			$this->_defaultClient,
 			$this->_securityClient,
 			$this->_serverUrl,

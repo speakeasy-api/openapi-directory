@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateModelXAmzTargetEnum: string
 {
     case AWS_LOOKOUT_EQUIPMENT_FRONTEND_SERVICE_CREATE_MODEL = 'AWSLookoutEquipmentFrontendService.CreateModel';

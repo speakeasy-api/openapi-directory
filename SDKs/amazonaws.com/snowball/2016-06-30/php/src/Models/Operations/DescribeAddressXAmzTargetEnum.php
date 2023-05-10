@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeAddressXAmzTargetEnum: string
 {
     case AWSIE_SNOWBALL_JOB_MANAGEMENT_SERVICE_DESCRIBE_ADDRESS = 'AWSIESnowballJobManagementService.DescribeAddress';

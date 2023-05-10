@@ -31,4 +31,6 @@ src/Models/Operations/OpenSearchSourceEnum.php
 src/Models/Operations/OpenSearchRequest.php
 src/Models/Operations/OpenSearchResponse.php
 src/Models/Operations/OpensearchDescriptionResponse.php
+docs/sdk/README.md
+docs/swaggerdocs/README.md
 USAGE.md

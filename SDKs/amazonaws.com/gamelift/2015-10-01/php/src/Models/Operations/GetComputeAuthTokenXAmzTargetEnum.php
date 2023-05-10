@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetComputeAuthTokenXAmzTargetEnum: string
 {
     case GAME_LIFT_GET_COMPUTE_AUTH_TOKEN = 'GameLift.GetComputeAuthToken';

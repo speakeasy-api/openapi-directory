@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeStreamXAmzTargetEnum: string
 {
     case KINESIS20131202_DESCRIBE_STREAM = 'Kinesis_20131202.DescribeStream';

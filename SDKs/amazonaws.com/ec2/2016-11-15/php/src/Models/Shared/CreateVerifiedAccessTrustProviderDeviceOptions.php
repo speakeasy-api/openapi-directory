@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * CreateVerifiedAccessTrustProviderDeviceOptions - Options for a device-identity type trust provider.
+ * CreateVerifiedAccessTrustProviderDeviceOptions - Describes the options when creating an Amazon Web Services Verified Access trust provider using the <code>device</code> type.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

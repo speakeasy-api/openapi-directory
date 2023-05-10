@@ -17,6 +17,11 @@ namespace OpenAPI\OpenAPI\Models\Shared;
  */
 class VolumeConfiguration
 {
+	#[\JMS\Serializer\Annotation\SerializedName('rootVolume')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $rootVolume = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('volumeBaselineIOPS')]
     #[\JMS\Serializer\Annotation\Type('int')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -49,6 +54,7 @@ class VolumeConfiguration
     
 	public function __construct()
 	{
+		$this->rootVolume = null;
 		$this->volumeBaselineIOPS = null;
 		$this->volumeBaselineThroughput = null;
 		$this->volumeBurstIOPS = null;

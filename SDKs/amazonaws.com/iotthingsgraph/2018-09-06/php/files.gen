@@ -214,4 +214,5 @@ src/Models/Shared/UpdateSystemTemplateRequest.php
 src/Models/Shared/UploadEntityDefinitionsResponse.php
 src/Models/Shared/UploadEntityDefinitionsRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

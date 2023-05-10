@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTPromoteReadReplicaActionEnum: string
 {
     case PROMOTE_READ_REPLICA = 'PromoteReadReplica';

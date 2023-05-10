@@ -43,9 +43,11 @@ class ClientManagement
      * Retrieve a list of clients.
      * 
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ClientSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ClientResponse
      */
 	public function client(
+        \OpenAPI\OpenAPI\Models\Operations\ClientSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ClientResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -53,7 +55,8 @@ class ClientManagement
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

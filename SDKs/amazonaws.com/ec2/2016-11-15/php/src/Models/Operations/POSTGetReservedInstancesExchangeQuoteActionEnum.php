@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTGetReservedInstancesExchangeQuoteActionEnum: string
 {
     case GET_RESERVED_INSTANCES_EXCHANGE_QUOTE = 'GetReservedInstancesExchangeQuote';

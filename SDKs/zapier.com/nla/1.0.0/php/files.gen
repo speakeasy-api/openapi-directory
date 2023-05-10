@@ -18,11 +18,17 @@ src/Utils/SecurityClient.php
 src/Utils/SecurityMetadata.php
 src/Utils/SpeakeasyMetadata.php
 src/Utils/Utils.php
+src/Models/Operations/CheckSecurity.php
 src/Models/Operations/CheckResponse.php
 src/Models/Operations/ExecuteAppActionEndpointSecurity.php
 src/Models/Operations/ExecuteAppActionEndpointRequest.php
 src/Models/Operations/ExecuteAppActionEndpointResponse.php
+src/Models/Operations/GetConfigurationLinkSecurity.php
 src/Models/Operations/GetConfigurationLinkResponse.php
+src/Models/Operations/GetExecutionLogEndpointSecurity.php
+src/Models/Operations/GetExecutionLogEndpointRequest.php
+src/Models/Operations/GetExecutionLogEndpointResponse.php
+src/Models/Operations/ListExposedActionsSecurity.php
 src/Models/Operations/ListExposedActionsResponse.php
 src/Models/Shared/ExecuteResponseStatusEnum.php
 src/Models/Shared/ExecuteResponse.php
@@ -30,4 +36,5 @@ src/Models/Shared/ErrorResponse.php
 src/Models/Shared/ExecuteRequest.php
 src/Models/Shared/ExposedActionResponseSchema.php
 src/Models/Shared/ExposedActionSchema.php
+docs/sdk/README.md
 USAGE.md

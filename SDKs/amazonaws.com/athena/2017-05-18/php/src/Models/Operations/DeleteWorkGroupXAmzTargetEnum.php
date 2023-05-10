@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteWorkGroupXAmzTargetEnum: string
 {
     case AMAZON_ATHENA_DELETE_WORK_GROUP = 'AmazonAthena.DeleteWorkGroup';

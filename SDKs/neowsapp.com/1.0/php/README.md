@@ -30,31 +30,55 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\RetrieveNEOFeedTodayRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new RetrieveNEOFeedTodayRequest();
+    $request->detailed = false;
+
+    $response = $sdk->feed->retrieveNEOFeedToday($request);
+
+    if ($response->nearEarthObjectList !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### feed
+### [feed](docs/feed/README.md)
 
-* `retrieveNEOFeedToday` - Find Near Earth Objects for today
-* `retrieveNearEarthObjectFeed` - Find Near Earth Objects by date
+* [retrieveNEOFeedToday](docs/feed/README.md#retrieveneofeedtoday) - Find Near Earth Objects for today
+* [retrieveNearEarthObjectFeed](docs/feed/README.md#retrievenearearthobjectfeed) - Find Near Earth Objects by date
 
-### neo
+### [neo](docs/neo/README.md)
 
-* `browseNearEarthObjects` - Browse the Near Earth Objects service
-* `retrieveNearEarthObjectById` - Find Near Earth Objects by id
+* [browseNearEarthObjects](docs/neo/README.md#browsenearearthobjects) - Browse the Near Earth Objects service
+* [retrieveNearEarthObjectById](docs/neo/README.md#retrievenearearthobjectbyid) - Find Near Earth Objects by id
 
-### neosentry
+### [neosentry](docs/neosentry/README.md)
 
-* `retrieveSentryRiskData` - Retrieve Sentry (Impact Risk ) Near Earth Objects
-* `retrieveSentryRiskDataById` - Retrieve Sentry (Impact Risk ) Near Earth Objectby ID 
+* [retrieveSentryRiskData](docs/neosentry/README.md#retrievesentryriskdata) - Retrieve Sentry (Impact Risk ) Near Earth Objects
+* [retrieveSentryRiskDataById](docs/neosentry/README.md#retrievesentryriskdatabyid) - Retrieve Sentry (Impact Risk ) Near Earth Objectby ID 
 
-### stats
+### [stats](docs/stats/README.md)
 
-* `retrieveCurrentNeoStatistics` - Get the Near Earth Object data set totals
+* [retrieveCurrentNeoStatistics](docs/stats/README.md#retrievecurrentneostatistics) - Get the Near Earth Object data set totals
 <!-- End SDK Available Operations -->
 
 ### Maturity

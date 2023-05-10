@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Shared;
 
 
-/** The priority of this case. If this is set, do not set severity. */
+/** The priority of this case. */
 enum CasePriorityEnum: string
 {
     case PRIORITY_UNSPECIFIED = 'PRIORITY_UNSPECIFIED';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTAuthorizeSecurityGroupEgressActionEnum: string
 {
     case AUTHORIZE_SECURITY_GROUP_EGRESS = 'AuthorizeSecurityGroupEgress';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteUserGroupActionEnum: string
 {
     case DELETE_USER_GROUP = 'DeleteUserGroup';

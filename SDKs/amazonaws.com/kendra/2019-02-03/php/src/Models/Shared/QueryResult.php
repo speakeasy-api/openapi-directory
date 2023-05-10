@@ -27,6 +27,16 @@ class QueryResult
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $facetResults = null;
     
+    /**
+     * $featuredResultsItems
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\FeaturedResultsItem> $featuredResultsItems
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('FeaturedResultsItems')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\FeaturedResultsItem>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $featuredResultsItems = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('QueryId')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -70,6 +80,7 @@ class QueryResult
 	public function __construct()
 	{
 		$this->facetResults = null;
+		$this->featuredResultsItems = null;
 		$this->queryId = null;
 		$this->resultItems = null;
 		$this->spellCorrectedQueries = null;

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetEffectiveRecommendationPreferencesXAmzTargetEnum: string
 {
     case COMPUTE_OPTIMIZER_SERVICE_GET_EFFECTIVE_RECOMMENDATION_PREFERENCES = 'ComputeOptimizerService.GetEffectiveRecommendationPreferences';

@@ -48,9 +48,11 @@ src/Models/Operations/GetMessagesIdRelatedReceivedMessagesResponse.php
 src/Models/Operations/PostMessagesSecurity.php
 src/Models/Operations/PostMessagesRequest.php
 src/Models/Operations/PostMessagesResponse.php
+src/Models/Operations/GetProfileSecurity.php
 src/Models/Operations/GetProfileResponse.php
 src/Models/Operations/DeleteWebhooksIdRequest.php
 src/Models/Operations/DeleteWebhooksIdResponse.php
+src/Models/Operations/GetWebhooksSecurity.php
 src/Models/Operations/GetWebhooksResponse.php
 src/Models/Operations/GetWebhooksIdRequest.php
 src/Models/Operations/GetWebhooksIdResponse.php
@@ -93,4 +95,11 @@ src/Models/Shared/WebhookEntryInvokeOptionEnum.php
 src/Models/Shared/WebhookEntryTriggerScopeEnum.php
 src/Models/Shared/WebhookEntry.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/attachments/README.md
+docs/blockednumbers/README.md
+docs/credits/README.md
+docs/message/README.md
+docs/profile/README.md
+docs/webhooks/README.md
 USAGE.md

@@ -105,4 +105,5 @@ src/Models/Shared/UpdateSiteResponse.php
 src/Models/Shared/UpdateWorkerResponse.php
 src/Models/Shared/UpdateWorkerFleetResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

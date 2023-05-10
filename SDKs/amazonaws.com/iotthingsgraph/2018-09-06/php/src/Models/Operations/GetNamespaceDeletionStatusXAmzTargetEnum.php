@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetNamespaceDeletionStatusXAmzTargetEnum: string
 {
     case IOT_THINGS_GRAPH_FRONT_END_SERVICE_GET_NAMESPACE_DELETION_STATUS = 'IotThingsGraphFrontEndService.GetNamespaceDeletionStatus';

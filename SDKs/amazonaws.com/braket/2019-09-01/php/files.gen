@@ -97,4 +97,5 @@ src/Models/Shared/QuantumTaskSummary.php
 src/Models/Shared/SearchQuantumTasksFilter.php
 src/Models/Shared/SearchQuantumTasksFilterOperatorEnum.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

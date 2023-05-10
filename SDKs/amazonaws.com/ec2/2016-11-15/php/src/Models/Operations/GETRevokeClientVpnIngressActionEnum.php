@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETRevokeClientVpnIngressActionEnum: string
 {
     case REVOKE_CLIENT_VPN_INGRESS = 'RevokeClientVpnIngress';

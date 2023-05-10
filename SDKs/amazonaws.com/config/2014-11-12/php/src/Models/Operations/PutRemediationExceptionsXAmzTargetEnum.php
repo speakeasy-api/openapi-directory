@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutRemediationExceptionsXAmzTargetEnum: string
 {
     case STARLING_DOVE_SERVICE_PUT_REMEDIATION_EXCEPTIONS = 'StarlingDoveService.PutRemediationExceptions';

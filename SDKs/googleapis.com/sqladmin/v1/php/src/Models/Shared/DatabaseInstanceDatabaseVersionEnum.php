@@ -27,6 +27,7 @@ enum DatabaseInstanceDatabaseVersionEnum: string
     case POSTGRES12 = 'POSTGRES_12';
     case POSTGRES13 = 'POSTGRES_13';
     case POSTGRES14 = 'POSTGRES_14';
+    case POSTGRES15 = 'POSTGRES_15';
     case MYSQL80 = 'MYSQL_8_0';
     case MYSQL8018 = 'MYSQL_8_0_18';
     case MYSQL8026 = 'MYSQL_8_0_26';
@@ -36,6 +37,10 @@ enum DatabaseInstanceDatabaseVersionEnum: string
     case MYSQL8030 = 'MYSQL_8_0_30';
     case MYSQL8031 = 'MYSQL_8_0_31';
     case MYSQL8032 = 'MYSQL_8_0_32';
+    case MYSQL8033 = 'MYSQL_8_0_33';
+    case MYSQL8034 = 'MYSQL_8_0_34';
+    case MYSQL8035 = 'MYSQL_8_0_35';
+    case MYSQL8036 = 'MYSQL_8_0_36';
     case SQLSERVER2019_STANDARD = 'SQLSERVER_2019_STANDARD';
     case SQLSERVER2019_ENTERPRISE = 'SQLSERVER_2019_ENTERPRISE';
     case SQLSERVER2019_EXPRESS = 'SQLSERVER_2019_EXPRESS';

@@ -65,4 +65,7 @@ src/Models/Shared/CustomerRead.php
 src/Models/Shared/SessionAcquiringChannelEnum.php
 src/Models/Shared/SessionIntentEnum.php
 src/Models/Shared/SessionInput.php
+docs/sdk/README.md
+docs/orders/README.md
+docs/sessions/README.md
 USAGE.md

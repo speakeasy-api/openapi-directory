@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopEngagementXAmzTargetEnum: string
 {
     case SSM_CONTACTS_STOP_ENGAGEMENT = 'SSMContacts.StopEngagement';

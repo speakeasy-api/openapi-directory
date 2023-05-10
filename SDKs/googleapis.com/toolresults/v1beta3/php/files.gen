@@ -201,4 +201,6 @@ src/Models/Shared/Image.php
 src/Models/Shared/Thumbnail.php
 src/Models/Shared/Status.php
 src/Models/Shared/ListHistoriesResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

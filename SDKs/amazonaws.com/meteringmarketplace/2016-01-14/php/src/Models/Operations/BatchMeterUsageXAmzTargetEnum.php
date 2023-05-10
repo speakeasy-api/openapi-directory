@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum BatchMeterUsageXAmzTargetEnum: string
 {
     case AWSMP_METERING_SERVICE_BATCH_METER_USAGE = 'AWSMPMeteringService.BatchMeterUsage';

@@ -189,4 +189,12 @@ src/Models/Shared/ScimUser.php
 src/Models/Shared/ScimUserName.php
 src/Models/Shared/ScimGroup.php
 src/Models/Shared/ScimEmail.php
+docs/sdk/README.md
+docs/accesstokens/README.md
+docs/auditlogs/README.md
+docs/authentication/README.md
+docs/images/README.md
+docs/orgsettings/README.md
+docs/repositories/README.md
+docs/scim/README.md
 USAGE.md

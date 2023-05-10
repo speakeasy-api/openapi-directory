@@ -34,20 +34,20 @@ class BusinessDetails
     /**
      * Information about the parent public company. Required if the account holder is 100% owned by a publicly listed company.
      * 
-     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\UltimateParentCompany> $listedUltimateParentCompany
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\UltimateParentCompanyWrapper> $listedUltimateParentCompany
      */
 	#[\JMS\Serializer\Annotation\SerializedName('listedUltimateParentCompany')]
-    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\UltimateParentCompany>')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\UltimateParentCompanyWrapper>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $listedUltimateParentCompany = null;
     
     /**
      * Array containing information about individuals associated with the account holder either through ownership or control. For details about how you can identify them, refer to [our verification guide](https://docs.adyen.com/marketplaces-and-platforms/classic/verification-process#identify-ubos).
      * 
-     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\ShareholderContact> $shareholders
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\ShareholderContactWrapper> $shareholders
      */
 	#[\JMS\Serializer\Annotation\SerializedName('shareholders')]
-    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\ShareholderContact>')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\ShareholderContactWrapper>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $shareholders = null;
     
@@ -56,10 +56,10 @@ class BusinessDetails
      * 
      * Each array entry should represent one signatory.
      * 
-     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\SignatoryContact> $signatories
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\SignatoryContactWrapper> $signatories
      */
 	#[\JMS\Serializer\Annotation\SerializedName('signatories')]
-    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\SignatoryContact>')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\SignatoryContactWrapper>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $signatories = null;
     

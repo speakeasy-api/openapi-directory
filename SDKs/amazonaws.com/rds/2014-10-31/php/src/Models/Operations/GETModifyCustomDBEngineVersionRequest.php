@@ -23,7 +23,7 @@ class GETModifyCustomDBEngineVersionRequest
     public ?string $description = null;
     
     /**
-     * The DB engine. The only supported value is <code>custom-oracle-ee</code>.
+     * The DB engine. The only supported values are <code>custom-oracle-ee</code> and <code>custom-oracle-ee-cdb</code>.
      * 
      * @var string $engine
      */

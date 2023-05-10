@@ -68,6 +68,16 @@ class Disk
     public ?CustomerEncryptionKey $diskEncryptionKey = null;
     
     /**
+     * Whether this disk is using confidential compute mode. see go/confidential-mode-in-arcus for details.
+     * 
+     * @var ?bool $enableConfidentialCompute
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('enableConfidentialCompute')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $enableConfidentialCompute = null;
+    
+    /**
      * Specifies whether the disk restored from a source snapshot should erase Windows specific VSS signature.
      * 
      * @var ?bool $eraseWindowsVssSignature
@@ -473,6 +483,16 @@ class Disk
     public ?DiskStatusEnum $status = null;
     
     /**
+     * The storage pool in which the new disk is created. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /storagePools/storagePool - projects/project/zones/zone/storagePools/storagePool - zones/zone/storagePools/storagePool 
+     * 
+     * @var ?string $storagePool
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('storagePool')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $storagePool = null;
+    
+    /**
      * [Deprecated] Storage type of the persistent disk.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\DiskStorageTypeEnum $storageType
@@ -530,6 +550,7 @@ class Disk
 		$this->creationTimestamp = null;
 		$this->description = null;
 		$this->diskEncryptionKey = null;
+		$this->enableConfidentialCompute = null;
 		$this->eraseWindowsVssSignature = null;
 		$this->guestOsFeatures = null;
 		$this->id = null;
@@ -572,6 +593,7 @@ class Disk
 		$this->sourceSnapshotId = null;
 		$this->sourceStorageObject = null;
 		$this->status = null;
+		$this->storagePool = null;
 		$this->storageType = null;
 		$this->type = null;
 		$this->userLicenses = null;

@@ -45,4 +45,5 @@ src/Models/Shared/FaxV1FaxQualityEnum.php
 src/Models/Shared/FaxV1FaxStatusEnum.php
 src/Models/Shared/FaxV1Fax.php
 src/Models/Shared/FaxV1FaxFaxMedia.php
+docs/sdk/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum SetResourceAccessForBucketXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_SET_RESOURCE_ACCESS_FOR_BUCKET = 'Lightsail_20161128.SetResourceAccessForBucket';

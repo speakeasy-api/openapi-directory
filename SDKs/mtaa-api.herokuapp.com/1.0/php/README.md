@@ -30,32 +30,57 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\DistrictsInARegionRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new DistrictsInARegionRequest();
+    $request->country = 'Malta';
+    $request->region = 'provident';
+
+    $response = $sdk->districtsInRegion->districtsInARegion($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### districtsInRegion
+### [districtsInRegion](docs/districtsinregion/README.md)
 
-* `districtsInARegion` - Returns all districts in region
+* [districtsInARegion](docs/districtsinregion/README.md#districtsinaregion) - Returns all districts in region
 
-### streetsInAWard
+### [streetsInAWard](docs/streetsinaward/README.md)
 
-* `streetsInAWard` - Returns all streets in a ward
+* [streetsInAWard](docs/streetsinaward/README.md#streetsinaward) - Returns all streets in a ward
 
-### tanzaniaRegions
+### [tanzaniaRegions](docs/tanzaniaregions/README.md)
 
-* `tanzaniaRegions` - Returns all regions present in Tanzania
+* [tanzaniaRegions](docs/tanzaniaregions/README.md#tanzaniaregions) - Returns all regions present in Tanzania
 
-### wardsInADistrict
+### [wardsInADistrict](docs/wardsinadistrict/README.md)
 
-* `wardsInADistrict` - Returns all wards in a district
+* [wardsInADistrict](docs/wardsinadistrict/README.md#wardsinadistrict) - Returns all wards in a district
 
-### neighborhoodInAStreet
+### [neighborhoodInAStreet](docs/neighborhoodinastreet/README.md)
 
-* `neighborhoodInAStreet` - Returns all neighborhood in a street
+* [neighborhoodInAStreet](docs/neighborhoodinastreet/README.md#neighborhoodinastreet) - Returns all neighborhood in a street
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -64,4 +64,5 @@ src/Models/Shared/RecognizeTextResponse.php
 src/Models/Shared/RecognizedBotMember.php
 src/Models/Shared/RecognizeUtteranceResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

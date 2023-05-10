@@ -17,4 +17,11 @@ enum GetLegalSearchCaseDocCategoryIDEnum: string
     case FOUR = '4';
     case FIVE = '5';
     case SIX = '6';
+    case ONE_THOUSAND_AND_ONE = '1001';
+    case ONE_THOUSAND_AND_TWO = '1002';
+    case ONE_THOUSAND_AND_THREE = '1003';
+    case ONE_THOUSAND_AND_FOUR = '1004';
+    case ONE_THOUSAND_AND_FIVE = '1005';
+    case ONE_THOUSAND_AND_SIX = '1006';
+    case TWO_THOUSAND_AND_ONE = '2001';
 }

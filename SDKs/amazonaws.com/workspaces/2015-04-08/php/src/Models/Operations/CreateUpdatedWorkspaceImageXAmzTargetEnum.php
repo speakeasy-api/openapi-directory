@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateUpdatedWorkspaceImageXAmzTargetEnum: string
 {
     case WORKSPACES_SERVICE_CREATE_UPDATED_WORKSPACE_IMAGE = 'WorkspacesService.CreateUpdatedWorkspaceImage';

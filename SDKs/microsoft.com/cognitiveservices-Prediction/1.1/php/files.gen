@@ -42,4 +42,6 @@ src/Models/Operations/PredictImageWithNoStoreResponse.php
 src/Models/Shared/ImagePredictionResultModel.php
 src/Models/Shared/ImageTagPredictionModel.php
 src/Models/Shared/ImageUrl.php
+docs/sdk/README.md
+docs/imagepredictionapi/README.md
 USAGE.md

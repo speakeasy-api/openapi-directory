@@ -66,7 +66,7 @@ class UrbanDelivery
      */
 	public function confirmCarbonOffset(
         \OpenAPI\OpenAPI\Models\Operations\ConfirmCarbonOffsetRequestBody $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ConfirmCarbonOffsetResponse
     {
         $baseUrl = UrbanDelivery::CONFIRM_CARBON_OFFSET_SERVERS[0];
@@ -104,7 +104,7 @@ class UrbanDelivery
      */
 	public function confirmPayment(
         \OpenAPI\OpenAPI\Models\Operations\ConfirmPaymentRequestBody $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ConfirmPaymentResponse
     {
         $baseUrl = UrbanDelivery::CONFIRM_PAYMENT_SERVERS[0];
@@ -142,7 +142,7 @@ class UrbanDelivery
      */
 	public function confirmPaymentOfTransaction(
         \OpenAPI\OpenAPI\Models\Operations\ConfirmPaymentOfTransactionRequestBody $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ConfirmPaymentOfTransactionResponse
     {
         $baseUrl = UrbanDelivery::CONFIRM_PAYMENT_OF_TRANSACTION_SERVERS[0];
@@ -180,7 +180,7 @@ class UrbanDelivery
      */
 	public function confirmsPlanting(
         \OpenAPI\OpenAPI\Models\Operations\ConfirmsPlantingRequestBody $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ConfirmsPlantingResponse
     {
         $baseUrl = UrbanDelivery::CONFIRMS_PLANTING_SERVERS[0];
@@ -218,7 +218,7 @@ class UrbanDelivery
      */
 	public function urbanDelivery(
         \OpenAPI\OpenAPI\Models\Operations\UrbanDeliveryRequestBody $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\UrbanDeliveryResponse
     {
         $baseUrl = UrbanDelivery::URBAN_DELIVERY_SERVERS[0];

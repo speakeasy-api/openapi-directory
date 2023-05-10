@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteFlowDefinitionXAmzTargetEnum: string
 {
     case SAGE_MAKER_DELETE_FLOW_DEFINITION = 'SageMaker.DeleteFlowDefinition';

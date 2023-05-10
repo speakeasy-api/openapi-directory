@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfiguration - The logging configuration for Amazon Web Services Verified Access instance.
+ * ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfiguration - The logging configuration for the Verified Access instance.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

@@ -44,6 +44,7 @@ src/Models/Shared/DisableRequest.php
 src/Models/Shared/DisablePermitResult.php
 src/Models/Shared/DisablePermitRequest.php
 src/Models/Shared/RecurringDetailsResult.php
+src/Models/Shared/RecurringDetailWrapper.php
 src/Models/Shared/RecurringDetail.php
 src/Models/Shared/TokenDetails.php
 src/Models/Shared/Name.php
@@ -58,4 +59,6 @@ src/Models/Shared/NotifyShopperResult.php
 src/Models/Shared/NotifyShopperRequest.php
 src/Models/Shared/ScheduleAccountUpdaterResult.php
 src/Models/Shared/ScheduleAccountUpdaterRequest.php
+docs/sdk/README.md
+docs/general/README.md
 USAGE.md

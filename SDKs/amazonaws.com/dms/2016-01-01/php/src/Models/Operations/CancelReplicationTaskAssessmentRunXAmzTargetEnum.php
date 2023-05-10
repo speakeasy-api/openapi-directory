@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CancelReplicationTaskAssessmentRunXAmzTargetEnum: string
 {
     case AMAZON_DM_SV20160101_CANCEL_REPLICATION_TASK_ASSESSMENT_RUN = 'AmazonDMSv20160101.CancelReplicationTaskAssessmentRun';

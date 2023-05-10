@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum MergeShardsXAmzTargetEnum: string
 {
     case KINESIS20131202_MERGE_SHARDS = 'Kinesis_20131202.MergeShards';

@@ -38,7 +38,7 @@ class CreateBatchPaymentNewBatch
     public ?string $callbackUrl = null;
     
     /**
-     * GBP or EUR
+     * 3 digit ISO code for the currency you wish to send - GBP, EUR, USD, CAD, etc...
      * 
      * @var ?string $currency
      */

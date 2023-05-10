@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class RoleAssignmentInput
 {
     /**
-     * The unique ID of the entity this role is assigned to—either the `user_id` of a user or the `uniqueId` of a service account, as defined in [Identity and Access Management (IAM)](https://cloud.google.com/iam/docs/reference/rest/v1/projects.serviceAccounts).
+     * The unique ID of the entity this role is assigned to—either the `user_id` of a user, the `group_id` of a group, or the `uniqueId` of a service account as defined in [Identity and Access Management (IAM)](https://cloud.google.com/iam/docs/reference/rest/v1/projects.serviceAccounts).
      * 
      * @var ?string $assignedTo
      */

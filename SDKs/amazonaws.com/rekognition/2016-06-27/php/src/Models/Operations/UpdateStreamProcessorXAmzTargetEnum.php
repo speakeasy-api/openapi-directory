@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateStreamProcessorXAmzTargetEnum: string
 {
     case REKOGNITION_SERVICE_UPDATE_STREAM_PROCESSOR = 'RekognitionService.UpdateStreamProcessor';

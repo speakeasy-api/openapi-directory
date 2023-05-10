@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DisassociateHealthCheckXAmzTargetEnum: string
 {
     case AWS_SHIELD20160616_DISASSOCIATE_HEALTH_CHECK = 'AWSShield_20160616.DisassociateHealthCheck';

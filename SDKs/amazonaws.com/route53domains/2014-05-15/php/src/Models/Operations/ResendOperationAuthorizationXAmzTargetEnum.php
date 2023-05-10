@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ResendOperationAuthorizationXAmzTargetEnum: string
 {
     case ROUTE53_DOMAINS_V20140515_RESEND_OPERATION_AUTHORIZATION = 'Route53Domains_v20140515.ResendOperationAuthorization';

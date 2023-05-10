@@ -41,7 +41,7 @@ class UpdateImagePipelineRequestBody
     public ?string $description = null;
     
     /**
-     * The Amazon Resource Name (ARN) of the distribution configuration that will be used to configure and distribute images updated by this image pipeline.
+     * The Amazon Resource Name (ARN) of the distribution configuration that Image Builder uses to configure and distribute images that this image pipeline has updated.
      * 
      * @var ?string $distributionConfigurationArn
      */
@@ -51,7 +51,7 @@ class UpdateImagePipelineRequestBody
     public ?string $distributionConfigurationArn = null;
     
     /**
-     *  Collects additional information about the image being created, including the operating system (OS) version and package list. This information is used to enhance the overall experience of using EC2 Image Builder. Enabled by default.
+     * Collects additional information about the image being created, including the operating system (OS) version and package list. This information is used to enhance the overall experience of using EC2 Image Builder. Enabled by default.
      * 
      * @var ?bool $enhancedImageMetadataEnabled
      */
@@ -80,6 +80,16 @@ class UpdateImagePipelineRequestBody
     public ?string $imageRecipeArn = null;
     
     /**
+     * Contains settings for Image Builder image resource and container image scans.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Operations\UpdateImagePipelineRequestBodyImageScanningConfiguration $imageScanningConfiguration
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('imageScanningConfiguration')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Operations\UpdateImagePipelineRequestBodyImageScanningConfiguration')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?UpdateImagePipelineRequestBodyImageScanningConfiguration $imageScanningConfiguration = null;
+    
+    /**
      * Configure image tests for your pipeline build. Tests run after building the image, to verify that the AMI or container image is valid before distributing it.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Operations\UpdateImagePipelineRequestBodyImageTestsConfiguration $imageTestsConfiguration
@@ -90,7 +100,7 @@ class UpdateImagePipelineRequestBody
     public ?UpdateImagePipelineRequestBodyImageTestsConfiguration $imageTestsConfiguration = null;
     
     /**
-     * The Amazon Resource Name (ARN) of the infrastructure configuration that will be used to build images updated by this image pipeline.
+     * The Amazon Resource Name (ARN) of the infrastructure configuration that Image Builder uses to build images that this image pipeline has updated.
      * 
      * @var string $infrastructureConfigurationArn
      */
@@ -127,6 +137,7 @@ class UpdateImagePipelineRequestBody
 		$this->enhancedImageMetadataEnabled = null;
 		$this->imagePipelineArn = "";
 		$this->imageRecipeArn = null;
+		$this->imageScanningConfiguration = null;
 		$this->imageTestsConfiguration = null;
 		$this->infrastructureConfigurationArn = "";
 		$this->schedule = null;

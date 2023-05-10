@@ -100,7 +100,7 @@ class AndroidpublisherInappproductsListRequest
     public ?string $quotaUser = null;
     
     /**
-     * Deprecated and ignored. Set the `token` parameter to rertieve the next page.
+     * Deprecated and ignored. Set the `token` parameter to retrieve the next page.
      * 
      * @var ?int $startIndex
      */

@@ -254,8 +254,6 @@ class PointPointDailyAllDayData
     public ?float $temperature = null;
     
     /**
-     * Temperature 2 metres above ground. (allday max)
-     * 
      * Units: metric = °C, us = °F, uk = °C, ca = °C
      * 
      * @var ?float $temperatureMax
@@ -266,8 +264,6 @@ class PointPointDailyAllDayData
     public ?float $temperatureMax = null;
     
     /**
-     * Temperature 2 metres above ground. (allday min)
-     * 
      * Units: metric = °C, us = °F, uk = °C, ca = °C
      * 
      * @var ?float $temperatureMin
@@ -316,8 +312,6 @@ class PointPointDailyAllDayData
     public ?float $windChill = null;
     
     /**
-     * Temperature 2 metres above ground. (allday max)
-     * 
      * Units: metric = °C, us = °F, uk = °C, ca = °C
      * 
      * @var ?float $windChillMax
@@ -328,8 +322,6 @@ class PointPointDailyAllDayData
     public ?float $windChillMax = null;
     
     /**
-     * Temperature 2 metres above ground. (allday min)
-     * 
      * Units: metric = °C, us = °F, uk = °C, ca = °C
      * 
      * @var ?float $windChillMin

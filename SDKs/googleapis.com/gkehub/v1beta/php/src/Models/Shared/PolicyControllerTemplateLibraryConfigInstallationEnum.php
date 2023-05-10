@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Shared;
 
 
-/** Configures the manner in which the template library is installed on the cluster. TODO (b/271878194): Decrement this */
+/** Configures the manner in which the template library is installed on the cluster. */
 enum PolicyControllerTemplateLibraryConfigInstallationEnum: string
 {
     case INSTALLATION_UNSPECIFIED = 'INSTALLATION_UNSPECIFIED';

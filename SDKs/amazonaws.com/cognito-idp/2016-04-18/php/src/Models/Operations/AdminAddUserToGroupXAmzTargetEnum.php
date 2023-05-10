@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AdminAddUserToGroupXAmzTargetEnum: string
 {
     case AWS_COGNITO_IDENTITY_PROVIDER_SERVICE_ADMIN_ADD_USER_TO_GROUP = 'AWSCognitoIdentityProviderService.AdminAddUserToGroup';

@@ -55,4 +55,5 @@ src/Models/Shared/IngredientObjectItemsNutrients.php
 src/Models/Shared/IngredientObjectItemsPortions.php
 src/Models/Shared/IngredientObjectItems.php
 src/Models/Shared/IngredientObject.php
+docs/sdk/README.md
 USAGE.md

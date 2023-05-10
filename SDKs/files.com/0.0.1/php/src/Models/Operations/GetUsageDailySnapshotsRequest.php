@@ -28,7 +28,7 @@ class GetUsageDailySnapshotsRequest
     public ?array $filter = null;
     
     /**
-     * If set, return records where the specified field is greater than the supplied value. Valid fields are `date` and `usage_snapshot_id`. Valid field combinations are `[ usage_snapshot_id, date ]`.
+     * If set, return records where the specified field is greater than the supplied value. Valid fields are `date`.
      * 
      * @var ?array<string, mixed> $filterGt
      */
@@ -36,7 +36,7 @@ class GetUsageDailySnapshotsRequest
     public ?array $filterGt = null;
     
     /**
-     * If set, return records where the specified field is greater than or equal to the supplied value. Valid fields are `date` and `usage_snapshot_id`. Valid field combinations are `[ usage_snapshot_id, date ]`.
+     * If set, return records where the specified field is greater than or equal the supplied value. Valid fields are `date`.
      * 
      * @var ?array<string, mixed> $filterGteq
      */
@@ -44,15 +44,7 @@ class GetUsageDailySnapshotsRequest
     public ?array $filterGteq = null;
     
     /**
-     * If set, return records where the specified field is equal to the supplied value. Valid fields are `date` and `usage_snapshot_id`. Valid field combinations are `[ usage_snapshot_id, date ]`.
-     * 
-     * @var ?array<string, mixed> $filterLike
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_like')]
-    public ?array $filterLike = null;
-    
-    /**
-     * If set, return records where the specified field is less than the supplied value. Valid fields are `date` and `usage_snapshot_id`. Valid field combinations are `[ usage_snapshot_id, date ]`.
+     * If set, return records where the specified field is less than the supplied value. Valid fields are `date`.
      * 
      * @var ?array<string, mixed> $filterLt
      */
@@ -60,7 +52,7 @@ class GetUsageDailySnapshotsRequest
     public ?array $filterLt = null;
     
     /**
-     * If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `date` and `usage_snapshot_id`. Valid field combinations are `[ usage_snapshot_id, date ]`.
+     * If set, return records where the specified field is less than or equal the supplied value. Valid fields are `date`.
      * 
      * @var ?array<string, mixed> $filterLteq
      */
@@ -89,7 +81,6 @@ class GetUsageDailySnapshotsRequest
 		$this->filter = null;
 		$this->filterGt = null;
 		$this->filterGteq = null;
-		$this->filterLike = null;
 		$this->filterLt = null;
 		$this->filterLteq = null;
 		$this->perPage = null;

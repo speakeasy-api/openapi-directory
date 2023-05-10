@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDefineRankExpressionActionEnum: string
 {
     case DEFINE_RANK_EXPRESSION = 'DefineRankExpression';

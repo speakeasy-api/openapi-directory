@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDisableEbsEncryptionByDefaultActionEnum: string
 {
     case DISABLE_EBS_ENCRYPTION_BY_DEFAULT = 'DisableEbsEncryptionByDefault';

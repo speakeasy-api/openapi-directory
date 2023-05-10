@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ExecuteStatementXAmzTargetEnum: string
 {
     case REDSHIFT_DATA_EXECUTE_STATEMENT = 'RedshiftData.ExecuteStatement';

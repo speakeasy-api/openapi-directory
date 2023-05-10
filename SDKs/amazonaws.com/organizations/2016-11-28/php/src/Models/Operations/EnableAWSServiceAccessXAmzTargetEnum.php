@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum EnableAWSServiceAccessXAmzTargetEnum: string
 {
     case AWS_ORGANIZATIONS_V20161128_ENABLE_AWS_SERVICE_ACCESS = 'AWSOrganizationsV20161128.EnableAWSServiceAccess';

@@ -275,11 +275,17 @@ class Orders
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->orderApiCreateInvoice200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiInvoice = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\RechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiInvoice', 'json');
             }
             if (Utils\Utils::matchContentType($contentType, 'text/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->orderApiCreateInvoice200TextJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiInvoice = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\RechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiInvoice', 'json');
+            }
+            if (Utils\Utils::matchContentType($contentType, 'application/xml')) {
+                $response->body = $httpResponse->getBody()->getContents();
+            }
+            if (Utils\Utils::matchContentType($contentType, 'text/xml')) {
+                $response->body = $httpResponse->getBody()->getContents();
             }
         }
 
@@ -291,11 +297,14 @@ class Orders
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\OrderApiFindRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\OrderApiFindResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function orderApiFind(
         \OpenAPI\OpenAPI\Models\Operations\OrderApiFindRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\OrderApiFindResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/api/v1/orders/find/{id}/{partner}', \OpenAPI\OpenAPI\Models\Operations\OrderApiFindRequest::class, $request);
         
@@ -441,11 +450,17 @@ class Orders
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->orderApiGetInvoiceList200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->rechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel', 'json');
             }
             if (Utils\Utils::matchContentType($contentType, 'text/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->orderApiGetInvoiceList200TextJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->rechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel', 'json');
+            }
+            if (Utils\Utils::matchContentType($contentType, 'application/xml')) {
+                $response->body = $httpResponse->getBody()->getContents();
+            }
+            if (Utils\Utils::matchContentType($contentType, 'text/xml')) {
+                $response->body = $httpResponse->getBody()->getContents();
             }
         }
 

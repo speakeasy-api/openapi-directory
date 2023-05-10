@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListDataQualityResultsXAmzTargetEnum: string
 {
     case AWS_GLUE_LIST_DATA_QUALITY_RESULTS = 'AWSGlue.ListDataQualityResults';

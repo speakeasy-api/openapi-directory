@@ -149,9 +149,11 @@ class InlineScript
     /**
      * インラインスクリプトタグの取得
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetInlineScriptTagsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetInlineScriptTagsResponse
      */
 	public function getInlineScriptTags(
+        \OpenAPI\OpenAPI\Models\Operations\GetInlineScriptTagsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetInlineScriptTagsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -159,7 +161,8 @@ class InlineScript
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

@@ -26,10 +26,21 @@ class SecurityPolicyAdvancedOptionsConfig
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?SecurityPolicyAdvancedOptionsConfigLogLevelEnum $logLevel = null;
     
+    /**
+     * An optional list of case-insensitive request header names to use for resolving the callers client IP address.
+     * 
+     * @var ?array<string> $userIpRequestHeaders
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('userIpRequestHeaders')]
+    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $userIpRequestHeaders = null;
+    
 	public function __construct()
 	{
 		$this->jsonCustomConfig = null;
 		$this->jsonParsing = null;
 		$this->logLevel = null;
+		$this->userIpRequestHeaders = null;
 	}
 }

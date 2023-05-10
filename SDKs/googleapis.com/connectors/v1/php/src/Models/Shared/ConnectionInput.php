@@ -88,6 +88,16 @@ class ConnectionInput
     public ?LockConfig $lockConfig = null;
     
     /**
+     * Log configuration for the connection.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\ConnectorsLogConfig $logConfig
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('logConfig')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\ConnectorsLogConfig')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?ConnectorsLogConfig $logConfig = null;
+    
+    /**
      * Node configuration for the connection.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\NodeConfig $nodeConfig
@@ -146,6 +156,7 @@ class ConnectionInput
 		$this->destinationConfigs = null;
 		$this->labels = null;
 		$this->lockConfig = null;
+		$this->logConfig = null;
 		$this->nodeConfig = null;
 		$this->serviceAccount = null;
 		$this->sslConfig = null;

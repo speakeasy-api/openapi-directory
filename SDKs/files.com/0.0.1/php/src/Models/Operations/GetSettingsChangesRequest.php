@@ -12,6 +12,14 @@ use \OpenAPI\OpenAPI\Utils\SpeakeasyMetadata;
 class GetSettingsChangesRequest
 {
     /**
+     * If set, return records where the specified field is equal to the supplied value.
+     * 
+     * @var ?string $apiKeyId
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=api_key_id')]
+    public ?string $apiKeyId = null;
+    
+    /**
      * Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
      * 
      * @var ?string $cursor
@@ -26,46 +34,6 @@ class GetSettingsChangesRequest
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter')]
     public ?array $filter = null;
-    
-    /**
-     * If set, return records where the specified field is greater than the supplied value. Valid fields are `api_key_id` and `user_id`.
-     * 
-     * @var ?array<string, mixed> $filterGt
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_gt')]
-    public ?array $filterGt = null;
-    
-    /**
-     * If set, return records where the specified field is greater than or equal to the supplied value. Valid fields are `api_key_id` and `user_id`.
-     * 
-     * @var ?array<string, mixed> $filterGteq
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_gteq')]
-    public ?array $filterGteq = null;
-    
-    /**
-     * If set, return records where the specified field is equal to the supplied value. Valid fields are `api_key_id` and `user_id`.
-     * 
-     * @var ?array<string, mixed> $filterLike
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_like')]
-    public ?array $filterLike = null;
-    
-    /**
-     * If set, return records where the specified field is less than the supplied value. Valid fields are `api_key_id` and `user_id`.
-     * 
-     * @var ?array<string, mixed> $filterLt
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_lt')]
-    public ?array $filterLt = null;
-    
-    /**
-     * If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `api_key_id` and `user_id`.
-     * 
-     * @var ?array<string, mixed> $filterLteq
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_lteq')]
-    public ?array $filterLteq = null;
     
     /**
      * Number of records to show per page.  (Max: 10,000, 1,000 or less is recommended).
@@ -83,16 +51,21 @@ class GetSettingsChangesRequest
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sort_by')]
     public ?array $sortBy = null;
     
+    /**
+     * If set, return records where the specified field is equal to the supplied value.
+     * 
+     * @var ?string $userId
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=user_id')]
+    public ?string $userId = null;
+    
 	public function __construct()
 	{
+		$this->apiKeyId = null;
 		$this->cursor = null;
 		$this->filter = null;
-		$this->filterGt = null;
-		$this->filterGteq = null;
-		$this->filterLike = null;
-		$this->filterLt = null;
-		$this->filterLteq = null;
 		$this->perPage = null;
 		$this->sortBy = null;
+		$this->userId = null;
 	}
 }

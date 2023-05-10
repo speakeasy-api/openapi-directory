@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTGetVerifiedAccessGroupPolicyActionEnum: string
 {
     case GET_VERIFIED_ACCESS_GROUP_POLICY = 'GetVerifiedAccessGroupPolicy';

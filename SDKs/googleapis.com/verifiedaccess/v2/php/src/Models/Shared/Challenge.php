@@ -18,16 +18,6 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class Challenge
 {
     /**
-     * Challenge generated with the old signing key, the bytes representation of SignedData (this will only be present during key rotation).
-     * 
-     * @var ?string $alternativeChallenge
-     */
-	#[\JMS\Serializer\Annotation\SerializedName('alternativeChallenge')]
-    #[\JMS\Serializer\Annotation\Type('string')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?string $alternativeChallenge = null;
-    
-    /**
      * Generated challenge, the bytes representation of SignedData.
      * 
      * @var ?string $challenge
@@ -39,7 +29,6 @@ class Challenge
     
 	public function __construct()
 	{
-		$this->alternativeChallenge = null;
 		$this->challenge = null;
 	}
 }

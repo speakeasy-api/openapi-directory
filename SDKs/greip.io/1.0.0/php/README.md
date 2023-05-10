@@ -30,19 +30,50 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetASNLookupRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetASNLookupRequest();
+    $request->asn = '15169';
+    $request->format = 'JSON';
+    $request->isList = 'no';
+    $request->key = '2517bc4fc3f790e8f09bc808bb63b899';
+
+    $response = $sdk->getASNLookup($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getBulkLookup` - BulkLookup endpoint: Returns the geolocation data of multiple IP Addresses.
-* `getCountry` - Country endpoint: Returns the information of a specific country by passing the `countrCode`.
-* `getGeoIP` - GeoIP endpoint: Returns the geolocation data of the visitor.
-* `getIPLookup` - IPLookup endpoint: Returns the geolocation data of a specific IP Address.
-* `getBadWords` - badWords endpoint: Detects whether user inputs contain profanity or not.
+* [getASNLookup](docs/sdk/README.md#getasnlookup) - ASNLookup endpoint: This method helps you lookup any AS Number. It returns the type, organisation details, routes, etc.
+* [getBINLookup](docs/sdk/README.md#getbinlookup) - This method helps you validate any BIN/IIN number and retrieve the full details related to the bank, brand, type, scheme, country, etc.
+* [getBulkLookup](docs/sdk/README.md#getbulklookup) - BulkLookup endpoint: Returns the geolocation data of multiple IP Addresses.
+* [getCountry](docs/sdk/README.md#getcountry) - Country endpoint: Returns the information of a specific country by passing the `countrCode`.
+* [getGeoIP](docs/sdk/README.md#getgeoip) - Returns the geolocation data of the visitor.
+* [getIPLookup](docs/sdk/README.md#getiplookup) - Returns the geolocation data of a specific IP Address.
+* [getBadWords](docs/sdk/README.md#getbadwords) - badWords endpoint: Detects whether user inputs contain profanity or not.
+* [getValidateEmail](docs/sdk/README.md#getvalidateemail) - This method can be used as an extra-layer of your system for validating email addresses.
+* [getValidatePhone](docs/sdk/README.md#getvalidatephone) - This method can be used as an extra-layer of your system for validating phone numbers.
 <!-- End SDK Available Operations -->
 
 ### Maturity

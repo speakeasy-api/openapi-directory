@@ -30,27 +30,54 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\ConvertRequestBody;
+use \OpenAPI\OpenAPI\Models\Operations\ConvertRequestBodyValidateEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new ConvertRequestBody();
+    $request->filename = 'corrupti';
+    $request->source = 'provident';
+    $request->validate = ConvertRequestBodyValidateEnum::ON;
+
+    $response = $sdk->conversion->convert($request);
+
+    if ($response->convert200ApplicationJSONAny !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### conversion
+### [conversion](docs/conversion/README.md)
 
-* `convert` - Convert a Swagger 2.0 definition passed in the body to OpenAPI 3.0.x 
-* `convertUrl` - Convert a Swagger 2.0 definition to OpenAPI 3.0.x from a URL
+* [convert](docs/conversion/README.md#convert) - Convert a Swagger 2.0 definition passed in the body to OpenAPI 3.0.x 
+* [convertUrl](docs/conversion/README.md#converturl) - Convert a Swagger 2.0 definition to OpenAPI 3.0.x from a URL
 
-### metadata
+### [metadata](docs/metadata/README.md)
 
-* `getStatus` - Get the status of the API
+* [getStatus](docs/metadata/README.md#getstatus) - Get the status of the API
 
-### validation
+### [validation](docs/validation/README.md)
 
-* `getBadge` - Return a redirect to a badge svg file depending on a source definition's validity
-* `validate` - Validate an OpenAPI 3.0.x definition supplied in the body of the request
-* `validateUrl` - Validate an OpenAPI 3.0.x definition
+* [getBadge](docs/validation/README.md#getbadge) - Return a redirect to a badge svg file depending on a source definition's validity
+* [validate](docs/validation/README.md#validate) - Validate an OpenAPI 3.0.x definition supplied in the body of the request
+* [validateUrl](docs/validation/README.md#validateurl) - Validate an OpenAPI 3.0.x definition
 <!-- End SDK Available Operations -->
 
 ### Maturity

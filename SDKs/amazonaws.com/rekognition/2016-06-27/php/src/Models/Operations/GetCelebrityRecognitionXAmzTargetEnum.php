@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetCelebrityRecognitionXAmzTargetEnum: string
 {
     case REKOGNITION_SERVICE_GET_CELEBRITY_RECOGNITION = 'RekognitionService.GetCelebrityRecognition';

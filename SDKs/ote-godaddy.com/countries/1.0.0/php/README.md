@@ -30,17 +30,47 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetCountriesRequest;
+use \OpenAPI\OpenAPI\Models\Operations\GetCountriesOrderEnum;
+use \OpenAPI\OpenAPI\Models\Operations\GetCountriesSortEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetCountriesRequest();
+    $request->marketId = 'corrupti';
+    $request->order = GetCountriesOrderEnum::DESCENDING;
+    $request->regionName = 'distinctio';
+    $request->regionTypeId = 844266;
+    $request->sort = GetCountriesSortEnum::LABEL;
+
+    $response = $sdk->v1->getCountries($request);
+
+    if ($response->arrayOfCountrySummary !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### v1
+### [v1](docs/v1/README.md)
 
-* `getCountries` - Retrieves summary country information for the provided marketId and filters
-* `getCountry` - Retrieves country and summary state information for provided countryKey
+* [getCountries](docs/v1/README.md#getcountries) - Retrieves summary country information for the provided marketId and filters
+* [getCountry](docs/v1/README.md#getcountry) - Retrieves country and summary state information for provided countryKey
 <!-- End SDK Available Operations -->
 
 ### Maturity

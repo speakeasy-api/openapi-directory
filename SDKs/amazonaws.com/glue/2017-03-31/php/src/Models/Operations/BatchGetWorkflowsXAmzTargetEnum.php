@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum BatchGetWorkflowsXAmzTargetEnum: string
 {
     case AWS_GLUE_BATCH_GET_WORKFLOWS = 'AWSGlue.BatchGetWorkflows';

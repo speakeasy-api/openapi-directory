@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-enum ErrorsGetRetentionSettings200ApplicationJSONRetentionInDaysEnum: string
+enum ErrorsGetRetentionSettings200ApplicationJSONRetentionInDaysEnum: int
 {
-    case TWENTY_EIGHT = '28';
+    case TWENTY_EIGHT = 28;
 }

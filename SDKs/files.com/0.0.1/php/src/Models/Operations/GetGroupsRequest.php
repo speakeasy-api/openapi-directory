@@ -28,44 +28,12 @@ class GetGroupsRequest
     public ?array $filter = null;
     
     /**
-     * If set, return records where the specified field is greater than the supplied value. Valid fields are `name`.
+     * If set, return records where the specified field is prefixed by the supplied value. Valid fields are `name`.
      * 
-     * @var ?array<string, mixed> $filterGt
+     * @var ?array<string, mixed> $filterPrefix
      */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_gt')]
-    public ?array $filterGt = null;
-    
-    /**
-     * If set, return records where the specified field is greater than or equal to the supplied value. Valid fields are `name`.
-     * 
-     * @var ?array<string, mixed> $filterGteq
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_gteq')]
-    public ?array $filterGteq = null;
-    
-    /**
-     * If set, return records where the specified field is equal to the supplied value. Valid fields are `name`.
-     * 
-     * @var ?array<string, mixed> $filterLike
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_like')]
-    public ?array $filterLike = null;
-    
-    /**
-     * If set, return records where the specified field is less than the supplied value. Valid fields are `name`.
-     * 
-     * @var ?array<string, mixed> $filterLt
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_lt')]
-    public ?array $filterLt = null;
-    
-    /**
-     * If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `name`.
-     * 
-     * @var ?array<string, mixed> $filterLteq
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_lteq')]
-    public ?array $filterLteq = null;
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_prefix')]
+    public ?array $filterPrefix = null;
     
     /**
      * Comma-separated list of group ids to include in results.
@@ -95,11 +63,7 @@ class GetGroupsRequest
 	{
 		$this->cursor = null;
 		$this->filter = null;
-		$this->filterGt = null;
-		$this->filterGteq = null;
-		$this->filterLike = null;
-		$this->filterLt = null;
-		$this->filterLteq = null;
+		$this->filterPrefix = null;
 		$this->ids = null;
 		$this->perPage = null;
 		$this->sortBy = null;

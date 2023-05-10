@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetChangeTokenStatusXAmzTargetEnum: string
 {
     case AWSWAF_REGIONAL20161128_GET_CHANGE_TOKEN_STATUS = 'AWSWAF_Regional_20161128.GetChangeTokenStatus';

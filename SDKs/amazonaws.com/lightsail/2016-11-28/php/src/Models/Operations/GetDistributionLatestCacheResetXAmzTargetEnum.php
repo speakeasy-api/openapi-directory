@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetDistributionLatestCacheResetXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_GET_DISTRIBUTION_LATEST_CACHE_RESET = 'Lightsail_20161128.GetDistributionLatestCacheReset';

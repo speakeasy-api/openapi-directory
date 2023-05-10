@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetVPCEConfigurationXAmzTargetEnum: string
 {
     case DEVICE_FARM20150623_GET_VPCE_CONFIGURATION = 'DeviceFarm_20150623.GetVPCEConfiguration';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeArtifactXAmzTargetEnum: string
 {
     case SAGE_MAKER_DESCRIBE_ARTIFACT = 'SageMaker.DescribeArtifact';

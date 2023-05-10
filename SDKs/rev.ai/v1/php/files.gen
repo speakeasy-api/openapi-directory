@@ -76,4 +76,9 @@ src/Models/Shared/TranscriptMonologues.php
 src/Models/Shared/Transcript.php
 src/Models/Shared/AcceptTranscriptEnum.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/account/README.md
+docs/captions/README.md
+docs/jobs/README.md
+docs/transcript/README.md
 USAGE.md

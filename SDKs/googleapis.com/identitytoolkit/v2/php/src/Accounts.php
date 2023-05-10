@@ -236,4 +236,204 @@ class Accounts
 
         return $response;
     }
+	
+    /**
+     * Finishes enrolling a passkey credential for the user.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeyEnrollmentFinalizeRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeyEnrollmentFinalizeSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeyEnrollmentFinalizeResponse
+     */
+	public function identitytoolkitAccountsPasskeyEnrollmentFinalize(
+        \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeyEnrollmentFinalizeRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeyEnrollmentFinalizeSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeyEnrollmentFinalizeResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v2/accounts/passkeyEnrollment:finalize');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "googleCloudIdentitytoolkitV2FinalizePasskeyEnrollmentRequest", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeyEnrollmentFinalizeRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeyEnrollmentFinalizeResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->googleCloudIdentitytoolkitV2FinalizePasskeyEnrollmentResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\GoogleCloudIdentitytoolkitV2FinalizePasskeyEnrollmentResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Step one of the passkey enrollment process. Returns a challenge and parameters for creation of the passkey credential.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeyEnrollmentStartRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeyEnrollmentStartSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeyEnrollmentStartResponse
+     */
+	public function identitytoolkitAccountsPasskeyEnrollmentStart(
+        \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeyEnrollmentStartRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeyEnrollmentStartSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeyEnrollmentStartResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v2/accounts/passkeyEnrollment:start');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "googleCloudIdentitytoolkitV2StartPasskeyEnrollmentRequest", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeyEnrollmentStartRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeyEnrollmentStartResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->googleCloudIdentitytoolkitV2StartPasskeyEnrollmentResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\GoogleCloudIdentitytoolkitV2StartPasskeyEnrollmentResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Verifies the passkey assertion and signs the user in.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeySignInFinalizeRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeySignInFinalizeSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeySignInFinalizeResponse
+     */
+	public function identitytoolkitAccountsPasskeySignInFinalize(
+        \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeySignInFinalizeRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeySignInFinalizeSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeySignInFinalizeResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v2/accounts/passkeySignIn:finalize');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "googleCloudIdentitytoolkitV2FinalizePasskeySignInRequest", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeySignInFinalizeRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeySignInFinalizeResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->googleCloudIdentitytoolkitV2FinalizePasskeySignInResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\GoogleCloudIdentitytoolkitV2FinalizePasskeySignInResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Creates and returns the passkey challenge
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeySignInStartRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeySignInStartSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeySignInStartResponse
+     */
+	public function identitytoolkitAccountsPasskeySignInStart(
+        \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeySignInStartRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeySignInStartSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeySignInStartResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v2/accounts/passkeySignIn:start');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "googleCloudIdentitytoolkitV2StartPasskeySignInRequest", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeySignInStartRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsPasskeySignInStartResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->googleCloudIdentitytoolkitV2StartPasskeySignInResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\GoogleCloudIdentitytoolkitV2StartPasskeySignInResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Revokes a user's token from an Identity Provider (IdP). This is done by manually providing an IdP credential, and the token types for revocation. An [API key](https://cloud.google.com/docs/authentication/api-keys) is required in the request in order to identify the Google Cloud project.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsRevokeTokenRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsRevokeTokenSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsRevokeTokenResponse
+     */
+	public function identitytoolkitAccountsRevokeToken(
+        \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsRevokeTokenRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsRevokeTokenSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsRevokeTokenResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v2/accounts:revokeToken');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "googleCloudIdentitytoolkitV2RevokeTokenRequest", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsRevokeTokenRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\IdentitytoolkitAccountsRevokeTokenResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->googleCloudIdentitytoolkitV2RevokeTokenResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
+
+        return $response;
+    }
 }

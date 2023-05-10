@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-enum ReturnASandboxAchTransferDefaultApplicationJSON6StatusEnum: string
+enum ReturnASandboxAchTransferDefaultApplicationJSON6StatusEnum: int
 {
-    case FIVE_HUNDRED = '500';
+    case FIVE_HUNDRED = 500;
 }

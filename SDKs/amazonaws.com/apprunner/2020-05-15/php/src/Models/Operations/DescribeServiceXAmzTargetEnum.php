@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeServiceXAmzTargetEnum: string
 {
     case APP_RUNNER_DESCRIBE_SERVICE = 'AppRunner.DescribeService';

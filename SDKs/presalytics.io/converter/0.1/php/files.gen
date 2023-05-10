@@ -22,4 +22,5 @@ src/Models/Operations/SvgconvertFileToConvertFile.php
 src/Models/Operations/SvgconvertFileToConvert.php
 src/Models/Operations/SvgconvertFileUrl.php
 src/Models/Operations/SvgconvertResponse.php
+docs/sdk/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeLaunchTemplatesActionEnum: string
 {
     case DESCRIBE_LAUNCH_TEMPLATES = 'DescribeLaunchTemplates';

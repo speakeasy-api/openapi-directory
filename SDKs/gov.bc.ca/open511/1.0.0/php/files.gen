@@ -33,4 +33,6 @@ src/Models/Operations/GetJurisdictionResponse.php
 src/Models/Operations/GetJurisdictiongeographyFormatEnum.php
 src/Models/Operations/GetJurisdictiongeographyRequest.php
 src/Models/Operations/GetJurisdictiongeographyResponse.php
+docs/sdk/README.md
+docs/resources/README.md
 USAGE.md

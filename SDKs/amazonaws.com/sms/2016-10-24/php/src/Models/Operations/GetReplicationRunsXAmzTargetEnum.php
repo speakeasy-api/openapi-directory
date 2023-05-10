@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetReplicationRunsXAmzTargetEnum: string
 {
     case AWS_SERVER_MIGRATION_SERVICE_V20161024_GET_REPLICATION_RUNS = 'AWSServerMigrationService_V2016_10_24.GetReplicationRuns';

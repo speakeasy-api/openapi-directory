@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * VectorEnrichmentJobDataSourceConfigInput - <p/>
+ * VectorEnrichmentJobDataSourceConfigInput - The input structure for the data source that represents the storage type of the input data objects.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

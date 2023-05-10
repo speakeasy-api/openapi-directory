@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetTableXAmzTargetEnum: string
 {
     case KEYSPACES_SERVICE_GET_TABLE = 'KeyspacesService.GetTable';

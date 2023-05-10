@@ -17,4 +17,5 @@ enum BackupStateEnum: string
     case FINALIZING = 'FINALIZING';
     case READY = 'READY';
     case DELETING = 'DELETING';
+    case INVALID = 'INVALID';
 }

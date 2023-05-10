@@ -25,6 +25,7 @@ src/Models/Operations/GETUserContentByDateJSON200ApplicationJSONResultsComments.
 src/Models/Operations/GETUserContentByDateJSON200ApplicationJSONResults.php
 src/Models/Operations/GETUserContentByDateJSON200ApplicationJSON.php
 src/Models/Operations/GETUserContentByDateJsonResponse.php
+src/Models/Operations/GETUserContentRecentJsonSecurity.php
 src/Models/Operations/GETUserContentRecentJSON200ApplicationJSONDebug.php
 src/Models/Operations/GETUserContentRecentJSON200ApplicationJSONResultsCommentsAssetAllProperties.php
 src/Models/Operations/GETUserContentRecentJSON200ApplicationJSONResultsCommentsAssetPropertiesAutomoderationOn.php
@@ -57,4 +58,5 @@ src/Models/Operations/GETUserContentUserJSON200ApplicationJSONResultsComments.ph
 src/Models/Operations/GETUserContentUserJSON200ApplicationJSONResults.php
 src/Models/Operations/GETUserContentUserJSON200ApplicationJSON.php
 src/Models/Operations/GETUserContentUserJsonResponse.php
+docs/sdk/README.md
 USAGE.md

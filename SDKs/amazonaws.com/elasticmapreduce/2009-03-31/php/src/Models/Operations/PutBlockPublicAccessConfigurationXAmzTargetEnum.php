@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutBlockPublicAccessConfigurationXAmzTargetEnum: string
 {
     case ELASTIC_MAP_REDUCE_PUT_BLOCK_PUBLIC_ACCESS_CONFIGURATION = 'ElasticMapReduce.PutBlockPublicAccessConfiguration';

@@ -56,4 +56,8 @@ src/Models/Shared/SynthesizeSpeechRequest.php
 src/Models/Shared/ListVoicesResponse.php
 src/Models/Shared/VoiceSsmlGenderEnum.php
 src/Models/Shared/Voice.php
+docs/sdk/README.md
+docs/projects/README.md
+docs/text/README.md
+docs/voices/README.md
 USAGE.md

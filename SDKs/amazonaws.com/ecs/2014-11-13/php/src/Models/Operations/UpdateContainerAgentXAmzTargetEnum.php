@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateContainerAgentXAmzTargetEnum: string
 {
     case AMAZON_EC2_CONTAINER_SERVICE_V20141113_UPDATE_CONTAINER_AGENT = 'AmazonEC2ContainerServiceV20141113.UpdateContainerAgent';

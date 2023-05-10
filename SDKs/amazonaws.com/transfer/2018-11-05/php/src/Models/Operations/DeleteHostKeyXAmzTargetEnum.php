@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteHostKeyXAmzTargetEnum: string
 {
     case TRANSFER_SERVICE_DELETE_HOST_KEY = 'TransferService.DeleteHostKey';

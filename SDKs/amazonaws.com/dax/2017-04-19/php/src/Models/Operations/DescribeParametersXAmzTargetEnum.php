@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeParametersXAmzTargetEnum: string
 {
     case AMAZON_DAXV3_DESCRIBE_PARAMETERS = 'AmazonDAXV3.DescribeParameters';

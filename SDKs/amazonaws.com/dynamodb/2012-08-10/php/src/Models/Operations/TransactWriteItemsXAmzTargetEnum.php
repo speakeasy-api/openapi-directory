@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum TransactWriteItemsXAmzTargetEnum: string
 {
     case DYNAMO_DB20120810_TRANSACT_WRITE_ITEMS = 'DynamoDB_20120810.TransactWriteItems';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GenerateMacXAmzTargetEnum: string
 {
     case TRENT_SERVICE_GENERATE_MAC = 'TrentService.GenerateMac';

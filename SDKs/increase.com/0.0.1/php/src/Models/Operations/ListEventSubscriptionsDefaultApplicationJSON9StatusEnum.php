@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-enum ListEventSubscriptionsDefaultApplicationJSON9StatusEnum: string
+enum ListEventSubscriptionsDefaultApplicationJSON9StatusEnum: int
 {
-    case FOUR_HUNDRED = '400';
+    case FOUR_HUNDRED = 400;
 }

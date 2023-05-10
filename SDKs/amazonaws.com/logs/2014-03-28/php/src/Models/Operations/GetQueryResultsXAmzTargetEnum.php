@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetQueryResultsXAmzTargetEnum: string
 {
     case LOGS20140328_GET_QUERY_RESULTS = 'Logs_20140328.GetQueryResults';

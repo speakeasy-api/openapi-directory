@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutRepositoryTriggersXAmzTargetEnum: string
 {
     case CODE_COMMIT20150413_PUT_REPOSITORY_TRIGGERS = 'CodeCommit_20150413.PutRepositoryTriggers';

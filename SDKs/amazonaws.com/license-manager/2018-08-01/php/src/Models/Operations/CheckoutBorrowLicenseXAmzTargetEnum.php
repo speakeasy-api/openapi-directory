@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CheckoutBorrowLicenseXAmzTargetEnum: string
 {
     case AWS_LICENSE_MANAGER_CHECKOUT_BORROW_LICENSE = 'AWSLicenseManager.CheckoutBorrowLicense';

@@ -49,4 +49,7 @@ src/Models/Shared/GoogleFactcheckingFactchecktoolsV1alpha1ClaimRating.php
 src/Models/Shared/GoogleFactcheckingFactchecktoolsV1alpha1ClaimAuthor.php
 src/Models/Shared/GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewAuthor.php
 src/Models/Shared/GoogleFactcheckingFactchecktoolsV1alpha1ListClaimReviewMarkupPagesResponse.php
+docs/sdk/README.md
+docs/claims/README.md
+docs/pages/README.md
 USAGE.md

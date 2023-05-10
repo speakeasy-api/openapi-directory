@@ -17,6 +17,16 @@ namespace OpenAPI\OpenAPI\Models\Operations;
  */
 class RegisterAgentRequestBodyAgentDetails
 {
+    /**
+     * $agentCpuCores
+     * 
+     * @var ?array<int> $agentCpuCores
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('agentCpuCores')]
+    #[\JMS\Serializer\Annotation\Type('array<int>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $agentCpuCores = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('agentVersion')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -54,6 +64,7 @@ class RegisterAgentRequestBodyAgentDetails
     
 	public function __construct()
 	{
+		$this->agentCpuCores = null;
 		$this->agentVersion = null;
 		$this->componentVersions = null;
 		$this->instanceId = null;

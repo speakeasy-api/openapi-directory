@@ -23,7 +23,7 @@ class GETModifyVerifiedAccessEndpointRequest
     public ?string $clientToken = null;
     
     /**
-     * A description for the Amazon Web Services Verified Access endpoint.
+     * A description for the Verified Access endpoint.
      * 
      * @var ?string $description
      */
@@ -39,7 +39,7 @@ class GETModifyVerifiedAccessEndpointRequest
     public ?bool $dryRun = null;
     
     /**
-     * The load balancer details if creating the Amazon Web Services Verified Access endpoint as <code>load-balancer</code>type.
+     * The load balancer details if creating the Verified Access endpoint as <code>load-balancer</code>type.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Operations\GETModifyVerifiedAccessEndpointLoadBalancerOptions $loadBalancerOptions
      */
@@ -55,7 +55,7 @@ class GETModifyVerifiedAccessEndpointRequest
     public ?GETModifyVerifiedAccessEndpointNetworkInterfaceOptions $networkInterfaceOptions = null;
     
     /**
-     * The ID of the Amazon Web Services Verified Access endpoint.
+     * The ID of the Verified Access endpoint.
      * 
      * @var string $verifiedAccessEndpointId
      */
@@ -63,7 +63,7 @@ class GETModifyVerifiedAccessEndpointRequest
     public string $verifiedAccessEndpointId;
     
     /**
-     * The ID of the Amazon Web Services Verified Access group.
+     * The ID of the Verified Access group.
      * 
      * @var ?string $verifiedAccessGroupId
      */

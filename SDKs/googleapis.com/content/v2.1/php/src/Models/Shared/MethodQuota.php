@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * MethodQuota - The quota information per method in the Content API. Includes only methods with current usage greater than zero for your account.
+ * MethodQuota - The quota information per method in the Content API.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

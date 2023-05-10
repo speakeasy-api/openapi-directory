@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-enum SubmitASandboxCheckDepositDefaultApplicationJSON6StatusEnum: string
+enum SubmitASandboxCheckDepositDefaultApplicationJSON6StatusEnum: int
 {
-    case FIVE_HUNDRED = '500';
+    case FIVE_HUNDRED = 500;
 }

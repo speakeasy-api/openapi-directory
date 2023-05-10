@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListStackInstancesForProvisionedProductXAmzTargetEnum: string
 {
     case AWS242_SERVICE_CATALOG_SERVICE_LIST_STACK_INSTANCES_FOR_PROVISIONED_PRODUCT = 'AWS242ServiceCatalogService.ListStackInstancesForProvisionedProduct';

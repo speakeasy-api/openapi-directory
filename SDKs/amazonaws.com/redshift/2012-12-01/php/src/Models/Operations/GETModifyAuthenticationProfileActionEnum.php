@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETModifyAuthenticationProfileActionEnum: string
 {
     case MODIFY_AUTHENTICATION_PROFILE = 'ModifyAuthenticationProfile';

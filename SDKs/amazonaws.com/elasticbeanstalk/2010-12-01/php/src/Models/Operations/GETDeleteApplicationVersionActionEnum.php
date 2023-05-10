@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteApplicationVersionActionEnum: string
 {
     case DELETE_APPLICATION_VERSION = 'DeleteApplicationVersion';

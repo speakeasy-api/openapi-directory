@@ -103,4 +103,9 @@ src/Models/Shared/InsertAddressesforSubscriptionRequest.php
 src/Models/Shared/UpdateSubscriptionsbySubscriptionIdRequest.php
 src/Models/Shared/Item.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/report/README.md
+docs/settings/README.md
+docs/subscriptiongroup/README.md
+docs/subscriptions/README.md
 USAGE.md

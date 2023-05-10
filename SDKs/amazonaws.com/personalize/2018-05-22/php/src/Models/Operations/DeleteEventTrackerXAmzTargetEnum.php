@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteEventTrackerXAmzTargetEnum: string
 {
     case AMAZON_PERSONALIZE_DELETE_EVENT_TRACKER = 'AmazonPersonalize.DeleteEventTracker';

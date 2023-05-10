@@ -25,4 +25,6 @@ src/Models/Shared/IdentificationTokenResponse.php
 src/Models/Shared/Error.php
 src/Models/Shared/ErrorDetail.php
 src/Models/Shared/IdentificationTokenGenerationRequest.php
+docs/sdk/README.md
+docs/generate/README.md
 USAGE.md

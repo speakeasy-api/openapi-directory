@@ -210,4 +210,5 @@ src/Models/Shared/UntagResourceRequest.php
 src/Models/Shared/UpdateInstanceAccessControlAttributeConfigurationRequest.php
 src/Models/Shared/UpdatePermissionSetRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

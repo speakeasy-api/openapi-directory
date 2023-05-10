@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DisassociateKmsKeyXAmzTargetEnum: string
 {
     case LOGS20140328_DISASSOCIATE_KMS_KEY = 'Logs_20140328.DisassociateKmsKey';

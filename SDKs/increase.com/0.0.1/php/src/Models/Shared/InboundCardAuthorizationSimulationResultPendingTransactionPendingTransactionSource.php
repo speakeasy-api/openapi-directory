@@ -90,6 +90,15 @@ class InboundCardAuthorizationSimulationResultPendingTransactionPendingTransacti
     public InboundCardAuthorizationSimulationResultPendingTransactionPendingTransactionSourceInboundFundsHold $inboundFundsHold;
     
     /**
+     * A Real Time Payments Transfer Instruction object. This field will be present in the JSON response if and only if `category` is equal to `real_time_payments_transfer_instruction`.
+     * 
+     * @var \OpenAPI\OpenAPI\Models\Shared\InboundCardAuthorizationSimulationResultPendingTransactionPendingTransactionSourceRealTimePaymentsTransferInstruction $realTimePaymentsTransferInstruction
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('real_time_payments_transfer_instruction')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\InboundCardAuthorizationSimulationResultPendingTransactionPendingTransactionSourceRealTimePaymentsTransferInstruction')]
+    public InboundCardAuthorizationSimulationResultPendingTransactionPendingTransactionSourceRealTimePaymentsTransferInstruction $realTimePaymentsTransferInstruction;
+    
+    /**
      * A Wire Drawdown Payment Instruction object. This field will be present in the JSON response if and only if `category` is equal to `wire_drawdown_payment_instruction`.
      * 
      * @var \OpenAPI\OpenAPI\Models\Shared\InboundCardAuthorizationSimulationResultPendingTransactionPendingTransactionSourceWireDrawdownPaymentInstruction $wireDrawdownPaymentInstruction
@@ -117,6 +126,7 @@ class InboundCardAuthorizationSimulationResultPendingTransactionPendingTransacti
 		$this->checkDepositInstruction = new \OpenAPI\OpenAPI\Models\Shared\InboundCardAuthorizationSimulationResultPendingTransactionPendingTransactionSourceCheckDepositInstruction();
 		$this->checkTransferInstruction = new \OpenAPI\OpenAPI\Models\Shared\InboundCardAuthorizationSimulationResultPendingTransactionPendingTransactionSourceCheckTransferInstruction();
 		$this->inboundFundsHold = new \OpenAPI\OpenAPI\Models\Shared\InboundCardAuthorizationSimulationResultPendingTransactionPendingTransactionSourceInboundFundsHold();
+		$this->realTimePaymentsTransferInstruction = new \OpenAPI\OpenAPI\Models\Shared\InboundCardAuthorizationSimulationResultPendingTransactionPendingTransactionSourceRealTimePaymentsTransferInstruction();
 		$this->wireDrawdownPaymentInstruction = new \OpenAPI\OpenAPI\Models\Shared\InboundCardAuthorizationSimulationResultPendingTransactionPendingTransactionSourceWireDrawdownPaymentInstruction();
 		$this->wireTransferInstruction = new \OpenAPI\OpenAPI\Models\Shared\InboundCardAuthorizationSimulationResultPendingTransactionPendingTransactionSourceWireTransferInstruction();
 	}

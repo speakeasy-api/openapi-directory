@@ -23,7 +23,7 @@ class GETModifyVerifiedAccessTrustProviderRequest
     public ?string $clientToken = null;
     
     /**
-     * A description for the Amazon Web Services Verified Access trust provider.
+     * A description for the Verified Access trust provider.
      * 
      * @var ?string $description
      */
@@ -39,7 +39,7 @@ class GETModifyVerifiedAccessTrustProviderRequest
     public ?bool $dryRun = null;
     
     /**
-     * The OpenID Connect details for an <code>oidc</code>-type, user-identity based trust provider.
+     * The options for an OpenID Connect-compatible user-identity trust provider.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Operations\GETModifyVerifiedAccessTrustProviderOidcOptions $oidcOptions
      */
@@ -47,7 +47,7 @@ class GETModifyVerifiedAccessTrustProviderRequest
     public ?GETModifyVerifiedAccessTrustProviderOidcOptions $oidcOptions = null;
     
     /**
-     * The ID of the Amazon Web Services Verified Access trust provider.
+     * The ID of the Verified Access trust provider.
      * 
      * @var string $verifiedAccessTrustProviderId
      */

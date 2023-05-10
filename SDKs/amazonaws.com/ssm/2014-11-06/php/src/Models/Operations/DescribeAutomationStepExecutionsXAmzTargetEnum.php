@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeAutomationStepExecutionsXAmzTargetEnum: string
 {
     case AMAZON_SSM_DESCRIBE_AUTOMATION_STEP_EXECUTIONS = 'AmazonSSM.DescribeAutomationStepExecutions';

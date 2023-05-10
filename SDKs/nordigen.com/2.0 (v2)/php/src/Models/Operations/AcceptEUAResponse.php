@@ -15,7 +15,7 @@ class AcceptEUAResponse
     public string $contentType;
     
     /**
-     * EUA
+     * Accept end user agreement
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\EndUserAgreement $endUserAgreement
      */
@@ -68,6 +68,14 @@ class AcceptEUAResponse
 	
     public ?array $acceptEUA405ApplicationJSONObject = null;
     
+    /**
+     * Nordigen rate limit exceeded
+     * 
+     * @var ?array<string, mixed> $acceptEUA429ApplicationJSONObject
+     */
+	
+    public ?array $acceptEUA429ApplicationJSONObject = null;
+    
 	public function __construct()
 	{
 		$this->contentType = "";
@@ -79,5 +87,6 @@ class AcceptEUAResponse
 		$this->acceptEUA403ApplicationJSONObject = null;
 		$this->acceptEUA404ApplicationJSONObject = null;
 		$this->acceptEUA405ApplicationJSONObject = null;
+		$this->acceptEUA429ApplicationJSONObject = null;
 	}
 }

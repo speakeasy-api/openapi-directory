@@ -30,39 +30,65 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\CategoriesAllRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new CategoriesAllRequest();
+    $request->cursor = 'corrupti';
+    $request->ecosystemId = 'provident';
+    $request->limit = 715190;
+
+    $response = $sdk->category->categoriesAll($request);
+
+    if ($response->getCategoriesResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### category
+### [category](docs/category/README.md)
 
-* `categoriesAll` - List categories
-* `categoriesOne` - Get category
-* `categoryListingsAll` - List category listings
+* [categoriesAll](docs/category/README.md#categoriesall) - List categories
+* [categoriesOne](docs/category/README.md#categoriesone) - Get category
+* [categoryListingsAll](docs/category/README.md#categorylistingsall) - List category listings
 
-### collection
+### [collection](docs/collection/README.md)
 
-* `collectionListingsAll` - List collection listings
-* `collectionsAll` - List collections
-* `collectionsOne` - Get collection
+* [collectionListingsAll](docs/collection/README.md#collectionlistingsall) - List collection listings
+* [collectionsAll](docs/collection/README.md#collectionsall) - List collections
+* [collectionsOne](docs/collection/README.md#collectionsone) - Get collection
 
-### ecosystem
+### [ecosystem](docs/ecosystem/README.md)
 
-* `ecosystemsOne` - Get ecosystem
+* [ecosystemsOne](docs/ecosystem/README.md#ecosystemsone) - Get ecosystem
 
-### listing
+### [listing](docs/listing/README.md)
 
-* `listingsAll` - List listings
-* `listingsOne` - Get listing
+* [listingsAll](docs/listing/README.md#listingsall) - List listings
+* [listingsOne](docs/listing/README.md#listingsone) - Get listing
 
-### product
+### [product](docs/product/README.md)
 
-* `productListingsAll` - List product listings
-* `productsAll` - List products
-* `productsOne` - Get product
+* [productListingsAll](docs/product/README.md#productlistingsall) - List product listings
+* [productsAll](docs/product/README.md#productsall) - List products
+* [productsOne](docs/product/README.md#productsone) - Get product
 <!-- End SDK Available Operations -->
 
 ### Maturity

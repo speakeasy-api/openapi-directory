@@ -30,5 +30,17 @@ src/Models/Shared/AltEnum.php
 src/Models/Shared/XgafvEnum.php
 src/Models/Shared/VerifyChallengeResponseResultKeyTrustLevelEnum.php
 src/Models/Shared/VerifyChallengeResponseResult.php
+src/Models/Shared/DeviceSignalsDiskEncryptionEnum.php
+src/Models/Shared/DeviceSignalsOperatingSystemEnum.php
+src/Models/Shared/DeviceSignalsOsFirewallEnum.php
+src/Models/Shared/DeviceSignalsPasswordProtectionWarningTriggerEnum.php
+src/Models/Shared/DeviceSignalsRealtimeUrlCheckModeEnum.php
+src/Models/Shared/DeviceSignalsSafeBrowsingProtectionLevelEnum.php
+src/Models/Shared/DeviceSignalsScreenLockSecuredEnum.php
+src/Models/Shared/DeviceSignalsSecureBootModeEnum.php
+src/Models/Shared/DeviceSignals.php
+src/Models/Shared/CrowdStrikeAgent.php
 src/Models/Shared/VerifyChallengeResponseRequest.php
+docs/sdk/README.md
+docs/challenge/README.md
 USAGE.md

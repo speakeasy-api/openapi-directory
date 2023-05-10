@@ -60,6 +60,7 @@ src/Models/Operations/CreateFunctionRequest.php
 src/Models/Operations/CreateFunctionResponse.php
 src/Models/Operations/CreateFunctionUrlConfigRequestBodyAuthTypeEnum.php
 src/Models/Operations/CreateFunctionUrlConfigRequestBodyCors.php
+src/Models/Operations/CreateFunctionUrlConfigRequestBodyInvokeModeEnum.php
 src/Models/Operations/CreateFunctionUrlConfigRequestBody.php
 src/Models/Operations/CreateFunctionUrlConfigRequest.php
 src/Models/Operations/CreateFunctionUrlConfigResponse.php
@@ -124,6 +125,11 @@ src/Models/Operations/InvokeResponse.php
 src/Models/Operations/InvokeAsyncRequestBody.php
 src/Models/Operations/InvokeAsyncRequest.php
 src/Models/Operations/InvokeAsyncResponse.php
+src/Models/Operations/InvokeWithResponseStreamRequestBody.php
+src/Models/Operations/InvokeWithResponseStreamXAmzInvocationTypeEnum.php
+src/Models/Operations/InvokeWithResponseStreamXAmzLogTypeEnum.php
+src/Models/Operations/InvokeWithResponseStreamRequest.php
+src/Models/Operations/InvokeWithResponseStreamResponse.php
 src/Models/Operations/ListAliasesRequest.php
 src/Models/Operations/ListAliasesResponse.php
 src/Models/Operations/ListCodeSigningConfigsRequest.php
@@ -223,6 +229,7 @@ src/Models/Operations/UpdateFunctionEventInvokeConfigRequest.php
 src/Models/Operations/UpdateFunctionEventInvokeConfigResponse.php
 src/Models/Operations/UpdateFunctionUrlConfigRequestBodyAuthTypeEnum.php
 src/Models/Operations/UpdateFunctionUrlConfigRequestBodyCors.php
+src/Models/Operations/UpdateFunctionUrlConfigRequestBodyInvokeModeEnum.php
 src/Models/Operations/UpdateFunctionUrlConfigRequestBody.php
 src/Models/Operations/UpdateFunctionUrlConfigRequest.php
 src/Models/Operations/UpdateFunctionUrlConfigResponse.php
@@ -277,6 +284,7 @@ src/Models/Shared/EnvironmentError.php
 src/Models/Shared/DeadLetterConfig.php
 src/Models/Shared/ArchitectureEnum.php
 src/Models/Shared/CreateFunctionUrlConfigResponse.php
+src/Models/Shared/InvokeModeEnum.php
 src/Models/Shared/Cors.php
 src/Models/Shared/FunctionUrlAuthTypeEnum.php
 src/Models/Shared/GetAccountSettingsResponse.php
@@ -300,6 +308,10 @@ src/Models/Shared/GetRuntimeManagementConfigResponse.php
 src/Models/Shared/UpdateRuntimeOnEnum.php
 src/Models/Shared/InvocationResponse.php
 src/Models/Shared/InvokeAsyncResponse.php
+src/Models/Shared/InvokeWithResponseStreamResponse.php
+src/Models/Shared/InvokeWithResponseStreamResponseEvent.php
+src/Models/Shared/InvokeResponseStreamUpdate.php
+src/Models/Shared/InvokeWithResponseStreamCompleteEvent.php
 src/Models/Shared/ListAliasesResponse.php
 src/Models/Shared/ListCodeSigningConfigsResponse.php
 src/Models/Shared/ListEventSourceMappingsResponse.php
@@ -323,4 +335,5 @@ src/Models/Shared/PutRuntimeManagementConfigResponse.php
 src/Models/Shared/UpdateCodeSigningConfigResponse.php
 src/Models/Shared/UpdateFunctionUrlConfigResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

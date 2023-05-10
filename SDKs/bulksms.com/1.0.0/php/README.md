@@ -30,45 +30,76 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Shared\PreSignRequest;
+use \OpenAPI\OpenAPI\Models\Operations\PostRmmPreSignAttachmentSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new PreSignRequest();
+    $request->fileExtension = 'pdf';
+    $request->mediaType = 'application/pdf';
+
+    $requestSecurity = new PostRmmPreSignAttachmentSecurity();
+    $requestSecurity->password = 'YOUR_PASSWORD_HERE';
+    $requestSecurity->username = 'YOUR_USERNAME_HERE';
+
+    $response = $sdk->attachments->postRmmPreSignAttachment($request, $requestSecurity);
+
+    if ($response->preSignInfo !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### attachments
+### [attachments](docs/attachments/README.md)
 
-* `postRmmPreSignAttachment` - Upload an attachment via a signed URL
+* [postRmmPreSignAttachment](docs/attachments/README.md#postrmmpresignattachment) - Upload an attachment via a signed URL
 
-### blockedNumbers
+### [blockedNumbers](docs/blockednumbers/README.md)
 
-* `getBlockedNumbers` - List blocked numbers
-* `postBlockedNumbers` - Create a blocked number
+* [getBlockedNumbers](docs/blockednumbers/README.md#getblockednumbers) - List blocked numbers
+* [postBlockedNumbers](docs/blockednumbers/README.md#postblockednumbers) - Create a blocked number
 
-### credits
+### [credits](docs/credits/README.md)
 
-* `postCreditTransfer` - Transfer credits to another account
+* [postCreditTransfer](docs/credits/README.md#postcredittransfer) - Transfer credits to another account
 
-### message
+### [message](docs/message/README.md)
 
-* `getMessages` - Retrieve Messages
-* `getMessagesSend` - Send message by simple GET or POST
-* `getMessagesId` - Show Message
-* `getMessagesIdRelatedReceivedMessages` - List Related Messages
-* `postMessages` - Send Messages
+* [getMessages](docs/message/README.md#getmessages) - Retrieve Messages
+* [getMessagesSend](docs/message/README.md#getmessagessend) - Send message by simple GET or POST
+* [getMessagesId](docs/message/README.md#getmessagesid) - Show Message
+* [getMessagesIdRelatedReceivedMessages](docs/message/README.md#getmessagesidrelatedreceivedmessages) - List Related Messages
+* [postMessages](docs/message/README.md#postmessages) - Send Messages
 
-### profile
+### [profile](docs/profile/README.md)
 
-* `getProfile` - Get profile
+* [getProfile](docs/profile/README.md#getprofile) - Get profile
 
-### webhooks
+### [webhooks](docs/webhooks/README.md)
 
-* `deleteWebhooksId` - Delete a webhook
-* `getWebhooks` - List webhooks
-* `getWebhooksId` - Read a webhook
-* `postWebhooks` - Create a webhook
-* `postWebhooksId` - Update a webhook
+* [deleteWebhooksId](docs/webhooks/README.md#deletewebhooksid) - Delete a webhook
+* [getWebhooks](docs/webhooks/README.md#getwebhooks) - List webhooks
+* [getWebhooksId](docs/webhooks/README.md#getwebhooksid) - Read a webhook
+* [postWebhooks](docs/webhooks/README.md#postwebhooks) - Create a webhook
+* [postWebhooksId](docs/webhooks/README.md#postwebhooksid) - Update a webhook
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CloseInstancePublicPortsXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_CLOSE_INSTANCE_PUBLIC_PORTS = 'Lightsail_20161128.CloseInstancePublicPorts';

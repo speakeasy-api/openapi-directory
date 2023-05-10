@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class GoogleCloudRunV2Revision
 {
     /**
-     * KRM-style annotations for the resource.
+     * Output only. Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects.
      * 
      * @var ?array<string, string> $annotations
      */
@@ -138,7 +138,7 @@ class GoogleCloudRunV2Revision
     public ?string $generation = null;
     
     /**
-     * KRM-style labels for the resource. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels
+     * Output only. Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels.
      * 
      * @var ?array<string, string> $labels
      */
@@ -248,6 +248,16 @@ class GoogleCloudRunV2Revision
     public ?string $serviceAccount = null;
     
     /**
+     * Enable session affinity.
+     * 
+     * @var ?bool $sessionAffinity
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('sessionAffinity')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $sessionAffinity = null;
+    
+    /**
      * Max allowed time for an instance to respond to a request.
      * 
      * @var ?string $timeout
@@ -322,6 +332,7 @@ class GoogleCloudRunV2Revision
 		$this->scaling = null;
 		$this->service = null;
 		$this->serviceAccount = null;
+		$this->sessionAffinity = null;
 		$this->timeout = null;
 		$this->uid = null;
 		$this->updateTime = null;

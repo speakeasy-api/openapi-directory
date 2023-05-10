@@ -1221,4 +1221,5 @@ src/Models/Shared/RevokeSnapshotAccessMessage.php
 src/Models/Shared/RotateEncryptionKeyMessage.php
 src/Models/Shared/UpdatePartnerStatusInputMessage.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

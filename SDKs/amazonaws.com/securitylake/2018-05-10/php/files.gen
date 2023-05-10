@@ -143,4 +143,5 @@ src/Models/Shared/ListSubscribersResponse.php
 src/Models/Shared/UpdateSubscriberResponse.php
 src/Models/Shared/UpdateSubscriptionNotificationConfigurationResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

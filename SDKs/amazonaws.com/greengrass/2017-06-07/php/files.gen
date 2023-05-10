@@ -376,4 +376,5 @@ src/Models/Shared/StartBulkDeploymentResponse.php
 src/Models/Shared/UpdateConnectivityInfoResponse.php
 src/Models/Shared/UpdateGroupCertificateConfigurationResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

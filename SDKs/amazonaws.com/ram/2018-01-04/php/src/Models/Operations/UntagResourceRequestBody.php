@@ -12,13 +12,24 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 class UntagResourceRequestBody
 {
     /**
-     * Specifies the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resoure Name (ARN)</a> of the resource share that you want to remove tags from. The tags are removed from the resource share, not the resources in the resource share.
+     * Specifies the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Name (ARN)</a> of the managed permission that you want to remove tags from. You must specify either <code>resourceArn</code>, or <code>resourceShareArn</code>, but not both.
      * 
-     * @var string $resourceShareArn
+     * @var ?string $resourceArn
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('resourceArn')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $resourceArn = null;
+    
+    /**
+     * Specifies the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Name (ARN)</a> of the resource share that you want to remove tags from. The tags are removed from the resource share, not the resources in the resource share. You must specify either <code>resourceShareArn</code>, or <code>resourceArn</code>, but not both.
+     * 
+     * @var ?string $resourceShareArn
      */
 	#[\JMS\Serializer\Annotation\SerializedName('resourceShareArn')]
     #[\JMS\Serializer\Annotation\Type('string')]
-    public string $resourceShareArn;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $resourceShareArn = null;
     
     /**
      * Specifies a list of one or more tag keys that you want to remove.
@@ -31,7 +42,8 @@ class UntagResourceRequestBody
     
 	public function __construct()
 	{
-		$this->resourceShareArn = "";
+		$this->resourceArn = null;
+		$this->resourceShareArn = null;
 		$this->tagKeys = [];
 	}
 }

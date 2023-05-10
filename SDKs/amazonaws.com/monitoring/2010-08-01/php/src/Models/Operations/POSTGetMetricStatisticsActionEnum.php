@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTGetMetricStatisticsActionEnum: string
 {
     case GET_METRIC_STATISTICS = 'GetMetricStatistics';

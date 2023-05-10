@@ -12,7 +12,7 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 class CreateImageRequestBody
 {
     /**
-     *  The idempotency token used to make this request idempotent.
+     * The idempotency token used to make this request idempotent.
      * 
      * @var string $clientToken
      */
@@ -31,7 +31,7 @@ class CreateImageRequestBody
     public ?string $containerRecipeArn = null;
     
     /**
-     *  The Amazon Resource Name (ARN) of the distribution configuration that defines and configures the outputs of your pipeline.
+     * The Amazon Resource Name (ARN) of the distribution configuration that defines and configures the outputs of your pipeline.
      * 
      * @var ?string $distributionConfigurationArn
      */
@@ -41,7 +41,7 @@ class CreateImageRequestBody
     public ?string $distributionConfigurationArn = null;
     
     /**
-     *  Collects additional information about the image being created, including the operating system (OS) version and package list. This information is used to enhance the overall experience of using EC2 Image Builder. Enabled by default.
+     * Collects additional information about the image being created, including the operating system (OS) version and package list. This information is used to enhance the overall experience of using EC2 Image Builder. Enabled by default.
      * 
      * @var ?bool $enhancedImageMetadataEnabled
      */
@@ -51,7 +51,7 @@ class CreateImageRequestBody
     public ?bool $enhancedImageMetadataEnabled = null;
     
     /**
-     *  The Amazon Resource Name (ARN) of the image recipe that defines how images are configured, tested, and assessed.
+     * The Amazon Resource Name (ARN) of the image recipe that defines how images are configured, tested, and assessed.
      * 
      * @var ?string $imageRecipeArn
      */
@@ -59,6 +59,16 @@ class CreateImageRequestBody
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $imageRecipeArn = null;
+    
+    /**
+     * Contains settings for Image Builder image resource and container image scans.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Operations\CreateImageRequestBodyImageScanningConfiguration $imageScanningConfiguration
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('imageScanningConfiguration')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Operations\CreateImageRequestBodyImageScanningConfiguration')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?CreateImageRequestBodyImageScanningConfiguration $imageScanningConfiguration = null;
     
     /**
      * Configure image tests for your pipeline build. Tests run after building the image, to verify that the AMI or container image is valid before distributing it.
@@ -71,7 +81,7 @@ class CreateImageRequestBody
     public ?CreateImageRequestBodyImageTestsConfiguration $imageTestsConfiguration = null;
     
     /**
-     *  The Amazon Resource Name (ARN) of the infrastructure configuration that defines the environment in which your image will be built and tested.
+     * The Amazon Resource Name (ARN) of the infrastructure configuration that defines the environment in which your image will be built and tested.
      * 
      * @var string $infrastructureConfigurationArn
      */
@@ -80,7 +90,7 @@ class CreateImageRequestBody
     public string $infrastructureConfigurationArn;
     
     /**
-     *  The tags of the image.
+     * The tags of the image.
      * 
      * @var ?array<string, string> $tags
      */
@@ -96,6 +106,7 @@ class CreateImageRequestBody
 		$this->distributionConfigurationArn = null;
 		$this->enhancedImageMetadataEnabled = null;
 		$this->imageRecipeArn = null;
+		$this->imageScanningConfiguration = null;
 		$this->imageTestsConfiguration = null;
 		$this->infrastructureConfigurationArn = "";
 		$this->tags = null;

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETRollbackInstanceRefreshActionEnum: string
 {
     case ROLLBACK_INSTANCE_REFRESH = 'RollbackInstanceRefresh';

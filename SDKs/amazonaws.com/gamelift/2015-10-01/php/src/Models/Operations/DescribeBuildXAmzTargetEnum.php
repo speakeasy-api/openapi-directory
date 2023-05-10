@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeBuildXAmzTargetEnum: string
 {
     case GAME_LIFT_DESCRIBE_BUILD = 'GameLift.DescribeBuild';

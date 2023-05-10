@@ -126,4 +126,6 @@ src/Models/Shared/VerifyPasswordResponse.php
 src/Models/Shared/IdentitytoolkitRelyingpartyVerifyPasswordRequest.php
 src/Models/Shared/IdentitytoolkitRelyingpartyVerifyPhoneNumberResponse.php
 src/Models/Shared/IdentitytoolkitRelyingpartyVerifyPhoneNumberRequest.php
+docs/sdk/README.md
+docs/relyingparty/README.md
 USAGE.md

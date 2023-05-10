@@ -12,7 +12,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 /** Additional information about the status of the transfer. */
 enum TransferReasonEnum: string
 {
-    case AMOUNT_LIMIT_EXCEDED = 'amountLimitExceded';
+    case AMOUNT_LIMIT_EXCEEDED = 'amountLimitExceeded';
     case APPROVED = 'approved';
     case COUNTERPARTY_ACCOUNT_BLOCKED = 'counterpartyAccountBlocked';
     case COUNTERPARTY_ACCOUNT_CLOSED = 'counterpartyAccountClosed';

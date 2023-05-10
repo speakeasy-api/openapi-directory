@@ -42,9 +42,11 @@ class Definition
      * 
      * Get a list of all subscription definitions for the portal
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetCommunicationPreferencesV3DefinitionsGetPageSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetCommunicationPreferencesV3DefinitionsGetPageResponse
      */
 	public function getCommunicationPreferencesV3DefinitionsGetPage(
+        \OpenAPI\OpenAPI\Models\Operations\GetCommunicationPreferencesV3DefinitionsGetPageSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetCommunicationPreferencesV3DefinitionsGetPageResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -52,7 +54,8 @@ class Definition
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

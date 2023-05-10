@@ -28,6 +28,16 @@ class ShardingOption
     public ?ManualSharding $manualSharding = null;
     
     /**
+     * Shards test based on previous test case timing records.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\SmartSharding $smartSharding
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('smartSharding')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\SmartSharding')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?SmartSharding $smartSharding = null;
+    
+    /**
      * Uniformly shards test cases given a total number of shards. For instrumentation tests, it will be translated to "-e numShard" and "-e shardIndex" AndroidJUnitRunner arguments. With uniform sharding enabled, specifying either of these sharding arguments via `environment_variables` is invalid. Based on the sharding mechanism AndroidJUnitRunner uses, there is no guarantee that test cases will be distributed uniformly across all shards.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\UniformSharding $uniformSharding
@@ -40,6 +50,7 @@ class ShardingOption
 	public function __construct()
 	{
 		$this->manualSharding = null;
+		$this->smartSharding = null;
 		$this->uniformSharding = null;
 	}
 }

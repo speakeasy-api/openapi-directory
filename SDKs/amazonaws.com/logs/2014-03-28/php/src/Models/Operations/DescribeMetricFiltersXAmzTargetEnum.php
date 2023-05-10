@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeMetricFiltersXAmzTargetEnum: string
 {
     case LOGS20140328_DESCRIBE_METRIC_FILTERS = 'Logs_20140328.DescribeMetricFilters';

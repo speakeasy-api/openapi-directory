@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * OpenHours - The time when journey allow to send messages. QuietTime should be configured first and SendingSchedule should be set to true.
+ * OpenHours - Specifies the times when message are allowed to be sent to endpoints.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

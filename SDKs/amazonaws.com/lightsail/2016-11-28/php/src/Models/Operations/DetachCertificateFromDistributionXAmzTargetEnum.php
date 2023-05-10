@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DetachCertificateFromDistributionXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_DETACH_CERTIFICATE_FROM_DISTRIBUTION = 'Lightsail_20161128.DetachCertificateFromDistribution';

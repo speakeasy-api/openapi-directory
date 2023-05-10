@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeEventTrackerXAmzTargetEnum: string
 {
     case AMAZON_PERSONALIZE_DESCRIBE_EVENT_TRACKER = 'AmazonPersonalize.DescribeEventTracker';

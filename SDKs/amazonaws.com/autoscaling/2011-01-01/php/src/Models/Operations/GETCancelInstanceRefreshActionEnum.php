@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETCancelInstanceRefreshActionEnum: string
 {
     case CANCEL_INSTANCE_REFRESH = 'CancelInstanceRefresh';

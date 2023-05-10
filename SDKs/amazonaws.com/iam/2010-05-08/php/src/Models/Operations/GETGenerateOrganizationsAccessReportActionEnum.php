@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETGenerateOrganizationsAccessReportActionEnum: string
 {
     case GENERATE_ORGANIZATIONS_ACCESS_REPORT = 'GenerateOrganizationsAccessReport';

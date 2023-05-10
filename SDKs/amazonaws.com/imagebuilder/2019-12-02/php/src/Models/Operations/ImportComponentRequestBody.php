@@ -12,7 +12,7 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 class ImportComponentRequestBody
 {
     /**
-     * The change description of the component. Describes what change has been made in this version, or what makes this version different from other versions of this component.
+     * The change description of the component. This description indicates the change that has been made in this version, or what makes this version different from other versions of this component.
      * 
      * @var ?string $changeDescription
      */
@@ -70,7 +70,7 @@ class ImportComponentRequestBody
     public ?string $kmsKeyId = null;
     
     /**
-     *  The name of the component.
+     * The name of the component.
      * 
      * @var string $name
      */

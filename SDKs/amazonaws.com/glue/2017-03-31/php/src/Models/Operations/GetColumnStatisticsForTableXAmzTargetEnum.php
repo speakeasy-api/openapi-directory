@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetColumnStatisticsForTableXAmzTargetEnum: string
 {
     case AWS_GLUE_GET_COLUMN_STATISTICS_FOR_TABLE = 'AWSGlue.GetColumnStatisticsForTable';

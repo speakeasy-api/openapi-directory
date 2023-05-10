@@ -171,12 +171,15 @@ class ComputerVision
      * @param \OpenAPI\OpenAPI\Models\Shared\ImageCreateRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\UploadEphemeralImageSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\UploadEphemeralImageResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function uploadEphemeralImage(
         \OpenAPI\OpenAPI\Models\Shared\ImageCreateRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\UploadEphemeralImageSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\UploadEphemeralImageResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v2/images');
         

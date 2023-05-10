@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * AnywhereConfiguration - GameLift Anywhere configuration options for your Anywhere fleets.
+ * AnywhereConfiguration - Amazon GameLift Anywhere configuration options for your Anywhere fleets.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

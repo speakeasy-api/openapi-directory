@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopApplicationXAmzTargetEnum: string
 {
     case KINESIS_ANALYTICS20180523_STOP_APPLICATION = 'KinesisAnalytics_20180523.StopApplication';

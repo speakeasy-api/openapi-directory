@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class GoogleCloudSecuritycenterV1Binding
 {
     /**
-     * Name for binding.
+     * Name for the binding.
      * 
      * @var ?string $name
      */
@@ -28,7 +28,7 @@ class GoogleCloudSecuritycenterV1Binding
     public ?string $name = null;
     
     /**
-     * Namespace for binding.
+     * Namespace for the binding.
      * 
      * @var ?string $ns
      */

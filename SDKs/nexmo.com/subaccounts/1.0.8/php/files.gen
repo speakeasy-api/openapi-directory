@@ -94,4 +94,7 @@ src/Models/Shared/ShortcodeNotFound.php
 src/Models/Shared/InvalidNumberTransferErrorResponse.php
 src/Models/Shared/TransferNumberResponse.php
 src/Models/Shared/TransferNumberRequest.php
+docs/sdk/README.md
+docs/subaccountmanagement/README.md
+docs/transfers/README.md
 USAGE.md

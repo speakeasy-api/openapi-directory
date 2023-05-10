@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ModifyHsmXAmzTargetEnum: string
 {
     case CLOUD_HSM_FRONTEND_SERVICE_MODIFY_HSM = 'CloudHsmFrontendService.ModifyHsm';

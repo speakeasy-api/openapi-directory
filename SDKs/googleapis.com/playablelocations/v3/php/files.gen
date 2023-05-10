@@ -45,4 +45,6 @@ src/Models/Shared/GoogleMapsPlayablelocationsV3SampleFilter.php
 src/Models/Shared/GoogleMapsPlayablelocationsV3SampleSpacingOptionsPointTypeEnum.php
 src/Models/Shared/GoogleMapsPlayablelocationsV3SampleSpacingOptions.php
 src/Models/Shared/GoogleMapsPlayablelocationsV3SampleAreaFilter.php
+docs/sdk/README.md
+docs/v3/README.md
 USAGE.md

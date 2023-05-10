@@ -28,6 +28,16 @@ class GoogleAdsSearchads360V0ResourcesAdGroupBidModifier
     public ?float $bidModifier = null;
     
     /**
+     * A device criterion.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0CommonDeviceInfo $device
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('device')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0CommonDeviceInfo')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleAdsSearchads360V0CommonDeviceInfo $device = null;
+    
+    /**
      * Immutable. The resource name of the ad group bid modifier. Ad group bid modifier resource names have the form: `customers/{customer_id}/adGroupBidModifiers/{ad_group_id}~{criterion_id}`
      * 
      * @var ?string $resourceName
@@ -40,6 +50,7 @@ class GoogleAdsSearchads360V0ResourcesAdGroupBidModifier
 	public function __construct()
 	{
 		$this->bidModifier = null;
+		$this->device = null;
 		$this->resourceName = null;
 	}
 }

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTGetReservedNodeExchangeConfigurationOptionsActionEnum: string
 {
     case GET_RESERVED_NODE_EXCHANGE_CONFIGURATION_OPTIONS = 'GetReservedNodeExchangeConfigurationOptions';

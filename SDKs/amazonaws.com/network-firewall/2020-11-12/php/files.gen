@@ -33,6 +33,9 @@ src/Models/Operations/CreateFirewallPolicyResponse.php
 src/Models/Operations/CreateRuleGroupXAmzTargetEnum.php
 src/Models/Operations/CreateRuleGroupRequest.php
 src/Models/Operations/CreateRuleGroupResponse.php
+src/Models/Operations/CreateTLSInspectionConfigurationXAmzTargetEnum.php
+src/Models/Operations/CreateTLSInspectionConfigurationRequest.php
+src/Models/Operations/CreateTLSInspectionConfigurationResponse.php
 src/Models/Operations/DeleteFirewallXAmzTargetEnum.php
 src/Models/Operations/DeleteFirewallRequest.php
 src/Models/Operations/DeleteFirewallResponse.php
@@ -45,6 +48,9 @@ src/Models/Operations/DeleteResourcePolicyResponse.php
 src/Models/Operations/DeleteRuleGroupXAmzTargetEnum.php
 src/Models/Operations/DeleteRuleGroupRequest.php
 src/Models/Operations/DeleteRuleGroupResponse.php
+src/Models/Operations/DeleteTLSInspectionConfigurationXAmzTargetEnum.php
+src/Models/Operations/DeleteTLSInspectionConfigurationRequest.php
+src/Models/Operations/DeleteTLSInspectionConfigurationResponse.php
 src/Models/Operations/DescribeFirewallXAmzTargetEnum.php
 src/Models/Operations/DescribeFirewallRequest.php
 src/Models/Operations/DescribeFirewallResponse.php
@@ -63,6 +69,9 @@ src/Models/Operations/DescribeRuleGroupResponse.php
 src/Models/Operations/DescribeRuleGroupMetadataXAmzTargetEnum.php
 src/Models/Operations/DescribeRuleGroupMetadataRequest.php
 src/Models/Operations/DescribeRuleGroupMetadataResponse.php
+src/Models/Operations/DescribeTLSInspectionConfigurationXAmzTargetEnum.php
+src/Models/Operations/DescribeTLSInspectionConfigurationRequest.php
+src/Models/Operations/DescribeTLSInspectionConfigurationResponse.php
 src/Models/Operations/DisassociateSubnetsXAmzTargetEnum.php
 src/Models/Operations/DisassociateSubnetsRequest.php
 src/Models/Operations/DisassociateSubnetsResponse.php
@@ -75,6 +84,9 @@ src/Models/Operations/ListFirewallsResponse.php
 src/Models/Operations/ListRuleGroupsXAmzTargetEnum.php
 src/Models/Operations/ListRuleGroupsRequest.php
 src/Models/Operations/ListRuleGroupsResponse.php
+src/Models/Operations/ListTLSInspectionConfigurationsXAmzTargetEnum.php
+src/Models/Operations/ListTLSInspectionConfigurationsRequest.php
+src/Models/Operations/ListTLSInspectionConfigurationsResponse.php
 src/Models/Operations/ListTagsForResourceXAmzTargetEnum.php
 src/Models/Operations/ListTagsForResourceRequest.php
 src/Models/Operations/ListTagsForResourceResponse.php
@@ -111,6 +123,9 @@ src/Models/Operations/UpdateRuleGroupResponse.php
 src/Models/Operations/UpdateSubnetChangeProtectionXAmzTargetEnum.php
 src/Models/Operations/UpdateSubnetChangeProtectionRequest.php
 src/Models/Operations/UpdateSubnetChangeProtectionResponse.php
+src/Models/Operations/UpdateTLSInspectionConfigurationXAmzTargetEnum.php
+src/Models/Operations/UpdateTLSInspectionConfigurationRequest.php
+src/Models/Operations/UpdateTLSInspectionConfigurationResponse.php
 src/Models/Shared/AssociateFirewallPolicyResponse.php
 src/Models/Shared/AssociateFirewallPolicyRequest.php
 src/Models/Shared/AssociateSubnetsResponse.php
@@ -180,6 +195,14 @@ src/Models/Shared/PortSet.php
 src/Models/Shared/IPSet.php
 src/Models/Shared/ReferenceSets.php
 src/Models/Shared/IPSetReference.php
+src/Models/Shared/CreateTLSInspectionConfigurationResponse.php
+src/Models/Shared/TLSInspectionConfigurationResponse.php
+src/Models/Shared/TlsCertificateData.php
+src/Models/Shared/CreateTLSInspectionConfigurationRequest.php
+src/Models/Shared/TLSInspectionConfiguration.php
+src/Models/Shared/ServerCertificateConfiguration.php
+src/Models/Shared/ServerCertificate.php
+src/Models/Shared/ServerCertificateScope.php
 src/Models/Shared/DeleteFirewallResponse.php
 src/Models/Shared/DeleteFirewallRequest.php
 src/Models/Shared/DeleteFirewallPolicyResponse.php
@@ -187,6 +210,8 @@ src/Models/Shared/DeleteFirewallPolicyRequest.php
 src/Models/Shared/DeleteResourcePolicyRequest.php
 src/Models/Shared/DeleteRuleGroupResponse.php
 src/Models/Shared/DeleteRuleGroupRequest.php
+src/Models/Shared/DeleteTLSInspectionConfigurationResponse.php
+src/Models/Shared/DeleteTLSInspectionConfigurationRequest.php
 src/Models/Shared/DescribeFirewallResponse.php
 src/Models/Shared/DescribeFirewallRequest.php
 src/Models/Shared/DescribeFirewallPolicyResponse.php
@@ -203,6 +228,8 @@ src/Models/Shared/DescribeRuleGroupResponse.php
 src/Models/Shared/DescribeRuleGroupRequest.php
 src/Models/Shared/DescribeRuleGroupMetadataResponse.php
 src/Models/Shared/DescribeRuleGroupMetadataRequest.php
+src/Models/Shared/DescribeTLSInspectionConfigurationResponse.php
+src/Models/Shared/DescribeTLSInspectionConfigurationRequest.php
 src/Models/Shared/DisassociateSubnetsResponse.php
 src/Models/Shared/DisassociateSubnetsRequest.php
 src/Models/Shared/ListFirewallPoliciesResponse.php
@@ -216,6 +243,9 @@ src/Models/Shared/RuleGroupMetadata.php
 src/Models/Shared/ListRuleGroupsRequest.php
 src/Models/Shared/ResourceManagedStatusEnum.php
 src/Models/Shared/ResourceManagedTypeEnum.php
+src/Models/Shared/ListTLSInspectionConfigurationsResponse.php
+src/Models/Shared/TLSInspectionConfigurationMetadata.php
+src/Models/Shared/ListTLSInspectionConfigurationsRequest.php
 src/Models/Shared/ListTagsForResourceResponse.php
 src/Models/Shared/ListTagsForResourceRequest.php
 src/Models/Shared/PutResourcePolicyRequest.php
@@ -237,5 +267,8 @@ src/Models/Shared/UpdateRuleGroupResponse.php
 src/Models/Shared/UpdateRuleGroupRequest.php
 src/Models/Shared/UpdateSubnetChangeProtectionResponse.php
 src/Models/Shared/UpdateSubnetChangeProtectionRequest.php
+src/Models/Shared/UpdateTLSInspectionConfigurationResponse.php
+src/Models/Shared/UpdateTLSInspectionConfigurationRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

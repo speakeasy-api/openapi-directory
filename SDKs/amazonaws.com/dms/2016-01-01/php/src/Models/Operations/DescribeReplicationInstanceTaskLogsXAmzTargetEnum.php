@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeReplicationInstanceTaskLogsXAmzTargetEnum: string
 {
     case AMAZON_DM_SV20160101_DESCRIBE_REPLICATION_INSTANCE_TASK_LOGS = 'AmazonDMSv20160101.DescribeReplicationInstanceTaskLogs';

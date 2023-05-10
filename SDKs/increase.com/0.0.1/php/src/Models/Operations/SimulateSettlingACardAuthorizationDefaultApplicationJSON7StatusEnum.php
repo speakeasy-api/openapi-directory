@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-enum SimulateSettlingACardAuthorizationDefaultApplicationJSON7StatusEnum: string
+enum SimulateSettlingACardAuthorizationDefaultApplicationJSON7StatusEnum: int
 {
-    case FOUR_HUNDRED_AND_ONE = '401';
+    case FOUR_HUNDRED_AND_ONE = 401;
 }

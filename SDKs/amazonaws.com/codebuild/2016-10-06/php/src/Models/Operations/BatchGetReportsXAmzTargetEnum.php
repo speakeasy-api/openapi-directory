@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum BatchGetReportsXAmzTargetEnum: string
 {
     case CODE_BUILD20161006_BATCH_GET_REPORTS = 'CodeBuild_20161006.BatchGetReports';

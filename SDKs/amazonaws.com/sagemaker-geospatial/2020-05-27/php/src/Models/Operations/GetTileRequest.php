@@ -20,6 +20,14 @@ class GetTileRequest
     public string $arn;
     
     /**
+     * The Amazon Resource Name (ARN) of the IAM role that you specify.
+     * 
+     * @var ?string $executionRoleArn
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=ExecutionRoleArn')]
+    public ?string $executionRoleArn = null;
+    
+    /**
      * The particular assets or bands to tile.
      * 
      * @var array<string> $imageAssets
@@ -123,6 +131,7 @@ class GetTileRequest
 	public function __construct()
 	{
 		$this->arn = "";
+		$this->executionRoleArn = null;
 		$this->imageAssets = [];
 		$this->imageMask = null;
 		$this->outputDataType = null;

@@ -30,15 +30,39 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetLatestBaseCurrencyRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetLatestBaseCurrencyRequest();
+    $request->baseCurrency = 'corrupti';
+
+    $response = $sdk->getLatestBaseCurrency($request);
+
+    if ($response->getLatestBaseCurrency200ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getLatestBaseCurrency` - Returns latest exchange rates in parameter-supplied base currency.
+* [getLatestBaseCurrency](docs/sdk/README.md#getlatestbasecurrency) - Returns latest exchange rates in parameter-supplied base currency.
 <!-- End SDK Available Operations -->
 
 ### Maturity

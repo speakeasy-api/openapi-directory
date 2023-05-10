@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTSetInstanceProtectionActionEnum: string
 {
     case SET_INSTANCE_PROTECTION = 'SetInstanceProtection';

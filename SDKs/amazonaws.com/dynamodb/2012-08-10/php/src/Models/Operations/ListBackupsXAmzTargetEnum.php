@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListBackupsXAmzTargetEnum: string
 {
     case DYNAMO_DB20120810_LIST_BACKUPS = 'DynamoDB_20120810.ListBackups';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateApplicationXAmzTargetEnum: string
 {
     case EC2_WINDOWS_BARLEY_SERVICE_UPDATE_APPLICATION = 'EC2WindowsBarleyService.UpdateApplication';

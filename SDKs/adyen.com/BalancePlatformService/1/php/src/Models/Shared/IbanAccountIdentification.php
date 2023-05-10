@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * IbanAccountIdentification - Bank account identification.
+ * IbanAccountIdentification - Contains the business account details. Returned when you create a payment instrument with `type` **bankAccount**.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

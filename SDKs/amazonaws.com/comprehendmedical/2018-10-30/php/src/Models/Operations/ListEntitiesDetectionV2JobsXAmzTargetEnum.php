@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListEntitiesDetectionV2JobsXAmzTargetEnum: string
 {
     case COMPREHEND_MEDICAL20181030_LIST_ENTITIES_DETECTION_V2_JOBS = 'ComprehendMedical_20181030.ListEntitiesDetectionV2Jobs';

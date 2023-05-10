@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RestoreFromSnapshotXAmzTargetEnum: string
 {
     case REDSHIFT_SERVERLESS_RESTORE_FROM_SNAPSHOT = 'RedshiftServerless.RestoreFromSnapshot';

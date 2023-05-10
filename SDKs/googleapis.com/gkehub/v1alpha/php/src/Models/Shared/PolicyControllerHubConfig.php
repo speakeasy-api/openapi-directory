@@ -38,7 +38,7 @@ class PolicyControllerHubConfig
     public ?string $constraintViolationLimit = null;
     
     /**
-     * Map of deployment configs to deployments (“admission”, “audit”, “mutation”).
+     * Map of deployment configs to deployments ("admission", "audit", "mutation').
      * 
      * @var ?array<string, \OpenAPI\OpenAPI\Models\Shared\PolicyControllerPolicyControllerDeploymentConfig> $deploymentConfigs
      */

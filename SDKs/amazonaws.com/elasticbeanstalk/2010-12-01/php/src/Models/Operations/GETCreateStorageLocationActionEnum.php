@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETCreateStorageLocationActionEnum: string
 {
     case CREATE_STORAGE_LOCATION = 'CreateStorageLocation';

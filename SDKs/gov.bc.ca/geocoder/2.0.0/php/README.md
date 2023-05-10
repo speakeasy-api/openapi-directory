@@ -30,41 +30,103 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\GetAddressesOutputFormatRequest;
+use \OpenAPI\OpenAPI\Models\Operations\GetAddressesOutputFormatInterpolationEnum;
+use \OpenAPI\OpenAPI\Models\Operations\GetAddressesOutputFormatLocationDescriptorEnum;
+use \OpenAPI\OpenAPI\Models\Operations\GetAddressesOutputFormatOutputFormatEnum;
+use \OpenAPI\OpenAPI\Models\Operations\GetAddressesOutputFormatOutputSrsEnum;
+use \OpenAPI\OpenAPI\Models\Operations\GetAddressesOutputFormatStreetDirectionEnum;
+use \OpenAPI\OpenAPI\Models\Operations\GetAddressesOutputFormatUnitDesignatorEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetAddressesOutputFormatRequest();
+    $request->addressString = 'corrupti';
+    $request->autoComplete = false;
+    $request->bbox = 'provident';
+    $request->brief = false;
+    $request->centre = 'distinctio';
+    $request->civicNumber = 'quibusdam';
+    $request->civicNumberSuffix = 'unde';
+    $request->echo = false;
+    $request->extrapolate = false;
+    $request->interpolation = GetAddressesOutputFormatInterpolationEnum::NONE;
+    $request->localities = 'corrupti';
+    $request->localityName = 'illum';
+    $request->locationDescriptor = GetAddressesOutputFormatLocationDescriptorEnum::FRONT_DOOR_POINT;
+    $request->matchPrecision = 'error';
+    $request->matchPrecisionNot = 'deserunt';
+    $request->maxDistance = 3843.82;
+    $request->maxResults = 437587;
+    $request->minScore = 297534;
+    $request->notLocalities = 'debitis';
+    $request->outputFormat = GetAddressesOutputFormatOutputFormatEnum::JSON;
+    $request->outputSRS = GetAddressesOutputFormatOutputSrsEnum::TWENTY_SIX_THOUSAND_NINE_HUNDRED_AND_ELEVEN;
+    $request->parcelPoint = 'tempora';
+    $request->provinceCode = 'suscipit';
+    $request->setBack = 477665;
+    $request->siteName = 'minus';
+    $request->streetDirection = GetAddressesOutputFormatStreetDirectionEnum::SE;
+    $request->streetName = 'voluptatum';
+    $request->streetQualifier = 'iusto';
+    $request->streetType = 'excepturi';
+    $request->unitDesignator = GetAddressesOutputFormatUnitDesignatorEnum::PAD;
+    $request->unitNumber = 'recusandae';
+    $request->unitNumberSuffix = 'temporibus';
+
+    $response = $sdk->intersections->getAddressesOutputFormat($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### intersections
+### [intersections](docs/intersections/README.md)
 
-* `getAddressesOutputFormat` - Geocode an address
-* `getIntersectionsNearOutputFormat` - Find intersections near to a geographic point
-* `getIntersectionsNearestOutputFormat` - Find nearest intersection to a geographic point
-* `getIntersectionsWithinOutputFormat` - Find intersections in a geographic area
-* `getIntersectionsIntersectionIDOutputFormat` - Get an intersection by its unique ID
+* [getAddressesOutputFormat](docs/intersections/README.md#getaddressesoutputformat) - Geocode an address
+* [getIntersectionsNearOutputFormat](docs/intersections/README.md#getintersectionsnearoutputformat) - Find intersections near to a geographic point
+* [getIntersectionsNearestOutputFormat](docs/intersections/README.md#getintersectionsnearestoutputformat) - Find nearest intersection to a geographic point
+* [getIntersectionsWithinOutputFormat](docs/intersections/README.md#getintersectionswithinoutputformat) - Find intersections in a geographic area
+* [getIntersectionsIntersectionIDOutputFormat](docs/intersections/README.md#getintersectionsintersectionidoutputformat) - Get an intersection by its unique ID
 
-### occupants
+### [occupants](docs/occupants/README.md)
 
-* `getOccupantsAddressesOutputFormat` - Geocode an address and identify site occupants
-* `getOccupantsNearOutputFormat` - Find occupants of sites near to a geographic point
-* `getOccupantsNearestOutputFormat` - Find occupants of the site nearest to a geographic point
-* `getOccupantsWithinOutputFormat` - Find occupants of sites in a geographic area
-* `getOccupantsOccupantIDOutputFormat` - Get an occupant (of a site) by its unique ID
+* [getOccupantsAddressesOutputFormat](docs/occupants/README.md#getoccupantsaddressesoutputformat) - Geocode an address and identify site occupants
+* [getOccupantsNearOutputFormat](docs/occupants/README.md#getoccupantsnearoutputformat) - Find occupants of sites near to a geographic point
+* [getOccupantsNearestOutputFormat](docs/occupants/README.md#getoccupantsnearestoutputformat) - Find occupants of the site nearest to a geographic point
+* [getOccupantsWithinOutputFormat](docs/occupants/README.md#getoccupantswithinoutputformat) - Find occupants of sites in a geographic area
+* [getOccupantsOccupantIDOutputFormat](docs/occupants/README.md#getoccupantsoccupantidoutputformat) - Get an occupant (of a site) by its unique ID
 
-### parcels
+### [parcels](docs/parcels/README.md)
 
-* `getParcelsPidsSiteIDOutputFormat` - Get a comma-separated string of all pids for a given site
+* [getParcelsPidsSiteIDOutputFormat](docs/parcels/README.md#getparcelspidssiteidoutputformat) - Get a comma-separated string of all pids for a given site
 
-### sites
+### [sites](docs/sites/README.md)
 
-* `getAddressesOutputFormat` - Geocode an address
-* `getSitesNearOutputFormat` - Find sites near to a geographic point
-* `getSitesNearestOutputFormat` - Find the site nearest to a geographic point
-* `getSitesWithinOutputFormat` - Find sites in a geographic area
-* `getSitesSiteIDOutputFormat` - Get a site by its unique ID
-* `getSitesSiteIDSubsitesOutputFormat` - Represents all subsites of a given site
+* [getAddressesOutputFormat](docs/sites/README.md#getaddressesoutputformat) - Geocode an address
+* [getSitesNearOutputFormat](docs/sites/README.md#getsitesnearoutputformat) - Find sites near to a geographic point
+* [getSitesNearestOutputFormat](docs/sites/README.md#getsitesnearestoutputformat) - Find the site nearest to a geographic point
+* [getSitesWithinOutputFormat](docs/sites/README.md#getsiteswithinoutputformat) - Find sites in a geographic area
+* [getSitesSiteIDOutputFormat](docs/sites/README.md#getsitessiteidoutputformat) - Get a site by its unique ID
+* [getSitesSiteIDSubsitesOutputFormat](docs/sites/README.md#getsitessiteidsubsitesoutputformat) - Represents all subsites of a given site
 <!-- End SDK Available Operations -->
 
 ### Maturity

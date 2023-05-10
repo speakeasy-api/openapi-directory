@@ -124,4 +124,6 @@ src/Models/Shared/RunRealtimeReportResponse.php
 src/Models/Shared/RunRealtimeReportRequestMetricAggregationsEnum.php
 src/Models/Shared/RunRealtimeReportRequest.php
 src/Models/Shared/MinuteRange.php
+docs/sdk/README.md
+docs/properties/README.md
 USAGE.md

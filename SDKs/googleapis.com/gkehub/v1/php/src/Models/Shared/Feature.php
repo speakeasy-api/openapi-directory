@@ -48,7 +48,7 @@ class Feature
     public ?array $fleetDefaultMemberConfig = null;
     
     /**
-     * GCP labels for this Feature.
+     * Labels for this Feature.
      * 
      * @var ?array<string, string> $labels
      */

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ExportECSServiceRecommendationsXAmzTargetEnum: string
 {
     case COMPUTE_OPTIMIZER_SERVICE_EXPORT_ECS_SERVICE_RECOMMENDATIONS = 'ComputeOptimizerService.ExportECSServiceRecommendations';

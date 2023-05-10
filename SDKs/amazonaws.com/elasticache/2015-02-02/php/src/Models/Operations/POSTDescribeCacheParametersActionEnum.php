@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeCacheParametersActionEnum: string
 {
     case DESCRIBE_CACHE_PARAMETERS = 'DescribeCacheParameters';

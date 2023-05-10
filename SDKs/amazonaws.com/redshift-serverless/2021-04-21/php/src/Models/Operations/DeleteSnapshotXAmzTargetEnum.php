@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteSnapshotXAmzTargetEnum: string
 {
     case REDSHIFT_SERVERLESS_DELETE_SNAPSHOT = 'RedshiftServerless.DeleteSnapshot';

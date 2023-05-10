@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-/** <p>Specifies whether you want to retrieve the associations that involve a specified resource or principal.</p> <ul> <li> <p> <code>PRINCIPAL</code> – list the principals that are associated with the specified resource share.</p> </li> <li> <p> <code>RESOURCE</code> – list the resources that are associated with the specified resource share.</p> </li> </ul> */
+/** <p>Specifies whether you want to retrieve the associations that involve a specified resource or principal.</p> <ul> <li> <p> <code>PRINCIPAL</code> – list the principals whose associations you want to see.</p> </li> <li> <p> <code>RESOURCE</code> – list the resources whose associations you want to see.</p> </li> </ul> */
 enum GetResourceShareAssociationsRequestBodyAssociationTypeEnum: string
 {
     case PRINCIPAL = 'PRINCIPAL';

@@ -22,4 +22,6 @@ src/Utils/Utils.php
 src/Models/Operations/GetaddressmatchRequest.php
 src/Models/Operations/Getaddressmatch200ApplicationJSON.php
 src/Models/Operations/GetaddressmatchResponse.php
+docs/sdk/README.md
+docs/streetaddresssimilaritykey/README.md
 USAGE.md

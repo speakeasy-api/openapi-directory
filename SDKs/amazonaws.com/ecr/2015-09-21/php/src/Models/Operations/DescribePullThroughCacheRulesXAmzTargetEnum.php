@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribePullThroughCacheRulesXAmzTargetEnum: string
 {
     case AMAZON_EC2_CONTAINER_REGISTRY_V20150921_DESCRIBE_PULL_THROUGH_CACHE_RULES = 'AmazonEC2ContainerRegistry_V20150921.DescribePullThroughCacheRules';

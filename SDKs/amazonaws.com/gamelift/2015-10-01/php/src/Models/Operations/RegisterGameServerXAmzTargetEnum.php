@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RegisterGameServerXAmzTargetEnum: string
 {
     case GAME_LIFT_REGISTER_GAME_SERVER = 'GameLift.RegisterGameServer';

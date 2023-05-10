@@ -138,9 +138,11 @@ class SDK
     /**
      * Access detailed block information
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetBlockSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetBlockResponse
      */
 	public function getBlock(
+        \OpenAPI\OpenAPI\Models\Operations\GetBlockSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetBlockResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -148,7 +150,8 @@ class SDK
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -289,9 +292,11 @@ class SDK
     /**
      * Get a list of supported blockchains
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetBlockchainSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetBlockchainResponse
      */
 	public function getBlockchain(
+        \OpenAPI\OpenAPI\Models\Operations\GetBlockchainSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetBlockchainResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -299,7 +304,8 @@ class SDK
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1552,9 +1558,11 @@ class SDK
     /**
      * Create new account
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\PostAccountSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\PostAccountResponse
      */
 	public function postAccount(
+        \OpenAPI\OpenAPI\Models\Operations\PostAccountSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\PostAccountResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -1562,7 +1570,8 @@ class SDK
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1755,9 +1764,11 @@ class SDK
     /**
      * Create a new transaction. Transfer Ether between accounts
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\PostTransactionSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\PostTransactionResponse
      */
 	public function postTransaction(
+        \OpenAPI\OpenAPI\Models\Operations\PostTransactionSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\PostTransactionResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -1765,7 +1776,8 @@ class SDK
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

@@ -112,9 +112,11 @@ class SDK
     /**
      * Recent User Comments
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GETUserContentRecentJsonSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GETUserContentRecentJsonResponse
      */
 	public function getUserContentRecentJson(
+        \OpenAPI\OpenAPI\Models\Operations\GETUserContentRecentJsonSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GETUserContentRecentJsonResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -122,7 +124,8 @@ class SDK
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

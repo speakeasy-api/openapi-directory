@@ -37,4 +37,6 @@ src/Models/Operations/ListWordSenses200ApplicationJSONFamilies.php
 src/Models/Operations/ListWordSenses200ApplicationJSONFeatures.php
 src/Models/Operations/ListWordSenses200ApplicationJSON.php
 src/Models/Operations/ListWordSensesResponse.php
+docs/sdk/README.md
+docs/languagemodeldirectaccess/README.md
 USAGE.md

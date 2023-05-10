@@ -295,11 +295,14 @@ class Strings
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetProjectTranslationsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetProjectTranslationsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getProjectTranslations(
         \OpenAPI\OpenAPI\Models\Operations\GetProjectTranslationsRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetProjectTranslationsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/projects/{projectId}/translations', \OpenAPI\OpenAPI\Models\Operations\GetProjectTranslationsRequest::class, $request);
         
@@ -329,11 +332,14 @@ class Strings
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetProjectTranslationsForLanguageRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetProjectTranslationsForLanguageResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getProjectTranslationsForLanguage(
         \OpenAPI\OpenAPI\Models\Operations\GetProjectTranslationsForLanguageRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetProjectTranslationsForLanguageResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/projects/{projectId}/translations/{language}', \OpenAPI\OpenAPI\Models\Operations\GetProjectTranslationsForLanguageRequest::class, $request);
         
@@ -706,11 +712,14 @@ class Strings
      * 
      * @param \OpenAPI\OpenAPI\Models\Shared\DeprecatedStringTranslationContent $request
      * @return \OpenAPI\OpenAPI\Models\Operations\PostStringsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function postStrings(
         \OpenAPI\OpenAPI\Models\Shared\DeprecatedStringTranslationContent $request,
     ): \OpenAPI\OpenAPI\Models\Operations\PostStringsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/strings');
         

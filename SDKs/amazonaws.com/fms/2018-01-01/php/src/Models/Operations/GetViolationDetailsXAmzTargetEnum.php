@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetViolationDetailsXAmzTargetEnum: string
 {
     case AWSFMS20180101_GET_VIOLATION_DETAILS = 'AWSFMS_20180101.GetViolationDetails';

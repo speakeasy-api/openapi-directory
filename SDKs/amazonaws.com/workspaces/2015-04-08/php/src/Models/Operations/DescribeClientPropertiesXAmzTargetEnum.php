@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeClientPropertiesXAmzTargetEnum: string
 {
     case WORKSPACES_SERVICE_DESCRIBE_CLIENT_PROPERTIES = 'WorkspacesService.DescribeClientProperties';

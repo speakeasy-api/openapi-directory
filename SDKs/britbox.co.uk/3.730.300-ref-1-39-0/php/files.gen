@@ -563,4 +563,15 @@ src/Models/Shared/RegistrationRequest.php
 src/Models/Shared/PasswordResetEmailRequest.php
 src/Models/Shared/SubscriptionDetails.php
 src/Models/Shared/PasswordResetRequest.php
+docs/sdk/README.md
+docs/account/README.md
+docs/app/README.md
+docs/authorization/README.md
+docs/bt/README.md
+docs/content/README.md
+docs/ee/README.md
+docs/itv/README.md
+docs/profile/README.md
+docs/registration/README.md
+docs/support/README.md
 USAGE.md

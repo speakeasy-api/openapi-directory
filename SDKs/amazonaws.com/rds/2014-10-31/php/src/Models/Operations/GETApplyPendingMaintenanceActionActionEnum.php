@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETApplyPendingMaintenanceActionActionEnum: string
 {
     case APPLY_PENDING_MAINTENANCE_ACTION = 'ApplyPendingMaintenanceAction';

@@ -43,12 +43,15 @@ class VeteranConfirmationStatus
      * @param \OpenAPI\OpenAPI\Models\Shared\VeteranStatusRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\GetVeteranStatusSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetVeteranStatusResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getVeteranStatus(
         \OpenAPI\OpenAPI\Models\Shared\VeteranStatusRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\GetVeteranStatusSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetVeteranStatusResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/status');
         

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AssociateTeamMemberXAmzTargetEnum: string
 {
     case CODE_STAR20170419_ASSOCIATE_TEAM_MEMBER = 'CodeStar_20170419.AssociateTeamMember';

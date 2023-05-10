@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeSpotPriceHistoryActionEnum: string
 {
     case DESCRIBE_SPOT_PRICE_HISTORY = 'DescribeSpotPriceHistory';

@@ -624,46 +624,6 @@ class Projects
     }
 	
     /**
-     * Resets a QueuedResource TPU instance
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\TpuProjectsLocationsQueuedResourcesResetRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\TpuProjectsLocationsQueuedResourcesResetSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\TpuProjectsLocationsQueuedResourcesResetResponse
-     */
-	public function tpuProjectsLocationsQueuedResourcesReset(
-        \OpenAPI\OpenAPI\Models\Operations\TpuProjectsLocationsQueuedResourcesResetRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\TpuProjectsLocationsQueuedResourcesResetSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\TpuProjectsLocationsQueuedResourcesResetResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v2alpha1/{name}:reset', \OpenAPI\OpenAPI\Models\Operations\TpuProjectsLocationsQueuedResourcesResetRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
-        $options = array_merge_recursive($options, $body);
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\TpuProjectsLocationsQueuedResourcesResetRequest::class, $request, null));
-        
-        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\TpuProjectsLocationsQueuedResourcesResetResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
      * Gets a runtime version.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\TpuProjectsLocationsRuntimeVersionsGetRequest $request

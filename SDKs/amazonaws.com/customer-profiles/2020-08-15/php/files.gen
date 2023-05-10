@@ -240,4 +240,5 @@ src/Models/Shared/AdditionalSearchKey.php
 src/Models/Shared/UpdateDomainResponse.php
 src/Models/Shared/UpdateProfileResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

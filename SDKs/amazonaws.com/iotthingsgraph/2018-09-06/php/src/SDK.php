@@ -89,11 +89,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\AssociateEntityToThingRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\AssociateEntityToThingResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function associateEntityToThing(
         \OpenAPI\OpenAPI\Models\Operations\AssociateEntityToThingRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\AssociateEntityToThingResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.AssociateEntityToThing');
         
@@ -153,11 +156,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\CreateFlowTemplateRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\CreateFlowTemplateResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function createFlowTemplate(
         \OpenAPI\OpenAPI\Models\Operations\CreateFlowTemplateRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\CreateFlowTemplateResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.CreateFlowTemplate');
         
@@ -223,11 +229,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\CreateSystemInstanceRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\CreateSystemInstanceResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function createSystemInstance(
         \OpenAPI\OpenAPI\Models\Operations\CreateSystemInstanceRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\CreateSystemInstanceResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.CreateSystemInstance');
         
@@ -293,11 +302,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\CreateSystemTemplateRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\CreateSystemTemplateResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function createSystemTemplate(
         \OpenAPI\OpenAPI\Models\Operations\CreateSystemTemplateRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\CreateSystemTemplateResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.CreateSystemTemplate');
         
@@ -357,11 +369,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DeleteFlowTemplateRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DeleteFlowTemplateResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function deleteFlowTemplate(
         \OpenAPI\OpenAPI\Models\Operations\DeleteFlowTemplateRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DeleteFlowTemplateResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.DeleteFlowTemplate');
         
@@ -421,11 +436,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DeleteNamespaceRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DeleteNamespaceResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function deleteNamespace(
         \OpenAPI\OpenAPI\Models\Operations\DeleteNamespaceRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DeleteNamespaceResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.DeleteNamespace');
         
@@ -473,11 +491,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DeleteSystemInstanceRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DeleteSystemInstanceResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function deleteSystemInstance(
         \OpenAPI\OpenAPI\Models\Operations\DeleteSystemInstanceRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DeleteSystemInstanceResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.DeleteSystemInstance');
         
@@ -537,11 +558,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DeleteSystemTemplateRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DeleteSystemTemplateResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function deleteSystemTemplate(
         \OpenAPI\OpenAPI\Models\Operations\DeleteSystemTemplateRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DeleteSystemTemplateResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.DeleteSystemTemplate');
         
@@ -601,11 +625,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DeploySystemInstanceRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DeploySystemInstanceResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function deploySystemInstance(
         \OpenAPI\OpenAPI\Models\Operations\DeploySystemInstanceRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DeploySystemInstanceResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.DeploySystemInstance');
         
@@ -671,11 +698,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DeprecateFlowTemplateRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DeprecateFlowTemplateResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function deprecateFlowTemplate(
         \OpenAPI\OpenAPI\Models\Operations\DeprecateFlowTemplateRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DeprecateFlowTemplateResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.DeprecateFlowTemplate');
         
@@ -735,11 +765,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DeprecateSystemTemplateRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DeprecateSystemTemplateResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function deprecateSystemTemplate(
         \OpenAPI\OpenAPI\Models\Operations\DeprecateSystemTemplateRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DeprecateSystemTemplateResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.DeprecateSystemTemplate');
         
@@ -799,11 +832,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DescribeNamespaceRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DescribeNamespaceResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function describeNamespace(
         \OpenAPI\OpenAPI\Models\Operations\DescribeNamespaceRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DescribeNamespaceResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.DescribeNamespace');
         
@@ -863,11 +899,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DissociateEntityFromThingRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DissociateEntityFromThingResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function dissociateEntityFromThing(
         \OpenAPI\OpenAPI\Models\Operations\DissociateEntityFromThingRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DissociateEntityFromThingResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.DissociateEntityFromThing');
         
@@ -927,11 +966,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetEntitiesRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetEntitiesResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getEntities(
         \OpenAPI\OpenAPI\Models\Operations\GetEntitiesRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetEntitiesResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.GetEntities');
         
@@ -991,11 +1033,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetFlowTemplateRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetFlowTemplateResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getFlowTemplate(
         \OpenAPI\OpenAPI\Models\Operations\GetFlowTemplateRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetFlowTemplateResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.GetFlowTemplate');
         
@@ -1055,11 +1100,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetFlowTemplateRevisionsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetFlowTemplateRevisionsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getFlowTemplateRevisions(
         \OpenAPI\OpenAPI\Models\Operations\GetFlowTemplateRevisionsRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetFlowTemplateRevisionsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.GetFlowTemplateRevisions');
         
@@ -1120,11 +1168,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetNamespaceDeletionStatusRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetNamespaceDeletionStatusResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getNamespaceDeletionStatus(
         \OpenAPI\OpenAPI\Models\Operations\GetNamespaceDeletionStatusRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetNamespaceDeletionStatusResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.GetNamespaceDeletionStatus');
         
@@ -1178,11 +1229,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetSystemInstanceRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetSystemInstanceResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getSystemInstance(
         \OpenAPI\OpenAPI\Models\Operations\GetSystemInstanceRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetSystemInstanceResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.GetSystemInstance');
         
@@ -1242,11 +1296,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetSystemTemplateRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetSystemTemplateResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getSystemTemplate(
         \OpenAPI\OpenAPI\Models\Operations\GetSystemTemplateRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetSystemTemplateResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.GetSystemTemplate');
         
@@ -1306,11 +1363,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetSystemTemplateRevisionsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetSystemTemplateRevisionsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getSystemTemplateRevisions(
         \OpenAPI\OpenAPI\Models\Operations\GetSystemTemplateRevisionsRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetSystemTemplateRevisionsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.GetSystemTemplateRevisions');
         
@@ -1371,11 +1431,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetUploadStatusRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetUploadStatusResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getUploadStatus(
         \OpenAPI\OpenAPI\Models\Operations\GetUploadStatusRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetUploadStatusResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.GetUploadStatus');
         
@@ -1435,11 +1498,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ListFlowExecutionMessagesRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ListFlowExecutionMessagesResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function listFlowExecutionMessages(
         \OpenAPI\OpenAPI\Models\Operations\ListFlowExecutionMessagesRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\ListFlowExecutionMessagesResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.ListFlowExecutionMessages');
         
@@ -1500,11 +1566,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ListTagsForResourceRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ListTagsForResourceResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function listTagsForResource(
         \OpenAPI\OpenAPI\Models\Operations\ListTagsForResourceRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\ListTagsForResourceResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.ListTagsForResource');
         
@@ -1565,11 +1634,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\SearchEntitiesRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\SearchEntitiesResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function searchEntities(
         \OpenAPI\OpenAPI\Models\Operations\SearchEntitiesRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\SearchEntitiesResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.SearchEntities');
         
@@ -1624,11 +1696,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\SearchFlowExecutionsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\SearchFlowExecutionsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function searchFlowExecutions(
         \OpenAPI\OpenAPI\Models\Operations\SearchFlowExecutionsRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\SearchFlowExecutionsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.SearchFlowExecutions');
         
@@ -1689,11 +1764,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\SearchFlowTemplatesRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\SearchFlowTemplatesResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function searchFlowTemplates(
         \OpenAPI\OpenAPI\Models\Operations\SearchFlowTemplatesRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\SearchFlowTemplatesResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.SearchFlowTemplates');
         
@@ -1748,11 +1826,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\SearchSystemInstancesRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\SearchSystemInstancesResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function searchSystemInstances(
         \OpenAPI\OpenAPI\Models\Operations\SearchSystemInstancesRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\SearchSystemInstancesResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.SearchSystemInstances');
         
@@ -1807,11 +1888,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\SearchSystemTemplatesRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\SearchSystemTemplatesResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function searchSystemTemplates(
         \OpenAPI\OpenAPI\Models\Operations\SearchSystemTemplatesRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\SearchSystemTemplatesResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.SearchSystemTemplates');
         
@@ -1866,11 +1950,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\SearchThingsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\SearchThingsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function searchThings(
         \OpenAPI\OpenAPI\Models\Operations\SearchThingsRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\SearchThingsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.SearchThings');
         
@@ -1931,11 +2018,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\TagResourceRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TagResourceResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function tagResource(
         \OpenAPI\OpenAPI\Models\Operations\TagResourceRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TagResourceResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.TagResource');
         
@@ -1995,11 +2085,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\UndeploySystemInstanceRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\UndeploySystemInstanceResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function undeploySystemInstance(
         \OpenAPI\OpenAPI\Models\Operations\UndeploySystemInstanceRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\UndeploySystemInstanceResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.UndeploySystemInstance');
         
@@ -2065,11 +2158,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\UntagResourceRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\UntagResourceResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function untagResource(
         \OpenAPI\OpenAPI\Models\Operations\UntagResourceRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\UntagResourceResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.UntagResource');
         
@@ -2129,11 +2225,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\UpdateFlowTemplateRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\UpdateFlowTemplateResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function updateFlowTemplate(
         \OpenAPI\OpenAPI\Models\Operations\UpdateFlowTemplateRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\UpdateFlowTemplateResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.UpdateFlowTemplate');
         
@@ -2193,11 +2292,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\UpdateSystemTemplateRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\UpdateSystemTemplateResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function updateSystemTemplate(
         \OpenAPI\OpenAPI\Models\Operations\UpdateSystemTemplateRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\UpdateSystemTemplateResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.UpdateSystemTemplate');
         
@@ -2257,11 +2359,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\UploadEntityDefinitionsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\UploadEntityDefinitionsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function uploadEntityDefinitions(
         \OpenAPI\OpenAPI\Models\Operations\UploadEntityDefinitionsRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\UploadEntityDefinitionsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=IotThingsGraphFrontEndService.UploadEntityDefinitions');
         

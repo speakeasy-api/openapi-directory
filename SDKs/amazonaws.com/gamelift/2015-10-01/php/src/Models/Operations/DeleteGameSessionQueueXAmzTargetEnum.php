@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteGameSessionQueueXAmzTargetEnum: string
 {
     case GAME_LIFT_DELETE_GAME_SESSION_QUEUE = 'GameLift.DeleteGameSessionQueue';

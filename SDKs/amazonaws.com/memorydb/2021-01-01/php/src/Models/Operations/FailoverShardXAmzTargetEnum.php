@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum FailoverShardXAmzTargetEnum: string
 {
     case AMAZON_MEMORY_DB_FAILOVER_SHARD = 'AmazonMemoryDB.FailoverShard';

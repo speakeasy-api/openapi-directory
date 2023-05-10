@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class GceRegionalPersistentDisk
 {
     /**
-     * Type of the disk to use.
+     * Type of the disk to use. Defaults to pd-standard.
      * 
      * @var ?string $diskType
      */
@@ -28,7 +28,7 @@ class GceRegionalPersistentDisk
     public ?string $diskType = null;
     
     /**
-     * Type of file system that the disk should be formatted with. The workstation image must support this file system type. Must be empty if source_snapshot is set.
+     * Type of file system that the disk should be formatted with. The workstation image must support this file system type. Must be empty if source_snapshot is set. Defaults to ext4.
      * 
      * @var ?string $fsType
      */
@@ -48,7 +48,7 @@ class GceRegionalPersistentDisk
     public ?GceRegionalPersistentDiskReclaimPolicyEnum $reclaimPolicy = null;
     
     /**
-     * Size of the disk in GB. Must be empty if source_snapshot is set.
+     * Size of the disk in GB. Must be empty if source_snapshot is set. Defaults to 200.
      * 
      * @var ?int $sizeGb
      */

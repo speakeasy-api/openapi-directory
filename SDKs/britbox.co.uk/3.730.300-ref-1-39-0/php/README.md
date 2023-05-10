@@ -30,17 +30,57 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\AddPaymentMethodRequest;
+use \OpenAPI\OpenAPI\Models\Shared\AddPaymentMethodRequest;
+use \OpenAPI\OpenAPI\Models\Shared\AddPaymentMethodRequestTypeEnum;
+use \OpenAPI\OpenAPI\Models\Shared\FeatureFlagsEnum;
+use \OpenAPI\OpenAPI\Models\Operations\AddPaymentMethodSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new AddPaymentMethodRequest();
+    $request->addPaymentMethodRequest = new AddPaymentMethodRequest();
+    $request->addPaymentMethodRequest->makeDefault = false;
+    $request->addPaymentMethodRequest->token = 'corrupti';
+    $request->addPaymentMethodRequest->type = AddPaymentMethodRequestTypeEnum::CARD;
+    $request->ff = [
+        FeatureFlagsEnum::CAS,
+        FeatureFlagsEnum::LRL,
+        FeatureFlagsEnum::RPT,
+    ];
+    $request->lang = 'nulla';
+
+    $requestSecurity = new AddPaymentMethodSecurity();
+    $requestSecurity->accountAuth = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+
+    $response = $sdk->account->addPaymentMethod($request, $requestSecurity);
+
+    if ($response->paymentMethod !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### account
+### [account](docs/account/README.md)
 
-* `addPaymentMethod` - Add a new payment method to an account.
-* `authorizeDevice` - Authorize a device from a generated device authorization code.
+* [addPaymentMethod](docs/account/README.md#addpaymentmethod) - Add a new payment method to an account.
+* [authorizeDevice](docs/account/README.md#authorizedevice) - Authorize a device from a generated device authorization code.
 
 This is the second step in the process of authorizing a device by pin code.
 
@@ -55,23 +95,23 @@ Once authorized, the device will then be able to sign in to that account
 via the `/authorization/device` endpoint, without needing to provide the 
 credentials of the user.
 
-* `cancelSubscription` - Cancel a plan subscription.
+* [cancelSubscription](docs/account/README.md#cancelsubscription) - Cancel a plan subscription.
 
 A cancelled subscription will continue to be valid until the subscription
 expiry date or next renewal date.
 
-* `changePassword` - Change the password of an account.
+* [changePassword](docs/account/README.md#changepassword) - Change the password of an account.
 
 The expected token scope is Settings.
 
-* `changePin` - Change the pin of an account.
-* `createProfile` - Create a new profile under the active account.
-* `deleteProfileWithId` - Delete a profile with a specific id under the active account.
+* [changePin](docs/account/README.md#changepin) - Change the pin of an account.
+* [createProfile](docs/account/README.md#createprofile) - Create a new profile under the active account.
+* [deleteProfileWithId](docs/account/README.md#deleteprofilewithid) - Delete a profile with a specific id under the active account.
 
 Note that you cannot delete the primary profile.
 
-* `deregisterDevice` - Deregister a playback device from an account.
-* `generateNonce` - Generate a new account nonce.
+* [deregisterDevice](docs/account/README.md#deregisterdevice) - Deregister a playback device from an account.
+* [generateNonce](docs/account/README.md#generatenonce) - Generate a new account nonce.
 
 A nonce may be required to help sign a response from a third party
 service which will be passed back to these services.
@@ -81,18 +121,18 @@ application may first get a nonce from here to include in the request.
 Facebook will then include the nonce in the auth token it issues. This
 token can be passed back to our services and the nonce checked for validity.
 
-* `getAccount` - Get the details of an account along with the profiles and entitlements under it.
-* `getDevice` - Get a registered device.
-* `getDevices` - Get all devices registered under this account.
+* [getAccount](docs/account/README.md#getaccount) - Get the details of an account along with the profiles and entitlements under it.
+* [getDevice](docs/account/README.md#getdevice) - Get a registered device.
+* [getDevices](docs/account/README.md#getdevices) - Get all devices registered under this account.
 
 Also includes information around device registration and deregistration limits.
 
-* `getEntitlements` - Get all entitlements under the account.
+* [getEntitlements](docs/account/README.md#getentitlements) - Get all entitlements under the account.
 
 This list is returned under the call to get account information so a call here is
 only required when wishing to refresh a local copy of entitlements.
 
-* `getItemMediaFiles` - Get the video files associated with an item given maximum resolution, device type
+* [getItemMediaFiles](docs/account/README.md#getitemmediafiles) - Get the video files associated with an item given maximum resolution, device type
 and one or more delivery types.
 
 This endpoint accepts an Account Catalog token, however if when requesting
@@ -118,7 +158,7 @@ would return an array with 0 or more stream files followed by 0 or more progress
 
 If no files are found a 404 is returned.
 
-* `getItemMediaFilesGuarded` - Get the video files associated with an item given maximum resolution, device type
+* [getItemMediaFilesGuarded](docs/account/README.md#getitemmediafilesguarded) - Get the video files associated with an item given maximum resolution, device type
 and one or more delivery types.
 
 This endpoint is identical to the `/account/items/{id}/videos` however it expects
@@ -139,20 +179,20 @@ would return an array with 0 or more stream files followed by 0 or more progress
 
 If no files are found a 404 is returned.
 
-* `getPaymentMethod` - Get a payment method under an account.
-* `getPaymentMethods` - Get the available payment methods under an account.
-* `getProfileWithId` - Get the summary of a profile with a specific id under the active account.
-* `getPurchases` - Get a list of all purchases made under an account.
-* `makePurchase` - Purchase a plan or item offer.
+* [getPaymentMethod](docs/account/README.md#getpaymentmethod) - Get a payment method under an account.
+* [getPaymentMethods](docs/account/README.md#getpaymentmethods) - Get the available payment methods under an account.
+* [getProfileWithId](docs/account/README.md#getprofilewithid) - Get the summary of a profile with a specific id under the active account.
+* [getPurchases](docs/account/README.md#getpurchases) - Get a list of all purchases made under an account.
+* [makePurchase](docs/account/README.md#makepurchase) - Purchase a plan or item offer.
 The result of a successful transaction is a new entitlement.
 
-* `registerDevice` - Register a playback device under an account.
+* [registerDevice](docs/account/README.md#registerdevice) - Register a playback device under an account.
 
 If a device with the same id already exists a `409` conflict will be returned.
 
-* `removePaymentMethod` - Remove a payment method from an account.
-* `renameDevice` - Rename a device
-* `requestEmailVerification` - Request that the email address tied to an account be verified.
+* [removePaymentMethod](docs/account/README.md#removepaymentmethod) - Remove a payment method from an account.
+* [renameDevice](docs/account/README.md#renamedevice) - Rename a device
+* [requestEmailVerification](docs/account/README.md#requestemailverification) - Request that the email address tied to an account be verified.
 
 This will send a verification email to the email address of the primary profile containing
 a link which, once clicked, completes the verification process via the /verify-email endpoint.
@@ -164,18 +204,18 @@ If the user doesn't click the link before it expires then this endpoint can be c
 to request a new verification email. In the future it may also be used if we add support
 for changing an account email address.
 
-* `updateAccount` - Update the details of an account.
+* [updateAccount](docs/account/README.md#updateaccount) - Update the details of an account.
 
 With the exception of the address, this supports partial updates, so you can send just the
 properties you wish to update.
 
 When the address is provided any properties which are omitted from the address will be cleared.
 
-* `updateProfileWithId` - Update the summary of a profile with a specific id under the active account.
+* [updateProfileWithId](docs/account/README.md#updateprofilewithid) - Update the summary of a profile with a specific id under the active account.
 
 This supports partial updates so you can send just the properties you wish to update.
 
-* `updateSubscription` - Renew a cancelled subscription or switch subscription to a different plan.
+* [updateSubscription](docs/account/README.md#updatesubscription) - Renew a cancelled subscription or switch subscription to a different plan.
 
 When renewing a cancelled subscription membership, hit this endpoint with
 the id of subscription to renew.
@@ -184,9 +224,9 @@ To switch plans provide the id of the current active subscription membership
 of the account, and in the query specify the id of the plan to switch to.
 
 
-### app
+### [app](docs/app/README.md)
 
-* `getAppConfig` - Get the global configuration for an application. Should be called during app statup.
+* [getAppConfig](docs/app/README.md#getappconfig) - Get the global configuration for an application. Should be called during app statup.
 
 This includes things like device and playback rules, classifications,
 sitemap and subscriptions.
@@ -194,7 +234,7 @@ sitemap and subscriptions.
 You have the option to select specific configuration objects using the 'include'
 parameter, or if unspecified, getting all configuration.
 
-* `getItvPage` - Returns a page with the specified id.
+* [getItvPage](docs/app/README.md#getitvpage) - Returns a page with the specified id.
 
 This is a cut down version for low memory devices.123
 
@@ -202,16 +242,16 @@ If targeting the search page you must url encode the search term as a parameter
 using the `q` key. For example if your browser path looks like `/search?q=the`
 then what you pass to this endpoint would look like `/itv/page?path=/search%3Fq%3Dthe`.
 
-* `getPage` - Returns a page with the specified id.
+* [getPage](docs/app/README.md#getpage) - Returns a page with the specified id.
 
 If targeting the search page you must url encode the search term as a parameter
 using the `q` key. For example if your browser path looks like `/search?q=the`
 then what you pass to this endpoint would look like `/page?path=/search%3Fq%3Dthe`.
 
 
-### authorization
+### [authorization](docs/authorization/README.md)
 
-* `generateDeviceAuthorizationCode` - Get a generated device authorization code.
+* [generateDeviceAuthorizationCode](docs/authorization/README.md#generatedeviceauthorizationcode) - Get a generated device authorization code.
 
 This is the first step in the process of authorizing a device by pin code.
 The device will make a request to this endpoint providing a unique identifier
@@ -226,7 +266,7 @@ Once authorized, the device will then be able to sign in to that account
 via the `/authorization/device` endpoint, without needing to provide the 
 credentials of the user.
 
-* `getAccountToken` - Request one or more `Account` level authorization tokens each with a chosen scope.
+* [getAccountToken](docs/authorization/README.md#getaccounttoken) - Request one or more `Account` level authorization tokens each with a chosen scope.
 
 Tokens are used to access restricted service endpoints. These restricted endpoints
 will require a specific token type (e.g Account) with a specific scope (e.g. Catalog)
@@ -237,7 +277,7 @@ For convenience, where a Profile level token with the same scope exists it will 
 Authorization with pin is not supported on this endpoint anymore. Use `/itv/pinauthorization`
 endpoint instead.
 
-* `getAccountTokenByCode` - Get Catalog tokens for an account using a device authorization code.
+* [getAccountTokenByCode](docs/authorization/README.md#getaccounttokenbycode) - Get Catalog tokens for an account using a device authorization code.
 Where a Profile level token of Catalog scope exists it will also be returned.
 
 This is the final step in the process of authorizing a device by pin code.
@@ -252,34 +292,34 @@ will be from a page presented in the web app under the account section.
 Once authorized, this endpoint will allow the device to sign in without
 needing to provide the credentials of the user.
 
-* `getProfileToken` - Request one or more `Profile` level authorization tokens each with a chosen scope.
+* [getProfileToken](docs/authorization/README.md#getprofiletoken) - Request one or more `Profile` level authorization tokens each with a chosen scope.
 
 Tokens are used to access restricted service endpoints. These restriced endpoints
 will require a specific token type (e.g Profile) with a specific scope (e.g. Catalog)
 before access is granted.
 
-* `refreshToken` - Refresh an account or profile level authorization token which is marked as refreshable.
-* `signOut` - When a user signs out of an application we need to clear some
+* [refreshToken](docs/authorization/README.md#refreshtoken) - Refresh an account or profile level authorization token which is marked as refreshable.
+* [signOut](docs/authorization/README.md#signout) - When a user signs out of an application we need to clear some
 basic cookies we assigned them during token authorization.
 
-* `singleSignOn` - Exchange a third party single-sign-on token for our own authorization tokens.
+* [singleSignOn](docs/authorization/README.md#singlesignon) - Exchange a third party single-sign-on token for our own authorization tokens.
 
-### bt
+### [bt](docs/bt/README.md)
 
-* `assignToken` - Assigns an UserToken to a profile on the ITV side. Currently throws an exception.
-* `checkEeBtEligibility` - Check whether or not a user is eligible for switching to Bt or EE offers.
-* `checkUserToken` - Checks a provided token for BT eligible user.
+* [assignToken](docs/bt/README.md#assigntoken) - Assigns an UserToken to a profile on the ITV side. Currently throws an exception.
+* [checkEeBtEligibility](docs/bt/README.md#checkeebteligibility) - Check whether or not a user is eligible for switching to Bt or EE offers.
+* [checkUserToken](docs/bt/README.md#checkusertoken) - Checks a provided token for BT eligible user.
 
-* `getPlanByToken` - Returns all the plans available for BT flow including additional description data.
-* `getPlans` - Returns all the plans available for BT flow including additional description data.
+* [getPlanByToken](docs/bt/README.md#getplanbytoken) - Returns all the plans available for BT flow including additional description data.
+* [getPlans](docs/bt/README.md#getplans) - Returns all the plans available for BT flow including additional description data.
 
-### content
+### [content](docs/content/README.md)
 
-* `getAnonNextPlaybackItem` - Identical to GET /account/profile/items/{itemId}/next route but for users
+* [getAnonNextPlaybackItem](docs/content/README.md#getanonnextplaybackitem) - Identical to GET /account/profile/items/{itemId}/next route but for users
 that are not logged in i.e. this endpoint does not require authorisation
 
-* `getItem` - Returns the details of an item with the specified id.
-* `getItemChildrenList` - Returns the List of child summary items under an item.
+* [getItem](docs/content/README.md#getitem) - Returns the details of an item with the specified id.
+* [getItemChildrenList](docs/content/README.md#getitemchildrenlist) - Returns the List of child summary items under an item.
 
 If the item is a Season then the children will be episodes and ordered by episode number.
 
@@ -287,16 +327,16 @@ If the item is a Show then the children will be Seasons and ordered by season nu
 
 Returns 404 if no children found.
 
-* `getItemDownloadables` - Returns the details of an item with the specified id.
-* `getItemRelatedList` - Returns the list of items related to the parent item.
+* [getItemDownloadables](docs/content/README.md#getitemdownloadables) - Returns the details of an item with the specified id.
+* [getItemRelatedList](docs/content/README.md#getitemrelatedlist) - Returns the list of items related to the parent item.
 
 Note for now, due to the size of the list being unknown, only a single page will be returned.
 
-* `getItemsMediaClipFiles` - Get the media clip files associated with items.
+* [getItemsMediaClipFiles](docs/content/README.md#getitemsmediaclipfiles) - Get the media clip files associated with items.
 
-* `getList` - Returns a list of items under the specified item list
-* `getLists` - Returns an array of item lists with their first page of content resolved.
-* `getPublicItemMediaFiles` - Get the free / public video files associated with an item given maximum resolution,
+* [getList](docs/content/README.md#getlist) - Returns a list of items under the specified item list
+* [getLists](docs/content/README.md#getlists) - Returns an array of item lists with their first page of content resolved.
+* [getPublicItemMediaFiles](docs/content/README.md#getpublicitemmediafiles) - Get the free / public video files associated with an item given maximum resolution,
 device type and one or more delivery types.
 
 Returns an array of video file objects which each include a url to a video.
@@ -312,7 +352,7 @@ would return an array with 0 or more stream files followed by 0 or more progress
 
 If no files are found a 404 is returned.
 
-* `getSchedules` - Returns schedules for a defined set of channels over a requested period.
+* [getSchedules](docs/content/README.md#getschedules) - Returns schedules for a defined set of channels over a requested period.
 
 Schedules are requested in hour blocks and returned grouped by the channel
 they belong to.
@@ -336,54 +376,54 @@ return an empty schedule list for it. If instead we returned 404,
 this would invalidate all other channel schedules in the same request
 which would be unfriendly for clients presenting these channel schedules.
 
-* `getPlansId` - Returns the details of a Plan with the specified id.
-* `search` - Search the catalog of items and people.
+* [getPlansId](docs/content/README.md#getplansid) - Returns the details of a Plan with the specified id.
+* [search](docs/content/README.md#search) - Search the catalog of items and people.
 
-### ee
+### [ee](docs/ee/README.md)
 
-* `assignMsisdn` - Assigns a msisdn to a profile on ITV side.
-* `checkEeBtEligibility` - Check whether or not a user is eligible for switching to Bt or EE offers.
-* `createPinRequest` - Creates a PIN request that will send an SMS to the given msisdn.
+* [assignMsisdn](docs/ee/README.md#assignmsisdn) - Assigns a msisdn to a profile on ITV side.
+* [checkEeBtEligibility](docs/ee/README.md#checkeebteligibility) - Check whether or not a user is eligible for switching to Bt or EE offers.
+* [createPinRequest](docs/ee/README.md#createpinrequest) - Creates a PIN request that will send an SMS to the given msisdn.
 This call is to validate MSISDN entered by a user not comming through EE network.
 This call should be followed by POST ee/pin.
 
-* `createToken` - Returns a token for later calls to EE API. TTL is one hour. Recommended is FE refreshes this token before each call.
-* `getEligibleOffers` - Returns eligible partner specific offers for the querying partner for an EE MSISDN.
+* [createToken](docs/ee/README.md#createtoken) - Returns a token for later calls to EE API. TTL is one hour. Recommended is FE refreshes this token before each call.
+* [getEligibleOffers](docs/ee/README.md#geteligibleoffers) - Returns eligible partner specific offers for the querying partner for an EE MSISDN.
 This call is supposed to be called after we have MSISDN accired.
 This call should be followed by POST /ee/msisdn.
 
-* `getPlan` - Returns the plan description for EE flow including additional description data.
-* `getEePlans` - Returns all the plans available for EE flow including additional description data.
-* `validatePinRequest` - Validate PIN request created by calling POST /ee/pin This call is to validate MSISDN entered by a user not comming through EE network. This call should be called after PUT /ee/pin. This call should be followed by POST /ee/offers.
+* [getPlan](docs/ee/README.md#getplan) - Returns the plan description for EE flow including additional description data.
+* [getEePlans](docs/ee/README.md#geteeplans) - Returns all the plans available for EE flow including additional description data.
+* [validatePinRequest](docs/ee/README.md#validatepinrequest) - Validate PIN request created by calling POST /ee/pin This call is to validate MSISDN entered by a user not comming through EE network. This call should be called after PUT /ee/pin. This call should be followed by POST /ee/offers.
 
-### itv
+### [itv](docs/itv/README.md)
 
-* `activateSaveOffer` - Activates the discount for a user. Only Stripe platform is currently supported.
-* `changeCardDetails` - Change payment card details.
-* `changeEmail` - Change email address related to account/profile.
-
-The expected token scope is Settings.
-
-* `changeMarketing` - Change marketing preferences related to account/profile.
+* [activateSaveOffer](docs/itv/README.md#activatesaveoffer) - Activates the discount for a user. Only Stripe platform is currently supported.
+* [changeCardDetails](docs/itv/README.md#changecarddetails) - Change payment card details.
+* [changeEmail](docs/itv/README.md#changeemail) - Change email address related to account/profile.
 
 The expected token scope is Settings.
 
-* `checkPreviousEntitlements` - Check whether the user has been previously entitled.
-* `checkVoucher` - Validates the coupon/voucher for specified payment platform.
-* `confirmPurchase` - Confirms purchase and returns the details of purchased subscription for specified payment platform.
-* `confirmPurchaseStrong` - Confirms purchase and returns the details of purchased subscription for specified payment platform.
-* `confirmPurchaseWithOffer` - Confirms purchase and returns the details of purchased subscription for specified payment platform.
-* `deleteAccount` - Delete account in compliance with GDPR.
+* [changeMarketing](docs/itv/README.md#changemarketing) - Change marketing preferences related to account/profile.
 
 The expected token scope is Settings.
 
-* `deleteItvPurchasePlatform` - Cancel a plan subscription.
+* [checkPreviousEntitlements](docs/itv/README.md#checkpreviousentitlements) - Check whether the user has been previously entitled.
+* [checkVoucher](docs/itv/README.md#checkvoucher) - Validates the coupon/voucher for specified payment platform.
+* [confirmPurchase](docs/itv/README.md#confirmpurchase) - Confirms purchase and returns the details of purchased subscription for specified payment platform.
+* [confirmPurchaseStrong](docs/itv/README.md#confirmpurchasestrong) - Confirms purchase and returns the details of purchased subscription for specified payment platform.
+* [confirmPurchaseWithOffer](docs/itv/README.md#confirmpurchasewithoffer) - Confirms purchase and returns the details of purchased subscription for specified payment platform.
+* [deleteAccount](docs/itv/README.md#deleteaccount) - Delete account in compliance with GDPR.
+
+The expected token scope is Settings.
+
+* [deleteItvPurchasePlatform](docs/itv/README.md#deleteitvpurchaseplatform) - Cancel a plan subscription.
 
 A cancelled subscription will continue to be valid until the subscription
 expiry date or next renewal date.
 
-* `executeTransaction` - Sends request to execute specified transaction.
-* `getAccountTokenWithPin` - Provides authorization with parental control pin.
+* [executeTransaction](docs/itv/README.md#executetransaction) - Sends request to execute specified transaction.
+* [getAccountTokenWithPin](docs/itv/README.md#getaccounttokenwithpin) - Provides authorization with parental control pin.
 
 Returns an array containing account token with Playback scope.
 
@@ -391,52 +431,52 @@ Requires access token with Catalog scope.
 
 Pin must be a 4-digit string
 
-* `getBillingHistory` - Returns the list of billing records for specified payment platform.
-* `getCardDetails` - Get payment card details.
-* `getCurrentEntitlement` - Returns current entitlement.
-* `getCurrentSubscription` - Returns the details of current subscription for specified payment platform.
-* `getEntitlementsHistory` - Returns the state of subscription for any payment platform.
-* `getFeatureFlag` - Gets info whether or not a feature is enabled or disabled using a feature flag. Feature flags are set as a custom field within PM. It also supports custom feature flag data if needed. Such data can be return as well.
-* `getFullPriceRenewal` - Returns full price renewal state and reason for specific user.
-* `getItvProfileToken` - Returns the ITV profile token.
-* `getPublicPreview` - Returns public preview for Samsung based on the page '/samsung-preview' configured in PresentationManager.
+* [getBillingHistory](docs/itv/README.md#getbillinghistory) - Returns the list of billing records for specified payment platform.
+* [getCardDetails](docs/itv/README.md#getcarddetails) - Get payment card details.
+* [getCurrentEntitlement](docs/itv/README.md#getcurrententitlement) - Returns current entitlement.
+* [getCurrentSubscription](docs/itv/README.md#getcurrentsubscription) - Returns the details of current subscription for specified payment platform.
+* [getEntitlementsHistory](docs/itv/README.md#getentitlementshistory) - Returns the state of subscription for any payment platform.
+* [getFeatureFlag](docs/itv/README.md#getfeatureflag) - Gets info whether or not a feature is enabled or disabled using a feature flag. Feature flags are set as a custom field within PM. It also supports custom feature flag data if needed. Such data can be return as well.
+* [getFullPriceRenewal](docs/itv/README.md#getfullpricerenewal) - Returns full price renewal state and reason for specific user.
+* [getItvProfileToken](docs/itv/README.md#getitvprofiletoken) - Returns the ITV profile token.
+* [getPublicPreview](docs/itv/README.md#getpublicpreview) - Returns public preview for Samsung based on the page '/samsung-preview' configured in PresentationManager.
 There is a hard limit of max 40 items to be returned. It splits evenly items count into the page rows, remaining items are added into the first row.
 
-* `getRecommendedList` - Get the list of recommended items under the active profile.
-* `getSaveOffer` - Checks the provided coupon id for a user. Only Stripe platform is currently supported.
-* `getSubscriptionState` - Returns the state of subscription for any payment platform.
-* `getSubscriptionStatus` - Returns status of latest payment intent.
-* `getUpcomingInvoice` - Returns an upcoming invoice
-* `getVoucherById` - Checks the provided coupon id for a user. Only Stripe platform is currently supported.
-* `getItvItemsummaryExternalId` - Redirects to corresponding Axis Item details page.
-* `getItvPlansPlatform` - Returns the plans available for specified payment platform.
-* `getItvProfile` - Returns the ITV profile object.
-* `getItvRokuPlans` - Gets available Roku plans.
-* `googlePaySubscription` - Get the list of recommended items under the active profile.
-* `resubscribe` - Resubscription for a user.
-* `updatePaymentIntentStrong` - Change payment method details.
-* `updatePaymentMethodStrong` - Change payment method details.
-* `updateProfile` - Update ITV profile.
+* [getRecommendedList](docs/itv/README.md#getrecommendedlist) - Get the list of recommended items under the active profile.
+* [getSaveOffer](docs/itv/README.md#getsaveoffer) - Checks the provided coupon id for a user. Only Stripe platform is currently supported.
+* [getSubscriptionState](docs/itv/README.md#getsubscriptionstate) - Returns the state of subscription for any payment platform.
+* [getSubscriptionStatus](docs/itv/README.md#getsubscriptionstatus) - Returns status of latest payment intent.
+* [getUpcomingInvoice](docs/itv/README.md#getupcominginvoice) - Returns an upcoming invoice
+* [getVoucherById](docs/itv/README.md#getvoucherbyid) - Checks the provided coupon id for a user. Only Stripe platform is currently supported.
+* [getItvItemsummaryExternalId](docs/itv/README.md#getitvitemsummaryexternalid) - Redirects to corresponding Axis Item details page.
+* [getItvPlansPlatform](docs/itv/README.md#getitvplansplatform) - Returns the plans available for specified payment platform.
+* [getItvProfile](docs/itv/README.md#getitvprofile) - Returns the ITV profile object.
+* [getItvRokuPlans](docs/itv/README.md#getitvrokuplans) - Gets available Roku plans.
+* [googlePaySubscription](docs/itv/README.md#googlepaysubscription) - Get the list of recommended items under the active profile.
+* [resubscribe](docs/itv/README.md#resubscribe) - Resubscription for a user.
+* [updatePaymentIntentStrong](docs/itv/README.md#updatepaymentintentstrong) - Change payment method details.
+* [updatePaymentMethodStrong](docs/itv/README.md#updatepaymentmethodstrong) - Change payment method details.
+* [updateProfile](docs/itv/README.md#updateprofile) - Update ITV profile.
 
 The expected token scope is Settings.
 
-* `upgradePlan` - Upgrades the plan for the current user.
+* [upgradePlan](docs/itv/README.md#upgradeplan) - Upgrades the plan for the current user.
 
-### profile
+### [profile](docs/profile/README.md)
 
-* `bookmarkItem` - Bookmark an item under the active profile.
+* [bookmarkItem](docs/profile/README.md#bookmarkitem) - Bookmark an item under the active profile.
 
 Creates one if it doesn't exist, overwrites one if it does.
 
-* `deleteItemBookmark` - Unbookmark an item under the active profile.
-* `deleteWatched` - Remove the watched status of items under the active profile. Passing in
+* [deleteItemBookmark](docs/profile/README.md#deleteitembookmark) - Unbookmark an item under the active profile.
+* [deleteWatched](docs/profile/README.md#deletewatched) - Remove the watched status of items under the active profile. Passing in
 specific `itemId`s to the `item_ids` query parameter will cause only these
 items to be removed. **If this list is missing all watched items will be
 removed**
 
-* `getBookmarkList` - Returns the list of bookmarked items under the active profile.
-* `getBookmarks` - Get the map of bookmarked item ids (itemId => creationDate) under the active profile.
-* `getContinueWatchingList` - Returns a list of items which have been watched but not completed under the active
+* [getBookmarkList](docs/profile/README.md#getbookmarklist) - Returns the list of bookmarked items under the active profile.
+* [getBookmarks](docs/profile/README.md#getbookmarks) - Get the map of bookmarked item ids (itemId => creationDate) under the active profile.
+* [getContinueWatchingList](docs/profile/README.md#getcontinuewatchinglist) - Returns a list of items which have been watched but not completed under the active
 profile.
 
 Multiple episodes under the same show may be watched or in progress, however only a
@@ -447,10 +487,10 @@ incompletely watched episode, or the next episode following the most recently
 completely watched episode. Based on the specified `show_item_type` type, either the next
 episode, the season of the next episode, or the show will be included in the list.
 
-* `getItemBookmark` - Get the bookmark for an item under the active profile.
-* `getItemRating` - Get the rating info for an item under the active profile.
-* `getItemWatchedStatus` - Get the watched status info for an item under the active profile.
-* `getNextPlaybackItem` - Returns the next item to play given a source item id.
+* [getItemBookmark](docs/profile/README.md#getitembookmark) - Get the bookmark for an item under the active profile.
+* [getItemRating](docs/profile/README.md#getitemrating) - Get the rating info for an item under the active profile.
+* [getItemWatchedStatus](docs/profile/README.md#getitemwatchedstatus) - Get the watched status info for an item under the active profile.
+* [getNextPlaybackItem](docs/profile/README.md#getnextplaybackitem) - Returns the next item to play given a source item id.
 
 For an unwatched show it returns the first episode available to the account.
 
@@ -463,25 +503,25 @@ the account, or nothing.
 
 If the response does not contain a `next` property then no item was found.
 
-* `getProfile` - Get the details of the active profile, including watched, bookmarked and rated items.
-* `getRatings` - Get the map of rated item ids (itemId => rating out of 10) under the active profile.
-* `getRatingsList` - Returns the list of rated items under the active profile.
-* `getWatched` - Get the map of watched item ids (itemId => last playhead position) under the active profile.
-* `getWatchedList` - Returns the list of watched items under the active profile.
-* `rateItem` - Rate an item under the active profile.
+* [getProfile](docs/profile/README.md#getprofile) - Get the details of the active profile, including watched, bookmarked and rated items.
+* [getRatings](docs/profile/README.md#getratings) - Get the map of rated item ids (itemId => rating out of 10) under the active profile.
+* [getRatingsList](docs/profile/README.md#getratingslist) - Returns the list of rated items under the active profile.
+* [getWatched](docs/profile/README.md#getwatched) - Get the map of watched item ids (itemId => last playhead position) under the active profile.
+* [getWatchedList](docs/profile/README.md#getwatchedlist) - Returns the list of watched items under the active profile.
+* [rateItem](docs/profile/README.md#rateitem) - Rate an item under the active profile.
 
 Creates one if it doesn't exist, overwrites one if it does.
 
-* `setItemWatchedStatus` - Record the watched playhead position of a video under the active profile.
+* [setItemWatchedStatus](docs/profile/README.md#setitemwatchedstatus) - Record the watched playhead position of a video under the active profile.
 
 Can be used later to resume a video from where it was last watched.
 
 Creates one if it doesn't exist, overwrites one if it does.
 
 
-### registration
+### [registration](docs/registration/README.md)
 
-* `register` - Register a new user, creating them an account.
+* [register](docs/registration/README.md#register) - Register a new user, creating them an account.
 
 Registration, when successful, will return an array of access tokens so the user is
 immediately signed in.
@@ -495,9 +535,9 @@ An email will also be sent with a link they need to click to confirm their
 email address. This confirmation is done via the /verify-email endpoint.
 
 
-### support
+### [support](docs/support/README.md)
 
-* `forgotPassword` - Request the password of an account's primary profile be reset.
+* [forgotPassword](docs/support/README.md#forgotpassword) - Request the password of an account's primary profile be reset.
 
 Should be called when a user has forgotten their password.
 
@@ -508,8 +548,8 @@ The link, once clicked, should take the user to the "reset-password" page of the
 website. Here they will enter their new password and submit to the /reset-password
 endpoint here, along with the password reset token provided in the original link.
 
-* `getSubscriptionData` - Returns the details of subscription data for a user with specified id.
-* `resetPassword` - When a user requests to reset their password via the /request-password-reset endpoint, an
+* [getSubscriptionData](docs/support/README.md#getsubscriptiondata) - Returns the details of subscription data for a user with specified id.
+* [resetPassword](docs/support/README.md#resetpassword) - When a user requests to reset their password via the /request-password-reset endpoint, an
 email is sent to the email address of the primary profile of the account. This email contains a link
 with a reset token as query parameter. The link should take the user to the "reset-password"
 page of the website.
@@ -519,7 +559,7 @@ It should then be submitted to this endpoint,
 along with the reset token from the email link. 
 The token should be provided in the body as resetToken property.
 
-* `verifyEmail` - When an account is created an email is sent to the email address of the new account.
+* [verifyEmail](docs/support/README.md#verifyemail) - When an account is created an email is sent to the email address of the new account.
 This contains a link, which once clicked, verifies the email address of the account is correct.
 
 The link contains a token as a query parameter which should be passed as the authorization

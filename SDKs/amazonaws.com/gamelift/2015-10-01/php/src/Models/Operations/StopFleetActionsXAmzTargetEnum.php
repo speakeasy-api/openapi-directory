@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopFleetActionsXAmzTargetEnum: string
 {
     case GAME_LIFT_STOP_FLEET_ACTIONS = 'GameLift.StopFleetActions';

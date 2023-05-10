@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AddTagsToCertificateXAmzTargetEnum: string
 {
     case CERTIFICATE_MANAGER_ADD_TAGS_TO_CERTIFICATE = 'CertificateManager.AddTagsToCertificate';

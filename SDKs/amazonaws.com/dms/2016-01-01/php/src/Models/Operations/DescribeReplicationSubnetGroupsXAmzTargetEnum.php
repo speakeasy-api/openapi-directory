@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeReplicationSubnetGroupsXAmzTargetEnum: string
 {
     case AMAZON_DM_SV20160101_DESCRIBE_REPLICATION_SUBNET_GROUPS = 'AmazonDMSv20160101.DescribeReplicationSubnetGroups';

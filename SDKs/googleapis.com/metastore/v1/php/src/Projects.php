@@ -232,6 +232,46 @@ class Projects
     }
 	
     /**
+     * Alter metadata resource location. The metadata resource can be a database, table, or partition. This functionality only updates the parent directory for the respective metadata resource and does not transfer any existing data to the new location.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\MetastoreProjectsLocationsServicesAlterLocationRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\MetastoreProjectsLocationsServicesAlterLocationSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\MetastoreProjectsLocationsServicesAlterLocationResponse
+     */
+	public function metastoreProjectsLocationsServicesAlterLocation(
+        \OpenAPI\OpenAPI\Models\Operations\MetastoreProjectsLocationsServicesAlterLocationRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\MetastoreProjectsLocationsServicesAlterLocationSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\MetastoreProjectsLocationsServicesAlterLocationResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{service}:alterLocation', \OpenAPI\OpenAPI\Models\Operations\MetastoreProjectsLocationsServicesAlterLocationRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "alterMetadataResourceLocationRequest", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\MetastoreProjectsLocationsServicesAlterLocationRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\MetastoreProjectsLocationsServicesAlterLocationResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Creates a new backup in a given project and location.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\MetastoreProjectsLocationsServicesBackupsCreateRequest $request
@@ -685,6 +725,86 @@ class Projects
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $response = new \OpenAPI\OpenAPI\Models\Operations\MetastoreProjectsLocationsServicesMetadataImportsPatchResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Move a table to another database.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\MetastoreProjectsLocationsServicesMoveTableToDatabaseRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\MetastoreProjectsLocationsServicesMoveTableToDatabaseSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\MetastoreProjectsLocationsServicesMoveTableToDatabaseResponse
+     */
+	public function metastoreProjectsLocationsServicesMoveTableToDatabase(
+        \OpenAPI\OpenAPI\Models\Operations\MetastoreProjectsLocationsServicesMoveTableToDatabaseRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\MetastoreProjectsLocationsServicesMoveTableToDatabaseSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\MetastoreProjectsLocationsServicesMoveTableToDatabaseResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{service}:moveTableToDatabase', \OpenAPI\OpenAPI\Models\Operations\MetastoreProjectsLocationsServicesMoveTableToDatabaseRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "moveTableToDatabaseRequest", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\MetastoreProjectsLocationsServicesMoveTableToDatabaseRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\MetastoreProjectsLocationsServicesMoveTableToDatabaseResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Query DPMS metadata.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\MetastoreProjectsLocationsServicesQueryMetadataRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\MetastoreProjectsLocationsServicesQueryMetadataSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\MetastoreProjectsLocationsServicesQueryMetadataResponse
+     */
+	public function metastoreProjectsLocationsServicesQueryMetadata(
+        \OpenAPI\OpenAPI\Models\Operations\MetastoreProjectsLocationsServicesQueryMetadataRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\MetastoreProjectsLocationsServicesQueryMetadataSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\MetastoreProjectsLocationsServicesQueryMetadataResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{service}:queryMetadata', \OpenAPI\OpenAPI\Models\Operations\MetastoreProjectsLocationsServicesQueryMetadataRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "queryMetadataRequest", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\MetastoreProjectsLocationsServicesQueryMetadataRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\MetastoreProjectsLocationsServicesQueryMetadataResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;

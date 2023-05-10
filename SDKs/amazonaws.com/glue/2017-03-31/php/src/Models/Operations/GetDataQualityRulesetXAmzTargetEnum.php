@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetDataQualityRulesetXAmzTargetEnum: string
 {
     case AWS_GLUE_GET_DATA_QUALITY_RULESET = 'AWSGlue.GetDataQualityRuleset';

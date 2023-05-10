@@ -22,4 +22,6 @@ src/Utils/Utils.php
 src/Models/Operations/GetareacodefromnumberRequest.php
 src/Models/Operations/Getareacodefromnumber200ApplicationJSON.php
 src/Models/Operations/GetareacodefromnumberResponse.php
+docs/sdk/README.md
+docs/areacodeinformation/README.md
 USAGE.md

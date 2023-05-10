@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum EnableAddOnXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_ENABLE_ADD_ON = 'Lightsail_20161128.EnableAddOn';

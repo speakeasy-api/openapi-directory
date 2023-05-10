@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * UserDefined - <p/>
+ * UserDefined - The output resolution (in target georeferenced units) of the result of the operation
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

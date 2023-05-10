@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum FilterLogEventsXAmzTargetEnum: string
 {
     case LOGS20140328_FILTER_LOG_EVENTS = 'Logs_20140328.FilterLogEvents';

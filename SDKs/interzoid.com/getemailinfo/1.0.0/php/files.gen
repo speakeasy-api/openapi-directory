@@ -22,4 +22,6 @@ src/Utils/Utils.php
 src/Models/Operations/GetemailinfoRequest.php
 src/Models/Operations/Getemailinfo200ApplicationJSON.php
 src/Models/Operations/GetemailinfoResponse.php
+docs/sdk/README.md
+docs/emailaddressinformation/README.md
 USAGE.md

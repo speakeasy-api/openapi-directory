@@ -12,6 +12,16 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 class CreateConnectorProfileRequestBody
 {
     /**
+     * <p>The <code>clientToken</code> parameter is an idempotency token. It ensures that your <code>CreateConnectorProfile</code> request completes only once. You choose the value to pass. For example, if you don't receive a response from your request, you can safely retry the request with the same <code>clientToken</code> parameter value.</p> <p>If you omit a <code>clientToken</code> value, the Amazon Web Services SDK that you are using inserts a value for you. This way, the SDK can safely retry requests multiple times after a network error. You must provide your own value for other use cases.</p> <p>If you specify input parameters that differ from your first request, an error occurs. If you use a different value for <code>clientToken</code>, Amazon AppFlow considers it a new call to <code>CreateConnectorProfile</code>. The token is active for 8 hours.</p>
+     * 
+     * @var ?string $clientToken
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('clientToken')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $clientToken = null;
+    
+    /**
      *  Indicates the connection mode and specifies whether it is public or private. Private flows use Amazon Web Services PrivateLink to route data over Amazon Web Services infrastructure without exposing it to the public internet. 
      * 
      * @var \OpenAPI\OpenAPI\Models\Operations\CreateConnectorProfileRequestBodyConnectionModeEnum $connectionMode
@@ -69,6 +79,7 @@ class CreateConnectorProfileRequestBody
     
 	public function __construct()
 	{
+		$this->clientToken = null;
 		$this->connectionMode = \OpenAPI\OpenAPI\Models\Operations\CreateConnectorProfileRequestBodyConnectionModeEnum::PUBLIC;
 		$this->connectorLabel = null;
 		$this->connectorProfileConfig = new \OpenAPI\OpenAPI\Models\Operations\CreateConnectorProfileRequestBodyConnectorProfileConfig();

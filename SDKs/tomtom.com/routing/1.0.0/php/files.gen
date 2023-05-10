@@ -58,4 +58,6 @@ src/Models/Shared/CalculateRoutePostDataParametersAvoidAreas.php
 src/Models/Shared/CalculateRoutePostDataParametersSupportingPoints.php
 src/Models/Shared/CalculateRoutePostDataParameters.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/routing/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTPutScheduledUpdateGroupActionActionEnum: string
 {
     case PUT_SCHEDULED_UPDATE_GROUP_ACTION = 'PutScheduledUpdateGroupAction';

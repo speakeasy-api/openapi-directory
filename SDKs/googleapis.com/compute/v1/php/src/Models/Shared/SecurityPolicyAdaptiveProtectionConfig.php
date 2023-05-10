@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class SecurityPolicyAdaptiveProtectionConfig
 {
     /**
-     * Configuration options for L7 DDoS detection.
+     * Configuration options for L7 DDoS detection. This field is only supported in Global Security Policies of type CLOUD_ARMOR.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig $layer7DdosDefenseConfig
      */

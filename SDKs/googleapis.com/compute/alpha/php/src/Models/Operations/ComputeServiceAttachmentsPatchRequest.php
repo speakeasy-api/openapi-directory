@@ -95,14 +95,6 @@ class ComputeServiceAttachmentsPatchRequest
     public ?string $quotaUser = null;
     
     /**
-     * This flag determines how to change the status of consumer connections, when the connection policy for the corresponding project or network is modified. If the flag is false, the default case, then existing ACCEPTED and REJECTED consumer connections stay in that state. For example, even if the project is removed from the accept list, existing ACCEPTED connections will stay the same. If the flag is true, then the connection can change from ACCEPTED or REJECTED to pending when the connection policy is modified. For example, if a project is removed from the reject list, its existing REJECTED connections will move to the PENDING state. If the project is also added to the accept list, then those connections will move to the ACCEPTED state.
-     * 
-     * @var ?bool $reconcileConnections
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=reconcileConnections')]
-    public ?bool $reconcileConnections = null;
-    
-    /**
      * The region scoping this request and should conform to RFC1035.
      * 
      * @var string $region
@@ -163,7 +155,6 @@ class ComputeServiceAttachmentsPatchRequest
 		$this->prettyPrint = null;
 		$this->project = "";
 		$this->quotaUser = null;
-		$this->reconcileConnections = null;
 		$this->region = "";
 		$this->requestId = null;
 		$this->serviceAttachmentPathParameter = "";

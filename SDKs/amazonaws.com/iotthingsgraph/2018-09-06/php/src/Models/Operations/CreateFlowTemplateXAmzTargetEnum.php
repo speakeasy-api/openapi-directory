@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateFlowTemplateXAmzTargetEnum: string
 {
     case IOT_THINGS_GRAPH_FRONT_END_SERVICE_CREATE_FLOW_TEMPLATE = 'IotThingsGraphFrontEndService.CreateFlowTemplate';

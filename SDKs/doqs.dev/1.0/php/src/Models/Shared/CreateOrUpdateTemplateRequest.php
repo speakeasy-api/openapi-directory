@@ -43,6 +43,11 @@ class CreateOrUpdateTemplateRequest
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $headerHtml = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('margin')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\CreateOrUpdateTemplateRequestMargin')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?CreateOrUpdateTemplateRequestMargin $margin = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('name')]
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $name;
@@ -76,6 +81,7 @@ class CreateOrUpdateTemplateRequest
 		$this->footerHtml = null;
 		$this->format = \OpenAPI\OpenAPI\Models\Shared\FormatEnum::A0;
 		$this->headerHtml = null;
+		$this->margin = null;
 		$this->name = "";
 		$this->orientation = \OpenAPI\OpenAPI\Models\Shared\OrientationEnum::LANDSCAPE;
 		$this->previewPayload = [];

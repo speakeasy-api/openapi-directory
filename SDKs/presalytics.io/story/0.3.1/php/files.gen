@@ -130,4 +130,15 @@ src/Models/Shared/Outline.php
 src/Models/Shared/FileUpload.php
 src/Models/Shared/ModifyInactiveCollaborator.php
 src/Models/Shared/AddNewCollaboratorRequest.php
+docs/sdk/README.md
+docs/cache/README.md
+docs/conversation/README.md
+docs/events/README.md
+docs/permissions/README.md
+docs/restricted/README.md
+docs/schemas/README.md
+docs/sessions/README.md
+docs/story/README.md
+docs/storycollaborators/README.md
+docs/views/README.md
 USAGE.md

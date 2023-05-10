@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateKeyXAmzTargetEnum: string
 {
     case TRENT_SERVICE_CREATE_KEY = 'TrentService.CreateKey';

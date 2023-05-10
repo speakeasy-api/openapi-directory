@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTGetQueueAttributesActionEnum: string
 {
     case GET_QUEUE_ATTRIBUTES = 'GetQueueAttributes';

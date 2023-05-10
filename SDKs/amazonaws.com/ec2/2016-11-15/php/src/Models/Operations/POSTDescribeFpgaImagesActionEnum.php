@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeFpgaImagesActionEnum: string
 {
     case DESCRIBE_FPGA_IMAGES = 'DescribeFpgaImages';

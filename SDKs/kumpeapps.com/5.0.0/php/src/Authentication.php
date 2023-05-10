@@ -44,11 +44,14 @@ class Authentication
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\AppkeyPatchRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\AppkeyPatchResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function appkeyPatch(
         \OpenAPI\OpenAPI\Models\Operations\AppkeyPatchRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\AppkeyPatchResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/appkey');
         
@@ -81,11 +84,14 @@ class Authentication
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\AppkeyPostRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\AppkeyPostResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function appkeyPost(
         \OpenAPI\OpenAPI\Models\Operations\AppkeyPostRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\AppkeyPostResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/appkey');
         
@@ -119,12 +125,15 @@ class Authentication
      * @param \OpenAPI\OpenAPI\Models\Operations\AppkeyPutRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\AppkeyPutSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\AppkeyPutResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function appkeyPut(
         \OpenAPI\OpenAPI\Models\Operations\AppkeyPutRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\AppkeyPutSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\AppkeyPutResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/appkey');
         
@@ -504,12 +513,15 @@ class Authentication
      * @param \OpenAPI\OpenAPI\Models\Operations\AuthkeyGetRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\AuthkeyGetSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\AuthkeyGetResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function authkeyGet(
         \OpenAPI\OpenAPI\Models\Operations\AuthkeyGetRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\AuthkeyGetSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\AuthkeyGetResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/authkey');
         
@@ -557,11 +569,14 @@ class Authentication
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\AuthkeyPatchRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\AuthkeyPatchResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function authkeyPatch(
         \OpenAPI\OpenAPI\Models\Operations\AuthkeyPatchRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\AuthkeyPatchResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/authkey');
         
@@ -597,12 +612,15 @@ class Authentication
      * @param \OpenAPI\OpenAPI\Models\Operations\AuthkeyPostRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\AuthkeyPostSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\AuthkeyPostResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function authkeyPost(
         \OpenAPI\OpenAPI\Models\Operations\AuthkeyPostRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\AuthkeyPostSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\AuthkeyPostResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/authkey');
         
@@ -651,12 +669,15 @@ class Authentication
      * @param \OpenAPI\OpenAPI\Models\Operations\AuthkeyPutRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\AuthkeyPutSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\AuthkeyPutResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function authkeyPut(
         \OpenAPI\OpenAPI\Models\Operations\AuthkeyPutRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\AuthkeyPutSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\AuthkeyPutResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/authkey');
         

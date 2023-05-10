@@ -51,4 +51,6 @@ src/Models/Operations/InsertSKUBindingResponse.php
 src/Models/Operations/PostSkuBindingPvtSkusellerChangenotificationSellerIdSellerSkuIdRequest.php
 src/Models/Operations/PostSkuBindingPvtSkusellerChangenotificationSellerIdSellerSkuIdResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/skubindings/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateExclusionsPreviewXAmzTargetEnum: string
 {
     case INSPECTOR_SERVICE_CREATE_EXCLUSIONS_PREVIEW = 'InspectorService.CreateExclusionsPreview';

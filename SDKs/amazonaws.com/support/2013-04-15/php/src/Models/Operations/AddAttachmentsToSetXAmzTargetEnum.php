@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AddAttachmentsToSetXAmzTargetEnum: string
 {
     case AWS_SUPPORT20130415_ADD_ATTACHMENTS_TO_SET = 'AWSSupport_20130415.AddAttachmentsToSet';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetMLTransformXAmzTargetEnum: string
 {
     case AWS_GLUE_GET_ML_TRANSFORM = 'AWSGlue.GetMLTransform';

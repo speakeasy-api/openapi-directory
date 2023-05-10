@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeDefaultSearchFieldActionEnum: string
 {
     case DESCRIBE_DEFAULT_SEARCH_FIELD = 'DescribeDefaultSearchField';

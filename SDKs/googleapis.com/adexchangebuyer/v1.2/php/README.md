@@ -30,25 +30,62 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\AdexchangebuyerAccountsGetRequest;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+use \OpenAPI\OpenAPI\Models\Operations\AdexchangebuyerAccountsGetSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new AdexchangebuyerAccountsGetRequest();
+    $request->alt = AltEnum::JSON;
+    $request->fields = 'corrupti';
+    $request->id = 592845;
+    $request->key = 'distinctio';
+    $request->oauthToken = 'quibusdam';
+    $request->prettyPrint = false;
+    $request->quotaUser = 'unde';
+    $request->userIp = 'nulla';
+
+    $requestSecurity = new AdexchangebuyerAccountsGetSecurity();
+    $requestSecurity->oauth2 = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+    $requestSecurity->oauth2c = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+
+    $response = $sdk->accounts->adexchangebuyerAccountsGet($request, $requestSecurity);
+
+    if ($response->account !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### accounts
+### [accounts](docs/accounts/README.md)
 
-* `adexchangebuyerAccountsGet` - Gets one account by ID.
-* `adexchangebuyerAccountsList` - Retrieves the authenticated user's list of accounts.
-* `adexchangebuyerAccountsPatch` - Updates an existing account. This method supports patch semantics.
-* `adexchangebuyerAccountsUpdate` - Updates an existing account.
+* [adexchangebuyerAccountsGet](docs/accounts/README.md#adexchangebuyeraccountsget) - Gets one account by ID.
+* [adexchangebuyerAccountsList](docs/accounts/README.md#adexchangebuyeraccountslist) - Retrieves the authenticated user's list of accounts.
+* [adexchangebuyerAccountsPatch](docs/accounts/README.md#adexchangebuyeraccountspatch) - Updates an existing account. This method supports patch semantics.
+* [adexchangebuyerAccountsUpdate](docs/accounts/README.md#adexchangebuyeraccountsupdate) - Updates an existing account.
 
-### creatives
+### [creatives](docs/creatives/README.md)
 
-* `adexchangebuyerCreativesGet` - Gets the status for a single creative. A creative will be available 30-40 minutes after submission.
-* `adexchangebuyerCreativesInsert` - Submit a new creative.
-* `adexchangebuyerCreativesList` - Retrieves a list of the authenticated user's active creatives. A creative will be available 30-40 minutes after submission.
+* [adexchangebuyerCreativesGet](docs/creatives/README.md#adexchangebuyercreativesget) - Gets the status for a single creative. A creative will be available 30-40 minutes after submission.
+* [adexchangebuyerCreativesInsert](docs/creatives/README.md#adexchangebuyercreativesinsert) - Submit a new creative.
+* [adexchangebuyerCreativesList](docs/creatives/README.md#adexchangebuyercreativeslist) - Retrieves a list of the authenticated user's active creatives. A creative will be available 30-40 minutes after submission.
 <!-- End SDK Available Operations -->
 
 ### Maturity

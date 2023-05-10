@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopWorkflowRunXAmzTargetEnum: string
 {
     case AWS_GLUE_STOP_WORKFLOW_RUN = 'AWSGlue.StopWorkflowRun';

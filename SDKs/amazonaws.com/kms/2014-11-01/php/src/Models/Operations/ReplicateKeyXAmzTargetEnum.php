@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ReplicateKeyXAmzTargetEnum: string
 {
     case TRENT_SERVICE_REPLICATE_KEY = 'TrentService.ReplicateKey';

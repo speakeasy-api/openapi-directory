@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteSSHPublicKeyActionEnum: string
 {
     case DELETE_SSH_PUBLIC_KEY = 'DeleteSSHPublicKey';

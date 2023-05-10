@@ -386,6 +386,50 @@ class Errors
     }
 	
     /**
+     * Percentage of error-free devices by day in the time range based on the selected versions. If SingleErrorTypeParameter is not provided, defaults to handlederror. API will return -1 if crash devices is greater than active devices
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ErrorsErrorFreeDevicePercentagesRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\ErrorsErrorFreeDevicePercentagesSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\ErrorsErrorFreeDevicePercentagesResponse
+     */
+	public function errorsErrorFreeDevicePercentages(
+        \OpenAPI\OpenAPI\Models\Operations\ErrorsErrorFreeDevicePercentagesRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\ErrorsErrorFreeDevicePercentagesSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\ErrorsErrorFreeDevicePercentagesResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/errors/errorfreeDevicePercentages', \OpenAPI\OpenAPI\Models\Operations\ErrorsErrorFreeDevicePercentagesRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\ErrorsErrorFreeDevicePercentagesRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\ErrorsErrorFreeDevicePercentagesResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->errorsErrorFreeDevicePercentages200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\ErrorsErrorFreeDevicePercentages200ApplicationJSON', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->errorsErrorFreeDevicePercentagesDefaultApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\ErrorsErrorFreeDevicePercentagesDefaultApplicationJSON', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Error groups list based on search parameters
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ErrorsErrorGroupsSearchRequest $request

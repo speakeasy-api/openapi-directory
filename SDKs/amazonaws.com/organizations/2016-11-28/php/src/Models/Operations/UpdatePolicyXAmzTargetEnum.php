@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdatePolicyXAmzTargetEnum: string
 {
     case AWS_ORGANIZATIONS_V20161128_UPDATE_POLICY = 'AWSOrganizationsV20161128.UpdatePolicy';

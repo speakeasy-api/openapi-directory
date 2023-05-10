@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTModifyInstanceEventStartTimeActionEnum: string
 {
     case MODIFY_INSTANCE_EVENT_START_TIME = 'ModifyInstanceEventStartTime';

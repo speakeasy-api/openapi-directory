@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteWorkgroupXAmzTargetEnum: string
 {
     case REDSHIFT_SERVERLESS_DELETE_WORKGROUP = 'RedshiftServerless.DeleteWorkgroup';

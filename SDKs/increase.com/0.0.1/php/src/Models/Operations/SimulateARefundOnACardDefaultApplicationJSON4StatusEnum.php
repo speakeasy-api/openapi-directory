@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-enum SimulateARefundOnACardDefaultApplicationJSON4StatusEnum: string
+enum SimulateARefundOnACardDefaultApplicationJSON4StatusEnum: int
 {
-    case FOUR_HUNDRED_AND_TWENTY_TWO = '422';
+    case FOUR_HUNDRED_AND_TWENTY_TWO = 422;
 }

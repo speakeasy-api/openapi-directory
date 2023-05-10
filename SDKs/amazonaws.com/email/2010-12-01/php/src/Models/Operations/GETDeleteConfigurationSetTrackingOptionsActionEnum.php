@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteConfigurationSetTrackingOptionsActionEnum: string
 {
     case DELETE_CONFIGURATION_SET_TRACKING_OPTIONS = 'DeleteConfigurationSetTrackingOptions';

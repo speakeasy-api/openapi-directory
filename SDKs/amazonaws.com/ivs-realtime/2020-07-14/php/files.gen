@@ -58,4 +58,5 @@ src/Models/Shared/StageSummary.php
 src/Models/Shared/ListTagsForResourceResponse.php
 src/Models/Shared/UpdateStageResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

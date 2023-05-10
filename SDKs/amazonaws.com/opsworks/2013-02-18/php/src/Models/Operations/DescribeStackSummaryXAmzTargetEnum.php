@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeStackSummaryXAmzTargetEnum: string
 {
     case OPS_WORKS20130218_DESCRIBE_STACK_SUMMARY = 'OpsWorks_20130218.DescribeStackSummary';

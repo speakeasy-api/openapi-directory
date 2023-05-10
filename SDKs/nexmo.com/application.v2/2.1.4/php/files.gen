@@ -105,4 +105,5 @@ src/Models/Shared/ApplicationResponse.php
 src/Models/Shared/ApplicationResponseCollectionEmbedded.php
 src/Models/Shared/ApplicationResponseCollection.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

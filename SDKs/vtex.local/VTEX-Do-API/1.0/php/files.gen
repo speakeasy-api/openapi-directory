@@ -45,4 +45,7 @@ src/Models/Shared/Target.php
 src/Models/Shared/Follower.php
 src/Models/Shared/Assignee.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/note/README.md
+docs/task/README.md
 USAGE.md

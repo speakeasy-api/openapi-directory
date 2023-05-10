@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RegisterWorkspaceDirectoryXAmzTargetEnum: string
 {
     case WORKSPACES_SERVICE_REGISTER_WORKSPACE_DIRECTORY = 'WorkspacesService.RegisterWorkspaceDirectory';

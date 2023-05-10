@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ConfirmPublicVirtualInterfaceXAmzTargetEnum: string
 {
     case OVERTURE_SERVICE_CONFIRM_PUBLIC_VIRTUAL_INTERFACE = 'OvertureService.ConfirmPublicVirtualInterface';

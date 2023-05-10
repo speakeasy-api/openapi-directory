@@ -23,6 +23,14 @@ class GetDatabaseResponse
     public mixed $entityNotFoundException = null;
     
     /**
+     * FederationSourceException
+     * 
+     * @var mixed $federationSourceException
+     */
+	
+    public mixed $federationSourceException = null;
+    
+    /**
      * Success
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GetDatabaseResponse $getDatabaseResponse
@@ -72,6 +80,7 @@ class GetDatabaseResponse
 	{
 		$this->contentType = "";
 		$this->entityNotFoundException = null;
+		$this->federationSourceException = null;
 		$this->getDatabaseResponse = null;
 		$this->glueEncryptionException = null;
 		$this->internalServiceException = null;

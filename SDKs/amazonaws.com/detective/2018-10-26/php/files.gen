@@ -116,4 +116,5 @@ src/Models/Shared/Administrator.php
 src/Models/Shared/ListTagsForResourceResponse.php
 src/Models/Shared/DatasourcePackageEnum.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

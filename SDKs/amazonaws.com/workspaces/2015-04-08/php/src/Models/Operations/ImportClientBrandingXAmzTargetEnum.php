@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ImportClientBrandingXAmzTargetEnum: string
 {
     case WORKSPACES_SERVICE_IMPORT_CLIENT_BRANDING = 'WorkspacesService.ImportClientBranding';

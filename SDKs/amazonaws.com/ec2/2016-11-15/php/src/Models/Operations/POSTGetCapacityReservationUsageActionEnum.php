@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTGetCapacityReservationUsageActionEnum: string
 {
     case GET_CAPACITY_RESERVATION_USAGE = 'GetCapacityReservationUsage';

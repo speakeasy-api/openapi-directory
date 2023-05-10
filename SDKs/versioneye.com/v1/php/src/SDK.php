@@ -8,12 +8,6 @@ declare(strict_types=1);
 
 namespace OpenAPI\OpenAPI;
 
-/**
- * SDK - VersionEye is a cross-platform search engine for free/libre/open source software libraries.
- * 
- * @package OpenAPI\OpenAPI
- * @access public
- */
 class SDK
 {
 	public const SERVERS = [

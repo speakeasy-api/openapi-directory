@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListTestGridProjectsXAmzTargetEnum: string
 {
     case DEVICE_FARM20150623_LIST_TEST_GRID_PROJECTS = 'DeviceFarm_20150623.ListTestGridProjects';

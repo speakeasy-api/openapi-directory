@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteEventSubscriptionActionEnum: string
 {
     case DELETE_EVENT_SUBSCRIPTION = 'DeleteEventSubscription';

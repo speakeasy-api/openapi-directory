@@ -52,7 +52,7 @@ class Health
      * @return \OpenAPI\OpenAPI\Models\Operations\GetHeartbeatResponse
      */
 	public function getHeartbeat(
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\GetHeartbeatResponse
     {
         $baseUrl = Health::GET_HEARTBEAT_SERVERS[0];
@@ -89,7 +89,7 @@ class Health
      * @return \OpenAPI\OpenAPI\Models\Operations\GetServerHealthResponse
      */
 	public function getServerHealth(
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\GetServerHealthResponse
     {
         $baseUrl = Health::GET_SERVER_HEALTH_SERVERS[0];

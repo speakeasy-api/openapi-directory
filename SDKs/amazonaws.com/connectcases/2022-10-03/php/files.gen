@@ -172,4 +172,5 @@ src/Models/Shared/ContactContent.php
 src/Models/Shared/RelatedItemTypeFilter.php
 src/Models/Shared/ContactFilter.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETGETConsoleScreenshotActionEnum: string
 {
     case GET_CONSOLE_SCREENSHOT = 'GetConsoleScreenshot';

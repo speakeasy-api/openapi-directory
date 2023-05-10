@@ -20,7 +20,7 @@ class CreateAccountRequest
     public \OpenAPI\OpenAPI\Models\Shared\PostAccountWrapper $postAccountWrapper;
     
     /**
-     * The id of the budget ("last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget)
+     * The id of the budget ("last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.ynab.com/#oauth-default-budget)
      * 
      * @var string $budgetId
      */

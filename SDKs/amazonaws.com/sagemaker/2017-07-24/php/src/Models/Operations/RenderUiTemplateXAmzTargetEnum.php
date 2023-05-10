@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RenderUiTemplateXAmzTargetEnum: string
 {
     case SAGE_MAKER_RENDER_UI_TEMPLATE = 'SageMaker.RenderUiTemplate';

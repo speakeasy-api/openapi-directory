@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutResourcePolicyXAmzTargetEnum: string
 {
     case LOGS20140328_PUT_RESOURCE_POLICY = 'Logs_20140328.PutResourcePolicy';

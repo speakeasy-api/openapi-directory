@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListFirewallRuleGroupsXAmzTargetEnum: string
 {
     case ROUTE53_RESOLVER_LIST_FIREWALL_RULE_GROUPS = 'Route53Resolver.ListFirewallRuleGroups';

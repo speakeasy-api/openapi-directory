@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutSchemaVersionMetadataXAmzTargetEnum: string
 {
     case AWS_GLUE_PUT_SCHEMA_VERSION_METADATA = 'AWSGlue.PutSchemaVersionMetadata';

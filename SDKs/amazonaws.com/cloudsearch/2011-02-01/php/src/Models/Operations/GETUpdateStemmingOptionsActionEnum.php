@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETUpdateStemmingOptionsActionEnum: string
 {
     case UPDATE_STEMMING_OPTIONS = 'UpdateStemmingOptions';

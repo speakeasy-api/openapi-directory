@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteLaunchConfigurationActionEnum: string
 {
     case DELETE_LAUNCH_CONFIGURATION = 'DeleteLaunchConfiguration';

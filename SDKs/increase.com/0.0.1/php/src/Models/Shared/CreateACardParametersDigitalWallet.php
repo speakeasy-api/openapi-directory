@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * CreateACardParametersDigitalWallet - The contact information used in the two-factor steps for digital wallet card creation. At least one field must be present to complete the digital wallet steps.
+ * CreateACardParametersDigitalWallet - The contact information used in the two-factor steps for digital wallet card creation. To add the card to a digital wallet, you may supply an email or phone number with this request. Otherwise, subscribe and then action a Real Time Decision with the category `digital_wallet_token_requested` or `digital_wallet_authentication_requested`.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

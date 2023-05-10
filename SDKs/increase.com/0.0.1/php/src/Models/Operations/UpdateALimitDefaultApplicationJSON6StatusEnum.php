@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-enum UpdateALimitDefaultApplicationJSON6StatusEnum: string
+enum UpdateALimitDefaultApplicationJSON6StatusEnum: int
 {
-    case FIVE_HUNDRED = '500';
+    case FIVE_HUNDRED = 500;
 }

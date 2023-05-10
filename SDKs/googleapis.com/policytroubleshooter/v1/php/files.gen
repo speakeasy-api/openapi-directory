@@ -46,4 +46,6 @@ src/Models/Shared/AltEnum.php
 src/Models/Shared/GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyRequest.php
 src/Models/Shared/GoogleCloudPolicytroubleshooterV1AccessTuple.php
 src/Models/Shared/XgafvEnum.php
+docs/sdk/README.md
+docs/iam/README.md
 USAGE.md

@@ -212,4 +212,5 @@ src/Models/Shared/ViewBillingResponse.php
 src/Models/Shared/BillingRecord.php
 src/Models/Shared/ViewBillingRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

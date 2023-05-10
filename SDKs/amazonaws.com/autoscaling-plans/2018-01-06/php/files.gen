@@ -72,4 +72,5 @@ src/Models/Shared/GetScalingPlanResourceForecastDataRequest.php
 src/Models/Shared/ForecastDataTypeEnum.php
 src/Models/Shared/UpdateScalingPlanRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

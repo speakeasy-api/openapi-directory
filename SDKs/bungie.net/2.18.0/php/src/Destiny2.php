@@ -76,9 +76,11 @@ class Destiny2
     /**
      * Initialize a request to perform an advanced write action.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\Destiny2AwaInitializeRequestSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\Destiny2AwaInitializeRequestResponse
      */
 	public function destiny2AwaInitializeRequest(
+        \OpenAPI\OpenAPI\Models\Operations\Destiny2AwaInitializeRequestSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\Destiny2AwaInitializeRequestResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -86,7 +88,8 @@ class Destiny2
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -138,9 +141,11 @@ class Destiny2
     /**
      * Clear the identifiers and items of a loadout.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\Destiny2ClearLoadoutSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\Destiny2ClearLoadoutResponse
      */
 	public function destiny2ClearLoadout(
+        \OpenAPI\OpenAPI\Models\Operations\Destiny2ClearLoadoutSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\Destiny2ClearLoadoutResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -148,7 +153,8 @@ class Destiny2
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -169,9 +175,11 @@ class Destiny2
     /**
      * Equip an item. You must have a valid Destiny Account, and either be in a social space, in orbit, or offline.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\Destiny2EquipItemSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\Destiny2EquipItemResponse
      */
 	public function destiny2EquipItem(
+        \OpenAPI\OpenAPI\Models\Operations\Destiny2EquipItemSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\Destiny2EquipItemResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -179,7 +187,8 @@ class Destiny2
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -200,9 +209,11 @@ class Destiny2
     /**
      * Equip a list of items by itemInstanceIds. You must have a valid Destiny Account, and either be in a social space, in orbit, or offline. Any items not found on your character will be ignored.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\Destiny2EquipItemsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\Destiny2EquipItemsResponse
      */
 	public function destiny2EquipItems(
+        \OpenAPI\OpenAPI\Models\Operations\Destiny2EquipItemsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\Destiny2EquipItemsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -210,7 +221,8 @@ class Destiny2
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -231,9 +243,11 @@ class Destiny2
     /**
      * Equip a loadout. You must have a valid Destiny Account, and either be in a social space, in orbit, or offline.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\Destiny2EquipLoadoutSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\Destiny2EquipLoadoutResponse
      */
 	public function destiny2EquipLoadout(
+        \OpenAPI\OpenAPI\Models\Operations\Destiny2EquipLoadoutSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\Destiny2EquipLoadoutResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -241,7 +255,8 @@ class Destiny2
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1094,9 +1109,11 @@ class Destiny2
     /**
      * Insert a plug into a socketed item. I know how it sounds, but I assure you it's much more G-rated than you might be guessing. We haven't decided yet whether this will be able to insert plugs that have side effects, but if we do it will require special scope permission for an application attempting to do so. You must have a valid Destiny Account, and either be in a social space, in orbit, or offline. Request must include proof of permission for 'InsertPlugs' from the account owner.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\Destiny2InsertSocketPlugSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\Destiny2InsertSocketPlugResponse
      */
 	public function destiny2InsertSocketPlug(
+        \OpenAPI\OpenAPI\Models\Operations\Destiny2InsertSocketPlugSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\Destiny2InsertSocketPlugResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -1104,7 +1121,8 @@ class Destiny2
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1125,9 +1143,11 @@ class Destiny2
     /**
      * Insert a 'free' plug into an item's socket. This does not require 'Advanced Write Action' authorization and is available to 3rd-party apps, but will only work on 'free and reversible' socket actions (Perks, Armor Mods, Shaders, Ornaments, etc.). You must have a valid Destiny Account, and the character must either be in a social space, in orbit, or offline.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\Destiny2InsertSocketPlugFreeSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\Destiny2InsertSocketPlugFreeResponse
      */
 	public function destiny2InsertSocketPlugFree(
+        \OpenAPI\OpenAPI\Models\Operations\Destiny2InsertSocketPlugFreeSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\Destiny2InsertSocketPlugFreeResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -1135,7 +1155,8 @@ class Destiny2
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1156,9 +1177,11 @@ class Destiny2
     /**
      * Extract an item from the Postmaster, with whatever implications that may entail. You must have a valid Destiny account. You must also pass BOTH a reference AND an instance ID if it's an instanced item.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\Destiny2PullFromPostmasterSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\Destiny2PullFromPostmasterResponse
      */
 	public function destiny2PullFromPostmaster(
+        \OpenAPI\OpenAPI\Models\Operations\Destiny2PullFromPostmasterSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\Destiny2PullFromPostmasterResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -1166,7 +1189,8 @@ class Destiny2
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1290,9 +1314,11 @@ class Destiny2
     /**
      * Set the Lock State for an instanced item. You must have a valid Destiny Account.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\Destiny2SetItemLockStateSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\Destiny2SetItemLockStateResponse
      */
 	public function destiny2SetItemLockState(
+        \OpenAPI\OpenAPI\Models\Operations\Destiny2SetItemLockStateSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\Destiny2SetItemLockStateResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -1300,7 +1326,8 @@ class Destiny2
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1321,9 +1348,11 @@ class Destiny2
     /**
      * Set the Tracking State for an instanced item, if that item is a Quest or Bounty. You must have a valid Destiny Account. Yeah, it's an item.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\Destiny2SetQuestTrackedStateSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\Destiny2SetQuestTrackedStateResponse
      */
 	public function destiny2SetQuestTrackedState(
+        \OpenAPI\OpenAPI\Models\Operations\Destiny2SetQuestTrackedStateSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\Destiny2SetQuestTrackedStateResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -1331,7 +1360,8 @@ class Destiny2
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1352,9 +1382,11 @@ class Destiny2
     /**
      * Snapshot a loadout with the currently equipped items.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\Destiny2SnapshotLoadoutSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\Destiny2SnapshotLoadoutResponse
      */
 	public function destiny2SnapshotLoadout(
+        \OpenAPI\OpenAPI\Models\Operations\Destiny2SnapshotLoadoutSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\Destiny2SnapshotLoadoutResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -1362,7 +1394,8 @@ class Destiny2
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1383,9 +1416,11 @@ class Destiny2
     /**
      * Transfer an item to/from your vault. You must have a valid Destiny account. You must also pass BOTH a reference AND an instance ID if it's an instanced item. itshappening.gif
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\Destiny2TransferItemSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\Destiny2TransferItemResponse
      */
 	public function destiny2TransferItem(
+        \OpenAPI\OpenAPI\Models\Operations\Destiny2TransferItemSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\Destiny2TransferItemResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -1393,7 +1428,8 @@ class Destiny2
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1414,9 +1450,11 @@ class Destiny2
     /**
      * Update the color, icon, and name of a loadout.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\Destiny2UpdateLoadoutIdentifiersSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\Destiny2UpdateLoadoutIdentifiersResponse
      */
 	public function destiny2UpdateLoadoutIdentifiers(
+        \OpenAPI\OpenAPI\Models\Operations\Destiny2UpdateLoadoutIdentifiersSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\Destiny2UpdateLoadoutIdentifiersResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -1424,7 +1462,8 @@ class Destiny2
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

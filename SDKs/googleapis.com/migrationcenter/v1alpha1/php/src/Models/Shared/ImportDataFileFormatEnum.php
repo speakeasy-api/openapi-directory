@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Shared;
 
 
-/** The payload format. */
+/** Required. The payload format. */
 enum ImportDataFileFormatEnum: string
 {
     case IMPORT_JOB_FORMAT_UNSPECIFIED = 'IMPORT_JOB_FORMAT_UNSPECIFIED';

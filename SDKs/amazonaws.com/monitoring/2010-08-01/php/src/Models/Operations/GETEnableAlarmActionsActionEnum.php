@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETEnableAlarmActionsActionEnum: string
 {
     case ENABLE_ALARM_ACTIONS = 'EnableAlarmActions';

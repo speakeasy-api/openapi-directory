@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationActionEnum: string
 {
     case CREATE_LOCAL_GATEWAY_ROUTE_TABLE_VIRTUAL_INTERFACE_GROUP_ASSOCIATION = 'CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociation';

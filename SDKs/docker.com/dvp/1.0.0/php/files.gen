@@ -54,4 +54,8 @@ src/Models/Shared/WeekData.php
 src/Models/Shared/YearData.php
 src/Models/Shared/YearModel.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/authentication/README.md
+docs/discovery/README.md
+docs/namespaces/README.md
 USAGE.md

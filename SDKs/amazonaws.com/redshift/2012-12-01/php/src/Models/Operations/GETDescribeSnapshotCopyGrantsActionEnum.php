@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDescribeSnapshotCopyGrantsActionEnum: string
 {
     case DESCRIBE_SNAPSHOT_COPY_GRANTS = 'DescribeSnapshotCopyGrants';

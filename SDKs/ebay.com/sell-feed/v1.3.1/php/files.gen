@@ -114,4 +114,10 @@ src/Models/Shared/CreateTaskRequest.php
 src/Models/Shared/Task.php
 src/Models/Shared/TaskCollection.php
 src/Models/Shared/FormDataContentDisposition.php
+docs/sdk/README.md
+docs/customerservicemetrictask/README.md
+docs/inventorytask/README.md
+docs/ordertask/README.md
+docs/schedule/README.md
+docs/task/README.md
 USAGE.md

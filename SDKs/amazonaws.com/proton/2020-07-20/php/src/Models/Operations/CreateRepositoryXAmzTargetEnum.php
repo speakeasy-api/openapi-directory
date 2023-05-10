@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateRepositoryXAmzTargetEnum: string
 {
     case AWS_PROTON20200720_CREATE_REPOSITORY = 'AwsProton20200720.CreateRepository';

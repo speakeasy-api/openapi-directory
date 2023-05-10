@@ -30,81 +30,119 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\CreateApiApplicationNewApiApplication;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new CreateApiApplicationNewApiApplication();
+    $request->applicationName = 'Batch Processing API';
+    $request->enabled = true;
+    $request->expiry = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2019-08-22T07:48:56.460Z');
+    $request->ican = 548814;
+    $request->numberOfPayeeApprovalsRequired = 1;
+    $request->numberOfPaymentApprovalsRequired = 1;
+    $request->permissions = [
+        'distinctio',
+        'quibusdam',
+        'unde',
+    ];
+
+    $response = $sdk->api->createApiApplication($request);
+
+    if ($response->apiApplication !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### api
+### [api](docs/api/README.md)
 
-* `createApiApplication` - Create a new API Application
+* [createApiApplication](docs/api/README.md#createapiapplication) - Create a new API Application
 
-### accounts
+### [accounts](docs/accounts/README.md)
 
-* `addAccount` - Add a new account
-* `getAccountById` - Retrieve the details of a fire.com Account
-* `getAccounts` - List all fire.com Accounts
+* [addAccount](docs/accounts/README.md#addaccount) - Add a new account
+* [getAccountById](docs/accounts/README.md#getaccountbyid) - Retrieve the details of a fire.com Account
+* [getAccounts](docs/accounts/README.md#getaccounts) - List all fire.com Accounts
 
-### authentication
+### [authentication](docs/authentication/README.md)
 
-* `authenticate` - Authenticate with the API.
+* [authenticate](docs/authentication/README.md#authenticate) - Authenticate with the API.
 
-### cards
+### [cards](docs/cards/README.md)
 
-* `blockCard` - Block a card
-* `createNewCard` - Create a new debit card.
-* `getListofCardTransactions` - List Card Transactions.
-* `getListofCards` - View List of Cards.
-* `unblockCard` - Unblock a card
+* [blockCard](docs/cards/README.md#blockcard) - Block a card
+* [createNewCard](docs/cards/README.md#createnewcard) - Create a new debit card.
+* [getListofCardTransactions](docs/cards/README.md#getlistofcardtransactions) - List Card Transactions.
+* [getListofCards](docs/cards/README.md#getlistofcards) - View List of Cards.
+* [unblockCard](docs/cards/README.md#unblockcard) - Unblock a card
 
-### directDebits
+### [directDebits](docs/directdebits/README.md)
 
-* `activateMandate` - Activate a direct debit mandate
-* `cancelMandateByUuid` - Cancel a direct debit mandate
-* `getDirectDebitByUuid` - Get the details of a direct debit
-* `getDirectDebitMandates` - List all direct debit mandates
-* `getDirectDebitsForMandateUuid` - Get all DD payments associated with a direct debit mandate
-* `getMandate` - Get direct debit mandate details
-* `rejectDirectDebit` - Reject a direct debit payment
-* `updateMandateAlias` - Update a direct debit mandate alias
+* [activateMandate](docs/directdebits/README.md#activatemandate) - Activate a direct debit mandate
+* [cancelMandateByUuid](docs/directdebits/README.md#cancelmandatebyuuid) - Cancel a direct debit mandate
+* [getDirectDebitByUuid](docs/directdebits/README.md#getdirectdebitbyuuid) - Get the details of a direct debit
+* [getDirectDebitMandates](docs/directdebits/README.md#getdirectdebitmandates) - List all direct debit mandates
+* [getDirectDebitsForMandateUuid](docs/directdebits/README.md#getdirectdebitsformandateuuid) - Get all DD payments associated with a direct debit mandate
+* [getMandate](docs/directdebits/README.md#getmandate) - Get direct debit mandate details
+* [rejectDirectDebit](docs/directdebits/README.md#rejectdirectdebit) - Reject a direct debit payment
+* [updateMandateAlias](docs/directdebits/README.md#updatemandatealias) - Update a direct debit mandate alias
 
-### openBanking
+### [openBanking](docs/openbanking/README.md)
 
-* `getListOfAspsps` - Get list of ASPSPs / Banks
-* `getPaymentDetails` - Get Payment Details
-* `newPaymentRequest` - Create a Fire Open Payment request
+* [getListOfAspsps](docs/openbanking/README.md#getlistofaspsps) - Get list of ASPSPs / Banks
+* [getPaymentDetails](docs/openbanking/README.md#getpaymentdetails) - Get Payment Details
+* [newPaymentRequest](docs/openbanking/README.md#newpaymentrequest) - Create a Fire Open Payment request
 
-### payeeBankAccounts
+### [payeeBankAccounts](docs/payeebankaccounts/README.md)
 
-* `getPayees` - List all Payee Bank Accounts
+* [getPayees](docs/payeebankaccounts/README.md#getpayees) - List all Payee Bank Accounts
 
-### paymentBatches
+### [paymentBatches](docs/paymentbatches/README.md)
 
-* `addBankTransferBatchPayment` - Add a bank transfer payment to the batch.
-* `addInternalTransferBatchPayment` - Add an internal transfer payment to the batch
-* `cancelBatchPayment` - Cancel a batch
-* `createBatchPayment` - Create a new batch of payments
-* `deleteBankTransferBatchPayment` - Remove a Payment from the Batch (Bank Transfers)
-* `deleteInternalTransferBatchPayment` - Remove a Payment from the Batch (Internal Transfer)
-* `getBatches` - List batches
-* `getDetailsSingleBatch` - Get details of a single Batch
-* `getItemsBatchBankTransfer` - List items in a Batch
-* `getItemsBatchInternalTrasnfer` - List items in a Batch
-* `getListofApproversForBatch` - List Approvers for a Batch
-* `submitBatch` - Submit a batch for approval
+* [addBankTransferBatchPayment](docs/paymentbatches/README.md#addbanktransferbatchpayment) - Add a bank transfer payment to the batch.
+* [addInternalTransferBatchPayment](docs/paymentbatches/README.md#addinternaltransferbatchpayment) - Add an internal transfer payment to the batch
+* [addInternationalTransferBatchPayment](docs/paymentbatches/README.md#addinternationaltransferbatchpayment) - Add an international transfer payment to the batch.
+* [cancelBatchPayment](docs/paymentbatches/README.md#cancelbatchpayment) - Cancel a batch
+* [createBatchPayment](docs/paymentbatches/README.md#createbatchpayment) - Create a new batch of payments
+* [deleteBankTransferBatchPayment](docs/paymentbatches/README.md#deletebanktransferbatchpayment) - Remove a Payment from the Batch (Bank Transfers)
+* [deleteInternalTransferBatchPayment](docs/paymentbatches/README.md#deleteinternaltransferbatchpayment) - Remove a Payment from the Batch (Internal Transfer)
+* [deleteInternationalTransferBatchPayment](docs/paymentbatches/README.md#deleteinternationaltransferbatchpayment) - Remove a Payment from the Batch (International Transfers)
+* [getBatches](docs/paymentbatches/README.md#getbatches) - List batches
+* [getDetailsSingleBatch](docs/paymentbatches/README.md#getdetailssinglebatch) - Get details of a single Batch
+* [getItemsBatchBankTransfer](docs/paymentbatches/README.md#getitemsbatchbanktransfer) - List items in a Batch (Bank Transfers)
+* [getItemsBatchInternalTrasnfer](docs/paymentbatches/README.md#getitemsbatchinternaltrasnfer) - List items in a Batch (Internal Transfers)
+* [getItemsBatchInternationalTransfer](docs/paymentbatches/README.md#getitemsbatchinternationaltransfer) - List items in a Batch (International Transfers)
+* [getListofApproversForBatch](docs/paymentbatches/README.md#getlistofapproversforbatch) - List Approvers for a Batch
+* [submitBatch](docs/paymentbatches/README.md#submitbatch) - Submit a batch for approval
 
-### transactions
+### [transactions](docs/transactions/README.md)
 
-* `getTransactionsByIdv1` - List transactions for an account (v1)
-* `getTransactionsByIdv3` - List transactions for an account (v3)
-* `getTransactionsFilteredById` - Filtered list of transactions for an account (v1)
+* [~~getTransactionsByAccountIdFiltered~~](docs/transactions/README.md#gettransactionsbyaccountidfiltered) - Filtered list of transactions for an account (v1) :warning: **Deprecated**
+* [~~getTransactionsByAccountIdv1~~](docs/transactions/README.md#gettransactionsbyaccountidv1) - List transactions for an account (v1) :warning: **Deprecated**
+* [getTransactionsByAccountIdv3](docs/transactions/README.md#gettransactionsbyaccountidv3) - List transactions for an account (v3)
 
-### users
+### [users](docs/users/README.md)
 
-* `getUser` - Returns details of a specific fire.com user.
-* `getUsers` - Returns list of all users on your fire.com account
+* [getUser](docs/users/README.md#getuser) - Returns details of a specific fire.com user.
+* [getUsers](docs/users/README.md#getusers) - Returns list of all users on your fire.com account
 <!-- End SDK Available Operations -->
 
 ### Maturity

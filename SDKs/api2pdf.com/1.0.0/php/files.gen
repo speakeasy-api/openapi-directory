@@ -49,4 +49,10 @@ src/Models/Shared/WkHtmlToPdfHtmlToPdfRequest.php
 src/Models/Shared/WkHtmlToPdfAdvancedOptions.php
 src/Models/Shared/WkHtmlToPdfUrlToPdfRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/headlesschrome/README.md
+docs/libreoffice/README.md
+docs/mergecombinepdfs/README.md
+docs/zxingzebracrossingbarcodes/README.md
+docs/wkhtmltopdf/README.md
 USAGE.md

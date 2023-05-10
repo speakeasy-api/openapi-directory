@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * AppEngineVersionEndpoint - Wrapper for app engine service version attributes.
+ * AppEngineVersionEndpoint - Wrapper for the App Engine service version attributes.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

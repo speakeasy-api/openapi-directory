@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetDiscoverySummaryXAmzTargetEnum: string
 {
     case AWS_POSEIDON_SERVICE_V20151101_GET_DISCOVERY_SUMMARY = 'AWSPoseidonService_V2015_11_01.GetDiscoverySummary';

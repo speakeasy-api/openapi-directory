@@ -239,7 +239,7 @@ class Japanese
     }
 	
     /**
-     * Identify japanese name candidates in KANJI, based on the romanized name ex. Yamamoto Sanae
+     * Identify japanese name candidates in KANJI, based on the romanized name ex. Yamamoto Sanae - and a known gender.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\JapaneseNameKanjiCandidatesRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\JapaneseNameKanjiCandidatesSecurity $security
@@ -251,7 +251,7 @@ class Japanese
     ): \OpenAPI\OpenAPI\Models\Operations\JapaneseNameKanjiCandidatesResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/api2/json/japaneseNameKanjiCandidates/{japaneseSurnameLatin}/{japaneseGivenNameLatin}', \OpenAPI\OpenAPI\Models\Operations\JapaneseNameKanjiCandidatesRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/api2/json/japaneseNameKanjiCandidates/{japaneseSurnameLatin}/{japaneseGivenNameLatin}/{knownGender}', \OpenAPI\OpenAPI\Models\Operations\JapaneseNameKanjiCandidatesRequest::class, $request);
         
         $options = ['http_errors' => false];
         
@@ -319,7 +319,7 @@ class Japanese
     }
 	
     /**
-     * Identify japanese name candidates in KANJI, based on the romanized name ex. Yamamoto Sanae - and a known gender.
+     * Identify japanese name candidates in KANJI, based on the romanized name ex. Yamamoto Sanae
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\JapaneseNameKanjiCandidates1Request $request
      * @param \OpenAPI\OpenAPI\Models\Operations\JapaneseNameKanjiCandidates1Security $security
@@ -331,7 +331,7 @@ class Japanese
     ): \OpenAPI\OpenAPI\Models\Operations\JapaneseNameKanjiCandidates1Response
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/api2/json/japaneseNameKanjiCandidates/{japaneseSurnameLatin}/{japaneseGivenNameLatin}/{knownGender}', \OpenAPI\OpenAPI\Models\Operations\JapaneseNameKanjiCandidates1Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/api2/json/japaneseNameKanjiCandidates/{japaneseSurnameLatin}/{japaneseGivenNameLatin}', \OpenAPI\OpenAPI\Models\Operations\JapaneseNameKanjiCandidates1Request::class, $request);
         
         $options = ['http_errors' => false];
         

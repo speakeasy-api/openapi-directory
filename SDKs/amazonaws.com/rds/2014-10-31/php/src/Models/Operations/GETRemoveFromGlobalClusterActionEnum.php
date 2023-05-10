@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETRemoveFromGlobalClusterActionEnum: string
 {
     case REMOVE_FROM_GLOBAL_CLUSTER = 'RemoveFromGlobalCluster';

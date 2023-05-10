@@ -14,8 +14,8 @@ namespace OpenAPI\OpenAPI\Models\Operations;
  * 
  * 
  */
-enum TypeaheadSafeModeEnum: string
+enum TypeaheadSafeModeEnum: int
 {
-    case ZERO = '0';
-    case ONE = '1';
+    case ZERO = 0;
+    case ONE = 1;
 }

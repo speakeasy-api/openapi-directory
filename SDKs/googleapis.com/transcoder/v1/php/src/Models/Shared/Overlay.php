@@ -28,7 +28,7 @@ class Overlay
     public ?array $animations = null;
     
     /**
-     * Overlaid jpeg image.
+     * Overlaid image.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\Image $image
      */

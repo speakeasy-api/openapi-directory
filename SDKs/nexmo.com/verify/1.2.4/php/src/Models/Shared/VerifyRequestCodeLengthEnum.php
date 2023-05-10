@@ -10,8 +10,8 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /** The length of the verification code. */
-enum VerifyRequestCodeLengthEnum: string
+enum VerifyRequestCodeLengthEnum: int
 {
-    case FOUR = '4';
-    case SIX = '6';
+    case FOUR = 4;
+    case SIX = 6;
 }

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDisassociateTrunkInterfaceActionEnum: string
 {
     case DISASSOCIATE_TRUNK_INTERFACE = 'DisassociateTrunkInterface';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteInstanceProfileXAmzTargetEnum: string
 {
     case DEVICE_FARM20150623_DELETE_INSTANCE_PROFILE = 'DeviceFarm_20150623.DeleteInstanceProfile';

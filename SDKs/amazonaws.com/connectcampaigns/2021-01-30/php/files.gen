@@ -111,4 +111,5 @@ src/Models/Shared/FailureCodeEnum.php
 src/Models/Shared/DialRequest.php
 src/Models/Shared/StartInstanceOnboardingJobResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

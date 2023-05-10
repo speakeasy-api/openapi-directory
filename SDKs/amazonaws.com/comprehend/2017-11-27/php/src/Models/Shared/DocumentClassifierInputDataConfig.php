@@ -32,6 +32,26 @@ class DocumentClassifierInputDataConfig
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?DocumentClassifierDataFormatEnum $dataFormat = null;
     
+    /**
+     * <p>Provides configuration parameters to override the default actions for extracting text from PDF documents and image files. </p> <p> By default, Amazon Comprehend performs the following actions to extract text from files, based on the input file type: </p> <ul> <li> <p> <b>Word files</b> - Amazon Comprehend parser extracts the text. </p> </li> <li> <p> <b>Digital PDF files</b> - Amazon Comprehend parser extracts the text. </p> </li> <li> <p> <b>Image files and scanned PDF files</b> - Amazon Comprehend uses the Amazon Textract <code>DetectDocumentText</code> API to extract the text. </p> </li> </ul> <p> <code>DocumentReaderConfig</code> does not apply to plain text files or Word files.</p> <p> For image files and PDF documents, you can override these default actions using the fields listed below. For more information, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/idp-set-textract-options.html"> Setting text extraction options</a> in the Comprehend Developer Guide. </p>
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\DocumentReaderConfig $documentReaderConfig
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('DocumentReaderConfig')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\DocumentReaderConfig')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?DocumentReaderConfig $documentReaderConfig = null;
+    
+	#[\JMS\Serializer\Annotation\SerializedName('DocumentType')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\DocumentClassifierDocumentTypeFormatEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?DocumentClassifierDocumentTypeFormatEnum $documentType = null;
+    
+	#[\JMS\Serializer\Annotation\SerializedName('Documents')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\DocumentClassifierDocuments')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?DocumentClassifierDocuments $documents = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('LabelDelimiter')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -51,6 +71,9 @@ class DocumentClassifierInputDataConfig
 	{
 		$this->augmentedManifests = null;
 		$this->dataFormat = null;
+		$this->documentReaderConfig = null;
+		$this->documentType = null;
+		$this->documents = null;
 		$this->labelDelimiter = null;
 		$this->s3Uri = null;
 		$this->testS3Uri = null;

@@ -31,4 +31,6 @@ src/Models/Shared/AltEnum.php
 src/Models/Shared/XgafvEnum.php
 src/Models/Shared/VerifyChallengeResponseResult.php
 src/Models/Shared/VerifyChallengeResponseRequest.php
+docs/sdk/README.md
+docs/challenge/README.md
 USAGE.md

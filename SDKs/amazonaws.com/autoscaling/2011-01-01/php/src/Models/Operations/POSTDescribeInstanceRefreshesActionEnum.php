@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeInstanceRefreshesActionEnum: string
 {
     case DESCRIBE_INSTANCE_REFRESHES = 'DescribeInstanceRefreshes';

@@ -42,15 +42,15 @@ class Accounts
      * 
      * Balances will be returned in Berlin Group PSD2 format.
      * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\AccountsBalancesRetrieveRequest $request
-     * @return \OpenAPI\OpenAPI\Models\Operations\AccountsBalancesRetrieveResponse
+     * @param \OpenAPI\OpenAPI\Models\Operations\RetrieveAccountBalancesV2Request $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\RetrieveAccountBalancesV2Response
      */
-	public function accountsBalancesRetrieve(
-        \OpenAPI\OpenAPI\Models\Operations\AccountsBalancesRetrieveRequest $request,
-    ): \OpenAPI\OpenAPI\Models\Operations\AccountsBalancesRetrieveResponse
+	public function retrieveAccountBalancesV2(
+        \OpenAPI\OpenAPI\Models\Operations\RetrieveAccountBalancesV2Request $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\RetrieveAccountBalancesV2Response
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/api/v2/accounts/{id}/balances/', \OpenAPI\OpenAPI\Models\Operations\AccountsBalancesRetrieveRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/api/v2/accounts/{id}/balances/', \OpenAPI\OpenAPI\Models\Operations\RetrieveAccountBalancesV2Request::class, $request);
         
         $options = ['http_errors' => false];
         
@@ -58,57 +58,63 @@ class Accounts
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \OpenAPI\OpenAPI\Models\Operations\AccountsBalancesRetrieveResponse();
+        $response = new \OpenAPI\OpenAPI\Models\Operations\RetrieveAccountBalancesV2Response();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if ($httpResponse->getStatusCode() === 400) {
+        if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountsBalancesRetrieve400ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->retrieveAccountBalancesV2200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 400) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->retrieveAccountBalancesV2400ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 401) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountsBalancesRetrieve401ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->retrieveAccountBalancesV2401ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 403) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountsBalancesRetrieve403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->retrieveAccountBalancesV2403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 404) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountsBalancesRetrieve404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->retrieveAccountBalancesV2404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 409) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountsBalancesRetrieve409ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->retrieveAccountBalancesV2409ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 429) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountsBalancesRetrieve429ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->retrieveAccountBalancesV2429ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 500) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountsBalancesRetrieve500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->retrieveAccountBalancesV2500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 503) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountsBalancesRetrieve503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->retrieveAccountBalancesV2503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
 
@@ -120,15 +126,15 @@ class Accounts
      * 
      * Account details will be returned in Berlin Group PSD2 format.
      * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\AccountsDetailsRetrieveRequest $request
-     * @return \OpenAPI\OpenAPI\Models\Operations\AccountsDetailsRetrieveResponse
+     * @param \OpenAPI\OpenAPI\Models\Operations\RetrieveAccountDetailsV2Request $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\RetrieveAccountDetailsV2Response
      */
-	public function accountsDetailsRetrieve(
-        \OpenAPI\OpenAPI\Models\Operations\AccountsDetailsRetrieveRequest $request,
-    ): \OpenAPI\OpenAPI\Models\Operations\AccountsDetailsRetrieveResponse
+	public function retrieveAccountDetailsV2(
+        \OpenAPI\OpenAPI\Models\Operations\RetrieveAccountDetailsV2Request $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\RetrieveAccountDetailsV2Response
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/api/v2/accounts/{id}/details/', \OpenAPI\OpenAPI\Models\Operations\AccountsDetailsRetrieveRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/api/v2/accounts/{id}/details/', \OpenAPI\OpenAPI\Models\Operations\RetrieveAccountDetailsV2Request::class, $request);
         
         $options = ['http_errors' => false];
         
@@ -136,136 +142,63 @@ class Accounts
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \OpenAPI\OpenAPI\Models\Operations\AccountsDetailsRetrieveResponse();
+        $response = new \OpenAPI\OpenAPI\Models\Operations\RetrieveAccountDetailsV2Response();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if ($httpResponse->getStatusCode() === 400) {
+        if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountsDetailsRetrieve400ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->retrieveAccountDetailsV2200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 400) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->retrieveAccountDetailsV2400ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 401) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountsDetailsRetrieve401ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->retrieveAccountDetailsV2401ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 403) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountsDetailsRetrieve403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->retrieveAccountDetailsV2403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 404) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountsDetailsRetrieve404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->retrieveAccountDetailsV2404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 409) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountsDetailsRetrieve409ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->retrieveAccountDetailsV2409ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 429) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountsDetailsRetrieve429ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->retrieveAccountDetailsV2429ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 500) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountsDetailsRetrieve500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->retrieveAccountDetailsV2500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 503) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountsDetailsRetrieve503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Access account transactions.
-     * 
-     * Transactions will be returned in Berlin Group PSD2 format.
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\AccountsTransactionsRetrieveRequest $request
-     * @return \OpenAPI\OpenAPI\Models\Operations\AccountsTransactionsRetrieveResponse
-     */
-	public function accountsTransactionsRetrieve(
-        \OpenAPI\OpenAPI\Models\Operations\AccountsTransactionsRetrieveRequest $request,
-    ): \OpenAPI\OpenAPI\Models\Operations\AccountsTransactionsRetrieveResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/api/v2/accounts/{id}/transactions/', \OpenAPI\OpenAPI\Models\Operations\AccountsTransactionsRetrieveRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\AccountsTransactionsRetrieveRequest::class, $request, null));
-        
-        $httpResponse = $this->_securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\AccountsTransactionsRetrieveResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 400) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->accountsTransactionsRetrieve400ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
-            }
-        }
-        else if ($httpResponse->getStatusCode() === 401) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->accountsTransactionsRetrieve401ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
-            }
-        }
-        else if ($httpResponse->getStatusCode() === 403) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->accountsTransactionsRetrieve403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
-            }
-        }
-        else if ($httpResponse->getStatusCode() === 404) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->accountsTransactionsRetrieve404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
-            }
-        }
-        else if ($httpResponse->getStatusCode() === 409) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->accountsTransactionsRetrieve409ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
-            }
-        }
-        else if ($httpResponse->getStatusCode() === 429) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->accountsTransactionsRetrieve429ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
-            }
-        }
-        else if ($httpResponse->getStatusCode() === 500) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->accountsTransactionsRetrieve500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
-            }
-        }
-        else if ($httpResponse->getStatusCode() === 503) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->accountsTransactionsRetrieve503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->retrieveAccountDetailsV2503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
 
@@ -303,7 +236,7 @@ class Accounts
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->accountV2 = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\AccountV2', 'json');
+                $response->account = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Account', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 401) {
@@ -322,6 +255,97 @@ class Accounts
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->retrieveAccountMetadata404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 429) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->retrieveAccountMetadata429ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Access account transactions.
+     * 
+     * Transactions will be returned in Berlin Group PSD2 format.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\RetrieveAccountTransactionsV22Request $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\RetrieveAccountTransactionsV22Response
+     */
+	public function retrieveAccountTransactionsV22(
+        \OpenAPI\OpenAPI\Models\Operations\RetrieveAccountTransactionsV22Request $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\RetrieveAccountTransactionsV22Response
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/api/v2/accounts/{id}/transactions/', \OpenAPI\OpenAPI\Models\Operations\RetrieveAccountTransactionsV22Request::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\RetrieveAccountTransactionsV22Request::class, $request, null));
+        
+        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\RetrieveAccountTransactionsV22Response();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->retrieveAccountTransactionsV22200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 400) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->retrieveAccountTransactionsV22400ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 401) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->retrieveAccountTransactionsV22401ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 403) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->retrieveAccountTransactionsV22403ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 404) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->retrieveAccountTransactionsV22404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 409) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->retrieveAccountTransactionsV22409ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 429) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->retrieveAccountTransactionsV22429ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 500) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->retrieveAccountTransactionsV22500ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 503) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->retrieveAccountTransactionsV22503ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
 

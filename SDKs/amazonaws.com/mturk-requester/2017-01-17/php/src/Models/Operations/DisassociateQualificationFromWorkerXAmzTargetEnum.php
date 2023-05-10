@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DisassociateQualificationFromWorkerXAmzTargetEnum: string
 {
     case M_TURK_REQUESTER_SERVICE_V20170117_DISASSOCIATE_QUALIFICATION_FROM_WORKER = 'MTurkRequesterServiceV20170117.DisassociateQualificationFromWorker';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListIdentityPoolsXAmzTargetEnum: string
 {
     case AWS_COGNITO_IDENTITY_SERVICE_LIST_IDENTITY_POOLS = 'AWSCognitoIdentityService.ListIdentityPools';

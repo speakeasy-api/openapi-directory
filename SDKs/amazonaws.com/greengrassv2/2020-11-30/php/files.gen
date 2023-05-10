@@ -173,4 +173,5 @@ src/Models/Shared/ResolvedComponentVersion.php
 src/Models/Shared/ComponentCandidate.php
 src/Models/Shared/UpdateConnectivityInfoResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

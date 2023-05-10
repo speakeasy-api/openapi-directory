@@ -17,6 +17,16 @@ namespace OpenAPI\OpenAPI\Models\Shared;
  */
 class ClusterStatus
 {
+    /**
+     * $errorDetails
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\ErrorDetail> $errorDetails
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('ErrorDetails')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\ErrorDetail>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $errorDetails = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('State')]
     #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\ClusterStateEnum>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -34,6 +44,7 @@ class ClusterStatus
     
 	public function __construct()
 	{
+		$this->errorDetails = null;
 		$this->state = null;
 		$this->stateChangeReason = null;
 		$this->timeline = null;

@@ -125,4 +125,5 @@ src/Models/Shared/RemoveNotificationChannelResponse.php
 src/Models/Shared/RemovePermissionResponse.php
 src/Models/Shared/UpdateProfilingGroupResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

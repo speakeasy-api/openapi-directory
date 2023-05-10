@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetLineageGroupPolicyXAmzTargetEnum: string
 {
     case SAGE_MAKER_GET_LINEAGE_GROUP_POLICY = 'SageMaker.GetLineageGroupPolicy';

@@ -38,4 +38,5 @@ src/Models/Shared/Word.php
 src/Models/Shared/TextOperationResult.php
 src/Models/Shared/TextRecognitionModeEnum.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

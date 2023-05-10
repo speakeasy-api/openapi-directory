@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeletePolicyXAmzTargetEnum: string
 {
     case ACM_PRIVATE_CA_DELETE_POLICY = 'ACMPrivateCA.DeletePolicy';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ImportKeyPairXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_IMPORT_KEY_PAIR = 'Lightsail_20161128.ImportKeyPair';

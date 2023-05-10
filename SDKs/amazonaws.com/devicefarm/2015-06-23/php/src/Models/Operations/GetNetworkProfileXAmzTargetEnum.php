@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetNetworkProfileXAmzTargetEnum: string
 {
     case DEVICE_FARM20150623_GET_NETWORK_PROFILE = 'DeviceFarm_20150623.GetNetworkProfile';

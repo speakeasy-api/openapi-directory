@@ -172,7 +172,7 @@ class UserAuth
      */
 	public function postV05UsersAuthOnConfirmJson(
         \OpenAPI\OpenAPI\Models\Operations\PostV05UsersAuthOnConfirmJsonRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05UsersAuthOnConfirmJsonResponse
     {
         $baseUrl = UserAuth::POST_V05_USERS_AUTH_ON_CONFIRM_JSON_SERVERS[0];
@@ -229,7 +229,7 @@ class UserAuth
      */
 	public function postV05UsersAuthOnConfirmRaw(
         \OpenAPI\OpenAPI\Models\Operations\PostV05UsersAuthOnConfirmRawRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05UsersAuthOnConfirmRawResponse
     {
         $baseUrl = UserAuth::POST_V05_USERS_AUTH_ON_CONFIRM_RAW_SERVERS[0];
@@ -430,7 +430,7 @@ class UserAuth
      */
 	public function postV05UsersAuthOnInitJson(
         \OpenAPI\OpenAPI\Models\Operations\PostV05UsersAuthOnInitJsonRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05UsersAuthOnInitJsonResponse
     {
         $baseUrl = UserAuth::POST_V05_USERS_AUTH_ON_INIT_JSON_SERVERS[0];
@@ -515,7 +515,7 @@ class UserAuth
      */
 	public function postV05UsersAuthOnInitRaw(
         \OpenAPI\OpenAPI\Models\Operations\PostV05UsersAuthOnInitRawRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05UsersAuthOnInitRawResponse
     {
         $baseUrl = UserAuth::POST_V05_USERS_AUTH_ON_INIT_RAW_SERVERS[0];

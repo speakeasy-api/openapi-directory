@@ -38,4 +38,5 @@ src/Models/Shared/Line.php
 src/Models/Shared/Did.php
 src/Models/Shared/ValidationErrorsResponse.php
 src/Models/Shared/DetailedInvalidParam.php
+docs/sdk/README.md
 USAGE.md

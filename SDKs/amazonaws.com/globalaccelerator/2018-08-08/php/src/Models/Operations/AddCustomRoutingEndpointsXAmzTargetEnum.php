@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AddCustomRoutingEndpointsXAmzTargetEnum: string
 {
     case GLOBAL_ACCELERATOR_V20180706_ADD_CUSTOM_ROUTING_ENDPOINTS = 'GlobalAccelerator_V20180706.AddCustomRoutingEndpoints';

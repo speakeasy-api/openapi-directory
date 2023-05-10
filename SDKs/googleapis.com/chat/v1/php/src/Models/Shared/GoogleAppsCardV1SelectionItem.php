@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * GoogleAppsCardV1SelectionItem - A selectable item in a selection input, such as a check box or a switch.
+ * GoogleAppsCardV1SelectionItem - An item that users can select in a selection input, such as a checkbox or switch.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public
@@ -28,7 +28,7 @@ class GoogleAppsCardV1SelectionItem
     public ?bool $selected = null;
     
     /**
-     * The text displayed to users.
+     * The text that identifies or describes the item to users.
      * 
      * @var ?string $text
      */

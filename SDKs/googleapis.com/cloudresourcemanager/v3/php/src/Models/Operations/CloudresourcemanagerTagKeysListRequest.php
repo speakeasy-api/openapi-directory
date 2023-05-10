@@ -84,7 +84,7 @@ class CloudresourcemanagerTagKeysListRequest
     public ?string $pageToken = null;
     
     /**
-     * Required. The resource name of the new TagKey's parent. Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+     * Required. The resource name of the TagKey's parent. Must be of the form `organizations/{org_id}` or `projects/{project_id}` or `projects/{project_number}`
      * 
      * @var ?string $parent
      */

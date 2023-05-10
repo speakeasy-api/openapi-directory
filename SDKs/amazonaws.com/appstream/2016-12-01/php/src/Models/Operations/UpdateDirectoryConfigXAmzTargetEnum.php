@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateDirectoryConfigXAmzTargetEnum: string
 {
     case PHOTON_ADMIN_PROXY_SERVICE_UPDATE_DIRECTORY_CONFIG = 'PhotonAdminProxyService.UpdateDirectoryConfig';

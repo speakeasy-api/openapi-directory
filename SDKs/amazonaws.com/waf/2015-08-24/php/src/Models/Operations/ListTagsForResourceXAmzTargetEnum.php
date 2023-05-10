@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListTagsForResourceXAmzTargetEnum: string
 {
     case AWSWAF20150824_LIST_TAGS_FOR_RESOURCE = 'AWSWAF_20150824.ListTagsForResource';

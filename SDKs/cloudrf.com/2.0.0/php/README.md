@@ -30,32 +30,62 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\InterferenceRequest;
+use \OpenAPI\OpenAPI\Models\Operations\InterferenceSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new InterferenceRequest();
+    $request->name = 'Terrence Rau';
+    $request->network = 'nulla';
+
+    $requestSecurity = new InterferenceSecurity();
+    $requestSecurity->apiKeyAuth = 'YOUR_API_KEY_HERE';
+
+    $response = $sdk->analyse->interference($request, $requestSecurity);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### analyse
+### [analyse](docs/analyse/README.md)
 
-* `interference` - Find the best server for overlapping coverage
-* `mesh` - Merge sites into a super layer.
-* `network` - Find the best server for somewhere
+* [interference](docs/analyse/README.md#interference) - Find the best server for overlapping coverage
+* [mesh](docs/analyse/README.md#mesh) - Merge sites into a super layer.
+* [network](docs/analyse/README.md#network) - Find the best server for somewhere
 
-### create
+### [create](docs/create/README.md)
 
-* `area` - Create a point-to-multipoint heatmap
-* `path` - Point-to-point path profile analysis (Tx to Rx)
-* `points` - Point-to-multipoint path profile analysis (Many Tx, one Rx)
+* [area](docs/create/README.md#area) - Create a point-to-multipoint heatmap
+* [path](docs/create/README.md#path) - Point-to-point path profile analysis (Tx to Rx)
+* [points](docs/create/README.md#points) - Point-to-multipoint path profile analysis (Many Tx, one Rx)
 
-### manage
+### [manage](docs/manage/README.md)
 
-* `addClutter` - Upload clutter data as GeoJSON
-* `delete` - Delete a calculation from the database.
-* `deleteNetwork` - Delete an entire network
-* `export` - Export a calculation in a GIS file format
-* `list` - List calculations from your archive
+* [addClutter](docs/manage/README.md#addclutter) - Upload clutter data as GeoJSON
+* [delete](docs/manage/README.md#delete) - Delete a calculation from the database.
+* [deleteNetwork](docs/manage/README.md#deletenetwork) - Delete an entire network
+* [export](docs/manage/README.md#export) - Export a calculation in a GIS file format
+* [list](docs/manage/README.md#list) - List calculations from your archive
 <!-- End SDK Available Operations -->
 
 ### Maturity

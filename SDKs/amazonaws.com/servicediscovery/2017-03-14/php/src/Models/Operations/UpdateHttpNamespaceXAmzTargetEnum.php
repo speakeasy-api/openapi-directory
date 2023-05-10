@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateHttpNamespaceXAmzTargetEnum: string
 {
     case ROUTE53_AUTO_NAMING_V20170314_UPDATE_HTTP_NAMESPACE = 'Route53AutoNaming_v20170314.UpdateHttpNamespace';

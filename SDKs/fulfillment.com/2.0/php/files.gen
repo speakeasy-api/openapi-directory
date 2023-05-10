@@ -164,6 +164,7 @@ src/Models/Operations/GetTrackTrackingResponseTrackingNumberV2CarrierSimpleV2.ph
 src/Models/Operations/GetTrackTrackingResponseTrackingNumberV2.php
 src/Models/Operations/GetTrackTrackingResponse.php
 src/Models/Operations/GetTrackResponse.php
+src/Models/Operations/GetUsersMeSecurity.php
 src/Models/Operations/GetUsersMeUserContactV2UserContactV2Merchant.php
 src/Models/Operations/GetUsersMeUserContactV2UserContactV2.php
 src/Models/Operations/GetUsersMeUserContactV2Merchant.php
@@ -199,4 +200,13 @@ src/Models/Shared/OnetrackGetResponses200ContentApplication1jsonSchemaProperties
 src/Models/Shared/OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOrigin.php
 src/Models/Shared/OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometryTypeEnum.php
 src/Models/Shared/OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometry.php
+docs/sdk/README.md
+docs/accounting/README.md
+docs/auth/README.md
+docs/inventory/README.md
+docs/orders/README.md
+docs/partners/README.md
+docs/returns/README.md
+docs/tracking/README.md
+docs/users/README.md
 USAGE.md

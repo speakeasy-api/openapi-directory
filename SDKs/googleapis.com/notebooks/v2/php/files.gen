@@ -56,4 +56,6 @@ src/Models/Shared/Location.php
 src/Models/Shared/Operation.php
 src/Models/Shared/Status.php
 src/Models/Shared/ListOperationsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

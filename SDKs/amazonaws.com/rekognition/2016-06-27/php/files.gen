@@ -30,6 +30,9 @@ src/Models/Operations/CreateCollectionResponse.php
 src/Models/Operations/CreateDatasetXAmzTargetEnum.php
 src/Models/Operations/CreateDatasetRequest.php
 src/Models/Operations/CreateDatasetResponse.php
+src/Models/Operations/CreateFaceLivenessSessionXAmzTargetEnum.php
+src/Models/Operations/CreateFaceLivenessSessionRequest.php
+src/Models/Operations/CreateFaceLivenessSessionResponse.php
 src/Models/Operations/CreateProjectXAmzTargetEnum.php
 src/Models/Operations/CreateProjectRequest.php
 src/Models/Operations/CreateProjectResponse.php
@@ -108,6 +111,9 @@ src/Models/Operations/GetContentModerationResponse.php
 src/Models/Operations/GetFaceDetectionXAmzTargetEnum.php
 src/Models/Operations/GetFaceDetectionRequest.php
 src/Models/Operations/GetFaceDetectionResponse.php
+src/Models/Operations/GetFaceLivenessSessionResultsXAmzTargetEnum.php
+src/Models/Operations/GetFaceLivenessSessionResultsRequest.php
+src/Models/Operations/GetFaceLivenessSessionResultsResponse.php
 src/Models/Operations/GetFaceSearchXAmzTargetEnum.php
 src/Models/Operations/GetFaceSearchRequest.php
 src/Models/Operations/GetFaceSearchResponse.php
@@ -234,6 +240,10 @@ src/Models/Shared/CreateDatasetRequest.php
 src/Models/Shared/DatasetTypeEnum.php
 src/Models/Shared/DatasetSource.php
 src/Models/Shared/GroundTruthManifest.php
+src/Models/Shared/CreateFaceLivenessSessionResponse.php
+src/Models/Shared/CreateFaceLivenessSessionRequest.php
+src/Models/Shared/CreateFaceLivenessSessionRequestSettings.php
+src/Models/Shared/LivenessOutputConfig.php
 src/Models/Shared/CreateProjectResponse.php
 src/Models/Shared/CreateProjectRequest.php
 src/Models/Shared/CreateProjectVersionResponse.php
@@ -368,6 +378,10 @@ src/Models/Shared/ContentModerationSortByEnum.php
 src/Models/Shared/GetFaceDetectionResponse.php
 src/Models/Shared/FaceDetection.php
 src/Models/Shared/GetFaceDetectionRequest.php
+src/Models/Shared/GetFaceLivenessSessionResultsResponse.php
+src/Models/Shared/LivenessSessionStatusEnum.php
+src/Models/Shared/AuditImage.php
+src/Models/Shared/GetFaceLivenessSessionResultsRequest.php
 src/Models/Shared/GetFaceSearchResponse.php
 src/Models/Shared/PersonMatch.php
 src/Models/Shared/PersonDetail.php
@@ -473,4 +487,5 @@ src/Models/Shared/StreamProcessorSettingsForUpdate.php
 src/Models/Shared/ConnectedHomeSettingsForUpdate.php
 src/Models/Shared/StreamProcessorParameterToDeleteEnum.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

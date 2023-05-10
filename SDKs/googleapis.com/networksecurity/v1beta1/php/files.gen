@@ -146,6 +146,7 @@ src/Models/Shared/Location.php
 src/Models/Shared/ListOperationsResponse.php
 src/Models/Shared/ServerTlsPolicy.php
 src/Models/Shared/ServerTlsPolicyInput.php
+src/Models/Shared/MTLSPolicyClientValidationModeEnum.php
 src/Models/Shared/MTLSPolicy.php
 src/Models/Shared/GoogleIamV1Policy.php
 src/Models/Shared/GoogleIamV1Binding.php
@@ -163,4 +164,6 @@ src/Models/Shared/ListTlsInspectionPoliciesResponse.php
 src/Models/Shared/UrlListInput.php
 src/Models/Shared/UrlList.php
 src/Models/Shared/ListUrlListsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

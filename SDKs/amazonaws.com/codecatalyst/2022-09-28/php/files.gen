@@ -137,4 +137,5 @@ src/Models/Shared/StopDevEnvironmentSessionResponse.php
 src/Models/Shared/UpdateDevEnvironmentResponse.php
 src/Models/Shared/VerifySessionResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

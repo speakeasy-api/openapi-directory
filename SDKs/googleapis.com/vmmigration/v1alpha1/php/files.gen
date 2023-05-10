@@ -207,6 +207,7 @@ src/Models/Shared/MigrationWarning.php
 src/Models/Shared/LocalizedMessage.php
 src/Models/Shared/Link.php
 src/Models/Shared/ListMigratingVmsResponse.php
+src/Models/Shared/CutoverForecast.php
 src/Models/Shared/ListReplicationCyclesResponse.php
 src/Models/Shared/UtilizationReportStateEnum.php
 src/Models/Shared/UtilizationReportTimeFrameEnum.php
@@ -219,4 +220,6 @@ src/Models/Shared/ListUtilizationReportsResponse.php
 src/Models/Shared/TargetProjectInput.php
 src/Models/Shared/TargetProject.php
 src/Models/Shared/ListTargetProjectsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

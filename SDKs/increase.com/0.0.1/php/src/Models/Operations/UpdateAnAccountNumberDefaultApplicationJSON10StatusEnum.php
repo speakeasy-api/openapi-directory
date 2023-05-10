@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-enum UpdateAnAccountNumberDefaultApplicationJSON10StatusEnum: string
+enum UpdateAnAccountNumberDefaultApplicationJSON10StatusEnum: int
 {
-    case FOUR_HUNDRED = '400';
+    case FOUR_HUNDRED = 400;
 }

@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-enum ListAchPrenotificationsDefaultApplicationJSON3StatusEnum: string
+enum ListAchPrenotificationsDefaultApplicationJSON3StatusEnum: int
 {
-    case FOUR_HUNDRED_AND_NINE = '409';
+    case FOUR_HUNDRED_AND_NINE = 409;
 }

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeNodeConfigurationOptionsActionEnum: string
 {
     case DESCRIBE_NODE_CONFIGURATION_OPTIONS = 'DescribeNodeConfigurationOptions';

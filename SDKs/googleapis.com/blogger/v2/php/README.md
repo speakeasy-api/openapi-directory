@@ -30,36 +30,78 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\BloggerBlogsGetRequest;
+use \OpenAPI\OpenAPI\Models\Shared\XgafvEnum;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+use \OpenAPI\OpenAPI\Models\Operations\BloggerBlogsGetSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new BloggerBlogsGetRequest();
+    $request->dollarXgafv = XgafvEnum::TWO;
+    $request->accessToken = 'provident';
+    $request->alt = AltEnum::PROTO;
+    $request->blogId = 'quibusdam';
+    $request->callback = 'unde';
+    $request->fields = 'nulla';
+    $request->key = 'corrupti';
+    $request->oauthToken = 'illum';
+    $request->prettyPrint = false;
+    $request->quotaUser = 'vel';
+    $request->uploadType = 'error';
+    $request->uploadProtocol = 'deserunt';
+
+    $requestSecurity = new BloggerBlogsGetSecurity();
+    $requestSecurity->oauth2 = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+    $requestSecurity->oauth2c = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+
+    $response = $sdk->blogs->bloggerBlogsGet($request, $requestSecurity);
+
+    if ($response->blog !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### blogs
+### [blogs](docs/blogs/README.md)
 
-* `bloggerBlogsGet` - Gets a blog by id.
-* `bloggerBlogsList` - Lists blogs by user id, possibly filtered.
+* [bloggerBlogsGet](docs/blogs/README.md#bloggerblogsget) - Gets a blog by id.
+* [bloggerBlogsList](docs/blogs/README.md#bloggerblogslist) - Lists blogs by user id, possibly filtered.
 
-### comments
+### [comments](docs/comments/README.md)
 
-* `bloggerCommentsGet` - Gets a comment by blog id, post id and comment id.
-* `bloggerCommentsList` - Lists comments.
+* [bloggerCommentsGet](docs/comments/README.md#bloggercommentsget) - Gets a comment by blog id, post id and comment id.
+* [bloggerCommentsList](docs/comments/README.md#bloggercommentslist) - Lists comments.
 
-### pages
+### [pages](docs/pages/README.md)
 
-* `bloggerPagesGet` - Gets a page by blog id and page id.
-* `bloggerPagesList` - Lists pages.
+* [bloggerPagesGet](docs/pages/README.md#bloggerpagesget) - Gets a page by blog id and page id.
+* [bloggerPagesList](docs/pages/README.md#bloggerpageslist) - Lists pages.
 
-### posts
+### [posts](docs/posts/README.md)
 
-* `bloggerPostsGet` - Gets a post by blog id and post id
-* `bloggerPostsList` - Lists posts.
+* [bloggerPostsGet](docs/posts/README.md#bloggerpostsget) - Gets a post by blog id and post id
+* [bloggerPostsList](docs/posts/README.md#bloggerpostslist) - Lists posts.
 
-### users
+### [users](docs/users/README.md)
 
-* `bloggerUsersGet` - Gets a user by user id.
+* [bloggerUsersGet](docs/users/README.md#bloggerusersget) - Gets a user by user id.
 <!-- End SDK Available Operations -->
 
 ### Maturity

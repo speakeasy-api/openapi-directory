@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteVpcPeeringAuthorizationXAmzTargetEnum: string
 {
     case GAME_LIFT_DELETE_VPC_PEERING_AUTHORIZATION = 'GameLift.DeleteVpcPeeringAuthorization';

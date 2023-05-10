@@ -98,4 +98,5 @@ src/Models/Shared/PutAlertManagerDefinitionResponse.php
 src/Models/Shared/PutRuleGroupsNamespaceResponse.php
 src/Models/Shared/UpdateLoggingConfigurationResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

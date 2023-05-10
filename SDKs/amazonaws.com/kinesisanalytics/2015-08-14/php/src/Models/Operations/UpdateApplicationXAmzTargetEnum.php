@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateApplicationXAmzTargetEnum: string
 {
     case KINESIS_ANALYTICS20150814_UPDATE_APPLICATION = 'KinesisAnalytics_20150814.UpdateApplication';

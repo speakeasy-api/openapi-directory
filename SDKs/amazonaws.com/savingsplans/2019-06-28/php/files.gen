@@ -73,4 +73,5 @@ src/Models/Shared/SavingsPlanOfferingFilterElement.php
 src/Models/Shared/SavingsPlanOfferingFilterAttributeEnum.php
 src/Models/Shared/ListTagsForResourceResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

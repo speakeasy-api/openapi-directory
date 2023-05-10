@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETListDeadLetterSourceQueuesActionEnum: string
 {
     case LIST_DEAD_LETTER_SOURCE_QUEUES = 'ListDeadLetterSourceQueues';

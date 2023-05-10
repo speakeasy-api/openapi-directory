@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteVerifiedAccessInstanceVersionEnum: string
 {
     case TWO_THOUSAND_AND_SIXTEEN1115 = '2016-11-15';

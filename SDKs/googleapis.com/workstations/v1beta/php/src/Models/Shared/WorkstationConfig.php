@@ -88,6 +88,16 @@ class WorkstationConfig
     public ?string $displayName = null;
     
     /**
+     * Whether to enable linux auditd logging on the workstation. When enabled, a service account must also be specified that has logging.buckets.write permission on the project. Operating system audit logging is distinct from [Cloud Audit Logs](https://cloud.google.com/workstations/docs/audit-logging).
+     * 
+     * @var ?bool $enableAuditAgent
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('enableAuditAgent')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $enableAuditAgent = null;
+    
+    /**
      * A customer-managed encryption key for the Compute Engine resources of this workstation configuration.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\CustomerEncryptionKey $encryptionKey
@@ -98,7 +108,7 @@ class WorkstationConfig
     public ?CustomerEncryptionKey $encryptionKey = null;
     
     /**
-     * Checksum computed by the server. May be sent on update and delete requests to ensure that the client has an up-to-date value before proceeding.
+     * Checksum computed by the server. May be sent on update and delete requests to make sure that the client has an up-to-date value before proceeding.
      * 
      * @var ?string $etag
      */
@@ -158,6 +168,16 @@ class WorkstationConfig
     public ?array $persistentDirectories = null;
     
     /**
+     * Readiness checks to perform when starting a workstation using this workstation configuration. Mark a workstation as running only after all specified readiness checks return 200 status codes.
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\ReadinessCheck> $readinessChecks
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('readinessChecks')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\ReadinessCheck>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $readinessChecks = null;
+    
+    /**
      * Output only. Indicates whether this resource is currently being updated to match its intended state.
      * 
      * @var ?bool $reconciling
@@ -206,6 +226,7 @@ class WorkstationConfig
 		$this->degraded = null;
 		$this->deleteTime = null;
 		$this->displayName = null;
+		$this->enableAuditAgent = null;
 		$this->encryptionKey = null;
 		$this->etag = null;
 		$this->host = null;
@@ -213,6 +234,7 @@ class WorkstationConfig
 		$this->labels = null;
 		$this->name = null;
 		$this->persistentDirectories = null;
+		$this->readinessChecks = null;
 		$this->reconciling = null;
 		$this->runningTimeout = null;
 		$this->uid = null;

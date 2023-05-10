@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * FleetAttributes - <p>Describes a GameLift fleet of game hosting resources.</p> <p> <b>Related actions</b> </p>
+ * FleetAttributes - <p>Describes a Amazon GameLift fleet of game hosting resources.</p> <p> <b>Related actions</b> </p>
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public
@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class FleetAttributes
 {
     /**
-     * GameLift Anywhere configuration options for your Anywhere fleets.
+     * Amazon GameLift Anywhere configuration options for your Anywhere fleets.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\AnywhereConfiguration $anywhereConfiguration
      */
@@ -38,7 +38,7 @@ class FleetAttributes
     public ?string $buildId = null;
     
     /**
-     * Determines whether a TLS/SSL certificate is generated for a fleet. This feature must be enabled when creating the fleet. All instances in a fleet share the same certificate. The certificate can be retrieved by calling the <a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk.html">GameLift Server SDK</a> operation <code>GetInstanceCertificate</code>. 
+     * Determines whether a TLS/SSL certificate is generated for a fleet. This feature must be enabled when creating the fleet. All instances in a fleet share the same certificate. The certificate can be retrieved by calling the <a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk.html">Amazon GameLift Server SDK</a> operation <code>GetInstanceCertificate</code>. 
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\CertificateConfiguration $certificateConfiguration
      */
@@ -123,7 +123,7 @@ class FleetAttributes
     public ?OperatingSystemEnum $operatingSystem = null;
     
     /**
-     * <p>A policy that puts limits on the number of game sessions that a player can create within a specified span of time. With this policy, you can control players' ability to consume available resources.</p> <p>The policy is evaluated when a player tries to create a new game session. On receiving a <code>CreateGameSession</code> request, GameLift checks that the player (identified by <code>CreatorId</code>) has created fewer than game session limit in the specified time period.</p>
+     * <p>A policy that puts limits on the number of game sessions that a player can create within a specified span of time. With this policy, you can control players' ability to consume available resources.</p> <p>The policy is evaluated when a player tries to create a new game session. On receiving a <code>CreateGameSession</code> request, Amazon GameLift checks that the player (identified by <code>CreatorId</code>) has created fewer than game session limit in the specified time period.</p>
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\ResourceCreationLimitPolicy $resourceCreationLimitPolicy
      */

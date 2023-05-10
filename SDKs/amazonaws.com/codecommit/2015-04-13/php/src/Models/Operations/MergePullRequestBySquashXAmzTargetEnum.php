@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum MergePullRequestBySquashXAmzTargetEnum: string
 {
     case CODE_COMMIT20150413_MERGE_PULL_REQUEST_BY_SQUASH = 'CodeCommit_20150413.MergePullRequestBySquash';

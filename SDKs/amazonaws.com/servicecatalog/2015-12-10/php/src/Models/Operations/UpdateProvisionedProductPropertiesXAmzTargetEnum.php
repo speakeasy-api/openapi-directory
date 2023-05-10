@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateProvisionedProductPropertiesXAmzTargetEnum: string
 {
     case AWS242_SERVICE_CATALOG_SERVICE_UPDATE_PROVISIONED_PRODUCT_PROPERTIES = 'AWS242ServiceCatalogService.UpdateProvisionedProductProperties';

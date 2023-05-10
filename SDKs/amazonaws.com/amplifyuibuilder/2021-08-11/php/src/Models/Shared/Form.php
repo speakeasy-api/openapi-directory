@@ -51,6 +51,11 @@ class Form
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $id;
     
+	#[\JMS\Serializer\Annotation\SerializedName('labelDecorator')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\LabelDecoratorEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?LabelDecoratorEnum $labelDecorator = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('name')]
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $name;
@@ -91,6 +96,7 @@ class Form
 		$this->fields = [];
 		$this->formActionType = \OpenAPI\OpenAPI\Models\Shared\FormActionTypeEnum::CREATE;
 		$this->id = "";
+		$this->labelDecorator = null;
 		$this->name = "";
 		$this->schemaVersion = "";
 		$this->sectionalElements = [];

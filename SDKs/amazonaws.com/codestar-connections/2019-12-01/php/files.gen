@@ -80,4 +80,5 @@ src/Models/Shared/TagResourceInput.php
 src/Models/Shared/UntagResourceInput.php
 src/Models/Shared/UpdateHostInput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

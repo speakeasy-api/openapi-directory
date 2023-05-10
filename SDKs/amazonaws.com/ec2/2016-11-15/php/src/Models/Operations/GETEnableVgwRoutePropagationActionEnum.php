@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETEnableVgwRoutePropagationActionEnum: string
 {
     case ENABLE_VGW_ROUTE_PROPAGATION = 'EnableVgwRoutePropagation';

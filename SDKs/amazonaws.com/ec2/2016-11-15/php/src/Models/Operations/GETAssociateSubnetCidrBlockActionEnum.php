@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETAssociateSubnetCidrBlockActionEnum: string
 {
     case ASSOCIATE_SUBNET_CIDR_BLOCK = 'AssociateSubnetCidrBlock';

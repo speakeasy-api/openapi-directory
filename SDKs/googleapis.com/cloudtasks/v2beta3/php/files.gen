@@ -88,6 +88,8 @@ src/Models/Shared/UriOverrideUriOverrideEnforceModeEnum.php
 src/Models/Shared/UriOverride.php
 src/Models/Shared/QueryOverride.php
 src/Models/Shared/PathOverride.php
+src/Models/Shared/OidcToken.php
+src/Models/Shared/OAuthToken.php
 src/Models/Shared/HeaderOverride.php
 src/Models/Shared/Header.php
 src/Models/Shared/AppEngineHttpQueue.php
@@ -107,8 +109,6 @@ src/Models/Shared/Attempt.php
 src/Models/Shared/Status.php
 src/Models/Shared/HttpRequestHttpMethodEnum.php
 src/Models/Shared/HttpRequest.php
-src/Models/Shared/OidcToken.php
-src/Models/Shared/OAuthToken.php
 src/Models/Shared/AppEngineHttpRequestHttpMethodEnum.php
 src/Models/Shared/AppEngineHttpRequest.php
 src/Models/Shared/BufferTaskRequest.php
@@ -120,4 +120,6 @@ src/Models/Shared/RunTaskRequestResponseViewEnum.php
 src/Models/Shared/RunTaskRequest.php
 src/Models/Shared/TestIamPermissionsResponse.php
 src/Models/Shared/TestIamPermissionsRequest.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

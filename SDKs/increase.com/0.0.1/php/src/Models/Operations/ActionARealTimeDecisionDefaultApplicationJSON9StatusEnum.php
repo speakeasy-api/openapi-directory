@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-enum ActionARealTimeDecisionDefaultApplicationJSON9StatusEnum: string
+enum ActionARealTimeDecisionDefaultApplicationJSON9StatusEnum: int
 {
-    case FOUR_HUNDRED = '400';
+    case FOUR_HUNDRED = 400;
 }

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteCallAnalyticsJobXAmzTargetEnum: string
 {
     case TRANSCRIBE_DELETE_CALL_ANALYTICS_JOB = 'Transcribe.DeleteCallAnalyticsJob';

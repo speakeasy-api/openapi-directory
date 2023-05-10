@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeAssociationExecutionTargetsXAmzTargetEnum: string
 {
     case AMAZON_SSM_DESCRIBE_ASSOCIATION_EXECUTION_TARGETS = 'AmazonSSM.DescribeAssociationExecutionTargets';

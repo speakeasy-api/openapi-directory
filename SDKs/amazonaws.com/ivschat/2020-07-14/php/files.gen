@@ -96,4 +96,5 @@ src/Models/Shared/UpdateLoggingConfigurationResponse.php
 src/Models/Shared/UpdateLoggingConfigurationStateEnum.php
 src/Models/Shared/UpdateRoomResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -216,4 +216,5 @@ src/Models/Shared/UpdateComputeEnvironmentResponse.php
 src/Models/Shared/CRUpdateAllocationStrategyEnum.php
 src/Models/Shared/UpdateJobQueueResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

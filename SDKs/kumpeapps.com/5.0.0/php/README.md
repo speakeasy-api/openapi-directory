@@ -30,51 +30,81 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\KkidAllowanceGetRequest;
+use \OpenAPI\OpenAPI\Models\Operations\KkidAllowanceGetSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new KkidAllowanceGetRequest();
+    $request->kidUserId = 548814;
+    $request->transactionDays = 592845;
+
+    $requestSecurity = new KkidAllowanceGetSecurity();
+    $requestSecurity->authKey = 'YOUR_API_KEY_HERE';
+
+    $response = $sdk->kKid->kkidAllowanceGet($request, $requestSecurity);
+
+    if ($response->allowance !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### kKid
+### [kKid](docs/kkid/README.md)
 
-* `kkidAllowanceGet` - returns allowance balance and allowance transactions
-* `kkidAllowancePost` - adds new allowance transaction to kidUserID
-* `kkidApnsPost` - subscribes/unsubscribes/registers for apns push notifications
-* `kkidChorelistDelete` - deletes chore for given chore id
-* `kkidChorelistGet` - returns list of chores for given user
-* `kkidChorelistPost` - adds chore for given user
-* `kkidChorelistPut` - updates chore for given chore id
-* `kkidMasteruserPost` - adds new master user account
-* `kkidShareGet` - Create Share Link
-* `kkidUserGet` - Gets user info
-* `kkidUserlistDelete` - deletes user
-* `kkidUserlistGet` - returns list of users
-* `kkidUserlistPost` - adds new child user
-* `kkidUserlistPut` - updates user
-* `kkidWishlistDelete` - Delete item from wishlist
-* `kkidWishlistGet` - Get list of wishlist items
-* `kkidWishlistPost` - Add item to kid's wishlist
-* `kkidWishlistPut` - Update item on kid's wishlist
+* [kkidAllowanceGet](docs/kkid/README.md#kkidallowanceget) - returns allowance balance and allowance transactions
+* [kkidAllowancePost](docs/kkid/README.md#kkidallowancepost) - adds new allowance transaction to kidUserID
+* [kkidApnsPost](docs/kkid/README.md#kkidapnspost) - subscribes/unsubscribes/registers for apns push notifications
+* [kkidChorelistDelete](docs/kkid/README.md#kkidchorelistdelete) - deletes chore for given chore id
+* [kkidChorelistGet](docs/kkid/README.md#kkidchorelistget) - returns list of chores for given user
+* [kkidChorelistPost](docs/kkid/README.md#kkidchorelistpost) - adds chore for given user
+* [kkidChorelistPut](docs/kkid/README.md#kkidchorelistput) - updates chore for given chore id
+* [kkidMasteruserPost](docs/kkid/README.md#kkidmasteruserpost) - adds new master user account
+* [kkidShareGet](docs/kkid/README.md#kkidshareget) - Create Share Link
+* [kkidUserGet](docs/kkid/README.md#kkiduserget) - Gets user info
+* [kkidUserlistDelete](docs/kkid/README.md#kkiduserlistdelete) - deletes user
+* [kkidUserlistGet](docs/kkid/README.md#kkiduserlistget) - returns list of users
+* [kkidUserlistPost](docs/kkid/README.md#kkiduserlistpost) - adds new child user
+* [kkidUserlistPut](docs/kkid/README.md#kkiduserlistput) - updates user
+* [kkidWishlistDelete](docs/kkid/README.md#kkidwishlistdelete) - Delete item from wishlist
+* [kkidWishlistGet](docs/kkid/README.md#kkidwishlistget) - Get list of wishlist items
+* [kkidWishlistPost](docs/kkid/README.md#kkidwishlistpost) - Add item to kid's wishlist
+* [kkidWishlistPut](docs/kkid/README.md#kkidwishlistput) - Update item on kid's wishlist
 
-### authentication
+### [authentication](docs/authentication/README.md)
 
-* `appkeyPatch` - Compromise app key
-* `appkeyPost` - Request app key
-* `appkeyPut` - Deactivate app key
-* `authAppkeyPatch` - Compromise app key
-* `authAppkeyPost` - Request app key
-* `authAppkeyPut` - Deactivate app key
-* `authAuthkeyGet` - Request auth key for user (login user)
-* `authAuthkeyPatch` - Compromise auth key
-* `authAuthkeyPost` - Request auth key for user (login user)
-* `authAuthkeyPut` - Deactivate auth key (logout)
-* `authVerifyotpGet` - Verifies YubiKey OTP for authenticated user
-* `authkeyGet` - Request auth key for user (login user)
-* `authkeyPatch` - Compromise auth key
-* `authkeyPost` - Request auth key for user (login user)
-* `authkeyPut` - Deactivate auth key (logout)
+* [~~appkeyPatch~~](docs/authentication/README.md#appkeypatch) - Compromise app key :warning: **Deprecated**
+* [~~appkeyPost~~](docs/authentication/README.md#appkeypost) - Request app key :warning: **Deprecated**
+* [~~appkeyPut~~](docs/authentication/README.md#appkeyput) - Deactivate app key :warning: **Deprecated**
+* [authAppkeyPatch](docs/authentication/README.md#authappkeypatch) - Compromise app key
+* [authAppkeyPost](docs/authentication/README.md#authappkeypost) - Request app key
+* [authAppkeyPut](docs/authentication/README.md#authappkeyput) - Deactivate app key
+* [authAuthkeyGet](docs/authentication/README.md#authauthkeyget) - Request auth key for user (login user)
+* [authAuthkeyPatch](docs/authentication/README.md#authauthkeypatch) - Compromise auth key
+* [authAuthkeyPost](docs/authentication/README.md#authauthkeypost) - Request auth key for user (login user)
+* [authAuthkeyPut](docs/authentication/README.md#authauthkeyput) - Deactivate auth key (logout)
+* [authVerifyotpGet](docs/authentication/README.md#authverifyotpget) - Verifies YubiKey OTP for authenticated user
+* [~~authkeyGet~~](docs/authentication/README.md#authkeyget) - Request auth key for user (login user) :warning: **Deprecated**
+* [~~authkeyPatch~~](docs/authentication/README.md#authkeypatch) - Compromise auth key :warning: **Deprecated**
+* [~~authkeyPost~~](docs/authentication/README.md#authkeypost) - Request auth key for user (login user) :warning: **Deprecated**
+* [~~authkeyPut~~](docs/authentication/README.md#authkeyput) - Deactivate auth key (logout) :warning: **Deprecated**
 <!-- End SDK Available Operations -->
 
 ### Maturity

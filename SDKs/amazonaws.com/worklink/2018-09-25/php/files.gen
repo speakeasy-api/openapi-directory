@@ -145,4 +145,5 @@ src/Models/Shared/AuthorizationProviderTypeEnum.php
 src/Models/Shared/ListWebsiteCertificateAuthoritiesResponse.php
 src/Models/Shared/WebsiteCaSummary.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

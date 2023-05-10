@@ -98,4 +98,9 @@ src/Models/Shared/MarketingEventCompleteRequestParams.php
 src/Models/Shared/CollectionResponseMarketingEventExternalUniqueIdentifierNoPaging.php
 src/Models/Shared/EventDetailSettings.php
 src/Models/Shared/EventDetailSettingsUrl.php
+docs/sdk/README.md
+docs/attendancesubscriberstatechanges/README.md
+docs/marketingeventsexternal/README.md
+docs/search/README.md
+docs/settingsexternal/README.md
 USAGE.md

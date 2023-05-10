@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeLoadBalancersActionEnum: string
 {
     case DESCRIBE_LOAD_BALANCERS = 'DescribeLoadBalancers';

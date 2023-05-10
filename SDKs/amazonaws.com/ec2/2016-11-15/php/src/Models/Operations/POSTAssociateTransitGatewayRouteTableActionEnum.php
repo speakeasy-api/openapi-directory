@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTAssociateTransitGatewayRouteTableActionEnum: string
 {
     case ASSOCIATE_TRANSIT_GATEWAY_ROUTE_TABLE = 'AssociateTransitGatewayRouteTable';

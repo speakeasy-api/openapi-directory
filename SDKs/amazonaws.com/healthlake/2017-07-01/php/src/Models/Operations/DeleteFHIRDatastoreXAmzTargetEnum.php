@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteFHIRDatastoreXAmzTargetEnum: string
 {
     case HEALTH_LAKE_DELETE_FHIR_DATASTORE = 'HealthLake.DeleteFHIRDatastore';

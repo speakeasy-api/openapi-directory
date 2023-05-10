@@ -569,4 +569,6 @@ src/Models/Shared/GoogleCloudDialogflowV2beta1ListKnowledgeBasesResponse.php
 src/Models/Shared/GoogleCloudLocationListLocationsResponse.php
 src/Models/Shared/GoogleCloudLocationLocation.php
 src/Models/Shared/GoogleLongrunningListOperationsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

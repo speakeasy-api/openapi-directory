@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteOrganizationXAmzTargetEnum: string
 {
     case WORK_MAIL_SERVICE_DELETE_ORGANIZATION = 'WorkMailService.DeleteOrganization';

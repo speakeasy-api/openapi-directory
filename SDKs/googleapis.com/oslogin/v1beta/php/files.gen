@@ -64,4 +64,6 @@ src/Models/Shared/PosixAccount.php
 src/Models/Shared/AltEnum.php
 src/Models/Shared/XgafvEnum.php
 src/Models/Shared/ImportSshPublicKeyResponse.php
+docs/sdk/README.md
+docs/users/README.md
 USAGE.md

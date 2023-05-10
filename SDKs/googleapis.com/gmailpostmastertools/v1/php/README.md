@@ -30,18 +30,61 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GmailpostmastertoolsDomainsListRequest;
+use \OpenAPI\OpenAPI\Models\Shared\XgafvEnum;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+use \OpenAPI\OpenAPI\Models\Operations\GmailpostmastertoolsDomainsListSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GmailpostmastertoolsDomainsListRequest();
+    $request->dollarXgafv = XgafvEnum::TWO;
+    $request->accessToken = 'provident';
+    $request->alt = AltEnum::PROTO;
+    $request->callback = 'quibusdam';
+    $request->fields = 'unde';
+    $request->key = 'nulla';
+    $request->oauthToken = 'corrupti';
+    $request->pageSize = 847252;
+    $request->pageToken = 'vel';
+    $request->prettyPrint = false;
+    $request->quotaUser = 'error';
+    $request->uploadType = 'deserunt';
+    $request->uploadProtocol = 'suscipit';
+
+    $requestSecurity = new GmailpostmastertoolsDomainsListSecurity();
+    $requestSecurity->oauth2 = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+    $requestSecurity->oauth2c = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+
+    $response = $sdk->domains->gmailpostmastertoolsDomainsList($request, $requestSecurity);
+
+    if ($response->listDomainsResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### domains
+### [domains](docs/domains/README.md)
 
-* `gmailpostmastertoolsDomainsList` - Lists the domains that have been registered by the client. The order of domains in the response is unspecified and non-deterministic. Newly created domains will not necessarily be added to the end of this list.
-* `gmailpostmastertoolsDomainsTrafficStatsGet` - Get traffic statistics for a domain on a specific date. Returns PERMISSION_DENIED if user does not have permission to access TrafficStats for the domain.
-* `gmailpostmastertoolsDomainsTrafficStatsList` - List traffic statistics for all available days. Returns PERMISSION_DENIED if user does not have permission to access TrafficStats for the domain.
+* [gmailpostmastertoolsDomainsList](docs/domains/README.md#gmailpostmastertoolsdomainslist) - Lists the domains that have been registered by the client. The order of domains in the response is unspecified and non-deterministic. Newly created domains will not necessarily be added to the end of this list.
+* [gmailpostmastertoolsDomainsTrafficStatsGet](docs/domains/README.md#gmailpostmastertoolsdomainstrafficstatsget) - Get traffic statistics for a domain on a specific date. Returns PERMISSION_DENIED if user does not have permission to access TrafficStats for the domain.
+* [gmailpostmastertoolsDomainsTrafficStatsList](docs/domains/README.md#gmailpostmastertoolsdomainstrafficstatslist) - List traffic statistics for all available days. Returns PERMISSION_DENIED if user does not have permission to access TrafficStats for the domain.
 <!-- End SDK Available Operations -->
 
 ### Maturity

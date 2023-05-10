@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UnlabelParameterVersionXAmzTargetEnum: string
 {
     case AMAZON_SSM_UNLABEL_PARAMETER_VERSION = 'AmazonSSM.UnlabelParameterVersion';

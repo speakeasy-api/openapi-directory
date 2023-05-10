@@ -1356,6 +1356,46 @@ class Instances
     }
 	
     /**
+     * Sets the Google Cloud Armor security policy for the specified instance. For more information, see Google Cloud Armor Overview
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ComputeInstancesSetSecurityPolicyRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\ComputeInstancesSetSecurityPolicySecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\ComputeInstancesSetSecurityPolicyResponse
+     */
+	public function computeInstancesSetSecurityPolicy(
+        \OpenAPI\OpenAPI\Models\Operations\ComputeInstancesSetSecurityPolicyRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\ComputeInstancesSetSecurityPolicySecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\ComputeInstancesSetSecurityPolicyResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/projects/{project}/zones/{zone}/instances/{instance}/setSecurityPolicy', \OpenAPI\OpenAPI\Models\Operations\ComputeInstancesSetSecurityPolicyRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "instancesSetSecurityPolicyRequest", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\ComputeInstancesSetSecurityPolicyRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\ComputeInstancesSetSecurityPolicyResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Sets the service account on the instance. For more information, read Changing the service account and access scopes for an instance.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ComputeInstancesSetServiceAccountRequest $request

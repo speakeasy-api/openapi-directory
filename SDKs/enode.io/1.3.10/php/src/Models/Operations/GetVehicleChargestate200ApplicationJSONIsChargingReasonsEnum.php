@@ -11,6 +11,6 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 
 enum GetVehicleChargestate200ApplicationJSONIsChargingReasonsEnum: string
 {
-    case UNKNOWN = '';
+    case LESS_THAN_NIL_GREATER_THAN = '<nil>';
     case DEFAULT = 'DEFAULT';
 }

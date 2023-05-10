@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartSchemaExtensionXAmzTargetEnum: string
 {
     case DIRECTORY_SERVICE20150416_START_SCHEMA_EXTENSION = 'DirectoryService_20150416.StartSchemaExtension';

@@ -50,7 +50,7 @@ class RequestApiKey
      */
 	public function requestApiKey(
         \OpenAPI\OpenAPI\Models\Operations\RequestApiKeyRequestBody $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\RequestApiKeyResponse
     {
         $baseUrl = RequestApiKey::REQUEST_API_KEY_SERVERS[0];

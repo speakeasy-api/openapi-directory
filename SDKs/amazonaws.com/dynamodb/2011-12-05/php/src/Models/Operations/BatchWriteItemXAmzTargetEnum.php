@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum BatchWriteItemXAmzTargetEnum: string
 {
     case DYNAMO_DB20111205_BATCH_WRITE_ITEM = 'DynamoDB_20111205.BatchWriteItem';

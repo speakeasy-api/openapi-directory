@@ -30,18 +30,46 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GETUserContentByDateJsonRequest;
+use \OpenAPI\OpenAPI\Models\Operations\GETUserContentByDateJsonSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GETUserContentByDateJsonRequest();
+    $request->date = 'corrupti';
+
+    $requestSecurity = new GETUserContentByDateJsonSecurity();
+    $requestSecurity->apiKey = 'YOUR_API_KEY_HERE';
+
+    $response = $sdk->getUserContentByDateJson($request, $requestSecurity);
+
+    if ($response->getUserContentByDateJSON200ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getUserContentByDateJson` - Comments by Date
-* `getUserContentRecentJson` - Recent User Comments
-* `getUserContentUrlJson` - Comments by URL
-* `getUserContentUserJson` - Comments by User
+* [getUserContentByDateJson](docs/sdk/README.md#getusercontentbydatejson) - Comments by Date
+* [getUserContentRecentJson](docs/sdk/README.md#getusercontentrecentjson) - Recent User Comments
+* [getUserContentUrlJson](docs/sdk/README.md#getusercontenturljson) - Comments by URL
+* [getUserContentUserJson](docs/sdk/README.md#getusercontentuserjson) - Comments by User
 <!-- End SDK Available Operations -->
 
 ### Maturity

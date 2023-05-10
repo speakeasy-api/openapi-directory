@@ -33,7 +33,7 @@ class PromoteResourceShareCreatedFromPolicyRequest
     public ?string $xAmzSignedHeaders = null;
     
     /**
-     * Specifies the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resoure Name (ARN)</a> of the resource share to promote.
+     * Specifies the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Name (ARN)</a> of the resource share to promote.
      * 
      * @var string $resourceShareArn
      */

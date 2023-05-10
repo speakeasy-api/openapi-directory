@@ -30,16 +30,68 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\GetPersonalizedRankingRequest;
+use \OpenAPI\OpenAPI\Models\Operations\GetPersonalizedRankingRequestBody;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetPersonalizedRankingRequest();
+    $request->requestBody = new GetPersonalizedRankingRequestBody();
+    $request->requestBody->campaignArn = 'corrupti';
+    $request->requestBody->context = [
+        'distinctio' => 'quibusdam',
+        'unde' => 'nulla',
+        'corrupti' => 'illum',
+    ];
+    $request->requestBody->filterArn = 'vel';
+    $request->requestBody->filterValues = [
+        'deserunt' => 'suscipit',
+        'iure' => 'magnam',
+        'debitis' => 'ipsa',
+    ];
+    $request->requestBody->inputList = [
+        'tempora',
+        'suscipit',
+        'molestiae',
+        'minus',
+    ];
+    $request->requestBody->userId = 'placeat';
+    $request->xAmzAlgorithm = 'voluptatum';
+    $request->xAmzContentSha256 = 'iusto';
+    $request->xAmzCredential = 'excepturi';
+    $request->xAmzDate = 'nisi';
+    $request->xAmzSecurityToken = 'recusandae';
+    $request->xAmzSignature = 'temporibus';
+    $request->xAmzSignedHeaders = 'ab';
+
+    $response = $sdk->getPersonalizedRanking($request);
+
+    if ($response->getPersonalizedRankingResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getPersonalizedRanking` - <p>Re-ranks a list of recommended items for the given user. The first item in the list is deemed the most likely item to be of interest to the user.</p> <note> <p>The solution backing the campaign must have been created using a recipe of type PERSONALIZED_RANKING.</p> </note>
-* `getRecommendations` - <p>Returns a list of recommended items. For campaigns, the campaign's Amazon Resource Name (ARN) is required and the required user and item input depends on the recipe type used to create the solution backing the campaign as follows:</p> <ul> <li> <p>USER_PERSONALIZATION - <code>userId</code> required, <code>itemId</code> not used</p> </li> <li> <p>RELATED_ITEMS - <code>itemId</code> required, <code>userId</code> not used</p> </li> </ul> <note> <p>Campaigns that are backed by a solution created using a recipe of type PERSONALIZED_RANKING use the API.</p> </note> <p> For recommenders, the recommender's ARN is required and the required item and user input depends on the use case (domain-based recipe) backing the recommender. For information on use case requirements see <a href="https://docs.aws.amazon.com/personalize/latest/dg/domain-use-cases.html">Choosing recommender use cases</a>. </p>
+* [getPersonalizedRanking](docs/sdk/README.md#getpersonalizedranking) - <p>Re-ranks a list of recommended items for the given user. The first item in the list is deemed the most likely item to be of interest to the user.</p> <note> <p>The solution backing the campaign must have been created using a recipe of type PERSONALIZED_RANKING.</p> </note>
+* [getRecommendations](docs/sdk/README.md#getrecommendations) - <p>Returns a list of recommended items. For campaigns, the campaign's Amazon Resource Name (ARN) is required and the required user and item input depends on the recipe type used to create the solution backing the campaign as follows:</p> <ul> <li> <p>USER_PERSONALIZATION - <code>userId</code> required, <code>itemId</code> not used</p> </li> <li> <p>RELATED_ITEMS - <code>itemId</code> required, <code>userId</code> not used</p> </li> </ul> <note> <p>Campaigns that are backed by a solution created using a recipe of type PERSONALIZED_RANKING use the API.</p> </note> <p> For recommenders, the recommender's ARN is required and the required item and user input depends on the use case (domain-based recipe) backing the recommender. For information on use case requirements see <a href="https://docs.aws.amazon.com/personalize/latest/dg/domain-use-cases.html">Choosing recommender use cases</a>. </p>
 <!-- End SDK Available Operations -->
 
 ### Maturity

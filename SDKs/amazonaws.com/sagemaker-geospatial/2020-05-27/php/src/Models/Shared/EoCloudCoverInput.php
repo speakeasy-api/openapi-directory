@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * EoCloudCoverInput - <p/>
+ * EoCloudCoverInput - The structure representing the EoCloudCover filter.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

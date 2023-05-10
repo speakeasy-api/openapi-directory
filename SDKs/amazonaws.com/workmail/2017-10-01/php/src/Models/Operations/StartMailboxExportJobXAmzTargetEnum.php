@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartMailboxExportJobXAmzTargetEnum: string
 {
     case WORK_MAIL_SERVICE_START_MAILBOX_EXPORT_JOB = 'WorkMailService.StartMailboxExportJob';

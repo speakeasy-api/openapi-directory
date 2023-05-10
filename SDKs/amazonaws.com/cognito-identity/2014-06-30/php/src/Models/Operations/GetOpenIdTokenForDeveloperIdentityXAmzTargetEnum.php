@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetOpenIdTokenForDeveloperIdentityXAmzTargetEnum: string
 {
     case AWS_COGNITO_IDENTITY_SERVICE_GET_OPEN_ID_TOKEN_FOR_DEVELOPER_IDENTITY = 'AWSCognitoIdentityService.GetOpenIdTokenForDeveloperIdentity';

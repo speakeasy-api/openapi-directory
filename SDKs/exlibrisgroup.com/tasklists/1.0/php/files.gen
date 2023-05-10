@@ -138,4 +138,9 @@ src/Models/Shared/Onealmaws1v11taskLists1requestedResourcesGetResponses200Conten
 src/Models/Shared/Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResource.php
 src/Models/Shared/Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchema.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/lendingrequests/README.md
+docs/printouts/README.md
+docs/requestedresources/README.md
+docs/test/README.md
 USAGE.md

@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-enum CreateAnAchTransferDefaultApplicationJSON1StatusEnum: string
+enum CreateAnAchTransferDefaultApplicationJSON1StatusEnum: int
 {
-    case FOUR_HUNDRED_AND_FOUR = '404';
+    case FOUR_HUNDRED_AND_FOUR = 404;
 }

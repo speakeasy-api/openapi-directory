@@ -33,5 +33,10 @@ src/Models/Operations/GetShakespeareGenerateNameResponse.php
 src/Models/Operations/GetShakespeareTranslateSecurity.php
 src/Models/Operations/GetShakespeareTranslateRequest.php
 src/Models/Operations/GetShakespeareTranslateResponse.php
+src/Models/Operations/GetShakespeareQuoteSecurity.php
 src/Models/Operations/GetShakespeareQuoteResponse.php
+docs/sdk/README.md
+docs/generation/README.md
+docs/translation/README.md
+docs/works/README.md
 USAGE.md

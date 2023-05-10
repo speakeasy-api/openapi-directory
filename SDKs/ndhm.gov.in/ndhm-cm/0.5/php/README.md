@@ -30,91 +30,170 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\PostV05ConsentRequestsInitJsonRequest;
+use \OpenAPI\OpenAPI\Models\Shared\ConsentRequest;
+use \OpenAPI\OpenAPI\Models\Shared\ConsentRequestConsent;
+use \OpenAPI\OpenAPI\Models\Shared\CareContextDefinition;
+use \OpenAPI\OpenAPI\Models\Shared\HITypeEnumEnum;
+use \OpenAPI\OpenAPI\Models\Shared\ConsentRequestConsentHip;
+use \OpenAPI\OpenAPI\Models\Shared\ConsentRequestConsentHiu;
+use \OpenAPI\OpenAPI\Models\Shared\ConsentRequestConsentPatient;
+use \OpenAPI\OpenAPI\Models\Shared\Permission;
+use \OpenAPI\OpenAPI\Models\Shared\PermissionAccessModeEnum;
+use \OpenAPI\OpenAPI\Models\Shared\PermissionDateRange;
+use \OpenAPI\OpenAPI\Models\Shared\PermissionFrequency;
+use \OpenAPI\OpenAPI\Models\Shared\PermissionFrequencyUnitEnum;
+use \OpenAPI\OpenAPI\Models\Shared\UsePurpose;
+use \OpenAPI\OpenAPI\Models\Shared\Requester;
+use \OpenAPI\OpenAPI\Models\Shared\RequesterIdentifier;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new PostV05ConsentRequestsInitJsonRequest();
+    $request->authorization = 'corrupti';
+    $request->consentRequest = new ConsentRequest();
+    $request->consentRequest->consent = new ConsentRequestConsent();
+    $request->consentRequest->consent->careContexts = [
+        new CareContextDefinition(),
+        new CareContextDefinition(),
+        new CareContextDefinition(),
+    ];
+    $request->consentRequest->consent->hiTypes = [
+        HITypeEnumEnum::DIAGNOSTIC_REPORT,
+        HITypeEnumEnum::DISCHARGE_SUMMARY,
+        HITypeEnumEnum::DIAGNOSTIC_REPORT,
+    ];
+    $request->consentRequest->consent->hip = new ConsentRequestConsentHip();
+    $request->consentRequest->consent->hip->id = '8d69a674-e0f4-467c-8879-6ed151a05dfc';
+    $request->consentRequest->consent->hiu = new ConsentRequestConsentHiu();
+    $request->consentRequest->consent->hiu->id = '2ddf7cc7-8ca1-4ba9-a8fc-816742cb7392';
+    $request->consentRequest->consent->patient = new ConsentRequestConsentPatient();
+    $request->consentRequest->consent->patient->id = 'hinapatel79@ndhm';
+    $request->consentRequest->consent->permission = new Permission();
+    $request->consentRequest->consent->permission->accessMode = PermissionAccessModeEnum::VIEW;
+    $request->consentRequest->consent->permission->dataEraseAt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-20T13:30:46.463Z');
+    $request->consentRequest->consent->permission->dateRange = new PermissionDateRange();
+    $request->consentRequest->consent->permission->dateRange->from = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-22T14:02:28.908Z');
+    $request->consentRequest->consent->permission->dateRange->to = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-20T19:39:29.035Z');
+    $request->consentRequest->consent->permission->frequency = new PermissionFrequency();
+    $request->consentRequest->consent->permission->frequency->repeats = 386489;
+    $request->consentRequest->consent->permission->frequency->unit = PermissionFrequencyUnitEnum::YEAR;
+    $request->consentRequest->consent->permission->frequency->value = 902599;
+    $request->consentRequest->consent->purpose = new UsePurpose();
+    $request->consentRequest->consent->purpose->code = 'fuga';
+    $request->consentRequest->consent->purpose->refUri = 'http://grown-opposite.info';
+    $request->consentRequest->consent->purpose->text = 'saepe';
+    $request->consentRequest->consent->requester = new Requester();
+    $request->consentRequest->consent->requester->identifier = new RequesterIdentifier();
+    $request->consentRequest->consent->requester->identifier->system = 'https://www.mciindia.org';
+    $request->consentRequest->consent->requester->identifier->type = 'REGNO';
+    $request->consentRequest->consent->requester->identifier->value = 'MH1001';
+    $request->consentRequest->consent->requester->name = 'Dr. Manju';
+    $request->consentRequest->requestId = '499a5a4a-7dda-4f20-9b67-e24589627061';
+    $request->consentRequest->timestamp = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-10-20T12:36:28.767Z');
+
+    $response = $sdk->consent->postV05ConsentRequestsInitJson($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### consent
+### [consent](docs/consent/README.md)
 
-* `postV05ConsentRequestsInitJson` - Create consent request
-* `postV05ConsentRequestsInitRaw` - Create consent request
-* `postV05ConsentRequestsStatusJson` - Get consent request status
-* `postV05ConsentRequestsStatusRaw` - Get consent request status
-* `postV05ConsentsFetch` - Get consent artefact
-* `postV05ConsentsHipOnNotifyJson` - Consent notification
-* `postV05ConsentsHipOnNotifyRaw` - Consent notification
-* `postV05ConsentsHiuOnNotify` - Consent notification
+* [postV05ConsentRequestsInitJson](docs/consent/README.md#postv05consentrequestsinitjson) - Create consent request
+* [postV05ConsentRequestsInitRaw](docs/consent/README.md#postv05consentrequestsinitraw) - Create consent request
+* [postV05ConsentRequestsStatusJson](docs/consent/README.md#postv05consentrequestsstatusjson) - Get consent request status
+* [postV05ConsentRequestsStatusRaw](docs/consent/README.md#postv05consentrequestsstatusraw) - Get consent request status
+* [postV05ConsentsFetch](docs/consent/README.md#postv05consentsfetch) - Get consent artefact
+* [postV05ConsentsHipOnNotifyJson](docs/consent/README.md#postv05consentshiponnotifyjson) - Consent notification
+* [postV05ConsentsHipOnNotifyRaw](docs/consent/README.md#postv05consentshiponnotifyraw) - Consent notification
+* [postV05ConsentsHiuOnNotify](docs/consent/README.md#postv05consentshiuonnotify) - Consent notification
 
-### dataFlow
+### [dataFlow](docs/dataflow/README.md)
 
-* `postV05HealthInformationNotifyJson` - Notifications corresponding to events during data flow
-* `postV05HealthInformationNotifyRaw` - Notifications corresponding to events during data flow
-* `postV05HealthInformationOnRequestJson` - Health information data request acknowledgement from HIP
-* `postV05HealthInformationOnRequestRaw` - Health information data request acknowledgement from HIP
-* `postV05HealthInformationRequestJson` - Health information data request from HIU
-* `postV05HealthInformationRequestRaw` - Health information data request from HIU
+* [postV05HealthInformationNotifyJson](docs/dataflow/README.md#postv05healthinformationnotifyjson) - Notifications corresponding to events during data flow
+* [postV05HealthInformationNotifyRaw](docs/dataflow/README.md#postv05healthinformationnotifyraw) - Notifications corresponding to events during data flow
+* [postV05HealthInformationOnRequestJson](docs/dataflow/README.md#postv05healthinformationonrequestjson) - Health information data request acknowledgement from HIP
+* [postV05HealthInformationOnRequestRaw](docs/dataflow/README.md#postv05healthinformationonrequestraw) - Health information data request acknowledgement from HIP
+* [postV05HealthInformationRequestJson](docs/dataflow/README.md#postv05healthinformationrequestjson) - Health information data request from HIU
+* [postV05HealthInformationRequestRaw](docs/dataflow/README.md#postv05healthinformationrequestraw) - Health information data request from HIU
 
-### discovery
+### [discovery](docs/discovery/README.md)
 
-* `postV05CareContextsOnDiscoverJson` - Response to patient's account discovery request
-* `postV05CareContextsOnDiscoverRaw` - Response to patient's account discovery request
+* [postV05CareContextsOnDiscoverJson](docs/discovery/README.md#postv05carecontextsondiscoverjson) - Response to patient's account discovery request
+* [postV05CareContextsOnDiscoverRaw](docs/discovery/README.md#postv05carecontextsondiscoverraw) - Response to patient's account discovery request
 
-### hipFacing
+### [hipFacing](docs/hipfacing/README.md)
 
-* `postV05UsersAuthFetchModesJson` - Get a patient's authentication modes relevant to specified purpose
-* `postV05UsersAuthFetchModesRaw` - Get a patient's authentication modes relevant to specified purpose
-* `postV05UsersAuthOnNotifyJson` - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
-* `postV05UsersAuthOnNotifyRaw` - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
+* [postV05UsersAuthFetchModesJson](docs/hipfacing/README.md#postv05usersauthfetchmodesjson) - Get a patient's authentication modes relevant to specified purpose
+* [postV05UsersAuthFetchModesRaw](docs/hipfacing/README.md#postv05usersauthfetchmodesraw) - Get a patient's authentication modes relevant to specified purpose
+* [postV05UsersAuthOnNotifyJson](docs/hipfacing/README.md#postv05usersauthonnotifyjson) - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
+* [postV05UsersAuthOnNotifyRaw](docs/hipfacing/README.md#postv05usersauthonnotifyraw) - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
 
-### hiuFacing
+### [hiuFacing](docs/hiufacing/README.md)
 
-* `postV05SubscriptionsHiuOnNotify` - Callback API for /subscriptions/hiu/notify to acknowledge receipt of notification.
-* `postV05UsersAuthOnNotifyJson` - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
-* `postV05UsersAuthOnNotifyRaw` - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
+* [postV05SubscriptionsHiuOnNotify](docs/hiufacing/README.md#postv05subscriptionshiuonnotify) - Callback API for /subscriptions/hiu/notify to acknowledge receipt of notification.
+* [postV05UsersAuthOnNotifyJson](docs/hiufacing/README.md#postv05usersauthonnotifyjson) - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
+* [postV05UsersAuthOnNotifyRaw](docs/hiufacing/README.md#postv05usersauthonnotifyraw) - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
 
-### identification
+### [identification](docs/identification/README.md)
 
-* `postV05PatientsFindJson` - Identify a patient by her consent-manager user-id
-* `postV05PatientsFindRaw` - Identify a patient by her consent-manager user-id
+* [postV05PatientsFindJson](docs/identification/README.md#postv05patientsfindjson) - Identify a patient by her consent-manager user-id
+* [postV05PatientsFindRaw](docs/identification/README.md#postv05patientsfindraw) - Identify a patient by her consent-manager user-id
 
-### link
+### [link](docs/link/README.md)
 
-* `postV05LinksLinkAddContextsJson` - API for HIP initiated care-context linking for patient
-* `postV05LinksLinkAddContextsRaw` - API for HIP initiated care-context linking for patient
-* `postV05LinksLinkOnConfirmJson` - Token authenticated by HIP, indicating completion of linkage of care-contexts
-* `postV05LinksLinkOnConfirmRaw` - Token authenticated by HIP, indicating completion of linkage of care-contexts
-* `postV05LinksLinkOnInitJson` - Response to patient's care context link request
-* `postV05LinksLinkOnInitRaw` - Response to patient's care context link request
+* [postV05LinksLinkAddContextsJson](docs/link/README.md#postv05linkslinkaddcontextsjson) - API for HIP initiated care-context linking for patient
+* [postV05LinksLinkAddContextsRaw](docs/link/README.md#postv05linkslinkaddcontextsraw) - API for HIP initiated care-context linking for patient
+* [postV05LinksLinkOnConfirmJson](docs/link/README.md#postv05linkslinkonconfirmjson) - Token authenticated by HIP, indicating completion of linkage of care-contexts
+* [postV05LinksLinkOnConfirmRaw](docs/link/README.md#postv05linkslinkonconfirmraw) - Token authenticated by HIP, indicating completion of linkage of care-contexts
+* [postV05LinksLinkOnInitJson](docs/link/README.md#postv05linkslinkoninitjson) - Response to patient's care context link request
+* [postV05LinksLinkOnInitRaw](docs/link/README.md#postv05linkslinkoninitraw) - Response to patient's care context link request
 
-### monitoring
+### [monitoring](docs/monitoring/README.md)
 
-* `getV05Heartbeat` - Get consent request status
+* [getV05Heartbeat](docs/monitoring/README.md#getv05heartbeat) - Get consent request status
 
-### profile
+### [profile](docs/profile/README.md)
 
-* `postV05PatientsProfileOnShareJson` - Response to patient's share profile request
-* `postV05PatientsProfileOnShareRaw` - Response to patient's share profile request
+* [postV05PatientsProfileOnShareJson](docs/profile/README.md#postv05patientsprofileonsharejson) - Response to patient's share profile request
+* [postV05PatientsProfileOnShareRaw](docs/profile/README.md#postv05patientsprofileonshareraw) - Response to patient's share profile request
 
-### subscriptions
+### [subscriptions](docs/subscriptions/README.md)
 
-* `postV05SubscriptionRequestsCmInitJson` - Request for subscription
-* `postV05SubscriptionRequestsCmInitRaw` - Request for subscription
-* `postV05SubscriptionRequestsHiuOnNotify` - Callback API for /subscription-requests/hiu/notify to acknowledge receipt of notification.
-* `postV05SubscriptionsHiuOnNotify` - Callback API for /subscriptions/hiu/notify to acknowledge receipt of notification.
+* [postV05SubscriptionRequestsCmInitJson](docs/subscriptions/README.md#postv05subscriptionrequestscminitjson) - Request for subscription
+* [postV05SubscriptionRequestsCmInitRaw](docs/subscriptions/README.md#postv05subscriptionrequestscminitraw) - Request for subscription
+* [postV05SubscriptionRequestsHiuOnNotify](docs/subscriptions/README.md#postv05subscriptionrequestshiuonnotify) - Callback API for /subscription-requests/hiu/notify to acknowledge receipt of notification.
+* [postV05SubscriptionsHiuOnNotify](docs/subscriptions/README.md#postv05subscriptionshiuonnotify) - Callback API for /subscriptions/hiu/notify to acknowledge receipt of notification.
 
-### userAuth
+### [userAuth](docs/userauth/README.md)
 
-* `postV05UsersAuthConfirmJson` - Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
-* `postV05UsersAuthConfirmRaw` - Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
-* `postV05UsersAuthFetchModesJson` - Get a patient's authentication modes relevant to specified purpose
-* `postV05UsersAuthFetchModesRaw` - Get a patient's authentication modes relevant to specified purpose
-* `postV05UsersAuthInitJson` - Initialize authentication from HIP
-* `postV05UsersAuthInitRaw` - Initialize authentication from HIP
-* `postV05UsersAuthOnNotifyJson` - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
-* `postV05UsersAuthOnNotifyRaw` - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
+* [postV05UsersAuthConfirmJson](docs/userauth/README.md#postv05usersauthconfirmjson) - Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
+* [postV05UsersAuthConfirmRaw](docs/userauth/README.md#postv05usersauthconfirmraw) - Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
+* [postV05UsersAuthFetchModesJson](docs/userauth/README.md#postv05usersauthfetchmodesjson) - Get a patient's authentication modes relevant to specified purpose
+* [postV05UsersAuthFetchModesRaw](docs/userauth/README.md#postv05usersauthfetchmodesraw) - Get a patient's authentication modes relevant to specified purpose
+* [postV05UsersAuthInitJson](docs/userauth/README.md#postv05usersauthinitjson) - Initialize authentication from HIP
+* [postV05UsersAuthInitRaw](docs/userauth/README.md#postv05usersauthinitraw) - Initialize authentication from HIP
+* [postV05UsersAuthOnNotifyJson](docs/userauth/README.md#postv05usersauthonnotifyjson) - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
+* [postV05UsersAuthOnNotifyRaw](docs/userauth/README.md#postv05usersauthonnotifyraw) - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
 <!-- End SDK Available Operations -->
 
 ### Maturity

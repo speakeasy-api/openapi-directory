@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ModifyInstanceFleetXAmzTargetEnum: string
 {
     case ELASTIC_MAP_REDUCE_MODIFY_INSTANCE_FLEET = 'ElasticMapReduce.ModifyInstanceFleet';

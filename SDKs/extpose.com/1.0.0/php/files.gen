@@ -19,6 +19,9 @@ src/Utils/SecurityClient.php
 src/Utils/SecurityMetadata.php
 src/Utils/SpeakeasyMetadata.php
 src/Utils/Utils.php
+src/Models/Operations/GetUserExtensionsSecurity.php
 src/Models/Operations/GetUserExtensionsResponse.php
 src/Models/Shared/Extension.php
+docs/sdk/README.md
+docs/user/README.md
 USAGE.md

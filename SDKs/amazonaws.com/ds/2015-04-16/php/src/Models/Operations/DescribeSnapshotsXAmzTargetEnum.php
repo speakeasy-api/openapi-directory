@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeSnapshotsXAmzTargetEnum: string
 {
     case DIRECTORY_SERVICE20150416_DESCRIBE_SNAPSHOTS = 'DirectoryService_20150416.DescribeSnapshots';

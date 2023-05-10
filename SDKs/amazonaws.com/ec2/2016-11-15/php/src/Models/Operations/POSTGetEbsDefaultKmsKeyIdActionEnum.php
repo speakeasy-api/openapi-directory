@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTGetEbsDefaultKmsKeyIdActionEnum: string
 {
     case GET_EBS_DEFAULT_KMS_KEY_ID = 'GetEbsDefaultKmsKeyId';

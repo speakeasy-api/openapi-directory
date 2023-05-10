@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RequestCancelWorkflowExecutionXAmzTargetEnum: string
 {
     case SIMPLE_WORKFLOW_SERVICE_REQUEST_CANCEL_WORKFLOW_EXECUTION = 'SimpleWorkflowService.RequestCancelWorkflowExecution';

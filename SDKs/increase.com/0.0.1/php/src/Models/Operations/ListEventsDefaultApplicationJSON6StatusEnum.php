@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-enum ListEventsDefaultApplicationJSON6StatusEnum: string
+enum ListEventsDefaultApplicationJSON6StatusEnum: int
 {
-    case FIVE_HUNDRED = '500';
+    case FIVE_HUNDRED = 500;
 }

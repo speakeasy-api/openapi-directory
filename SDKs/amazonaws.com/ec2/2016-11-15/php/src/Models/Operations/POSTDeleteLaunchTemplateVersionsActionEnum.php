@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteLaunchTemplateVersionsActionEnum: string
 {
     case DELETE_LAUNCH_TEMPLATE_VERSIONS = 'DeleteLaunchTemplateVersions';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteVoiceMessageSpendLimitOverrideXAmzTargetEnum: string
 {
     case PINPOINT_SMS_VOICE_V2_DELETE_VOICE_MESSAGE_SPEND_LIMIT_OVERRIDE = 'PinpointSMSVoiceV2.DeleteVoiceMessageSpendLimitOverride';

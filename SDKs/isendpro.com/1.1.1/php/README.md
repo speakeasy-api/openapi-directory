@@ -30,62 +30,87 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\ShortlinkRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new ShortlinkRequest();
+    $request->keyid = 'corrupti';
+    $request->shortlink = 'provident';
+
+    $response = $sdk->addShortlink->addShortlink($request);
+
+    if ($response->shortlinkResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### addShortlink
+### [addShortlink](docs/addshortlink/README.md)
 
-* `addShortlink` - add a shortlink
+* [addShortlink](docs/addshortlink/README.md#addshortlink) - add a shortlink
 
-### addSubaccount
+### [addSubaccount](docs/addsubaccount/README.md)
 
-* `subaccountAdd` - Ajoute un sous compte
+* [subaccountAdd](docs/addsubaccount/README.md#subaccountadd) - Ajoute un sous compte
 
-### campagne
+### [campagne](docs/campagne/README.md)
 
-* `getCampagne` - Retourne les SMS envoyés sur une période donnée
+* [getCampagne](docs/campagne/README.md#getcampagne) - Retourne les SMS envoyés sur une période donnée
 
-### comptage
+### [comptage](docs/comptage/README.md)
 
-* `comptage` - Compter le nombre de caractère 
+* [comptage](docs/comptage/README.md#comptage) - Compter le nombre de caractère 
 
-### credit
+### [credit](docs/credit/README.md)
 
-* `getCredit` - Interrogation credit
+* [getCredit](docs/credit/README.md#getcredit) - Interrogation credit
 
-### delListeNoire
+### [delListeNoire](docs/dellistenoire/README.md)
 
-* `delListeNoire` - Ajoute un numero en liste noire
+* [delListeNoire](docs/dellistenoire/README.md#dellistenoire) - Ajoute un numero en liste noire
 
-### editSubaccount
+### [editSubaccount](docs/editsubaccount/README.md)
 
-* `subaccountEdit` - Edit a subaccount
+* [subaccountEdit](docs/editsubaccount/README.md#subaccountedit) - Edit a subaccount
 
-### getListeNoire
+### [getListeNoire](docs/getlistenoire/README.md)
 
-* `getListeNoire` - Retourne le liste noire
+* [getListeNoire](docs/getlistenoire/README.md#getlistenoire) - Retourne le liste noire
 
-### hlr
+### [hlr](docs/hlr/README.md)
 
-* `getHlr` - Vérifier la validité d'un numéro
+* [getHlr](docs/hlr/README.md#gethlr) - Vérifier la validité d'un numéro
 
-### repertoire
+### [repertoire](docs/repertoire/README.md)
 
-* `repertoire` - Gestion repertoire (modification)
-* `repertoireCrea` - Gestion repertoire (creation)
+* [repertoire](docs/repertoire/README.md#repertoire) - Gestion repertoire (modification)
+* [repertoireCrea](docs/repertoire/README.md#repertoirecrea) - Gestion repertoire (creation)
 
-### setListeNoire
+### [setListeNoire](docs/setlistenoire/README.md)
 
-* `setListeNoire` - Ajoute un numero en liste noire
+* [setListeNoire](docs/setlistenoire/README.md#setlistenoire) - Ajoute un numero en liste noire
 
-### sms
+### [sms](docs/sms/README.md)
 
-* `sendSms` - Envoyer un sms
-* `sendSmsMulti` - Envoyer des SMS
+* [sendSms](docs/sms/README.md#sendsms) - Envoyer un sms
+* [sendSmsMulti](docs/sms/README.md#sendsmsmulti) - Envoyer des SMS
 <!-- End SDK Available Operations -->
 
 ### Maturity

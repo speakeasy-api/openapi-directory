@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum SearchFacesByImageXAmzTargetEnum: string
 {
     case REKOGNITION_SERVICE_SEARCH_FACES_BY_IMAGE = 'RekognitionService.SearchFacesByImage';

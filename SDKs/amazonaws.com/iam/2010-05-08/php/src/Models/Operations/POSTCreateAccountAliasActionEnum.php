@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateAccountAliasActionEnum: string
 {
     case CREATE_ACCOUNT_ALIAS = 'CreateAccountAlias';

@@ -14,5 +14,5 @@ enum PostUsersIdCategoriesRequestBodyRefundBehaviourEnum: string
 {
     case DEBITS_ARE_DEDUCTIONS = 'debits_are_deductions';
     case CREDITS_ARE_REFUNDS = 'credits_are_refunds';
-    case NULL = 'null';
+    case LESS_THAN_NIL_GREATER_THAN = '<nil>';
 }

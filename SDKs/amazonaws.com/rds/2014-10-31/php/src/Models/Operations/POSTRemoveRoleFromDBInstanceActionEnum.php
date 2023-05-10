@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTRemoveRoleFromDBInstanceActionEnum: string
 {
     case REMOVE_ROLE_FROM_DB_INSTANCE = 'RemoveRoleFromDBInstance';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum SendVoiceMessageXAmzTargetEnum: string
 {
     case PINPOINT_SMS_VOICE_V2_SEND_VOICE_MESSAGE = 'PinpointSMSVoiceV2.SendVoiceMessage';

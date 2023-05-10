@@ -20,12 +20,12 @@ class RecognitionConfigInput
     /**
      * Speech adaptation configuration.
      * 
-     * @var ?\OpenAPI\OpenAPI\Models\Shared\SpeechAdaptation $adaptation
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\SpeechAdaptationInput $adaptation
      */
 	#[\JMS\Serializer\Annotation\SerializedName('adaptation')]
-    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\SpeechAdaptation')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\SpeechAdaptationInput')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?SpeechAdaptation $adaptation = null;
+    public ?SpeechAdaptationInput $adaptation = null;
     
     /**
      * A list of up to 3 additional [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tags, listing possible alternative languages of the supplied audio. See [Language Support](https://cloud.google.com/speech-to-text/docs/languages) for a list of the currently supported language codes. If alternative languages are listed, recognition result will contain recognition in the most likely language detected including the main language_code. The recognition result will include the language tag of the language detected in the audio. Note: This feature is only supported for Voice Command and Voice Search use cases and performance may vary for other use cases (e.g., phone call transcription).

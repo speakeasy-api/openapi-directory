@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListLogSubscriptionsXAmzTargetEnum: string
 {
     case DIRECTORY_SERVICE20150416_LIST_LOG_SUBSCRIPTIONS = 'DirectoryService_20150416.ListLogSubscriptions';

@@ -30,15 +30,41 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\PostMakePdfRequestBody;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new PostMakePdfRequestBody();
+    $request->html = 'corrupti';
+    $request->key = 'provident';
+    $request->url = 'distinctio';
+
+    $response = $sdk->postMakePdf($request);
+
+    if ($response->postMakePdf200ApplicationPdfBinaryString !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `postMakePdf` - Generate a PDF from HTML or URL.
+* [postMakePdf](docs/sdk/README.md#postmakepdf) - Generate a PDF from HTML or URL.
 <!-- End SDK Available Operations -->
 
 ### Maturity

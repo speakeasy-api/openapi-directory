@@ -42,9 +42,11 @@ class Errors
      * 
      * Returns with all of the error page types for this project
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetErrorsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetErrorsResponse
      */
 	public function getErrors(
+        \OpenAPI\OpenAPI\Models\Operations\GetErrorsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetErrorsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -52,7 +54,8 @@ class Errors
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * BufferTaskRequest - LINT.IfChange Request message for BufferTask.
+ * BufferTaskRequest - Request message for BufferTask.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

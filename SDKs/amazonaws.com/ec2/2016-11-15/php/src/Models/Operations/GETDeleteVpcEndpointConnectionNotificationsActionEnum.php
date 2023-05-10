@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteVpcEndpointConnectionNotificationsActionEnum: string
 {
     case DELETE_VPC_ENDPOINT_CONNECTION_NOTIFICATIONS = 'DeleteVpcEndpointConnectionNotifications';

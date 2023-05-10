@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListComponentProvisionedResourcesXAmzTargetEnum: string
 {
     case AWS_PROTON20200720_LIST_COMPONENT_PROVISIONED_RESOURCES = 'AwsProton20200720.ListComponentProvisionedResources';

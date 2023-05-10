@@ -22,4 +22,5 @@ src/Models/Operations/GetTimestagsFilterEnum.php
 src/Models/Operations/GetTimestagsRequest.php
 src/Models/Operations/GetTimestagsResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

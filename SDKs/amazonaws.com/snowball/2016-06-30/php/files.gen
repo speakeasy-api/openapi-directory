@@ -102,10 +102,14 @@ src/Models/Shared/CreateAddressResult.php
 src/Models/Shared/CreateAddressRequest.php
 src/Models/Shared/Address.php
 src/Models/Shared/CreateClusterResult.php
+src/Models/Shared/JobListEntry.php
+src/Models/Shared/SnowballTypeEnum.php
+src/Models/Shared/JobTypeEnum.php
+src/Models/Shared/JobStateEnum.php
 src/Models/Shared/CreateClusterRequest.php
 src/Models/Shared/TaxDocuments.php
 src/Models/Shared/INDTaxDocuments.php
-src/Models/Shared/SnowballTypeEnum.php
+src/Models/Shared/SnowballCapacityEnum.php
 src/Models/Shared/ShippingOptionEnum.php
 src/Models/Shared/JobResource.php
 src/Models/Shared/S3Resource.php
@@ -120,14 +124,12 @@ src/Models/Shared/RemoteManagementEnum.php
 src/Models/Shared/OnDeviceServiceConfiguration.php
 src/Models/Shared/TGWOnDeviceServiceConfiguration.php
 src/Models/Shared/StorageUnitEnum.php
+src/Models/Shared/S3OnDeviceServiceConfiguration.php
 src/Models/Shared/NFSOnDeviceServiceConfiguration.php
 src/Models/Shared/EKSOnDeviceServiceConfiguration.php
 src/Models/Shared/Notification.php
-src/Models/Shared/JobStateEnum.php
-src/Models/Shared/JobTypeEnum.php
 src/Models/Shared/CreateJobResult.php
 src/Models/Shared/CreateJobRequest.php
-src/Models/Shared/SnowballCapacityEnum.php
 src/Models/Shared/DeviceConfiguration.php
 src/Models/Shared/SnowconeDeviceConfiguration.php
 src/Models/Shared/WirelessConnection.php
@@ -162,7 +164,6 @@ src/Models/Shared/GetSnowballUsageResult.php
 src/Models/Shared/GetSoftwareUpdatesResult.php
 src/Models/Shared/GetSoftwareUpdatesRequest.php
 src/Models/Shared/ListClusterJobsResult.php
-src/Models/Shared/JobListEntry.php
 src/Models/Shared/ListClusterJobsRequest.php
 src/Models/Shared/ListClustersResult.php
 src/Models/Shared/ClusterListEntry.php
@@ -186,4 +187,5 @@ src/Models/Shared/UpdateJobShipmentStateRequest.php
 src/Models/Shared/ShipmentStateEnum.php
 src/Models/Shared/UpdateLongTermPricingRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -159,6 +159,7 @@ src/Models/Shared/TeamDriveInfo.php
 src/Models/Shared/SitesUrlInfo.php
 src/Models/Shared/SharedDriveInfo.php
 src/Models/Shared/OrgUnitInfo.php
+src/Models/Shared/MailOptionsClientSideEncryptedOptionEnum.php
 src/Models/Shared/MailOptions.php
 src/Models/Shared/HangoutsChatOptions.php
 src/Models/Shared/HangoutsChatInfo.php
@@ -207,4 +208,7 @@ src/Models/Shared/ReopenMatterResponse.php
 src/Models/Shared/SavedQuery.php
 src/Models/Shared/ListSavedQueriesResponse.php
 src/Models/Shared/ListOperationsResponse.php
+docs/sdk/README.md
+docs/matters/README.md
+docs/operations/README.md
 USAGE.md

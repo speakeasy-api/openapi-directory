@@ -192,4 +192,11 @@ src/Models/Shared/GetPromotions.php
 src/Models/Shared/GetTaxesScope.php
 src/Models/Shared/GetTaxes.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/bundles/README.md
+docs/campaignaudiences/README.md
+docs/coupons/README.md
+docs/notifications/README.md
+docs/priceslegacyv1/README.md
+docs/promotionsandtaxes/README.md
 USAGE.md

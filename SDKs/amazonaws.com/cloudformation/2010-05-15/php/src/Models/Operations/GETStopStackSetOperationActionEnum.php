@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETStopStackSetOperationActionEnum: string
 {
     case STOP_STACK_SET_OPERATION = 'StopStackSetOperation';

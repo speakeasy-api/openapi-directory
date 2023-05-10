@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListFlywheelIterationHistoryXAmzTargetEnum: string
 {
     case COMPREHEND20171127_LIST_FLYWHEEL_ITERATION_HISTORY = 'Comprehend_20171127.ListFlywheelIterationHistory';

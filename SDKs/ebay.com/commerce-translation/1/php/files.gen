@@ -28,4 +28,6 @@ src/Models/Shared/ErrorParameter.php
 src/Models/Shared/TranslateResponse.php
 src/Models/Shared/Translation.php
 src/Models/Shared/TranslateRequest.php
+docs/sdk/README.md
+docs/language/README.md
 USAGE.md

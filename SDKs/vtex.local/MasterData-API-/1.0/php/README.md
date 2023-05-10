@@ -30,56 +30,84 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\RetrieveattachmentRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new RetrieveattachmentRequest();
+    $request->acronym = 'corrupti';
+    $request->field = 'provident';
+    $request->fileName = 'distinctio';
+    $request->id = 'd9d8d69a-674e-40f4-a7cc-8796ed151a05';
+
+    $response = $sdk->attachments->retrieveattachment($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### attachments
+### [attachments](docs/attachments/README.md)
 
-* `retrieveattachment` - Retrieve attachment
-* `saveattachment` - Save attachment
+* [retrieveattachment](docs/attachments/README.md#retrieveattachment) - Retrieve attachment
+* [saveattachment](docs/attachments/README.md#saveattachment) - Save attachment
 
-### clusters
+### [clusters](docs/clusters/README.md)
 
-* `validateDocumentbyClusters` - Validate Document by Clusters
+* [validateDocumentbyClusters](docs/clusters/README.md#validatedocumentbyclusters) - Validate Document by Clusters
 
-### dataEntities
+### [dataEntities](docs/dataentities/README.md)
 
-* `getdataentitystructure` - Get data entity structure
-* `listdataentities` - List data entities
+* [getdataentitystructure](docs/dataentities/README.md#getdataentitystructure) - Get data entity structure
+* [listdataentities](docs/dataentities/README.md#listdataentities) - List data entities
 
-### documents
+### [documents](docs/documents/README.md)
 
-* `createnewdocument` - Create new document
-* `createorupdateentiredocument` - Create or update entire document
-* `createorupdatepartialdocument` - Create or update partial document
-* `deletedocument` - Delete document
-* `getdocument` - Get document
-* `updateentiredocument` - Update entire document
-* `updatepartialdocument` - Update partial document
+* [createnewdocument](docs/documents/README.md#createnewdocument) - Create new document
+* [createorupdateentiredocument](docs/documents/README.md#createorupdateentiredocument) - Create or update entire document
+* [createorupdatepartialdocument](docs/documents/README.md#createorupdatepartialdocument) - Create or update partial document
+* [deletedocument](docs/documents/README.md#deletedocument) - Delete document
+* [getdocument](docs/documents/README.md#getdocument) - Get document
+* [updateentiredocument](docs/documents/README.md#updateentiredocument) - Update entire document
+* [updatepartialdocument](docs/documents/README.md#updatepartialdocument) - Update partial document
 
-### score
+### [score](docs/score/README.md)
 
-* `deletescorebyfield` - Delete score by field
-* `putscorebyfield` - Put score by field
-* `putscores` - Put scores
+* [deletescorebyfield](docs/score/README.md#deletescorebyfield) - Delete score by field
+* [putscorebyfield](docs/score/README.md#putscorebyfield) - Put score by field
+* [putscores](docs/score/README.md#putscores) - Put scores
 
-### scroll
+### [scroll](docs/scroll/README.md)
 
-* `scrolldocuments` - Scroll documents
+* [scrolldocuments](docs/scroll/README.md#scrolldocuments) - Scroll documents
 
-### search
+### [search](docs/search/README.md)
 
-* `searchdocuments` - Search documents
+* [searchdocuments](docs/search/README.md#searchdocuments) - Search documents
 
-### versions
+### [versions](docs/versions/README.md)
 
-* `getversion` - Get version
-* `listversions` - List versions
-* `putversion` - Put version
+* [getversion](docs/versions/README.md#getversion) - Get version
+* [listversions](docs/versions/README.md#listversions) - List versions
+* [putversion](docs/versions/README.md#putversion) - Put version
 <!-- End SDK Available Operations -->
 
 ### Maturity

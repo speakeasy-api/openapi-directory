@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeCacheSubnetGroupsActionEnum: string
 {
     case DESCRIBE_CACHE_SUBNET_GROUPS = 'DescribeCacheSubnetGroups';

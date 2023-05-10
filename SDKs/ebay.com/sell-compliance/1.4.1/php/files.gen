@@ -39,4 +39,7 @@ src/Models/Shared/AspectRecommendations.php
 src/Models/Shared/SuppressViolationRequest.php
 src/Models/Shared/ComplianceSummary.php
 src/Models/Shared/ComplianceSummaryInfo.php
+docs/sdk/README.md
+docs/listingviolation/README.md
+docs/listingviolationsummary/README.md
 USAGE.md

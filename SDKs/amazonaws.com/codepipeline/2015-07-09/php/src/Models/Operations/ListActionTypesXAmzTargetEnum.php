@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListActionTypesXAmzTargetEnum: string
 {
     case CODE_PIPELINE20150709_LIST_ACTION_TYPES = 'CodePipeline_20150709.ListActionTypes';

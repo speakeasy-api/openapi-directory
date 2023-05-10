@@ -30,29 +30,74 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\ServicedirectoryProjectsLocationsListRequest;
+use \OpenAPI\OpenAPI\Models\Shared\XgafvEnum;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+use \OpenAPI\OpenAPI\Models\Operations\ServicedirectoryProjectsLocationsListSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new ServicedirectoryProjectsLocationsListRequest();
+    $request->dollarXgafv = XgafvEnum::TWO;
+    $request->accessToken = 'provident';
+    $request->alt = AltEnum::PROTO;
+    $request->callback = 'quibusdam';
+    $request->fields = 'unde';
+    $request->filter = 'nulla';
+    $request->key = 'corrupti';
+    $request->name = 'Ben Mueller';
+    $request->oauthToken = 'iure';
+    $request->pageSize = 297534;
+    $request->pageToken = 'debitis';
+    $request->prettyPrint = false;
+    $request->quotaUser = 'ipsa';
+    $request->uploadType = 'delectus';
+    $request->uploadProtocol = 'tempora';
+
+    $requestSecurity = new ServicedirectoryProjectsLocationsListSecurity();
+    $requestSecurity->oauth2 = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+    $requestSecurity->oauth2c = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+
+    $response = $sdk->projects->servicedirectoryProjectsLocationsList($request, $requestSecurity);
+
+    if ($response->listLocationsResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `servicedirectoryProjectsLocationsList` - Lists information about the supported locations for this service.
-* `servicedirectoryProjectsLocationsNamespacesCreate` - Creates a namespace, and returns the new namespace.
-* `servicedirectoryProjectsLocationsNamespacesList` - Lists all namespaces.
-* `servicedirectoryProjectsLocationsNamespacesServicesCreate` - Creates a service, and returns the new service.
-* `servicedirectoryProjectsLocationsNamespacesServicesEndpointsCreate` - Creates an endpoint, and returns the new endpoint.
-* `servicedirectoryProjectsLocationsNamespacesServicesEndpointsDelete` - Deletes an endpoint.
-* `servicedirectoryProjectsLocationsNamespacesServicesEndpointsGet` - Gets an endpoint.
-* `servicedirectoryProjectsLocationsNamespacesServicesEndpointsList` - Lists all endpoints.
-* `servicedirectoryProjectsLocationsNamespacesServicesEndpointsPatch` - Updates an endpoint.
-* `servicedirectoryProjectsLocationsNamespacesServicesGetIamPolicy` - Gets the IAM Policy for a resource (namespace or service only).
-* `servicedirectoryProjectsLocationsNamespacesServicesList` - Lists all services belonging to a namespace.
-* `servicedirectoryProjectsLocationsNamespacesServicesResolve` - Returns a service and its associated endpoints. Resolving a service is not considered an active developer method.
-* `servicedirectoryProjectsLocationsNamespacesServicesSetIamPolicy` - Sets the IAM Policy for a resource (namespace or service only).
-* `servicedirectoryProjectsLocationsNamespacesServicesTestIamPermissions` - Tests IAM permissions for a resource (namespace or service only).
+* [servicedirectoryProjectsLocationsList](docs/projects/README.md#servicedirectoryprojectslocationslist) - Lists information about the supported locations for this service.
+* [servicedirectoryProjectsLocationsNamespacesCreate](docs/projects/README.md#servicedirectoryprojectslocationsnamespacescreate) - Creates a namespace, and returns the new namespace.
+* [servicedirectoryProjectsLocationsNamespacesList](docs/projects/README.md#servicedirectoryprojectslocationsnamespaceslist) - Lists all namespaces.
+* [servicedirectoryProjectsLocationsNamespacesServicesCreate](docs/projects/README.md#servicedirectoryprojectslocationsnamespacesservicescreate) - Creates a service, and returns the new service.
+* [servicedirectoryProjectsLocationsNamespacesServicesEndpointsCreate](docs/projects/README.md#servicedirectoryprojectslocationsnamespacesservicesendpointscreate) - Creates an endpoint, and returns the new endpoint.
+* [servicedirectoryProjectsLocationsNamespacesServicesEndpointsDelete](docs/projects/README.md#servicedirectoryprojectslocationsnamespacesservicesendpointsdelete) - Deletes an endpoint.
+* [servicedirectoryProjectsLocationsNamespacesServicesEndpointsGet](docs/projects/README.md#servicedirectoryprojectslocationsnamespacesservicesendpointsget) - Gets an endpoint.
+* [servicedirectoryProjectsLocationsNamespacesServicesEndpointsList](docs/projects/README.md#servicedirectoryprojectslocationsnamespacesservicesendpointslist) - Lists all endpoints.
+* [servicedirectoryProjectsLocationsNamespacesServicesEndpointsPatch](docs/projects/README.md#servicedirectoryprojectslocationsnamespacesservicesendpointspatch) - Updates an endpoint.
+* [servicedirectoryProjectsLocationsNamespacesServicesGetIamPolicy](docs/projects/README.md#servicedirectoryprojectslocationsnamespacesservicesgetiampolicy) - Gets the IAM Policy for a resource (namespace or service only).
+* [servicedirectoryProjectsLocationsNamespacesServicesList](docs/projects/README.md#servicedirectoryprojectslocationsnamespacesserviceslist) - Lists all services belonging to a namespace.
+* [servicedirectoryProjectsLocationsNamespacesServicesResolve](docs/projects/README.md#servicedirectoryprojectslocationsnamespacesservicesresolve) - Returns a service and its associated endpoints. Resolving a service is not considered an active developer method.
+* [servicedirectoryProjectsLocationsNamespacesServicesSetIamPolicy](docs/projects/README.md#servicedirectoryprojectslocationsnamespacesservicessetiampolicy) - Sets the IAM Policy for a resource (namespace or service only).
+* [servicedirectoryProjectsLocationsNamespacesServicesTestIamPermissions](docs/projects/README.md#servicedirectoryprojectslocationsnamespacesservicestestiampermissions) - Tests IAM permissions for a resource (namespace or service only).
 <!-- End SDK Available Operations -->
 
 ### Maturity

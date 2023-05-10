@@ -42,9 +42,15 @@ class HostedOnboarding
      * 
      * Returns a list of hosted onboarding page themes.
      * 
+     * >If you are using hosted onboarding, [only use v2](https://docs.adyen.com/release-notes/platforms-and-financial-products#releaseNote=2023-05-01-legal-entity-management-api-3) for your API requests.
+     * 
+     * 
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetThemesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetThemesResponse
      */
 	public function getThemes(
+        \OpenAPI\OpenAPI\Models\Operations\GetThemesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetThemesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -52,7 +58,8 @@ class HostedOnboarding
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -80,7 +87,9 @@ class HostedOnboarding
     /**
      * Get an onboarding link theme
      * 
-     * Returns the details of the theme identified in the path.
+     * Returns the details of the theme identified in the path.>If you are using hosted onboarding, [only use v2](https://docs.adyen.com/release-notes/platforms-and-financial-products#releaseNote=2023-05-01-legal-entity-management-api-3) for your API requests.
+     * 
+     * 
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetThemesIdRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\GetThemesIdSecurity $security
@@ -126,6 +135,10 @@ class HostedOnboarding
      * Get a link to an Adyen-hosted onboarding page
      * 
      * Returns a link to an Adyen-hosted onboarding page where you need to redirect your user.
+     * 
+     * >If you are using hosted onboarding, [only use v2](https://docs.adyen.com/release-notes/platforms-and-financial-products#releaseNote=2023-05-01-legal-entity-management-api-3) for your API requests.
+     * 
+     * 
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\PostLegalEntitiesIdOnboardingLinksRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\PostLegalEntitiesIdOnboardingLinksSecurity $security

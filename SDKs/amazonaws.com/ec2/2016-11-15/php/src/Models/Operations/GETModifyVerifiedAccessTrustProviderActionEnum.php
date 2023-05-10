@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETModifyVerifiedAccessTrustProviderActionEnum: string
 {
     case MODIFY_VERIFIED_ACCESS_TRUST_PROVIDER = 'ModifyVerifiedAccessTrustProvider';

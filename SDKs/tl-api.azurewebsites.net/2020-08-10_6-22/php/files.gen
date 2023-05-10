@@ -48,6 +48,7 @@ src/Models/Operations/ArticleGetResponse.php
 src/Models/Operations/AuthLoginResponse.php
 src/Models/Operations/GymGetRequest.php
 src/Models/Operations/GymGetResponse.php
+src/Models/Operations/MembershipGetSecurity.php
 src/Models/Operations/MembershipGetResponse.php
 src/Models/Operations/MembershipPostResponse.php
 src/Models/Operations/PackageDeleteRequest.php
@@ -98,4 +99,13 @@ src/Models/Shared/MessageStatus.php
 src/Models/Shared/TestDTO.php
 src/Models/Shared/UserDTO.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/article/README.md
+docs/auth/README.md
+docs/gym/README.md
+docs/membership/README.md
+docs/package/README.md
+docs/status/README.md
+docs/test/README.md
+docs/user/README.md
 USAGE.md

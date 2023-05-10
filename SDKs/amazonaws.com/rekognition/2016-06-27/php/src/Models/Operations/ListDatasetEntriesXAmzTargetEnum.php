@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListDatasetEntriesXAmzTargetEnum: string
 {
     case REKOGNITION_SERVICE_LIST_DATASET_ENTRIES = 'RekognitionService.ListDatasetEntries';

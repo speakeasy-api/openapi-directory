@@ -42,9 +42,11 @@ class V1Pepsanction
      * 
      * Retrieve a list of all active Pep Sanction Report monitors for this account
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\PepMonitorListSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\PepMonitorListResponse
      */
 	public function pepMonitorList(
+        \OpenAPI\OpenAPI\Models\Operations\PepMonitorListSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\PepMonitorListResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -52,7 +54,8 @@ class V1Pepsanction
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

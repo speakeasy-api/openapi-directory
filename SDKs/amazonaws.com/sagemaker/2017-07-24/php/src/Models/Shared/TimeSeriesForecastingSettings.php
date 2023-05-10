@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * TimeSeriesForecastingSettings - Time series forecast settings for the SageMaker Canvas app.
+ * TimeSeriesForecastingSettings - Time series forecast settings for the SageMaker Canvas application.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

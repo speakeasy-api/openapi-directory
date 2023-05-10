@@ -504,7 +504,7 @@ class Projects
     }
 	
     /**
-     * Returns all Workstations using the specified config.
+     * Returns all Workstations using the specified workstation configuration.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsListRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsListSecurity $security
@@ -542,7 +542,7 @@ class Projects
     }
 	
     /**
-     * Returns all Workstations using the specified config on which the caller has the "workstations.workstations.use" permission.
+     * Returns all workstations using the specified workstation configuration on which the caller has the "workstations.workstations.use" permission.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsListUsableRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstationsListUsableSecurity $security

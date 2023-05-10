@@ -72,4 +72,6 @@ src/Models/Shared/StationSearchResults.php
 src/Models/Shared/StationSearchParams.php
 src/Models/Shared/StationFilters.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/apiv2/README.md
 USAGE.md

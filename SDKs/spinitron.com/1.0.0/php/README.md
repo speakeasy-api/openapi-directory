@@ -30,33 +30,71 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\GetPersonasRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetPersonasRequest();
+    $request->count = 548814;
+    $request->expand = [
+        'distinctio',
+        'quibusdam',
+        'unde',
+    ];
+    $request->fields = [
+        'corrupti',
+        'illum',
+        'vel',
+        'error',
+    ];
+    $request->name = 'Rick Kertzmann';
+    $request->page = 56713;
+
+    $response = $sdk->persona->getPersonas($request);
+
+    if ($response->getPersonas200ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### persona
+### [persona](docs/persona/README.md)
 
-* `getPersonas` - Get Personas
-* `getPersonasId` - Get Persona by id
+* [getPersonas](docs/persona/README.md#getpersonas) - Get Personas
+* [getPersonasId](docs/persona/README.md#getpersonasid) - Get Persona by id
 
-### playlist
+### [playlist](docs/playlist/README.md)
 
-* `getPlaylists` - Returns playlists optionally filtered by {start} and/or {end} datetimes
-* `getPlaylistsId` - Get a Playlist by id
+* [getPlaylists](docs/playlist/README.md#getplaylists) - Returns playlists optionally filtered by {start} and/or {end} datetimes
+* [getPlaylistsId](docs/playlist/README.md#getplaylistsid) - Get a Playlist by id
 
-### show
+### [show](docs/show/README.md)
 
-* `getShows` - Returns scheduled shows optionally filtered by {start} and/or {end} datetimes
-* `getShowsId` - Get a Show by id
+* [getShows](docs/show/README.md#getshows) - Returns scheduled shows optionally filtered by {start} and/or {end} datetimes
+* [getShowsId](docs/show/README.md#getshowsid) - Get a Show by id
 
-### spin
+### [spin](docs/spin/README.md)
 
-* `getSpins` - Returns spins optionally filtered by {start} and/or {end} datetimes
-* `getSpinsId` - Get a Spin by id
-* `postSpins` - Log a Spin
+* [getSpins](docs/spin/README.md#getspins) - Returns spins optionally filtered by {start} and/or {end} datetimes
+* [getSpinsId](docs/spin/README.md#getspinsid) - Get a Spin by id
+* [postSpins](docs/spin/README.md#postspins) - Log a Spin
 <!-- End SDK Available Operations -->
 
 ### Maturity

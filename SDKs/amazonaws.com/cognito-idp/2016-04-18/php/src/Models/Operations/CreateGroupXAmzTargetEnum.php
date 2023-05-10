@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateGroupXAmzTargetEnum: string
 {
     case AWS_COGNITO_IDENTITY_PROVIDER_SERVICE_CREATE_GROUP = 'AWSCognitoIdentityProviderService.CreateGroup';

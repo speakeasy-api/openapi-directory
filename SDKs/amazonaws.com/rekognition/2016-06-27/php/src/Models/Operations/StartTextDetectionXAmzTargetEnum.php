@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartTextDetectionXAmzTargetEnum: string
 {
     case REKOGNITION_SERVICE_START_TEXT_DETECTION = 'RekognitionService.StartTextDetection';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum MoveAccountXAmzTargetEnum: string
 {
     case AWS_ORGANIZATIONS_V20161128_MOVE_ACCOUNT = 'AWSOrganizationsV20161128.MoveAccount';

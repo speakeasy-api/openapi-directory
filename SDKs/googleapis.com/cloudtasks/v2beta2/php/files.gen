@@ -143,4 +143,7 @@ src/Models/Shared/RunTaskRequestResponseViewEnum.php
 src/Models/Shared/RunTaskRequest.php
 src/Models/Shared/TestIamPermissionsResponse.php
 src/Models/Shared/TestIamPermissionsRequest.php
+docs/sdk/README.md
+docs/api/README.md
+docs/projects/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETAssociateIamInstanceProfileActionEnum: string
 {
     case ASSOCIATE_IAM_INSTANCE_PROFILE = 'AssociateIamInstanceProfile';

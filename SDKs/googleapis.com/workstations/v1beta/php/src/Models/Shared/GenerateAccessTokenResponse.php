@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class GenerateAccessTokenResponse
 {
     /**
-     * The generated bearer access token. To use this token, include it in an Authorization header of an HTTP request sent to the associated workstation's hostname, for example, `Authorization: Bearer `.
+     * The generated bearer access token. To use this token, include it in an Authorization header of an HTTP request sent to the associated workstation's hostname—for example, `Authorization: Bearer `.
      * 
      * @var ?string $accessToken
      */

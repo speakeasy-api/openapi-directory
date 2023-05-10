@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Shared;
 
 
+/** The aggregate metric to evaluate. */
 enum GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectationStatisticEnum: string
 {
     case STATISTIC_UNDEFINED = 'STATISTIC_UNDEFINED';

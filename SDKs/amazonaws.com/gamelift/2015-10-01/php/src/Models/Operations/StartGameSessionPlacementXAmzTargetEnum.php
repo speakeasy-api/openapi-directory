@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartGameSessionPlacementXAmzTargetEnum: string
 {
     case GAME_LIFT_START_GAME_SESSION_PLACEMENT = 'GameLift.StartGameSessionPlacement';

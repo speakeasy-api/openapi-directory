@@ -227,4 +227,5 @@ src/Models/Shared/UpdateNotificationSettingsRequest.php
 src/Models/Shared/UpdateQualificationTypeResponse.php
 src/Models/Shared/UpdateQualificationTypeRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

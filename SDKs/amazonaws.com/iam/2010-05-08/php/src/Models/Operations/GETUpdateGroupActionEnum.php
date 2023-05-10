@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETUpdateGroupActionEnum: string
 {
     case UPDATE_GROUP = 'UpdateGroup';

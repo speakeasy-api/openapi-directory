@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETReplaceNetworkAclEntryActionEnum: string
 {
     case REPLACE_NETWORK_ACL_ENTRY = 'ReplaceNetworkAclEntry';

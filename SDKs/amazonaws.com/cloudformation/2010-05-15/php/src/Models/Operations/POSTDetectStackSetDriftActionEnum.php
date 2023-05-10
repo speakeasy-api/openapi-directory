@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDetectStackSetDriftActionEnum: string
 {
     case DETECT_STACK_SET_DRIFT = 'DetectStackSetDrift';

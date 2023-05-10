@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateVocabularyFilterXAmzTargetEnum: string
 {
     case TRANSCRIBE_CREATE_VOCABULARY_FILTER = 'Transcribe.CreateVocabularyFilter';

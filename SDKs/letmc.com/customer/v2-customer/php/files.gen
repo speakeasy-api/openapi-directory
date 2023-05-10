@@ -99,4 +99,10 @@ src/Models/Shared/LandlordMaintenanceCertificateModel.php
 src/Models/Shared/LandlordPhotoModelResults.php
 src/Models/Shared/LandlordPhotoModelPhotoTypeEnum.php
 src/Models/Shared/LandlordPhotoModel.php
+docs/sdk/README.md
+docs/branchcontroller/README.md
+docs/landlordcontroller/README.md
+docs/photocontroller/README.md
+docs/propertycontroller/README.md
+docs/sessioncontroller/README.md
 USAGE.md

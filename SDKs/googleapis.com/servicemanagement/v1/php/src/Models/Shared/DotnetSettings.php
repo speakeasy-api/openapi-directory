@@ -27,8 +27,63 @@ class DotnetSettings
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?CommonLanguageSettings $common = null;
     
+    /**
+     * Namespaces which must be aliased in snippets due to a known (but non-generator-predictable) naming collision
+     * 
+     * @var ?array<string> $forcedNamespaceAliases
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('forcedNamespaceAliases')]
+    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $forcedNamespaceAliases = null;
+    
+    /**
+     * Method signatures (in the form "service.method(signature)") which are provided separately, so shouldn't be generated. Snippets *calling* these methods are still generated, however.
+     * 
+     * @var ?array<string> $handwrittenSignatures
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('handwrittenSignatures')]
+    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $handwrittenSignatures = null;
+    
+    /**
+     * List of full resource types to ignore during generation. This is typically used for API-specific Location resources, which should be handled by the generator as if they were actually the common Location resources. Example entry: "documentai.googleapis.com/Location"
+     * 
+     * @var ?array<string> $ignoredResources
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('ignoredResources')]
+    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $ignoredResources = null;
+    
+    /**
+     * Map from full resource types to the effective short name for the resource. This is used when otherwise resource named from different services would cause naming collisions. Example entry: "datalabeling.googleapis.com/Dataset": "DataLabelingDataset"
+     * 
+     * @var ?array<string, string> $renamedResources
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('renamedResources')]
+    #[\JMS\Serializer\Annotation\Type('array<string, string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $renamedResources = null;
+    
+    /**
+     * Map from original service names to renamed versions. This is used when the default generated types would cause a naming conflict. (Neither name is fully-qualified.) Example: Subscriber to SubscriberServiceApi.
+     * 
+     * @var ?array<string, string> $renamedServices
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('renamedServices')]
+    #[\JMS\Serializer\Annotation\Type('array<string, string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $renamedServices = null;
+    
 	public function __construct()
 	{
 		$this->common = null;
+		$this->forcedNamespaceAliases = null;
+		$this->handwrittenSignatures = null;
+		$this->ignoredResources = null;
+		$this->renamedResources = null;
+		$this->renamedServices = null;
 	}
 }

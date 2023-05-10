@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeImageBuildersXAmzTargetEnum: string
 {
     case PHOTON_ADMIN_PROXY_SERVICE_DESCRIBE_IMAGE_BUILDERS = 'PhotonAdminProxyService.DescribeImageBuilders';

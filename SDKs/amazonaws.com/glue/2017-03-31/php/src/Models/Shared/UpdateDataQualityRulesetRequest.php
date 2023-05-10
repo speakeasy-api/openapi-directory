@@ -25,16 +25,10 @@ class UpdateDataQualityRulesetRequest
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $ruleset = null;
     
-	#[\JMS\Serializer\Annotation\SerializedName('UpdatedName')]
-    #[\JMS\Serializer\Annotation\Type('string')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?string $updatedName = null;
-    
 	public function __construct()
 	{
 		$this->description = null;
 		$this->name = "";
 		$this->ruleset = null;
-		$this->updatedName = null;
 	}
 }

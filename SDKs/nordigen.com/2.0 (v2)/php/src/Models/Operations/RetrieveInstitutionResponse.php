@@ -17,10 +17,10 @@ class RetrieveInstitutionResponse
     /**
      * Retrieve institution by id
      * 
-     * @var ?\OpenAPI\OpenAPI\Models\Shared\Integration $integration
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\IntegrationRetrieve $integrationRetrieve
      */
 	
-    public ?\OpenAPI\OpenAPI\Models\Shared\Integration $integration = null;
+    public ?\OpenAPI\OpenAPI\Models\Shared\IntegrationRetrieve $integrationRetrieve = null;
     
 	
     public int $statusCode;
@@ -52,14 +52,23 @@ class RetrieveInstitutionResponse
 	
     public ?array $retrieveInstitution404ApplicationJSONObject = null;
     
+    /**
+     * Nordigen rate limit exceeded
+     * 
+     * @var ?array<string, mixed> $retrieveInstitution429ApplicationJSONObject
+     */
+	
+    public ?array $retrieveInstitution429ApplicationJSONObject = null;
+    
 	public function __construct()
 	{
 		$this->contentType = "";
-		$this->integration = null;
+		$this->integrationRetrieve = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
 		$this->retrieveInstitution401ApplicationJSONObject = null;
 		$this->retrieveInstitution403ApplicationJSONObject = null;
 		$this->retrieveInstitution404ApplicationJSONObject = null;
+		$this->retrieveInstitution429ApplicationJSONObject = null;
 	}
 }

@@ -188,9 +188,11 @@ class SDK
     /**
      * The settings for all organizations of the system. Must have admin access.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetSettingsOrganizationsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetSettingsOrganizationsResponse
      */
 	public function getSettingsOrganizations(
+        \OpenAPI\OpenAPI\Models\Operations\GetSettingsOrganizationsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetSettingsOrganizationsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -198,7 +200,8 @@ class SDK
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -415,9 +418,11 @@ class SDK
     /**
      * Retrived the last modified for all settings of the system. Must have admin access.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\HeadSettingsOrganizationsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\HeadSettingsOrganizationsResponse
      */
 	public function headSettingsOrganizations(
+        \OpenAPI\OpenAPI\Models\Operations\HeadSettingsOrganizationsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\HeadSettingsOrganizationsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -425,7 +430,8 @@ class SDK
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('HEAD', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('HEAD', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

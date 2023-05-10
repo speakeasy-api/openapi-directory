@@ -176,6 +176,12 @@ src/Models/Operations/GetJourneyExecutionActivityMetricsRequest.php
 src/Models/Operations/GetJourneyExecutionActivityMetricsResponse.php
 src/Models/Operations/GetJourneyExecutionMetricsRequest.php
 src/Models/Operations/GetJourneyExecutionMetricsResponse.php
+src/Models/Operations/GetJourneyRunExecutionActivityMetricsRequest.php
+src/Models/Operations/GetJourneyRunExecutionActivityMetricsResponse.php
+src/Models/Operations/GetJourneyRunExecutionMetricsRequest.php
+src/Models/Operations/GetJourneyRunExecutionMetricsResponse.php
+src/Models/Operations/GetJourneyRunsRequest.php
+src/Models/Operations/GetJourneyRunsResponse.php
 src/Models/Operations/GetPushTemplateRequest.php
 src/Models/Operations/GetPushTemplateResponse.php
 src/Models/Operations/GetRecommenderConfigurationRequest.php
@@ -562,6 +568,14 @@ src/Models/Shared/GetJourneyExecutionActivityMetricsResponse.php
 src/Models/Shared/JourneyExecutionActivityMetricsResponse.php
 src/Models/Shared/GetJourneyExecutionMetricsResponse.php
 src/Models/Shared/JourneyExecutionMetricsResponse.php
+src/Models/Shared/GetJourneyRunExecutionActivityMetricsResponse.php
+src/Models/Shared/JourneyRunExecutionActivityMetricsResponse.php
+src/Models/Shared/GetJourneyRunExecutionMetricsResponse.php
+src/Models/Shared/JourneyRunExecutionMetricsResponse.php
+src/Models/Shared/GetJourneyRunsResponse.php
+src/Models/Shared/JourneyRunsResponse.php
+src/Models/Shared/JourneyRunResponse.php
+src/Models/Shared/JourneyRunStatusEnum.php
 src/Models/Shared/GetPushTemplateResponse.php
 src/Models/Shared/PushNotificationTemplateResponse.php
 src/Models/Shared/GetRecommenderConfigurationResponse.php
@@ -656,4 +670,5 @@ src/Models/Shared/UpdateVoiceTemplateResponse.php
 src/Models/Shared/VerifyOTPMessageResponse.php
 src/Models/Shared/VerificationResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

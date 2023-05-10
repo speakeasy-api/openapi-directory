@@ -30,4 +30,5 @@ src/Models/Shared/TravelCenterOpeningTimes.php
 src/Models/Shared/TravelCenterTypeEnum.php
 src/Models/Shared/TravelCenter.php
 src/Models/Shared/Error.php
+docs/sdk/README.md
 USAGE.md

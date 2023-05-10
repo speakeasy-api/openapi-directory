@@ -49,4 +49,6 @@ src/Models/Shared/UpdaterecurrenceRequest.php
 src/Models/Shared/Item.php
 src/Models/Shared/UpdaterecurrencesettingsRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/miscellaneous/README.md
 USAGE.md

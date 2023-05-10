@@ -88,7 +88,7 @@ class GoogleAdsSearchads360V0ResourcesCampaign
     public ?string $campaignBudget = null;
     
     /**
-     * Output only. Timestamp of the campaign's creation time, formatted in ISO 8601.
+     * Output only. The timestamp when this campaign was created. The timestamp is in the customer's time zone and in "yyyy-MM-dd HH:mm:ss" format. create_time will be deprecated in v1. Use creation_time instead.
      * 
      * @var ?string $createTime
      */
@@ -96,6 +96,16 @@ class GoogleAdsSearchads360V0ResourcesCampaign
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $createTime = null;
+    
+    /**
+     * Output only. The timestamp when this campaign was created. The timestamp is in the customer's time zone and in "yyyy-MM-dd HH:mm:ss" format.
+     * 
+     * @var ?string $creationTime
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('creationTime')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $creationTime = null;
     
     /**
      * The setting for controlling Dynamic Search Ads (DSA).
@@ -457,6 +467,7 @@ class GoogleAdsSearchads360V0ResourcesCampaign
 		$this->biddingStrategyType = null;
 		$this->campaignBudget = null;
 		$this->createTime = null;
+		$this->creationTime = null;
 		$this->dynamicSearchAdsSetting = null;
 		$this->endDate = null;
 		$this->engineId = null;

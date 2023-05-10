@@ -30,16 +30,41 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetglobaltimeRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetglobaltimeRequest();
+    $request->license = 'corrupti';
+    $request->locale = 'provident';
+
+    $response = $sdk->currentGlobalTime->getglobaltime($request);
+
+    if ($response->getglobaltime200ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### currentGlobalTime
+### [currentGlobalTime](docs/currentglobaltime/README.md)
 
-* `getglobaltime` - Gets the current time for a global locale
+* [getglobaltime](docs/currentglobaltime/README.md#getglobaltime) - Gets the current time for a global locale
 <!-- End SDK Available Operations -->
 
 ### Maturity

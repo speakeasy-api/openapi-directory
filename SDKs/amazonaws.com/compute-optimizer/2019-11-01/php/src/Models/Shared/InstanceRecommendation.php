@@ -72,6 +72,11 @@ class InstanceRecommendation
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $instanceName = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('instanceState')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\InstanceStateEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?InstanceStateEnum $instanceState = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('lastRefreshTimestamp')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -123,6 +128,7 @@ class InstanceRecommendation
 		$this->inferredWorkloadTypes = null;
 		$this->instanceArn = null;
 		$this->instanceName = null;
+		$this->instanceState = null;
 		$this->lastRefreshTimestamp = null;
 		$this->lookBackPeriodInDays = null;
 		$this->recommendationOptions = null;

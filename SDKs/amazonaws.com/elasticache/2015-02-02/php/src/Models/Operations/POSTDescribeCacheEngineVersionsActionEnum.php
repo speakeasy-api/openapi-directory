@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeCacheEngineVersionsActionEnum: string
 {
     case DESCRIBE_CACHE_ENGINE_VERSIONS = 'DescribeCacheEngineVersions';

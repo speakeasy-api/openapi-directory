@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETSetTypeDefaultVersionActionEnum: string
 {
     case SET_TYPE_DEFAULT_VERSION = 'SetTypeDefaultVersion';

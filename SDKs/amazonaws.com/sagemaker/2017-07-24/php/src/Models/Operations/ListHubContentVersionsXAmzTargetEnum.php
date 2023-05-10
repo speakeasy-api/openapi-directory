@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListHubContentVersionsXAmzTargetEnum: string
 {
     case SAGE_MAKER_LIST_HUB_CONTENT_VERSIONS = 'SageMaker.ListHubContentVersions';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateLocationFsxLustreXAmzTargetEnum: string
 {
     case FMRS_SERVICE_CREATE_LOCATION_FSX_LUSTRE = 'FmrsService.CreateLocationFsxLustre';

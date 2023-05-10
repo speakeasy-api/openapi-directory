@@ -27,4 +27,5 @@ src/Models/Shared/SendSMSRequest.php
 src/Models/Shared/BulkSMSRequest.php
 src/Models/Shared/Message.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

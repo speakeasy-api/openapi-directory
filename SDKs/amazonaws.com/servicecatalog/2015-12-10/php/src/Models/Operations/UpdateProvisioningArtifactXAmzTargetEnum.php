@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateProvisioningArtifactXAmzTargetEnum: string
 {
     case AWS242_SERVICE_CATALOG_SERVICE_UPDATE_PROVISIONING_ARTIFACT = 'AWS242ServiceCatalogService.UpdateProvisioningArtifact';

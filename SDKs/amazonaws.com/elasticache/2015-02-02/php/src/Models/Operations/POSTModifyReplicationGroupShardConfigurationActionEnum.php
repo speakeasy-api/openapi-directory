@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTModifyReplicationGroupShardConfigurationActionEnum: string
 {
     case MODIFY_REPLICATION_GROUP_SHARD_CONFIGURATION = 'ModifyReplicationGroupShardConfiguration';

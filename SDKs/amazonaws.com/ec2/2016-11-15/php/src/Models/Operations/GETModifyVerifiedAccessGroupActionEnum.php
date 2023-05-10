@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETModifyVerifiedAccessGroupActionEnum: string
 {
     case MODIFY_VERIFIED_ACCESS_GROUP = 'ModifyVerifiedAccessGroup';

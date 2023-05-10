@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateVolumeFromBackupXAmzTargetEnum: string
 {
     case AWS_SIMBA_API_SERVICE_V20180301_CREATE_VOLUME_FROM_BACKUP = 'AWSSimbaAPIService_v20180301.CreateVolumeFromBackup';

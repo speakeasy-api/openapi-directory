@@ -232,9 +232,11 @@ class Organization
     /**
      * List LTI 1.x credentials
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListLtiCredentialsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ListLtiCredentialsResponse
      */
 	public function listLtiCredentials(
+        \OpenAPI\OpenAPI\Models\Operations\ListLtiCredentialsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ListLtiCredentialsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -242,7 +244,8 @@ class Organization
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

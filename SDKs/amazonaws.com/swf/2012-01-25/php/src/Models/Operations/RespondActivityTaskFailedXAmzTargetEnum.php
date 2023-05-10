@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RespondActivityTaskFailedXAmzTargetEnum: string
 {
     case SIMPLE_WORKFLOW_SERVICE_RESPOND_ACTIVITY_TASK_FAILED = 'SimpleWorkflowService.RespondActivityTaskFailed';

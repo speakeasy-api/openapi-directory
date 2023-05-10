@@ -18,6 +18,16 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class DeployJobRun
 {
     /**
+     * The artifacts produced by a deploy operation.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\DeployArtifact $artifact
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('artifact')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\DeployArtifact')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?DeployArtifact $artifact = null;
+    
+    /**
      * Output only. The resource name of the Cloud Build `Build` object that is used to deploy. Format is projects/{project}/locations/{location}/builds/{build}.
      * 
      * @var ?string $build
@@ -59,6 +69,7 @@ class DeployJobRun
     
 	public function __construct()
 	{
+		$this->artifact = null;
 		$this->build = null;
 		$this->failureCause = null;
 		$this->failureMessage = null;

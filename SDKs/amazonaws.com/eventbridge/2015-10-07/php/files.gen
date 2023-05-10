@@ -366,4 +366,5 @@ src/Models/Shared/UpdateConnectionApiKeyAuthRequestParameters.php
 src/Models/Shared/UpdateEndpointResponse.php
 src/Models/Shared/UpdateEndpointRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteDefaultSenderIdXAmzTargetEnum: string
 {
     case PINPOINT_SMS_VOICE_V2_DELETE_DEFAULT_SENDER_ID = 'PinpointSMSVoiceV2.DeleteDefaultSenderId';

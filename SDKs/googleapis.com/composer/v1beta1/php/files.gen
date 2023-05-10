@@ -95,4 +95,6 @@ src/Models/Shared/ListImageVersionsResponse.php
 src/Models/Shared/ImageVersion.php
 src/Models/Shared/Date.php
 src/Models/Shared/ListOperationsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

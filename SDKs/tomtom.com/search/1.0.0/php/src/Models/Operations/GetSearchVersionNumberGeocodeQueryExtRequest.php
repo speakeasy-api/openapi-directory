@@ -114,6 +114,7 @@ class GetSearchVersionNumberGeocodeQueryExtRequest
      * If the "storeResult" flag is set, the query will be interpreted as a stored geocode and will be billed according to the terms of use.
      * 
      * @var ?bool $storeResult
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=storeResult')]
     public ?bool $storeResult = null;

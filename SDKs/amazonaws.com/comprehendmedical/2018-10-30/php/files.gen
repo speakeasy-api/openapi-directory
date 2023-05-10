@@ -191,4 +191,5 @@ src/Models/Shared/StopRxNormInferenceJobRequest.php
 src/Models/Shared/StopSNOMEDCTInferenceJobResponse.php
 src/Models/Shared/StopSNOMEDCTInferenceJobRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

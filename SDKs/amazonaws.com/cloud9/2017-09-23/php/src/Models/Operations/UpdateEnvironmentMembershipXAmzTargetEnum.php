@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateEnvironmentMembershipXAmzTargetEnum: string
 {
     case AWS_CLOUD9_WORKSPACE_MANAGEMENT_SERVICE_UPDATE_ENVIRONMENT_MEMBERSHIP = 'AWSCloud9WorkspaceManagementService.UpdateEnvironmentMembership';

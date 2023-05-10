@@ -18,6 +18,16 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class GoogleCloudChannelV1Row
 {
     /**
+     * The key for the partition this row belongs to. This field is empty if the report is not partitioned.
+     * 
+     * @var ?string $partitionKey
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('partitionKey')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $partitionKey = null;
+    
+    /**
      * The list of values in the row.
      * 
      * @var ?array<\OpenAPI\OpenAPI\Models\Shared\GoogleCloudChannelV1ReportValue> $values
@@ -29,6 +39,7 @@ class GoogleCloudChannelV1Row
     
 	public function __construct()
 	{
+		$this->partitionKey = null;
 		$this->values = null;
 	}
 }

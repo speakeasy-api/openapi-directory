@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTRebootInstancesActionEnum: string
 {
     case REBOOT_INSTANCES = 'RebootInstances';

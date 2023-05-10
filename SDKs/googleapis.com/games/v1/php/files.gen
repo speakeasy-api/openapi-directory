@@ -223,4 +223,16 @@ src/Models/Shared/Snapshot.php
 src/Models/Shared/SnapshotImage.php
 src/Models/Shared/SnapshotListResponse.php
 src/Models/Shared/StatsResponse.php
+docs/sdk/README.md
+docs/achievementdefinitions/README.md
+docs/achievements/README.md
+docs/applications/README.md
+docs/events/README.md
+docs/leaderboards/README.md
+docs/metagame/README.md
+docs/players/README.md
+docs/revisions/README.md
+docs/scores/README.md
+docs/snapshots/README.md
+docs/stats/README.md
 USAGE.md

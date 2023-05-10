@@ -158,4 +158,15 @@ src/Models/Shared/OBEntryStatus1CodeEnum.php
 src/Models/Shared/ProprietaryBankTransactionCodeStructure1.php
 src/Models/Shared/OBCashAccount6.php
 src/Models/Shared/OBTransactionCashBalance.php
+docs/sdk/README.md
+docs/accountaccess/README.md
+docs/accounts/README.md
+docs/balances/README.md
+docs/beneficiaries/README.md
+docs/parties/README.md
+docs/sandbox/README.md
+docs/scheduledpayments/README.md
+docs/standingorders/README.md
+docs/statements/README.md
+docs/transactions/README.md
 USAGE.md

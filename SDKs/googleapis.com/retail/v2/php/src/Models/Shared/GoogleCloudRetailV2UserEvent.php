@@ -38,16 +38,6 @@ class GoogleCloudRetailV2UserEvent
     public ?string $attributionToken = null;
     
     /**
-     * Represents the banner of the user event, for projects that combine banners. For example: retailer can have events from multiple banners like retailer-main, retailer-baby, retailer-meds, etc. under one project.
-     * 
-     * @var ?string $banner
-     */
-	#[\JMS\Serializer\Annotation\SerializedName('banner')]
-    #[\JMS\Serializer\Annotation\Type('string')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?string $banner = null;
-    
-    /**
      * The ID or name of the associated shopping cart. This ID is used to associate multiple items added or present in the cart before purchase. This can only be set for `add-to-cart`, `purchase-complete`, or `shopping-cart-page-view` events.
      * 
      * @var ?string $cartId
@@ -66,6 +56,16 @@ class GoogleCloudRetailV2UserEvent
     #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleCloudRetailV2CompletionDetail')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?GoogleCloudRetailV2CompletionDetail $completionDetail = null;
+    
+    /**
+     * The entity for customers that may run multiple different entities, domains, sites or regions, for example, `Google US`, `Google Ads`, `Waymo`, `google.com`, `youtube.com`, etc. We recommend that you set this field to get better per-entity search, completion, and prediction results.
+     * 
+     * @var ?string $entity
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('entity')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $entity = null;
     
     /**
      * Only required for UserEventService.ImportUserEvents method. Timestamp of when the user event happened.
@@ -231,9 +231,9 @@ class GoogleCloudRetailV2UserEvent
 	{
 		$this->attributes = null;
 		$this->attributionToken = null;
-		$this->banner = null;
 		$this->cartId = null;
 		$this->completionDetail = null;
+		$this->entity = null;
 		$this->eventTime = null;
 		$this->eventType = null;
 		$this->experimentIds = null;

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETCancelImageLaunchPermissionActionEnum: string
 {
     case CANCEL_IMAGE_LAUNCH_PERMISSION = 'CancelImageLaunchPermission';

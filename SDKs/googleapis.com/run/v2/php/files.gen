@@ -87,6 +87,8 @@ src/Models/Shared/GoogleCloudRunV2VpcAccess.php
 src/Models/Shared/GoogleCloudRunV2Volume.php
 src/Models/Shared/GoogleCloudRunV2SecretVolumeSource.php
 src/Models/Shared/GoogleCloudRunV2VersionToPath.php
+src/Models/Shared/GoogleCloudRunV2EmptyDirVolumeSourceMediumEnum.php
+src/Models/Shared/GoogleCloudRunV2EmptyDirVolumeSource.php
 src/Models/Shared/GoogleCloudRunV2CloudSqlInstance.php
 src/Models/Shared/GoogleCloudRunV2Container.php
 src/Models/Shared/GoogleCloudRunV2VolumeMount.php
@@ -140,4 +142,6 @@ src/Models/Shared/GoogleCloudRunV2ListRevisionsResponse.php
 src/Models/Shared/GoogleIamV1SetIamPolicyRequest.php
 src/Models/Shared/GoogleIamV1TestIamPermissionsResponse.php
 src/Models/Shared/GoogleIamV1TestIamPermissionsRequest.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

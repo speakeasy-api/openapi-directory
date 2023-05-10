@@ -42,6 +42,9 @@ src/Models/Operations/GamesByDateResponse.php
 src/Models/Operations/GamesByWeekFormatEnum.php
 src/Models/Operations/GamesByWeekRequest.php
 src/Models/Operations/GamesByWeekResponse.php
+src/Models/Operations/GamesByWeekBasicFormatEnum.php
+src/Models/Operations/GamesByWeekBasicRequest.php
+src/Models/Operations/GamesByWeekBasicResponse.php
 src/Models/Operations/InjuredPlayersFormatEnum.php
 src/Models/Operations/InjuredPlayersRequest.php
 src/Models/Operations/InjuredPlayersResponse.php
@@ -54,9 +57,15 @@ src/Models/Operations/PlayerDetailsByPlayerResponse.php
 src/Models/Operations/PlayerDetailsByTeamFormatEnum.php
 src/Models/Operations/PlayerDetailsByTeamRequest.php
 src/Models/Operations/PlayerDetailsByTeamResponse.php
+src/Models/Operations/PlayersByTeamBasicFormatEnum.php
+src/Models/Operations/PlayersByTeamBasicRequest.php
+src/Models/Operations/PlayersByTeamBasicResponse.php
 src/Models/Operations/SchedulesFormatEnum.php
 src/Models/Operations/SchedulesRequest.php
 src/Models/Operations/SchedulesResponse.php
+src/Models/Operations/SchedulesBasicFormatEnum.php
+src/Models/Operations/SchedulesBasicRequest.php
+src/Models/Operations/SchedulesBasicResponse.php
 src/Models/Operations/StadiumsFormatEnum.php
 src/Models/Operations/StadiumsRequest.php
 src/Models/Operations/StadiumsResponse.php
@@ -72,6 +81,9 @@ src/Models/Operations/TeamSeasonStatsStandingsResponse.php
 src/Models/Operations/TeamsFormatEnum.php
 src/Models/Operations/TeamsRequest.php
 src/Models/Operations/TeamsResponse.php
+src/Models/Operations/TeamsBasicFormatEnum.php
+src/Models/Operations/TeamsBasicRequest.php
+src/Models/Operations/TeamsBasicResponse.php
 src/Models/Shared/Conference.php
 src/Models/Shared/Team.php
 src/Models/Shared/Season.php
@@ -79,7 +91,11 @@ src/Models/Shared/Game.php
 src/Models/Shared/Stadium.php
 src/Models/Shared/Period.php
 src/Models/Shared/Player.php
+src/Models/Shared/PlayerBasic.php
+src/Models/Shared/ScheduleBasic.php
 src/Models/Shared/TeamGame.php
 src/Models/Shared/TeamSeason.php
+src/Models/Shared/TeamBasic.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

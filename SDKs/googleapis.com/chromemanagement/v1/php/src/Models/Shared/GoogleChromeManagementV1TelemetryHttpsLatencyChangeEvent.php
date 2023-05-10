@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * GoogleChromeManagementV1TelemetryHttpsLatencyChangeEvent - Https latency routine is run periodically and `TelemetryHttpsLatencyChangeEvent` is triggered if a latency problem was detected or if the device has recovered from a latency problem..
+ * GoogleChromeManagementV1TelemetryHttpsLatencyChangeEvent - Https latency routine is run periodically and `TelemetryHttpsLatencyChangeEvent` is triggered if a latency problem was detected or if the device has recovered from a latency problem. * Granular permission needed: TELEMETRY_API_NETWORK_REPORT
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteResourceDataSyncXAmzTargetEnum: string
 {
     case AMAZON_SSM_DELETE_RESOURCE_DATA_SYNC = 'AmazonSSM.DeleteResourceDataSync';

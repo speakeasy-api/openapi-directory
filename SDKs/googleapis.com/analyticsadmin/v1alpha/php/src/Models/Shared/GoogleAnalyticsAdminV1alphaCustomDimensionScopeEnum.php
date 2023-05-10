@@ -15,4 +15,5 @@ enum GoogleAnalyticsAdminV1alphaCustomDimensionScopeEnum: string
     case DIMENSION_SCOPE_UNSPECIFIED = 'DIMENSION_SCOPE_UNSPECIFIED';
     case EVENT = 'EVENT';
     case USER = 'USER';
+    case ITEM = 'ITEM';
 }

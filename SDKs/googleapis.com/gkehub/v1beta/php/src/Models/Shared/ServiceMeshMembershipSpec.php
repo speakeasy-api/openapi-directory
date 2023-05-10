@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class ServiceMeshMembershipSpec
 {
     /**
-     * Enables automatic control plane management.
+     * Deprecated: use `management` instead Enables automatic control plane management.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\ServiceMeshMembershipSpecControlPlaneEnum $controlPlane
      */

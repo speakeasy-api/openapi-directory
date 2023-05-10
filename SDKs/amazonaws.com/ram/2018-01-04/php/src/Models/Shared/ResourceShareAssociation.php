@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * ResourceShareAssociation - Describes an association with a resource share and either a principal or a resource.
+ * ResourceShareAssociation - Describes an association between a resource share and either a principal or a resource.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

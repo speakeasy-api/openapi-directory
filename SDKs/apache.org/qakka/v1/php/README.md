@@ -30,28 +30,53 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\AckMessageRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new AckMessageRequest();
+    $request->queueMessageId = 'corrupti';
+    $request->queueName = 'provident';
+
+    $response = $sdk->queues->ackMessage($request);
+
+    if ($response->apiResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### queues
+### [queues](docs/queues/README.md)
 
-* `ackMessage` - Acknowledge that Queue Message has been processed.
-* `createQueue` - Create new queue.
-* `deleteQueue` - Delete Queue.
-* `getListOfQueues` - Get list of all Queues.
-* `getMessageData` - Get data associated with a Queue Message.
-* `getNextMessages` - Get next Queue Messages from a Queue
-* `getQueueConfig` - Get Queue config.
-* `sendMessageBinary` - Send Queue Message with a binary data (blob) payload.
-* `updateQueueConfig` - Update Queue configuration.
+* [ackMessage](docs/queues/README.md#ackmessage) - Acknowledge that Queue Message has been processed.
+* [createQueue](docs/queues/README.md#createqueue) - Create new queue.
+* [deleteQueue](docs/queues/README.md#deletequeue) - Delete Queue.
+* [getListOfQueues](docs/queues/README.md#getlistofqueues) - Get list of all Queues.
+* [getMessageData](docs/queues/README.md#getmessagedata) - Get data associated with a Queue Message.
+* [getNextMessages](docs/queues/README.md#getnextmessages) - Get next Queue Messages from a Queue
+* [getQueueConfig](docs/queues/README.md#getqueueconfig) - Get Queue config.
+* [sendMessageBinary](docs/queues/README.md#sendmessagebinary) - Send Queue Message with a binary data (blob) payload.
+* [updateQueueConfig](docs/queues/README.md#updatequeueconfig) - Update Queue configuration.
 
-### status
+### [status](docs/status/README.md)
 
-* `status` - Status of webapp.
+* [status](docs/status/README.md#status) - Status of webapp.
 <!-- End SDK Available Operations -->
 
 ### Maturity

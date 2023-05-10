@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopGameSessionPlacementXAmzTargetEnum: string
 {
     case GAME_LIFT_STOP_GAME_SESSION_PLACEMENT = 'GameLift.StopGameSessionPlacement';

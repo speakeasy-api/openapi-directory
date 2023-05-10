@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UnsubscribeFromEventXAmzTargetEnum: string
 {
     case INSPECTOR_SERVICE_UNSUBSCRIBE_FROM_EVENT = 'InspectorService.UnsubscribeFromEvent';

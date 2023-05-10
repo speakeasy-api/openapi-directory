@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListResourceDelegatesXAmzTargetEnum: string
 {
     case WORK_MAIL_SERVICE_LIST_RESOURCE_DELEGATES = 'WorkMailService.ListResourceDelegates';

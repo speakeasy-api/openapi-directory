@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeDominantLanguageDetectionJobXAmzTargetEnum: string
 {
     case COMPREHEND20171127_DESCRIBE_DOMINANT_LANGUAGE_DETECTION_JOB = 'Comprehend_20171127.DescribeDominantLanguageDetectionJob';

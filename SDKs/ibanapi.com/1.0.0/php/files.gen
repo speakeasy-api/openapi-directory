@@ -19,6 +19,7 @@ src/Utils/SecurityClient.php
 src/Utils/SecurityMetadata.php
 src/Utils/SpeakeasyMetadata.php
 src/Utils/Utils.php
+src/Models/Operations/GetBalanceSecurity.php
 src/Models/Operations/GetBalanceResponse.php
 src/Models/Operations/ValidateIBANSecurity.php
 src/Models/Operations/ValidateIBANRequest.php
@@ -33,4 +34,6 @@ src/Models/Shared/FourHundredAndTwentyTwo.php
 src/Models/Shared/BalanceResponse.php
 src/Models/Shared/IBANResult.php
 src/Models/Shared/IBANResultBasic.php
+docs/sdk/README.md
+docs/ibanapi/README.md
 USAGE.md

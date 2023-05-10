@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTReorderReceiptRuleSetActionEnum: string
 {
     case REORDER_RECEIPT_RULE_SET = 'ReorderReceiptRuleSet';

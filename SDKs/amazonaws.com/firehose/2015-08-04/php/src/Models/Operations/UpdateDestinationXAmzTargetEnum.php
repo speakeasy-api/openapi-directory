@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateDestinationXAmzTargetEnum: string
 {
     case FIREHOSE20150804_UPDATE_DESTINATION = 'Firehose_20150804.UpdateDestination';

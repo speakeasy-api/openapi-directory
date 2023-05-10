@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteNotebookInstanceXAmzTargetEnum: string
 {
     case SAGE_MAKER_DELETE_NOTEBOOK_INSTANCE = 'SageMaker.DeleteNotebookInstance';

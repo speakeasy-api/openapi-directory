@@ -297,4 +297,5 @@ src/Models/Shared/UndeprecateDomainInput.php
 src/Models/Shared/UndeprecateWorkflowTypeInput.php
 src/Models/Shared/UntagResourceInput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

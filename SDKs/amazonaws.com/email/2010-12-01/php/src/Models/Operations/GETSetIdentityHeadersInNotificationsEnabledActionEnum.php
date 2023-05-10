@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETSetIdentityHeadersInNotificationsEnabledActionEnum: string
 {
     case SET_IDENTITY_HEADERS_IN_NOTIFICATIONS_ENABLED = 'SetIdentityHeadersInNotificationsEnabled';

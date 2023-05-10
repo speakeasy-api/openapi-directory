@@ -23,7 +23,7 @@ class GETModifyVerifiedAccessGroupRequest
     public ?string $clientToken = null;
     
     /**
-     * A description for the Amazon Web Services Verified Access group.
+     * A description for the Verified Access group.
      * 
      * @var ?string $description
      */
@@ -39,7 +39,7 @@ class GETModifyVerifiedAccessGroupRequest
     public ?bool $dryRun = null;
     
     /**
-     * The ID of the Amazon Web Services Verified Access group.
+     * The ID of the Verified Access group.
      * 
      * @var string $verifiedAccessGroupId
      */
@@ -47,7 +47,7 @@ class GETModifyVerifiedAccessGroupRequest
     public string $verifiedAccessGroupId;
     
     /**
-     * The ID of the Amazon Web Services Verified Access instance.
+     * The ID of the Verified Access instance.
      * 
      * @var ?string $verifiedAccessInstanceId
      */

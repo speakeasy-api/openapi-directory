@@ -46,11 +46,14 @@ class MarketplacesOrdersBatches
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ChangeOrderListRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ChangeOrderListResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function changeOrderList(
         \OpenAPI\OpenAPI\Models\Operations\ChangeOrderListRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\ChangeOrderListResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v2/user/marketplaces/orders/batches/changeOrders/{changeOrderType}', \OpenAPI\OpenAPI\Models\Operations\ChangeOrderListRequest::class, $request);
         
@@ -94,11 +97,14 @@ class MarketplacesOrdersBatches
      * 
      * @param \OpenAPI\OpenAPI\Models\Shared\ClearMerchantOrderInfoListRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ClearMerchantOrderInfoListResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function clearMerchantOrderInfoList(
         \OpenAPI\OpenAPI\Models\Shared\ClearMerchantOrderInfoListRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\ClearMerchantOrderInfoListResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v2/user/marketplaces/orders/batches/clearMerchantOrderInfos');
         
@@ -141,11 +147,14 @@ class MarketplacesOrdersBatches
      * 
      * @param \OpenAPI\OpenAPI\Models\Shared\SetMerchantOrderInfoListRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\SetMerchantOrderInfoListResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function setMerchantOrderInfoList(
         \OpenAPI\OpenAPI\Models\Shared\SetMerchantOrderInfoListRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\SetMerchantOrderInfoListResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v2/user/marketplaces/orders/batches/setMerchantOrderInfos');
         

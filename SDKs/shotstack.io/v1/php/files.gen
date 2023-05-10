@@ -84,4 +84,7 @@ src/Models/Shared/AssetResponseData.php
 src/Models/Shared/AssetResponseAttributesStatusEnum.php
 src/Models/Shared/AssetResponseAttributes.php
 src/Models/Shared/AssetRenderResponse.php
+docs/sdk/README.md
+docs/edit/README.md
+docs/serve/README.md
 USAGE.md

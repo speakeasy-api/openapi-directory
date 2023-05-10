@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETUpdateAssumeRolePolicyActionEnum: string
 {
     case UPDATE_ASSUME_ROLE_POLICY = 'UpdateAssumeRolePolicy';

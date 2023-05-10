@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopDataSourceSyncJobXAmzTargetEnum: string
 {
     case AWS_KENDRA_FRONTEND_SERVICE_STOP_DATA_SOURCE_SYNC_JOB = 'AWSKendraFrontendService.StopDataSourceSyncJob';

@@ -188,6 +188,16 @@ class AndroidNotification
     public ?AndroidNotificationNotificationPriorityEnum $notificationPriority = null;
     
     /**
+     * Setting to control when a notification may be proxied.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\AndroidNotificationProxyEnum $proxy
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('proxy')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\AndroidNotificationProxyEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?AndroidNotificationProxyEnum $proxy = null;
+    
+    /**
      * The sound to play when the device receives the notification. Supports "default" or the filename of a sound resource bundled in the app. Sound files must reside in /res/raw/.
      * 
      * @var ?string $sound
@@ -296,6 +306,7 @@ class AndroidNotification
 		$this->localOnly = null;
 		$this->notificationCount = null;
 		$this->notificationPriority = null;
+		$this->proxy = null;
 		$this->sound = null;
 		$this->sticky = null;
 		$this->tag = null;

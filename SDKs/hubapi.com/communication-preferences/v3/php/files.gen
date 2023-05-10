@@ -20,6 +20,7 @@ src/Utils/SecurityClient.php
 src/Utils/SecurityMetadata.php
 src/Utils/SpeakeasyMetadata.php
 src/Utils/Utils.php
+src/Models/Operations/GetCommunicationPreferencesV3DefinitionsGetPageSecurity.php
 src/Models/Operations/GetCommunicationPreferencesV3DefinitionsGetPageResponse.php
 src/Models/Operations/GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusSecurity.php
 src/Models/Operations/GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusRequest.php
@@ -39,4 +40,7 @@ src/Models/Shared/PublicSubscriptionStatusStatusEnum.php
 src/Models/Shared/PublicSubscriptionStatus.php
 src/Models/Shared/PublicUpdateSubscriptionStatusRequestLegalBasisEnum.php
 src/Models/Shared/PublicUpdateSubscriptionStatusRequest.php
+docs/sdk/README.md
+docs/definition/README.md
+docs/status/README.md
 USAGE.md

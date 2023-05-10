@@ -66,4 +66,6 @@ src/Models/Shared/CustomVisionErrorCodeEnum.php
 src/Models/Shared/CustomVisionError.php
 src/Models/Shared/ImageUrl.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/imagepredictionapi/README.md
 USAGE.md

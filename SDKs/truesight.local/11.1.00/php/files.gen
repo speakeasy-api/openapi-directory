@@ -97,4 +97,11 @@ src/Models/Shared/GlobalSummary.php
 src/Models/Shared/GroupSummary.php
 src/Models/Shared/GroupConfiguration.php
 src/Models/Shared/ServiceSummary.php
+docs/sdk/README.md
+docs/actions/README.md
+docs/applications/README.md
+docs/devices/README.md
+docs/groups/README.md
+docs/historicaldata/README.md
+docs/services/README.md
 USAGE.md

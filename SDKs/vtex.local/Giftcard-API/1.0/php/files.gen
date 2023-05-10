@@ -67,4 +67,7 @@ src/Models/Shared/Response5.php
 src/Models/Shared/Response7.php
 src/Models/Shared/SettleGiftCardTransactionRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/giftcard/README.md
+docs/transaction/README.md
 USAGE.md

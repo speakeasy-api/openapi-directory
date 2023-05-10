@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetDefaultRetentionPolicyXAmzTargetEnum: string
 {
     case WORK_MAIL_SERVICE_GET_DEFAULT_RETENTION_POLICY = 'WorkMailService.GetDefaultRetentionPolicy';

@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * Operation - <p/>
+ * Operation - Represents an arithmetic operation to compute spectral index.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

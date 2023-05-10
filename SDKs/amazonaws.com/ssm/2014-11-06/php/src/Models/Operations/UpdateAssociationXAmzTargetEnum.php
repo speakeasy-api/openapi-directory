@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateAssociationXAmzTargetEnum: string
 {
     case AMAZON_SSM_UPDATE_ASSOCIATION = 'AmazonSSM.UpdateAssociation';

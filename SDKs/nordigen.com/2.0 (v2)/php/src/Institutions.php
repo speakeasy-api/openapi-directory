@@ -92,6 +92,12 @@ class Institutions
                 $response->retrieveAllSupportedInstitutionsInAGivenCountry404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
+        else if ($httpResponse->getStatusCode() === 429) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->retrieveAllSupportedInstitutionsInAGivenCountry429ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
 
         return $response;
     }
@@ -123,7 +129,7 @@ class Institutions
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->integration = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Integration', 'json');
+                $response->integrationRetrieve = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\IntegrationRetrieve', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 401) {
@@ -142,6 +148,12 @@ class Institutions
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->retrieveInstitution404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 429) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->retrieveInstitution429ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
 

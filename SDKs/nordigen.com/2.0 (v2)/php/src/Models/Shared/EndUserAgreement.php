@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * EndUserAgreement - EndUserAgreement.
+ * EndUserAgreement - Represents an end-user agreement.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

@@ -30,30 +30,57 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\DfsSlateOwnershipProjectionsBySlateidRequest;
+use \OpenAPI\OpenAPI\Models\Operations\DfsSlateOwnershipProjectionsBySlateidFormatEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new DfsSlateOwnershipProjectionsBySlateidRequest();
+    $request->format = DfsSlateOwnershipProjectionsBySlateidFormatEnum::JSON;
+    $request->slateId = 'provident';
+
+    $response = $sdk->dfsSlateOwnershipProjectionsBySlateid($request);
+
+    if ($response->dfsSlateWithOwnershipProjection !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `dfsSlateOwnershipProjectionsBySlateid` - DFS Slate Ownership Projections by SlateID
-* `dfsSlatesByDate` - DFS Slates by Date
-* `dfsSlatesByWeek` - DFS Slates by Week
-* `idpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalaries` - IDP Projected Player Game Stats by Player (w/ Injuries, Lineups, DFS Salaries)
-* `idpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalaries` - IDP Projected Player Game Stats by Team (w/ Injuries, Lineups, DFS Salaries)
-* `idpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalaries` - IDP Projected Player Game Stats by Week (w/ Injuries, Lineups, DFS Salaries)
-* `injuredPlayers` - Injured Players
-* `projectedFantasyDefenseGameStatsWDfsSalaries` - Projected Fantasy Defense Game Stats (w/ DFS Salaries)
-* `projectedFantasyDefenseSeasonStatsWAdp` - Projected Fantasy Defense Season Stats (w/ ADP)
-* `projectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalaries` - Projected Player Game Stats by Player (w/ Injuries, Lineups, DFS Salaries)
-* `projectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalaries` - Projected Player Game Stats by Team (w/ Injuries, Lineups, DFS Salaries)
-* `projectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalaries` - Projected Player Game Stats by Week (w/ Injuries, Lineups, DFS Salaries)
-* `projectedPlayerSeasonStatsByPlayerWAdp` - Projected Player Season Stats by Player (w/ ADP)
-* `projectedPlayerSeasonStatsByTeamWAdp` - Projected Player Season Stats by Team (w/ ADP)
-* `projectedPlayerSeasonStatsWAdp` - Projected Player Season Stats (w/ ADP)
-* `upcomingDfsSlateOwnershipProjections` - Upcoming DFS Slate Ownership Projections
+* [dfsSlateOwnershipProjectionsBySlateid](docs/sdk/README.md#dfsslateownershipprojectionsbyslateid) - DFS Slate Ownership Projections by SlateID
+* [dfsSlatesByDate](docs/sdk/README.md#dfsslatesbydate) - DFS Slates by Date
+* [dfsSlatesByWeek](docs/sdk/README.md#dfsslatesbyweek) - DFS Slates by Week
+* [idpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalaries](docs/sdk/README.md#idpprojectedplayergamestatsbyplayerwinjurieslineupsdfssalaries) - IDP Projected Player Game Stats by Player (w/ Injuries, Lineups, DFS Salaries)
+* [idpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalaries](docs/sdk/README.md#idpprojectedplayergamestatsbyteamwinjurieslineupsdfssalaries) - IDP Projected Player Game Stats by Team (w/ Injuries, Lineups, DFS Salaries)
+* [idpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalaries](docs/sdk/README.md#idpprojectedplayergamestatsbyweekwinjurieslineupsdfssalaries) - IDP Projected Player Game Stats by Week (w/ Injuries, Lineups, DFS Salaries)
+* [injuredPlayers](docs/sdk/README.md#injuredplayers) - Injured Players
+* [projectedFantasyDefenseGameStatsWDfsSalaries](docs/sdk/README.md#projectedfantasydefensegamestatswdfssalaries) - Projected Fantasy Defense Game Stats (w/ DFS Salaries)
+* [projectedFantasyDefenseSeasonStatsWAdp](docs/sdk/README.md#projectedfantasydefenseseasonstatswadp) - Projected Fantasy Defense Season Stats (w/ ADP)
+* [projectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalaries](docs/sdk/README.md#projectedplayergamestatsbyplayerwinjurieslineupsdfssalaries) - Projected Player Game Stats by Player (w/ Injuries, Lineups, DFS Salaries)
+* [projectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalaries](docs/sdk/README.md#projectedplayergamestatsbyteamwinjurieslineupsdfssalaries) - Projected Player Game Stats by Team (w/ Injuries, Lineups, DFS Salaries)
+* [projectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalaries](docs/sdk/README.md#projectedplayergamestatsbyweekwinjurieslineupsdfssalaries) - Projected Player Game Stats by Week (w/ Injuries, Lineups, DFS Salaries)
+* [projectedPlayerSeasonStatsByPlayerWAdp](docs/sdk/README.md#projectedplayerseasonstatsbyplayerwadp) - Projected Player Season Stats by Player (w/ ADP)
+* [projectedPlayerSeasonStatsByTeamWAdp](docs/sdk/README.md#projectedplayerseasonstatsbyteamwadp) - Projected Player Season Stats by Team (w/ ADP)
+* [projectedPlayerSeasonStatsWAdp](docs/sdk/README.md#projectedplayerseasonstatswadp) - Projected Player Season Stats (w/ ADP)
+* [upcomingDfsSlateOwnershipProjections](docs/sdk/README.md#upcomingdfsslateownershipprojections) - Upcoming DFS Slate Ownership Projections
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -30,26 +30,53 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\GetProductRatingRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetProductRatingRequest();
+    $request->accept = 'corrupti';
+    $request->contentType = 'provident';
+    $request->productId = '1';
+
+    $response = $sdk->rating->getProductRating($request);
+
+    if ($response->getProductRating200ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### rating
+### [rating](docs/rating/README.md)
 
-* `getProductRating` - Get Product Rating
+* [getProductRating](docs/rating/README.md#getproductrating) - Get Product Rating
 
-### review
+### [review](docs/review/README.md)
 
-* `deleteMultipleReviews` - Delete Multiple Reviews
-* `deleteReview` - Delete Review
-* `editReview` - Update a Review
-* `getReviewbyReviewId` - Get Review by Review ID
-* `getalistofReviews` - Get a list of Reviews
-* `saveMultipleReviews` - Create Multiple Reviews
-* `saveReview` - Create a Review
+* [deleteMultipleReviews](docs/review/README.md#deletemultiplereviews) - Delete Multiple Reviews
+* [deleteReview](docs/review/README.md#deletereview) - Delete Review
+* [editReview](docs/review/README.md#editreview) - Update a Review
+* [getReviewbyReviewId](docs/review/README.md#getreviewbyreviewid) - Get Review by Review ID
+* [getalistofReviews](docs/review/README.md#getalistofreviews) - Get a list of Reviews
+* [saveMultipleReviews](docs/review/README.md#savemultiplereviews) - Create Multiple Reviews
+* [saveReview](docs/review/README.md#savereview) - Create a Review
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -178,4 +178,6 @@ src/Models/Shared/TlsRouteRouteMatch.php
 src/Models/Shared/TlsRouteRouteAction.php
 src/Models/Shared/TlsRouteRouteDestination.php
 src/Models/Shared/ListTlsRoutesResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

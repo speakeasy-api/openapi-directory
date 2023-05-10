@@ -83,51 +83,6 @@ class TermsOfService
     }
 	
     /**
-     * Get Terms of Service status
-     * 
-     * Returns the required types of Terms of Service that need to be accepted by a legal entity.
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\GetLegalEntitiesIdTermsOfServiceStatusRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\GetLegalEntitiesIdTermsOfServiceStatusSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\GetLegalEntitiesIdTermsOfServiceStatusResponse
-     */
-	public function getLegalEntitiesIdTermsOfServiceStatus(
-        \OpenAPI\OpenAPI\Models\Operations\GetLegalEntitiesIdTermsOfServiceStatusRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\GetLegalEntitiesIdTermsOfServiceStatusSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\GetLegalEntitiesIdTermsOfServiceStatusResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/legalEntities/{id}/termsOfServiceStatus', \OpenAPI\OpenAPI\Models\Operations\GetLegalEntitiesIdTermsOfServiceStatusRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        
-        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\GetLegalEntitiesIdTermsOfServiceStatusResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->calculateTermsOfServiceStatusResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\CalculateTermsOfServiceStatusResponse', 'json');
-            }
-        }
-        else if ($httpResponse->getStatusCode() === 400 or $httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 403 or $httpResponse->getStatusCode() === 422 or $httpResponse->getStatusCode() === 500) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->serviceError = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ServiceError', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
      * Accept Terms of Service
      * 
      * Accepts Terms of Service.

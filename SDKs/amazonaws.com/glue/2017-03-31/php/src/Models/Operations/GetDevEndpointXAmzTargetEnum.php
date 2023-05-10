@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetDevEndpointXAmzTargetEnum: string
 {
     case AWS_GLUE_GET_DEV_ENDPOINT = 'AWSGlue.GetDevEndpoint';

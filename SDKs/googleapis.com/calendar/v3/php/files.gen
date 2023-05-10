@@ -250,4 +250,13 @@ src/Models/Shared/FreeBusyRequest.php
 src/Models/Shared/FreeBusyRequestItem.php
 src/Models/Shared/Setting.php
 src/Models/Shared/Settings.php
+docs/sdk/README.md
+docs/acl/README.md
+docs/calendarlist/README.md
+docs/calendars/README.md
+docs/channels/README.md
+docs/colors/README.md
+docs/events/README.md
+docs/freebusy/README.md
+docs/settings/README.md
 USAGE.md

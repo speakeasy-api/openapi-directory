@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTRemoveSourceIdentifierFromSubscriptionActionEnum: string
 {
     case REMOVE_SOURCE_IDENTIFIER_FROM_SUBSCRIPTION = 'RemoveSourceIdentifierFromSubscription';

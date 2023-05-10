@@ -102,6 +102,11 @@ class InstanceGroupManager
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('instanceFlexibilityPolicy')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\InstanceGroupManagerInstanceFlexibilityPolicy')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?InstanceGroupManagerInstanceFlexibilityPolicy $instanceFlexibilityPolicy = null;
+    
     /**
      * [Output Only] The URL of the Instance Group resource.
      * 
@@ -243,6 +248,16 @@ class InstanceGroupManager
     public ?int $targetSize = null;
     
     /**
+     * The unit of measure for the target size.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\InstanceGroupManagerTargetSizeUnitEnum $targetSizeUnit
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('targetSizeUnit')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\InstanceGroupManagerTargetSizeUnitEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?InstanceGroupManagerTargetSizeUnitEnum $targetSizeUnit = null;
+    
+    /**
      * The target number of stopped instances for this managed instance group. This number changes when you: - Stop instance using the stopInstances method or start instances using the startInstances method. - Manually change the targetStoppedSize using the update method. 
      * 
      * @var ?int $targetStoppedSize
@@ -299,6 +314,7 @@ class InstanceGroupManager
 		$this->failoverAction = null;
 		$this->fingerprint = null;
 		$this->id = null;
+		$this->instanceFlexibilityPolicy = null;
 		$this->instanceGroup = null;
 		$this->instanceLifecyclePolicy = null;
 		$this->instanceTemplate = null;
@@ -315,6 +331,7 @@ class InstanceGroupManager
 		$this->status = null;
 		$this->targetPools = null;
 		$this->targetSize = null;
+		$this->targetSizeUnit = null;
 		$this->targetStoppedSize = null;
 		$this->targetSuspendedSize = null;
 		$this->updatePolicy = null;

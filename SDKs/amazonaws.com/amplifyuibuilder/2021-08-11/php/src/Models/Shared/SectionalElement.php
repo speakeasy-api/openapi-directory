@@ -17,6 +17,11 @@ namespace OpenAPI\OpenAPI\Models\Shared;
  */
 class SectionalElement
 {
+	#[\JMS\Serializer\Annotation\SerializedName('excluded')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $excluded = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('level')]
     #[\JMS\Serializer\Annotation\Type('int')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -43,6 +48,7 @@ class SectionalElement
     
 	public function __construct()
 	{
+		$this->excluded = null;
 		$this->level = null;
 		$this->orientation = null;
 		$this->position = null;

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeLunaClientXAmzTargetEnum: string
 {
     case CLOUD_HSM_FRONTEND_SERVICE_DESCRIBE_LUNA_CLIENT = 'CloudHsmFrontendService.DescribeLunaClient';

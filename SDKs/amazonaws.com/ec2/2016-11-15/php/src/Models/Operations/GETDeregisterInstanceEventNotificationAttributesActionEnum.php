@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeregisterInstanceEventNotificationAttributesActionEnum: string
 {
     case DEREGISTER_INSTANCE_EVENT_NOTIFICATION_ATTRIBUTES = 'DeregisterInstanceEventNotificationAttributes';

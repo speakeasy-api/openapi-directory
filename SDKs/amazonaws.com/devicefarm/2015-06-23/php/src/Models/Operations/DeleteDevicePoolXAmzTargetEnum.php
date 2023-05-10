@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteDevicePoolXAmzTargetEnum: string
 {
     case DEVICE_FARM20150623_DELETE_DEVICE_POOL = 'DeviceFarm_20150623.DeleteDevicePool';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeFHIRImportJobXAmzTargetEnum: string
 {
     case HEALTH_LAKE_DESCRIBE_FHIR_IMPORT_JOB = 'HealthLake.DescribeFHIRImportJob';

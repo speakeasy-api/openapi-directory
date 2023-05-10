@@ -17,6 +17,11 @@ namespace OpenAPI\OpenAPI\Models\Operations;
  */
 class RefreshTokenRequestBodyRefreshTokenBody
 {
+	#[\JMS\Serializer\Annotation\SerializedName('clientId')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $clientId = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('token')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -24,6 +29,7 @@ class RefreshTokenRequestBodyRefreshTokenBody
     
 	public function __construct()
 	{
+		$this->clientId = null;
 		$this->token = null;
 	}
 }

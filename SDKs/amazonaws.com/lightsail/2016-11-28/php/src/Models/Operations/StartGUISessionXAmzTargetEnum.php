@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartGUISessionXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_START_GUI_SESSION = 'Lightsail_20161128.StartGUISession';

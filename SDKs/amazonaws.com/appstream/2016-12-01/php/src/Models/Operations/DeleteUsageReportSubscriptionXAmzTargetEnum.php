@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteUsageReportSubscriptionXAmzTargetEnum: string
 {
     case PHOTON_ADMIN_PROXY_SERVICE_DELETE_USAGE_REPORT_SUBSCRIPTION = 'PhotonAdminProxyService.DeleteUsageReportSubscription';

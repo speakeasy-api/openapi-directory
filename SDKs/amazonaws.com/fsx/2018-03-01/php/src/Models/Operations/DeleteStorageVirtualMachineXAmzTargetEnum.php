@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteStorageVirtualMachineXAmzTargetEnum: string
 {
     case AWS_SIMBA_API_SERVICE_V20180301_DELETE_STORAGE_VIRTUAL_MACHINE = 'AWSSimbaAPIService_v20180301.DeleteStorageVirtualMachine';

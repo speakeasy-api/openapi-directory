@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeEc2InstanceLimitsXAmzTargetEnum: string
 {
     case GAME_LIFT_DESCRIBE_EC2_INSTANCE_LIMITS = 'GameLift.DescribeEC2InstanceLimits';

@@ -48,6 +48,16 @@ class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem
     public ?string $lineItemFreeTrialEndTime = null;
     
     /**
+     * Output only. A unique index of the subscription line item.
+     * 
+     * @var ?int $lineItemIndex
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('lineItemIndex')]
+    #[\JMS\Serializer\Annotation\Type('int')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?int $lineItemIndex = null;
+    
+    /**
      * Optional. The promotions applied on the line item. It can be: - a free trial promotion, which overrides the subscription-level free trial promotion. - an introductory pricing promotion. When used as input in Create or Provision API, specify its resource name only.
      * 
      * @var ?array<\OpenAPI\OpenAPI\Models\Shared\GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec> $lineItemPromotionSpecs
@@ -112,6 +122,7 @@ class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem
 		$this->amount = null;
 		$this->description = null;
 		$this->lineItemFreeTrialEndTime = null;
+		$this->lineItemIndex = null;
 		$this->lineItemPromotionSpecs = null;
 		$this->oneTimeRecurrenceDetails = null;
 		$this->product = null;

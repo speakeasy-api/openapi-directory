@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListUserImportJobsXAmzTargetEnum: string
 {
     case AWS_COGNITO_IDENTITY_PROVIDER_SERVICE_LIST_USER_IMPORT_JOBS = 'AWSCognitoIdentityProviderService.ListUserImportJobs';

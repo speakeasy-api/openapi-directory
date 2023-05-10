@@ -41,4 +41,8 @@ src/Models/Shared/ApiResponseListPublishedWrittenQuestion.php
 src/Models/Shared/PublishedWrittenQuestionQuestionTypeEnum.php
 src/Models/Shared/PublishedWrittenQuestion.php
 src/Models/Shared/MemberForDate.php
+docs/sdk/README.md
+docs/earlydaymotions/README.md
+docs/oralquestiontimes/README.md
+docs/oralquestions/README.md
 USAGE.md

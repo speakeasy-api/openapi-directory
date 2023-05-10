@@ -34,6 +34,9 @@ src/Models/Operations/ManagedidentitiesProjectsLocationsGlobalDomainsCreateRespo
 src/Models/Operations/ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustSecurity.php
 src/Models/Operations/ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustRequest.php
 src/Models/Operations/ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustResponse.php
+src/Models/Operations/ManagedidentitiesProjectsLocationsGlobalDomainsDomainJoinMachineSecurity.php
+src/Models/Operations/ManagedidentitiesProjectsLocationsGlobalDomainsDomainJoinMachineRequest.php
+src/Models/Operations/ManagedidentitiesProjectsLocationsGlobalDomainsDomainJoinMachineResponse.php
 src/Models/Operations/ManagedidentitiesProjectsLocationsGlobalDomainsExtendSchemaSecurity.php
 src/Models/Operations/ManagedidentitiesProjectsLocationsGlobalDomainsExtendSchemaRequest.php
 src/Models/Operations/ManagedidentitiesProjectsLocationsGlobalDomainsExtendSchemaResponse.php
@@ -110,6 +113,8 @@ src/Models/Shared/DomainStateEnum.php
 src/Models/Shared/Domain.php
 src/Models/Shared/DomainInput.php
 src/Models/Shared/DetachTrustRequestInput.php
+src/Models/Shared/DomainJoinMachineResponse.php
+src/Models/Shared/DomainJoinMachineRequest.php
 src/Models/Shared/ExtendSchemaRequest.php
 src/Models/Shared/LDAPSSettingsInput.php
 src/Models/Shared/LDAPSSettingsStateEnum.php
@@ -135,4 +140,6 @@ src/Models/Shared/TestIamPermissionsResponse.php
 src/Models/Shared/TestIamPermissionsRequest.php
 src/Models/Shared/ListLocationsResponse.php
 src/Models/Shared/Location.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

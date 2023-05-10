@@ -22,4 +22,6 @@ src/Utils/Utils.php
 src/Models/Operations/GetstateabbreviationRequest.php
 src/Models/Operations/Getstateabbreviation200ApplicationJSON.php
 src/Models/Operations/GetstateabbreviationResponse.php
+docs/sdk/README.md
+docs/statedatastandardization/README.md
 USAGE.md

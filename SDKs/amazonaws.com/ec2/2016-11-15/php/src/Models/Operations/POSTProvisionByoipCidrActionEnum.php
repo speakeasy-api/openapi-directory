@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTProvisionByoipCidrActionEnum: string
 {
     case PROVISION_BYOIP_CIDR = 'ProvisionByoipCidr';

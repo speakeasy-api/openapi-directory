@@ -49,7 +49,7 @@ class GetJourneyExecutionMetricsRequest
     public string $journeyId;
     
     /**
-     * The  string that specifies which page of results to return in a paginated response. This parameter is not supported for application, campaign, and journey metrics.
+     * The <code/> string that specifies which page of results to return in a paginated response. This parameter is not supported for application, campaign, and journey metrics.
      * 
      * @var ?string $nextToken
      */

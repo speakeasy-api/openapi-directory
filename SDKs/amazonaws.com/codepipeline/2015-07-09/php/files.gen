@@ -285,4 +285,5 @@ src/Models/Shared/UpdateActionTypeInput.php
 src/Models/Shared/UpdatePipelineOutput.php
 src/Models/Shared/UpdatePipelineInput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

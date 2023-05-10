@@ -30,17 +30,42 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\GetCriticsResourceTypeJsonRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetCriticsResourceTypeJsonRequest();
+    $request->resourceType = 'corrupti';
+
+    $response = $sdk->getCriticsResourceTypeJson($request);
+
+    if ($response->getCriticsResourceTypeJSON200ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getCriticsResourceTypeJson`
-* `getReviewsSearchJson`
-* `getReviewsResourceTypeJson`
+* [getCriticsResourceTypeJson](docs/sdk/README.md#getcriticsresourcetypejson)
+* [getReviewsSearchJson](docs/sdk/README.md#getreviewssearchjson)
+* [getReviewsResourceTypeJson](docs/sdk/README.md#getreviewsresourcetypejson)
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AssociateOpsItemRelatedItemXAmzTargetEnum: string
 {
     case AMAZON_SSM_ASSOCIATE_OPS_ITEM_RELATED_ITEM = 'AmazonSSM.AssociateOpsItemRelatedItem';

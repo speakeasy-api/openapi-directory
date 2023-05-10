@@ -95,4 +95,7 @@ src/Models/Shared/GetBreakpointResponse.php
 src/Models/Shared/ListBreakpointsResponse.php
 src/Models/Shared/SetBreakpointResponse.php
 src/Models/Shared/ListDebuggeesResponse.php
+docs/sdk/README.md
+docs/controller/README.md
+docs/debugger/README.md
 USAGE.md

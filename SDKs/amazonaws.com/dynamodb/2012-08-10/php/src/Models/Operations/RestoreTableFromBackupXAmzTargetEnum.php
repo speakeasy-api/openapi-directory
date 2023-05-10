@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RestoreTableFromBackupXAmzTargetEnum: string
 {
     case DYNAMO_DB20120810_RESTORE_TABLE_FROM_BACKUP = 'DynamoDB_20120810.RestoreTableFromBackup';

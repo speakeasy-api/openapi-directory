@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteTargetGroupActionEnum: string
 {
     case DELETE_TARGET_GROUP = 'DeleteTargetGroup';

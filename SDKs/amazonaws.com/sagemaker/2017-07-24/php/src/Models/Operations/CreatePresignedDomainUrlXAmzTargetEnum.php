@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreatePresignedDomainUrlXAmzTargetEnum: string
 {
     case SAGE_MAKER_CREATE_PRESIGNED_DOMAIN_URL = 'SageMaker.CreatePresignedDomainUrl';

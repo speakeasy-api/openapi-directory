@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetBlueprintsXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_GET_BLUEPRINTS = 'Lightsail_20161128.GetBlueprints';

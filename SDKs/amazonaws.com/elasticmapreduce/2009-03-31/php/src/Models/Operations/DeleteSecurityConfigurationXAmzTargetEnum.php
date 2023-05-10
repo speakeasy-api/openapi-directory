@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteSecurityConfigurationXAmzTargetEnum: string
 {
     case ELASTIC_MAP_REDUCE_DELETE_SECURITY_CONFIGURATION = 'ElasticMapReduce.DeleteSecurityConfiguration';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateGameSessionXAmzTargetEnum: string
 {
     case GAME_LIFT_UPDATE_GAME_SESSION = 'GameLift.UpdateGameSession';

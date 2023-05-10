@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Shared;
 
 
-/**
- * ACHTransferACHNotificationOfChange - If the receiving bank accepts the transfer but notifies that future transfers should use different details, this will contain those details.
- * 
- * @package OpenAPI\OpenAPI\Models\Shared
- * @access public
- */
 class ACHTransferACHNotificationOfChange
 {
     /**

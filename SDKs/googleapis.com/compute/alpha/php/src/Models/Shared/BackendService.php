@@ -278,6 +278,16 @@ class BackendService
     public ?Duration $maxStreamDuration = null;
     
     /**
+     * Deployment metadata associated with the resource to be set by a GKE hub controller and read by the backend RCTH
+     * 
+     * @var ?array<string, string> $metadatas
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('metadatas')]
+    #[\JMS\Serializer\Annotation\Type('array<string, string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $metadatas = null;
+    
+    /**
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      * @var ?string $name
@@ -475,6 +485,7 @@ class BackendService
 		$this->localityLbPolicy = null;
 		$this->logConfig = null;
 		$this->maxStreamDuration = null;
+		$this->metadatas = null;
 		$this->name = null;
 		$this->network = null;
 		$this->outlierDetection = null;

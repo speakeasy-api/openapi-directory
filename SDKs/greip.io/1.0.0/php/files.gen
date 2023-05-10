@@ -18,6 +18,10 @@ src/Utils/SecurityClient.php
 src/Utils/SecurityMetadata.php
 src/Utils/SpeakeasyMetadata.php
 src/Utils/Utils.php
+src/Models/Operations/GetASNLookupRequest.php
+src/Models/Operations/GetASNLookupResponse.php
+src/Models/Operations/GetBINLookupRequest.php
+src/Models/Operations/GetBINLookupResponse.php
 src/Models/Operations/GetBulkLookupRequest.php
 src/Models/Operations/GetBulkLookupResponse.php
 src/Models/Operations/GetCountryRequest.php
@@ -28,4 +32,9 @@ src/Models/Operations/GetIPLookupRequest.php
 src/Models/Operations/GetIPLookupResponse.php
 src/Models/Operations/GetBadWordsRequest.php
 src/Models/Operations/GetBadWordsResponse.php
+src/Models/Operations/GetValidateEmailRequest.php
+src/Models/Operations/GetValidateEmailResponse.php
+src/Models/Operations/GetValidatePhoneRequest.php
+src/Models/Operations/GetValidatePhoneResponse.php
+docs/sdk/README.md
 USAGE.md

@@ -76,6 +76,14 @@ class ComputeRoutersGetNatMappingInfoRequest
     public ?int $maxResults = null;
     
     /**
+     * Name of the nat service to filter the Nat Mapping information. If it is omitted, all nats for this router will be returned. Name should conform to RFC1035.
+     * 
+     * @var ?string $natName
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=natName')]
+    public ?string $natName = null;
+    
+    /**
      * OAuth 2.0 token for the current user.
      * 
      * @var ?string $oauthToken
@@ -181,6 +189,7 @@ class ComputeRoutersGetNatMappingInfoRequest
 		$this->filter = null;
 		$this->key = null;
 		$this->maxResults = null;
+		$this->natName = null;
 		$this->oauthToken = null;
 		$this->orderBy = null;
 		$this->pageToken = null;

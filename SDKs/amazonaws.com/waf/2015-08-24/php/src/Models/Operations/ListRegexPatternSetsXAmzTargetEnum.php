@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListRegexPatternSetsXAmzTargetEnum: string
 {
     case AWSWAF20150824_LIST_REGEX_PATTERN_SETS = 'AWSWAF_20150824.ListRegexPatternSets';

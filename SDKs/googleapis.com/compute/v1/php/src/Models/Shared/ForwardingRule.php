@@ -58,6 +58,16 @@ class ForwardingRule
     public ?bool $allowGlobalAccess = null;
     
     /**
+     * This is used in PSC consumer ForwardingRule to control whether the PSC endpoint can be accessed from another region.
+     * 
+     * @var ?bool $allowPscGlobalAccess
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('allowPscGlobalAccess')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $allowPscGlobalAccess = null;
+    
+    /**
      * Identifies the backend service to which the forwarding rule sends traffic. Required for Internal TCP/UDP Load Balancing and Network Load Balancing; must be omitted for all other load balancer types.
      * 
      * @var ?string $backendService
@@ -198,7 +208,7 @@ class ForwardingRule
     public ?string $name = null;
     
     /**
-     * This field is not used for external load balancing. For Internal TCP/UDP Load Balancing, this field identifies the network that the load balanced IP should belong to for this Forwarding Rule. If this field is not specified, the default network will be used. For Private Service Connect forwarding rules that forward traffic to Google APIs, a network must be provided.
+     * This field is not used for external load balancing. For Internal TCP/UDP Load Balancing, this field identifies the network that the load balanced IP should belong to for this Forwarding Rule. If the subnetwork is specified, the network of the subnetwork will be used. If neither subnetwork nor this field is specified, the default network will be used. For Private Service Connect forwarding rules that forward traffic to Google APIs, a network must be provided.
      * 
      * @var ?string $network
      */
@@ -348,6 +358,7 @@ class ForwardingRule
 		$this->ipProtocol = null;
 		$this->allPorts = null;
 		$this->allowGlobalAccess = null;
+		$this->allowPscGlobalAccess = null;
 		$this->backendService = null;
 		$this->baseForwardingRule = null;
 		$this->creationTimestamp = null;

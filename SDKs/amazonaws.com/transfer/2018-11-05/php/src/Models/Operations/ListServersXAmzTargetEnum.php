@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListServersXAmzTargetEnum: string
 {
     case TRANSFER_SERVICE_LIST_SERVERS = 'TransferService.ListServers';

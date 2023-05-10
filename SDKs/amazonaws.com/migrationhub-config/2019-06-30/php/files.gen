@@ -36,4 +36,5 @@ src/Models/Shared/DescribeHomeRegionControlsResult.php
 src/Models/Shared/DescribeHomeRegionControlsRequest.php
 src/Models/Shared/GetHomeRegionResult.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

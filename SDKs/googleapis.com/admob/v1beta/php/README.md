@@ -30,22 +30,61 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\AdmobAccountsAdSourcesListRequest;
+use \OpenAPI\OpenAPI\Models\Shared\XgafvEnum;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new AdmobAccountsAdSourcesListRequest();
+    $request->dollarXgafv = XgafvEnum::TWO;
+    $request->accessToken = 'provident';
+    $request->alt = AltEnum::PROTO;
+    $request->callback = 'quibusdam';
+    $request->fields = 'unde';
+    $request->key = 'nulla';
+    $request->oauthToken = 'corrupti';
+    $request->pageSize = 847252;
+    $request->pageToken = 'vel';
+    $request->parent = 'error';
+    $request->prettyPrint = false;
+    $request->quotaUser = 'deserunt';
+    $request->uploadType = 'suscipit';
+    $request->uploadProtocol = 'iure';
+
+    $response = $sdk->accounts->admobAccountsAdSourcesList($request);
+
+    if ($response->listAdSourcesResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### accounts
+### [accounts](docs/accounts/README.md)
 
-* `admobAccountsAdSourcesList` - List the ad sources.
-* `admobAccountsAdUnitsList` - List the ad units under the specified AdMob account.
-* `admobAccountsAppsList` - List the apps under the specified AdMob account.
-* `admobAccountsGet` - Gets information about the specified AdMob publisher account.
-* `admobAccountsList` - Lists the AdMob publisher account that was most recently signed in to from the AdMob UI. For more information, see https://support.google.com/admob/answer/10243672.
-* `admobAccountsMediationReportGenerate` - Generates an AdMob mediation report based on the provided report specification. Returns result of a server-side streaming RPC. The result is returned in a sequence of responses.
-* `admobAccountsNetworkReportGenerate` - Generates an AdMob Network report based on the provided report specification. Returns result of a server-side streaming RPC. The result is returned in a sequence of responses.
+* [admobAccountsAdSourcesList](docs/accounts/README.md#admobaccountsadsourceslist) - List the ad sources.
+* [admobAccountsAdUnitsList](docs/accounts/README.md#admobaccountsadunitslist) - List the ad units under the specified AdMob account.
+* [admobAccountsAppsList](docs/accounts/README.md#admobaccountsappslist) - List the apps under the specified AdMob account.
+* [admobAccountsGet](docs/accounts/README.md#admobaccountsget) - Gets information about the specified AdMob publisher account.
+* [admobAccountsList](docs/accounts/README.md#admobaccountslist) - Lists the AdMob publisher account that was most recently signed in to from the AdMob UI. For more information, see https://support.google.com/admob/answer/10243672.
+* [admobAccountsMediationReportGenerate](docs/accounts/README.md#admobaccountsmediationreportgenerate) - Generates an AdMob mediation report based on the provided report specification. Returns result of a server-side streaming RPC. The result is returned in a sequence of responses.
+* [admobAccountsNetworkReportGenerate](docs/accounts/README.md#admobaccountsnetworkreportgenerate) - Generates an AdMob Network report based on the provided report specification. Returns result of a server-side streaming RPC. The result is returned in a sequence of responses.
 <!-- End SDK Available Operations -->
 
 ### Maturity

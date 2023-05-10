@@ -36,6 +36,11 @@ class ResourceSet
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $name;
     
+	#[\JMS\Serializer\Annotation\SerializedName('ResourceSetStatus')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\ResourceSetStatusEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?ResourceSetStatusEnum $resourceSetStatus = null;
+    
     /**
      * $resourceTypeList
      * 
@@ -56,6 +61,7 @@ class ResourceSet
 		$this->id = null;
 		$this->lastUpdateTime = null;
 		$this->name = "";
+		$this->resourceSetStatus = null;
 		$this->resourceTypeList = [];
 		$this->updateToken = null;
 	}

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListTagsForResourceXAmzTargetEnum: string
 {
     case AMAZON_EC2_CONTAINER_SERVICE_V20141113_LIST_TAGS_FOR_RESOURCE = 'AmazonEC2ContainerServiceV20141113.ListTagsForResource';

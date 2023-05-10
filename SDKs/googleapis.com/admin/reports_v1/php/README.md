@@ -30,33 +30,87 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\ReportsActivitiesListRequest;
+use \OpenAPI\OpenAPI\Models\Shared\XgafvEnum;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+use \OpenAPI\OpenAPI\Models\Operations\ReportsActivitiesListApplicationNameEnum;
+use \OpenAPI\OpenAPI\Models\Operations\ReportsActivitiesListSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new ReportsActivitiesListRequest();
+    $request->dollarXgafv = XgafvEnum::TWO;
+    $request->accessToken = 'provident';
+    $request->actorIpAddress = 'distinctio';
+    $request->alt = AltEnum::PROTO;
+    $request->applicationName = ReportsActivitiesListApplicationNameEnum::MOBILE;
+    $request->callback = 'nulla';
+    $request->customerId = 'corrupti';
+    $request->endTime = 'illum';
+    $request->eventName = 'vel';
+    $request->fields = 'error';
+    $request->filters = 'deserunt';
+    $request->groupIdFilter = 'suscipit';
+    $request->key = 'iure';
+    $request->maxResults = 297534;
+    $request->oauthToken = 'debitis';
+    $request->orgUnitID = 'ipsa';
+    $request->pageToken = 'delectus';
+    $request->prettyPrint = false;
+    $request->quotaUser = 'tempora';
+    $request->startTime = 'suscipit';
+    $request->uploadType = 'molestiae';
+    $request->uploadProtocol = 'minus';
+    $request->userKey = 'placeat';
+
+    $requestSecurity = new ReportsActivitiesListSecurity();
+    $requestSecurity->oauth2 = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+    $requestSecurity->oauth2c = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+
+    $response = $sdk->activities->reportsActivitiesList($request, $requestSecurity);
+
+    if ($response->activities !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### activities
+### [activities](docs/activities/README.md)
 
-* `reportsActivitiesList` - Retrieves a list of activities for a specific customer's account and application such as the Admin console application or the Google Drive application. For more information, see the guides for administrator and Google Drive activity reports. For more information about the activity report's parameters, see the activity parameters reference guides. 
-* `reportsActivitiesWatch` - Start receiving notifications for account activities. For more information, see Receiving Push Notifications.
+* [reportsActivitiesList](docs/activities/README.md#reportsactivitieslist) - Retrieves a list of activities for a specific customer's account and application such as the Admin console application or the Google Drive application. For more information, see the guides for administrator and Google Drive activity reports. For more information about the activity report's parameters, see the activity parameters reference guides. 
+* [reportsActivitiesWatch](docs/activities/README.md#reportsactivitieswatch) - Start receiving notifications for account activities. For more information, see Receiving Push Notifications.
 
-### channels
+### [channels](docs/channels/README.md)
 
-* `adminChannelsStop` - Stop watching resources through this channel.
+* [adminChannelsStop](docs/channels/README.md#adminchannelsstop) - Stop watching resources through this channel.
 
-### customerUsageReports
+### [customerUsageReports](docs/customerusagereports/README.md)
 
-* `reportsCustomerUsageReportsGet` - Retrieves a report which is a collection of properties and statistics for a specific customer's account. For more information, see the Customers Usage Report guide. For more information about the customer report's parameters, see the Customers Usage parameters reference guides. 
+* [reportsCustomerUsageReportsGet](docs/customerusagereports/README.md#reportscustomerusagereportsget) - Retrieves a report which is a collection of properties and statistics for a specific customer's account. For more information, see the Customers Usage Report guide. For more information about the customer report's parameters, see the Customers Usage parameters reference guides. 
 
-### entityUsageReports
+### [entityUsageReports](docs/entityusagereports/README.md)
 
-* `reportsEntityUsageReportsGet` - Retrieves a report which is a collection of properties and statistics for entities used by users within the account. For more information, see the Entities Usage Report guide. For more information about the entities report's parameters, see the Entities Usage parameters reference guides.
+* [reportsEntityUsageReportsGet](docs/entityusagereports/README.md#reportsentityusagereportsget) - Retrieves a report which is a collection of properties and statistics for entities used by users within the account. For more information, see the Entities Usage Report guide. For more information about the entities report's parameters, see the Entities Usage parameters reference guides.
 
-### userUsageReport
+### [userUsageReport](docs/userusagereport/README.md)
 
-* `reportsUserUsageReportGet` - Retrieves a report which is a collection of properties and statistics for a set of users with the account. For more information, see the User Usage Report guide. For more information about the user report's parameters, see the Users Usage parameters reference guides.
+* [reportsUserUsageReportGet](docs/userusagereport/README.md#reportsuserusagereportget) - Retrieves a report which is a collection of properties and statistics for a set of users with the account. For more information, see the User Usage Report guide. For more information about the user report's parameters, see the Users Usage parameters reference guides.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetTableVersionXAmzTargetEnum: string
 {
     case AWS_GLUE_GET_TABLE_VERSION = 'AWSGlue.GetTableVersion';

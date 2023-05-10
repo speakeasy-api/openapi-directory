@@ -38,6 +38,358 @@ class Cases
 	}
 	
     /**
+     * Retrieve all attachments associated with a support case.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesAttachmentsListRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesAttachmentsListSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesAttachmentsListResponse
+     */
+	public function cloudsupportCasesAttachmentsList(
+        \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesAttachmentsListRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesAttachmentsListSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesAttachmentsListResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v2beta/{parent}/attachments', \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesAttachmentsListRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesAttachmentsListRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesAttachmentsListResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->listAttachmentsResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListAttachmentsResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Close the specified case.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCloseRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCloseSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCloseResponse
+     */
+	public function cloudsupportCasesClose(
+        \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCloseRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCloseSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCloseResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v2beta/{name}:close', \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCloseRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCloseRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCloseResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->case = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\CaseT', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Add a new comment to the specified Case. The comment object must have the following fields set: body.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCommentsCreateRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCommentsCreateSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCommentsCreateResponse
+     */
+	public function cloudsupportCasesCommentsCreate(
+        \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCommentsCreateRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCommentsCreateSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCommentsCreateResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v2beta/{parent}/comments', \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCommentsCreateRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "commentInput", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCommentsCreateRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCommentsCreateResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->comment = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Comment', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Retrieve all Comments associated with the Case object.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCommentsListRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCommentsListSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCommentsListResponse
+     */
+	public function cloudsupportCasesCommentsList(
+        \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCommentsListRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCommentsListSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCommentsListResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v2beta/{parent}/comments', \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCommentsListRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCommentsListRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCommentsListResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->listCommentsResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListCommentsResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Create a new case and associate it with the given Google Cloud Resource. The case object must have the following fields set: `display_name`, `description`, `classification`, and `priority`.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCreateRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCreateSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCreateResponse
+     */
+	public function cloudsupportCasesCreate(
+        \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCreateRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCreateSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCreateResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v2beta/{parent}/cases', \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCreateRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "caseInput", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCreateRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesCreateResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->case = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\CaseT', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Escalate a case. Escalating a case will initiate the Google Cloud Support escalation management process. This operation is only available to certain Customer Care tiers. Go to https://cloud.google.com/support and look for 'Technical support escalations' in the feature list to find out which tiers are able to perform escalations.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesEscalateRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesEscalateSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesEscalateResponse
+     */
+	public function cloudsupportCasesEscalate(
+        \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesEscalateRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesEscalateSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesEscalateResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v2beta/{name}:escalate', \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesEscalateRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "escalateCaseRequest", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesEscalateRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesEscalateResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->case = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\CaseT', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Retrieve the specified case.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesGetRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesGetSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesGetResponse
+     */
+	public function cloudsupportCasesGet(
+        \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesGetRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesGetSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesGetResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v2beta/{name}', \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesGetRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesGetRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesGetResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->case = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\CaseT', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Retrieve all cases under the specified parent. Note: Listing cases under an Organization returns only the cases directly parented by that organization. To retrieve all cases under an organization, including cases parented by projects under that organization, use `cases.search`.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesListRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesListSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesListResponse
+     */
+	public function cloudsupportCasesList(
+        \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesListRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesListSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesListResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v2beta/{parent}/cases', \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesListRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesListRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesListResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->listCasesResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListCasesResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Update the specified case. Only a subset of fields can be updated.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesPatchRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesPatchSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesPatchResponse
+     */
+	public function cloudsupportCasesPatch(
+        \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesPatchRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesPatchSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesPatchResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v2beta/{name}', \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesPatchRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "caseInput", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesPatchRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('PATCH', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesPatchResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->case = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\CaseT', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Search cases using the specified query.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\CloudsupportCasesSearchRequest $request

@@ -307,4 +307,5 @@ src/Models/Shared/UpdateDomainEndpointOptionsRequest.php
 src/Models/Shared/UpdateScalingParametersRequest.php
 src/Models/Shared/UpdateServiceAccessPoliciesRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

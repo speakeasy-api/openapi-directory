@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetTableRestoreStatusXAmzTargetEnum: string
 {
     case REDSHIFT_SERVERLESS_GET_TABLE_RESTORE_STATUS = 'RedshiftServerless.GetTableRestoreStatus';

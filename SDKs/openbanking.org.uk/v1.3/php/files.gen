@@ -469,4 +469,11 @@ src/Models/Operations/GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV1
 src/Models/Operations/GetUnsecuredSmeLoansResponse.php
 src/Models/Operations/HeadUnsecuredSmeLoansRequest.php
 src/Models/Operations/HeadUnsecuredSmeLoansResponse.php
+docs/sdk/README.md
+docs/atm/README.md
+docs/bca/README.md
+docs/branch/README.md
+docs/ccc/README.md
+docs/pca/README.md
+docs/sme/README.md
 USAGE.md

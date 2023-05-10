@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListProtocolsListsXAmzTargetEnum: string
 {
     case AWSFMS20180101_LIST_PROTOCOLS_LISTS = 'AWSFMS_20180101.ListProtocolsLists';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RejectDomainTransferFromAnotherAwsAccountXAmzTargetEnum: string
 {
     case ROUTE53_DOMAINS_V20140515_REJECT_DOMAIN_TRANSFER_FROM_ANOTHER_AWS_ACCOUNT = 'Route53Domains_v20140515.RejectDomainTransferFromAnotherAwsAccount';

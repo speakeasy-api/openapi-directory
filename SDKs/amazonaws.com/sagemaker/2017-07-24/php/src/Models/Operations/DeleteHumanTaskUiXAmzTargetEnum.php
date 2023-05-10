@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteHumanTaskUiXAmzTargetEnum: string
 {
     case SAGE_MAKER_DELETE_HUMAN_TASK_UI = 'SageMaker.DeleteHumanTaskUi';

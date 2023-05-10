@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AnalyzeIDXAmzTargetEnum: string
 {
     case TEXTRACT_ANALYZE_ID = 'Textract.AnalyzeID';

@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class KernelRootkit
 {
     /**
-     * Rootkit name when available.
+     * Rootkit name, when available.
      * 
      * @var ?string $name
      */
@@ -28,7 +28,7 @@ class KernelRootkit
     public ?string $name = null;
     
     /**
-     * True when unexpected modifications of kernel code memory are present.
+     * True if unexpected modifications of kernel code memory are present.
      * 
      * @var ?bool $unexpectedCodeModification
      */
@@ -38,7 +38,7 @@ class KernelRootkit
     public ?bool $unexpectedCodeModification = null;
     
     /**
-     * True when `ftrace` points are present with callbacks pointing to regions that are not in the expected kernel or module code range.
+     * True if `ftrace` points are present with callbacks pointing to regions that are not in the expected kernel or module code range.
      * 
      * @var ?bool $unexpectedFtraceHandler
      */
@@ -48,7 +48,7 @@ class KernelRootkit
     public ?bool $unexpectedFtraceHandler = null;
     
     /**
-     * True when interrupt handlers that are are not in the expected kernel or module code regions are present.
+     * True if interrupt handlers that are are not in the expected kernel or module code regions are present.
      * 
      * @var ?bool $unexpectedInterruptHandler
      */
@@ -58,7 +58,7 @@ class KernelRootkit
     public ?bool $unexpectedInterruptHandler = null;
     
     /**
-     * True when kernel code pages that are not in the expected kernel or module code regions are present.
+     * True if kernel code pages that are not in the expected kernel or module code regions are present.
      * 
      * @var ?bool $unexpectedKernelCodePages
      */
@@ -68,7 +68,7 @@ class KernelRootkit
     public ?bool $unexpectedKernelCodePages = null;
     
     /**
-     * True when `kprobe` points are present with callbacks pointing to regions that are not in the expected kernel or module code range.
+     * True if `kprobe` points are present with callbacks pointing to regions that are not in the expected kernel or module code range.
      * 
      * @var ?bool $unexpectedKprobeHandler
      */
@@ -78,7 +78,7 @@ class KernelRootkit
     public ?bool $unexpectedKprobeHandler = null;
     
     /**
-     * True when unexpected processes in the scheduler run queue are present. Such processes are in the run queue, but not in the process task list.
+     * True if unexpected processes in the scheduler run queue are present. Such processes are in the run queue, but not in the process task list.
      * 
      * @var ?bool $unexpectedProcessesInRunqueue
      */
@@ -88,7 +88,7 @@ class KernelRootkit
     public ?bool $unexpectedProcessesInRunqueue = null;
     
     /**
-     * True when unexpected modifications of kernel read-only data memory are present.
+     * True if unexpected modifications of kernel read-only data memory are present.
      * 
      * @var ?bool $unexpectedReadOnlyDataModification
      */
@@ -98,7 +98,7 @@ class KernelRootkit
     public ?bool $unexpectedReadOnlyDataModification = null;
     
     /**
-     * True when system call handlers that are are not in the expected kernel or module code regions are present.
+     * True if system call handlers that are are not in the expected kernel or module code regions are present.
      * 
      * @var ?bool $unexpectedSystemCallHandler
      */

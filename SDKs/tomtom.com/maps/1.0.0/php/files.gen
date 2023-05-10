@@ -84,4 +84,9 @@ src/Models/Operations/GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlWM
 src/Models/Operations/GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlRequest.php
 src/Models/Operations/GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/copyrights/README.md
+docs/raster/README.md
+docs/vector/README.md
+docs/wmswmts/README.md
 USAGE.md

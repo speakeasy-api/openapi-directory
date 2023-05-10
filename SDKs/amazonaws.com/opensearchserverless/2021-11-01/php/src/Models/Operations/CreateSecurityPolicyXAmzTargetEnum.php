@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateSecurityPolicyXAmzTargetEnum: string
 {
     case OPEN_SEARCH_SERVERLESS_CREATE_SECURITY_POLICY = 'OpenSearchServerless.CreateSecurityPolicy';

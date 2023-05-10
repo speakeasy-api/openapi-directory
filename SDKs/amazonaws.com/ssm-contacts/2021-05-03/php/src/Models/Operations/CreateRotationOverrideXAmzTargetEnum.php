@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateRotationOverrideXAmzTargetEnum: string
 {
     case SSM_CONTACTS_CREATE_ROTATION_OVERRIDE = 'SSMContacts.CreateRotationOverride';

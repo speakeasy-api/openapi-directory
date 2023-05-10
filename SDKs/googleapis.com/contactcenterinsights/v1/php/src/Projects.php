@@ -312,6 +312,46 @@ class Projects
     }
 	
     /**
+     * Create a longrunning conversation upload operation. This method differs from CreateConversation by allowing audio transcription and optional DLP redaction.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ContactcenterinsightsProjectsLocationsConversationsUploadRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\ContactcenterinsightsProjectsLocationsConversationsUploadSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\ContactcenterinsightsProjectsLocationsConversationsUploadResponse
+     */
+	public function contactcenterinsightsProjectsLocationsConversationsUpload(
+        \OpenAPI\OpenAPI\Models\Operations\ContactcenterinsightsProjectsLocationsConversationsUploadRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\ContactcenterinsightsProjectsLocationsConversationsUploadSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\ContactcenterinsightsProjectsLocationsConversationsUploadResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{parent}/conversations:upload', \OpenAPI\OpenAPI\Models\Operations\ContactcenterinsightsProjectsLocationsConversationsUploadRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "googleCloudContactcenterinsightsV1UploadConversationRequestInput", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\ContactcenterinsightsProjectsLocationsConversationsUploadRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\ContactcenterinsightsProjectsLocationsConversationsUploadResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->googleLongrunningOperation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\GoogleLongrunningOperation', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Export insights data to a destination defined in the request body.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ContactcenterinsightsProjectsLocationsInsightsdataExportRequest $request

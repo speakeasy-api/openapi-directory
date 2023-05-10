@@ -352,6 +352,13 @@ class SDK
 	public RecordingSettings $recordingSettings;
 	
     /**
+     * Role Information
+     * 
+     * @var Roles $$roles
+     */
+	public Roles $roles;
+	
+    /**
      * Saved List Views
      * 
      * @var SavedListViews $$savedListViews
@@ -883,6 +890,15 @@ class SDK
 		);
 		
 		$this->recordingSettings = new RecordingSettings(
+			$this->_defaultClient,
+			$this->_securityClient,
+			$this->_serverUrl,
+			$this->_language,
+			$this->_sdkVersion,
+			$this->_genVersion
+		);
+		
+		$this->roles = new Roles(
 			$this->_defaultClient,
 			$this->_securityClient,
 			$this->_serverUrl,

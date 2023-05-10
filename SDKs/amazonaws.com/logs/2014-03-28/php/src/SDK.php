@@ -1926,11 +1926,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ListTagsLogGroupRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ListTagsLogGroupResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function listTagsLogGroup(
         \OpenAPI\OpenAPI\Models\Operations\ListTagsLogGroupRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\ListTagsLogGroupResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=Logs_20140328.ListTagsLogGroup');
         
@@ -2678,11 +2681,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\TagLogGroupRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TagLogGroupResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function tagLogGroup(
         \OpenAPI\OpenAPI\Models\Operations\TagLogGroupRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TagLogGroupResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=Logs_20140328.TagLogGroup');
         
@@ -2838,11 +2844,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\UntagLogGroupRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\UntagLogGroupResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function untagLogGroup(
         \OpenAPI\OpenAPI\Models\Operations\UntagLogGroupRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\UntagLogGroupResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=Logs_20140328.UntagLogGroup');
         

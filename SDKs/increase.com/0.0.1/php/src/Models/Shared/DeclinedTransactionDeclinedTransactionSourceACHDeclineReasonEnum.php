@@ -18,9 +18,10 @@ enum DeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum: string
     case CREDIT_ENTRY_REFUSED_BY_RECEIVER = 'credit_entry_refused_by_receiver';
     case DUPLICATE_RETURN = 'duplicate_return';
     case ENTITY_NOT_ACTIVE = 'entity_not_active';
-    case TRANSACTION_NOT_ALLOWED = 'transaction_not_allowed';
     case GROUP_LOCKED = 'group_locked';
     case INSUFFICIENT_FUNDS = 'insufficient_funds';
+    case MISROUTED_RETURN = 'misrouted_return';
     case NO_ACH_ROUTE = 'no_ach_route';
     case ORIGINATOR_REQUEST = 'originator_request';
+    case TRANSACTION_NOT_ALLOWED = 'transaction_not_allowed';
 }

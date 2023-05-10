@@ -116,4 +116,6 @@ src/Models/Shared/AutoscaleInput.php
 src/Models/Shared/ListReservationsResponse.php
 src/Models/Shared/SearchAllAssignmentsResponse.php
 src/Models/Shared/SearchAssignmentsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

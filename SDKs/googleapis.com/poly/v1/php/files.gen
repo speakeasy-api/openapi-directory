@@ -46,4 +46,7 @@ src/Models/Shared/ListAssetsResponse.php
 src/Models/Shared/ListUserAssetsResponse.php
 src/Models/Shared/UserAsset.php
 src/Models/Shared/ListLikedAssetsResponse.php
+docs/sdk/README.md
+docs/assets/README.md
+docs/users/README.md
 USAGE.md

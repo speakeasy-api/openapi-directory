@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteApplicationReferenceDataSourceXAmzTargetEnum: string
 {
     case KINESIS_ANALYTICS20150814_DELETE_APPLICATION_REFERENCE_DATA_SOURCE = 'KinesisAnalytics_20150814.DeleteApplicationReferenceDataSource';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetSolutionMetricsXAmzTargetEnum: string
 {
     case AMAZON_PERSONALIZE_GET_SOLUTION_METRICS = 'AmazonPersonalize.GetSolutionMetrics';

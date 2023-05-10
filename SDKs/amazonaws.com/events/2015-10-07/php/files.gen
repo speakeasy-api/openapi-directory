@@ -333,4 +333,5 @@ src/Models/Shared/UpdateConnectionOAuthClientRequestParameters.php
 src/Models/Shared/UpdateConnectionBasicAuthRequestParameters.php
 src/Models/Shared/UpdateConnectionApiKeyAuthRequestParameters.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

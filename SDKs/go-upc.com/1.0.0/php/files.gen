@@ -26,4 +26,6 @@ src/Models/Operations/GetProductInfo200ApplicationJSON.php
 src/Models/Operations/GetProductInfoResponse.php
 src/Models/Shared/Error.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/product/README.md
 USAGE.md

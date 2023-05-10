@@ -19,6 +19,7 @@ src/Utils/SecurityClient.php
 src/Utils/SecurityMetadata.php
 src/Utils/SpeakeasyMetadata.php
 src/Utils/Utils.php
+src/Models/Operations/GetUserSecurity.php
 src/Models/Operations/GetUserResponse.php
 src/Models/Shared/UserResponse.php
 src/Models/Shared/IndividualAccount.php
@@ -26,4 +27,6 @@ src/Models/Shared/Phone.php
 src/Models/Shared/Address.php
 src/Models/Shared/BusinessAccount.php
 src/Models/Shared/Contact.php
+docs/sdk/README.md
+docs/user/README.md
 USAGE.md

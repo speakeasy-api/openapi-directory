@@ -505,4 +505,5 @@ src/Models/Shared/UpdateResourcePolicyResponse.php
 src/Models/Shared/UpdateSlotResponse.php
 src/Models/Shared/UpdateSlotTypeResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

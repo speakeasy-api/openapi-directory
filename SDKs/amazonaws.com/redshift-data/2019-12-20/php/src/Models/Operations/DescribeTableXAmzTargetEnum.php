@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeTableXAmzTargetEnum: string
 {
     case REDSHIFT_DATA_DESCRIBE_TABLE = 'RedshiftData.DescribeTable';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeStepXAmzTargetEnum: string
 {
     case ELASTIC_MAP_REDUCE_DESCRIBE_STEP = 'ElasticMapReduce.DescribeStep';

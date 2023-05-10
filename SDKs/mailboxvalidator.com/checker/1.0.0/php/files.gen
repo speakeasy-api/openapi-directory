@@ -21,4 +21,5 @@ src/Utils/Utils.php
 src/Models/Operations/GetV1EmailFreeFormatEnum.php
 src/Models/Operations/GetV1EmailFreeRequest.php
 src/Models/Operations/GetV1EmailFreeResponse.php
+docs/sdk/README.md
 USAGE.md

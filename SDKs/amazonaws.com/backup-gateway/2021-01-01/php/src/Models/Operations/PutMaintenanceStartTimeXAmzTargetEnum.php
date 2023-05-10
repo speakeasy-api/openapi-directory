@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutMaintenanceStartTimeXAmzTargetEnum: string
 {
     case BACKUP_ON_PREMISES_V20210101_PUT_MAINTENANCE_START_TIME = 'BackupOnPremises_v20210101.PutMaintenanceStartTime';

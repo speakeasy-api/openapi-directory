@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutHypervisorPropertyMappingsXAmzTargetEnum: string
 {
     case BACKUP_ON_PREMISES_V20210101_PUT_HYPERVISOR_PROPERTY_MAPPINGS = 'BackupOnPremises_v20210101.PutHypervisorPropertyMappings';

@@ -61,4 +61,6 @@ src/Models/Shared/GoogleCloudBillingBudgetsV1beta1CreateBudgetRequestInput.php
 src/Models/Shared/XgafvEnum.php
 src/Models/Shared/GoogleCloudBillingBudgetsV1beta1ListBudgetsResponse.php
 src/Models/Shared/GoogleCloudBillingBudgetsV1beta1UpdateBudgetRequestInput.php
+docs/sdk/README.md
+docs/billingaccounts/README.md
 USAGE.md

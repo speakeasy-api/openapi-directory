@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeletePreparedStatementXAmzTargetEnum: string
 {
     case AMAZON_ATHENA_DELETE_PREPARED_STATEMENT = 'AmazonAthena.DeletePreparedStatement';

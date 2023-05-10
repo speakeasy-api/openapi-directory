@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteRegexPatternSetXAmzTargetEnum: string
 {
     case AWSWAF20150824_DELETE_REGEX_PATTERN_SET = 'AWSWAF_20150824.DeleteRegexPatternSet';

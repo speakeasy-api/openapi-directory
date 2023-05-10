@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDescribeEnvironmentManagedActionHistoryActionEnum: string
 {
     case DESCRIBE_ENVIRONMENT_MANAGED_ACTION_HISTORY = 'DescribeEnvironmentManagedActionHistory';

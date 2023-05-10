@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AddTagsToResourceXAmzTargetEnum: string
 {
     case DIRECTORY_SERVICE20150416_ADD_TAGS_TO_RESOURCE = 'DirectoryService_20150416.AddTagsToResource';

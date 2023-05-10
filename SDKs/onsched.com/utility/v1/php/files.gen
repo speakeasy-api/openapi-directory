@@ -23,4 +23,6 @@ src/Models/Operations/GetUtilityV1HealthHeartbeatResponse.php
 src/Models/Operations/GetUtilityV1HealthThreadinfoResponse.php
 src/Models/Shared/ThreadPoolInfo.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/health/README.md
 USAGE.md

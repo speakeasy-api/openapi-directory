@@ -25,4 +25,5 @@ enum GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelTypeEnum: string
     case PERFORMANCE_MAX = 'PERFORMANCE_MAX';
     case LOCAL_SERVICES = 'LOCAL_SERVICES';
     case DISCOVERY = 'DISCOVERY';
+    case TRAVEL = 'TRAVEL';
 }

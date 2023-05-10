@@ -18,6 +18,16 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class AuthConfigTemplate
 {
     /**
+     * Identifier key for auth config
+     * 
+     * @var ?string $authKey
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('authKey')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $authKey = null;
+    
+    /**
      * The type of authentication configured.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\AuthConfigTemplateAuthTypeEnum $authType
@@ -59,6 +69,7 @@ class AuthConfigTemplate
     
 	public function __construct()
 	{
+		$this->authKey = null;
 		$this->authType = null;
 		$this->configVariableTemplates = null;
 		$this->description = null;

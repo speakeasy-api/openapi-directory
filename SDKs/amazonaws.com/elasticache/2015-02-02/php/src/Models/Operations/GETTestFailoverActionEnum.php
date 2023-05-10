@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETTestFailoverActionEnum: string
 {
     case TEST_FAILOVER = 'TestFailover';

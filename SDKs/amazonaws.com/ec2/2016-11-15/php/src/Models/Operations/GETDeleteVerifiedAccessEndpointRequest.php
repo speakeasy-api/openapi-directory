@@ -31,7 +31,7 @@ class GETDeleteVerifiedAccessEndpointRequest
     public ?bool $dryRun = null;
     
     /**
-     * The ID of the Amazon Web Services Verified Access endpoint.
+     * The ID of the Verified Access endpoint.
      * 
      * @var string $verifiedAccessEndpointId
      */

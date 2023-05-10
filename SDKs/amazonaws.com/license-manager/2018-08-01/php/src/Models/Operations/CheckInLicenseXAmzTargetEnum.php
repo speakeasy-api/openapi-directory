@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CheckInLicenseXAmzTargetEnum: string
 {
     case AWS_LICENSE_MANAGER_CHECK_IN_LICENSE = 'AWSLicenseManager.CheckInLicense';

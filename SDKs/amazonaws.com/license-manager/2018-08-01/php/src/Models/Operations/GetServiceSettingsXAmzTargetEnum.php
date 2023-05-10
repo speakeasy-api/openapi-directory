@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetServiceSettingsXAmzTargetEnum: string
 {
     case AWS_LICENSE_MANAGER_GET_SERVICE_SETTINGS = 'AWSLicenseManager.GetServiceSettings';

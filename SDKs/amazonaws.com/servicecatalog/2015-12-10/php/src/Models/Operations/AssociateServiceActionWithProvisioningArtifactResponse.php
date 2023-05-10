@@ -31,6 +31,14 @@ class AssociateServiceActionWithProvisioningArtifactResponse
     public mixed $duplicateResourceException = null;
     
     /**
+     * InvalidParametersException
+     * 
+     * @var mixed $invalidParametersException
+     */
+	
+    public mixed $invalidParametersException = null;
+    
+    /**
      * LimitExceededException
      * 
      * @var mixed $limitExceededException
@@ -57,6 +65,7 @@ class AssociateServiceActionWithProvisioningArtifactResponse
 		$this->associateServiceActionWithProvisioningArtifactOutput = null;
 		$this->contentType = "";
 		$this->duplicateResourceException = null;
+		$this->invalidParametersException = null;
 		$this->limitExceededException = null;
 		$this->resourceNotFoundException = null;
 		$this->statusCode = 0;

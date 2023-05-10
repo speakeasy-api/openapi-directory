@@ -18,6 +18,16 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class PhaseArtifact
 {
     /**
+     * Output only. File path of the directory of rendered job manifests relative to the URI. This is only set if it is applicable.
+     * 
+     * @var ?string $jobManifestsPath
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('jobManifestsPath')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $jobManifestsPath = null;
+    
+    /**
      * Output only. File path of the rendered manifest relative to the URI.
      * 
      * @var ?string $manifestPath
@@ -39,6 +49,7 @@ class PhaseArtifact
     
 	public function __construct()
 	{
+		$this->jobManifestsPath = null;
 		$this->manifestPath = null;
 		$this->skaffoldConfigPath = null;
 	}

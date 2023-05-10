@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreatePublicIpv4PoolActionEnum: string
 {
     case CREATE_PUBLIC_IPV4_POOL = 'CreatePublicIpv4Pool';

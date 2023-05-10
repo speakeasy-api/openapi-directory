@@ -30,17 +30,48 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GETMostemailedSectionTimePeriodJsonRequest;
+use \OpenAPI\OpenAPI\Models\Shared\SectionEnum;
+use \OpenAPI\OpenAPI\Models\Shared\TimePeriodEnum;
+use \OpenAPI\OpenAPI\Models\Operations\GETMostemailedSectionTimePeriodJsonSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GETMostemailedSectionTimePeriodJsonRequest();
+    $request->section = SectionEnum::PUBLIC_EDITOR;
+    $request->timePeriod = TimePeriodEnum::SEVEN;
+
+    $requestSecurity = new GETMostemailedSectionTimePeriodJsonSecurity();
+    $requestSecurity->apiKey = 'YOUR_API_KEY_HERE';
+
+    $response = $sdk->getMostemailedSectionTimePeriodJson($request, $requestSecurity);
+
+    if ($response->getMostemailedSectionTimePeriodJSON200ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getMostemailedSectionTimePeriodJson` - Most Emailed by Section & Time Period
-* `getMostsharedSectionTimePeriodJson` - Most Shared by Section & Time Period
-* `getMostviewedSectionTimePeriodJson` - Most Viewed by Section & Time Period
+* [getMostemailedSectionTimePeriodJson](docs/sdk/README.md#getmostemailedsectiontimeperiodjson) - Most Emailed by Section & Time Period
+* [getMostsharedSectionTimePeriodJson](docs/sdk/README.md#getmostsharedsectiontimeperiodjson) - Most Shared by Section & Time Period
+* [getMostviewedSectionTimePeriodJson](docs/sdk/README.md#getmostviewedsectiontimeperiodjson) - Most Viewed by Section & Time Period
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -12,4 +12,5 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 enum SyncTypeEnum: string
 {
     case TEMPLATE_SYNC = 'TEMPLATE_SYNC';
+    case SERVICE_SYNC = 'SERVICE_SYNC';
 }

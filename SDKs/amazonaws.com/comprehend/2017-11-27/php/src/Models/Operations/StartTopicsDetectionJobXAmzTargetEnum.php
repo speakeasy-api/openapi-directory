@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartTopicsDetectionJobXAmzTargetEnum: string
 {
     case COMPREHEND20171127_START_TOPICS_DETECTION_JOB = 'Comprehend_20171127.StartTopicsDetectionJob';

@@ -30,4 +30,5 @@ src/Models/Shared/Play.php
 src/Models/Shared/Game.php
 src/Models/Shared/Series.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

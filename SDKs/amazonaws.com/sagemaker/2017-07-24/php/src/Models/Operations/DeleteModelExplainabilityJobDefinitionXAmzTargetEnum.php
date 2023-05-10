@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteModelExplainabilityJobDefinitionXAmzTargetEnum: string
 {
     case SAGE_MAKER_DELETE_MODEL_EXPLAINABILITY_JOB_DEFINITION = 'SageMaker.DeleteModelExplainabilityJobDefinition';

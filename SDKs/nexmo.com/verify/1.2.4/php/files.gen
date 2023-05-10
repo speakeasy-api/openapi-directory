@@ -70,4 +70,7 @@ src/Models/Shared/SearchResponseStatusEnum.php
 src/Models/Shared/SearchResponse.php
 src/Models/Shared/SearchErrorResponseStatusEnum.php
 src/Models/Shared/SearchErrorResponse.php
+docs/sdk/README.md
+docs/fraudmanagement/README.md
+docs/requests/README.md
 USAGE.md

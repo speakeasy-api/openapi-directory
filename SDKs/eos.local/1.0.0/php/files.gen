@@ -29,4 +29,5 @@ src/Models/Operations/StatusRequestBody.php
 src/Models/Operations/Status200ApplicationJSONLastHandshake.php
 src/Models/Operations/Status200ApplicationJSON.php
 src/Models/Operations/StatusResponse.php
+docs/sdk/README.md
 USAGE.md

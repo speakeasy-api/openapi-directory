@@ -30,15 +30,42 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetV1EmailFreeRequest;
+use \OpenAPI\OpenAPI\Models\Operations\GetV1EmailFreeFormatEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetV1EmailFreeRequest();
+    $request->email = 'Larue_Rau85@yahoo.com';
+    $request->format = GetV1EmailFreeFormatEnum::XML;
+    $request->key = 'illum';
+
+    $response = $sdk->getV1EmailFree($request);
+
+    if ($response->getV1EmailFree200ApplicationJSONString !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getV1EmailFree` - The Free Email Checker API does validation on a single email address and returns if it is from a free email provider in either JSON or XML format.
+* [getV1EmailFree](docs/sdk/README.md#getv1emailfree) - The Free Email Checker API does validation on a single email address and returns if it is from a free email provider in either JSON or XML format.
 <!-- End SDK Available Operations -->
 
 ### Maturity

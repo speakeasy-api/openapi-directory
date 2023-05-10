@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * SearchRecord - A single resource returned as part of the <a>Search</a> API response.
+ * SearchRecord - A single resource returned as part of the <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API response.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

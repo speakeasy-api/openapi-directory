@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ConfirmPrivateVirtualInterfaceXAmzTargetEnum: string
 {
     case OVERTURE_SERVICE_CONFIRM_PRIVATE_VIRTUAL_INTERFACE = 'OvertureService.ConfirmPrivateVirtualInterface';

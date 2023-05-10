@@ -26,8 +26,18 @@ class WireTransferTransferCancellation
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     public \DateTime $canceledAt;
     
+    /**
+     * If the Transfer was canceled by a user in the dashboard, the email address of that user.
+     * 
+     * @var string $canceledBy
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('canceled_by')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    public string $canceledBy;
+    
 	public function __construct()
 	{
 		$this->canceledAt = new \DateTime();
+		$this->canceledBy = "";
 	}
 }

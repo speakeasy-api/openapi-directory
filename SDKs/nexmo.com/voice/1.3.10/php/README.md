@@ -30,33 +30,85 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\CreateCallSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new CreateCallRequestAnswerUrl();
+    $request->answerMethod = CreateCallRequestAnswerUrlAnswerMethodEnum::GET;
+    $request->answerUrl = [
+        'quibusdam',
+        'unde',
+        'nulla',
+    ];
+    $request->eventMethod = CreateCallRequestAnswerUrlEventMethodEnum::GET;
+    $request->eventUrl = [
+        'http://physical-pegboard.info',
+        'http://fond-teen.com',
+        'https://fatherly-geyser.info',
+        'https://studious-lynx.info',
+    ];
+    $request->from = new EndpointPhoneFrom();
+    $request->from->number = '14155550100';
+    $request->from->type = 'phone';
+    $request->lengthTimer = 568045;
+    $request->machineDetection = CreateCallRequestAnswerUrlMachineDetectionEnum::CONTINUE;
+    $request->randomFromNumber = false;
+    $request->ringingTimer = 392785;
+    $request->to = [
+        new EndpointVBCExtension(),
+        new EndpointPhoneTo(),
+        new EndpointSip(),
+        new EndpointPhoneTo(),
+    ];
+
+    $requestSecurity = new CreateCallSecurity();
+    $requestSecurity->bearerAuth = 'Bearer YOUR_BEARER_TOKEN_HERE';
+
+    $response = $sdk->calls->createCall($request, $requestSecurity);
+
+    if ($response->createCallResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### calls
+### [calls](docs/calls/README.md)
 
-* `createCall` - Create an outbound call
-* `getCall` - Get detail of a specific call
-* `getCalls` - Get details of your calls
-* `updateCall` - Modify an in progress call
+* [createCall](docs/calls/README.md#createcall) - Create an outbound call
+* [getCall](docs/calls/README.md#getcall) - Get detail of a specific call
+* [getCalls](docs/calls/README.md#getcalls) - Get details of your calls
+* [updateCall](docs/calls/README.md#updatecall) - Modify an in progress call
 
-### playDTMF
+### [playDTMF](docs/playdtmf/README.md)
 
-* `startDTMF` - Play DTMF tones into a call
+* [startDTMF](docs/playdtmf/README.md#startdtmf) - Play DTMF tones into a call
 
-### playTTS
+### [playTTS](docs/playtts/README.md)
 
-* `startTalk` - Play text to speech into a call
-* `stopTalk` - Stop text to speech in a call
+* [startTalk](docs/playtts/README.md#starttalk) - Play text to speech into a call
+* [stopTalk](docs/playtts/README.md#stoptalk) - Stop text to speech in a call
 
-### streamAudio
+### [streamAudio](docs/streamaudio/README.md)
 
-* `startStream` - Play an audio file into a call
-* `stopStream` - Stop playing an audio file into a call
+* [startStream](docs/streamaudio/README.md#startstream) - Play an audio file into a call
+* [stopStream](docs/streamaudio/README.md#stopstream) - Stop playing an audio file into a call
 <!-- End SDK Available Operations -->
 
 ### Maturity

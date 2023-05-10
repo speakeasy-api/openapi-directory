@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeExportConfigurationsXAmzTargetEnum: string
 {
     case AWS_POSEIDON_SERVICE_V20151101_DESCRIBE_EXPORT_CONFIGURATIONS = 'AWSPoseidonService_V2015_11_01.DescribeExportConfigurations';

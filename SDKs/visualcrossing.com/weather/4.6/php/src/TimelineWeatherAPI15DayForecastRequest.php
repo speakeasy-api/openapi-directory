@@ -52,7 +52,7 @@ class TimelineWeatherAPI15DayForecastRequest
      */
 	public function getVisualCrossingWebServicesRestServicesTimelineLocation(
         \OpenAPI\OpenAPI\Models\Operations\GetVisualCrossingWebServicesRestServicesTimelineLocationRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\GetVisualCrossingWebServicesRestServicesTimelineLocationResponse
     {
         $baseUrl = TimelineWeatherAPI15DayForecastRequest::GET_VISUAL_CROSSING_WEB_SERVICES_REST_SERVICES_TIMELINE_LOCATION_SERVERS[0];

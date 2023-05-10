@@ -49,7 +49,6 @@ class LocationEndpoints
      * mountains, lakes, countries, ZIP codes, etc. The response can contain multiple places, sorted by relevance.
      * You can then identify the one you want by coordinates, country, or the administrative area.
      * 
-     * 
      * @param \OpenAPI\OpenAPI\Models\Operations\FindPlacesFindPlacesGetRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\FindPlacesFindPlacesGetSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\FindPlacesFindPlacesGetResponse
@@ -106,7 +105,6 @@ class LocationEndpoints
      * 
      * Unlike the `/find_places` endpoint, you should only specify the prefix of the place you are looking for. This is particularly useful for autocomplete forms. You can search for cities, mountains, lakes, countries, ZIP codes, etc. The response can contain multiple places, sorted by relevance. You can then identify the one you want by coordinates, country, or the administrative area.
      * 
-     * 
      * @param \OpenAPI\OpenAPI\Models\Operations\FindPlacesPrefixFindPlacesPrefixGetRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\FindPlacesPrefixFindPlacesPrefixGetSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\FindPlacesPrefixFindPlacesPrefixGetResponse
@@ -162,7 +160,6 @@ class LocationEndpoints
      * You can use this endpoint to find the nearest place from given coordinates.
      * 
      * *Note: If you specify coordinates of a secluded place (e.g. middle of the ocean), the nearest point can be very far from the coordinates.*
-     * 
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\NearestPlaceNearestPlaceGetRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\NearestPlaceNearestPlaceGetSecurity $security

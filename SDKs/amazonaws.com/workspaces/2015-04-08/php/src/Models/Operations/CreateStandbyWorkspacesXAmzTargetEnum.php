@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateStandbyWorkspacesXAmzTargetEnum: string
 {
     case WORKSPACES_SERVICE_CREATE_STANDBY_WORKSPACES = 'WorkspacesService.CreateStandbyWorkspaces';

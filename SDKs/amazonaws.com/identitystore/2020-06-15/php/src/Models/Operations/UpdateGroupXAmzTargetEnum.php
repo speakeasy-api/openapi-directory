@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateGroupXAmzTargetEnum: string
 {
     case AWS_IDENTITY_STORE_UPDATE_GROUP = 'AWSIdentityStore.UpdateGroup';

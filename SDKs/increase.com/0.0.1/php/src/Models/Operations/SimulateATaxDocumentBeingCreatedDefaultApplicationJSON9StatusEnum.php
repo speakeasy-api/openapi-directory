@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-enum SimulateATaxDocumentBeingCreatedDefaultApplicationJSON9StatusEnum: string
+enum SimulateATaxDocumentBeingCreatedDefaultApplicationJSON9StatusEnum: int
 {
-    case FOUR_HUNDRED = '400';
+    case FOUR_HUNDRED = 400;
 }

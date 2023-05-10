@@ -9,16 +9,16 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Shared;
 
 
-enum SocialFriendsPlatformFriendDestinyMembershipTypeEnum: string
+enum SocialFriendsPlatformFriendDestinyMembershipTypeEnum: int
 {
-    case ZERO = '0';
-    case ONE = '1';
-    case TWO = '2';
-    case THREE = '3';
-    case FOUR = '4';
-    case FIVE = '5';
-    case SIX = '6';
-    case TEN = '10';
-    case TWO_HUNDRED_AND_FIFTY_FOUR = '254';
-    case MINUS1 = '-1';
+    case ZERO = 0;
+    case ONE = 1;
+    case TWO = 2;
+    case THREE = 3;
+    case FOUR = 4;
+    case FIVE = 5;
+    case SIX = 6;
+    case TEN = 10;
+    case TWO_HUNDRED_AND_FIFTY_FOUR = 254;
+    case MINUS1 = -1;
 }

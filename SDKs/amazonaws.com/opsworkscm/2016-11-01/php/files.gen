@@ -120,4 +120,5 @@ src/Models/Shared/UpdateServerRequest.php
 src/Models/Shared/UpdateServerEngineAttributesResponse.php
 src/Models/Shared/UpdateServerEngineAttributesRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

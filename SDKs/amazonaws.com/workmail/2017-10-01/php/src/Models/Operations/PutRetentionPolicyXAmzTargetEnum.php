@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutRetentionPolicyXAmzTargetEnum: string
 {
     case WORK_MAIL_SERVICE_PUT_RETENTION_POLICY = 'WorkMailService.PutRetentionPolicy';

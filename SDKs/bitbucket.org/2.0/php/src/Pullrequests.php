@@ -162,6 +162,45 @@ class Pullrequests
     }
 	
     /**
+     * Reopen a comment thread
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdResolveRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdResolveSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdResolveResponse
+     */
+	public function deleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdResolve(
+        \OpenAPI\OpenAPI\Models\Operations\DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdResolveRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdResolveSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdResolveResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/comments/{comment_id}/resolve', \OpenAPI\OpenAPI\Models\Operations\DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdResolveRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdResolveResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 204) {
+        }
+        else if ($httpResponse->getStatusCode() === 403 or $httpResponse->getStatusCode() === 404) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->error = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Remove change request for a pull request
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequestChangesRequest $request
@@ -1811,6 +1850,49 @@ class Pullrequests
             }
         }
         else if ($httpResponse->getStatusCode() === 403 or $httpResponse->getStatusCode() === 404) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->error = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Resolve a comment thread
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdResolveRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdResolveSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdResolveResponse
+     */
+	public function postRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdResolve(
+        \OpenAPI\OpenAPI\Models\Operations\PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdResolveRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdResolveSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdResolveResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/comments/{comment_id}/resolve', \OpenAPI\OpenAPI\Models\Operations\PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdResolveRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdResolveResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->commentResolution = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 403 or $httpResponse->getStatusCode() === 404 or $httpResponse->getStatusCode() === 409) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->error = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');

@@ -34,6 +34,11 @@ class CreateGrantVersionRequest
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $grantName = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('Options')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\Options')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?Options $options = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('SourceVersion')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -55,6 +60,7 @@ class CreateGrantVersionRequest
 		$this->clientToken = "";
 		$this->grantArn = "";
 		$this->grantName = null;
+		$this->options = null;
 		$this->sourceVersion = null;
 		$this->status = null;
 		$this->statusReason = null;

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteModelPackageXAmzTargetEnum: string
 {
     case SAGE_MAKER_DELETE_MODEL_PACKAGE = 'SageMaker.DeleteModelPackage';

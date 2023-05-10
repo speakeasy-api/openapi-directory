@@ -64,4 +64,6 @@ src/Models/Shared/ListJobsResponse.php
 src/Models/Shared/RunJobRequest.php
 src/Models/Shared/ListLocationsResponse.php
 src/Models/Shared/Location.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETBatchApplyUpdateActionActionEnum: string
 {
     case BATCH_APPLY_UPDATE_ACTION = 'BatchApplyUpdateAction';

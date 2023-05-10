@@ -46,7 +46,7 @@ class StoreDetailRequest
      * @var \DateTime $dateOfBirth
      */
 	#[\JMS\Serializer\Annotation\SerializedName('dateOfBirth')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
+    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d', '', '|Y-m-d'>")]
     public \DateTime $dateOfBirth;
     
     /**

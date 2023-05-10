@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetCredentialsForIdentityXAmzTargetEnum: string
 {
     case AWS_COGNITO_IDENTITY_SERVICE_GET_CREDENTIALS_FOR_IDENTITY = 'AWSCognitoIdentityService.GetCredentialsForIdentity';

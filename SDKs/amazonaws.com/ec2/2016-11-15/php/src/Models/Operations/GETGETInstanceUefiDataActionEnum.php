@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETGETInstanceUefiDataActionEnum: string
 {
     case GET_INSTANCE_UEFI_DATA = 'GetInstanceUefiData';

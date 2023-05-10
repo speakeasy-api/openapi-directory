@@ -25,4 +25,5 @@ src/Models/Shared/BadRequestException.php
 src/Models/Shared/Event.php
 src/Models/Shared/Session.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

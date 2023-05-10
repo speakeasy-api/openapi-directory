@@ -106,4 +106,9 @@ src/Models/Shared/TimeMachineTimeMachineHourlyData.php
 src/Models/Shared/TimeMachineTimeMachineWindData.php
 src/Models/Shared/TimeMachineTimeMachinePrecipitationData.php
 src/Models/Shared/TimeMachineTimeMachineCloudCoverData.php
+docs/sdk/README.md
+docs/locationendpoints/README.md
+docs/pointweather/README.md
+docs/timemachinehistoricalweather/README.md
+docs/weathermaps/README.md
 USAGE.md

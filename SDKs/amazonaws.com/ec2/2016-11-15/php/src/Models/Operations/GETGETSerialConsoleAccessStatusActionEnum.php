@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETGETSerialConsoleAccessStatusActionEnum: string
 {
     case GET_SERIAL_CONSOLE_ACCESS_STATUS = 'GetSerialConsoleAccessStatus';

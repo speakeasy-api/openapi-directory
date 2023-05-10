@@ -40,4 +40,7 @@ src/Models/Shared/AltEnum.php
 src/Models/Shared/XgafvEnum.php
 src/Models/Shared/SearchAllResourcesResponse.php
 src/Models/Shared/StandardResourceMetadata.php
+docs/sdk/README.md
+docs/iampolicies/README.md
+docs/resources/README.md
 USAGE.md

@@ -157,6 +157,72 @@ class SDK
     }
 	
     /**
+     * Deletes a resource-based policy on an Entity that is identified by its resource ARN.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\DeleteResourcePolicyRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\DeleteResourcePolicyResponse
+     */
+	public function deleteResourcePolicy(
+        \OpenAPI\OpenAPI\Models\Operations\DeleteResourcePolicyRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\DeleteResourcePolicyResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/DeleteResourcePolicy#resourceArn');
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\DeleteResourcePolicyRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_securityClient->request('DELETE', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\DeleteResourcePolicyResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->deleteResourcePolicyResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 480) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->internalServiceException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 481) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->accessDeniedException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 482) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->validationException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 483) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->resourceNotFoundException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 484) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->throttlingException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Provides information about a given change set.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DescribeChangeSetRequest $request
@@ -285,6 +351,72 @@ class SDK
             }
         }
         else if ($httpResponse->getStatusCode() === 485) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->throttlingException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Gets a resource-based policy of an Entity that is identified by its resource ARN.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetResourcePolicyRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\GetResourcePolicyResponse
+     */
+	public function getResourcePolicy(
+        \OpenAPI\OpenAPI\Models\Operations\GetResourcePolicyRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\GetResourcePolicyResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/GetResourcePolicy#resourceArn');
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\GetResourcePolicyRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GetResourcePolicyResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->getResourcePolicyResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\GetResourcePolicyResponse', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 480) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->internalServiceException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 481) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->accessDeniedException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 482) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->validationException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 483) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->resourceNotFoundException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 484) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->throttlingException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
@@ -501,7 +633,77 @@ class SDK
     }
 	
     /**
-     * <p>Allows you to request changes for your entities. Within a single <code>ChangeSet</code>, you can't start the same change type against the same entity multiple times. Additionally, when a <code>ChangeSet</code> is running, all the entities targeted by the different changes are locked until the change set has completed (either succeeded, cancelled, or failed). If you try to start a change set containing a change against an entity that is already locked, you will receive a <code>ResourceInUseException</code> error.</p> <p>For example, you can't start the <code>ChangeSet</code> described in the <a href="https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/API_StartChangeSet.html#API_StartChangeSet_Examples">example</a> later in this topic because it contains two changes to run the same change type (<code>AddRevisions</code>) against the same entity (<code>entity-id@1</code>).</p> <p>For more information about working with change sets, see <a href="https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/welcome.html#working-with-change-sets"> Working with change sets</a>.</p>
+     * Attaches a resource-based policy to an Entity. Examples of an entity include: <code>AmiProduct</code> and <code>ContainerProduct</code>.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\PutResourcePolicyRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\PutResourcePolicyResponse
+     */
+	public function putResourcePolicy(
+        \OpenAPI\OpenAPI\Models\Operations\PutResourcePolicyRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\PutResourcePolicyResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/PutResourcePolicy');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\PutResourcePolicyResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->putResourcePolicyResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 480) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->internalServiceException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 481) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->accessDeniedException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 482) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->validationException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 483) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->resourceNotFoundException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 484) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->throttlingException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * <p>Allows you to request changes for your entities. Within a single <code>ChangeSet</code>, you can't start the same change type against the same entity multiple times. Additionally, when a <code>ChangeSet</code> is running, all the entities targeted by the different changes are locked until the change set has completed (either succeeded, cancelled, or failed). If you try to start a change set containing a change against an entity that is already locked, you will receive a <code>ResourceInUseException</code> error.</p> <p>For example, you can't start the <code>ChangeSet</code> described in the <a href="https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/API_StartChangeSet.html#API_StartChangeSet_Examples">example</a> later in this topic because it contains two changes to run the same change type (<code>AddRevisions</code>) against the same entity (<code>entity-id@1</code>).</p> <p>For more information about working with change sets, see <a href="https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/welcome.html#working-with-change-sets"> Working with change sets</a>. For information on change types for single-AMI products, see <a href="https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/ami-products.html#working-with-single-AMI-products">Working with single-AMI products</a>. Als, for more information on change types available for container-based products, see <a href="https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/container-products.html#working-with-container-products">Working with container products</a>.</p>
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\StartChangeSetRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\StartChangeSetResponse

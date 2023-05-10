@@ -116,4 +116,5 @@ src/Models/Shared/UpdateActionEnum.php
 src/Models/Shared/UpdateWorkspaceResponse.php
 src/Models/Shared/UpdateWorkspaceAuthenticationResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

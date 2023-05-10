@@ -30,20 +30,49 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\DeleteFaxRequest;
+use \OpenAPI\OpenAPI\Models\Operations\DeleteFaxSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new DeleteFaxRequest();
+    $request->sid = 'corrupti';
+
+    $requestSecurity = new DeleteFaxSecurity();
+    $requestSecurity->password = 'YOUR_PASSWORD_HERE';
+    $requestSecurity->username = 'YOUR_USERNAME_HERE';
+
+    $response = $sdk->deleteFax($request, $requestSecurity);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `deleteFax` - Delete a specific fax and its associated media.
-* `deleteFaxMedia` - Delete a specific fax media instance.
-* `fetchFax` - Fetch a specific fax.
-* `fetchFaxMedia` - Fetch a specific fax media instance.
-* `listFax` - Retrieve a list of all faxes.
-* `listFaxMedia` - Retrieve a list of all fax media instances for the specified fax.
+* [deleteFax](docs/sdk/README.md#deletefax) - Delete a specific fax and its associated media.
+* [deleteFaxMedia](docs/sdk/README.md#deletefaxmedia) - Delete a specific fax media instance.
+* [fetchFax](docs/sdk/README.md#fetchfax) - Fetch a specific fax.
+* [fetchFaxMedia](docs/sdk/README.md#fetchfaxmedia) - Fetch a specific fax media instance.
+* [listFax](docs/sdk/README.md#listfax) - Retrieve a list of all faxes.
+* [listFaxMedia](docs/sdk/README.md#listfaxmedia) - Retrieve a list of all fax media instances for the specified fax.
 <!-- End SDK Available Operations -->
 
 ### Maturity

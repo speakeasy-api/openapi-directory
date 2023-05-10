@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeLimitsXAmzTargetEnum: string
 {
     case KINESIS20131202_DESCRIBE_LIMITS = 'Kinesis_20131202.DescribeLimits';

@@ -30,54 +30,89 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\DeleteBusinessLinesIdRequest;
+use \OpenAPI\OpenAPI\Models\Operations\DeleteBusinessLinesIdSecurity;
+use \OpenAPI\OpenAPI\Models\Shared\SchemeBasicAuth;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new DeleteBusinessLinesIdRequest();
+    $request->id = '89bd9d8d-69a6-474e-8f46-7cc8796ed151';
+
+    $requestSecurity = new DeleteBusinessLinesIdSecurity();
+    $requestSecurity->apiKeyAuth = 'YOUR_API_KEY_HERE';
+
+    $response = $sdk->businessLines->deleteBusinessLinesId($request, $requestSecurity);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### businessLines
+### [businessLines](docs/businesslines/README.md)
 
-* `deleteBusinessLinesId` - Delete a business line
-* `getBusinessLinesId` - Get a business line
-* `patchBusinessLinesId` - Update a business line
-* `postBusinessLines` - Create a business line
+* [deleteBusinessLinesId](docs/businesslines/README.md#deletebusinesslinesid) - Delete a business line
+* [getBusinessLinesId](docs/businesslines/README.md#getbusinesslinesid) - Get a business line
+* [patchBusinessLinesId](docs/businesslines/README.md#patchbusinesslinesid) - Update a business line
+* [postBusinessLines](docs/businesslines/README.md#postbusinesslines) - Create a business line
 
-### documents
+### [documents](docs/documents/README.md)
 
-* `deleteDocumentsId` - Delete a document
-* `getDocumentsId` - Get a document
-* `patchDocumentsId` - Update a document
-* `postDocuments` - Upload a document for verification checks
+* [deleteDocumentsId](docs/documents/README.md#deletedocumentsid) - Delete a document
+* [getDocumentsId](docs/documents/README.md#getdocumentsid) - Get a document
+* [patchDocumentsId](docs/documents/README.md#patchdocumentsid) - Update a document
+* [postDocuments](docs/documents/README.md#postdocuments) - Upload a document for verification checks
 
-### hostedOnboarding
+### [hostedOnboarding](docs/hostedonboarding/README.md)
 
-* `getThemes` - Get a list of hosted onboarding page themes
-* `getThemesId` - Get an onboarding link theme
-* `postLegalEntitiesIdOnboardingLinks` - Get a link to an Adyen-hosted onboarding page
+* [getThemes](docs/hostedonboarding/README.md#getthemes) - Get a list of hosted onboarding page themes
+* [getThemesId](docs/hostedonboarding/README.md#getthemesid) - Get an onboarding link theme
+* [postLegalEntitiesIdOnboardingLinks](docs/hostedonboarding/README.md#postlegalentitiesidonboardinglinks) - Get a link to an Adyen-hosted onboarding page
 
-### legalEntities
+### [legalEntities](docs/legalentities/README.md)
 
-* `getLegalEntitiesId` - Get a legal entity
-* `getLegalEntitiesIdBusinessLines` - Get all business lines under a legal entity
-* `patchLegalEntitiesId` - Update a legal entity
-* `postLegalEntities` - Create a legal entity
-* `postLegalEntitiesIdCheckVerificationErrors` - Check a legal entity's verification errors
+* [getLegalEntitiesId](docs/legalentities/README.md#getlegalentitiesid) - Get a legal entity
+* [getLegalEntitiesIdBusinessLines](docs/legalentities/README.md#getlegalentitiesidbusinesslines) - Get all business lines under a legal entity
+* [patchLegalEntitiesId](docs/legalentities/README.md#patchlegalentitiesid) - Update a legal entity
+* [postLegalEntities](docs/legalentities/README.md#postlegalentities) - Create a legal entity
+* [postLegalEntitiesIdCheckVerificationErrors](docs/legalentities/README.md#postlegalentitiesidcheckverificationerrors) - Check a legal entity's verification errors
 
-### termsOfService
+### [pciQuestionnaires](docs/pciquestionnaires/README.md)
 
-* `getLegalEntitiesIdTermsOfServiceAcceptanceInfos` - Get Terms of Service information for a legal entity
-* `getLegalEntitiesIdTermsOfServiceStatus` - Get Terms of Service status
-* `patchLegalEntitiesIdTermsOfServiceTermsofservicedocumentid` - Accept Terms of Service
-* `postLegalEntitiesIdTermsOfService` - Get Terms of Service document
+* [getLegalEntitiesIdPciQuestionnaires](docs/pciquestionnaires/README.md#getlegalentitiesidpciquestionnaires) - Get PCI questionnaire details
+* [getLegalEntitiesIdPciQuestionnairesPciid](docs/pciquestionnaires/README.md#getlegalentitiesidpciquestionnairespciid) - Get PCI questionnaire
+* [postLegalEntitiesIdPciQuestionnairesGeneratePciTemplates](docs/pciquestionnaires/README.md#postlegalentitiesidpciquestionnairesgeneratepcitemplates) - Generate PCI questionnaire
+* [postLegalEntitiesIdPciQuestionnairesSignPciTemplates](docs/pciquestionnaires/README.md#postlegalentitiesidpciquestionnairessignpcitemplates) - Sign PCI questionnaire
 
-### transferInstruments
+### [termsOfService](docs/termsofservice/README.md)
 
-* `deleteTransferInstrumentsId` - Delete a transfer instrument
-* `getTransferInstrumentsId` - Get a transfer instrument
-* `patchTransferInstrumentsId` - Update a transfer instrument
-* `postTransferInstruments` - Create a transfer instrument
+* [getLegalEntitiesIdTermsOfServiceAcceptanceInfos](docs/termsofservice/README.md#getlegalentitiesidtermsofserviceacceptanceinfos) - Get Terms of Service information for a legal entity
+* [patchLegalEntitiesIdTermsOfServiceTermsofservicedocumentid](docs/termsofservice/README.md#patchlegalentitiesidtermsofservicetermsofservicedocumentid) - Accept Terms of Service
+* [postLegalEntitiesIdTermsOfService](docs/termsofservice/README.md#postlegalentitiesidtermsofservice) - Get Terms of Service document
+
+### [transferInstruments](docs/transferinstruments/README.md)
+
+* [deleteTransferInstrumentsId](docs/transferinstruments/README.md#deletetransferinstrumentsid) - Delete a transfer instrument
+* [getTransferInstrumentsId](docs/transferinstruments/README.md#gettransferinstrumentsid) - Get a transfer instrument
+* [patchTransferInstrumentsId](docs/transferinstruments/README.md#patchtransferinstrumentsid) - Update a transfer instrument
+* [postTransferInstruments](docs/transferinstruments/README.md#posttransferinstruments) - Create a transfer instrument
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -245,6 +245,7 @@ src/Models/Shared/ClusterTimeline.php
 src/Models/Shared/ClusterStateChangeReason.php
 src/Models/Shared/ClusterStateChangeReasonCodeEnum.php
 src/Models/Shared/ClusterStateEnum.php
+src/Models/Shared/ErrorDetail.php
 src/Models/Shared/ScaleDownBehaviorEnum.php
 src/Models/Shared/RepoUpgradeOnBootEnum.php
 src/Models/Shared/PlacementGroupConfig.php
@@ -400,4 +401,5 @@ src/Models/Shared/TerminateJobFlowsInput.php
 src/Models/Shared/UpdateStudioInput.php
 src/Models/Shared/UpdateStudioSessionMappingInput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

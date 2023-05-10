@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum TagResourceXAmzTargetEnum: string
 {
     case ROUTE53_RESOLVER_TAG_RESOURCE = 'Route53Resolver.TagResource';

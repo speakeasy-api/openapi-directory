@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteGitHubAccountTokenXAmzTargetEnum: string
 {
     case CODE_DEPLOY20141006_DELETE_GIT_HUB_ACCOUNT_TOKEN = 'CodeDeploy_20141006.DeleteGitHubAccountToken';

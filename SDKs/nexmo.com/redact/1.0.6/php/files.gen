@@ -30,4 +30,5 @@ src/Models/Shared/ErrorInvalidId.php
 src/Models/Shared/RedactTransactionProductEnum.php
 src/Models/Shared/RedactTransactionTypeEnum.php
 src/Models/Shared/RedactTransaction.php
+docs/sdk/README.md
 USAGE.md

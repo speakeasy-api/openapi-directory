@@ -342,4 +342,7 @@ src/Models/Shared/TestIamPermissionsResponse.php
 src/Models/Shared/TestIamPermissionsRequest.php
 src/Models/Shared/Location.php
 src/Models/Shared/ListLocationsResponse.php
+docs/sdk/README.md
+docs/operations/README.md
+docs/projects/README.md
 USAGE.md

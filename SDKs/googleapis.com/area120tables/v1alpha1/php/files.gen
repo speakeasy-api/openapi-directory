@@ -125,4 +125,7 @@ src/Models/Shared/UpdateRowRequest.php
 src/Models/Shared/ListRowsResponse.php
 src/Models/Shared/Workspace.php
 src/Models/Shared/ListWorkspacesResponse.php
+docs/sdk/README.md
+docs/tables/README.md
+docs/workspaces/README.md
 USAGE.md

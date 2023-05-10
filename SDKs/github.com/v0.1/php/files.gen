@@ -30,6 +30,7 @@ src/Models/Operations/PostV01CancelScheduledPlaySecurity.php
 src/Models/Operations/PostV01CancelScheduledPlayResponse.php
 src/Models/Operations/PostV01GroupCallSecurity.php
 src/Models/Operations/PostV01GroupCallResponse.php
+src/Models/Operations/PostV01HangupAllCallsSecurity.php
 src/Models/Operations/PostV01HangupAllCallsResponse.php
 src/Models/Operations/PostV01HangupCallSecurity.php
 src/Models/Operations/PostV01HangupCallResponse.php
@@ -171,4 +172,7 @@ src/Models/Shared/ConferenceUndeafParameters.php
 src/Models/Shared/ConferenceUnmuteResponseMessageEnum.php
 src/Models/Shared/ConferenceUnmuteResponse.php
 src/Models/Shared/ConferenceUnmuteParameters.php
+docs/sdk/README.md
+docs/call/README.md
+docs/conference/README.md
 USAGE.md

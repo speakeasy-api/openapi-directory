@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DistributeDatasetEntriesXAmzTargetEnum: string
 {
     case REKOGNITION_SERVICE_DISTRIBUTE_DATASET_ENTRIES = 'RekognitionService.DistributeDatasetEntries';

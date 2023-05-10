@@ -573,4 +573,10 @@ src/Models/Shared/ReportGoogleLocationRequestReportReasonBadRecommendationEnum.p
 src/Models/Shared/ReportGoogleLocationRequest.php
 src/Models/Shared/SearchGoogleLocationsResponse.php
 src/Models/Shared/SearchGoogleLocationsRequestInput.php
+docs/sdk/README.md
+docs/accounts/README.md
+docs/attributes/README.md
+docs/categories/README.md
+docs/chains/README.md
+docs/googlelocations/README.md
 USAGE.md

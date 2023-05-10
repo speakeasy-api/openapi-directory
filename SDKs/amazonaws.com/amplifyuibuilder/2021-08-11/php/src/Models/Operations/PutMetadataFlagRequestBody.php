@@ -12,7 +12,7 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 class PutMetadataFlagRequestBody
 {
     /**
-     * Stores the metadata information about a feature on a form or view.
+     * Stores the metadata information about a feature on a form.
      * 
      * @var \OpenAPI\OpenAPI\Models\Operations\PutMetadataFlagRequestBodyBody $body
      */

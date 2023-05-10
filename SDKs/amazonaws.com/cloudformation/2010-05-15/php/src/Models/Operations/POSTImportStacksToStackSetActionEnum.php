@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTImportStacksToStackSetActionEnum: string
 {
     case IMPORT_STACKS_TO_STACK_SET = 'ImportStacksToStackSet';

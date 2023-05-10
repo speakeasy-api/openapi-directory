@@ -92,4 +92,6 @@ src/Models/Shared/ScanRunErrorTraceCodeEnum.php
 src/Models/Shared/ScanRunErrorTrace.php
 src/Models/Shared/ScanConfigErrorCodeEnum.php
 src/Models/Shared/ScanConfigError.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

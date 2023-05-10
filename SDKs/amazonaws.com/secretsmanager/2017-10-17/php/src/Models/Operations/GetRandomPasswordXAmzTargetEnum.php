@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetRandomPasswordXAmzTargetEnum: string
 {
     case SECRETSMANAGER_GET_RANDOM_PASSWORD = 'secretsmanager.GetRandomPassword';

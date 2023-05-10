@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETUntagServerCertificateActionEnum: string
 {
     case UNTAG_SERVER_CERTIFICATE = 'UntagServerCertificate';

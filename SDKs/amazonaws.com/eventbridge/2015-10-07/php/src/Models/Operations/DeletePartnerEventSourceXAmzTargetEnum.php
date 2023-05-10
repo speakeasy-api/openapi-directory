@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeletePartnerEventSourceXAmzTargetEnum: string
 {
     case AWS_EVENTS_DELETE_PARTNER_EVENT_SOURCE = 'AWSEvents.DeletePartnerEventSource';

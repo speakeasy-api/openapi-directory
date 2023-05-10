@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreatePreparedStatementXAmzTargetEnum: string
 {
     case AMAZON_ATHENA_CREATE_PREPARED_STATEMENT = 'AmazonAthena.CreatePreparedStatement';

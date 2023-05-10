@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateLagXAmzTargetEnum: string
 {
     case OVERTURE_SERVICE_CREATE_LAG = 'OvertureService.CreateLag';

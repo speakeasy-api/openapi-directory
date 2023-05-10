@@ -150,4 +150,5 @@ src/Models/Shared/OperationEnum.php
 src/Models/Shared/UpdateSnapshotResult.php
 src/Models/Shared/UpdateStageResult.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -49,4 +49,9 @@ src/Models/Shared/SlackMessageRequest.php
 src/Models/Shared/SnsMessageRequest.php
 src/Models/Shared/TwilioMessageRequest.php
 src/Models/Shared/Config.php
+docs/sdk/README.md
+docs/discord/README.md
+docs/slack/README.md
+docs/sns/README.md
+docs/twilio/README.md
 USAGE.md

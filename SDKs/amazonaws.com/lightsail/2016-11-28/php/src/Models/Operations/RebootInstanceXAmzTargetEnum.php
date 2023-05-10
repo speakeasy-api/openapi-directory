@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RebootInstanceXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_REBOOT_INSTANCE = 'Lightsail_20161128.RebootInstance';

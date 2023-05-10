@@ -30,31 +30,89 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Shared\CreateOrUpdateTemplateRequest;
+use \OpenAPI\OpenAPI\Models\Shared\FormatEnum;
+use \OpenAPI\OpenAPI\Models\Shared\CreateOrUpdateTemplateRequestMargin;
+use \OpenAPI\OpenAPI\Models\Shared\OrientationEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new CreateOrUpdateTemplateRequest();
+    $request->components = [
+        [
+            'distinctio' => 'quibusdam',
+            'unde' => 'nulla',
+            'corrupti' => 'illum',
+        ],
+        [
+            'error' => 'deserunt',
+            'suscipit' => 'iure',
+        ],
+        [
+            'debitis' => 'ipsa',
+            'delectus' => 'tempora',
+        ],
+    ];
+    $request->css = 'suscipit';
+    $request->footerHtml = 'molestiae';
+    $request->format = FormatEnum::A5;
+    $request->headerHtml = 'placeat';
+    $request->margin = new CreateOrUpdateTemplateRequestMargin();
+    $request->margin->bottom = 528895;
+    $request->margin->left = 479977;
+    $request->margin->right = 568045;
+    $request->margin->top = 392785;
+    $request->name = 'Jake Bernier MD';
+    $request->orientation = OrientationEnum::LANDSCAPE;
+    $request->previewPayload = [
+        'repellendus' => 'sapiente',
+        'quo' => 'odit',
+    ];
+    $request->templateHtml = 'at';
+
+    $response = $sdk->createTemplateDesignerTemplatesPost($request);
+
+    if ($response->responseOkDesignerTemplate !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `createTemplateDesignerTemplatesPost` - Create Template
-* `deleteDesignerTemplatesIdDelete` - Delete
-* `generatePdfDesignerTemplatesIdGeneratePost` - Generate Pdf
-* `listTemplatesDesignerTemplatesGet` - List Templates
-* `listTemplatesDesignerTemplatesIdGet` - List Templates
-* `previewDesignerTemplatesPreviewPost` - Preview
-* `updateTemplateDesignerTemplatesIdPut` - Update Template
+* [createTemplateDesignerTemplatesPost](docs/sdk/README.md#createtemplatedesignertemplatespost) - Create Template
+* [deleteDesignerTemplatesIdDelete](docs/sdk/README.md#deletedesignertemplatesiddelete) - Delete
+* [generatePdfDesignerTemplatesIdGeneratePost](docs/sdk/README.md#generatepdfdesignertemplatesidgeneratepost) - Generate Pdf
+* [listTemplatesDesignerTemplatesIdGet](docs/sdk/README.md#listtemplatesdesignertemplatesidget) - List Templates
+* [listTemplatesDesignerTemplatesGet](docs/sdk/README.md#listtemplatesdesignertemplatesget) - List Templates
+* [previewDesignerTemplatesPreviewPost](docs/sdk/README.md#previewdesignertemplatespreviewpost) - Preview
+* [updateTemplateDesignerTemplatesIdPut](docs/sdk/README.md#updatetemplatedesignertemplatesidput) - Update Template
 
-### templates
+### [templates](docs/templates/README.md)
 
-* `create` - Create
-* `deleteTemplatesIdDelete` - Delete 
-* `fill` - Fill
-* `get` - Get Template
-* `getFileTemplatesIdFileGet` - Get File
-* `list` - List 
-* `update` - Update
+* [create](docs/templates/README.md#create) - Create
+* [deleteTemplatesIdDelete](docs/templates/README.md#deletetemplatesiddelete) - Delete 
+* [fill](docs/templates/README.md#fill) - Fill
+* [get](docs/templates/README.md#get) - Get Template
+* [getFileTemplatesIdFileGet](docs/templates/README.md#getfiletemplatesidfileget) - Get File
+* [list](docs/templates/README.md#list) - List 
+* [update](docs/templates/README.md#update) - Update
 <!-- End SDK Available Operations -->
 
 ### Maturity

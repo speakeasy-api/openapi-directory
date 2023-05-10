@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopAssessmentRunXAmzTargetEnum: string
 {
     case INSPECTOR_SERVICE_STOP_ASSESSMENT_RUN = 'InspectorService.StopAssessmentRun';

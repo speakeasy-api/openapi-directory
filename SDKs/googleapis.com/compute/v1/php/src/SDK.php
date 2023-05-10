@@ -131,6 +131,8 @@ class SDK
 	
 	public RegionInstanceGroups $regionInstanceGroups;
 	
+	public RegionInstanceTemplates $regionInstanceTemplates;
+	
 	public RegionInstances $regionInstances;
 	
 	public RegionNetworkEndpointGroups $regionNetworkEndpointGroups;
@@ -728,6 +730,15 @@ class SDK
 		);
 		
 		$this->regionInstanceGroups = new RegionInstanceGroups(
+			$this->_defaultClient,
+			$this->_securityClient,
+			$this->_serverUrl,
+			$this->_language,
+			$this->_sdkVersion,
+			$this->_genVersion
+		);
+		
+		$this->regionInstanceTemplates = new RegionInstanceTemplates(
 			$this->_defaultClient,
 			$this->_securityClient,
 			$this->_serverUrl,

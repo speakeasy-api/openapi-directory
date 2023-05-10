@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchOutputConfig - The message for output config in batch process.
+ * GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchOutputConfig - The output configuration in the BatchProcessDocuments method.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

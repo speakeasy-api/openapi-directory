@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * OpenHoursRule - List of OpenHours Rules.
+ * OpenHoursRule - Specifies the start and end time for OpenHours.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

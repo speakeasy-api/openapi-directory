@@ -30,24 +30,64 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\PatchAttractionRequest;
+use \OpenAPI\OpenAPI\Models\Shared\AugmentationData;
+use \OpenAPI\OpenAPI\Models\Shared\Change;
+use \OpenAPI\OpenAPI\Models\Shared\ChangeOpEnum;
+use \OpenAPI\OpenAPI\Models\Shared\AugmentationDataRelatedEntityTypeEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new PatchAttractionRequest();
+    $request->augmentationData = new AugmentationData();
+    $request->augmentationData->changes = [
+        new Change(),
+        new Change(),
+        new Change(),
+    ];
+    $request->augmentationData->relatedEntityId = 'provident';
+    $request->augmentationData->relatedEntityType = AugmentationDataRelatedEntityTypeEnum::VENUE;
+    $request->augmentationData->score = 8442.66;
+    $request->augmentationData->source = 'unde';
+    $request->augmentationData->versionNumber = 857946;
+    $request->tmpsCorrelationId = 'corrupti';
+    $request->id = 'd69a674e-0f46-47cc-8796-ed151a05dfc2';
+
+    $response = $sdk->patchAttraction($request);
+
+    if ($response->body !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `patchAttraction` - Publish a patch on an attraction
-* `patchEvent` - Publish a patch on an event
-* `patchVenue` - Publish a patch on a venue
-* `publishAttraction` - Publish an attractions
-* `publishAttractionVideos` - Publish a video on an attraction
-* `publishEntitlements` - Publish entitlements on an entity
-* `publishEvent` - Publish an event
-* `publishEventVideos` - Publish a video on an event
-* `publishExtension` - Publish extension on an entity
-* `publishVenue` - Publish a venue
+* [patchAttraction](docs/sdk/README.md#patchattraction) - Publish a patch on an attraction
+* [patchEvent](docs/sdk/README.md#patchevent) - Publish a patch on an event
+* [patchVenue](docs/sdk/README.md#patchvenue) - Publish a patch on a venue
+* [publishAttraction](docs/sdk/README.md#publishattraction) - Publish an attractions
+* [publishAttractionVideos](docs/sdk/README.md#publishattractionvideos) - Publish a video on an attraction
+* [publishEntitlements](docs/sdk/README.md#publishentitlements) - Publish entitlements on an entity
+* [publishEvent](docs/sdk/README.md#publishevent) - Publish an event
+* [publishEventVideos](docs/sdk/README.md#publisheventvideos) - Publish a video on an event
+* [publishExtension](docs/sdk/README.md#publishextension) - Publish extension on an entity
+* [publishVenue](docs/sdk/README.md#publishvenue) - Publish a venue
 <!-- End SDK Available Operations -->
 
 ### Maturity

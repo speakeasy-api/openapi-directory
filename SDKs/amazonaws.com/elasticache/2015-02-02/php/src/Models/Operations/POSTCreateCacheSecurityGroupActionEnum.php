@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateCacheSecurityGroupActionEnum: string
 {
     case CREATE_CACHE_SECURITY_GROUP = 'CreateCacheSecurityGroup';

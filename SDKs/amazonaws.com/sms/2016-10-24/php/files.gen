@@ -221,4 +221,5 @@ src/Models/Shared/UpdateAppResponse.php
 src/Models/Shared/UpdateAppRequest.php
 src/Models/Shared/UpdateReplicationJobRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

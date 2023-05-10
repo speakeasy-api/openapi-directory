@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * Node - Kubernetes Nodes associated with the finding.
+ * Node - Kubernetes nodes associated with the finding.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public
@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class Node
 {
     /**
-     * Full Resource name of the Compute Engine VM running the cluster node.
+     * [Full resource name](https://google.aip.dev/122#full-resource-names) of the Compute Engine VM running the cluster node.
      * 
      * @var ?string $name
      */

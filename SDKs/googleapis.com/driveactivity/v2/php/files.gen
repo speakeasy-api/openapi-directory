@@ -94,4 +94,6 @@ src/Models/Shared/AltEnum.php
 src/Models/Shared/QueryDriveActivityRequest.php
 src/Models/Shared/ConsolidationStrategy.php
 src/Models/Shared/XgafvEnum.php
+docs/sdk/README.md
+docs/activity/README.md
 USAGE.md

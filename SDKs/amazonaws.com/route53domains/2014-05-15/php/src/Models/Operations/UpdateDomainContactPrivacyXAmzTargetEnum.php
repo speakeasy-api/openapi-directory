@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateDomainContactPrivacyXAmzTargetEnum: string
 {
     case ROUTE53_DOMAINS_V20140515_UPDATE_DOMAIN_CONTACT_PRIVACY = 'Route53Domains_v20140515.UpdateDomainContactPrivacy';

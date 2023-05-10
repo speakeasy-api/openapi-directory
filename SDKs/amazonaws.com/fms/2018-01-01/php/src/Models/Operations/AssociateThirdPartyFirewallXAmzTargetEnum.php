@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AssociateThirdPartyFirewallXAmzTargetEnum: string
 {
     case AWSFMS20180101_ASSOCIATE_THIRD_PARTY_FIREWALL = 'AWSFMS_20180101.AssociateThirdPartyFirewall';

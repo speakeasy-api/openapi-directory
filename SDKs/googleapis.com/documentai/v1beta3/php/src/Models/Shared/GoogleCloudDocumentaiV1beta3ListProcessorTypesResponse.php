@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * GoogleCloudDocumentaiV1beta3ListProcessorTypesResponse - Response message for list processor types.
+ * GoogleCloudDocumentaiV1beta3ListProcessorTypesResponse - Response message for the ListProcessorTypes method.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

@@ -60,6 +60,14 @@ class RetrieveEUAByIdV2Response
 	
     public ?array $retrieveEUAByIdV2404ApplicationJSONObject = null;
     
+    /**
+     * Nordigen rate limit exceeded
+     * 
+     * @var ?array<string, mixed> $retrieveEUAByIdV2429ApplicationJSONObject
+     */
+	
+    public ?array $retrieveEUAByIdV2429ApplicationJSONObject = null;
+    
 	public function __construct()
 	{
 		$this->contentType = "";
@@ -70,5 +78,6 @@ class RetrieveEUAByIdV2Response
 		$this->retrieveEUAByIdV2401ApplicationJSONObject = null;
 		$this->retrieveEUAByIdV2403ApplicationJSONObject = null;
 		$this->retrieveEUAByIdV2404ApplicationJSONObject = null;
+		$this->retrieveEUAByIdV2429ApplicationJSONObject = null;
 	}
 }

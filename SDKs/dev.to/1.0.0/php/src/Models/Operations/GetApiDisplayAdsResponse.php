@@ -14,6 +14,14 @@ class GetApiDisplayAdsResponse
 	
     public string $contentType;
     
+    /**
+     * successful
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\DisplayAd> $displayAds
+     */
+	
+    public ?array $displayAds = null;
+    
 	
     public int $statusCode;
     
@@ -23,6 +31,7 @@ class GetApiDisplayAdsResponse
 	public function __construct()
 	{
 		$this->contentType = "";
+		$this->displayAds = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
 	}

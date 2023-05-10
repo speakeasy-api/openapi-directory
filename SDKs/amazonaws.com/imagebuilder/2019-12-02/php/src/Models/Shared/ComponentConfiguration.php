@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * ComponentConfiguration -  Configuration details of the component.
+ * ComponentConfiguration - Configuration details of the component.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

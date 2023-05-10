@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETListVerifiedEmailAddressesActionEnum: string
 {
     case LIST_VERIFIED_EMAIL_ADDRESSES = 'ListVerifiedEmailAddresses';

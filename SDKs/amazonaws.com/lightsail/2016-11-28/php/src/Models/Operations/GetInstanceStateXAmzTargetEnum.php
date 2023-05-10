@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetInstanceStateXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_GET_INSTANCE_STATE = 'Lightsail_20161128.GetInstanceState';

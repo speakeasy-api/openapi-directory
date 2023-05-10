@@ -158,4 +158,8 @@ src/Models/Shared/GoogleCloudDatacatalogV1beta1ListPolicyTagsResponse.php
 src/Models/Shared/SetIamPolicyRequest.php
 src/Models/Shared/TestIamPermissionsResponse.php
 src/Models/Shared/TestIamPermissionsRequest.php
+docs/sdk/README.md
+docs/catalog/README.md
+docs/entries/README.md
+docs/projects/README.md
 USAGE.md

@@ -50,7 +50,7 @@ class Metrics
      * @return \OpenAPI\OpenAPI\Models\Operations\GetPrometheusMetricsResponse
      */
 	public function getPrometheusMetrics(
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\GetPrometheusMetricsResponse
     {
         $baseUrl = Metrics::GET_PROMETHEUS_METRICS_SERVERS[0];

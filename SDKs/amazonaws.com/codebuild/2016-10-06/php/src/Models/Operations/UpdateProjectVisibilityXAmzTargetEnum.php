@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateProjectVisibilityXAmzTargetEnum: string
 {
     case CODE_BUILD20161006_UPDATE_PROJECT_VISIBILITY = 'CodeBuild_20161006.UpdateProjectVisibility';

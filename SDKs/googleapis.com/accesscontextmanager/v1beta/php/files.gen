@@ -72,4 +72,7 @@ src/Models/Shared/ServicePerimeter.php
 src/Models/Shared/ServicePerimeterConfig.php
 src/Models/Shared/VpcAccessibleServices.php
 src/Models/Shared/ListServicePerimetersResponse.php
+docs/sdk/README.md
+docs/accesspolicies/README.md
+docs/operations/README.md
 USAGE.md

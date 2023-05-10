@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTGetOpenIDConnectProviderActionEnum: string
 {
     case GET_OPEN_ID_CONNECT_PROVIDER = 'GetOpenIDConnectProvider';

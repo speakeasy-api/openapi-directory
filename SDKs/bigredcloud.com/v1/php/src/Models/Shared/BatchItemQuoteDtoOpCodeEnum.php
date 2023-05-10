@@ -15,9 +15,9 @@ namespace OpenAPI\OpenAPI\Models\Shared;
  * 2 - Update
  * 3 - Delete
  */
-enum BatchItemQuoteDtoOpCodeEnum: string
+enum BatchItemQuoteDtoOpCodeEnum: int
 {
-    case ONE = '1';
-    case TWO = '2';
-    case THREE = '3';
+    case ONE = 1;
+    case TWO = 2;
+    case THREE = 3;
 }

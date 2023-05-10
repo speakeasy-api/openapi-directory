@@ -165,6 +165,14 @@ class MeetingSetting
     public ?string $primaryCalendarName = null;
     
     /**
+     * Determines if a user enabled reschedule meetings feature
+     * 
+     * @var ?bool $rescheduleMeetingsEnabled
+     */
+	
+    public ?bool $rescheduleMeetingsEnabled = null;
+    
+    /**
      * Determines if meetings are scheduled with a 15 minute buffer between them
      * 
      * @var ?bool $scheduleBufferEnabled
@@ -260,6 +268,7 @@ class MeetingSetting
 		$this->primaryCalendarConnectionFailed = null;
 		$this->primaryCalendarId = null;
 		$this->primaryCalendarName = null;
+		$this->rescheduleMeetingsEnabled = null;
 		$this->scheduleBufferEnabled = null;
 		$this->scheduleDelay = null;
 		$this->shareEventDetail = null;

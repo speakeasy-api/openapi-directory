@@ -28,14 +28,6 @@ class PostV2MeetingsSettingsSearchesJsonRequest
     public ?bool $includePagingCounts = null;
     
     /**
-     * Specifies whether the max limit of 10k records should be applied to pagination counts. Affects the total_count and total_pages data
-     * 
-     * @var ?bool $limitPagingCounts
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit_paging_counts')]
-    public ?bool $limitPagingCounts = null;
-    
-    /**
      * The current page to fetch results from. Defaults to 1
      * 
      * @var ?int $page
@@ -76,7 +68,6 @@ class PostV2MeetingsSettingsSearchesJsonRequest
 	{
 		$this->calendarType = null;
 		$this->includePagingCounts = null;
-		$this->limitPagingCounts = null;
 		$this->page = null;
 		$this->perPage = null;
 		$this->updatedAt = null;

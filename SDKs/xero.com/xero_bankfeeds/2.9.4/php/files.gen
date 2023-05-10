@@ -56,4 +56,6 @@ src/Models/Shared/StatementLine.php
 src/Models/Shared/CreditDebitIndicatorEnum.php
 src/Models/Shared/StartBalance.php
 src/Models/Shared/EndBalance.php
+docs/sdk/README.md
+docs/bankfeeds/README.md
 USAGE.md

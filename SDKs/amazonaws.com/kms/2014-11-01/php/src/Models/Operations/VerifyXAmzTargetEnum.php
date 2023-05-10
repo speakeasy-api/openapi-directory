@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum VerifyXAmzTargetEnum: string
 {
     case TRENT_SERVICE_VERIFY = 'TrentService.Verify';

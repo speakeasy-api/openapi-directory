@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum BloggerPostUserInfosListOrderByEnum: string
 {
     case ORDER_BY_UNSPECIFIED = 'ORDER_BY_UNSPECIFIED';

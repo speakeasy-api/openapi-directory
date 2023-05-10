@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum TestAlarmXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_TEST_ALARM = 'Lightsail_20161128.TestAlarm';

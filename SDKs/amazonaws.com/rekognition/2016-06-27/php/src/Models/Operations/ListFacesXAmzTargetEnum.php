@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListFacesXAmzTargetEnum: string
 {
     case REKOGNITION_SERVICE_LIST_FACES = 'RekognitionService.ListFaces';

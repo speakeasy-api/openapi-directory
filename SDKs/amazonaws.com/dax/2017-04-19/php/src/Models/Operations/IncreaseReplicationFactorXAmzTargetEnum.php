@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum IncreaseReplicationFactorXAmzTargetEnum: string
 {
     case AMAZON_DAXV3_INCREASE_REPLICATION_FACTOR = 'AmazonDAXV3.IncreaseReplicationFactor';

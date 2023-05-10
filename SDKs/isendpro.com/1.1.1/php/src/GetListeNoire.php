@@ -66,8 +66,7 @@ class GetListeNoire
         
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->getListeNoire200ApplicationJSONBinaryString = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->getListeNoire200ApplicationJSONBinaryString = $httpResponse->getBody()->getContents();
             }
         }
         else if ($httpResponse->getStatusCode() === 400) {

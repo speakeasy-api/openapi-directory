@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateGeoMatchSetXAmzTargetEnum: string
 {
     case AWSWAF_REGIONAL20161128_CREATE_GEO_MATCH_SET = 'AWSWAF_Regional_20161128.CreateGeoMatchSet';

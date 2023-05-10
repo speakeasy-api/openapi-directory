@@ -100,4 +100,11 @@ src/Models/Shared/PatchOpEnum.php
 src/Models/Shared/Patch.php
 src/Models/Shared/VaultTypeEnum.php
 src/Models/Shared/Vault.php
+docs/sdk/README.md
+docs/activity/README.md
+docs/files/README.md
+docs/health/README.md
+docs/items/README.md
+docs/metrics/README.md
+docs/vaults/README.md
 USAGE.md

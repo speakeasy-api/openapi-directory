@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateDocumentClassifierXAmzTargetEnum: string
 {
     case COMPREHEND20171127_CREATE_DOCUMENT_CLASSIFIER = 'Comprehend_20171127.CreateDocumentClassifier';

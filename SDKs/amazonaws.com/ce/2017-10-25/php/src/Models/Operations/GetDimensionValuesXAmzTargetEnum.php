@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetDimensionValuesXAmzTargetEnum: string
 {
     case AWS_INSIGHTS_INDEX_SERVICE_GET_DIMENSION_VALUES = 'AWSInsightsIndexService.GetDimensionValues';

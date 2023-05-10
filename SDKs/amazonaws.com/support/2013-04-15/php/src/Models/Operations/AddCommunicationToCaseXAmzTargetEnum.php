@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AddCommunicationToCaseXAmzTargetEnum: string
 {
     case AWS_SUPPORT20130415_ADD_COMMUNICATION_TO_CASE = 'AWSSupport_20130415.AddCommunicationToCase';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListLabelsXAmzTargetEnum: string
 {
     case AWS_LOOKOUT_EQUIPMENT_FRONTEND_SERVICE_LIST_LABELS = 'AWSLookoutEquipmentFrontendService.ListLabels';

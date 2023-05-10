@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum TagResourceXAmzTargetEnum: string
 {
     case AWS_SHIELD20160616_TAG_RESOURCE = 'AWSShield_20160616.TagResource';

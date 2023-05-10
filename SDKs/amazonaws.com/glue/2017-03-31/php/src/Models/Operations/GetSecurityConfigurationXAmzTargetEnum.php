@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetSecurityConfigurationXAmzTargetEnum: string
 {
     case AWS_GLUE_GET_SECURITY_CONFIGURATION = 'AWSGlue.GetSecurityConfiguration';

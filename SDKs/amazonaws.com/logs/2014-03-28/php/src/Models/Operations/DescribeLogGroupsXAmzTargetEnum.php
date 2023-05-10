@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeLogGroupsXAmzTargetEnum: string
 {
     case LOGS20140328_DESCRIBE_LOG_GROUPS = 'Logs_20140328.DescribeLogGroups';

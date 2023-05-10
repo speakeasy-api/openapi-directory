@@ -252,4 +252,5 @@ src/Models/Shared/UpdateStreamingImageResponse.php
 src/Models/Shared/UpdateStudioResponse.php
 src/Models/Shared/UpdateStudioComponentResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -40,4 +40,7 @@ src/Models/Shared/GoogleSearchIdeahubV1alphaIdeaActivity.php
 src/Models/Shared/GoogleSearchIdeahubV1alphaListAvailableLocalesResponse.php
 src/Models/Shared/GoogleSearchIdeahubV1alphaAvailableLocale.php
 src/Models/Shared/GoogleSearchIdeahubV1alphaTopicState.php
+docs/sdk/README.md
+docs/ideas/README.md
+docs/platforms/README.md
 USAGE.md

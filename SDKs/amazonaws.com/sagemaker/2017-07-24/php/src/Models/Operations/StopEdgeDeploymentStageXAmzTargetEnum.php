@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopEdgeDeploymentStageXAmzTargetEnum: string
 {
     case SAGE_MAKER_STOP_EDGE_DEPLOYMENT_STAGE = 'SageMaker.StopEdgeDeploymentStage';

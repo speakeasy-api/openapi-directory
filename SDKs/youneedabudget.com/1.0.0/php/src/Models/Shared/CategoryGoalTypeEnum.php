@@ -17,5 +17,5 @@ enum CategoryGoalTypeEnum: string
     case MF = 'MF';
     case NEED = 'NEED';
     case DEBT = 'DEBT';
-    case NULL = 'null';
+    case LESS_THAN_NIL_GREATER_THAN = '<nil>';
 }

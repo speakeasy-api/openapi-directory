@@ -18,6 +18,7 @@ enum RepositoryFormatEnum: string
     case NPM = 'NPM';
     case APT = 'APT';
     case YUM = 'YUM';
+    case GOOGET = 'GOOGET';
     case PYTHON = 'PYTHON';
     case KFP = 'KFP';
 }

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DevicesBySubTypeGetMeterSubTypeEnum: string
 {
     case METER_SUB_TYPE_UNKNOWN = 'MeterSubTypeUnknown';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AddCustomAttributesXAmzTargetEnum: string
 {
     case AWS_COGNITO_IDENTITY_PROVIDER_SERVICE_ADD_CUSTOM_ATTRIBUTES = 'AWSCognitoIdentityProviderService.AddCustomAttributes';

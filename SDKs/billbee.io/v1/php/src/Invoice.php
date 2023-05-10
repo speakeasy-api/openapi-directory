@@ -65,11 +65,17 @@ class Invoice
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->orderApiCreateInvoice200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiInvoice = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\RechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiInvoice', 'json');
             }
             if (Utils\Utils::matchContentType($contentType, 'text/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->orderApiCreateInvoice200TextJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiInvoice = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\RechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiInvoice', 'json');
+            }
+            if (Utils\Utils::matchContentType($contentType, 'application/xml')) {
+                $response->body = $httpResponse->getBody()->getContents();
+            }
+            if (Utils\Utils::matchContentType($contentType, 'text/xml')) {
+                $response->body = $httpResponse->getBody()->getContents();
             }
         }
 
@@ -104,11 +110,17 @@ class Invoice
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->orderApiGetInvoiceList200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->rechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel', 'json');
             }
             if (Utils\Utils::matchContentType($contentType, 'text/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->orderApiGetInvoiceList200TextJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+                $response->rechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel', 'json');
+            }
+            if (Utils\Utils::matchContentType($contentType, 'application/xml')) {
+                $response->body = $httpResponse->getBody()->getContents();
+            }
+            if (Utils\Utils::matchContentType($contentType, 'text/xml')) {
+                $response->body = $httpResponse->getBody()->getContents();
             }
         }
 

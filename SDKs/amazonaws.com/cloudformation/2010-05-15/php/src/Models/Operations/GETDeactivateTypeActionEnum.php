@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeactivateTypeActionEnum: string
 {
     case DEACTIVATE_TYPE = 'DeactivateType';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CountPendingDecisionTasksXAmzTargetEnum: string
 {
     case SIMPLE_WORKFLOW_SERVICE_COUNT_PENDING_DECISION_TASKS = 'SimpleWorkflowService.CountPendingDecisionTasks';

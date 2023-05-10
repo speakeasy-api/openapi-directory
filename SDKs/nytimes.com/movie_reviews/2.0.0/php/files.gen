@@ -38,4 +38,5 @@ src/Models/Shared/MovieMultimediaResource.php
 src/Models/Shared/MovieMultimedia.php
 src/Models/Shared/Movie.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

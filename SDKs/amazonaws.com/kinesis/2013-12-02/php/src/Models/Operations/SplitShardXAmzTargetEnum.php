@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum SplitShardXAmzTargetEnum: string
 {
     case KINESIS20131202_SPLIT_SHARD = 'Kinesis_20131202.SplitShard';

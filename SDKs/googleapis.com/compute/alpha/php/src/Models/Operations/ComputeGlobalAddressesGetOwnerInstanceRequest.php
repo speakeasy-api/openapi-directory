@@ -52,7 +52,7 @@ class ComputeGlobalAddressesGetOwnerInstanceRequest
     public ?string $fields = null;
     
     /**
-     * The ip_address could be external IPv4, or internal IPv4 within IPv6 form of virtual_network_id with internal IPv4. IPv6 is not supported yet.
+     * The VM IP address.
      * 
      * @var ?string $ipAddress
      */

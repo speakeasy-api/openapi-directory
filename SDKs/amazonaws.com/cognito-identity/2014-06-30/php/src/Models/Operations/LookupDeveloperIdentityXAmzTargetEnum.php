@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum LookupDeveloperIdentityXAmzTargetEnum: string
 {
     case AWS_COGNITO_IDENTITY_SERVICE_LOOKUP_DEVELOPER_IDENTITY = 'AWSCognitoIdentityService.LookupDeveloperIdentity';

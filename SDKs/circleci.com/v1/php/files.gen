@@ -92,4 +92,5 @@ src/Models/Shared/Aws.php
 src/Models/Shared/BuildSummary.php
 src/Models/Shared/OutcomeEnum.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

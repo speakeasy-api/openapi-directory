@@ -88,13 +88,17 @@ src/Models/Shared/PrivateClusterConfigInput.php
 src/Models/Shared/ListWorkstationClustersResponse.php
 src/Models/Shared/WorkstationConfig.php
 src/Models/Shared/WorkstationConfigInput.php
+src/Models/Shared/ReadinessCheck.php
 src/Models/Shared/PersistentDirectory.php
 src/Models/Shared/GceRegionalPersistentDiskReclaimPolicyEnum.php
 src/Models/Shared/GceRegionalPersistentDisk.php
 src/Models/Shared/Host.php
+src/Models/Shared/HostInput.php
 src/Models/Shared/GceInstance.php
+src/Models/Shared/GceInstanceInput.php
 src/Models/Shared/GceShieldedInstanceConfig.php
 src/Models/Shared/GceConfidentialInstanceConfig.php
+src/Models/Shared/Accelerator.php
 src/Models/Shared/CustomerEncryptionKey.php
 src/Models/Shared/Container.php
 src/Models/Shared/ListWorkstationConfigsResponse.php
@@ -117,4 +121,6 @@ src/Models/Shared/StartWorkstationRequest.php
 src/Models/Shared/StopWorkstationRequest.php
 src/Models/Shared/TestIamPermissionsResponse.php
 src/Models/Shared/TestIamPermissionsRequest.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

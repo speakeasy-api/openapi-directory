@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum BatchPutDocumentXAmzTargetEnum: string
 {
     case AWS_KENDRA_FRONTEND_SERVICE_BATCH_PUT_DOCUMENT = 'AWSKendraFrontendService.BatchPutDocument';

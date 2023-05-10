@@ -191,4 +191,6 @@ src/Models/Shared/ListPatchJobInstanceDetailsResponse.php
 src/Models/Shared/PatchJobInstanceDetailsStateEnum.php
 src/Models/Shared/PatchJobInstanceDetails.php
 src/Models/Shared/ListPatchJobsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

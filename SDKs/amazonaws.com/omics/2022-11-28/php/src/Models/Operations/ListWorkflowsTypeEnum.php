@@ -13,5 +13,4 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 enum ListWorkflowsTypeEnum: string
 {
     case PRIVATE = 'PRIVATE';
-    case SERVICE = 'SERVICE';
 }

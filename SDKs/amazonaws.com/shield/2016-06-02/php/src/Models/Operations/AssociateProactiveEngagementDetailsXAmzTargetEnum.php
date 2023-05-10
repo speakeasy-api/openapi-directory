@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AssociateProactiveEngagementDetailsXAmzTargetEnum: string
 {
     case AWS_SHIELD20160616_ASSOCIATE_PROACTIVE_ENGAGEMENT_DETAILS = 'AWSShield_20160616.AssociateProactiveEngagementDetails';

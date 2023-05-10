@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * ModifyVerifiedAccessGroupResultVerifiedAccessGroup - Details of Amazon Web Services Verified Access group.
+ * ModifyVerifiedAccessGroupResultVerifiedAccessGroup - Details of Verified Access group.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

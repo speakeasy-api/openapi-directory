@@ -345,4 +345,6 @@ src/Models/Shared/Accessibility.php
 src/Models/Shared/AltEnum.php
 src/Models/Shared/XgafvEnum.php
 src/Models/Shared/GetGoogleUpdatedLodgingResponse.php
+docs/sdk/README.md
+docs/locations/README.md
 USAGE.md

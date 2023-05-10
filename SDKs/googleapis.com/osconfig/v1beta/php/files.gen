@@ -138,4 +138,6 @@ src/Models/Shared/EffectiveGuestPolicySourcedSoftwareRecipe.php
 src/Models/Shared/EffectiveGuestPolicySourcedPackage.php
 src/Models/Shared/EffectiveGuestPolicySourcedPackageRepository.php
 src/Models/Shared/LookupEffectiveGuestPolicyRequest.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

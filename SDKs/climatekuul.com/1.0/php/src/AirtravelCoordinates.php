@@ -66,7 +66,7 @@ class AirtravelCoordinates
      */
 	public function airtravelCoordinates(
         \OpenAPI\OpenAPI\Models\Operations\AirtravelCoordinatesRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\AirtravelCoordinatesResponse
     {
         $baseUrl = AirtravelCoordinates::AIRTRAVEL_COORDINATES_SERVERS[0];
@@ -105,7 +105,7 @@ class AirtravelCoordinates
      */
 	public function confirmCarbonOffset4(
         \OpenAPI\OpenAPI\Models\Operations\ConfirmCarbonOffset4RequestBody $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ConfirmCarbonOffset4Response
     {
         $baseUrl = AirtravelCoordinates::CONFIRM_CARBON_OFFSET4_SERVERS[0];
@@ -143,7 +143,7 @@ class AirtravelCoordinates
      */
 	public function confirmPayment4(
         \OpenAPI\OpenAPI\Models\Operations\ConfirmPayment4RequestBody $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ConfirmPayment4Response
     {
         $baseUrl = AirtravelCoordinates::CONFIRM_PAYMENT4_SERVERS[0];
@@ -181,7 +181,7 @@ class AirtravelCoordinates
      */
 	public function confirmPaymentOfTransaction4(
         \OpenAPI\OpenAPI\Models\Operations\ConfirmPaymentOfTransaction4RequestBody $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ConfirmPaymentOfTransaction4Response
     {
         $baseUrl = AirtravelCoordinates::CONFIRM_PAYMENT_OF_TRANSACTION4_SERVERS[0];
@@ -219,7 +219,7 @@ class AirtravelCoordinates
      */
 	public function confirmsPlanting4(
         \OpenAPI\OpenAPI\Models\Operations\ConfirmsPlanting4RequestBody $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ConfirmsPlanting4Response
     {
         $baseUrl = AirtravelCoordinates::CONFIRMS_PLANTING4_SERVERS[0];

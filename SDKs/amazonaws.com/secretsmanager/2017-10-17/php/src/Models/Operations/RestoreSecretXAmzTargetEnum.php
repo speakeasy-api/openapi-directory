@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RestoreSecretXAmzTargetEnum: string
 {
     case SECRETSMANAGER_RESTORE_SECRET = 'secretsmanager.RestoreSecret';

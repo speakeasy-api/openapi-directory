@@ -127,9 +127,11 @@ class Account
      * 
      * Delete a currently logged in user account. Behind the scene, the user record is not deleted but permanently blocked from any access. This is done to avoid deleted accounts being overtaken by new users with the same email address. Any user-related resources like documents or storage files should be deleted separately.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AccountDeleteSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\AccountDeleteResponse
      */
 	public function accountDelete(
+        \OpenAPI\OpenAPI\Models\Operations\AccountDeleteSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\AccountDeleteResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -137,7 +139,8 @@ class Account
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('DELETE', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -192,9 +195,11 @@ class Account
      * 
      * Delete all sessions from the user account and remove any sessions cookies from the end client.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AccountDeleteSessionsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\AccountDeleteSessionsResponse
      */
 	public function accountDeleteSessions(
+        \OpenAPI\OpenAPI\Models\Operations\AccountDeleteSessionsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\AccountDeleteSessionsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -202,7 +207,8 @@ class Account
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('DELETE', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -222,9 +228,11 @@ class Account
      * 
      * Get currently logged in user data as JSON object.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AccountGetSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\AccountGetResponse
      */
 	public function accountGet(
+        \OpenAPI\OpenAPI\Models\Operations\AccountGetSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\AccountGetResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -232,7 +240,8 @@ class Account
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -256,9 +265,11 @@ class Account
      * 
      * Get currently logged in user list of latest security activity logs. Each log returns user IP address, location and date and time of log.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AccountGetLogsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\AccountGetLogsResponse
      */
 	public function accountGetLogs(
+        \OpenAPI\OpenAPI\Models\Operations\AccountGetLogsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\AccountGetLogsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -266,7 +277,8 @@ class Account
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -290,9 +302,11 @@ class Account
      * 
      * Get currently logged in user preferences as a key-value object.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AccountGetPrefsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\AccountGetPrefsResponse
      */
 	public function accountGetPrefs(
+        \OpenAPI\OpenAPI\Models\Operations\AccountGetPrefsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\AccountGetPrefsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -300,7 +314,8 @@ class Account
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -363,9 +378,11 @@ class Account
      * 
      * Get currently logged in user list of active sessions across different devices.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AccountGetSessionsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\AccountGetSessionsResponse
      */
 	public function accountGetSessions(
+        \OpenAPI\OpenAPI\Models\Operations\AccountGetSessionsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\AccountGetSessionsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -373,7 +390,8 @@ class Account
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

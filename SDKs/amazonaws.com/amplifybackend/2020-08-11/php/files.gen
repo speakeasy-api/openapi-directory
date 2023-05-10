@@ -254,4 +254,5 @@ src/Models/Shared/UpdateBackendConfigResponse.php
 src/Models/Shared/UpdateBackendJobResponse.php
 src/Models/Shared/UpdateBackendStorageResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

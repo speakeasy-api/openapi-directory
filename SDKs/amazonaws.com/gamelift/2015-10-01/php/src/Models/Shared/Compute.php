@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * Compute - Resources used to host your game servers. A compute resource can be managed GameLift Amazon EC2 instances or your own resources.
+ * Compute - Resources used to host your game servers. A compute resource can be managed Amazon GameLift Amazon EC2 instances or your own resources.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

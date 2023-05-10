@@ -112,4 +112,11 @@ src/Models/Shared/VersionMetaData.php
 src/Models/Shared/EditableMetaData.php
 src/Models/Shared/VersionSearchResults.php
 src/Models/Shared/SearchedVersion.php
+docs/sdk/README.md
+docs/artifactrules/README.md
+docs/artifacts/README.md
+docs/globalrules/README.md
+docs/metadata/README.md
+docs/search/README.md
+docs/versions/README.md
 USAGE.md

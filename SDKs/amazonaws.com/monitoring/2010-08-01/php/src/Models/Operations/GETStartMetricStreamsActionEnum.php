@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETStartMetricStreamsActionEnum: string
 {
     case START_METRIC_STREAMS = 'StartMetricStreams';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeVpcEndpointServicePermissionsActionEnum: string
 {
     case DESCRIBE_VPC_ENDPOINT_SERVICE_PERMISSIONS = 'DescribeVpcEndpointServicePermissions';

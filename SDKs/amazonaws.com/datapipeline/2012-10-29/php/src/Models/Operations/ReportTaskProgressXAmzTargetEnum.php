@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ReportTaskProgressXAmzTargetEnum: string
 {
     case DATA_PIPELINE_REPORT_TASK_PROGRESS = 'DataPipeline.ReportTaskProgress';

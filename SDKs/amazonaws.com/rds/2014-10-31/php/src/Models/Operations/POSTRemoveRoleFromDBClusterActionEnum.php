@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTRemoveRoleFromDBClusterActionEnum: string
 {
     case REMOVE_ROLE_FROM_DB_CLUSTER = 'RemoveRoleFromDBCluster';

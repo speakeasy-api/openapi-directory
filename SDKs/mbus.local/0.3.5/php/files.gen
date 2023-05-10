@@ -30,4 +30,5 @@ src/Models/Operations/ScanRequest.php
 src/Models/Operations/ScanResponse.php
 src/Models/Shared/BaudrateEnum.php
 src/Models/Shared/Hat.php
+docs/sdk/README.md
 USAGE.md

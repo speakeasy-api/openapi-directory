@@ -42,9 +42,11 @@ class Environments
      * 
      * Get all environments provided by the current Otoroshi instance
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AllLinesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\AllLinesResponse
      */
 	public function allLines(
+        \OpenAPI\OpenAPI\Models\Operations\AllLinesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\AllLinesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -52,7 +54,8 @@ class Environments
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

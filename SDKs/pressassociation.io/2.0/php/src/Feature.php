@@ -81,9 +81,11 @@ class Feature
      * 
      * Return a collection of Feature Types.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListFeatureTypesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ListFeatureTypesResponse
      */
 	public function listFeatureTypes(
+        \OpenAPI\OpenAPI\Models\Operations\ListFeatureTypesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ListFeatureTypesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -91,7 +93,8 @@ class Feature
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

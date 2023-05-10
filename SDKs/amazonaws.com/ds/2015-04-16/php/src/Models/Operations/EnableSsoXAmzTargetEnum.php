@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum EnableSsoXAmzTargetEnum: string
 {
     case DIRECTORY_SERVICE20150416_ENABLE_SSO = 'DirectoryService_20150416.EnableSso';

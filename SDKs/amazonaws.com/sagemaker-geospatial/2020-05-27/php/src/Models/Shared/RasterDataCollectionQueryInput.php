@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * RasterDataCollectionQueryInput - <p/>
+ * RasterDataCollectionQueryInput - The input structure for Raster Data Collection Query containing the Area of Interest, TimeRange Filters, and Property Filters.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

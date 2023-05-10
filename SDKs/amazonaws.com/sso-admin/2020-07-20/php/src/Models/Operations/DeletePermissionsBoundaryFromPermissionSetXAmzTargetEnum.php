@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeletePermissionsBoundaryFromPermissionSetXAmzTargetEnum: string
 {
     case SWB_EXTERNAL_SERVICE_DELETE_PERMISSIONS_BOUNDARY_FROM_PERMISSION_SET = 'SWBExternalService.DeletePermissionsBoundaryFromPermissionSet';

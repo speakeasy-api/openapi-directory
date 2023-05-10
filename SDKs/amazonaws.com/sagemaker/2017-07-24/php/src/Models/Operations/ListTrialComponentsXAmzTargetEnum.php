@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListTrialComponentsXAmzTargetEnum: string
 {
     case SAGE_MAKER_LIST_TRIAL_COMPONENTS = 'SageMaker.ListTrialComponents';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateSnapshotXAmzTargetEnum: string
 {
     case AWS_SIMBA_API_SERVICE_V20180301_UPDATE_SNAPSHOT = 'AWSSimbaAPIService_v20180301.UpdateSnapshot';

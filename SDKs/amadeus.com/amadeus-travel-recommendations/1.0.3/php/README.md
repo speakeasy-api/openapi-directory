@@ -30,16 +30,42 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetRecommendedLocationRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetRecommendedLocationRequest();
+    $request->cityCodes = 'corrupti';
+    $request->destinationCountryCodes = 'provident';
+    $request->travelerCountryCode = 'distinctio';
+
+    $response = $sdk->recommendedLocations->getRecommendedLocation($request);
+
+    if ($response->getRecommendedLocation200ApplicationVndAmadeusPlusJsonObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### recommendedLocations
+### [recommendedLocations](docs/recommendedlocations/README.md)
 
-* `getRecommendedLocation` - GET recommended destinations
+* [getRecommendedLocation](docs/recommendedlocations/README.md#getrecommendedlocation) - GET recommended destinations
 <!-- End SDK Available Operations -->
 
 ### Maturity

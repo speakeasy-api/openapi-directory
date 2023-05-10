@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ModifyCertificateBasedAuthPropertiesXAmzTargetEnum: string
 {
     case WORKSPACES_SERVICE_MODIFY_CERTIFICATE_BASED_AUTH_PROPERTIES = 'WorkspacesService.ModifyCertificateBasedAuthProperties';

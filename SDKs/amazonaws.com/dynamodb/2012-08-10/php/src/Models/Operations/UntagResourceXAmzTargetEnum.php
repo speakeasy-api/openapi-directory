@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UntagResourceXAmzTargetEnum: string
 {
     case DYNAMO_DB20120810_UNTAG_RESOURCE = 'DynamoDB_20120810.UntagResource';

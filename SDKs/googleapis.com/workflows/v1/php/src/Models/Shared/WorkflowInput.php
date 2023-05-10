@@ -18,6 +18,26 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class WorkflowInput
 {
     /**
+     * Optional. Describes the level of platform logging to apply to calls and call responses during executions of this workflow. If both the workflow and the execution specify a logging level, the execution level takes precedence.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\WorkflowCallLogLevelEnum $callLogLevel
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('callLogLevel')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\WorkflowCallLogLevelEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?WorkflowCallLogLevelEnum $callLogLevel = null;
+    
+    /**
+     * Optional. The resource name of a KMS crypto key used to encrypt or decrypt the data associated with the workflow. Format: projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{cryptoKey} Using `-` as a wildcard for the `{project}` or not providing one at all will infer the project from the account. If not provided, data associated with the workflow will not be CMEK-encrypted.
+     * 
+     * @var ?string $cryptoKeyName
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('cryptoKeyName')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $cryptoKeyName = null;
+    
+    /**
      * Description of the workflow provided by the user. Must be at most 1000 unicode characters long.
      * 
      * @var ?string $description
@@ -67,12 +87,25 @@ class WorkflowInput
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $sourceContents = null;
     
+    /**
+     * Describes an error related to the current state of the workflow.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\StateError $stateError
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('stateError')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\StateError')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?StateError $stateError = null;
+    
 	public function __construct()
 	{
+		$this->callLogLevel = null;
+		$this->cryptoKeyName = null;
 		$this->description = null;
 		$this->labels = null;
 		$this->name = null;
 		$this->serviceAccount = null;
 		$this->sourceContents = null;
+		$this->stateError = null;
 	}
 }

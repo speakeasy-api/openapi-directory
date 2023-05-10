@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeContributorInsightsXAmzTargetEnum: string
 {
     case DYNAMO_DB20120810_DESCRIBE_CONTRIBUTOR_INSIGHTS = 'DynamoDB_20120810.DescribeContributorInsights';

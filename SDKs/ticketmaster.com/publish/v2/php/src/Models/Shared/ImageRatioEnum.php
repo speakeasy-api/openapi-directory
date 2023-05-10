@@ -12,7 +12,5 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 /** Aspect ratio of the image */
 enum ImageRatioEnum: string
 {
-    case SIXTEEN9 = '16_9';
-    case THREE2 = '3_2';
-    case FOUR3 = '4_3';
+    case ZERO = '0';
 }

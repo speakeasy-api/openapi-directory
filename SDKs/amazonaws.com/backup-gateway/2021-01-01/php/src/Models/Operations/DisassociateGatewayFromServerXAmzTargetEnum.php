@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DisassociateGatewayFromServerXAmzTargetEnum: string
 {
     case BACKUP_ON_PREMISES_V20210101_DISASSOCIATE_GATEWAY_FROM_SERVER = 'BackupOnPremises_v20210101.DisassociateGatewayFromServer';

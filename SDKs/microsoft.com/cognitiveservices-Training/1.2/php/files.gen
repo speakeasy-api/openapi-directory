@@ -178,4 +178,11 @@ src/Models/Shared/TagPerformance.php
 src/Models/Shared/TagInput.php
 src/Models/Shared/Tag.php
 src/Models/Shared/TagList.php
+docs/sdk/README.md
+docs/accountapi/README.md
+docs/domainsapi/README.md
+docs/imageapi/README.md
+docs/predictionsapi/README.md
+docs/projectapi/README.md
+docs/tagsapi/README.md
 USAGE.md

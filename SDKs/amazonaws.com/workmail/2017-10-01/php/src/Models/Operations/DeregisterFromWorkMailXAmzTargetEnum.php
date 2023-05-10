@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeregisterFromWorkMailXAmzTargetEnum: string
 {
     case WORK_MAIL_SERVICE_DEREGISTER_FROM_WORK_MAIL = 'WorkMailService.DeregisterFromWorkMail';

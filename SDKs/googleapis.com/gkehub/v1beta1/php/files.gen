@@ -73,6 +73,7 @@ src/Models/Shared/Membership.php
 src/Models/Shared/MembershipStateInput.php
 src/Models/Shared/MembershipStateCodeEnum.php
 src/Models/Shared/MembershipState.php
+src/Models/Shared/MonitoringConfig.php
 src/Models/Shared/MembershipEndpointInput.php
 src/Models/Shared/MembershipEndpoint.php
 src/Models/Shared/OnPremClusterClusterTypeEnum.php
@@ -107,4 +108,6 @@ src/Models/Shared/TestIamPermissionsResponse.php
 src/Models/Shared/TestIamPermissionsRequest.php
 src/Models/Shared/ValidateExclusivityResponse.php
 src/Models/Shared/ListOperationsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

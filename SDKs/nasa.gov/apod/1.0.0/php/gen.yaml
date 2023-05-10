@@ -1,10 +1,11 @@
 configVersion: 1.0.0
 generation:
-  telemetryEnabled: false
+  baseServerURL: https://nasa.gov
   sdkClassName: SDK
-  sdkFlattening: true
   singleTagPerOp: false
+  tagNamespacingDisabled: false
 php:
   version: 0.0.1
+  maxMethodParams: 0
   namespace: OpenAPI\OpenAPI
   packageName: openapi/openapi

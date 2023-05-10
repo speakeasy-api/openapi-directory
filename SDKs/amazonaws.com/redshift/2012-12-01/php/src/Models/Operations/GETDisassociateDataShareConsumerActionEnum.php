@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDisassociateDataShareConsumerActionEnum: string
 {
     case DISASSOCIATE_DATA_SHARE_CONSUMER = 'DisassociateDataShareConsumer';

@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class Section
 {
     /**
-     * The header of the section, text formatted supported.
+     * The header of the section. Formatted text is supported. For more information about formatting text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
      * 
      * @var ?string $header
      */

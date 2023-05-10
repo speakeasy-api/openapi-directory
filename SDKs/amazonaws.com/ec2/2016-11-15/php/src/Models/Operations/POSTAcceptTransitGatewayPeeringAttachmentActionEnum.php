@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTAcceptTransitGatewayPeeringAttachmentActionEnum: string
 {
     case ACCEPT_TRANSIT_GATEWAY_PEERING_ATTACHMENT = 'AcceptTransitGatewayPeeringAttachment';

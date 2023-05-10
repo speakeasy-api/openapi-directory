@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateSubscriberXAmzTargetEnum: string
 {
     case AWS_BUDGET_SERVICE_GATEWAY_UPDATE_SUBSCRIBER = 'AWSBudgetServiceGateway.UpdateSubscriber';

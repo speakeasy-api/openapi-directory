@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListLaunchPathsXAmzTargetEnum: string
 {
     case AWS242_SERVICE_CATALOG_SERVICE_LIST_LAUNCH_PATHS = 'AWS242ServiceCatalogService.ListLaunchPaths';

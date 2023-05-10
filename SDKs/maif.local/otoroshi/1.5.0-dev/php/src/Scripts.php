@@ -169,9 +169,11 @@ class Scripts
      * 
      * Get all scripts
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\FindAllScriptsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\FindAllScriptsResponse
      */
 	public function findAllScripts(
+        \OpenAPI\OpenAPI\Models\Operations\FindAllScriptsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\FindAllScriptsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -179,7 +181,8 @@ class Scripts
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

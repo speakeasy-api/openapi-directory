@@ -30,17 +30,38 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $response = $sdk->balanceGet();
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `balanceGet` - Balance
-* `sendPost` - SendSMS
-* `sendbatchPost` - Bulk SMS
+* [balanceGet](docs/sdk/README.md#balanceget) - Balance
+* [sendPost](docs/sdk/README.md#sendpost) - SendSMS
+* [sendbatchPost](docs/sdk/README.md#sendbatchpost) - Bulk SMS
 <!-- End SDK Available Operations -->
 
 ### Maturity

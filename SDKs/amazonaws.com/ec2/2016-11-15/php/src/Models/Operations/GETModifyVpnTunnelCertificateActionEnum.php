@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETModifyVpnTunnelCertificateActionEnum: string
 {
     case MODIFY_VPN_TUNNEL_CERTIFICATE = 'ModifyVpnTunnelCertificate';

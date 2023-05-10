@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class DailySubEntityType
 {
     /**
-     * Represents the day of the week. Eg: MONDAY.
+     * Represents the day of the week. Eg: MONDAY. Currently supported DailyMetrics = NONE.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\DailySubEntityTypeDayOfWeekEnum $dayOfWeek
      */

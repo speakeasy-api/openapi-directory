@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteSigningCertificateActionEnum: string
 {
     case DELETE_SIGNING_CERTIFICATE = 'DeleteSigningCertificate';

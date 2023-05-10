@@ -15,4 +15,5 @@ enum ExecutionCallLogLevelEnum: string
     case CALL_LOG_LEVEL_UNSPECIFIED = 'CALL_LOG_LEVEL_UNSPECIFIED';
     case LOG_ALL_CALLS = 'LOG_ALL_CALLS';
     case LOG_ERRORS_ONLY = 'LOG_ERRORS_ONLY';
+    case LOG_NONE = 'LOG_NONE';
 }

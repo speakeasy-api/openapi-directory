@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteFpgaImageActionEnum: string
 {
     case DELETE_FPGA_IMAGE = 'DeleteFpgaImage';

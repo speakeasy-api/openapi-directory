@@ -414,4 +414,5 @@ src/Models/Shared/UpdateTimeToLiveOutput.php
 src/Models/Shared/TimeToLiveSpecification.php
 src/Models/Shared/UpdateTimeToLiveInput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -221,4 +221,6 @@ src/Models/Shared/GoogleIamV1TestIamPermissionsRequest.php
 src/Models/Shared/GoogleCloudMlV1ListVersionsResponse.php
 src/Models/Shared/GoogleLongrunningListOperationsResponse.php
 src/Models/Shared/GoogleCloudMlV1PredictRequest.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

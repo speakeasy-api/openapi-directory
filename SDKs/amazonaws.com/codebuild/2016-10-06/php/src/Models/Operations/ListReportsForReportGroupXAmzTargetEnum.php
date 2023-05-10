@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListReportsForReportGroupXAmzTargetEnum: string
 {
     case CODE_BUILD20161006_LIST_REPORTS_FOR_REPORT_GROUP = 'CodeBuild_20161006.ListReportsForReportGroup';

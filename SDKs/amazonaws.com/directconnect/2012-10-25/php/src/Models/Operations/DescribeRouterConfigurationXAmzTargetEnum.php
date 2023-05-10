@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeRouterConfigurationXAmzTargetEnum: string
 {
     case OVERTURE_SERVICE_DESCRIBE_ROUTER_CONFIGURATION = 'OvertureService.DescribeRouterConfiguration';

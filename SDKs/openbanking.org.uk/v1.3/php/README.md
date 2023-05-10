@@ -30,42 +30,67 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetAtmsRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetAtmsRequest();
+    $request->ifModifiedSince = 'corrupti';
+    $request->ifNoneMatch = 'provident';
+
+    $response = $sdk->atm->getAtms($request);
+
+    if ($response->getAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### atm
+### [atm](docs/atm/README.md)
 
-* `getAtms` - Gets a list of all `ATM` objects.
-* `headAtms` - Gets header information on the current set of `ATM` data
+* [getAtms](docs/atm/README.md#getatms) - Gets a list of all `ATM` objects.
+* [headAtms](docs/atm/README.md#headatms) - Gets header information on the current set of `ATM` data
 
-### bca
+### [bca](docs/bca/README.md)
 
-* `getBusinessCurrentAccounts` - Gets a list of all `Branch Current Account` objects.
-* `headBusinessCurrentAccounts` - Gets header information on the current set of `Business Current Account` data
+* [getBusinessCurrentAccounts](docs/bca/README.md#getbusinesscurrentaccounts) - Gets a list of all `Branch Current Account` objects.
+* [headBusinessCurrentAccounts](docs/bca/README.md#headbusinesscurrentaccounts) - Gets header information on the current set of `Business Current Account` data
 
-### branch
+### [branch](docs/branch/README.md)
 
-* `getBranches` - Gets a list of all `Branch` objects.
-* `headBranches` - Gets header information on the current set of `Branch` data
+* [getBranches](docs/branch/README.md#getbranches) - Gets a list of all `Branch` objects.
+* [headBranches](docs/branch/README.md#headbranches) - Gets header information on the current set of `Branch` data
 
-### ccc
+### [ccc](docs/ccc/README.md)
 
-* `getCommercialCreditCards` - Gets a list of all `Commerical Credit Card` objects.
-* `headCommercialCreditCards` - Gets header information on the current set of `Commerical Credit Card` data
+* [getCommercialCreditCards](docs/ccc/README.md#getcommercialcreditcards) - Gets a list of all `Commerical Credit Card` objects.
+* [headCommercialCreditCards](docs/ccc/README.md#headcommercialcreditcards) - Gets header information on the current set of `Commerical Credit Card` data
 
-### pca
+### [pca](docs/pca/README.md)
 
-* `getPersonalCurrentAccounts` - Gets a list of all `Personal Current Account` objects.
-* `headPersonalCurrentAccounts` - Gets header information on the current set of `Personal Current Account` data
+* [getPersonalCurrentAccounts](docs/pca/README.md#getpersonalcurrentaccounts) - Gets a list of all `Personal Current Account` objects.
+* [headPersonalCurrentAccounts](docs/pca/README.md#headpersonalcurrentaccounts) - Gets header information on the current set of `Personal Current Account` data
 
-### sme
+### [sme](docs/sme/README.md)
 
-* `getUnsecuredSmeLoans` - Gets a list of all `Unsercured SME Lending` objects.
-* `headUnsecuredSmeLoans` - Gets header information on the current set of `Unsercured SME Lending` data
+* [getUnsecuredSmeLoans](docs/sme/README.md#getunsecuredsmeloans) - Gets a list of all `Unsercured SME Lending` objects.
+* [headUnsecuredSmeLoans](docs/sme/README.md#headunsecuredsmeloans) - Gets header information on the current set of `Unsercured SME Lending` data
 <!-- End SDK Available Operations -->
 
 ### Maturity

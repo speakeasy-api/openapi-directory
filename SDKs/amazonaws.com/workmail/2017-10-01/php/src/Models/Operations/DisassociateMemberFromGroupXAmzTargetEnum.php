@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DisassociateMemberFromGroupXAmzTargetEnum: string
 {
     case WORK_MAIL_SERVICE_DISASSOCIATE_MEMBER_FROM_GROUP = 'WorkMailService.DisassociateMemberFromGroup';

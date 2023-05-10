@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteServiceLinkedRoleActionEnum: string
 {
     case DELETE_SERVICE_LINKED_ROLE = 'DeleteServiceLinkedRole';

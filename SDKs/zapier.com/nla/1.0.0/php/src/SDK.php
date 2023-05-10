@@ -492,9 +492,11 @@ class SDK
      * 
      * Test that the API and auth are working.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\CheckSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\CheckResponse
      */
 	public function check(
+        \OpenAPI\OpenAPI\Models\Operations\CheckSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\CheckResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -502,7 +504,8 @@ class SDK
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -520,9 +523,7 @@ class SDK
     /**
      * Execute App Action Endpoint
      * 
-     * Give us a plain english description of exact action you want to do.
-     * There should be dynamically generated documentation for this endpoint
-     * for each action that is exposed.
+     * Give us a plain english description of exact action you want to do. There should be dynamically generated documentation for this endpoint for each action that is exposed.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ExecuteAppActionEndpointRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\ExecuteAppActionEndpointSecurity $security
@@ -572,12 +573,13 @@ class SDK
     /**
      * Get Configuration Link
      * 
-     * If the user wants to execute actions that are not exposed, they can
-     * go here to configure and expose more.
+     * Provides a link to configure more actions. Alternatively, searching through apps and actions will provide more specific configuration links.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetConfigurationLinkSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetConfigurationLinkResponse
      */
 	public function getConfigurationLink(
+        \OpenAPI\OpenAPI\Models\Operations\GetConfigurationLinkSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetConfigurationLinkResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -585,7 +587,8 @@ class SDK
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -601,13 +604,60 @@ class SDK
     }
 	
     /**
+     * Get Execution Log Endpoint
+     * 
+     * Get the execution log for a given execution log id.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetExecutionLogEndpointRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetExecutionLogEndpointSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\GetExecutionLogEndpointResponse
+     */
+	public function getExecutionLogEndpoint(
+        \OpenAPI\OpenAPI\Models\Operations\GetExecutionLogEndpointRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\GetExecutionLogEndpointSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\GetExecutionLogEndpointResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/api/v1/execution-log/{execution_log_id}/', \OpenAPI\OpenAPI\Models\Operations\GetExecutionLogEndpointRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GetExecutionLogEndpointResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->executeResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ExecuteResponse', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 400) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->errorResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ErrorResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * List Exposed Actions
      * 
      * List all the currently exposed actions for the given account.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListExposedActionsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ListExposedActionsResponse
      */
 	public function listExposedActions(
+        \OpenAPI\OpenAPI\Models\Operations\ListExposedActionsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ListExposedActionsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -615,7 +665,8 @@ class SDK
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

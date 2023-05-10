@@ -21,6 +21,10 @@ class RepositorySummary
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $arn;
     
+	#[\JMS\Serializer\Annotation\SerializedName('connectionArn')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    public string $connectionArn;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('name')]
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $name;
@@ -32,6 +36,7 @@ class RepositorySummary
 	public function __construct()
 	{
 		$this->arn = "";
+		$this->connectionArn = "";
 		$this->name = "";
 		$this->provider = \OpenAPI\OpenAPI\Models\Shared\RepositoryProviderEnum::GITHUB;
 	}

@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * PolygonGeometryInput - <p/>
+ * PolygonGeometryInput - The structure representing Polygon Geometry based on the <a href="https://www.rfc-editor.org/rfc/rfc7946#section-3.1.6">GeoJson spec</a>.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteTransitGatewayMulticastDomainActionEnum: string
 {
     case DELETE_TRANSIT_GATEWAY_MULTICAST_DOMAIN = 'DeleteTransitGatewayMulticastDomain';

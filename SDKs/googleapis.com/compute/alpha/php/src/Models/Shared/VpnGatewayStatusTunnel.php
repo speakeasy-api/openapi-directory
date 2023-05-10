@@ -28,7 +28,7 @@ class VpnGatewayStatusTunnel
     public ?int $localGatewayInterface = null;
     
     /**
-     * The peer gateway interface this VPN tunnel is connected to, the peer gateway could either be an external VPN gateway or GCP VPN gateway.
+     * The peer gateway interface this VPN tunnel is connected to, the peer gateway could either be an external VPN gateway or a Google Cloud VPN gateway.
      * 
      * @var ?int $peerGatewayInterface
      */

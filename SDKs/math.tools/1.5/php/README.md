@@ -30,72 +30,102 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetNumbersBaseRequest;
+use \OpenAPI\OpenAPI\Models\Operations\GetNumbersBaseSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetNumbersBaseRequest();
+    $request->from = 548814;
+    $request->number = 592845;
+    $request->to = 715190;
+
+    $requestSecurity = new GetNumbersBaseSecurity();
+    $requestSecurity->xMathtoolsApiSecret = 'YOUR_API_KEY_HERE';
+
+    $response = $sdk->baseConversion->getNumbersBase($request, $requestSecurity);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### baseConversion
+### [baseConversion](docs/baseconversion/README.md)
 
-* `getNumbersBase` - Convert a given number from one base to another base
-* `getNumbersBaseBinary` - Convert a given number to binary
-* `getNumbersBaseHex` - Convert a given number to hexadecimal
-* `getNumbersBaseOctal` - Convert a given number to octal
+* [getNumbersBase](docs/baseconversion/README.md#getnumbersbase) - Convert a given number from one base to another base
+* [getNumbersBaseBinary](docs/baseconversion/README.md#getnumbersbasebinary) - Convert a given number to binary
+* [getNumbersBaseHex](docs/baseconversion/README.md#getnumbersbasehex) - Convert a given number to hexadecimal
+* [getNumbersBaseOctal](docs/baseconversion/README.md#getnumbersbaseoctal) - Convert a given number to octal
 
-### numberChecks
+### [numberChecks](docs/numberchecks/README.md)
 
-* `getNumbersIsCube` - Checks whether a given number is a cube number or not.
-* `getNumbersIsPalindrome` - Checks whether a given number is a palindrome number or not.
-* `getNumbersIsSquare` - Checks whether a given number is a square number or not.
-* `getNumbersIsTriangle` - Checks whether a given number is a triangle number or not.
-* `getNumbersPrimeIsFermatPrime` - Checks whether a given number is a known fermat prime number or not.
-* `getNumbersPrimeIsFibonacciPrime` - Checks whether a given number is a known fibonacci prime number or not.
-* `getNumbersPrimeIsMersennePrime` - Checks whether a given number is a known mersenne prime number or not.
-* `getNumbersPrimeIsPartitionPrime` - Checks whether a given number is a known partition prime number or not.
-* `getNumbersPrimeIsPellPrime` - Checks whether a given number is a known pell prime number or not.
-* `getNumbersPrimeIsPerfect` - Checks whether a given number is a perfect number or not.
-* `getNumbersPrimeIsPrime` - Checks whether a given number is a known prime number or not.
+* [getNumbersIsCube](docs/numberchecks/README.md#getnumbersiscube) - Checks whether a given number is a cube number or not.
+* [getNumbersIsPalindrome](docs/numberchecks/README.md#getnumbersispalindrome) - Checks whether a given number is a palindrome number or not.
+* [getNumbersIsSquare](docs/numberchecks/README.md#getnumbersissquare) - Checks whether a given number is a square number or not.
+* [getNumbersIsTriangle](docs/numberchecks/README.md#getnumbersistriangle) - Checks whether a given number is a triangle number or not.
+* [getNumbersPrimeIsFermatPrime](docs/numberchecks/README.md#getnumbersprimeisfermatprime) - Checks whether a given number is a known fermat prime number or not.
+* [getNumbersPrimeIsFibonacciPrime](docs/numberchecks/README.md#getnumbersprimeisfibonacciprime) - Checks whether a given number is a known fibonacci prime number or not.
+* [getNumbersPrimeIsMersennePrime](docs/numberchecks/README.md#getnumbersprimeismersenneprime) - Checks whether a given number is a known mersenne prime number or not.
+* [getNumbersPrimeIsPartitionPrime](docs/numberchecks/README.md#getnumbersprimeispartitionprime) - Checks whether a given number is a known partition prime number or not.
+* [getNumbersPrimeIsPellPrime](docs/numberchecks/README.md#getnumbersprimeispellprime) - Checks whether a given number is a known pell prime number or not.
+* [getNumbersPrimeIsPerfect](docs/numberchecks/README.md#getnumbersprimeisperfect) - Checks whether a given number is a perfect number or not.
+* [getNumbersPrimeIsPrime](docs/numberchecks/README.md#getnumbersprimeisprime) - Checks whether a given number is a known prime number or not.
 
-### numberFacts
+### [numberFacts](docs/numberfacts/README.md)
 
-* `getNumbersFact` - Get a random fact about a number
+* [getNumbersFact](docs/numberfacts/README.md#getnumbersfact) - Get a random fact about a number
 
-### numberGeneration
+### [numberGeneration](docs/numbergeneration/README.md)
 
-* `getNumbersRandom` - Generate random number(s)
+* [getNumbersRandom](docs/numbergeneration/README.md#getnumbersrandom) - Generate random number(s)
 
-### numberSystemsConversion
+### [numberSystemsConversion](docs/numbersystemsconversion/README.md)
 
-* `getNumbersNumeralChinese` - Convert base 10 representation of a given number to chinese numeral.
-* `getNumbersNumeralEgyptian` - Convert base 10 representation of a given number to egyptian numeral.
-* `getNumbersNumeralRoman` - Convert base 10 representation of a given number to roman numeral.
+* [getNumbersNumeralChinese](docs/numbersystemsconversion/README.md#getnumbersnumeralchinese) - Convert base 10 representation of a given number to chinese numeral.
+* [getNumbersNumeralEgyptian](docs/numbersystemsconversion/README.md#getnumbersnumeralegyptian) - Convert base 10 representation of a given number to egyptian numeral.
+* [getNumbersNumeralRoman](docs/numbersystemsconversion/README.md#getnumbersnumeralroman) - Convert base 10 representation of a given number to roman numeral.
 
-### numberOfTheDay
+### [numberOfTheDay](docs/numberoftheday/README.md)
 
-* `getNumbersNod` - Get the number of the day for current day
+* [getNumbersNod](docs/numberoftheday/README.md#getnumbersnod) - Get the number of the day for current day
 
-### pi
+### [pi](docs/pi/README.md)
 
-* `getNumbersPi` - Get digits of pi (Ï€)
+* [getNumbersPi](docs/pi/README.md#getnumberspi) - Get digits of pi (Ï€)
 
-### prime
+### [prime](docs/prime/README.md)
 
-* `getNumbersPrimeFactors` - Get the prime factors of a given number.
-* `getNumbersPrimeIsFermatPrime` - Checks whether a given number is a known fermat prime number or not.
-* `getNumbersPrimeIsFibonacciPrime` - Checks whether a given number is a known fibonacci prime number or not.
-* `getNumbersPrimeIsMersennePrime` - Checks whether a given number is a known mersenne prime number or not.
-* `getNumbersPrimeIsPartitionPrime` - Checks whether a given number is a known partition prime number or not.
-* `getNumbersPrimeIsPellPrime` - Checks whether a given number is a known pell prime number or not.
-* `getNumbersPrimeIsPerfect` - Checks whether a given number is a perfect number or not.
-* `getNumbersPrimeIsPrime` - Checks whether a given number is a known prime number or not.
+* [getNumbersPrimeFactors](docs/prime/README.md#getnumbersprimefactors) - Get the prime factors of a given number.
+* [getNumbersPrimeIsFermatPrime](docs/prime/README.md#getnumbersprimeisfermatprime) - Checks whether a given number is a known fermat prime number or not.
+* [getNumbersPrimeIsFibonacciPrime](docs/prime/README.md#getnumbersprimeisfibonacciprime) - Checks whether a given number is a known fibonacci prime number or not.
+* [getNumbersPrimeIsMersennePrime](docs/prime/README.md#getnumbersprimeismersenneprime) - Checks whether a given number is a known mersenne prime number or not.
+* [getNumbersPrimeIsPartitionPrime](docs/prime/README.md#getnumbersprimeispartitionprime) - Checks whether a given number is a known partition prime number or not.
+* [getNumbersPrimeIsPellPrime](docs/prime/README.md#getnumbersprimeispellprime) - Checks whether a given number is a known pell prime number or not.
+* [getNumbersPrimeIsPerfect](docs/prime/README.md#getnumbersprimeisperfect) - Checks whether a given number is a perfect number or not.
+* [getNumbersPrimeIsPrime](docs/prime/README.md#getnumbersprimeisprime) - Checks whether a given number is a known prime number or not.
 
-### spell
+### [spell](docs/spell/README.md)
 
-* `getNumbersCardinal` - Get the cardinal of the given number
-* `getNumbersCurrency` - Spells out the number as a currency
-* `getNumbersOrdinal` - Get the ordinal of the given number
+* [getNumbersCardinal](docs/spell/README.md#getnumberscardinal) - Get the cardinal of the given number
+* [getNumbersCurrency](docs/spell/README.md#getnumberscurrency) - Spells out the number as a currency
+* [getNumbersOrdinal](docs/spell/README.md#getnumbersordinal) - Get the ordinal of the given number
 <!-- End SDK Available Operations -->
 
 ### Maturity

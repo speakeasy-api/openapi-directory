@@ -33,4 +33,6 @@ src/Models/Shared/GoogleIdentityStsV1ExchangeOauthTokenResponse.php
 src/Models/Shared/GoogleIdentityStsV1ExchangeOauthTokenRequest.php
 src/Models/Shared/GoogleIdentityStsV1ExchangeTokenResponse.php
 src/Models/Shared/GoogleIdentityStsV1ExchangeTokenRequest.php
+docs/sdk/README.md
+docs/v1/README.md
 USAGE.md

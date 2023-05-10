@@ -436,4 +436,16 @@ src/Models/Shared/ApiCoreDtoDomainsDomain.php
 src/Models/Shared/ApiCoreDtoGroupsGroup.php
 src/Models/Shared/ApiCoreDtoRetargetingRetargetingScript.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/account/README.md
+docs/aggregated/README.md
+docs/clickstream/README.md
+docs/conversions/README.md
+docs/datapoints/README.md
+docs/domains/README.md
+docs/groups/README.md
+docs/hits/README.md
+docs/me/README.md
+docs/retargeting/README.md
+docs/tags/README.md
 USAGE.md

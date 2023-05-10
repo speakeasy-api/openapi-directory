@@ -30,60 +30,86 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Shared\AccessibilityRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new AccessibilityRequest();
+    $request->endpointEnabled = false;
+    $request->hotwordEnabled = false;
+
+    $response = $sdk->assistant->accessibility($request);
+
+    if ($response->getcurrentvalues !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### assistant
+### [assistant](docs/assistant/README.md)
 
-* `accessibility` - Accessibility
-* `alarmVolume` - Alarm Volume
-* `deleteAlarmsandTimers` - Delete Alarms and Timers
-* `doNotDisturb` - Do Not Disturb
-* `getAlarmsandTimers` - Get Alarms and Timers
-* `setEqualizerValues` - Set Equalizer Values
+* [accessibility](docs/assistant/README.md#accessibility) - Accessibility
+* [alarmVolume](docs/assistant/README.md#alarmvolume) - Alarm Volume
+* [deleteAlarmsandTimers](docs/assistant/README.md#deletealarmsandtimers) - Delete Alarms and Timers
+* [doNotDisturb](docs/assistant/README.md#donotdisturb) - Do Not Disturb
+* [getAlarmsandTimers](docs/assistant/README.md#getalarmsandtimers) - Get Alarms and Timers
+* [setEqualizerValues](docs/assistant/README.md#setequalizervalues) - Set Equalizer Values
 
-### bluetooth
+### [bluetooth](docs/bluetooth/README.md)
 
-* `changeDiscoverability` - Change Discoverability
-* `forgetpaireddevice` - Forget paired device
-* `getPairedDevices` - Get Paired Devices
-* `getScanResults` - Get Scan Results
-* `pairwithSpeaker` - Pair with Speaker
-* `scanfordevices` - Scan for devices
-* `status` - Status
+* [changeDiscoverability](docs/bluetooth/README.md#changediscoverability) - Change Discoverability
+* [forgetpaireddevice](docs/bluetooth/README.md#forgetpaireddevice) - Forget paired device
+* [getPairedDevices](docs/bluetooth/README.md#getpaireddevices) - Get Paired Devices
+* [getScanResults](docs/bluetooth/README.md#getscanresults) - Get Scan Results
+* [pairwithSpeaker](docs/bluetooth/README.md#pairwithspeaker) - Pair with Speaker
+* [scanfordevices](docs/bluetooth/README.md#scanfordevices) - Scan for devices
+* [status](docs/bluetooth/README.md#status) - Status
 
-### deviceInfo
+### [deviceInfo](docs/deviceinfo/README.md)
 
-* `appDeviceID` - App Device ID
-* `checkReadyStatus` - Check Ready Status
-* `eurekaInfo` - Eureka Info
-* `locales` - Locales
-* `offer` - Offer
-* `testInternetDownloadSpeed` - Test Internet Download Speed
-* `timezones` - Timezones
+* [appDeviceID](docs/deviceinfo/README.md#appdeviceid) - App Device ID
+* [checkReadyStatus](docs/deviceinfo/README.md#checkreadystatus) - Check Ready Status
+* [eurekaInfo](docs/deviceinfo/README.md#eurekainfo) - Eureka Info
+* [locales](docs/deviceinfo/README.md#locales) - Locales
+* [offer](docs/deviceinfo/README.md#offer) - Offer
+* [testInternetDownloadSpeed](docs/deviceinfo/README.md#testinternetdownloadspeed) - Test Internet Download Speed
+* [timezones](docs/deviceinfo/README.md#timezones) - Timezones
 
-### deviceSettings
+### [deviceSettings](docs/devicesettings/README.md)
 
-* `nightModesettings` - Night Mode settings
-* `rebootandFactoryReset` - Reboot and Factory Reset
-* `setEurekaInfo` - Set Eureka Info
+* [nightModesettings](docs/devicesettings/README.md#nightmodesettings) - Night Mode settings
+* [rebootandFactoryReset](docs/devicesettings/README.md#rebootandfactoryreset) - Reboot and Factory Reset
+* [setEurekaInfo](docs/devicesettings/README.md#seteurekainfo) - Set Eureka Info
 
-### staticFiles
+### [staticFiles](docs/staticfiles/README.md)
 
-* `chromecastIcon` - Chromecast Icon
-* `legalNotice` - Legal Notice
+* [chromecastIcon](docs/staticfiles/README.md#chromecasticon) - Chromecast Icon
+* [legalNotice](docs/staticfiles/README.md#legalnotice) - Legal Notice
 
-### wifi
+### [wifi](docs/wifi/README.md)
 
-* `connecttoWiFiNetwork` - Connect to Wi-Fi Network
-* `forgetWiFiNetwork` - Forget Wi-Fi Network
-* `getSavedNetworks` - Get Saved Networks
-* `getWiFiScanResults` - Get Wi-Fi Scan Results
-* `scanforNetworks` - Scan for Networks
+* [connecttoWiFiNetwork](docs/wifi/README.md#connecttowifinetwork) - Connect to Wi-Fi Network
+* [forgetWiFiNetwork](docs/wifi/README.md#forgetwifinetwork) - Forget Wi-Fi Network
+* [getSavedNetworks](docs/wifi/README.md#getsavednetworks) - Get Saved Networks
+* [getWiFiScanResults](docs/wifi/README.md#getwifiscanresults) - Get Wi-Fi Scan Results
+* [scanforNetworks](docs/wifi/README.md#scanfornetworks) - Scan for Networks
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -47,6 +47,16 @@ class SecurityPolicyRuleRateLimitOptions
     public ?SecurityPolicyRuleRateLimitOptionsEnforceOnKeyEnum $enforceOnKey = null;
     
     /**
+     * If specified, any combination of values of enforce_on_key_type/enforce_on_key_name is treated as the key on which ratelimit threshold/action is enforced. You can specify up to 3 enforce_on_key_configs. If enforce_on_key_configs is specified, enforce_on_key must not be specified.
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig> $enforceOnKeyConfigs
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('enforceOnKeyConfigs')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $enforceOnKeyConfigs = null;
+    
+    /**
      * Rate limit key name applicable only for the following key types: HTTP_HEADER -- Name of the HTTP header whose value is taken as the key value. HTTP_COOKIE -- Name of the HTTP cookie whose value is taken as the key value.
      * 
      * @var ?string $enforceOnKeyName
@@ -57,7 +67,7 @@ class SecurityPolicyRuleRateLimitOptions
     public ?string $enforceOnKeyName = null;
     
     /**
-     * Action to take for requests that are above the configured rate limit threshold, to either deny with a specified HTTP response code, or redirect to a different endpoint. Valid options are `deny(STATUS)`, where valid values for `STATUS` are 403, 404, 429, and 502, and `redirect`, where the redirect parameters come from `exceedRedirectOptions` below.
+     * Action to take for requests that are above the configured rate limit threshold, to either deny with a specified HTTP response code, or redirect to a different endpoint. Valid options are `deny(STATUS)`, where valid values for `STATUS` are 403, 404, 429, and 502, and `redirect`, where the redirect parameters come from `exceedRedirectOptions` below. The `redirect` action is only supported in Global Security Policies of type CLOUD_ARMOR.
      * 
      * @var ?string $exceedAction
      */
@@ -82,6 +92,7 @@ class SecurityPolicyRuleRateLimitOptions
 		$this->banThreshold = null;
 		$this->conformAction = null;
 		$this->enforceOnKey = null;
+		$this->enforceOnKeyConfigs = null;
 		$this->enforceOnKeyName = null;
 		$this->exceedAction = null;
 		$this->exceedRedirectOptions = null;

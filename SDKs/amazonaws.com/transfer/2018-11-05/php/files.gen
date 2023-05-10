@@ -368,4 +368,5 @@ src/Models/Shared/UpdateServerRequest.php
 src/Models/Shared/UpdateUserResponse.php
 src/Models/Shared/UpdateUserRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

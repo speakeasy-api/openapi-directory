@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTListQueueTagsActionEnum: string
 {
     case LIST_QUEUE_TAGS = 'ListQueueTags';

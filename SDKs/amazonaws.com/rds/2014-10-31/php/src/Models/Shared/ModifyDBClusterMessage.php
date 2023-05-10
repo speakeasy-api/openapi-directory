@@ -21,6 +21,9 @@ class ModifyDBClusterMessage
     public ?int $allocatedStorage = null;
     
 	
+    public ?bool $allowEngineModeChange = null;
+    
+	
     public ?bool $allowMajorVersionUpgrade = null;
     
 	
@@ -73,6 +76,9 @@ class ModifyDBClusterMessage
     
 	
     public ?bool $enablePerformanceInsights = null;
+    
+	
+    public ?string $engineMode = null;
     
 	
     public ?string $engineVersion = null;
@@ -147,6 +153,7 @@ class ModifyDBClusterMessage
 	public function __construct()
 	{
 		$this->allocatedStorage = null;
+		$this->allowEngineModeChange = null;
 		$this->allowMajorVersionUpgrade = null;
 		$this->applyImmediately = null;
 		$this->autoMinorVersionUpgrade = null;
@@ -165,6 +172,7 @@ class ModifyDBClusterMessage
 		$this->enableHttpEndpoint = null;
 		$this->enableIAMDatabaseAuthentication = null;
 		$this->enablePerformanceInsights = null;
+		$this->engineMode = null;
 		$this->engineVersion = null;
 		$this->iops = null;
 		$this->manageMasterUserPassword = null;

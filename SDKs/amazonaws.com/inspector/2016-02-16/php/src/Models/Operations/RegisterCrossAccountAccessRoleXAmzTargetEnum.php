@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RegisterCrossAccountAccessRoleXAmzTargetEnum: string
 {
     case INSPECTOR_SERVICE_REGISTER_CROSS_ACCOUNT_ACCESS_ROLE = 'InspectorService.RegisterCrossAccountAccessRole';

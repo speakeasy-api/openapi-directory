@@ -21,6 +21,16 @@ class ExportVectorEnrichmentJobRequestBody
     public string $arn;
     
     /**
+     * A unique token that guarantees that the call to this API is idempotent.
+     * 
+     * @var ?string $clientToken
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('ClientToken')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $clientToken = null;
+    
+    /**
      * The Amazon Resource Name (ARN) of the IAM rolewith permission to upload to the location in OutputConfig.
      * 
      * @var string $executionRoleArn
@@ -41,6 +51,7 @@ class ExportVectorEnrichmentJobRequestBody
 	public function __construct()
 	{
 		$this->arn = "";
+		$this->clientToken = null;
 		$this->executionRoleArn = "";
 		$this->outputConfig = new \OpenAPI\OpenAPI\Models\Operations\ExportVectorEnrichmentJobRequestBodyOutputConfig();
 	}

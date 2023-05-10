@@ -30,40 +30,73 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\BatchInputCallbackCompletionBatchRequest;
+use \OpenAPI\OpenAPI\Models\Shared\CallbackCompletionBatchRequest;
+use \OpenAPI\OpenAPI\Models\Operations\PostAutomationV4ActionsCallbacksCompleteCompleteBatchSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new BatchInputCallbackCompletionBatchRequest();
+    $request->inputs = [
+        new CallbackCompletionBatchRequest(),
+        new CallbackCompletionBatchRequest(),
+        new CallbackCompletionBatchRequest(),
+    ];
+
+    $requestSecurity = new PostAutomationV4ActionsCallbacksCompleteCompleteBatchSecurity();
+    $requestSecurity->hapikey = 'YOUR_API_KEY_HERE';
+
+    $response = $sdk->callbacks->postAutomationV4ActionsCallbacksCompleteCompleteBatch($request, $requestSecurity);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### callbacks
+### [callbacks](docs/callbacks/README.md)
 
-* `postAutomationV4ActionsCallbacksCompleteCompleteBatch` - Complete a batch of callbacks
-* `postAutomationV4ActionsCallbacksCallbackIdCompleteComplete` - Complete a callback
+* [postAutomationV4ActionsCallbacksCompleteCompleteBatch](docs/callbacks/README.md#postautomationv4actionscallbackscompletecompletebatch) - Complete a batch of callbacks
+* [postAutomationV4ActionsCallbacksCallbackIdCompleteComplete](docs/callbacks/README.md#postautomationv4actionscallbackscallbackidcompletecomplete) - Complete a callback
 
-### definitions
+### [definitions](docs/definitions/README.md)
 
-* `deleteAutomationV4ActionsAppIdDefinitionIdArchive` - Archive a custom action
-* `getAutomationV4ActionsAppIdDefinitionIdGetById` - Get a custom action
-* `getAutomationV4ActionsAppIdGetPage` - Get all custom actions
-* `patchAutomationV4ActionsAppIdDefinitionIdUpdate` - Update a custom action
-* `postAutomationV4ActionsAppIdCreate` - Create new custom action
+* [deleteAutomationV4ActionsAppIdDefinitionIdArchive](docs/definitions/README.md#deleteautomationv4actionsappiddefinitionidarchive) - Archive a custom action
+* [getAutomationV4ActionsAppIdDefinitionIdGetById](docs/definitions/README.md#getautomationv4actionsappiddefinitionidgetbyid) - Get a custom action
+* [getAutomationV4ActionsAppIdGetPage](docs/definitions/README.md#getautomationv4actionsappidgetpage) - Get all custom actions
+* [patchAutomationV4ActionsAppIdDefinitionIdUpdate](docs/definitions/README.md#patchautomationv4actionsappiddefinitionidupdate) - Update a custom action
+* [postAutomationV4ActionsAppIdCreate](docs/definitions/README.md#postautomationv4actionsappidcreate) - Create new custom action
 
-### functions
+### [functions](docs/functions/README.md)
 
-* `deleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdArchive` - Delete a custom action function
-* `deleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeArchiveByFunctionType` - Delete a custom action function
-* `getAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdGetById` - Get a custom action function
-* `getAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeGetByFunctionType` - Get a custom action function
-* `getAutomationV4ActionsAppIdDefinitionIdFunctionsGetPage` - Get all custom action functions
-* `putAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdCreateOrReplace` - Create or replace a custom action function
-* `putAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionType` - Create or replace a custom action function
+* [deleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdArchive](docs/functions/README.md#deleteautomationv4actionsappiddefinitionidfunctionsfunctiontypefunctionidarchive) - Delete a custom action function
+* [deleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeArchiveByFunctionType](docs/functions/README.md#deleteautomationv4actionsappiddefinitionidfunctionsfunctiontypearchivebyfunctiontype) - Delete a custom action function
+* [getAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdGetById](docs/functions/README.md#getautomationv4actionsappiddefinitionidfunctionsfunctiontypefunctionidgetbyid) - Get a custom action function
+* [getAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeGetByFunctionType](docs/functions/README.md#getautomationv4actionsappiddefinitionidfunctionsfunctiontypegetbyfunctiontype) - Get a custom action function
+* [getAutomationV4ActionsAppIdDefinitionIdFunctionsGetPage](docs/functions/README.md#getautomationv4actionsappiddefinitionidfunctionsgetpage) - Get all custom action functions
+* [putAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdCreateOrReplace](docs/functions/README.md#putautomationv4actionsappiddefinitionidfunctionsfunctiontypefunctionidcreateorreplace) - Create or replace a custom action function
+* [putAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionType](docs/functions/README.md#putautomationv4actionsappiddefinitionidfunctionsfunctiontypecreateorreplacebyfunctiontype) - Create or replace a custom action function
 
-### revisions
+### [revisions](docs/revisions/README.md)
 
-* `getAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetById` - Get a revision for a custom action
-* `getAutomationV4ActionsAppIdDefinitionIdRevisionsGetPage` - Get all revisions for a custom action
+* [getAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetById](docs/revisions/README.md#getautomationv4actionsappiddefinitionidrevisionsrevisionidgetbyid) - Get a revision for a custom action
+* [getAutomationV4ActionsAppIdDefinitionIdRevisionsGetPage](docs/revisions/README.md#getautomationv4actionsappiddefinitionidrevisionsgetpage) - Get all revisions for a custom action
 <!-- End SDK Available Operations -->
 
 ### Maturity

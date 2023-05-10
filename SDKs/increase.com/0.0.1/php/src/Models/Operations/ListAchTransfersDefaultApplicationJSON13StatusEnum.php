@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-enum ListAchTransfersDefaultApplicationJSON13StatusEnum: string
+enum ListAchTransfersDefaultApplicationJSON13StatusEnum: int
 {
-    case FOUR_HUNDRED_AND_TWENTY_NINE = '429';
+    case FOUR_HUNDRED_AND_TWENTY_NINE = 429;
 }

@@ -32,10 +32,16 @@ class ResourceInfo
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $roleArn = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('WithFederation')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $withFederation = null;
+    
 	public function __construct()
 	{
 		$this->lastModified = null;
 		$this->resourceArn = null;
 		$this->roleArn = null;
+		$this->withFederation = null;
 	}
 }

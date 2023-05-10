@@ -23,6 +23,22 @@ class GetUnfilteredPartitionMetadataResponse
     public mixed $entityNotFoundException = null;
     
     /**
+     * FederationSourceException
+     * 
+     * @var mixed $federationSourceException
+     */
+	
+    public mixed $federationSourceException = null;
+    
+    /**
+     * FederationSourceRetryableException
+     * 
+     * @var mixed $federationSourceRetryableException
+     */
+	
+    public mixed $federationSourceRetryableException = null;
+    
+    /**
      * Success
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GetUnfilteredPartitionMetadataResponse $getUnfilteredPartitionMetadataResponse
@@ -80,6 +96,8 @@ class GetUnfilteredPartitionMetadataResponse
 	{
 		$this->contentType = "";
 		$this->entityNotFoundException = null;
+		$this->federationSourceException = null;
+		$this->federationSourceRetryableException = null;
 		$this->getUnfilteredPartitionMetadataResponse = null;
 		$this->glueEncryptionException = null;
 		$this->internalServiceException = null;

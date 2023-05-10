@@ -156,4 +156,7 @@ src/Models/Shared/Option.php
 src/Models/Shared/Mixin.php
 src/Models/Shared/MethodSyntaxEnum.php
 src/Models/Shared/Method.php
+docs/sdk/README.md
+docs/operations/README.md
+docs/services/README.md
 USAGE.md

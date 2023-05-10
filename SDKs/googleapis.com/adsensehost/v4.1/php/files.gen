@@ -124,4 +124,11 @@ src/Models/Shared/CustomChannel.php
 src/Models/Shared/CustomChannels.php
 src/Models/Shared/UrlChannel.php
 src/Models/Shared/UrlChannels.php
+docs/sdk/README.md
+docs/accounts/README.md
+docs/adclients/README.md
+docs/associationsessions/README.md
+docs/customchannels/README.md
+docs/reports/README.md
+docs/urlchannels/README.md
 USAGE.md

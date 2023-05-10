@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutProtocolsListXAmzTargetEnum: string
 {
     case AWSFMS20180101_PUT_PROTOCOLS_LIST = 'AWSFMS_20180101.PutProtocolsList';

@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class GoogleAnalyticsAdminV1alphaAudienceSequenceFilterAudienceSequenceStep
 {
     /**
-     * Optional. When set, this step must be satisfied within the constraint_duration of the previous step (i.e., t[i] - t[i-1] <= constraint_duration). If not set, there is no duration requirement (the duration is effectively unlimited). It is ignored for the first step.
+     * Optional. When set, this step must be satisfied within the constraint_duration of the previous step (For example, t[i] - t[i-1] <= constraint_duration). If not set, there is no duration requirement (the duration is effectively unlimited). It is ignored for the first step.
      * 
      * @var ?string $constraintDuration
      */

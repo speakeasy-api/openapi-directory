@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDisableSnapshotCopyActionEnum: string
 {
     case DISABLE_SNAPSHOT_COPY = 'DisableSnapshotCopy';

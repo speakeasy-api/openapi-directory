@@ -42,4 +42,5 @@ src/Models/Shared/EdgeMetric.php
 src/Models/Shared/DeploymentModel.php
 src/Models/Shared/DeploymentStatusEnum.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

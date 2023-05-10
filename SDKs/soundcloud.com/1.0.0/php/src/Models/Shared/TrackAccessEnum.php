@@ -22,5 +22,5 @@ enum TrackAccessEnum: string
     case PLAYABLE = 'playable';
     case PREVIEW = 'preview';
     case BLOCKED = 'blocked';
-    case NULL = 'null';
+    case LESS_THAN_NIL_GREATER_THAN = '<nil>';
 }

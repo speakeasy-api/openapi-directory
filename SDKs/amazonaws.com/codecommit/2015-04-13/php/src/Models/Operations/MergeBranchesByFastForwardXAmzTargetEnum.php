@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum MergeBranchesByFastForwardXAmzTargetEnum: string
 {
     case CODE_COMMIT20150413_MERGE_BRANCHES_BY_FAST_FORWARD = 'CodeCommit_20150413.MergeBranchesByFastForward';

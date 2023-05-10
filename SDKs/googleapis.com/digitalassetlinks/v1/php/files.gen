@@ -41,4 +41,7 @@ src/Models/Shared/XgafvEnum.php
 src/Models/Shared/ListResponseErrorCodeEnum.php
 src/Models/Shared/ListResponse.php
 src/Models/Shared/Statement.php
+docs/sdk/README.md
+docs/assetlinks/README.md
+docs/statements/README.md
 USAGE.md

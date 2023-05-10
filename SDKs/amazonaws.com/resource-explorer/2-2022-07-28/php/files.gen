@@ -102,4 +102,5 @@ src/Models/Shared/ResourceCount.php
 src/Models/Shared/UpdateIndexTypeOutput.php
 src/Models/Shared/UpdateViewOutput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

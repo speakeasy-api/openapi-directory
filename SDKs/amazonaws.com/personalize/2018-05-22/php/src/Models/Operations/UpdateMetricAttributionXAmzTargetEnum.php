@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateMetricAttributionXAmzTargetEnum: string
 {
     case AMAZON_PERSONALIZE_UPDATE_METRIC_ATTRIBUTION = 'AmazonPersonalize.UpdateMetricAttribution';

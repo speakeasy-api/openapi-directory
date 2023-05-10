@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateReplicationInstanceXAmzTargetEnum: string
 {
     case AMAZON_DM_SV20160101_CREATE_REPLICATION_INSTANCE = 'AmazonDMSv20160101.CreateReplicationInstance';

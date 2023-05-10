@@ -122,11 +122,14 @@ class Events
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\TrackJourneyEventRequestBody $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TrackJourneyEventResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function trackJourneyEvent(
         \OpenAPI\OpenAPI\Models\Operations\TrackJourneyEventRequestBody $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TrackJourneyEventResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/events');
         

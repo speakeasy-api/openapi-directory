@@ -18,6 +18,16 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class ScopeInput
 {
     /**
+     * If true, all Memberships in the Fleet bind to this Scope.
+     * 
+     * @var ?bool $allMemberships
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('allMemberships')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $allMemberships = null;
+    
+    /**
      * The resource name for the scope `projects/{project}/locations/{location}/scopes/{scope}`
      * 
      * @var ?string $name
@@ -29,6 +39,7 @@ class ScopeInput
     
 	public function __construct()
 	{
+		$this->allMemberships = null;
 		$this->name = null;
 	}
 }

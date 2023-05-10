@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetClusterSessionCredentialsXAmzTargetEnum: string
 {
     case ELASTIC_MAP_REDUCE_GET_CLUSTER_SESSION_CREDENTIALS = 'ElasticMapReduce.GetClusterSessionCredentials';

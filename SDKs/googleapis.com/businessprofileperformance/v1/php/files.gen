@@ -44,4 +44,6 @@ src/Models/Shared/GetDailyMetricsTimeSeriesResponse.php
 src/Models/Shared/ListSearchKeywordImpressionsMonthlyResponse.php
 src/Models/Shared/SearchKeywordCount.php
 src/Models/Shared/InsightsValue.php
+docs/sdk/README.md
+docs/locations/README.md
 USAGE.md

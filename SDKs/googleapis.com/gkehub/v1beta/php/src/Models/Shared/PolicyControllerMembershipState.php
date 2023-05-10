@@ -28,7 +28,7 @@ class PolicyControllerMembershipState
     public ?array $componentStates = null;
     
     /**
-     * The state of the template library and any bundles included in the chosen version of the manifest TODO (b/271878194): Remove this
+     * The state of the template library and any bundles included in the chosen version of the manifest
      * 
      * @var ?array<string, \OpenAPI\OpenAPI\Models\Shared\PolicyControllerOnClusterState> $contentStates
      */

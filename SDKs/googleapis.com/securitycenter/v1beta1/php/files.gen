@@ -100,4 +100,6 @@ src/Models/Shared/ListSourcesResponse.php
 src/Models/Shared/SetIamPolicyRequest.php
 src/Models/Shared/TestIamPermissionsResponse.php
 src/Models/Shared/TestIamPermissionsRequest.php
+docs/sdk/README.md
+docs/organizations/README.md
 USAGE.md

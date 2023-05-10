@@ -96,4 +96,5 @@ src/Models/Shared/CreateTimeOffPeriodResponseDataTypeEnum.php
 src/Models/Shared/CreateTimeOffPeriodResponseData.php
 src/Models/Shared/CreateTimeOffPeriodResponse.php
 src/Models/Shared/CreateTimeOffPeriodRequest.php
+docs/sdk/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETSetIdentityFeedbackForwardingEnabledActionEnum: string
 {
     case SET_IDENTITY_FEEDBACK_FORWARDING_ENABLED = 'SetIdentityFeedbackForwardingEnabled';

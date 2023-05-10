@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum BatchDeleteTableXAmzTargetEnum: string
 {
     case AWS_GLUE_BATCH_DELETE_TABLE = 'AWSGlue.BatchDeleteTable';

@@ -30,19 +30,44 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetAreasRequest;
+use \OpenAPI\OpenAPI\Models\Operations\GetAreasFormatEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetAreasRequest();
+    $request->format = GetAreasFormatEnum::XML;
+
+    $response = $sdk->resources->getAreas($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### resources
+### [resources](docs/resources/README.md)
 
-* `getAreas` - Lists the geographical areas (e.g. districts) that can be used to filter events.
-* `getEvents` - Lists road events
-* `getJurisdiction` - Lists the jurisdictions publishing data through this Open511 API implementation
-* `getJurisdictiongeography` - Provides the geographical boundaries for all the jurisdictions.
+* [getAreas](docs/resources/README.md#getareas) - Lists the geographical areas (e.g. districts) that can be used to filter events.
+* [getEvents](docs/resources/README.md#getevents) - Lists road events
+* [getJurisdiction](docs/resources/README.md#getjurisdiction) - Lists the jurisdictions publishing data through this Open511 API implementation
+* [getJurisdictiongeography](docs/resources/README.md#getjurisdictiongeography) - Provides the geographical boundaries for all the jurisdictions.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutDestinationXAmzTargetEnum: string
 {
     case LOGS20140328_PUT_DESTINATION = 'Logs_20140328.PutDestination';

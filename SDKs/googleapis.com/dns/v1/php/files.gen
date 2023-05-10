@@ -350,4 +350,14 @@ src/Models/Shared/ResponsePolicyRuleLocalData.php
 src/Models/Shared/ResponsePolicyRulesListResponse.php
 src/Models/Shared/ResponsePolicyRulesPatchResponse.php
 src/Models/Shared/ResponsePolicyRulesUpdateResponse.php
+docs/sdk/README.md
+docs/changes/README.md
+docs/dnskeys/README.md
+docs/managedzoneoperations/README.md
+docs/managedzones/README.md
+docs/policies/README.md
+docs/projects/README.md
+docs/resourcerecordsets/README.md
+docs/responsepolicies/README.md
+docs/responsepolicyrules/README.md
 USAGE.md

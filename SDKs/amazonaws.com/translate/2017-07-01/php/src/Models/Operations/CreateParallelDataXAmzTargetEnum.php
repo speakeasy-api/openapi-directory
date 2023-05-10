@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateParallelDataXAmzTargetEnum: string
 {
     case AWS_SHINE_FRONTEND_SERVICE20170701_CREATE_PARALLEL_DATA = 'AWSShineFrontendService_20170701.CreateParallelData';

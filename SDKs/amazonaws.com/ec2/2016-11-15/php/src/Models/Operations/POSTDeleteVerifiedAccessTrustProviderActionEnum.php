@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteVerifiedAccessTrustProviderActionEnum: string
 {
     case DELETE_VERIFIED_ACCESS_TRUST_PROVIDER = 'DeleteVerifiedAccessTrustProvider';

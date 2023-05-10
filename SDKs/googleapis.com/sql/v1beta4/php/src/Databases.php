@@ -114,7 +114,7 @@ class Databases
     }
 	
     /**
-     * Inserts a resource containing information about a database inside a Cloud SQL instance.
+     * Inserts a resource containing information about a database inside a Cloud SQL instance. **Note:** You can't modify the default character set and collation.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\SqlDatabasesInsertRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\SqlDatabasesInsertSecurity $security

@@ -148,4 +148,7 @@ src/Models/Shared/OpenAQProjectsResultMeta.php
 src/Models/Shared/OpenAQProjectsResult.php
 src/Models/Shared/ProjectsRow.php
 src/Models/Shared/ProjectParameterDetails.php
+docs/sdk/README.md
+docs/v1/README.md
+docs/v2/README.md
 USAGE.md

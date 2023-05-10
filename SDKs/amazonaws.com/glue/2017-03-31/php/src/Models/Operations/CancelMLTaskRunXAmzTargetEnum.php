@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CancelMLTaskRunXAmzTargetEnum: string
 {
     case AWS_GLUE_CANCEL_ML_TASK_RUN = 'AWSGlue.CancelMLTaskRun';

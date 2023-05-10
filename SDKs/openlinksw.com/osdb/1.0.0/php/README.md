@@ -30,25 +30,50 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\ActionHelpRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new ActionHelpRequest();
+    $request->actionId = 'corrupti';
+    $request->serviceId = 'provident';
+
+    $response = $sdk->osdb->actionHelp($request);
+
+    if ($response->actionHelpResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### osdb
+### [osdb](docs/osdb/README.md)
 
-* `actionHelp` - Action help
-* `describeAction` - Describe action
-* `describeService` - Describe service
-* `executeAction` - Execute action
-* `listActions` - List actions
-* `listServices` - List services
-* `loadService` - Load service
-* `login` - Login
-* `logout` - Logout
-* `unloadService` - Unload service
+* [actionHelp](docs/osdb/README.md#actionhelp) - Action help
+* [describeAction](docs/osdb/README.md#describeaction) - Describe action
+* [describeService](docs/osdb/README.md#describeservice) - Describe service
+* [executeAction](docs/osdb/README.md#executeaction) - Execute action
+* [listActions](docs/osdb/README.md#listactions) - List actions
+* [listServices](docs/osdb/README.md#listservices) - List services
+* [loadService](docs/osdb/README.md#loadservice) - Load service
+* [login](docs/osdb/README.md#login) - Login
+* [logout](docs/osdb/README.md#logout) - Logout
+* [unloadService](docs/osdb/README.md#unloadservice) - Unload service
 <!-- End SDK Available Operations -->
 
 ### Maturity

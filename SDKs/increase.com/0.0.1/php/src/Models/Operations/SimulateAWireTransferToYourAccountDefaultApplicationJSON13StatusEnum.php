@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-enum SimulateAWireTransferToYourAccountDefaultApplicationJSON13StatusEnum: string
+enum SimulateAWireTransferToYourAccountDefaultApplicationJSON13StatusEnum: int
 {
-    case FOUR_HUNDRED_AND_TWENTY_NINE = '429';
+    case FOUR_HUNDRED_AND_TWENTY_NINE = 429;
 }

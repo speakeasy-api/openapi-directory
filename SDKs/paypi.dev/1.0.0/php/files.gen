@@ -29,4 +29,5 @@ src/Models/Operations/PostSendCode400ApplicationJSON.php
 src/Models/Operations/PostSendCode200ApplicationJSON.php
 src/Models/Operations/PostSendCodeResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -21,6 +21,7 @@ enum InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSource
     case CARD_DISPUTE_ACCEPTANCE = 'card_dispute_acceptance';
     case CARD_REFUND = 'card_refund';
     case CARD_SETTLEMENT = 'card_settlement';
+    case CARD_REVENUE_PAYMENT = 'card_revenue_payment';
     case CHECK_DEPOSIT_ACCEPTANCE = 'check_deposit_acceptance';
     case CHECK_DEPOSIT_RETURN = 'check_deposit_return';
     case CHECK_TRANSFER_INTENTION = 'check_transfer_intention';
@@ -29,6 +30,7 @@ enum InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSource
     case CHECK_TRANSFER_STOP_PAYMENT_REQUEST = 'check_transfer_stop_payment_request';
     case DISPUTE_RESOLUTION = 'dispute_resolution';
     case EMPYREAL_CASH_DEPOSIT = 'empyreal_cash_deposit';
+    case FEE_PAYMENT = 'fee_payment';
     case INBOUND_ACH_TRANSFER = 'inbound_ach_transfer';
     case INBOUND_ACH_TRANSFER_RETURN_INTENTION = 'inbound_ach_transfer_return_intention';
     case INBOUND_CHECK = 'inbound_check';

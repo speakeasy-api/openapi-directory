@@ -30,18 +30,39 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $response = $sdk->pets->createPets();
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### pets
+### [pets](docs/pets/README.md)
 
-* `createPets` - Create a pet
-* `listPets` - List all pets
-* `showPetById` - Info for a specific pet
+* [createPets](docs/pets/README.md#createpets) - Create a pet
+* [listPets](docs/pets/README.md#listpets) - List all pets
+* [showPetById](docs/pets/README.md#showpetbyid) - Info for a specific pet
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -138,4 +138,5 @@ src/Models/Shared/PingResponse.php
 src/Models/Shared/StartNetworkResourceUpdateResponse.php
 src/Models/Shared/UpdateNetworkSiteResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

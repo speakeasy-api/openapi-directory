@@ -12,7 +12,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 /** **Required when the `state` is `resolved`.** The reason for resolving the alert. */
 enum SecretScanningAlertResolutionEnum: string
 {
-    case NULL = 'null';
+    case LESS_THAN_NIL_GREATER_THAN = '<nil>';
     case FALSE_POSITIVE = 'false_positive';
     case WONT_FIX = 'wont_fix';
     case REVOKED = 'revoked';

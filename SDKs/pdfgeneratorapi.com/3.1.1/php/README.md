@@ -30,32 +30,66 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\MergeTemplateRequest;
+use \OpenAPI\OpenAPI\Models\Shared\Data;
+use \OpenAPI\OpenAPI\Models\Shared\FormatEnum;
+use \OpenAPI\OpenAPI\Models\Shared\OutputEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new MergeTemplateRequest();
+    $request->data = new Data();
+    $request->data->id = 12312;
+    $request->data->name = 'Sample Data';
+    $request->format = FormatEnum::PDF;
+    $request->name = 'My document';
+    $request->output = OutputEnum::BASE64;
+    $request->templateId = 19375;
+
+    $response = $sdk->documents->mergeTemplate($request);
+
+    if ($response->mergeTemplate200ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### documents
+### [documents](docs/documents/README.md)
 
-* `mergeTemplate` - Generate document
-* `mergeTemplates` - Generate document (multiple templates)
+* [mergeTemplate](docs/documents/README.md#mergetemplate) - Generate document
+* [mergeTemplates](docs/documents/README.md#mergetemplates) - Generate document (multiple templates)
 
-### templates
+### [templates](docs/templates/README.md)
 
-* `copyTemplate` - Copy template
-* `createTemplate` - Create template
-* `deleteTemplate` - Delete template
-* `getEditorUrl` - Open editor
-* `getTemplate` - Get template
-* `getTemplates` - Get templates
-* `updateTemplate` - Update template
+* [copyTemplate](docs/templates/README.md#copytemplate) - Copy template
+* [createTemplate](docs/templates/README.md#createtemplate) - Create template
+* [deleteTemplate](docs/templates/README.md#deletetemplate) - Delete template
+* [getEditorUrl](docs/templates/README.md#geteditorurl) - Open editor
+* [getTemplate](docs/templates/README.md#gettemplate) - Get template
+* [getTemplates](docs/templates/README.md#gettemplates) - Get templates
+* [updateTemplate](docs/templates/README.md#updatetemplate) - Update template
 
-### workspaces
+### [workspaces](docs/workspaces/README.md)
 
-* `deleteWorkspace` - Delete workspace
-* `getWorkspace` - Get workspace
+* [deleteWorkspace](docs/workspaces/README.md#deleteworkspace) - Delete workspace
+* [getWorkspace](docs/workspaces/README.md#getworkspace) - Get workspace
 <!-- End SDK Available Operations -->
 
 ### Maturity

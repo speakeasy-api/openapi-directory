@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeImportSnapshotTasksActionEnum: string
 {
     case DESCRIBE_IMPORT_SNAPSHOT_TASKS = 'DescribeImportSnapshotTasks';

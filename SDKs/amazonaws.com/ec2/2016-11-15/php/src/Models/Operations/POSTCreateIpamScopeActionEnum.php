@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateIpamScopeActionEnum: string
 {
     case CREATE_IPAM_SCOPE = 'CreateIpamScope';

@@ -18,4 +18,5 @@ enum EffectiveDeploymentExecutionStatusEnum: string
     case TIMED_OUT = 'TIMED_OUT';
     case CANCELED = 'CANCELED';
     case REJECTED = 'REJECTED';
+    case SUCCEEDED = 'SUCCEEDED';
 }

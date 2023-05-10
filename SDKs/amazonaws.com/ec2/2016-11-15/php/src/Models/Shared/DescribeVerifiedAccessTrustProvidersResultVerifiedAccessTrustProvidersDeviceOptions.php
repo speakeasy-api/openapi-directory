@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvidersDeviceOptions - The options for device-identity type trust provider.
+ * DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvidersDeviceOptions - The options for device-identity trust provider.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

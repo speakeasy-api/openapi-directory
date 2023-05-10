@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ReplicateSecretToRegionsXAmzTargetEnum: string
 {
     case SECRETSMANAGER_REPLICATE_SECRET_TO_REGIONS = 'secretsmanager.ReplicateSecretToRegions';

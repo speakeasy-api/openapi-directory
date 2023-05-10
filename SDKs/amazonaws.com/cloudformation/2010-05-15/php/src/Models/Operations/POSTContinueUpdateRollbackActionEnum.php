@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTContinueUpdateRollbackActionEnum: string
 {
     case CONTINUE_UPDATE_ROLLBACK = 'ContinueUpdateRollback';

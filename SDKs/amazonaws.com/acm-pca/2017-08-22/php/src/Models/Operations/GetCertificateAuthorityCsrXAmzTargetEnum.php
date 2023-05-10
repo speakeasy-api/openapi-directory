@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetCertificateAuthorityCsrXAmzTargetEnum: string
 {
     case ACM_PRIVATE_CA_GET_CERTIFICATE_AUTHORITY_CSR = 'ACMPrivateCA.GetCertificateAuthorityCsr';

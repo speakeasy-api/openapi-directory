@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateAnomalyMonitorXAmzTargetEnum: string
 {
     case AWS_INSIGHTS_INDEX_SERVICE_UPDATE_ANOMALY_MONITOR = 'AWSInsightsIndexService.UpdateAnomalyMonitor';

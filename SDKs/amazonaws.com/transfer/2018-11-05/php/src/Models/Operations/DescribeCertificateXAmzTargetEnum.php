@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeCertificateXAmzTargetEnum: string
 {
     case TRANSFER_SERVICE_DESCRIBE_CERTIFICATE = 'TransferService.DescribeCertificate';

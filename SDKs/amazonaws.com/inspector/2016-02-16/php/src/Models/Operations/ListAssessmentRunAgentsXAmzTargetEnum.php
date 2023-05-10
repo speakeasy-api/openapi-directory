@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListAssessmentRunAgentsXAmzTargetEnum: string
 {
     case INSPECTOR_SERVICE_LIST_ASSESSMENT_RUN_AGENTS = 'InspectorService.ListAssessmentRunAgents';

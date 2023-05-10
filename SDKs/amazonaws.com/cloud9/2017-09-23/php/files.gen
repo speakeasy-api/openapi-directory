@@ -91,4 +91,5 @@ src/Models/Shared/ManagedCredentialsActionEnum.php
 src/Models/Shared/UpdateEnvironmentMembershipResult.php
 src/Models/Shared/UpdateEnvironmentMembershipRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetAccountConfigurationXAmzTargetEnum: string
 {
     case CERTIFICATE_MANAGER_GET_ACCOUNT_CONFIGURATION = 'CertificateManager.GetAccountConfiguration';

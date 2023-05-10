@@ -73,4 +73,5 @@ src/Models/Shared/ListSpeechSynthesisTasksOutput.php
 src/Models/Shared/StartSpeechSynthesisTaskOutput.php
 src/Models/Shared/SynthesizeSpeechOutput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

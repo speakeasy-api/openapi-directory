@@ -68,4 +68,7 @@ src/Models/Shared/V2AndroidKeyRestrictions.php
 src/Models/Shared/V2AndroidApplication.php
 src/Models/Shared/V2GetKeyStringResponse.php
 src/Models/Shared/V2ListKeysResponse.php
+docs/sdk/README.md
+docs/keys/README.md
+docs/projects/README.md
 USAGE.md

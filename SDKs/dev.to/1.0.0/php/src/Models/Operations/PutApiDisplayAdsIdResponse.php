@@ -20,10 +20,19 @@ class PutApiDisplayAdsIdResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
+    /**
+     * successful
+     * 
+     * @var ?array<string, mixed> $putApiDisplayAdsId200ApplicationJSONObject
+     */
+	
+    public ?array $putApiDisplayAdsId200ApplicationJSONObject = null;
+    
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
+		$this->putApiDisplayAdsId200ApplicationJSONObject = null;
 	}
 }

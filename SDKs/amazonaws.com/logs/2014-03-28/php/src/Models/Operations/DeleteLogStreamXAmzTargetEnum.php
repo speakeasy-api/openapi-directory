@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteLogStreamXAmzTargetEnum: string
 {
     case LOGS20140328_DELETE_LOG_STREAM = 'Logs_20140328.DeleteLogStream';

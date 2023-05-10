@@ -18,6 +18,16 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class DomainJoinMachineRequest
 {
     /**
+     * Optional. force if True, forces domain join even if the computer account already exists.
+     * 
+     * @var ?bool $force
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('force')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $force = null;
+    
+    /**
      * Optional. OU name where the VM needs to be domain joined
      * 
      * @var ?string $ouName
@@ -39,6 +49,7 @@ class DomainJoinMachineRequest
     
 	public function __construct()
 	{
+		$this->force = null;
 		$this->ouName = null;
 		$this->vmIdToken = null;
 	}

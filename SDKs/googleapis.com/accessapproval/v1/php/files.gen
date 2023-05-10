@@ -56,4 +56,6 @@ src/Models/Shared/AccessApprovalSettingsInput.php
 src/Models/Shared/AccessApprovalSettings.php
 src/Models/Shared/EnrolledServiceEnrollmentLevelEnum.php
 src/Models/Shared/EnrolledService.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

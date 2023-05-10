@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartReportCreationXAmzTargetEnum: string
 {
     case RESOURCE_GROUPS_TAGGING_API20170126_START_REPORT_CREATION = 'ResourceGroupsTaggingAPI_20170126.StartReportCreation';

@@ -30,58 +30,84 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\CreateAttachmentRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new CreateAttachmentRequest();
+    $request->bucketId = 'corrupti';
+    $request->collectionId = 'provident';
+    $request->id = 'bd9d8d69-a674-4e0f-867c-c8796ed151a0';
+
+    $response = $sdk->attachment->createAttachment($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### attachment
+### [attachment](docs/attachment/README.md)
 
-* `createAttachment`
-* `deleteAttachment`
+* [createAttachment](docs/attachment/README.md#createattachment)
+* [deleteAttachment](docs/attachment/README.md#deleteattachment)
 
-### batch
+### [batch](docs/batch/README.md)
 
-* `batch`
+* [batch](docs/batch/README.md#batch)
 
-### buckets
+### [buckets](docs/buckets/README.md)
 
-* `getBucket`
-* `getBuckets`
+* [getBucket](docs/buckets/README.md#getbucket)
+* [getBuckets](docs/buckets/README.md#getbuckets)
 
-### changess
+### [changess](docs/changess/README.md)
 
-* `getChangess`
+* [getChangess](docs/changess/README.md#getchangess)
 
-### collectionChangeset
+### [collectionChangeset](docs/collectionchangeset/README.md)
 
-* `getCollectionChangeset`
+* [getCollectionChangeset](docs/collectionchangeset/README.md#getcollectionchangeset)
 
-### collections
+### [collections](docs/collections/README.md)
 
-* `getCollection`
-* `getCollections`
+* [getCollection](docs/collections/README.md#getcollection)
+* [getCollections](docs/collections/README.md#getcollections)
 
-### groups
+### [groups](docs/groups/README.md)
 
-* `getGroup`
-* `getGroups`
+* [getGroup](docs/groups/README.md#getgroup)
+* [getGroups](docs/groups/README.md#getgroups)
 
-### records
+### [records](docs/records/README.md)
 
-* `getRecord`
-* `getRecords`
+* [getRecord](docs/records/README.md#getrecord)
+* [getRecords](docs/records/README.md#getrecords)
 
-### utilities
+### [utilities](docs/utilities/README.md)
 
-* `heartbeat`
-* `lbheartbeat`
-* `version`
-* `contribute`
-* `getOpenapiSpec`
-* `serverInfo`
+* [heartbeat](docs/utilities/README.md#heartbeat)
+* [lbheartbeat](docs/utilities/README.md#lbheartbeat)
+* [version](docs/utilities/README.md#version)
+* [contribute](docs/utilities/README.md#contribute)
+* [getOpenapiSpec](docs/utilities/README.md#getopenapispec)
+* [serverInfo](docs/utilities/README.md#serverinfo)
 <!-- End SDK Available Operations -->
 
 ### Maturity

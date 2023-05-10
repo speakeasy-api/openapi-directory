@@ -42,9 +42,11 @@ class Templates
      * 
      * Get a template of an Otoroshi Api Key. The generated entity is not persisted
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\InitiateApiKeySecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\InitiateApiKeyResponse
      */
 	public function initiateApiKey(
+        \OpenAPI\OpenAPI\Models\Operations\InitiateApiKeySecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\InitiateApiKeyResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -52,7 +54,8 @@ class Templates
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -78,9 +81,11 @@ class Templates
      * 
      * Get a template of an Otoroshi service descriptor. The generated entity is not persisted
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\InitiateServiceSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\InitiateServiceResponse
      */
 	public function initiateService(
+        \OpenAPI\OpenAPI\Models\Operations\InitiateServiceSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\InitiateServiceResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -88,7 +93,8 @@ class Templates
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -114,9 +120,11 @@ class Templates
      * 
      * Get a template of an Otoroshi service group. The generated entity is not persisted
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\InitiateServiceGroupSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\InitiateServiceGroupResponse
      */
 	public function initiateServiceGroup(
+        \OpenAPI\OpenAPI\Models\Operations\InitiateServiceGroupSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\InitiateServiceGroupResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -124,7 +132,8 @@ class Templates
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

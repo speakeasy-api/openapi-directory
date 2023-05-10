@@ -52,6 +52,11 @@ class Image
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?ImageRecipe $imageRecipe = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('imageScanningConfiguration')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\ImageScanningConfiguration')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?ImageScanningConfiguration $imageScanningConfiguration = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('imageSource')]
     #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\ImageSourceEnum>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -86,6 +91,11 @@ class Image
     #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\PlatformEnum>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?PlatformEnum $platform = null;
+    
+	#[\JMS\Serializer\Annotation\SerializedName('scanState')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\ImageScanState')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?ImageScanState $scanState = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('sourcePipelineArn')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -131,6 +141,7 @@ class Image
 		$this->distributionConfiguration = null;
 		$this->enhancedImageMetadataEnabled = null;
 		$this->imageRecipe = null;
+		$this->imageScanningConfiguration = null;
 		$this->imageSource = null;
 		$this->imageTestsConfiguration = null;
 		$this->infrastructureConfiguration = null;
@@ -138,6 +149,7 @@ class Image
 		$this->osVersion = null;
 		$this->outputResources = null;
 		$this->platform = null;
+		$this->scanState = null;
 		$this->sourcePipelineArn = null;
 		$this->sourcePipelineName = null;
 		$this->state = null;

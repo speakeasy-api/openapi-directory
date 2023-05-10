@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum TagResourceXAmzTargetEnum: string
 {
     case ANY_SCALE_FRONTEND_SERVICE_TAG_RESOURCE = 'AnyScaleFrontendService.TagResource';

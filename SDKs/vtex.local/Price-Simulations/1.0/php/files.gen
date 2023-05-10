@@ -47,4 +47,8 @@ src/Models/Operations/PostSessionsRequestBodyPublic.php
 src/Models/Operations/PostSessionsRequestBody.php
 src/Models/Operations/PostSessionsRequest.php
 src/Models/Operations/PostSessionsResponse.php
+docs/sdk/README.md
+docs/customprices/README.md
+docs/priceassociation/README.md
+docs/sessionmanagement/README.md
 USAGE.md

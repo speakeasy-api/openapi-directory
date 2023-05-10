@@ -109,4 +109,5 @@ src/Models/Shared/UpdateExperimentTemplateTargetInput.php
 src/Models/Shared/UpdateExperimentTemplateStopConditionInput.php
 src/Models/Shared/UpdateExperimentTemplateActionInputItem.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

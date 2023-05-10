@@ -18,6 +18,16 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment
 {
     /**
+     * Information about behavioral trust of the transaction.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentBehavioralTrustVerdict $behavioralTrustVerdict
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('behavioralTrustVerdict')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentBehavioralTrustVerdict')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentBehavioralTrustVerdict $behavioralTrustVerdict = null;
+    
+    /**
      * Information about card testing fraud, where an adversary is testing fraudulently obtained cards or brute forcing their details.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentCardTestingVerdict $cardTestingVerdict
@@ -49,6 +59,7 @@ class GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment
     
 	public function __construct()
 	{
+		$this->behavioralTrustVerdict = null;
 		$this->cardTestingVerdict = null;
 		$this->stolenInstrumentVerdict = null;
 		$this->transactionRisk = null;

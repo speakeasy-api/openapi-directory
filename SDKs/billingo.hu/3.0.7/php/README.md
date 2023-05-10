@@ -30,67 +30,98 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Shared\BankAccountInput;
+use \OpenAPI\OpenAPI\Models\Shared\CurrencyEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new BankAccountInput();
+    $request->accountNumber = 'corrupti';
+    $request->accountNumberIban = 'provident';
+    $request->currency = CurrencyEnum::PLN;
+    $request->name = 'Stuart Stiedemann';
+    $request->needQr = false;
+    $request->swift = 'vel';
+
+    $response = $sdk->bankAccount->createBankAccount($request);
+
+    if ($response->bankAccount !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### bankAccount
+### [bankAccount](docs/bankaccount/README.md)
 
-* `createBankAccount` - Create a bank account
-* `deleteBankAccount` - Delete a bank account
-* `getBankAccount` - Retrieve a bank account
-* `listBankAccount` - List all bank account
-* `updateBankAccount` - Update a bank account
+* [createBankAccount](docs/bankaccount/README.md#createbankaccount) - Create a bank account
+* [deleteBankAccount](docs/bankaccount/README.md#deletebankaccount) - Delete a bank account
+* [getBankAccount](docs/bankaccount/README.md#getbankaccount) - Retrieve a bank account
+* [listBankAccount](docs/bankaccount/README.md#listbankaccount) - List all bank account
+* [updateBankAccount](docs/bankaccount/README.md#updatebankaccount) - Update a bank account
 
-### currency
+### [currency](docs/currency/README.md)
 
-* `getConversionRate` - Get currencies exchange rate.
+* [getConversionRate](docs/currency/README.md#getconversionrate) - Get currencies exchange rate.
 
-### document
+### [document](docs/document/README.md)
 
-* `cancelDocument` - Cancel a document
-* `createDocument` - Create a document
-* `createDocumentFromProforma` - Create a document from proforma.
-* `deletePayment` - Delete all payment history on document
-* `downloadDocument` - Download a document in PDF format.
-* `getDocument` - Retrieve a document
-* `getOnlineSzamlaStatus` - Retrieve a document Online Számla status
-* `getPayment` - Retrieve a payment histroy
-* `getPublicUrl` - Retrieve a document download public url.
-* `listDocument` - List all documents
-* `sendDocument` - Send invoice to given email adresses.
-* `updatePayment` - Update payment history
+* [cancelDocument](docs/document/README.md#canceldocument) - Cancel a document
+* [createDocument](docs/document/README.md#createdocument) - Create a document
+* [createDocumentFromProforma](docs/document/README.md#createdocumentfromproforma) - Create a document from proforma.
+* [deletePayment](docs/document/README.md#deletepayment) - Delete all payment history on document
+* [downloadDocument](docs/document/README.md#downloaddocument) - Download a document in PDF format.
+* [getDocument](docs/document/README.md#getdocument) - Retrieve a document
+* [getOnlineSzamlaStatus](docs/document/README.md#getonlineszamlastatus) - Retrieve a document Online Számla status
+* [getPayment](docs/document/README.md#getpayment) - Retrieve a payment histroy
+* [getPublicUrl](docs/document/README.md#getpublicurl) - Retrieve a document download public url.
+* [listDocument](docs/document/README.md#listdocument) - List all documents
+* [sendDocument](docs/document/README.md#senddocument) - Send invoice to given email adresses.
+* [updatePayment](docs/document/README.md#updatepayment) - Update payment history
 
-### documentBlock
+### [documentBlock](docs/documentblock/README.md)
 
-* `listDocumentBlock` - List all document blocks
+* [listDocumentBlock](docs/documentblock/README.md#listdocumentblock) - List all document blocks
 
-### organization
+### [organization](docs/organization/README.md)
 
-* `getOrganizationData` - Retrieve a organization data.
+* [getOrganizationData](docs/organization/README.md#getorganizationdata) - Retrieve a organization data.
 
-### partner
+### [partner](docs/partner/README.md)
 
-* `createPartner` - Create a partner
-* `deletePartner` - Delete a partner
-* `getPartner` - Retrieve a partner
-* `listPartner` - List all partners
-* `updatePartner` - Update a partner
+* [createPartner](docs/partner/README.md#createpartner) - Create a partner
+* [deletePartner](docs/partner/README.md#deletepartner) - Delete a partner
+* [getPartner](docs/partner/README.md#getpartner) - Retrieve a partner
+* [listPartner](docs/partner/README.md#listpartner) - List all partners
+* [updatePartner](docs/partner/README.md#updatepartner) - Update a partner
 
-### product
+### [product](docs/product/README.md)
 
-* `createProduct` - Create a product
-* `deleteProduct` - Delete a product
-* `getProduct` - Retrieve a product
-* `listProduct` - List all product
-* `updateProduct` - Update a product
+* [createProduct](docs/product/README.md#createproduct) - Create a product
+* [deleteProduct](docs/product/README.md#deleteproduct) - Delete a product
+* [getProduct](docs/product/README.md#getproduct) - Retrieve a product
+* [listProduct](docs/product/README.md#listproduct) - List all product
+* [updateProduct](docs/product/README.md#updateproduct) - Update a product
 
-### util
+### [util](docs/util/README.md)
 
-* `getId` - Convert legacy ID to v3 ID.
+* [getId](docs/util/README.md#getid) - Convert legacy ID to v3 ID.
 <!-- End SDK Available Operations -->
 
 ### Maturity

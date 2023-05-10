@@ -126,9 +126,11 @@ class ValidationAuthorities
      * 
      * Get all validation authoritiess
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\FindAllClientValidatorsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\FindAllClientValidatorsResponse
      */
 	public function findAllClientValidators(
+        \OpenAPI\OpenAPI\Models\Operations\FindAllClientValidatorsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\FindAllClientValidatorsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -136,7 +138,8 @@ class ValidationAuthorities
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

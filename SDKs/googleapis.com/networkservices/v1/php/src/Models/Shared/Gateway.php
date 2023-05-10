@@ -18,6 +18,26 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class Gateway
 {
     /**
+     * Optional. Zero or one IPv4-address on which the Gateway will receive the traffic. When no address is provided, an IP from the subnetwork is allocated This field only applies to gateways of type 'SECURE_WEB_GATEWAY'. Gateways of type 'OPEN_MESH' listen on 0.0.0.0.
+     * 
+     * @var ?array<string> $addresses
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('addresses')]
+    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $addresses = null;
+    
+    /**
+     * Optional. A fully-qualified Certificates URL reference. The proxy presents a Certificate (selected based on SNI) when establishing a TLS connection. This feature only applies to gateways of type 'SECURE_WEB_GATEWAY'.
+     * 
+     * @var ?array<string> $certificateUrls
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('certificateUrls')]
+    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $certificateUrls = null;
+    
+    /**
      * Output only. The timestamp when the resource was created.
      * 
      * @var ?string $createTime
@@ -38,6 +58,16 @@ class Gateway
     public ?string $description = null;
     
     /**
+     * Optional. A fully-qualified GatewaySecurityPolicy URL reference. Defines how a server should apply security policy to inbound (VM to Proxy) initiated connections. For example: `projects/* /locations/* /gatewaySecurityPolicies/swg-policy`. This policy is specific to gateways of type 'SECURE_WEB_GATEWAY'.
+     * 
+     * @var ?string $gatewaySecurityPolicy
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('gatewaySecurityPolicy')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $gatewaySecurityPolicy = null;
+    
+    /**
      * Optional. Set of label tags associated with the Gateway resource.
      * 
      * @var ?array<string, string> $labels
@@ -56,6 +86,16 @@ class Gateway
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
+    
+    /**
+     * Optional. The relative resource name identifying the VPC network that is using this configuration. For example: `projects/* /global/networks/network-1`. Currently, this field is specific to gateways of type 'SECURE_WEB_GATEWAY'.
+     * 
+     * @var ?string $network
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('network')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $network = null;
     
     /**
      * Required. One or more port numbers (1-65535), on which the Gateway will receive traffic. The proxy binds to the specified ports. Gateways of type 'SECURE_WEB_GATEWAY' are limited to 1 port. Gateways of type 'OPEN_MESH' listen on 0.0.0.0 and support multiple ports.
@@ -98,6 +138,16 @@ class Gateway
     public ?string $serverTlsPolicy = null;
     
     /**
+     * Optional. The relative resource name identifying the subnetwork in which this SWG is allocated. For example: `projects/* /regions/us-central1/subnetworks/network-1` Currently, this field is specific to gateways of type 'SECURE_WEB_GATEWAY".
+     * 
+     * @var ?string $subnetwork
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('subnetwork')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $subnetwork = null;
+    
+    /**
      * Immutable. The type of the customer managed gateway. This field is required. If unspecified, an error is returned.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GatewayTypeEnum $type
@@ -119,14 +169,19 @@ class Gateway
     
 	public function __construct()
 	{
+		$this->addresses = null;
+		$this->certificateUrls = null;
 		$this->createTime = null;
 		$this->description = null;
+		$this->gatewaySecurityPolicy = null;
 		$this->labels = null;
 		$this->name = null;
+		$this->network = null;
 		$this->ports = null;
 		$this->scope = null;
 		$this->selfLink = null;
 		$this->serverTlsPolicy = null;
+		$this->subnetwork = null;
 		$this->type = null;
 		$this->updateTime = null;
 	}

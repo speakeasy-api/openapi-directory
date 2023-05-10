@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateEndpointXAmzTargetEnum: string
 {
     case AWS_EVENTS_UPDATE_ENDPOINT = 'AWSEvents.UpdateEndpoint';

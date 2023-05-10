@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeReservedInstancesModificationsActionEnum: string
 {
     case DESCRIBE_RESERVED_INSTANCES_MODIFICATIONS = 'DescribeReservedInstancesModifications';

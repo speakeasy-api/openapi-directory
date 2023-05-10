@@ -14,6 +14,18 @@ class ListPendingTransactionsRequest
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=account_id')]
     public ?string $accountId = null;
     
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=created_at.after,dateTimeFormat=Y-m-d\TH:i:s.up')]
+    public ?\DateTime $createdAtAfter = null;
+    
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=created_at.before,dateTimeFormat=Y-m-d\TH:i:s.up')]
+    public ?\DateTime $createdAtBefore = null;
+    
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=created_at.on_or_after,dateTimeFormat=Y-m-d\TH:i:s.up')]
+    public ?\DateTime $createdAtOnOrAfter = null;
+    
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=created_at.on_or_before,dateTimeFormat=Y-m-d\TH:i:s.up')]
+    public ?\DateTime $createdAtOnOrBefore = null;
+    
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=cursor')]
     public ?string $cursor = null;
     
@@ -37,6 +49,10 @@ class ListPendingTransactionsRequest
 	public function __construct()
 	{
 		$this->accountId = null;
+		$this->createdAtAfter = null;
+		$this->createdAtBefore = null;
+		$this->createdAtOnOrAfter = null;
+		$this->createdAtOnOrBefore = null;
 		$this->cursor = null;
 		$this->limit = null;
 		$this->routeId = null;

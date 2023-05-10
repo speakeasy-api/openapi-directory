@@ -1095,6 +1095,7 @@ src/Models/Shared/CodeRepository.php
 src/Models/Shared/CanvasAppSettings.php
 src/Models/Shared/TimeSeriesForecastingSettings.php
 src/Models/Shared/FeatureStatusEnum.php
+src/Models/Shared/ModelRegisterSettings.php
 src/Models/Shared/DefaultSpaceSettings.php
 src/Models/Shared/AuthModeEnum.php
 src/Models/Shared/AppSecurityGroupManagementEnum.php
@@ -1141,6 +1142,7 @@ src/Models/Shared/CaptureContentTypeHeader.php
 src/Models/Shared/AsyncInferenceConfig.php
 src/Models/Shared/AsyncInferenceOutputConfig.php
 src/Models/Shared/AsyncInferenceNotificationConfig.php
+src/Models/Shared/AsyncNotificationTopicTypesEnum.php
 src/Models/Shared/AsyncInferenceClientConfig.php
 src/Models/Shared/CreateExperimentResponse.php
 src/Models/Shared/CreateExperimentRequest.php
@@ -2171,4 +2173,5 @@ src/Models/Shared/UpdateWorkforceRequest.php
 src/Models/Shared/UpdateWorkteamResponse.php
 src/Models/Shared/UpdateWorkteamRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

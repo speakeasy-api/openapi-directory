@@ -58,7 +58,7 @@ class FunctionT
     public ?EventTrigger $eventTrigger = null;
     
     /**
-     * Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources. It must match the pattern `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
+     * [Preview] Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources. It must match the pattern `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
      * 
      * @var ?string $kmsKeyName
      */
@@ -88,7 +88,7 @@ class FunctionT
     public ?string $name = null;
     
     /**
-     * Describes the Service being deployed. Currently Supported : Cloud Run (fully managed). Next tag: 23
+     * Describes the Service being deployed. Currently Supported : Cloud Run (fully managed).
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\ServiceConfig $serviceConfig
      */
@@ -127,16 +127,6 @@ class FunctionT
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $updateTime = null;
     
-    /**
-     * Output only. The deployed url for the function.
-     * 
-     * @var ?string $url
-     */
-	#[\JMS\Serializer\Annotation\SerializedName('url')]
-    #[\JMS\Serializer\Annotation\Type('string')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?string $url = null;
-    
 	public function __construct()
 	{
 		$this->buildConfig = null;
@@ -150,6 +140,5 @@ class FunctionT
 		$this->state = null;
 		$this->stateMessages = null;
 		$this->updateTime = null;
-		$this->url = null;
 	}
 }

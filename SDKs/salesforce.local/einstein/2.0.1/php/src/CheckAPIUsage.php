@@ -42,9 +42,11 @@ class CheckAPIUsage
      * 
      * Returns prediction usage on a monthly basis for the current calendar month and future months. Each apiusage object in the response corresponds to a calendar month in your plan.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetApiUsagePlansV2Security $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetApiUsagePlansV2Response
      */
 	public function getApiUsagePlansV2(
+        \OpenAPI\OpenAPI\Models\Operations\GetApiUsagePlansV2Security $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetApiUsagePlansV2Response
     {
         $baseUrl = $this->_serverUrl;
@@ -52,7 +54,8 @@ class CheckAPIUsage
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

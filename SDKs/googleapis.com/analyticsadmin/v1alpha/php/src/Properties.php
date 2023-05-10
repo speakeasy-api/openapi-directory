@@ -430,6 +430,84 @@ class Properties
     }
 	
     /**
+     * Creates a ChannelGroup.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesChannelGroupsCreateRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesChannelGroupsCreateSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesChannelGroupsCreateResponse
+     */
+	public function analyticsadminPropertiesChannelGroupsCreate(
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesChannelGroupsCreateRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesChannelGroupsCreateSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesChannelGroupsCreateResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1alpha/{parent}/channelGroups', \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesChannelGroupsCreateRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "googleAnalyticsAdminV1alphaChannelGroupInput", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesChannelGroupsCreateRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesChannelGroupsCreateResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->googleAnalyticsAdminV1alphaChannelGroup = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\GoogleAnalyticsAdminV1alphaChannelGroup', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Lists ChannelGroups on a property.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesChannelGroupsListRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesChannelGroupsListSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesChannelGroupsListResponse
+     */
+	public function analyticsadminPropertiesChannelGroupsList(
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesChannelGroupsListRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesChannelGroupsListSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesChannelGroupsListResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1alpha/{parent}/channelGroups', \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesChannelGroupsListRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesChannelGroupsListRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesChannelGroupsListResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->googleAnalyticsAdminV1alphaListChannelGroupsResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\GoogleAnalyticsAdminV1alphaListChannelGroupsResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Creates a conversion event with the specified attributes.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesConversionEventsCreateRequest $request
@@ -817,6 +895,84 @@ class Properties
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->googleAnalyticsAdminV1alphaDataStream = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\GoogleAnalyticsAdminV1alphaDataStream', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Creates an EventCreateRule.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesDataStreamsEventCreateRulesCreateRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesDataStreamsEventCreateRulesCreateSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesDataStreamsEventCreateRulesCreateResponse
+     */
+	public function analyticsadminPropertiesDataStreamsEventCreateRulesCreate(
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesDataStreamsEventCreateRulesCreateRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesDataStreamsEventCreateRulesCreateSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesDataStreamsEventCreateRulesCreateResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1alpha/{parent}/eventCreateRules', \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesDataStreamsEventCreateRulesCreateRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "googleAnalyticsAdminV1alphaEventCreateRuleInput", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesDataStreamsEventCreateRulesCreateRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesDataStreamsEventCreateRulesCreateResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->googleAnalyticsAdminV1alphaEventCreateRule = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\GoogleAnalyticsAdminV1alphaEventCreateRule', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Lists EventCreateRules on a web data stream.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesDataStreamsEventCreateRulesListRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesDataStreamsEventCreateRulesListSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesDataStreamsEventCreateRulesListResponse
+     */
+	public function analyticsadminPropertiesDataStreamsEventCreateRulesList(
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesDataStreamsEventCreateRulesListRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesDataStreamsEventCreateRulesListSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesDataStreamsEventCreateRulesListResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1alpha/{parent}/eventCreateRules', \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesDataStreamsEventCreateRulesListRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesDataStreamsEventCreateRulesListRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesDataStreamsEventCreateRulesListResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->googleAnalyticsAdminV1alphaListEventCreateRulesResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\GoogleAnalyticsAdminV1alphaListEventCreateRulesResponse', 'json');
             }
         }
 
@@ -1327,6 +1483,44 @@ class Properties
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->googleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\GoogleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Given a specified UA property, looks up the GA4 property connected to it. Note: this cannot be used with GA4 properties.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesFetchConnectedGa4PropertyRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesFetchConnectedGa4PropertySecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesFetchConnectedGa4PropertyResponse
+     */
+	public function analyticsadminPropertiesFetchConnectedGa4Property(
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesFetchConnectedGa4PropertyRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesFetchConnectedGa4PropertySecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesFetchConnectedGa4PropertyResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1alpha/properties:fetchConnectedGa4Property');
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesFetchConnectedGa4PropertyRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\AnalyticsadminPropertiesFetchConnectedGa4PropertyResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->googleAnalyticsAdminV1alphaFetchConnectedGa4PropertyResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\GoogleAnalyticsAdminV1alphaFetchConnectedGa4PropertyResponse', 'json');
             }
         }
 

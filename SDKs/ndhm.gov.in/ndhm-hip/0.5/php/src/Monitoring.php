@@ -48,7 +48,7 @@ class Monitoring
      * @return \OpenAPI\OpenAPI\Models\Operations\GetV05HeartbeatResponse
      */
 	public function getV05Heartbeat(
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\GetV05HeartbeatResponse
     {
         $baseUrl = Monitoring::GET_V05_HEARTBEAT_SERVERS[0];

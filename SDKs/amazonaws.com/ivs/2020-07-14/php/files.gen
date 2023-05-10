@@ -154,4 +154,5 @@ src/Models/Shared/StreamSummary.php
 src/Models/Shared/ListTagsForResourceResponse.php
 src/Models/Shared/UpdateChannelResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

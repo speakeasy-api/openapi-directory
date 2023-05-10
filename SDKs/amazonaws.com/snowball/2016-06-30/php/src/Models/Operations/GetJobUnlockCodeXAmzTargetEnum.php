@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetJobUnlockCodeXAmzTargetEnum: string
 {
     case AWSIE_SNOWBALL_JOB_MANAGEMENT_SERVICE_GET_JOB_UNLOCK_CODE = 'AWSIESnowballJobManagementService.GetJobUnlockCode';

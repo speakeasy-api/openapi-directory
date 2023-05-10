@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * ItemSource - Structure representing the items in the response for SearchRasterDataCollection.
+ * ItemSource - The structure representing the items in the response for SearchRasterDataCollection.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

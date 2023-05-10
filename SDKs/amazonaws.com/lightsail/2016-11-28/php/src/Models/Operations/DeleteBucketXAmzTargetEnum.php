@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteBucketXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_DELETE_BUCKET = 'Lightsail_20161128.DeleteBucket';

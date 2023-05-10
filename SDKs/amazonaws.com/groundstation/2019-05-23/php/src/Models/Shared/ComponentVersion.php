@@ -18,8 +18,8 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class ComponentVersion
 {
 	#[\JMS\Serializer\Annotation\SerializedName('componentType')]
-    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\ComponentTypeEnum>')]
-    public ComponentTypeEnum $componentType;
+    #[\JMS\Serializer\Annotation\Type('string')]
+    public string $componentType;
     
     /**
      * $versions
@@ -32,7 +32,7 @@ class ComponentVersion
     
 	public function __construct()
 	{
-		$this->componentType = \OpenAPI\OpenAPI\Models\Shared\ComponentTypeEnum::LAMINAR_FLOW;
+		$this->componentType = "";
 		$this->versions = [];
 	}
 }

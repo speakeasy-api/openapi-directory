@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateDataSourceXAmzTargetEnum: string
 {
     case AMAZON_ML20141212_UPDATE_DATA_SOURCE = 'AmazonML_20141212.UpdateDataSource';

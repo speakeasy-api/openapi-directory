@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTTerminateInstanceInAutoScalingGroupActionEnum: string
 {
     case TERMINATE_INSTANCE_IN_AUTO_SCALING_GROUP = 'TerminateInstanceInAutoScalingGroup';

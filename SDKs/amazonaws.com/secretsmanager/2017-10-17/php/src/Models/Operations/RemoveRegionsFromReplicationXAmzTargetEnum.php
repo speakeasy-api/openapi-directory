@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RemoveRegionsFromReplicationXAmzTargetEnum: string
 {
     case SECRETSMANAGER_REMOVE_REGIONS_FROM_REPLICATION = 'secretsmanager.RemoveRegionsFromReplication';

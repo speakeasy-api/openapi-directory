@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListTagsForResourceXAmzTargetEnum: string
 {
     case AWS_STEP_FUNCTIONS_LIST_TAGS_FOR_RESOURCE = 'AWSStepFunctions.ListTagsForResource';

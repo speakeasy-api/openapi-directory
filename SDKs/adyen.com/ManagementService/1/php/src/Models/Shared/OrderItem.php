@@ -22,6 +22,16 @@ class OrderItem
     public ?string $id = null;
     
     /**
+     * The number of installments for the specified product `id`.
+     * 
+     * @var ?int $installments
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('installments')]
+    #[\JMS\Serializer\Annotation\Type('int')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?int $installments = null;
+    
+    /**
      * The name of the product.
      * 
      * @var ?string $name
@@ -44,6 +54,7 @@ class OrderItem
 	public function __construct()
 	{
 		$this->id = null;
+		$this->installments = null;
 		$this->name = null;
 		$this->quantity = null;
 	}

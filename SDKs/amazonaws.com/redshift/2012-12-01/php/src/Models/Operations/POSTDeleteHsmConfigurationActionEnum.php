@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteHsmConfigurationActionEnum: string
 {
     case DELETE_HSM_CONFIGURATION = 'DeleteHsmConfiguration';

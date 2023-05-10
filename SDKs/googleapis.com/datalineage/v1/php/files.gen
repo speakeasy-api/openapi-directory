@@ -81,4 +81,6 @@ src/Models/Shared/GoogleCloudDatacatalogLineageV1ListRunsResponse.php
 src/Models/Shared/GoogleCloudDatacatalogLineageV1SearchLinksResponse.php
 src/Models/Shared/GoogleCloudDatacatalogLineageV1Link.php
 src/Models/Shared/GoogleCloudDatacatalogLineageV1SearchLinksRequest.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

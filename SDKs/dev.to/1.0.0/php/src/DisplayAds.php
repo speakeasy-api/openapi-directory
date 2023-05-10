@@ -61,7 +61,13 @@ class DisplayAds
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if ($httpResponse->getStatusCode() === 200 or $httpResponse->getStatusCode() === 401) {
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->displayAds = $serializer->deserialize((string)$httpResponse->getBody(), 'array<OpenAPI\OpenAPI\Models\Shared\DisplayAd>', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 401) {
         }
 
         return $response;
@@ -104,11 +110,11 @@ class DisplayAds
      * 
      * This endpoint allows the client to create a new display ad.
      * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\PostApiDisplayAdsRequestBody $request
+     * @param array<string, mixed> $request
      * @return \OpenAPI\OpenAPI\Models\Operations\PostApiDisplayAdsResponse
      */
 	public function postApiDisplayAds(
-        \OpenAPI\OpenAPI\Models\Operations\PostApiDisplayAdsRequestBody $request,
+        array $request,
     ): \OpenAPI\OpenAPI\Models\Operations\PostApiDisplayAdsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -127,7 +133,13 @@ class DisplayAds
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if ($httpResponse->getStatusCode() === 200 or $httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 422) {
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->postApiDisplayAds200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 422) {
         }
 
         return $response;
@@ -161,7 +173,13 @@ class DisplayAds
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if ($httpResponse->getStatusCode() === 200 or $httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 404) {
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->putApiDisplayAdsId200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 404) {
         }
 
         return $response;

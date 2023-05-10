@@ -27,4 +27,6 @@ src/Models/Shared/GoogleCloudPolicyanalyzerV1Activity.php
 src/Models/Shared/GoogleCloudPolicyanalyzerV1ObservationPeriod.php
 src/Models/Shared/AltEnum.php
 src/Models/Shared/XgafvEnum.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

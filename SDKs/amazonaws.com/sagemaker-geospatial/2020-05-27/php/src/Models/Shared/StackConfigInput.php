@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * StackConfigInput - <p/>
+ * StackConfigInput - The input structure for Stacking Operation.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

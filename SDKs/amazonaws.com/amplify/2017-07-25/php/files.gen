@@ -169,4 +169,5 @@ src/Models/Shared/UpdateBranchResult.php
 src/Models/Shared/UpdateDomainAssociationResult.php
 src/Models/Shared/UpdateWebhookResult.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

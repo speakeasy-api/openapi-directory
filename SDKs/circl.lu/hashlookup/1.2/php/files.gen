@@ -37,4 +37,6 @@ src/Models/Operations/GetSessionMatchesResponse.php
 src/Models/Operations/GetStattopResponse.php
 src/Models/Operations/PostBulkmd5Response.php
 src/Models/Operations/PostBulksha1Response.php
+docs/sdk/README.md
+docs/default/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateAssociationBatchXAmzTargetEnum: string
 {
     case AMAZON_SSM_CREATE_ASSOCIATION_BATCH = 'AmazonSSM.CreateAssociationBatch';

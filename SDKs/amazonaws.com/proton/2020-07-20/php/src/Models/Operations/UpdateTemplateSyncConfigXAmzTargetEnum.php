@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateTemplateSyncConfigXAmzTargetEnum: string
 {
     case AWS_PROTON20200720_UPDATE_TEMPLATE_SYNC_CONFIG = 'AwsProton20200720.UpdateTemplateSyncConfig';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum TagResourceXAmzTargetEnum: string
 {
     case CODE_PIPELINE20150709_TAG_RESOURCE = 'CodePipeline_20150709.TagResource';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteKeyspaceXAmzTargetEnum: string
 {
     case KEYSPACES_SERVICE_DELETE_KEYSPACE = 'KeyspacesService.DeleteKeyspace';

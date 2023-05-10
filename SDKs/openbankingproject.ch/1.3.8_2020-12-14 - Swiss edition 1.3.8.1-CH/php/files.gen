@@ -354,4 +354,10 @@ src/Models/Shared/SigningBasketResponse201.php
 src/Models/Shared/LinksSigningBasket.php
 src/Models/Shared/SigningBasket.php
 src/Models/Shared/SigningBasketResponse200.php
+docs/sdk/README.md
+docs/accountinformationserviceais/README.md
+docs/commonservices/README.md
+docs/confirmationoffundsservicepiis/README.md
+docs/paymentinitiationservicepis/README.md
+docs/signingbasketsservicesbs/README.md
 USAGE.md

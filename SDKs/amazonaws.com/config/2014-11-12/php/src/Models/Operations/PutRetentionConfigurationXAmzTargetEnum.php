@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutRetentionConfigurationXAmzTargetEnum: string
 {
     case STARLING_DOVE_SERVICE_PUT_RETENTION_CONFIGURATION = 'StarlingDoveService.PutRetentionConfiguration';

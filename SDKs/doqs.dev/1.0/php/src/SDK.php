@@ -90,7 +90,7 @@ class SDK
     ): \OpenAPI\OpenAPI\Models\Operations\CreateTemplateDesignerTemplatesPostResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/designer/templates/');
+        $url = Utils\Utils::generateUrl($baseUrl, '/designer/templates');
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "request", "json");
@@ -212,47 +212,6 @@ class SDK
     /**
      * List Templates
      * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\ListTemplatesDesignerTemplatesGetRequest $request
-     * @return \OpenAPI\OpenAPI\Models\Operations\ListTemplatesDesignerTemplatesGetResponse
-     */
-	public function listTemplatesDesignerTemplatesGet(
-        \OpenAPI\OpenAPI\Models\Operations\ListTemplatesDesignerTemplatesGetRequest $request,
-    ): \OpenAPI\OpenAPI\Models\Operations\ListTemplatesDesignerTemplatesGetResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/designer/templates/');
-        
-        $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\ListTemplatesDesignerTemplatesGetRequest::class, $request, null));
-        
-        $httpResponse = $this->_securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\ListTemplatesDesignerTemplatesGetResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->responseOkListFillrEntitiesDesignerTemplateDesignerTemplate = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ResponseOkListFillrEntitiesDesignerTemplateDesignerTemplate', 'json');
-            }
-        }
-        else if (($httpResponse->getStatusCode() >= 400 && $httpResponse->getStatusCode() < 500) or ($httpResponse->getStatusCode() >= 500 && $httpResponse->getStatusCode() < 600)) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->responseError = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ResponseError', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * List Templates
-     * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ListTemplatesDesignerTemplatesIdGetRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ListTemplatesDesignerTemplatesIdGetResponse
      */
@@ -278,6 +237,47 @@ class SDK
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->responseOkDesignerTemplate = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ResponseOkDesignerTemplate', 'json');
+            }
+        }
+        else if (($httpResponse->getStatusCode() >= 400 && $httpResponse->getStatusCode() < 500) or ($httpResponse->getStatusCode() >= 500 && $httpResponse->getStatusCode() < 600)) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->responseError = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ResponseError', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * List Templates
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListTemplatesDesignerTemplatesGetRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\ListTemplatesDesignerTemplatesGetResponse
+     */
+	public function listTemplatesDesignerTemplatesGet(
+        \OpenAPI\OpenAPI\Models\Operations\ListTemplatesDesignerTemplatesGetRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\ListTemplatesDesignerTemplatesGetResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/designer/templates');
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\ListTemplatesDesignerTemplatesGetRequest::class, $request, null));
+        
+        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\ListTemplatesDesignerTemplatesGetResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->responseOkListFillrEntitiesDesignerTemplateDesignerTemplate = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ResponseOkListFillrEntitiesDesignerTemplateDesignerTemplate', 'json');
             }
         }
         else if (($httpResponse->getStatusCode() >= 400 && $httpResponse->getStatusCode() < 500) or ($httpResponse->getStatusCode() >= 500 && $httpResponse->getStatusCode() < 600)) {

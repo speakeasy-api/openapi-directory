@@ -997,4 +997,5 @@ src/Models/Shared/UpdateRelationalDatabaseRequest.php
 src/Models/Shared/UpdateRelationalDatabaseParametersResult.php
 src/Models/Shared/UpdateRelationalDatabaseParametersRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

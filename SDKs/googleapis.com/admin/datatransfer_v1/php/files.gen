@@ -51,4 +51,7 @@ src/Models/Shared/ApplicationsListResponse.php
 src/Models/Shared/DataTransfer.php
 src/Models/Shared/ApplicationDataTransfer.php
 src/Models/Shared/DataTransfersListResponse.php
+docs/sdk/README.md
+docs/applications/README.md
+docs/transfers/README.md
 USAGE.md

@@ -31,4 +31,6 @@ src/Models/Shared/UrlNotification.php
 src/Models/Shared/AltEnum.php
 src/Models/Shared/XgafvEnum.php
 src/Models/Shared/PublishUrlNotificationResponse.php
+docs/sdk/README.md
+docs/urlnotifications/README.md
 USAGE.md

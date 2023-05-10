@@ -377,4 +377,9 @@ src/Models/Shared/GuardianInvitation.php
 src/Models/Shared/ListGuardianInvitationsResponse.php
 src/Models/Shared/Guardian.php
 src/Models/Shared/ListGuardiansResponse.php
+docs/sdk/README.md
+docs/courses/README.md
+docs/invitations/README.md
+docs/registrations/README.md
+docs/userprofiles/README.md
 USAGE.md

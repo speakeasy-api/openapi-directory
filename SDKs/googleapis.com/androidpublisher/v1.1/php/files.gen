@@ -32,4 +32,7 @@ src/Models/Operations/AndroidpublisherPurchasesGetResponse.php
 src/Models/Shared/InappPurchase.php
 src/Models/Shared/AltEnum.php
 src/Models/Shared/SubscriptionPurchase.php
+docs/sdk/README.md
+docs/inapppurchases/README.md
+docs/purchases/README.md
 USAGE.md

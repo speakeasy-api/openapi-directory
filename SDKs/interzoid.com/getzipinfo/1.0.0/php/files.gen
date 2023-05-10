@@ -22,4 +22,6 @@ src/Utils/Utils.php
 src/Models/Operations/GetzipcodeinfoRequest.php
 src/Models/Operations/Getzipcodeinfo200ApplicationJSON.php
 src/Models/Operations/GetzipcodeinfoResponse.php
+docs/sdk/README.md
+docs/detailedzipcodeinformation/README.md
 USAGE.md

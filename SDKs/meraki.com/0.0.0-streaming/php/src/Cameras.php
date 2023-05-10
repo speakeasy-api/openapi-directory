@@ -76,42 +76,6 @@ class Cameras
     }
 	
     /**
-     * Returns quality and retention settings for the given camera
-     * 
-     * Returns quality and retention settings for the given camera
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\GetDeviceCameraQualityAndRetentionSettingsRequest $request
-     * @return \OpenAPI\OpenAPI\Models\Operations\GetDeviceCameraQualityAndRetentionSettingsResponse
-     */
-	public function getDeviceCameraQualityAndRetentionSettings(
-        \OpenAPI\OpenAPI\Models\Operations\GetDeviceCameraQualityAndRetentionSettingsRequest $request,
-    ): \OpenAPI\OpenAPI\Models\Operations\GetDeviceCameraQualityAndRetentionSettingsResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/devices/{serial}/camera/qualityAndRetentionSettings', \OpenAPI\OpenAPI\Models\Operations\GetDeviceCameraQualityAndRetentionSettingsRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        
-        $httpResponse = $this->_securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\GetDeviceCameraQualityAndRetentionSettingsResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->getDeviceCameraQualityAndRetentionSettings200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
      * Returns video settings for the given camera
      * 
      * Returns video settings for the given camera
@@ -214,44 +178,6 @@ class Cameras
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->getNetworkCameraVideoLink200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Update quality and retention settings for the given camera
-     * 
-     * Update quality and retention settings for the given camera
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\UpdateDeviceCameraQualityAndRetentionSettingsRequest $request
-     * @return \OpenAPI\OpenAPI\Models\Operations\UpdateDeviceCameraQualityAndRetentionSettingsResponse
-     */
-	public function updateDeviceCameraQualityAndRetentionSettings(
-        \OpenAPI\OpenAPI\Models\Operations\UpdateDeviceCameraQualityAndRetentionSettingsRequest $request,
-    ): \OpenAPI\OpenAPI\Models\Operations\UpdateDeviceCameraQualityAndRetentionSettingsResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/devices/{serial}/camera/qualityAndRetentionSettings', \OpenAPI\OpenAPI\Models\Operations\UpdateDeviceCameraQualityAndRetentionSettingsRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
-        $options = array_merge_recursive($options, $body);
-        
-        $httpResponse = $this->_securityClient->request('PUT', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\UpdateDeviceCameraQualityAndRetentionSettingsResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->updateDeviceCameraQualityAndRetentionSettings200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
 

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeSnapshotTierStatusActionEnum: string
 {
     case DESCRIBE_SNAPSHOT_TIER_STATUS = 'DescribeSnapshotTierStatus';

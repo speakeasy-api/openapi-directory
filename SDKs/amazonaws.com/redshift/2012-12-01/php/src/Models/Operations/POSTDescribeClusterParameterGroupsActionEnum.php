@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeClusterParameterGroupsActionEnum: string
 {
     case DESCRIBE_CLUSTER_PARAMETER_GROUPS = 'DescribeClusterParameterGroups';

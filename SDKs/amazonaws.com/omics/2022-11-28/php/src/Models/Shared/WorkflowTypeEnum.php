@@ -12,5 +12,4 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 enum WorkflowTypeEnum: string
 {
     case PRIVATE = 'PRIVATE';
-    case SERVICE = 'SERVICE';
 }

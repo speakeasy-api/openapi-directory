@@ -68,6 +68,7 @@ src/Models/Shared/GoogleCloudDocumentaiV1beta2DocumentPageLayout.php
 src/Models/Shared/GoogleCloudDocumentaiV1beta2DocumentPageDetectedLanguage.php
 src/Models/Shared/GoogleCloudDocumentaiV1beta2DocumentPageMatrix.php
 src/Models/Shared/GoogleCloudDocumentaiV1beta2DocumentPageToken.php
+src/Models/Shared/GoogleCloudDocumentaiV1beta2DocumentPageTokenStyleInfo.php
 src/Models/Shared/GoogleCloudDocumentaiV1beta2DocumentPageTokenDetectedBreakTypeEnum.php
 src/Models/Shared/GoogleCloudDocumentaiV1beta2DocumentPageTokenDetectedBreak.php
 src/Models/Shared/GoogleCloudDocumentaiV1beta2DocumentPageTable.php
@@ -96,4 +97,6 @@ src/Models/Shared/GoogleTypeDateTime.php
 src/Models/Shared/GoogleTypeTimeZone.php
 src/Models/Shared/GoogleTypeDate.php
 src/Models/Shared/GoogleTypePostalAddress.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

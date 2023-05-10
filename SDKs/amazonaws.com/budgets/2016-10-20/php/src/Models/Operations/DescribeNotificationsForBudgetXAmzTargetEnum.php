@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeNotificationsForBudgetXAmzTargetEnum: string
 {
     case AWS_BUDGET_SERVICE_GATEWAY_DESCRIBE_NOTIFICATIONS_FOR_BUDGET = 'AWSBudgetServiceGateway.DescribeNotificationsForBudget';

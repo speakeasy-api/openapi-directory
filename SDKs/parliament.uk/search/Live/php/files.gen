@@ -26,4 +26,7 @@ src/Models/Operations/GetQueryResponse.php
 src/Models/Operations/GetQueryExtensionExtensionEnum.php
 src/Models/Operations/GetQueryExtensionRequest.php
 src/Models/Operations/GetQueryExtensionResponse.php
+docs/sdk/README.md
+docs/description/README.md
+docs/query/README.md
 USAGE.md

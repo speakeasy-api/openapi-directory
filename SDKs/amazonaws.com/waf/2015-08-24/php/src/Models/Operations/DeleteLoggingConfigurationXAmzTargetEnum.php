@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteLoggingConfigurationXAmzTargetEnum: string
 {
     case AWSWAF20150824_DELETE_LOGGING_CONFIGURATION = 'AWSWAF_20150824.DeleteLoggingConfiguration';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTModifyIdFormatActionEnum: string
 {
     case MODIFY_ID_FORMAT = 'ModifyIdFormat';

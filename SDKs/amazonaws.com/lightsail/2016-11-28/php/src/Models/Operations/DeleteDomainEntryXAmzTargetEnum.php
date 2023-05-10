@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteDomainEntryXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_DELETE_DOMAIN_ENTRY = 'Lightsail_20161128.DeleteDomainEntry';

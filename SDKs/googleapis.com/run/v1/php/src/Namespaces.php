@@ -517,7 +517,7 @@ class Namespaces
         $url = Utils\Utils::generateUrl($baseUrl, '/apis/run.googleapis.com/v1/{name}:run', \OpenAPI\OpenAPI\Models\Operations\RunNamespacesJobsRunRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "runJobRequest", "json");
         $options = array_merge_recursive($options, $body);
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\RunNamespacesJobsRunRequest::class, $request, null));
         

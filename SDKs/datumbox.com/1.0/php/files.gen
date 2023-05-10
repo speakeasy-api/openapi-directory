@@ -49,4 +49,8 @@ src/Models/Operations/TextExtractionRequestBody.php
 src/Models/Operations/TextExtractionResponse.php
 src/Models/Operations/DocumentSimilarityRequestBody.php
 src/Models/Operations/DocumentSimilarityResponse.php
+docs/sdk/README.md
+docs/documentclassification/README.md
+docs/informationretrieval/README.md
+docs/metrics/README.md
 USAGE.md

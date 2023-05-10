@@ -259,4 +259,5 @@ src/Models/Shared/DeleteObjectInput.php
 src/Models/Shared/AddObjectInput.php
 src/Models/Shared/UpdateTableStorageOptimizerResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

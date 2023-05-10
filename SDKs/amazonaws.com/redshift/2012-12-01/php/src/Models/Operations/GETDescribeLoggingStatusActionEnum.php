@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDescribeLoggingStatusActionEnum: string
 {
     case DESCRIBE_LOGGING_STATUS = 'DescribeLoggingStatus';

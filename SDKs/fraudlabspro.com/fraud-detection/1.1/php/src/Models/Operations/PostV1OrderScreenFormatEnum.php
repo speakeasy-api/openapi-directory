@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PostV1OrderScreenFormatEnum: string
 {
     case JSON = 'json';

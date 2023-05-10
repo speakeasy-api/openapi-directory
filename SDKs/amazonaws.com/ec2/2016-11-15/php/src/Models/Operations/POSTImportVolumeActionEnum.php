@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTImportVolumeActionEnum: string
 {
     case IMPORT_VOLUME = 'ImportVolume';

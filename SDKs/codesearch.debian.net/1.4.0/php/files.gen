@@ -29,4 +29,6 @@ src/Models/Operations/SearchperpackageRequest.php
 src/Models/Operations/SearchperpackageResponse.php
 src/Models/Shared/SearchResult.php
 src/Models/Shared/PackageSearchResult.php
+docs/sdk/README.md
+docs/search/README.md
 USAGE.md

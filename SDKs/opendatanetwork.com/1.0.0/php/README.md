@@ -30,23 +30,51 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\CreateAMapRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new CreateAMapRequest();
+    $request->xAppToken = 'corrupti';
+    $request->appToken = 'provident';
+    $request->constraint = 'distinctio';
+    $request->entityId = 'quibusdam';
+    $request->variable = 'unde';
+
+    $response = $sdk->createAMap($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `createAMap` - Create a map
-* `findAllAvailableDataForSomeEntities` - Find all available data for some entities
-* `findTheRelativesOfAnEntity` - Find the relatives of an entity
-* `getEntities` - Get Entities
-* `getConstraintPermutationsForEntities` - Get constraint permutations for entities
-* `getDatasets` - Get datasets
-* `getQuestions` - Get questions
-* `getSuggestions` - Get suggestions
-* `getValuesForVariables` - Get values for variables
+* [createAMap](docs/sdk/README.md#createamap) - Create a map
+* [findAllAvailableDataForSomeEntities](docs/sdk/README.md#findallavailabledataforsomeentities) - Find all available data for some entities
+* [findTheRelativesOfAnEntity](docs/sdk/README.md#findtherelativesofanentity) - Find the relatives of an entity
+* [getEntities](docs/sdk/README.md#getentities) - Get Entities
+* [getConstraintPermutationsForEntities](docs/sdk/README.md#getconstraintpermutationsforentities) - Get constraint permutations for entities
+* [getDatasets](docs/sdk/README.md#getdatasets) - Get datasets
+* [getQuestions](docs/sdk/README.md#getquestions) - Get questions
+* [getSuggestions](docs/sdk/README.md#getsuggestions) - Get suggestions
+* [getValuesForVariables](docs/sdk/README.md#getvaluesforvariables) - Get values for variables
 <!-- End SDK Available Operations -->
 
 ### Maturity

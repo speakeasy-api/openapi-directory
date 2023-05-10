@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTModifyScheduledActionActionEnum: string
 {
     case MODIFY_SCHEDULED_ACTION = 'ModifyScheduledAction';

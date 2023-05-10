@@ -38,6 +38,16 @@ class Settings
     public ?SqlActiveDirectoryConfig $activeDirectoryConfig = null;
     
     /**
+     * Specifies options for controlling advanced machine features.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\AdvancedMachineFeatures $advancedMachineFeatures
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('advancedMachineFeatures')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\AdvancedMachineFeatures')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?AdvancedMachineFeatures $advancedMachineFeatures = null;
+    
+    /**
      * The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only.
      * 
      * @var ?array<string> $authorizedGaeApplications
@@ -311,6 +321,7 @@ class Settings
 	{
 		$this->activationPolicy = null;
 		$this->activeDirectoryConfig = null;
+		$this->advancedMachineFeatures = null;
 		$this->authorizedGaeApplications = null;
 		$this->availabilityType = null;
 		$this->backupConfiguration = null;

@@ -40,4 +40,6 @@ src/Models/Shared/GoogleCloudVideointelligenceV1beta2LabelDetectionConfig.php
 src/Models/Shared/GoogleCloudVideointelligenceV1beta2FaceDetectionConfig.php
 src/Models/Shared/GoogleCloudVideointelligenceV1beta2ExplicitContentDetectionConfig.php
 src/Models/Shared/XgafvEnum.php
+docs/sdk/README.md
+docs/videos/README.md
 USAGE.md

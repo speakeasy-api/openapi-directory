@@ -80,11 +80,14 @@ class OpenAI
      * 
      * @param \OpenAPI\OpenAPI\Models\Shared\CreateAnswerRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\CreateAnswerResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function createAnswer(
         \OpenAPI\OpenAPI\Models\Shared\CreateAnswerRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\CreateAnswerResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/answers');
         
@@ -167,11 +170,14 @@ class OpenAI
      * 
      * @param \OpenAPI\OpenAPI\Models\Shared\CreateClassificationRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\CreateClassificationResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function createClassification(
         \OpenAPI\OpenAPI\Models\Shared\CreateClassificationRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\CreateClassificationResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/classifications');
         
@@ -568,11 +574,14 @@ class OpenAI
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\CreateSearchRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\CreateSearchResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function createSearch(
         \OpenAPI\OpenAPI\Models\Operations\CreateSearchRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\CreateSearchResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/engines/{engine_id}/search', \OpenAPI\OpenAPI\Models\Operations\CreateSearchRequest::class, $request);
         
@@ -785,10 +794,13 @@ class OpenAI
      * Lists the currently available (non-finetuned) models, and provides basic information about each one such as the owner and availability.
      * 
      * @return \OpenAPI\OpenAPI\Models\Operations\ListEnginesResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function listEngines(
     ): \OpenAPI\OpenAPI\Models\Operations\ListEnginesResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/engines');
         
@@ -951,11 +963,14 @@ class OpenAI
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\RetrieveEngineRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\RetrieveEngineResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function retrieveEngine(
         \OpenAPI\OpenAPI\Models\Operations\RetrieveEngineRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\RetrieveEngineResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/engines/{engine_id}', \OpenAPI\OpenAPI\Models\Operations\RetrieveEngineRequest::class, $request);
         

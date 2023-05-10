@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum SendSerialConsoleSSHPublicKeyXAmzTargetEnum: string
 {
     case AWSEC2_INSTANCE_CONNECT_SERVICE_SEND_SERIAL_CONSOLE_SSH_PUBLIC_KEY = 'AWSEC2InstanceConnectService.SendSerialConsoleSSHPublicKey';

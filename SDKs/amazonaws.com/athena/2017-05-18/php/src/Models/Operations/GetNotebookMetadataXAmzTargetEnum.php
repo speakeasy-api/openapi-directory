@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetNotebookMetadataXAmzTargetEnum: string
 {
     case AMAZON_ATHENA_GET_NOTEBOOK_METADATA = 'AmazonAthena.GetNotebookMetadata';

@@ -42,7 +42,7 @@ class BusinessLines
      * 
      * Deletes a business line.
      * 
-     *  >"If you delete a business line linked to a [payment method](https://docs.adyen.com/development-resources/paymentmethodvariant#management-api), it can affect your merchant account's ability to use the [payment method](https://docs.adyen.com/api-explorer/Management/latest/post/merchants/_merchantId_/paymentMethodSettings). The business line is removed from all linked merchant accounts.
+     *  >If you delete a business line linked to a [payment method](https://docs.adyen.com/development-resources/paymentmethodvariant#management-api), it can affect your merchant account's ability to use the [payment method](https://docs.adyen.com/api-explorer/Management/latest/post/merchants/_merchantId_/paymentMethodSettings). The business line is removed from all linked merchant accounts.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DeleteBusinessLinesIdRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\DeleteBusinessLinesIdSecurity $security
@@ -177,7 +177,9 @@ class BusinessLines
      * 
      * Creates a business line. 
      * 
-     * This resource contains information about your user's line of business, including their industry and their source of funds. Adyen uses this information to verify your users as required by payment industry regulations. Adyen informs you of the verification results through webhooks or API responses.
+     * This resource contains information about your user's line of business, including their industry and their source of funds. Adyen uses this information to verify your users as required by payment industry regulations. Adyen informs you of the verification results through webhooks or API responses.>If you are using hosted onboarding, [only use v2](https://docs.adyen.com/release-notes/platforms-and-financial-products#releaseNote=2023-05-01-legal-entity-management-api-3) for your API requests.
+     * 
+     * 
      * 
      * @param \OpenAPI\OpenAPI\Models\Shared\BusinessLineInfoInput $request
      * @param \OpenAPI\OpenAPI\Models\Operations\PostBusinessLinesSecurity $security

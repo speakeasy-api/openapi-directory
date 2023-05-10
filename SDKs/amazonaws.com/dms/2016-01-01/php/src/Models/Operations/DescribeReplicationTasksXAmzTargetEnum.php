@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeReplicationTasksXAmzTargetEnum: string
 {
     case AMAZON_DM_SV20160101_DESCRIBE_REPLICATION_TASKS = 'AmazonDMSv20160101.DescribeReplicationTasks';

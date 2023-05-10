@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListS3ResourcesXAmzTargetEnum: string
 {
     case MACIE_SERVICE_LIST_S3_RESOURCES = 'MacieService.ListS3Resources';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PollForTaskXAmzTargetEnum: string
 {
     case DATA_PIPELINE_POLL_FOR_TASK = 'DataPipeline.PollForTask';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateManagedInstanceRoleXAmzTargetEnum: string
 {
     case AMAZON_SSM_UPDATE_MANAGED_INSTANCE_ROLE = 'AmazonSSM.UpdateManagedInstanceRole';

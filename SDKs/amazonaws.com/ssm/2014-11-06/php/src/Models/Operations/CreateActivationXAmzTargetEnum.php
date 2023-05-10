@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateActivationXAmzTargetEnum: string
 {
     case AMAZON_SSM_CREATE_ACTIVATION = 'AmazonSSM.CreateActivation';

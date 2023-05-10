@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteByteMatchSetXAmzTargetEnum: string
 {
     case AWSWAF_REGIONAL20161128_DELETE_BYTE_MATCH_SET = 'AWSWAF_Regional_20161128.DeleteByteMatchSet';

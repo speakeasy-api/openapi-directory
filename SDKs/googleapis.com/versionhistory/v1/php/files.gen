@@ -40,4 +40,6 @@ src/Models/Shared/Interval.php
 src/Models/Shared/ListPlatformsResponse.php
 src/Models/Shared/PlatformPlatformTypeEnum.php
 src/Models/Shared/Platform.php
+docs/sdk/README.md
+docs/platforms/README.md
 USAGE.md

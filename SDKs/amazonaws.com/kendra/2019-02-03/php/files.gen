@@ -27,6 +27,9 @@ src/Models/Operations/AssociatePersonasToEntitiesResponse.php
 src/Models/Operations/BatchDeleteDocumentXAmzTargetEnum.php
 src/Models/Operations/BatchDeleteDocumentRequest.php
 src/Models/Operations/BatchDeleteDocumentResponse.php
+src/Models/Operations/BatchDeleteFeaturedResultsSetXAmzTargetEnum.php
+src/Models/Operations/BatchDeleteFeaturedResultsSetRequest.php
+src/Models/Operations/BatchDeleteFeaturedResultsSetResponse.php
 src/Models/Operations/BatchGetDocumentStatusXAmzTargetEnum.php
 src/Models/Operations/BatchGetDocumentStatusRequest.php
 src/Models/Operations/BatchGetDocumentStatusResponse.php
@@ -48,6 +51,9 @@ src/Models/Operations/CreateExperienceResponse.php
 src/Models/Operations/CreateFaqXAmzTargetEnum.php
 src/Models/Operations/CreateFaqRequest.php
 src/Models/Operations/CreateFaqResponse.php
+src/Models/Operations/CreateFeaturedResultsSetXAmzTargetEnum.php
+src/Models/Operations/CreateFeaturedResultsSetRequest.php
+src/Models/Operations/CreateFeaturedResultsSetResponse.php
 src/Models/Operations/CreateIndexXAmzTargetEnum.php
 src/Models/Operations/CreateIndexRequest.php
 src/Models/Operations/CreateIndexResponse.php
@@ -93,6 +99,9 @@ src/Models/Operations/DescribeExperienceResponse.php
 src/Models/Operations/DescribeFaqXAmzTargetEnum.php
 src/Models/Operations/DescribeFaqRequest.php
 src/Models/Operations/DescribeFaqResponse.php
+src/Models/Operations/DescribeFeaturedResultsSetXAmzTargetEnum.php
+src/Models/Operations/DescribeFeaturedResultsSetRequest.php
+src/Models/Operations/DescribeFeaturedResultsSetResponse.php
 src/Models/Operations/DescribeIndexXAmzTargetEnum.php
 src/Models/Operations/DescribeIndexRequest.php
 src/Models/Operations/DescribeIndexResponse.php
@@ -141,6 +150,9 @@ src/Models/Operations/ListExperiencesResponse.php
 src/Models/Operations/ListFaqsXAmzTargetEnum.php
 src/Models/Operations/ListFaqsRequest.php
 src/Models/Operations/ListFaqsResponse.php
+src/Models/Operations/ListFeaturedResultsSetsXAmzTargetEnum.php
+src/Models/Operations/ListFeaturedResultsSetsRequest.php
+src/Models/Operations/ListFeaturedResultsSetsResponse.php
 src/Models/Operations/ListGroupsOlderThanOrderingIdXAmzTargetEnum.php
 src/Models/Operations/ListGroupsOlderThanOrderingIdRequest.php
 src/Models/Operations/ListGroupsOlderThanOrderingIdResponse.php
@@ -186,6 +198,9 @@ src/Models/Operations/UpdateDataSourceResponse.php
 src/Models/Operations/UpdateExperienceXAmzTargetEnum.php
 src/Models/Operations/UpdateExperienceRequest.php
 src/Models/Operations/UpdateExperienceResponse.php
+src/Models/Operations/UpdateFeaturedResultsSetXAmzTargetEnum.php
+src/Models/Operations/UpdateFeaturedResultsSetRequest.php
+src/Models/Operations/UpdateFeaturedResultsSetResponse.php
 src/Models/Operations/UpdateIndexXAmzTargetEnum.php
 src/Models/Operations/UpdateIndexRequest.php
 src/Models/Operations/UpdateIndexResponse.php
@@ -212,6 +227,9 @@ src/Models/Shared/BatchDeleteDocumentResponseFailedDocument.php
 src/Models/Shared/ErrorCodeEnum.php
 src/Models/Shared/BatchDeleteDocumentRequest.php
 src/Models/Shared/DataSourceSyncJobMetricTarget.php
+src/Models/Shared/BatchDeleteFeaturedResultsSetResponse.php
+src/Models/Shared/BatchDeleteFeaturedResultsSetError.php
+src/Models/Shared/BatchDeleteFeaturedResultsSetRequest.php
 src/Models/Shared/BatchGetDocumentStatusResponse.php
 src/Models/Shared/BatchGetDocumentStatusResponseError.php
 src/Models/Shared/Status.php
@@ -325,6 +343,11 @@ src/Models/Shared/ContentSourceConfiguration.php
 src/Models/Shared/CreateFaqResponse.php
 src/Models/Shared/CreateFaqRequest.php
 src/Models/Shared/FaqFileFormatEnum.php
+src/Models/Shared/CreateFeaturedResultsSetResponse.php
+src/Models/Shared/FeaturedResultsSet.php
+src/Models/Shared/FeaturedResultsSetStatusEnum.php
+src/Models/Shared/FeaturedDocument.php
+src/Models/Shared/CreateFeaturedResultsSetRequest.php
 src/Models/Shared/CreateIndexResponse.php
 src/Models/Shared/CreateIndexRequest.php
 src/Models/Shared/UserTokenConfiguration.php
@@ -361,6 +384,10 @@ src/Models/Shared/DescribeExperienceRequest.php
 src/Models/Shared/DescribeFaqResponse.php
 src/Models/Shared/FaqStatusEnum.php
 src/Models/Shared/DescribeFaqRequest.php
+src/Models/Shared/DescribeFeaturedResultsSetResponse.php
+src/Models/Shared/FeaturedDocumentWithMetadata.php
+src/Models/Shared/FeaturedDocumentMissing.php
+src/Models/Shared/DescribeFeaturedResultsSetRequest.php
 src/Models/Shared/DescribeIndexResponse.php
 src/Models/Shared/IndexStatusEnum.php
 src/Models/Shared/IndexStatistics.php
@@ -426,6 +453,9 @@ src/Models/Shared/ListExperiencesRequest.php
 src/Models/Shared/ListFaqsResponse.php
 src/Models/Shared/FaqSummary.php
 src/Models/Shared/ListFaqsRequest.php
+src/Models/Shared/ListFeaturedResultsSetsResponse.php
+src/Models/Shared/FeaturedResultsSetSummary.php
+src/Models/Shared/ListFeaturedResultsSetsRequest.php
 src/Models/Shared/ListGroupsOlderThanOrderingIdResponse.php
 src/Models/Shared/GroupSummary.php
 src/Models/Shared/ListGroupsOlderThanOrderingIdRequest.php
@@ -463,6 +493,7 @@ src/Models/Shared/HighlightTypeEnum.php
 src/Models/Shared/AdditionalResultAttribute.php
 src/Models/Shared/AdditionalResultAttributeValueTypeEnum.php
 src/Models/Shared/AdditionalResultAttributeValue.php
+src/Models/Shared/FeaturedResultsItem.php
 src/Models/Shared/FacetResult.php
 src/Models/Shared/DocumentAttributeValueCountPair.php
 src/Models/Shared/QueryRequest.php
@@ -486,9 +517,12 @@ src/Models/Shared/UntagResourceRequest.php
 src/Models/Shared/UpdateAccessControlConfigurationRequest.php
 src/Models/Shared/UpdateDataSourceRequest.php
 src/Models/Shared/UpdateExperienceRequest.php
+src/Models/Shared/UpdateFeaturedResultsSetResponse.php
+src/Models/Shared/UpdateFeaturedResultsSetRequest.php
 src/Models/Shared/UpdateIndexRequest.php
 src/Models/Shared/UpdateQuerySuggestionsBlockListRequest.php
 src/Models/Shared/UpdateQuerySuggestionsConfigRequest.php
 src/Models/Shared/UpdateThesaurusRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -98,4 +98,8 @@ src/Models/Shared/MemberList.php
 src/Models/Shared/UserList.php
 src/Models/Shared/UserLinksSelf.php
 src/Models/Shared/UserLinks.php
+docs/sdk/README.md
+docs/conversation/README.md
+docs/event/README.md
+docs/member/README.md
 USAGE.md

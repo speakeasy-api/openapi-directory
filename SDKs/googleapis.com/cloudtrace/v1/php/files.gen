@@ -42,4 +42,6 @@ src/Models/Shared/TraceSpanKindEnum.php
 src/Models/Shared/TraceSpan.php
 src/Models/Shared/XgafvEnum.php
 src/Models/Shared/ListTracesResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

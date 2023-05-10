@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeContinuousBackupsXAmzTargetEnum: string
 {
     case DYNAMO_DB20120810_DESCRIBE_CONTINUOUS_BACKUPS = 'DynamoDB_20120810.DescribeContinuousBackups';

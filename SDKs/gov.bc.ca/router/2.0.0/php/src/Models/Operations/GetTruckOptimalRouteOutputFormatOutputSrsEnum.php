@@ -10,14 +10,14 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 
 
 /** The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a> */
-enum GetTruckOptimalRouteOutputFormatOutputSrsEnum: string
+enum GetTruckOptimalRouteOutputFormatOutputSrsEnum: int
 {
-    case FOUR_THOUSAND_THREE_HUNDRED_AND_TWENTY_SIX = '4326';
-    case FOUR_THOUSAND_TWO_HUNDRED_AND_SIXTY_NINE = '4269';
-    case THREE_THOUSAND_AND_FIVE = '3005';
-    case TWENTY_SIX_THOUSAND_NINE_HUNDRED_AND_SEVEN = '26907';
-    case TWENTY_SIX_THOUSAND_NINE_HUNDRED_AND_EIGHT = '26908';
-    case TWENTY_SIX_THOUSAND_NINE_HUNDRED_AND_NINE = '26909';
-    case TWENTY_SIX_THOUSAND_NINE_HUNDRED_AND_TEN = '26910';
-    case TWENTY_SIX_THOUSAND_NINE_HUNDRED_AND_ELEVEN = '26911';
+    case FOUR_THOUSAND_THREE_HUNDRED_AND_TWENTY_SIX = 4326;
+    case FOUR_THOUSAND_TWO_HUNDRED_AND_SIXTY_NINE = 4269;
+    case THREE_THOUSAND_AND_FIVE = 3005;
+    case TWENTY_SIX_THOUSAND_NINE_HUNDRED_AND_SEVEN = 26907;
+    case TWENTY_SIX_THOUSAND_NINE_HUNDRED_AND_EIGHT = 26908;
+    case TWENTY_SIX_THOUSAND_NINE_HUNDRED_AND_NINE = 26909;
+    case TWENTY_SIX_THOUSAND_NINE_HUNDRED_AND_TEN = 26910;
+    case TWENTY_SIX_THOUSAND_NINE_HUNDRED_AND_ELEVEN = 26911;
 }

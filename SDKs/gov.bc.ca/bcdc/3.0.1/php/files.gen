@@ -63,4 +63,6 @@ src/Models/Operations/GetActionStatusShowResponse.php
 src/Models/Operations/GetActionTagListRequest.php
 src/Models/Operations/GetActionTagListResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/action/README.md
 USAGE.md

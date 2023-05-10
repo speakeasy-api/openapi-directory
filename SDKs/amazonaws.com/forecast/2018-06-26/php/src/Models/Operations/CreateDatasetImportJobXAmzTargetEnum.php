@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateDatasetImportJobXAmzTargetEnum: string
 {
     case AMAZON_FORECAST_CREATE_DATASET_IMPORT_JOB = 'AmazonForecast.CreateDatasetImportJob';

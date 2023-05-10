@@ -48,4 +48,5 @@ src/Models/Shared/UploadDocumentsResponse.php
 src/Models/Shared/DocumentServiceWarning.php
 src/Models/Shared/DocumentServiceException.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -2670,9 +2670,11 @@ class DataSources
      * 
      * List arista switch data sources
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListAristaSwitchesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ListAristaSwitchesResponse
      */
 	public function listAristaSwitches(
+        \OpenAPI\OpenAPI\Models\Operations\ListAristaSwitchesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ListAristaSwitchesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -2680,7 +2682,8 @@ class DataSources
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2706,9 +2709,11 @@ class DataSources
      * 
      * List brocade switch data sources
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListBrocadeSwitchesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ListBrocadeSwitchesResponse
      */
 	public function listBrocadeSwitches(
+        \OpenAPI\OpenAPI\Models\Operations\ListBrocadeSwitchesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ListBrocadeSwitchesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -2716,7 +2721,8 @@ class DataSources
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2742,9 +2748,11 @@ class DataSources
      * 
      * List checkpoint firewall data sources
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListCheckpointFirewallsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ListCheckpointFirewallsResponse
      */
 	public function listCheckpointFirewalls(
+        \OpenAPI\OpenAPI\Models\Operations\ListCheckpointFirewallsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ListCheckpointFirewallsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -2752,7 +2760,8 @@ class DataSources
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2778,9 +2787,11 @@ class DataSources
      * 
      * List cisco switch data sources
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListCiscoSwitchesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ListCiscoSwitchesResponse
      */
 	public function listCiscoSwitches(
+        \OpenAPI\OpenAPI\Models\Operations\ListCiscoSwitchesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ListCiscoSwitchesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -2788,7 +2799,8 @@ class DataSources
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2814,9 +2826,11 @@ class DataSources
      * 
      * List dell switch data sources
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListDellSwitchesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ListDellSwitchesResponse
      */
 	public function listDellSwitches(
+        \OpenAPI\OpenAPI\Models\Operations\ListDellSwitchesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ListDellSwitchesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -2824,7 +2838,8 @@ class DataSources
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2850,9 +2865,11 @@ class DataSources
      * 
      * List hp oneview manager data sources
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListHpovManagersSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ListHpovManagersResponse
      */
 	public function listHpovManagers(
+        \OpenAPI\OpenAPI\Models\Operations\ListHpovManagersSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ListHpovManagersResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -2860,7 +2877,8 @@ class DataSources
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2886,9 +2904,11 @@ class DataSources
      * 
      * List hpvc manager data sources
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListHpvcManagersSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ListHpvcManagersResponse
      */
 	public function listHpvcManagers(
+        \OpenAPI\OpenAPI\Models\Operations\ListHpvcManagersSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ListHpvcManagersResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -2896,7 +2916,8 @@ class DataSources
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2922,9 +2943,11 @@ class DataSources
      * 
      * List juniper switch data sources
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListJuniperSwitchesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ListJuniperSwitchesResponse
      */
 	public function listJuniperSwitches(
+        \OpenAPI\OpenAPI\Models\Operations\ListJuniperSwitchesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ListJuniperSwitchesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -2932,7 +2955,8 @@ class DataSources
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2958,9 +2982,11 @@ class DataSources
      * 
      * List nsx-v manager data sources
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListNsxvManagersSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ListNsxvManagersResponse
      */
 	public function listNsxvManagers(
+        \OpenAPI\OpenAPI\Models\Operations\ListNsxvManagersSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ListNsxvManagersResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -2968,7 +2994,8 @@ class DataSources
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2994,9 +3021,11 @@ class DataSources
      * 
      * List panorama firewall data sources
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListPanoramaFirewallsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ListPanoramaFirewallsResponse
      */
 	public function listPanoramaFirewalls(
+        \OpenAPI\OpenAPI\Models\Operations\ListPanoramaFirewallsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ListPanoramaFirewallsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -3004,7 +3033,8 @@ class DataSources
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -3030,9 +3060,11 @@ class DataSources
      * 
      * List ucs manager data sources
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListUcsManagersSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ListUcsManagersResponse
      */
 	public function listUcsManagers(
+        \OpenAPI\OpenAPI\Models\Operations\ListUcsManagersSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ListUcsManagersResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -3040,7 +3072,8 @@ class DataSources
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -3066,9 +3099,11 @@ class DataSources
      * 
      * List vCenter data sources
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListVcentersSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ListVcentersResponse
      */
 	public function listVcenters(
+        \OpenAPI\OpenAPI\Models\Operations\ListVcentersSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ListVcentersResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -3076,7 +3111,8 @@ class DataSources
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

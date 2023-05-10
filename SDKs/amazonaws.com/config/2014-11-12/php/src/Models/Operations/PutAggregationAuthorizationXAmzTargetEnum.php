@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutAggregationAuthorizationXAmzTargetEnum: string
 {
     case STARLING_DOVE_SERVICE_PUT_AGGREGATION_AUTHORIZATION = 'StarlingDoveService.PutAggregationAuthorization';

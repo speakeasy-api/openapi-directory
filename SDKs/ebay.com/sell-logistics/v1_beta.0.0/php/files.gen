@@ -56,4 +56,7 @@ src/Models/Shared/ErrorParameter.php
 src/Models/Shared/Rate.php
 src/Models/Shared/PickupSlot.php
 src/Models/Shared/ShippingQuoteRequest.php
+docs/sdk/README.md
+docs/shipment/README.md
+docs/shippingquote/README.md
 USAGE.md

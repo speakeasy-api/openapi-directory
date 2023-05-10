@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DisassociateConnectionFromLagXAmzTargetEnum: string
 {
     case OVERTURE_SERVICE_DISASSOCIATE_CONNECTION_FROM_LAG = 'OvertureService.DisassociateConnectionFromLag';

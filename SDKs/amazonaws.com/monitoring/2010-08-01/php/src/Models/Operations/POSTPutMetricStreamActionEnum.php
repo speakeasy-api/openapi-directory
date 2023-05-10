@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTPutMetricStreamActionEnum: string
 {
     case PUT_METRIC_STREAM = 'PutMetricStream';

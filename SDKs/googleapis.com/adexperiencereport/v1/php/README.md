@@ -30,20 +30,57 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\AdexperiencereportSitesGetRequest;
+use \OpenAPI\OpenAPI\Models\Shared\XgafvEnum;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new AdexperiencereportSitesGetRequest();
+    $request->dollarXgafv = XgafvEnum::TWO;
+    $request->accessToken = 'provident';
+    $request->alt = AltEnum::PROTO;
+    $request->callback = 'quibusdam';
+    $request->fields = 'unde';
+    $request->key = 'nulla';
+    $request->name = 'Dallas Kassulke';
+    $request->oauthToken = 'suscipit';
+    $request->prettyPrint = false;
+    $request->quotaUser = 'iure';
+    $request->uploadType = 'magnam';
+    $request->uploadProtocol = 'debitis';
+
+    $response = $sdk->sites->adexperiencereportSitesGet($request);
+
+    if ($response->siteSummaryResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### sites
+### [sites](docs/sites/README.md)
 
-* `adexperiencereportSitesGet` - Gets a site's Ad Experience Report summary.
+* [adexperiencereportSitesGet](docs/sites/README.md#adexperiencereportsitesget) - Gets a site's Ad Experience Report summary.
 
-### violatingSites
+### [violatingSites](docs/violatingsites/README.md)
 
-* `adexperiencereportViolatingSitesList` - Lists sites that are failing in the Ad Experience Report on at least one platform.
+* [adexperiencereportViolatingSitesList](docs/violatingsites/README.md#adexperiencereportviolatingsiteslist) - Lists sites that are failing in the Ad Experience Report on at least one platform.
 <!-- End SDK Available Operations -->
 
 ### Maturity

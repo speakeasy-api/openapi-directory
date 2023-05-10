@@ -27,8 +27,19 @@ class ProductViewItemIssueItemIssueType
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $canonicalAttribute = null;
     
+    /**
+     * Error code of the issue.
+     * 
+     * @var ?string $code
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('code')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $code = null;
+    
 	public function __construct()
 	{
 		$this->canonicalAttribute = null;
+		$this->code = null;
 	}
 }

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeVpcAttributeActionEnum: string
 {
     case DESCRIBE_VPC_ATTRIBUTE = 'DescribeVpcAttribute';

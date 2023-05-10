@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateXssMatchSetXAmzTargetEnum: string
 {
     case AWSWAF20150824_CREATE_XSS_MATCH_SET = 'AWSWAF_20150824.CreateXssMatchSet';

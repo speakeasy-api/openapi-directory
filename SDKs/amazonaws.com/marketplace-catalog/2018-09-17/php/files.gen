@@ -20,14 +20,19 @@ src/Utils/SpeakeasyMetadata.php
 src/Utils/Utils.php
 src/Models/Operations/CancelChangeSetRequest.php
 src/Models/Operations/CancelChangeSetResponse.php
+src/Models/Operations/DeleteResourcePolicyRequest.php
+src/Models/Operations/DeleteResourcePolicyResponse.php
 src/Models/Operations/DescribeChangeSetRequest.php
 src/Models/Operations/DescribeChangeSetResponse.php
 src/Models/Operations/DescribeEntityRequest.php
 src/Models/Operations/DescribeEntityResponse.php
+src/Models/Operations/GetResourcePolicyRequest.php
+src/Models/Operations/GetResourcePolicyResponse.php
 src/Models/Operations/ListChangeSetsRequestBodySort.php
 src/Models/Operations/ListChangeSetsRequestBody.php
 src/Models/Operations/ListChangeSetsRequest.php
 src/Models/Operations/ListChangeSetsResponse.php
+src/Models/Operations/ListEntitiesRequestBodyOwnershipTypeEnum.php
 src/Models/Operations/ListEntitiesRequestBodySort.php
 src/Models/Operations/ListEntitiesRequestBody.php
 src/Models/Operations/ListEntitiesRequest.php
@@ -35,6 +40,9 @@ src/Models/Operations/ListEntitiesResponse.php
 src/Models/Operations/ListTagsForResourceRequestBody.php
 src/Models/Operations/ListTagsForResourceRequest.php
 src/Models/Operations/ListTagsForResourceResponse.php
+src/Models/Operations/PutResourcePolicyRequestBody.php
+src/Models/Operations/PutResourcePolicyRequest.php
+src/Models/Operations/PutResourcePolicyResponse.php
 src/Models/Operations/StartChangeSetRequestBody.php
 src/Models/Operations/StartChangeSetRequest.php
 src/Models/Operations/StartChangeSetResponse.php
@@ -52,6 +60,7 @@ src/Models/Shared/ChangeSummary.php
 src/Models/Shared/ErrorDetail.php
 src/Models/Shared/Entity.php
 src/Models/Shared/DescribeEntityResponse.php
+src/Models/Shared/GetResourcePolicyResponse.php
 src/Models/Shared/ListChangeSetsResponse.php
 src/Models/Shared/ChangeSetSummaryListItem.php
 src/Models/Shared/SortOrderEnum.php
@@ -63,4 +72,5 @@ src/Models/Shared/Tag.php
 src/Models/Shared/StartChangeSetResponse.php
 src/Models/Shared/Change.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

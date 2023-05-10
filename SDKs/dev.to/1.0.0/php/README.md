@@ -30,102 +30,137 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Shared\Article;
+use \OpenAPI\OpenAPI\Models\Shared\ArticleArticle;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new Article();
+    $request->article = new ArticleArticle();
+    $request->article->bodyMarkdown = 'corrupti';
+    $request->article->canonicalUrl = 'provident';
+    $request->article->description = 'distinctio';
+    $request->article->mainImage = 'quibusdam';
+    $request->article->organizationId = 602763;
+    $request->article->published = false;
+    $request->article->series = 'nulla';
+    $request->article->tags = 'corrupti';
+    $request->article->title = 'Dr.';
+
+    $response = $sdk->articles->createArticle($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### articles
+### [articles](docs/articles/README.md)
 
-* `createArticle` - Publish article
-* `getArticleById` - Published article by id
-* `getArticleByPath` - Published article by path
-* `getArticles` - Published articles
-* `getLatestArticles` - Published articles sorted by published date
-* `getOrgArticles` - Organization's Articles
-* `getUserAllArticles` - User's all articles
-* `getUserArticles` - User's articles
-* `getUserPublishedArticles` - User's published articles
-* `getUserUnpublishedArticles` - User's unpublished articles
-* `unpublishArticle` - Unpublish an article
-* `updateArticle` - Update an article by id
-* `videos` - Articles with a video
+* [createArticle](docs/articles/README.md#createarticle) - Publish article
+* [getArticleById](docs/articles/README.md#getarticlebyid) - Published article by id
+* [getArticleByPath](docs/articles/README.md#getarticlebypath) - Published article by path
+* [getArticles](docs/articles/README.md#getarticles) - Published articles
+* [getLatestArticles](docs/articles/README.md#getlatestarticles) - Published articles sorted by published date
+* [getOrgArticles](docs/articles/README.md#getorgarticles) - Organization's Articles
+* [getUserAllArticles](docs/articles/README.md#getuserallarticles) - User's all articles
+* [getUserArticles](docs/articles/README.md#getuserarticles) - User's articles
+* [getUserPublishedArticles](docs/articles/README.md#getuserpublishedarticles) - User's published articles
+* [getUserUnpublishedArticles](docs/articles/README.md#getuserunpublishedarticles) - User's unpublished articles
+* [unpublishArticle](docs/articles/README.md#unpublisharticle) - Unpublish an article
+* [updateArticle](docs/articles/README.md#updatearticle) - Update an article by id
+* [videos](docs/articles/README.md#videos) - Articles with a video
 
-### comments
+### [comments](docs/comments/README.md)
 
-* `getCommentById` - Comment by id
-* `getCommentsByArticleId` - Comments
+* [getCommentById](docs/comments/README.md#getcommentbyid) - Comment by id
+* [getCommentsByArticleId](docs/comments/README.md#getcommentsbyarticleid) - Comments
 
-### displayAds
+### [displayAds](docs/displayads/README.md)
 
-* `getApiDisplayAds` - display ads
-* `getApiDisplayAdsId` - display ad
-* `postApiDisplayAds` - display ads
-* `putApiDisplayAdsId` - display ads
-* `putApiDisplayAdsIdUnpublish` - unpublish
+* [getApiDisplayAds](docs/displayads/README.md#getapidisplayads) - display ads
+* [getApiDisplayAdsId](docs/displayads/README.md#getapidisplayadsid) - display ad
+* [postApiDisplayAds](docs/displayads/README.md#postapidisplayads) - display ads
+* [putApiDisplayAdsId](docs/displayads/README.md#putapidisplayadsid) - display ads
+* [putApiDisplayAdsIdUnpublish](docs/displayads/README.md#putapidisplayadsidunpublish) - unpublish
 
-### followedTags
+### [followedTags](docs/followedtags/README.md)
 
-* `getFollowedTags` - Followed Tags
+* [getFollowedTags](docs/followedtags/README.md#getfollowedtags) - Followed Tags
 
-### followers
+### [followers](docs/followers/README.md)
 
-* `getFollowers` - Followers
+* [getFollowers](docs/followers/README.md#getfollowers) - Followers
 
-### organizations
+### [organizations](docs/organizations/README.md)
 
-* `getOrgArticles` - Organization's Articles
-* `getOrgUsers` - Organization's users
-* `getOrganization` - An organization
+* [getOrgArticles](docs/organizations/README.md#getorgarticles) - Organization's Articles
+* [getOrgUsers](docs/organizations/README.md#getorgusers) - Organization's users
+* [getOrganization](docs/organizations/README.md#getorganization) - An organization
 
-### pages
+### [pages](docs/pages/README.md)
 
-* `deleteApiPagesId` - remove a page
-* `getApiPages` - show details for all pages
-* `getApiPagesId` - show details for a page
-* `postApiPages` - pages
-* `putApiPagesId` - update details for a page
+* [deleteApiPagesId](docs/pages/README.md#deleteapipagesid) - remove a page
+* [getApiPages](docs/pages/README.md#getapipages) - show details for all pages
+* [getApiPagesId](docs/pages/README.md#getapipagesid) - show details for a page
+* [postApiPages](docs/pages/README.md#postapipages) - pages
+* [putApiPagesId](docs/pages/README.md#putapipagesid) - update details for a page
 
-### podcastEpisodes
+### [podcastEpisodes](docs/podcastepisodes/README.md)
 
-* `getPodcastEpisodes` - Podcast Episodes
+* [getPodcastEpisodes](docs/podcastepisodes/README.md#getpodcastepisodes) - Podcast Episodes
 
-### profileImages
+### [profileImages](docs/profileimages/README.md)
 
-* `getProfileImage` - A Users or organizations profile image
+* [getProfileImage](docs/profileimages/README.md#getprofileimage) - A Users or organizations profile image
 
-### reactions
+### [reactions](docs/reactions/README.md)
 
-* `postApiReactions` - create reaction
-* `postApiReactionsToggle` - toggle reaction
+* [postApiReactions](docs/reactions/README.md#postapireactions) - create reaction
+* [postApiReactionsToggle](docs/reactions/README.md#postapireactionstoggle) - toggle reaction
 
-### readinglist
+### [readinglist](docs/readinglist/README.md)
 
-* `getReadinglist` - Readinglist
+* [getReadinglist](docs/readinglist/README.md#getreadinglist) - Readinglist
 
-### tags
+### [tags](docs/tags/README.md)
 
-* `getFollowedTags` - Followed Tags
-* `getTags` - Tags
+* [getFollowedTags](docs/tags/README.md#getfollowedtags) - Followed Tags
+* [getTags](docs/tags/README.md#gettags) - Tags
 
-### users
+### [users](docs/users/README.md)
 
-* `getOrgUsers` - Organization's users
-* `getUser` - A User
-* `getUserAllArticles` - User's all articles
-* `getUserArticles` - User's articles
-* `getUserMe` - The authenticated user
-* `getUserPublishedArticles` - User's published articles
-* `getUserUnpublishedArticles` - User's unpublished articles
-* `postAdminUsersCreate` - Invite a User
-* `suspendUser` - Suspend a User
-* `unpublishUser` - Unpublish a User's Articles and Comments
+* [getOrgUsers](docs/users/README.md#getorgusers) - Organization's users
+* [getUser](docs/users/README.md#getuser) - A User
+* [getUserAllArticles](docs/users/README.md#getuserallarticles) - User's all articles
+* [getUserArticles](docs/users/README.md#getuserarticles) - User's articles
+* [getUserMe](docs/users/README.md#getuserme) - The authenticated user
+* [getUserPublishedArticles](docs/users/README.md#getuserpublishedarticles) - User's published articles
+* [getUserUnpublishedArticles](docs/users/README.md#getuserunpublishedarticles) - User's unpublished articles
+* [postAdminUsersCreate](docs/users/README.md#postadminuserscreate) - Invite a User
+* [suspendUser](docs/users/README.md#suspenduser) - Suspend a User
+* [unpublishUser](docs/users/README.md#unpublishuser) - Unpublish a User's Articles and Comments
 
-### videos
+### [videos](docs/videos/README.md)
 
-* `videos` - Articles with a video
+* [videos](docs/videos/README.md#videos) - Articles with a video
 <!-- End SDK Available Operations -->
 
 ### Maturity

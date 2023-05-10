@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ResendConfirmationCodeXAmzTargetEnum: string
 {
     case AWS_COGNITO_IDENTITY_PROVIDER_SERVICE_RESEND_CONFIRMATION_CODE = 'AWSCognitoIdentityProviderService.ResendConfirmationCode';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETAttachUserPolicyActionEnum: string
 {
     case ATTACH_USER_POLICY = 'AttachUserPolicy';

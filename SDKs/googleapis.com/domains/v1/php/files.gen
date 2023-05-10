@@ -152,4 +152,6 @@ src/Models/Shared/TestIamPermissionsResponse.php
 src/Models/Shared/TestIamPermissionsRequest.php
 src/Models/Shared/TransferDomainRequestContactNoticesEnum.php
 src/Models/Shared/TransferDomainRequestInput.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

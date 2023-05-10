@@ -45,4 +45,5 @@ src/Models/Operations/PostApiV1DonationsCreateSecurity.php
 src/Models/Operations/PostApiV1DonationsCreateFundingSourceEnum.php
 src/Models/Operations/PostApiV1DonationsCreateRequest.php
 src/Models/Operations/PostApiV1DonationsCreateResponse.php
+docs/sdk/README.md
 USAGE.md

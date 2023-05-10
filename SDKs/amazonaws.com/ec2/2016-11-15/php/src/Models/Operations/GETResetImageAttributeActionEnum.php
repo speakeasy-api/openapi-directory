@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETResetImageAttributeActionEnum: string
 {
     case RESET_IMAGE_ATTRIBUTE = 'ResetImageAttribute';

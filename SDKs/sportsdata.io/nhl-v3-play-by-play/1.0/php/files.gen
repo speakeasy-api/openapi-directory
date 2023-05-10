@@ -32,4 +32,5 @@ src/Models/Shared/Period.php
 src/Models/Shared/ScoringPlay.php
 src/Models/Shared/Penalty.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetCostEstimateXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_GET_COST_ESTIMATE = 'Lightsail_20161128.GetCostEstimate';

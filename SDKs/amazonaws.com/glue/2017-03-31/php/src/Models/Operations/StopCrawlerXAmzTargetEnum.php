@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopCrawlerXAmzTargetEnum: string
 {
     case AWS_GLUE_STOP_CRAWLER = 'AWSGlue.StopCrawler';

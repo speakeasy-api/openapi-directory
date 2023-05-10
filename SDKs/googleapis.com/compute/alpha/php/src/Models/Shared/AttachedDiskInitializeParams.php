@@ -227,6 +227,16 @@ class AttachedDiskInitializeParams
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?CustomerEncryptionKey $sourceSnapshotEncryptionKey = null;
     
+    /**
+     * The storage pool in which the new disk is created. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /storagePools/storagePool - projects/project/zones/zone/storagePools/storagePool - zones/zone/storagePools/storagePool 
+     * 
+     * @var ?string $storagePool
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('storagePool')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $storagePool = null;
+    
 	public function __construct()
 	{
 		$this->architecture = null;
@@ -251,5 +261,6 @@ class AttachedDiskInitializeParams
 		$this->sourceInstantSnapshot = null;
 		$this->sourceSnapshot = null;
 		$this->sourceSnapshotEncryptionKey = null;
+		$this->storagePool = null;
 	}
 }

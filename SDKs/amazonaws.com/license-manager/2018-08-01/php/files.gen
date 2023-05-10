@@ -186,6 +186,8 @@ src/Models/Shared/CreateGrantRequest.php
 src/Models/Shared/AllowedOperationEnum.php
 src/Models/Shared/CreateGrantVersionResponse.php
 src/Models/Shared/CreateGrantVersionRequest.php
+src/Models/Shared/Options.php
+src/Models/Shared/ActivationOverrideBehaviorEnum.php
 src/Models/Shared/CreateLicenseResponse.php
 src/Models/Shared/LicenseStatusEnum.php
 src/Models/Shared/CreateLicenseRequest.php
@@ -313,4 +315,5 @@ src/Models/Shared/UpdateLicenseManagerReportGeneratorRequest.php
 src/Models/Shared/UpdateLicenseSpecificationsForResourceRequest.php
 src/Models/Shared/UpdateServiceSettingsRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

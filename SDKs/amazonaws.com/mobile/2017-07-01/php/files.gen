@@ -63,4 +63,5 @@ src/Models/Shared/ProjectSummary.php
 src/Models/Shared/UpdateProjectResult.php
 src/Models/Shared/AccountActionRequiredException.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

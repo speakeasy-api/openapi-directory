@@ -18,6 +18,16 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class BulkInsertInstanceResourcePerInstanceProperties
 {
     /**
+     * Specifies the hostname of the instance. More details in: https://cloud.google.com/compute/docs/instances/custom-hostname-vm#naming_convention
+     * 
+     * @var ?string $hostname
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('hostname')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $hostname = null;
+    
+    /**
      * This field is only temporary. It will be removed. Do not use it.
      * 
      * @var ?string $name
@@ -29,6 +39,7 @@ class BulkInsertInstanceResourcePerInstanceProperties
     
 	public function __construct()
 	{
+		$this->hostname = null;
 		$this->name = null;
 	}
 }

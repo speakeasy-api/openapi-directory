@@ -30,74 +30,99 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\DeleteConsumerV1AppointmentsIdRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new DeleteConsumerV1AppointmentsIdRequest();
+    $request->id = '89bd9d8d-69a6-474e-8f46-7cc8796ed151';
+
+    $response = $sdk->appointments->deleteConsumerV1AppointmentsId($request);
+
+    if ($response->appointmentViewModel !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### appointments
+### [appointments](docs/appointments/README.md)
 
-* `deleteConsumerV1AppointmentsId` - Delete Appointment
-* `getConsumerV1Appointments` - Get Appointments
-* `getConsumerV1AppointmentsBookingfields` - Get Custom Fields Labels
-* `getConsumerV1AppointmentsCustomfields` - Get Custom Fields List
-* `getConsumerV1AppointmentsId` - Get Appointment
-* `postConsumerV1Appointments` - Create Appointment
-* `putConsumerV1AppointmentsIdBook` - Book Appointment
-* `putConsumerV1AppointmentsIdCancel` - Cancel Appointment
-* `putConsumerV1AppointmentsIdConfirm` - Confirm Appointment
-* `putConsumerV1AppointmentsIdNoshow` - Set NoShow Status
-* `putConsumerV1AppointmentsIdReschedule` - Reschedule Appointment
-* `putConsumerV1AppointmentsIdReserve` - Reserve Appointment
+* [deleteConsumerV1AppointmentsId](docs/appointments/README.md#deleteconsumerv1appointmentsid) - Delete Appointment
+* [getConsumerV1Appointments](docs/appointments/README.md#getconsumerv1appointments) - Get Appointments
+* [getConsumerV1AppointmentsBookingfields](docs/appointments/README.md#getconsumerv1appointmentsbookingfields) - Get Custom Fields Labels
+* [getConsumerV1AppointmentsCustomfields](docs/appointments/README.md#getconsumerv1appointmentscustomfields) - Get Custom Fields List
+* [getConsumerV1AppointmentsId](docs/appointments/README.md#getconsumerv1appointmentsid) - Get Appointment
+* [postConsumerV1Appointments](docs/appointments/README.md#postconsumerv1appointments) - Create Appointment
+* [putConsumerV1AppointmentsIdBook](docs/appointments/README.md#putconsumerv1appointmentsidbook) - Book Appointment
+* [putConsumerV1AppointmentsIdCancel](docs/appointments/README.md#putconsumerv1appointmentsidcancel) - Cancel Appointment
+* [putConsumerV1AppointmentsIdConfirm](docs/appointments/README.md#putconsumerv1appointmentsidconfirm) - Confirm Appointment
+* [putConsumerV1AppointmentsIdNoshow](docs/appointments/README.md#putconsumerv1appointmentsidnoshow) - Set NoShow Status
+* [putConsumerV1AppointmentsIdReschedule](docs/appointments/README.md#putconsumerv1appointmentsidreschedule) - Reschedule Appointment
+* [putConsumerV1AppointmentsIdReserve](docs/appointments/README.md#putconsumerv1appointmentsidreserve) - Reserve Appointment
 
-### availability
+### [availability](docs/availability/README.md)
 
-* `getConsumerV1AvailabilityServiceIdStartDateEndDate` - Get Available Times
-* `getConsumerV1AvailabilityServiceIdStartDateEndDateDays` - Get Available Days
-* `getConsumerV1AvailabilityServiceIdStartDateEndDateUnavailable` - Get Unavailable Times
+* [getConsumerV1AvailabilityServiceIdStartDateEndDate](docs/availability/README.md#getconsumerv1availabilityserviceidstartdateenddate) - Get Available Times
+* [getConsumerV1AvailabilityServiceIdStartDateEndDateDays](docs/availability/README.md#getconsumerv1availabilityserviceidstartdateenddatedays) - Get Available Days
+* [getConsumerV1AvailabilityServiceIdStartDateEndDateUnavailable](docs/availability/README.md#getconsumerv1availabilityserviceidstartdateenddateunavailable) - Get Unavailable Times
 
-### customers
+### [customers](docs/customers/README.md)
 
-* `deleteConsumerV1CustomersId` - Delete Customer
-* `getConsumerV1Customers` - List Customers
-* `getConsumerV1CustomersBookingfields` - Get Customer Booking Fields
-* `getConsumerV1CustomersCountries` - List Country Codes
-* `getConsumerV1CustomersCustomfields` - Get Customer Custom Fields
-* `getConsumerV1CustomersStates` - List Country States
-* `getConsumerV1CustomersId` - Get Customer
-* `postConsumerV1Customers` - Create Customer
-* `putConsumerV1CustomersId` - Update Customer
+* [deleteConsumerV1CustomersId](docs/customers/README.md#deleteconsumerv1customersid) - Delete Customer
+* [getConsumerV1Customers](docs/customers/README.md#getconsumerv1customers) - List Customers
+* [getConsumerV1CustomersBookingfields](docs/customers/README.md#getconsumerv1customersbookingfields) - Get Customer Booking Fields
+* [getConsumerV1CustomersCountries](docs/customers/README.md#getconsumerv1customerscountries) - List Country Codes
+* [getConsumerV1CustomersCustomfields](docs/customers/README.md#getconsumerv1customerscustomfields) - Get Customer Custom Fields
+* [getConsumerV1CustomersStates](docs/customers/README.md#getconsumerv1customersstates) - List Country States
+* [getConsumerV1CustomersId](docs/customers/README.md#getconsumerv1customersid) - Get Customer
+* [postConsumerV1Customers](docs/customers/README.md#postconsumerv1customers) - Create Customer
+* [putConsumerV1CustomersId](docs/customers/README.md#putconsumerv1customersid) - Update Customer
 
-### locations
+### [locations](docs/locations/README.md)
 
-* `getConsumerV1Locations` - List Locations
-* `getConsumerV1LocationsId` - Get Location
+* [getConsumerV1Locations](docs/locations/README.md#getconsumerv1locations) - List Locations
+* [getConsumerV1LocationsId](docs/locations/README.md#getconsumerv1locationsid) - Get Location
 
-### resourceGroups
+### [resourceGroups](docs/resourcegroups/README.md)
 
-* `getConsumerV1Resourcegroups` - List Resource Groups
-* `getConsumerV1ResourcegroupsId` - Get Resource Group
+* [getConsumerV1Resourcegroups](docs/resourcegroups/README.md#getconsumerv1resourcegroups) - List Resource Groups
+* [getConsumerV1ResourcegroupsId](docs/resourcegroups/README.md#getconsumerv1resourcegroupsid) - Get Resource Group
 
-### resources
+### [resources](docs/resources/README.md)
 
-* `getConsumerV1Resources` - List Resources
-* `getConsumerV1ResourcesId` - Get Resource
-* `getConsumerV1ResourcesIdServices` - Get Resource Linked Services
+* [getConsumerV1Resources](docs/resources/README.md#getconsumerv1resources) - List Resources
+* [getConsumerV1ResourcesId](docs/resources/README.md#getconsumerv1resourcesid) - Get Resource
+* [getConsumerV1ResourcesIdServices](docs/resources/README.md#getconsumerv1resourcesidservices) - Get Resource Linked Services
 
-### serviceGroups
+### [serviceGroups](docs/servicegroups/README.md)
 
-* `getConsumerV1Servicegroups` - List Service Groups
-* `getConsumerV1ServicegroupsId` - Get Service Group
+* [getConsumerV1Servicegroups](docs/servicegroups/README.md#getconsumerv1servicegroups) - List Service Groups
+* [getConsumerV1ServicegroupsId](docs/servicegroups/README.md#getconsumerv1servicegroupsid) - Get Service Group
 
-### services
+### [services](docs/services/README.md)
 
-* `getConsumerV1Services` - List Services
-* `getConsumerV1ServicesAllocationsId` - Get Service Allocation
-* `getConsumerV1ServicesId` - Get Service
-* `getConsumerV1ServicesIdAllocations` - List Service Allocations
-* `getConsumerV1ServicesIdResources` - List Resources for Service
+* [getConsumerV1Services](docs/services/README.md#getconsumerv1services) - List Services
+* [getConsumerV1ServicesAllocationsId](docs/services/README.md#getconsumerv1servicesallocationsid) - Get Service Allocation
+* [getConsumerV1ServicesId](docs/services/README.md#getconsumerv1servicesid) - Get Service
+* [getConsumerV1ServicesIdAllocations](docs/services/README.md#getconsumerv1servicesidallocations) - List Service Allocations
+* [getConsumerV1ServicesIdResources](docs/services/README.md#getconsumerv1servicesidresources) - List Resources for Service
 <!-- End SDK Available Operations -->
 
 ### Maturity

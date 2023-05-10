@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteAutoScalingGroupActionEnum: string
 {
     case DELETE_AUTO_SCALING_GROUP = 'DeleteAutoScalingGroup';

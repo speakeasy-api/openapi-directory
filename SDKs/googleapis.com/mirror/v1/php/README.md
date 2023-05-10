@@ -30,54 +30,108 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\MirrorAccountsInsertRequest;
+use \OpenAPI\OpenAPI\Models\Shared\Account;
+use \OpenAPI\OpenAPI\Models\Shared\AuthToken;
+use \OpenAPI\OpenAPI\Models\Shared\UserData;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new MirrorAccountsInsertRequest();
+    $request->account = new Account();
+    $request->account->authTokens = [
+        new AuthToken(),
+        new AuthToken(),
+        new AuthToken(),
+    ];
+    $request->account->features = [
+        'distinctio',
+        'quibusdam',
+        'unde',
+    ];
+    $request->account->password = 'nulla';
+    $request->account->userData = [
+        new UserData(),
+        new UserData(),
+        new UserData(),
+    ];
+    $request->accountName = 'illum';
+    $request->accountType = 'vel';
+    $request->alt = AltEnum::JSON;
+    $request->fields = 'error';
+    $request->key = 'deserunt';
+    $request->oauthToken = 'suscipit';
+    $request->prettyPrint = false;
+    $request->quotaUser = 'iure';
+    $request->userIp = 'magnam';
+    $request->userToken = 'debitis';
+
+    $response = $sdk->accounts->mirrorAccountsInsert($request);
+
+    if ($response->body !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### accounts
+### [accounts](docs/accounts/README.md)
 
-* `mirrorAccountsInsert` - Inserts a new account for a user
+* [mirrorAccountsInsert](docs/accounts/README.md#mirroraccountsinsert) - Inserts a new account for a user
 
-### contacts
+### [contacts](docs/contacts/README.md)
 
-* `mirrorContactsDelete` - Deletes a contact.
-* `mirrorContactsGet` - Gets a single contact by ID.
-* `mirrorContactsInsert` - Inserts a new contact.
-* `mirrorContactsList` - Retrieves a list of contacts for the authenticated user.
-* `mirrorContactsPatch` - Updates a contact in place. This method supports patch semantics.
-* `mirrorContactsUpdate` - Updates a contact in place.
+* [mirrorContactsDelete](docs/contacts/README.md#mirrorcontactsdelete) - Deletes a contact.
+* [mirrorContactsGet](docs/contacts/README.md#mirrorcontactsget) - Gets a single contact by ID.
+* [mirrorContactsInsert](docs/contacts/README.md#mirrorcontactsinsert) - Inserts a new contact.
+* [mirrorContactsList](docs/contacts/README.md#mirrorcontactslist) - Retrieves a list of contacts for the authenticated user.
+* [mirrorContactsPatch](docs/contacts/README.md#mirrorcontactspatch) - Updates a contact in place. This method supports patch semantics.
+* [mirrorContactsUpdate](docs/contacts/README.md#mirrorcontactsupdate) - Updates a contact in place.
 
-### locations
+### [locations](docs/locations/README.md)
 
-* `mirrorLocationsGet` - Gets a single location by ID.
-* `mirrorLocationsList` - Retrieves a list of locations for the user.
+* [mirrorLocationsGet](docs/locations/README.md#mirrorlocationsget) - Gets a single location by ID.
+* [mirrorLocationsList](docs/locations/README.md#mirrorlocationslist) - Retrieves a list of locations for the user.
 
-### settings
+### [settings](docs/settings/README.md)
 
-* `mirrorSettingsGet` - Gets a single setting by ID.
+* [mirrorSettingsGet](docs/settings/README.md#mirrorsettingsget) - Gets a single setting by ID.
 
-### subscriptions
+### [subscriptions](docs/subscriptions/README.md)
 
-* `mirrorSubscriptionsDelete` - Deletes a subscription.
-* `mirrorSubscriptionsInsert` - Creates a new subscription.
-* `mirrorSubscriptionsList` - Retrieves a list of subscriptions for the authenticated user and service.
-* `mirrorSubscriptionsUpdate` - Updates an existing subscription in place.
+* [mirrorSubscriptionsDelete](docs/subscriptions/README.md#mirrorsubscriptionsdelete) - Deletes a subscription.
+* [mirrorSubscriptionsInsert](docs/subscriptions/README.md#mirrorsubscriptionsinsert) - Creates a new subscription.
+* [mirrorSubscriptionsList](docs/subscriptions/README.md#mirrorsubscriptionslist) - Retrieves a list of subscriptions for the authenticated user and service.
+* [mirrorSubscriptionsUpdate](docs/subscriptions/README.md#mirrorsubscriptionsupdate) - Updates an existing subscription in place.
 
-### timeline
+### [timeline](docs/timeline/README.md)
 
-* `mirrorTimelineAttachmentsDelete` - Deletes an attachment from a timeline item.
-* `mirrorTimelineAttachmentsGet` - Retrieves an attachment on a timeline item by item ID and attachment ID.
-* `mirrorTimelineAttachmentsInsert` - Adds a new attachment to a timeline item.
-* `mirrorTimelineAttachmentsList` - Returns a list of attachments for a timeline item.
-* `mirrorTimelineDelete` - Deletes a timeline item.
-* `mirrorTimelineGet` - Gets a single timeline item by ID.
-* `mirrorTimelineInsert` - Inserts a new item into the timeline.
-* `mirrorTimelineList` - Retrieves a list of timeline items for the authenticated user.
-* `mirrorTimelinePatch` - Updates a timeline item in place. This method supports patch semantics.
-* `mirrorTimelineUpdate` - Updates a timeline item in place.
+* [mirrorTimelineAttachmentsDelete](docs/timeline/README.md#mirrortimelineattachmentsdelete) - Deletes an attachment from a timeline item.
+* [mirrorTimelineAttachmentsGet](docs/timeline/README.md#mirrortimelineattachmentsget) - Retrieves an attachment on a timeline item by item ID and attachment ID.
+* [mirrorTimelineAttachmentsInsert](docs/timeline/README.md#mirrortimelineattachmentsinsert) - Adds a new attachment to a timeline item.
+* [mirrorTimelineAttachmentsList](docs/timeline/README.md#mirrortimelineattachmentslist) - Returns a list of attachments for a timeline item.
+* [mirrorTimelineDelete](docs/timeline/README.md#mirrortimelinedelete) - Deletes a timeline item.
+* [mirrorTimelineGet](docs/timeline/README.md#mirrortimelineget) - Gets a single timeline item by ID.
+* [mirrorTimelineInsert](docs/timeline/README.md#mirrortimelineinsert) - Inserts a new item into the timeline.
+* [mirrorTimelineList](docs/timeline/README.md#mirrortimelinelist) - Retrieves a list of timeline items for the authenticated user.
+* [mirrorTimelinePatch](docs/timeline/README.md#mirrortimelinepatch) - Updates a timeline item in place. This method supports patch semantics.
+* [mirrorTimelineUpdate](docs/timeline/README.md#mirrortimelineupdate) - Updates a timeline item in place.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -85,4 +85,14 @@ src/Models/Shared/PaymentRequestStateResponse.php
 src/Models/Shared/NodePeer.php
 src/Models/Shared/CheckResponse.php
 src/Models/Shared/GenuineToken.php
+docs/sdk/README.md
+docs/ageusd/README.md
+docs/babelfeecontroller/README.md
+docs/babelfeenewoffercontroller/README.md
+docs/boxconsolidationcontroller/README.md
+docs/paymentportal/README.md
+docs/peerdetection/README.md
+docs/tokenburncontroller/README.md
+docs/tokenprices/README.md
+docs/tokenverification/README.md
 USAGE.md

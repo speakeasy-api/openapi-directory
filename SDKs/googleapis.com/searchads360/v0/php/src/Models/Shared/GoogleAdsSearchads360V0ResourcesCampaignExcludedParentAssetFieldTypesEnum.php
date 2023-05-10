@@ -38,4 +38,6 @@ enum GoogleAdsSearchads360V0ResourcesCampaignExcludedParentAssetFieldTypesEnum: 
     case VIDEO = 'VIDEO';
     case CALL_TO_ACTION_SELECTION = 'CALL_TO_ACTION_SELECTION';
     case AD_IMAGE = 'AD_IMAGE';
+    case BUSINESS_LOGO = 'BUSINESS_LOGO';
+    case HOTEL_PROPERTY = 'HOTEL_PROPERTY';
 }

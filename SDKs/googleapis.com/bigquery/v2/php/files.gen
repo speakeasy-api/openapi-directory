@@ -357,6 +357,8 @@ src/Models/Shared/ArimaSingleModelForecastingMetricsSeasonalPeriodsEnum.php
 src/Models/Shared/ArimaSingleModelForecastingMetrics.php
 src/Models/Shared/ArimaFittingMetrics.php
 src/Models/Shared/DataSplitResult.php
+src/Models/Shared/RemoteModelInfoRemoteServiceTypeEnum.php
+src/Models/Shared/RemoteModelInfo.php
 src/Models/Shared/StandardSqlField.php
 src/Models/Shared/StandardSqlDataTypeTypeKindEnum.php
 src/Models/Shared/StandardSqlDataType.php
@@ -422,4 +424,13 @@ src/Models/Shared/TableList.php
 src/Models/Shared/SetIamPolicyRequest.php
 src/Models/Shared/TestIamPermissionsResponse.php
 src/Models/Shared/TestIamPermissionsRequest.php
+docs/sdk/README.md
+docs/datasets/README.md
+docs/jobs/README.md
+docs/models/README.md
+docs/projects/README.md
+docs/routines/README.md
+docs/rowaccesspolicies/README.md
+docs/tabledata/README.md
+docs/tables/README.md
 USAGE.md

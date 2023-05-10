@@ -36,6 +36,7 @@ src/Models/Shared/GetNotificationConfigurationResponse.php
 src/Models/Shared/NotificationConfigurationDetailsMessageFormatEnum.php
 src/Models/Shared/NotificationConfigurationDetailsSslProtocolEnum.php
 src/Models/Shared/NotificationConfigurationDetails.php
+src/Models/Shared/NotificationEventConfigurationWrapper.php
 src/Models/Shared/NotificationEventConfigurationEventTypeEnum.php
 src/Models/Shared/NotificationEventConfigurationIncludeModeEnum.php
 src/Models/Shared/NotificationEventConfiguration.php
@@ -45,10 +46,14 @@ src/Models/Shared/GenericResponse.php
 src/Models/Shared/DeleteNotificationConfigurationRequest.php
 src/Models/Shared/GetNotificationConfigurationRequest.php
 src/Models/Shared/GetNotificationConfigurationListResponse.php
+src/Models/Shared/NotificationConfigurationDetailsWrapper.php
 src/Models/Shared/TestNotificationConfigurationResponseEventTypesEnum.php
 src/Models/Shared/TestNotificationConfigurationResponse.php
+src/Models/Shared/ExchangeMessageWrapper.php
 src/Models/Shared/ExchangeMessage.php
 src/Models/Shared/TestNotificationConfigurationRequestEventTypesEnum.php
 src/Models/Shared/TestNotificationConfigurationRequest.php
 src/Models/Shared/UpdateNotificationConfigurationRequest.php
+docs/sdk/README.md
+docs/general/README.md
 USAGE.md

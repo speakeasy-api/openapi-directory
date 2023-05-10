@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteEventSubscriptionXAmzTargetEnum: string
 {
     case AMAZON_DM_SV20160101_DELETE_EVENT_SUBSCRIPTION = 'AmazonDMSv20160101.DeleteEventSubscription';

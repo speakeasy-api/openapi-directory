@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetAutoScalingGroupRecommendationsXAmzTargetEnum: string
 {
     case COMPUTE_OPTIMIZER_SERVICE_GET_AUTO_SCALING_GROUP_RECOMMENDATIONS = 'ComputeOptimizerService.GetAutoScalingGroupRecommendations';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ImportCertificateXAmzTargetEnum: string
 {
     case AMAZON_DM_SV20160101_IMPORT_CERTIFICATE = 'AmazonDMSv20160101.ImportCertificate';

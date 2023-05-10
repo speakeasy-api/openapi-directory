@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeExecutionXAmzTargetEnum: string
 {
     case AWS_STEP_FUNCTIONS_DESCRIBE_EXECUTION = 'AWSStepFunctions.DescribeExecution';

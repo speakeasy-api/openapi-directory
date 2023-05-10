@@ -17,6 +17,11 @@ namespace OpenAPI\OpenAPI\Models\Operations;
  */
 class ExchangeCodeForTokenRequestBodyRequest
 {
+	#[\JMS\Serializer\Annotation\SerializedName('clientId')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $clientId = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('code')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -29,6 +34,7 @@ class ExchangeCodeForTokenRequestBodyRequest
     
 	public function __construct()
 	{
+		$this->clientId = null;
 		$this->code = null;
 		$this->redirectUri = null;
 	}

@@ -60,4 +60,8 @@ src/Models/Shared/ImprovementProgramJson.php
 src/Models/Shared/ImprovementProgramMultipartImageFile.php
 src/Models/Shared/ImprovementProgramMultipart.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/backgroundremoval/README.md
+docs/fetchaccountinfo/README.md
+docs/improvementprogram/README.md
 USAGE.md

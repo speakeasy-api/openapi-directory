@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutAppReplicationConfigurationXAmzTargetEnum: string
 {
     case AWS_SERVER_MIGRATION_SERVICE_V20161024_PUT_APP_REPLICATION_CONFIGURATION = 'AWSServerMigrationService_V2016_10_24.PutAppReplicationConfiguration';

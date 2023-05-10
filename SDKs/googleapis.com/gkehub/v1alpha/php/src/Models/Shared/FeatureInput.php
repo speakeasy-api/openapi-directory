@@ -28,7 +28,7 @@ class FeatureInput
     public ?CommonFleetDefaultMemberConfigSpecInput $fleetDefaultMemberConfig = null;
     
     /**
-     * GCP labels for this Feature.
+     * Labels for this Feature.
      * 
      * @var ?array<string, string> $labels
      */

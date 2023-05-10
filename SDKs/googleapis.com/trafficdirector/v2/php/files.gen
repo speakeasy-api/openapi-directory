@@ -62,4 +62,6 @@ src/Models/Shared/DoubleMatcher.php
 src/Models/Shared/DoubleRange.php
 src/Models/Shared/PathSegment.php
 src/Models/Shared/XgafvEnum.php
+docs/sdk/README.md
+docs/discovery/README.md
 USAGE.md

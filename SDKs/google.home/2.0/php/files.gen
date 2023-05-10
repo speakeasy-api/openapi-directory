@@ -127,4 +127,11 @@ src/Models/Shared/ForgetWiFiNetworkRequest.php
 src/Models/Shared/Example113.php
 src/Models/Shared/Example114.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/assistant/README.md
+docs/bluetooth/README.md
+docs/deviceinfo/README.md
+docs/devicesettings/README.md
+docs/staticfiles/README.md
+docs/wifi/README.md
 USAGE.md

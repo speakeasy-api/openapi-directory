@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeConnectionAliasPermissionsXAmzTargetEnum: string
 {
     case WORKSPACES_SERVICE_DESCRIBE_CONNECTION_ALIAS_PERMISSIONS = 'WorkspacesService.DescribeConnectionAliasPermissions';

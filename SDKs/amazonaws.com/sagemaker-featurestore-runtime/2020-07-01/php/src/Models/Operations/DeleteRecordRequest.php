@@ -12,6 +12,14 @@ use \OpenAPI\OpenAPI\Utils\SpeakeasyMetadata;
 class DeleteRecordRequest
 {
     /**
+     * The name of the deletion mode for deleting the record. By default, the deletion mode is set to <code>SoftDelete</code>.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Operations\DeleteRecordDeletionModeEnum $deletionMode
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=DeletionMode')]
+    public ?DeleteRecordDeletionModeEnum $deletionMode = null;
+    
+    /**
      * Timestamp indicating when the deletion event occurred. <code>EventTime</code> can be used to query data at a certain point in time.
      * 
      * @var string $eventTime
@@ -66,6 +74,7 @@ class DeleteRecordRequest
     
 	public function __construct()
 	{
+		$this->deletionMode = null;
 		$this->eventTime = "";
 		$this->featureGroupName = "";
 		$this->recordIdentifierValueAsString = "";

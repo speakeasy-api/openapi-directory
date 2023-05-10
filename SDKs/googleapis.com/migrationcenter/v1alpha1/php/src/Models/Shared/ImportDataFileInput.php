@@ -28,7 +28,7 @@ class ImportDataFileInput
     public ?string $displayName = null;
     
     /**
-     * The payload format.
+     * Required. The payload format.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\ImportDataFileFormatEnum $format
      */

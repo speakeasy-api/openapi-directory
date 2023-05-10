@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTRestoreSnapshotTierActionEnum: string
 {
     case RESTORE_SNAPSHOT_TIER = 'RestoreSnapshotTier';

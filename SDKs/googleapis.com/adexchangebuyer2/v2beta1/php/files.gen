@@ -335,4 +335,7 @@ src/Models/Shared/ListLosingBidsResponse.php
 src/Models/Shared/ListNonBillableWinningBidsResponse.php
 src/Models/Shared/NonBillableWinningBidStatusRowStatusEnum.php
 src/Models/Shared/NonBillableWinningBidStatusRow.php
+docs/sdk/README.md
+docs/accounts/README.md
+docs/bidders/README.md
 USAGE.md

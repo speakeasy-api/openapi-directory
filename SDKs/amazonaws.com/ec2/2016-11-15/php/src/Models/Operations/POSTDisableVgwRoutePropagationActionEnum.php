@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDisableVgwRoutePropagationActionEnum: string
 {
     case DISABLE_VGW_ROUTE_PROPAGATION = 'DisableVgwRoutePropagation';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateFlywheelXAmzTargetEnum: string
 {
     case COMPREHEND20171127_UPDATE_FLYWHEEL = 'Comprehend_20171127.UpdateFlywheel';

@@ -40,10 +40,21 @@ class RegisterResourceRequestBody
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $useServiceLinkedRole = null;
     
+    /**
+     * Whether or not the resource is a federated resource.
+     * 
+     * @var ?bool $withFederation
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('WithFederation')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $withFederation = null;
+    
 	public function __construct()
 	{
 		$this->resourceArn = "";
 		$this->roleArn = null;
 		$this->useServiceLinkedRole = null;
+		$this->withFederation = null;
 	}
 }

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateSpotDatafeedSubscriptionActionEnum: string
 {
     case CREATE_SPOT_DATAFEED_SUBSCRIPTION = 'CreateSpotDatafeedSubscription';

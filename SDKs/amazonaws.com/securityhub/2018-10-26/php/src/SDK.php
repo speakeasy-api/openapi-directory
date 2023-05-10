@@ -159,11 +159,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\AcceptInvitationRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\AcceptInvitationResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function acceptInvitation(
         \OpenAPI\OpenAPI\Models\Operations\AcceptInvitationRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\AcceptInvitationResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/master');
         
@@ -1973,11 +1976,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DisassociateFromMasterAccountRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DisassociateFromMasterAccountResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function disassociateFromMasterAccount(
         \OpenAPI\OpenAPI\Models\Operations\DisassociateFromMasterAccountRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DisassociateFromMasterAccountResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/master/disassociate');
         
@@ -2773,11 +2779,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetMasterAccountRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetMasterAccountResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getMasterAccount(
         \OpenAPI\OpenAPI\Models\Operations\GetMasterAccountRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetMasterAccountResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/master');
         

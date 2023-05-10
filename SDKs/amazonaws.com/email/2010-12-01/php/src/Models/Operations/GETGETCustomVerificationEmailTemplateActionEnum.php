@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETGETCustomVerificationEmailTemplateActionEnum: string
 {
     case GET_CUSTOM_VERIFICATION_EMAIL_TEMPLATE = 'GetCustomVerificationEmailTemplate';

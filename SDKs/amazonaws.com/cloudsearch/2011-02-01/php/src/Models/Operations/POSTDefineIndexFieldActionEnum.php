@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDefineIndexFieldActionEnum: string
 {
     case DEFINE_INDEX_FIELD = 'DefineIndexField';

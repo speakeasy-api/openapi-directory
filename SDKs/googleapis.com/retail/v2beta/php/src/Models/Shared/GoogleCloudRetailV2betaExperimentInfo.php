@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * GoogleCloudRetailV2betaExperimentInfo - Metadata for active A/B testing Experiments.
+ * GoogleCloudRetailV2betaExperimentInfo - Metadata for active A/B testing Experiment.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public
@@ -20,12 +20,12 @@ class GoogleCloudRetailV2betaExperimentInfo
     /**
      * The fully qualified resource name of the experiment that provides the serving config under test, should an active experiment exist. For example: `projects/* /locations/global/catalogs/default_catalog/experiments/experiment_id`
      * 
-     * @var ?string $experimentName
+     * @var ?string $experiment
      */
-	#[\JMS\Serializer\Annotation\SerializedName('experimentName')]
+	#[\JMS\Serializer\Annotation\SerializedName('experiment')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?string $experimentName = null;
+    public ?string $experiment = null;
     
     /**
      * Metadata for active serving config A/B tests.
@@ -39,7 +39,7 @@ class GoogleCloudRetailV2betaExperimentInfo
     
 	public function __construct()
 	{
-		$this->experimentName = null;
+		$this->experiment = null;
 		$this->servingConfigExperiment = null;
 	}
 }

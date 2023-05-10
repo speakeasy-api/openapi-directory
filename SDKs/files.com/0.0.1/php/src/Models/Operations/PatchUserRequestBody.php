@@ -148,7 +148,7 @@ class PatchUserRequestBody
     public ?bool $ftpPermission = null;
     
     /**
-     * Permission to grant on the user root.  Can be blank or `full`, `read`, `write`, `list`, or `history`.
+     * Permission to grant on the user root.  Can be blank or `full`, `read`, `write`, `list`, `read+write`, or `list+write`
      * 
      * @var ?string $grantPermission
      */

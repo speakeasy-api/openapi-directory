@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetOnPremisesInstanceXAmzTargetEnum: string
 {
     case CODE_DEPLOY20141006_GET_ON_PREMISES_INSTANCE = 'CodeDeploy_20141006.GetOnPremisesInstance';

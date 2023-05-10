@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateFileCacheXAmzTargetEnum: string
 {
     case AWS_SIMBA_API_SERVICE_V20180301_UPDATE_FILE_CACHE = 'AWSSimbaAPIService_v20180301.UpdateFileCache';

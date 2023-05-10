@@ -265,4 +265,5 @@ src/Models/Shared/UpdateEventDataStoreRequest.php
 src/Models/Shared/UpdateTrailResponse.php
 src/Models/Shared/UpdateTrailRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

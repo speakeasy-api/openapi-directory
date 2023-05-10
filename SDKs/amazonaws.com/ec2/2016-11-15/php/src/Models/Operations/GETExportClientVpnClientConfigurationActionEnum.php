@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETExportClientVpnClientConfigurationActionEnum: string
 {
     case EXPORT_CLIENT_VPN_CLIENT_CONFIGURATION = 'ExportClientVpnClientConfiguration';

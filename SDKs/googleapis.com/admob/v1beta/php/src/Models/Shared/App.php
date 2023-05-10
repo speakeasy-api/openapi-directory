@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class App
 {
     /**
-     * Output only. The approval state for the app.
+     * Output only. The approval state for the app. The field is read-only.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\AppAppApprovalStateEnum $appApprovalState
      */

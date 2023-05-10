@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * ImageState -  Image state shows the image status and the reason for that status.
+ * ImageState - Image status and the reason for that status.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

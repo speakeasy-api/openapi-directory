@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeWorkforceXAmzTargetEnum: string
 {
     case SAGE_MAKER_DESCRIBE_WORKFORCE = 'SageMaker.DescribeWorkforce';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTRemoveClientIDFromOpenIDConnectProviderActionEnum: string
 {
     case REMOVE_CLIENT_ID_FROM_OPEN_ID_CONNECT_PROVIDER = 'RemoveClientIDFromOpenIDConnectProvider';

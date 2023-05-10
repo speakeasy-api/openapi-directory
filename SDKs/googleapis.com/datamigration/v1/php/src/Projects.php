@@ -704,44 +704,6 @@ class Projects
     }
 	
     /**
-     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsMigrationJobsGetIamPolicyRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsMigrationJobsGetIamPolicySecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsMigrationJobsGetIamPolicyResponse
-     */
-	public function datamigrationProjectsLocationsMigrationJobsGetIamPolicy(
-        \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsMigrationJobsGetIamPolicyRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsMigrationJobsGetIamPolicySecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsMigrationJobsGetIamPolicyResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{resource}:getIamPolicy', \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsMigrationJobsGetIamPolicyRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsMigrationJobsGetIamPolicyRequest::class, $request, null));
-        
-        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsMigrationJobsGetIamPolicyResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->policy = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Policy', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
      * Lists migration jobs in a given project and location.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsMigrationJobsListRequest $request
@@ -940,46 +902,6 @@ class Projects
     }
 	
     /**
-     * Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsMigrationJobsSetIamPolicyRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsMigrationJobsSetIamPolicySecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsMigrationJobsSetIamPolicyResponse
-     */
-	public function datamigrationProjectsLocationsMigrationJobsSetIamPolicy(
-        \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsMigrationJobsSetIamPolicyRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsMigrationJobsSetIamPolicySecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsMigrationJobsSetIamPolicyResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{resource}:setIamPolicy', \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsMigrationJobsSetIamPolicyRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "setIamPolicyRequest", "json");
-        $options = array_merge_recursive($options, $body);
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsMigrationJobsSetIamPolicyRequest::class, $request, null));
-        
-        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsMigrationJobsSetIamPolicyResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->policy = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Policy', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
      * Start an already created migration job.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsMigrationJobsStartRequest $request
@@ -1053,46 +975,6 @@ class Projects
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsResponse
-     */
-	public function datamigrationProjectsLocationsMigrationJobsTestIamPermissions(
-        \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{resource}:testIamPermissions', \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "testIamPermissionsRequest", "json");
-        $options = array_merge_recursive($options, $body);
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsRequest::class, $request, null));
-        
-        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->testIamPermissionsResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\TestIamPermissionsResponse', 'json');
             }
         }
 
@@ -1334,6 +1216,44 @@ class Projects
     }
 	
     /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsPrivateConnectionsGetIamPolicyRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsPrivateConnectionsGetIamPolicySecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsPrivateConnectionsGetIamPolicyResponse
+     */
+	public function datamigrationProjectsLocationsPrivateConnectionsGetIamPolicy(
+        \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsPrivateConnectionsGetIamPolicyRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsPrivateConnectionsGetIamPolicySecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsPrivateConnectionsGetIamPolicyResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{resource}:getIamPolicy', \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsPrivateConnectionsGetIamPolicyRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsPrivateConnectionsGetIamPolicyRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsPrivateConnectionsGetIamPolicyResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->policy = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Policy', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Retrieves a list of private connections in a given project and location.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsPrivateConnectionsListRequest $request
@@ -1365,6 +1285,86 @@ class Projects
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->listPrivateConnectionsResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListPrivateConnectionsResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsPrivateConnectionsSetIamPolicyRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsPrivateConnectionsSetIamPolicySecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsPrivateConnectionsSetIamPolicyResponse
+     */
+	public function datamigrationProjectsLocationsPrivateConnectionsSetIamPolicy(
+        \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsPrivateConnectionsSetIamPolicyRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsPrivateConnectionsSetIamPolicySecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsPrivateConnectionsSetIamPolicyResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{resource}:setIamPolicy', \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsPrivateConnectionsSetIamPolicyRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "setIamPolicyRequest", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsPrivateConnectionsSetIamPolicyRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsPrivateConnectionsSetIamPolicyResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->policy = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Policy', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsPrivateConnectionsTestIamPermissionsRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsPrivateConnectionsTestIamPermissionsSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsPrivateConnectionsTestIamPermissionsResponse
+     */
+	public function datamigrationProjectsLocationsPrivateConnectionsTestIamPermissions(
+        \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsPrivateConnectionsTestIamPermissionsRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsPrivateConnectionsTestIamPermissionsSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsPrivateConnectionsTestIamPermissionsResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{resource}:testIamPermissions', \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsPrivateConnectionsTestIamPermissionsRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "testIamPermissionsRequest", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsPrivateConnectionsTestIamPermissionsRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\DatamigrationProjectsLocationsPrivateConnectionsTestIamPermissionsResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->testIamPermissionsResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\TestIamPermissionsResponse', 'json');
             }
         }
 

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteResourceTreeXAmzTargetEnum: string
 {
     case AMAZON_FORECAST_DELETE_RESOURCE_TREE = 'AmazonForecast.DeleteResourceTree';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateJobXAmzTargetEnum: string
 {
     case AWSIE_SNOWBALL_JOB_MANAGEMENT_SERVICE_UPDATE_JOB = 'AWSIESnowballJobManagementService.UpdateJob';

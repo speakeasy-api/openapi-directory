@@ -30,51 +30,80 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetAssetRequest;
+use \OpenAPI\OpenAPI\Models\Operations\GetAssetSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetAssetRequest();
+    $request->aliases = false;
+    $request->assetId = 'corrupti';
+
+    $requestSecurity = new GetAssetSecurity();
+    $requestSecurity->apikey = 'YOUR_API_KEY_HERE';
+
+    $response = $sdk->asset->getAsset($request, $requestSecurity);
+
+    if ($response->getAsset200ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### asset
+### [asset](docs/asset/README.md)
 
-* `getAsset` - Asset Detail
-* `getAssetContributors` - Asset Contributors
-* `listAssets` - Asset Collection
+* [getAsset](docs/asset/README.md#getasset) - Asset Detail
+* [getAssetContributors](docs/asset/README.md#getassetcontributors) - Asset Contributors
+* [listAssets](docs/asset/README.md#listassets) - Asset Collection
 
-### catalogue
+### [catalogue](docs/catalogue/README.md)
 
-* `getCatalogue` - Catalogue Detail
-* `getCatalogueAsset` - Catalogue Asset Collection
-* `getCatalogueAssetDetail` - Catalogue Asset Detail
-* `listCatalogues` - Catalogue Collection
+* [getCatalogue](docs/catalogue/README.md#getcatalogue) - Catalogue Detail
+* [getCatalogueAsset](docs/catalogue/README.md#getcatalogueasset) - Catalogue Asset Collection
+* [getCatalogueAssetDetail](docs/catalogue/README.md#getcatalogueassetdetail) - Catalogue Asset Detail
+* [listCatalogues](docs/catalogue/README.md#listcatalogues) - Catalogue Collection
 
-### channel
+### [channel](docs/channel/README.md)
 
-* `getChannel` - Channel Detail
-* `listChannels` - Channel Collection
+* [getChannel](docs/channel/README.md#getchannel) - Channel Detail
+* [listChannels](docs/channel/README.md#listchannels) - Channel Collection
 
-### contributor
+### [contributor](docs/contributor/README.md)
 
-* `getContributor` - Contributor Detail
-* `listContributor` - Contributor Collection
+* [getContributor](docs/contributor/README.md#getcontributor) - Contributor Detail
+* [listContributor](docs/contributor/README.md#listcontributor) - Contributor Collection
 
-### feature
+### [feature](docs/feature/README.md)
 
-* `getFeature` - Feature Detail
-* `listFeatureTypes` - Feature Type Collection
-* `listFeatures` - Feature Collection
+* [getFeature](docs/feature/README.md#getfeature) - Feature Detail
+* [listFeatureTypes](docs/feature/README.md#listfeaturetypes) - Feature Type Collection
+* [listFeatures](docs/feature/README.md#listfeatures) - Feature Collection
 
-### platform
+### [platform](docs/platform/README.md)
 
-* `getPlatform` - Platform Detail
-* `listPlatformRegions` - Platform Region Collection
-* `listPlatforms` - Platform Collection
+* [getPlatform](docs/platform/README.md#getplatform) - Platform Detail
+* [listPlatformRegions](docs/platform/README.md#listplatformregions) - Platform Region Collection
+* [listPlatforms](docs/platform/README.md#listplatforms) - Platform Collection
 
-### schedule
+### [schedule](docs/schedule/README.md)
 
-* `listSchedule` - Schedule Collection
+* [listSchedule](docs/schedule/README.md#listschedule) - Schedule Collection
 <!-- End SDK Available Operations -->
 
 ### Maturity

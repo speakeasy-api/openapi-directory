@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartExpenseAnalysisXAmzTargetEnum: string
 {
     case TEXTRACT_START_EXPENSE_ANALYSIS = 'Textract.StartExpenseAnalysis';

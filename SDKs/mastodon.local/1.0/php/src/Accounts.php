@@ -128,9 +128,11 @@ class Accounts
     /**
      * Test to make sure that the user token works.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetApiV1AccountsVerifyCredentialsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetApiV1AccountsVerifyCredentialsResponse
      */
 	public function getApiV1AccountsVerifyCredentials(
+        \OpenAPI\OpenAPI\Models\Operations\GetApiV1AccountsVerifyCredentialsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetApiV1AccountsVerifyCredentialsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -138,7 +140,8 @@ class Accounts
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

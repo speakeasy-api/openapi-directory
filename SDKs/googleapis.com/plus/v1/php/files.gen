@@ -126,4 +126,8 @@ src/Models/Shared/PersonPlacesLived.php
 src/Models/Shared/PersonUrls.php
 src/Models/Shared/Person.php
 src/Models/Shared/PeopleFeed.php
+docs/sdk/README.md
+docs/activities/README.md
+docs/comments/README.md
+docs/people/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeActivityTypeXAmzTargetEnum: string
 {
     case SIMPLE_WORKFLOW_SERVICE_DESCRIBE_ACTIVITY_TYPE = 'SimpleWorkflowService.DescribeActivityType';

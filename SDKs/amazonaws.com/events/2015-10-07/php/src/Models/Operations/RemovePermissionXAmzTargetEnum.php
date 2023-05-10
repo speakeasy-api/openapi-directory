@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RemovePermissionXAmzTargetEnum: string
 {
     case AWS_EVENTS_REMOVE_PERMISSION = 'AWSEvents.RemovePermission';

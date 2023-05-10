@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Shared;
 
 
+/**
+ */
 enum SalesActivityTypeEnum: string
 {
     case EMAIL = 'EMAIL';

@@ -36,4 +36,6 @@ src/Models/Operations/Oauth2TokeninfoResponse.php
 src/Models/Shared/Userinfo.php
 src/Models/Shared/AltEnum.php
 src/Models/Shared/Tokeninfo.php
+docs/sdk/README.md
+docs/userinfo/README.md
 USAGE.md

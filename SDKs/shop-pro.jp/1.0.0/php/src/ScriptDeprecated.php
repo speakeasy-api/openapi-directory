@@ -149,9 +149,11 @@ class ScriptDeprecated
     /**
      * スクリプトタグの取得
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetScriptTagsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetScriptTagsResponse
      */
 	public function getScriptTags(
+        \OpenAPI\OpenAPI\Models\Operations\GetScriptTagsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetScriptTagsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -159,7 +161,8 @@ class ScriptDeprecated
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

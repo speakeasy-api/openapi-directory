@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTGetSendQuotaActionEnum: string
 {
     case GET_SEND_QUOTA = 'GetSendQuota';

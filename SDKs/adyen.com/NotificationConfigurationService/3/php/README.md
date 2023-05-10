@@ -30,21 +30,72 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\CreateNotificationConfigurationRequest;
+use \OpenAPI\OpenAPI\Models\Shared\NotificationConfigurationDetails;
+use \OpenAPI\OpenAPI\Models\Shared\NotificationEventConfigurationWrapper;
+use \OpenAPI\OpenAPI\Models\Shared\NotificationEventConfiguration;
+use \OpenAPI\OpenAPI\Models\Shared\NotificationEventConfigurationEventTypeEnum;
+use \OpenAPI\OpenAPI\Models\Shared\NotificationEventConfigurationIncludeModeEnum;
+use \OpenAPI\OpenAPI\Models\Shared\NotificationConfigurationDetailsMessageFormatEnum;
+use \OpenAPI\OpenAPI\Models\Shared\NotificationConfigurationDetailsSslProtocolEnum;
+use \OpenAPI\OpenAPI\Models\Operations\PostCreateNotificationConfigurationSecurity;
+use \OpenAPI\OpenAPI\Models\Shared\SchemeBasicAuth;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new CreateNotificationConfigurationRequest();
+    $request->configurationDetails = new NotificationConfigurationDetails();
+    $request->configurationDetails->active = false;
+    $request->configurationDetails->apiVersion = 548814;
+    $request->configurationDetails->description = 'provident';
+    $request->configurationDetails->eventConfigs = [
+        new NotificationEventConfigurationWrapper(),
+        new NotificationEventConfigurationWrapper(),
+        new NotificationEventConfigurationWrapper(),
+    ];
+    $request->configurationDetails->messageFormat = NotificationConfigurationDetailsMessageFormatEnum::SOAP;
+    $request->configurationDetails->notificationId = 602763;
+    $request->configurationDetails->notifyPassword = 'nulla';
+    $request->configurationDetails->notifyURL = 'corrupti';
+    $request->configurationDetails->notifyUsername = 'illum';
+    $request->configurationDetails->sendActionHeader = false;
+    $request->configurationDetails->sslProtocol = NotificationConfigurationDetailsSslProtocolEnum::TL_SV12;
+
+    $requestSecurity = new PostCreateNotificationConfigurationSecurity();
+    $requestSecurity->apiKeyAuth = 'YOUR_API_KEY_HERE';
+
+    $response = $sdk->general->postCreateNotificationConfiguration($request, $requestSecurity);
+
+    if ($response->getNotificationConfigurationResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### general
+### [general](docs/general/README.md)
 
-* `postCreateNotificationConfiguration` - Subscribe to notifications
-* `postDeleteNotificationConfigurations` - Delete a notification subscription configuration
-* `postGetNotificationConfiguration` - Get a notification subscription configuration
-* `postGetNotificationConfigurationList` - Get a list of notification subscription configurations
-* `postTestNotificationConfiguration` - Test a notification configuration
-* `postUpdateNotificationConfiguration` - Update a notification subscription configuration
+* [postCreateNotificationConfiguration](docs/general/README.md#postcreatenotificationconfiguration) - Subscribe to notifications
+* [postDeleteNotificationConfigurations](docs/general/README.md#postdeletenotificationconfigurations) - Delete a notification subscription configuration
+* [postGetNotificationConfiguration](docs/general/README.md#postgetnotificationconfiguration) - Get a notification subscription configuration
+* [postGetNotificationConfigurationList](docs/general/README.md#postgetnotificationconfigurationlist) - Get a list of notification subscription configurations
+* [postTestNotificationConfiguration](docs/general/README.md#posttestnotificationconfiguration) - Test a notification configuration
+* [postUpdateNotificationConfiguration](docs/general/README.md#postupdatenotificationconfiguration) - Update a notification subscription configuration
 <!-- End SDK Available Operations -->
 
 ### Maturity

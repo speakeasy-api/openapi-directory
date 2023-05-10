@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeImageVersionXAmzTargetEnum: string
 {
     case SAGE_MAKER_DESCRIBE_IMAGE_VERSION = 'SageMaker.DescribeImageVersion';

@@ -195,4 +195,6 @@ src/Models/Shared/VehicleRegistrationSchemaIssuedToPersonPhoto.php
 src/Models/Shared/VehicleRegistrationSchemaIssuedToPerson.php
 src/Models/Shared/VehicleRegistrationSchemaIssuedTo.php
 src/Models/Shared/VehicleRegistrationSchema.php
+docs/sdk/README.md
+docs/apis/README.md
 USAGE.md

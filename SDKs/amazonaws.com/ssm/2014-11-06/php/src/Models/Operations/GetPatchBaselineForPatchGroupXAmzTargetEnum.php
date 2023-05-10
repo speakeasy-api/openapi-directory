@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetPatchBaselineForPatchGroupXAmzTargetEnum: string
 {
     case AMAZON_SSM_GET_PATCH_BASELINE_FOR_PATCH_GROUP = 'AmazonSSM.GetPatchBaselineForPatchGroup';

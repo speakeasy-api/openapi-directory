@@ -200,4 +200,5 @@ src/Models/Shared/UpdateVpcEndpointResponse.php
 src/Models/Shared/UpdateVpcEndpointDetail.php
 src/Models/Shared/UpdateVpcEndpointRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

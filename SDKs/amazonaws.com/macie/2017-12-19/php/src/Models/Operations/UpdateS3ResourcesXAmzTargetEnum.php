@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateS3ResourcesXAmzTargetEnum: string
 {
     case MACIE_SERVICE_UPDATE_S3_RESOURCES = 'MacieService.UpdateS3Resources';

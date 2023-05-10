@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteOptOutListXAmzTargetEnum: string
 {
     case PINPOINT_SMS_VOICE_V2_DELETE_OPT_OUT_LIST = 'PinpointSMSVoiceV2.DeleteOptOutList';

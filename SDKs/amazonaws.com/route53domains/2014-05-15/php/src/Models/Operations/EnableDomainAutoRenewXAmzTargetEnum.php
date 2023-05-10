@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum EnableDomainAutoRenewXAmzTargetEnum: string
 {
     case ROUTE53_DOMAINS_V20140515_ENABLE_DOMAIN_AUTO_RENEW = 'Route53Domains_v20140515.EnableDomainAutoRenew';

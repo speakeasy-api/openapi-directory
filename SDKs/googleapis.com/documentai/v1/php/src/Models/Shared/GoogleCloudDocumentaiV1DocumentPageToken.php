@@ -57,11 +57,22 @@ class GoogleCloudDocumentaiV1DocumentPageToken
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?GoogleCloudDocumentaiV1DocumentProvenance $provenance = null;
     
+    /**
+     * Font and other text style attributes.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo $styleInfo
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('styleInfo')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo $styleInfo = null;
+    
 	public function __construct()
 	{
 		$this->detectedBreak = null;
 		$this->detectedLanguages = null;
 		$this->layout = null;
 		$this->provenance = null;
+		$this->styleInfo = null;
 	}
 }

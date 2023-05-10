@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeReservedNodesOfferingsXAmzTargetEnum: string
 {
     case AMAZON_MEMORY_DB_DESCRIBE_RESERVED_NODES_OFFERINGS = 'AmazonMemoryDB.DescribeReservedNodesOfferings';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopTransformJobXAmzTargetEnum: string
 {
     case SAGE_MAKER_STOP_TRANSFORM_JOB = 'SageMaker.StopTransformJob';

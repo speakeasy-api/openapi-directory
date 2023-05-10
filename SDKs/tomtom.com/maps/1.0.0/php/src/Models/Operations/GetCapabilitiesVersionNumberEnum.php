@@ -9,7 +9,9 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-enum GetCapabilitiesVersionNumberEnum: string
+/**
+ */
+enum GetCapabilitiesVersionNumberEnum: int
 {
-    case ONE = '1';
+    case ONE = 1;
 }

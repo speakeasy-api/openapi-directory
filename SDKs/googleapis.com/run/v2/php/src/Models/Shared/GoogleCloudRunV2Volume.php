@@ -28,6 +28,16 @@ class GoogleCloudRunV2Volume
     public ?GoogleCloudRunV2CloudSqlInstance $cloudSqlInstance = null;
     
     /**
+     * Ephemeral storage which can be backed by real disks (HD, SSD), network storage or memory (i.e. tmpfs). For now only in memory (tmpfs) is supported. It is ephemeral in the sense that when the sandbox is taken down, the data is destroyed with it (it does not persist across sandbox runs).
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleCloudRunV2EmptyDirVolumeSource $emptyDir
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('emptyDir')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleCloudRunV2EmptyDirVolumeSource')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleCloudRunV2EmptyDirVolumeSource $emptyDir = null;
+    
+    /**
      * Required. Volume's name.
      * 
      * @var ?string $name
@@ -50,6 +60,7 @@ class GoogleCloudRunV2Volume
 	public function __construct()
 	{
 		$this->cloudSqlInstance = null;
+		$this->emptyDir = null;
 		$this->name = null;
 		$this->secret = null;
 	}

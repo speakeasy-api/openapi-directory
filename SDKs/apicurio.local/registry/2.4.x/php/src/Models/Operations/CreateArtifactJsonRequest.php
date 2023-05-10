@@ -27,10 +27,10 @@ class CreateArtifactJsonRequest
      * * XML Schema (`XSD`)
      * 
      * 
-     * @var \OpenAPI\OpenAPI\Models\Shared\ContentCreateRequest $contentCreateRequest
+     * @var \OpenAPI\OpenAPI\Models\Shared\ArtifactContent $artifactContent
      */
 	#[SpeakeasyMetadata('request:mediaType=application/vnd.create.extended+json')]
-    public \OpenAPI\OpenAPI\Models\Shared\ContentCreateRequest $contentCreateRequest;
+    public \OpenAPI\OpenAPI\Models\Shared\ArtifactContent $artifactContent;
     
     /**
      * A client-provided, globally unique identifier for the new artifact.
@@ -144,7 +144,7 @@ class CreateArtifactJsonRequest
     
 	public function __construct()
 	{
-		$this->contentCreateRequest = new \OpenAPI\OpenAPI\Models\Shared\ContentCreateRequest();
+		$this->artifactContent = new \OpenAPI\OpenAPI\Models\Shared\ArtifactContent();
 		$this->xRegistryArtifactId = null;
 		$this->xRegistryArtifactType = null;
 		$this->xRegistryContentHash = null;

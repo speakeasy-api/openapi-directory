@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UntagResourceXAmzTargetEnum: string
 {
     case TRANSFER_SERVICE_UNTAG_RESOURCE = 'TransferService.UntagResource';

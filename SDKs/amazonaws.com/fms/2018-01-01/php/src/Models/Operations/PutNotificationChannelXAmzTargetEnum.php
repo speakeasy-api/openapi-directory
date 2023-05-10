@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutNotificationChannelXAmzTargetEnum: string
 {
     case AWSFMS20180101_PUT_NOTIFICATION_CHANNEL = 'AWSFMS_20180101.PutNotificationChannel';

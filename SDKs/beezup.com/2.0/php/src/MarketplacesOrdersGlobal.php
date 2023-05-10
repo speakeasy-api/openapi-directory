@@ -44,11 +44,14 @@ class MarketplacesOrdersGlobal
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetMarketplaceAccountsSynchronizationRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetMarketplaceAccountsSynchronizationResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getMarketplaceAccountsSynchronization(
         \OpenAPI\OpenAPI\Models\Operations\GetMarketplaceAccountsSynchronizationRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetMarketplaceAccountsSynchronizationResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v2/user/marketplaces/orders/status');
         
@@ -90,11 +93,14 @@ class MarketplacesOrdersGlobal
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetOrderIndexRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetOrderIndexResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getOrderIndex(
         \OpenAPI\OpenAPI\Models\Operations\GetOrderIndexRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetOrderIndexResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v2/user/marketplaces/orders/');
         
@@ -135,11 +141,14 @@ class MarketplacesOrdersGlobal
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\HarvestAllRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\HarvestAllResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function harvestAll(
         \OpenAPI\OpenAPI\Models\Operations\HarvestAllRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\HarvestAllResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v2/user/marketplaces/orders/harvest');
         

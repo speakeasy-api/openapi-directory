@@ -63,6 +63,7 @@ src/Models/Operations/GetFulfillmentPolicyByNameResponse.php
 src/Models/Operations/UpdateFulfillmentPolicySecurity.php
 src/Models/Operations/UpdateFulfillmentPolicyRequest.php
 src/Models/Operations/UpdateFulfillmentPolicyResponse.php
+src/Models/Operations/GetKYCSecurity.php
 src/Models/Operations/GetKYCResponse.php
 src/Models/Operations/GetPaymentsProgramOnboardingSecurity.php
 src/Models/Operations/GetPaymentsProgramOnboardingRequest.php
@@ -87,7 +88,9 @@ src/Models/Operations/UpdatePaymentPolicyResponse.php
 src/Models/Operations/GetPaymentsProgramSecurity.php
 src/Models/Operations/GetPaymentsProgramRequest.php
 src/Models/Operations/GetPaymentsProgramResponse.php
+src/Models/Operations/GetPrivilegesSecurity.php
 src/Models/Operations/GetPrivilegesResponse.php
+src/Models/Operations/GetOptedInProgramsSecurity.php
 src/Models/Operations/GetOptedInProgramsResponse.php
 src/Models/Operations/OptInToProgramSecurity.php
 src/Models/Operations/OptInToProgramResponse.php
@@ -176,4 +179,18 @@ src/Models/Shared/SalesTax.php
 src/Models/Shared/SalesTaxes.php
 src/Models/Shared/SubscriptionResponse.php
 src/Models/Shared/Subscription.php
+docs/sdk/README.md
+docs/advertisingeligibility/README.md
+docs/custompolicy/README.md
+docs/fulfillmentpolicy/README.md
+docs/kyc/README.md
+docs/onboarding/README.md
+docs/paymentpolicy/README.md
+docs/paymentsprogram/README.md
+docs/privilege/README.md
+docs/program/README.md
+docs/ratetable/README.md
+docs/returnpolicy/README.md
+docs/salestax/README.md
+docs/subscription/README.md
 USAGE.md

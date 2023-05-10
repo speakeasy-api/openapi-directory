@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTBatchDeleteClusterSnapshotsActionEnum: string
 {
     case BATCH_DELETE_CLUSTER_SNAPSHOTS = 'BatchDeleteClusterSnapshots';

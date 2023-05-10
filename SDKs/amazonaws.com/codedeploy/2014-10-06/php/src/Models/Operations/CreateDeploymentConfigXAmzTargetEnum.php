@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateDeploymentConfigXAmzTargetEnum: string
 {
     case CODE_DEPLOY20141006_CREATE_DEPLOYMENT_CONFIG = 'CodeDeploy_20141006.CreateDeploymentConfig';

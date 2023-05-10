@@ -48,10 +48,10 @@ src/Models/Shared/ListOperationsResponse.php
 src/Models/Shared/AnalyzePackagesRequestV1.php
 src/Models/Shared/PackageDataPackageTypeEnum.php
 src/Models/Shared/PackageData.php
+src/Models/Shared/PackageVersion.php
 src/Models/Shared/Maintainer.php
 src/Models/Shared/FileLocation.php
 src/Models/Shared/LanguagePackageDependency.php
-src/Models/Shared/Binary.php
 src/Models/Shared/ListVulnerabilitiesResponseV1.php
 src/Models/Shared/OccurrenceKindEnum.php
 src/Models/Shared/Occurrence.php
@@ -86,6 +86,11 @@ src/Models/Shared/WindowsUpdate.php
 src/Models/Shared/Identity.php
 src/Models/Shared/Category.php
 src/Models/Shared/UpgradeDistribution.php
+src/Models/Shared/SBOMReferenceOccurrence.php
+src/Models/Shared/EnvelopeSignature.php
+src/Models/Shared/SbomReferenceIntotoPayload.php
+src/Models/Shared/Subject.php
+src/Models/Shared/SbomReferenceIntotoPredicate.php
 src/Models/Shared/PackageOccurrenceArchitectureEnum.php
 src/Models/Shared/PackageOccurrence.php
 src/Models/Shared/Location.php
@@ -94,10 +99,8 @@ src/Models/Shared/ImageOccurrence.php
 src/Models/Shared/Layer.php
 src/Models/Shared/Fingerprint.php
 src/Models/Shared/Envelope.php
-src/Models/Shared/EnvelopeSignature.php
 src/Models/Shared/DSSEAttestationOccurrence.php
 src/Models/Shared/InTotoStatement.php
-src/Models/Shared/Subject.php
 src/Models/Shared/SlsaProvenanceZeroTwo.php
 src/Models/Shared/GrafeasV1SlsaProvenanceZeroTwoSlsaMetadata.php
 src/Models/Shared/GrafeasV1SlsaProvenanceZeroTwoSlsaCompleteness.php
@@ -142,4 +145,6 @@ src/Models/Shared/Artifact.php
 src/Models/Shared/AttestationOccurrence.php
 src/Models/Shared/Signature.php
 src/Models/Shared/Jwt.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

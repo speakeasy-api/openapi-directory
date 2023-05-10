@@ -24,6 +24,7 @@ src/Models/Operations/GetEventResponse.php
 src/Models/Operations/GetEventsSecurity.php
 src/Models/Operations/GetEventsRequest.php
 src/Models/Operations/GetEventsResponse.php
+src/Models/Operations/GetEventsOptionsSecurity.php
 src/Models/Operations/GetEventsOptionsResponse.php
 src/Models/Shared/ErrorUnauthorized.php
 src/Models/Shared/ErrorNotFound.php
@@ -51,4 +52,5 @@ src/Models/Shared/PaginationLinks.php
 src/Models/Shared/NoContent.php
 src/Models/Shared/AuditEventTypesResp.php
 src/Models/Shared/AuditEventType.php
+docs/sdk/README.md
 USAGE.md

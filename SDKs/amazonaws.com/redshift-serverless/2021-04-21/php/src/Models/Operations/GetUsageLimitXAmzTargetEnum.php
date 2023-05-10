@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetUsageLimitXAmzTargetEnum: string
 {
     case REDSHIFT_SERVERLESS_GET_USAGE_LIMIT = 'RedshiftServerless.GetUsageLimit';

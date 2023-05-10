@@ -78,7 +78,7 @@ class Network
     public ?string $firewallPolicy = null;
     
     /**
-     * [Output Only] The gateway address for default routing out of the network, selected by GCP.
+     * [Output Only] The gateway address for default routing out of the network, selected by Google Cloud.
      * 
      * @var ?string $gatewayIPv4
      */

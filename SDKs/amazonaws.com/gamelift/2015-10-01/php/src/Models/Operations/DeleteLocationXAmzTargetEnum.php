@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteLocationXAmzTargetEnum: string
 {
     case GAME_LIFT_DELETE_LOCATION = 'GameLift.DeleteLocation';

@@ -22,4 +22,6 @@ src/Utils/Utils.php
 src/Models/Operations/GetcurrencyrateRequest.php
 src/Models/Operations/Getcurrencyrate200ApplicationJSON.php
 src/Models/Operations/GetcurrencyrateResponse.php
+docs/sdk/README.md
+docs/currencyrates/README.md
 USAGE.md

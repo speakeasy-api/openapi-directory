@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateTableXAmzTargetEnum: string
 {
     case KEYSPACES_SERVICE_UPDATE_TABLE = 'KeyspacesService.UpdateTable';

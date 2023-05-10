@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetReportGroupTrendXAmzTargetEnum: string
 {
     case CODE_BUILD20161006_GET_REPORT_GROUP_TREND = 'CodeBuild_20161006.GetReportGroupTrend';

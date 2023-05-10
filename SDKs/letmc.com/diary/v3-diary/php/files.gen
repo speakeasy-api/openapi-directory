@@ -68,6 +68,7 @@ src/Models/Shared/LinkedPropertiesModel.php
 src/Models/Shared/LinkedLandlordModel.php
 src/Models/Shared/LatestTenancyModel.php
 src/Models/Shared/LinkedTenantModel.php
+src/Models/Shared/LinkedGuestModel.php
 src/Models/Shared/DiaryAppointmentTypeModelResults.php
 src/Models/Shared/DiaryAppointmentTypeModelSystemTypeEnum.php
 src/Models/Shared/DiaryAppointmentTypeModel.php
@@ -77,4 +78,7 @@ src/Models/Shared/DiaryGuestDetails.php
 src/Models/Shared/GuestDiaryParametersResultsModel.php
 src/Models/Shared/BaseHypermediaLink.php
 src/Models/Shared/GuestDiaryParametersModel.php
+docs/sdk/README.md
+docs/companycontroller/README.md
+docs/diarycontroller/README.md
 USAGE.md

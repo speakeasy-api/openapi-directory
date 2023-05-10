@@ -118,4 +118,5 @@ src/Models/Shared/AutoScalingUpdate.php
 src/Models/Shared/ScaleOutPolicyUpdate.php
 src/Models/Shared/ScaleInPolicyUpdate.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

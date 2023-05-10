@@ -30,17 +30,37 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $response = $sdk->getInfo0Json();
+
+    if ($response->body !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getInfo0Json` - Fetch current comic and metadata.
+* [getInfo0Json](docs/sdk/README.md#getinfo0json) - Fetch current comic and metadata.
 
-* `getComicIdInfo0Json` - Fetch comics and metadata  by comic id.
+* [getComicIdInfo0Json](docs/sdk/README.md#getcomicidinfo0json) - Fetch comics and metadata  by comic id.
 
 <!-- End SDK Available Operations -->
 

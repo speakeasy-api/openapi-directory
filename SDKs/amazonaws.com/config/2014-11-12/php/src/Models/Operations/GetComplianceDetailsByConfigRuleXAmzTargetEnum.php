@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetComplianceDetailsByConfigRuleXAmzTargetEnum: string
 {
     case STARLING_DOVE_SERVICE_GET_COMPLIANCE_DETAILS_BY_CONFIG_RULE = 'StarlingDoveService.GetComplianceDetailsByConfigRule';

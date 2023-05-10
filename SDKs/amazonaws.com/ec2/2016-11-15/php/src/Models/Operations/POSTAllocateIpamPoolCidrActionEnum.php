@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTAllocateIpamPoolCidrActionEnum: string
 {
     case ALLOCATE_IPAM_POOL_CIDR = 'AllocateIpamPoolCidr';

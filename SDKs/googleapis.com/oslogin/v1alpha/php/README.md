@@ -30,21 +30,74 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\OsloginUsersGetLoginProfileRequest;
+use \OpenAPI\OpenAPI\Models\Shared\XgafvEnum;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+use \OpenAPI\OpenAPI\Models\Operations\OsloginUsersGetLoginProfileOperatingSystemTypeEnum;
+use \OpenAPI\OpenAPI\Models\Operations\OsloginUsersGetLoginProfileViewEnum;
+use \OpenAPI\OpenAPI\Models\Operations\OsloginUsersGetLoginProfileSecurity;
+use \OpenAPI\OpenAPI\Models\Operations\OsloginUsersGetLoginProfileSecurityOption1;
+use \OpenAPI\OpenAPI\Models\Operations\OsloginUsersGetLoginProfileSecurityOption2;
+use \OpenAPI\OpenAPI\Models\Operations\OsloginUsersGetLoginProfileSecurityOption3;
+use \OpenAPI\OpenAPI\Models\Operations\OsloginUsersGetLoginProfileSecurityOption4;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new OsloginUsersGetLoginProfileRequest();
+    $request->dollarXgafv = XgafvEnum::TWO;
+    $request->accessToken = 'provident';
+    $request->alt = AltEnum::PROTO;
+    $request->callback = 'quibusdam';
+    $request->fields = 'unde';
+    $request->key = 'nulla';
+    $request->name = 'Dallas Kassulke';
+    $request->oauthToken = 'suscipit';
+    $request->operatingSystemType = OsloginUsersGetLoginProfileOperatingSystemTypeEnum::LINUX;
+    $request->prettyPrint = false;
+    $request->projectId = 'magnam';
+    $request->quotaUser = 'debitis';
+    $request->systemId = 'ipsa';
+    $request->uploadType = 'delectus';
+    $request->uploadProtocol = 'tempora';
+    $request->view = OsloginUsersGetLoginProfileViewEnum::BASIC;
+
+    $requestSecurity = new OsloginUsersGetLoginProfileSecurity();
+    $requestSecurity->option1 = new OsloginUsersGetLoginProfileSecurityOption1();
+    $requestSecurity->option1->oauth2 = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+    $requestSecurity->option1->oauth2c = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+
+    $response = $sdk->users->osloginUsersGetLoginProfile($request, $requestSecurity);
+
+    if ($response->loginProfile !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### users
+### [users](docs/users/README.md)
 
-* `osloginUsersGetLoginProfile` - Retrieves the profile information used for logging in to a virtual machine on Google Compute Engine.
-* `osloginUsersImportSshPublicKey` - Adds an SSH public key and returns the profile information. Default POSIX account information is set when no username and UID exist as part of the login profile.
-* `osloginUsersSshPublicKeysCreate` - Create an SSH public key
-* `osloginUsersSshPublicKeysDelete` - Deletes an SSH public key.
-* `osloginUsersSshPublicKeysGet` - Retrieves an SSH public key.
-* `osloginUsersSshPublicKeysPatch` - Updates an SSH public key and returns the profile information. This method supports patch semantics.
+* [osloginUsersGetLoginProfile](docs/users/README.md#osloginusersgetloginprofile) - Retrieves the profile information used for logging in to a virtual machine on Google Compute Engine.
+* [osloginUsersImportSshPublicKey](docs/users/README.md#osloginusersimportsshpublickey) - Adds an SSH public key and returns the profile information. Default POSIX account information is set when no username and UID exist as part of the login profile.
+* [osloginUsersSshPublicKeysCreate](docs/users/README.md#osloginuserssshpublickeyscreate) - Create an SSH public key
+* [osloginUsersSshPublicKeysDelete](docs/users/README.md#osloginuserssshpublickeysdelete) - Deletes an SSH public key.
+* [osloginUsersSshPublicKeysGet](docs/users/README.md#osloginuserssshpublickeysget) - Retrieves an SSH public key.
+* [osloginUsersSshPublicKeysPatch](docs/users/README.md#osloginuserssshpublickeyspatch) - Updates an SSH public key and returns the profile information. This method supports patch semantics.
 <!-- End SDK Available Operations -->
 
 ### Maturity

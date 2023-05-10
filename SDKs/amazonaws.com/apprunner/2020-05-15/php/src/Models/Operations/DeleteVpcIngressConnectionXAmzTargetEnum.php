@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteVpcIngressConnectionXAmzTargetEnum: string
 {
     case APP_RUNNER_DELETE_VPC_INGRESS_CONNECTION = 'AppRunner.DeleteVpcIngressConnection';

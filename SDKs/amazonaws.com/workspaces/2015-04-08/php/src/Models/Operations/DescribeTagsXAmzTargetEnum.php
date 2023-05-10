@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeTagsXAmzTargetEnum: string
 {
     case WORKSPACES_SERVICE_DESCRIBE_TAGS = 'WorkspacesService.DescribeTags';

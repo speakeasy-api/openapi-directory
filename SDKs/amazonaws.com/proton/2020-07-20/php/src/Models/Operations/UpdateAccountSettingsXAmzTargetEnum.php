@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateAccountSettingsXAmzTargetEnum: string
 {
     case AWS_PROTON20200720_UPDATE_ACCOUNT_SETTINGS = 'AwsProton20200720.UpdateAccountSettings';

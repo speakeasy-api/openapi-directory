@@ -22,4 +22,6 @@ src/Utils/Utils.php
 src/Models/Operations/GetfullnameparsedmatchRequest.php
 src/Models/Operations/Getfullnameparsedmatch200ApplicationJSON.php
 src/Models/Operations/GetfullnameparsedmatchResponse.php
+docs/sdk/README.md
+docs/fullnameparsedsimilaritykey/README.md
 USAGE.md

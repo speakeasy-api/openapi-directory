@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateNotificationSettingsXAmzTargetEnum: string
 {
     case M_TURK_REQUESTER_SERVICE_V20170117_UPDATE_NOTIFICATION_SETTINGS = 'MTurkRequesterServiceV20170117.UpdateNotificationSettings';

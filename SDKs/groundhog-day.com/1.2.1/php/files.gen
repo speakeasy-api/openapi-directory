@@ -47,4 +47,8 @@ src/Models/Operations/PredictionsResponse.php
 src/Models/Shared/GroundhogActiveEnum.php
 src/Models/Shared/Groundhog.php
 src/Models/Shared/Prediction.php
+docs/sdk/README.md
+docs/groundhogs/README.md
+docs/info/README.md
+docs/predictions/README.md
 USAGE.md

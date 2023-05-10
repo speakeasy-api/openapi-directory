@@ -30,301 +30,345 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetV2AccountStagesJsonRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetV2AccountStagesJsonRequest();
+    $request->ids = [
+        592845,
+        715190,
+        844266,
+    ];
+    $request->includePagingCounts = false;
+    $request->limitPagingCounts = false;
+    $request->page = 602763;
+    $request->perPage = 857946;
+    $request->sortBy = 'corrupti';
+    $request->sortDirection = 'illum';
+    $request->updatedAt = [
+        'error',
+        'deserunt',
+    ];
+
+    $response = $sdk->accountStages->getV2AccountStagesJson($request);
+
+    if ($response->body !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### accountStages
+### [accountStages](docs/accountstages/README.md)
 
-* `getV2AccountStagesJson` - List account stages
-* `getV2AccountStagesIdJson` - Fetch an account stage
+* [getV2AccountStagesJson](docs/accountstages/README.md#getv2accountstagesjson) - List account stages
+* [getV2AccountStagesIdJson](docs/accountstages/README.md#getv2accountstagesidjson) - Fetch an account stage
 
-### accountTiers
+### [accountTiers](docs/accounttiers/README.md)
 
-* `getV2AccountTiersJson` - List Account Tiers
-* `getV2AccountTiersIdJson` - Fetch an account tier
+* [getV2AccountTiersJson](docs/accounttiers/README.md#getv2accounttiersjson) - List Account Tiers
+* [getV2AccountTiersIdJson](docs/accounttiers/README.md#getv2accounttiersidjson) - Fetch an account tier
 
-### accountUpsert
+### [accountUpsert](docs/accountupsert/README.md)
 
-* `postV2AccountUpsertsJson` - Upsert an account
+* [postV2AccountUpsertsJson](docs/accountupsert/README.md#postv2accountupsertsjson) - Upsert an account
 
-### accounts
+### [accounts](docs/accounts/README.md)
 
-* `deleteV2AccountsIdJson` - Delete an account
-* `getV2AccountsJson` - List accounts
-* `getV2AccountsIdJson` - Fetch an account
-* `postV2AccountsJson` - Create an account
-* `putV2AccountsIdJson` - Update an existing Account
+* [deleteV2AccountsIdJson](docs/accounts/README.md#deletev2accountsidjson) - Delete an account
+* [getV2AccountsJson](docs/accounts/README.md#getv2accountsjson) - List accounts
+* [getV2AccountsIdJson](docs/accounts/README.md#getv2accountsidjson) - Fetch an account
+* [postV2AccountsJson](docs/accounts/README.md#postv2accountsjson) - Create an account
+* [putV2AccountsIdJson](docs/accounts/README.md#putv2accountsidjson) - Update an existing Account
 
-### actionDetailsCallInstructions
+### [actionDetailsCallInstructions](docs/actiondetailscallinstructions/README.md)
 
-* `getV2ActionDetailsCallInstructionsJson` - List call instructions
-* `getV2ActionDetailsCallInstructionsIdJson` - Fetch a call instructions
+* [getV2ActionDetailsCallInstructionsJson](docs/actiondetailscallinstructions/README.md#getv2actiondetailscallinstructionsjson) - List call instructions
+* [getV2ActionDetailsCallInstructionsIdJson](docs/actiondetailscallinstructions/README.md#getv2actiondetailscallinstructionsidjson) - Fetch a call instructions
 
-### actions
+### [actions](docs/actions/README.md)
 
-* `getV2ActionsJson` - List actions
-* `getV2ActionsIdJson` - Fetch an action
+* [getV2ActionsJson](docs/actions/README.md#getv2actionsjson) - List actions
+* [getV2ActionsIdJson](docs/actions/README.md#getv2actionsidjson) - Fetch an action
 
-### activities
+### [activities](docs/activities/README.md)
 
-* `postV2ActivitiesJson` - Create an activity
+* [postV2ActivitiesJson](docs/activities/README.md#postv2activitiesjson) - Create an activity
 
-### activityHistories
+### [activityHistories](docs/activityhistories/README.md)
 
-* `getV2ActivityHistories` - List Past Activities
+* [getV2ActivityHistories](docs/activityhistories/README.md#getv2activityhistories) - List Past Activities
 
-### bulkJobs
+### [bulkJobs](docs/bulkjobs/README.md)
 
-* `getV2BulkJobs` - List bulk jobs
-* `getV2BulkJobsId` - Fetch a bulk job
-* `postV2BulkJobs` - Create a bulk job
-* `putV2BulkJobsId` - Update a bulk job
+* [getV2BulkJobs](docs/bulkjobs/README.md#getv2bulkjobs) - List bulk jobs
+* [getV2BulkJobsId](docs/bulkjobs/README.md#getv2bulkjobsid) - Fetch a bulk job
+* [postV2BulkJobs](docs/bulkjobs/README.md#postv2bulkjobs) - Create a bulk job
+* [putV2BulkJobsId](docs/bulkjobs/README.md#putv2bulkjobsid) - Update a bulk job
 
-### bulkJobsJobData
+### [bulkJobsJobData](docs/bulkjobsjobdata/README.md)
 
-* `getV2BulkJobsBulkJobsIdJobData` - List job data for a bulk job
-* `postV2BulkJobsBulkJobsIdJobData` - Create job data for a bulk job
+* [getV2BulkJobsBulkJobsIdJobData](docs/bulkjobsjobdata/README.md#getv2bulkjobsbulkjobsidjobdata) - List job data for a bulk job
+* [postV2BulkJobsBulkJobsIdJobData](docs/bulkjobsjobdata/README.md#postv2bulkjobsbulkjobsidjobdata) - Create job data for a bulk job
 
-### bulkJobsResults
+### [bulkJobsResults](docs/bulkjobsresults/README.md)
 
-* `getV2BulkJobsBulkJobsIdResults` - List job data for a completed bulk job.
+* [getV2BulkJobsBulkJobsIdResults](docs/bulkjobsresults/README.md#getv2bulkjobsbulkjobsidresults) - List job data for a completed bulk job.
 
-### crmActivities
+### [crmActivities](docs/crmactivities/README.md)
 
-* `getV2CrmActivitiesJson` - List crm activities
-* `getV2CrmActivitiesIdJson` - Fetch a crm activity
+* [getV2CrmActivitiesJson](docs/crmactivities/README.md#getv2crmactivitiesjson) - List crm activities
+* [getV2CrmActivitiesIdJson](docs/crmactivities/README.md#getv2crmactivitiesidjson) - Fetch a crm activity
 
-### crmActivityFields
+### [crmActivityFields](docs/crmactivityfields/README.md)
 
-* `getV2CrmActivityFieldsJson` - List crm activity fields
+* [getV2CrmActivityFieldsJson](docs/crmactivityfields/README.md#getv2crmactivityfieldsjson) - List crm activity fields
 
-### cadenceExports
+### [cadenceExports](docs/cadenceexports/README.md)
 
-* `getV2CadenceExportsIdJson` - Export a cadence
+* [getV2CadenceExportsIdJson](docs/cadenceexports/README.md#getv2cadenceexportsidjson) - Export a cadence
 
-### cadenceImports
+### [cadenceImports](docs/cadenceimports/README.md)
 
-* `postV2CadenceImportsJson` - Import cadences from JSON
+* [postV2CadenceImportsJson](docs/cadenceimports/README.md#postv2cadenceimportsjson) - Import cadences from JSON
 
-### cadenceMemberships
+### [cadenceMemberships](docs/cadencememberships/README.md)
 
-* `deleteV2CadenceMembershipsIdJson` - Delete a cadence membership
-* `getV2CadenceMembershipsJson` - List cadence memberships
-* `getV2CadenceMembershipsIdJson` - Fetch a cadence membership
-* `postV2CadenceMembershipsJson` - Create a cadence membership
+* [deleteV2CadenceMembershipsIdJson](docs/cadencememberships/README.md#deletev2cadencemembershipsidjson) - Delete a cadence membership
+* [getV2CadenceMembershipsJson](docs/cadencememberships/README.md#getv2cadencemembershipsjson) - List cadence memberships
+* [getV2CadenceMembershipsIdJson](docs/cadencememberships/README.md#getv2cadencemembershipsidjson) - Fetch a cadence membership
+* [postV2CadenceMembershipsJson](docs/cadencememberships/README.md#postv2cadencemembershipsjson) - Create a cadence membership
 
-### cadences
+### [cadences](docs/cadences/README.md)
 
-* `getV2CadencesJson` - List cadences
-* `getV2CadencesIdJson` - Fetch a cadence
+* [getV2CadencesJson](docs/cadences/README.md#getv2cadencesjson) - List cadences
+* [getV2CadencesIdJson](docs/cadences/README.md#getv2cadencesidjson) - Fetch a cadence
 
-### calendarEvents
+### [calendarEvents](docs/calendarevents/README.md)
 
-* `getV2CalendarEvents` - List calendar events
-* `postV2CalendarEventsUpsert` - Upsert a calendar event
+* [getV2CalendarEvents](docs/calendarevents/README.md#getv2calendarevents) - List calendar events
+* [postV2CalendarEventsUpsert](docs/calendarevents/README.md#postv2calendareventsupsert) - Upsert a calendar event
 
-### callDataRecords
+### [callDataRecords](docs/calldatarecords/README.md)
 
-* `getV2CallDataRecordsJson` - List call data records
-* `getV2CallDataRecordsIdJson` - Fetch a call data record
+* [getV2CallDataRecordsJson](docs/calldatarecords/README.md#getv2calldatarecordsjson) - List call data records
+* [getV2CallDataRecordsIdJson](docs/calldatarecords/README.md#getv2calldatarecordsidjson) - Fetch a call data record
 
-### callDispositions
+### [callDispositions](docs/calldispositions/README.md)
 
-* `getV2CallDispositionsJson` - List call dispositions
+* [getV2CallDispositionsJson](docs/calldispositions/README.md#getv2calldispositionsjson) - List call dispositions
 
-### callSentiments
+### [callSentiments](docs/callsentiments/README.md)
 
-* `getV2CallSentimentsJson` - List call sentiments
+* [getV2CallSentimentsJson](docs/callsentiments/README.md#getv2callsentimentsjson) - List call sentiments
 
-### callerIDs
+### [callerIDs](docs/callerids/README.md)
 
-* `getV2PhoneNumbersCallerIdsJson` - List caller ids
+* [getV2PhoneNumbersCallerIdsJson](docs/callerids/README.md#getv2phonenumberscalleridsjson) - List caller ids
 
-### calls
+### [calls](docs/calls/README.md)
 
-* `getV2ActivitiesCallsJson` - List calls
-* `getV2ActivitiesCallsIdJson` - Fetch a call
-* `postV2ActivitiesCallsJson` - Create a call
+* [getV2ActivitiesCallsJson](docs/calls/README.md#getv2activitiescallsjson) - List calls
+* [getV2ActivitiesCallsIdJson](docs/calls/README.md#getv2activitiescallsidjson) - Fetch a call
+* [postV2ActivitiesCallsJson](docs/calls/README.md#postv2activitiescallsjson) - Create a call
 
-### conversationsCalls
+### [conversationsCalls](docs/conversationscalls/README.md)
 
-* `postV2ConversationsCalls` - Create Conversations Call
+* [postV2ConversationsCalls](docs/conversationscalls/README.md#postv2conversationscalls) - Create Conversations Call
 
-### crmUsers
+### [crmUsers](docs/crmusers/README.md)
 
-* `getV2CrmUsersJson` - List crm users
+* [getV2CrmUsersJson](docs/crmusers/README.md#getv2crmusersjson) - List crm users
 
-### customFields
+### [customFields](docs/customfields/README.md)
 
-* `deleteV2CustomFieldsIdJson` - Delete a custom field
-* `getV2CustomFieldsJson` - List custom fields
-* `getV2CustomFieldsIdJson` - Fetch a custom field
-* `postV2CustomFieldsJson` - Create a custom field
-* `putV2CustomFieldsIdJson` - Update a custom field
+* [deleteV2CustomFieldsIdJson](docs/customfields/README.md#deletev2customfieldsidjson) - Delete a custom field
+* [getV2CustomFieldsJson](docs/customfields/README.md#getv2customfieldsjson) - List custom fields
+* [getV2CustomFieldsIdJson](docs/customfields/README.md#getv2customfieldsidjson) - Fetch a custom field
+* [postV2CustomFieldsJson](docs/customfields/README.md#postv2customfieldsjson) - Create a custom field
+* [putV2CustomFieldsIdJson](docs/customfields/README.md#putv2customfieldsidjson) - Update a custom field
 
-### emailTemplateAttachments
+### [emailTemplateAttachments](docs/emailtemplateattachments/README.md)
 
-* `getV2EmailTemplateAttachmentsJson` - List email template attachments
+* [getV2EmailTemplateAttachmentsJson](docs/emailtemplateattachments/README.md#getv2emailtemplateattachmentsjson) - List email template attachments
 
-### emailTemplates
+### [emailTemplates](docs/emailtemplates/README.md)
 
-* `getV2EmailTemplatesJson` - List email templates
-* `getV2EmailTemplatesIdJson` - Fetch an email template
+* [getV2EmailTemplatesJson](docs/emailtemplates/README.md#getv2emailtemplatesjson) - List email templates
+* [getV2EmailTemplatesIdJson](docs/emailtemplates/README.md#getv2emailtemplatesidjson) - Fetch an email template
 
-### emails
+### [emails](docs/emails/README.md)
 
-* `getV2ActivitiesEmailsJson` - List emails
-* `getV2ActivitiesEmailsIdJson` - Fetch an email
+* [getV2ActivitiesEmailsJson](docs/emails/README.md#getv2activitiesemailsjson) - List emails
+* [getV2ActivitiesEmailsIdJson](docs/emails/README.md#getv2activitiesemailsidjson) - Fetch an email
 
-### externalEmails
+### [externalEmails](docs/externalemails/README.md)
 
-* `postV2ExternalEmailsJson` - Create an External Email
+* [postV2ExternalEmailsJson](docs/externalemails/README.md#postv2externalemailsjson) - Create an External Email
 
-### groups
+### [groups](docs/groups/README.md)
 
-* `getV2GroupsJson` - List groups
-* `getV2GroupsIdJson` - Fetch a group
+* [getV2GroupsJson](docs/groups/README.md#getv2groupsjson) - List groups
+* [getV2GroupsIdJson](docs/groups/README.md#getv2groupsidjson) - Fetch a group
 
-### imports
+### [imports](docs/imports/README.md)
 
-* `deleteV2ImportsIdJson` - Delete an import
-* `getV2ImportsJson` - List imports
-* `getV2ImportsIdJson` - Fetch an import
-* `postV2ImportsJson` - Create an import
-* `putV2ImportsIdJson` - Update an import
+* [deleteV2ImportsIdJson](docs/imports/README.md#deletev2importsidjson) - Delete an import
+* [getV2ImportsJson](docs/imports/README.md#getv2importsjson) - List imports
+* [getV2ImportsIdJson](docs/imports/README.md#getv2importsidjson) - Fetch an import
+* [postV2ImportsJson](docs/imports/README.md#postv2importsjson) - Create an import
+* [putV2ImportsIdJson](docs/imports/README.md#putv2importsidjson) - Update an import
 
-### liveFeedItems
+### [liveFeedItems](docs/livefeeditems/README.md)
 
-* `postV2ThirdPartyLiveFeedItems` - Create a live feed item
+* [postV2ThirdPartyLiveFeedItems](docs/livefeeditems/README.md#postv2thirdpartylivefeeditems) - Create a live feed item
 
-### liveWebsiteTrackingParameters
+### [liveWebsiteTrackingParameters](docs/livewebsitetrackingparameters/README.md)
 
-* `postV2LiveWebsiteTrackingParametersJson` - Create an Live Website Tracking Parameter
+* [postV2LiveWebsiteTrackingParametersJson](docs/livewebsitetrackingparameters/README.md#postv2livewebsitetrackingparametersjson) - Create an Live Website Tracking Parameter
 
-### me
+### [me](docs/me/README.md)
 
-* `getV2MeJson` - Fetch current user
+* [getV2MeJson](docs/me/README.md#getv2mejson) - Fetch current user
 
-### meetingSettings
+### [meetingSettings](docs/meetingsettings/README.md)
 
-* `putV2MeetingsSettingsIdJson` - Update a meeting setting
+* [putV2MeetingsSettingsIdJson](docs/meetingsettings/README.md#putv2meetingssettingsidjson) - Update a meeting setting
 
-### meetings
+### [meetings](docs/meetings/README.md)
 
-* `getV2MeetingsJson` - List meetings
-* `putV2MeetingsIdJson` - Update a meeting
+* [getV2MeetingsJson](docs/meetings/README.md#getv2meetingsjson) - List meetings
+* [putV2MeetingsIdJson](docs/meetings/README.md#putv2meetingsidjson) - Update a meeting
 
-### meetingsSettingsSearches
+### [meetingsSettingsSearches](docs/meetingssettingssearches/README.md)
 
-* `postV2MeetingsSettingsSearchesJson` - List meeting settings
+* [postV2MeetingsSettingsSearchesJson](docs/meetingssettingssearches/README.md#postv2meetingssettingssearchesjson) - List meeting settings
 
-### mimeEmailPayloads
+### [mimeEmailPayloads](docs/mimeemailpayloads/README.md)
 
-* `getV2MimeEmailPayloadsIdJson` - Fetch the MIME content for email
+* [getV2MimeEmailPayloadsIdJson](docs/mimeemailpayloads/README.md#getv2mimeemailpayloadsidjson) - Fetch the MIME content for email
 
-### notes
+### [notes](docs/notes/README.md)
 
-* `deleteV2NotesIdJson` - Delete a note
-* `getV2NotesJson` - List notes
-* `getV2NotesIdJson` - Fetch a note
-* `postV2NotesJson` - Create a note
-* `putV2NotesIdJson` - Update a note
+* [deleteV2NotesIdJson](docs/notes/README.md#deletev2notesidjson) - Delete a note
+* [getV2NotesJson](docs/notes/README.md#getv2notesjson) - List notes
+* [getV2NotesIdJson](docs/notes/README.md#getv2notesidjson) - Fetch a note
+* [postV2NotesJson](docs/notes/README.md#postv2notesjson) - Create a note
+* [putV2NotesIdJson](docs/notes/README.md#putv2notesidjson) - Update a note
 
-### ongoingActions
+### [ongoingActions](docs/ongoingactions/README.md)
 
-* `postV2OngoingActionsJson` - Create an ongoing action
+* [postV2OngoingActionsJson](docs/ongoingactions/README.md#postv2ongoingactionsjson) - Create an ongoing action
 
-### pendingEmails
+### [pendingEmails](docs/pendingemails/README.md)
 
-* `getV2PendingEmailsJson` - Fetches a list of emails ready to be sent by an external email service. Only emails sent with an External Email Client will appear here.
-* `putV2PendingEmailsIdJson` - Updates the status of an email sent by an External Email Client
+* [getV2PendingEmailsJson](docs/pendingemails/README.md#getv2pendingemailsjson) - Fetches a list of emails ready to be sent by an external email service. Only emails sent with an External Email Client will appear here.
+* [putV2PendingEmailsIdJson](docs/pendingemails/README.md#putv2pendingemailsidjson) - Updates the status of an email sent by an External Email Client
 
-### people
+### [people](docs/people/README.md)
 
-* `deleteV2PeopleIdJson` - Delete a person
-* `getV2PeopleJson` - List people
-* `getV2PeopleIdJson` - Fetch a person
-* `postV2PeopleJson` - Create a person
-* `putV2PeopleIdJson` - Update a person
+* [deleteV2PeopleIdJson](docs/people/README.md#deletev2peopleidjson) - Delete a person
+* [getV2PeopleJson](docs/people/README.md#getv2peoplejson) - List people
+* [getV2PeopleIdJson](docs/people/README.md#getv2peopleidjson) - Fetch a person
+* [postV2PeopleJson](docs/people/README.md#postv2peoplejson) - Create a person
+* [putV2PeopleIdJson](docs/people/README.md#putv2peopleidjson) - Update a person
 
-### personStages
+### [personStages](docs/personstages/README.md)
 
-* `deleteV2PersonStagesIdJson` - Delete an person stage
-* `getV2PersonStagesJson` - List person stages
-* `getV2PersonStagesIdJson` - Fetch a person stage
-* `postV2PersonStagesJson` - Create a person stage
-* `putV2PersonStagesIdJson` - Update a person stage
+* [deleteV2PersonStagesIdJson](docs/personstages/README.md#deletev2personstagesidjson) - Delete an person stage
+* [getV2PersonStagesJson](docs/personstages/README.md#getv2personstagesjson) - List person stages
+* [getV2PersonStagesIdJson](docs/personstages/README.md#getv2personstagesidjson) - Fetch a person stage
+* [postV2PersonStagesJson](docs/personstages/README.md#postv2personstagesjson) - Create a person stage
+* [putV2PersonStagesIdJson](docs/personstages/README.md#putv2personstagesidjson) - Update a person stage
 
-### personUpsert
+### [personUpsert](docs/personupsert/README.md)
 
-* `postV2PersonUpsertsJson` - Upsert a person
+* [postV2PersonUpsertsJson](docs/personupsert/README.md#postv2personupsertsjson) - Upsert a person
 
-### phoneNumberAssignments
+### [phoneNumberAssignments](docs/phonenumberassignments/README.md)
 
-* `getV2PhoneNumberAssignmentsJson` - List phone number assignments
-* `getV2PhoneNumberAssignmentsIdJson` - Fetch a phone number assignment
+* [getV2PhoneNumberAssignmentsJson](docs/phonenumberassignments/README.md#getv2phonenumberassignmentsjson) - List phone number assignments
+* [getV2PhoneNumberAssignmentsIdJson](docs/phonenumberassignments/README.md#getv2phonenumberassignmentsidjson) - Fetch a phone number assignment
 
-### recordingSettings
+### [recordingSettings](docs/recordingsettings/README.md)
 
-* `getV2PhoneNumbersRecordingSettingsIdJson` - Fetch recording setting
+* [getV2PhoneNumbersRecordingSettingsIdJson](docs/recordingsettings/README.md#getv2phonenumbersrecordingsettingsidjson) - Fetch recording setting
 
-### savedListViews
+### [roles](docs/roles/README.md)
 
-* `deleteV2SavedListViewsIdJson` - Delete a saved list view
-* `getV2SavedListViewsJson` - List saved list views
-* `getV2SavedListViewsIdJson` - Fetch a saved list view
-* `postV2SavedListViewsJson` - Create a saved list view
-* `putV2SavedListViewsIdJson` - Update a saved list view
+* [getV2CustomRolesJson](docs/roles/README.md#getv2customrolesjson) - List custom roles
+* [getV2CustomRolesIdJson](docs/roles/README.md#getv2customrolesidjson) - Fetch a custom role
 
-### steps
+### [savedListViews](docs/savedlistviews/README.md)
 
-* `getV2StepsJson` - List steps
-* `getV2StepsIdJson` - Fetch a step
+* [deleteV2SavedListViewsIdJson](docs/savedlistviews/README.md#deletev2savedlistviewsidjson) - Delete a saved list view
+* [getV2SavedListViewsJson](docs/savedlistviews/README.md#getv2savedlistviewsjson) - List saved list views
+* [getV2SavedListViewsIdJson](docs/savedlistviews/README.md#getv2savedlistviewsidjson) - Fetch a saved list view
+* [postV2SavedListViewsJson](docs/savedlistviews/README.md#postv2savedlistviewsjson) - Create a saved list view
+* [putV2SavedListViewsIdJson](docs/savedlistviews/README.md#putv2savedlistviewsidjson) - Update a saved list view
 
-### successes
+### [steps](docs/steps/README.md)
 
-* `getV2SuccessesJson` - List successes
+* [getV2StepsJson](docs/steps/README.md#getv2stepsjson) - List steps
+* [getV2StepsIdJson](docs/steps/README.md#getv2stepsidjson) - Fetch a step
 
-### tags
+### [successes](docs/successes/README.md)
 
-* `getV2TagsJson` - List team tags
+* [getV2SuccessesJson](docs/successes/README.md#getv2successesjson) - List successes
 
-### tasks
+### [tags](docs/tags/README.md)
 
-* `getV2TasksJson` - List tasks
-* `getV2TasksIdJson` - Fetch a task
-* `postV2TasksJson` - Create a Task
-* `putV2TasksIdJson` - Update a Task
+* [getV2TagsJson](docs/tags/README.md#getv2tagsjson) - List team tags
 
-### team
+### [tasks](docs/tasks/README.md)
 
-* `getV2TeamJson` - Fetch current team
+* [getV2TasksJson](docs/tasks/README.md#getv2tasksjson) - List tasks
+* [getV2TasksIdJson](docs/tasks/README.md#getv2tasksidjson) - Fetch a task
+* [postV2TasksJson](docs/tasks/README.md#postv2tasksjson) - Create a Task
+* [putV2TasksIdJson](docs/tasks/README.md#putv2tasksidjson) - Update a Task
 
-### teamTemplateAttachments
+### [team](docs/team/README.md)
 
-* `getV2TeamTemplateAttachmentsJson` - List team template attachments
+* [getV2TeamJson](docs/team/README.md#getv2teamjson) - Fetch current team
 
-### teamTemplates
+### [teamTemplateAttachments](docs/teamtemplateattachments/README.md)
 
-* `getV2TeamTemplatesJson` - List team templates
-* `getV2TeamTemplatesIdJson` - Fetch a team template
+* [getV2TeamTemplateAttachmentsJson](docs/teamtemplateattachments/README.md#getv2teamtemplateattachmentsjson) - List team template attachments
 
-### users
+### [teamTemplates](docs/teamtemplates/README.md)
 
-* `getV2UsersJson` - List users
-* `getV2UsersIdJson` - Fetch a user
+* [getV2TeamTemplatesJson](docs/teamtemplates/README.md#getv2teamtemplatesjson) - List team templates
+* [getV2TeamTemplatesIdJson](docs/teamtemplates/README.md#getv2teamtemplatesidjson) - Fetch a team template
 
-### webhookSubscriptions
+### [users](docs/users/README.md)
 
-* `deleteV2WebhookSubscriptionsId` - Delete a webhook subscription
-* `getV2WebhookSubscriptions` - List webhook subscriptions
-* `getV2WebhookSubscriptionsId` - Fetch a webhook subscription
-* `postV2WebhookSubscriptions` - Create a webhook subscription
-* `putV2WebhookSubscriptionsId` - Update a webhook subscription
+* [getV2UsersJson](docs/users/README.md#getv2usersjson) - List users
+* [getV2UsersIdJson](docs/users/README.md#getv2usersidjson) - Fetch a user
+* [putV2UsersIdJson](docs/users/README.md#putv2usersidjson) - Update a user
+
+### [webhookSubscriptions](docs/webhooksubscriptions/README.md)
+
+* [deleteV2WebhookSubscriptionsId](docs/webhooksubscriptions/README.md#deletev2webhooksubscriptionsid) - Delete a webhook subscription
+* [getV2WebhookSubscriptions](docs/webhooksubscriptions/README.md#getv2webhooksubscriptions) - List webhook subscriptions
+* [getV2WebhookSubscriptionsId](docs/webhooksubscriptions/README.md#getv2webhooksubscriptionsid) - Fetch a webhook subscription
+* [postV2WebhookSubscriptions](docs/webhooksubscriptions/README.md#postv2webhooksubscriptions) - Create a webhook subscription
+* [putV2WebhookSubscriptionsId](docs/webhooksubscriptions/README.md#putv2webhooksubscriptionsid) - Update a webhook subscription
 <!-- End SDK Available Operations -->
 
 ### Maturity

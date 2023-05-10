@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateSecurityConfigurationXAmzTargetEnum: string
 {
     case ELASTIC_MAP_REDUCE_CREATE_SECURITY_CONFIGURATION = 'ElasticMapReduce.CreateSecurityConfiguration';

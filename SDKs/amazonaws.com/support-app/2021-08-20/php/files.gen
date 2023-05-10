@@ -58,4 +58,5 @@ src/Models/Shared/RegisterSlackWorkspaceForOrganizationResult.php
 src/Models/Shared/AccountTypeEnum.php
 src/Models/Shared/UpdateSlackChannelConfigurationResult.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

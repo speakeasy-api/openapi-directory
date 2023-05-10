@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListWebACLsXAmzTargetEnum: string
 {
     case AWSWAF_REGIONAL20161128_LIST_WEB_AC_LS = 'AWSWAF_Regional_20161128.ListWebACLs';

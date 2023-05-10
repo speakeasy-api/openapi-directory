@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTModifyCacheParameterGroupActionEnum: string
 {
     case MODIFY_CACHE_PARAMETER_GROUP = 'ModifyCacheParameterGroup';

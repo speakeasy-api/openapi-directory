@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListModelQualityJobDefinitionsXAmzTargetEnum: string
 {
     case SAGE_MAKER_LIST_MODEL_QUALITY_JOB_DEFINITIONS = 'SageMaker.ListModelQualityJobDefinitions';

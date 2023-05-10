@@ -10,8 +10,8 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 
 
 /** Tile dimensions in pixels. <em>512</em> is only available for the <em>main</em> style and <em>basic</em> or <em>labels</em> layers. */
-enum GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum: string
+enum GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum: int
 {
-    case TWO_HUNDRED_AND_FIFTY_SIX = '256';
-    case FIVE_HUNDRED_AND_TWELVE = '512';
+    case TWO_HUNDRED_AND_FIFTY_SIX = 256;
+    case FIVE_HUNDRED_AND_TWELVE = 512;
 }

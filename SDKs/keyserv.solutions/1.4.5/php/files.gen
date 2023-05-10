@@ -67,4 +67,8 @@ src/Models/Shared/FindCredentials.php
 src/Models/Shared/ProductCreateModify.php
 src/Models/Shared/ApiCredentials.php
 src/Models/Shared/SubscriptionCreateModify.php
+docs/sdk/README.md
+docs/keysapi/README.md
+docs/productsapi/README.md
+docs/subscriptionsapi/README.md
 USAGE.md

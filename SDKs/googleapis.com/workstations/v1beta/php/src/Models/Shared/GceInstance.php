@@ -18,7 +18,17 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class GceInstance
 {
     /**
-     * Size of the boot disk in GB.
+     * A list of the type and count of accelerator cards attached to the instance.
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\Accelerator> $accelerators
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('accelerators')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\Accelerator>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $accelerators = null;
+    
+    /**
+     * Size of the boot disk in GB. Defaults to 50.
      * 
      * @var ?int $bootDiskSizeGb
      */
@@ -58,7 +68,7 @@ class GceInstance
     public ?string $machineType = null;
     
     /**
-     * Number of instances to pool for faster workstation starup.
+     * Number of instances to pool for faster workstation startup.
      * 
      * @var ?int $poolSize
      */
@@ -68,7 +78,17 @@ class GceInstance
     public ?int $poolSize = null;
     
     /**
-     * Email address of the service account that will be used on VM instances used to support this config. This service account must have permission to pull the specified container image. If not set, VMs will run without a service account, in which case the image must be publicly accessible.
+     * Output only. Number of instances currently available in the pool for faster workstation startup.
+     * 
+     * @var ?int $pooledInstances
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('pooledInstances')]
+    #[\JMS\Serializer\Annotation\Type('int')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?int $pooledInstances = null;
+    
+    /**
+     * Email address of the service account used on VM instances used to support this configuration. If not set, VMs run with a Google-managed service account. This service account must have permission to pull the specified container image; otherwise, the image must be publicly accessible.
      * 
      * @var ?string $serviceAccount
      */
@@ -99,11 +119,13 @@ class GceInstance
     
 	public function __construct()
 	{
+		$this->accelerators = null;
 		$this->bootDiskSizeGb = null;
 		$this->confidentialInstanceConfig = null;
 		$this->disablePublicIpAddresses = null;
 		$this->machineType = null;
 		$this->poolSize = null;
+		$this->pooledInstances = null;
 		$this->serviceAccount = null;
 		$this->shieldedInstanceConfig = null;
 		$this->tags = null;

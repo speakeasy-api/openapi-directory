@@ -241,4 +241,5 @@ src/Models/Shared/SubscribeToEventRequest.php
 src/Models/Shared/UnsubscribeFromEventRequest.php
 src/Models/Shared/UpdateAssessmentTargetRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListApplicationStatesXAmzTargetEnum: string
 {
     case AWS_MIGRATION_HUB_LIST_APPLICATION_STATES = 'AWSMigrationHub.ListApplicationStates';

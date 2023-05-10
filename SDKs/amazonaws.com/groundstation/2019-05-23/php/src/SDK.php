@@ -694,7 +694,7 @@ class SDK
     }
 	
     /**
-     * Gets the latest configuration information for a registered agent.
+     * <note> <p> For use by AWS Ground Station Agent and shouldn't be called directly.</p> </note> <p>Gets the latest configuration information for a registered agent.</p>
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetAgentConfigurationRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetAgentConfigurationResponse
@@ -1458,7 +1458,7 @@ class SDK
     }
 	
     /**
-     * Registers a new agent with AWS Groundstation.
+     * <note> <p> For use by AWS Ground Station Agent and shouldn't be called directly.</p> </note> <p> Registers a new agent with AWS Ground Station. </p>
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\RegisterAgentRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\RegisterAgentResponse
@@ -1686,7 +1686,7 @@ class SDK
     }
 	
     /**
-     * Update the status of the agent.
+     * <note> <p> For use by AWS Ground Station Agent and shouldn't be called directly.</p> </note> <p>Update the status of the agent.</p>
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\UpdateAgentStatusRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\UpdateAgentStatusResponse

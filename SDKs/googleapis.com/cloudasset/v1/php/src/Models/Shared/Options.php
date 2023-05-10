@@ -58,6 +58,16 @@ class Options
     public ?bool $expandRoles = null;
     
     /**
+     * Optional. If true, the response includes deny policy analysis results, and you can see which access tuples are denied. Default is false.
+     * 
+     * @var ?bool $includeDenyPolicyAnalysis
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('includeDenyPolicyAnalysis')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $includeDenyPolicyAnalysis = null;
+    
+    /**
      * Optional. If true, the result will output the relevant membership relationships between groups and other groups, and between groups and principals. Default is false.
      * 
      * @var ?bool $outputGroupEdges
@@ -83,6 +93,7 @@ class Options
 		$this->expandGroups = null;
 		$this->expandResources = null;
 		$this->expandRoles = null;
+		$this->includeDenyPolicyAnalysis = null;
 		$this->outputGroupEdges = null;
 		$this->outputResourceEdges = null;
 	}

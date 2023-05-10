@@ -28,6 +28,16 @@ class SqlInstancesGetDiskShrinkConfigResponse
     public ?string $kind = null;
     
     /**
+     * Additional message to customers.
+     * 
+     * @var ?string $message
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('message')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $message = null;
+    
+    /**
      * The minimum size to which a disk can be shrunk in GigaBytes.
      * 
      * @var ?string $minimalTargetSizeGb
@@ -40,6 +50,7 @@ class SqlInstancesGetDiskShrinkConfigResponse
 	public function __construct()
 	{
 		$this->kind = null;
+		$this->message = null;
 		$this->minimalTargetSizeGb = null;
 	}
 }

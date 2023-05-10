@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateParameterGroupXAmzTargetEnum: string
 {
     case AMAZON_DAXV3_CREATE_PARAMETER_GROUP = 'AmazonDAXV3.CreateParameterGroup';

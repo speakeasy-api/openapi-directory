@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateDevicesXAmzTargetEnum: string
 {
     case SAGE_MAKER_UPDATE_DEVICES = 'SageMaker.UpdateDevices';

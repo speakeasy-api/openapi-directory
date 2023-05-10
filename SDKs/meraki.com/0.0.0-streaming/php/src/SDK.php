@@ -12,7 +12,7 @@ namespace OpenAPI\OpenAPI;
  * SDK - The Cisco Meraki Dashboard API is a modern REST API based on the OpenAPI specification.
  * 
  * 
- * > Date: 05 March, 2023
+ * > Date: 23 April, 2023
  * >
  * > [Recent Updates](https://meraki.io/whats-new/)
  * 
@@ -109,8 +109,6 @@ class SDK
 	public MalwareSettings $malwareSettings;
 	
 	public MerakiAuthUsers $merakiAuthUsers;
-	
-	public MonitoredMediaServers $monitoredMediaServers;
 	
 	public NamedTagScope $namedTagScope;
 	
@@ -547,15 +545,6 @@ class SDK
 		);
 		
 		$this->merakiAuthUsers = new MerakiAuthUsers(
-			$this->_defaultClient,
-			$this->_securityClient,
-			$this->_serverUrl,
-			$this->_language,
-			$this->_sdkVersion,
-			$this->_genVersion
-		);
-		
-		$this->monitoredMediaServers = new MonitoredMediaServers(
 			$this->_defaultClient,
 			$this->_securityClient,
 			$this->_serverUrl,

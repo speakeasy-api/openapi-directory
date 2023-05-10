@@ -37,6 +37,7 @@ src/Models/Operations/GetAssignmentsIdResponse.php
 src/Models/Operations/PostAssignmentsResponse.php
 src/Models/Operations/GetCredentialsResponse.php
 src/Models/Operations/GetScopesResponse.php
+src/Models/Operations/PostVerifySecurity.php
 src/Models/Operations/PostVerifyResponse.php
 src/Models/Operations/DeleteContributionsIdRequest.php
 src/Models/Operations/DeleteContributionsIdResponse.php
@@ -143,4 +144,15 @@ src/Models/Shared/SubscriptionSubmission.php
 src/Models/Shared/TagSubmission.php
 src/Models/Shared/TagSetSubmission.php
 src/Models/Shared/LinkedProfile.php
+docs/sdk/README.md
+docs/assignment/README.md
+docs/auth/README.md
+docs/contribution/README.md
+docs/form/README.md
+docs/info/README.md
+docs/media/README.md
+docs/notifications/README.md
+docs/subscriptions/README.md
+docs/tag/README.md
+docs/user/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetScalingPlanResourceForecastDataXAmzTargetEnum: string
 {
     case ANY_SCALE_SCALING_PLANNER_FRONTEND_SERVICE_GET_SCALING_PLAN_RESOURCE_FORECAST_DATA = 'AnyScaleScalingPlannerFrontendService.GetScalingPlanResourceForecastData';

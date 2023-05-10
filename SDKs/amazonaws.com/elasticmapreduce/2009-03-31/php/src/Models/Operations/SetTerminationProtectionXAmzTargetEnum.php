@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum SetTerminationProtectionXAmzTargetEnum: string
 {
     case ELASTIC_MAP_REDUCE_SET_TERMINATION_PROTECTION = 'ElasticMapReduce.SetTerminationProtection';

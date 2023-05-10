@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteContainerImageXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_DELETE_CONTAINER_IMAGE = 'Lightsail_20161128.DeleteContainerImage';

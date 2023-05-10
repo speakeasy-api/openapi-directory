@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListCustomRoutingPortMappingsByDestinationXAmzTargetEnum: string
 {
     case GLOBAL_ACCELERATOR_V20180706_LIST_CUSTOM_ROUTING_PORT_MAPPINGS_BY_DESTINATION = 'GlobalAccelerator_V20180706.ListCustomRoutingPortMappingsByDestination';

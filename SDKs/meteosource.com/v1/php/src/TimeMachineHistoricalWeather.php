@@ -42,7 +42,7 @@ class TimeMachineHistoricalWeather
      * 
      * ## Actual weather data for a single location and day in the past
      * 
-     * The output contains actual weather data for each day up to 8 years in the past, and long-term statistics of selected weather variables aggregated over 40 years.
+     * The output contains actual weather data for each day up to 20 years in the past, and long-term statistics of selected weather variables aggregated over 40 years.
      * 
      * ### Location specification
      * The location of the weather data must be specified. There are two ways to do this:
@@ -50,7 +50,6 @@ class TimeMachineHistoricalWeather
      * 2. **OR** specify the name of the place using the parameter `place_id`. To obtain the `place_id` for the location you want, please use endpoints `/find_places_prefix` (search by prefix) or `/find_places` (search by full name).
      * 
      * *Note: For mountains, it is usually better to specify the `place_id` rather than the `lat` and `lon`. When you use `place_id`, you are guaranteed to receive data for the precise elevation of the peak. When you specify the coordinates, the elevation can be less precise.*
-     * 
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\TimeMachineTimeMachineGetRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\TimeMachineTimeMachineGetSecurity $security

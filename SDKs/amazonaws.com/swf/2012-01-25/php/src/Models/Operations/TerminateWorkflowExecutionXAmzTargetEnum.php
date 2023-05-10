@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum TerminateWorkflowExecutionXAmzTargetEnum: string
 {
     case SIMPLE_WORKFLOW_SERVICE_TERMINATE_WORKFLOW_EXECUTION = 'SimpleWorkflowService.TerminateWorkflowExecution';

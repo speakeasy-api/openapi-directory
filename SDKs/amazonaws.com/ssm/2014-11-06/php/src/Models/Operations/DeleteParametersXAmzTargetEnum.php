@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteParametersXAmzTargetEnum: string
 {
     case AMAZON_SSM_DELETE_PARAMETERS = 'AmazonSSM.DeleteParameters';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETGETNetworkInsightsAccessScopeContentActionEnum: string
 {
     case GET_NETWORK_INSIGHTS_ACCESS_SCOPE_CONTENT = 'GetNetworkInsightsAccessScopeContent';

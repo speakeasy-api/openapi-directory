@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDescribeDomainEndpointOptionsActionEnum: string
 {
     case DESCRIBE_DOMAIN_ENDPOINT_OPTIONS = 'DescribeDomainEndpointOptions';

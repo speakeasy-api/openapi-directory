@@ -126,6 +126,15 @@ class AchTransfer
     public AchTransferCurrencyEnum $currency;
     
     /**
+     * The transfer effective date in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+     * 
+     * @var \DateTime $effectiveDate
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('effective_date')]
+    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d', '', '|Y-m-d'>")]
+    public \DateTime $effectiveDate;
+    
+    /**
      * The identifier of the External Account the transfer was made to, if any.
      * 
      * @var string $externalAccountId
@@ -182,11 +191,11 @@ class AchTransfer
     /**
      * If the receiving bank accepts the transfer but notifies that future transfers should use different details, this will contain those details.
      * 
-     * @var \OpenAPI\OpenAPI\Models\Shared\ACHTransferACHNotificationOfChange $notificationOfChange
+     * @var array<\OpenAPI\OpenAPI\Models\Shared\ACHTransferACHNotificationOfChange> $notificationsOfChange
      */
-	#[\JMS\Serializer\Annotation\SerializedName('notification_of_change')]
-    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\ACHTransferACHNotificationOfChange')]
-    public ACHTransferACHNotificationOfChange $notificationOfChange;
+	#[\JMS\Serializer\Annotation\SerializedName('notifications_of_change')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\ACHTransferACHNotificationOfChange>')]
+    public array $notificationsOfChange;
     
     /**
      * If your transfer is returned, this will contain details of the return.
@@ -243,15 +252,6 @@ class AchTransfer
     public ACHTransferACHTransferSubmission $submission;
     
     /**
-     * If the transfer was created from a template, this will be the template's ID.
-     * 
-     * @var string $templateId
-     */
-	#[\JMS\Serializer\Annotation\SerializedName('template_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
-    public string $templateId;
-    
-    /**
      * The ID for the transaction funding the transfer.
      * 
      * @var string $transactionId
@@ -283,20 +283,20 @@ class AchTransfer
 		$this->companyName = "";
 		$this->createdAt = new \DateTime();
 		$this->currency = \OpenAPI\OpenAPI\Models\Shared\AchTransferCurrencyEnum::CAD;
+		$this->effectiveDate = new \DateTime();
 		$this->externalAccountId = "";
 		$this->funding = \OpenAPI\OpenAPI\Models\Shared\AchTransferFundingEnum::CHECKING;
 		$this->id = "";
 		$this->individualId = "";
 		$this->individualName = "";
 		$this->network = \OpenAPI\OpenAPI\Models\Shared\AchTransferNetworkEnum::ACH;
-		$this->notificationOfChange = new \OpenAPI\OpenAPI\Models\Shared\ACHTransferACHNotificationOfChange();
+		$this->notificationsOfChange = [];
 		$this->return = new \OpenAPI\OpenAPI\Models\Shared\ACHTransferACHTransferReturn();
 		$this->routingNumber = "";
 		$this->standardEntryClassCode = \OpenAPI\OpenAPI\Models\Shared\AchTransferStandardEntryClassCodeEnum::CORPORATE_CREDIT_OR_DEBIT;
 		$this->statementDescriptor = "";
 		$this->status = \OpenAPI\OpenAPI\Models\Shared\AchTransferStatusEnum::PENDING_APPROVAL;
 		$this->submission = new \OpenAPI\OpenAPI\Models\Shared\ACHTransferACHTransferSubmission();
-		$this->templateId = "";
 		$this->transactionId = "";
 		$this->type = \OpenAPI\OpenAPI\Models\Shared\AchTransferTypeEnum::ACH_TRANSFER;
 	}

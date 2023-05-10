@@ -59,4 +59,6 @@ src/Models/Shared/StoredValueBalanceMergeRequest.php
 src/Models/Shared/StoredValueVoidResponseResultCodeEnum.php
 src/Models/Shared/StoredValueVoidResponse.php
 src/Models/Shared/StoredValueVoidRequest.php
+docs/sdk/README.md
+docs/general/README.md
 USAGE.md

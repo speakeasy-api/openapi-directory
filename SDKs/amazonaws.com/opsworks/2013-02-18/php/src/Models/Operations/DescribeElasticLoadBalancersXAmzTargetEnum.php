@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeElasticLoadBalancersXAmzTargetEnum: string
 {
     case OPS_WORKS20130218_DESCRIBE_ELASTIC_LOAD_BALANCERS = 'OpsWorks_20130218.DescribeElasticLoadBalancers';

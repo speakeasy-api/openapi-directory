@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * GoogleCloudDocumentaiV1TrainProcessorVersionRequest - Request message for the create processor version method.
+ * GoogleCloudDocumentaiV1TrainProcessorVersionRequest - Request message for the TrainProcessorVersion method.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public
@@ -38,7 +38,7 @@ class GoogleCloudDocumentaiV1TrainProcessorVersionRequest
     public ?GoogleCloudDocumentaiV1DocumentSchema $documentSchema = null;
     
     /**
-     * The input data used to train a new `ProcessorVersion`.
+     * The input data used to train a new ProcessorVersion.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleCloudDocumentaiV1TrainProcessorVersionRequestInputData $inputData
      */

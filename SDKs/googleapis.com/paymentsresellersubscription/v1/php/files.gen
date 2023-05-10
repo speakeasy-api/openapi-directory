@@ -88,4 +88,6 @@ src/Models/Shared/GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionRes
 src/Models/Shared/GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionRequest.php
 src/Models/Shared/GoogleCloudPaymentsResellerSubscriptionV1Extension.php
 src/Models/Shared/GoogleCloudPaymentsResellerSubscriptionV1UndoCancelSubscriptionResponse.php
+docs/sdk/README.md
+docs/partners/README.md
 USAGE.md

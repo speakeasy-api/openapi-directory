@@ -30,63 +30,89 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\DeleteProjectUsernameProjectBuildCacheRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new DeleteProjectUsernameProjectBuildCacheRequest();
+    $request->project = 'corrupti';
+    $request->username = 'Larue_Rau85';
+
+    $response = $sdk->deleteProjectUsernameProjectBuildCache($request);
+
+    if ($response->deleteProjectUsernameProjectBuildCache200ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `deleteProjectUsernameProjectBuildCache` - Clears the cache for a project.
+* [deleteProjectUsernameProjectBuildCache](docs/sdk/README.md#deleteprojectusernameprojectbuildcache) - Clears the cache for a project.
 
-* `deleteProjectUsernameProjectCheckoutKeyFingerprint` - Delete a checkout key.
+* [deleteProjectUsernameProjectCheckoutKeyFingerprint](docs/sdk/README.md#deleteprojectusernameprojectcheckoutkeyfingerprint) - Delete a checkout key.
 
-* `deleteProjectUsernameProjectEnvvarName` - Deletes the environment variable named ':name'
+* [deleteProjectUsernameProjectEnvvarName](docs/sdk/README.md#deleteprojectusernameprojectenvvarname) - Deletes the environment variable named ':name'
 
-* `getMe` - Provides information about the signed in user.
+* [getMe](docs/sdk/README.md#getme) - Provides information about the signed in user.
 
-* `getProjectUsernameProject` - Build summary for each of the last 30 builds for a single git repo.
+* [getProjectUsernameProject](docs/sdk/README.md#getprojectusernameproject) - Build summary for each of the last 30 builds for a single git repo.
 
-* `getProjectUsernameProjectCheckoutKey` - Lists checkout keys.
+* [getProjectUsernameProjectCheckoutKey](docs/sdk/README.md#getprojectusernameprojectcheckoutkey) - Lists checkout keys.
 
-* `getProjectUsernameProjectCheckoutKeyFingerprint` - Get a checkout key.
+* [getProjectUsernameProjectCheckoutKeyFingerprint](docs/sdk/README.md#getprojectusernameprojectcheckoutkeyfingerprint) - Get a checkout key.
 
-* `getProjectUsernameProjectEnvvar` - Lists the environment variables for :project
+* [getProjectUsernameProjectEnvvar](docs/sdk/README.md#getprojectusernameprojectenvvar) - Lists the environment variables for :project
 
-* `getProjectUsernameProjectEnvvarName` - Gets the hidden value of environment variable :name
+* [getProjectUsernameProjectEnvvarName](docs/sdk/README.md#getprojectusernameprojectenvvarname) - Gets the hidden value of environment variable :name
 
-* `getProjectUsernameProjectBuildNum` - Full details for a single build. The response includes all of the fields from the build summary.
+* [getProjectUsernameProjectBuildNum](docs/sdk/README.md#getprojectusernameprojectbuildnum) - Full details for a single build. The response includes all of the fields from the build summary.
 This is also the payload for the [notification webhooks](/docs/configuration/#notify), in which case this object is the value to a key named 'payload'.
 
-* `getProjectUsernameProjectBuildNumArtifacts` - List the artifacts produced by a given build.
+* [getProjectUsernameProjectBuildNumArtifacts](docs/sdk/README.md#getprojectusernameprojectbuildnumartifacts) - List the artifacts produced by a given build.
 
-* `getProjectUsernameProjectBuildNumTests` - Provides test metadata for a build
+* [getProjectUsernameProjectBuildNumTests](docs/sdk/README.md#getprojectusernameprojectbuildnumtests) - Provides test metadata for a build
 Note: [Learn how to set up your builds to collect test metadata](https://circleci.com/docs/test-metadata/)
 
-* `getProjects` - List of all the projects you're following on CircleCI, with build information organized by branch.
+* [getProjects](docs/sdk/README.md#getprojects) - List of all the projects you're following on CircleCI, with build information organized by branch.
 
-* `getRecentBuilds` - Build summary for each of the last 30 recent builds, ordered by build_num.
+* [getRecentBuilds](docs/sdk/README.md#getrecentbuilds) - Build summary for each of the last 30 recent builds, ordered by build_num.
 
-* `postProjectUsernameProject` - Triggers a new build, returns a summary of the build.
+* [postProjectUsernameProject](docs/sdk/README.md#postprojectusernameproject) - Triggers a new build, returns a summary of the build.
 
-* `postProjectUsernameProjectCheckoutKey` - Creates a new checkout key.
+* [postProjectUsernameProjectCheckoutKey](docs/sdk/README.md#postprojectusernameprojectcheckoutkey) - Creates a new checkout key.
 Only usable with a user API token.
 
-* `postProjectUsernameProjectEnvvar` - Creates a new environment variable
+* [postProjectUsernameProjectEnvvar](docs/sdk/README.md#postprojectusernameprojectenvvar) - Creates a new environment variable
 
-* `postProjectUsernameProjectSshKey` - Create an ssh key used to access external systems that require SSH key-based authentication
+* [postProjectUsernameProjectSshKey](docs/sdk/README.md#postprojectusernameprojectsshkey) - Create an ssh key used to access external systems that require SSH key-based authentication
 
-* `postProjectUsernameProjectTreeBranch` - Triggers a new build, returns a summary of the build.
+* [postProjectUsernameProjectTreeBranch](docs/sdk/README.md#postprojectusernameprojecttreebranch) - Triggers a new build, returns a summary of the build.
 Optional build parameters can be set using an experimental API.
 
 Note: For more about build parameters, read about [using parameterized builds](https://circleci.com/docs/parameterized-builds/)
 
-* `postProjectUsernameProjectBuildNumCancel` - Cancels the build, returns a summary of the build.
+* [postProjectUsernameProjectBuildNumCancel](docs/sdk/README.md#postprojectusernameprojectbuildnumcancel) - Cancels the build, returns a summary of the build.
 
-* `postProjectUsernameProjectBuildNumRetry` - Retries the build, returns a summary of the new build.
+* [postProjectUsernameProjectBuildNumRetry](docs/sdk/README.md#postprojectusernameprojectbuildnumretry) - Retries the build, returns a summary of the new build.
 
-* `postUserHerokuKey` - Adds your Heroku API key to CircleCI, takes apikey as form param name.
+* [postUserHerokuKey](docs/sdk/README.md#postuserherokukey) - Adds your Heroku API key to CircleCI, takes apikey as form param name.
 
 <!-- End SDK Available Operations -->
 

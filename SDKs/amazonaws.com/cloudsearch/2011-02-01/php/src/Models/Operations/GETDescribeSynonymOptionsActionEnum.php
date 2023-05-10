@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDescribeSynonymOptionsActionEnum: string
 {
     case DESCRIBE_SYNONYM_OPTIONS = 'DescribeSynonymOptions';

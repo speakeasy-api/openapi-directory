@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateProfileXAmzTargetEnum: string
 {
     case TRANSFER_SERVICE_UPDATE_PROFILE = 'TransferService.UpdateProfile';

@@ -28,7 +28,7 @@ class GoogleAppsCardV1Section
     public ?bool $collapsible = null;
     
     /**
-     * Text that appears at the top of a section. Supports [simple HTML formatted text](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
+     * Text that appears at the top of a section. Supports simple HTML formatted text. For more information about formatting text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
      * 
      * @var ?string $header
      */

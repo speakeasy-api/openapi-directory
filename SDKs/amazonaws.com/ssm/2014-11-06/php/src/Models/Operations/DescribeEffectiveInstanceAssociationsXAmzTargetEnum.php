@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeEffectiveInstanceAssociationsXAmzTargetEnum: string
 {
     case AMAZON_SSM_DESCRIBE_EFFECTIVE_INSTANCE_ASSOCIATIONS = 'AmazonSSM.DescribeEffectiveInstanceAssociations';

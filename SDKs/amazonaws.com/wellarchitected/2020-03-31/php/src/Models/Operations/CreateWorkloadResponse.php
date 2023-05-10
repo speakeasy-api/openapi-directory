@@ -61,6 +61,14 @@ class CreateWorkloadResponse
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
     /**
+     * ResourceNotFoundException
+     * 
+     * @var mixed $resourceNotFoundException
+     */
+	
+    public mixed $resourceNotFoundException = null;
+    
+    /**
      * ThrottlingException
      * 
      * @var mixed $throttlingException
@@ -86,6 +94,7 @@ class CreateWorkloadResponse
 		$this->serviceQuotaExceededException = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
+		$this->resourceNotFoundException = null;
 		$this->throttlingException = null;
 		$this->validationException = null;
 	}

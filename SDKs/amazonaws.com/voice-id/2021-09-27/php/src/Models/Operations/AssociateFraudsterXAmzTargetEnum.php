@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AssociateFraudsterXAmzTargetEnum: string
 {
     case VOICE_ID_ASSOCIATE_FRAUDSTER = 'VoiceID.AssociateFraudster';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeInstanceAssociationsStatusXAmzTargetEnum: string
 {
     case AMAZON_SSM_DESCRIBE_INSTANCE_ASSOCIATIONS_STATUS = 'AmazonSSM.DescribeInstanceAssociationsStatus';

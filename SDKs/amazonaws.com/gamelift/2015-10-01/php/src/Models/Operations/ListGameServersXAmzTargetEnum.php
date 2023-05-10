@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListGameServersXAmzTargetEnum: string
 {
     case GAME_LIFT_LIST_GAME_SERVERS = 'GameLift.ListGameServers';

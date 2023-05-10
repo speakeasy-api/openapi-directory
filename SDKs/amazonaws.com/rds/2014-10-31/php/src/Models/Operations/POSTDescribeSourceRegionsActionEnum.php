@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeSourceRegionsActionEnum: string
 {
     case DESCRIBE_SOURCE_REGIONS = 'DescribeSourceRegions';

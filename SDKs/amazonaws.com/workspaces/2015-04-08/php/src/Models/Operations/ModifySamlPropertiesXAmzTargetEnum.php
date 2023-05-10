@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ModifySamlPropertiesXAmzTargetEnum: string
 {
     case WORKSPACES_SERVICE_MODIFY_SAML_PROPERTIES = 'WorkspacesService.ModifySamlProperties';

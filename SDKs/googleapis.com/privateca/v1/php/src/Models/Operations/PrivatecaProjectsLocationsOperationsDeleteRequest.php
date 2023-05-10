@@ -52,6 +52,14 @@ class PrivatecaProjectsLocationsOperationsDeleteRequest
     public ?string $fields = null;
     
     /**
+     * Optional. This field allows this ca to be deleted even if it's being depended on by another resource. However, doing so may result in unintended and unrecoverable effects on any dependent resource(s) since the CA will no longer be able to issue certificates.
+     * 
+     * @var ?bool $ignoreDependentResources
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=ignoreDependentResources')]
+    public ?bool $ignoreDependentResources = null;
+    
+    /**
      * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
      * 
      * @var ?string $key
@@ -130,6 +138,7 @@ class PrivatecaProjectsLocationsOperationsDeleteRequest
 		$this->alt = null;
 		$this->callback = null;
 		$this->fields = null;
+		$this->ignoreDependentResources = null;
 		$this->key = null;
 		$this->name = "";
 		$this->oauthToken = null;

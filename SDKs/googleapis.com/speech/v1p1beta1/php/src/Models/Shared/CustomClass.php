@@ -38,6 +38,26 @@ class CustomClass
     public ?array $items = null;
     
     /**
+     * Output only. The [KMS key name](https://cloud.google.com/kms/docs/resource-hierarchy#keys) with which the content of the ClassItem is encrypted. The expected format is `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
+     * 
+     * @var ?string $kmsKeyName
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('kmsKeyName')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $kmsKeyName = null;
+    
+    /**
+     * Output only. The [KMS key version name](https://cloud.google.com/kms/docs/resource-hierarchy#key_versions) with which content of the ClassItem is encrypted. The expected format is `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}/cryptoKeyVersions/{crypto_key_version}`.
+     * 
+     * @var ?string $kmsKeyVersionName
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('kmsKeyVersionName')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $kmsKeyVersionName = null;
+    
+    /**
      * The resource name of the custom class.
      * 
      * @var ?string $name
@@ -51,6 +71,8 @@ class CustomClass
 	{
 		$this->customClassId = null;
 		$this->items = null;
+		$this->kmsKeyName = null;
+		$this->kmsKeyVersionName = null;
 		$this->name = null;
 	}
 }

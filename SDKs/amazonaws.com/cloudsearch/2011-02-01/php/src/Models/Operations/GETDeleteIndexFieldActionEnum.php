@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteIndexFieldActionEnum: string
 {
     case DELETE_INDEX_FIELD = 'DeleteIndexField';

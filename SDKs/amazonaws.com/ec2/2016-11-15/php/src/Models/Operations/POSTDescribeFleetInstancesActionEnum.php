@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeFleetInstancesActionEnum: string
 {
     case DESCRIBE_FLEET_INSTANCES = 'DescribeFleetInstances';

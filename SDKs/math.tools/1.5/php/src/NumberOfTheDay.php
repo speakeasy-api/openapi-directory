@@ -40,9 +40,11 @@ class NumberOfTheDay
     /**
      * Get the number of the day for current day
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetNumbersNodSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetNumbersNodResponse
      */
 	public function getNumbersNod(
+        \OpenAPI\OpenAPI\Models\Operations\GetNumbersNodSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetNumbersNodResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -50,7 +52,8 @@ class NumberOfTheDay
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeStorageVirtualMachinesXAmzTargetEnum: string
 {
     case AWS_SIMBA_API_SERVICE_V20180301_DESCRIBE_STORAGE_VIRTUAL_MACHINES = 'AWSSimbaAPIService_v20180301.DescribeStorageVirtualMachines';

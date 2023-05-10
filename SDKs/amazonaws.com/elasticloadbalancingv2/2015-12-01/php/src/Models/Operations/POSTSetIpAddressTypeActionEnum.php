@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTSetIpAddressTypeActionEnum: string
 {
     case SET_IP_ADDRESS_TYPE = 'SetIpAddressType';

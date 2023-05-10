@@ -1021,6 +1021,158 @@ class SDK
     }
 	
     /**
+     * Create a service instance.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\CreateServiceInstanceRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\CreateServiceInstanceResponse
+     */
+	public function createServiceInstance(
+        \OpenAPI\OpenAPI\Models\Operations\CreateServiceInstanceRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\CreateServiceInstanceResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=AwsProton20200720.CreateServiceInstance');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "createServiceInstanceInput", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\CreateServiceInstanceResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->createServiceInstanceOutput = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\CreateServiceInstanceOutput', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 480) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->validationException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 481) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->accessDeniedException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 482) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->throttlingException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 483) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->conflictException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 484) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->resourceNotFoundException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 485) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->internalServerException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Create the Proton Ops configuration file.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\CreateServiceSyncConfigRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\CreateServiceSyncConfigResponse
+     */
+	public function createServiceSyncConfig(
+        \OpenAPI\OpenAPI\Models\Operations\CreateServiceSyncConfigRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\CreateServiceSyncConfigResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=AwsProton20200720.CreateServiceSyncConfig');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "createServiceSyncConfigInput", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\CreateServiceSyncConfigResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->createServiceSyncConfigOutput = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\CreateServiceSyncConfigOutput', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 480) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->serviceQuotaExceededException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 481) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->validationException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 482) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->accessDeniedException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 483) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->throttlingException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 484) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->conflictException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 485) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->internalServerException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Create a service template. The administrator creates a service template to define standardized infrastructure and an optional CI/CD service pipeline. Developers, in turn, select the service template from Proton. If the selected service template includes a service pipeline definition, they provide a link to their source code repository. Proton then deploys and manages the infrastructure defined by the selected service template. For more information, see <a href="https://docs.aws.amazon.com/proton/latest/userguide/ag-templates.html">Proton templates</a> in the <i>Proton User Guide</i>.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\CreateServiceTemplateRequest $request
@@ -1744,6 +1896,82 @@ class SDK
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->deleteServiceOutput = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\DeleteServiceOutput', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 480) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->validationException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 481) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->accessDeniedException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 482) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->throttlingException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 483) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->conflictException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 484) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->resourceNotFoundException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 485) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->internalServerException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Delete the Proton Ops file.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\DeleteServiceSyncConfigRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\DeleteServiceSyncConfigResponse
+     */
+	public function deleteServiceSyncConfig(
+        \OpenAPI\OpenAPI\Models\Operations\DeleteServiceSyncConfigRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\DeleteServiceSyncConfigResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=AwsProton20200720.DeleteServiceSyncConfig');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "deleteServiceSyncConfigInput", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\DeleteServiceSyncConfigResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->deleteServiceSyncConfigOutput = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\DeleteServiceSyncConfigOutput', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 480) {
@@ -2575,7 +2803,7 @@ class SDK
     }
 	
     /**
-     * <p>Get counts of Proton resources.</p> <p>For infrastructure-provisioning resources (environments, services, service instances, pipelines), the action returns staleness counts. A resource is stale when it's behind the recommended version of the Proton template that it uses and it needs an update to become current.</p> <p>The action returns staleness counts (counts of resources that are up-to-date, behind a template major version, or behind a template minor version), the total number of resources, and the number of resources that are in a failed state, grouped by resource type. Components, environments, and service templates are exceptions—see the <code>components</code>, <code>environments</code>, and <code>serviceTemplates</code> field descriptions.</p> <p>For context, the action also returns the total number of each type of Proton template in the Amazon Web Services account.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/proton/latest/userguide/monitoring-dashboard.html">Proton dashboard</a> in the <i>Proton User Guide</i>.</p>
+     * <p>Get counts of Proton resources.</p> <p>For infrastructure-provisioning resources (environments, services, service instances, pipelines), the action returns staleness counts. A resource is stale when it's behind the recommended version of the Proton template that it uses and it needs an update to become current.</p> <p>The action returns staleness counts (counts of resources that are up-to-date, behind a template major version, or behind a template minor version), the total number of resources, and the number of resources that are in a failed state, grouped by resource type. Components, environments, and service templates return less information - see the <code>components</code>, <code>environments</code>, and <code>serviceTemplates</code> field descriptions.</p> <p>For context, the action also returns the total number of each type of Proton template in the Amazon Web Services account.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/proton/latest/userguide/monitoring-dashboard.html">Proton dashboard</a> in the <i>Proton User Guide</i>.</p>
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetResourcesSummaryRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetResourcesSummaryResponse
@@ -2742,6 +2970,216 @@ class SDK
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->getServiceInstanceOutput = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\GetServiceInstanceOutput', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 480) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->validationException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 481) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->accessDeniedException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 482) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->throttlingException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 483) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->resourceNotFoundException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 484) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->internalServerException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Get the status of the synced service instance.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetServiceInstanceSyncStatusRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\GetServiceInstanceSyncStatusResponse
+     */
+	public function getServiceInstanceSyncStatus(
+        \OpenAPI\OpenAPI\Models\Operations\GetServiceInstanceSyncStatusRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\GetServiceInstanceSyncStatusResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=AwsProton20200720.GetServiceInstanceSyncStatus');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "getServiceInstanceSyncStatusInput", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GetServiceInstanceSyncStatusResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->getServiceInstanceSyncStatusOutput = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\GetServiceInstanceSyncStatusOutput', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 480) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->validationException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 481) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->accessDeniedException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 482) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->throttlingException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 483) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->resourceNotFoundException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 484) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->internalServerException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Get detailed data for the service sync blocker summary.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetServiceSyncBlockerSummaryRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\GetServiceSyncBlockerSummaryResponse
+     */
+	public function getServiceSyncBlockerSummary(
+        \OpenAPI\OpenAPI\Models\Operations\GetServiceSyncBlockerSummaryRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\GetServiceSyncBlockerSummaryResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=AwsProton20200720.GetServiceSyncBlockerSummary');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "getServiceSyncBlockerSummaryInput", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GetServiceSyncBlockerSummaryResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->getServiceSyncBlockerSummaryOutput = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\GetServiceSyncBlockerSummaryOutput', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 480) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->validationException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 481) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->accessDeniedException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 482) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->throttlingException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 483) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->resourceNotFoundException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 484) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->internalServerException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Get detailed information for the service sync configuration.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetServiceSyncConfigRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\GetServiceSyncConfigResponse
+     */
+	public function getServiceSyncConfig(
+        \OpenAPI\OpenAPI\Models\Operations\GetServiceSyncConfigRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\GetServiceSyncConfigResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=AwsProton20200720.GetServiceSyncConfig');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "getServiceSyncConfigInput", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GetServiceSyncConfigResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->getServiceSyncConfigOutput = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\GetServiceSyncConfigOutput', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 480) {
@@ -5400,6 +5838,158 @@ class SDK
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->updateServicePipelineOutput = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\UpdateServicePipelineOutput', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 480) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->validationException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 481) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->accessDeniedException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 482) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->throttlingException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 483) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->conflictException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 484) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->resourceNotFoundException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 485) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->internalServerException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Update the service sync blocker by resolving it.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\UpdateServiceSyncBlockerRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\UpdateServiceSyncBlockerResponse
+     */
+	public function updateServiceSyncBlocker(
+        \OpenAPI\OpenAPI\Models\Operations\UpdateServiceSyncBlockerRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\UpdateServiceSyncBlockerResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=AwsProton20200720.UpdateServiceSyncBlocker');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "updateServiceSyncBlockerInput", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\UpdateServiceSyncBlockerResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->updateServiceSyncBlockerOutput = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\UpdateServiceSyncBlockerOutput', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 480) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->validationException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 481) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->accessDeniedException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 482) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->throttlingException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 483) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->conflictException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 484) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->resourceNotFoundException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 485) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->internalServerException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Update the Proton Ops config file.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\UpdateServiceSyncConfigRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\UpdateServiceSyncConfigResponse
+     */
+	public function updateServiceSyncConfig(
+        \OpenAPI\OpenAPI\Models\Operations\UpdateServiceSyncConfigRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\UpdateServiceSyncConfigResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=AwsProton20200720.UpdateServiceSyncConfig');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "updateServiceSyncConfigInput", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\UpdateServiceSyncConfigResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->updateServiceSyncConfigOutput = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\UpdateServiceSyncConfigOutput', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 480) {

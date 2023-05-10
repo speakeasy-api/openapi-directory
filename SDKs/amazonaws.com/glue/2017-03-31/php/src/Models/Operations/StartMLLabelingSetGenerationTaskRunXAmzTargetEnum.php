@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartMLLabelingSetGenerationTaskRunXAmzTargetEnum: string
 {
     case AWS_GLUE_START_ML_LABELING_SET_GENERATION_TASK_RUN = 'AWSGlue.StartMLLabelingSetGenerationTaskRun';

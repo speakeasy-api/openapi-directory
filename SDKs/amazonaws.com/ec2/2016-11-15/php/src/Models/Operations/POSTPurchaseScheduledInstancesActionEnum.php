@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTPurchaseScheduledInstancesActionEnum: string
 {
     case PURCHASE_SCHEDULED_INSTANCES = 'PurchaseScheduledInstances';

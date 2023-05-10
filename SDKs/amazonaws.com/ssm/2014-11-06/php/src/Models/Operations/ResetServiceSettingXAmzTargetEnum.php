@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ResetServiceSettingXAmzTargetEnum: string
 {
     case AMAZON_SSM_RESET_SERVICE_SETTING = 'AmazonSSM.ResetServiceSetting';

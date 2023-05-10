@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDisableAvailabilityZonesForLoadBalancerActionEnum: string
 {
     case DISABLE_AVAILABILITY_ZONES_FOR_LOAD_BALANCER = 'DisableAvailabilityZonesForLoadBalancer';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTAuthorizeEndpointAccessActionEnum: string
 {
     case AUTHORIZE_ENDPOINT_ACCESS = 'AuthorizeEndpointAccess';

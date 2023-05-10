@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteDBProxyActionEnum: string
 {
     case DELETE_DB_PROXY = 'DeleteDBProxy';

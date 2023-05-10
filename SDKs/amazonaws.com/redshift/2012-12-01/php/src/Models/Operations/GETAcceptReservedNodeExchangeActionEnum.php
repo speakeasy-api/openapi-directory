@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETAcceptReservedNodeExchangeActionEnum: string
 {
     case ACCEPT_RESERVED_NODE_EXCHANGE = 'AcceptReservedNodeExchange';

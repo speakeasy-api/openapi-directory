@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UntagResourceXAmzTargetEnum: string
 {
     case IO_T_SECURED_TUNNELING_UNTAG_RESOURCE = 'IoTSecuredTunneling.UntagResource';

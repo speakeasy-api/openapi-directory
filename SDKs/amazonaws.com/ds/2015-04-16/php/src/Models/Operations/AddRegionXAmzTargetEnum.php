@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AddRegionXAmzTargetEnum: string
 {
     case DIRECTORY_SERVICE20150416_ADD_REGION = 'DirectoryService_20150416.AddRegion';

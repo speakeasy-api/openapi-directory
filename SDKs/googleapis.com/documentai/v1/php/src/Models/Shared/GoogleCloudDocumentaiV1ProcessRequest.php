@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * GoogleCloudDocumentaiV1ProcessRequest - Request message for the process document method.
+ * GoogleCloudDocumentaiV1ProcessRequest - Request message for the ProcessDocument method.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public
@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class GoogleCloudDocumentaiV1ProcessRequest
 {
     /**
-     * Specifies which fields to include in ProcessResponse's document. Only supports top level document and pages field so it must be in the form of `{document_field_name}` or `pages.{page_field_name}`.
+     * Specifies which fields to include in the ProcessResponse.document output. Only supports top-level document and pages field, so it must be in the form of `{document_field_name}` or `pages.{page_field_name}`.
      * 
      * @var ?string $fieldMask
      */

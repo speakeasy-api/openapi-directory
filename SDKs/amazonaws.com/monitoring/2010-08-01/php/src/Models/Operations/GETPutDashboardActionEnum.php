@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETPutDashboardActionEnum: string
 {
     case PUT_DASHBOARD = 'PutDashboard';

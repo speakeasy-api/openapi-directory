@@ -30,17 +30,44 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\DfsSlatesByDateRequest;
+use \OpenAPI\OpenAPI\Models\Operations\DfsSlatesByDateFormatEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new DfsSlatesByDateRequest();
+    $request->date = 'corrupti';
+    $request->format = DfsSlatesByDateFormatEnum::XML;
+
+    $response = $sdk->dfsSlatesByDate($request);
+
+    if ($response->dfsSlates !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `dfsSlatesByDate` - Dfs Slates By Date
-* `projectedPlayerGameStatsByDate` - Projected Player Game Stats by Date
-* `projectedPlayerGameStatsByPlayer` - Projected Player Game Stats by Player
+* [dfsSlatesByDate](docs/sdk/README.md#dfsslatesbydate) - Dfs Slates By Date
+* [projectedPlayerGameStatsByDate](docs/sdk/README.md#projectedplayergamestatsbydate) - Projected Player Game Stats by Date
+* [projectedPlayerGameStatsByPlayer](docs/sdk/README.md#projectedplayergamestatsbyplayer) - Projected Player Game Stats by Player
 <!-- End SDK Available Operations -->
 
 ### Maturity

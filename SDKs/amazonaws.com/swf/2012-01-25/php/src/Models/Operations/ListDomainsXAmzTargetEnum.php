@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListDomainsXAmzTargetEnum: string
 {
     case SIMPLE_WORKFLOW_SERVICE_LIST_DOMAINS = 'SimpleWorkflowService.ListDomains';

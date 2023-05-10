@@ -21,7 +21,7 @@ class ListImagePackagesRequestBody
     public string $imageBuildVersionArn;
     
     /**
-     * The maxiumum number of results to return from the ListImagePackages request.
+     * The maximum items to return in a request.
      * 
      * @var ?int $maxResults
      */

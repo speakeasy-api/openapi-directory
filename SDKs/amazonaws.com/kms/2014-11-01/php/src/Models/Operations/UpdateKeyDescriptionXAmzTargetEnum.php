@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateKeyDescriptionXAmzTargetEnum: string
 {
     case TRENT_SERVICE_UPDATE_KEY_DESCRIPTION = 'TrentService.UpdateKeyDescription';

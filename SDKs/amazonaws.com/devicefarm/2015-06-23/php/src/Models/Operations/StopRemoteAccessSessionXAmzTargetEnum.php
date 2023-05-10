@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopRemoteAccessSessionXAmzTargetEnum: string
 {
     case DEVICE_FARM20150623_STOP_REMOTE_ACCESS_SESSION = 'DeviceFarm_20150623.StopRemoteAccessSession';

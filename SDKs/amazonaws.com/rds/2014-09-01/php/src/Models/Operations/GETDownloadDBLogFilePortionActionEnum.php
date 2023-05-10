@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDownloadDBLogFilePortionActionEnum: string
 {
     case DOWNLOAD_DB_LOG_FILE_PORTION = 'DownloadDBLogFilePortion';

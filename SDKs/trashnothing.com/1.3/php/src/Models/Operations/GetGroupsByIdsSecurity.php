@@ -12,18 +12,10 @@ use \OpenAPI\OpenAPI\Utils\SpeakeasyMetadata;
 class GetGroupsByIdsSecurity
 {
 	#[SpeakeasyMetadata('security:scheme=true,type=apiKey,subtype=query,name=api_key')]
-    public ?string $apiKey = null;
-    
-	#[SpeakeasyMetadata('security:scheme=true,type=oauth2,name=Authorization')]
-    public ?string $oauth2Code = null;
-    
-	#[SpeakeasyMetadata('security:scheme=true,type=oauth2,name=Authorization')]
-    public ?string $oauth2Implicit = null;
+    public string $apiKey;
     
 	public function __construct()
 	{
-		$this->apiKey = null;
-		$this->oauth2Code = null;
-		$this->oauth2Implicit = null;
+		$this->apiKey = "";
 	}
 }

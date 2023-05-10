@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-enum UpdateAnExternalAccountDefaultApplicationJSON5StatusEnum: string
+enum UpdateAnExternalAccountDefaultApplicationJSON5StatusEnum: int
 {
-    case FOUR_HUNDRED_AND_THREE = '403';
+    case FOUR_HUNDRED_AND_THREE = 403;
 }

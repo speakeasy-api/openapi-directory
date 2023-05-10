@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListTagsForResourceXAmzTargetEnum: string
 {
     case GLOBAL_ACCELERATOR_V20180706_LIST_TAGS_FOR_RESOURCE = 'GlobalAccelerator_V20180706.ListTagsForResource';

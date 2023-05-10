@@ -259,4 +259,5 @@ src/Models/Shared/UpdateStemmingOptionsRequest.php
 src/Models/Shared/UpdateStopwordOptionsRequest.php
 src/Models/Shared/UpdateSynonymOptionsRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

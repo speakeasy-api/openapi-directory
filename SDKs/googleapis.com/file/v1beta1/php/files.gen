@@ -88,8 +88,11 @@ src/Models/Shared/NetworkConfig.php
 src/Models/Shared/NetworkConfigInput.php
 src/Models/Shared/FileShareConfig.php
 src/Models/Shared/NfsExportOptionsAccessModeEnum.php
+src/Models/Shared/NfsExportOptionsSecurityFlavorsEnum.php
 src/Models/Shared/NfsExportOptionsSquashModeEnum.php
 src/Models/Shared/NfsExportOptions.php
+src/Models/Shared/DirectoryServicesConfig.php
+src/Models/Shared/ManagedActiveDirectoryConfig.php
 src/Models/Shared/ListInstancesResponse.php
 src/Models/Shared/RestoreInstanceRequest.php
 src/Models/Shared/RevertInstanceRequest.php
@@ -104,4 +107,6 @@ src/Models/Shared/ListSnapshotsResponse.php
 src/Models/Shared/ListLocationsResponse.php
 src/Models/Shared/Location.php
 src/Models/Shared/ListOperationsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

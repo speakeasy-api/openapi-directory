@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteProjectVersionXAmzTargetEnum: string
 {
     case REKOGNITION_SERVICE_DELETE_PROJECT_VERSION = 'RekognitionService.DeleteProjectVersion';

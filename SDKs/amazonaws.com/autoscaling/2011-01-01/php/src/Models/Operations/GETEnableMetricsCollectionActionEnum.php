@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETEnableMetricsCollectionActionEnum: string
 {
     case ENABLE_METRICS_COLLECTION = 'EnableMetricsCollection';

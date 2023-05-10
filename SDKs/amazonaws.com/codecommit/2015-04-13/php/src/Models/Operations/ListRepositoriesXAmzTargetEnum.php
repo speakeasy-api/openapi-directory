@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListRepositoriesXAmzTargetEnum: string
 {
     case CODE_COMMIT20150413_LIST_REPOSITORIES = 'CodeCommit_20150413.ListRepositories';

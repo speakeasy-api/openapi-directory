@@ -9,9 +9,9 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI;
 
 /**
- * SDK - This documentation shows how to use Greip API, By highlighting the API methods, options and some other features that allow you to get the most of this API.
+ * SDK - This documentation shows how to use Greip API, by highlighting the API methods, options and some other features that allow you to get the most of this API.
  * 
- * https://docs.greip.io - Find more info here
+ * https://docs.greip.io - API Documentaion
  * 
  * @package OpenAPI\OpenAPI
  * @access public
@@ -73,6 +73,74 @@ class SDK
 			$this->_serverUrl = $this::SERVERS[0];
 		}
 	}
+	
+    /**
+     * ASNLookup endpoint: This method helps you lookup any AS Number. It returns the type, organisation details, routes, etc.
+     * 
+     * https://docs.greip.io/methods/asn-lookup-api - Greip API - ASN Lookup
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetASNLookupRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\GetASNLookupResponse
+     * @see https://docs.greip.io/methods/asn-lookup-api
+     */
+	public function getASNLookup(
+        \OpenAPI\OpenAPI\Models\Operations\GetASNLookupRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\GetASNLookupResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/ASNLookup');
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\GetASNLookupRequest::class, $request, null));
+        
+        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GetASNLookupResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200 or $httpResponse->getStatusCode() === 400 or $httpResponse->getStatusCode() === 500) {
+        }
+
+        return $response;
+    }
+	
+    /**
+     * This method helps you validate any BIN/IIN number and retrieve the full details related to the bank, brand, type, scheme, country, etc.
+     * 
+     * https://docs.greip.io/methods/bin-iin-validation - Greip API - BIN/IIN Validation
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetBINLookupRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\GetBINLookupResponse
+     * @see https://docs.greip.io/methods/bin-iin-validation
+     */
+	public function getBINLookup(
+        \OpenAPI\OpenAPI\Models\Operations\GetBINLookupRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\GetBINLookupResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/BINLookup');
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\GetBINLookupRequest::class, $request, null));
+        
+        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GetBINLookupResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200 or $httpResponse->getStatusCode() === 400 or $httpResponse->getStatusCode() === 500) {
+        }
+
+        return $response;
+    }
 	
     /**
      * BulkLookup endpoint: Returns the geolocation data of multiple IP Addresses.
@@ -143,7 +211,7 @@ class SDK
     }
 	
     /**
-     * GeoIP endpoint: Returns the geolocation data of the visitor.
+     * Returns the geolocation data of the visitor.
      * 
      * https://docs.greip.io/methods/retrieve-visitor-info - Greip API - Retrieve Visitor Info
      * 
@@ -177,7 +245,7 @@ class SDK
     }
 	
     /**
-     * IPLookup endpoint: Returns the geolocation data of a specific IP Address.
+     * Returns the geolocation data of a specific IP Address.
      * 
      * https://docs.greip.io/methods/lookup-ip-address - Greip API - Lookup IP Address
      * 
@@ -234,6 +302,74 @@ class SDK
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $response = new \OpenAPI\OpenAPI\Models\Operations\GetBadWordsResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200 or $httpResponse->getStatusCode() === 400 or $httpResponse->getStatusCode() === 500) {
+        }
+
+        return $response;
+    }
+	
+    /**
+     * This method can be used as an extra-layer of your system for validating email addresses.
+     * 
+     * https://docs.greip.io/methods/data-validation/email-validation - Greip API - Email Validation
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetValidateEmailRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\GetValidateEmailResponse
+     * @see https://docs.greip.io/methods/data-validation/email-validation
+     */
+	public function getValidateEmail(
+        \OpenAPI\OpenAPI\Models\Operations\GetValidateEmailRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\GetValidateEmailResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/validateEmail');
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\GetValidateEmailRequest::class, $request, null));
+        
+        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GetValidateEmailResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200 or $httpResponse->getStatusCode() === 400 or $httpResponse->getStatusCode() === 500) {
+        }
+
+        return $response;
+    }
+	
+    /**
+     * This method can be used as an extra-layer of your system for validating phone numbers.
+     * 
+     * https://docs.greip.io/methods/data-validation/phone-number-validation - Greip API - Phone Number Validation
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetValidatePhoneRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\GetValidatePhoneResponse
+     * @see https://docs.greip.io/methods/data-validation/phone-number-validation
+     */
+	public function getValidatePhone(
+        \OpenAPI\OpenAPI\Models\Operations\GetValidatePhoneRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\GetValidatePhoneResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/validatePhone');
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\GetValidatePhoneRequest::class, $request, null));
+        
+        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GetValidatePhoneResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;

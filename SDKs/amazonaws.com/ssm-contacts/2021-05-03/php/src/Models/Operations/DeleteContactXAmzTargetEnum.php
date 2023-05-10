@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteContactXAmzTargetEnum: string
 {
     case SSM_CONTACTS_DELETE_CONTACT = 'SSMContacts.DeleteContact';

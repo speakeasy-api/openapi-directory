@@ -282,14 +282,21 @@ class GetLegalSearchRequest
     public ?array $caseDispositions = null;
     
     /**
-     * Select one or more case_doc_category_id to filter by corresponding CASE_DOCUMENT_CATEGORY:
      * 
-     *         - 1 - Conciliation Agreements
-     *         - 2 - Complaint, Responses, Designation of Counsel and Extensions of Timee
+     * Select one or more case_doc_category_id to filter by corresponding CASE_DOCUMENT_CATEGORY:
+     *         - 1 - Conciliation and Settlement Agreements
+     *         - 2 - Complaint, Responses, Designation of Counsel and Extensions of Time
      *         - 3 - General Counsel Reports, Briefs, Notifications and Responses
      *         - 4 - Certifications
-     *         - 5 - Civil Penalties, Disgorgements and Other Payments
-     *         - 6 - Statements of Reasons 
+     *         - 5 - Civil Penalties, Disgorgements, Other Payments and Letters of Compliance
+     *         - 6 - Statement of Reasons 
+     *         - 1001 - ADR Settlement Agreements
+     *         - 1002 - Complaint, Responses, Designation of Counsel and Extensions of Time
+     *         - 1003 - ADR Memoranda, Notifications and Responses
+     *         - 1004 - Certifications
+     *         - 1005 - Civil Penalties, Disgorgements, Other Payments and Letters of Compliance
+     *         - 1006 - Statement of Reasons 
+     *         - 2001 - Administrative Fine Case
      * 
      * 
      * @var ?array<\OpenAPI\OpenAPI\Models\Operations\GetLegalSearchCaseDocCategoryIDEnum> $caseDocCategoryId
@@ -412,10 +419,10 @@ class GetLegalSearchRequest
      * Type of MUR : current or archived
      * 
      * 
-     * @var ?string $murType
+     * @var ?\OpenAPI\OpenAPI\Models\Operations\GetLegalSearchMurTypeEnum $murType
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=mur_type')]
-    public ?string $murType = null;
+    public ?GetLegalSearchMurTypeEnum $murType = null;
     
     /**
      * 
@@ -438,19 +445,14 @@ class GetLegalSearchRequest
     public ?string $sort = null;
     
     /**
-     * Legal Document type to refine search by
      * 
-     *     - statutes
-     *     - regulations
-     *     - advisory_opinions
-     *     - murs
-     *     - admin_fines
+     * Choose a legal document type
      * 
      * 
-     * @var ?string $type
+     * @var ?\OpenAPI\OpenAPI\Models\Operations\GetLegalSearchTypeEnum $type
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=type')]
-    public ?string $type = null;
+    public ?GetLegalSearchTypeEnum $type = null;
     
 	public function __construct()
 	{

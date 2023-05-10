@@ -104,4 +104,5 @@ src/Models/Shared/ListDetectorsResponse.php
 src/Models/Shared/DetectorSummary.php
 src/Models/Shared/DetectorStateSummary.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

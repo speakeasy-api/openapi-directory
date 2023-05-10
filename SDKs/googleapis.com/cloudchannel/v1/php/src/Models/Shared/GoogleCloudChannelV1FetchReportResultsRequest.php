@@ -37,9 +37,20 @@ class GoogleCloudChannelV1FetchReportResultsRequest
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $pageToken = null;
     
+    /**
+     * Optional. List of keys specifying which report partitions to return. If empty, returns all partitions.
+     * 
+     * @var ?array<string> $partitionKeys
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('partitionKeys')]
+    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $partitionKeys = null;
+    
 	public function __construct()
 	{
 		$this->pageSize = null;
 		$this->pageToken = null;
+		$this->partitionKeys = null;
 	}
 }

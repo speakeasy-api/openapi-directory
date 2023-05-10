@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateStudioLifecycleConfigXAmzTargetEnum: string
 {
     case SAGE_MAKER_CREATE_STUDIO_LIFECYCLE_CONFIG = 'SageMaker.CreateStudioLifecycleConfig';

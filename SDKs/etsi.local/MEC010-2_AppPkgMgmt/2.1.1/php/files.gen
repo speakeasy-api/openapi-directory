@@ -92,4 +92,7 @@ src/Models/Shared/TimeStamp.php
 src/Models/Shared/AppPkgNotificationTypeEnum.php
 src/Models/Shared/AppPkgNotificationLinks.php
 src/Models/Callbacks/SubscriptionsPOSTNotificationPOSTResponse.php
+docs/sdk/README.md
+docs/apppkgm/README.md
+docs/apppkgmnotifications/README.md
 USAGE.md

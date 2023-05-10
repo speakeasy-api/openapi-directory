@@ -33,7 +33,18 @@ class RedshiftDataParameters
     
 	#[\JMS\Serializer\Annotation\SerializedName('Sql')]
     #[\JMS\Serializer\Annotation\Type('string')]
-    public string $sql;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $sql = null;
+    
+    /**
+     * A list of SQLs.
+     * 
+     * @var ?array<string> $sqls
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('Sqls')]
+    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $sqls = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('StatementName')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -50,7 +61,8 @@ class RedshiftDataParameters
 		$this->database = "";
 		$this->dbUser = null;
 		$this->secretManagerArn = null;
-		$this->sql = "";
+		$this->sql = null;
+		$this->sqls = null;
 		$this->statementName = null;
 		$this->withEvent = null;
 	}

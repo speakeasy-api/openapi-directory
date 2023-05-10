@@ -38,6 +38,16 @@ class DocumentationRule
     public ?string $description = null;
     
     /**
+     * String of comma or space separated case-sensitive words for which method/field name replacement will be disabled by go/api-docgen.
+     * 
+     * @var ?string $disableReplacementWords
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('disableReplacementWords')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $disableReplacementWords = null;
+    
+    /**
      * The selector is a comma-separated list of patterns for any element such as a method, a field, an enum value. Each pattern is a qualified name of the element which may end in "*", indicating a wildcard. Wildcards are only allowed at the end and for a whole component of the qualified name, i.e. "foo.*" is ok, but not "foo.b*" or "foo.*.bar". A wildcard will match one or more components. To specify a default for all applicable elements, the whole pattern "*" is used.
      * 
      * @var ?string $selector
@@ -51,6 +61,7 @@ class DocumentationRule
 	{
 		$this->deprecationDescription = null;
 		$this->description = null;
+		$this->disableReplacementWords = null;
 		$this->selector = null;
 	}
 }

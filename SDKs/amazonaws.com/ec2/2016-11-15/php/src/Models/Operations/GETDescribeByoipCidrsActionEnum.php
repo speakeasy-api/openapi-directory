@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDescribeByoipCidrsActionEnum: string
 {
     case DESCRIBE_BYOIP_CIDRS = 'DescribeByoipCidrs';

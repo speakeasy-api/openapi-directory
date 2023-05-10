@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum TagResourceXAmzTargetEnum: string
 {
     case NETWORK_FIREWALL20201112_TAG_RESOURCE = 'NetworkFirewall_20201112.TagResource';

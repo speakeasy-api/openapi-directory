@@ -37,4 +37,6 @@ src/Models/Shared/GoogleSearchIdeahubV1betaTopic.php
 src/Models/Shared/GoogleSearchIdeahubV1betaListAvailableLocalesResponse.php
 src/Models/Shared/GoogleSearchIdeahubV1betaAvailableLocale.php
 src/Models/Shared/GoogleSearchIdeahubV1betaTopicState.php
+docs/sdk/README.md
+docs/platforms/README.md
 USAGE.md

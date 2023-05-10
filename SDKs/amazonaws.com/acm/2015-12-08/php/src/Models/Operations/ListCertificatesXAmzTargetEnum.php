@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListCertificatesXAmzTargetEnum: string
 {
     case CERTIFICATE_MANAGER_LIST_CERTIFICATES = 'CertificateManager.ListCertificates';

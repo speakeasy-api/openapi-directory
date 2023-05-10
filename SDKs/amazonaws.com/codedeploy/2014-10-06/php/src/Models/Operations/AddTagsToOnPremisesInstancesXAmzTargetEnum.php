@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AddTagsToOnPremisesInstancesXAmzTargetEnum: string
 {
     case CODE_DEPLOY20141006_ADD_TAGS_TO_ON_PREMISES_INSTANCES = 'CodeDeploy_20141006.AddTagsToOnPremisesInstances';

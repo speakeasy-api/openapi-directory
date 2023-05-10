@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetSecurityConfigXAmzTargetEnum: string
 {
     case OPEN_SEARCH_SERVERLESS_GET_SECURITY_CONFIG = 'OpenSearchServerless.GetSecurityConfig';

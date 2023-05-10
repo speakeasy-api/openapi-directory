@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListBatchLoadTasksXAmzTargetEnum: string
 {
     case TIMESTREAM20181101_LIST_BATCH_LOAD_TASKS = 'Timestream_20181101.ListBatchLoadTasks';

@@ -77,4 +77,5 @@ src/Models/Shared/ListTablesResponse.php
 src/Models/Shared/TableMember.php
 src/Models/Shared/ListTablesRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

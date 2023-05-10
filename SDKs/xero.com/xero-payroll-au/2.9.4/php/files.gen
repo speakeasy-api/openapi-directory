@@ -196,4 +196,6 @@ src/Models/Shared/SuperFundProduct.php
 src/Models/Shared/TimesheetObject.php
 src/Models/Shared/Payslips.php
 src/Models/Shared/PayslipLines.php
+docs/sdk/README.md
+docs/payrollau/README.md
 USAGE.md

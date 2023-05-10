@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum InitiateLayerUploadXAmzTargetEnum: string
 {
     case AMAZON_EC2_CONTAINER_REGISTRY_V20150921_INITIATE_LAYER_UPLOAD = 'AmazonEC2ContainerRegistry_V20150921.InitiateLayerUpload';

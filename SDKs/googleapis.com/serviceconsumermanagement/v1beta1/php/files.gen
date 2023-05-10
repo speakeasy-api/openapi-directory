@@ -58,4 +58,6 @@ src/Models/Shared/V1Beta1QuotaBucket.php
 src/Models/Shared/V1Beta1ListProducerOverridesResponse.php
 src/Models/Shared/V1Beta1ListConsumerQuotaMetricsResponse.php
 src/Models/Shared/V1Beta1ConsumerQuotaMetric.php
+docs/sdk/README.md
+docs/services/README.md
 USAGE.md

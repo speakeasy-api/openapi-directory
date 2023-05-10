@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RegisterEventTopicXAmzTargetEnum: string
 {
     case DIRECTORY_SERVICE20150416_REGISTER_EVENT_TOPIC = 'DirectoryService_20150416.RegisterEventTopic';

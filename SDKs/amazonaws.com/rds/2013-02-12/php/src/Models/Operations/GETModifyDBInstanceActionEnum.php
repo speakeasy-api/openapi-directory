@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETModifyDBInstanceActionEnum: string
 {
     case MODIFY_DB_INSTANCE = 'ModifyDBInstance';

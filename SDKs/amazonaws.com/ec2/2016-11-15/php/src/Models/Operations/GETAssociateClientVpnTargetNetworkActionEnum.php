@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETAssociateClientVpnTargetNetworkActionEnum: string
 {
     case ASSOCIATE_CLIENT_VPN_TARGET_NETWORK = 'AssociateClientVpnTargetNetwork';

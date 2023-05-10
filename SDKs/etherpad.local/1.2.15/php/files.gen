@@ -651,4 +651,9 @@ src/Models/Operations/SaveRevisionUsingPOST400ApplicationJSON.php
 src/Models/Operations/SaveRevisionUsingPOST200ApplicationJSON.php
 src/Models/Operations/SaveRevisionUsingPOSTResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/author/README.md
+docs/group/README.md
+docs/pad/README.md
+docs/session/README.md
 USAGE.md

@@ -30,22 +30,67 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\AccessapprovalProjectsApprovalRequestsApproveRequest;
+use \OpenAPI\OpenAPI\Models\Shared\XgafvEnum;
+use \OpenAPI\OpenAPI\Models\Shared\ApproveApprovalRequestMessage;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+use \OpenAPI\OpenAPI\Models\Operations\AccessapprovalProjectsApprovalRequestsApproveSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new AccessapprovalProjectsApprovalRequestsApproveRequest();
+    $request->dollarXgafv = XgafvEnum::TWO;
+    $request->approveApprovalRequestMessage = new ApproveApprovalRequestMessage();
+    $request->approveApprovalRequestMessage->expireTime = 'provident';
+    $request->accessToken = 'distinctio';
+    $request->alt = AltEnum::PROTO;
+    $request->callback = 'unde';
+    $request->fields = 'nulla';
+    $request->key = 'corrupti';
+    $request->name = 'Ben Mueller';
+    $request->oauthToken = 'iure';
+    $request->prettyPrint = false;
+    $request->quotaUser = 'magnam';
+    $request->uploadType = 'debitis';
+    $request->uploadProtocol = 'ipsa';
+
+    $requestSecurity = new AccessapprovalProjectsApprovalRequestsApproveSecurity();
+    $requestSecurity->oauth2 = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+    $requestSecurity->oauth2c = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+
+    $response = $sdk->projects->accessapprovalProjectsApprovalRequestsApprove($request, $requestSecurity);
+
+    if ($response->approvalRequest !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `accessapprovalProjectsApprovalRequestsApprove` - Approves a request and returns the updated ApprovalRequest. Returns NOT_FOUND if the request does not exist. Returns FAILED_PRECONDITION if the request exists but is not in a pending state.
-* `accessapprovalProjectsApprovalRequestsDismiss` - Dismisses a request. Returns the updated ApprovalRequest. NOTE: This does not deny access to the resource if another request has been made and approved. It is equivalent in effect to ignoring the request altogether. Returns NOT_FOUND if the request does not exist. Returns FAILED_PRECONDITION if the request exists but is not in a pending state.
-* `accessapprovalProjectsApprovalRequestsGet` - Gets an approval request. Returns NOT_FOUND if the request does not exist.
-* `accessapprovalProjectsApprovalRequestsInvalidate` - Invalidates an existing ApprovalRequest. Returns the updated ApprovalRequest. NOTE: This does not deny access to the resource if another request has been made and approved. It only invalidates a single approval. Returns FAILED_PRECONDITION if the request exists but is not in an approved state.
-* `accessapprovalProjectsApprovalRequestsList` - Lists approval requests associated with a project, folder, or organization. Approval requests can be filtered by state (pending, active, dismissed). The order is reverse chronological.
-* `accessapprovalProjectsDeleteAccessApprovalSettings` - Deletes the settings associated with a project, folder, or organization. This will have the effect of disabling Access Approval for the project, folder, or organization, but only if all ancestors also have Access Approval disabled. If Access Approval is enabled at a higher level of the hierarchy, then Access Approval will still be enabled at this level as the settings are inherited.
-* `accessapprovalProjectsUpdateAccessApprovalSettings` - Updates the settings associated with a project, folder, or organization. Settings to update are determined by the value of field_mask.
+* [accessapprovalProjectsApprovalRequestsApprove](docs/projects/README.md#accessapprovalprojectsapprovalrequestsapprove) - Approves a request and returns the updated ApprovalRequest. Returns NOT_FOUND if the request does not exist. Returns FAILED_PRECONDITION if the request exists but is not in a pending state.
+* [accessapprovalProjectsApprovalRequestsDismiss](docs/projects/README.md#accessapprovalprojectsapprovalrequestsdismiss) - Dismisses a request. Returns the updated ApprovalRequest. NOTE: This does not deny access to the resource if another request has been made and approved. It is equivalent in effect to ignoring the request altogether. Returns NOT_FOUND if the request does not exist. Returns FAILED_PRECONDITION if the request exists but is not in a pending state.
+* [accessapprovalProjectsApprovalRequestsGet](docs/projects/README.md#accessapprovalprojectsapprovalrequestsget) - Gets an approval request. Returns NOT_FOUND if the request does not exist.
+* [accessapprovalProjectsApprovalRequestsInvalidate](docs/projects/README.md#accessapprovalprojectsapprovalrequestsinvalidate) - Invalidates an existing ApprovalRequest. Returns the updated ApprovalRequest. NOTE: This does not deny access to the resource if another request has been made and approved. It only invalidates a single approval. Returns FAILED_PRECONDITION if the request exists but is not in an approved state.
+* [accessapprovalProjectsApprovalRequestsList](docs/projects/README.md#accessapprovalprojectsapprovalrequestslist) - Lists approval requests associated with a project, folder, or organization. Approval requests can be filtered by state (pending, active, dismissed). The order is reverse chronological.
+* [accessapprovalProjectsDeleteAccessApprovalSettings](docs/projects/README.md#accessapprovalprojectsdeleteaccessapprovalsettings) - Deletes the settings associated with a project, folder, or organization. This will have the effect of disabling Access Approval for the project, folder, or organization, but only if all ancestors also have Access Approval disabled. If Access Approval is enabled at a higher level of the hierarchy, then Access Approval will still be enabled at this level as the settings are inherited.
+* [accessapprovalProjectsUpdateAccessApprovalSettings](docs/projects/README.md#accessapprovalprojectsupdateaccessapprovalsettings) - Updates the settings associated with a project, folder, or organization. Settings to update are determined by the value of field_mask.
 <!-- End SDK Available Operations -->
 
 ### Maturity

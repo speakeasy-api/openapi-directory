@@ -82,7 +82,7 @@ class PricingConfiguration
      */
 	public function getPricingConfig(
         \OpenAPI\OpenAPI\Models\Operations\GetPricingConfigRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\GetPricingConfigResponse
     {
         $baseUrl = PricingConfiguration::GET_PRICING_CONFIG_SERVERS[0];
@@ -135,7 +135,7 @@ class PricingConfiguration
      */
 	public function getPricingv2Status(
         \OpenAPI\OpenAPI\Models\Operations\GetPricingv2StatusRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\GetPricingv2StatusResponse
     {
         $baseUrl = PricingConfiguration::GET_PRICINGV2_STATUS_SERVERS[0];

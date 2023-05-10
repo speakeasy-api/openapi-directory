@@ -38,4 +38,6 @@ src/Models/Shared/StatementGetResponse.php
 src/Models/Shared/PolicySaveRequest.php
 src/Models/Shared/PolicyActionGetResponse.php
 src/Models/Shared/EvaluatePolicyRequest.php
+docs/sdk/README.md
+docs/policy/README.md
 USAGE.md

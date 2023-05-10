@@ -127,4 +127,6 @@ src/Models/Shared/TestIamPermissionsRequest.php
 src/Models/Shared/ImportYumArtifactsRequest.php
 src/Models/Shared/ImportYumArtifactsGcsSource.php
 src/Models/Shared/UploadYumArtifactMediaResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

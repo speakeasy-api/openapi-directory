@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateAccessPolicyXAmzTargetEnum: string
 {
     case OPEN_SEARCH_SERVERLESS_UPDATE_ACCESS_POLICY = 'OpenSearchServerless.UpdateAccessPolicy';

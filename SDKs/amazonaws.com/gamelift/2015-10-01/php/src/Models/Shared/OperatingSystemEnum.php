@@ -14,4 +14,5 @@ enum OperatingSystemEnum: string
     case WINDOWS2012 = 'WINDOWS_2012';
     case AMAZON_LINUX = 'AMAZON_LINUX';
     case AMAZON_LINUX2 = 'AMAZON_LINUX_2';
+    case WINDOWS2016 = 'WINDOWS_2016';
 }

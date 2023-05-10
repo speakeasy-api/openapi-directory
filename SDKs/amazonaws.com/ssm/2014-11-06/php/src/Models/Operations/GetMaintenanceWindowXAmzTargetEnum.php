@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetMaintenanceWindowXAmzTargetEnum: string
 {
     case AMAZON_SSM_GET_MAINTENANCE_WINDOW = 'AmazonSSM.GetMaintenanceWindow';

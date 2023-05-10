@@ -110,4 +110,17 @@ src/Models/Shared/SmsUniqueRequest.php
 src/Models/Shared/SMSRequestGmtZoneEnum.php
 src/Models/Shared/SMSRequestNumAzurEnum.php
 src/Models/Shared/SMSRequest.php
+docs/sdk/README.md
+docs/addshortlink/README.md
+docs/addsubaccount/README.md
+docs/campagne/README.md
+docs/comptage/README.md
+docs/credit/README.md
+docs/dellistenoire/README.md
+docs/editsubaccount/README.md
+docs/getlistenoire/README.md
+docs/hlr/README.md
+docs/repertoire/README.md
+docs/setlistenoire/README.md
+docs/sms/README.md
 USAGE.md

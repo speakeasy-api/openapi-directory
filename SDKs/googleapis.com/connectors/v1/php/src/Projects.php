@@ -156,46 +156,6 @@ class Projects
     }
 	
     /**
-     * Updates the parameters of a single Connection.
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsConnectionsPatchRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsConnectionsPatchSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsConnectionsPatchResponse
-     */
-	public function connectorsProjectsLocationsConnectionsPatch(
-        \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsConnectionsPatchRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsConnectionsPatchSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsConnectionsPatchResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{name}', \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsConnectionsPatchRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "connectionInput", "json");
-        $options = array_merge_recursive($options, $body);
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsConnectionsPatchRequest::class, $request, null));
-        
-        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsConnectionsPatchResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
      * List schema of a runtime actions filtered by action name.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsConnectionsRuntimeActionSchemasListRequest $request
@@ -265,6 +225,202 @@ class Projects
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->listRuntimeEntitySchemasResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListRuntimeEntitySchemasResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Creates a new EndpointAttachment in a given project and location.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsEndpointAttachmentsCreateRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsEndpointAttachmentsCreateSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsEndpointAttachmentsCreateResponse
+     */
+	public function connectorsProjectsLocationsEndpointAttachmentsCreate(
+        \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsEndpointAttachmentsCreateRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsEndpointAttachmentsCreateSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsEndpointAttachmentsCreateResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{parent}/endpointAttachments', \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsEndpointAttachmentsCreateRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "endpointAttachmentInput", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsEndpointAttachmentsCreateRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsEndpointAttachmentsCreateResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * List EndpointAttachments in a given project
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsEndpointAttachmentsListRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsEndpointAttachmentsListSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsEndpointAttachmentsListResponse
+     */
+	public function connectorsProjectsLocationsEndpointAttachmentsList(
+        \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsEndpointAttachmentsListRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsEndpointAttachmentsListSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsEndpointAttachmentsListResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{parent}/endpointAttachments', \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsEndpointAttachmentsListRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsEndpointAttachmentsListRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsEndpointAttachmentsListResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->listEndpointAttachmentsResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListEndpointAttachmentsResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Creates a new ManagedZone in a given project and location.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsGlobalManagedZonesCreateRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsGlobalManagedZonesCreateSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsGlobalManagedZonesCreateResponse
+     */
+	public function connectorsProjectsLocationsGlobalManagedZonesCreate(
+        \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsGlobalManagedZonesCreateRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsGlobalManagedZonesCreateSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsGlobalManagedZonesCreateResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{parent}/managedZones', \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsGlobalManagedZonesCreateRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "managedZoneInput", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsGlobalManagedZonesCreateRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsGlobalManagedZonesCreateResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * List ManagedZones in a given project
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsGlobalManagedZonesListRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsGlobalManagedZonesListSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsGlobalManagedZonesListResponse
+     */
+	public function connectorsProjectsLocationsGlobalManagedZonesList(
+        \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsGlobalManagedZonesListRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsGlobalManagedZonesListSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsGlobalManagedZonesListResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{parent}/managedZones', \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsGlobalManagedZonesListRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsGlobalManagedZonesListRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsGlobalManagedZonesListResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->listManagedZonesResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListManagedZonesResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Updates the parameters of a single ManagedZone.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsGlobalManagedZonesPatchRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsGlobalManagedZonesPatchSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsGlobalManagedZonesPatchResponse
+     */
+	public function connectorsProjectsLocationsGlobalManagedZonesPatch(
+        \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsGlobalManagedZonesPatchRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsGlobalManagedZonesPatchSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsGlobalManagedZonesPatchResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{name}', \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsGlobalManagedZonesPatchRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "managedZoneInput", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsGlobalManagedZonesPatchRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('PATCH', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\ConnectorsProjectsLocationsGlobalManagedZonesPatchResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
             }
         }
 

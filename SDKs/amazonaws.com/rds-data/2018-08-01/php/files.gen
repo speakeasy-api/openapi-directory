@@ -59,4 +59,5 @@ src/Models/Shared/LongReturnTypeEnum.php
 src/Models/Shared/DecimalReturnTypeEnum.php
 src/Models/Shared/RollbackTransactionResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

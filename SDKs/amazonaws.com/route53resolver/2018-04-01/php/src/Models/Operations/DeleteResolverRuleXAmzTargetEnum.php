@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteResolverRuleXAmzTargetEnum: string
 {
     case ROUTE53_RESOLVER_DELETE_RESOLVER_RULE = 'Route53Resolver.DeleteResolverRule';

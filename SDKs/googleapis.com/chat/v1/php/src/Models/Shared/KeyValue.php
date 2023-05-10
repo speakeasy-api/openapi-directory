@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class KeyValue
 {
     /**
-     * The text of the bottom label. Formatted text supported.
+     * The text of the bottom label. Formatted text supported. For more information about formatting text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
      * 
      * @var ?string $bottomLabel
      */
@@ -38,7 +38,7 @@ class KeyValue
     public ?Button $button = null;
     
     /**
-     * The text of the content. Formatted text supported and always required.
+     * The text of the content. Formatted text supported and always required. For more information about formatting text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
      * 
      * @var ?string $content
      */
@@ -88,7 +88,7 @@ class KeyValue
     public ?OnClick $onClick = null;
     
     /**
-     * The text of the top label. Formatted text supported.
+     * The text of the top label. Formatted text supported. For more information about formatting text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
      * 
      * @var ?string $topLabel
      */

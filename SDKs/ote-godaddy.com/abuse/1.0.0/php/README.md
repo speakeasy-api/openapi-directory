@@ -30,18 +30,49 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\AbuseTicketCreate;
+use \OpenAPI\OpenAPI\Models\Shared\AbuseTicketCreateTypeEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new AbuseTicketCreate();
+    $request->info = 'corrupti';
+    $request->infoUrl = 'provident';
+    $request->intentional = false;
+    $request->proxy = 'distinctio';
+    $request->source = 'quibusdam';
+    $request->target = 'unde';
+    $request->type = AbuseTicketCreateTypeEnum::PHISHING;
+
+    $response = $sdk->v1->createTicket($request);
+
+    if ($response->body !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### v1
+### [v1](docs/v1/README.md)
 
-* `createTicket` - Create a new abuse ticket
-* `getTicketInfo` - Return the abuse ticket data for a given ticket id
-* `getTickets` - List all abuse tickets ids that match user provided filters
+* [createTicket](docs/v1/README.md#createticket) - Create a new abuse ticket
+* [getTicketInfo](docs/v1/README.md#getticketinfo) - Return the abuse ticket data for a given ticket id
+* [getTickets](docs/v1/README.md#gettickets) - List all abuse tickets ids that match user provided filters
 <!-- End SDK Available Operations -->
 
 ### Maturity

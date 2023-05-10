@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum SetRepositoryPolicyXAmzTargetEnum: string
 {
     case SPENCER_FRONTEND_SERVICE_SET_REPOSITORY_POLICY = 'SpencerFrontendService.SetRepositoryPolicy';

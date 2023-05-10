@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTListPlatformVersionsActionEnum: string
 {
     case LIST_PLATFORM_VERSIONS = 'ListPlatformVersions';

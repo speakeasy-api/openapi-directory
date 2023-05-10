@@ -61,4 +61,5 @@ src/Models/Shared/MarketDataFilterFieldsEnum.php
 src/Models/Shared/MarketDataFilter.php
 src/Models/Shared/HeartbeatMessage.php
 src/Models/Shared/AuthenticationMessage.php
+docs/sdk/README.md
 USAGE.md

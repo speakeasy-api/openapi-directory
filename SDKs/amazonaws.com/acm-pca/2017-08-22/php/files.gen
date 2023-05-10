@@ -164,4 +164,5 @@ src/Models/Shared/TagCertificateAuthorityRequest.php
 src/Models/Shared/UntagCertificateAuthorityRequest.php
 src/Models/Shared/UpdateCertificateAuthorityRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

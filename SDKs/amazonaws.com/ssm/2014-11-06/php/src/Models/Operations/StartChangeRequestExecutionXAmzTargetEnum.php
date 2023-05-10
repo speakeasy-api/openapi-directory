@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartChangeRequestExecutionXAmzTargetEnum: string
 {
     case AMAZON_SSM_START_CHANGE_REQUEST_EXECUTION = 'AmazonSSM.StartChangeRequestExecution';

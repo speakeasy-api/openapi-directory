@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateConnectionXAmzTargetEnum: string
 {
     case APP_RUNNER_CREATE_CONNECTION = 'AppRunner.CreateConnection';

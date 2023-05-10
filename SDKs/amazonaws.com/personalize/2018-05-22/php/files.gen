@@ -407,4 +407,5 @@ src/Models/Shared/UpdateMetricAttributionRequest.php
 src/Models/Shared/UpdateRecommenderResponse.php
 src/Models/Shared/UpdateRecommenderRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

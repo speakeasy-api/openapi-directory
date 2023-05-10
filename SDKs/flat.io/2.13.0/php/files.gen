@@ -167,6 +167,7 @@ src/Models/Operations/CreateOrganizationInvitationSecurity.php
 src/Models/Operations/CreateOrganizationInvitationResponse.php
 src/Models/Operations/CreateOrganizationUserSecurity.php
 src/Models/Operations/CreateOrganizationUserResponse.php
+src/Models/Operations/ListLtiCredentialsSecurity.php
 src/Models/Operations/ListLtiCredentialsResponse.php
 src/Models/Operations/ListOrganizationInvitationsSecurity.php
 src/Models/Operations/ListOrganizationInvitationsRoleEnum.php
@@ -380,4 +381,12 @@ src/Models/Shared/ScoreCommentContext.php
 src/Models/Shared/ScoreCommentCreation.php
 src/Models/Shared/ScoreCommentUpdate.php
 src/Models/Shared/ScoreTrackUpdate.php
+docs/sdk/README.md
+docs/account/README.md
+docs/class/README.md
+docs/collection/README.md
+docs/group/README.md
+docs/organization/README.md
+docs/score/README.md
+docs/user/README.md
 USAGE.md

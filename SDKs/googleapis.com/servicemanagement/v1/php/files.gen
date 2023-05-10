@@ -249,4 +249,7 @@ src/Models/Shared/RolloutStatusEnum.php
 src/Models/Shared/Rollout.php
 src/Models/Shared/TrafficPercentStrategy.php
 src/Models/Shared/ListServiceRolloutsResponse.php
+docs/sdk/README.md
+docs/operations/README.md
+docs/services/README.md
 USAGE.md

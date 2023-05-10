@@ -30,23 +30,64 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\Searchads360CustomersCustomColumnsListRequest;
+use \OpenAPI\OpenAPI\Models\Shared\XgafvEnum;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+use \OpenAPI\OpenAPI\Models\Operations\Searchads360CustomersCustomColumnsListSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new Searchads360CustomersCustomColumnsListRequest();
+    $request->dollarXgafv = XgafvEnum::TWO;
+    $request->accessToken = 'provident';
+    $request->alt = AltEnum::PROTO;
+    $request->callback = 'quibusdam';
+    $request->customerId = 'unde';
+    $request->fields = 'nulla';
+    $request->key = 'corrupti';
+    $request->oauthToken = 'illum';
+    $request->prettyPrint = false;
+    $request->quotaUser = 'vel';
+    $request->uploadType = 'error';
+    $request->uploadProtocol = 'deserunt';
+
+    $requestSecurity = new Searchads360CustomersCustomColumnsListSecurity();
+    $requestSecurity->oauth2 = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+    $requestSecurity->oauth2c = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+
+    $response = $sdk->customers->searchads360CustomersCustomColumnsList($request, $requestSecurity);
+
+    if ($response->googleAdsSearchads360V0ServicesListCustomColumnsResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### customers
+### [customers](docs/customers/README.md)
 
-* `searchads360CustomersCustomColumnsList` - Returns all the custom columns associated with the customer in full detail.
-* `searchads360CustomersSearchAds360Search` - Returns all rows that match the search query. List of thrown errors: [AuthenticationError]() [AuthorizationError]() [HeaderError]() [InternalError]() [QueryError]() [QuotaError]() [RequestError]()
-* `searchads360CustomersSearchAds360SearchStream` - Returns all rows that match the search stream query. List of thrown errors: [AuthenticationError]() [AuthorizationError]() [HeaderError]() [InternalError]() [QueryError]() [QuotaError]() [RequestError]()
+* [searchads360CustomersCustomColumnsList](docs/customers/README.md#searchads360customerscustomcolumnslist) - Returns all the custom columns associated with the customer in full detail.
+* [searchads360CustomersSearchAds360Search](docs/customers/README.md#searchads360customerssearchads360search) - Returns all rows that match the search query. List of thrown errors: [AuthenticationError]() [AuthorizationError]() [HeaderError]() [InternalError]() [QueryError]() [QuotaError]() [RequestError]()
 
-### searchAds360Fields
+### [searchAds360Fields](docs/searchads360fields/README.md)
 
-* `searchads360SearchAds360FieldsGet` - Returns just the requested field. List of thrown errors: [AuthenticationError]() [AuthorizationError]() [HeaderError]() [InternalError]() [QuotaError]() [RequestError]()
-* `searchads360SearchAds360FieldsSearch` - Returns all fields that match the search query. List of thrown errors: [AuthenticationError]() [AuthorizationError]() [HeaderError]() [InternalError]() [QueryError]() [QuotaError]() [RequestError]()
+* [searchads360SearchAds360FieldsGet](docs/searchads360fields/README.md#searchads360searchads360fieldsget) - Returns just the requested field. List of thrown errors: [AuthenticationError]() [AuthorizationError]() [HeaderError]() [InternalError]() [QuotaError]() [RequestError]()
+* [searchads360SearchAds360FieldsSearch](docs/searchads360fields/README.md#searchads360searchads360fieldssearch) - Returns all fields that match the search query. List of thrown errors: [AuthenticationError]() [AuthorizationError]() [HeaderError]() [InternalError]() [QueryError]() [QuotaError]() [RequestError]()
 <!-- End SDK Available Operations -->
 
 ### Maturity

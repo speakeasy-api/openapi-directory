@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteApplicationInputProcessingConfigurationXAmzTargetEnum: string
 {
     case KINESIS_ANALYTICS20150814_DELETE_APPLICATION_INPUT_PROCESSING_CONFIGURATION = 'KinesisAnalytics_20150814.DeleteApplicationInputProcessingConfiguration';

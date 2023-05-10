@@ -30,19 +30,46 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\DfsSlatesByDateRequest;
+use \OpenAPI\OpenAPI\Models\Operations\DfsSlatesByDateFormatEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new DfsSlatesByDateRequest();
+    $request->date = 'corrupti';
+    $request->format = DfsSlatesByDateFormatEnum::JSON;
+
+    $response = $sdk->dfsSlatesByDate($request);
+
+    if ($response->dfsSlates !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `dfsSlatesByDate` - DFS Slates by Date
-* `injuredPlayers` - Injured Players
-* `projectedPlayerGameStatsByDateWInjuriesDfsSalaries` - Projected Player Game Stats by Date (w/ Injuries, DFS Salaries)
-* `projectedPlayerGameStatsByPlayerWInjuriesDfsSalaries` - Projected Player Game Stats by Player (w/ Injuries, DFS Salaries)
-* `startingGoaltendersByDate` - Starting Goaltenders by Date
+* [dfsSlatesByDate](docs/sdk/README.md#dfsslatesbydate) - DFS Slates by Date
+* [injuredPlayers](docs/sdk/README.md#injuredplayers) - Injured Players
+* [projectedPlayerGameStatsByDateWInjuriesDfsSalaries](docs/sdk/README.md#projectedplayergamestatsbydatewinjuriesdfssalaries) - Projected Player Game Stats by Date (w/ Injuries, DFS Salaries)
+* [projectedPlayerGameStatsByPlayerWInjuriesDfsSalaries](docs/sdk/README.md#projectedplayergamestatsbyplayerwinjuriesdfssalaries) - Projected Player Game Stats by Player (w/ Injuries, DFS Salaries)
+* [startingGoaltendersByDate](docs/sdk/README.md#startinggoaltendersbydate) - Starting Goaltenders by Date
 <!-- End SDK Available Operations -->
 
 ### Maturity

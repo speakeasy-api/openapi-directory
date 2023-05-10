@@ -229,4 +229,6 @@ src/Models/Shared/Footer.php
 src/Models/Shared/FooterInput.php
 src/Models/Shared/Body.php
 src/Models/Shared/BodyInput.php
+docs/sdk/README.md
+docs/documents/README.md
 USAGE.md

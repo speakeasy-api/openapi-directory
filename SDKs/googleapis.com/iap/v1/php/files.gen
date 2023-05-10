@@ -100,4 +100,7 @@ src/Models/Shared/AllowedDomainsSettings.php
 src/Models/Shared/SetIamPolicyRequest.php
 src/Models/Shared/TestIamPermissionsResponse.php
 src/Models/Shared/TestIamPermissionsRequest.php
+docs/sdk/README.md
+docs/projects/README.md
+docs/v1/README.md
 USAGE.md

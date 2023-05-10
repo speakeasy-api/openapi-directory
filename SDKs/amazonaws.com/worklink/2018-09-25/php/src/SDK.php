@@ -89,11 +89,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\AssociateDomainRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\AssociateDomainResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function associateDomain(
         \OpenAPI\OpenAPI\Models\Operations\AssociateDomainRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\AssociateDomainResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/associateDomain');
         
@@ -165,11 +168,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\AssociateWebsiteAuthorizationProviderRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\AssociateWebsiteAuthorizationProviderResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function associateWebsiteAuthorizationProvider(
         \OpenAPI\OpenAPI\Models\Operations\AssociateWebsiteAuthorizationProviderRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\AssociateWebsiteAuthorizationProviderResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/associateWebsiteAuthorizationProvider');
         
@@ -241,11 +247,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\AssociateWebsiteCertificateAuthorityRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\AssociateWebsiteCertificateAuthorityResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function associateWebsiteCertificateAuthority(
         \OpenAPI\OpenAPI\Models\Operations\AssociateWebsiteCertificateAuthorityRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\AssociateWebsiteCertificateAuthorityResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/associateWebsiteCertificateAuthority');
         
@@ -317,11 +326,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\CreateFleetRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\CreateFleetResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function createFleet(
         \OpenAPI\OpenAPI\Models\Operations\CreateFleetRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\CreateFleetResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/createFleet');
         
@@ -393,11 +405,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DeleteFleetRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DeleteFleetResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function deleteFleet(
         \OpenAPI\OpenAPI\Models\Operations\DeleteFleetRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DeleteFleetResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/deleteFleet');
         
@@ -463,11 +478,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DescribeAuditStreamConfigurationRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DescribeAuditStreamConfigurationResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function describeAuditStreamConfiguration(
         \OpenAPI\OpenAPI\Models\Operations\DescribeAuditStreamConfigurationRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DescribeAuditStreamConfigurationResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/describeAuditStreamConfiguration');
         
@@ -533,11 +551,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DescribeCompanyNetworkConfigurationRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DescribeCompanyNetworkConfigurationResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function describeCompanyNetworkConfiguration(
         \OpenAPI\OpenAPI\Models\Operations\DescribeCompanyNetworkConfigurationRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DescribeCompanyNetworkConfigurationResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/describeCompanyNetworkConfiguration');
         
@@ -603,11 +624,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DescribeDeviceRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DescribeDeviceResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function describeDevice(
         \OpenAPI\OpenAPI\Models\Operations\DescribeDeviceRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DescribeDeviceResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/describeDevice');
         
@@ -673,11 +697,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DescribeDevicePolicyConfigurationRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DescribeDevicePolicyConfigurationResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function describeDevicePolicyConfiguration(
         \OpenAPI\OpenAPI\Models\Operations\DescribeDevicePolicyConfigurationRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DescribeDevicePolicyConfigurationResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/describeDevicePolicyConfiguration');
         
@@ -743,11 +770,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DescribeDomainRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DescribeDomainResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function describeDomain(
         \OpenAPI\OpenAPI\Models\Operations\DescribeDomainRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DescribeDomainResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/describeDomain');
         
@@ -813,11 +843,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DescribeFleetMetadataRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DescribeFleetMetadataResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function describeFleetMetadata(
         \OpenAPI\OpenAPI\Models\Operations\DescribeFleetMetadataRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DescribeFleetMetadataResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/describeFleetMetadata');
         
@@ -883,11 +916,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DescribeIdentityProviderConfigurationRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DescribeIdentityProviderConfigurationResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function describeIdentityProviderConfiguration(
         \OpenAPI\OpenAPI\Models\Operations\DescribeIdentityProviderConfigurationRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DescribeIdentityProviderConfigurationResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/describeIdentityProviderConfiguration');
         
@@ -953,11 +989,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DescribeWebsiteCertificateAuthorityRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DescribeWebsiteCertificateAuthorityResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function describeWebsiteCertificateAuthority(
         \OpenAPI\OpenAPI\Models\Operations\DescribeWebsiteCertificateAuthorityRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DescribeWebsiteCertificateAuthorityResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/describeWebsiteCertificateAuthority');
         
@@ -1023,11 +1062,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DisassociateDomainRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DisassociateDomainResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function disassociateDomain(
         \OpenAPI\OpenAPI\Models\Operations\DisassociateDomainRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DisassociateDomainResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/disassociateDomain');
         
@@ -1093,11 +1135,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DisassociateWebsiteAuthorizationProviderRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DisassociateWebsiteAuthorizationProviderResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function disassociateWebsiteAuthorizationProvider(
         \OpenAPI\OpenAPI\Models\Operations\DisassociateWebsiteAuthorizationProviderRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DisassociateWebsiteAuthorizationProviderResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/disassociateWebsiteAuthorizationProvider');
         
@@ -1169,11 +1214,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DisassociateWebsiteCertificateAuthorityRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DisassociateWebsiteCertificateAuthorityResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function disassociateWebsiteCertificateAuthority(
         \OpenAPI\OpenAPI\Models\Operations\DisassociateWebsiteCertificateAuthorityRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DisassociateWebsiteCertificateAuthorityResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/disassociateWebsiteCertificateAuthority');
         
@@ -1239,11 +1287,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ListDevicesRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ListDevicesResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function listDevices(
         \OpenAPI\OpenAPI\Models\Operations\ListDevicesRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\ListDevicesResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/listDevices');
         
@@ -1310,11 +1361,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ListDomainsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ListDomainsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function listDomains(
         \OpenAPI\OpenAPI\Models\Operations\ListDomainsRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\ListDomainsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/listDomains');
         
@@ -1381,11 +1435,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ListFleetsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ListFleetsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function listFleets(
         \OpenAPI\OpenAPI\Models\Operations\ListFleetsRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\ListFleetsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/listFleets');
         
@@ -1446,11 +1503,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ListTagsForResourceRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ListTagsForResourceResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function listTagsForResource(
         \OpenAPI\OpenAPI\Models\Operations\ListTagsForResourceRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\ListTagsForResourceResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/tags/{ResourceArn}', \OpenAPI\OpenAPI\Models\Operations\ListTagsForResourceRequest::class, $request);
         
@@ -1487,11 +1547,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ListWebsiteAuthorizationProvidersRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ListWebsiteAuthorizationProvidersResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function listWebsiteAuthorizationProviders(
         \OpenAPI\OpenAPI\Models\Operations\ListWebsiteAuthorizationProvidersRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\ListWebsiteAuthorizationProvidersResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/listWebsiteAuthorizationProviders');
         
@@ -1558,11 +1621,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ListWebsiteCertificateAuthoritiesRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ListWebsiteCertificateAuthoritiesResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function listWebsiteCertificateAuthorities(
         \OpenAPI\OpenAPI\Models\Operations\ListWebsiteCertificateAuthoritiesRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\ListWebsiteCertificateAuthoritiesResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/listWebsiteCertificateAuthorities');
         
@@ -1623,11 +1689,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\RestoreDomainAccessRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\RestoreDomainAccessResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function restoreDomainAccess(
         \OpenAPI\OpenAPI\Models\Operations\RestoreDomainAccessRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\RestoreDomainAccessResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/restoreDomainAccess');
         
@@ -1693,11 +1762,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\RevokeDomainAccessRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\RevokeDomainAccessResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function revokeDomainAccess(
         \OpenAPI\OpenAPI\Models\Operations\RevokeDomainAccessRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\RevokeDomainAccessResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/revokeDomainAccess');
         
@@ -1763,11 +1835,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\SignOutUserRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\SignOutUserResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function signOutUser(
         \OpenAPI\OpenAPI\Models\Operations\SignOutUserRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\SignOutUserResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/signOutUser');
         
@@ -1833,11 +1908,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\TagResourceRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TagResourceResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function tagResource(
         \OpenAPI\OpenAPI\Models\Operations\TagResourceRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TagResourceResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/tags/{ResourceArn}', \OpenAPI\OpenAPI\Models\Operations\TagResourceRequest::class, $request);
         
@@ -1879,11 +1957,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\UntagResourceRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\UntagResourceResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function untagResource(
         \OpenAPI\OpenAPI\Models\Operations\UntagResourceRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\UntagResourceResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/tags/{ResourceArn}#tagKeys', \OpenAPI\OpenAPI\Models\Operations\UntagResourceRequest::class, $request);
         
@@ -1921,11 +2002,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\UpdateAuditStreamConfigurationRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\UpdateAuditStreamConfigurationResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function updateAuditStreamConfiguration(
         \OpenAPI\OpenAPI\Models\Operations\UpdateAuditStreamConfigurationRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\UpdateAuditStreamConfigurationResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/updateAuditStreamConfiguration');
         
@@ -1991,11 +2075,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\UpdateCompanyNetworkConfigurationRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\UpdateCompanyNetworkConfigurationResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function updateCompanyNetworkConfiguration(
         \OpenAPI\OpenAPI\Models\Operations\UpdateCompanyNetworkConfigurationRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\UpdateCompanyNetworkConfigurationResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/updateCompanyNetworkConfiguration');
         
@@ -2061,11 +2148,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\UpdateDevicePolicyConfigurationRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\UpdateDevicePolicyConfigurationResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function updateDevicePolicyConfiguration(
         \OpenAPI\OpenAPI\Models\Operations\UpdateDevicePolicyConfigurationRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\UpdateDevicePolicyConfigurationResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/updateDevicePolicyConfiguration');
         
@@ -2131,11 +2221,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\UpdateDomainMetadataRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\UpdateDomainMetadataResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function updateDomainMetadata(
         \OpenAPI\OpenAPI\Models\Operations\UpdateDomainMetadataRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\UpdateDomainMetadataResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/updateDomainMetadata');
         
@@ -2201,11 +2294,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\UpdateFleetMetadataRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\UpdateFleetMetadataResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function updateFleetMetadata(
         \OpenAPI\OpenAPI\Models\Operations\UpdateFleetMetadataRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\UpdateFleetMetadataResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/UpdateFleetMetadata');
         
@@ -2271,11 +2367,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\UpdateIdentityProviderConfigurationRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\UpdateIdentityProviderConfigurationResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function updateIdentityProviderConfiguration(
         \OpenAPI\OpenAPI\Models\Operations\UpdateIdentityProviderConfigurationRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\UpdateIdentityProviderConfigurationResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/updateIdentityProviderConfiguration');
         

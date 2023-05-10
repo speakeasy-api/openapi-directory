@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeVpcEndpointConnectionNotificationsActionEnum: string
 {
     case DESCRIBE_VPC_ENDPOINT_CONNECTION_NOTIFICATIONS = 'DescribeVpcEndpointConnectionNotifications';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateDatabaseXAmzTargetEnum: string
 {
     case TIMESTREAM20181101_UPDATE_DATABASE = 'Timestream_20181101.UpdateDatabase';

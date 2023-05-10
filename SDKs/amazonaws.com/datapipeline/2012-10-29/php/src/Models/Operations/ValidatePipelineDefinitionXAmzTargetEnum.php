@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ValidatePipelineDefinitionXAmzTargetEnum: string
 {
     case DATA_PIPELINE_VALIDATE_PIPELINE_DEFINITION = 'DataPipeline.ValidatePipelineDefinition';

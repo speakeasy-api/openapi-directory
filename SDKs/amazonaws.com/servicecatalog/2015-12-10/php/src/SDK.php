@@ -376,6 +376,12 @@ class SDK
                 $response->limitExceededException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
             }
         }
+        else if ($httpResponse->getStatusCode() === 483) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->invalidParametersException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
 
         return $response;
     }
@@ -3942,6 +3948,162 @@ class SDK
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->invalidParametersException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     *  Notifies the result of the provisioning engine execution. 
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\NotifyProvisionProductEngineWorkflowResultRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\NotifyProvisionProductEngineWorkflowResultResponse
+     */
+	public function notifyProvisionProductEngineWorkflowResult(
+        \OpenAPI\OpenAPI\Models\Operations\NotifyProvisionProductEngineWorkflowResultRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\NotifyProvisionProductEngineWorkflowResultResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=AWS242ServiceCatalogService.NotifyProvisionProductEngineWorkflowResult');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "notifyProvisionProductEngineWorkflowResultInput", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\NotifyProvisionProductEngineWorkflowResultResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->notifyProvisionProductEngineWorkflowResultOutput = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 480) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->invalidParametersException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 481) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->resourceNotFoundException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     *  Notifies the result of the terminate engine execution. 
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\NotifyTerminateProvisionedProductEngineWorkflowResultRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\NotifyTerminateProvisionedProductEngineWorkflowResultResponse
+     */
+	public function notifyTerminateProvisionedProductEngineWorkflowResult(
+        \OpenAPI\OpenAPI\Models\Operations\NotifyTerminateProvisionedProductEngineWorkflowResultRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\NotifyTerminateProvisionedProductEngineWorkflowResultResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=AWS242ServiceCatalogService.NotifyTerminateProvisionedProductEngineWorkflowResult');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "notifyTerminateProvisionedProductEngineWorkflowResultInput", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\NotifyTerminateProvisionedProductEngineWorkflowResultResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->notifyTerminateProvisionedProductEngineWorkflowResultOutput = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 480) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->invalidParametersException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 481) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->resourceNotFoundException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     *  Notifies the result of the update engine execution. 
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\NotifyUpdateProvisionedProductEngineWorkflowResultRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\NotifyUpdateProvisionedProductEngineWorkflowResultResponse
+     */
+	public function notifyUpdateProvisionedProductEngineWorkflowResult(
+        \OpenAPI\OpenAPI\Models\Operations\NotifyUpdateProvisionedProductEngineWorkflowResultRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\NotifyUpdateProvisionedProductEngineWorkflowResultResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=AWS242ServiceCatalogService.NotifyUpdateProvisionedProductEngineWorkflowResult');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "notifyUpdateProvisionedProductEngineWorkflowResultInput", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\NotifyUpdateProvisionedProductEngineWorkflowResultResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->notifyUpdateProvisionedProductEngineWorkflowResultOutput = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 480) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->invalidParametersException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 481) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->resourceNotFoundException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
             }
         }
 

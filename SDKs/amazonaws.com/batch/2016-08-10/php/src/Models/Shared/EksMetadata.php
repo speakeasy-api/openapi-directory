@@ -9,6 +9,12 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Shared;
 
 
+/**
+ * EksMetadata - Describes and uniquely identifies Kubernetes resources. For example, the compute environment that a pod runs in or the <code>jobID</code> for a job running in the pod. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/">Understanding Kubernetes Objects</a> in the <i>Kubernetes documentation</i>.
+ * 
+ * @package OpenAPI\OpenAPI\Models\Shared
+ * @access public
+ */
 class EksMetadata
 {
     /**

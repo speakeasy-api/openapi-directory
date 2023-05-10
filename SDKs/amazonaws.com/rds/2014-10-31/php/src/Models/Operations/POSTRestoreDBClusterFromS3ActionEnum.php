@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTRestoreDBClusterFromS3ActionEnum: string
 {
     case RESTORE_DB_CLUSTER_FROM_S3 = 'RestoreDBClusterFromS3';

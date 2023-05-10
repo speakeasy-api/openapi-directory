@@ -26,4 +26,5 @@ src/Models/Operations/InvokeEndpointAsyncResponse.php
 src/Models/Shared/InvokeEndpointOutput.php
 src/Models/Shared/InvokeEndpointAsyncOutput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

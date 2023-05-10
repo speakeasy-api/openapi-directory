@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteNatGatewayActionEnum: string
 {
     case DELETE_NAT_GATEWAY = 'DeleteNatGateway';

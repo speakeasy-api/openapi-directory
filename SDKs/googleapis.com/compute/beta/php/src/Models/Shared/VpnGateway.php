@@ -38,6 +38,16 @@ class VpnGateway
     public ?string $description = null;
     
     /**
+     * The IP family of the gateway IPs for the HA-VPN gateway interfaces. If not specified, IPV4 will be used.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\VpnGatewayGatewayIpVersionEnum $gatewayIpVersion
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('gatewayIpVersion')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\VpnGatewayGatewayIpVersionEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?VpnGatewayGatewayIpVersionEnum $gatewayIpVersion = null;
+    
+    /**
      * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
      * 
      * @var ?string $id
@@ -141,6 +151,7 @@ class VpnGateway
 	{
 		$this->creationTimestamp = null;
 		$this->description = null;
+		$this->gatewayIpVersion = null;
 		$this->id = null;
 		$this->kind = null;
 		$this->labelFingerprint = null;

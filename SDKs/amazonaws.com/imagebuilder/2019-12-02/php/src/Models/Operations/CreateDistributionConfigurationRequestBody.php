@@ -12,7 +12,7 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 class CreateDistributionConfigurationRequestBody
 {
     /**
-     *  The idempotency token of the distribution configuration.
+     * The idempotency token of the distribution configuration.
      * 
      * @var string $clientToken
      */
@@ -21,7 +21,7 @@ class CreateDistributionConfigurationRequestBody
     public string $clientToken;
     
     /**
-     *  The description of the distribution configuration.
+     * The description of the distribution configuration.
      * 
      * @var ?string $description
      */
@@ -31,7 +31,7 @@ class CreateDistributionConfigurationRequestBody
     public ?string $description = null;
     
     /**
-     *  The distributions of the distribution configuration.
+     * The distributions of the distribution configuration.
      * 
      * @var array<\OpenAPI\OpenAPI\Models\Shared\Distribution> $distributions
      */
@@ -40,7 +40,7 @@ class CreateDistributionConfigurationRequestBody
     public array $distributions;
     
     /**
-     *  The name of the distribution configuration.
+     * The name of the distribution configuration.
      * 
      * @var string $name
      */
@@ -49,7 +49,7 @@ class CreateDistributionConfigurationRequestBody
     public string $name;
     
     /**
-     *  The tags of the distribution configuration.
+     * The tags of the distribution configuration.
      * 
      * @var ?array<string, string> $tags
      */

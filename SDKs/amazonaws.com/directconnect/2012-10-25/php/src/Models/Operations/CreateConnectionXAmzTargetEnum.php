@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateConnectionXAmzTargetEnum: string
 {
     case OVERTURE_SERVICE_CREATE_CONNECTION = 'OvertureService.CreateConnection';

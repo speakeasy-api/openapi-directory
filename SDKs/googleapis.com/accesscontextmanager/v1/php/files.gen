@@ -137,4 +137,8 @@ src/Models/Shared/TestIamPermissionsRequest.php
 src/Models/Shared/SetIamPolicyRequest.php
 src/Models/Shared/GcpUserAccessBinding.php
 src/Models/Shared/ListGcpUserAccessBindingsResponse.php
+docs/sdk/README.md
+docs/accesspolicies/README.md
+docs/operations/README.md
+docs/organizations/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeliverConfigSnapshotXAmzTargetEnum: string
 {
     case STARLING_DOVE_SERVICE_DELIVER_CONFIG_SNAPSHOT = 'StarlingDoveService.DeliverConfigSnapshot';

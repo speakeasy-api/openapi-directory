@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RegisterDevicesXAmzTargetEnum: string
 {
     case SAGE_MAKER_REGISTER_DEVICES = 'SageMaker.RegisterDevices';

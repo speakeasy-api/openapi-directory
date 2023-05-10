@@ -10,10 +10,10 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /** **Advanced**: The Data Coding Scheme value of the message */
-enum NewMessageMessageClassEnum: string
+enum NewMessageMessageClassEnum: int
 {
-    case ZERO = '0';
-    case ONE = '1';
-    case TWO = '2';
-    case THREE = '3';
+    case ZERO = 0;
+    case ONE = 1;
+    case TWO = 2;
+    case THREE = 3;
 }

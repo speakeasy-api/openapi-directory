@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateSecretVersionStageXAmzTargetEnum: string
 {
     case SECRETSMANAGER_UPDATE_SECRET_VERSION_STAGE = 'secretsmanager.UpdateSecretVersionStage';

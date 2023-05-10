@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreatePipelineXAmzTargetEnum: string
 {
     case DATA_PIPELINE_CREATE_PIPELINE = 'DataPipeline.CreatePipeline';

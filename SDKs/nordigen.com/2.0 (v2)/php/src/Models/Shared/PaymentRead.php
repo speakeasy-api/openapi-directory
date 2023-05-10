@@ -20,11 +20,22 @@ class PaymentRead
     /**
      * Registered creditor account
      * 
-     * @var string $creditorAccount
+     * @var ?string $creditorAccount
      */
 	#[\JMS\Serializer\Annotation\SerializedName('creditor_account')]
     #[\JMS\Serializer\Annotation\Type('string')]
-    public string $creditorAccount;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $creditorAccount = null;
+    
+    /**
+     * Creditor account
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\CreditorAccountWrite $creditorObject
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('creditor_object')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\CreditorAccountWrite')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?CreditorAccountWrite $creditorObject = null;
     
     /**
      * Payment Custom Payment ID
@@ -77,6 +88,18 @@ class PaymentRead
     /**
      * Payment product
      * 
+     * 
+     * * `T2P` - target-2-payments
+     * * `SCT` - sepa-credit-transfers
+     * * `ISCT` - instant-sepa-credit-transfer
+     * * `CBCT` - cross-border-credit-transfers
+     * * `BACS` - Back Payment Scheme
+     * * `CHAPS` - CHAPS Payment Scheme
+     * * `FPS` - Faster Payment Scheme
+     * * `SWIFT` - Swift Payment Service
+     * * `BT` - Balance Transfer
+     * * `MT` - Money Transfer
+     * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\PaymentReadPaymentProductEnum $paymentProduct
      */
 	#[\JMS\Serializer\Annotation\SerializedName('payment_product')]
@@ -87,6 +110,25 @@ class PaymentRead
     /**
      * Payment end to end identification
      * 
+     * 
+     * * `INIT` - Initiated. Payment has been initiated.
+     * * `ERRE` - ExecutionError. We experienced error on payment execution.
+     * * `ERRS` - StatusError. We experienced error retrieving payment status. Try again.
+     * * `ACCC` - AcceptedSettlementCompleted. Settlement on the creditor's account has been completed
+     * * `ACCP` - AcceptedCustomerProfile. Preceding check of technical validation was successful. Customer profile check was successful
+     * * `ACSC` - AcceptedSettlementCompleted. Settlement on the debtor’s account has been completed
+     * * `ACSP` - AcceptedSettlementInProcess. All preceding checks such as technical validation and customer profile were successful and therefore the payment initiation has been accepted for execution
+     * * `ACTC` - AcceptedTechnicalValidation. Authentication and syntactical and semantical validation are successful
+     * * `ACWC` - AcceptedWithChange. Instruction is accepted but a change will be made, such as date or remittance not sent
+     * * `ACWP` - AcceptedWithoutPosting. Payment instruction included in the credit transfer is accepted without being posted to the creditor customer’s account
+     * * `RCVD` - Received. Payment initiation has been received by the receiving agent
+     * * `PDNG` - Pending. Payment initiation or individual transaction included in the payment initiation is pending. Further checks and status update will be performed
+     * * `RJCT` - Rejected. Payment initiation or individual transaction included in the payment initiation has been rejected.
+     * * `CANC` - Cancelled. Payment initiation has been cancelled before execution
+     * * `ACFC` - AcceptedFundsChecked. Pre-ceeding check of technical validation and customer profile was successful and an automatic funds check was positive
+     * * `PATC` - PartiallyAcceptedTechnicalCorrect. The payment initiation needs multiple authentications, where some but not yet all have been performed
+     * * `PART` - PartiallyAccepted. A number of transactions have been accepted, whereas another number of transactions have not yet achieved 'accepted' status
+     * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\PaymentReadPaymentStatusEnum $paymentStatus
      */
 	#[\JMS\Serializer\Annotation\SerializedName('payment_status')]
@@ -96,6 +138,11 @@ class PaymentRead
     
     /**
      * Payment Type
+     * 
+     * 
+     * * `single-payment` - payment
+     * * `bulk-payment` - bulk-payments
+     * * `periodic-payment` - periodic-payments
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\PaymentReadPaymentTypeEnum $paymentType
      */
@@ -115,7 +162,8 @@ class PaymentRead
     
 	public function __construct()
 	{
-		$this->creditorAccount = "";
+		$this->creditorAccount = null;
+		$this->creditorObject = null;
 		$this->customPaymentId = null;
 		$this->debtorAccount = new \OpenAPI\OpenAPI\Models\Shared\DebtorAccountWrite();
 		$this->description = null;

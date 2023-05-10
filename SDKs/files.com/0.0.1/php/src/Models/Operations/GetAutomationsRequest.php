@@ -12,7 +12,7 @@ use \OpenAPI\OpenAPI\Utils\SpeakeasyMetadata;
 class GetAutomationsRequest
 {
     /**
-     * DEPRECATED: Type of automation to filter by. Use `filter[automation]` instead.
+     * If set, return records where the specified field is equal to the supplied value.
      * 
      * @var ?string $automation
      */
@@ -28,7 +28,7 @@ class GetAutomationsRequest
     public ?string $cursor = null;
     
     /**
-     * If set, return records where the specified field is equal to the supplied value. Valid fields are `automation`, `last_modified_at` or `disabled`. Valid field combinations are `[ automation, disabled ]` and `[ disabled, automation ]`.
+     * If set, return records where the specified field is equal to the supplied value. Valid fields are `disabled`, `last_modified_at` or `automation`. Valid field combinations are `[ automation, disabled ]` and `[ disabled, automation ]`.
      * 
      * @var ?array<string, mixed> $filter
      */
@@ -36,7 +36,7 @@ class GetAutomationsRequest
     public ?array $filter = null;
     
     /**
-     * If set, return records where the specified field is greater than the supplied value. Valid fields are `automation`, `last_modified_at` or `disabled`. Valid field combinations are `[ automation, disabled ]` and `[ disabled, automation ]`.
+     * If set, return records where the specified field is greater than the supplied value. Valid fields are `last_modified_at`.
      * 
      * @var ?array<string, mixed> $filterGt
      */
@@ -44,7 +44,7 @@ class GetAutomationsRequest
     public ?array $filterGt = null;
     
     /**
-     * If set, return records where the specified field is greater than or equal to the supplied value. Valid fields are `automation`, `last_modified_at` or `disabled`. Valid field combinations are `[ automation, disabled ]` and `[ disabled, automation ]`.
+     * If set, return records where the specified field is greater than or equal the supplied value. Valid fields are `last_modified_at`.
      * 
      * @var ?array<string, mixed> $filterGteq
      */
@@ -52,15 +52,7 @@ class GetAutomationsRequest
     public ?array $filterGteq = null;
     
     /**
-     * If set, return records where the specified field is equal to the supplied value. Valid fields are `automation`, `last_modified_at` or `disabled`. Valid field combinations are `[ automation, disabled ]` and `[ disabled, automation ]`.
-     * 
-     * @var ?array<string, mixed> $filterLike
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_like')]
-    public ?array $filterLike = null;
-    
-    /**
-     * If set, return records where the specified field is less than the supplied value. Valid fields are `automation`, `last_modified_at` or `disabled`. Valid field combinations are `[ automation, disabled ]` and `[ disabled, automation ]`.
+     * If set, return records where the specified field is less than the supplied value. Valid fields are `last_modified_at`.
      * 
      * @var ?array<string, mixed> $filterLt
      */
@@ -68,7 +60,7 @@ class GetAutomationsRequest
     public ?array $filterLt = null;
     
     /**
-     * If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `automation`, `last_modified_at` or `disabled`. Valid field combinations are `[ automation, disabled ]` and `[ disabled, automation ]`.
+     * If set, return records where the specified field is less than or equal the supplied value. Valid fields are `last_modified_at`.
      * 
      * @var ?array<string, mixed> $filterLteq
      */
@@ -106,7 +98,6 @@ class GetAutomationsRequest
 		$this->filter = null;
 		$this->filterGt = null;
 		$this->filterGteq = null;
-		$this->filterLike = null;
 		$this->filterLt = null;
 		$this->filterLteq = null;
 		$this->perPage = null;

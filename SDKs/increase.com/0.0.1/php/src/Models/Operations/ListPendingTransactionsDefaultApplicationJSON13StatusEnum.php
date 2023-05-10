@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-enum ListPendingTransactionsDefaultApplicationJSON13StatusEnum: string
+enum ListPendingTransactionsDefaultApplicationJSON13StatusEnum: int
 {
-    case FOUR_HUNDRED_AND_TWENTY_NINE = '429';
+    case FOUR_HUNDRED_AND_TWENTY_NINE = 429;
 }

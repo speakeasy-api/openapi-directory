@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum SetIdentityPoolRolesXAmzTargetEnum: string
 {
     case AWS_COGNITO_IDENTITY_SERVICE_SET_IDENTITY_POOL_ROLES = 'AWSCognitoIdentityService.SetIdentityPoolRoles';

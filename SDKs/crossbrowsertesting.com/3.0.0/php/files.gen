@@ -35,4 +35,5 @@ src/Models/Shared/Comparison.php
 src/Models/Shared/Element.php
 src/Models/Shared/FullComparisonTestBase.php
 src/Models/Shared/FullComparisonTest.php
+docs/sdk/README.md
 USAGE.md

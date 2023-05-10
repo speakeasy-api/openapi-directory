@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateDatasetExportJobXAmzTargetEnum: string
 {
     case AMAZON_PERSONALIZE_CREATE_DATASET_EXPORT_JOB = 'AmazonPersonalize.CreateDatasetExportJob';

@@ -70,4 +70,5 @@ src/Models/Shared/LockRuleResponse.php
 src/Models/Shared/UnlockRuleResponse.php
 src/Models/Shared/UpdateRuleResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

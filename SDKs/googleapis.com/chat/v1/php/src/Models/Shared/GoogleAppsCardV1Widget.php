@@ -78,7 +78,7 @@ class GoogleAppsCardV1Widget
     public ?GoogleAppsCardV1Image $image = null;
     
     /**
-     * A widget that creates a UI item with options for users to select. For example, a dropdown menu or check list. Chat apps receive and can process the value of entered text during form input events. For details about working with form inputs, see [Receive form data](https://developers.google.com/chat/how-tos/dialogs#receive_form_data_from_dialogs). When you need to collect data from users that matches options you set, use a selection input. To collect abstract data from users, use the text input widget instead.
+     * A widget that creates one or more UI items that users can select. For example, a dropdown menu or checkboxes. You can use this widget to collect data that can be predicted or enumerated. Chat apps can process the value of items that users select or input. For details about working with form inputs, see [Receive form data](https://developers.google.com/chat/how-tos/dialogs#receive_form_data_from_dialogs). To collect undefined or abstract data from users, use the TextInput widget.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAppsCardV1SelectionInput $selectionInput
      */
@@ -88,7 +88,7 @@ class GoogleAppsCardV1Widget
     public ?GoogleAppsCardV1SelectionInput $selectionInput = null;
     
     /**
-     * A field in which users can enter text. Supports suggestions and on-change actions. Chat apps receive and can process the value of entered text during form input events. For details about working with form inputs, see [Receive form data](https://developers.google.com/chat/how-tos/dialogs#receive_form_data_from_dialogs). When you need to collect abstract data from users, use a text input. To collect defined data from users, use the selection input widget instead.
+     * A field in which users can enter text. Supports suggestions and on-change actions. Chat apps receive and can process the value of entered text during form input events. For details about working with form inputs, see [Receive form data](https://developers.google.com/chat/how-tos/dialogs#receive_form_data_from_dialogs). When you need to collect undefined or abstract data from users, use a text input. To collect defined or enumerated data from users, use the SelectionInput widget.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAppsCardV1TextInput $textInput
      */
@@ -98,7 +98,7 @@ class GoogleAppsCardV1Widget
     public ?GoogleAppsCardV1TextInput $textInput = null;
     
     /**
-     * A paragraph of text that supports formatting. See [Text formatting](https://developers.google.com/workspace/add-ons/concepts/widgets#text_formatting) for details.
+     * A paragraph of text that supports formatting. For more information about formatting text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAppsCardV1TextParagraph $textParagraph
      */

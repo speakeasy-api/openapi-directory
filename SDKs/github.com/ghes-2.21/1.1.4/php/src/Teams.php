@@ -56,11 +56,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsAddMemberLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsAddMemberLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.21/rest/reference/teams#add-team-member-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsAddMemberLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsAddMemberLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsAddMemberLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/members/{username}', \OpenAPI\OpenAPI\Models\Operations\TeamsAddMemberLegacyRequest::class, $request);
         
@@ -158,11 +161,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsAddOrUpdateMembershipForUserLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsAddOrUpdateMembershipForUserLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.21/rest/reference/teams#add-or-update-team-membership-for-a-user-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsAddOrUpdateMembershipForUserLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsAddOrUpdateMembershipForUserLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsAddOrUpdateMembershipForUserLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/memberships/{username}', \OpenAPI\OpenAPI\Models\Operations\TeamsAddOrUpdateMembershipForUserLegacyRequest::class, $request);
         
@@ -252,11 +258,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsAddOrUpdateProjectPermissionsLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsAddOrUpdateProjectPermissionsLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.21/rest/reference/teams/#add-or-update-team-project-permissions-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsAddOrUpdateProjectPermissionsLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsAddOrUpdateProjectPermissionsLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsAddOrUpdateProjectPermissionsLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/projects/{project_id}', \OpenAPI\OpenAPI\Models\Operations\TeamsAddOrUpdateProjectPermissionsLegacyRequest::class, $request);
         
@@ -356,11 +365,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsAddOrUpdateRepoPermissionsLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsAddOrUpdateRepoPermissionsLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.21/rest/reference/teams/#add-or-update-team-repository-permissions-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsAddOrUpdateRepoPermissionsLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsAddOrUpdateRepoPermissionsLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsAddOrUpdateRepoPermissionsLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/repos/{owner}/{repo}', \OpenAPI\OpenAPI\Models\Operations\TeamsAddOrUpdateRepoPermissionsLegacyRequest::class, $request);
         
@@ -448,11 +460,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsCheckPermissionsForProjectLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsCheckPermissionsForProjectLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.21/rest/reference/teams/#check-team-permissions-for-a-project-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsCheckPermissionsForProjectLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsCheckPermissionsForProjectLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsCheckPermissionsForProjectLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/projects/{project_id}', \OpenAPI\OpenAPI\Models\Operations\TeamsCheckPermissionsForProjectLegacyRequest::class, $request);
         
@@ -544,11 +559,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsCheckPermissionsForRepoLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsCheckPermissionsForRepoLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.21/rest/reference/teams/#check-team-permissions-for-a-repository-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsCheckPermissionsForRepoLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsCheckPermissionsForRepoLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsCheckPermissionsForRepoLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/repos/{owner}/{repo}', \OpenAPI\OpenAPI\Models\Operations\TeamsCheckPermissionsForRepoLegacyRequest::class, $request);
         
@@ -692,11 +710,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsCreateDiscussionCommentLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsCreateDiscussionCommentLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.21/rest/reference/teams#create-a-discussion-comment-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsCreateDiscussionCommentLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsCreateDiscussionCommentLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsCreateDiscussionCommentLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/discussions/{discussion_number}/comments', \OpenAPI\OpenAPI\Models\Operations\TeamsCreateDiscussionCommentLegacyRequest::class, $request);
         
@@ -786,11 +807,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsCreateDiscussionLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsCreateDiscussionLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.21/rest/reference/teams#create-a-discussion-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsCreateDiscussionLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsCreateDiscussionLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsCreateDiscussionLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/discussions', \OpenAPI\OpenAPI\Models\Operations\TeamsCreateDiscussionLegacyRequest::class, $request);
         
@@ -867,11 +891,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsDeleteDiscussionCommentLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsDeleteDiscussionCommentLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.21/rest/reference/teams#delete-a-discussion-comment-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsDeleteDiscussionCommentLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsDeleteDiscussionCommentLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsDeleteDiscussionCommentLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}', \OpenAPI\OpenAPI\Models\Operations\TeamsDeleteDiscussionCommentLegacyRequest::class, $request);
         
@@ -939,11 +966,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsDeleteDiscussionLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsDeleteDiscussionLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.21/rest/reference/teams#delete-a-discussion-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsDeleteDiscussionLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsDeleteDiscussionLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsDeleteDiscussionLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/discussions/{discussion_number}', \OpenAPI\OpenAPI\Models\Operations\TeamsDeleteDiscussionLegacyRequest::class, $request);
         
@@ -1015,11 +1045,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsDeleteLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsDeleteLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.21/rest/reference/teams/#delete-a-team-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsDeleteLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsDeleteLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsDeleteLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}', \OpenAPI\OpenAPI\Models\Operations\TeamsDeleteLegacyRequest::class, $request);
         
@@ -1149,11 +1182,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsGetDiscussionCommentLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsGetDiscussionCommentLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.21/rest/reference/teams#get-a-discussion-comment-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsGetDiscussionCommentLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsGetDiscussionCommentLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsGetDiscussionCommentLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}', \OpenAPI\OpenAPI\Models\Operations\TeamsGetDiscussionCommentLegacyRequest::class, $request);
         
@@ -1229,11 +1265,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsGetDiscussionLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsGetDiscussionLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.21/rest/reference/teams#get-a-discussion-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsGetDiscussionLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsGetDiscussionLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsGetDiscussionLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/discussions/{discussion_number}', \OpenAPI\OpenAPI\Models\Operations\TeamsGetDiscussionLegacyRequest::class, $request);
         
@@ -1267,11 +1306,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsGetLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsGetLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.21/rest/reference/teams/#get-a-team-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsGetLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsGetLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsGetLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}', \OpenAPI\OpenAPI\Models\Operations\TeamsGetLegacyRequest::class, $request);
         
@@ -1315,11 +1357,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsGetMemberLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsGetMemberLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.21/rest/reference/teams#get-team-member-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsGetMemberLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsGetMemberLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsGetMemberLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/members/{username}', \OpenAPI\OpenAPI\Models\Operations\TeamsGetMemberLegacyRequest::class, $request);
         
@@ -1407,11 +1452,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsGetMembershipForUserLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsGetMembershipForUserLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.21/rest/reference/teams#get-team-membership-for-a-user-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsGetMembershipForUserLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsGetMembershipForUserLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsGetMembershipForUserLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/memberships/{username}', \OpenAPI\OpenAPI\Models\Operations\TeamsGetMembershipForUserLegacyRequest::class, $request);
         
@@ -1541,11 +1589,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsListChildLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsListChildLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.21/rest/reference/teams/#list-child-teams-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsListChildLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsListChildLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsListChildLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/teams', \OpenAPI\OpenAPI\Models\Operations\TeamsListChildLegacyRequest::class, $request);
         
@@ -1639,11 +1690,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsListDiscussionCommentsLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsListDiscussionCommentsLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.21/rest/reference/teams#list-discussion-comments-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsListDiscussionCommentsLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsListDiscussionCommentsLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsListDiscussionCommentsLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/discussions/{discussion_number}/comments', \OpenAPI\OpenAPI\Models\Operations\TeamsListDiscussionCommentsLegacyRequest::class, $request);
         
@@ -1725,11 +1779,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsListDiscussionsLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsListDiscussionsLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.21/rest/reference/teams#list-discussions-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsListDiscussionsLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsListDiscussionsLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsListDiscussionsLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/discussions', \OpenAPI\OpenAPI\Models\Operations\TeamsListDiscussionsLegacyRequest::class, $request);
         
@@ -1860,11 +1917,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsListMembersLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsListMembersLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.21/rest/reference/teams#list-team-members-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsListMembersLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsListMembersLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsListMembersLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/members', \OpenAPI\OpenAPI\Models\Operations\TeamsListMembersLegacyRequest::class, $request);
         
@@ -1952,11 +2012,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsListProjectsLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsListProjectsLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.21/rest/reference/teams/#list-team-projects-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsListProjectsLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsListProjectsLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsListProjectsLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/projects', \OpenAPI\OpenAPI\Models\Operations\TeamsListProjectsLegacyRequest::class, $request);
         
@@ -2048,11 +2111,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsListReposLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsListReposLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.21/rest/reference/teams/#list-team-repositories-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsListReposLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsListReposLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsListReposLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/repos', \OpenAPI\OpenAPI\Models\Operations\TeamsListReposLegacyRequest::class, $request);
         
@@ -2103,11 +2169,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsRemoveMemberLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsRemoveMemberLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.21/rest/reference/teams#remove-team-member-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsRemoveMemberLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsRemoveMemberLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsRemoveMemberLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/members/{username}', \OpenAPI\OpenAPI\Models\Operations\TeamsRemoveMemberLegacyRequest::class, $request);
         
@@ -2183,11 +2252,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsRemoveMembershipForUserLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsRemoveMembershipForUserLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.21/rest/reference/teams#remove-team-membership-for-a-user-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsRemoveMembershipForUserLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsRemoveMembershipForUserLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsRemoveMembershipForUserLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/memberships/{username}', \OpenAPI\OpenAPI\Models\Operations\TeamsRemoveMembershipForUserLegacyRequest::class, $request);
         
@@ -2255,11 +2327,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsRemoveProjectLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsRemoveProjectLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.21/rest/reference/teams/#remove-a-project-from-a-team-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsRemoveProjectLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsRemoveProjectLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsRemoveProjectLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/projects/{project_id}', \OpenAPI\OpenAPI\Models\Operations\TeamsRemoveProjectLegacyRequest::class, $request);
         
@@ -2345,11 +2420,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsRemoveRepoLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsRemoveRepoLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.21/rest/reference/teams/#remove-a-repository-from-a-team-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsRemoveRepoLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsRemoveRepoLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsRemoveRepoLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/repos/{owner}/{repo}', \OpenAPI\OpenAPI\Models\Operations\TeamsRemoveRepoLegacyRequest::class, $request);
         
@@ -2426,11 +2504,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsUpdateDiscussionCommentLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsUpdateDiscussionCommentLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.21/rest/reference/teams#update-a-discussion-comment-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsUpdateDiscussionCommentLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsUpdateDiscussionCommentLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsUpdateDiscussionCommentLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}', \OpenAPI\OpenAPI\Models\Operations\TeamsUpdateDiscussionCommentLegacyRequest::class, $request);
         
@@ -2513,11 +2594,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsUpdateDiscussionLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsUpdateDiscussionLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.21/rest/reference/teams#update-a-discussion-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsUpdateDiscussionLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsUpdateDiscussionLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsUpdateDiscussionLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/discussions/{discussion_number}', \OpenAPI\OpenAPI\Models\Operations\TeamsUpdateDiscussionLegacyRequest::class, $request);
         
@@ -2599,11 +2683,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsUpdateLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsUpdateLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.21/rest/reference/teams/#update-a-team-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsUpdateLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsUpdateLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsUpdateLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}', \OpenAPI\OpenAPI\Models\Operations\TeamsUpdateLegacyRequest::class, $request);
         

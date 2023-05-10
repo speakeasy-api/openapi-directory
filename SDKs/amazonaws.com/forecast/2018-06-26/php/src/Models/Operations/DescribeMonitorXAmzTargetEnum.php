@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeMonitorXAmzTargetEnum: string
 {
     case AMAZON_FORECAST_DESCRIBE_MONITOR = 'AmazonForecast.DescribeMonitor';

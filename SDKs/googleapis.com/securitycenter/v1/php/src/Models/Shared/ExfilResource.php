@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * ExfilResource - Resource that has been exfiltrated or exfiltrated_to.
+ * ExfilResource - Resource where data was exfiltrated from or exfiltrated to.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public
@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class ExfilResource
 {
     /**
-     * Subcomponents of the asset that is exfiltrated - these could be URIs used during exfiltration, table names, databases, filenames, etc. For example, multiple tables may be exfiltrated from the same CloudSQL instance, or multiple files from the same Cloud Storage bucket.
+     * Subcomponents of the asset that was exfiltrated, like URIs used during exfiltration, table names, databases, and filenames. For example, multiple tables might have been exfiltrated from the same Cloud SQL instance, or multiple files might have been exfiltrated from the same Cloud Storage bucket.
      * 
      * @var ?array<string> $components
      */
@@ -28,7 +28,7 @@ class ExfilResource
     public ?array $components = null;
     
     /**
-     * Resource's URI (https://google.aip.dev/122#full-resource-names)
+     * The resource's [full resource name](https://cloud.google.com/apis/design/resource_names#full_resource_name).
      * 
      * @var ?string $name
      */

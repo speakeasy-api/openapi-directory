@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * Image - Overlaid jpeg image.
+ * Image - Overlaid image.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public
@@ -38,7 +38,7 @@ class Image
     public ?NormalizedCoordinate $resolution = null;
     
     /**
-     * Required. URI of the JPEG image in Cloud Storage. For example, `gs://bucket/inputs/image.jpeg`. JPEG is the only supported image type.
+     * Required. URI of the image in Cloud Storage. For example, `gs://bucket/inputs/image.png`. Only PNG and JPEG images are supported.
      * 
      * @var ?string $uri
      */

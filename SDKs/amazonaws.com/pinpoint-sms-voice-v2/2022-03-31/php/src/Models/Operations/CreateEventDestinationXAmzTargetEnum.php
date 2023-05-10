@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateEventDestinationXAmzTargetEnum: string
 {
     case PINPOINT_SMS_VOICE_V2_CREATE_EVENT_DESTINATION = 'PinpointSMSVoiceV2.CreateEventDestination';

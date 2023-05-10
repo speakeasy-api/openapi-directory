@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class GoogleCloudDialogflowCxV3beta1TransitionCoverageTransition
 {
     /**
-     * Whether or not the transition is covered by at least one of the agent's test cases.
+     * Whether the transition is covered by at least one of the agent's test cases.
      * 
      * @var ?bool $covered
      */

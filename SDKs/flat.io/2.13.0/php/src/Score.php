@@ -851,8 +851,7 @@ class Score
         
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->getScoreRevisionData200ApplicationJSONBinaryString = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->getScoreRevisionData200ApplicationJSONBinaryString = $httpResponse->getBody()->getContents();
             }
             if (Utils\Utils::matchContentType($contentType, 'application/vnd.recordare.musicxml')) {
                 $response->getScoreRevisionData200ApplicationVndRecordareMusicxmlBinaryString = $httpResponse->getBody()->getContents();

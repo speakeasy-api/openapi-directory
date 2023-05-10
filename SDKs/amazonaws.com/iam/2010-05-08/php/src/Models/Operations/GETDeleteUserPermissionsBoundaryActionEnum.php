@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteUserPermissionsBoundaryActionEnum: string
 {
     case DELETE_USER_PERMISSIONS_BOUNDARY = 'DeleteUserPermissionsBoundary';

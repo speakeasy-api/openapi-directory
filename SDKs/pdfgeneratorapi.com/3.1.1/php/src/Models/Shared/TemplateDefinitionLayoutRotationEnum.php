@@ -10,10 +10,10 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /** Page rotation in degrees */
-enum TemplateDefinitionLayoutRotationEnum: string
+enum TemplateDefinitionLayoutRotationEnum: int
 {
-    case ZERO = '0';
-    case NINETY = '90';
-    case ONE_HUNDRED_AND_EIGHTY = '180';
-    case TWO_HUNDRED_AND_SEVENTY = '270';
+    case ZERO = 0;
+    case NINETY = 90;
+    case ONE_HUNDRED_AND_EIGHTY = 180;
+    case TWO_HUNDRED_AND_SEVENTY = 270;
 }

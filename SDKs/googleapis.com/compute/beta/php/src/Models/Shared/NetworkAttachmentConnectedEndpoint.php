@@ -38,7 +38,7 @@ class NetworkAttachmentConnectedEndpoint
     public ?string $projectIdOrNum = null;
     
     /**
-     * Alias IP ranges from the same subnetwork
+     * Alias IP ranges from the same subnetwork.
      * 
      * @var ?array<string> $secondaryIpCidrRanges
      */

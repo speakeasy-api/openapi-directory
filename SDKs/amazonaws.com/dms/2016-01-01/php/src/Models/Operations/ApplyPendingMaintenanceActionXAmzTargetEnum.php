@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ApplyPendingMaintenanceActionXAmzTargetEnum: string
 {
     case AMAZON_DM_SV20160101_APPLY_PENDING_MAINTENANCE_ACTION = 'AmazonDMSv20160101.ApplyPendingMaintenanceAction';

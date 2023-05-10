@@ -18,6 +18,16 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class ValueMappings
 {
     /**
+     * $bindingProperties
+     * 
+     * @var ?array<string, \OpenAPI\OpenAPI\Models\Shared\FormInputBindingPropertiesValue> $bindingProperties
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('bindingProperties')]
+    #[\JMS\Serializer\Annotation\Type('array<string, OpenAPI\OpenAPI\Models\Shared\FormInputBindingPropertiesValue>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $bindingProperties = null;
+    
+    /**
      * $values
      * 
      * @var array<\OpenAPI\OpenAPI\Models\Shared\ValueMapping> $values
@@ -28,6 +38,7 @@ class ValueMappings
     
 	public function __construct()
 	{
+		$this->bindingProperties = null;
 		$this->values = [];
 	}
 }

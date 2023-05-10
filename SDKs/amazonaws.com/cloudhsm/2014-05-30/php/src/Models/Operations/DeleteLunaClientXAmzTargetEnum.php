@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteLunaClientXAmzTargetEnum: string
 {
     case CLOUD_HSM_FRONTEND_SERVICE_DELETE_LUNA_CLIENT = 'CloudHsmFrontendService.DeleteLunaClient';

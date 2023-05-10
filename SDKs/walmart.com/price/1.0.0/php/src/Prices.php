@@ -38,6 +38,164 @@ class Prices
 	}
 	
     /**
+     * Create Repricer Strategy
+     * 
+     * Creates a new strategy for the seller
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\CreateStrategyRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\CreateStrategyResponse
+     */
+	public function createStrategy(
+        \OpenAPI\OpenAPI\Models\Operations\CreateStrategyRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\CreateStrategyResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v3/repricer/strategy');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_defaultClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\CreateStrategyResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->createStrategy200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\CreateStrategy200ApplicationJSON', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Delete Repricer Strategy
+     * 
+     * Deletes the strategy
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\DeleteStrategyRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\DeleteStrategyResponse
+     */
+	public function deleteStrategy(
+        \OpenAPI\OpenAPI\Models\Operations\DeleteStrategyRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\DeleteStrategyResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v3/repricer/strategy/{strategyCollectionId}', \OpenAPI\OpenAPI\Models\Operations\DeleteStrategyRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_defaultClient->request('DELETE', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\DeleteStrategyResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->deleteStrategy200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\DeleteStrategy200ApplicationJSON', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Assign/Unassign items to/from Repricer Strategy
+     * 
+     * Add/Remove one or more items from a strategy
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetRepricerFeedRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\GetRepricerFeedResponse
+     */
+	public function getRepricerFeed(
+        \OpenAPI\OpenAPI\Models\Operations\GetRepricerFeedRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\GetRepricerFeedResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v3/repricerFeeds');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_defaultClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GetRepricerFeedResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->getRepricerFeed200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\GetRepricerFeed200ApplicationJSON', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * List of Repricer Strategies
+     * 
+     * Get the list of strategies
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetStrategiesRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\GetStrategiesResponse
+     */
+	public function getStrategies(
+        \OpenAPI\OpenAPI\Models\Operations\GetStrategiesRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\GetStrategiesResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v3/repricer/strategies');
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GetStrategiesResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->getStrategies200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\GetStrategies200ApplicationJSON', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Set up CAP SKU All
      * 
      * This API helps Sellers to completely opt-in or opt-out from CAP program.
@@ -182,6 +340,48 @@ class Prices
             }
             if (Utils\Utils::matchContentType($contentType, 'application/xml')) {
                 $response->body = $httpResponse->getBody()->getContents();
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Update Repricer Strategy
+     * 
+     * Updates the existing strategy
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\UpdateStrategyRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\UpdateStrategyResponse
+     */
+	public function updateStrategy(
+        \OpenAPI\OpenAPI\Models\Operations\UpdateStrategyRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\UpdateStrategyResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v3/repricer/strategy/{strategyCollectionId}', \OpenAPI\OpenAPI\Models\Operations\UpdateStrategyRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_defaultClient->request('PUT', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\UpdateStrategyResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->updateStrategy200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\UpdateStrategy200ApplicationJSON', 'json');
             }
         }
 

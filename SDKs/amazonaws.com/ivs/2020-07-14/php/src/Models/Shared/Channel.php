@@ -32,6 +32,11 @@ class Channel
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $ingestEndpoint = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('insecureIngest')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $insecureIngest = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('latencyMode')]
     #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\ChannelLatencyModeEnum>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -72,6 +77,7 @@ class Channel
 		$this->arn = null;
 		$this->authorized = null;
 		$this->ingestEndpoint = null;
+		$this->insecureIngest = null;
 		$this->latencyMode = null;
 		$this->name = null;
 		$this->playbackUrl = null;

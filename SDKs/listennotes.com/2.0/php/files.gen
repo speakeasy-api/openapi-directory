@@ -54,6 +54,8 @@ src/Models/Operations/JustListenRequest.php
 src/Models/Operations/JustListenResponse.php
 src/Models/Operations/GetPodcastAudienceRequest.php
 src/Models/Operations/GetPodcastAudienceResponse.php
+src/Models/Operations/GetPodcastsByDomainNameRequest.php
+src/Models/Operations/GetPodcastsByDomainNameResponse.php
 src/Models/Operations/GetPlaylistByIdSortEnum.php
 src/Models/Operations/GetPlaylistByIdTypeEnum.php
 src/Models/Operations/GetPlaylistByIdRequest.php
@@ -109,6 +111,7 @@ src/Models/Shared/GetPodcastsInBatchForm.php
 src/Models/Shared/GetRegionsResponse.php
 src/Models/Shared/PodcastAudienceResponseByRegions.php
 src/Models/Shared/PodcastAudienceResponse.php
+src/Models/Shared/PodcastDomainResponse.php
 src/Models/Shared/PlaylistResponseTypeEnum.php
 src/Models/Shared/PlaylistResponse.php
 src/Models/Shared/PlaylistVisibilityFieldEnum.php
@@ -140,4 +143,10 @@ src/Models/Webhooks/PodcastsSubmitAcceptedResponse.php
 src/Models/Webhooks/PodcastsSubmitRejectedResponse.php
 src/Models/Webhooks/PodcastsSubmitRejectedRequestBodyPodcast.php
 src/Models/Webhooks/PodcastsSubmitRejectedRequestBody.php
+docs/sdk/README.md
+docs/directoryapi/README.md
+docs/insightsapi/README.md
+docs/playlistapi/README.md
+docs/podcasterapi/README.md
+docs/searchapi/README.md
 USAGE.md

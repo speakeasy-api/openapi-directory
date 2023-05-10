@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeConnectionLoaXAmzTargetEnum: string
 {
     case OVERTURE_SERVICE_DESCRIBE_CONNECTION_LOA = 'OvertureService.DescribeConnectionLoa';

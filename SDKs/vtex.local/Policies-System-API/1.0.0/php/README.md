@@ -30,21 +30,58 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\PolicyCreateOrUpdateRequest;
+use \OpenAPI\OpenAPI\Models\Shared\PolicySaveRequest;
+use \OpenAPI\OpenAPI\Models\Shared\StatementGetResponse;
+use \OpenAPI\OpenAPI\Models\Shared\StatementGetResponseCondition;
+use \OpenAPI\OpenAPI\Models\Shared\StatementGetResponseConditionConditions;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new PolicyCreateOrUpdateRequest();
+    $request->accept = 'corrupti';
+    $request->contentType = 'provident';
+    $request->policySaveRequest = new PolicySaveRequest();
+    $request->policySaveRequest->description = 'distinctio';
+    $request->policySaveRequest->name = 'Stuart Stiedemann';
+    $request->policySaveRequest->statements = [
+        new StatementGetResponse(),
+        new StatementGetResponse(),
+    ];
+    $request->id = '9a674e0f-467c-4c87-96ed-151a05dfc2dd';
+
+    $response = $sdk->policy->policyCreateOrUpdate($request);
+
+    if ($response->body !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### policy
+### [policy](docs/policy/README.md)
 
-* `policyCreateOrUpdate` - Create Policy
-* `policyDelete` - Delete Policy by ID
-* `policyEvaluate` - Evaluate Policies
-* `policyGet` - Get Policy by ID
-* `policyList` - Get Policy List
-* `putApiPolicyEnginePoliciesId` - Update Policy
+* [policyCreateOrUpdate](docs/policy/README.md#policycreateorupdate) - Create Policy
+* [policyDelete](docs/policy/README.md#policydelete) - Delete Policy by ID
+* [policyEvaluate](docs/policy/README.md#policyevaluate) - Evaluate Policies
+* [policyGet](docs/policy/README.md#policyget) - Get Policy by ID
+* [policyList](docs/policy/README.md#policylist) - Get Policy List
+* [putApiPolicyEnginePoliciesId](docs/policy/README.md#putapipolicyenginepoliciesid) - Update Policy
 <!-- End SDK Available Operations -->
 
 ### Maturity

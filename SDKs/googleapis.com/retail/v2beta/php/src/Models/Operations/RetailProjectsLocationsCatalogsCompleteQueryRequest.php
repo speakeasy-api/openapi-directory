@@ -36,14 +36,6 @@ class RetailProjectsLocationsCatalogsCompleteQueryRequest
     public ?\OpenAPI\OpenAPI\Models\Shared\AltEnum $alt = null;
     
     /**
-     * The banner context for completion suggestions.
-     * 
-     * @var ?string $banner
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=banner')]
-    public ?string $banner = null;
-    
-    /**
      * JSONP
      * 
      * @var ?string $callback
@@ -74,6 +66,14 @@ class RetailProjectsLocationsCatalogsCompleteQueryRequest
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=deviceType')]
     public ?string $deviceType = null;
+    
+    /**
+     * The entity for customers who run multiple entities, domains, sites, or regions, for example, `Google US`, `Google Ads`, `Waymo`, `google.com`, `youtube.com`, etc. If this is set, it must be an exact match with UserEvent.entity to get per-entity autocomplete results.
+     * 
+     * @var ?string $entity
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=entity')]
+    public ?string $entity = null;
     
     /**
      * Selector specifying which fields to include in a partial response.
@@ -168,11 +168,11 @@ class RetailProjectsLocationsCatalogsCompleteQueryRequest
 		$this->dollarXgafv = null;
 		$this->accessToken = null;
 		$this->alt = null;
-		$this->banner = null;
 		$this->callback = null;
 		$this->catalog = "";
 		$this->dataset = null;
 		$this->deviceType = null;
+		$this->entity = null;
 		$this->fields = null;
 		$this->key = null;
 		$this->languageCodes = null;

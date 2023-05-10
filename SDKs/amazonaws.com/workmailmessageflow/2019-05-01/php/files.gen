@@ -27,4 +27,5 @@ src/Models/Operations/PutRawMessageContentResponse.php
 src/Models/Shared/GetRawMessageContentResponse.php
 src/Models/Shared/S3Reference.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

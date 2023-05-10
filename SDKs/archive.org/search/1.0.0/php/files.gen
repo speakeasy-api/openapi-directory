@@ -27,4 +27,5 @@ src/Models/Operations/GetSearchV1ScrapeResponse.php
 src/Models/Shared/OrganicResult.php
 src/Models/Shared/Error.php
 src/Models/Shared/ScrapeResult.php
+docs/sdk/README.md
 USAGE.md

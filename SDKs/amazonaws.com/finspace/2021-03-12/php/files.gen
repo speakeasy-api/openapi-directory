@@ -52,4 +52,5 @@ src/Models/Shared/ListEnvironmentsResponse.php
 src/Models/Shared/ListTagsForResourceResponse.php
 src/Models/Shared/UpdateEnvironmentResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

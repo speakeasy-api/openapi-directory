@@ -116,6 +116,10 @@ src/Models/Shared/MembershipSpecCertificateManagementEnum.php
 src/Models/Shared/MembershipSpec.php
 src/Models/Shared/MultiClusterIngressFeatureSpecBillingEnum.php
 src/Models/Shared/MultiClusterIngressFeatureSpec.php
+src/Models/Shared/FleetObservabilityFeatureSpec.php
+src/Models/Shared/FleetObservabilityLoggingConfig.php
+src/Models/Shared/FleetObservabilityRoutingConfigModeEnum.php
+src/Models/Shared/FleetObservabilityRoutingConfig.php
 src/Models/Shared/CloudAuditLoggingFeatureSpec.php
 src/Models/Shared/AnthosObservabilityFeatureSpec.php
 src/Models/Shared/AnthosObservabilityMembershipSpec.php
@@ -157,6 +161,7 @@ src/Models/Shared/ConfigManagementPolicyControllerMonitoring.php
 src/Models/Shared/ConfigManagementHierarchyControllerConfig.php
 src/Models/Shared/ConfigManagementConfigSync.php
 src/Models/Shared/ConfigManagementOciConfig.php
+src/Models/Shared/ConfigManagementManaged.php
 src/Models/Shared/ConfigManagementGitConfig.php
 src/Models/Shared/ConfigManagementBinauthzConfig.php
 src/Models/Shared/CloudBuildMembershipSpecSecurityPolicyEnum.php
@@ -235,6 +240,7 @@ src/Models/Shared/MembershipBindingLifecycleStateCodeEnum.php
 src/Models/Shared/MembershipBindingLifecycleState.php
 src/Models/Shared/MembershipInput.php
 src/Models/Shared/Membership.php
+src/Models/Shared/MonitoringConfig.php
 src/Models/Shared/MembershipEndpointInput.php
 src/Models/Shared/MembershipEndpoint.php
 src/Models/Shared/OnPremClusterClusterTypeEnum.php
@@ -291,4 +297,6 @@ src/Models/Shared/Scope.php
 src/Models/Shared/ScopeLifecycleStateCodeEnum.php
 src/Models/Shared/ScopeLifecycleState.php
 src/Models/Shared/ListScopesResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

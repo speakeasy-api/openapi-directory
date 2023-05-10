@@ -71,4 +71,5 @@ src/Models/Operations/RotatePagesV1RequestBody.php
 src/Models/Operations/RotatePagesV14XXApplicationProblemPlusJson.php
 src/Models/Operations/RotatePagesV1Response.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

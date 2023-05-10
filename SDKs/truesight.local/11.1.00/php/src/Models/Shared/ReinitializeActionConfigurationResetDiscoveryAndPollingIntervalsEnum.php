@@ -10,8 +10,8 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /** When set to <em>1</em>, removes all user-defined frequencies for discovery and polling processes to their default values (respectively 1 hour and 2 minutes). */
-enum ReinitializeActionConfigurationResetDiscoveryAndPollingIntervalsEnum: string
+enum ReinitializeActionConfigurationResetDiscoveryAndPollingIntervalsEnum: int
 {
-    case ZERO = '0';
-    case ONE = '1';
+    case ZERO = 0;
+    case ONE = 1;
 }

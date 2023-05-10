@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteDirectConnectGatewayAssociationXAmzTargetEnum: string
 {
     case OVERTURE_SERVICE_DELETE_DIRECT_CONNECT_GATEWAY_ASSOCIATION = 'OvertureService.DeleteDirectConnectGatewayAssociation';

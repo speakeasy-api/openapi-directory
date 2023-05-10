@@ -21,4 +21,5 @@ src/Utils/Utils.php
 src/Models/Operations/GetCityFormatEnum.php
 src/Models/Operations/GetCityRequest.php
 src/Models/Operations/GetCityResponse.php
+docs/sdk/README.md
 USAGE.md

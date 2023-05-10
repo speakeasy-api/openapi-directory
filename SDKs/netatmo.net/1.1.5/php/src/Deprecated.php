@@ -45,12 +45,15 @@ class Deprecated
      * @param \OpenAPI\OpenAPI\Models\Operations\DevicelistRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\DevicelistSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\DevicelistResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function devicelist(
         \OpenAPI\OpenAPI\Models\Operations\DevicelistRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\DevicelistSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\DevicelistResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/devicelist');
         
@@ -83,12 +86,15 @@ class Deprecated
      * @param \OpenAPI\OpenAPI\Models\Operations\GetthermstateRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\GetthermstateSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetthermstateResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getthermstate(
         \OpenAPI\OpenAPI\Models\Operations\GetthermstateRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\GetthermstateSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetthermstateResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/getthermstate');
         
@@ -119,17 +125,23 @@ class Deprecated
      * The method getuser returns information about a user such as prefered language, prefered units, and list of devices.
      * 
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetuserSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetuserResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getuser(
+        \OpenAPI\OpenAPI\Models\Operations\GetuserSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetuserResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/getuser');
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

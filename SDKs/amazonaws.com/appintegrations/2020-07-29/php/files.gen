@@ -73,4 +73,5 @@ src/Models/Shared/ListEventIntegrationsResponse.php
 src/Models/Shared/EventIntegration.php
 src/Models/Shared/ListTagsForResourceResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

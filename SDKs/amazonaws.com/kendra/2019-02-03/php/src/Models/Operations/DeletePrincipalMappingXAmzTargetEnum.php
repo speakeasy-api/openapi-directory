@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeletePrincipalMappingXAmzTargetEnum: string
 {
     case AWS_KENDRA_FRONTEND_SERVICE_DELETE_PRINCIPAL_MAPPING = 'AWSKendraFrontendService.DeletePrincipalMapping';

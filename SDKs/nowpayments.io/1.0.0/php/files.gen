@@ -85,4 +85,9 @@ src/Models/Operations/GetOneRecurringPaymentResponse.php
 src/Models/Operations/UpdatePlanRequestBody.php
 src/Models/Operations/UpdatePlanRequest.php
 src/Models/Operations/UpdatePlanResponse.php
+docs/sdk/README.md
+docs/billingsubpartnerapi/README.md
+docs/paymentsapi/README.md
+docs/payoutsapi/README.md
+docs/recurringpaymentsapiemailsubscriptionsfeature/README.md
 USAGE.md

@@ -418,4 +418,5 @@ src/Models/Shared/TypedLinkFacetAttributeUpdate.php
 src/Models/Shared/UpgradeAppliedSchemaResponse.php
 src/Models/Shared/UpgradePublishedSchemaResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

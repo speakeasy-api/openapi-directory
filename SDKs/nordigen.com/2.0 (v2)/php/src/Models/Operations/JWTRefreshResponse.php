@@ -31,6 +31,14 @@ class JWTRefreshResponse
     public ?array $jwtRefresh403ApplicationJSONObject = null;
     
     /**
+     * Nordigen rate limit exceeded
+     * 
+     * @var ?array<string, mixed> $jwtRefresh429ApplicationJSONObject
+     */
+	
+    public ?array $jwtRefresh429ApplicationJSONObject = null;
+    
+    /**
      * Refresh access token.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\SpectacularJWTRefresh $spectacularJWTRefresh
@@ -49,6 +57,7 @@ class JWTRefreshResponse
 		$this->contentType = "";
 		$this->jwtRefresh401ApplicationJSONObject = null;
 		$this->jwtRefresh403ApplicationJSONObject = null;
+		$this->jwtRefresh429ApplicationJSONObject = null;
 		$this->spectacularJWTRefresh = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;

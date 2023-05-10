@@ -42,6 +42,11 @@ class Table
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('FederatedTable')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\FederatedTable')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?FederatedTable $federatedTable = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('IsRegisteredWithLakeFormation')]
     #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -133,6 +138,7 @@ class Table
 		$this->createdBy = null;
 		$this->databaseName = null;
 		$this->description = null;
+		$this->federatedTable = null;
 		$this->isRegisteredWithLakeFormation = null;
 		$this->lastAccessTime = null;
 		$this->lastAnalyzedTime = null;

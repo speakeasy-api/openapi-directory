@@ -38,6 +38,11 @@ class ServiceInstance
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $environmentName;
     
+	#[\JMS\Serializer\Annotation\SerializedName('lastClientRequestToken')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $lastClientRequestToken = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('lastDeploymentAttemptedAt')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     public \DateTime $lastDeploymentAttemptedAt;
@@ -78,6 +83,7 @@ class ServiceInstance
 		$this->deploymentStatus = \OpenAPI\OpenAPI\Models\Shared\DeploymentStatusEnum::IN_PROGRESS;
 		$this->deploymentStatusMessage = null;
 		$this->environmentName = "";
+		$this->lastClientRequestToken = null;
 		$this->lastDeploymentAttemptedAt = new \DateTime();
 		$this->lastDeploymentSucceededAt = new \DateTime();
 		$this->name = "";

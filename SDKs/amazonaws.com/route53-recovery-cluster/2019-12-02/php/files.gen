@@ -40,4 +40,5 @@ src/Models/Shared/UpdateRoutingControlStateRequest.php
 src/Models/Shared/UpdateRoutingControlStatesRequest.php
 src/Models/Shared/UpdateRoutingControlStateEntry.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

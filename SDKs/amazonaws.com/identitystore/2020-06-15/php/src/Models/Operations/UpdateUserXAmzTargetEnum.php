@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateUserXAmzTargetEnum: string
 {
     case AWS_IDENTITY_STORE_UPDATE_USER = 'AWSIdentityStore.UpdateUser';

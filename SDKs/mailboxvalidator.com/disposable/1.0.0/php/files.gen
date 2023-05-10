@@ -21,4 +21,5 @@ src/Utils/Utils.php
 src/Models/Operations/GetV1EmailDisposableFormatEnum.php
 src/Models/Operations/GetV1EmailDisposableRequest.php
 src/Models/Operations/GetV1EmailDisposableResponse.php
+docs/sdk/README.md
 USAGE.md

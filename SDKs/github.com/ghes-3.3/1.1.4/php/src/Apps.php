@@ -90,11 +90,14 @@ class Apps
      * @param \OpenAPI\OpenAPI\Models\Operations\AppsCheckAuthorizationRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\AppsCheckAuthorizationResponse
      * @see https://docs.github.com/enterprise-server@3.3/rest/reference/apps#check-an-authorization
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function appsCheckAuthorization(
         \OpenAPI\OpenAPI\Models\Operations\AppsCheckAuthorizationRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\AppsCheckAuthorizationResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/applications/{client_id}/tokens/{access_token}', \OpenAPI\OpenAPI\Models\Operations\AppsCheckAuthorizationRequest::class, $request);
         
@@ -1204,11 +1207,14 @@ class Apps
      * @param \OpenAPI\OpenAPI\Models\Operations\AppsResetAuthorizationRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\AppsResetAuthorizationResponse
      * @see https://docs.github.com/enterprise-server@3.3/rest/reference/apps#reset-an-authorization
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function appsResetAuthorization(
         \OpenAPI\OpenAPI\Models\Operations\AppsResetAuthorizationRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\AppsResetAuthorizationResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/applications/{client_id}/tokens/{access_token}', \OpenAPI\OpenAPI\Models\Operations\AppsResetAuthorizationRequest::class, $request);
         
@@ -1293,11 +1299,14 @@ class Apps
      * @param \OpenAPI\OpenAPI\Models\Operations\AppsRevokeAuthorizationForApplicationRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\AppsRevokeAuthorizationForApplicationResponse
      * @see https://docs.github.com/enterprise-server@3.3/rest/reference/apps#revoke-an-authorization-for-an-application
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function appsRevokeAuthorizationForApplication(
         \OpenAPI\OpenAPI\Models\Operations\AppsRevokeAuthorizationForApplicationRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\AppsRevokeAuthorizationForApplicationResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/applications/{client_id}/tokens/{access_token}', \OpenAPI\OpenAPI\Models\Operations\AppsRevokeAuthorizationForApplicationRequest::class, $request);
         
@@ -1331,11 +1340,14 @@ class Apps
      * @param \OpenAPI\OpenAPI\Models\Operations\AppsRevokeGrantForApplicationRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\AppsRevokeGrantForApplicationResponse
      * @see https://docs.github.com/enterprise-server@3.3/rest/reference/apps#revoke-a-grant-for-an-application
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function appsRevokeGrantForApplication(
         \OpenAPI\OpenAPI\Models\Operations\AppsRevokeGrantForApplicationRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\AppsRevokeGrantForApplicationResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/applications/{client_id}/grants/{access_token}', \OpenAPI\OpenAPI\Models\Operations\AppsRevokeGrantForApplicationRequest::class, $request);
         

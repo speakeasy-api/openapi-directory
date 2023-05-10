@@ -20,11 +20,20 @@ class PaymentWriteRequest2
     /**
      * Registered creditor account
      * 
-     * @var string $creditorAccount
+     * @var ?string $creditorAccount
      */
 	#[SpeakeasyMetadata('form:name=creditor_account')]
     #[SpeakeasyMetadata('multipartForm:name=creditor_account')]
-    public string $creditorAccount;
+    public ?string $creditorAccount = null;
+    
+    /**
+     * Creditor account
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\CreditorAccountWriteRequest $creditorObject
+     */
+	#[SpeakeasyMetadata('form:name=creditor_object,json=true')]
+    #[SpeakeasyMetadata('multipartForm:name=creditor_object,json=true')]
+    public ?CreditorAccountWriteRequest $creditorObject = null;
     
     /**
      * Payment Custom Payment ID
@@ -74,6 +83,18 @@ class PaymentWriteRequest2
     /**
      * Payment product
      * 
+     * 
+     * * `T2P` - target-2-payments
+     * * `SCT` - sepa-credit-transfers
+     * * `ISCT` - instant-sepa-credit-transfer
+     * * `CBCT` - cross-border-credit-transfers
+     * * `BACS` - Back Payment Scheme
+     * * `CHAPS` - CHAPS Payment Scheme
+     * * `FPS` - Faster Payment Scheme
+     * * `SWIFT` - Swift Payment Service
+     * * `BT` - Balance Transfer
+     * * `MT` - Money Transfer
+     * 
      * @var mixed $paymentProduct
      */
 	#[SpeakeasyMetadata('form:name=payment_product')]
@@ -107,9 +128,19 @@ class PaymentWriteRequest2
     #[SpeakeasyMetadata('multipartForm:name=requested_execution_date,dateTimeFormat=Y-m-d')]
     public ?\DateTime $requestedExecutionDate = null;
     
+    /**
+     * Indicates whether payment should be submitted separately
+     * 
+     * @var ?bool $submitPayment
+     */
+	#[SpeakeasyMetadata('form:name=submit_payment')]
+    #[SpeakeasyMetadata('multipartForm:name=submit_payment')]
+    public ?bool $submitPayment = null;
+    
 	public function __construct()
 	{
-		$this->creditorAccount = "";
+		$this->creditorAccount = null;
+		$this->creditorObject = null;
 		$this->customPaymentId = null;
 		$this->debtorAccount = null;
 		$this->description = null;
@@ -119,5 +150,6 @@ class PaymentWriteRequest2
 		$this->periodicPayment = null;
 		$this->redirect = "";
 		$this->requestedExecutionDate = null;
+		$this->submitPayment = null;
 	}
 }

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RemoveTagsFromStreamXAmzTargetEnum: string
 {
     case KINESIS20131202_REMOVE_TAGS_FROM_STREAM = 'Kinesis_20131202.RemoveTagsFromStream';

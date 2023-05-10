@@ -30,32 +30,62 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\AreGamesInProgressRequest;
+use \OpenAPI\OpenAPI\Models\Operations\AreGamesInProgressFormatEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new AreGamesInProgressRequest();
+    $request->format = AreGamesInProgressFormatEnum::JSON;
+
+    $response = $sdk->areGamesInProgress($request);
+
+    if ($response->areGamesInProgress200ApplicationJSONBoolean !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `areGamesInProgress` - Are Games In Progress
-* `conferenceHierarchyWithTeams` - Conference Hierarchy (with Teams)
-* `currentSeason` - Current Season
-* `currentSeasonDetails` - Current Season Details
-* `currentSeasontype` - Current SeasonType
-* `currentWeek` - Current Week
-* `gamesByDate` - Games by Date
-* `gamesByWeek` - Games by Week
-* `injuredPlayers` - Injured Players
-* `playerDetailsByActive` - Player Details By Active
-* `playerDetailsByPlayer` - Player Details By Player
-* `playerDetailsByTeam` - Player Details by Team
-* `schedules` - Schedules
-* `stadiums` - Stadiums
-* `teamGameLogsBySeason` - Team Game Logs By Season
-* `teamGameStatsByWeek` - Team Game Stats by Week
-* `teamSeasonStatsStandings` - Team Season Stats & Standings
-* `teams` - Teams
+* [areGamesInProgress](docs/sdk/README.md#aregamesinprogress) - Are Games In Progress
+* [conferenceHierarchyWithTeams](docs/sdk/README.md#conferencehierarchywithteams) - Conference Hierarchy (with Teams)
+* [currentSeason](docs/sdk/README.md#currentseason) - Current Season
+* [currentSeasonDetails](docs/sdk/README.md#currentseasondetails) - Current Season Details
+* [currentSeasontype](docs/sdk/README.md#currentseasontype) - Current SeasonType
+* [currentWeek](docs/sdk/README.md#currentweek) - Current Week
+* [gamesByDate](docs/sdk/README.md#gamesbydate) - Games by Date
+* [gamesByWeek](docs/sdk/README.md#gamesbyweek) - Games by Week
+* [gamesByWeekBasic](docs/sdk/README.md#gamesbyweekbasic) - Games by Week (Basic)
+* [injuredPlayers](docs/sdk/README.md#injuredplayers) - Injured Players
+* [playerDetailsByActive](docs/sdk/README.md#playerdetailsbyactive) - Player Details By Active
+* [playerDetailsByPlayer](docs/sdk/README.md#playerdetailsbyplayer) - Player Details By Player
+* [playerDetailsByTeam](docs/sdk/README.md#playerdetailsbyteam) - Player Details by Team
+* [playersByTeamBasic](docs/sdk/README.md#playersbyteambasic) - Players by Team (Basic)
+* [schedules](docs/sdk/README.md#schedules) - Schedules
+* [schedulesBasic](docs/sdk/README.md#schedulesbasic) - Schedules (Basic)
+* [stadiums](docs/sdk/README.md#stadiums) - Stadiums
+* [teamGameLogsBySeason](docs/sdk/README.md#teamgamelogsbyseason) - Team Game Logs By Season
+* [teamGameStatsByWeek](docs/sdk/README.md#teamgamestatsbyweek) - Team Game Stats by Week
+* [teamSeasonStatsStandings](docs/sdk/README.md#teamseasonstatsstandings) - Team Season Stats & Standings
+* [teams](docs/sdk/README.md#teams) - Teams
+* [teamsBasic](docs/sdk/README.md#teamsbasic) - Teams (Basic)
 <!-- End SDK Available Operations -->
 
 ### Maturity

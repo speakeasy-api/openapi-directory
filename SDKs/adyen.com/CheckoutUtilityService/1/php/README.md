@@ -30,15 +30,43 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\CheckoutUtilityRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new CheckoutUtilityRequest();
+    $request->originDomains = [
+        'provident',
+        'distinctio',
+        'quibusdam',
+    ];
+
+    $response = $sdk->postOriginKeys($request);
+
+    if ($response->checkoutUtilityResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `postOriginKeys` - Create originKey values for one or more merchant domains.
+* [postOriginKeys](docs/sdk/README.md#postoriginkeys) - Create originKey values for one or more merchant domains.
 <!-- End SDK Available Operations -->
 
 ### Maturity

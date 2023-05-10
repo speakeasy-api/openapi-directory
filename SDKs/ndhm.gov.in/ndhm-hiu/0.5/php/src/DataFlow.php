@@ -68,7 +68,7 @@ class DataFlow
      */
 	public function postV05HealthInformationHiuOnRequestJson(
         \OpenAPI\OpenAPI\Models\Operations\PostV05HealthInformationHiuOnRequestJsonRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05HealthInformationHiuOnRequestJsonResponse
     {
         $baseUrl = DataFlow::POST_V05_HEALTH_INFORMATION_HIU_ON_REQUEST_JSON_SERVERS[0];
@@ -125,7 +125,7 @@ class DataFlow
      */
 	public function postV05HealthInformationHiuOnRequestRaw(
         \OpenAPI\OpenAPI\Models\Operations\PostV05HealthInformationHiuOnRequestRawRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05HealthInformationHiuOnRequestRawResponse
     {
         $baseUrl = DataFlow::POST_V05_HEALTH_INFORMATION_HIU_ON_REQUEST_RAW_SERVERS[0];
@@ -185,7 +185,7 @@ class DataFlow
      */
 	public function postV05HealthInformationTransferJson(
         \OpenAPI\OpenAPI\Models\Operations\PostV05HealthInformationTransferJsonRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05HealthInformationTransferJsonResponse
     {
         $baseUrl = DataFlow::POST_V05_HEALTH_INFORMATION_TRANSFER_JSON_SERVERS[0];
@@ -245,7 +245,7 @@ class DataFlow
      */
 	public function postV05HealthInformationTransferRaw(
         \OpenAPI\OpenAPI\Models\Operations\PostV05HealthInformationTransferRawRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05HealthInformationTransferRawResponse
     {
         $baseUrl = DataFlow::POST_V05_HEALTH_INFORMATION_TRANSFER_RAW_SERVERS[0];

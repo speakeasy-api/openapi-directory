@@ -119,4 +119,8 @@ src/Models/Shared/AggregationInfo.php
 src/Models/Shared/GeoTaxonomyTypeEnum.php
 src/Models/Shared/GeoTaxonomy.php
 src/Models/Shared/Category.php
+docs/sdk/README.md
+docs/billingaccounts/README.md
+docs/projects/README.md
+docs/services/README.md
 USAGE.md

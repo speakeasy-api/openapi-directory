@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetCustomRulePolicyXAmzTargetEnum: string
 {
     case STARLING_DOVE_SERVICE_GET_CUSTOM_RULE_POLICY = 'StarlingDoveService.GetCustomRulePolicy';

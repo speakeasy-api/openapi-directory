@@ -30,65 +30,94 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\CreateArtifactRuleRequest;
+use \OpenAPI\OpenAPI\Models\Shared\Rule;
+use \OpenAPI\OpenAPI\Models\Shared\RuleTypeEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new CreateArtifactRuleRequest();
+    $request->rule = new Rule();
+    $request->rule->config = 'corrupti';
+    $request->rule->type = RuleTypeEnum::VALIDITY;
+    $request->artifactId = 'provident';
+
+    $response = $sdk->artifactRules->createArtifactRule($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### artifactRules
+### [artifactRules](docs/artifactrules/README.md)
 
-* `createArtifactRule` - Create artifact rule
-* `deleteArtifactRule` - Delete artifact rule
-* `deleteArtifactRules` - Delete artifact rules
-* `getArtifactRuleConfig` - Get artifact rule configuration
-* `listArtifactRules` - List artifact rules
-* `testUpdateArtifact` - Test update artifact
-* `updateArtifactRuleConfig` - Update artifact rule configuration
+* [createArtifactRule](docs/artifactrules/README.md#createartifactrule) - Create artifact rule
+* [deleteArtifactRule](docs/artifactrules/README.md#deleteartifactrule) - Delete artifact rule
+* [deleteArtifactRules](docs/artifactrules/README.md#deleteartifactrules) - Delete artifact rules
+* [getArtifactRuleConfig](docs/artifactrules/README.md#getartifactruleconfig) - Get artifact rule configuration
+* [listArtifactRules](docs/artifactrules/README.md#listartifactrules) - List artifact rules
+* [testUpdateArtifact](docs/artifactrules/README.md#testupdateartifact) - Test update artifact
+* [updateArtifactRuleConfig](docs/artifactrules/README.md#updateartifactruleconfig) - Update artifact rule configuration
 
-### artifacts
+### [artifacts](docs/artifacts/README.md)
 
-* `createArtifact` - Create artifact
-* `deleteArtifact` - Delete artifact
-* `getArtifactByGlobalId` - Get artifact by global ID
-* `getLatestArtifact` - Get latest artifact
-* `listArtifacts` - List all artifact IDs
-* `searchArtifacts` - Search for artifacts
-* `updateArtifact` - Update artifact
-* `updateArtifactState` - Update artifact state
+* [createArtifact](docs/artifacts/README.md#createartifact) - Create artifact
+* [deleteArtifact](docs/artifacts/README.md#deleteartifact) - Delete artifact
+* [getArtifactByGlobalId](docs/artifacts/README.md#getartifactbyglobalid) - Get artifact by global ID
+* [getLatestArtifact](docs/artifacts/README.md#getlatestartifact) - Get latest artifact
+* [listArtifacts](docs/artifacts/README.md#listartifacts) - List all artifact IDs
+* [searchArtifacts](docs/artifacts/README.md#searchartifacts) - Search for artifacts
+* [updateArtifact](docs/artifacts/README.md#updateartifact) - Update artifact
+* [updateArtifactState](docs/artifacts/README.md#updateartifactstate) - Update artifact state
 
-### globalRules
+### [globalRules](docs/globalrules/README.md)
 
-* `createGlobalRule` - Create global rule
-* `deleteAllGlobalRules` - Delete all global rules
-* `deleteGlobalRule` - Delete global rule
-* `getGlobalRuleConfig` - Get global rule configuration
-* `listGlobalRules` - List global rules
-* `updateGlobalRuleConfig` - Update global rule configuration
+* [createGlobalRule](docs/globalrules/README.md#createglobalrule) - Create global rule
+* [deleteAllGlobalRules](docs/globalrules/README.md#deleteallglobalrules) - Delete all global rules
+* [deleteGlobalRule](docs/globalrules/README.md#deleteglobalrule) - Delete global rule
+* [getGlobalRuleConfig](docs/globalrules/README.md#getglobalruleconfig) - Get global rule configuration
+* [listGlobalRules](docs/globalrules/README.md#listglobalrules) - List global rules
+* [updateGlobalRuleConfig](docs/globalrules/README.md#updateglobalruleconfig) - Update global rule configuration
 
-### metadata
+### [metadata](docs/metadata/README.md)
 
-* `deleteArtifactVersionMetaData` - Delete artifact version metadata
-* `getArtifactMetaData` - Get artifact metadata
-* `getArtifactMetaDataByContent` - Get artifact metadata by content
-* `getArtifactMetaDataByGlobalId` - Get global artifact metadata
-* `getArtifactVersionMetaData` - Get artifact version metadata
-* `updateArtifactMetaData` - Update artifact metadata
-* `updateArtifactVersionMetaData` - Update artifact version metadata
+* [deleteArtifactVersionMetaData](docs/metadata/README.md#deleteartifactversionmetadata) - Delete artifact version metadata
+* [getArtifactMetaData](docs/metadata/README.md#getartifactmetadata) - Get artifact metadata
+* [getArtifactMetaDataByContent](docs/metadata/README.md#getartifactmetadatabycontent) - Get artifact metadata by content
+* [getArtifactMetaDataByGlobalId](docs/metadata/README.md#getartifactmetadatabyglobalid) - Get global artifact metadata
+* [getArtifactVersionMetaData](docs/metadata/README.md#getartifactversionmetadata) - Get artifact version metadata
+* [updateArtifactMetaData](docs/metadata/README.md#updateartifactmetadata) - Update artifact metadata
+* [updateArtifactVersionMetaData](docs/metadata/README.md#updateartifactversionmetadata) - Update artifact version metadata
 
-### search
+### [search](docs/search/README.md)
 
-* `searchArtifacts` - Search for artifacts
-* `searchVersions` - Search artifact versions
+* [searchArtifacts](docs/search/README.md#searchartifacts) - Search for artifacts
+* [searchVersions](docs/search/README.md#searchversions) - Search artifact versions
 
-### versions
+### [versions](docs/versions/README.md)
 
-* `createArtifactVersion` - Create artifact version
-* `getArtifactVersion` - Get artifact version
-* `listArtifactVersions` - List artifact versions
-* `searchVersions` - Search artifact versions
-* `updateArtifactVersionState` - Update artifact version state
+* [createArtifactVersion](docs/versions/README.md#createartifactversion) - Create artifact version
+* [getArtifactVersion](docs/versions/README.md#getartifactversion) - Get artifact version
+* [listArtifactVersions](docs/versions/README.md#listartifactversions) - List artifact versions
+* [searchVersions](docs/versions/README.md#searchversions) - Search artifact versions
+* [updateArtifactVersionState](docs/versions/README.md#updateartifactversionstate) - Update artifact version state
 <!-- End SDK Available Operations -->
 
 ### Maturity

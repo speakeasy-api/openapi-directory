@@ -74,4 +74,6 @@ src/Models/Shared/Reference.php
 src/Models/Shared/ExecuteSqlQueryResponse.php
 src/Models/Shared/ExecuteSqlQueryRequest.php
 src/Models/Shared/Query.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopRecommenderXAmzTargetEnum: string
 {
     case AMAZON_PERSONALIZE_STOP_RECOMMENDER = 'AmazonPersonalize.StopRecommender';

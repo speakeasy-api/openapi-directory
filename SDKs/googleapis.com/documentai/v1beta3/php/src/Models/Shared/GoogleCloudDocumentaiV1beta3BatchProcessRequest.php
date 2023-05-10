@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * GoogleCloudDocumentaiV1beta3BatchProcessRequest - Request message for batch process document method.
+ * GoogleCloudDocumentaiV1beta3BatchProcessRequest - Request message for BatchProcessDocuments.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public
@@ -48,7 +48,7 @@ class GoogleCloudDocumentaiV1beta3BatchProcessRequest
     public ?GoogleCloudDocumentaiV1beta3BatchDocumentsInputConfig $inputDocuments = null;
     
     /**
-     * The message for output config in batch process.
+     * The output configuration in the BatchProcessDocuments method.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchOutputConfig $outputConfig
      */

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeKeyPhrasesDetectionJobXAmzTargetEnum: string
 {
     case COMPREHEND20171127_DESCRIBE_KEY_PHRASES_DETECTION_JOB = 'Comprehend_20171127.DescribeKeyPhrasesDetectionJob';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeSpotInstanceRequestsActionEnum: string
 {
     case DESCRIBE_SPOT_INSTANCE_REQUESTS = 'DescribeSpotInstanceRequests';

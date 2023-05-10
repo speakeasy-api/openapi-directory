@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDisableVpcClassicLinkDnsSupportActionEnum: string
 {
     case DISABLE_VPC_CLASSIC_LINK_DNS_SUPPORT = 'DisableVpcClassicLinkDnsSupport';

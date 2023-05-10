@@ -27,4 +27,7 @@ src/Models/Operations/GETHackathonsComingFormatResponse.php
 src/Models/Operations/GETSwaggerDocFormatResponse.php
 src/Models/Operations/GETSwaggerDocNameFormatRequest.php
 src/Models/Operations/GETSwaggerDocNameFormatResponse.php
+docs/sdk/README.md
+docs/hackathons/README.md
+docs/swaggerdoc/README.md
 USAGE.md

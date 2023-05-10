@@ -251,4 +251,15 @@ src/Models/Shared/UrlChannels.php
 src/Models/Shared/UrlChannel.php
 src/Models/Shared/Metadata.php
 src/Models/Shared/ReportingMetadataEntry.php
+docs/sdk/README.md
+docs/accounts/README.md
+docs/adclients/README.md
+docs/adunits/README.md
+docs/alerts/README.md
+docs/customchannels/README.md
+docs/metadata/README.md
+docs/payments/README.md
+docs/reports/README.md
+docs/savedadstyles/README.md
+docs/urlchannels/README.md
 USAGE.md

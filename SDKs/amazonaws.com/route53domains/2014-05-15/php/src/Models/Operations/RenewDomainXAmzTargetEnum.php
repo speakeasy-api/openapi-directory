@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RenewDomainXAmzTargetEnum: string
 {
     case ROUTE53_DOMAINS_V20140515_RENEW_DOMAIN = 'Route53Domains_v20140515.RenewDomain';

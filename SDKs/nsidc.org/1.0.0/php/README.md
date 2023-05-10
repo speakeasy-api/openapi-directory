@@ -30,19 +30,53 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\FacetsRequest;
+use \OpenAPI\OpenAPI\Models\Operations\FacetsSortKeysEnum;
+use \OpenAPI\OpenAPI\Models\Operations\FacetsSourceEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new FacetsRequest();
+    $request->count = 548814;
+    $request->endDate = DateTime::createFromFormat('Y-m-d', '2021-07-27');
+    $request->facetFilters = 'quibusdam';
+    $request->searchTerms = 'unde';
+    $request->sortKeys = FacetsSortKeysEnum::UPDATED_DESC;
+    $request->source = FacetsSourceEnum::ADE;
+    $request->spatial = 'illum';
+    $request->startDate = DateTime::createFromFormat('Y-m-d', '2022-05-18');
+    $request->startIndex = 645894;
+
+    $response = $sdk->swaggerDocs->facets($request);
+
+    if ($response->facets200ApplicationNsidcfacetsPlusXmlString !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### swaggerDocs
+### [swaggerDocs](docs/swaggerdocs/README.md)
 
-* `facets` - View the facet information corresponding to a search
-* `id` - Suggest search terms based on a partial query
-* `openSearch` - Search documents using the OpenSearch 1.1 Specification
-* `opensearchDescription` - Describes the web interface of NSIDC's data search engine
+* [facets](docs/swaggerdocs/README.md#facets) - View the facet information corresponding to a search
+* [id](docs/swaggerdocs/README.md#id) - Suggest search terms based on a partial query
+* [openSearch](docs/swaggerdocs/README.md#opensearch) - Search documents using the OpenSearch 1.1 Specification
+* [opensearchDescription](docs/swaggerdocs/README.md#opensearchdescription) - Describes the web interface of NSIDC's data search engine
 <!-- End SDK Available Operations -->
 
 ### Maturity

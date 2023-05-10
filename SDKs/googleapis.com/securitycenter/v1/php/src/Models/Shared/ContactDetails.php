@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * ContactDetails - The details pertaining to specific contacts
+ * ContactDetails - Details about specific contacts
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

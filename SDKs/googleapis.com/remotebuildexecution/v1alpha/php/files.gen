@@ -71,4 +71,6 @@ src/Models/Shared/GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfi
 src/Models/Shared/GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscale.php
 src/Models/Shared/GoogleDevtoolsRemotebuildexecutionAdminV1alphaListWorkerPoolsResponse.php
 src/Models/Shared/GoogleDevtoolsRemotebuildexecutionAdminV1alphaUpdateWorkerPoolRequest.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

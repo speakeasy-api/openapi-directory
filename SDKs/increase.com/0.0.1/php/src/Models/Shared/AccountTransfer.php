@@ -126,15 +126,6 @@ class AccountTransfer
     public AccountTransferStatusEnum $status;
     
     /**
-     * If the transfer was created from a template, this will be the template's ID.
-     * 
-     * @var string $templateId
-     */
-	#[\JMS\Serializer\Annotation\SerializedName('template_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
-    public string $templateId;
-    
-    /**
      * The ID for the transaction funding the transfer.
      * 
      * @var string $transactionId
@@ -165,8 +156,7 @@ class AccountTransfer
 		$this->destinationTransactionId = "";
 		$this->id = "";
 		$this->network = \OpenAPI\OpenAPI\Models\Shared\AccountTransferNetworkEnum::ACCOUNT;
-		$this->status = \OpenAPI\OpenAPI\Models\Shared\AccountTransferStatusEnum::PENDING_SUBMISSION;
-		$this->templateId = "";
+		$this->status = \OpenAPI\OpenAPI\Models\Shared\AccountTransferStatusEnum::PENDING_APPROVAL;
 		$this->transactionId = "";
 		$this->type = \OpenAPI\OpenAPI\Models\Shared\AccountTransferTypeEnum::ACCOUNT_TRANSFER;
 	}

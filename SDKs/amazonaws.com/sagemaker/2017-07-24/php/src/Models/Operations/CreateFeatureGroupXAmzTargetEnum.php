@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateFeatureGroupXAmzTargetEnum: string
 {
     case SAGE_MAKER_CREATE_FEATURE_GROUP = 'SageMaker.CreateFeatureGroup';

@@ -39,6 +39,14 @@ class StartSentimentDetectionJobResponse
     public mixed $kmsKeyValidationException = null;
     
     /**
+     * ResourceInUseException
+     * 
+     * @var mixed $resourceInUseException
+     */
+	
+    public mixed $resourceInUseException = null;
+    
+    /**
      * Success
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\StartSentimentDetectionJobResponse $startSentimentDetectionJobResponse
@@ -74,6 +82,7 @@ class StartSentimentDetectionJobResponse
 		$this->internalServerException = null;
 		$this->invalidRequestException = null;
 		$this->kmsKeyValidationException = null;
+		$this->resourceInUseException = null;
 		$this->startSentimentDetectionJobResponse = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;

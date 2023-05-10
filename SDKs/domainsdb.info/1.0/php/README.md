@@ -30,32 +30,58 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetDomainsTldZoneIdDownloadRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetDomainsTldZoneIdDownloadRequest();
+    $request->apiKey = 'corrupti';
+    $request->date = 'provident';
+    $request->zoneId = 'distinctio';
+
+    $response = $sdk->domains->getDomainsTldZoneIdDownload($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### domains
+### [domains](docs/domains/README.md)
 
-* `getDomainsTldZoneIdDownload` - Download Whole Dataset for TLD
-* `getDomainsTldZoneIdSearch` - Domains Search for TLD
-* `getDomainsUpdatesAdded` - Get added domains, latest if date not specified
-* `getDomainsUpdatesAddedDownload` - Download added domains, latest if date not specified
-* `getDomainsUpdatesDeleted` - Get deleted domains, latest if date not specified
-* `getDomainsUpdatesDeletedDownload` - Download deleted domains, latest if date not specified
-* `getDomainsUpdatesList` - List of updates
-* `getSearchDomainItem` - Domains Database Search
-* `getTldDomainItem` - Get TLD records
+* [getDomainsTldZoneIdDownload](docs/domains/README.md#getdomainstldzoneiddownload) - Download Whole Dataset for TLD
+* [getDomainsTldZoneIdSearch](docs/domains/README.md#getdomainstldzoneidsearch) - Domains Search for TLD
+* [getDomainsUpdatesAdded](docs/domains/README.md#getdomainsupdatesadded) - Get added domains, latest if date not specified
+* [getDomainsUpdatesAddedDownload](docs/domains/README.md#getdomainsupdatesaddeddownload) - Download added domains, latest if date not specified
+* [getDomainsUpdatesDeleted](docs/domains/README.md#getdomainsupdatesdeleted) - Get deleted domains, latest if date not specified
+* [getDomainsUpdatesDeletedDownload](docs/domains/README.md#getdomainsupdatesdeleteddownload) - Download deleted domains, latest if date not specified
+* [getDomainsUpdatesList](docs/domains/README.md#getdomainsupdateslist) - List of updates
+* [getSearchDomainItem](docs/domains/README.md#getsearchdomainitem) - Domains Database Search
+* [getTldDomainItem](docs/domains/README.md#gettlddomainitem) - Get TLD records
 
-### info
+### [info](docs/info/README.md)
 
-* `getInfoTld` - Returns overall Tld info
-* `getInfoTldZone` - Returns statistics for specific zone
-* `getApiInfoItem`
-* `getStatisticsCollection` - Returns overall stagtistics
-* `getStatisticsItem` - Returns statistics for specific zone
+* [getInfoTld](docs/info/README.md#getinfotld) - Returns overall Tld info
+* [getInfoTldZone](docs/info/README.md#getinfotldzone) - Returns statistics for specific zone
+* [getApiInfoItem](docs/info/README.md#getapiinfoitem)
+* [getStatisticsCollection](docs/info/README.md#getstatisticscollection) - Returns overall stagtistics
+* [getStatisticsItem](docs/info/README.md#getstatisticsitem) - Returns statistics for specific zone
 <!-- End SDK Available Operations -->
 
 ### Maturity

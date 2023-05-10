@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ReportTaskRunnerHeartbeatXAmzTargetEnum: string
 {
     case DATA_PIPELINE_REPORT_TASK_RUNNER_HEARTBEAT = 'DataPipeline.ReportTaskRunnerHeartbeat';

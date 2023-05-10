@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETApplyEnvironmentManagedActionActionEnum: string
 {
     case APPLY_ENVIRONMENT_MANAGED_ACTION = 'ApplyEnvironmentManagedAction';

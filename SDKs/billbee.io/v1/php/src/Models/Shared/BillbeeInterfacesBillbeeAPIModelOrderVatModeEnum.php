@@ -10,12 +10,12 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /** The vat mode of the order */
-enum BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum: string
+enum BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum: int
 {
-    case ZERO = '0';
-    case ONE = '1';
-    case TWO = '2';
-    case THREE = '3';
-    case FOUR = '4';
-    case FIVE = '5';
+    case ZERO = 0;
+    case ONE = 1;
+    case TWO = 2;
+    case THREE = 3;
+    case FOUR = 4;
+    case FIVE = 5;
 }

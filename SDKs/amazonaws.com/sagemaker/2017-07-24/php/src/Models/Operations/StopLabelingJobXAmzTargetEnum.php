@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopLabelingJobXAmzTargetEnum: string
 {
     case SAGE_MAKER_STOP_LABELING_JOB = 'SageMaker.StopLabelingJob';

@@ -138,4 +138,7 @@ src/Models/Shared/InlineResponse202.php
 src/Models/Shared/InlineResponse201.php
 src/Models/Shared/InlineResponse2011.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/kkid/README.md
+docs/authentication/README.md
 USAGE.md

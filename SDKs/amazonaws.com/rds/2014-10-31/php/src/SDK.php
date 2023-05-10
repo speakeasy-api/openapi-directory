@@ -1423,7 +1423,7 @@ class SDK
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if ($httpResponse->getStatusCode() === 200 or $httpResponse->getStatusCode() === 480 or $httpResponse->getStatusCode() === 481 or $httpResponse->getStatusCode() === 482 or $httpResponse->getStatusCode() === 483 or $httpResponse->getStatusCode() === 484 or $httpResponse->getStatusCode() === 485 or $httpResponse->getStatusCode() === 486 or $httpResponse->getStatusCode() === 487 or $httpResponse->getStatusCode() === 488 or $httpResponse->getStatusCode() === 489 or $httpResponse->getStatusCode() === 490 or $httpResponse->getStatusCode() === 491) {
+        if ($httpResponse->getStatusCode() === 200 or $httpResponse->getStatusCode() === 480 or $httpResponse->getStatusCode() === 481 or $httpResponse->getStatusCode() === 482 or $httpResponse->getStatusCode() === 483 or $httpResponse->getStatusCode() === 484 or $httpResponse->getStatusCode() === 485 or $httpResponse->getStatusCode() === 486 or $httpResponse->getStatusCode() === 487 or $httpResponse->getStatusCode() === 488 or $httpResponse->getStatusCode() === 489 or $httpResponse->getStatusCode() === 490 or $httpResponse->getStatusCode() === 491 or $httpResponse->getStatusCode() === 492) {
             if (Utils\Utils::matchContentType($contentType, 'text/xml')) {
                 $response->body = $httpResponse->getBody()->getContents();
             }
@@ -6082,7 +6082,7 @@ class SDK
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if ($httpResponse->getStatusCode() === 200 or $httpResponse->getStatusCode() === 480 or $httpResponse->getStatusCode() === 481 or $httpResponse->getStatusCode() === 482 or $httpResponse->getStatusCode() === 483 or $httpResponse->getStatusCode() === 484 or $httpResponse->getStatusCode() === 485 or $httpResponse->getStatusCode() === 486 or $httpResponse->getStatusCode() === 487 or $httpResponse->getStatusCode() === 488 or $httpResponse->getStatusCode() === 489 or $httpResponse->getStatusCode() === 490 or $httpResponse->getStatusCode() === 491) {
+        if ($httpResponse->getStatusCode() === 200 or $httpResponse->getStatusCode() === 480 or $httpResponse->getStatusCode() === 481 or $httpResponse->getStatusCode() === 482 or $httpResponse->getStatusCode() === 483 or $httpResponse->getStatusCode() === 484 or $httpResponse->getStatusCode() === 485 or $httpResponse->getStatusCode() === 486 or $httpResponse->getStatusCode() === 487 or $httpResponse->getStatusCode() === 488 or $httpResponse->getStatusCode() === 489 or $httpResponse->getStatusCode() === 490 or $httpResponse->getStatusCode() === 491 or $httpResponse->getStatusCode() === 492) {
             if (Utils\Utils::matchContentType($contentType, 'text/xml')) {
                 $response->body = $httpResponse->getBody()->getContents();
             }

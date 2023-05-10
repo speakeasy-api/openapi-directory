@@ -38,7 +38,7 @@ class SubmitRequest
      * @var ?\DateTime $dateOfBirth
      */
 	#[\JMS\Serializer\Annotation\SerializedName('dateOfBirth')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
+    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d', '', '|Y-m-d'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $dateOfBirth = null;
     

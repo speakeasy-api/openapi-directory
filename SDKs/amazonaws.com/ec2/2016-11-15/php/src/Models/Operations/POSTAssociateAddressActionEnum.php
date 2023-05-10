@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTAssociateAddressActionEnum: string
 {
     case ASSOCIATE_ADDRESS = 'AssociateAddress';

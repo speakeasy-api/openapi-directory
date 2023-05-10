@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTEstimateTemplateCostActionEnum: string
 {
     case ESTIMATE_TEMPLATE_COST = 'EstimateTemplateCost';

@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest - Use this request to post all workflows associated with a given trigger id. Next available id: 10
+ * GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest - Use this request to post all workflows associated with a given trigger id. Next available id: 11
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public
@@ -68,6 +68,16 @@ class GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest
     public ?string $requestId = null;
     
     /**
+     * This field is only required when using Admin Access. The resource name of target, or the parent resource name. For example: "projects/* /locations/* /integrations/*"
+     * 
+     * @var ?string $resourceName
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('resourceName')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $resourceName = null;
+    
+    /**
      * Optional. Time in milliseconds since epoch when the given event would be scheduled.
      * 
      * @var ?string $scheduledTime
@@ -114,6 +124,7 @@ class GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest
 		$this->parameters = null;
 		$this->priority = null;
 		$this->requestId = null;
+		$this->resourceName = null;
 		$this->scheduledTime = null;
 		$this->testMode = null;
 		$this->triggerId = null;

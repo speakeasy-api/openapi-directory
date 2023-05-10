@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeRulesPackagesXAmzTargetEnum: string
 {
     case INSPECTOR_SERVICE_DESCRIBE_RULES_PACKAGES = 'InspectorService.DescribeRulesPackages';

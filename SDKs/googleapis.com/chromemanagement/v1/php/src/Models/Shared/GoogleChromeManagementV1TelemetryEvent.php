@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class GoogleChromeManagementV1TelemetryEvent
 {
     /**
-     * `TelemetryAudioSevereUnderrunEvent` is triggered when a audio devices run out of buffer data for more than 5 seconds.
+     * `TelemetryAudioSevereUnderrunEvent` is triggered when a audio devices run out of buffer data for more than 5 seconds. * Granular permission needed: TELEMETRY_API_AUDIO_REPORT
      * 
      * @var ?array<string, mixed> $audioSevereUnderrunEvent
      */
@@ -28,7 +28,7 @@ class GoogleChromeManagementV1TelemetryEvent
     public ?array $audioSevereUnderrunEvent = null;
     
     /**
-     * Information about a device associated with telemetry data.
+     * Information about a device associated with telemetry data. * Granular Permission needed: TELEMETRY_API_DEVICE
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleChromeManagementV1TelemetryDeviceInfo $device
      */
@@ -48,7 +48,7 @@ class GoogleChromeManagementV1TelemetryEvent
     public ?GoogleChromeManagementV1TelemetryEventEventTypeEnum $eventType = null;
     
     /**
-     * Https latency routine is run periodically and `TelemetryHttpsLatencyChangeEvent` is triggered if a latency problem was detected or if the device has recovered from a latency problem..
+     * Https latency routine is run periodically and `TelemetryHttpsLatencyChangeEvent` is triggered if a latency problem was detected or if the device has recovered from a latency problem. * Granular permission needed: TELEMETRY_API_NETWORK_REPORT
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleChromeManagementV1TelemetryHttpsLatencyChangeEvent $httpsLatencyChangeEvent
      */
@@ -78,7 +78,7 @@ class GoogleChromeManagementV1TelemetryEvent
     public ?string $reportTime = null;
     
     /**
-     * `TelemetryUsbPeripheralsEvent` is triggered USB devices are either added or removed.
+     * `TelemetryUsbPeripheralsEvent` is triggered USB devices are either added or removed. * Granular permission needed: TELEMETRY_API_PERIPHERALS_REPORT
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleChromeManagementV1TelemetryUsbPeripheralsEvent $usbPeripheralsEvent
      */
@@ -88,7 +88,7 @@ class GoogleChromeManagementV1TelemetryEvent
     public ?GoogleChromeManagementV1TelemetryUsbPeripheralsEvent $usbPeripheralsEvent = null;
     
     /**
-     * Information about a user associated with telemetry data.
+     * Information about a user associated with telemetry data. * Granular permission needed: TELEMETRY_API_USER
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleChromeManagementV1TelemetryUserInfo $user
      */

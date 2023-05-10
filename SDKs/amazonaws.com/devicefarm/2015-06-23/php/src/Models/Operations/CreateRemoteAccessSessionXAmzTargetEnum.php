@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateRemoteAccessSessionXAmzTargetEnum: string
 {
     case DEVICE_FARM20150623_CREATE_REMOTE_ACCESS_SESSION = 'DeviceFarm_20150623.CreateRemoteAccessSession';

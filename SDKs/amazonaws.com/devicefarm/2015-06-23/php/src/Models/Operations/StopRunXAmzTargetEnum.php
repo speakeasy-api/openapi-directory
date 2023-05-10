@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopRunXAmzTargetEnum: string
 {
     case DEVICE_FARM20150623_STOP_RUN = 'DeviceFarm_20150623.StopRun';

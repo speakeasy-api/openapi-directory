@@ -82,7 +82,7 @@ class PriceTables
      */
 	public function getrulesforapricetable(
         \OpenAPI\OpenAPI\Models\Operations\GetrulesforapricetableRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\GetrulesforapricetableResponse
     {
         $baseUrl = PriceTables::GETRULESFORAPRICETABLE_SERVERS[0];
@@ -140,7 +140,7 @@ class PriceTables
      */
 	public function listpricetables(
         \OpenAPI\OpenAPI\Models\Operations\ListpricetablesRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ListpricetablesResponse
     {
         $baseUrl = PriceTables::LISTPRICETABLES_SERVERS[0];
@@ -226,7 +226,7 @@ class PriceTables
      */
 	public function getallpricetablesandrules(
         \OpenAPI\OpenAPI\Models\Operations\GetallpricetablesandrulesRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\GetallpricetablesandrulesResponse
     {
         $baseUrl = PriceTables::GETALLPRICETABLESANDRULES_SERVERS[0];

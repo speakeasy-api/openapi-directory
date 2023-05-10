@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTAuthorizeDBSecurityGroupIngressActionEnum: string
 {
     case AUTHORIZE_DB_SECURITY_GROUP_INGRESS = 'AuthorizeDBSecurityGroupIngress';

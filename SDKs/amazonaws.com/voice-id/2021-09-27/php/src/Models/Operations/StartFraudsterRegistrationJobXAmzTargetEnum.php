@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartFraudsterRegistrationJobXAmzTargetEnum: string
 {
     case VOICE_ID_START_FRAUDSTER_REGISTRATION_JOB = 'VoiceID.StartFraudsterRegistrationJob';

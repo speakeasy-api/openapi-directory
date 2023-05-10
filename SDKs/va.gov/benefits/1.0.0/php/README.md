@@ -30,21 +30,49 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetBenefitsDocumentUploadDownloadRequest;
+use \OpenAPI\OpenAPI\Models\Operations\GetBenefitsDocumentUploadDownloadSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetBenefitsDocumentUploadDownloadRequest();
+    $request->id = '89bd9d8d-69a6-474e-8f46-7cc8796ed151';
+
+    $requestSecurity = new GetBenefitsDocumentUploadDownloadSecurity();
+    $requestSecurity->apikey = 'YOUR_API_KEY_HERE';
+
+    $response = $sdk->vbaDocuments->getBenefitsDocumentUploadDownload($request, $requestSecurity);
+
+    if ($response->getBenefitsDocumentUploadDownload200ApplicationZipBinaryString !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### vbaDocuments
+### [vbaDocuments](docs/vbadocuments/README.md)
 
-* `getBenefitsDocumentUploadDownload` - Download zip of "what the server sees"
-* `getBenefitsDocumentUploadStatus` - Get status for a previous benefits document upload
-* `getBenefitsDocumentUploadStatusReport` - Get a bulk status report for a list of previous uploads
-* `postBenefitsDocumentUpload` - Get a location for subsequent document upload PUT request
-* `postBenefitsDocumentUploadValidateDocument` - Validate an individual document against system file requirements
-* `putBenefitsDocumentUpload` - Accepts document upload.
+* [getBenefitsDocumentUploadDownload](docs/vbadocuments/README.md#getbenefitsdocumentuploaddownload) - Download zip of "what the server sees"
+* [getBenefitsDocumentUploadStatus](docs/vbadocuments/README.md#getbenefitsdocumentuploadstatus) - Get status for a previous benefits document upload
+* [getBenefitsDocumentUploadStatusReport](docs/vbadocuments/README.md#getbenefitsdocumentuploadstatusreport) - Get a bulk status report for a list of previous uploads
+* [postBenefitsDocumentUpload](docs/vbadocuments/README.md#postbenefitsdocumentupload) - Get a location for subsequent document upload PUT request
+* [postBenefitsDocumentUploadValidateDocument](docs/vbadocuments/README.md#postbenefitsdocumentuploadvalidatedocument) - Validate an individual document against system file requirements
+* [putBenefitsDocumentUpload](docs/vbadocuments/README.md#putbenefitsdocumentupload) - Accepts document upload.
 <!-- End SDK Available Operations -->
 
 ### Maturity

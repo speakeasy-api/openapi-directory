@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetOrganizationConformancePackDetailedStatusXAmzTargetEnum: string
 {
     case STARLING_DOVE_SERVICE_GET_ORGANIZATION_CONFORMANCE_PACK_DETAILED_STATUS = 'StarlingDoveService.GetOrganizationConformancePackDetailedStatus';

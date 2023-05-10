@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * GoogleCloudDocumentaiV1ReviewDocumentRequest - Request message for review document method.
+ * GoogleCloudDocumentaiV1ReviewDocumentRequest - Request message for the ReviewDocument method.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

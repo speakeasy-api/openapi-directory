@@ -56,4 +56,6 @@ src/Models/Shared/Accelerator.php
 src/Models/Shared/Secret.php
 src/Models/Shared/Action.php
 src/Models/Shared/Mount.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

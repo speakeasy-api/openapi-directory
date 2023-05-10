@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ResolveCustomerXAmzTargetEnum: string
 {
     case AWSMP_METERING_SERVICE_RESOLVE_CUSTOMER = 'AWSMPMeteringService.ResolveCustomer';

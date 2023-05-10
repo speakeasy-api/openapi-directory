@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETGETInsightRuleReportActionEnum: string
 {
     case GET_INSIGHT_RULE_REPORT = 'GetInsightRuleReport';

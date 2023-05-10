@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class PolicyControllerBundleInstallSpec
 {
     /**
-     * the set of namespaces to be exempted from the bundle TODO (b/271878194): Decrement this
+     * the set of namespaces to be exempted from the bundle
      * 
      * @var ?array<string> $exemptedNamespaces
      */
@@ -28,7 +28,7 @@ class PolicyControllerBundleInstallSpec
     public ?array $exemptedNamespaces = null;
     
     /**
-     * Management specifies how the bundle will be managed by the controller. TODO (b/271878194): Remove this
+     * Management specifies how the bundle will be managed by the controller.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\PolicyControllerBundleInstallSpecManagementEnum $management
      */

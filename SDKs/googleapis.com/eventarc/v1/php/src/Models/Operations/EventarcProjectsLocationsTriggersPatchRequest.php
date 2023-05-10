@@ -127,7 +127,7 @@ class EventarcProjectsLocationsTriggersPatchRequest
     public ?string $uploadProtocol = null;
     
     /**
-     * Required. If set, validate the request and preview the review, but do not post it.
+     * Optional. If set, validate the request and preview the review, but do not post it.
      * 
      * @var ?bool $validateOnly
      */

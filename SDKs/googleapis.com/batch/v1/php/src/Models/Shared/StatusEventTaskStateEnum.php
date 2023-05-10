@@ -18,4 +18,5 @@ enum StatusEventTaskStateEnum: string
     case RUNNING = 'RUNNING';
     case FAILED = 'FAILED';
     case SUCCEEDED = 'SUCCEEDED';
+    case UNEXECUTED = 'UNEXECUTED';
 }

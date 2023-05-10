@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteAlarmXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_DELETE_ALARM = 'Lightsail_20161128.DeleteAlarm';

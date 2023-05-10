@@ -265,4 +265,5 @@ src/Models/Shared/TestMetricFilterRequest.php
 src/Models/Shared/UntagLogGroupRequest.php
 src/Models/Shared/UntagResourceRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

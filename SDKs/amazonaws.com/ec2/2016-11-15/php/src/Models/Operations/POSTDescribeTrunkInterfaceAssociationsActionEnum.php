@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeTrunkInterfaceAssociationsActionEnum: string
 {
     case DESCRIBE_TRUNK_INTERFACE_ASSOCIATIONS = 'DescribeTrunkInterfaceAssociations';

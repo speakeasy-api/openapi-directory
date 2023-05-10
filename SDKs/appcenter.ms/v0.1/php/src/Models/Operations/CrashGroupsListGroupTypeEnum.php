@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CrashGroupsListGroupTypeEnum: string
 {
     case GROUP_TYPE1 = 'GroupType1';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateContextXAmzTargetEnum: string
 {
     case SAGE_MAKER_UPDATE_CONTEXT = 'SageMaker.UpdateContext';

@@ -83,4 +83,10 @@ src/Models/Shared/VersionNumberEnum.php
 src/Models/Shared/ExtEnum.php
 src/Models/Shared/ViewEnum.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/additionaldata/README.md
+docs/filters/README.md
+docs/geocoding/README.md
+docs/reversegeocoding/README.md
+docs/search/README.md
 USAGE.md

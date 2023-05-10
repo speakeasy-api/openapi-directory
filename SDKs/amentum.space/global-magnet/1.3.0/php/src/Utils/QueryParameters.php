@@ -50,7 +50,10 @@ class QueryParameters
                         $parts[] = $this->parseDeepObjectParams($metadata, $value);
                         break;
                     case "form":
-                        $parts[] = $this->parseFormParams($metadata, $value);
+                        $parts[] = $this->parseDelimitedParams($metadata, $value, ",");
+                        break;
+                    case "pipeDelimited":
+                        $parts[] = $this->parseDelimitedParams($metadata, $value, "|");
                         break;
                     default:
                         throw new \Exception("Unsupported style: " . $metadata->style);
@@ -153,9 +156,10 @@ class QueryParameters
     /**
      * @param ParamsMetadata $metadata
      * @param mixed $value
+     * @param string $arrayDelimiter
      * @return string
      */
-    private function parseFormParams(ParamsMetadata $metadata, mixed $value): string
+    private function parseDelimitedParams(ParamsMetadata $metadata, mixed $value, string $arrayDelimiter): string
     {
         $queryParams = [];
 
@@ -202,7 +206,7 @@ class QueryParameters
                     }
 
                     if (count($items) > 0) {
-                        $values[] = implode(",", $items);
+                        $values[] = implode($arrayDelimiter, $items);
                     }
 
                     $queryParams[$metadata->name] = $values;

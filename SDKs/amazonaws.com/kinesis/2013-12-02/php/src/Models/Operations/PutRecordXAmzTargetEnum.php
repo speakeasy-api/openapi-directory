@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutRecordXAmzTargetEnum: string
 {
     case KINESIS20131202_PUT_RECORD = 'Kinesis_20131202.PutRecord';

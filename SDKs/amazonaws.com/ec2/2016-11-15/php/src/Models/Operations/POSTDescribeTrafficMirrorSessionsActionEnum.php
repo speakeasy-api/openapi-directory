@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeTrafficMirrorSessionsActionEnum: string
 {
     case DESCRIBE_TRAFFIC_MIRROR_SESSIONS = 'DescribeTrafficMirrorSessions';

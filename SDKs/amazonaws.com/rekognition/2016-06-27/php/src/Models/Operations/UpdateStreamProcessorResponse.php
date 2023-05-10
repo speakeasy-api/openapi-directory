@@ -47,6 +47,14 @@ class UpdateStreamProcessorResponse
     public mixed $provisionedThroughputExceededException = null;
     
     /**
+     * ResourceInUseException
+     * 
+     * @var mixed $resourceInUseException
+     */
+	
+    public mixed $resourceInUseException = null;
+    
+    /**
      * ResourceNotFoundException
      * 
      * @var mixed $resourceNotFoundException
@@ -83,6 +91,7 @@ class UpdateStreamProcessorResponse
 		$this->internalServerError = null;
 		$this->invalidParameterException = null;
 		$this->provisionedThroughputExceededException = null;
+		$this->resourceInUseException = null;
 		$this->resourceNotFoundException = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;

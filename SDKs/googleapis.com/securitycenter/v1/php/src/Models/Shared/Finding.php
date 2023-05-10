@@ -98,7 +98,7 @@ class Finding
     public ?array $contacts = null;
     
     /**
-     * Containers associated with the finding. containers provides information for both Kubernetes and non-Kubernetes containers.
+     * Containers associated with the finding. This field provides information for both Kubernetes and non-Kubernetes containers.
      * 
      * @var ?array<\OpenAPI\OpenAPI\Models\Shared\Container> $containers
      */
@@ -118,7 +118,7 @@ class Finding
     public ?string $createTime = null;
     
     /**
-     * Represents database access information, such as queries. A database may be a sub-resource of an instance (as in the case of CloudSQL instances or Cloud Spanner instances), or the database instance itself. Some database resources may not have the full resource name populated because these resource types are not yet supported by Cloud Asset Inventory (e.g. CloudSQL databases). In these cases only the display name will be provided.
+     * Represents database access information, such as queries. A database may be a sub-resource of an instance (as in the case of Cloud SQL instances or Cloud Spanner instances), or the database instance itself. Some database resources might not have the [full resource name](https://google.aip.dev/122#full-resource-names) populated because these resource types, such as Cloud SQL databases, are not yet supported by Cloud Asset Inventory. In these cases only the display name is provided. Some database resources may not have the [full resource name](https://google.aip.dev/122#full-resource-names) populated because these resource types are not yet supported by Cloud Asset Inventory (e.g. Cloud SQL databases). In these cases only the display name will be provided.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\Database $database
      */
@@ -128,7 +128,7 @@ class Finding
     public ?Database $database = null;
     
     /**
-     * Contains more detail about the finding.
+     * Contains more details about the finding.
      * 
      * @var ?string $description
      */
@@ -148,7 +148,7 @@ class Finding
     public ?string $eventTime = null;
     
     /**
-     * Exfiltration represents a data exfiltration attempt of one or more sources to one or more targets. Sources represent the source of data that is exfiltrated, and Targets represents the destination the data was copied to.
+     * Exfiltration represents a data exfiltration attempt from one or more sources to one or more targets. The `sources` attribute lists the sources of the exfiltrated data. The `targets` attribute lists the destinations the data was copied to.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\Exfiltration $exfiltration
      */
@@ -198,7 +198,7 @@ class Finding
     public ?FindingFindingClassEnum $findingClass = null;
     
     /**
-     * Represents IAM bindings associated with the Finding.
+     * Represents IAM bindings associated with the finding.
      * 
      * @var ?array<\OpenAPI\OpenAPI\Models\Shared\IamBinding> $iamBindings
      */
@@ -268,7 +268,7 @@ class Finding
     public ?FindingMuteEnum $mute = null;
     
     /**
-     * First known as mute_annotation. Records additional information about the mute operation e.g. mute config that muted the finding, user who muted the finding, etc. Unlike other attributes of a finding, a finding provider shouldn't set the value of mute.
+     * Records additional information about the mute operation, for example, the [mute configuration](/security-command-center/docs/how-to-mute-findings) that muted the finding and the user who muted the finding.
      * 
      * @var ?string $muteInitiator
      */
@@ -288,7 +288,7 @@ class Finding
     public ?string $muteUpdateTime = null;
     
     /**
-     * The relative resource name of this finding. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+     * The [relative resource name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the finding. Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}", "folders/{folder_id}/sources/{source_id}/findings/{finding_id}", "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
      * 
      * @var ?string $name
      */
@@ -298,7 +298,7 @@ class Finding
     public ?string $name = null;
     
     /**
-     * Next steps associate to the finding.
+     * Steps to address the finding.
      * 
      * @var ?string $nextSteps
      */
@@ -306,16 +306,6 @@ class Finding
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $nextSteps = null;
-    
-    /**
-     * Contains information about the org policy constraints associated with the finding.
-     * 
-     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\OrgPolicyConstraint> $orgPolicyConstraints
-     */
-	#[\JMS\Serializer\Annotation\SerializedName('orgPolicyConstraints')]
-    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\OrgPolicyConstraint>')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $orgPolicyConstraints = null;
     
     /**
      * The relative resource name of the source the finding belongs to. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name This field is immutable after creation time. For example: "organizations/{organization_id}/sources/{source_id}"
@@ -438,7 +428,6 @@ class Finding
 		$this->muteUpdateTime = null;
 		$this->name = null;
 		$this->nextSteps = null;
-		$this->orgPolicyConstraints = null;
 		$this->parent = null;
 		$this->parentDisplayName = null;
 		$this->processes = null;

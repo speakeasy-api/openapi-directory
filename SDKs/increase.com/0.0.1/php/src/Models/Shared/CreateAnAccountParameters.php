@@ -40,10 +40,21 @@ class CreateAnAccountParameters
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $name;
     
+    /**
+     * The identifier for the Program that this Account falls under.
+     * 
+     * @var ?string $programId
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('program_id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $programId = null;
+    
 	public function __construct()
 	{
 		$this->entityId = null;
 		$this->informationalEntityId = null;
 		$this->name = "";
+		$this->programId = null;
 	}
 }

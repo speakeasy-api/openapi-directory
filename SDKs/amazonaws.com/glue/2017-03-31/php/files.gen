@@ -881,6 +881,7 @@ src/Models/Shared/DataQualityTargetTable.php
 src/Models/Shared/CreateDatabaseRequest.php
 src/Models/Shared/DatabaseInput.php
 src/Models/Shared/DatabaseIdentifier.php
+src/Models/Shared/FederatedDatabase.php
 src/Models/Shared/PrincipalPermissions.php
 src/Models/Shared/DataLakePrincipal.php
 src/Models/Shared/PermissionEnum.php
@@ -1146,6 +1147,7 @@ src/Models/Shared/StatementOutputData.php
 src/Models/Shared/GetStatementRequest.php
 src/Models/Shared/GetTableResponse.php
 src/Models/Shared/Table.php
+src/Models/Shared/FederatedTable.php
 src/Models/Shared/GetTableRequest.php
 src/Models/Shared/GetTableVersionResponse.php
 src/Models/Shared/TableVersion.php
@@ -1338,4 +1340,5 @@ src/Models/Shared/UpdateUserDefinedFunctionRequest.php
 src/Models/Shared/UpdateWorkflowResponse.php
 src/Models/Shared/UpdateWorkflowRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

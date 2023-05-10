@@ -17,4 +17,5 @@ enum GoogleCloudDialogflowCxV3beta1TestRunDifferenceTypeEnum: string
     case PAGE = 'PAGE';
     case PARAMETERS = 'PARAMETERS';
     case UTTERANCE = 'UTTERANCE';
+    case FLOW = 'FLOW';
 }

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteEdgeDeploymentPlanXAmzTargetEnum: string
 {
     case SAGE_MAKER_DELETE_EDGE_DEPLOYMENT_PLAN = 'SageMaker.DeleteEdgeDeploymentPlan';

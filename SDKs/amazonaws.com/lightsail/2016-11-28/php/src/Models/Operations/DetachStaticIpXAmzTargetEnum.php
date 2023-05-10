@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DetachStaticIpXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_DETACH_STATIC_IP = 'Lightsail_20161128.DetachStaticIp';

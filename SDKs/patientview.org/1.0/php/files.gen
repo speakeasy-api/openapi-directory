@@ -92,4 +92,10 @@ src/Models/Shared/CodeExternalStandard.php
 src/Models/Shared/CodeCategory.php
 src/Models/Shared/Category.php
 src/Models/Shared/PatientManagement.php
+docs/sdk/README.md
+docs/authcontroller/README.md
+docs/observationcontroller/README.md
+docs/observationheadingcontroller/README.md
+docs/patientcontroller/README.md
+docs/patientmanagementcontroller/README.md
 USAGE.md

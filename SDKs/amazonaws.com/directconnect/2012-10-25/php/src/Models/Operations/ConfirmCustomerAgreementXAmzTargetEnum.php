@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ConfirmCustomerAgreementXAmzTargetEnum: string
 {
     case OVERTURE_SERVICE_CONFIRM_CUSTOMER_AGREEMENT = 'OvertureService.ConfirmCustomerAgreement';

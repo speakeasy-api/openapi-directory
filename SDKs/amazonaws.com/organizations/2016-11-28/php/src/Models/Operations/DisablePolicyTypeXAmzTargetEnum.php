@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DisablePolicyTypeXAmzTargetEnum: string
 {
     case AWS_ORGANIZATIONS_V20161128_DISABLE_POLICY_TYPE = 'AWSOrganizationsV20161128.DisablePolicyType';

@@ -38,6 +38,16 @@ class InstanceInput
     public ?string $description = null;
     
     /**
+     * Directory Services configuration for Kerberos-based authentication.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\DirectoryServicesConfig $directoryServices
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('directoryServices')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\DirectoryServicesConfig')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?DirectoryServicesConfig $directoryServices = null;
+    
+    /**
      * Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
      * 
      * @var ?string $etag
@@ -76,6 +86,16 @@ class InstanceInput
     #[\JMS\Serializer\Annotation\Type('array<string, string>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $labels = null;
+    
+    /**
+     * The max number of shares allowed.
+     * 
+     * @var ?string $maxShareCount
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('maxShareCount')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $maxShareCount = null;
     
     /**
      * Indicates whether this instance uses a multi-share configuration with which it can have more than one file-share or none at all. File-shares are added, updated and removed through the separate file-share APIs.
@@ -121,10 +141,12 @@ class InstanceInput
 	{
 		$this->capacityGb = null;
 		$this->description = null;
+		$this->directoryServices = null;
 		$this->etag = null;
 		$this->fileShares = null;
 		$this->kmsKeyName = null;
 		$this->labels = null;
+		$this->maxShareCount = null;
 		$this->multiShareEnabled = null;
 		$this->networks = null;
 		$this->protocol = null;

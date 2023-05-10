@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetPriceListFileUrlXAmzTargetEnum: string
 {
     case AWS_PRICE_LIST_SERVICE_GET_PRICE_LIST_FILE_URL = 'AWSPriceListService.GetPriceListFileUrl';

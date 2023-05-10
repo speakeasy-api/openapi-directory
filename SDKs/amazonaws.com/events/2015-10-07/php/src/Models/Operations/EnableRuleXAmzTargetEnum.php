@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum EnableRuleXAmzTargetEnum: string
 {
     case AWS_EVENTS_ENABLE_RULE = 'AWSEvents.EnableRule';

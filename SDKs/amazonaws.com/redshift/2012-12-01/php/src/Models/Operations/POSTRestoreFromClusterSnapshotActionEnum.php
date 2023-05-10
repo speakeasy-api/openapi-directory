@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTRestoreFromClusterSnapshotActionEnum: string
 {
     case RESTORE_FROM_CLUSTER_SNAPSHOT = 'RestoreFromClusterSnapshot';

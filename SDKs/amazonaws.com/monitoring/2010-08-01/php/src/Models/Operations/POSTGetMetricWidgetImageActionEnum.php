@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTGetMetricWidgetImageActionEnum: string
 {
     case GET_METRIC_WIDGET_IMAGE = 'GetMetricWidgetImage';

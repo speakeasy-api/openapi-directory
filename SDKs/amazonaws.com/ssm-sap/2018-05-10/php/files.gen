@@ -106,4 +106,5 @@ src/Models/Shared/PutResourcePermissionOutput.php
 src/Models/Shared/RegisterApplicationOutput.php
 src/Models/Shared/UpdateApplicationSettingsOutput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

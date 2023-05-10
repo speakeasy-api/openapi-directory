@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * CreateVerifiedAccessEndpointLoadBalancerOptions - Describes a load balancer when creating an Amazon Web Services Verified Access endpoint using the <code>load-balancer</code> type.
+ * CreateVerifiedAccessEndpointLoadBalancerOptions - Describes the load balancer options when creating an Amazon Web Services Verified Access endpoint using the <code>load-balancer</code> type.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

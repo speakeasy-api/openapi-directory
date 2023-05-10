@@ -1264,4 +1264,5 @@ src/Models/Shared/StopDBInstanceAutomatedBackupsReplicationMessage.php
 src/Models/Shared/SwitchoverBlueGreenDeploymentRequest.php
 src/Models/Shared/SwitchoverReadReplicaMessage.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

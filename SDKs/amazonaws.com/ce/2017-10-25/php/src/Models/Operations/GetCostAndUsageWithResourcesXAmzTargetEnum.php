@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetCostAndUsageWithResourcesXAmzTargetEnum: string
 {
     case AWS_INSIGHTS_INDEX_SERVICE_GET_COST_AND_USAGE_WITH_RESOURCES = 'AWSInsightsIndexService.GetCostAndUsageWithResources';

@@ -123,9 +123,11 @@ class Taxes
     /**
      * Get all tax rates and a count of products associated with each
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetProductCountForAllTaxesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetProductCountForAllTaxesResponse
      */
 	public function getProductCountForAllTaxes(
+        \OpenAPI\OpenAPI\Models\Operations\GetProductCountForAllTaxesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetProductCountForAllTaxesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -133,7 +135,8 @@ class Taxes
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -196,9 +199,11 @@ class Taxes
     /**
      * Get all available tax rates
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetTaxRatesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetTaxRatesResponse
      */
 	public function getTaxRates(
+        \OpenAPI\OpenAPI\Models\Operations\GetTaxRatesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetTaxRatesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -206,7 +211,8 @@ class Taxes
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -230,9 +236,11 @@ class Taxes
     /**
      * Get the organization tax settings 
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetTaxSettingsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetTaxSettingsResponse
      */
 	public function getTaxSettings(
+        \OpenAPI\OpenAPI\Models\Operations\GetTaxSettingsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetTaxSettingsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -240,7 +248,8 @@ class Taxes
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

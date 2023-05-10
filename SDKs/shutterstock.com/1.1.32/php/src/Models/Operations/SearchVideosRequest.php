@@ -71,6 +71,7 @@ class SearchVideosRequest
      * (Deprecated; use duration_from and duration_to instead) Show videos with the specified duration in seconds
      * 
      * @var ?int $duration
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=duration')]
     public ?int $duration = null;
@@ -95,6 +96,7 @@ class SearchVideosRequest
      * (Deprecated; use fps_from and fps_to instead) Show videos with the specified frames per second
      * 
      * @var ?float $fps
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fps')]
     public ?float $fps = null;

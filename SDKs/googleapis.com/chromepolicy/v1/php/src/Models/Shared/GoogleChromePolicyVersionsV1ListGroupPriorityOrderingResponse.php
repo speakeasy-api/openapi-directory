@@ -38,6 +38,16 @@ class GoogleChromePolicyVersionsV1ListGroupPriorityOrderingResponse
     public ?string $policyNamespace = null;
     
     /**
+     * Output only. The schema name of the policy for the group IDs.
+     * 
+     * @var ?string $policySchema
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('policySchema')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $policySchema = null;
+    
+    /**
      * The key used to identify the target on which the policy will be applied.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleChromePolicyVersionsV1PolicyTargetKey $policyTargetKey
@@ -51,6 +61,7 @@ class GoogleChromePolicyVersionsV1ListGroupPriorityOrderingResponse
 	{
 		$this->groupIds = null;
 		$this->policyNamespace = null;
+		$this->policySchema = null;
 		$this->policyTargetKey = null;
 	}
 }

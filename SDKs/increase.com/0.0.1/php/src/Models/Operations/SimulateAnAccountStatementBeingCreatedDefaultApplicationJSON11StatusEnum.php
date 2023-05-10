@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-enum SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON11StatusEnum: string
+enum SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON11StatusEnum: int
 {
-    case FOUR_HUNDRED_AND_FOUR = '404';
+    case FOUR_HUNDRED_AND_FOUR = 404;
 }

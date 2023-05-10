@@ -36,6 +36,15 @@ class InboundCardAuthorizationSimulationResultPendingTransaction
     public int $amount;
     
     /**
+     * The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date on which the Pending Transaction was completed.
+     * 
+     * @var \DateTime $completedAt
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('completed_at')]
+    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
+    public \DateTime $completedAt;
+    
+    /**
      * The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date on which the Pending Transaction occured.
      * 
      * @var \DateTime $createdAt
@@ -83,11 +92,11 @@ class InboundCardAuthorizationSimulationResultPendingTransaction
     /**
      * The type of the route this Pending Transaction came through.
      * 
-     * @var string $routeType
+     * @var \OpenAPI\OpenAPI\Models\Shared\InboundCardAuthorizationSimulationResultPendingTransactionRouteTypeEnum $routeType
      */
 	#[\JMS\Serializer\Annotation\SerializedName('route_type')]
-    #[\JMS\Serializer\Annotation\Type('string')]
-    public string $routeType;
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\InboundCardAuthorizationSimulationResultPendingTransactionRouteTypeEnum>')]
+    public InboundCardAuthorizationSimulationResultPendingTransactionRouteTypeEnum $routeType;
     
     /**
      * This is an object giving more details on the network-level event that caused the Pending Transaction. For example, for a card transaction this lists the merchant's industry and location.
@@ -120,12 +129,13 @@ class InboundCardAuthorizationSimulationResultPendingTransaction
 	{
 		$this->accountId = "";
 		$this->amount = 0;
+		$this->completedAt = new \DateTime();
 		$this->createdAt = new \DateTime();
 		$this->currency = \OpenAPI\OpenAPI\Models\Shared\InboundCardAuthorizationSimulationResultPendingTransactionCurrencyEnum::CAD;
 		$this->description = "";
 		$this->id = "";
 		$this->routeId = "";
-		$this->routeType = "";
+		$this->routeType = \OpenAPI\OpenAPI\Models\Shared\InboundCardAuthorizationSimulationResultPendingTransactionRouteTypeEnum::ACCOUNT_NUMBER;
 		$this->source = new \OpenAPI\OpenAPI\Models\Shared\InboundCardAuthorizationSimulationResultPendingTransactionPendingTransactionSource();
 		$this->status = \OpenAPI\OpenAPI\Models\Shared\InboundCardAuthorizationSimulationResultPendingTransactionStatusEnum::PENDING;
 		$this->type = \OpenAPI\OpenAPI\Models\Shared\InboundCardAuthorizationSimulationResultPendingTransactionTypeEnum::PENDING_TRANSACTION;

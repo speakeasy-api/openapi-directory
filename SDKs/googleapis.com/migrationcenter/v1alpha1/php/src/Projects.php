@@ -824,6 +824,162 @@ class Projects
     }
 	
     /**
+     * Creates a report configuration.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsCreateRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsCreateSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsCreateResponse
+     */
+	public function migrationcenterProjectsLocationsReportConfigsCreate(
+        \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsCreateRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsCreateSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsCreateResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1alpha1/{parent}/reportConfigs', \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsCreateRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "reportConfigInput", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsCreateRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsCreateResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Lists ReportConfigs in a given project and location.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsListRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsListSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsListResponse
+     */
+	public function migrationcenterProjectsLocationsReportConfigsList(
+        \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsListRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsListSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsListResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1alpha1/{parent}/reportConfigs', \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsListRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsListRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsListResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->listReportConfigsResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListReportConfigsResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Creates a report.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsReportsCreateRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsReportsCreateSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsReportsCreateResponse
+     */
+	public function migrationcenterProjectsLocationsReportConfigsReportsCreate(
+        \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsReportsCreateRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsReportsCreateSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsReportsCreateResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1alpha1/{parent}/reports', \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsReportsCreateRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "reportInput", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsReportsCreateRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsReportsCreateResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Lists Reports in a given ReportConfig.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsReportsListRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsReportsListSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsReportsListResponse
+     */
+	public function migrationcenterProjectsLocationsReportConfigsReportsList(
+        \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsReportsListRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsReportsListSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsReportsListResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1alpha1/{parent}/reports', \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsReportsListRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsReportsListRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsReportConfigsReportsListResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->listReportsResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListReportsResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Creates a new source in a given project and location.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsSourcesCreateRequest $request
@@ -902,29 +1058,29 @@ class Projects
     }
 	
     /**
-     * Gets the details of a source.
+     * Gets the details of an error frame.
      * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsSourcesGetRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsSourcesGetSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsSourcesGetResponse
+     * @param \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsSourcesErrorFramesGetRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsSourcesErrorFramesGetSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsSourcesErrorFramesGetResponse
      */
-	public function migrationcenterProjectsLocationsSourcesGet(
-        \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsSourcesGetRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsSourcesGetSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsSourcesGetResponse
+	public function migrationcenterProjectsLocationsSourcesErrorFramesGet(
+        \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsSourcesErrorFramesGetRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsSourcesErrorFramesGetSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsSourcesErrorFramesGetResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1alpha1/{name}', \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsSourcesGetRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1alpha1/{name}', \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsSourcesErrorFramesGetRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsSourcesGetRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsSourcesErrorFramesGetRequest::class, $request, null));
         
         $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
         $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsSourcesGetResponse();
+        $response = new \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsSourcesErrorFramesGetResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -932,7 +1088,45 @@ class Projects
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->source = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Source', 'json');
+                $response->errorFrame = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ErrorFrame', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Lists all error frames in a given source and location.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsSourcesErrorFramesListRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsSourcesErrorFramesListSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsSourcesErrorFramesListResponse
+     */
+	public function migrationcenterProjectsLocationsSourcesErrorFramesList(
+        \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsSourcesErrorFramesListRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsSourcesErrorFramesListSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsSourcesErrorFramesListResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1alpha1/{parent}/errorFrames', \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsSourcesErrorFramesListRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsSourcesErrorFramesListRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\MigrationcenterProjectsLocationsSourcesErrorFramesListResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->listErrorFramesResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListErrorFramesResponse', 'json');
             }
         }
 

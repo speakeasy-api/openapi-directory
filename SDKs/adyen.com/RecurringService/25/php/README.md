@@ -30,19 +30,51 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\DisableRequest;
+use \OpenAPI\OpenAPI\Models\Operations\PostDisableSecurity;
+use \OpenAPI\OpenAPI\Models\Shared\SchemeBasicAuth;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new DisableRequest();
+    $request->contract = 'corrupti';
+    $request->merchantAccount = 'provident';
+    $request->recurringDetailReference = 'distinctio';
+    $request->shopperReference = 'quibusdam';
+
+    $requestSecurity = new PostDisableSecurity();
+    $requestSecurity->apiKeyAuth = 'YOUR_API_KEY_HERE';
+
+    $response = $sdk->general->postDisable($request, $requestSecurity);
+
+    if ($response->disableResult !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### general
+### [general](docs/general/README.md)
 
-* `postDisable` - Disable stored payment details
-* `postListRecurringDetails` - Get stored payment details
-* `postNotifyShopper` - Ask issuer to notify the shopper
-* `postScheduleAccountUpdater` - Schedule running the Account Updater
+* [postDisable](docs/general/README.md#postdisable) - Disable stored payment details
+* [postListRecurringDetails](docs/general/README.md#postlistrecurringdetails) - Get stored payment details
+* [postNotifyShopper](docs/general/README.md#postnotifyshopper) - Ask issuer to notify the shopper
+* [postScheduleAccountUpdater](docs/general/README.md#postscheduleaccountupdater) - Schedule running the Account Updater
 <!-- End SDK Available Operations -->
 
 ### Maturity

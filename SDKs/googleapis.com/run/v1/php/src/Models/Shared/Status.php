@@ -68,7 +68,7 @@ class Status
     public ?string $reason = null;
     
     /**
-     * Status of the operation. One of: "Success" or "Failure". More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     * Status of the operation. One of: "Success" or "Failure".
      * 
      * @var ?string $status
      */

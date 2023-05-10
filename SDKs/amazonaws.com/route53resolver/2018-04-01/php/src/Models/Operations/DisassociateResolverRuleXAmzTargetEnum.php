@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DisassociateResolverRuleXAmzTargetEnum: string
 {
     case ROUTE53_RESOLVER_DISASSOCIATE_RESOLVER_RULE = 'Route53Resolver.DisassociateResolverRule';

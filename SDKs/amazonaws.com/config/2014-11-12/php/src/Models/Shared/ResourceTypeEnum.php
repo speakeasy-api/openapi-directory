@@ -262,4 +262,27 @@ enum ResourceTypeEnum: string
     case AWS_EVENTS_CONNECTION = 'AWS::Events::Connection';
     case AWS_EVENT_SCHEMAS_SCHEMA = 'AWS::EventSchemas::Schema';
     case AWS_MEDIA_PACKAGE_PACKAGING_CONFIGURATION = 'AWS::MediaPackage::PackagingConfiguration';
+    case AWS_KINESIS_VIDEO_SIGNALING_CHANNEL = 'AWS::KinesisVideo::SignalingChannel';
+    case AWS_APP_STREAM_DIRECTORY_CONFIG = 'AWS::AppStream::DirectoryConfig';
+    case AWS_LOOKOUT_VISION_PROJECT = 'AWS::LookoutVision::Project';
+    case AWS_ROUTE53_RECOVERY_CONTROL_CLUSTER = 'AWS::Route53RecoveryControl::Cluster';
+    case AWS_ROUTE53_RECOVERY_CONTROL_SAFETY_RULE = 'AWS::Route53RecoveryControl::SafetyRule';
+    case AWS_ROUTE53_RECOVERY_CONTROL_CONTROL_PANEL = 'AWS::Route53RecoveryControl::ControlPanel';
+    case AWS_ROUTE53_RECOVERY_CONTROL_ROUTING_CONTROL = 'AWS::Route53RecoveryControl::RoutingControl';
+    case AWS_ROUTE53_RECOVERY_READINESS_RESOURCE_SET = 'AWS::Route53RecoveryReadiness::ResourceSet';
+    case AWS_ROBO_MAKER_SIMULATION_APPLICATION = 'AWS::RoboMaker::SimulationApplication';
+    case AWS_ROBO_MAKER_ROBOT_APPLICATION = 'AWS::RoboMaker::RobotApplication';
+    case AWS_HEALTH_LAKE_FHIR_DATASTORE = 'AWS::HealthLake::FHIRDatastore';
+    case AWS_PINPOINT_SEGMENT = 'AWS::Pinpoint::Segment';
+    case AWS_PINPOINT_APPLICATION_SETTINGS = 'AWS::Pinpoint::ApplicationSettings';
+    case AWS_EVENTS_RULE = 'AWS::Events::Rule';
+    case AWS_EC2_DHCP_OPTIONS = 'AWS::EC2::DHCPOptions';
+    case AWS_EC2_NETWORK_INSIGHTS_PATH = 'AWS::EC2::NetworkInsightsPath';
+    case AWS_EC2_TRAFFIC_MIRROR_FILTER = 'AWS::EC2::TrafficMirrorFilter';
+    case AWS_EC2_IPAM = 'AWS::EC2::IPAM';
+    case AWS_IO_T_TWIN_MAKER_SCENE = 'AWS::IoTTwinMaker::Scene';
+    case AWS_NETWORK_MANAGER_TRANSIT_GATEWAY_REGISTRATION = 'AWS::NetworkManager::TransitGatewayRegistration';
+    case AWS_CUSTOMER_PROFILES_DOMAIN = 'AWS::CustomerProfiles::Domain';
+    case AWS_AUTO_SCALING_WARM_POOL = 'AWS::AutoScaling::WarmPool';
+    case AWS_CONNECT_PHONE_NUMBER = 'AWS::Connect::PhoneNumber';
 }

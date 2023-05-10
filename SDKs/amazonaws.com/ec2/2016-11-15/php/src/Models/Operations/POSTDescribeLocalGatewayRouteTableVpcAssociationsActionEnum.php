@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeLocalGatewayRouteTableVpcAssociationsActionEnum: string
 {
     case DESCRIBE_LOCAL_GATEWAY_ROUTE_TABLE_VPC_ASSOCIATIONS = 'DescribeLocalGatewayRouteTableVpcAssociations';

@@ -21,6 +21,7 @@ src/Utils/Utils.php
 src/Models/Operations/BatchGetRecordRequestBody.php
 src/Models/Operations/BatchGetRecordRequest.php
 src/Models/Operations/BatchGetRecordResponse.php
+src/Models/Operations/DeleteRecordDeletionModeEnum.php
 src/Models/Operations/DeleteRecordRequest.php
 src/Models/Operations/DeleteRecordResponse.php
 src/Models/Operations/GetRecordRequest.php
@@ -36,4 +37,5 @@ src/Models/Shared/BatchGetRecordError.php
 src/Models/Shared/TargetStoreEnum.php
 src/Models/Shared/GetRecordResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

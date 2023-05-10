@@ -143,4 +143,5 @@ src/Models/Shared/MeasureValue.php
 src/Models/Shared/Dimension.php
 src/Models/Shared/DimensionValueTypeEnum.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

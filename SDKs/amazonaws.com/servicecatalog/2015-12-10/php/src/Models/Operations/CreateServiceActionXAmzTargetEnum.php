@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateServiceActionXAmzTargetEnum: string
 {
     case AWS242_SERVICE_CATALOG_SERVICE_CREATE_SERVICE_ACTION = 'AWS242ServiceCatalogService.CreateServiceAction';

@@ -148,11 +148,14 @@ class Event
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetEventsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetEventsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getEvents(
         \OpenAPI\OpenAPI\Models\Operations\GetEventsRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetEventsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/conversations/{conversation_id}/events', \OpenAPI\OpenAPI\Models\Operations\GetEventsRequest::class, $request);
         

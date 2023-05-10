@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListDelegatedAdministratorsXAmzTargetEnum: string
 {
     case AWS_ORGANIZATIONS_V20161128_LIST_DELEGATED_ADMINISTRATORS = 'AWSOrganizationsV20161128.ListDelegatedAdministrators';

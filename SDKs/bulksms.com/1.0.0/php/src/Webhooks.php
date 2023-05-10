@@ -78,9 +78,11 @@ class Webhooks
      * 
      * Contains a list of your webhooks
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetWebhooksSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetWebhooksResponse
      */
 	public function getWebhooks(
+        \OpenAPI\OpenAPI\Models\Operations\GetWebhooksSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetWebhooksResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -88,7 +90,8 @@ class Webhooks
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

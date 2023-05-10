@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetTagsTagTopAskersPeriodPeriodEnum: string
 {
     case ALL_TIME = 'all_time';

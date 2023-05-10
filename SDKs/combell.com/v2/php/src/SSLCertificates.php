@@ -66,8 +66,7 @@ class SSLCertificates
         
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->downloadCertificate200ApplicationJSONBinaryString = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->downloadCertificate200ApplicationJSONBinaryString = $httpResponse->getBody()->getContents();
             }
         }
         else if ($httpResponse->getStatusCode() === 400) {

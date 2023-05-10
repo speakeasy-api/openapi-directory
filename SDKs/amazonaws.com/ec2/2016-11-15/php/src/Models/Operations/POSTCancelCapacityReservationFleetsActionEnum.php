@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCancelCapacityReservationFleetsActionEnum: string
 {
     case CANCEL_CAPACITY_RESERVATION_FLEETS = 'CancelCapacityReservationFleets';

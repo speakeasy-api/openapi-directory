@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListPortfoliosXAmzTargetEnum: string
 {
     case AWS242_SERVICE_CATALOG_SERVICE_LIST_PORTFOLIOS = 'AWS242ServiceCatalogService.ListPortfolios';

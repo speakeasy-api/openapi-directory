@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * AttachVerifiedAccessTrustProviderResultVerifiedAccessInstance - The ID of the Amazon Web Services Verified Access instance.
+ * AttachVerifiedAccessTrustProviderResultVerifiedAccessInstance - The ID of the Verified Access instance.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

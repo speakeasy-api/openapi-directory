@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopPipelineExecutionXAmzTargetEnum: string
 {
     case SAGE_MAKER_STOP_PIPELINE_EXECUTION = 'SageMaker.StopPipelineExecution';

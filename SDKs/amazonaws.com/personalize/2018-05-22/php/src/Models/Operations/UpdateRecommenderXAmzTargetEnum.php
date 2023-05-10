@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateRecommenderXAmzTargetEnum: string
 {
     case AMAZON_PERSONALIZE_UPDATE_RECOMMENDER = 'AmazonPersonalize.UpdateRecommender';

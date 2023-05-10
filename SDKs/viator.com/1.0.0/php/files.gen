@@ -236,4 +236,10 @@ src/Models/Shared/SearchFreetextResponse.php
 src/Models/Shared/SortOrderEnum.php
 src/Models/Shared/DestinationTypeEnum.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/bookingservices/README.md
+docs/deprecatedservices/README.md
+docs/generalservices/README.md
+docs/productservices/README.md
+docs/taxonomyservices/README.md
 USAGE.md

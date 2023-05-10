@@ -30,17 +30,59 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\IndexingUrlNotificationsGetMetadataRequest;
+use \OpenAPI\OpenAPI\Models\Shared\XgafvEnum;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+use \OpenAPI\OpenAPI\Models\Operations\IndexingUrlNotificationsGetMetadataSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new IndexingUrlNotificationsGetMetadataRequest();
+    $request->dollarXgafv = XgafvEnum::TWO;
+    $request->accessToken = 'provident';
+    $request->alt = AltEnum::PROTO;
+    $request->callback = 'quibusdam';
+    $request->fields = 'unde';
+    $request->key = 'nulla';
+    $request->oauthToken = 'corrupti';
+    $request->prettyPrint = false;
+    $request->quotaUser = 'illum';
+    $request->uploadType = 'vel';
+    $request->uploadProtocol = 'error';
+    $request->url = 'deserunt';
+
+    $requestSecurity = new IndexingUrlNotificationsGetMetadataSecurity();
+    $requestSecurity->oauth2 = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+    $requestSecurity->oauth2c = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+
+    $response = $sdk->urlNotifications->indexingUrlNotificationsGetMetadata($request, $requestSecurity);
+
+    if ($response->urlNotificationMetadata !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### urlNotifications
+### [urlNotifications](docs/urlnotifications/README.md)
 
-* `indexingUrlNotificationsGetMetadata` - Gets metadata about a Web Document. This method can _only_ be used to query URLs that were previously seen in successful Indexing API notifications. Includes the latest `UrlNotification` received via this API.
-* `indexingUrlNotificationsPublish` - Notifies that a URL has been updated or deleted.
+* [indexingUrlNotificationsGetMetadata](docs/urlnotifications/README.md#indexingurlnotificationsgetmetadata) - Gets metadata about a Web Document. This method can _only_ be used to query URLs that were previously seen in successful Indexing API notifications. Includes the latest `UrlNotification` received via this API.
+* [indexingUrlNotificationsPublish](docs/urlnotifications/README.md#indexingurlnotificationspublish) - Notifies that a URL has been updated or deleted.
 <!-- End SDK Available Operations -->
 
 ### Maturity

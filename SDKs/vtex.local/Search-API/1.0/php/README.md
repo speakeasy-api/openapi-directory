@@ -30,42 +30,69 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\AutoCompleteRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new AutoCompleteRequest();
+    $request->accept = 'application/json';
+    $request->contentType = 'application/json';
+    $request->productNameContains = 'jeans';
+
+    $response = $sdk->autocomplete->autoComplete($request);
+
+    if ($response->theRootSchema !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### autocomplete
+### [autocomplete](docs/autocomplete/README.md)
 
-* `autoComplete` - Product Search Autocomplete
+* [autoComplete](docs/autocomplete/README.md#autocomplete) - Product Search Autocomplete
 
-### crossSelling
+### [crossSelling](docs/crossselling/README.md)
 
-* `productSearchAccessories` - Get Product Search of Accessories
-* `productSearchShowTogether` - Get Product Search of Show Together
-* `productSearchSimilars` - Get Product Search of Similars
-* `productSearchSuggestions` - Get Product Search of Suggestions
-* `productSearchWhoBoughtAlsoBought` - Get Product Search of Who Bought Also Bought
-* `productSearchWhoSawAlsoBought` - Get Product Search of Who Saw Also Bought
-* `productSearchWhoSawAlsoSaw` - Get Product Search of Who Saw Also Saw
+* [productSearchAccessories](docs/crossselling/README.md#productsearchaccessories) - Get Product Search of Accessories
+* [productSearchShowTogether](docs/crossselling/README.md#productsearchshowtogether) - Get Product Search of Show Together
+* [productSearchSimilars](docs/crossselling/README.md#productsearchsimilars) - Get Product Search of Similars
+* [productSearchSuggestions](docs/crossselling/README.md#productsearchsuggestions) - Get Product Search of Suggestions
+* [productSearchWhoBoughtAlsoBought](docs/crossselling/README.md#productsearchwhoboughtalsobought) - Get Product Search of Who Bought Also Bought
+* [productSearchWhoSawAlsoBought](docs/crossselling/README.md#productsearchwhosawalsobought) - Get Product Search of Who Saw Also Bought
+* [productSearchWhoSawAlsoSaw](docs/crossselling/README.md#productsearchwhosawalsosaw) - Get Product Search of Who Saw Also Saw
 
-### facets
+### [facets](docs/facets/README.md)
 
-* `facetscategory` - Search by Store Facets
-* `getApiCatalogSystemPubFacetsCategoryCategoryId` - Get Category Facets
+* [facetscategory](docs/facets/README.md#facetscategory) - Search by Store Facets
+* [getApiCatalogSystemPubFacetsCategoryCategoryId](docs/facets/README.md#getapicatalogsystempubfacetscategorycategoryid) - Get Category Facets
 
-### offers
+### [offers](docs/offers/README.md)
 
-* `getApiCatalogSystemPubProductsOffersProductId` - Search Product offers
-* `getApiCatalogSystemPubProductsOffersProductIdSkuSkuId` - Search SKU offers
+* [getApiCatalogSystemPubProductsOffersProductId](docs/offers/README.md#getapicatalogsystempubproductsoffersproductid) - Search Product offers
+* [getApiCatalogSystemPubProductsOffersProductIdSkuSkuId](docs/offers/README.md#getapicatalogsystempubproductsoffersproductidskuskuid) - Search SKU offers
 
-### search
+### [search](docs/search/README.md)
 
-* `productSearch` - Search for Products
-* `productSearchFilteredandOrdered` - Search for Products with Filter, Order and Pagination
-* `searchbyproducturl` - Search Product by Product URL
+* [productSearch](docs/search/README.md#productsearch) - Search for Products
+* [productSearchFilteredandOrdered](docs/search/README.md#productsearchfilteredandordered) - Search for Products with Filter, Order and Pagination
+* [searchbyproducturl](docs/search/README.md#searchbyproducturl) - Search Product by Product URL
 <!-- End SDK Available Operations -->
 
 ### Maturity

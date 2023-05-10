@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RemoveManagedScalingPolicyXAmzTargetEnum: string
 {
     case ELASTIC_MAP_REDUCE_REMOVE_MANAGED_SCALING_POLICY = 'ElasticMapReduce.RemoveManagedScalingPolicy';

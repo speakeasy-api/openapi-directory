@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListTagsForResourceXAmzTargetEnum: string
 {
     case PINPOINT_SMS_VOICE_V2_LIST_TAGS_FOR_RESOURCE = 'PinpointSMSVoiceV2.ListTagsForResource';

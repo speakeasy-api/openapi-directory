@@ -619,4 +619,5 @@ src/Models/Shared/RestoreDBClusterToPointInTimeMessage.php
 src/Models/Shared/StartDBClusterMessage.php
 src/Models/Shared/StopDBClusterMessage.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

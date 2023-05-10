@@ -42,9 +42,11 @@ class Projects
      * 
      * Returns project data for API key
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetProjectSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetProjectResponse
      */
 	public function getProject(
+        \OpenAPI\OpenAPI\Models\Operations\GetProjectSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetProjectResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -52,7 +54,8 @@ class Projects
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

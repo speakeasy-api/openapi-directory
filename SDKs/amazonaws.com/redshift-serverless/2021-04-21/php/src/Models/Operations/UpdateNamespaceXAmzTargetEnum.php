@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateNamespaceXAmzTargetEnum: string
 {
     case REDSHIFT_SERVERLESS_UPDATE_NAMESPACE = 'RedshiftServerless.UpdateNamespace';

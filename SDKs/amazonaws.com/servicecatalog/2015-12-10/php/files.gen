@@ -231,6 +231,15 @@ src/Models/Operations/ListStackInstancesForProvisionedProductResponse.php
 src/Models/Operations/ListTagOptionsXAmzTargetEnum.php
 src/Models/Operations/ListTagOptionsRequest.php
 src/Models/Operations/ListTagOptionsResponse.php
+src/Models/Operations/NotifyProvisionProductEngineWorkflowResultXAmzTargetEnum.php
+src/Models/Operations/NotifyProvisionProductEngineWorkflowResultRequest.php
+src/Models/Operations/NotifyProvisionProductEngineWorkflowResultResponse.php
+src/Models/Operations/NotifyTerminateProvisionedProductEngineWorkflowResultXAmzTargetEnum.php
+src/Models/Operations/NotifyTerminateProvisionedProductEngineWorkflowResultRequest.php
+src/Models/Operations/NotifyTerminateProvisionedProductEngineWorkflowResultResponse.php
+src/Models/Operations/NotifyUpdateProvisionedProductEngineWorkflowResultXAmzTargetEnum.php
+src/Models/Operations/NotifyUpdateProvisionedProductEngineWorkflowResultRequest.php
+src/Models/Operations/NotifyUpdateProvisionedProductEngineWorkflowResultResponse.php
 src/Models/Operations/ProvisionProductXAmzTargetEnum.php
 src/Models/Operations/ProvisionProductRequest.php
 src/Models/Operations/ProvisionProductResponse.php
@@ -478,6 +487,12 @@ src/Models/Shared/ListStackInstancesForProvisionedProductInput.php
 src/Models/Shared/ListTagOptionsOutput.php
 src/Models/Shared/ListTagOptionsInput.php
 src/Models/Shared/ListTagOptionsFilters.php
+src/Models/Shared/NotifyProvisionProductEngineWorkflowResultInput.php
+src/Models/Shared/EngineWorkflowStatusEnum.php
+src/Models/Shared/EngineWorkflowResourceIdentifier.php
+src/Models/Shared/UniqueTagResourceIdentifier.php
+src/Models/Shared/NotifyTerminateProvisionedProductEngineWorkflowResultInput.php
+src/Models/Shared/NotifyUpdateProvisionedProductEngineWorkflowResultInput.php
 src/Models/Shared/ProvisionProductOutput.php
 src/Models/Shared/ProvisionProductInput.php
 src/Models/Shared/ProvisioningPreferences.php
@@ -519,4 +534,5 @@ src/Models/Shared/UpdateServiceActionInput.php
 src/Models/Shared/UpdateTagOptionOutput.php
 src/Models/Shared/UpdateTagOptionInput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

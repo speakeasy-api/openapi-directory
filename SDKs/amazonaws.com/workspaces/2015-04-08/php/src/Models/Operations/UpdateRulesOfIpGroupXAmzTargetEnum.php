@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateRulesOfIpGroupXAmzTargetEnum: string
 {
     case WORKSPACES_SERVICE_UPDATE_RULES_OF_IP_GROUP = 'WorkspacesService.UpdateRulesOfIpGroup';

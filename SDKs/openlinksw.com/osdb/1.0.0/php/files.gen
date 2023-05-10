@@ -67,4 +67,6 @@ src/Models/Shared/LoginResponse.php
 src/Models/Shared/LogoutResponseResponse.php
 src/Models/Shared/LogoutResponseStatusEnum.php
 src/Models/Shared/LogoutResponse.php
+docs/sdk/README.md
+docs/osdb/README.md
 USAGE.md

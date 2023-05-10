@@ -177,4 +177,6 @@ src/Models/Shared/HistogramQuery.php
 src/Models/Shared/CustomRankingInfoImportanceLevelEnum.php
 src/Models/Shared/CustomRankingInfo.php
 src/Models/Shared/ListTenantsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

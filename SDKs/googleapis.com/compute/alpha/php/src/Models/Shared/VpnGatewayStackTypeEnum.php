@@ -14,4 +14,5 @@ enum VpnGatewayStackTypeEnum: string
 {
     case IPV4_IPV6 = 'IPV4_IPV6';
     case IPV4_ONLY = 'IPV4_ONLY';
+    case IPV6_ONLY = 'IPV6_ONLY';
 }

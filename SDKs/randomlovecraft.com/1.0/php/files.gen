@@ -33,4 +33,7 @@ src/Models/Operations/GetSpecificSentence200ApplicationJSON.php
 src/Models/Operations/GetSpecificSentenceResponse.php
 src/Models/Shared/Book.php
 src/Models/Shared/Sentence.php
+docs/sdk/README.md
+docs/books/README.md
+docs/sentences/README.md
 USAGE.md

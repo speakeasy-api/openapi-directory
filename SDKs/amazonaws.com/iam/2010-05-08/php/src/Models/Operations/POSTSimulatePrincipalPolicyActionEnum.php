@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTSimulatePrincipalPolicyActionEnum: string
 {
     case SIMULATE_PRINCIPAL_POLICY = 'SimulatePrincipalPolicy';

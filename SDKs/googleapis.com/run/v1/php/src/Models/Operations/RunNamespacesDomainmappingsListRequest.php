@@ -108,7 +108,7 @@ class RunNamespacesDomainmappingsListRequest
     public ?string $oauthToken = null;
     
     /**
-     * The namespace from which the domain mappings should be listed. For Cloud Run (fully managed), replace {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+     * Required. The namespace from which the domain mappings should be listed. For Cloud Run (fully managed), replace {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
      * 
      * @var string $parent
      */

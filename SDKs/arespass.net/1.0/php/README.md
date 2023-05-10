@@ -30,19 +30,43 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetAboutRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetAboutRequest();
+    $request->outputFormat = 'corrupti';
+
+    $response = $sdk->getAbout($request);
+
+    if ($response->about !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getAbout` - Metadata about this API&#58; version number, release date and available languages.
+* [getAbout](docs/sdk/README.md#getabout) - Metadata about this API&#58; version number, release date and available languages.
 
 Metadata requests are NOT billed.
 
-* `getEc` - The entropy calculator - alias ec -, analyzes a password and calculates its entropy.
+* [getEc](docs/sdk/README.md#getec) - The entropy calculator - alias ec -, analyzes a password and calculates its entropy.
 
 Entropy calculator requests are billed.
 

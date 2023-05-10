@@ -30,21 +30,78 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\KeepNotesCreateRequest;
+use \OpenAPI\OpenAPI\Models\Shared\XgafvEnum;
+use \OpenAPI\OpenAPI\Models\Shared\NoteInput;
+use \OpenAPI\OpenAPI\Models\Shared\Section;
+use \OpenAPI\OpenAPI\Models\Shared\ListContent;
+use \OpenAPI\OpenAPI\Models\Shared\ListItem;
+use \OpenAPI\OpenAPI\Models\Shared\TextContent;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+use \OpenAPI\OpenAPI\Models\Operations\KeepNotesCreateSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new KeepNotesCreateRequest();
+    $request->dollarXgafv = XgafvEnum::TWO;
+    $request->noteInput = new NoteInput();
+    $request->noteInput->body = new Section();
+    $request->noteInput->body->list = new ListContent();
+    $request->noteInput->body->list->listItems = [
+        new ListItem(),
+        new ListItem(),
+        new ListItem(),
+    ];
+    $request->noteInput->body->text = new TextContent();
+    $request->noteInput->body->text->text = 'distinctio';
+    $request->noteInput->title = 'Dr.';
+    $request->accessToken = 'unde';
+    $request->alt = AltEnum::PROTO;
+    $request->callback = 'corrupti';
+    $request->fields = 'illum';
+    $request->key = 'vel';
+    $request->oauthToken = 'error';
+    $request->prettyPrint = false;
+    $request->quotaUser = 'deserunt';
+    $request->uploadType = 'suscipit';
+    $request->uploadProtocol = 'iure';
+
+    $requestSecurity = new KeepNotesCreateSecurity();
+    $requestSecurity->oauth2 = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+    $requestSecurity->oauth2c = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+
+    $response = $sdk->notes->keepNotesCreate($request, $requestSecurity);
+
+    if ($response->note !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### notes
+### [notes](docs/notes/README.md)
 
-* `keepNotesCreate` - Creates a new note.
-* `keepNotesDelete` - Deletes a note. Caller must have the `OWNER` role on the note to delete. Deleting a note removes the resource immediately and cannot be undone. Any collaborators will lose access to the note.
-* `keepNotesGet` - Gets a note.
-* `keepNotesList` - Lists notes. Every list call returns a page of results with `page_size` as the upper bound of returned items. A `page_size` of zero allows the server to choose the upper bound. The ListNotesResponse contains at most `page_size` entries. If there are more things left to list, it provides a `next_page_token` value. (Page tokens are opaque values.) To get the next page of results, copy the result's `next_page_token` into the next request's `page_token`. Repeat until the `next_page_token` returned with a page of results is empty. ListNotes return consistent results in the face of concurrent changes, or signals that it cannot with an ABORTED error.
-* `keepNotesPermissionsBatchCreate` - Creates one or more permissions on the note. Only permissions with the `WRITER` role may be created. If adding any permission fails, then the entire request fails and no changes are made.
-* `keepNotesPermissionsBatchDelete` - Deletes one or more permissions on the note. The specified entities will immediately lose access. A permission with the `OWNER` role can't be removed. If removing a permission fails, then the entire request fails and no changes are made. Returns a 400 bad request error if a specified permission does not exist on the note.
+* [keepNotesCreate](docs/notes/README.md#keepnotescreate) - Creates a new note.
+* [keepNotesDelete](docs/notes/README.md#keepnotesdelete) - Deletes a note. Caller must have the `OWNER` role on the note to delete. Deleting a note removes the resource immediately and cannot be undone. Any collaborators will lose access to the note.
+* [keepNotesGet](docs/notes/README.md#keepnotesget) - Gets a note.
+* [keepNotesList](docs/notes/README.md#keepnoteslist) - Lists notes. Every list call returns a page of results with `page_size` as the upper bound of returned items. A `page_size` of zero allows the server to choose the upper bound. The ListNotesResponse contains at most `page_size` entries. If there are more things left to list, it provides a `next_page_token` value. (Page tokens are opaque values.) To get the next page of results, copy the result's `next_page_token` into the next request's `page_token`. Repeat until the `next_page_token` returned with a page of results is empty. ListNotes return consistent results in the face of concurrent changes, or signals that it cannot with an ABORTED error.
+* [keepNotesPermissionsBatchCreate](docs/notes/README.md#keepnotespermissionsbatchcreate) - Creates one or more permissions on the note. Only permissions with the `WRITER` role may be created. If adding any permission fails, then the entire request fails and no changes are made.
+* [keepNotesPermissionsBatchDelete](docs/notes/README.md#keepnotespermissionsbatchdelete) - Deletes one or more permissions on the note. The specified entities will immediately lose access. A permission with the `OWNER` role can't be removed. If removing a permission fails, then the entire request fails and no changes are made. Returns a 400 bad request error if a specified permission does not exist on the note.
 <!-- End SDK Available Operations -->
 
 ### Maturity

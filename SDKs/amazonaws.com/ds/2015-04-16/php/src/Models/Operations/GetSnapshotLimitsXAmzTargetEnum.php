@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetSnapshotLimitsXAmzTargetEnum: string
 {
     case DIRECTORY_SERVICE20150416_GET_SNAPSHOT_LIMITS = 'DirectoryService_20150416.GetSnapshotLimits';

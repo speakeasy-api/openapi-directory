@@ -75,4 +75,7 @@ src/Models/Shared/ReportStatus.php
 src/Models/Shared/ReportFailureErrorCodeEnum.php
 src/Models/Shared/ReportFailure.php
 src/Models/Shared/ReportKey.php
+docs/sdk/README.md
+docs/queries/README.md
+docs/reports/README.md
 USAGE.md

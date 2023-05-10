@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteBucketAccessKeyXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_DELETE_BUCKET_ACCESS_KEY = 'Lightsail_20161128.DeleteBucketAccessKey';

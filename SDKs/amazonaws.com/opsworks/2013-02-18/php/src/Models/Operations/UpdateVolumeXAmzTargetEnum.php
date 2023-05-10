@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateVolumeXAmzTargetEnum: string
 {
     case OPS_WORKS20130218_UPDATE_VOLUME = 'OpsWorks_20130218.UpdateVolume';

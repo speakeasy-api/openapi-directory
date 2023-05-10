@@ -413,4 +413,5 @@ src/Models/Shared/UpdateGatewayCapabilityConfigurationResponse.php
 src/Models/Shared/UpdatePortalResponse.php
 src/Models/Shared/ImageFile.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

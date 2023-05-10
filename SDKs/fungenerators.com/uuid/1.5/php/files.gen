@@ -29,4 +29,7 @@ src/Models/Operations/GetUuidVersionVersionResponse.php
 src/Models/Operations/PostUuidSecurity.php
 src/Models/Operations/PostUuidRequest.php
 src/Models/Operations/PostUuidResponse.php
+docs/sdk/README.md
+docs/uuidgeneration/README.md
+docs/uuidparsing/README.md
 USAGE.md

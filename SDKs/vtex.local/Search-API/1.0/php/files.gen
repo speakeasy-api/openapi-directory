@@ -171,4 +171,10 @@ src/Models/Operations/Searchbyproducturl200ApplicationJSONItems.php
 src/Models/Operations/Searchbyproducturl200ApplicationJSON.php
 src/Models/Operations/SearchbyproducturlResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/autocomplete/README.md
+docs/crossselling/README.md
+docs/facets/README.md
+docs/offers/README.md
+docs/search/README.md
 USAGE.md

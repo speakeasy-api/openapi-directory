@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Shared;
 
 
-/** The type of configuration. The default and only option is ONE_TO_ONE_NAT. */
+/** The type of configuration. In accessConfigs (IPv4), the default and only option is ONE_TO_ONE_NAT. In ipv6AccessConfigs, the default and only option is DIRECT_IPV6. */
 enum AccessConfigTypeEnum: string
 {
     case DIRECT_IPV6 = 'DIRECT_IPV6';

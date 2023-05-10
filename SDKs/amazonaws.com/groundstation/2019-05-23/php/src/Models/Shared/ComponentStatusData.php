@@ -32,8 +32,8 @@ class ComponentStatusData
     public string $capabilityArn;
     
 	#[\JMS\Serializer\Annotation\SerializedName('componentType')]
-    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\ComponentTypeEnum>')]
-    public ComponentTypeEnum $componentType;
+    #[\JMS\Serializer\Annotation\Type('string')]
+    public string $componentType;
     
 	#[\JMS\Serializer\Annotation\SerializedName('dataflowId')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -53,7 +53,7 @@ class ComponentStatusData
 		$this->bytesReceived = null;
 		$this->bytesSent = null;
 		$this->capabilityArn = "";
-		$this->componentType = \OpenAPI\OpenAPI\Models\Shared\ComponentTypeEnum::LAMINAR_FLOW;
+		$this->componentType = "";
 		$this->dataflowId = "";
 		$this->packetsDropped = null;
 		$this->status = \OpenAPI\OpenAPI\Models\Shared\AgentStatusEnum::SUCCESS;

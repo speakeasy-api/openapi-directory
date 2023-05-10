@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateServiceSpecificCredentialActionEnum: string
 {
     case CREATE_SERVICE_SPECIFIC_CREDENTIAL = 'CreateServiceSpecificCredential';

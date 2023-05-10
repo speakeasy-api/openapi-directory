@@ -42,4 +42,7 @@ src/Models/Shared/ListPlaceActionLinksResponse.php
 src/Models/Shared/ListPlaceActionTypeMetadataResponse.php
 src/Models/Shared/PlaceActionTypeMetadataPlaceActionTypeEnum.php
 src/Models/Shared/PlaceActionTypeMetadata.php
+docs/sdk/README.md
+docs/locations/README.md
+docs/placeactiontypemetadata/README.md
 USAGE.md

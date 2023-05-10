@@ -163,4 +163,11 @@ src/Models/Shared/WebhookEventTypeEnumEnum.php
 src/Models/Shared/Security.php
 src/Models/Callbacks/PostWebhooksEventResponse.php
 src/Models/Callbacks/PostWebhooksEventRequest.php
+docs/sdk/README.md
+docs/accounts/README.md
+docs/categories/README.md
+docs/tags/README.md
+docs/transactions/README.md
+docs/utilityendpoints/README.md
+docs/webhooks/README.md
 USAGE.md

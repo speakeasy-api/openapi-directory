@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETRegisterDBProxyTargetsActionEnum: string
 {
     case REGISTER_DB_PROXY_TARGETS = 'RegisterDBProxyTargets';

@@ -220,4 +220,6 @@ src/Models/Shared/GoogleCloudDatalabelingV1beta1PdfInstruction.php
 src/Models/Shared/GoogleCloudDatalabelingV1beta1CsvInstruction.php
 src/Models/Shared/GoogleCloudDatalabelingV1beta1ListInstructionsResponse.php
 src/Models/Shared/GoogleLongrunningListOperationsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

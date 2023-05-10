@@ -14,8 +14,12 @@ class GenderRequest
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=firstName')]
     public string $firstName;
     
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=lastName')]
+    public string $lastName;
+    
 	public function __construct()
 	{
 		$this->firstName = "";
+		$this->lastName = "";
 	}
 }

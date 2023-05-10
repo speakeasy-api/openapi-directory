@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETApplySecurityGroupsToLoadBalancerActionEnum: string
 {
     case APPLY_SECURITY_GROUPS_TO_LOAD_BALANCER = 'ApplySecurityGroupsToLoadBalancer';

@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-enum RetrieveAnAccountTransferDefaultApplicationJSON7StatusEnum: string
+enum RetrieveAnAccountTransferDefaultApplicationJSON7StatusEnum: int
 {
-    case FOUR_HUNDRED_AND_ONE = '401';
+    case FOUR_HUNDRED_AND_ONE = 401;
 }

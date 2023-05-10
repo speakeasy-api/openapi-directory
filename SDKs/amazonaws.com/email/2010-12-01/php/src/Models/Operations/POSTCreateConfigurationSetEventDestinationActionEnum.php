@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateConfigurationSetEventDestinationActionEnum: string
 {
     case CREATE_CONFIGURATION_SET_EVENT_DESTINATION = 'CreateConfigurationSetEventDestination';

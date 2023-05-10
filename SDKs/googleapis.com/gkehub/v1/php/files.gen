@@ -109,6 +109,7 @@ src/Models/Shared/ConfigManagementPolicyControllerMonitoring.php
 src/Models/Shared/ConfigManagementHierarchyControllerConfig.php
 src/Models/Shared/ConfigManagementConfigSync.php
 src/Models/Shared/ConfigManagementOciConfig.php
+src/Models/Shared/ConfigManagementManaged.php
 src/Models/Shared/ConfigManagementGitConfig.php
 src/Models/Shared/XgafvEnum.php
 src/Models/Shared/ListFeaturesResponse.php
@@ -163,6 +164,7 @@ src/Models/Shared/MembershipBindingLifecycleStateCodeEnum.php
 src/Models/Shared/MembershipBindingLifecycleState.php
 src/Models/Shared/Membership.php
 src/Models/Shared/MembershipInput.php
+src/Models/Shared/MonitoringConfig.php
 src/Models/Shared/MembershipEndpoint.php
 src/Models/Shared/MembershipEndpointInput.php
 src/Models/Shared/OnPremClusterClusterTypeEnum.php
@@ -202,4 +204,6 @@ src/Models/Shared/ScopeInput.php
 src/Models/Shared/ScopeLifecycleStateCodeEnum.php
 src/Models/Shared/ScopeLifecycleState.php
 src/Models/Shared/ListScopesResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

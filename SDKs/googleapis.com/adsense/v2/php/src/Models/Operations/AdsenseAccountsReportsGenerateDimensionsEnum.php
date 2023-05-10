@@ -28,6 +28,7 @@ enum AdsenseAccountsReportsGenerateDimensionsEnum: string
     case CUSTOM_CHANNEL_ID = 'CUSTOM_CHANNEL_ID';
     case OWNED_SITE_DOMAIN_NAME = 'OWNED_SITE_DOMAIN_NAME';
     case OWNED_SITE_ID = 'OWNED_SITE_ID';
+    case PAGE_URL = 'PAGE_URL';
     case URL_CHANNEL_NAME = 'URL_CHANNEL_NAME';
     case URL_CHANNEL_ID = 'URL_CHANNEL_ID';
     case BUYER_NETWORK_NAME = 'BUYER_NETWORK_NAME';

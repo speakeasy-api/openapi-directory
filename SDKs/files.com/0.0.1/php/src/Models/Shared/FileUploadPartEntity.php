@@ -148,6 +148,16 @@ class FileUploadPartEntity
     public ?string $ref = null;
     
     /**
+     * If `true`, parts may be retried. If `false`, a part cannot be retried and the upload should be restarted.
+     * 
+     * @var ?bool $retryParts
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('retry_parts')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $retryParts = null;
+    
+    /**
      * Content-Type and File to send
      * 
      * @var ?array<string, mixed> $send
@@ -182,6 +192,7 @@ class FileUploadPartEntity
 		$this->partsize = null;
 		$this->path = null;
 		$this->ref = null;
+		$this->retryParts = null;
 		$this->send = null;
 		$this->uploadUri = null;
 	}

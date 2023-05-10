@@ -171,6 +171,7 @@ src/Models/Shared/GoogleCloudDataplexV1ScannedData.php
 src/Models/Shared/GoogleCloudDataplexV1ScannedDataIncrementalField.php
 src/Models/Shared/GoogleCloudDataplexV1DataQualityRuleResult.php
 src/Models/Shared/GoogleCloudDataplexV1DataQualityDimensionResult.php
+src/Models/Shared/GoogleCloudDataplexV1DataProfileSpec.php
 src/Models/Shared/GoogleCloudDataplexV1DataProfileResult.php
 src/Models/Shared/GoogleCloudDataplexV1DataProfileResultProfile.php
 src/Models/Shared/GoogleCloudDataplexV1DataProfileResultProfileField.php
@@ -311,4 +312,6 @@ src/Models/Shared/GoogleCloudDataplexV1ListZonesResponse.php
 src/Models/Shared/GoogleCloudLocationListLocationsResponse.php
 src/Models/Shared/GoogleCloudLocationLocation.php
 src/Models/Shared/GoogleLongrunningListOperationsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

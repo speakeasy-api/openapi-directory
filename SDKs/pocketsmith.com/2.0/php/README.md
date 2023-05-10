@@ -30,110 +30,135 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\DeleteAccountsIdRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new DeleteAccountsIdRequest();
+    $request->id = 548814;
+
+    $response = $sdk->accounts->deleteAccountsId($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### accounts
+### [accounts](docs/accounts/README.md)
 
-* `deleteAccountsId` - Delete account
-* `getAccountsId` - Get account
-* `getInstitutionsIdAccounts` - List accounts in institution
-* `getUsersIdAccounts` - List accounts in user
-* `postUsersIdAccounts` - Create an account in user
-* `putAccountsId` - Update account
-* `putUsersIdAccounts` - Update the display order of accounts in user
+* [deleteAccountsId](docs/accounts/README.md#deleteaccountsid) - Delete account
+* [getAccountsId](docs/accounts/README.md#getaccountsid) - Get account
+* [getInstitutionsIdAccounts](docs/accounts/README.md#getinstitutionsidaccounts) - List accounts in institution
+* [getUsersIdAccounts](docs/accounts/README.md#getusersidaccounts) - List accounts in user
+* [postUsersIdAccounts](docs/accounts/README.md#postusersidaccounts) - Create an account in user
+* [putAccountsId](docs/accounts/README.md#putaccountsid) - Update account
+* [putUsersIdAccounts](docs/accounts/README.md#putusersidaccounts) - Update the display order of accounts in user
 
-### attachments
+### [attachments](docs/attachments/README.md)
 
-* `deleteAttachmentsId` - Delete attachment
-* `deleteTransactionsTransactionIdAttachmentsAttachmentId` - Unassigns attachment in transaction
-* `getAttachmentsId` - Get attachment
-* `getTransactionsIdAttachments` - List attachments in transaction
-* `getUsersIdAttachments` - Lists attachments in user
-* `postTransactionsIdAttachments` - Assigns attachment to transaction
-* `postUsersIdAttachments` - Create attachment in user
-* `putAttachmentsId` - Update attachment
+* [deleteAttachmentsId](docs/attachments/README.md#deleteattachmentsid) - Delete attachment
+* [deleteTransactionsTransactionIdAttachmentsAttachmentId](docs/attachments/README.md#deletetransactionstransactionidattachmentsattachmentid) - Unassigns attachment in transaction
+* [getAttachmentsId](docs/attachments/README.md#getattachmentsid) - Get attachment
+* [getTransactionsIdAttachments](docs/attachments/README.md#gettransactionsidattachments) - List attachments in transaction
+* [getUsersIdAttachments](docs/attachments/README.md#getusersidattachments) - Lists attachments in user
+* [postTransactionsIdAttachments](docs/attachments/README.md#posttransactionsidattachments) - Assigns attachment to transaction
+* [postUsersIdAttachments](docs/attachments/README.md#postusersidattachments) - Create attachment in user
+* [putAttachmentsId](docs/attachments/README.md#putattachmentsid) - Update attachment
 
-### budgeting
+### [budgeting](docs/budgeting/README.md)
 
-* `deleteUsersIdForecastCache` - Delete forecast cache for user
-* `getUsersIdBudget` - List budget for user
-* `getUsersIdBudgetSummary` - Get budget summary for user
-* `getUsersIdTrendAnalysis` - Get trend analysis for user
+* [deleteUsersIdForecastCache](docs/budgeting/README.md#deleteusersidforecastcache) - Delete forecast cache for user
+* [getUsersIdBudget](docs/budgeting/README.md#getusersidbudget) - List budget for user
+* [getUsersIdBudgetSummary](docs/budgeting/README.md#getusersidbudgetsummary) - Get budget summary for user
+* [getUsersIdTrendAnalysis](docs/budgeting/README.md#getusersidtrendanalysis) - Get trend analysis for user
 
-### categories
+### [categories](docs/categories/README.md)
 
-* `deleteCategoriesId` - Delete category
-* `getCategoriesId` - Get category
-* `getUsersIdCategories` - List categories in user
-* `postUsersIdCategories` - Create category in user
-* `putCategoriesId` - Update category
+* [deleteCategoriesId](docs/categories/README.md#deletecategoriesid) - Delete category
+* [getCategoriesId](docs/categories/README.md#getcategoriesid) - Get category
+* [getUsersIdCategories](docs/categories/README.md#getusersidcategories) - List categories in user
+* [postUsersIdCategories](docs/categories/README.md#postusersidcategories) - Create category in user
+* [putCategoriesId](docs/categories/README.md#putcategoriesid) - Update category
 
-### categoryRules
+### [categoryRules](docs/categoryrules/README.md)
 
-* `getUsersIdCategoryRules` - List category rules in user
-* `postCategoriesIdCategoryRules` - Create category rule in category
+* [getUsersIdCategoryRules](docs/categoryrules/README.md#getusersidcategoryrules) - List category rules in user
+* [postCategoriesIdCategoryRules](docs/categoryrules/README.md#postcategoriesidcategoryrules) - Create category rule in category
 
-### currencies
+### [currencies](docs/currencies/README.md)
 
-* `getCurrencies` - List currencies
-* `getCurrenciesId` - Get currency
+* [getCurrencies](docs/currencies/README.md#getcurrencies) - List currencies
+* [getCurrenciesId](docs/currencies/README.md#getcurrenciesid) - Get currency
 
-### events
+### [events](docs/events/README.md)
 
-* `deleteEventsId` - Delete event
-* `getEventsId` - Get event
-* `getScenariosIdEvents` - List events in scenario.
-* `getUsersIdEvents` - List events in user.
-* `postScenariosIdEvents` - Create event in scenario
-* `putEventsId` - Update event
+* [deleteEventsId](docs/events/README.md#deleteeventsid) - Delete event
+* [getEventsId](docs/events/README.md#geteventsid) - Get event
+* [getScenariosIdEvents](docs/events/README.md#getscenariosidevents) - List events in scenario.
+* [getUsersIdEvents](docs/events/README.md#getusersidevents) - List events in user.
+* [postScenariosIdEvents](docs/events/README.md#postscenariosidevents) - Create event in scenario
+* [putEventsId](docs/events/README.md#puteventsid) - Update event
 
-### institutions
+### [institutions](docs/institutions/README.md)
 
-* `deleteInstitutionsId` - Delete institution
-* `getInstitutionsId` - Get institution
-* `getUsersIdInstitutions` - List institutions in user
-* `postUsersIdInstitutions` - Create institution in user
-* `putInstitutionsId` - Update institution
+* [deleteInstitutionsId](docs/institutions/README.md#deleteinstitutionsid) - Delete institution
+* [getInstitutionsId](docs/institutions/README.md#getinstitutionsid) - Get institution
+* [getUsersIdInstitutions](docs/institutions/README.md#getusersidinstitutions) - List institutions in user
+* [postUsersIdInstitutions](docs/institutions/README.md#postusersidinstitutions) - Create institution in user
+* [putInstitutionsId](docs/institutions/README.md#putinstitutionsid) - Update institution
 
-### labels
+### [labels](docs/labels/README.md)
 
-* `getUsersIdLabels` - List labels in user
+* [getUsersIdLabels](docs/labels/README.md#getusersidlabels) - List labels in user
 
-### savedSearches
+### [savedSearches](docs/savedsearches/README.md)
 
-* `getUsersIdSavedSearches` - List saved searches in user
+* [getUsersIdSavedSearches](docs/savedsearches/README.md#getusersidsavedsearches) - List saved searches in user
 
-### timeZones
+### [timeZones](docs/timezones/README.md)
 
-* `getTimeZones` - List time zones
+* [getTimeZones](docs/timezones/README.md#gettimezones) - List time zones
 
-### transactionAccounts
+### [transactionAccounts](docs/transactionaccounts/README.md)
 
-* `getTransactionAccountsId` - Get transaction account
-* `getUsersIdTransactionAccounts` - List transaction accounts in user
-* `putTransactionAccountsId` - Update transaction account
+* [getTransactionAccountsId](docs/transactionaccounts/README.md#gettransactionaccountsid) - Get transaction account
+* [getUsersIdTransactionAccounts](docs/transactionaccounts/README.md#getusersidtransactionaccounts) - List transaction accounts in user
+* [putTransactionAccountsId](docs/transactionaccounts/README.md#puttransactionaccountsid) - Update transaction account
 
-### transactions
+### [transactions](docs/transactions/README.md)
 
-* `deleteTransactionsId` - Delete transaction
-* `getAccountsIdTransactions` - List transactions in account
-* `getCategoriesIdTransactions` - List transactions in categories
-* `getTransactionAccountsIdTransactions` - List transactions in transaction account
-* `getTransactionsId` - Get a transaction
-* `getUsersIdTransactions` - List transactions in user
-* `postTransactionAccountsIdTransactions` - Create a transaction in transaction account
-* `putTransactionsId` - Update a transaction
+* [deleteTransactionsId](docs/transactions/README.md#deletetransactionsid) - Delete transaction
+* [getAccountsIdTransactions](docs/transactions/README.md#getaccountsidtransactions) - List transactions in account
+* [getCategoriesIdTransactions](docs/transactions/README.md#getcategoriesidtransactions) - List transactions in categories
+* [getTransactionAccountsIdTransactions](docs/transactions/README.md#gettransactionaccountsidtransactions) - List transactions in transaction account
+* [getTransactionsId](docs/transactions/README.md#gettransactionsid) - Get a transaction
+* [getUsersIdTransactions](docs/transactions/README.md#getusersidtransactions) - List transactions in user
+* [postTransactionAccountsIdTransactions](docs/transactions/README.md#posttransactionaccountsidtransactions) - Create a transaction in transaction account
+* [putTransactionsId](docs/transactions/README.md#puttransactionsid) - Update a transaction
 
-### users
+### [users](docs/users/README.md)
 
-* `getMe` - Get the authorised user
-* `getUsersId` - Get user
-* `putUsersId` - Update user
+* [getMe](docs/users/README.md#getme) - Get the authorised user
+* [getUsersId](docs/users/README.md#getusersid) - Get user
+* [putUsersId](docs/users/README.md#putusersid) - Update user
 <!-- End SDK Available Operations -->
 
 ### Maturity

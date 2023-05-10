@@ -60,4 +60,6 @@ src/Models/Shared/BatchCreatePermissionsResponse.php
 src/Models/Shared/BatchCreatePermissionsRequestInput.php
 src/Models/Shared/CreatePermissionRequestInput.php
 src/Models/Shared/BatchDeletePermissionsRequest.php
+docs/sdk/README.md
+docs/notes/README.md
 USAGE.md

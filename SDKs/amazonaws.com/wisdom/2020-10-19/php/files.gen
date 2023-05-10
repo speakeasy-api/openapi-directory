@@ -167,4 +167,5 @@ src/Models/Shared/StartContentUploadResponse.php
 src/Models/Shared/UpdateContentResponse.php
 src/Models/Shared/UpdateKnowledgeBaseTemplateUriResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

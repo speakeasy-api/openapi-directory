@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * PlatformInput - <p/>
+ * PlatformInput - The input structure for specifying Platform. Platform refers to the unique name of the specific platform the instrument is attached to. For satellites it is the name of the satellite, eg. landsat-8 (Landsat-8), sentinel-2a.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

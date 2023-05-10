@@ -43,6 +43,16 @@ class User
     public ?bool $active = null;
     
     /**
+     * Set of authn apps available to this user
+     * 
+     * @var ?array<string> $authnApps
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('authnApps')]
+    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $authnApps = null;
+    
+    /**
      * The email address of the user.
      * 
      * @var string $email
@@ -97,6 +107,7 @@ class User
 		$this->links = null;
 		$this->accountGroups = null;
 		$this->active = null;
+		$this->authnApps = null;
 		$this->email = "";
 		$this->id = "";
 		$this->name = null;

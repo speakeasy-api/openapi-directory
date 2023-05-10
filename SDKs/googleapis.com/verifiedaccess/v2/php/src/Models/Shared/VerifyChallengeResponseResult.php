@@ -38,7 +38,7 @@ class VerifyChallengeResponseResult
     public ?string $devicePermanentId = null;
     
     /**
-     * Device signal in json string representation.
+     * Deprecated. Device signal in json string representation. Prefer using `device_signals` instead.
      * 
      * @var ?string $deviceSignal
      */
@@ -46,6 +46,16 @@ class VerifyChallengeResponseResult
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $deviceSignal = null;
+    
+    /**
+     * The device signals as reported by Chrome.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\DeviceSignals $deviceSignals
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('deviceSignals')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\DeviceSignals')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?DeviceSignals $deviceSignals = null;
     
     /**
      * Device attested key trust level.
@@ -82,6 +92,7 @@ class VerifyChallengeResponseResult
 		$this->customerId = null;
 		$this->devicePermanentId = null;
 		$this->deviceSignal = null;
+		$this->deviceSignals = null;
 		$this->keyTrustLevel = null;
 		$this->signedPublicKeyAndChallenge = null;
 		$this->virtualDeviceId = null;

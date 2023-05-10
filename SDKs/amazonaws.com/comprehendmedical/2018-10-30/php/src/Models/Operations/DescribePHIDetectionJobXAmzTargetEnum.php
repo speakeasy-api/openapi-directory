@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribePHIDetectionJobXAmzTargetEnum: string
 {
     case COMPREHEND_MEDICAL20181030_DESCRIBE_PHI_DETECTION_JOB = 'ComprehendMedical_20181030.DescribePHIDetectionJob';

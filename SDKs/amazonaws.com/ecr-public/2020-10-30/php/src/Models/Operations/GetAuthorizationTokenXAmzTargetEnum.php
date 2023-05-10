@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetAuthorizationTokenXAmzTargetEnum: string
 {
     case SPENCER_FRONTEND_SERVICE_GET_AUTHORIZATION_TOKEN = 'SpencerFrontendService.GetAuthorizationToken';

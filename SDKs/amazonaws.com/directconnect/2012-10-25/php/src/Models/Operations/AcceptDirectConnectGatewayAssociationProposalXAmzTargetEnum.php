@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AcceptDirectConnectGatewayAssociationProposalXAmzTargetEnum: string
 {
     case OVERTURE_SERVICE_ACCEPT_DIRECT_CONNECT_GATEWAY_ASSOCIATION_PROPOSAL = 'OvertureService.AcceptDirectConnectGatewayAssociationProposal';

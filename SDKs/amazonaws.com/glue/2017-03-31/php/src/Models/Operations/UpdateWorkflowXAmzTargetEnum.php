@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateWorkflowXAmzTargetEnum: string
 {
     case AWS_GLUE_UPDATE_WORKFLOW = 'AWSGlue.UpdateWorkflow';

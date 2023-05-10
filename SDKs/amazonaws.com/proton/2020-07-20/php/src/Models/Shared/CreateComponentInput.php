@@ -11,6 +11,11 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 class CreateComponentInput
 {
+	#[\JMS\Serializer\Annotation\SerializedName('clientToken')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $clientToken = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('description')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -60,6 +65,7 @@ class CreateComponentInput
     
 	public function __construct()
 	{
+		$this->clientToken = null;
 		$this->description = null;
 		$this->environmentName = null;
 		$this->manifest = "";

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AdminDeleteUserXAmzTargetEnum: string
 {
     case AWS_COGNITO_IDENTITY_PROVIDER_SERVICE_ADMIN_DELETE_USER = 'AWSCognitoIdentityProviderService.AdminDeleteUser';

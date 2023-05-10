@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteNetworkInsightsAccessScopeAnalysisActionEnum: string
 {
     case DELETE_NETWORK_INSIGHTS_ACCESS_SCOPE_ANALYSIS = 'DeleteNetworkInsightsAccessScopeAnalysis';

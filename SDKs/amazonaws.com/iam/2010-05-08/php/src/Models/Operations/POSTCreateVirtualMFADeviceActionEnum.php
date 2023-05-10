@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateVirtualMFADeviceActionEnum: string
 {
     case CREATE_VIRTUAL_MFA_DEVICE = 'CreateVirtualMFADevice';

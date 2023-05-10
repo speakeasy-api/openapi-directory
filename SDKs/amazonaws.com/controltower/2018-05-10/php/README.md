@@ -30,18 +30,53 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\DisableControlRequest;
+use \OpenAPI\OpenAPI\Models\Operations\DisableControlRequestBody;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new DisableControlRequest();
+    $request->requestBody = new DisableControlRequestBody();
+    $request->requestBody->controlIdentifier = 'corrupti';
+    $request->requestBody->targetIdentifier = 'provident';
+    $request->xAmzAlgorithm = 'distinctio';
+    $request->xAmzContentSha256 = 'quibusdam';
+    $request->xAmzCredential = 'unde';
+    $request->xAmzDate = 'nulla';
+    $request->xAmzSecurityToken = 'corrupti';
+    $request->xAmzSignature = 'illum';
+    $request->xAmzSignedHeaders = 'vel';
+
+    $response = $sdk->disableControl($request);
+
+    if ($response->disableControlOutput !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `disableControl` - This API call turns off a control. It starts an asynchronous operation that deletes AWS resources on the specified organizational unit and the accounts it contains. The resources will vary according to the control that you specify.
-* `enableControl` - This API call activates a control. It starts an asynchronous operation that creates AWS resources on the specified organizational unit and the accounts it contains. The resources created will vary according to the control that you specify.
-* `getControlOperation` - Returns the status of a particular <code>EnableControl</code> or <code>DisableControl</code> operation. Displays a message in case of error. Details for an operation are available for 90 days.
-* `listEnabledControls` - Lists the controls enabled by AWS Control Tower on the specified organizational unit and the accounts it contains.
+* [disableControl](docs/sdk/README.md#disablecontrol) - This API call turns off a control. It starts an asynchronous operation that deletes AWS resources on the specified organizational unit and the accounts it contains. The resources will vary according to the control that you specify.
+* [enableControl](docs/sdk/README.md#enablecontrol) - This API call activates a control. It starts an asynchronous operation that creates AWS resources on the specified organizational unit and the accounts it contains. The resources created will vary according to the control that you specify.
+* [getControlOperation](docs/sdk/README.md#getcontroloperation) - Returns the status of a particular <code>EnableControl</code> or <code>DisableControl</code> operation. Displays a message in case of error. Details for an operation are available for 90 days.
+* [listEnabledControls](docs/sdk/README.md#listenabledcontrols) - Lists the controls enabled by AWS Control Tower on the specified organizational unit and the accounts it contains.
 <!-- End SDK Available Operations -->
 
 ### Maturity

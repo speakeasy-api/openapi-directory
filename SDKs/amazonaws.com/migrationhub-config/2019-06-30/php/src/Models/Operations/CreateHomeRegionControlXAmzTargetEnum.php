@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateHomeRegionControlXAmzTargetEnum: string
 {
     case AWS_MIGRATION_HUB_MULTI_ACCOUNT_SERVICE_CREATE_HOME_REGION_CONTROL = 'AWSMigrationHubMultiAccountService.CreateHomeRegionControl';

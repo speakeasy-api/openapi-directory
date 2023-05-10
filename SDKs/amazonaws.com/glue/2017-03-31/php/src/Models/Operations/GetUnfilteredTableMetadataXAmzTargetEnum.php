@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetUnfilteredTableMetadataXAmzTargetEnum: string
 {
     case AWS_GLUE_GET_UNFILTERED_TABLE_METADATA = 'AWSGlue.GetUnfilteredTableMetadata';

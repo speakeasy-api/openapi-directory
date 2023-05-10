@@ -17,9 +17,19 @@ namespace OpenAPI\OpenAPI\Models\Shared;
  */
 class Transfer
 {
+	#[\JMS\Serializer\Annotation\SerializedName('accountHolder')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\ResourceReference')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?ResourceReference $accountHolder = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('amount')]
     #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\Amount')]
     public Amount $amount;
+    
+	#[\JMS\Serializer\Annotation\SerializedName('balanceAccount')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\ResourceReference')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?ResourceReference $balanceAccount = null;
     
     /**
      * The unique identifier of the source [balance account](https://docs.adyen.com/api-explorer/#/balanceplatform/latest/post/balanceAccounts__resParam_id).
@@ -56,7 +66,12 @@ class Transfer
     public CounterpartyV3 $counterparty;
     
     /**
-     * A human-readable description for the transfer. You can use alphanumeric characters and hyphens. We recommend sending a maximum of 140 characters, otherwise the description may be truncated.
+     * Your description for the transfer. It is used by most banks as the transfer description. We recommend sending a maximum of 140 characters, otherwise the description may be truncated.
+     * 
+     * 
+     * Supported characters: **[a-z] [A-Z] [0-9] / - ?** **: ( ) . , ' + Space**
+     * 
+     * Supported characters for **regular** and **fast** transfers to a US counterparty: **[a-z] [A-Z] [0-9] & $ % # @** **~ = + - _ ' " ! ?**
      * 
      * @var ?string $description
      */
@@ -88,8 +103,13 @@ class Transfer
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('paymentInstrument')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\PaymentInstrument')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?PaymentInstrument $paymentInstrument = null;
+    
     /**
-     * The unique identifier of the source [payment instrument](https://docs.adyen.com/api-explorer/#/balanceplatform/latest/post/paymentInstruments__resParam_id).
+     * The unique identifier of the [payment instrument](https://docs.adyen.com/api-explorer/#/balanceplatform/latest/post/balanceAccounts__resParam_id) used in the transfer.
      * 
      * @var ?string $paymentInstrumentId
      */
@@ -174,18 +194,21 @@ class Transfer
     
 	public function __construct()
 	{
+		$this->accountHolder = null;
 		$this->amount = new \OpenAPI\OpenAPI\Models\Shared\Amount();
+		$this->balanceAccount = null;
 		$this->balanceAccountId = null;
 		$this->category = \OpenAPI\OpenAPI\Models\Shared\TransferCategoryEnum::BANK;
 		$this->counterparty = new \OpenAPI\OpenAPI\Models\Shared\CounterpartyV3();
 		$this->description = null;
 		$this->direction = null;
 		$this->id = null;
+		$this->paymentInstrument = null;
 		$this->paymentInstrumentId = null;
 		$this->priority = null;
 		$this->reason = null;
 		$this->reference = null;
 		$this->referenceForBeneficiary = null;
-		$this->status = \OpenAPI\OpenAPI\Models\Shared\TransferStatusEnum::ATM_WITHDRAWAL;
+		$this->status = \OpenAPI\OpenAPI\Models\Shared\TransferStatusEnum::APPROVAL_PENDING;
 	}
 }

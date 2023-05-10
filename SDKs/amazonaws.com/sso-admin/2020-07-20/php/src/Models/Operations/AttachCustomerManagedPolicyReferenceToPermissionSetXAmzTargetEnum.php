@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AttachCustomerManagedPolicyReferenceToPermissionSetXAmzTargetEnum: string
 {
     case SWB_EXTERNAL_SERVICE_ATTACH_CUSTOMER_MANAGED_POLICY_REFERENCE_TO_PERMISSION_SET = 'SWBExternalService.AttachCustomerManagedPolicyReferenceToPermissionSet';

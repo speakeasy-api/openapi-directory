@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListBatchSegmentJobsXAmzTargetEnum: string
 {
     case AMAZON_PERSONALIZE_LIST_BATCH_SEGMENT_JOBS = 'AmazonPersonalize.ListBatchSegmentJobs';

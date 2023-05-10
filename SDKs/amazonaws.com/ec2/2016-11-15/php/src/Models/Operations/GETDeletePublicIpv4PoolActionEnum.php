@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeletePublicIpv4PoolActionEnum: string
 {
     case DELETE_PUBLIC_IPV4_POOL = 'DeletePublicIpv4Pool';

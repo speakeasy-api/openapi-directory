@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteBlueGreenDeploymentActionEnum: string
 {
     case DELETE_BLUE_GREEN_DEPLOYMENT = 'DeleteBlueGreenDeployment';

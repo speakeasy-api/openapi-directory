@@ -30,6 +30,16 @@ class ActivityResponse
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $end = null;
     
+    /**
+     * $executionMetrics
+     * 
+     * @var ?array<string, string> $executionMetrics
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('ExecutionMetrics')]
+    #[\JMS\Serializer\Annotation\Type('array<string, string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $executionMetrics = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('Id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $id;
@@ -84,6 +94,7 @@ class ActivityResponse
 		$this->applicationId = "";
 		$this->campaignId = "";
 		$this->end = null;
+		$this->executionMetrics = null;
 		$this->id = "";
 		$this->result = null;
 		$this->scheduledStart = null;

@@ -126,4 +126,94 @@ class AssetsReturns
 
         return $response;
     }
+	
+    /**
+     * Logarithmic Returns
+     * 
+     * Compute the logarithmic return(s) of one or several asset(s) for one or several time period(s).
+     * 
+     * References
+     * * [Wikipedia, Logarithmic or continuously compounded return](https://en.wikipedia.org/wiki/Rate_of_return#Logarithmic_or_continuously_compounded_return)
+     * 
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\PostAssetsReturnsLogarithmicRequestBody $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\PostAssetsReturnsLogarithmicResponse
+     */
+	public function postAssetsReturnsLogarithmic(
+        \OpenAPI\OpenAPI\Models\Operations\PostAssetsReturnsLogarithmicRequestBody $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\PostAssetsReturnsLogarithmicResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/assets/returns/logarithmic');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\PostAssetsReturnsLogarithmicResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->postAssetsReturnsLogarithmic200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\PostAssetsReturnsLogarithmic200ApplicationJSON', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Turbulence-partitioned Asset Returns
+     * 
+     * Partition asset returns into several subsets based on their turbulence index.
+     * 
+     * References
+     * * [George Chow, Jacquier, E., Kritzman, M., & Kenneth Lowry. (1999). Optimal Portfolios in Good Times and Bad. Financial Analysts Journal, 55(3), 65–73.](https://www.jstor.org/stable/4480169)
+     * 
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\PostAssetsReturnsTurbulencePartitionedRequestBody $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\PostAssetsReturnsTurbulencePartitionedResponse
+     */
+	public function postAssetsReturnsTurbulencePartitioned(
+        \OpenAPI\OpenAPI\Models\Operations\PostAssetsReturnsTurbulencePartitionedRequestBody $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\PostAssetsReturnsTurbulencePartitionedResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/assets/returns/turbulence-partitioned');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\PostAssetsReturnsTurbulencePartitionedResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->postAssetsReturnsTurbulencePartitioned200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\PostAssetsReturnsTurbulencePartitioned200ApplicationJSON', 'json');
+            }
+        }
+
+        return $response;
+    }
 }

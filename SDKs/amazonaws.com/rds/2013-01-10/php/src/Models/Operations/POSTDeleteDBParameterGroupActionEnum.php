@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteDBParameterGroupActionEnum: string
 {
     case DELETE_DB_PARAMETER_GROUP = 'DeleteDBParameterGroup';

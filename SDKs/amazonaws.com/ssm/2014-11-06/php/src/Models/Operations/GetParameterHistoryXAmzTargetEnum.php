@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetParameterHistoryXAmzTargetEnum: string
 {
     case AMAZON_SSM_GET_PARAMETER_HISTORY = 'AmazonSSM.GetParameterHistory';

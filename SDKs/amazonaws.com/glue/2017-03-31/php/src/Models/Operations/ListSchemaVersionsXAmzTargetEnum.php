@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListSchemaVersionsXAmzTargetEnum: string
 {
     case AWS_GLUE_LIST_SCHEMA_VERSIONS = 'AWSGlue.ListSchemaVersions';

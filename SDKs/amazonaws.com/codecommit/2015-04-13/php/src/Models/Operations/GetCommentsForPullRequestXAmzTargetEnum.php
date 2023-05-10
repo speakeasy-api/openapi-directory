@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetCommentsForPullRequestXAmzTargetEnum: string
 {
     case CODE_COMMIT20150413_GET_COMMENTS_FOR_PULL_REQUEST = 'CodeCommit_20150413.GetCommentsForPullRequest';

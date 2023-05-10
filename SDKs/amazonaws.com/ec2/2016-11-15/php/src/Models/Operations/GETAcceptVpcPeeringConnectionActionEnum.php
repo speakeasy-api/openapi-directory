@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETAcceptVpcPeeringConnectionActionEnum: string
 {
     case ACCEPT_VPC_PEERING_CONNECTION = 'AcceptVpcPeeringConnection';

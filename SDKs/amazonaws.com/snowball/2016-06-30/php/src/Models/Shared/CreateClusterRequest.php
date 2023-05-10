@@ -20,10 +20,20 @@ class CreateClusterRequest
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('ForceCreateJobs')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $forceCreateJobs = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('ForwardingAddressId')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $forwardingAddressId = null;
+    
+	#[\JMS\Serializer\Annotation\SerializedName('InitialClusterSize')]
+    #[\JMS\Serializer\Annotation\Type('int')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?int $initialClusterSize = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('JobType')]
     #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\JobTypeEnum>')]
@@ -33,6 +43,16 @@ class CreateClusterRequest
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $kmsKeyARN = null;
+    
+    /**
+     * $longTermPricingIds
+     * 
+     * @var ?array<string> $longTermPricingIds
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('LongTermPricingIds')]
+    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $longTermPricingIds = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('Notification')]
     #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\Notification')]
@@ -51,15 +71,22 @@ class CreateClusterRequest
     
 	#[\JMS\Serializer\Annotation\SerializedName('Resources')]
     #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\JobResource')]
-    public JobResource $resources;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?JobResource $resources = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('RoleARN')]
     #[\JMS\Serializer\Annotation\Type('string')]
-    public string $roleARN;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $roleARN = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('ShippingOption')]
     #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\ShippingOptionEnum>')]
     public ShippingOptionEnum $shippingOption;
+    
+	#[\JMS\Serializer\Annotation\SerializedName('SnowballCapacityPreference')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\SnowballCapacityEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?SnowballCapacityEnum $snowballCapacityPreference = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('SnowballType')]
     #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\SnowballTypeEnum>')]
@@ -74,15 +101,19 @@ class CreateClusterRequest
 	{
 		$this->addressId = "";
 		$this->description = null;
+		$this->forceCreateJobs = null;
 		$this->forwardingAddressId = null;
+		$this->initialClusterSize = null;
 		$this->jobType = \OpenAPI\OpenAPI\Models\Shared\JobTypeEnum::IMPORT;
 		$this->kmsKeyARN = null;
+		$this->longTermPricingIds = null;
 		$this->notification = null;
 		$this->onDeviceServiceConfiguration = null;
 		$this->remoteManagement = null;
-		$this->resources = new \OpenAPI\OpenAPI\Models\Shared\JobResource();
-		$this->roleARN = "";
+		$this->resources = null;
+		$this->roleARN = null;
 		$this->shippingOption = \OpenAPI\OpenAPI\Models\Shared\ShippingOptionEnum::SECOND_DAY;
+		$this->snowballCapacityPreference = null;
 		$this->snowballType = \OpenAPI\OpenAPI\Models\Shared\SnowballTypeEnum::STANDARD;
 		$this->taxDocuments = null;
 	}

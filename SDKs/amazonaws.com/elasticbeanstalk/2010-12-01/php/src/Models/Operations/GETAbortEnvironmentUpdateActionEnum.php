@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETAbortEnvironmentUpdateActionEnum: string
 {
     case ABORT_ENVIRONMENT_UPDATE = 'AbortEnvironmentUpdate';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListDocumentMetadataHistoryXAmzTargetEnum: string
 {
     case AMAZON_SSM_LIST_DOCUMENT_METADATA_HISTORY = 'AmazonSSM.ListDocumentMetadataHistory';

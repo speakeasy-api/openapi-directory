@@ -30,16 +30,44 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetVehicleDetailsByRegistrationNumberRequest;
+use \OpenAPI\OpenAPI\Models\Shared\VehicleRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetVehicleDetailsByRegistrationNumberRequest();
+    $request->vehicleRequest = new VehicleRequest();
+    $request->vehicleRequest->registrationNumber = 'corrupti';
+    $request->xCorrelationId = 'provident';
+    $request->xApiKey = 'distinctio';
+
+    $response = $sdk->vehicle->getVehicleDetailsByRegistrationNumber($request);
+
+    if ($response->vehicle !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### vehicle
+### [vehicle](docs/vehicle/README.md)
 
-* `getVehicleDetailsByRegistrationNumber` - Get vehicle details by registration number
+* [getVehicleDetailsByRegistrationNumber](docs/vehicle/README.md#getvehicledetailsbyregistrationnumber) - Get vehicle details by registration number
 <!-- End SDK Available Operations -->
 
 ### Maturity

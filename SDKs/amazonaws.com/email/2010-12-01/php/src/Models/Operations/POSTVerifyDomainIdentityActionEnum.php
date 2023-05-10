@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTVerifyDomainIdentityActionEnum: string
 {
     case VERIFY_DOMAIN_IDENTITY = 'VerifyDomainIdentity';

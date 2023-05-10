@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AssociateOriginationIdentityXAmzTargetEnum: string
 {
     case PINPOINT_SMS_VOICE_V2_ASSOCIATE_ORIGINATION_IDENTITY = 'PinpointSMSVoiceV2.AssociateOriginationIdentity';

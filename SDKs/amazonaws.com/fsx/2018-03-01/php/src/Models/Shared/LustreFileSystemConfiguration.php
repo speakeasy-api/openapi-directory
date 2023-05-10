@@ -48,7 +48,7 @@ class LustreFileSystemConfiguration
     public ?DataCompressionTypeEnum $dataCompressionType = null;
     
     /**
-     * <p>The data repository configuration object for Lustre file systems returned in the response of the <code>CreateFileSystem</code> operation.</p> <p>This data type is not supported for file systems with the <code>Persistent_2</code> deployment type. Instead, use .</p>
+     * <p>The data repository configuration object for Lustre file systems returned in the response of the <code>CreateFileSystem</code> operation.</p> <p>This data type is not supported on file systems with a data repository association. For file systems with a data repository association, see .</p>
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\DataRepositoryConfiguration $dataRepositoryConfiguration
      */

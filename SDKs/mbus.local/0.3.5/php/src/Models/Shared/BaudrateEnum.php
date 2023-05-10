@@ -10,12 +10,12 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /** Baudrate to use for the communication - valid values 300, 600, 1200, 2400, 4800, 9600 */
-enum BaudrateEnum: string
+enum BaudrateEnum: int
 {
-    case THREE_HUNDRED = '300';
-    case SIX_HUNDRED = '600';
-    case ONE_THOUSAND_TWO_HUNDRED = '1200';
-    case TWO_THOUSAND_FOUR_HUNDRED = '2400';
-    case FOUR_THOUSAND_EIGHT_HUNDRED = '4800';
-    case NINE_THOUSAND_SIX_HUNDRED = '9600';
+    case THREE_HUNDRED = 300;
+    case SIX_HUNDRED = 600;
+    case ONE_THOUSAND_TWO_HUNDRED = 1200;
+    case TWO_THOUSAND_FOUR_HUNDRED = 2400;
+    case FOUR_THOUSAND_EIGHT_HUNDRED = 4800;
+    case NINE_THOUSAND_SIX_HUNDRED = 9600;
 }

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GrantAccessXAmzTargetEnum: string
 {
     case OPS_WORKS20130218_GRANT_ACCESS = 'OpsWorks_20130218.GrantAccess';

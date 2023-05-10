@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutInstancePublicPortsXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_PUT_INSTANCE_PUBLIC_PORTS = 'Lightsail_20161128.PutInstancePublicPorts';

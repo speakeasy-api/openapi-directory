@@ -86,12 +86,12 @@ class Metadata
     /**
      * Get artifact metadata
      * 
-     * Gets the metadata for an artifact in the registry.  The returned metadata includes
+     * Gets the metadata for an artifact in the registry, based on the latest version. If the latest version of the artifact is marked as `DISABLED`, the next available non-disabled version will be used. The returned metadata includes
      * both generated (read-only) and editable metadata (such as name and description).
      * 
      * This operation can fail for the following reasons:
      * 
-     * * No artifact with this `artifactId` exists (HTTP error `404`)
+     * * No artifact with this `artifactId` exists  or all versions are `DISABLED` (HTTP error `404`)
      * * A server error occurred (HTTP error `500`)
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetArtifactMetaDataRequest $request
@@ -244,15 +244,73 @@ class Metadata
      * * A server error occurred (HTTP error `500`)
      * 
      * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\GetArtifactVersionMetaDataByContentRequest $request
-     * @return \OpenAPI\OpenAPI\Models\Operations\GetArtifactVersionMetaDataByContentResponse
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetArtifactVersionMetaDataByContentJsonRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\GetArtifactVersionMetaDataByContentJsonResponse
      */
-	public function getArtifactVersionMetaDataByContent(
-        \OpenAPI\OpenAPI\Models\Operations\GetArtifactVersionMetaDataByContentRequest $request,
-    ): \OpenAPI\OpenAPI\Models\Operations\GetArtifactVersionMetaDataByContentResponse
+	public function getArtifactVersionMetaDataByContentJson(
+        \OpenAPI\OpenAPI\Models\Operations\GetArtifactVersionMetaDataByContentJsonRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\GetArtifactVersionMetaDataByContentJsonResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/groups/{groupId}/artifacts/{artifactId}/meta', \OpenAPI\OpenAPI\Models\Operations\GetArtifactVersionMetaDataByContentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/groups/{groupId}/artifacts/{artifactId}/meta', \OpenAPI\OpenAPI\Models\Operations\GetArtifactVersionMetaDataByContentJsonRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "artifactContent", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\GetArtifactVersionMetaDataByContentJsonRequest::class, $request, null));
+        
+        $httpResponse = $this->_defaultClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GetArtifactVersionMetaDataByContentJsonResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->versionMetaData = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\VersionMetaData', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 404 or $httpResponse->getStatusCode() === 500) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->error = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Error', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Get artifact version metadata by content
+     * 
+     * Gets the metadata for an artifact that matches the raw content.  Searches the registry
+     * for a version of the given artifact matching the content provided in the body of the
+     * POST.
+     * 
+     * This operation can fail for the following reasons:
+     * 
+     * * Provided content (request body) was empty (HTTP error `400`)
+     * * No artifact with the `artifactId` exists (HTTP error `404`)
+     * * No artifact version matching the provided content exists (HTTP error `404`)
+     * * A server error occurred (HTTP error `500`)
+     * 
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetArtifactVersionMetaDataByContentRawRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\GetArtifactVersionMetaDataByContentRawResponse
+     */
+	public function getArtifactVersionMetaDataByContentRaw(
+        \OpenAPI\OpenAPI\Models\Operations\GetArtifactVersionMetaDataByContentRawRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\GetArtifactVersionMetaDataByContentRawResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/groups/{groupId}/artifacts/{artifactId}/meta', \OpenAPI\OpenAPI\Models\Operations\GetArtifactVersionMetaDataByContentRawRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "requestBody", "raw");
@@ -260,13 +318,13 @@ class Metadata
             throw new \Exception('Request body is required');
         }
         $options = array_merge_recursive($options, $body);
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\GetArtifactVersionMetaDataByContentRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\GetArtifactVersionMetaDataByContentRawRequest::class, $request, null));
         
         $httpResponse = $this->_defaultClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \OpenAPI\OpenAPI\Models\Operations\GetArtifactVersionMetaDataByContentResponse();
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GetArtifactVersionMetaDataByContentRawResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;

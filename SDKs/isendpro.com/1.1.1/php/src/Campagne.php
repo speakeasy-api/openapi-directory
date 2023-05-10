@@ -71,8 +71,7 @@ class Campagne
         
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->getCampagne200ApplicationJSONBinaryString = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->getCampagne200ApplicationJSONBinaryString = $httpResponse->getBody()->getContents();
             }
             if (Utils\Utils::matchContentType($contentType, 'file')) {
                 $response->getCampagne200FileBinaryString = $httpResponse->getBody()->getContents();

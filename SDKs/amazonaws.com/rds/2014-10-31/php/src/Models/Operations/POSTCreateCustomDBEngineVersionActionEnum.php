@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateCustomDBEngineVersionActionEnum: string
 {
     case CREATE_CUSTOM_DB_ENGINE_VERSION = 'CreateCustomDBEngineVersion';

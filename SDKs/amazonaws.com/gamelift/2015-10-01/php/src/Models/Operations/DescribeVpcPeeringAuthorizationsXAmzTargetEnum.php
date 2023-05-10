@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeVpcPeeringAuthorizationsXAmzTargetEnum: string
 {
     case GAME_LIFT_DESCRIBE_VPC_PEERING_AUTHORIZATIONS = 'GameLift.DescribeVpcPeeringAuthorizations';

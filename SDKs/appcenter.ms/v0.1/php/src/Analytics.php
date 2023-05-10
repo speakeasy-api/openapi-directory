@@ -77,17 +77,69 @@ class Analytics
     }
 	
     /**
+     * Available for UWP apps only.
+     * 
+     * Count of crashes by day in the time range based the selected versions. Available for UWP apps only.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashCountsRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashCountsSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashCountsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
+     */
+	public function analyticsCrashCounts(
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashCountsRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashCountsSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashCountsResponse
+    {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/analytics/crash_counts', \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashCountsRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashCountsRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashCountsResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsCrashCounts200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashCounts200ApplicationJSON', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsCrashCountsDefaultApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashCountsDefaultApplicationJSON', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Percentage of crash-free device by day in the time range based on the selected versions. Api will return -1 if crash devices is greater than active devices.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashFreeDevicePercentagesRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashFreeDevicePercentagesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashFreeDevicePercentagesResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function analyticsCrashFreeDevicePercentages(
         \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashFreeDevicePercentagesRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashFreeDevicePercentagesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashFreeDevicePercentagesResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/analytics/crashfree_device_percentages', \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashFreeDevicePercentagesRequest::class, $request);
         
@@ -128,12 +180,15 @@ class Analytics
      * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashGroupCountsRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashGroupCountsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashGroupCountsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function analyticsCrashGroupCounts(
         \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashGroupCountsRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashGroupCountsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashGroupCountsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/crash_counts', \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashGroupCountsRequest::class, $request);
         
@@ -174,12 +229,15 @@ class Analytics
      * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashGroupModelCountsRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashGroupModelCountsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashGroupModelCountsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function analyticsCrashGroupModelCounts(
         \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashGroupModelCountsRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashGroupModelCountsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashGroupModelCountsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/models', \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashGroupModelCountsRequest::class, $request);
         
@@ -220,12 +278,15 @@ class Analytics
      * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashGroupOperatingSystemCountsRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashGroupOperatingSystemCountsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashGroupOperatingSystemCountsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function analyticsCrashGroupOperatingSystemCounts(
         \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashGroupOperatingSystemCountsRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashGroupOperatingSystemCountsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashGroupOperatingSystemCountsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/operating_systems', \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashGroupOperatingSystemCountsRequest::class, $request);
         
@@ -266,12 +327,15 @@ class Analytics
      * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashGroupTotalsRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashGroupTotalsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashGroupTotalsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function analyticsCrashGroupTotals(
         \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashGroupTotalsRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashGroupTotalsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashGroupTotalsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/overall', \OpenAPI\OpenAPI\Models\Operations\AnalyticsCrashGroupTotalsRequest::class, $request);
         
@@ -440,6 +504,50 @@ class Analytics
     }
 	
     /**
+     * Count of active devices by interval in the time range.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsDeviceCountsRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsDeviceCountsSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\AnalyticsDeviceCountsResponse
+     */
+	public function analyticsDeviceCounts(
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsDeviceCountsRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsDeviceCountsSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\AnalyticsDeviceCountsResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/analytics/active_device_counts', \OpenAPI\OpenAPI\Models\Operations\AnalyticsDeviceCountsRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\AnalyticsDeviceCountsRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\AnalyticsDeviceCountsResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsDeviceCounts200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsDeviceCounts200ApplicationJSON', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsDeviceCountsDefaultApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsDeviceCountsDefaultApplicationJSON', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Count of total downloads for the provided distribution releases.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsDistributionReleaseCountsRequest $request
@@ -488,6 +596,182 @@ class Analytics
     }
 	
     /**
+     * Count of events by interval in the time range.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventCountRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventCountSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventCountResponse
+     */
+	public function analyticsEventCount(
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventCountRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventCountSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventCountResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/analytics/events/{event_name}/event_count', \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventCountRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\AnalyticsEventCountRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventCountResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsEventCount200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsEventCount200ApplicationJSON', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsEventCountDefaultApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsEventCountDefaultApplicationJSON', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Count of devices for an event by interval in the time range.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventDeviceCountRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventDeviceCountSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventDeviceCountResponse
+     */
+	public function analyticsEventDeviceCount(
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventDeviceCountRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventDeviceCountSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventDeviceCountResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/analytics/events/{event_name}/device_count', \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventDeviceCountRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\AnalyticsEventDeviceCountRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventDeviceCountResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsEventDeviceCount200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsEventDeviceCount200ApplicationJSON', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsEventDeviceCountDefaultApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsEventDeviceCountDefaultApplicationJSON', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Count of events per device by interval in the time range.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPerDeviceCountRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPerDeviceCountSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPerDeviceCountResponse
+     */
+	public function analyticsEventPerDeviceCount(
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPerDeviceCountRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPerDeviceCountSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPerDeviceCountResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/analytics/events/{event_name}/count_per_device', \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPerDeviceCountRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPerDeviceCountRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPerDeviceCountResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsEventPerDeviceCount200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPerDeviceCount200ApplicationJSON', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsEventPerDeviceCountDefaultApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPerDeviceCountDefaultApplicationJSON', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Count of events per session by interval in the time range.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPerSessionCountRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPerSessionCountSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPerSessionCountResponse
+     */
+	public function analyticsEventPerSessionCount(
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPerSessionCountRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPerSessionCountSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPerSessionCountResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/analytics/events/{event_name}/count_per_session', \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPerSessionCountRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPerSessionCountRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPerSessionCountResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsEventPerSessionCount200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPerSessionCount200ApplicationJSON', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsEventPerSessionCountDefaultApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPerSessionCountDefaultApplicationJSON', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Event properties.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPropertiesRequest $request
@@ -524,6 +808,94 @@ class Analytics
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->analyticsEventPropertiesDefaultApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPropertiesDefaultApplicationJSON', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Event properties value counts during the time range in descending order.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPropertyCountsRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPropertyCountsSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPropertyCountsResponse
+     */
+	public function analyticsEventPropertyCounts(
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPropertyCountsRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPropertyCountsSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPropertyCountsResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/analytics/events/{event_name}/properties/{event_property_name}/counts', \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPropertyCountsRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPropertyCountsRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPropertyCountsResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsEventPropertyCounts200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPropertyCounts200ApplicationJSON', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsEventPropertyCountsDefaultApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsEventPropertyCountsDefaultApplicationJSON', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Count of active events in the time range ordered by event.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventsRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventsSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventsResponse
+     */
+	public function analyticsEvents(
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventsRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventsSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventsResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/analytics/events', \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventsRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\AnalyticsEventsRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\AnalyticsEventsResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsEvents200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsEvents200ApplicationJSON', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsEventsDefaultApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsEventsDefaultApplicationJSON', 'json');
             }
         }
 
@@ -689,6 +1061,50 @@ class Analytics
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->analyticsGetAudienceDefaultApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsGetAudienceDefaultApplicationJSON', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Languages in the time range.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsLanguageCountsRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsLanguageCountsSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\AnalyticsLanguageCountsResponse
+     */
+	public function analyticsLanguageCounts(
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsLanguageCountsRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsLanguageCountsSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\AnalyticsLanguageCountsResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/analytics/languages', \OpenAPI\OpenAPI\Models\Operations\AnalyticsLanguageCountsRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\AnalyticsLanguageCountsRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\AnalyticsLanguageCountsResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsLanguageCounts200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsLanguageCounts200ApplicationJSON', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsLanguageCountsDefaultApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsLanguageCountsDefaultApplicationJSON', 'json');
             }
         }
 
@@ -914,6 +1330,270 @@ class Analytics
     }
 	
     /**
+     * Models in the time range.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsModelCountsRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsModelCountsSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\AnalyticsModelCountsResponse
+     */
+	public function analyticsModelCounts(
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsModelCountsRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsModelCountsSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\AnalyticsModelCountsResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/analytics/models', \OpenAPI\OpenAPI\Models\Operations\AnalyticsModelCountsRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\AnalyticsModelCountsRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\AnalyticsModelCountsResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsModelCounts200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsModelCounts200ApplicationJSON', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsModelCountsDefaultApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsModelCountsDefaultApplicationJSON', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * OSes in the time range.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsOperatingSystemCountsRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsOperatingSystemCountsSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\AnalyticsOperatingSystemCountsResponse
+     */
+	public function analyticsOperatingSystemCounts(
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsOperatingSystemCountsRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsOperatingSystemCountsSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\AnalyticsOperatingSystemCountsResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/analytics/oses', \OpenAPI\OpenAPI\Models\Operations\AnalyticsOperatingSystemCountsRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\AnalyticsOperatingSystemCountsRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\AnalyticsOperatingSystemCountsResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsOperatingSystemCounts200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsOperatingSystemCounts200ApplicationJSON', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsOperatingSystemCountsDefaultApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsOperatingSystemCountsDefaultApplicationJSON', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Count of sessions per device in the time range.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsPerDeviceCountsRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsPerDeviceCountsSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\AnalyticsPerDeviceCountsResponse
+     */
+	public function analyticsPerDeviceCounts(
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsPerDeviceCountsRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsPerDeviceCountsSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\AnalyticsPerDeviceCountsResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/analytics/sessions_per_device', \OpenAPI\OpenAPI\Models\Operations\AnalyticsPerDeviceCountsRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\AnalyticsPerDeviceCountsRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\AnalyticsPerDeviceCountsResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsPerDeviceCounts200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsPerDeviceCounts200ApplicationJSON', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsPerDeviceCountsDefaultApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsPerDeviceCountsDefaultApplicationJSON', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Places in the time range.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsPlaceCountsRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsPlaceCountsSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\AnalyticsPlaceCountsResponse
+     */
+	public function analyticsPlaceCounts(
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsPlaceCountsRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsPlaceCountsSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\AnalyticsPlaceCountsResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/analytics/places', \OpenAPI\OpenAPI\Models\Operations\AnalyticsPlaceCountsRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\AnalyticsPlaceCountsRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\AnalyticsPlaceCountsResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsPlaceCounts200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsPlaceCounts200ApplicationJSON', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsPlaceCountsDefaultApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsPlaceCountsDefaultApplicationJSON', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Count of sessions in the time range.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsSessionCountsRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsSessionCountsSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\AnalyticsSessionCountsResponse
+     */
+	public function analyticsSessionCounts(
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsSessionCountsRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsSessionCountsSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\AnalyticsSessionCountsResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/analytics/session_counts', \OpenAPI\OpenAPI\Models\Operations\AnalyticsSessionCountsRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\AnalyticsSessionCountsRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\AnalyticsSessionCountsResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsSessionCounts200ApplicationJSONObjects = $serializer->deserialize((string)$httpResponse->getBody(), 'array<OpenAPI\OpenAPI\Models\Operations\AnalyticsSessionCounts200ApplicationJSON>', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsSessionCountsDefaultApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsSessionCountsDefaultApplicationJSON', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Gets session duration.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsSessionDurationsDistributionRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsSessionDurationsDistributionSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\AnalyticsSessionDurationsDistributionResponse
+     */
+	public function analyticsSessionDurationsDistribution(
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsSessionDurationsDistributionRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsSessionDurationsDistributionSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\AnalyticsSessionDurationsDistributionResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/analytics/session_durations_distribution', \OpenAPI\OpenAPI\Models\Operations\AnalyticsSessionDurationsDistributionRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\AnalyticsSessionDurationsDistributionRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\AnalyticsSessionDurationsDistributionResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsSessionDurationsDistribution200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsSessionDurationsDistribution200ApplicationJSON', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsSessionDurationsDistributionDefaultApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsSessionDurationsDistributionDefaultApplicationJSON', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Tests audience definition.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsTestAudienceRequest $request
@@ -955,6 +1635,50 @@ class Analytics
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->analyticsTestAudienceDefaultApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsTestAudienceDefaultApplicationJSON', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Count of active versions in the time range ordered by version.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsVersionsRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\AnalyticsVersionsSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\AnalyticsVersionsResponse
+     */
+	public function analyticsVersions(
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsVersionsRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\AnalyticsVersionsSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\AnalyticsVersionsResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/analytics/versions', \OpenAPI\OpenAPI\Models\Operations\AnalyticsVersionsRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\AnalyticsVersionsRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\AnalyticsVersionsResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsVersions200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsVersions200ApplicationJSON', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->analyticsVersionsDefaultApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AnalyticsVersionsDefaultApplicationJSON', 'json');
             }
         }
 

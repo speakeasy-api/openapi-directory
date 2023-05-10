@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteScalingPlanXAmzTargetEnum: string
 {
     case ANY_SCALE_SCALING_PLANNER_FRONTEND_SERVICE_DELETE_SCALING_PLAN = 'AnyScaleScalingPlannerFrontendService.DeleteScalingPlan';

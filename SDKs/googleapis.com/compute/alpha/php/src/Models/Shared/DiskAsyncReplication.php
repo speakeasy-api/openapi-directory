@@ -12,6 +12,26 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class DiskAsyncReplication
 {
     /**
+     * [Output Only] URL of the DiskConsistencyGroupPolicy if replication was started on the disk as a member of a group.
+     * 
+     * @var ?string $consistencyGroupPolicy
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('consistencyGroupPolicy')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $consistencyGroupPolicy = null;
+    
+    /**
+     * [Output Only] ID of the DiskConsistencyGroupPolicy if replication was started on the disk as a member of a group.
+     * 
+     * @var ?string $consistencyGroupPolicyId
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('consistencyGroupPolicyId')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $consistencyGroupPolicyId = null;
+    
+    /**
      * The other disk asynchronously replicated to or from the current disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk - projects/project/zones/zone/disks/disk - zones/zone/disks/disk 
      * 
      * @var ?string $disk
@@ -33,6 +53,8 @@ class DiskAsyncReplication
     
 	public function __construct()
 	{
+		$this->consistencyGroupPolicy = null;
+		$this->consistencyGroupPolicyId = null;
 		$this->disk = null;
 		$this->diskId = null;
 	}

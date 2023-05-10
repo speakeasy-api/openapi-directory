@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * SetFulfillmentPolicyResponse - A complex type that is populated with a response containing a fulfillment policy.
+ * SetFulfillmentPolicyResponse - Complex type that that gets populated with a response containing a fulfillment policy.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

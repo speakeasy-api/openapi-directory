@@ -85,4 +85,5 @@ src/Models/Shared/SubscribeResult.php
 src/Models/Shared/TagResourceResult.php
 src/Models/Shared/UnsubscribeResult.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

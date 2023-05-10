@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListSavingsPlansPurchaseRecommendationGenerationXAmzTargetEnum: string
 {
     case AWS_INSIGHTS_INDEX_SERVICE_LIST_SAVINGS_PLANS_PURCHASE_RECOMMENDATION_GENERATION = 'AWSInsightsIndexService.ListSavingsPlansPurchaseRecommendationGeneration';

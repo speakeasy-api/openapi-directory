@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ModifyReportDefinitionXAmzTargetEnum: string
 {
     case AWS_ORIGAMI_SERVICE_GATEWAY_SERVICE_MODIFY_REPORT_DEFINITION = 'AWSOrigamiServiceGatewayService.ModifyReportDefinition';

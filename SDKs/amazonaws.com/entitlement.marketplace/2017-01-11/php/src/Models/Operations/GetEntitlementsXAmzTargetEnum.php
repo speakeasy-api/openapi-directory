@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetEntitlementsXAmzTargetEnum: string
 {
     case AWSMP_ENTITLEMENT_SERVICE_GET_ENTITLEMENTS = 'AWSMPEntitlementService.GetEntitlements';

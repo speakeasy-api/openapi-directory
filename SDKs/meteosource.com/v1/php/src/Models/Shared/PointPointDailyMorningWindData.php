@@ -36,8 +36,6 @@ class PointPointDailyMorningWindData
     public ?string $dir = null;
     
     /**
-     * Wind gust speed. (morning max)
-     * 
      * Units: metric = m/s, us = mph, uk = mph, ca = km/h
      * 
      * @var ?float $gusts

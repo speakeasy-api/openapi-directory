@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListLicenseSpecificationsForResourceXAmzTargetEnum: string
 {
     case AWS_LICENSE_MANAGER_LIST_LICENSE_SPECIFICATIONS_FOR_RESOURCE = 'AWSLicenseManager.ListLicenseSpecificationsForResource';

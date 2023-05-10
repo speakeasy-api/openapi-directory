@@ -30,16 +30,55 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\SendSSHPublicKeyRequest;
+use \OpenAPI\OpenAPI\Models\Shared\SendSSHPublicKeyRequest;
+use \OpenAPI\OpenAPI\Models\Operations\SendSSHPublicKeyXAmzTargetEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new SendSSHPublicKeyRequest();
+    $request->sendSSHPublicKeyRequest = new SendSSHPublicKeyRequest();
+    $request->sendSSHPublicKeyRequest->availabilityZone = 'corrupti';
+    $request->sendSSHPublicKeyRequest->instanceId = 'provident';
+    $request->sendSSHPublicKeyRequest->instanceOSUser = 'distinctio';
+    $request->sendSSHPublicKeyRequest->sshPublicKey = 'quibusdam';
+    $request->xAmzAlgorithm = 'unde';
+    $request->xAmzContentSha256 = 'nulla';
+    $request->xAmzCredential = 'corrupti';
+    $request->xAmzDate = 'illum';
+    $request->xAmzSecurityToken = 'vel';
+    $request->xAmzSignature = 'error';
+    $request->xAmzSignedHeaders = 'deserunt';
+    $request->xAmzTarget = SendSSHPublicKeyXAmzTargetEnum::AWSEC2_INSTANCE_CONNECT_SERVICE_SEND_SSH_PUBLIC_KEY;
+
+    $response = $sdk->sendSSHPublicKey($request);
+
+    if ($response->sendSSHPublicKeyResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `sendSSHPublicKey` - Pushes an SSH public key to the specified EC2 instance for use by the specified user. The key remains for 60 seconds. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Connect-using-EC2-Instance-Connect.html">Connect to your Linux instance using EC2 Instance Connect</a> in the <i>Amazon EC2 User Guide</i>.
-* `sendSerialConsoleSSHPublicKey` - Pushes an SSH public key to the specified EC2 instance. The key remains for 60 seconds, which gives you 60 seconds to establish a serial console connection to the instance using SSH. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-serial-console.html">EC2 Serial Console</a> in the <i>Amazon EC2 User Guide</i>.
+* [sendSSHPublicKey](docs/sdk/README.md#sendsshpublickey) - Pushes an SSH public key to the specified EC2 instance for use by the specified user. The key remains for 60 seconds. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Connect-using-EC2-Instance-Connect.html">Connect to your Linux instance using EC2 Instance Connect</a> in the <i>Amazon EC2 User Guide</i>.
+* [sendSerialConsoleSSHPublicKey](docs/sdk/README.md#sendserialconsolesshpublickey) - Pushes an SSH public key to the specified EC2 instance. The key remains for 60 seconds, which gives you 60 seconds to establish a serial console connection to the instance using SSH. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-serial-console.html">EC2 Serial Console</a> in the <i>Amazon EC2 User Guide</i>.
 <!-- End SDK Available Operations -->
 
 ### Maturity

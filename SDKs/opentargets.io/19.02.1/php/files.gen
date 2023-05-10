@@ -69,4 +69,11 @@ src/Models/Operations/GetSearchResponse.php
 src/Models/Operations/GetTherapeuticAreasResponse.php
 src/Models/Operations/GetVersionResponse.php
 src/Models/Operations/PostEvidenceByIdResponse.php
+docs/sdk/README.md
+docs/filter/README.md
+docs/private/README.md
+docs/public/README.md
+docs/retrieve/README.md
+docs/search/README.md
+docs/utils/README.md
 USAGE.md

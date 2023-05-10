@@ -58,7 +58,7 @@ class FunctionInput
     public ?EventTriggerInput $eventTrigger = null;
     
     /**
-     * Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources. It must match the pattern `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
+     * [Preview] Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources. It must match the pattern `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
      * 
      * @var ?string $kmsKeyName
      */
@@ -88,7 +88,7 @@ class FunctionInput
     public ?string $name = null;
     
     /**
-     * Describes the Service being deployed. Currently Supported : Cloud Run (fully managed). Next tag: 23
+     * Describes the Service being deployed. Currently Supported : Cloud Run (fully managed).
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\ServiceConfigInput $serviceConfig
      */

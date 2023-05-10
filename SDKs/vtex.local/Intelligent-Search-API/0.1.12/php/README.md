@@ -30,25 +30,50 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetAutocompleteSuggestionsRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetAutocompleteSuggestionsRequest();
+    $request->locale = 'corrupti';
+    $request->query = 'provident';
+
+    $response = $sdk->autocomplete->getAutocompleteSuggestions($request);
+
+    if ($response->autocompleteSearchSuggestions !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### autocomplete
+### [autocomplete](docs/autocomplete/README.md)
 
-* `getAutocompleteSuggestions` - Get list of suggested terms and attributes similar to the search term
-* `getTopSearches` - Get list of the 10 most searched terms
+* [getAutocompleteSuggestions](docs/autocomplete/README.md#getautocompletesuggestions) - Get list of suggested terms and attributes similar to the search term
+* [getTopSearches](docs/autocomplete/README.md#gettopsearches) - Get list of the 10 most searched terms
 
-### productListPage
+### [productListPage](docs/productlistpage/README.md)
 
-* `getBannersFacets` - Get list of banners registered for query
-* `getCorrectionSearch` - Get attempt of correction of a misspelled term
-* `getFacetsFacets` - Get list of the possible facets for a given query
-* `getProductSearchFacets` - Get list of products for a query
-* `getSearchSuggestions` - Get list of suggested terms similar to the search term
+* [getBannersFacets](docs/productlistpage/README.md#getbannersfacets) - Get list of banners registered for query
+* [getCorrectionSearch](docs/productlistpage/README.md#getcorrectionsearch) - Get attempt of correction of a misspelled term
+* [getFacetsFacets](docs/productlistpage/README.md#getfacetsfacets) - Get list of the possible facets for a given query
+* [getProductSearchFacets](docs/productlistpage/README.md#getproductsearchfacets) - Get list of products for a query
+* [getSearchSuggestions](docs/productlistpage/README.md#getsearchsuggestions) - Get list of suggested terms similar to the search term
 <!-- End SDK Available Operations -->
 
 ### Maturity

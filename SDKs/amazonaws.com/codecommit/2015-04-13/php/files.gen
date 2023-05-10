@@ -464,4 +464,5 @@ src/Models/Shared/UpdatePullRequestTitleInput.php
 src/Models/Shared/UpdateRepositoryDescriptionInput.php
 src/Models/Shared/UpdateRepositoryNameInput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

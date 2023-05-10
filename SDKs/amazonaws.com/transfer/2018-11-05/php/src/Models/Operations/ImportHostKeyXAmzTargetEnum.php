@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ImportHostKeyXAmzTargetEnum: string
 {
     case TRANSFER_SERVICE_IMPORT_HOST_KEY = 'TransferService.ImportHostKey';

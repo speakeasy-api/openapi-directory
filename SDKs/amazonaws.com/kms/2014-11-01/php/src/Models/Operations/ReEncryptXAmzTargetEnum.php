@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ReEncryptXAmzTargetEnum: string
 {
     case TRENT_SERVICE_RE_ENCRYPT = 'TrentService.ReEncrypt';

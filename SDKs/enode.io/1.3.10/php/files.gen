@@ -44,6 +44,7 @@ src/Models/Operations/GetChargersResponse.php
 src/Models/Operations/DeleteCharginglocationsCharginglocationidSecurity.php
 src/Models/Operations/DeleteCharginglocationsCharginglocationidRequest.php
 src/Models/Operations/DeleteCharginglocationsCharginglocationidResponse.php
+src/Models/Operations/GetCharginglocationsSecurity.php
 src/Models/Operations/GetCharginglocationsResponse.php
 src/Models/Operations/GetCharginglocationsCharginglocationidSecurity.php
 src/Models/Operations/GetCharginglocationsCharginglocationidRequest.php
@@ -58,6 +59,7 @@ src/Models/Operations/DisconnectVendorSecurity.php
 src/Models/Operations/DisconnectVendorVendorEnum.php
 src/Models/Operations/DisconnectVendorRequest.php
 src/Models/Operations/DisconnectVendorResponse.php
+src/Models/Operations/GetMeSecurity.php
 src/Models/Operations/GetMe200ApplicationJSONLinkedVendors.php
 src/Models/Operations/GetMe200ApplicationJSON.php
 src/Models/Operations/GetMeResponse.php
@@ -124,6 +126,7 @@ src/Models/Operations/PutVehiclesVehicleidSmartchargingpolicySecurity.php
 src/Models/Operations/PutVehiclesVehicleidSmartchargingpolicyRequestBody.php
 src/Models/Operations/PutVehiclesVehicleidSmartchargingpolicyRequest.php
 src/Models/Operations/PutVehiclesVehicleidSmartchargingpolicyResponse.php
+src/Models/Operations/PostWebhooksFirehoseTestSecurity.php
 src/Models/Operations/PostWebhooksFirehoseTestResponse.php
 src/Models/Operations/PutWebhooksFirehoseSecurity.php
 src/Models/Operations/PutWebhooksFirehoseRequestBody.php
@@ -144,4 +147,13 @@ src/Models/Shared/Onevehicles1Percent7BvehicleIdPercent7D1chargeStateGetResponse
 src/Models/Shared/Onevehicles1Percent7BvehicleIdPercent7D1chargeStateGetResponses200ContentApplication1jsonSchema.php
 src/Models/Shared/Onevehicles1Percent7BvehicleIdPercent7D1watchPostRequestBodyContentApplication1jsonSchemaPropertiesEnum.php
 src/Models/Shared/Onevehicles1Percent7BvehicleIdPercent7D1watchPostRequestBodyContentApplication1jsonSchema.php
+docs/sdk/README.md
+docs/chargers/README.md
+docs/charginglocations/README.md
+docs/me/README.md
+docs/servicehealth/README.md
+docs/statistics/README.md
+docs/usermanagement/README.md
+docs/vehicles/README.md
+docs/webhooks/README.md
 USAGE.md

@@ -25,4 +25,7 @@ src/Models/Operations/BalanceLookupResponse.php
 src/Models/Operations/BinLookupRequest.php
 src/Models/Operations/BinLookupResponse.php
 src/Models/Shared/ResponseItem.php
+docs/sdk/README.md
+docs/balance/README.md
+docs/lookup/README.md
 USAGE.md

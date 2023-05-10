@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateDocumentDefaultVersionXAmzTargetEnum: string
 {
     case AMAZON_SSM_UPDATE_DOCUMENT_DEFAULT_VERSION = 'AmazonSSM.UpdateDocumentDefaultVersion';

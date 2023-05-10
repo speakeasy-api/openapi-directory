@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartCrawlerScheduleXAmzTargetEnum: string
 {
     case AWS_GLUE_START_CRAWLER_SCHEDULE = 'AWSGlue.StartCrawlerSchedule';

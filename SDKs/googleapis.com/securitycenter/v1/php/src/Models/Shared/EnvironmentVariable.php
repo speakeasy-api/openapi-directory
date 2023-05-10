@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * EnvironmentVariable - EnvironmentVariable is a name-value pair to store environment variables for Process.
+ * EnvironmentVariable - A name-value pair representing an environment variable used in an operating system process.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

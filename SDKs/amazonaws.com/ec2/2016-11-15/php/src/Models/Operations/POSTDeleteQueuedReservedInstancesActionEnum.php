@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteQueuedReservedInstancesActionEnum: string
 {
     case DELETE_QUEUED_RESERVED_INSTANCES = 'DeleteQueuedReservedInstances';

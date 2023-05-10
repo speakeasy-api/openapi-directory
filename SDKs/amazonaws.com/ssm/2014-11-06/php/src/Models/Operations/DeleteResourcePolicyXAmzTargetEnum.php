@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteResourcePolicyXAmzTargetEnum: string
 {
     case AMAZON_SSM_DELETE_RESOURCE_POLICY = 'AmazonSSM.DeleteResourcePolicy';

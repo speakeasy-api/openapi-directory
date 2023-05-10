@@ -26,4 +26,5 @@ src/Models/Shared/ArchivedResult.php
 src/Models/Shared/Snapshot.php
 src/Models/Shared/StatusCodeEnum.php
 src/Models/Shared/ClosestEnum.php
+docs/sdk/README.md
 USAGE.md

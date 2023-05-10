@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteNotificationConfigurationActionEnum: string
 {
     case DELETE_NOTIFICATION_CONFIGURATION = 'DeleteNotificationConfiguration';

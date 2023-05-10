@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum TerminateSessionXAmzTargetEnum: string
 {
     case AMAZON_ATHENA_TERMINATE_SESSION = 'AmazonAthena.TerminateSession';

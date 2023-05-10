@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteBGPPeerXAmzTargetEnum: string
 {
     case OVERTURE_SERVICE_DELETE_BGP_PEER = 'OvertureService.DeleteBGPPeer';

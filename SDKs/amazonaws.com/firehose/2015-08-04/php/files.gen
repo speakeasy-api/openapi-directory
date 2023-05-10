@@ -170,4 +170,5 @@ src/Models/Shared/ElasticsearchDestinationUpdate.php
 src/Models/Shared/AmazonopensearchserviceDestinationUpdate.php
 src/Models/Shared/AmazonOpenSearchServerlessDestinationUpdate.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

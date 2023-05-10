@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-enum RetrieveADeclinedTransactionDefaultApplicationJSON12StatusEnum: string
+enum RetrieveADeclinedTransactionDefaultApplicationJSON12StatusEnum: int
 {
-    case FOUR_HUNDRED_AND_THREE = '403';
+    case FOUR_HUNDRED_AND_THREE = 403;
 }

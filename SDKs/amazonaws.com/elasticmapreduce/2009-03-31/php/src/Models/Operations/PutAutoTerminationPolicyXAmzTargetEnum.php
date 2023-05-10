@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutAutoTerminationPolicyXAmzTargetEnum: string
 {
     case ELASTIC_MAP_REDUCE_PUT_AUTO_TERMINATION_POLICY = 'ElasticMapReduce.PutAutoTerminationPolicy';

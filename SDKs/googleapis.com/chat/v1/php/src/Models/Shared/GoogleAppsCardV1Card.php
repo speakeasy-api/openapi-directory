@@ -38,7 +38,7 @@ class GoogleAppsCardV1Card
     public ?GoogleAppsCardV1CardDisplayStyleEnum $displayStyle = null;
     
     /**
-     * A persistent (sticky) footer that that appears at the bottom of the card. Setting `fixedFooter` without specifying a `primaryButton` or a `secondaryButton` causes an error. Chat apps support `fixedFooter` in [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not in [card messages](https://developers.google.com/chat/api/guides/message-formats/cards).
+     * A persistent (sticky) footer that that appears at the bottom of the card. Setting `fixedFooter` without specifying a `primaryButton` or a `secondaryButton` causes an error. Supported by Google Workspace Add-ons and Chat apps. For Chat apps, you can use fixed footers in [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not [card messages](https://developers.google.com/chat/api/guides/message-formats/cards).
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAppsCardV1CardFixedFooter $fixedFooter
      */

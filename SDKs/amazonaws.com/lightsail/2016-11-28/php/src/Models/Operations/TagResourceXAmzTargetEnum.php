@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum TagResourceXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_TAG_RESOURCE = 'Lightsail_20161128.TagResource';

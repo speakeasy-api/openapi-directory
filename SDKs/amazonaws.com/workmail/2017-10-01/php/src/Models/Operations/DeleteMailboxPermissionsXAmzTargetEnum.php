@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteMailboxPermissionsXAmzTargetEnum: string
 {
     case WORK_MAIL_SERVICE_DELETE_MAILBOX_PERMISSIONS = 'WorkMailService.DeleteMailboxPermissions';

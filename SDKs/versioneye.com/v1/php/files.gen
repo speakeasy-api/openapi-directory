@@ -28,4 +28,6 @@ src/Models/Operations/GetApiV1ScansIdResponse.php
 src/Models/Operations/GetApiV1ScansIdFilesFileIdSecurity.php
 src/Models/Operations/GetApiV1ScansIdFilesFileIdRequest.php
 src/Models/Operations/GetApiV1ScansIdFilesFileIdResponse.php
+docs/sdk/README.md
+docs/scans/README.md
 USAGE.md

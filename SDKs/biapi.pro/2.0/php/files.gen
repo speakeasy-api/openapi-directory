@@ -472,4 +472,14 @@ src/Models/Shared/Alert.php
 src/Models/Shared/AccountLog.php
 src/Models/Shared/ProfileRoleEnum.php
 src/Models/Shared/Profile.php
+docs/sdk/README.md
+docs/administration/README.md
+docs/authentication/README.md
+docs/banks/README.md
+docs/connections/README.md
+docs/pfm/README.md
+docs/providers/README.md
+docs/timeline/README.md
+docs/transfer/README.md
+docs/usersmanagement/README.md
 USAGE.md

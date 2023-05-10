@@ -38,7 +38,7 @@ class TrainingOptions
     public ?bool $autoArima = null;
     
     /**
-     * The max value of non-seasonal p and q.
+     * The max value of the sum of non-seasonal p and q.
      * 
      * @var ?string $autoArimaMaxOrder
      */
@@ -46,6 +46,16 @@ class TrainingOptions
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $autoArimaMaxOrder = null;
+    
+    /**
+     * The min value of the sum of non-seasonal p and q.
+     * 
+     * @var ?string $autoArimaMinOrder
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('autoArimaMinOrder')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $autoArimaMinOrder = null;
     
     /**
      * Batch size for dnn models.
@@ -306,6 +316,16 @@ class TrainingOptions
     #[\JMS\Serializer\Annotation\Type('array<string>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $inputLabelColumns = null;
+    
+    /**
+     * Name of the instance weight column for training data. This column isn't be used as a feature.
+     * 
+     * @var ?string $instanceWeightColumn
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('instanceWeightColumn')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $instanceWeightColumn = null;
     
     /**
      * Number of integral steps for the integrated gradients explain method.
@@ -588,6 +608,16 @@ class TrainingOptions
     public ?float $subsample = null;
     
     /**
+     * Based on the selected TF version, the corresponding docker image is used to train external models.
+     * 
+     * @var ?string $tfVersion
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('tfVersion')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $tfVersion = null;
+    
+    /**
      * Column to be designated as time series data for ARIMA model.
      * 
      * @var ?string $timeSeriesDataColumn
@@ -687,11 +717,22 @@ class TrainingOptions
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $warmStart = null;
     
+    /**
+     * User-selected XGBoost versions for training of XGBoost models.
+     * 
+     * @var ?string $xgboostVersion
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('xgboostVersion')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $xgboostVersion = null;
+    
 	public function __construct()
 	{
 		$this->adjustStepChanges = null;
 		$this->autoArima = null;
 		$this->autoArimaMaxOrder = null;
+		$this->autoArimaMinOrder = null;
 		$this->batchSize = null;
 		$this->boosterType = null;
 		$this->calculatePValues = null;
@@ -718,6 +759,7 @@ class TrainingOptions
 		$this->includeDrift = null;
 		$this->initialLearnRate = null;
 		$this->inputLabelColumns = null;
+		$this->instanceWeightColumn = null;
 		$this->integratedGradientsNumSteps = null;
 		$this->itemColumn = null;
 		$this->kmeansInitializationColumn = null;
@@ -746,6 +788,7 @@ class TrainingOptions
 		$this->preserveInputStructs = null;
 		$this->sampledShapleyNumPaths = null;
 		$this->subsample = null;
+		$this->tfVersion = null;
 		$this->timeSeriesDataColumn = null;
 		$this->timeSeriesIdColumn = null;
 		$this->timeSeriesIdColumns = null;
@@ -756,5 +799,6 @@ class TrainingOptions
 		$this->userColumn = null;
 		$this->walsAlpha = null;
 		$this->warmStart = null;
+		$this->xgboostVersion = null;
 	}
 }

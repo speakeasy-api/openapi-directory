@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Shared;
 
 
-/** The severity of this case. Deprecated. Use priority instead. */
+/** REMOVED. The severity of this case. Use priority instead. */
 enum CaseSeverityEnum: string
 {
     case SEVERITY_UNSPECIFIED = 'SEVERITY_UNSPECIFIED';

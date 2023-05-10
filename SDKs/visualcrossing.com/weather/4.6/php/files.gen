@@ -33,4 +33,10 @@ src/Models/Operations/GetVisualCrossingWebServicesRestServicesTimelineLocationSt
 src/Models/Operations/GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateResponse.php
 src/Models/Operations/GetVisualCrossingWebServicesRestServicesWeatherdataForecastRequest.php
 src/Models/Operations/GetVisualCrossingWebServicesRestServicesWeatherdataForecastResponse.php
+docs/sdk/README.md
+docs/historicalweather/README.md
+docs/timelineweatherapi15dayforecastrequest/README.md
+docs/timelineweatherapidaterangerequest/README.md
+docs/timelineweatherapisingledaterequest/README.md
+docs/weatherforecast/README.md
 USAGE.md

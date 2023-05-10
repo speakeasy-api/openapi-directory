@@ -68,7 +68,7 @@ class Versions
         $url = Utils\Utils::generateUrl($baseUrl, '/groups/{groupId}/artifacts/{artifactId}/versions', \OpenAPI\OpenAPI\Models\Operations\CreateArtifactVersionJsonRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "contentCreateRequest", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "artifactContent", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -169,6 +169,54 @@ class Versions
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->ruleViolationError = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\RuleViolationError', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Delete artifact version
+     * 
+     * Deletes a single version of the artifact. Parameters `groupId`, `artifactId` and the unique `version`
+     * are needed. If this is the only version of the artifact, this operation is the same as 
+     * deleting the entire artifact.
+     * 
+     * This feature is disabled by default and it's discouraged for normal usage. To enable it, set the `registry.rest.artifact.deletion.enabled` property to true. This operation can fail for the following reasons:
+     * 
+     * * No artifact with this `artifactId` exists (HTTP error `404`)
+     * * No version with this `version` exists (HTTP error `404`)
+     *  * Feature is disabled (HTTP error `405`)
+     *  * A server error occurred (HTTP error `500`)
+     * 
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\DeleteArtifactVersionRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\DeleteArtifactVersionResponse
+     */
+	public function deleteArtifactVersion(
+        \OpenAPI\OpenAPI\Models\Operations\DeleteArtifactVersionRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\DeleteArtifactVersionResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/groups/{groupId}/artifacts/{artifactId}/versions/{version}', \OpenAPI\OpenAPI\Models\Operations\DeleteArtifactVersionRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        
+        $httpResponse = $this->_defaultClient->request('DELETE', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\DeleteArtifactVersionResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 204) {
+        }
+        else if ($httpResponse->getStatusCode() === 404 or $httpResponse->getStatusCode() === 405 or $httpResponse->getStatusCode() === 500) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->error = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Error', 'json');
             }
         }
 

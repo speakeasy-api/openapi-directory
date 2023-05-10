@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeSecretXAmzTargetEnum: string
 {
     case SECRETSMANAGER_DESCRIBE_SECRET = 'secretsmanager.DescribeSecret';

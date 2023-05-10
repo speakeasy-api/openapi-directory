@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTModifyClusterDbRevisionActionEnum: string
 {
     case MODIFY_CLUSTER_DB_REVISION = 'ModifyClusterDbRevision';

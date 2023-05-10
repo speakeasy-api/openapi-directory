@@ -30,31 +30,62 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\FindPlacesFindPlacesGetRequest;
+use \OpenAPI\OpenAPI\Models\Operations\FindPlacesFindPlacesGetLanguageLanguageEnum;
+use \OpenAPI\OpenAPI\Models\Operations\FindPlacesFindPlacesGetSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new FindPlacesFindPlacesGetRequest();
+    $request->key = 'corrupti';
+    $request->language = FindPlacesFindPlacesGetLanguageLanguageEnum::FR;
+    $request->text = 'distinctio';
+
+    $requestSecurity = new FindPlacesFindPlacesGetSecurity();
+    $requestSecurity->apiKeyHeader = 'YOUR_API_KEY_HERE';
+
+    $response = $sdk->locationEndpoints->findPlacesFindPlacesGet($request, $requestSecurity);
+
+    if ($response->findPlacesModels !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### locationEndpoints
+### [locationEndpoints](docs/locationendpoints/README.md)
 
-* `findPlacesFindPlacesGet` - Search for places. Complete words required.
-* `findPlacesPrefixFindPlacesPrefixGet` - Prefix search for places. Useful for autocomplete forms.
-* `nearestPlaceNearestPlaceGet` - Returns the nearest named location for a given GPS coordinates.
+* [findPlacesFindPlacesGet](docs/locationendpoints/README.md#findplacesfindplacesget) - Search for places. Complete words required.
+* [findPlacesPrefixFindPlacesPrefixGet](docs/locationendpoints/README.md#findplacesprefixfindplacesprefixget) - Prefix search for places. Useful for autocomplete forms.
+* [nearestPlaceNearestPlaceGet](docs/locationendpoints/README.md#nearestplacenearestplaceget) - Returns the nearest named location for a given GPS coordinates.
 
-### pointWeather
+### [pointWeather](docs/pointweather/README.md)
 
-* `airQualityAirQualityGet` - Returns air quality data for a single point (geographic name or GPS)
-* `pointPointGet` - Returns weather data for a single point (geographic name or GPS)
+* [airQualityAirQualityGet](docs/pointweather/README.md#airqualityairqualityget) - Returns air quality data for a single point (geographic name or GPS)
+* [pointPointGet](docs/pointweather/README.md#pointpointget) - Returns weather data for a single point (geographic name or GPS)
 
-### timeMachineHistoricalWeather
+### [timeMachineHistoricalWeather](docs/timemachinehistoricalweather/README.md)
 
-* `timeMachineTimeMachineGet` - Returns weather data for a single location and given day in the past
+* [timeMachineTimeMachineGet](docs/timemachinehistoricalweather/README.md#timemachinetimemachineget) - Returns weather data for a single location and given day in the past
 
-### weatherMaps
+### [weatherMaps](docs/weathermaps/README.md)
 
-* `mapMapGet` - Returns PNG weather map for given area and variable
+* [mapMapGet](docs/weathermaps/README.md#mapmapget) - Returns PNG weather map for given area and variable
 <!-- End SDK Available Operations -->
 
 ### Maturity

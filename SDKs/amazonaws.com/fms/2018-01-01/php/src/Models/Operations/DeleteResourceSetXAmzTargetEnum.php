@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteResourceSetXAmzTargetEnum: string
 {
     case AWSFMS20180101_DELETE_RESOURCE_SET = 'AWSFMS_20180101.DeleteResourceSet';

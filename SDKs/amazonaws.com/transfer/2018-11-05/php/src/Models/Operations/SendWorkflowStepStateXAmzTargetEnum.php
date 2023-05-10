@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum SendWorkflowStepStateXAmzTargetEnum: string
 {
     case TRANSFER_SERVICE_SEND_WORKFLOW_STEP_STATE = 'TransferService.SendWorkflowStepState';

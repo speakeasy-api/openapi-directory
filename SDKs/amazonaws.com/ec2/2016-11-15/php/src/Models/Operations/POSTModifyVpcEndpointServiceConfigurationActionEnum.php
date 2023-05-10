@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTModifyVpcEndpointServiceConfigurationActionEnum: string
 {
     case MODIFY_VPC_ENDPOINT_SERVICE_CONFIGURATION = 'ModifyVpcEndpointServiceConfiguration';

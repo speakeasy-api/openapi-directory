@@ -30,126 +30,152 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\CreateAccount;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new CreateAccount();
+    $request->ftpPassword = 'corrupti';
+    $request->identifier = 'provident';
+    $request->servicepackId = 715190;
+
+    $response = $sdk->accounts->createAccount($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### accounts
+### [accounts](docs/accounts/README.md)
 
-* `createAccount` - Create a new account
-* `getAccount` - Get a specific account
-* `getAccounts` - Overview of accounts
+* [createAccount](docs/accounts/README.md#createaccount) - Create a new account
+* [getAccount](docs/accounts/README.md#getaccount) - Get a specific account
+* [getAccounts](docs/accounts/README.md#getaccounts) - Overview of accounts
 
-### dnsRecords
+### [dnsRecords](docs/dnsrecords/README.md)
 
-* `deleteDnsDomainNameRecordsRecordId` - Delete a record
-* `getDnsDomainNameRecords` - Get records
-* `getDnsDomainNameRecordsRecordId` - Get specific record
-* `postDnsDomainNameRecords` - Create a record
-* `putDnsDomainNameRecordsRecordId` - Edit a record
+* [deleteDnsDomainNameRecordsRecordId](docs/dnsrecords/README.md#deletednsdomainnamerecordsrecordid) - Delete a record
+* [getDnsDomainNameRecords](docs/dnsrecords/README.md#getdnsdomainnamerecords) - Get records
+* [getDnsDomainNameRecordsRecordId](docs/dnsrecords/README.md#getdnsdomainnamerecordsrecordid) - Get specific record
+* [postDnsDomainNameRecords](docs/dnsrecords/README.md#postdnsdomainnamerecords) - Create a record
+* [putDnsDomainNameRecordsRecordId](docs/dnsrecords/README.md#putdnsdomainnamerecordsrecordid) - Edit a record
 
-### domains
+### [domains](docs/domains/README.md)
 
-* `configureDomain` - Edit domain name renew state
-* `editNameServers` - Edit domain name servers
-* `getDomain` - Details of a domain
-* `getDomains` - Overviews of domains
-* `register` - Register a domain
-* `transfer` - Transfer a domain
+* [configureDomain](docs/domains/README.md#configuredomain) - Edit domain name renew state
+* [editNameServers](docs/domains/README.md#editnameservers) - Edit domain name servers
+* [getDomain](docs/domains/README.md#getdomain) - Details of a domain
+* [getDomains](docs/domains/README.md#getdomains) - Overviews of domains
+* [register](docs/domains/README.md#register) - Register a domain
+* [transfer](docs/domains/README.md#transfer) - Transfer a domain
 
-### linuxHostings
+### [linuxHostings](docs/linuxhostings/README.md)
 
-* `addScheduledTasks` - Add a scheduled task
-* `addSshKey` - Add a SSH key
-* `changeApcu` - Configure PHP APCu setting
-* `changeAutoRedirect` - Configure auto redirect
-* `changeGzipCompression` - Enable/disable GZIP compression
-* `changeLetsEncrypt` - Configure let's encrypt
-* `changePhpMemoryLimit` - Configure PHP memory limit
-* `changePhpVersion` - Change the Linux hosting PHP version.
-* `configureFtp` - Configure FTP
-* `configureHttp2` - Configure HTTP/2
-* `configureScheduledTask` - Configure a scheduled task
-* `configureSsh` - Configure SSH
-* `createHostHeader` - Create a host header
-* `createSubsite` - Create a subsite
-* `deleteScheduledTask` - Delete a scheduled task
-* `deleteSshKey` - Delete a SSH key
-* `deleteSubsite` - Delete a subsite
-* `getAvailablePhpVersions` - Get the available PHP versions.
-* `getLinuxHosting` - Linux hosting detail
-* `getLinuxHostings` - Overview of linux hostings
-* `getScheduledTask` - Get scheduled task detail
-* `getScheduledTasks` - Overview of scheduled tasks
-* `getSshKeys` - Overview of SSH keys
+* [addScheduledTasks](docs/linuxhostings/README.md#addscheduledtasks) - Add a scheduled task
+* [addSshKey](docs/linuxhostings/README.md#addsshkey) - Add a SSH key
+* [changeApcu](docs/linuxhostings/README.md#changeapcu) - Configure PHP APCu setting
+* [changeAutoRedirect](docs/linuxhostings/README.md#changeautoredirect) - Configure auto redirect
+* [changeGzipCompression](docs/linuxhostings/README.md#changegzipcompression) - Enable/disable GZIP compression
+* [changeLetsEncrypt](docs/linuxhostings/README.md#changeletsencrypt) - Configure let's encrypt
+* [changePhpMemoryLimit](docs/linuxhostings/README.md#changephpmemorylimit) - Configure PHP memory limit
+* [changePhpVersion](docs/linuxhostings/README.md#changephpversion) - Change the Linux hosting PHP version.
+* [configureFtp](docs/linuxhostings/README.md#configureftp) - Configure FTP
+* [configureHttp2](docs/linuxhostings/README.md#configurehttp2) - Configure HTTP/2
+* [configureScheduledTask](docs/linuxhostings/README.md#configurescheduledtask) - Configure a scheduled task
+* [configureSsh](docs/linuxhostings/README.md#configuressh) - Configure SSH
+* [createHostHeader](docs/linuxhostings/README.md#createhostheader) - Create a host header
+* [createSubsite](docs/linuxhostings/README.md#createsubsite) - Create a subsite
+* [deleteScheduledTask](docs/linuxhostings/README.md#deletescheduledtask) - Delete a scheduled task
+* [deleteSshKey](docs/linuxhostings/README.md#deletesshkey) - Delete a SSH key
+* [deleteSubsite](docs/linuxhostings/README.md#deletesubsite) - Delete a subsite
+* [getAvailablePhpVersions](docs/linuxhostings/README.md#getavailablephpversions) - Get the available PHP versions.
+* [getLinuxHosting](docs/linuxhostings/README.md#getlinuxhosting) - Linux hosting detail
+* [getLinuxHostings](docs/linuxhostings/README.md#getlinuxhostings) - Overview of linux hostings
+* [getScheduledTask](docs/linuxhostings/README.md#getscheduledtask) - Get scheduled task detail
+* [getScheduledTasks](docs/linuxhostings/README.md#getscheduledtasks) - Overview of scheduled tasks
+* [getSshKeys](docs/linuxhostings/README.md#getsshkeys) - Overview of SSH keys
 
-### mailZones
+### [mailZones](docs/mailzones/README.md)
 
-* `configureAlias` - Configure a alias
-* `configureAntiSpam` - Configure anti-spam for mail zone
-* `configureSmtpDomain` - Configure an extra smtp domain
-* `createAlias` - Create a new alias
-* `createCatchAll` - Create a catch-all on the mail zone
-* `createSmtpDomain` - Create an extra smtp domain
-* `deleteAlias` - Delete a alias
-* `deleteCatchAll` - Delete a catch-all on the mail zone
-* `deleteSmtpDomain` - Delete an extra smtp domain
-* `getMailZone` - Get the mail zone.
+* [configureAlias](docs/mailzones/README.md#configurealias) - Configure a alias
+* [configureAntiSpam](docs/mailzones/README.md#configureantispam) - Configure anti-spam for mail zone
+* [configureSmtpDomain](docs/mailzones/README.md#configuresmtpdomain) - Configure an extra smtp domain
+* [createAlias](docs/mailzones/README.md#createalias) - Create a new alias
+* [createCatchAll](docs/mailzones/README.md#createcatchall) - Create a catch-all on the mail zone
+* [createSmtpDomain](docs/mailzones/README.md#createsmtpdomain) - Create an extra smtp domain
+* [deleteAlias](docs/mailzones/README.md#deletealias) - Delete a alias
+* [deleteCatchAll](docs/mailzones/README.md#deletecatchall) - Delete a catch-all on the mail zone
+* [deleteSmtpDomain](docs/mailzones/README.md#deletesmtpdomain) - Delete an extra smtp domain
+* [getMailZone](docs/mailzones/README.md#getmailzone) - Get the mail zone.
 
-### mailboxes
+### [mailboxes](docs/mailboxes/README.md)
 
-* `changeMailboxPassword` - Change password for mailbox
-* `configureMailboxAutoForward` - Configure auto-forward for mailbox
-* `configureMailboxAutoReply` - Configure auto-reply for mailbox
-* `createMailbox` - Create a new mailbox.
-* `deleteMailbox` - Delete a mailbox
-* `getMailbox` - Get a specific mailbox
-* `getMailboxes` - Gets your mailboxes.
+* [changeMailboxPassword](docs/mailboxes/README.md#changemailboxpassword) - Change password for mailbox
+* [configureMailboxAutoForward](docs/mailboxes/README.md#configuremailboxautoforward) - Configure auto-forward for mailbox
+* [configureMailboxAutoReply](docs/mailboxes/README.md#configuremailboxautoreply) - Configure auto-reply for mailbox
+* [createMailbox](docs/mailboxes/README.md#createmailbox) - Create a new mailbox.
+* [deleteMailbox](docs/mailboxes/README.md#deletemailbox) - Delete a mailbox
+* [getMailbox](docs/mailboxes/README.md#getmailbox) - Get a specific mailbox
+* [getMailboxes](docs/mailboxes/README.md#getmailboxes) - Gets your mailboxes.
 
-### mySqlDatabases
+### [mySqlDatabases](docs/mysqldatabases/README.md)
 
-* `changeDatabaseUserPassword` - Change password for mysql user
-* `changeDatabaseUserStatus` - Enable/disable mysql user
-* `createMySqlDatabase` - Create a new mysql database
-* `createMySqlUser` - Create a new mysql user
-* `deleteDatabase` - Delete a mysql database
-* `deleteDatabaseUser` - Delete a mysql user
-* `getDatabaseUsers` - Overview of mysql users
-* `getMySqlDatabase` - Get a specific database
-* `getMySqlDatabases` - Overview of mysql databases
+* [changeDatabaseUserPassword](docs/mysqldatabases/README.md#changedatabaseuserpassword) - Change password for mysql user
+* [changeDatabaseUserStatus](docs/mysqldatabases/README.md#changedatabaseuserstatus) - Enable/disable mysql user
+* [createMySqlDatabase](docs/mysqldatabases/README.md#createmysqldatabase) - Create a new mysql database
+* [createMySqlUser](docs/mysqldatabases/README.md#createmysqluser) - Create a new mysql user
+* [deleteDatabase](docs/mysqldatabases/README.md#deletedatabase) - Delete a mysql database
+* [deleteDatabaseUser](docs/mysqldatabases/README.md#deletedatabaseuser) - Delete a mysql user
+* [getDatabaseUsers](docs/mysqldatabases/README.md#getdatabaseusers) - Overview of mysql users
+* [getMySqlDatabase](docs/mysqldatabases/README.md#getmysqldatabase) - Get a specific database
+* [getMySqlDatabases](docs/mysqldatabases/README.md#getmysqldatabases) - Overview of mysql databases
 
-### provisioningJobs
+### [provisioningJobs](docs/provisioningjobs/README.md)
 
-* `getProvisioningjobsJobId` - Detail of a provisioning job
+* [getProvisioningjobsJobId](docs/provisioningjobs/README.md#getprovisioningjobsjobid) - Detail of a provisioning job
 
-### ssh
+### [ssh](docs/ssh/README.md)
 
-* `getAllSshKeys` - Overview of SSH keys
+* [getAllSshKeys](docs/ssh/README.md#getallsshkeys) - Overview of SSH keys
 
-### sslCertificateRequests
+### [sslCertificateRequests](docs/sslcertificaterequests/README.md)
 
-* `addSslCertificateRequest` - Add a SSL certificate request
-* `getSslCertificateRequest` - Detail of a SSL certificate request
-* `getSslCertificateRequests` - Overview of SSL certificate requests
-* `verifySslCertificateRequestDomainValidations` - Verify the SSL certificate request domain validations
+* [addSslCertificateRequest](docs/sslcertificaterequests/README.md#addsslcertificaterequest) - Add a SSL certificate request
+* [getSslCertificateRequest](docs/sslcertificaterequests/README.md#getsslcertificaterequest) - Detail of a SSL certificate request
+* [getSslCertificateRequests](docs/sslcertificaterequests/README.md#getsslcertificaterequests) - Overview of SSL certificate requests
+* [verifySslCertificateRequestDomainValidations](docs/sslcertificaterequests/README.md#verifysslcertificaterequestdomainvalidations) - Verify the SSL certificate request domain validations
 
-### sslCertificates
+### [sslCertificates](docs/sslcertificates/README.md)
 
-* `downloadCertificate` - Download a SSL certificate
-* `getSslCertificate` - Detail of a SSL certificate
-* `getSslCertificates` - Overview of SSL certificates
+* [downloadCertificate](docs/sslcertificates/README.md#downloadcertificate) - Download a SSL certificate
+* [getSslCertificate](docs/sslcertificates/README.md#getsslcertificate) - Detail of a SSL certificate
+* [getSslCertificates](docs/sslcertificates/README.md#getsslcertificates) - Overview of SSL certificates
 
-### servicepacks
+### [servicepacks](docs/servicepacks/README.md)
 
-* `servicepacks` - Overview of service packs
+* [servicepacks](docs/servicepacks/README.md#servicepacks) - Overview of service packs
 
-### windowsHostings
+### [windowsHostings](docs/windowshostings/README.md)
 
-* `getWindowsHosting` - Windows hosting detail
-* `getWindowsHostings` - Overview of windows hostings
+* [getWindowsHosting](docs/windowshostings/README.md#getwindowshosting) - Windows hosting detail
+* [getWindowsHostings](docs/windowshostings/README.md#getwindowshostings) - Overview of windows hostings
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateCollectionXAmzTargetEnum: string
 {
     case OPEN_SEARCH_SERVERLESS_UPDATE_COLLECTION = 'OpenSearchServerless.UpdateCollection';

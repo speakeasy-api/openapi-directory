@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteCarrierGatewayActionEnum: string
 {
     case DELETE_CARRIER_GATEWAY = 'DeleteCarrierGateway';

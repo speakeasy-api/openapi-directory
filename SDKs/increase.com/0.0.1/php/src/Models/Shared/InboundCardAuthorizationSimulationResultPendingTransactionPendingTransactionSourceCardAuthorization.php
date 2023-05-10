@@ -45,6 +45,15 @@ class InboundCardAuthorizationSimulationResultPendingTransactionPendingTransacti
     public string $digitalWalletTokenId;
     
     /**
+     * The Card Authorization identifier.
+     * 
+     * @var string $id
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    public string $id;
+    
+    /**
      * The merchant identifier (commonly abbreviated as MID) of the merchant the card is transacting with.
      * 
      * @var string $merchantAcceptorId
@@ -116,11 +125,21 @@ class InboundCardAuthorizationSimulationResultPendingTransactionPendingTransacti
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $realTimeDecisionId;
     
+    /**
+     * A constant representing the object's type. For this resource it will always be `card_authorization`.
+     * 
+     * @var \OpenAPI\OpenAPI\Models\Shared\InboundCardAuthorizationSimulationResultPendingTransactionPendingTransactionSourceCardAuthorizationTypeEnum $type
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('type')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\InboundCardAuthorizationSimulationResultPendingTransactionPendingTransactionSourceCardAuthorizationTypeEnum>')]
+    public InboundCardAuthorizationSimulationResultPendingTransactionPendingTransactionSourceCardAuthorizationTypeEnum $type;
+    
 	public function __construct()
 	{
 		$this->amount = 0;
 		$this->currency = \OpenAPI\OpenAPI\Models\Shared\InboundCardAuthorizationSimulationResultPendingTransactionPendingTransactionSourceCardAuthorizationCurrencyEnum::CAD;
 		$this->digitalWalletTokenId = "";
+		$this->id = "";
 		$this->merchantAcceptorId = "";
 		$this->merchantCategoryCode = "";
 		$this->merchantCity = "";
@@ -129,5 +148,6 @@ class InboundCardAuthorizationSimulationResultPendingTransactionPendingTransacti
 		$this->network = \OpenAPI\OpenAPI\Models\Shared\InboundCardAuthorizationSimulationResultPendingTransactionPendingTransactionSourceCardAuthorizationNetworkEnum::VISA;
 		$this->networkDetails = new \OpenAPI\OpenAPI\Models\Shared\InboundCardAuthorizationSimulationResultPendingTransactionPendingTransactionSourceCardAuthorizationNetworkDetails();
 		$this->realTimeDecisionId = "";
+		$this->type = \OpenAPI\OpenAPI\Models\Shared\InboundCardAuthorizationSimulationResultPendingTransactionPendingTransactionSourceCardAuthorizationTypeEnum::CARD_AUTHORIZATION;
 	}
 }

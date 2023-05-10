@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CopyProjectVersionXAmzTargetEnum: string
 {
     case REKOGNITION_SERVICE_COPY_PROJECT_VERSION = 'RekognitionService.CopyProjectVersion';

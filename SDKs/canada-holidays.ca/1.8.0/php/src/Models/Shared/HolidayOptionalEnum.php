@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /** Whether this is a province-wide statutory holiday, or one that is optional for employers. */
-enum HolidayOptionalEnum: string
+enum HolidayOptionalEnum: int
 {
-    case ONE = '1';
+    case ONE = 1;
 }

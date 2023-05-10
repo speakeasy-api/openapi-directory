@@ -144,9 +144,11 @@ class Admin
     /**
      * Print current API usage.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ApiUsageSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ApiUsageResponse
      */
 	public function apiUsage(
+        \OpenAPI\OpenAPI\Models\Operations\ApiUsageSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ApiUsageResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -154,7 +156,8 @@ class Admin
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -178,9 +181,11 @@ class Admin
     /**
      * Print historical API usage.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ApiUsageHistorySecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ApiUsageHistoryResponse
      */
 	public function apiUsageHistory(
+        \OpenAPI\OpenAPI\Models\Operations\ApiUsageHistorySecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ApiUsageHistoryResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -188,7 +193,8 @@ class Admin
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -212,9 +218,11 @@ class Admin
     /**
      * Print historical API usage (in an aggregated view, by service, by day/hour/min).
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ApiUsageHistoryAggregateSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ApiUsageHistoryAggregateResponse
      */
 	public function apiUsageHistoryAggregate(
+        \OpenAPI\OpenAPI\Models\Operations\ApiUsageHistoryAggregateSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ApiUsageHistoryAggregateResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -222,7 +230,8 @@ class Admin
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

@@ -40,10 +40,10 @@ class GetAccountHolderResponse
     /**
      * A list of the accounts under the account holder.
      * 
-     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\Account> $accounts
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\AccountWrapper> $accounts
      */
 	#[\JMS\Serializer\Annotation\SerializedName('accounts')]
-    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\Account>')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\AccountWrapper>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $accounts = null;
     

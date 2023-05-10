@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum BatchDetectDominantLanguageXAmzTargetEnum: string
 {
     case COMPREHEND20171127_BATCH_DETECT_DOMINANT_LANGUAGE = 'Comprehend_20171127.BatchDetectDominantLanguage';

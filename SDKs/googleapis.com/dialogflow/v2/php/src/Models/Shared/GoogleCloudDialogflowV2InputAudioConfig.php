@@ -38,6 +38,16 @@ class GoogleCloudDialogflowV2InputAudioConfig
     public ?bool $disableNoSpeechRecognizedEvent = null;
     
     /**
+     * Enable automatic punctuation option at the speech backend.
+     * 
+     * @var ?bool $enableAutomaticPunctuation
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('enableAutomaticPunctuation')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $enableAutomaticPunctuation = null;
+    
+    /**
      * If `true`, Dialogflow returns SpeechWordInfo in StreamingRecognitionResult with information about the recognized speech words, e.g. start and end time offsets. If false or unspecified, Speech doesn't return any word-level information.
      * 
      * @var ?bool $enableWordInfo
@@ -121,6 +131,7 @@ class GoogleCloudDialogflowV2InputAudioConfig
 	{
 		$this->audioEncoding = null;
 		$this->disableNoSpeechRecognizedEvent = null;
+		$this->enableAutomaticPunctuation = null;
 		$this->enableWordInfo = null;
 		$this->languageCode = null;
 		$this->model = null;

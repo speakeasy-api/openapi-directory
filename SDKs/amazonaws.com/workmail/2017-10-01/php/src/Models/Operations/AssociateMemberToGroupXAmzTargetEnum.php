@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AssociateMemberToGroupXAmzTargetEnum: string
 {
     case WORK_MAIL_SERVICE_ASSOCIATE_MEMBER_TO_GROUP = 'WorkMailService.AssociateMemberToGroup';

@@ -67,6 +67,10 @@ class CreditorAccount
     /**
      * Creditor account type
      * 
+     * 
+     * * `IBAN` - IBAN
+     * * `SCAN` - SortCodeAccountNumber
+     * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\CreditorAccountTypeEnum $type
      */
 	#[\JMS\Serializer\Annotation\SerializedName('type')]

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateAgentXAmzTargetEnum: string
 {
     case FMRS_SERVICE_UPDATE_AGENT = 'FmrsService.UpdateAgent';

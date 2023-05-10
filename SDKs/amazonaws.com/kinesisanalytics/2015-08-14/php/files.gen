@@ -160,4 +160,5 @@ src/Models/Shared/InputLambdaProcessorUpdate.php
 src/Models/Shared/InputParallelismUpdate.php
 src/Models/Shared/CloudWatchLoggingOptionUpdate.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

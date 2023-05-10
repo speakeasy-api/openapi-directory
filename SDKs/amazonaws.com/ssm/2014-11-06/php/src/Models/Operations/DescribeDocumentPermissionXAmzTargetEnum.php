@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeDocumentPermissionXAmzTargetEnum: string
 {
     case AMAZON_SSM_DESCRIBE_DOCUMENT_PERMISSION = 'AmazonSSM.DescribeDocumentPermission';

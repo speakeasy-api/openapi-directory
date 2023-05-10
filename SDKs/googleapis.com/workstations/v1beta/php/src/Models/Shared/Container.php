@@ -38,7 +38,7 @@ class Container
     public ?array $command = null;
     
     /**
-     * Environment variables passed to the container.
+     * Environment variables passed to the container's entrypoint.
      * 
      * @var ?array<string, string> $env
      */
@@ -48,7 +48,7 @@ class Container
     public ?array $env = null;
     
     /**
-     * Docker image defining the container. This image must be accessible by the config's service account.
+     * Docker image defining the container. This image must be accessible by the service account specified in the workstation configuration.
      * 
      * @var ?string $image
      */

@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * ReverseGeocodingConfig - <p/>
+ * ReverseGeocodingConfig - The input structure for Reverse Geocoding operation type.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

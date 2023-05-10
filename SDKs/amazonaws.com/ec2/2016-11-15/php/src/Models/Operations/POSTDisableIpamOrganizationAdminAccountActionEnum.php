@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDisableIpamOrganizationAdminAccountActionEnum: string
 {
     case DISABLE_IPAM_ORGANIZATION_ADMIN_ACCOUNT = 'DisableIpamOrganizationAdminAccount';

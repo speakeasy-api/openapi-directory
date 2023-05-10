@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum SetDefaultMessageTypeXAmzTargetEnum: string
 {
     case PINPOINT_SMS_VOICE_V2_SET_DEFAULT_MESSAGE_TYPE = 'PinpointSMSVoiceV2.SetDefaultMessageType';

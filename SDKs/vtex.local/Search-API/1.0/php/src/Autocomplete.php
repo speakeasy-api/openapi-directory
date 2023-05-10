@@ -54,7 +54,7 @@ class Autocomplete
      */
 	public function autoComplete(
         \OpenAPI\OpenAPI\Models\Operations\AutoCompleteRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\AutoCompleteResponse
     {
         $baseUrl = Autocomplete::AUTO_COMPLETE_SERVERS[0];

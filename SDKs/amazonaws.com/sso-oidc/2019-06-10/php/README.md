@@ -30,17 +30,63 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\CreateTokenRequest;
+use \OpenAPI\OpenAPI\Models\Operations\CreateTokenRequestBody;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new CreateTokenRequest();
+    $request->requestBody = new CreateTokenRequestBody();
+    $request->requestBody->clientId = 'corrupti';
+    $request->requestBody->clientSecret = 'provident';
+    $request->requestBody->code = 'distinctio';
+    $request->requestBody->deviceCode = 'quibusdam';
+    $request->requestBody->grantType = 'unde';
+    $request->requestBody->redirectUri = 'nulla';
+    $request->requestBody->refreshToken = 'corrupti';
+    $request->requestBody->scope = [
+        'vel',
+        'error',
+        'deserunt',
+        'suscipit',
+    ];
+    $request->xAmzAlgorithm = 'iure';
+    $request->xAmzContentSha256 = 'magnam';
+    $request->xAmzCredential = 'debitis';
+    $request->xAmzDate = 'ipsa';
+    $request->xAmzSecurityToken = 'delectus';
+    $request->xAmzSignature = 'tempora';
+    $request->xAmzSignedHeaders = 'suscipit';
+
+    $response = $sdk->createToken($request);
+
+    if ($response->createTokenResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `createToken` - Creates and returns an access token for the authorized client. The access token issued will be used to fetch short-term credentials for the assigned roles in the AWS account.
-* `registerClient` - Registers a client with IAM Identity Center. This allows clients to initiate device authorization. The output should be persisted for reuse through many authentication requests.
-* `startDeviceAuthorization` - Initiates device authorization by requesting a pair of verification codes from the authorization service.
+* [createToken](docs/sdk/README.md#createtoken) - Creates and returns an access token for the authorized client. The access token issued will be used to fetch short-term credentials for the assigned roles in the AWS account.
+* [registerClient](docs/sdk/README.md#registerclient) - Registers a client with IAM Identity Center. This allows clients to initiate device authorization. The output should be persisted for reuse through many authentication requests.
+* [startDeviceAuthorization](docs/sdk/README.md#startdeviceauthorization) - Initiates device authorization by requesting a pair of verification codes from the authorization service.
 <!-- End SDK Available Operations -->
 
 ### Maturity

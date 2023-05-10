@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RegisterDefaultPatchBaselineXAmzTargetEnum: string
 {
     case AMAZON_SSM_REGISTER_DEFAULT_PATCH_BASELINE = 'AmazonSSM.RegisterDefaultPatchBaseline';

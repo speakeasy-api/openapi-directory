@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCancelUpdateStackActionEnum: string
 {
     case CANCEL_UPDATE_STACK = 'CancelUpdateStack';

@@ -56,11 +56,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsAddMemberLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsAddMemberLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.20/rest/reference/teams#add-team-member-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsAddMemberLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsAddMemberLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsAddMemberLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/members/{username}', \OpenAPI\OpenAPI\Models\Operations\TeamsAddMemberLegacyRequest::class, $request);
         
@@ -724,11 +727,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsGetMemberLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsGetMemberLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.20/rest/reference/teams#get-team-member-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsGetMemberLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsGetMemberLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsGetMemberLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/members/{username}', \OpenAPI\OpenAPI\Models\Operations\TeamsGetMemberLegacyRequest::class, $request);
         
@@ -1152,11 +1158,14 @@ class Teams
      * @param \OpenAPI\OpenAPI\Models\Operations\TeamsRemoveMemberLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TeamsRemoveMemberLegacyResponse
      * @see https://docs.github.com/enterprise-server@2.20/rest/reference/teams#remove-team-member-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function teamsRemoveMemberLegacy(
         \OpenAPI\OpenAPI\Models\Operations\TeamsRemoveMemberLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TeamsRemoveMemberLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/members/{username}', \OpenAPI\OpenAPI\Models\Operations\TeamsRemoveMemberLegacyRequest::class, $request);
         

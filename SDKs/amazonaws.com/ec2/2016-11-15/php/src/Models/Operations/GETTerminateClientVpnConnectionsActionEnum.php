@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETTerminateClientVpnConnectionsActionEnum: string
 {
     case TERMINATE_CLIENT_VPN_CONNECTIONS = 'TerminateClientVpnConnections';

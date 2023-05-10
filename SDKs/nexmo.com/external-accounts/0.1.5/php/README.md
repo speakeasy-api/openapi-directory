@@ -30,36 +30,69 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetAllAccountsRequest;
+use \OpenAPI\OpenAPI\Models\Operations\GetAllAccountsProviderEnum;
+use \OpenAPI\OpenAPI\Models\Operations\GetAllAccountsSecurity;
+use \OpenAPI\OpenAPI\Models\Shared\SchemeBasicAuth;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetAllAccountsRequest();
+    $request->pageNumber = 1;
+    $request->pageSize = 1;
+    $request->provider = GetAllAccountsProviderEnum::VIBER_SERVICE_MSG;
+
+    $requestSecurity = new GetAllAccountsSecurity();
+    $requestSecurity->basicAuth->password = 'YOUR_PASSWORD_HERE';
+    $requestSecurity->basicAuth->username = 'YOUR_USERNAME_HERE';
+
+    $response = $sdk->account->getAllAccounts($request, $requestSecurity);
+
+    if ($response->getAllAccounts200ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### account
+### [account](docs/account/README.md)
 
-* `getAllAccounts` - Retrieve all accounts you own
+* [getAllAccounts](docs/account/README.md#getallaccounts) - Retrieve all accounts you own
 
-### application
+### [application](docs/application/README.md)
 
-* `linkApplication` - Link application to an account
-* `unliWithoutApplicationnkApplication` - Unlink application from an account
+* [linkApplication](docs/application/README.md#linkapplication) - Link application to an account
+* [unliWithoutApplicationnkApplication](docs/application/README.md#unliwithoutapplicationnkapplication) - Unlink application from an account
 
-### facebookMessenger
+### [facebookMessenger](docs/facebookmessenger/README.md)
 
-* `createMessengerAccount` - Create a Messenger account
-* `deleteMessengerAccount` - Delete a Messenger account
-* `getMessengerAccount` - Retrieve a Messenger account
-* `updateMessengerAccount` - Update a Messenger account
+* [createMessengerAccount](docs/facebookmessenger/README.md#createmessengeraccount) - Create a Messenger account
+* [deleteMessengerAccount](docs/facebookmessenger/README.md#deletemessengeraccount) - Delete a Messenger account
+* [getMessengerAccount](docs/facebookmessenger/README.md#getmessengeraccount) - Retrieve a Messenger account
+* [updateMessengerAccount](docs/facebookmessenger/README.md#updatemessengeraccount) - Update a Messenger account
 
-### viberServiceMessage
+### [viberServiceMessage](docs/viberservicemessage/README.md)
 
-* `getVSMAccount` - Retrieve a Viber Service Message account
+* [getVSMAccount](docs/viberservicemessage/README.md#getvsmaccount) - Retrieve a Viber Service Message account
 
-### whatsApp
+### [whatsApp](docs/whatsapp/README.md)
 
-* `getWAAccount` - Retrieve a Whatsapp account
+* [getWAAccount](docs/whatsapp/README.md#getwaaccount) - Retrieve a Whatsapp account
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetAccountBalanceXAmzTargetEnum: string
 {
     case M_TURK_REQUESTER_SERVICE_V20170117_GET_ACCOUNT_BALANCE = 'MTurkRequesterServiceV20170117.GetAccountBalance';

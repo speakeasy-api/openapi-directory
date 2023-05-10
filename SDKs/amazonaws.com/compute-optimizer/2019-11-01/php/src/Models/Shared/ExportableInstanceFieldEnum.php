@@ -64,4 +64,5 @@ enum ExportableInstanceFieldEnum: string
     case INFERRED_WORKLOAD_TYPES = 'InferredWorkloadTypes';
     case RECOMMENDATION_OPTIONS_MIGRATION_EFFORT = 'RecommendationOptionsMigrationEffort';
     case EFFECTIVE_RECOMMENDATION_PREFERENCES_EXTERNAL_METRICS_SOURCE = 'EffectiveRecommendationPreferencesExternalMetricsSource';
+    case INSTANCE_STATE = 'InstanceState';
 }

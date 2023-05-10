@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeExportXAmzTargetEnum: string
 {
     case DYNAMO_DB20120810_DESCRIBE_EXPORT = 'DynamoDB_20120810.DescribeExport';

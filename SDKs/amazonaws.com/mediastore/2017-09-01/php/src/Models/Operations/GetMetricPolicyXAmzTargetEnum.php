@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetMetricPolicyXAmzTargetEnum: string
 {
     case MEDIA_STORE20170901_GET_METRIC_POLICY = 'MediaStore_20170901.GetMetricPolicy';

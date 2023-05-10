@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteApplicationActionEnum: string
 {
     case DELETE_APPLICATION = 'DeleteApplication';

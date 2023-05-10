@@ -28,4 +28,6 @@ src/Models/Operations/ListHistoricalGWSOrderingEnum.php
 src/Models/Operations/ListHistoricalGWSRequest.php
 src/Models/Operations/ListHistoricalGWSResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/globalwinescore/README.md
 USAGE.md

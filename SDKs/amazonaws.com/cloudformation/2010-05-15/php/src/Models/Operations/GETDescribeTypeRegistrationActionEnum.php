@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDescribeTypeRegistrationActionEnum: string
 {
     case DESCRIBE_TYPE_REGISTRATION = 'DescribeTypeRegistration';

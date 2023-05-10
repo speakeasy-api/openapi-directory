@@ -328,4 +328,5 @@ src/Models/Shared/UpdateRobotApplicationResponse.php
 src/Models/Shared/UpdateSimulationApplicationResponse.php
 src/Models/Shared/UpdateWorldTemplateResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteConfigurationSetXAmzTargetEnum: string
 {
     case PINPOINT_SMS_VOICE_V2_DELETE_CONFIGURATION_SET = 'PinpointSMSVoiceV2.DeleteConfigurationSet';

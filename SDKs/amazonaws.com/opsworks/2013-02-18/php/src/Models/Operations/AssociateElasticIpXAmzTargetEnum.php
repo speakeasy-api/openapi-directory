@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AssociateElasticIpXAmzTargetEnum: string
 {
     case OPS_WORKS20130218_ASSOCIATE_ELASTIC_IP = 'OpsWorks_20130218.AssociateElasticIp';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetOpsSummaryXAmzTargetEnum: string
 {
     case AMAZON_SSM_GET_OPS_SUMMARY = 'AmazonSSM.GetOpsSummary';

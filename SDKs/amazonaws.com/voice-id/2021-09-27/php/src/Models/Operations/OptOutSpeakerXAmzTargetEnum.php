@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum OptOutSpeakerXAmzTargetEnum: string
 {
     case VOICE_ID_OPT_OUT_SPEAKER = 'VoiceID.OptOutSpeaker';

@@ -924,4 +924,5 @@ src/Models/Shared/UpdatePatchBaselineRequest.php
 src/Models/Shared/UpdateResourceDataSyncRequest.php
 src/Models/Shared/UpdateServiceSettingRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

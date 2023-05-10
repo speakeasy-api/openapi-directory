@@ -30,27 +30,57 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\ExtensionConfigurationRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new ExtensionConfigurationRequest();
+    $request->acceptLanguage = 'corrupti';
+    $request->cacheControl = 'provident';
+    $request->ifNoneMatch = 'distinctio';
+    $request->requestTimeout = 8442.66;
+    $request->userAgent = 'unde';
+    $request->xApplecloudextensionRetryCount = 8579.46;
+    $request->xApplecloudextensionSessionId = 'corrupti';
+
+    $response = $sdk->config->extensionConfiguration($request);
+
+    if ($response->body !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### config
+### [config](docs/config/README.md)
 
-* `extensionConfiguration` - Configuration Resource
+* [extensionConfiguration](docs/config/README.md#extensionconfiguration) - Configuration Resource
 
-### intent
+### [intent](docs/intent/README.md)
 
-* `addMediaIntentHandling` - addMedia
-* `playMediaIntentHandling` - playMedia
-* `updateMediaAffinityIntentHandling` - updateMediaAffinity
+* [addMediaIntentHandling](docs/intent/README.md#addmediaintenthandling) - addMedia
+* [playMediaIntentHandling](docs/intent/README.md#playmediaintenthandling) - playMedia
+* [updateMediaAffinityIntentHandling](docs/intent/README.md#updatemediaaffinityintenthandling) - updateMediaAffinity
 
-### queues
+### [queues](docs/queues/README.md)
 
-* `playMediaOnQueue` - playMedia
-* `updateActivityOnQueue` - updateActivity
+* [playMediaOnQueue](docs/queues/README.md#playmediaonqueue) - playMedia
+* [updateActivityOnQueue](docs/queues/README.md#updateactivityonqueue) - updateActivity
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeTransitGatewaysActionEnum: string
 {
     case DESCRIBE_TRANSIT_GATEWAYS = 'DescribeTransitGateways';

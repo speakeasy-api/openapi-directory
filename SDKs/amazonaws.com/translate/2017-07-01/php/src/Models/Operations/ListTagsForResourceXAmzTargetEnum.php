@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListTagsForResourceXAmzTargetEnum: string
 {
     case AWS_SHINE_FRONTEND_SERVICE20170701_LIST_TAGS_FOR_RESOURCE = 'AWSShineFrontendService_20170701.ListTagsForResource';

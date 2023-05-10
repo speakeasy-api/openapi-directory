@@ -12,7 +12,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class TargetSslProxiesSetCertificateMapRequest
 {
     /**
-     * URL of the Certificate Map to associate with this TargetSslProxy.
+     * URL of the Certificate Map to associate with this TargetSslProxy. Accepted format is //certificatemanager.googleapis.com/projects/{project }/locations/{location}/certificateMaps/{resourceName}.
      * 
      * @var ?string $certificateMap
      */

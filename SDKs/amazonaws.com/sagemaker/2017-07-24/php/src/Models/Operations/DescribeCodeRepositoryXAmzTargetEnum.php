@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeCodeRepositoryXAmzTargetEnum: string
 {
     case SAGE_MAKER_DESCRIBE_CODE_REPOSITORY = 'SageMaker.DescribeCodeRepository';

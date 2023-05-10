@@ -28,4 +28,7 @@ src/Models/Shared/DeliveredEnum.php
 src/Models/Shared/SecurityOption1.php
 src/Models/Shared/SecurityOption2.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/smsconversion/README.md
+docs/voiceconversion/README.md
 USAGE.md

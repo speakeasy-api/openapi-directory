@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteEndpointXAmzTargetEnum: string
 {
     case COMPREHEND20171127_DELETE_ENDPOINT = 'Comprehend_20171127.DeleteEndpoint';

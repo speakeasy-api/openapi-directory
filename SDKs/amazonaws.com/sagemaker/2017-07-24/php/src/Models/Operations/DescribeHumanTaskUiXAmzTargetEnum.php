@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeHumanTaskUiXAmzTargetEnum: string
 {
     case SAGE_MAKER_DESCRIBE_HUMAN_TASK_UI = 'SageMaker.DescribeHumanTaskUi';

@@ -23,10 +23,10 @@ class FraudResult
     /**
      * The result of the individual risk checks.
      * 
-     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\FraudCheckResult> $results
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\FraudCheckResultWrapper> $results
      */
 	#[\JMS\Serializer\Annotation\SerializedName('results')]
-    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\FraudCheckResult>')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\FraudCheckResultWrapper>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $results = null;
     

@@ -113,4 +113,7 @@ src/Models/Shared/GoogleFirebaseAppdistroV1BatchAddTestersRequest.php
 src/Models/Shared/GoogleFirebaseAppdistroV1BatchRemoveTestersResponse.php
 src/Models/Shared/GoogleFirebaseAppdistroV1BatchRemoveTestersRequest.php
 src/Models/Shared/GoogleFirebaseAppdistroV1ListTestersResponse.php
+docs/sdk/README.md
+docs/media/README.md
+docs/projects/README.md
 USAGE.md

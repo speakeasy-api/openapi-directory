@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateChannelXAmzTargetEnum: string
 {
     case COM_AMAZONAWS_CLOUDTRAIL_V20131101_CLOUD_TRAIL20131101_CREATE_CHANNEL = 'com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.CreateChannel';

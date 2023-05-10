@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutAccountConfigurationXAmzTargetEnum: string
 {
     case CERTIFICATE_MANAGER_PUT_ACCOUNT_CONFIGURATION = 'CertificateManager.PutAccountConfiguration';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetAccuracyMetricsXAmzTargetEnum: string
 {
     case AMAZON_FORECAST_GET_ACCURACY_METRICS = 'AmazonForecast.GetAccuracyMetrics';

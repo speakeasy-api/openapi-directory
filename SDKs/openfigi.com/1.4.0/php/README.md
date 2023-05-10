@@ -30,16 +30,42 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\GetMappingValuesKeyRequest;
+use \OpenAPI\OpenAPI\Models\Operations\GetMappingValuesKeyKeyEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetMappingValuesKeyRequest();
+    $request->key = GetMappingValuesKeyKeyEnum::CURRENCY;
+
+    $response = $sdk->getMappingValuesKey($request);
+
+    if ($response->getMappingValuesKey200ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getMappingValuesKey` - Get values for enum-like fields.
-* `postMapping` - Allows mapping from third-party identifiers to FIGIs.
+* [getMappingValuesKey](docs/sdk/README.md#getmappingvalueskey) - Get values for enum-like fields.
+* [postMapping](docs/sdk/README.md#postmapping) - Allows mapping from third-party identifiers to FIGIs.
 <!-- End SDK Available Operations -->
 
 ### Maturity

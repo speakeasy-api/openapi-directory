@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDescribeOrderableDBInstanceOptionsActionEnum: string
 {
     case DESCRIBE_ORDERABLE_DB_INSTANCE_OPTIONS = 'DescribeOrderableDBInstanceOptions';

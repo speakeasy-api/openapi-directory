@@ -23,4 +23,6 @@ src/Models/Operations/GetSearchSecurity.php
 src/Models/Operations/GetSearchRequest.php
 src/Models/Operations/GetSearch200ApplicationJSON.php
 src/Models/Operations/GetSearchResponse.php
+docs/sdk/README.md
+docs/rating/README.md
 USAGE.md

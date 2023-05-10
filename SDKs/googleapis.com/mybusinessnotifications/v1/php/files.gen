@@ -27,4 +27,6 @@ src/Models/Shared/NotificationSettingNotificationTypesEnum.php
 src/Models/Shared/NotificationSetting.php
 src/Models/Shared/AltEnum.php
 src/Models/Shared/XgafvEnum.php
+docs/sdk/README.md
+docs/accounts/README.md
 USAGE.md

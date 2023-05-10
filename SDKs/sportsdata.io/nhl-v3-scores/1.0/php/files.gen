@@ -27,6 +27,9 @@ src/Models/Operations/CurrentSeasonResponse.php
 src/Models/Operations/GamesByDateFormatEnum.php
 src/Models/Operations/GamesByDateRequest.php
 src/Models/Operations/GamesByDateResponse.php
+src/Models/Operations/GamesByDateBasicFormatEnum.php
+src/Models/Operations/GamesByDateBasicRequest.php
+src/Models/Operations/GamesByDateBasicResponse.php
 src/Models/Operations/NewsFormatEnum.php
 src/Models/Operations/NewsRequest.php
 src/Models/Operations/NewsResponse.php
@@ -48,9 +51,15 @@ src/Models/Operations/PlayerDetailsByPlayerResponse.php
 src/Models/Operations/PlayersByTeamFormatEnum.php
 src/Models/Operations/PlayersByTeamRequest.php
 src/Models/Operations/PlayersByTeamResponse.php
+src/Models/Operations/PlayersByTeamBasicFormatEnum.php
+src/Models/Operations/PlayersByTeamBasicRequest.php
+src/Models/Operations/PlayersByTeamBasicResponse.php
 src/Models/Operations/SchedulesFormatEnum.php
 src/Models/Operations/SchedulesRequest.php
 src/Models/Operations/SchedulesResponse.php
+src/Models/Operations/SchedulesBasicFormatEnum.php
+src/Models/Operations/SchedulesBasicRequest.php
+src/Models/Operations/SchedulesBasicResponse.php
 src/Models/Operations/StadiumsFormatEnum.php
 src/Models/Operations/StadiumsRequest.php
 src/Models/Operations/StadiumsResponse.php
@@ -78,8 +87,11 @@ src/Models/Shared/Series.php
 src/Models/Shared/Period.php
 src/Models/Shared/ScoringPlay.php
 src/Models/Shared/Penalty.php
+src/Models/Shared/ScoreBasic.php
 src/Models/Shared/News.php
 src/Models/Shared/Player.php
+src/Models/Shared/PlayerBasic.php
+src/Models/Shared/ScheduleBasic.php
 src/Models/Shared/Stadium.php
 src/Models/Shared/Standing.php
 src/Models/Shared/TeamGame.php
@@ -87,4 +99,5 @@ src/Models/Shared/TeamSeason.php
 src/Models/Shared/OpponentSeason.php
 src/Models/Shared/Team.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

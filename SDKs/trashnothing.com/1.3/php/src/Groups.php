@@ -38,41 +38,6 @@ class Groups
 	}
 	
     /**
-     * Contact group moderators
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\ContactModeratorsRequest $request
-     * @return \OpenAPI\OpenAPI\Models\Operations\ContactModeratorsResponse
-     */
-	public function contactModerators(
-        \OpenAPI\OpenAPI\Models\Operations\ContactModeratorsRequest $request,
-    ): \OpenAPI\OpenAPI\Models\Operations\ContactModeratorsResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/groups/{group_id}/contact', \OpenAPI\OpenAPI\Models\Operations\ContactModeratorsRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "multipart");
-        if ($body === null) {
-            throw new \Exception('Request body is required');
-        }
-        $options = array_merge_recursive($options, $body);
-        
-        $httpResponse = $this->_securityClient->request('POST', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\ContactModeratorsResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200 or $httpResponse->getStatusCode() === 400 or $httpResponse->getStatusCode() === 404) {
-        }
-
-        return $response;
-    }
-	
-    /**
      * Retrieve a group
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetGroupRequest $request
@@ -152,86 +117,6 @@ class Groups
     }
 	
     /**
-     * Join groups
-     * 
-     * Request membership to one or more groups. <br /><br /> NOTE: Any group with a has_questions field set to true will also require answers to the groups' new member questionnaire to be submitted.  Groups waiting for answers will have their membership field set to 'pending-questions'.  And the questionnaire that needs to be answered can be found in the membership.questionnaire field of the group after a subscribe request is made to that group.
-     * 
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\JoinGroupsRequestBody $request
-     * @return \OpenAPI\OpenAPI\Models\Operations\JoinGroupsResponse
-     */
-	public function joinGroups(
-        \OpenAPI\OpenAPI\Models\Operations\JoinGroupsRequestBody $request,
-    ): \OpenAPI\OpenAPI\Models\Operations\JoinGroupsResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/groups/subscribe');
-        
-        $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "multipart");
-        if ($body === null) {
-            throw new \Exception('Request body is required');
-        }
-        $options = array_merge_recursive($options, $body);
-        
-        $httpResponse = $this->_securityClient->request('POST', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\JoinGroupsResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->joinGroups200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\JoinGroups200ApplicationJSON', 'json');
-            }
-        }
-        else if ($httpResponse->getStatusCode() === 400 or $httpResponse->getStatusCode() === 404) {
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Leave a group
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\LeaveGroupRequest $request
-     * @return \OpenAPI\OpenAPI\Models\Operations\LeaveGroupResponse
-     */
-	public function leaveGroup(
-        \OpenAPI\OpenAPI\Models\Operations\LeaveGroupRequest $request,
-    ): \OpenAPI\OpenAPI\Models\Operations\LeaveGroupResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/groups/{group_id}/unsubscribe', \OpenAPI\OpenAPI\Models\Operations\LeaveGroupRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        
-        $httpResponse = $this->_securityClient->request('POST', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\LeaveGroupResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->group = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Group', 'json');
-            }
-        }
-        else if ($httpResponse->getStatusCode() === 400 or $httpResponse->getStatusCode() === 404) {
-        }
-
-        return $response;
-    }
-	
-    /**
      * Search groups
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\SearchGroupsRequest $request
@@ -266,50 +151,6 @@ class Groups
             }
         }
         else if ($httpResponse->getStatusCode() === 400) {
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Submit group answers
-     * 
-     * Submits answers to a groups' membership questionnaire. <br /><br /> The request body should be a JSON object mapping each question from the group membership.questionnaire.questions field to an answer (eg. {"Where do you live?": "New York City"} ). All questions are required so no null or empty string answers are allowed.
-     * 
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\SubmitAnswersRequest $request
-     * @return \OpenAPI\OpenAPI\Models\Operations\SubmitAnswersResponse
-     */
-	public function submitAnswers(
-        \OpenAPI\OpenAPI\Models\Operations\SubmitAnswersRequest $request,
-    ): \OpenAPI\OpenAPI\Models\Operations\SubmitAnswersResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/groups/{group_id}/answers', \OpenAPI\OpenAPI\Models\Operations\SubmitAnswersRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
-        if ($body === null) {
-            throw new \Exception('Request body is required');
-        }
-        $options = array_merge_recursive($options, $body);
-        
-        $httpResponse = $this->_securityClient->request('POST', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\SubmitAnswersResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->group = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Group', 'json');
-            }
-        }
-        else if ($httpResponse->getStatusCode() === 400 or $httpResponse->getStatusCode() === 404) {
         }
 
         return $response;

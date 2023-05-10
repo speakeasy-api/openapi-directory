@@ -29,4 +29,6 @@ src/Models/Shared/AltEnum.php
 src/Models/Shared/BatchGetAmpUrlsRequestLookupStrategyEnum.php
 src/Models/Shared/BatchGetAmpUrlsRequest.php
 src/Models/Shared/XgafvEnum.php
+docs/sdk/README.md
+docs/ampurls/README.md
 USAGE.md

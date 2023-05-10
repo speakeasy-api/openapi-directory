@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartEngagementXAmzTargetEnum: string
 {
     case SSM_CONTACTS_START_ENGAGEMENT = 'SSMContacts.StartEngagement';

@@ -10,13 +10,13 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /** Selects the predefined sequence of SMS and TTS (Text To Speech) actions to use in order to convey the PIN to your user. For example, an id of 1 identifies the workflow SMS - TTS - TTS. For a list of all workflows and their associated ids, please visit the [developer portal](https://developer.nexmo.com/verify/guides/workflows-and-events). */
-enum Psd2RequestWorkflowIdEnum: string
+enum Psd2RequestWorkflowIdEnum: int
 {
-    case ONE = '1';
-    case TWO = '2';
-    case THREE = '3';
-    case FOUR = '4';
-    case FIVE = '5';
-    case SIX = '6';
-    case SEVEN = '7';
+    case ONE = 1;
+    case TWO = 2;
+    case THREE = 3;
+    case FOUR = 4;
+    case FIVE = 5;
+    case SIX = 6;
+    case SEVEN = 7;
 }

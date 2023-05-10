@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum SendCommandXAmzTargetEnum: string
 {
     case AMAZON_SSM_SEND_COMMAND = 'AmazonSSM.SendCommand';

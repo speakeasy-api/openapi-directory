@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class GoogleCloudDatacatalogV1beta1TaxonomyService
 {
     /**
-     * P4SA Identity of the service.
+     * The service agent for the service.
      * 
      * @var ?string $identity
      */

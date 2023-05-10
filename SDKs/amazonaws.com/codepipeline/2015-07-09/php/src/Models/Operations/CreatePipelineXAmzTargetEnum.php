@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreatePipelineXAmzTargetEnum: string
 {
     case CODE_PIPELINE20150709_CREATE_PIPELINE = 'CodePipeline_20150709.CreatePipeline';

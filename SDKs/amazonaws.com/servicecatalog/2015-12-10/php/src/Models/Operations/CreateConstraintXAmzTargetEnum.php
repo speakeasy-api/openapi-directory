@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateConstraintXAmzTargetEnum: string
 {
     case AWS242_SERVICE_CATALOG_SERVICE_CREATE_CONSTRAINT = 'AWS242ServiceCatalogService.CreateConstraint';

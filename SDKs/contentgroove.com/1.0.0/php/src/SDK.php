@@ -135,8 +135,8 @@ namespace OpenAPI\OpenAPI;
 class SDK
 {
 	public const SERVERS = [
-        /** API server */
-		'https://api.contentgroove.com',
+        /** V1 API server */
+		'https://api.contentgroove.com/api/v1',
 	];
   		
 	// SDK private variables namespaced with _ to avoid conflicts with API models
@@ -188,19 +188,179 @@ class SDK
 	}
 	
     /**
-     * delete clip
+     * create clip
      * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1ClipsIdRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1ClipsIdSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1ClipsIdResponse
+     * @param \OpenAPI\OpenAPI\Models\Operations\CreateClipRequestBody $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\CreateClipSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\CreateClipResponse
      */
-	public function deleteApiV1ClipsId(
-        \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1ClipsIdRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1ClipsIdSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1ClipsIdResponse
+	public function createClip(
+        \OpenAPI\OpenAPI\Models\Operations\CreateClipRequestBody $request,
+        \OpenAPI\OpenAPI\Models\Operations\CreateClipSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\CreateClipResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/api/v1/clips/{id}', \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1ClipsIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/clips');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\CreateClipResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->clipResponseObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ClipResponseObject', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 401) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->unauthorizedErrorResponseObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\UnauthorizedErrorResponseObject', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 402) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->paymentRequiredErrorResponseObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\PaymentRequiredErrorResponseObject', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 429) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->tooManyRequestsErrorResponseObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\TooManyRequestsErrorResponseObject', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * create media
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\CreateMediaRequestBody $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\CreateMediaSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\CreateMediaResponse
+     */
+	public function createMedia(
+        \OpenAPI\OpenAPI\Models\Operations\CreateMediaRequestBody $request,
+        \OpenAPI\OpenAPI\Models\Operations\CreateMediaSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\CreateMediaResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/medias');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\CreateMediaResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->mediaResponseObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\MediaResponseObject', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 402) {
+        }
+        else if ($httpResponse->getStatusCode() === 429) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->tooManyRequestsErrorResponseObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\TooManyRequestsErrorResponseObject', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * create webhook subscription
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\CreateWebhookSubscriptionRequestBody $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\CreateWebhookSubscriptionSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\CreateWebhookSubscriptionResponse
+     */
+	public function createWebhookSubscription(
+        \OpenAPI\OpenAPI\Models\Operations\CreateWebhookSubscriptionRequestBody $request,
+        \OpenAPI\OpenAPI\Models\Operations\CreateWebhookSubscriptionSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\CreateWebhookSubscriptionResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/webhook_subscriptions');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\CreateWebhookSubscriptionResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->webhookSubscriptionResponseObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\WebhookSubscriptionResponseObject', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 401) {
+        }
+        else if ($httpResponse->getStatusCode() === 429) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->tooManyRequestsErrorResponseObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\TooManyRequestsErrorResponseObject', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * delete clip
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\DeleteClipByIdRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\DeleteClipByIdSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\DeleteClipByIdResponse
+     */
+	public function deleteClipById(
+        \OpenAPI\OpenAPI\Models\Operations\DeleteClipByIdRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\DeleteClipByIdSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\DeleteClipByIdResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/clips/{id}', \OpenAPI\OpenAPI\Models\Operations\DeleteClipByIdRequest::class, $request);
         
         $options = ['http_errors' => false];
         
@@ -209,7 +369,7 @@ class SDK
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1ClipsIdResponse();
+        $response = new \OpenAPI\OpenAPI\Models\Operations\DeleteClipByIdResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -223,17 +383,17 @@ class SDK
     /**
      * delete media
      * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1MediasIdRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1MediasIdSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1MediasIdResponse
+     * @param \OpenAPI\OpenAPI\Models\Operations\DeleteMediaByIdRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\DeleteMediaByIdSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\DeleteMediaByIdResponse
      */
-	public function deleteApiV1MediasId(
-        \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1MediasIdRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1MediasIdSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1MediasIdResponse
+	public function deleteMediaById(
+        \OpenAPI\OpenAPI\Models\Operations\DeleteMediaByIdRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\DeleteMediaByIdSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\DeleteMediaByIdResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/api/v1/medias/{id}', \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1MediasIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/medias/{id}', \OpenAPI\OpenAPI\Models\Operations\DeleteMediaByIdRequest::class, $request);
         
         $options = ['http_errors' => false];
         
@@ -242,7 +402,7 @@ class SDK
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1MediasIdResponse();
+        $response = new \OpenAPI\OpenAPI\Models\Operations\DeleteMediaByIdResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -256,17 +416,17 @@ class SDK
     /**
      * delete webhook subscription
      * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1WebhookSubscriptionsIdRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1WebhookSubscriptionsIdSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1WebhookSubscriptionsIdResponse
+     * @param \OpenAPI\OpenAPI\Models\Operations\DeleteWebhookSubscriptionByIdRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\DeleteWebhookSubscriptionByIdSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\DeleteWebhookSubscriptionByIdResponse
      */
-	public function deleteApiV1WebhookSubscriptionsId(
-        \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1WebhookSubscriptionsIdRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1WebhookSubscriptionsIdSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1WebhookSubscriptionsIdResponse
+	public function deleteWebhookSubscriptionById(
+        \OpenAPI\OpenAPI\Models\Operations\DeleteWebhookSubscriptionByIdRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\DeleteWebhookSubscriptionByIdSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\DeleteWebhookSubscriptionByIdResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/api/v1/webhook_subscriptions/{id}', \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1WebhookSubscriptionsIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/webhook_subscriptions/{id}', \OpenAPI\OpenAPI\Models\Operations\DeleteWebhookSubscriptionByIdRequest::class, $request);
         
         $options = ['http_errors' => false];
         
@@ -275,7 +435,7 @@ class SDK
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1WebhookSubscriptionsIdResponse();
+        $response = new \OpenAPI\OpenAPI\Models\Operations\DeleteWebhookSubscriptionByIdResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -287,53 +447,19 @@ class SDK
     }
 	
     /**
-     * list clips
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\GetApiV1ClipsRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\GetApiV1ClipsSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\GetApiV1ClipsResponse
-     */
-	public function getApiV1Clips(
-        \OpenAPI\OpenAPI\Models\Operations\GetApiV1ClipsRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\GetApiV1ClipsSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\GetApiV1ClipsResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/api/v1/clips');
-        
-        $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\GetApiV1ClipsRequest::class, $request, null));
-        
-        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\GetApiV1ClipsResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200 or $httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 429) {
-        }
-
-        return $response;
-    }
-	
-    /**
      * show clip
      * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\GetApiV1ClipsIdRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\GetApiV1ClipsIdSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\GetApiV1ClipsIdResponse
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetClipByIdRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetClipByIdSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\GetClipByIdResponse
      */
-	public function getApiV1ClipsId(
-        \OpenAPI\OpenAPI\Models\Operations\GetApiV1ClipsIdRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\GetApiV1ClipsIdSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\GetApiV1ClipsIdResponse
+	public function getClipById(
+        \OpenAPI\OpenAPI\Models\Operations\GetClipByIdRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\GetClipByIdSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\GetClipByIdResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/api/v1/clips/{id}', \OpenAPI\OpenAPI\Models\Operations\GetApiV1ClipsIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/clips/{id}', \OpenAPI\OpenAPI\Models\Operations\GetClipByIdRequest::class, $request);
         
         $options = ['http_errors' => false];
         
@@ -342,74 +468,74 @@ class SDK
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \OpenAPI\OpenAPI\Models\Operations\GetApiV1ClipsIdResponse();
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GetClipByIdResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if ($httpResponse->getStatusCode() === 200 or $httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 404 or $httpResponse->getStatusCode() === 429) {
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->clipResponseObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ClipResponseObject', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 404) {
+        }
+        else if ($httpResponse->getStatusCode() === 429) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->tooManyRequestsErrorResponseObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\TooManyRequestsErrorResponseObject', 'json');
+            }
         }
 
         return $response;
     }
 	
     /**
-     * prepare presigned upload url
+     * list clips
      * 
-     * @return \OpenAPI\OpenAPI\Models\Operations\GetApiV1DirectUploadsResponse
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetClipsRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetClipsSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\GetClipsResponse
      */
-	public function getApiV1DirectUploads(
-    ): \OpenAPI\OpenAPI\Models\Operations\GetApiV1DirectUploadsResponse
+	public function getClips(
+        \OpenAPI\OpenAPI\Models\Operations\GetClipsRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\GetClipsSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\GetClipsResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/api/v1/direct_uploads');
+        $url = Utils\Utils::generateUrl($baseUrl, '/clips');
         
         $options = ['http_errors' => false];
-        
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\GetApiV1DirectUploadsResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200 or $httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 429) {
-        }
-
-        return $response;
-    }
-	
-    /**
-     * list medias
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\GetApiV1MediasRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\GetApiV1MediasSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\GetApiV1MediasResponse
-     */
-	public function getApiV1Medias(
-        \OpenAPI\OpenAPI\Models\Operations\GetApiV1MediasRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\GetApiV1MediasSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\GetApiV1MediasResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/api/v1/medias');
-        
-        $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\GetApiV1MediasRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\GetClipsRequest::class, $request, null));
         
         $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
         $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \OpenAPI\OpenAPI\Models\Operations\GetApiV1MediasResponse();
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GetClipsResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if ($httpResponse->getStatusCode() === 200 or $httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 429) {
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->clipsResponseObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ClipsResponseObject', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 401) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->unauthorizedErrorResponseObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\UnauthorizedErrorResponseObject', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 429) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->tooManyRequestsErrorResponseObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\TooManyRequestsErrorResponseObject', 'json');
+            }
         }
 
         return $response;
@@ -418,17 +544,17 @@ class SDK
     /**
      * show media
      * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\GetApiV1MediasIdRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\GetApiV1MediasIdSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\GetApiV1MediasIdResponse
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetMediaByIdRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetMediaByIdSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\GetMediaByIdResponse
      */
-	public function getApiV1MediasId(
-        \OpenAPI\OpenAPI\Models\Operations\GetApiV1MediasIdRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\GetApiV1MediasIdSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\GetApiV1MediasIdResponse
+	public function getMediaById(
+        \OpenAPI\OpenAPI\Models\Operations\GetMediaByIdRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\GetMediaByIdSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\GetMediaByIdResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/api/v1/medias/{id}', \OpenAPI\OpenAPI\Models\Operations\GetApiV1MediasIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/medias/{id}', \OpenAPI\OpenAPI\Models\Operations\GetMediaByIdRequest::class, $request);
         
         $options = ['http_errors' => false];
         
@@ -437,46 +563,113 @@ class SDK
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \OpenAPI\OpenAPI\Models\Operations\GetApiV1MediasIdResponse();
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GetMediaByIdResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if ($httpResponse->getStatusCode() === 200 or $httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 404 or $httpResponse->getStatusCode() === 429) {
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->mediaResponseObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\MediaResponseObject', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 404) {
+        }
+        else if ($httpResponse->getStatusCode() === 429) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->tooManyRequestsErrorResponseObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\TooManyRequestsErrorResponseObject', 'json');
+            }
         }
 
         return $response;
     }
 	
     /**
-     * list webhook subscriptions
+     * list medias
      * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\GetApiV1WebhookSubscriptionsRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\GetApiV1WebhookSubscriptionsSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\GetApiV1WebhookSubscriptionsResponse
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetMediasRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetMediasSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\GetMediasResponse
      */
-	public function getApiV1WebhookSubscriptions(
-        \OpenAPI\OpenAPI\Models\Operations\GetApiV1WebhookSubscriptionsRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\GetApiV1WebhookSubscriptionsSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\GetApiV1WebhookSubscriptionsResponse
+	public function getMedias(
+        \OpenAPI\OpenAPI\Models\Operations\GetMediasRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\GetMediasSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\GetMediasResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/api/v1/webhook_subscriptions');
+        $url = Utils\Utils::generateUrl($baseUrl, '/medias');
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\GetApiV1WebhookSubscriptionsRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\GetMediasRequest::class, $request, null));
         
         $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
         $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \OpenAPI\OpenAPI\Models\Operations\GetApiV1WebhookSubscriptionsResponse();
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GetMediasResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if ($httpResponse->getStatusCode() === 200 or $httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 429) {
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->mediasResponseObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\MediasResponseObject', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 401) {
+        }
+        else if ($httpResponse->getStatusCode() === 429) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->tooManyRequestsErrorResponseObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\TooManyRequestsErrorResponseObject', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * prepare presigned upload url
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetUploadUrlSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\GetUploadUrlResponse
+     */
+	public function getUploadUrl(
+        \OpenAPI\OpenAPI\Models\Operations\GetUploadUrlSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\GetUploadUrlResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/direct_uploads');
+        
+        $options = ['http_errors' => false];
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GetUploadUrlResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->directUploadResponseObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\DirectUploadResponseObject', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 401) {
+        }
+        else if ($httpResponse->getStatusCode() === 429) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->tooManyRequestsErrorResponseObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\TooManyRequestsErrorResponseObject', 'json');
+            }
         }
 
         return $response;
@@ -485,17 +678,17 @@ class SDK
     /**
      * show webhook subscription
      * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\GetApiV1WebhookSubscriptionsIdRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\GetApiV1WebhookSubscriptionsIdSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\GetApiV1WebhookSubscriptionsIdResponse
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetWebhookSubscriptionByIdRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetWebhookSubscriptionByIdSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\GetWebhookSubscriptionByIdResponse
      */
-	public function getApiV1WebhookSubscriptionsId(
-        \OpenAPI\OpenAPI\Models\Operations\GetApiV1WebhookSubscriptionsIdRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\GetApiV1WebhookSubscriptionsIdSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\GetApiV1WebhookSubscriptionsIdResponse
+	public function getWebhookSubscriptionById(
+        \OpenAPI\OpenAPI\Models\Operations\GetWebhookSubscriptionByIdRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\GetWebhookSubscriptionByIdSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\GetWebhookSubscriptionByIdResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/api/v1/webhook_subscriptions/{id}', \OpenAPI\OpenAPI\Models\Operations\GetApiV1WebhookSubscriptionsIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/webhook_subscriptions/{id}', \OpenAPI\OpenAPI\Models\Operations\GetWebhookSubscriptionByIdRequest::class, $request);
         
         $options = ['http_errors' => false];
         
@@ -504,126 +697,70 @@ class SDK
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \OpenAPI\OpenAPI\Models\Operations\GetApiV1WebhookSubscriptionsIdResponse();
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GetWebhookSubscriptionByIdResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if ($httpResponse->getStatusCode() === 200 or $httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 404 or $httpResponse->getStatusCode() === 429) {
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->webhookSubscriptionResponseObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\WebhookSubscriptionResponseObject', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 404) {
+        }
+        else if ($httpResponse->getStatusCode() === 429) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->tooManyRequestsErrorResponseObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\TooManyRequestsErrorResponseObject', 'json');
+            }
         }
 
         return $response;
     }
 	
     /**
-     * create clip
+     * list webhook subscriptions
      * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\PostApiV1ClipsRequestBody $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\PostApiV1ClipsSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\PostApiV1ClipsResponse
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetWebhookSubscriptionsRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetWebhookSubscriptionsSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\GetWebhookSubscriptionsResponse
      */
-	public function postApiV1Clips(
-        \OpenAPI\OpenAPI\Models\Operations\PostApiV1ClipsRequestBody $request,
-        \OpenAPI\OpenAPI\Models\Operations\PostApiV1ClipsSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\PostApiV1ClipsResponse
+	public function getWebhookSubscriptions(
+        \OpenAPI\OpenAPI\Models\Operations\GetWebhookSubscriptionsRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\GetWebhookSubscriptionsSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\GetWebhookSubscriptionsResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/api/v1/clips');
+        $url = Utils\Utils::generateUrl($baseUrl, '/webhook_subscriptions');
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
-        if ($body === null) {
-            throw new \Exception('Request body is required');
-        }
-        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\GetWebhookSubscriptionsRequest::class, $request, null));
         
         $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \OpenAPI\OpenAPI\Models\Operations\PostApiV1ClipsResponse();
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GetWebhookSubscriptionsResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if ($httpResponse->getStatusCode() === 200 or $httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 402 or $httpResponse->getStatusCode() === 429) {
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->webhookSubscriptionsResponseObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\WebhookSubscriptionsResponseObject', 'json');
+            }
         }
-
-        return $response;
-    }
-	
-    /**
-     * create media
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\PostApiV1MediasRequestBody $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\PostApiV1MediasSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\PostApiV1MediasResponse
-     */
-	public function postApiV1Medias(
-        \OpenAPI\OpenAPI\Models\Operations\PostApiV1MediasRequestBody $request,
-        \OpenAPI\OpenAPI\Models\Operations\PostApiV1MediasSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\PostApiV1MediasResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/api/v1/medias');
-        
-        $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
-        if ($body === null) {
-            throw new \Exception('Request body is required');
+        else if ($httpResponse->getStatusCode() === 401) {
         }
-        $options = array_merge_recursive($options, $body);
-        
-        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\PostApiV1MediasResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200 or $httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 402 or $httpResponse->getStatusCode() === 429) {
-        }
-
-        return $response;
-    }
-	
-    /**
-     * create webhook subscription
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\PostApiV1WebhookSubscriptionsRequestBody $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\PostApiV1WebhookSubscriptionsSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\PostApiV1WebhookSubscriptionsResponse
-     */
-	public function postApiV1WebhookSubscriptions(
-        \OpenAPI\OpenAPI\Models\Operations\PostApiV1WebhookSubscriptionsRequestBody $request,
-        \OpenAPI\OpenAPI\Models\Operations\PostApiV1WebhookSubscriptionsSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\PostApiV1WebhookSubscriptionsResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/api/v1/webhook_subscriptions');
-        
-        $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
-        if ($body === null) {
-            throw new \Exception('Request body is required');
-        }
-        $options = array_merge_recursive($options, $body);
-        
-        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\PostApiV1WebhookSubscriptionsResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200 or $httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 429) {
+        else if ($httpResponse->getStatusCode() === 429) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->tooManyRequestsErrorResponseObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\TooManyRequestsErrorResponseObject', 'json');
+            }
         }
 
         return $response;
@@ -632,17 +769,17 @@ class SDK
     /**
      * update clip
      * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\PutApiV1ClipsIdRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\PutApiV1ClipsIdSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\PutApiV1ClipsIdResponse
+     * @param \OpenAPI\OpenAPI\Models\Operations\UpdateClipByIdRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\UpdateClipByIdSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\UpdateClipByIdResponse
      */
-	public function putApiV1ClipsId(
-        \OpenAPI\OpenAPI\Models\Operations\PutApiV1ClipsIdRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\PutApiV1ClipsIdSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\PutApiV1ClipsIdResponse
+	public function updateClipById(
+        \OpenAPI\OpenAPI\Models\Operations\UpdateClipByIdRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\UpdateClipByIdSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\UpdateClipByIdResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/api/v1/clips/{id}', \OpenAPI\OpenAPI\Models\Operations\PutApiV1ClipsIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/clips/{id}', \OpenAPI\OpenAPI\Models\Operations\UpdateClipByIdRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
@@ -656,12 +793,24 @@ class SDK
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \OpenAPI\OpenAPI\Models\Operations\PutApiV1ClipsIdResponse();
+        $response = new \OpenAPI\OpenAPI\Models\Operations\UpdateClipByIdResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if ($httpResponse->getStatusCode() === 200 or $httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 429) {
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->clipResponseObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ClipResponseObject', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 401) {
+        }
+        else if ($httpResponse->getStatusCode() === 429) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->tooManyRequestsErrorResponseObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\TooManyRequestsErrorResponseObject', 'json');
+            }
         }
 
         return $response;
@@ -670,17 +819,17 @@ class SDK
     /**
      * update media
      * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\PutApiV1MediasIdRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\PutApiV1MediasIdSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\PutApiV1MediasIdResponse
+     * @param \OpenAPI\OpenAPI\Models\Operations\UpdateMediaByIdRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\UpdateMediaByIdSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\UpdateMediaByIdResponse
      */
-	public function putApiV1MediasId(
-        \OpenAPI\OpenAPI\Models\Operations\PutApiV1MediasIdRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\PutApiV1MediasIdSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\PutApiV1MediasIdResponse
+	public function updateMediaById(
+        \OpenAPI\OpenAPI\Models\Operations\UpdateMediaByIdRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\UpdateMediaByIdSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\UpdateMediaByIdResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/api/v1/medias/{id}', \OpenAPI\OpenAPI\Models\Operations\PutApiV1MediasIdRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/medias/{id}', \OpenAPI\OpenAPI\Models\Operations\UpdateMediaByIdRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
@@ -694,12 +843,24 @@ class SDK
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \OpenAPI\OpenAPI\Models\Operations\PutApiV1MediasIdResponse();
+        $response = new \OpenAPI\OpenAPI\Models\Operations\UpdateMediaByIdResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         
-        if ($httpResponse->getStatusCode() === 200 or $httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 429) {
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->mediaResponseObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\MediaResponseObject', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 401) {
+        }
+        else if ($httpResponse->getStatusCode() === 429) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->tooManyRequestsErrorResponseObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\TooManyRequestsErrorResponseObject', 'json');
+            }
         }
 
         return $response;

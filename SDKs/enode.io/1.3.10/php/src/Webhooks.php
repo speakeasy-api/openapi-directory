@@ -42,9 +42,11 @@ class Webhooks
      * 
      * Trigger a test payload to be sent to your configured Firehose Webhook url.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\PostWebhooksFirehoseTestSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\PostWebhooksFirehoseTestResponse
      */
 	public function postWebhooksFirehoseTest(
+        \OpenAPI\OpenAPI\Models\Operations\PostWebhooksFirehoseTestSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\PostWebhooksFirehoseTestResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -52,7 +54,8 @@ class Webhooks
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

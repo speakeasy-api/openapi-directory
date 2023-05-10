@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * Property - <p/>
+ * Property - Represents a single searchable property to search on.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

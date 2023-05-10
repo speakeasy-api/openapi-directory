@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListOrganizationPortfolioAccessXAmzTargetEnum: string
 {
     case AWS242_SERVICE_CATALOG_SERVICE_LIST_ORGANIZATION_PORTFOLIO_ACCESS = 'AWS242ServiceCatalogService.ListOrganizationPortfolioAccess';

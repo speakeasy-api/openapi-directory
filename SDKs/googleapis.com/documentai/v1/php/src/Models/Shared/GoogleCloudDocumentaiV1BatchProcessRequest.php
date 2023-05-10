@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * GoogleCloudDocumentaiV1BatchProcessRequest - Request message for batch process document method.
+ * GoogleCloudDocumentaiV1BatchProcessRequest - Request message for BatchProcessDocuments.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ValidateResourcePolicyXAmzTargetEnum: string
 {
     case SECRETSMANAGER_VALIDATE_RESOURCE_POLICY = 'secretsmanager.ValidateResourcePolicy';

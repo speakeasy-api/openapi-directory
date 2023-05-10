@@ -68,7 +68,7 @@ class DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest
     public ?string $oauthToken = null;
     
     /**
-     * The maximum number of processor versions to return. If unspecified, at most 10 processor versions will be returned. The maximum value is 20; values above 20 will be coerced to 20.
+     * The maximum number of processor versions to return. If unspecified, at most `10` processor versions will be returned. The maximum value is `20`. Values above `20` will be coerced to `20`.
      * 
      * @var ?int $pageSize
      */

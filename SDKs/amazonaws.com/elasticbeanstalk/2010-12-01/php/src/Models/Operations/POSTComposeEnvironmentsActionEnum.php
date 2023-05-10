@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTComposeEnvironmentsActionEnum: string
 {
     case COMPOSE_ENVIRONMENTS = 'ComposeEnvironments';

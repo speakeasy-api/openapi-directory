@@ -148,6 +148,16 @@ class AutomationEntity
     public ?string $path = null;
     
     /**
+     * If trigger type is `daily`, this specifies a day number to run in one of the supported intervals: `week`, `month`, `quarter`, `year`.
+     * 
+     * @var ?int $recurringDay
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('recurring_day')]
+    #[\JMS\Serializer\Annotation\Type('int')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?int $recurringDay = null;
+    
+    /**
      * If trigger is `custom_schedule`, Custom schedule description for when the automation should be run.
      * 
      * @var ?array<string, mixed> $schedule
@@ -252,6 +262,7 @@ class AutomationEntity
 		$this->lastModifiedAt = null;
 		$this->name = null;
 		$this->path = null;
+		$this->recurringDay = null;
 		$this->schedule = null;
 		$this->source = null;
 		$this->syncIds = null;

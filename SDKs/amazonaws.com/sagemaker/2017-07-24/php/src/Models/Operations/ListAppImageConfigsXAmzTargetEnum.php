@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListAppImageConfigsXAmzTargetEnum: string
 {
     case SAGE_MAKER_LIST_APP_IMAGE_CONFIGS = 'SageMaker.ListAppImageConfigs';

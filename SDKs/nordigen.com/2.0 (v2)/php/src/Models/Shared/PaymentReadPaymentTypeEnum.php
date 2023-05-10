@@ -9,7 +9,12 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Shared;
 
 
-/** Payment Type */
+/**
+ * * `single-payment` - payment
+ * 
+ * * `bulk-payment` - bulk-payments
+ * * `periodic-payment` - periodic-payments
+ */
 enum PaymentReadPaymentTypeEnum: string
 {
     case SINGLE_PAYMENT = 'single-payment';

@@ -1109,4 +1109,5 @@ src/Models/Shared/UpdateThingGroupResponse.php
 src/Models/Shared/ValidateSecurityProfileBehaviorsResponse.php
 src/Models/Shared/ValidationError.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AssociateTagOptionWithResourceXAmzTargetEnum: string
 {
     case AWS242_SERVICE_CATALOG_SERVICE_ASSOCIATE_TAG_OPTION_WITH_RESOURCE = 'AWS242ServiceCatalogService.AssociateTagOptionWithResource';

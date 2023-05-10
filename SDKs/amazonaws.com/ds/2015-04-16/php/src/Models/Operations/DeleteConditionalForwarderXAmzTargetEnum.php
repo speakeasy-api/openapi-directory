@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteConditionalForwarderXAmzTargetEnum: string
 {
     case DIRECTORY_SERVICE20150416_DELETE_CONDITIONAL_FORWARDER = 'DirectoryService_20150416.DeleteConditionalForwarder';

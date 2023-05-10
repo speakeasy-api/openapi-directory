@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum QuerySchemaVersionMetadataXAmzTargetEnum: string
 {
     case AWS_GLUE_QUERY_SCHEMA_VERSION_METADATA = 'AWSGlue.QuerySchemaVersionMetadata';

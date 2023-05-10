@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListOperationsXAmzTargetEnum: string
 {
     case APP_RUNNER_LIST_OPERATIONS = 'AppRunner.ListOperations';

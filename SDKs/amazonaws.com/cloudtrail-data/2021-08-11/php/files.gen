@@ -26,4 +26,5 @@ src/Models/Shared/AuditEventResultEntry.php
 src/Models/Shared/ResultErrorEntry.php
 src/Models/Shared/AuditEvent.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

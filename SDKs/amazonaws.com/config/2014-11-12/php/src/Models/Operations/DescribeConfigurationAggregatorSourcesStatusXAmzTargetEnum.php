@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeConfigurationAggregatorSourcesStatusXAmzTargetEnum: string
 {
     case STARLING_DOVE_SERVICE_DESCRIBE_CONFIGURATION_AGGREGATOR_SOURCES_STATUS = 'StarlingDoveService.DescribeConfigurationAggregatorSourcesStatus';

@@ -71,4 +71,5 @@ src/Models/Shared/ListProjectsResponse.php
 src/Models/Shared/ProjectSummary.php
 src/Models/Shared/ListTagsForResourceResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

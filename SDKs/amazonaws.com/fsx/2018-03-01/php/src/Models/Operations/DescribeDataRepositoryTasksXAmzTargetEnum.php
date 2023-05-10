@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeDataRepositoryTasksXAmzTargetEnum: string
 {
     case AWS_SIMBA_API_SERVICE_V20180301_DESCRIBE_DATA_REPOSITORY_TASKS = 'AWSSimbaAPIService_v20180301.DescribeDataRepositoryTasks';

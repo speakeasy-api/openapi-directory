@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateEndpointAccessXAmzTargetEnum: string
 {
     case REDSHIFT_SERVERLESS_UPDATE_ENDPOINT_ACCESS = 'RedshiftServerless.UpdateEndpointAccess';

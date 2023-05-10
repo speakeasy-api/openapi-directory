@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeScalingPoliciesXAmzTargetEnum: string
 {
     case GAME_LIFT_DESCRIBE_SCALING_POLICIES = 'GameLift.DescribeScalingPolicies';

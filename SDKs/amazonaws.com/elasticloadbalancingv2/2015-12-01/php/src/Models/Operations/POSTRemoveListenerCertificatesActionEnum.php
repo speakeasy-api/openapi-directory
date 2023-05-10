@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTRemoveListenerCertificatesActionEnum: string
 {
     case REMOVE_LISTENER_CERTIFICATES = 'RemoveListenerCertificates';

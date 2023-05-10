@@ -18,9 +18,9 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class File
 {
     /**
-     * A collection of arbitrary key-value pairs which are private to the requesting app.
+     * A collection of arbitrary key-value pairs that are private to the requesting app.
      * 
-     * Entries with null values are cleared in update and copy requests. These properties can only be retrieved using an authenticated request. An authenticated request uses an access token obtained with a OAuth 2 client ID. You cannot use an API key to retrieve private properties.
+     * Entries with null values are cleared in update and copy requests. These properties can only be retrieved using an authenticated request. An authenticated request uses an access token obtained with an OAuth 2 client ID. You cannot use an API key to retrieve private properties.
      * 
      * @var ?array<string, string> $appProperties
      */
@@ -30,7 +30,7 @@ class File
     public ?array $appProperties = null;
     
     /**
-     * Capabilities the current user has on this file. Each capability corresponds to a fine-grained action that a user may take.
+     * Capabilities the current user has on this file. Each capability corresponds to a fine-grained action that a user can take.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\FileCapabilities $capabilities
      */
@@ -142,9 +142,9 @@ class File
     public ?string $folderColorRgb = null;
     
     /**
-     * The full file extension extracted from the name field. May contain multiple concatenated extensions, such as "tar.gz". This is only available for files with binary content in Google Drive.
+     * The full file extension extracted from the name field. Can contain multiple concatenated extensions, such as "tar.gz". This is only available for files with binary content in Google Drive.
      * 
-     * This is automatically updated when the name field changes, however it isn't cleared if the new name does not contain a valid extension.
+     * This is automatically updated when the name field changes, however it's not cleared if the new name does not contain a valid extension.
      * 
      * @var ?string $fullFileExtension
      */
@@ -174,7 +174,7 @@ class File
     public ?bool $hasThumbnail = null;
     
     /**
-     * The ID of the file's head revision. This is currently only available for files with binary content in Google Drive.
+     * The ID of the file's head revision. This is only available for files with binary content in Google Drive.
      * 
      * @var ?string $headRevisionId
      */
@@ -214,7 +214,7 @@ class File
     public ?FileImageMediaMetadata $imageMediaMetadata = null;
     
     /**
-     * Whether the file was created or opened by the requesting app.
+     * Whether the requesting app created or opened the file.
      * 
      * @var ?bool $isAppAuthorized
      */
@@ -287,7 +287,7 @@ class File
     public ?string $mimeType = null;
     
     /**
-     * Whether the file has been modified by this user.
+     * Whether this user has modified the file.
      * 
      * @var ?bool $modifiedByMe
      */
@@ -297,7 +297,7 @@ class File
     public ?bool $modifiedByMe = null;
     
     /**
-     * The last time the file was modified by the user (RFC 3339 date-time).
+     * The last time the user modified the file (RFC 3339 date-time).
      * 
      * @var ?\DateTime $modifiedByMeTime
      */
@@ -307,7 +307,7 @@ class File
     public ?\DateTime $modifiedByMeTime = null;
     
     /**
-     * The last time the file was modified by anyone (RFC 3339 date-time).
+     * The last time anyone modified the file (RFC 3339 date-time).
      * 
      * Note that setting modifiedTime will also update modifiedByMeTime for the user.
      * 
@@ -319,7 +319,7 @@ class File
     public ?\DateTime $modifiedTime = null;
     
     /**
-     * The name of the file. This is not necessarily unique within a folder. Note that for immutable items such as the top level folders of shared drives, My Drive root folder, and Application Data folder the name is constant.
+     * The name of the file. This isn't necessarily unique within a folder. Note that for immutable items such as the top-level folders of shared drives, My Drive root folder, and Application Data folder the name is constant.
      * 
      * @var ?string $name
      */
@@ -349,7 +349,7 @@ class File
     public ?bool $ownedByMe = null;
     
     /**
-     * The owner of this file. Only certain legacy files may have more than one owner. This field isn't populated for items in shared drives.
+     * The owner of this file. Only certain legacy files might have more than one owner. This field isn't populated for items in shared drives.
      * 
      * @var ?array<\OpenAPI\OpenAPI\Models\Shared\User> $owners
      */
@@ -359,7 +359,7 @@ class File
     public ?array $owners = null;
     
     /**
-     * The IDs of the parent folders which contain the file.
+     * The IDs of the parent folders that contain the file.
      * 
      * If not specified as part of a create request, the file will be placed directly in the user's My Drive folder. If not specified as part of a copy request, the file will inherit any discoverable parents of the source file. Update requests must use the addParents and removeParents parameters to modify the parents list.
      * 
@@ -391,7 +391,7 @@ class File
     public ?array $permissions = null;
     
     /**
-     * A collection of arbitrary key-value pairs which are visible to all apps.
+     * A collection of arbitrary key-value pairs that are visible to all apps.
      * 
      * Entries with null values are cleared in update and copy requests.
      * 
@@ -423,7 +423,7 @@ class File
     public ?string $resourceKey = null;
     
     /**
-     * The SHA1 checksum associated with this file, if available. This field is only populated for files with content stored in Google Drive; it isn't populated for Docs Editors or shortcut files.
+     * The SHA1 checksum associated with this file, if available. This field is only populated for files with content stored in Google Drive; it's not populated for Docs Editors or shortcut files.
      * 
      * @var ?string $sha1Checksum
      */
@@ -433,7 +433,7 @@ class File
     public ?string $sha1Checksum = null;
     
     /**
-     * The SHA256 checksum associated with this file, if available. This field is only populated for files with content stored in Google Drive; it isn't populated for Docs Editors or shortcut files.
+     * The SHA256 checksum associated with this file, if available. This field is only populated for files with content stored in Google Drive; it's not populated for Docs Editors or shortcut files.
      * 
      * @var ?string $sha256Checksum
      */
@@ -483,7 +483,7 @@ class File
     public ?FileShortcutDetails $shortcutDetails = null;
     
     /**
-     * The size of the file's content in bytes. This field is populated for files with binary content stored in Google Drive and for Docs Editors files; it is not populated for shortcuts or folders.
+     * The size of the file's content in bytes. This field is populated for files with binary content stored in Google Drive and for Docs Editors files; it's not populated for shortcuts or folders.
      * 
      * @var ?string $size
      */
@@ -493,7 +493,7 @@ class File
     public ?string $size = null;
     
     /**
-     * The list of spaces which contain the file. The currently supported values are 'drive', 'appDataFolder' and 'photos'.
+     * The list of spaces that contain the file. The currently supported values are 'drive', 'appDataFolder' and 'photos'.
      * 
      * @var ?array<string> $spaces
      */
@@ -543,7 +543,7 @@ class File
     public ?string $thumbnailVersion = null;
     
     /**
-     * Whether the file has been trashed, either explicitly or from a trashed parent folder. Only the owner may trash a file. The trashed item is excluded from all files.list responses returned for any user who does not own the file. However, all users with access to the file can see the trashed item metadata in an API response. All users with access can copy, download, export, and share the file.
+     * Whether the file has been trashed, either explicitly or from a trashed parent folder. Only the owner can trash a file. The trashed item is excluded from all files.list responses returned for any user who does not own the file. However, all users with access to the file can see the trashed item metadata in an API response. All users with access can copy, download, export, and share the file.
      * 
      * @var ?bool $trashed
      */
@@ -583,7 +583,7 @@ class File
     public ?string $version = null;
     
     /**
-     * Additional metadata about video media. This may not be available immediately upon upload.
+     * Additional metadata about video media. This might not be available immediately upon upload.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\FileVideoMediaMetadata $videoMediaMetadata
      */
@@ -593,7 +593,7 @@ class File
     public ?FileVideoMediaMetadata $videoMediaMetadata = null;
     
     /**
-     * Whether the file has been viewed by this user.
+     * Whether this user has viewed the file.
      * 
      * @var ?bool $viewedByMe
      */
@@ -603,7 +603,7 @@ class File
     public ?bool $viewedByMe = null;
     
     /**
-     * The last time the file was viewed by the user (RFC 3339 date-time).
+     * The last time the user viewed the file (RFC 3339 date-time).
      * 
      * @var ?\DateTime $viewedByMeTime
      */

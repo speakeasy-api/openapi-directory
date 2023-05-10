@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCheckDNSAvailabilityActionEnum: string
 {
     case CHECK_DNS_AVAILABILITY = 'CheckDNSAvailability';

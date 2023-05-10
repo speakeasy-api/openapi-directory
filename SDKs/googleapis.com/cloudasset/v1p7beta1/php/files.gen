@@ -37,4 +37,7 @@ src/Models/Shared/GoogleCloudAssetV1p7beta1GcsDestination.php
 src/Models/Shared/GoogleCloudAssetV1p7beta1BigQueryDestination.php
 src/Models/Shared/GoogleCloudAssetV1p7beta1PartitionSpecPartitionKeyEnum.php
 src/Models/Shared/GoogleCloudAssetV1p7beta1PartitionSpec.php
+docs/sdk/README.md
+docs/operations/README.md
+docs/v1p7beta1/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteBuildXAmzTargetEnum: string
 {
     case GAME_LIFT_DELETE_BUILD = 'GameLift.DeleteBuild';

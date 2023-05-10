@@ -150,4 +150,6 @@ src/Models/Shared/ReconciliationReport.php
 src/Models/Shared/ReconciliationReportValidationIssue.php
 src/Models/Shared/ListReconciliationReportsResponse.php
 src/Models/Shared/ValidateReconciliationReportResponse.php
+docs/sdk/README.md
+docs/accounts/README.md
 USAGE.md

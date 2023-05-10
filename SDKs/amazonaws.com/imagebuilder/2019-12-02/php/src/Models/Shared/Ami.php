@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * Ami -  Details of an Amazon EC2 AMI.
+ * Ami - Details of an Amazon EC2 AMI.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public
@@ -43,7 +43,7 @@ class Ami
     public ?string $region = null;
     
     /**
-     *  Image state shows the image status and the reason for that status.
+     * Image status and the reason for that status.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\ImageState $state
      */

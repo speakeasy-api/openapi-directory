@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTMoveByoipCidrToIpamActionEnum: string
 {
     case MOVE_BYOIP_CIDR_TO_IPAM = 'MoveByoipCidrToIpam';

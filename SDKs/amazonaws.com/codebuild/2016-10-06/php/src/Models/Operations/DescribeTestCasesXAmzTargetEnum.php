@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeTestCasesXAmzTargetEnum: string
 {
     case CODE_BUILD20161006_DESCRIBE_TEST_CASES = 'CodeBuild_20161006.DescribeTestCases';

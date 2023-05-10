@@ -88,7 +88,7 @@ class CreateComponentRequestBody
     public string $semanticVersion;
     
     /**
-     *  The operating system (OS) version supported by the component. If the OS information is available, a prefix match is performed against the base image OS version during image recipe creation.
+     * The operating system (OS) version supported by the component. If the OS information is available, a prefix match is performed against the base image OS version during image recipe creation.
      * 
      * @var ?array<string> $supportedOsVersions
      */

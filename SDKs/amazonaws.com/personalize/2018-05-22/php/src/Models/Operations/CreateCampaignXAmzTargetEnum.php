@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateCampaignXAmzTargetEnum: string
 {
     case AMAZON_PERSONALIZE_CREATE_CAMPAIGN = 'AmazonPersonalize.CreateCampaign';

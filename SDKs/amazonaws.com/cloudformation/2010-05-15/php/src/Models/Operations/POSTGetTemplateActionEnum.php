@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTGetTemplateActionEnum: string
 {
     case GET_TEMPLATE = 'GetTemplate';

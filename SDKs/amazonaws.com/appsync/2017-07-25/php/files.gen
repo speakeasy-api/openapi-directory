@@ -282,4 +282,5 @@ src/Models/Shared/UpdateGraphqlApiResponse.php
 src/Models/Shared/UpdateResolverResponse.php
 src/Models/Shared/UpdateTypeResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

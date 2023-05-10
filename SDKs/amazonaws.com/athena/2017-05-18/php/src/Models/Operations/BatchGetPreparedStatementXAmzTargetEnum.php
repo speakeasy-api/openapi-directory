@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum BatchGetPreparedStatementXAmzTargetEnum: string
 {
     case AMAZON_ATHENA_BATCH_GET_PREPARED_STATEMENT = 'AmazonAthena.BatchGetPreparedStatement';

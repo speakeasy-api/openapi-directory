@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateOrganizationalUnitXAmzTargetEnum: string
 {
     case AWS_ORGANIZATIONS_V20161128_UPDATE_ORGANIZATIONAL_UNIT = 'AWSOrganizationsV20161128.UpdateOrganizationalUnit';

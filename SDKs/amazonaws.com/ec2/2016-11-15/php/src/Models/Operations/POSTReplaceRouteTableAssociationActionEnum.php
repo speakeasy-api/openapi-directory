@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTReplaceRouteTableAssociationActionEnum: string
 {
     case REPLACE_ROUTE_TABLE_ASSOCIATION = 'ReplaceRouteTableAssociation';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTModifyInstanceCreditSpecificationActionEnum: string
 {
     case MODIFY_INSTANCE_CREDIT_SPECIFICATION = 'ModifyInstanceCreditSpecification';

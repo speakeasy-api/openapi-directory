@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateResourceDataSyncXAmzTargetEnum: string
 {
     case AMAZON_SSM_CREATE_RESOURCE_DATA_SYNC = 'AmazonSSM.CreateResourceDataSync';

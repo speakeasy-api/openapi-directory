@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteProjectXAmzTargetEnum: string
 {
     case CODE_STAR20170419_DELETE_PROJECT = 'CodeStar_20170419.DeleteProject';

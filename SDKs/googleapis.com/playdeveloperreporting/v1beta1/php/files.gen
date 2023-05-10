@@ -62,4 +62,7 @@ src/Models/Shared/GooglePlayDeveloperReportingV1beta1MetricsRowAggregationPeriod
 src/Models/Shared/GooglePlayDeveloperReportingV1beta1MetricsRow.php
 src/Models/Shared/GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetRequestUserCohortEnum.php
 src/Models/Shared/GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetRequest.php
+docs/sdk/README.md
+docs/anomalies/README.md
+docs/vitals/README.md
 USAGE.md

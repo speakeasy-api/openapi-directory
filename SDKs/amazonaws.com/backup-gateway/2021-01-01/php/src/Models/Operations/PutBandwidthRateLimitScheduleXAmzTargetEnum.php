@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutBandwidthRateLimitScheduleXAmzTargetEnum: string
 {
     case BACKUP_ON_PREMISES_V20210101_PUT_BANDWIDTH_RATE_LIMIT_SCHEDULE = 'BackupOnPremises_v20210101.PutBandwidthRateLimitSchedule';

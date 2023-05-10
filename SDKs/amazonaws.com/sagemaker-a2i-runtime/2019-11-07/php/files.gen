@@ -41,4 +41,5 @@ src/Models/Shared/HumanLoopSummary.php
 src/Models/Shared/StartHumanLoopResponse.php
 src/Models/Shared/ContentClassifierEnum.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

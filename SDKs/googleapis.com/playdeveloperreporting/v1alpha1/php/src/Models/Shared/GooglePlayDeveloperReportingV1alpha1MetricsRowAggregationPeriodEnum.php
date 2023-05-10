@@ -15,4 +15,5 @@ enum GooglePlayDeveloperReportingV1alpha1MetricsRowAggregationPeriodEnum: string
     case AGGREGATION_PERIOD_UNSPECIFIED = 'AGGREGATION_PERIOD_UNSPECIFIED';
     case HOURLY = 'HOURLY';
     case DAILY = 'DAILY';
+    case FULL_RANGE = 'FULL_RANGE';
 }

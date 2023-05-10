@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UntagResourceXAmzTargetEnum: string
 {
     case NETWORK_FIREWALL20201112_UNTAG_RESOURCE = 'NetworkFirewall_20201112.UntagResource';

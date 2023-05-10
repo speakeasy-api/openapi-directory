@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteBatchPredictionXAmzTargetEnum: string
 {
     case AMAZON_ML20141212_DELETE_BATCH_PREDICTION = 'AmazonML_20141212.DeleteBatchPrediction';

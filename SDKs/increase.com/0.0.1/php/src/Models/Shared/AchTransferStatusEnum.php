@@ -14,6 +14,7 @@ enum AchTransferStatusEnum: string
 {
     case PENDING_APPROVAL = 'pending_approval';
     case CANCELED = 'canceled';
+    case PENDING_REVIEWING = 'pending_reviewing';
     case PENDING_SUBMISSION = 'pending_submission';
     case SUBMITTED = 'submitted';
     case RETURNED = 'returned';

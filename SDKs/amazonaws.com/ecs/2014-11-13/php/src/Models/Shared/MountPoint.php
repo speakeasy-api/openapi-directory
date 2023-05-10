@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * MountPoint - Details for a volume mount point that's used in a container definition.
+ * MountPoint - The details for a volume mount point that's used in a container definition.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

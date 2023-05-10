@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeletePermissionPolicyXAmzTargetEnum: string
 {
     case AWSWAF_REGIONAL20161128_DELETE_PERMISSION_POLICY = 'AWSWAF_Regional_20161128.DeletePermissionPolicy';

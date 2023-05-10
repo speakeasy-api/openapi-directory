@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * GoogleCloudDialogflowCxV3beta1TextToSpeechSettings - Settings related to speech generating.
+ * GoogleCloudDialogflowCxV3beta1TextToSpeechSettings - Settings related to speech synthesizing.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public
@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class GoogleCloudDialogflowCxV3beta1TextToSpeechSettings
 {
     /**
-     * Configuration of how speech should be synthesized, mapping from language (https://dialogflow.com/docs/reference/language) to SynthesizeSpeechConfig.
+     * Configuration of how speech should be synthesized, mapping from language (https://cloud.google.com/dialogflow/cx/docs/reference/language) to SynthesizeSpeechConfig. These settings affect: - The synthesize configuration used in [phone gateway](https://cloud.google.com/dialogflow/cx/docs/concept/integration/phone-gateway). - You no longer need to specify OutputAudioConfig.synthesize_speech_config when invoking API calls. Your agent will use the pre-configured options for speech synthesizing.
      * 
      * @var ?array<string, \OpenAPI\OpenAPI\Models\Shared\GoogleCloudDialogflowCxV3beta1SynthesizeSpeechConfig> $synthesizeSpeechConfigs
      */

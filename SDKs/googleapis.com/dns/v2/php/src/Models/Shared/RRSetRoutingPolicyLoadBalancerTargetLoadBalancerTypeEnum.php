@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Shared;
 
 
+/** The type of Load Balancer specified by this target. Must match the configuration of the Load Balancer located at the LoadBalancerTarget's IP address/port and region. */
 enum RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum: string
 {
     case NONE = 'NONE';

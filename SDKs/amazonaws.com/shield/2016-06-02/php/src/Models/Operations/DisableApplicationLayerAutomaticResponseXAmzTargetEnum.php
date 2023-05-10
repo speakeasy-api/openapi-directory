@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DisableApplicationLayerAutomaticResponseXAmzTargetEnum: string
 {
     case AWS_SHIELD20160616_DISABLE_APPLICATION_LAYER_AUTOMATIC_RESPONSE = 'AWSShield_20160616.DisableApplicationLayerAutomaticResponse';

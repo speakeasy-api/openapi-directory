@@ -21,4 +21,5 @@ src/Utils/Utils.php
 src/Models/Operations/GetV1ValidationSingleFormatEnum.php
 src/Models/Operations/GetV1ValidationSingleRequest.php
 src/Models/Operations/GetV1ValidationSingleResponse.php
+docs/sdk/README.md
 USAGE.md

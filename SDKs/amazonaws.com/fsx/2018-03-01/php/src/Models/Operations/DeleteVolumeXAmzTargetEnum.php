@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteVolumeXAmzTargetEnum: string
 {
     case AWS_SIMBA_API_SERVICE_V20180301_DELETE_VOLUME = 'AWSSimbaAPIService_v20180301.DeleteVolume';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTRestoreAddressToClassicActionEnum: string
 {
     case RESTORE_ADDRESS_TO_CLASSIC = 'RestoreAddressToClassic';

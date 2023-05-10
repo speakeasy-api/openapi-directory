@@ -27,6 +27,11 @@ class OnDeviceServiceConfiguration
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?NFSOnDeviceServiceConfiguration $nfsOnDeviceService = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('S3OnDeviceService')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\S3OnDeviceServiceConfiguration')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?S3OnDeviceServiceConfiguration $s3OnDeviceService = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('TGWOnDeviceService')]
     #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\TGWOnDeviceServiceConfiguration')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -36,6 +41,7 @@ class OnDeviceServiceConfiguration
 	{
 		$this->eksOnDeviceService = null;
 		$this->nfsOnDeviceService = null;
+		$this->s3OnDeviceService = null;
 		$this->tgwOnDeviceService = null;
 	}
 }

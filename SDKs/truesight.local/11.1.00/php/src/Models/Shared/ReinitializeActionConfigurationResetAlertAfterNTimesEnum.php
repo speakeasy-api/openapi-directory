@@ -10,8 +10,8 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /** When set to <em>1</em>, resets the number of times thresholds can be breached before triggering an alert to their default values (1 time) for numeric, discrete, connector status and present parameters. */
-enum ReinitializeActionConfigurationResetAlertAfterNTimesEnum: string
+enum ReinitializeActionConfigurationResetAlertAfterNTimesEnum: int
 {
-    case ZERO = '0';
-    case ONE = '1';
+    case ZERO = 0;
+    case ONE = 1;
 }

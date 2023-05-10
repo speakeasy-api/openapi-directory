@@ -28,7 +28,7 @@ class GoogleAppsCardV1ImageComponent
     public ?string $altText = null;
     
     /**
-     * Represents the complete border style applied to items in a widget.
+     * The style options for the border of a card or widget, including the border type and color.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAppsCardV1BorderStyle $borderStyle
      */

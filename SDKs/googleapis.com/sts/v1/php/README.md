@@ -30,18 +30,58 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\StsIntrospectRequest;
+use \OpenAPI\OpenAPI\Models\Shared\XgafvEnum;
+use \OpenAPI\OpenAPI\Models\Shared\GoogleIdentityStsV1IntrospectTokenRequest;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new StsIntrospectRequest();
+    $request->dollarXgafv = XgafvEnum::TWO;
+    $request->googleIdentityStsV1IntrospectTokenRequest = new GoogleIdentityStsV1IntrospectTokenRequest();
+    $request->googleIdentityStsV1IntrospectTokenRequest->token = 'provident';
+    $request->googleIdentityStsV1IntrospectTokenRequest->tokenTypeHint = 'distinctio';
+    $request->accessToken = 'quibusdam';
+    $request->alt = AltEnum::MEDIA;
+    $request->callback = 'nulla';
+    $request->fields = 'corrupti';
+    $request->key = 'illum';
+    $request->oauthToken = 'vel';
+    $request->prettyPrint = false;
+    $request->quotaUser = 'error';
+    $request->uploadType = 'deserunt';
+    $request->uploadProtocol = 'suscipit';
+
+    $response = $sdk->v1->stsIntrospect($request);
+
+    if ($response->googleIdentityStsV1IntrospectTokenResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### v1
+### [v1](docs/v1/README.md)
 
-* `stsIntrospect` - Gets information about a Google OAuth 2.0 access token issued by the Google Cloud [Security Token Service API](https://cloud.google.com/iam/docs/reference/sts/rest).
-* `stsOauthtoken` - Exchanges a credential that represents the resource owner's authorization for a Google-generated [OAuth 2.0 access token] (https://www.rfc-editor.org/rfc/rfc6749#section-5) or [refreshes an accesstoken] (https://www.rfc-editor.org/rfc/rfc6749#section-6) following [the OAuth 2.0 authorization framework] (https://tools.ietf.org/html/rfc8693) The credential can be one of the following: - An authorization code issued by the workforce identity federation authorization endpoint - A [refresh token](https://www.rfc-editor.org/rfc/rfc6749#section-10.4) issued by this endpoint This endpoint is only meant to be called by the Google Cloud CLI. Also note that this API only accepts the authorization code issued for workforce pools.
-* `stsToken` - Exchanges a credential for a Google OAuth 2.0 access token. The token asserts an external identity within an identity pool, or it applies a Credential Access Boundary to a Google access token. Note that workforce pools do not support Credential Access Boundaries. When you call this method, do not send the `Authorization` HTTP header in the request. This method does not require the `Authorization` header, and using the header can cause the request to fail.
+* [stsIntrospect](docs/v1/README.md#stsintrospect) - Gets information about a Google OAuth 2.0 access token issued by the Google Cloud [Security Token Service API](https://cloud.google.com/iam/docs/reference/sts/rest).
+* [stsOauthtoken](docs/v1/README.md#stsoauthtoken) - Exchanges a credential that represents the resource owner's authorization for a Google-generated [OAuth 2.0 access token] (https://www.rfc-editor.org/rfc/rfc6749#section-5) or [refreshes an accesstoken] (https://www.rfc-editor.org/rfc/rfc6749#section-6) following [the OAuth 2.0 authorization framework] (https://tools.ietf.org/html/rfc8693) The credential can be one of the following: - An authorization code issued by the workforce identity federation authorization endpoint - A [refresh token](https://www.rfc-editor.org/rfc/rfc6749#section-10.4) issued by this endpoint This endpoint is only meant to be called by the Google Cloud CLI. Also note that this API only accepts the authorization code issued for workforce pools.
+* [stsToken](docs/v1/README.md#ststoken) - Exchanges a credential for a Google OAuth 2.0 access token. The token asserts an external identity within an identity pool, or it applies a Credential Access Boundary to a Google access token. Note that workforce pools do not support Credential Access Boundaries. When you call this method, do not send the `Authorization` HTTP header in the request. This method does not require the `Authorization` header, and using the header can cause the request to fail.
 <!-- End SDK Available Operations -->
 
 ### Maturity

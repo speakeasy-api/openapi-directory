@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopAppReplicationXAmzTargetEnum: string
 {
     case AWS_SERVER_MIGRATION_SERVICE_V20161024_STOP_APP_REPLICATION = 'AWSServerMigrationService_V2016_10_24.StopAppReplication';

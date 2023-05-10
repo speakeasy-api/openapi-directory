@@ -60,10 +60,10 @@ class CreateAccountHolderResponse
     /**
      * A list of fields that caused the `/createAccountHolder` request to fail.
      * 
-     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\ErrorFieldType> $invalidFields
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\ErrorFieldTypeWrapper> $invalidFields
      */
 	#[\JMS\Serializer\Annotation\SerializedName('invalidFields')]
-    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\ErrorFieldType>')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\ErrorFieldTypeWrapper>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $invalidFields = null;
     

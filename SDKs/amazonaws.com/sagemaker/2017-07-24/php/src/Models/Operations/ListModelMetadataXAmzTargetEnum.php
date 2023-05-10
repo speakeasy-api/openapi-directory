@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListModelMetadataXAmzTargetEnum: string
 {
     case SAGE_MAKER_LIST_MODEL_METADATA = 'SageMaker.ListModelMetadata';

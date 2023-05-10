@@ -32,4 +32,9 @@ src/Models/Operations/AllStatsExampleParametersRequest.php
 src/Models/Operations/AllStatsExampleParametersResponse.php
 src/Models/Operations/AllTeamsResponse.php
 src/Models/Operations/SpecificTeamResponse.php
+docs/sdk/README.md
+docs/games/README.md
+docs/players/README.md
+docs/stats/README.md
+docs/teams/README.md
 USAGE.md

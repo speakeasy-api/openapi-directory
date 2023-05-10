@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDescribeValidDBInstanceModificationsActionEnum: string
 {
     case DESCRIBE_VALID_DB_INSTANCE_MODIFICATIONS = 'DescribeValidDBInstanceModifications';

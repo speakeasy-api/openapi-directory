@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-/** Specifies that you want to retrieve only associations with this status. */
+/** Specifies that you want to retrieve only associations that have this status. */
 enum GetResourceShareAssociationsRequestBodyAssociationStatusEnum: string
 {
     case ASSOCIATING = 'ASSOCIATING';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETAssignIpv6AddressesActionEnum: string
 {
     case ASSIGN_IPV6_ADDRESSES = 'AssignIpv6Addresses';

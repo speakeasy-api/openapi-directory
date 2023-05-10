@@ -12,23 +12,18 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 class OrderApiCreateInvoiceResponse
 {
 	
+    public ?string $body = null;
+    
+	
     public string $contentType;
     
     /**
      * OK
      * 
-     * @var ?array<string, mixed> $orderApiCreateInvoice200ApplicationJSONObject
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\RechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiInvoice $rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiInvoice
      */
 	
-    public ?array $orderApiCreateInvoice200ApplicationJSONObject = null;
-    
-    /**
-     * OK
-     * 
-     * @var ?array<string, mixed> $orderApiCreateInvoice200TextJSONObject
-     */
-	
-    public ?array $orderApiCreateInvoice200TextJSONObject = null;
+    public ?\OpenAPI\OpenAPI\Models\Shared\RechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiInvoice $rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiInvoice = null;
     
 	
     public int $statusCode;
@@ -38,9 +33,9 @@ class OrderApiCreateInvoiceResponse
     
 	public function __construct()
 	{
+		$this->body = null;
 		$this->contentType = "";
-		$this->orderApiCreateInvoice200ApplicationJSONObject = null;
-		$this->orderApiCreateInvoice200TextJSONObject = null;
+		$this->rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiInvoice = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
 	}

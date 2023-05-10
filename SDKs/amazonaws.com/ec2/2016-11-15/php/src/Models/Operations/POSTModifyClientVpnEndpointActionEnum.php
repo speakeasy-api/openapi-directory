@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTModifyClientVpnEndpointActionEnum: string
 {
     case MODIFY_CLIENT_VPN_ENDPOINT = 'ModifyClientVpnEndpoint';

@@ -68,6 +68,7 @@ src/Models/Shared/GoogleRpcStatus.php
 src/Models/Shared/MembershipInfrastructureTypeEnum.php
 src/Models/Shared/MembershipInput.php
 src/Models/Shared/Membership.php
+src/Models/Shared/MonitoringConfig.php
 src/Models/Shared/MembershipEndpointInput.php
 src/Models/Shared/MembershipEndpoint.php
 src/Models/Shared/OnPremClusterClusterTypeEnum.php
@@ -102,4 +103,6 @@ src/Models/Shared/SetIamPolicyRequest.php
 src/Models/Shared/TestIamPermissionsResponse.php
 src/Models/Shared/TestIamPermissionsRequest.php
 src/Models/Shared/ListOperationsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

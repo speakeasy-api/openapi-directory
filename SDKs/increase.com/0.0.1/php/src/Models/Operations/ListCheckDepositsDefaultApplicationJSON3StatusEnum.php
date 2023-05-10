@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-enum ListCheckDepositsDefaultApplicationJSON3StatusEnum: string
+enum ListCheckDepositsDefaultApplicationJSON3StatusEnum: int
 {
-    case FOUR_HUNDRED_AND_NINE = '409';
+    case FOUR_HUNDRED_AND_NINE = 409;
 }

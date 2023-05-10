@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateServicePipelineXAmzTargetEnum: string
 {
     case AWS_PROTON20200720_UPDATE_SERVICE_PIPELINE = 'AwsProton20200720.UpdateServicePipeline';

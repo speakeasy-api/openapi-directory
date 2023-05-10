@@ -693,11 +693,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DescribeJobFlowsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DescribeJobFlowsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function describeJobFlows(
         \OpenAPI\OpenAPI\Models\Operations\DescribeJobFlowsRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DescribeJobFlowsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=ElasticMapReduce.DescribeJobFlows');
         

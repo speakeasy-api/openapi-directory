@@ -167,6 +167,82 @@ class SDK
     }
 	
     /**
+     * Creates a new Launch Configuration Template.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\CreateLaunchConfigurationTemplateRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\CreateLaunchConfigurationTemplateResponse
+     */
+	public function createLaunchConfigurationTemplate(
+        \OpenAPI\OpenAPI\Models\Operations\CreateLaunchConfigurationTemplateRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\CreateLaunchConfigurationTemplateResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/CreateLaunchConfigurationTemplate');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\CreateLaunchConfigurationTemplateResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 201) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->createLaunchConfigurationTemplateResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\CreateLaunchConfigurationTemplateResponse', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 480) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->internalServerException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 481) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->serviceQuotaExceededException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 482) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->throttlingException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 483) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->accessDeniedException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 484) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->validationException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 485) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->uninitializedAccountException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Creates a new ReplicationConfigurationTemplate.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\CreateReplicationConfigurationTemplateRequest $request
@@ -276,6 +352,76 @@ class SDK
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->deleteJobResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 480) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->resourceNotFoundException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 481) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->internalServerException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 482) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->conflictException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 483) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->throttlingException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 484) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->uninitializedAccountException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Deletes a single Launch Configuration Template by ID.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\DeleteLaunchConfigurationTemplateRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\DeleteLaunchConfigurationTemplateResponse
+     */
+	public function deleteLaunchConfigurationTemplate(
+        \OpenAPI\OpenAPI\Models\Operations\DeleteLaunchConfigurationTemplateRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\DeleteLaunchConfigurationTemplateResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/DeleteLaunchConfigurationTemplate');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\DeleteLaunchConfigurationTemplateResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 204) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->deleteLaunchConfigurationTemplateResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 480) {
@@ -639,6 +785,77 @@ class SDK
             }
         }
         else if ($httpResponse->getStatusCode() === 483) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->uninitializedAccountException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Lists all Launch Configuration Templates, filtered by Launch Configuration Template IDs
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\DescribeLaunchConfigurationTemplatesRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\DescribeLaunchConfigurationTemplatesResponse
+     */
+	public function describeLaunchConfigurationTemplates(
+        \OpenAPI\OpenAPI\Models\Operations\DescribeLaunchConfigurationTemplatesRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\DescribeLaunchConfigurationTemplatesResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/DescribeLaunchConfigurationTemplates');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\DescribeLaunchConfigurationTemplatesRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\DescribeLaunchConfigurationTemplatesResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->describeLaunchConfigurationTemplatesResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\DescribeLaunchConfigurationTemplatesResponse', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 480) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->resourceNotFoundException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 481) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->internalServerException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 482) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->throttlingException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 483) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->validationException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 484) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->uninitializedAccountException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
@@ -1522,15 +1739,18 @@ class SDK
     }
 	
     /**
-     * Causes the data replication initiation sequence to begin immediately upon next Handshake for the specified Source Server ID, regardless of when the previous initiation started. This command will work only if the Source Server is stalled or is in a DISCONNECTED or STOPPED state.
+     * WARNING: RetryDataReplication is deprecated. Causes the data replication initiation sequence to begin immediately upon next Handshake for the specified Source Server ID, regardless of when the previous initiation started. This command will work only if the Source Server is stalled or is in a DISCONNECTED or STOPPED state. 
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\RetryDataReplicationRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\RetryDataReplicationResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function retryDataReplication(
         \OpenAPI\OpenAPI\Models\Operations\RetryDataReplicationRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\RetryDataReplicationResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/RetryDataReplication');
         
@@ -2341,6 +2561,82 @@ class SDK
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->throttlingException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 484) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->validationException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 485) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->uninitializedAccountException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Updates an existing Launch Configuration Template by ID.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\UpdateLaunchConfigurationTemplateRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\UpdateLaunchConfigurationTemplateResponse
+     */
+	public function updateLaunchConfigurationTemplate(
+        \OpenAPI\OpenAPI\Models\Operations\UpdateLaunchConfigurationTemplateRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\UpdateLaunchConfigurationTemplateResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/UpdateLaunchConfigurationTemplate');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\UpdateLaunchConfigurationTemplateResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->updateLaunchConfigurationTemplateResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\UpdateLaunchConfigurationTemplateResponse', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 480) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->resourceNotFoundException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 481) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->internalServerException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 482) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->throttlingException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 483) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->accessDeniedException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 484) {

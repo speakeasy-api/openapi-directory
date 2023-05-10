@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeReturnShippingLabelXAmzTargetEnum: string
 {
     case AWSIE_SNOWBALL_JOB_MANAGEMENT_SERVICE_DESCRIBE_RETURN_SHIPPING_LABEL = 'AWSIESnowballJobManagementService.DescribeReturnShippingLabel';

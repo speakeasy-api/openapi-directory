@@ -37,4 +37,6 @@ src/Models/Shared/AccountActivity.php
 src/Models/Shared/AltEnum.php
 src/Models/Shared/DecodeIntegrityTokenRequest.php
 src/Models/Shared/XgafvEnum.php
+docs/sdk/README.md
+docs/v1/README.md
 USAGE.md

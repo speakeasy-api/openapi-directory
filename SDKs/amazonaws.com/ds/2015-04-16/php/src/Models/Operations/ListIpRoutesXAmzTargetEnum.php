@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListIpRoutesXAmzTargetEnum: string
 {
     case DIRECTORY_SERVICE20150416_LIST_IP_ROUTES = 'DirectoryService_20150416.ListIpRoutes';

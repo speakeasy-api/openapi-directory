@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETSetSecurityTokenServicePreferencesActionEnum: string
 {
     case SET_SECURITY_TOKEN_SERVICE_PREFERENCES = 'SetSecurityTokenServicePreferences';

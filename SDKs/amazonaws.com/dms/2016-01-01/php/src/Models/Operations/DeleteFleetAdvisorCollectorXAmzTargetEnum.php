@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteFleetAdvisorCollectorXAmzTargetEnum: string
 {
     case AMAZON_DM_SV20160101_DELETE_FLEET_ADVISOR_COLLECTOR = 'AmazonDMSv20160101.DeleteFleetAdvisorCollector';

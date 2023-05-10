@@ -30,21 +30,50 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\CashinRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new CashinRequest();
+    $request->apiKey = 'corrupti';
+    $request->apiSecret = 'provident';
+    $request->apiTicket = 'distinctio';
+    $request->betId = 'quibusdam';
+    $request->cashInValue = 6027.63;
+    $request->cashinBetDelayId = 'nulla';
+
+    $response = $sdk->bets->cashin($request);
+
+    if ($response->cashInResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### bets
+### [bets](docs/bets/README.md)
 
-* `cashin` - Allows a trusted application to cash in a bet (take a return on a bet) on behalf of the customer
-* `getBetHistory` - Retrieves the customer’s bet history.
-* `getFreeBets` - Returns available free bets
-* `placeComplexBet` - Places a multiple or a complex bet.
-* `placeSingleBet` - Places a single bet
-* `validateBetslip` - Organises the betslip when one or more selections are made. It returns a bet slip structure organised by betting opportunities.
+* [cashin](docs/bets/README.md#cashin) - Allows a trusted application to cash in a bet (take a return on a bet) on behalf of the customer
+* [getBetHistory](docs/bets/README.md#getbethistory) - Retrieves the customer’s bet history.
+* [getFreeBets](docs/bets/README.md#getfreebets) - Returns available free bets
+* [placeComplexBet](docs/bets/README.md#placecomplexbet) - Places a multiple or a complex bet.
+* [placeSingleBet](docs/bets/README.md#placesinglebet) - Places a single bet
+* [validateBetslip](docs/bets/README.md#validatebetslip) - Organises the betslip when one or more selections are made. It returns a bet slip structure organised by betting opportunities.
 <!-- End SDK Available Operations -->
 
 ### Maturity

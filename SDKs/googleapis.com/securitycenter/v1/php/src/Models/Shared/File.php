@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class File
 {
     /**
-     * Prefix of the file contents as a JSON encoded string. (Currently only populated for Malicious Script Executed findings.)
+     * Prefix of the file contents as a JSON-encoded string.
      * 
      * @var ?string $contents
      */

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteDeploymentConfigXAmzTargetEnum: string
 {
     case CODE_DEPLOY20141006_DELETE_DEPLOYMENT_CONFIG = 'CodeDeploy_20141006.DeleteDeploymentConfig';

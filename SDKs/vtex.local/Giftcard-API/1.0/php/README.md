@@ -30,29 +30,66 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\CreateGiftCardRequest;
+use \OpenAPI\OpenAPI\Models\Shared\CreateGiftCardRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new CreateGiftCardRequest();
+    $request->accept = 'corrupti';
+    $request->contentType = 'provident';
+    $request->createGiftCardRequest = new CreateGiftCardRequest();
+    $request->createGiftCardRequest->caption = 'rewards program';
+    $request->createGiftCardRequest->expiringDate = '2020-09-01T13:15:30Z';
+    $request->createGiftCardRequest->multipleCredits = false;
+    $request->createGiftCardRequest->multipleRedemptions = false;
+    $request->createGiftCardRequest->profileId = '1234';
+    $request->createGiftCardRequest->relationName = 'insert example here';
+    $request->createGiftCardRequest->restrictedToOwner = false;
+    $request->xVTEXAPIAppKey = 'distinctio';
+    $request->xVTEXAPIAppToken = 'quibusdam';
+
+    $response = $sdk->giftCard->createGiftCard($request);
+
+    if ($response->response !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### giftCard
+### [giftCard](docs/giftcard/README.md)
 
-* `createGiftCard` - Create GiftCard
-* `getGiftCardbyID` - Get GiftCard by ID
-* `getGiftCardusingJSON` - Get GiftCard using JSON
+* [createGiftCard](docs/giftcard/README.md#creategiftcard) - Create GiftCard
+* [getGiftCardbyID](docs/giftcard/README.md#getgiftcardbyid) - Get GiftCard by ID
+* [getGiftCardusingJSON](docs/giftcard/README.md#getgiftcardusingjson) - Get GiftCard using JSON
 
-### transaction
+### [transaction](docs/transaction/README.md)
 
-* `cancelGiftCardTransaction` - Cancel GiftCard Transaction
-* `createGiftCardTransaction` - Create GiftCard Transaction
-* `getGiftCardTransactionbyID` - Get GiftCard Transaction by ID
-* `getGiftCardTransactions` - Get GiftCard Transactions
-* `getTransactionAuthorizations` - Get Transaction Authorizations
-* `getTransactionCancellations` - Get Transaction Cancellations
-* `getTransactionSettlements` - Get Transaction Settlements
-* `settleGiftCardTransaction` - Settle GiftCard Transaction
+* [cancelGiftCardTransaction](docs/transaction/README.md#cancelgiftcardtransaction) - Cancel GiftCard Transaction
+* [createGiftCardTransaction](docs/transaction/README.md#creategiftcardtransaction) - Create GiftCard Transaction
+* [getGiftCardTransactionbyID](docs/transaction/README.md#getgiftcardtransactionbyid) - Get GiftCard Transaction by ID
+* [getGiftCardTransactions](docs/transaction/README.md#getgiftcardtransactions) - Get GiftCard Transactions
+* [getTransactionAuthorizations](docs/transaction/README.md#gettransactionauthorizations) - Get Transaction Authorizations
+* [getTransactionCancellations](docs/transaction/README.md#gettransactioncancellations) - Get Transaction Cancellations
+* [getTransactionSettlements](docs/transaction/README.md#gettransactionsettlements) - Get Transaction Settlements
+* [settleGiftCardTransaction](docs/transaction/README.md#settlegiftcardtransaction) - Settle GiftCard Transaction
 <!-- End SDK Available Operations -->
 
 ### Maturity

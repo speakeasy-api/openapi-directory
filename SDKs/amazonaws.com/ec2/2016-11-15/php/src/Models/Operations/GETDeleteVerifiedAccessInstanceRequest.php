@@ -31,7 +31,7 @@ class GETDeleteVerifiedAccessInstanceRequest
     public ?bool $dryRun = null;
     
     /**
-     * The ID of the Amazon Web Services Verified Access instance.
+     * The ID of the Verified Access instance.
      * 
      * @var string $verifiedAccessInstanceId
      */

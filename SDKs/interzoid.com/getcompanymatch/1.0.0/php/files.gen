@@ -22,4 +22,6 @@ src/Utils/Utils.php
 src/Models/Operations/GetcompanymatchRequest.php
 src/Models/Operations/Getcompanymatch200ApplicationJSON.php
 src/Models/Operations/GetcompanymatchResponse.php
+docs/sdk/README.md
+docs/companynamesimilaritykey/README.md
 USAGE.md

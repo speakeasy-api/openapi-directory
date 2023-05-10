@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RemoveTagsXAmzTargetEnum: string
 {
     case DATA_PIPELINE_REMOVE_TAGS = 'DataPipeline.RemoveTags';

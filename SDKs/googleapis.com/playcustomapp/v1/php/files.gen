@@ -27,4 +27,6 @@ src/Models/Shared/CustomApp.php
 src/Models/Shared/Organization.php
 src/Models/Shared/AltEnum.php
 src/Models/Shared/XgafvEnum.php
+docs/sdk/README.md
+docs/accounts/README.md
 USAGE.md

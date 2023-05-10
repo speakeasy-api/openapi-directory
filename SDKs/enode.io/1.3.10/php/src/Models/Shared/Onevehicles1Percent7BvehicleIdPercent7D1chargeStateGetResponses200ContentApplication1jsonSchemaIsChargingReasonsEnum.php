@@ -11,6 +11,6 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 enum Onevehicles1Percent7BvehicleIdPercent7D1chargeStateGetResponses200ContentApplication1jsonSchemaIsChargingReasonsEnum: string
 {
-    case UNKNOWN = '';
+    case LESS_THAN_NIL_GREATER_THAN = '<nil>';
     case DEFAULT = 'DEFAULT';
 }

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutActionRevisionXAmzTargetEnum: string
 {
     case CODE_PIPELINE20150709_PUT_ACTION_REVISION = 'CodePipeline_20150709.PutActionRevision';

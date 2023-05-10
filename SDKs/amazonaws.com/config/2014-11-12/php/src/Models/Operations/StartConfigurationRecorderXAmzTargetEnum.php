@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartConfigurationRecorderXAmzTargetEnum: string
 {
     case STARLING_DOVE_SERVICE_START_CONFIGURATION_RECORDER = 'StarlingDoveService.StartConfigurationRecorder';

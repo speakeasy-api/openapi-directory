@@ -38,6 +38,54 @@ class PdfOcr
 	}
 	
     /**
+     * Returns the result of the Async Job - possible states can be STARTED or COMPLETED
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\PdfOcrGetAsyncJobStatusRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\PdfOcrGetAsyncJobStatusSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\PdfOcrGetAsyncJobStatusResponse
+     */
+	public function pdfOcrGetAsyncJobStatus(
+        \OpenAPI\OpenAPI\Models\Operations\PdfOcrGetAsyncJobStatusRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\PdfOcrGetAsyncJobStatusSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\PdfOcrGetAsyncJobStatusResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/ocr/pdf/get-job-status');
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\PdfOcrGetAsyncJobStatusRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\PdfOcrGetAsyncJobStatusResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->pdfToTextResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\PdfToTextResponse', 'json');
+            }
+            if (Utils\Utils::matchContentType($contentType, 'text/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->pdfToTextResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\PdfToTextResponse', 'json');
+            }
+            if (Utils\Utils::matchContentType($contentType, 'application/xml')) {
+                $response->body = $httpResponse->getBody()->getContents();
+            }
+            if (Utils\Utils::matchContentType($contentType, 'text/xml')) {
+                $response->body = $httpResponse->getBody()->getContents();
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Convert a PDF into text lines with location
      * 
      * Converts a PDF into lines/text with location information and other metdata via Optical Character Recognition.  This API is intended to be run on scanned documents.  If you want to OCR photos (e.g. taken with a smart phone camera), be sure to use the photo/toText API instead, as it is designed to unskew the image first.

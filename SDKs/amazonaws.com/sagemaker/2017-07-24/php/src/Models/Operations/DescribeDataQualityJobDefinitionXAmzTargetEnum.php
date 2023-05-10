@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeDataQualityJobDefinitionXAmzTargetEnum: string
 {
     case SAGE_MAKER_DESCRIBE_DATA_QUALITY_JOB_DEFINITION = 'SageMaker.DescribeDataQualityJobDefinition';

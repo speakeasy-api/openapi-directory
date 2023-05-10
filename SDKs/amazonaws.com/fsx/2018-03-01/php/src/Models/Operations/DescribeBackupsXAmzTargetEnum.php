@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeBackupsXAmzTargetEnum: string
 {
     case AWS_SIMBA_API_SERVICE_V20180301_DESCRIBE_BACKUPS = 'AWSSimbaAPIService_v20180301.DescribeBackups';

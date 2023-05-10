@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AttachDiskXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_ATTACH_DISK = 'Lightsail_20161128.AttachDisk';

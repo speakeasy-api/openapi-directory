@@ -199,4 +199,11 @@ src/Models/Shared/ComposeRequestSourceObjectsObjectPreconditions.php
 src/Models/Shared/ComposeRequestSourceObjects.php
 src/Models/Shared/ComposeRequest.php
 src/Models/Shared/Objects.php
+docs/sdk/README.md
+docs/bucketaccesscontrols/README.md
+docs/buckets/README.md
+docs/channels/README.md
+docs/defaultobjectaccesscontrols/README.md
+docs/objectaccesscontrols/README.md
+docs/objects/README.md
 USAGE.md

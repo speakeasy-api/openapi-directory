@@ -21,4 +21,6 @@ src/Utils/SpeakeasyMetadata.php
 src/Utils/Utils.php
 src/Models/Operations/GetPublicHistoryRequest.php
 src/Models/Operations/GetPublicHistoryResponse.php
+docs/sdk/README.md
+docs/default/README.md
 USAGE.md

@@ -84,4 +84,5 @@ src/Models/Shared/UpdateRecordsResponse.php
 src/Models/Shared/RecordPatch.php
 src/Models/Shared/OperationEnum.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

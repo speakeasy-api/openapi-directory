@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreatePartnerEventSourceXAmzTargetEnum: string
 {
     case AWS_EVENTS_CREATE_PARTNER_EVENT_SOURCE = 'AWSEvents.CreatePartnerEventSource';

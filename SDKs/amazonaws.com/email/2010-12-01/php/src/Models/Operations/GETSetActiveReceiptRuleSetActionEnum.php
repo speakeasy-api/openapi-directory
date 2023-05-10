@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETSetActiveReceiptRuleSetActionEnum: string
 {
     case SET_ACTIVE_RECEIPT_RULE_SET = 'SetActiveReceiptRuleSet';

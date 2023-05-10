@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTModifyAddressAttributeActionEnum: string
 {
     case MODIFY_ADDRESS_ATTRIBUTE = 'ModifyAddressAttribute';

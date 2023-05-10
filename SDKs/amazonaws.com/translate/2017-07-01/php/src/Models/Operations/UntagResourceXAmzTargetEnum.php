@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UntagResourceXAmzTargetEnum: string
 {
     case AWS_SHINE_FRONTEND_SERVICE20170701_UNTAG_RESOURCE = 'AWSShineFrontendService_20170701.UntagResource';

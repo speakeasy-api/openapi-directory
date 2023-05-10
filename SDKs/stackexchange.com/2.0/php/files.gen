@@ -498,4 +498,5 @@ src/Models/Shared/CreatedCommentOwner.php
 src/Models/Shared/CreatedCommentReplyToUserBadgeCounts.php
 src/Models/Shared/CreatedCommentReplyToUser.php
 src/Models/Shared/CreatedComment.php
+docs/sdk/README.md
 USAGE.md

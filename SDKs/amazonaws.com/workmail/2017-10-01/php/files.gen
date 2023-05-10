@@ -419,4 +419,5 @@ src/Models/Shared/UpdateMobileDeviceAccessRuleRequest.php
 src/Models/Shared/UpdatePrimaryEmailAddressRequest.php
 src/Models/Shared/UpdateResourceRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

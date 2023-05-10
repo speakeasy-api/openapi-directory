@@ -30,17 +30,49 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\DeleteConnectionRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new DeleteConnectionRequest();
+    $request->xAmzAlgorithm = 'corrupti';
+    $request->xAmzContentSha256 = 'provident';
+    $request->xAmzCredential = 'distinctio';
+    $request->xAmzDate = 'quibusdam';
+    $request->xAmzSecurityToken = 'unde';
+    $request->xAmzSignature = 'nulla';
+    $request->xAmzSignedHeaders = 'corrupti';
+    $request->connectionId = 'illum';
+
+    $response = $sdk->deleteConnection($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `deleteConnection` - Delete the connection with the provided id.
-* `getConnection` - Get information about the connection with the provided id.
-* `postToConnection` - Sends the provided data to the specified connection.
+* [deleteConnection](docs/sdk/README.md#deleteconnection) - Delete the connection with the provided id.
+* [getConnection](docs/sdk/README.md#getconnection) - Get information about the connection with the provided id.
+* [postToConnection](docs/sdk/README.md#posttoconnection) - Sends the provided data to the specified connection.
 <!-- End SDK Available Operations -->
 
 ### Maturity

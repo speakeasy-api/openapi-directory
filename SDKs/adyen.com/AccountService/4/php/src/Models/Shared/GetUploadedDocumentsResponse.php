@@ -20,10 +20,10 @@ class GetUploadedDocumentsResponse
     /**
      * A list of the documents and their details.
      * 
-     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\DocumentDetail> $documentDetails
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\DocumentDetailWrapper> $documentDetails
      */
 	#[\JMS\Serializer\Annotation\SerializedName('documentDetails')]
-    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\DocumentDetail>')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\DocumentDetailWrapper>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $documentDetails = null;
     

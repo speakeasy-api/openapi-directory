@@ -29,4 +29,5 @@ src/Models/Shared/SendSSHPublicKeyRequest.php
 src/Models/Shared/SendSerialConsoleSSHPublicKeyResponse.php
 src/Models/Shared/SendSerialConsoleSSHPublicKeyRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

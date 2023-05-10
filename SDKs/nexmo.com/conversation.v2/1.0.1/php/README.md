@@ -30,27 +30,54 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetUsersRequest;
+use \OpenAPI\OpenAPI\Models\Shared\OrderEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetUsersRequest();
+    $request->cursor = 'corrupti';
+    $request->order = OrderEnum::DESC;
+    $request->pageSize = 715190;
+
+    $response = $sdk->getUsers($request);
+
+    if ($response->getUsers200ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getUsers` - List Users
+* [getUsers](docs/sdk/README.md#getusers) - List Users
 
-### conversation
+### [conversation](docs/conversation/README.md)
 
-* `getConversations` - List Conversations
+* [getConversations](docs/conversation/README.md#getconversations) - List Conversations
 
-### event
+### [event](docs/event/README.md)
 
-* `getEvents` - List Events
+* [getEvents](docs/event/README.md#getevents) - List Events
 
-### member
+### [member](docs/member/README.md)
 
-* `getMembers` - List Members
+* [getMembers](docs/member/README.md#getmembers) - List Members
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -14,8 +14,8 @@ namespace OpenAPI\OpenAPI\Models\Operations;
  * 
  * 
  */
-enum SearchUniquePodcastsEnum: string
+enum SearchUniquePodcastsEnum: int
 {
-    case ZERO = '0';
-    case ONE = '1';
+    case ZERO = 0;
+    case ONE = 1;
 }

@@ -22,4 +22,6 @@ src/Utils/Utils.php
 src/Models/Operations/GetglobalnumberinfoRequest.php
 src/Models/Operations/Getglobalnumberinfo200ApplicationJSON.php
 src/Models/Operations/GetglobalnumberinfoResponse.php
+docs/sdk/README.md
+docs/globalphonenumberinformation/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateDeploymentXAmzTargetEnum: string
 {
     case OPS_WORKS20130218_CREATE_DEPLOYMENT = 'OpsWorks_20130218.CreateDeployment';

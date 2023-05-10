@@ -28,7 +28,7 @@ class GoogleChromePolicyVersionsV1UpdateGroupPriorityOrderingRequest
     public ?array $groupIds = null;
     
     /**
-     * Required. The namespace of the policy type for the request.
+     * The namespace of the policy type for the request.
      * 
      * @var ?string $policyNamespace
      */
@@ -36,6 +36,16 @@ class GoogleChromePolicyVersionsV1UpdateGroupPriorityOrderingRequest
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $policyNamespace = null;
+    
+    /**
+     * The schema name of the policy for the request.
+     * 
+     * @var ?string $policySchema
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('policySchema')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $policySchema = null;
     
     /**
      * The key used to identify the target on which the policy will be applied.
@@ -51,6 +61,7 @@ class GoogleChromePolicyVersionsV1UpdateGroupPriorityOrderingRequest
 	{
 		$this->groupIds = null;
 		$this->policyNamespace = null;
+		$this->policySchema = null;
 		$this->policyTargetKey = null;
 	}
 }

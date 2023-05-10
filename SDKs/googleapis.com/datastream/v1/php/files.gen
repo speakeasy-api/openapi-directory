@@ -152,4 +152,6 @@ src/Models/Shared/ListStreamObjectsResponse.php
 src/Models/Shared/LookupStreamObjectRequest.php
 src/Models/Shared/StartBackfillJobResponse.php
 src/Models/Shared/StopBackfillJobResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

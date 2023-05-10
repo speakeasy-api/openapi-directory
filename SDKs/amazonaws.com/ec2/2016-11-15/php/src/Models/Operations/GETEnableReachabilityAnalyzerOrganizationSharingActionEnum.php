@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETEnableReachabilityAnalyzerOrganizationSharingActionEnum: string
 {
     case ENABLE_REACHABILITY_ANALYZER_ORGANIZATION_SHARING = 'EnableReachabilityAnalyzerOrganizationSharing';

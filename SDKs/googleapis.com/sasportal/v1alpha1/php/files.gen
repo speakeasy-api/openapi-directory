@@ -170,4 +170,9 @@ src/Models/Shared/SasPortalGetPolicyRequest.php
 src/Models/Shared/SasPortalSetPolicyRequest.php
 src/Models/Shared/SasPortalTestPermissionsResponse.php
 src/Models/Shared/SasPortalTestPermissionsRequest.php
+docs/sdk/README.md
+docs/customers/README.md
+docs/installer/README.md
+docs/nodes/README.md
+docs/policies/README.md
 USAGE.md

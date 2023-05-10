@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTUpdateJobVersionEnum: string
 {
     case TWO_THOUSAND_AND_TEN0601 = '2010-06-01';

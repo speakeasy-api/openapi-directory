@@ -14,4 +14,5 @@ enum WorkflowStateEnum: string
 {
     case STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
     case ACTIVE = 'ACTIVE';
+    case UNAVAILABLE = 'UNAVAILABLE';
 }

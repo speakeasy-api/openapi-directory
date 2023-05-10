@@ -13,4 +13,5 @@ enum ResourceShareTypeEnum: string
 {
     case FOREIGN = 'FOREIGN';
     case ALL = 'ALL';
+    case FEDERATED = 'FEDERATED';
 }

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTRegisterInstanceEventNotificationAttributesActionEnum: string
 {
     case REGISTER_INSTANCE_EVENT_NOTIFICATION_ATTRIBUTES = 'RegisterInstanceEventNotificationAttributes';

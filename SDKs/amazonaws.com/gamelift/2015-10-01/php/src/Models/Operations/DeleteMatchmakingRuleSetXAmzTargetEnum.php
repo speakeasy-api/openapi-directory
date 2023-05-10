@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteMatchmakingRuleSetXAmzTargetEnum: string
 {
     case GAME_LIFT_DELETE_MATCHMAKING_RULE_SET = 'GameLift.DeleteMatchmakingRuleSet';

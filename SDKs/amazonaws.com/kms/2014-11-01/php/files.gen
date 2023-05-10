@@ -283,4 +283,5 @@ src/Models/Shared/VerifyRequest.php
 src/Models/Shared/VerifyMacResponse.php
 src/Models/Shared/VerifyMacRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

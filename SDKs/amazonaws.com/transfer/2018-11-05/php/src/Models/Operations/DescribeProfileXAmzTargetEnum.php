@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeProfileXAmzTargetEnum: string
 {
     case TRANSFER_SERVICE_DESCRIBE_PROFILE = 'TransferService.DescribeProfile';

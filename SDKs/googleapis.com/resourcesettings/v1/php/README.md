@@ -30,18 +30,62 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\ResourcesettingsProjectsSettingsGetRequest;
+use \OpenAPI\OpenAPI\Models\Shared\XgafvEnum;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+use \OpenAPI\OpenAPI\Models\Operations\ResourcesettingsProjectsSettingsGetViewEnum;
+use \OpenAPI\OpenAPI\Models\Operations\ResourcesettingsProjectsSettingsGetSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new ResourcesettingsProjectsSettingsGetRequest();
+    $request->dollarXgafv = XgafvEnum::TWO;
+    $request->accessToken = 'provident';
+    $request->alt = AltEnum::PROTO;
+    $request->callback = 'quibusdam';
+    $request->fields = 'unde';
+    $request->key = 'nulla';
+    $request->name = 'Dallas Kassulke';
+    $request->oauthToken = 'suscipit';
+    $request->prettyPrint = false;
+    $request->quotaUser = 'iure';
+    $request->uploadType = 'magnam';
+    $request->uploadProtocol = 'debitis';
+    $request->view = ResourcesettingsProjectsSettingsGetViewEnum::SETTING_VIEW_UNSPECIFIED;
+
+    $requestSecurity = new ResourcesettingsProjectsSettingsGetSecurity();
+    $requestSecurity->oauth2 = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+    $requestSecurity->oauth2c = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+
+    $response = $sdk->projects->resourcesettingsProjectsSettingsGet($request, $requestSecurity);
+
+    if ($response->googleCloudResourcesettingsV1Setting !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `resourcesettingsProjectsSettingsGet` - Returns a specified setting. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the setting does not exist.
-* `resourcesettingsProjectsSettingsList` - Lists all the settings that are available on the Cloud resource `parent`.
-* `resourcesettingsProjectsSettingsPatch` - Updates a specified setting. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the setting does not exist. Returns a `google.rpc.Status` with `google.rpc.Code.FAILED_PRECONDITION` if the setting is flagged as read only. Returns a `google.rpc.Status` with `google.rpc.Code.ABORTED` if the etag supplied in the request does not match the persisted etag of the setting value. On success, the response will contain only `name`, `local_value` and `etag`. The `metadata` and `effective_value` cannot be updated through this API. Note: the supplied setting will perform a full overwrite of the `local_value` field.
+* [resourcesettingsProjectsSettingsGet](docs/projects/README.md#resourcesettingsprojectssettingsget) - Returns a specified setting. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the setting does not exist.
+* [resourcesettingsProjectsSettingsList](docs/projects/README.md#resourcesettingsprojectssettingslist) - Lists all the settings that are available on the Cloud resource `parent`.
+* [resourcesettingsProjectsSettingsPatch](docs/projects/README.md#resourcesettingsprojectssettingspatch) - Updates a specified setting. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the setting does not exist. Returns a `google.rpc.Status` with `google.rpc.Code.FAILED_PRECONDITION` if the setting is flagged as read only. Returns a `google.rpc.Status` with `google.rpc.Code.ABORTED` if the etag supplied in the request does not match the persisted etag of the setting value. On success, the response will contain only `name`, `local_value` and `etag`. The `metadata` and `effective_value` cannot be updated through this API. Note: the supplied setting will perform a full overwrite of the `local_value` field.
 <!-- End SDK Available Operations -->
 
 ### Maturity

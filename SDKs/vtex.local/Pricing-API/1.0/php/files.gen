@@ -78,4 +78,8 @@ src/Models/Shared/PricingConfigurationPriceVariation.php
 src/Models/Shared/PricingConfigurationTradePolicyConfigs.php
 src/Models/Shared/PricingConfiguration.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/pricetables/README.md
+docs/pricesandfixedprices/README.md
+docs/pricingconfiguration/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateIPSetXAmzTargetEnum: string
 {
     case AWSWAF_REGIONAL20161128_UPDATE_IP_SET = 'AWSWAF_Regional_20161128.UpdateIPSet';

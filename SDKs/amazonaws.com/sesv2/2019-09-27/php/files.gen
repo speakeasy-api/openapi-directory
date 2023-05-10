@@ -409,4 +409,5 @@ src/Models/Shared/SendCustomVerificationEmailResponse.php
 src/Models/Shared/SendEmailResponse.php
 src/Models/Shared/TestRenderEmailTemplateResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

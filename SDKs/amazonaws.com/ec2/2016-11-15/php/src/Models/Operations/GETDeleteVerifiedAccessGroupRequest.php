@@ -31,7 +31,7 @@ class GETDeleteVerifiedAccessGroupRequest
     public ?bool $dryRun = null;
     
     /**
-     * The ID of the Amazon Web Services Verified Access group.
+     * The ID of the Verified Access group.
      * 
      * @var string $verifiedAccessGroupId
      */

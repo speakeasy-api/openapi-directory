@@ -26,4 +26,5 @@ src/Models/Operations/StartConfigurationSessionResponse.php
 src/Models/Shared/GetLatestConfigurationResponse.php
 src/Models/Shared/StartConfigurationSessionResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

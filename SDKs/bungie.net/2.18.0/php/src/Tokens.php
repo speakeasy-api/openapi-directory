@@ -76,9 +76,11 @@ class Tokens
     /**
      * Claim a partner offer as the authenticated user.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\TokensClaimPartnerOfferSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\TokensClaimPartnerOfferResponse
      */
 	public function tokensClaimPartnerOffer(
+        \OpenAPI\OpenAPI\Models\Operations\TokensClaimPartnerOfferSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\TokensClaimPartnerOfferResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -86,7 +88,8 @@ class Tokens
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -107,9 +110,11 @@ class Tokens
     /**
      * Twitch Drops self-repair function - scans twitch for drops not marked as fulfilled and resyncs them.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\TokensForceDropsRepairSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\TokensForceDropsRepairResponse
      */
 	public function tokensForceDropsRepair(
+        \OpenAPI\OpenAPI\Models\Operations\TokensForceDropsRepairSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\TokensForceDropsRepairResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -117,7 +122,8 @@ class Tokens
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

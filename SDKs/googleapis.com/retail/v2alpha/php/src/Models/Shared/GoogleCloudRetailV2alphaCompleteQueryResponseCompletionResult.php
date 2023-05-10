@@ -28,6 +28,16 @@ class GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResult
     public ?array $attributes = null;
     
     /**
+     * Facet information for the suggestion term. Gives the number of items resulting from a search with this suggestion term for each facet. This is an experimental feature for limited customers. If you want to receive this facet information, reach out to the Retail support team.
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\GoogleCloudRetailV2alphaSearchResponseFacet> $facets
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('facets')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\GoogleCloudRetailV2alphaSearchResponseFacet>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $facets = null;
+    
+    /**
      * The suggestion for the query.
      * 
      * @var ?string $suggestion
@@ -37,9 +47,21 @@ class GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResult
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $suggestion = null;
     
+    /**
+     * Total number of products associated with a search with this suggestion. This is an experimental feature for limited customers. If you want to receive this product count information, reach out to the Retail support team.
+     * 
+     * @var ?int $totalProductCount
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('totalProductCount')]
+    #[\JMS\Serializer\Annotation\Type('int')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?int $totalProductCount = null;
+    
 	public function __construct()
 	{
 		$this->attributes = null;
+		$this->facets = null;
 		$this->suggestion = null;
+		$this->totalProductCount = null;
 	}
 }

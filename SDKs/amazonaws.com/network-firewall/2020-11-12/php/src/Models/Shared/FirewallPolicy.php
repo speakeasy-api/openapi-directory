@@ -80,6 +80,11 @@ class FirewallPolicy
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $statelessRuleGroupReferences = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('TLSInspectionConfigurationArn')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $tlsInspectionConfigurationArn = null;
+    
 	public function __construct()
 	{
 		$this->statefulDefaultActions = null;
@@ -89,5 +94,6 @@ class FirewallPolicy
 		$this->statelessDefaultActions = [];
 		$this->statelessFragmentDefaultActions = [];
 		$this->statelessRuleGroupReferences = null;
+		$this->tlsInspectionConfigurationArn = null;
 	}
 }

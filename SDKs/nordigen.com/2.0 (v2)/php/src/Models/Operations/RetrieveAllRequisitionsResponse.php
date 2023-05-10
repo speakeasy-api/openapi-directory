@@ -17,10 +17,10 @@ class RetrieveAllRequisitionsResponse
     /**
      * Retrieve all requisitions
      * 
-     * @var ?\OpenAPI\OpenAPI\Models\Shared\PaginatedRequisitionV2List $paginatedRequisitionV2List
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\PaginatedRequisitionList $paginatedRequisitionList
      */
 	
-    public ?\OpenAPI\OpenAPI\Models\Shared\PaginatedRequisitionV2List $paginatedRequisitionV2List = null;
+    public ?\OpenAPI\OpenAPI\Models\Shared\PaginatedRequisitionList $paginatedRequisitionList = null;
     
 	
     public int $statusCode;
@@ -60,15 +60,24 @@ class RetrieveAllRequisitionsResponse
 	
     public ?array $retrieveAllRequisitions404ApplicationJSONObject = null;
     
+    /**
+     * Nordigen rate limit exceeded
+     * 
+     * @var ?array<string, mixed> $retrieveAllRequisitions429ApplicationJSONObject
+     */
+	
+    public ?array $retrieveAllRequisitions429ApplicationJSONObject = null;
+    
 	public function __construct()
 	{
 		$this->contentType = "";
-		$this->paginatedRequisitionV2List = null;
+		$this->paginatedRequisitionList = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
 		$this->retrieveAllRequisitions400ApplicationJSONObject = null;
 		$this->retrieveAllRequisitions401ApplicationJSONObject = null;
 		$this->retrieveAllRequisitions403ApplicationJSONObject = null;
 		$this->retrieveAllRequisitions404ApplicationJSONObject = null;
+		$this->retrieveAllRequisitions429ApplicationJSONObject = null;
 	}
 }

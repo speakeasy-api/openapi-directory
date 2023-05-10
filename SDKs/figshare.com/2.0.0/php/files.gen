@@ -27,6 +27,7 @@ src/Utils/Utils.php
 src/Models/Operations/AccountArticleReportSecurity.php
 src/Models/Operations/AccountArticleReportRequest.php
 src/Models/Operations/AccountArticleReportResponse.php
+src/Models/Operations/AccountArticleReportGenerateSecurity.php
 src/Models/Operations/AccountArticleReportGenerateResponse.php
 src/Models/Operations/ArticleDetailsRequest.php
 src/Models/Operations/ArticleDetailsResponse.php
@@ -278,6 +279,7 @@ src/Models/Operations/PostAccountInstitutionReviewCurationIdCommentsResponse.php
 src/Models/Operations/PrivateAccountInstitutionUserSecurity.php
 src/Models/Operations/PrivateAccountInstitutionUserRequest.php
 src/Models/Operations/PrivateAccountInstitutionUserResponse.php
+src/Models/Operations/PrivateCategoriesListSecurity.php
 src/Models/Operations/PrivateCategoriesListResponse.php
 src/Models/Operations/PrivateGroupEmbargoOptionsDetailsSecurity.php
 src/Models/Operations/PrivateGroupEmbargoOptionsDetailsRequest.php
@@ -306,9 +308,13 @@ src/Models/Operations/PrivateInstitutionArticlesOrderEnum.php
 src/Models/Operations/PrivateInstitutionArticlesOrderDirectionEnum.php
 src/Models/Operations/PrivateInstitutionArticlesRequest.php
 src/Models/Operations/PrivateInstitutionArticlesResponse.php
+src/Models/Operations/PrivateInstitutionDetailsSecurity.php
 src/Models/Operations/PrivateInstitutionDetailsResponse.php
+src/Models/Operations/PrivateInstitutionEmbargoOptionsDetailsSecurity.php
 src/Models/Operations/PrivateInstitutionEmbargoOptionsDetailsResponse.php
+src/Models/Operations/PrivateInstitutionGroupsListSecurity.php
 src/Models/Operations/PrivateInstitutionGroupsListResponse.php
+src/Models/Operations/PrivateInstitutionRolesListSecurity.php
 src/Models/Operations/PrivateInstitutionRolesListResponse.php
 src/Models/Operations/CategoriesListResponse.php
 src/Models/Operations/FileDownloadRequest.php
@@ -317,9 +323,11 @@ src/Models/Operations/ItemTypesListSecurity.php
 src/Models/Operations/ItemTypesListRequest.php
 src/Models/Operations/ItemTypesListResponse.php
 src/Models/Operations/LicensesListResponse.php
+src/Models/Operations/PrivateAccountSecurity.php
 src/Models/Operations/PrivateAccountResponse.php
 src/Models/Operations/PrivateFundingSearchSecurity.php
 src/Models/Operations/PrivateFundingSearchResponse.php
+src/Models/Operations/PrivateLicensesListSecurity.php
 src/Models/Operations/PrivateLicensesListResponse.php
 src/Models/Operations/PrivateProjectArticleDeleteSecurity.php
 src/Models/Operations/PrivateProjectArticleDeleteRequest.php
@@ -508,4 +516,11 @@ src/Models/Shared/ProjectsSearchOrderDirectionEnum.php
 src/Models/Shared/ProjectsSearch.php
 src/Models/Shared/ProjectComplete.php
 src/Models/Shared/Project.php
+docs/sdk/README.md
+docs/articles/README.md
+docs/authors/README.md
+docs/collections/README.md
+docs/institutions/README.md
+docs/other/README.md
+docs/projects/README.md
 USAGE.md

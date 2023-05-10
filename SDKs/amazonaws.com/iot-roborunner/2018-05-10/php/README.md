@@ -30,34 +30,73 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\CreateDestinationRequest;
+use \OpenAPI\OpenAPI\Models\Operations\CreateDestinationRequestBody;
+use \OpenAPI\OpenAPI\Models\Operations\CreateDestinationRequestBodyStateEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new CreateDestinationRequest();
+    $request->requestBody = new CreateDestinationRequestBody();
+    $request->requestBody->additionalFixedProperties = 'corrupti';
+    $request->requestBody->clientToken = 'provident';
+    $request->requestBody->name = 'Ellis Mitchell';
+    $request->requestBody->site = 'illum';
+    $request->requestBody->state = CreateDestinationRequestBodyStateEnum::DISABLED;
+    $request->xAmzAlgorithm = 'error';
+    $request->xAmzContentSha256 = 'deserunt';
+    $request->xAmzCredential = 'suscipit';
+    $request->xAmzDate = 'iure';
+    $request->xAmzSecurityToken = 'magnam';
+    $request->xAmzSignature = 'debitis';
+    $request->xAmzSignedHeaders = 'ipsa';
+
+    $response = $sdk->createDestination($request);
+
+    if ($response->createDestinationResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `createDestination` - Grants permission to create a destination
-* `createSite` - Grants permission to create a site
-* `createWorker` - Grants permission to create a worker
-* `createWorkerFleet` - Grants permission to create a worker fleet
-* `deleteDestination` - Grants permission to delete a destination
-* `deleteSite` - Grants permission to delete a site
-* `deleteWorker` - Grants permission to delete a worker
-* `deleteWorkerFleet` - Grants permission to delete a worker fleet
-* `getDestination` - Grants permission to get a destination
-* `getSite` - Grants permission to get a site
-* `getWorker` - Grants permission to get a worker
-* `getWorkerFleet` - Grants permission to get a worker fleet
-* `listDestinations` - Grants permission to list destinations
-* `listSites` - Grants permission to list sites
-* `listWorkerFleets` - Grants permission to list worker fleets
-* `listWorkers` - Grants permission to list workers
-* `updateDestination` - Grants permission to update a destination
-* `updateSite` - Grants permission to update a site
-* `updateWorker` - Grants permission to update a worker
-* `updateWorkerFleet` - Grants permission to update a worker fleet
+* [createDestination](docs/sdk/README.md#createdestination) - Grants permission to create a destination
+* [createSite](docs/sdk/README.md#createsite) - Grants permission to create a site
+* [createWorker](docs/sdk/README.md#createworker) - Grants permission to create a worker
+* [createWorkerFleet](docs/sdk/README.md#createworkerfleet) - Grants permission to create a worker fleet
+* [deleteDestination](docs/sdk/README.md#deletedestination) - Grants permission to delete a destination
+* [deleteSite](docs/sdk/README.md#deletesite) - Grants permission to delete a site
+* [deleteWorker](docs/sdk/README.md#deleteworker) - Grants permission to delete a worker
+* [deleteWorkerFleet](docs/sdk/README.md#deleteworkerfleet) - Grants permission to delete a worker fleet
+* [getDestination](docs/sdk/README.md#getdestination) - Grants permission to get a destination
+* [getSite](docs/sdk/README.md#getsite) - Grants permission to get a site
+* [getWorker](docs/sdk/README.md#getworker) - Grants permission to get a worker
+* [getWorkerFleet](docs/sdk/README.md#getworkerfleet) - Grants permission to get a worker fleet
+* [listDestinations](docs/sdk/README.md#listdestinations) - Grants permission to list destinations
+* [listSites](docs/sdk/README.md#listsites) - Grants permission to list sites
+* [listWorkerFleets](docs/sdk/README.md#listworkerfleets) - Grants permission to list worker fleets
+* [listWorkers](docs/sdk/README.md#listworkers) - Grants permission to list workers
+* [updateDestination](docs/sdk/README.md#updatedestination) - Grants permission to update a destination
+* [updateSite](docs/sdk/README.md#updatesite) - Grants permission to update a site
+* [updateWorker](docs/sdk/README.md#updateworker) - Grants permission to update a worker
+* [updateWorkerFleet](docs/sdk/README.md#updateworkerfleet) - Grants permission to update a worker fleet
 <!-- End SDK Available Operations -->
 
 ### Maturity

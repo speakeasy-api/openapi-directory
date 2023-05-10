@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateQuerySuggestionsBlockListXAmzTargetEnum: string
 {
     case AWS_KENDRA_FRONTEND_SERVICE_CREATE_QUERY_SUGGESTIONS_BLOCK_LIST = 'AWSKendraFrontendService.CreateQuerySuggestionsBlockList';

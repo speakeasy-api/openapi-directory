@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CancelResourceRequestXAmzTargetEnum: string
 {
     case CLOUD_API_SERVICE_CANCEL_RESOURCE_REQUEST = 'CloudApiService.CancelResourceRequest';

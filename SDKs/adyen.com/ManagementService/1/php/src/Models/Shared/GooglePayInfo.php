@@ -14,15 +14,25 @@ class GooglePayInfo
     /**
      * Google Pay [Merchant ID](https://support.google.com/paymentscenter/answer/7163092?hl=en). Character length and limitations: 16 alphanumeric characters or 20 numeric characters.
      * 
-     * @var ?string $merchantId
+     * @var string $merchantId
      */
 	#[\JMS\Serializer\Annotation\SerializedName('merchantId')]
     #[\JMS\Serializer\Annotation\Type('string')]
+    public string $merchantId;
+    
+    /**
+     * Indicates whether the Google Pay Merchant ID is used for several merchant accounts. Default value: **false**.
+     * 
+     * @var ?bool $reuseMerchantId
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('reuseMerchantId')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?string $merchantId = null;
+    public ?bool $reuseMerchantId = null;
     
 	public function __construct()
 	{
-		$this->merchantId = null;
+		$this->merchantId = "";
+		$this->reuseMerchantId = null;
 	}
 }

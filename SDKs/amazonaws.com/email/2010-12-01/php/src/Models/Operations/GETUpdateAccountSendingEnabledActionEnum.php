@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETUpdateAccountSendingEnabledActionEnum: string
 {
     case UPDATE_ACCOUNT_SENDING_ENABLED = 'UpdateAccountSendingEnabled';

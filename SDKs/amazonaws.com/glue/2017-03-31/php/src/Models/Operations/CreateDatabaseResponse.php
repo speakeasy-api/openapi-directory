@@ -39,6 +39,14 @@ class CreateDatabaseResponse
     public ?array $createDatabaseResponse = null;
     
     /**
+     * FederatedResourceAlreadyExistsException
+     * 
+     * @var mixed $federatedResourceAlreadyExistsException
+     */
+	
+    public mixed $federatedResourceAlreadyExistsException = null;
+    
+    /**
      * GlueEncryptionException
      * 
      * @var mixed $glueEncryptionException
@@ -90,6 +98,7 @@ class CreateDatabaseResponse
 		$this->concurrentModificationException = null;
 		$this->contentType = "";
 		$this->createDatabaseResponse = null;
+		$this->federatedResourceAlreadyExistsException = null;
 		$this->glueEncryptionException = null;
 		$this->internalServiceException = null;
 		$this->invalidInputException = null;

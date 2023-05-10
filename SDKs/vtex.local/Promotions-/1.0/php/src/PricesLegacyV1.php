@@ -75,7 +75,7 @@ class PricesLegacyV1
      */
 	public function deletebyskuId(
         \OpenAPI\OpenAPI\Models\Operations\DeletebyskuIdRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\DeletebyskuIdResponse
     {
         $baseUrl = PricesLegacyV1::DELETEBYSKU_ID_SERVERS[0];
@@ -118,7 +118,7 @@ class PricesLegacyV1
      */
 	public function getallpaged(
         \OpenAPI\OpenAPI\Models\Operations\GetallpagedRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\GetallpagedResponse
     {
         $baseUrl = PricesLegacyV1::GETALLPAGED_SERVERS[0];
@@ -161,7 +161,7 @@ class PricesLegacyV1
      */
 	public function pricebycontext(
         \OpenAPI\OpenAPI\Models\Operations\PricebycontextRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PricebycontextResponse
     {
         $baseUrl = PricesLegacyV1::PRICEBYCONTEXT_SERVERS[0];
@@ -207,7 +207,7 @@ class PricesLegacyV1
      */
 	public function pricebyskuId(
         \OpenAPI\OpenAPI\Models\Operations\PricebyskuIdRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PricebyskuIdResponse
     {
         $baseUrl = PricesLegacyV1::PRICEBYSKU_ID_SERVERS[0];
@@ -250,7 +250,7 @@ class PricesLegacyV1
      */
 	public function pricebyskuIdandtradePolicy(
         \OpenAPI\OpenAPI\Models\Operations\PricebyskuIdandtradePolicyRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PricebyskuIdandtradePolicyResponse
     {
         $baseUrl = PricesLegacyV1::PRICEBYSKU_IDANDTRADE_POLICY_SERVERS[0];
@@ -293,7 +293,7 @@ class PricesLegacyV1
      */
 	public function saveprice(
         \OpenAPI\OpenAPI\Models\Operations\SavepriceRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\SavepriceResponse
     {
         $baseUrl = PricesLegacyV1::SAVEPRICE_SERVERS[0];

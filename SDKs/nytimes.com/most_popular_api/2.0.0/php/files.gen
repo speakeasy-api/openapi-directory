@@ -34,13 +34,12 @@ src/Models/Operations/GETMostviewedSectionTimePeriodJsonRequest.php
 src/Models/Operations/GETMostviewedSectionTimePeriodJSON200ApplicationJSON.php
 src/Models/Operations/GETMostviewedSectionTimePeriodJsonResponse.php
 src/Models/Shared/ArticleWithCountTypeGeoFacet2Enum.php
-src/Models/Shared/ArticleWithCountTypeGeoFacet1Enum.php
 src/Models/Shared/ArticleWithCountTypeMediaMediaMetadata.php
 src/Models/Shared/ArticleWithCountTypeMedia.php
 src/Models/Shared/ArticleWithCountType.php
 src/Models/Shared/TimePeriodEnum.php
 src/Models/Shared/SectionEnum.php
 src/Models/Shared/ArticleGeoFacet2Enum.php
-src/Models/Shared/ArticleGeoFacet1Enum.php
 src/Models/Shared/Article.php
+docs/sdk/README.md
 USAGE.md

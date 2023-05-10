@@ -28,8 +28,6 @@ class SDK
 	public Cases $cases;
 	
 	public Media $media;
-	
-	public Projects $projects;
 		
 	// SDK private variables namespaced with _ to avoid conflicts with API models
 	private ?\GuzzleHttp\ClientInterface $_defaultClient;
@@ -97,15 +95,6 @@ class SDK
 		);
 		
 		$this->media = new Media(
-			$this->_defaultClient,
-			$this->_securityClient,
-			$this->_serverUrl,
-			$this->_language,
-			$this->_sdkVersion,
-			$this->_genVersion
-		);
-		
-		$this->projects = new Projects(
 			$this->_defaultClient,
 			$this->_securityClient,
 			$this->_serverUrl,

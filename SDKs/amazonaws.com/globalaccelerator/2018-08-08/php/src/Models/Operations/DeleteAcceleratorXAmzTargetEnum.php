@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteAcceleratorXAmzTargetEnum: string
 {
     case GLOBAL_ACCELERATOR_V20180706_DELETE_ACCELERATOR = 'GlobalAccelerator_V20180706.DeleteAccelerator';

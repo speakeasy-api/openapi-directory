@@ -470,4 +470,5 @@ src/Models/Shared/UpdateUploadRequest.php
 src/Models/Shared/UpdateVPCEConfigurationResult.php
 src/Models/Shared/UpdateVPCEConfigurationRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

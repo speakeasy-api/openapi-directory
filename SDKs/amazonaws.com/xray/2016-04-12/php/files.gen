@@ -198,4 +198,5 @@ src/Models/Shared/UnprocessedTraceSegment.php
 src/Models/Shared/UpdateGroupResult.php
 src/Models/Shared/UpdateSamplingRuleResult.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

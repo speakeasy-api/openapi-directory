@@ -30,16 +30,42 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GlobalpageloadRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GlobalpageloadRequest();
+    $request->license = 'corrupti';
+    $request->origin = 'provident';
+    $request->url = 'distinctio';
+
+    $response = $sdk->pageLoadPerformanceTime->globalpageload($request);
+
+    if ($response->globalpageload200ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### pageLoadPerformanceTime
+### [pageLoadPerformanceTime](docs/pageloadperformancetime/README.md)
 
-* `globalpageload` - Gets page load (or an API call) performance from a specified global geography such as Paris, Tokyo, Virginia, Mumbai, Frankfurt, London, Seoul, California, Sao Paolo, and many more.
+* [globalpageload](docs/pageloadperformancetime/README.md#globalpageload) - Gets page load (or an API call) performance from a specified global geography such as Paris, Tokyo, Virginia, Mumbai, Frankfurt, London, Seoul, California, Sao Paolo, and many more.
 <!-- End SDK Available Operations -->
 
 ### Maturity

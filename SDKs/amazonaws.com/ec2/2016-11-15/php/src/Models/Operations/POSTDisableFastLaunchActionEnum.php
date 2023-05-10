@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDisableFastLaunchActionEnum: string
 {
     case DISABLE_FAST_LAUNCH = 'DisableFastLaunch';

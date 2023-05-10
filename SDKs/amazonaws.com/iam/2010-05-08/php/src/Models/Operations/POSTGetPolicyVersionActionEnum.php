@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTGetPolicyVersionActionEnum: string
 {
     case GET_POLICY_VERSION = 'GetPolicyVersion';

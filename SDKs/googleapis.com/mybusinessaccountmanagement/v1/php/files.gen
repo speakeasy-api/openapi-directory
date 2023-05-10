@@ -65,4 +65,7 @@ src/Models/Shared/AdminInput.php
 src/Models/Shared/Admin.php
 src/Models/Shared/ListLocationAdminsResponse.php
 src/Models/Shared/TransferLocationRequest.php
+docs/sdk/README.md
+docs/accounts/README.md
+docs/locations/README.md
 USAGE.md

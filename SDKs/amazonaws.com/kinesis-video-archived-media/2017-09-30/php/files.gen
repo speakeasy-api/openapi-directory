@@ -67,4 +67,5 @@ src/Models/Shared/Fragment.php
 src/Models/Shared/TimestampRange.php
 src/Models/Shared/FragmentSelectorTypeEnum.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

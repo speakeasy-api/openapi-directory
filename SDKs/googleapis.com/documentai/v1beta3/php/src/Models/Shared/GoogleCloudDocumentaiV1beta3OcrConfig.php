@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class GoogleCloudDocumentaiV1beta3OcrConfig
 {
     /**
-     * A list of advanced OCR options to further fine-tune OCR behavior. Current valid values are: - "legacy_layout": a heuristics layout detection algorithm, which serves as an alternative to the current ML-based layout detection algorithm. Customers can choose the best suitable layout algorithm based on their situation.
+     * A list of advanced OCR options to further fine-tune OCR behavior. Current valid values are: - `legacy_layout`: a heuristics layout detection algorithm, which serves as an alternative to the current ML-based layout detection algorithm. Customers can choose the best suitable layout algorithm based on their situation.
      * 
      * @var ?array<string> $advancedOcrOptions
      */
@@ -26,6 +26,16 @@ class GoogleCloudDocumentaiV1beta3OcrConfig
     #[\JMS\Serializer\Annotation\Type('array<string>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $advancedOcrOptions = null;
+    
+    /**
+     * Turn on font id model and returns font style information.
+     * 
+     * @var ?bool $computeStyleInfo
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('computeStyleInfo')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $computeStyleInfo = null;
     
     /**
      * Enables intelligent document quality scores after OCR. Can help with diagnosing why OCR responses are of poor quality for a given input. Adds additional latency comparable to regular OCR to the process call.
@@ -70,6 +80,7 @@ class GoogleCloudDocumentaiV1beta3OcrConfig
 	public function __construct()
 	{
 		$this->advancedOcrOptions = null;
+		$this->computeStyleInfo = null;
 		$this->enableImageQualityScores = null;
 		$this->enableNativePdfParsing = null;
 		$this->enableSymbol = null;

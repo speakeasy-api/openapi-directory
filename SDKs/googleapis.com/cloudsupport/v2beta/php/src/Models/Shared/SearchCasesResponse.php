@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class SearchCasesResponse
 {
     /**
-     * The list of Case associated with the cloud resource, after any filters have been applied.
+     * The list of cases associated with the Google Cloud Resource, after any filters have been applied.
      * 
      * @var ?array<\OpenAPI\OpenAPI\Models\Shared\CaseT> $cases
      */

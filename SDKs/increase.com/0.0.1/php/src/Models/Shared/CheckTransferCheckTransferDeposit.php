@@ -27,6 +27,15 @@ class CheckTransferCheckTransferDeposit
     public string $backImageFileId;
     
     /**
+     * When the check was deposited.
+     * 
+     * @var \DateTime $depositedAt
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('deposited_at')]
+    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
+    public \DateTime $depositedAt;
+    
+    /**
      * The ID for the File containing the image of the front of the check.
      * 
      * @var string $frontImageFileId
@@ -47,6 +56,7 @@ class CheckTransferCheckTransferDeposit
 	public function __construct()
 	{
 		$this->backImageFileId = "";
+		$this->depositedAt = new \DateTime();
 		$this->frontImageFileId = "";
 		$this->type = \OpenAPI\OpenAPI\Models\Shared\CheckTransferCheckTransferDepositTypeEnum::CHECK_TRANSFER_DEPOSIT;
 	}

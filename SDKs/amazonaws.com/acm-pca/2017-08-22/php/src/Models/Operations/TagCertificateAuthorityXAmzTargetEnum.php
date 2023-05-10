@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum TagCertificateAuthorityXAmzTargetEnum: string
 {
     case ACM_PRIVATE_CA_TAG_CERTIFICATE_AUTHORITY = 'ACMPrivateCA.TagCertificateAuthority';

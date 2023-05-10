@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTGetSubnetCidrReservationsActionEnum: string
 {
     case GET_SUBNET_CIDR_RESERVATIONS = 'GetSubnetCidrReservations';

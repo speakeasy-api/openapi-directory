@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetAccountSettingsXAmzTargetEnum: string
 {
     case AWS_PROTON20200720_GET_ACCOUNT_SETTINGS = 'AwsProton20200720.GetAccountSettings';

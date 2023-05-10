@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetAssociationForServiceQuotaTemplateXAmzTargetEnum: string
 {
     case SERVICE_QUOTAS_V20190624_GET_ASSOCIATION_FOR_SERVICE_QUOTA_TEMPLATE = 'ServiceQuotasV20190624.GetAssociationForServiceQuotaTemplate';

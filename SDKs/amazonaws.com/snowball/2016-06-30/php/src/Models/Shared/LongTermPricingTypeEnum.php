@@ -13,4 +13,5 @@ enum LongTermPricingTypeEnum: string
 {
     case ONE_YEAR = 'OneYear';
     case THREE_YEAR = 'ThreeYear';
+    case ONE_MONTH = 'OneMonth';
 }

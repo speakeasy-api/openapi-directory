@@ -44,6 +44,7 @@ src/Models/Operations/GetBenefitsDocumentUploadStatusReport403ApplicationJSON.ph
 src/Models/Operations/GetBenefitsDocumentUploadStatusReport401ApplicationJSON.php
 src/Models/Operations/GetBenefitsDocumentUploadStatusReport200ApplicationJSON.php
 src/Models/Operations/GetBenefitsDocumentUploadStatusReportResponse.php
+src/Models/Operations/PostBenefitsDocumentUploadSecurity.php
 src/Models/Operations/PostBenefitsDocumentUpload500ApplicationJSON.php
 src/Models/Operations/PostBenefitsDocumentUpload429ApplicationJSON.php
 src/Models/Operations/PostBenefitsDocumentUpload422ApplicationJSON.php
@@ -80,4 +81,6 @@ src/Models/Shared/DocumentUploadAttributesStatusEnum.php
 src/Models/Shared/DocumentUploadAttributes.php
 src/Models/Shared/DocumentValidationErrorModel.php
 src/Models/Shared/DocumentUploadFailure.php
+docs/sdk/README.md
+docs/vbadocuments/README.md
 USAGE.md

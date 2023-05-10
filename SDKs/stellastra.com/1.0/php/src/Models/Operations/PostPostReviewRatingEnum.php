@@ -10,11 +10,11 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 
 
 /** The user's star rating, must be a single integer from [1, 2, 3, 4, 5] */
-enum PostPostReviewRatingEnum: string
+enum PostPostReviewRatingEnum: int
 {
-    case ONE = '1';
-    case TWO = '2';
-    case THREE = '3';
-    case FOUR = '4';
-    case FIVE = '5';
+    case ONE = 1;
+    case TWO = 2;
+    case THREE = 3;
+    case FOUR = 4;
+    case FIVE = 5;
 }

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateNamedQueryXAmzTargetEnum: string
 {
     case AMAZON_ATHENA_UPDATE_NAMED_QUERY = 'AmazonAthena.UpdateNamedQuery';

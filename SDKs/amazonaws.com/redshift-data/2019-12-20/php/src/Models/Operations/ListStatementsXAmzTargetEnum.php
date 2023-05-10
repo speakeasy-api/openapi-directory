@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListStatementsXAmzTargetEnum: string
 {
     case REDSHIFT_DATA_LIST_STATEMENTS = 'RedshiftData.ListStatements';

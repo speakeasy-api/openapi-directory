@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETGETAssociatedEnclaveCertificateIamRolesActionEnum: string
 {
     case GET_ASSOCIATED_ENCLAVE_CERTIFICATE_IAM_ROLES = 'GetAssociatedEnclaveCertificateIamRoles';

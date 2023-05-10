@@ -159,10 +159,12 @@ class Authentication
      * 
      * http://openid.net/specs/openid-connect-core-1_0.html#UserInfo - OIDC UserInfo Endpoint
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\UserInfoSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\UserInfoResponse
      * @see http://openid.net/specs/openid-connect-core-1_0.html#UserInfo
      */
 	public function userInfo(
+        \OpenAPI\OpenAPI\Models\Operations\UserInfoSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\UserInfoResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -170,7 +172,8 @@ class Authentication
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

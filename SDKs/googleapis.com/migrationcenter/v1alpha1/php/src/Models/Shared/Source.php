@@ -48,6 +48,16 @@ class Source
     public ?string $displayName = null;
     
     /**
+     * Output only. The number of frames that were reported by the source and contained errors.
+     * 
+     * @var ?int $errorFrameCount
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('errorFrameCount')]
+    #[\JMS\Serializer\Annotation\Type('int')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?int $errorFrameCount = null;
+    
+    /**
      * If `true`, the source is managed by other service(s).
      * 
      * @var ?bool $isManaged
@@ -88,6 +98,16 @@ class Source
     public ?int $priority = null;
     
     /**
+     * Output only. The state of the source.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\SourceStateEnum $state
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('state')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\SourceStateEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?SourceStateEnum $state = null;
+    
+    /**
      * Data source type.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\SourceTypeEnum $type
@@ -112,10 +132,12 @@ class Source
 		$this->createTime = null;
 		$this->description = null;
 		$this->displayName = null;
+		$this->errorFrameCount = null;
 		$this->isManaged = null;
 		$this->name = null;
 		$this->pendingFrameCount = null;
 		$this->priority = null;
+		$this->state = null;
 		$this->type = null;
 		$this->updateTime = null;
 	}

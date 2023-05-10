@@ -53,7 +53,7 @@ class Projects
         $url = Utils\Utils::generateUrl($baseUrl, '/v1/{parent}/customClasses', \OpenAPI\OpenAPI\Models\Operations\SpeechProjectsLocationsCustomClassesCreateRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "createCustomClassRequest", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "createCustomClassRequestInput", "json");
         $options = array_merge_recursive($options, $body);
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\SpeechProjectsLocationsCustomClassesCreateRequest::class, $request, null));
         
@@ -131,7 +131,7 @@ class Projects
         $url = Utils\Utils::generateUrl($baseUrl, '/v1/{parent}/phraseSets', \OpenAPI\OpenAPI\Models\Operations\SpeechProjectsLocationsPhraseSetsCreateRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "createPhraseSetRequest", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "createPhraseSetRequestInput", "json");
         $options = array_merge_recursive($options, $body);
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\SpeechProjectsLocationsPhraseSetsCreateRequest::class, $request, null));
         
@@ -285,7 +285,7 @@ class Projects
         $url = Utils\Utils::generateUrl($baseUrl, '/v1/{name}', \OpenAPI\OpenAPI\Models\Operations\SpeechProjectsLocationsPhraseSetsPatchRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "phraseSet", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "phraseSetInput", "json");
         $options = array_merge_recursive($options, $body);
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\SpeechProjectsLocationsPhraseSetsPatchRequest::class, $request, null));
         

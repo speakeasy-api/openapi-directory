@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetAccountSettingsXAmzTargetEnum: string
 {
     case DEVICE_FARM20150623_GET_ACCOUNT_SETTINGS = 'DeviceFarm_20150623.GetAccountSettings';

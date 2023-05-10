@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GenerateDataKeyPairXAmzTargetEnum: string
 {
     case TRENT_SERVICE_GENERATE_DATA_KEY_PAIR = 'TrentService.GenerateDataKeyPair';

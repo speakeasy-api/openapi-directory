@@ -38,7 +38,7 @@ class Users
 	}
 	
     /**
-     * Bulk edits user roles for a user. The operation will delete the assigned user roles provided in BulkEditAssignedUserRolesRequest.deletedAssignedUserRoles and then assign the user roles provided in BulkEditAssignedUserRolesRequest.createdAssignedUserRoles.
+     * Bulk edits user roles for a user. The operation will delete the assigned user roles provided in BulkEditAssignedUserRolesRequest.deletedAssignedUserRoles and then assign the user roles provided in BulkEditAssignedUserRolesRequest.createdAssignedUserRoles. This method has unique authentication requirements. Read the prerequisites in our [Managing Users guide](/display-video/api/guides/users/overview#prerequisites) before using this method. The "Try this method" feature does not work for this method.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DisplayvideoUsersBulkEditAssignedUserRolesRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\DisplayvideoUsersBulkEditAssignedUserRolesSecurity $security
@@ -78,7 +78,7 @@ class Users
     }
 	
     /**
-     * Creates a new user. Returns the newly created user if successful.
+     * Creates a new user. Returns the newly created user if successful. This method has unique authentication requirements. Read the prerequisites in our [Managing Users guide](/display-video/api/guides/users/overview#prerequisites) before using this method. The "Try this method" feature does not work for this method.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DisplayvideoUsersCreateRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\DisplayvideoUsersCreateSecurity $security
@@ -118,7 +118,7 @@ class Users
     }
 	
     /**
-     * Deletes a user.
+     * Deletes a user. This method has unique authentication requirements. Read the prerequisites in our [Managing Users guide](/display-video/api/guides/users/overview#prerequisites) before using this method. The "Try this method" feature does not work for this method.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DisplayvideoUsersDeleteRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\DisplayvideoUsersDeleteSecurity $security
@@ -156,7 +156,7 @@ class Users
     }
 	
     /**
-     * Gets a user.
+     * Gets a user. This method has unique authentication requirements. Read the prerequisites in our [Managing Users guide](/display-video/api/guides/users/overview#prerequisites) before using this method. The "Try this method" feature does not work for this method.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DisplayvideoUsersGetRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\DisplayvideoUsersGetSecurity $security
@@ -194,7 +194,7 @@ class Users
     }
 	
     /**
-     * Lists users that are accessible to the current user. If two users have user roles on the same partner or advertiser, they can access each other.
+     * Lists users that are accessible to the current user. If two users have user roles on the same partner or advertiser, they can access each other. This method has unique authentication requirements. Read the prerequisites in our [Managing Users guide](/display-video/api/guides/users/overview#prerequisites) before using this method. The "Try this method" feature does not work for this method.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DisplayvideoUsersListRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\DisplayvideoUsersListSecurity $security
@@ -232,7 +232,7 @@ class Users
     }
 	
     /**
-     * Updates an existing user. Returns the updated user if successful.
+     * Updates an existing user. Returns the updated user if successful. This method has unique authentication requirements. Read the prerequisites in our [Managing Users guide](/display-video/api/guides/users/overview#prerequisites) before using this method. The "Try this method" feature does not work for this method.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DisplayvideoUsersPatchRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\DisplayvideoUsersPatchSecurity $security

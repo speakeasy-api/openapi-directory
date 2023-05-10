@@ -25,6 +25,11 @@ class JobRun
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $arn;
     
+	#[\JMS\Serializer\Annotation\SerializedName('billedResourceUtilization')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\ResourceUtilization')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?ResourceUtilization $billedResourceUtilization = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('configurationOverrides')]
     #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\ConfigurationOverrides')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -41,6 +46,11 @@ class JobRun
 	#[\JMS\Serializer\Annotation\SerializedName('executionRole')]
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $executionRole;
+    
+	#[\JMS\Serializer\Annotation\SerializedName('executionTimeoutMinutes')]
+    #[\JMS\Serializer\Annotation\Type('int')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?int $executionTimeoutMinutes = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('jobDriver')]
     #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\JobDriver')]
@@ -105,10 +115,12 @@ class JobRun
 	{
 		$this->applicationId = "";
 		$this->arn = "";
+		$this->billedResourceUtilization = null;
 		$this->configurationOverrides = null;
 		$this->createdAt = new \DateTime();
 		$this->createdBy = "";
 		$this->executionRole = "";
+		$this->executionTimeoutMinutes = null;
 		$this->jobDriver = new \OpenAPI\OpenAPI\Models\Shared\JobDriver();
 		$this->jobRunId = "";
 		$this->name = null;

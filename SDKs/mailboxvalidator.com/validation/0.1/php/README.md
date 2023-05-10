@@ -30,15 +30,42 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetV1ValidationSingleRequest;
+use \OpenAPI\OpenAPI\Models\Operations\GetV1ValidationSingleFormatEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetV1ValidationSingleRequest();
+    $request->email = 'Larue_Rau85@yahoo.com';
+    $request->format = GetV1ValidationSingleFormatEnum::XML;
+    $request->key = 'illum';
+
+    $response = $sdk->getV1ValidationSingle($request);
+
+    if ($response->getV1ValidationSingle200ApplicationJSONString !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getV1ValidationSingle` - The Single Validation API does validation on a single email address and returns all the validation results in either JSON or XML format.
+* [getV1ValidationSingle](docs/sdk/README.md#getv1validationsingle) - The Single Validation API does validation on a single email address and returns all the validation results in either JSON or XML format.
 <!-- End SDK Available Operations -->
 
 ### Maturity

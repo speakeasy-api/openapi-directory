@@ -27,6 +27,11 @@ class SettingEntry
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $appliedValue = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('DataType')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $dataType = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('LastRequestedDateTime')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -76,6 +81,7 @@ class SettingEntry
 	{
 		$this->allowedValues = null;
 		$this->appliedValue = null;
+		$this->dataType = null;
 		$this->lastRequestedDateTime = null;
 		$this->lastUpdatedDateTime = null;
 		$this->name = null;

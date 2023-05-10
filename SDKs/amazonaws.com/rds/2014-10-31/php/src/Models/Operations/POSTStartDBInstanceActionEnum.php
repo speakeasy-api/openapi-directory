@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTStartDBInstanceActionEnum: string
 {
     case START_DB_INSTANCE = 'StartDBInstance';

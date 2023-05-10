@@ -30,30 +30,67 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\AssociateDeviceWithPlacementRequest;
+use \OpenAPI\OpenAPI\Models\Operations\AssociateDeviceWithPlacementRequestBody;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new AssociateDeviceWithPlacementRequest();
+    $request->requestBody = new AssociateDeviceWithPlacementRequestBody();
+    $request->requestBody->deviceId = 'corrupti';
+    $request->xAmzAlgorithm = 'provident';
+    $request->xAmzContentSha256 = 'distinctio';
+    $request->xAmzCredential = 'quibusdam';
+    $request->xAmzDate = 'unde';
+    $request->xAmzSecurityToken = 'nulla';
+    $request->xAmzSignature = 'corrupti';
+    $request->xAmzSignedHeaders = 'illum';
+    $request->deviceTemplateName = 'vel';
+    $request->placementName = 'error';
+    $request->projectName = 'deserunt';
+
+    $response = $sdk->associateDeviceWithPlacement($request);
+
+    if ($response->associateDeviceWithPlacementResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `associateDeviceWithPlacement` - Associates a physical device with a placement.
-* `createPlacement` - Creates an empty placement.
-* `createProject` - Creates an empty project with a placement template. A project contains zero or more placements that adhere to the placement template defined in the project.
-* `deletePlacement` - <p>Deletes a placement. To delete a placement, it must not have any devices associated with it.</p> <note> <p>When you delete a placement, all associated data becomes irretrievable.</p> </note>
-* `deleteProject` - <p>Deletes a project. To delete a project, it must not have any placements associated with it.</p> <note> <p>When you delete a project, all associated data becomes irretrievable.</p> </note>
-* `describePlacement` - Describes a placement in a project.
-* `describeProject` - Returns an object describing a project.
-* `disassociateDeviceFromPlacement` - Removes a physical device from a placement.
-* `getDevicesInPlacement` - Returns an object enumerating the devices in a placement.
-* `listPlacements` - Lists the placement(s) of a project.
-* `listProjects` - Lists the AWS IoT 1-Click project(s) associated with your AWS account and region.
-* `listTagsForResource` - Lists the tags (metadata key/value pairs) which you have assigned to the resource.
-* `tagResource` - Creates or modifies tags for a resource. Tags are key/value pairs (metadata) that can be used to manage a resource. For more information, see <a href="https://aws.amazon.com/answers/account-management/aws-tagging-strategies/">AWS Tagging Strategies</a>.
-* `untagResource` - Removes one or more tags (metadata key/value pairs) from a resource.
-* `updatePlacement` - Updates a placement with the given attributes. To clear an attribute, pass an empty value (i.e., "").
-* `updateProject` - Updates a project associated with your AWS account and region. With the exception of device template names, you can pass just the values that need to be updated because the update request will change only the values that are provided. To clear a value, pass the empty string (i.e., <code>""</code>).
+* [associateDeviceWithPlacement](docs/sdk/README.md#associatedevicewithplacement) - Associates a physical device with a placement.
+* [createPlacement](docs/sdk/README.md#createplacement) - Creates an empty placement.
+* [createProject](docs/sdk/README.md#createproject) - Creates an empty project with a placement template. A project contains zero or more placements that adhere to the placement template defined in the project.
+* [deletePlacement](docs/sdk/README.md#deleteplacement) - <p>Deletes a placement. To delete a placement, it must not have any devices associated with it.</p> <note> <p>When you delete a placement, all associated data becomes irretrievable.</p> </note>
+* [deleteProject](docs/sdk/README.md#deleteproject) - <p>Deletes a project. To delete a project, it must not have any placements associated with it.</p> <note> <p>When you delete a project, all associated data becomes irretrievable.</p> </note>
+* [describePlacement](docs/sdk/README.md#describeplacement) - Describes a placement in a project.
+* [describeProject](docs/sdk/README.md#describeproject) - Returns an object describing a project.
+* [disassociateDeviceFromPlacement](docs/sdk/README.md#disassociatedevicefromplacement) - Removes a physical device from a placement.
+* [getDevicesInPlacement](docs/sdk/README.md#getdevicesinplacement) - Returns an object enumerating the devices in a placement.
+* [listPlacements](docs/sdk/README.md#listplacements) - Lists the placement(s) of a project.
+* [listProjects](docs/sdk/README.md#listprojects) - Lists the AWS IoT 1-Click project(s) associated with your AWS account and region.
+* [listTagsForResource](docs/sdk/README.md#listtagsforresource) - Lists the tags (metadata key/value pairs) which you have assigned to the resource.
+* [tagResource](docs/sdk/README.md#tagresource) - Creates or modifies tags for a resource. Tags are key/value pairs (metadata) that can be used to manage a resource. For more information, see <a href="https://aws.amazon.com/answers/account-management/aws-tagging-strategies/">AWS Tagging Strategies</a>.
+* [untagResource](docs/sdk/README.md#untagresource) - Removes one or more tags (metadata key/value pairs) from a resource.
+* [updatePlacement](docs/sdk/README.md#updateplacement) - Updates a placement with the given attributes. To clear an attribute, pass an empty value (i.e., "").
+* [updateProject](docs/sdk/README.md#updateproject) - Updates a project associated with your AWS account and region. With the exception of device template names, you can pass just the values that need to be updated because the update request will change only the values that are provided. To clear a value, pass the empty string (i.e., <code>""</code>).
 <!-- End SDK Available Operations -->
 
 ### Maturity

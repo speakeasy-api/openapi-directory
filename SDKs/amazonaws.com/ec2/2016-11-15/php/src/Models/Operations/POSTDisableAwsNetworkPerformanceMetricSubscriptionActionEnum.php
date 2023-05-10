@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDisableAwsNetworkPerformanceMetricSubscriptionActionEnum: string
 {
     case DISABLE_AWS_NETWORK_PERFORMANCE_METRIC_SUBSCRIPTION = 'DisableAwsNetworkPerformanceMetricSubscription';

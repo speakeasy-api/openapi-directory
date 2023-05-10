@@ -75,12 +75,11 @@ class CardConfiguration
      * 
      * For example, send the `shipmentMethod` to override the logistics company defined in the card configuration profile.
      * 
-     * @var ?string $configurationProfileId
+     * @var string $configurationProfileId
      */
 	#[\JMS\Serializer\Annotation\SerializedName('configurationProfileId')]
     #[\JMS\Serializer\Annotation\Type('string')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?string $configurationProfileId = null;
+    public string $configurationProfileId;
     
     /**
      * The three-letter [ISO-4217](https://en.wikipedia.org/wiki/ISO_4217) currency code of the card. For example, **EUR**.
@@ -160,7 +159,7 @@ class CardConfiguration
 		$this->cardImageId = null;
 		$this->carrier = null;
 		$this->carrierImageId = null;
-		$this->configurationProfileId = null;
+		$this->configurationProfileId = "";
 		$this->currency = null;
 		$this->envelope = null;
 		$this->insert = null;

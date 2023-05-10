@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDescribeVolumeAttributeActionEnum: string
 {
     case DESCRIBE_VOLUME_ATTRIBUTE = 'DescribeVolumeAttribute';

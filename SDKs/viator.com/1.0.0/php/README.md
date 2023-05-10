@@ -30,55 +30,92 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\BookingAvailabilityRequest;
+use \OpenAPI\OpenAPI\Models\Operations\BookingAvailabilityRequestBody;
+use \OpenAPI\OpenAPI\Models\Operations\BookingAvailabilityRequestBodyAgeBands;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new BookingAvailabilityRequest();
+    $request->acceptLanguage = 'en-US';
+    $request->requestBody = new BookingAvailabilityRequestBody();
+    $request->requestBody->ageBands = [
+        new BookingAvailabilityRequestBodyAgeBands(),
+        new BookingAvailabilityRequestBodyAgeBands(),
+        new BookingAvailabilityRequestBodyAgeBands(),
+    ];
+    $request->requestBody->currencyCode = 'provident';
+    $request->requestBody->month = 'distinctio';
+    $request->requestBody->productCode = 'quibusdam';
+    $request->requestBody->year = 'unde';
+
+    $response = $sdk->bookingServices->bookingAvailability($request);
+
+    if ($response->bookingAvailability200ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### bookingServices
+### [bookingServices](docs/bookingservices/README.md)
 
-* `bookingAvailability` - /booking/availability
-* `bookingAvailabilityDates` - /booking/availability/dates
-* `bookingAvailabilityTourgrades` - /booking/availability/tourgrades
-* `bookingAvailabilityTourgradesPricingmatrix` - /booking/availability/tourgrades/pricingmatrix
-* `bookingBook` - /booking/book
-* `bookingCalculateprice` - /booking/calculateprice
-* `bookingHotels` - /booking/hotels
-* `bookingMybookings` - /booking/mybookings
-* `bookingPastbooking` - /booking/pastbooking
-* `bookingPricingmatrix` - /booking/pricingmatrix
-* `bookingStatus` - /booking/status
-* `bookingStatusItems` - /booking/status/items
-* `bookingVoucher` - /booking/voucher
-* `cancelBooking` - /bookings/{booking-reference}/cancel
-* `cancelBookingQuote` - /bookings/{booking-reference}/cancel-quote
-* `cancellationReasons` - /bookings/cancel-reasons
+* [bookingAvailability](docs/bookingservices/README.md#bookingavailability) - /booking/availability
+* [bookingAvailabilityDates](docs/bookingservices/README.md#bookingavailabilitydates) - /booking/availability/dates
+* [bookingAvailabilityTourgrades](docs/bookingservices/README.md#bookingavailabilitytourgrades) - /booking/availability/tourgrades
+* [bookingAvailabilityTourgradesPricingmatrix](docs/bookingservices/README.md#bookingavailabilitytourgradespricingmatrix) - /booking/availability/tourgrades/pricingmatrix
+* [bookingBook](docs/bookingservices/README.md#bookingbook) - /booking/book
+* [bookingCalculateprice](docs/bookingservices/README.md#bookingcalculateprice) - /booking/calculateprice
+* [bookingHotels](docs/bookingservices/README.md#bookinghotels) - /booking/hotels
+* [bookingMybookings](docs/bookingservices/README.md#bookingmybookings) - /booking/mybookings
+* [bookingPastbooking](docs/bookingservices/README.md#bookingpastbooking) - /booking/pastbooking
+* [bookingPricingmatrix](docs/bookingservices/README.md#bookingpricingmatrix) - /booking/pricingmatrix
+* [bookingStatus](docs/bookingservices/README.md#bookingstatus) - /booking/status
+* [bookingStatusItems](docs/bookingservices/README.md#bookingstatusitems) - /booking/status/items
+* [bookingVoucher](docs/bookingservices/README.md#bookingvoucher) - /booking/voucher
+* [cancelBooking](docs/bookingservices/README.md#cancelbooking) - /bookings/{booking-reference}/cancel
+* [cancelBookingQuote](docs/bookingservices/README.md#cancelbookingquote) - /bookings/{booking-reference}/cancel-quote
+* [cancellationReasons](docs/bookingservices/README.md#cancellationreasons) - /bookings/cancel-reasons
 
-### deprecatedServices
+### [deprecatedServices](docs/deprecatedservices/README.md)
 
-* `merchantCancellation` - /merchant/cancellation
+* [~~merchantCancellation~~](docs/deprecatedservices/README.md#merchantcancellation) - /merchant/cancellation :warning: **Deprecated**
 
-### generalServices
+### [generalServices](docs/generalservices/README.md)
 
-* `healthCheck` - /health/check
+* [healthCheck](docs/generalservices/README.md#healthcheck) - /health/check
 
-### productServices
+### [productServices](docs/productservices/README.md)
 
-* `availableProducts` - /available/products
-* `product` - /product
-* `productPhotos` - /product/photos
-* `productReviews` - /product/reviews
-* `searchFreetext` - /search/freetext
-* `searchProducts` - /search/products
-* `searchProductsCodes` - /search/products/codes
+* [availableProducts](docs/productservices/README.md#availableproducts) - /available/products
+* [product](docs/productservices/README.md#product) - /product
+* [productPhotos](docs/productservices/README.md#productphotos) - /product/photos
+* [productReviews](docs/productservices/README.md#productreviews) - /product/reviews
+* [searchFreetext](docs/productservices/README.md#searchfreetext) - /search/freetext
+* [searchProducts](docs/productservices/README.md#searchproducts) - /search/products
+* [searchProductsCodes](docs/productservices/README.md#searchproductscodes) - /search/products/codes
 
-### taxonomyServices
+### [taxonomyServices](docs/taxonomyservices/README.md)
 
-* `taxonomyAttractions` - /taxonomy/attractions
-* `taxonomyCategories` - /taxonomy/categories
-* `taxonomyDestinations` - /taxonomy/destinations
+* [taxonomyAttractions](docs/taxonomyservices/README.md#taxonomyattractions) - /taxonomy/attractions
+* [taxonomyCategories](docs/taxonomyservices/README.md#taxonomycategories) - /taxonomy/categories
+* [taxonomyDestinations](docs/taxonomyservices/README.md#taxonomydestinations) - /taxonomy/destinations
 <!-- End SDK Available Operations -->
 
 ### Maturity

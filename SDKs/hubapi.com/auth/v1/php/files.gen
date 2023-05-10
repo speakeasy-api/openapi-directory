@@ -35,4 +35,8 @@ src/Models/Shared/ErrorDetail.php
 src/Models/Shared/AccessTokenInfoResponse.php
 src/Models/Shared/RefreshTokenInfoResponse.php
 src/Models/Shared/TokenResponseIF.php
+docs/sdk/README.md
+docs/accesstokens/README.md
+docs/refreshtokens/README.md
+docs/tokens/README.md
 USAGE.md

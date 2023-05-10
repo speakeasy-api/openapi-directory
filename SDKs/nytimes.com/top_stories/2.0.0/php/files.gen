@@ -28,4 +28,6 @@ src/Models/Shared/ArticleMultimedia.php
 src/Models/Shared/ArticleRelatedUrls.php
 src/Models/Shared/Article.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/stories/README.md
 USAGE.md

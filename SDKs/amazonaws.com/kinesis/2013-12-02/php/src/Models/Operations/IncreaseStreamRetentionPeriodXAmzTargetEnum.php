@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum IncreaseStreamRetentionPeriodXAmzTargetEnum: string
 {
     case KINESIS20131202_INCREASE_STREAM_RETENTION_PERIOD = 'Kinesis_20131202.IncreaseStreamRetentionPeriod';

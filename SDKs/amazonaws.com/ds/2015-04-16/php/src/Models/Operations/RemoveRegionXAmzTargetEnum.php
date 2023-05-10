@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RemoveRegionXAmzTargetEnum: string
 {
     case DIRECTORY_SERVICE20150416_REMOVE_REGION = 'DirectoryService_20150416.RemoveRegion';

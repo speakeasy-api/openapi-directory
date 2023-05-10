@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeObservabilityConfigurationXAmzTargetEnum: string
 {
     case APP_RUNNER_DESCRIBE_OBSERVABILITY_CONFIGURATION = 'AppRunner.DescribeObservabilityConfiguration';

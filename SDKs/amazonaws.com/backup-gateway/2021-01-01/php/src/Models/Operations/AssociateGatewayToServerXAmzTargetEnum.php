@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AssociateGatewayToServerXAmzTargetEnum: string
 {
     case BACKUP_ON_PREMISES_V20210101_ASSOCIATE_GATEWAY_TO_SERVER = 'BackupOnPremises_v20210101.AssociateGatewayToServer';

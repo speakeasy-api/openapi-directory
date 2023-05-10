@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListRepositoriesForApprovalRuleTemplateXAmzTargetEnum: string
 {
     case CODE_COMMIT20150413_LIST_REPOSITORIES_FOR_APPROVAL_RULE_TEMPLATE = 'CodeCommit_20150413.ListRepositoriesForApprovalRuleTemplate';

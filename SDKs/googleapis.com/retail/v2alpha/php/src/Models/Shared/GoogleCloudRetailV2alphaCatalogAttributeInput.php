@@ -38,6 +38,26 @@ class GoogleCloudRetailV2alphaCatalogAttributeInput
     public ?GoogleCloudRetailV2alphaCatalogAttributeExactSearchableOptionEnum $exactSearchableOption = null;
     
     /**
+     * If you don't set the facet SearchRequest.FacetSpec.FacetKey.intervals to a numerical attribute, then a weekly pipeline calculates intervals using some percentiles on the distribution of all its product numerical attribute values. The calculated intervals might not be ideal for some attributes. Therefore, we give you the option the overwrite them. For any numerical attribute that is passed as a facet key in the request along with given intervals, the given intervals are the facet intervals returned in the response.
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\GoogleCloudRetailV2alphaInterval> $facetIntervals
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('facetIntervals')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\GoogleCloudRetailV2alphaInterval>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $facetIntervals = null;
+    
+    /**
+     * Each instance represents a list of attribute values to ignore as facet values for a specific time range.
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\GoogleCloudRetailV2alphaCatalogAttributeIgnoredFacetValues> $ignoredFacetValues
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('ignoredFacetValues')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\GoogleCloudRetailV2alphaCatalogAttributeIgnoredFacetValues>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $ignoredFacetValues = null;
+    
+    /**
      * When AttributesConfig.attribute_config_level is CATALOG_LEVEL_ATTRIBUTE_CONFIG, if INDEXABLE_ENABLED attribute values are indexed so that it can be filtered, faceted, or boosted in SearchService.Search. Must be specified, otherwise throws INVALID_FORMAT error.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleCloudRetailV2alphaCatalogAttributeIndexableOptionEnum $indexableOption
@@ -91,6 +111,8 @@ class GoogleCloudRetailV2alphaCatalogAttributeInput
 	{
 		$this->dynamicFacetableOption = null;
 		$this->exactSearchableOption = null;
+		$this->facetIntervals = null;
+		$this->ignoredFacetValues = null;
 		$this->indexableOption = null;
 		$this->key = null;
 		$this->recommendationsFilteringOption = null;

@@ -11,6 +11,9 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 use \OpenAPI\OpenAPI\Utils\SpeakeasyMetadata;
 class PatchAs2PartnersIdRequestBody
 {
+	#[SpeakeasyMetadata('multipartForm:name=enable_dedicated_ips')]
+    public ?bool $enableDedicatedIps = null;
+    
     /**
      * AS2 Name
      * 
@@ -40,6 +43,7 @@ class PatchAs2PartnersIdRequestBody
     
 	public function __construct()
 	{
+		$this->enableDedicatedIps = null;
 		$this->name = null;
 		$this->publicCertificate = null;
 		$this->serverCertificate = null;

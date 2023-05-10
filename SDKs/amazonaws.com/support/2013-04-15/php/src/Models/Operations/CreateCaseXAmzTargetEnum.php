@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateCaseXAmzTargetEnum: string
 {
     case AWS_SUPPORT20130415_CREATE_CASE = 'AWSSupport_20130415.CreateCase';

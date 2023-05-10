@@ -29,4 +29,6 @@ src/Models/Shared/Aspect.php
 src/Models/Shared/PricingSummary.php
 src/Models/Shared/Amount.php
 src/Models/Shared/Charity.php
+docs/sdk/README.md
+docs/itemdraft/README.md
 USAGE.md

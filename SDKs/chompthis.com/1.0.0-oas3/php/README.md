@@ -30,18 +30,46 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetFoodBrandedBarcodePhpRequest;
+use \OpenAPI\OpenAPI\Models\Operations\GetFoodBrandedBarcodePhpSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetFoodBrandedBarcodePhpRequest();
+    $request->code = 'corrupti';
+
+    $requestSecurity = new GetFoodBrandedBarcodePhpSecurity();
+    $requestSecurity->apiKeyAuth = 'YOUR_API_KEY_HERE';
+
+    $response = $sdk->getFoodBrandedBarcodePhp($request, $requestSecurity);
+
+    if ($response->brandedFoodObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getFoodBrandedBarcodePhp` - Get a branded food item using a barcode
-* `getFoodBrandedNamePhp` - Get a branded food item by name
-* `getFoodBrandedSearchPhp` - Get data for branded food items using various search parameters
-* `getFoodIngredientSearchPhp` - Get raw/generic food ingredient item(s)
+* [getFoodBrandedBarcodePhp](docs/sdk/README.md#getfoodbrandedbarcodephp) - Get a branded food item using a barcode
+* [getFoodBrandedNamePhp](docs/sdk/README.md#getfoodbrandednamephp) - Get a branded food item by name
+* [getFoodBrandedSearchPhp](docs/sdk/README.md#getfoodbrandedsearchphp) - Get data for branded food items using various search parameters
+* [getFoodIngredientSearchPhp](docs/sdk/README.md#getfoodingredientsearchphp) - Get raw/generic food ingredient item(s)
 <!-- End SDK Available Operations -->
 
 ### Maturity

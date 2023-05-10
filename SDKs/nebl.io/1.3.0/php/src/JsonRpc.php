@@ -57,7 +57,7 @@ class JsonRpc
 	public function jsonRpc(
         \OpenAPI\OpenAPI\Models\Shared\RpcRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\JsonRpcSecurity $security,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\JsonRpcResponse
     {
         $baseUrl = JsonRpc::JSON_RPC_SERVERS[0];

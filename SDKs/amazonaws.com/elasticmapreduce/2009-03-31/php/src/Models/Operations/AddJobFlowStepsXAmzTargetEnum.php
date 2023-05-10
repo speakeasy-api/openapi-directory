@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AddJobFlowStepsXAmzTargetEnum: string
 {
     case ELASTIC_MAP_REDUCE_ADD_JOB_FLOW_STEPS = 'ElasticMapReduce.AddJobFlowSteps';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateEnvironmentEc2XAmzTargetEnum: string
 {
     case AWS_CLOUD9_WORKSPACE_MANAGEMENT_SERVICE_CREATE_ENVIRONMENT_EC2 = 'AWSCloud9WorkspaceManagementService.CreateEnvironmentEC2';

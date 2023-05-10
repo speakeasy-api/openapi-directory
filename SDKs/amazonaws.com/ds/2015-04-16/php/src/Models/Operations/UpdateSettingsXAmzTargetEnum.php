@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateSettingsXAmzTargetEnum: string
 {
     case DIRECTORY_SERVICE20150416_UPDATE_SETTINGS = 'DirectoryService_20150416.UpdateSettings';

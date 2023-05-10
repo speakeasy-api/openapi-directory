@@ -39,12 +39,12 @@ class GETDescribeTrafficSourcesRequest
     public ?string $nextToken = null;
     
     /**
-     * The type of traffic source you are describing. Currently, the only valid value is <code>vpc-lattice</code>.
+     * <p>The traffic source type that you want to describe.</p> <p>The following lists the valid values:</p> <ul> <li> <p> <code>elb</code> if the traffic source is a Classic Load Balancer.</p> </li> <li> <p> <code>elbv2</code> if the traffic source is a Application Load Balancer, Gateway Load Balancer, or Network Load Balancer.</p> </li> <li> <p> <code>vpc-lattice</code> if the traffic source is VPC Lattice.</p> </li> </ul>
      * 
-     * @var string $trafficSourceType
+     * @var ?string $trafficSourceType
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=TrafficSourceType')]
-    public string $trafficSourceType;
+    public ?string $trafficSourceType = null;
     
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=Version')]
     public GETDescribeTrafficSourcesVersionEnum $version;
@@ -76,7 +76,7 @@ class GETDescribeTrafficSourcesRequest
 		$this->autoScalingGroupName = "";
 		$this->maxRecords = null;
 		$this->nextToken = null;
-		$this->trafficSourceType = "";
+		$this->trafficSourceType = null;
 		$this->version = \OpenAPI\OpenAPI\Models\Operations\GETDescribeTrafficSourcesVersionEnum::TWO_THOUSAND_AND_ELEVEN0101;
 		$this->xAmzAlgorithm = null;
 		$this->xAmzContentSha256 = null;

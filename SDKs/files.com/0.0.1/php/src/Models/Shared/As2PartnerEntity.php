@@ -28,6 +28,16 @@ class As2PartnerEntity
     public ?int $as2StationId = null;
     
     /**
+     * `true` if remote server only accepts connections from dedicated IPs
+     * 
+     * @var ?bool $enableDedicatedIps
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('enable_dedicated_ips')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $enableDedicatedIps = null;
+    
+    /**
      * Serial of public certificate used for message security in hex format.
      * 
      * @var ?string $hexPublicCertificateSerial
@@ -140,6 +150,7 @@ class As2PartnerEntity
 	public function __construct()
 	{
 		$this->as2StationId = null;
+		$this->enableDedicatedIps = null;
 		$this->hexPublicCertificateSerial = null;
 		$this->id = null;
 		$this->name = null;

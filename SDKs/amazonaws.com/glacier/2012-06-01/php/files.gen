@@ -143,4 +143,5 @@ src/Models/Shared/ProvisionedCapacityDescription.php
 src/Models/Shared/ListTagsForVaultOutput.php
 src/Models/Shared/ListVaultsOutput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

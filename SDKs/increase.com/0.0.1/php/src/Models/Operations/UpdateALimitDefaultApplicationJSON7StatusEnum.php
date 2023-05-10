@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-enum UpdateALimitDefaultApplicationJSON7StatusEnum: string
+enum UpdateALimitDefaultApplicationJSON7StatusEnum: int
 {
-    case FOUR_HUNDRED_AND_ONE = '401';
+    case FOUR_HUNDRED_AND_ONE = 401;
 }

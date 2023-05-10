@@ -10,12 +10,12 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /** Optionally specify the default vat mode of the user */
-enum RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCreateAccountContainerDefaultVatModeEnum: string
+enum RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCreateAccountContainerDefaultVatModeEnum: int
 {
-    case ZERO = '0';
-    case ONE = '1';
-    case TWO = '2';
-    case THREE = '3';
-    case FOUR = '4';
-    case FIVE = '5';
+    case ZERO = 0;
+    case ONE = 1;
+    case TWO = 2;
+    case THREE = 3;
+    case FOUR = 4;
+    case FIVE = 5;
 }

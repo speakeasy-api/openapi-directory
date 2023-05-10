@@ -27,6 +27,21 @@ class Disk
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?DiskArchitectureEnum $architecture = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('asyncPrimaryDisk')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\DiskAsyncReplication')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?DiskAsyncReplication $asyncPrimaryDisk = null;
+    
+    /**
+     * [Output Only] A list of disks this disk is asynchronously replicated to.
+     * 
+     * @var ?array<string, \OpenAPI\OpenAPI\Models\Shared\DiskAsyncReplicationList> $asyncSecondaryDisks
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('asyncSecondaryDisks')]
+    #[\JMS\Serializer\Annotation\Type('array<string, OpenAPI\OpenAPI\Models\Shared\DiskAsyncReplicationList>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $asyncSecondaryDisks = null;
+    
     /**
      * [Output Only] Creation timestamp in RFC3339 text format.
      * 
@@ -203,6 +218,16 @@ class Disk
     public ?string $provisionedIops = null;
     
     /**
+     * Indicates how much throughput to provision for the disk. This sets the number of throughput mb per second that the disk can handle. Values must be between 1 and 7,124.
+     * 
+     * @var ?string $provisionedThroughput
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('provisionedThroughput')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $provisionedThroughput = null;
+    
+    /**
      * [Output Only] URL of the region where the disk resides. Only applicable for regional resources. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
      * 
      * @var ?string $region
@@ -231,6 +256,11 @@ class Disk
     #[\JMS\Serializer\Annotation\Type('array<string>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $resourcePolicies = null;
+    
+	#[\JMS\Serializer\Annotation\SerializedName('resourceStatus')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\DiskResourceStatus')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?DiskResourceStatus $resourceStatus = null;
     
     /**
      * [Output Only] Reserved for future use.
@@ -261,6 +291,26 @@ class Disk
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $sizeGb = null;
+    
+    /**
+     * [Output Only] URL of the DiskConsistencyGroupPolicy for a secondary disk that was created using a consistency group.
+     * 
+     * @var ?string $sourceConsistencyGroupPolicy
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('sourceConsistencyGroupPolicy')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $sourceConsistencyGroupPolicy = null;
+    
+    /**
+     * [Output Only] ID of the DiskConsistencyGroupPolicy for a secondary disk that was created using a consistency group.
+     * 
+     * @var ?string $sourceConsistencyGroupPolicyId
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('sourceConsistencyGroupPolicyId')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $sourceConsistencyGroupPolicyId = null;
     
     /**
      * The source disk used to create this disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk - https://www.googleapis.com/compute/v1/projects/project/regions/region /disks/disk - projects/project/zones/zone/disks/disk - projects/project/regions/region/disks/disk - zones/zone/disks/disk - regions/region/disks/disk 
@@ -385,6 +435,8 @@ class Disk
 	public function __construct()
 	{
 		$this->architecture = null;
+		$this->asyncPrimaryDisk = null;
+		$this->asyncSecondaryDisks = null;
 		$this->creationTimestamp = null;
 		$this->description = null;
 		$this->diskEncryptionKey = null;
@@ -403,12 +455,16 @@ class Disk
 		$this->params = null;
 		$this->physicalBlockSizeBytes = null;
 		$this->provisionedIops = null;
+		$this->provisionedThroughput = null;
 		$this->region = null;
 		$this->replicaZones = null;
 		$this->resourcePolicies = null;
+		$this->resourceStatus = null;
 		$this->satisfiesPzs = null;
 		$this->selfLink = null;
 		$this->sizeGb = null;
+		$this->sourceConsistencyGroupPolicy = null;
+		$this->sourceConsistencyGroupPolicyId = null;
 		$this->sourceDisk = null;
 		$this->sourceDiskId = null;
 		$this->sourceImage = null;

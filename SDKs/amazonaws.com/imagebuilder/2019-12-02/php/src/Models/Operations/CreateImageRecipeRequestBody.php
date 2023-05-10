@@ -50,7 +50,7 @@ class CreateImageRecipeRequestBody
     public array $components;
     
     /**
-     *  The description of the image recipe.
+     * The description of the image recipe.
      * 
      * @var ?string $description
      */
@@ -60,7 +60,7 @@ class CreateImageRecipeRequestBody
     public ?string $description = null;
     
     /**
-     *  The name of the image recipe.
+     * The name of the image recipe.
      * 
      * @var string $name
      */
@@ -87,7 +87,7 @@ class CreateImageRecipeRequestBody
     public string $semanticVersion;
     
     /**
-     *  The tags of the image recipe.
+     * The tags of the image recipe.
      * 
      * @var ?array<string, string> $tags
      */

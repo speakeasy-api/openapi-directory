@@ -26,8 +26,18 @@ class CheckTransferCheckTransferSubmission
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $checkNumber;
     
+    /**
+     * When this check transfer was submitted to our check printer.
+     * 
+     * @var \DateTime $submittedAt
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('submitted_at')]
+    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
+    public \DateTime $submittedAt;
+    
 	public function __construct()
 	{
 		$this->checkNumber = "";
+		$this->submittedAt = new \DateTime();
 	}
 }

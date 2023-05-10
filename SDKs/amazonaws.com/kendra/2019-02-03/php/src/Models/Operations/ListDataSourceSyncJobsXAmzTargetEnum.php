@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListDataSourceSyncJobsXAmzTargetEnum: string
 {
     case AWS_KENDRA_FRONTEND_SERVICE_LIST_DATA_SOURCE_SYNC_JOBS = 'AWSKendraFrontendService.ListDataSourceSyncJobs';

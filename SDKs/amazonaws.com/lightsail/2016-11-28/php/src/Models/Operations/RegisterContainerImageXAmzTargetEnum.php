@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RegisterContainerImageXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_REGISTER_CONTAINER_IMAGE = 'Lightsail_20161128.RegisterContainerImage';

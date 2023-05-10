@@ -19,9 +19,9 @@ namespace OpenAPI\OpenAPI\Models\Shared;
  * See: [Working with human and machine translations](#section/Appendices/Working-with-human-and-machine-translations) for more information
  * 
  */
-enum TranslationLevelEnum: string
+enum TranslationLevelEnum: int
 {
-    case ZERO = '0';
-    case EIGHTY = '80';
-    case ONE_HUNDRED = '100';
+    case ZERO = 0;
+    case EIGHTY = 80;
+    case ONE_HUNDRED = 100;
 }

@@ -106,4 +106,5 @@ src/Models/Shared/ListDomainsRequest.php
 src/Models/Shared/PutAttributesRequest.php
 src/Models/Shared/SelectRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

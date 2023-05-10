@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTModifyNetworkInterfaceAttributeActionEnum: string
 {
     case MODIFY_NETWORK_INTERFACE_ATTRIBUTE = 'ModifyNetworkInterfaceAttribute';

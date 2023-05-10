@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetResourceMetricsXAmzTargetEnum: string
 {
     case PERFORMANCE_INSIGHTSV20180227_GET_RESOURCE_METRICS = 'PerformanceInsightsv20180227.GetResourceMetrics';

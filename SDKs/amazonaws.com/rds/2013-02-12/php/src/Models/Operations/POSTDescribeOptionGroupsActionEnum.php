@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeOptionGroupsActionEnum: string
 {
     case DESCRIBE_OPTION_GROUPS = 'DescribeOptionGroups';

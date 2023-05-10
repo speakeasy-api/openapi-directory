@@ -58,6 +58,16 @@ class TargetHttpProxy
     public ?array $httpFilters = null;
     
     /**
+     * Specifies how long to keep a connection open, after completing a response, while there is no matching traffic (in seconds). If an HTTP keep-alive is not specified, a default value (610 seconds) will be used. For Global external HTTP(S) load balancer, the minimum allowed value is 5 seconds and the maximum allowed value is 1200 seconds. For Global external HTTP(S) load balancer (classic), this option is not available publicly.
+     * 
+     * @var ?int $httpKeepAliveTimeoutSec
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('httpKeepAliveTimeoutSec')]
+    #[\JMS\Serializer\Annotation\Type('int')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?int $httpKeepAliveTimeoutSec = null;
+    
+    /**
      * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
      * 
      * @var ?string $id
@@ -143,6 +153,7 @@ class TargetHttpProxy
 		$this->description = null;
 		$this->fingerprint = null;
 		$this->httpFilters = null;
+		$this->httpKeepAliveTimeoutSec = null;
 		$this->id = null;
 		$this->kind = null;
 		$this->name = null;

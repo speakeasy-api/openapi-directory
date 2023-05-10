@@ -38,6 +38,16 @@ class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource
     public ?GoogleAnalyticsAdminV1alphaAttributionSettings $attributionSettings = null;
     
     /**
+     * A resource message representing a GA4 Audience.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAnalyticsAdminV1alphaAudience $audience
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('audience')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAnalyticsAdminV1alphaAudience')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleAnalyticsAdminV1alphaAudience $audience = null;
+    
+    /**
      * A link between a GA4 Property and BigQuery project.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAnalyticsAdminV1alphaBigQueryLink $bigqueryLink
@@ -46,6 +56,16 @@ class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource
     #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAnalyticsAdminV1alphaBigQueryLink')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?GoogleAnalyticsAdminV1alphaBigQueryLink $bigqueryLink = null;
+    
+    /**
+     * A resource message representing a Channel Group.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAnalyticsAdminV1alphaChannelGroup $channelGroup
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('channelGroup')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAnalyticsAdminV1alphaChannelGroup')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleAnalyticsAdminV1alphaChannelGroup $channelGroup = null;
     
     /**
      * A conversion event in a Google Analytics property.
@@ -128,6 +148,16 @@ class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource
     public ?GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings $enhancedMeasurementSettings = null;
     
     /**
+     * An Event Create Rule defines conditions that will trigger the creation of an entirely new event based upon matched criteria of a source event. Additional mutations of the parameters from the source event can be defined. Unlike Event Edit rules, Event Creation Rules have no defined order. They will all be run independently. Event Edit and Event Create rules can't be used to modify an event created from an Event Create rule.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAnalyticsAdminV1alphaEventCreateRule $eventCreateRule
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('eventCreateRule')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAnalyticsAdminV1alphaEventCreateRule')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleAnalyticsAdminV1alphaEventCreateRule $eventCreateRule = null;
+    
+    /**
      * A resource message representing a GA4 ExpandedDataSet.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAnalyticsAdminV1alphaExpandedDataSet $expandedDataSet
@@ -201,7 +231,9 @@ class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource
 	{
 		$this->account = null;
 		$this->attributionSettings = null;
+		$this->audience = null;
 		$this->bigqueryLink = null;
+		$this->channelGroup = null;
 		$this->conversionEvent = null;
 		$this->customDimension = null;
 		$this->customMetric = null;
@@ -210,6 +242,7 @@ class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource
 		$this->displayVideo360AdvertiserLink = null;
 		$this->displayVideo360AdvertiserLinkProposal = null;
 		$this->enhancedMeasurementSettings = null;
+		$this->eventCreateRule = null;
 		$this->expandedDataSet = null;
 		$this->firebaseLink = null;
 		$this->googleAdsLink = null;

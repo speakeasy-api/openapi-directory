@@ -72,6 +72,11 @@ class SourceProperties
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $recommendedInstanceType = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('supportsNitroInstances')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $supportsNitroInstances = null;
+    
 	public function __construct()
 	{
 		$this->cpus = null;
@@ -82,5 +87,6 @@ class SourceProperties
 		$this->os = null;
 		$this->ramBytes = null;
 		$this->recommendedInstanceType = null;
+		$this->supportsNitroInstances = null;
 	}
 }

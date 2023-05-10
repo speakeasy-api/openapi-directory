@@ -40,9 +40,11 @@ class Privilege
     /**
      * This method retrieves the seller's current set of privileges, including whether or not the seller's eBay registration has been completed, as well as the details of their site-wide <b>sellingLimt</b> (the amount and quantity they can sell on a given day).
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetPrivilegesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetPrivilegesResponse
      */
 	public function getPrivileges(
+        \OpenAPI\OpenAPI\Models\Operations\GetPrivilegesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetPrivilegesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -50,7 +52,8 @@ class Privilege
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

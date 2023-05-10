@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * ResamplingConfigInput - <p/>
+ * ResamplingConfigInput - The structure representing input for resampling operation.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTSendBulkTemplatedEmailActionEnum: string
 {
     case SEND_BULK_TEMPLATED_EMAIL = 'SendBulkTemplatedEmail';

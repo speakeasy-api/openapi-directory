@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopDeliveryStreamEncryptionXAmzTargetEnum: string
 {
     case FIREHOSE20150804_STOP_DELIVERY_STREAM_ENCRYPTION = 'Firehose_20150804.StopDeliveryStreamEncryption';

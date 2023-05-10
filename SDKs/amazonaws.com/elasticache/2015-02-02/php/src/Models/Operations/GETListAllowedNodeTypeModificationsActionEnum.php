@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETListAllowedNodeTypeModificationsActionEnum: string
 {
     case LIST_ALLOWED_NODE_TYPE_MODIFICATIONS = 'ListAllowedNodeTypeModifications';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutLogEventsXAmzTargetEnum: string
 {
     case LOGS20140328_PUT_LOG_EVENTS = 'Logs_20140328.PutLogEvents';

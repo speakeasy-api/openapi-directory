@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListLocationsXAmzTargetEnum: string
 {
     case FMRS_SERVICE_LIST_LOCATIONS = 'FmrsService.ListLocations';

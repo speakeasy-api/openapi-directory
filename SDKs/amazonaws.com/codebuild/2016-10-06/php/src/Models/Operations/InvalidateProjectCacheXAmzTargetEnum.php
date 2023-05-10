@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum InvalidateProjectCacheXAmzTargetEnum: string
 {
     case CODE_BUILD20161006_INVALIDATE_PROJECT_CACHE = 'CodeBuild_20161006.InvalidateProjectCache';

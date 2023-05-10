@@ -39,6 +39,14 @@ class StartKeyPhrasesDetectionJobResponse
     public mixed $kmsKeyValidationException = null;
     
     /**
+     * ResourceInUseException
+     * 
+     * @var mixed $resourceInUseException
+     */
+	
+    public mixed $resourceInUseException = null;
+    
+    /**
      * Success
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\StartKeyPhrasesDetectionJobResponse $startKeyPhrasesDetectionJobResponse
@@ -74,6 +82,7 @@ class StartKeyPhrasesDetectionJobResponse
 		$this->internalServerException = null;
 		$this->invalidRequestException = null;
 		$this->kmsKeyValidationException = null;
+		$this->resourceInUseException = null;
 		$this->startKeyPhrasesDetectionJobResponse = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;

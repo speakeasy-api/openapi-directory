@@ -92,7 +92,9 @@ src/Models/Operations/SearchDocsResponse.php
 src/Models/Operations/UpdateDocSecurity.php
 src/Models/Operations/UpdateDocRequest.php
 src/Models/Operations/UpdateDocResponse.php
+src/Models/Operations/GetErrorsSecurity.php
 src/Models/Operations/GetErrorsResponse.php
+src/Models/Operations/GetProjectSecurity.php
 src/Models/Operations/GetProjectResponse.php
 src/Models/Operations/DeleteSwaggerSecurity.php
 src/Models/Operations/DeleteSwaggerRequest.php
@@ -114,6 +116,7 @@ src/Models/Operations/DeleteVersionResponse.php
 src/Models/Operations/GetVersionSecurity.php
 src/Models/Operations/GetVersionRequest.php
 src/Models/Operations/GetVersionResponse.php
+src/Models/Operations/GetVersionsSecurity.php
 src/Models/Operations/GetVersionsResponse.php
 src/Models/Operations/UpdateVersionSecurity.php
 src/Models/Operations/UpdateVersionRequest.php
@@ -124,4 +127,14 @@ src/Models/Shared/CustomPage.php
 src/Models/Shared/DocTypeEnum.php
 src/Models/Shared/Doc.php
 src/Models/Shared/Version.php
+docs/sdk/README.md
+docs/apispecification/README.md
+docs/categories/README.md
+docs/changelog/README.md
+docs/custompages/README.md
+docs/docs/README.md
+docs/errors/README.md
+docs/projects/README.md
+docs/swagger/README.md
+docs/version/README.md
 USAGE.md

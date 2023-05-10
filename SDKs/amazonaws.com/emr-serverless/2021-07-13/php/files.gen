@@ -95,6 +95,7 @@ src/Models/Shared/MonitoringConfiguration.php
 src/Models/Shared/S3MonitoringConfiguration.php
 src/Models/Shared/ManagedPersistenceMonitoringConfiguration.php
 src/Models/Shared/Configuration.php
+src/Models/Shared/ResourceUtilization.php
 src/Models/Shared/ListApplicationsResponse.php
 src/Models/Shared/ApplicationSummary.php
 src/Models/Shared/ListJobRunsResponse.php
@@ -103,4 +104,5 @@ src/Models/Shared/ListTagsForResourceResponse.php
 src/Models/Shared/StartJobRunResponse.php
 src/Models/Shared/UpdateApplicationResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -30,50 +30,84 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetBestPodcastsRequest;
+use \OpenAPI\OpenAPI\Models\Shared\SafeModeParamEnum;
+use \OpenAPI\OpenAPI\Models\Operations\GetBestPodcastsSortEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetBestPodcastsRequest();
+    $request->xListenAPIKey = 'corrupti';
+    $request->genreId = 'provident';
+    $request->language = 'distinctio';
+    $request->page = 844266;
+    $request->publisherRegion = 'unde';
+    $request->region = 'nulla';
+    $request->safeMode = SafeModeParamEnum::ONE;
+    $request->sort = GetBestPodcastsSortEnum::LISTEN_SCORE;
+
+    $response = $sdk->directoryAPI->getBestPodcasts($request);
+
+    if ($response->bestPodcastsResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### directoryAPI
+### [directoryAPI](docs/directoryapi/README.md)
 
-* `getBestPodcasts` - Fetch a list of best podcasts by genre
-* `getCuratedPodcastById` - Fetch a curated list of podcasts by id
-* `getCuratedPodcasts` - Fetch curated lists of podcasts
-* `getEpisodeById` - Fetch detailed meta data for an episode by id
-* `getEpisodeRecommendations` - Fetch recommendations for an episode
-* `getEpisodesInBatch` - Batch fetch basic meta data for episodes
-* `getGenres` - Fetch a list of podcast genres
-* `getLanguages` - Fetch a list of supported languages for podcasts
-* `getPodcastById` - Fetch detailed meta data and episodes for a podcast by id
-* `getPodcastRecommendations` - Fetch recommendations for a podcast
-* `getPodcastsInBatch` - Batch fetch basic meta data for podcasts
-* `getRegions` - Fetch a list of supported countries/regions for best podcasts
-* `justListen` - Fetch a random podcast episode
+* [getBestPodcasts](docs/directoryapi/README.md#getbestpodcasts) - Fetch a list of best podcasts by genre
+* [getCuratedPodcastById](docs/directoryapi/README.md#getcuratedpodcastbyid) - Fetch a curated list of podcasts by id
+* [getCuratedPodcasts](docs/directoryapi/README.md#getcuratedpodcasts) - Fetch curated lists of podcasts
+* [getEpisodeById](docs/directoryapi/README.md#getepisodebyid) - Fetch detailed meta data for an episode by id
+* [getEpisodeRecommendations](docs/directoryapi/README.md#getepisoderecommendations) - Fetch recommendations for an episode
+* [getEpisodesInBatch](docs/directoryapi/README.md#getepisodesinbatch) - Batch fetch basic meta data for episodes
+* [getGenres](docs/directoryapi/README.md#getgenres) - Fetch a list of podcast genres
+* [getLanguages](docs/directoryapi/README.md#getlanguages) - Fetch a list of supported languages for podcasts
+* [getPodcastById](docs/directoryapi/README.md#getpodcastbyid) - Fetch detailed meta data and episodes for a podcast by id
+* [getPodcastRecommendations](docs/directoryapi/README.md#getpodcastrecommendations) - Fetch recommendations for a podcast
+* [getPodcastsInBatch](docs/directoryapi/README.md#getpodcastsinbatch) - Batch fetch basic meta data for podcasts
+* [getRegions](docs/directoryapi/README.md#getregions) - Fetch a list of supported countries/regions for best podcasts
+* [justListen](docs/directoryapi/README.md#justlisten) - Fetch a random podcast episode
 
-### insightsAPI
+### [insightsAPI](docs/insightsapi/README.md)
 
-* `getPodcastAudience` - Fetch audience demographics for a podcast
+* [getPodcastAudience](docs/insightsapi/README.md#getpodcastaudience) - Fetch audience demographics for a podcast
+* [getPodcastsByDomainName](docs/insightsapi/README.md#getpodcastsbydomainname) - Fetch podcasts by a publisher's domain name
 
-### playlistAPI
+### [playlistAPI](docs/playlistapi/README.md)
 
-* `getPlaylistById` - Fetch a playlist's info and items (i.e., episodes or podcasts).
-* `getPlaylists` - Fetch a list of your playlists.
+* [getPlaylistById](docs/playlistapi/README.md#getplaylistbyid) - Fetch a playlist's info and items (i.e., episodes or podcasts).
+* [getPlaylists](docs/playlistapi/README.md#getplaylists) - Fetch a list of your playlists.
 
-### podcasterAPI
+### [podcasterAPI](docs/podcasterapi/README.md)
 
-* `deletePodcastById` - Request to delete a podcast
-* `submitPodcast` - Submit a podcast to Listen Notes database
+* [deletePodcastById](docs/podcasterapi/README.md#deletepodcastbyid) - Request to delete a podcast
+* [submitPodcast](docs/podcasterapi/README.md#submitpodcast) - Submit a podcast to Listen Notes database
 
-### searchAPI
+### [searchAPI](docs/searchapi/README.md)
 
-* `getRelatedSearches` - Fetch related search terms
-* `getTrendingSearches` - Fetch trending search terms
-* `search` - Full-text search
-* `spellcheck` - Spell check on a search term
-* `typeahead` - Typeahead search
+* [getRelatedSearches](docs/searchapi/README.md#getrelatedsearches) - Fetch related search terms
+* [getTrendingSearches](docs/searchapi/README.md#gettrendingsearches) - Fetch trending search terms
+* [search](docs/searchapi/README.md#search) - Full-text search
+* [spellcheck](docs/searchapi/README.md#spellcheck) - Spell check on a search term
+* [typeahead](docs/searchapi/README.md#typeahead) - Typeahead search
 <!-- End SDK Available Operations -->
 
 ### Maturity

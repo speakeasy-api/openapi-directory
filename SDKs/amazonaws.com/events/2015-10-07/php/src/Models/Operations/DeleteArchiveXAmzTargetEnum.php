@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteArchiveXAmzTargetEnum: string
 {
     case AWS_EVENTS_DELETE_ARCHIVE = 'AWSEvents.DeleteArchive';

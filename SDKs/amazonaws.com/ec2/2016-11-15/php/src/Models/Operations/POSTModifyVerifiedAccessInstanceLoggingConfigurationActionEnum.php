@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTModifyVerifiedAccessInstanceLoggingConfigurationActionEnum: string
 {
     case MODIFY_VERIFIED_ACCESS_INSTANCE_LOGGING_CONFIGURATION = 'ModifyVerifiedAccessInstanceLoggingConfiguration';

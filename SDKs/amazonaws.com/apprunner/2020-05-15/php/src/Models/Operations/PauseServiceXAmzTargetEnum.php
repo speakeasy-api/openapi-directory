@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PauseServiceXAmzTargetEnum: string
 {
     case APP_RUNNER_PAUSE_SERVICE = 'AppRunner.PauseService';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteFirewallDomainListXAmzTargetEnum: string
 {
     case ROUTE53_RESOLVER_DELETE_FIREWALL_DOMAIN_LIST = 'Route53Resolver.DeleteFirewallDomainList';

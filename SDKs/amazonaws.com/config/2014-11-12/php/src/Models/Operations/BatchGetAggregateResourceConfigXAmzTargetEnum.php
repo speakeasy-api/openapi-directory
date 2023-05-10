@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum BatchGetAggregateResourceConfigXAmzTargetEnum: string
 {
     case STARLING_DOVE_SERVICE_BATCH_GET_AGGREGATE_RESOURCE_CONFIG = 'StarlingDoveService.BatchGetAggregateResourceConfig';

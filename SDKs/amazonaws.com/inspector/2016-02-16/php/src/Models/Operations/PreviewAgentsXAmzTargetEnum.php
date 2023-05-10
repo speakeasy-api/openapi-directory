@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PreviewAgentsXAmzTargetEnum: string
 {
     case INSPECTOR_SERVICE_PREVIEW_AGENTS = 'InspectorService.PreviewAgents';

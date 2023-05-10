@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTRecordHandlerProgressActionEnum: string
 {
     case RECORD_HANDLER_PROGRESS = 'RecordHandlerProgress';

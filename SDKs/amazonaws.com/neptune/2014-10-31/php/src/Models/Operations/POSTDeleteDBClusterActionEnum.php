@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteDBClusterActionEnum: string
 {
     case DELETE_DB_CLUSTER = 'DeleteDBCluster';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetConfigXAmzTargetEnum: string
 {
     case CLOUD_HSM_FRONTEND_SERVICE_GET_CONFIG = 'CloudHsmFrontendService.GetConfig';

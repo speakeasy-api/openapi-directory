@@ -22,4 +22,5 @@ src/Models/Operations/GetProfileRequest.php
 src/Models/Operations/GetProfileResponse.php
 src/Models/Operations/GetTokenRequest.php
 src/Models/Operations/GetTokenResponse.php
+docs/sdk/README.md
 USAGE.md

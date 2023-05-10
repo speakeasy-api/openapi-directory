@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateSubscriberXAmzTargetEnum: string
 {
     case AWS_BUDGET_SERVICE_GATEWAY_CREATE_SUBSCRIBER = 'AWSBudgetServiceGateway.CreateSubscriber';

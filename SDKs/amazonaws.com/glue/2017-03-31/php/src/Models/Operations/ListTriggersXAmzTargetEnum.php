@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListTriggersXAmzTargetEnum: string
 {
     case AWS_GLUE_LIST_TRIGGERS = 'AWSGlue.ListTriggers';

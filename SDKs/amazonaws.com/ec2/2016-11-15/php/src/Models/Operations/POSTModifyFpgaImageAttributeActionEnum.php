@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTModifyFpgaImageAttributeActionEnum: string
 {
     case MODIFY_FPGA_IMAGE_ATTRIBUTE = 'ModifyFpgaImageAttribute';

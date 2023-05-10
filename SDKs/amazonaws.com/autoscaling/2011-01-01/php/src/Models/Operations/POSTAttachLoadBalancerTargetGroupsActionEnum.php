@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTAttachLoadBalancerTargetGroupsActionEnum: string
 {
     case ATTACH_LOAD_BALANCER_TARGET_GROUPS = 'AttachLoadBalancerTargetGroups';

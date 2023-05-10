@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetCallAnalyticsJobXAmzTargetEnum: string
 {
     case TRANSCRIBE_GET_CALL_ANALYTICS_JOB = 'Transcribe.GetCallAnalyticsJob';

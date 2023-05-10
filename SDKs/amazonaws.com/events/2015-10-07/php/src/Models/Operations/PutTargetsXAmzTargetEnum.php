@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutTargetsXAmzTargetEnum: string
 {
     case AWS_EVENTS_PUT_TARGETS = 'AWSEvents.PutTargets';

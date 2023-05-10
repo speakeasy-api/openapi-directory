@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AuthorizeIpRulesXAmzTargetEnum: string
 {
     case WORKSPACES_SERVICE_AUTHORIZE_IP_RULES = 'WorkspacesService.AuthorizeIpRules';

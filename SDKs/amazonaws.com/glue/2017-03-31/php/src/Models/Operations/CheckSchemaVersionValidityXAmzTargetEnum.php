@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CheckSchemaVersionValidityXAmzTargetEnum: string
 {
     case AWS_GLUE_CHECK_SCHEMA_VERSION_VALIDITY = 'AWSGlue.CheckSchemaVersionValidity';

@@ -30,39 +30,60 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $response = $sdk->account->getAccount();
+
+    if ($response->accountResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### account
+### [account](docs/account/README.md)
 
-* `getAccount` - Get information about account
+* [getAccount](docs/account/README.md#getaccount) - Get information about account
 
-### appKeys
+### [appKeys](docs/appkeys/README.md)
 
-* `createnewappkey` - Create new appkey
-* `getappkeysfromaccount` - Get appKeys from account
-* `updateappkey` - Update appkey
+* [createnewappkey](docs/appkeys/README.md#createnewappkey) - Create new appkey
+* [getappkeysfromaccount](docs/appkeys/README.md#getappkeysfromaccount) - Get appKeys from account
+* [updateappkey](docs/appkeys/README.md#updateappkey) - Update appkey
 
-### roles
+### [roles](docs/roles/README.md)
 
-* `getListRoles` - Get List of Roles
-* `getRolesbyUser` - Get Roles by User/appKey
-* `putRolesinUser` - Put Roles in User/appKey
-* `removeRolefromUser` - Remove Role from User/appKey
+* [getListRoles](docs/roles/README.md#getlistroles) - Get List of Roles
+* [getRolesbyUser](docs/roles/README.md#getrolesbyuser) - Get Roles by User/appKey
+* [putRolesinUser](docs/roles/README.md#putrolesinuser) - Put Roles in User/appKey
+* [removeRolefromUser](docs/roles/README.md#removerolefromuser) - Remove Role from User/appKey
 
-### store
+### [store](docs/store/README.md)
 
-* `getByAccount` - Get Stores
+* [getByAccount](docs/store/README.md#getbyaccount) - Get Stores
 
-### user
+### [user](docs/user/README.md)
 
-* `createUser` - Create User
-* `getListUsers` - Get List of Users
-* `getUser` - Get User
+* [createUser](docs/user/README.md#createuser) - Create User
+* [getListUsers](docs/user/README.md#getlistusers) - Get List of Users
+* [getUser](docs/user/README.md#getuser) - Get User
 <!-- End SDK Available Operations -->
 
 ### Maturity

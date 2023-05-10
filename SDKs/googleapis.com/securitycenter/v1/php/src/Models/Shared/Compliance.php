@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class Compliance
 {
     /**
-     * Policies within the standard/benchmark e.g. A.12.4.1
+     * Policies within the standard or benchmark, for example, A.12.4.1
      * 
      * @var ?array<string> $ids
      */
@@ -28,7 +28,7 @@ class Compliance
     public ?array $ids = null;
     
     /**
-     * Refers to industry wide standards or benchmarks e.g. "cis", "pci", "owasp", etc.
+     * Industry-wide compliance standards or benchmarks, such as CIS, PCI, and OWASP.
      * 
      * @var ?string $standard
      */
@@ -38,7 +38,7 @@ class Compliance
     public ?string $standard = null;
     
     /**
-     * Version of the standard/benchmark e.g. 1.1
+     * Version of the standard or benchmark, for example, 1.1
      * 
      * @var ?string $version
      */

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateRealtimeEndpointXAmzTargetEnum: string
 {
     case AMAZON_ML20141212_CREATE_REALTIME_ENDPOINT = 'AmazonML_20141212.CreateRealtimeEndpoint';

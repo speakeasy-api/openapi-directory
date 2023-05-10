@@ -30,69 +30,94 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\GetApplicationsApplicationIdRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetApplicationsApplicationIdRequest();
+    $request->applicationId = '89bd9d8d-69a6-474e-8f46-7cc8796ed151';
+
+    $response = $sdk->applications->getApplicationsApplicationId($request);
+
+    if ($response->getApplicationsApplicationId200ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### applications
+### [applications](docs/applications/README.md)
 
-* `getApplicationsApplicationId` - /applications/{application_id}
-* `postApplications` - /applications
-* `putApplicationsApplicationId` - /applications/{application_id}
+* [getApplicationsApplicationId](docs/applications/README.md#getapplicationsapplicationid) - /applications/{application_id}
+* [postApplications](docs/applications/README.md#postapplications) - /applications
+* [putApplicationsApplicationId](docs/applications/README.md#putapplicationsapplicationid) - /applications/{application_id}
 
-### auth
+### [auth](docs/auth/README.md)
 
-* `postAuthToken` - /auth/token
+* [postAuthToken](docs/auth/README.md#postauthtoken) - /auth/token
 
-### classifications
+### [classifications](docs/classifications/README.md)
 
-* `getClassifications` - /classifications/naics_index_entries
+* [getClassifications](docs/classifications/README.md#getclassifications) - /classifications/naics_index_entries
 
-### coverageParameters
+### [coverageParameters](docs/coverageparameters/README.md)
 
-* `getCoverageParameters` - /coverage_parameters
+* [getCoverageParameters](docs/coverageparameters/README.md#getcoverageparameters) - /coverage_parameters
 
-### files
+### [files](docs/files/README.md)
 
-* `getFilesFileId` - /files/{file_id}
-* `postFilesFileIdGetTemporaryLink` - /files/{file_id}/get_temporary_link
+* [getFilesFileId](docs/files/README.md#getfilesfileid) - /files/{file_id}
+* [postFilesFileIdGetTemporaryLink](docs/files/README.md#postfilesfileidgettemporarylink) - /files/{file_id}/get_temporary_link
 
-### institutions
+### [institutions](docs/institutions/README.md)
 
-* `getInstitutions` - /institutions
+* [getInstitutions](docs/institutions/README.md#getinstitutions) - /institutions
 
-### policies
+### [policies](docs/policies/README.md)
 
-* `getPoliciesPolicyId` - /policies/{policy_id}
-* `postPolicies` - /policies
+* [getPoliciesPolicyId](docs/policies/README.md#getpoliciespolicyid) - /policies/{policy_id}
+* [postPolicies](docs/policies/README.md#postpolicies) - /policies
 
-### producers
+### [producers](docs/producers/README.md)
 
-* `getProducers` - /producers
+* [getProducers](docs/producers/README.md#getproducers) - /producers
 
-### products
+### [products](docs/products/README.md)
 
-* `getProducts` - /products
+* [getProducts](docs/products/README.md#getproducts) - /products
 
-### quotes
+### [quotes](docs/quotes/README.md)
 
-* `getQuotesQuoteId` - /quotes/{quote_id}
+* [getQuotesQuoteId](docs/quotes/README.md#getquotesquoteid) - /quotes/{quote_id}
 
-### riskParameters
+### [riskParameters](docs/riskparameters/README.md)
 
-* `getRiskParameters` - /risk_parameters
+* [getRiskParameters](docs/riskparameters/README.md#getriskparameters) - /risk_parameters
 
-### submissions
+### [submissions](docs/submissions/README.md)
 
-* `getSubmissionsSubmissionId` - /submissions/{submission_id}
-* `postSubmissions` - /submissions
+* [getSubmissionsSubmissionId](docs/submissions/README.md#getsubmissionssubmissionid) - /submissions/{submission_id}
+* [postSubmissions](docs/submissions/README.md#postsubmissions) - /submissions
 
-### welcomeAndHealthCheck
+### [welcomeAndHealthCheck](docs/welcomeandhealthcheck/README.md)
 
-* `get` - /
+* [get](docs/welcomeandhealthcheck/README.md#get) - /
 <!-- End SDK Available Operations -->
 
 ### Maturity

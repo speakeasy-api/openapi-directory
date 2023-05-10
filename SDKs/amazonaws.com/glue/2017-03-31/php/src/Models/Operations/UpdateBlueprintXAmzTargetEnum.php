@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateBlueprintXAmzTargetEnum: string
 {
     case AWS_GLUE_UPDATE_BLUEPRINT = 'AWSGlue.UpdateBlueprint';

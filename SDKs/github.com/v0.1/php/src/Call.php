@@ -247,9 +247,11 @@ class Call
      * 
      * Hangs up all established calls
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\PostV01HangupAllCallsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\PostV01HangupAllCallsResponse
      */
 	public function postV01HangupAllCalls(
+        \OpenAPI\OpenAPI\Models\Operations\PostV01HangupAllCallsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV01HangupAllCallsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -257,7 +259,8 @@ class Call
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

@@ -27,6 +27,7 @@ src/Models/Operations/DeleteSettingsOrganizationsOrganizationNameReceiversReceiv
 src/Models/Operations/DeleteSettingsOrganizationsOrganizationNameSendersSenderNameSecurity.php
 src/Models/Operations/DeleteSettingsOrganizationsOrganizationNameSendersSenderNameRequest.php
 src/Models/Operations/DeleteSettingsOrganizationsOrganizationNameSendersSenderNameResponse.php
+src/Models/Operations/GetSettingsOrganizationsSecurity.php
 src/Models/Operations/GetSettingsOrganizationsResponse.php
 src/Models/Operations/GetSettingsOrganizationsOrganizationNameSecurity.php
 src/Models/Operations/GetSettingsOrganizationsOrganizationNameRequest.php
@@ -43,6 +44,7 @@ src/Models/Operations/GetSettingsOrganizationsOrganizationNameSendersResponse.ph
 src/Models/Operations/GetSettingsOrganizationsOrganizationNameSendersSenderNameSecurity.php
 src/Models/Operations/GetSettingsOrganizationsOrganizationNameSendersSenderNameRequest.php
 src/Models/Operations/GetSettingsOrganizationsOrganizationNameSendersSenderNameResponse.php
+src/Models/Operations/HeadSettingsOrganizationsSecurity.php
 src/Models/Operations/HeadSettingsOrganizationsResponse.php
 src/Models/Operations/PostReportsSecurity.php
 src/Models/Operations/PostReportsOptionEnum.php
@@ -83,4 +85,5 @@ src/Models/Shared/DetailScopeEnum.php
 src/Models/Shared/Detail.php
 src/Models/Shared/ItemRouting.php
 src/Models/Shared/Destination.php
+docs/sdk/README.md
 USAGE.md

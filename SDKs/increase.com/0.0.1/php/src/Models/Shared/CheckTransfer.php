@@ -81,6 +81,24 @@ class CheckTransfer
     public int $amount;
     
     /**
+     * If your account requires approvals for transfers and the transfer was approved, this will contain details of the approval.
+     * 
+     * @var \OpenAPI\OpenAPI\Models\Shared\CheckTransferTransferApproval $approval
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('approval')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\CheckTransferTransferApproval')]
+    public CheckTransferTransferApproval $approval;
+    
+    /**
+     * If your account requires approvals for transfers and the transfer was not approved, this will contain details of the cancellation.
+     * 
+     * @var \OpenAPI\OpenAPI\Models\Shared\CheckTransferTransferCancellation $cancellation
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('cancellation')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\CheckTransferTransferCancellation')]
+    public CheckTransferTransferCancellation $cancellation;
+    
+    /**
      * The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time at which the transfer was created.
      * 
      * @var \DateTime $createdAt
@@ -162,6 +180,15 @@ class CheckTransfer
     public CheckTransferReturnAddress $returnAddress;
     
     /**
+     * After a check transfer is returned, this will contain supplemental details. A check transfer is returned when the receiver mails a never deposited check back to the bank printed on the check.
+     * 
+     * @var \OpenAPI\OpenAPI\Models\Shared\CheckTransferCheckTransferReturn $returnDetails
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('return_details')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\CheckTransferCheckTransferReturn')]
+    public CheckTransferCheckTransferReturn $returnDetails;
+    
+    /**
      * The lifecycle status of the transfer.
      * 
      * @var \OpenAPI\OpenAPI\Models\Shared\CheckTransferStatusEnum $status
@@ -198,15 +225,6 @@ class CheckTransfer
     public \DateTime $submittedAt;
     
     /**
-     * If the transfer was created from a template, this will be the template's ID.
-     * 
-     * @var string $templateId
-     */
-	#[\JMS\Serializer\Annotation\SerializedName('template_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
-    public string $templateId;
-    
-    /**
      * The ID for the transaction caused by the transfer.
      * 
      * @var string $transactionId
@@ -233,6 +251,8 @@ class CheckTransfer
 		$this->addressState = "";
 		$this->addressZip = "";
 		$this->amount = 0;
+		$this->approval = new \OpenAPI\OpenAPI\Models\Shared\CheckTransferTransferApproval();
+		$this->cancellation = new \OpenAPI\OpenAPI\Models\Shared\CheckTransferTransferCancellation();
 		$this->createdAt = new \DateTime();
 		$this->currency = \OpenAPI\OpenAPI\Models\Shared\CheckTransferCurrencyEnum::CAD;
 		$this->deposit = new \OpenAPI\OpenAPI\Models\Shared\CheckTransferCheckTransferDeposit();
@@ -242,11 +262,11 @@ class CheckTransfer
 		$this->note = "";
 		$this->recipientName = "";
 		$this->returnAddress = new \OpenAPI\OpenAPI\Models\Shared\CheckTransferReturnAddress();
+		$this->returnDetails = new \OpenAPI\OpenAPI\Models\Shared\CheckTransferCheckTransferReturn();
 		$this->status = \OpenAPI\OpenAPI\Models\Shared\CheckTransferStatusEnum::PENDING_APPROVAL;
 		$this->stopPaymentRequest = new \OpenAPI\OpenAPI\Models\Shared\CheckTransferCheckTransferStopPaymentRequest();
 		$this->submission = new \OpenAPI\OpenAPI\Models\Shared\CheckTransferCheckTransferSubmission();
 		$this->submittedAt = new \DateTime();
-		$this->templateId = "";
 		$this->transactionId = "";
 		$this->type = \OpenAPI\OpenAPI\Models\Shared\CheckTransferTypeEnum::CHECK_TRANSFER;
 	}

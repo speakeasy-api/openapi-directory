@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDescribeReservedCacheNodesActionEnum: string
 {
     case DESCRIBE_RESERVED_CACHE_NODES = 'DescribeReservedCacheNodes';

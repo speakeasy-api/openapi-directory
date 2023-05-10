@@ -37,4 +37,6 @@ src/Models/Shared/ResultScreenshot.php
 src/Models/Shared/ResultVersion.php
 src/Models/Shared/Result.php
 src/Models/Shared/AltEnum.php
+docs/sdk/README.md
+docs/pagespeedapi/README.md
 USAGE.md

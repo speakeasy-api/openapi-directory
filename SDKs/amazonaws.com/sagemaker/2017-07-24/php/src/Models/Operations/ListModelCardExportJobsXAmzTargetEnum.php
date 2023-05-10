@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListModelCardExportJobsXAmzTargetEnum: string
 {
     case SAGE_MAKER_LIST_MODEL_CARD_EXPORT_JOBS = 'SageMaker.ListModelCardExportJobs';

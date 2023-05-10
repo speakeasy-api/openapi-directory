@@ -71,4 +71,7 @@ src/Models/Shared/Settings.php
 src/Models/Shared/Notification.php
 src/Models/Shared/CloudPubsubTopicPayloadFormatEnum.php
 src/Models/Shared/CloudPubsubTopic.php
+docs/sdk/README.md
+docs/alerts/README.md
+docs/v1beta1/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateWatchlistXAmzTargetEnum: string
 {
     case VOICE_ID_CREATE_WATCHLIST = 'VoiceID.CreateWatchlist';

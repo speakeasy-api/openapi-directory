@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTModifyTargetGroupActionEnum: string
 {
     case MODIFY_TARGET_GROUP = 'ModifyTargetGroup';

@@ -79,7 +79,7 @@ class RunNamespacesDomainmappingsCreateRequest
     public ?string $oauthToken = null;
     
     /**
-     * The namespace in which the domain mapping should be created. For Cloud Run (fully managed), replace {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+     * Required. The namespace in which the domain mapping should be created. For Cloud Run (fully managed), replace {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
      * 
      * @var string $parent
      */

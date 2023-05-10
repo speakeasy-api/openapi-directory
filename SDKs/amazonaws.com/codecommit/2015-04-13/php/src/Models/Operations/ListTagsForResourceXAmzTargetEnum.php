@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListTagsForResourceXAmzTargetEnum: string
 {
     case CODE_COMMIT20150413_LIST_TAGS_FOR_RESOURCE = 'CodeCommit_20150413.ListTagsForResource';

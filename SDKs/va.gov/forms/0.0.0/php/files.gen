@@ -40,4 +40,6 @@ src/Models/Shared/FormShow.php
 src/Models/Shared/FormsIndexAttributesBenefitCategories.php
 src/Models/Shared/FormsIndexAttributes.php
 src/Models/Shared/FormsIndex.php
+docs/sdk/README.md
+docs/forms/README.md
 USAGE.md

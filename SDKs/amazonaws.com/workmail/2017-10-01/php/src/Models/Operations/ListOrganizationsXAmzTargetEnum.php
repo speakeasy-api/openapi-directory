@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListOrganizationsXAmzTargetEnum: string
 {
     case WORK_MAIL_SERVICE_LIST_ORGANIZATIONS = 'WorkMailService.ListOrganizations';

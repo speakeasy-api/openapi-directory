@@ -21,4 +21,5 @@ src/Utils/Utils.php
 src/Models/Operations/CreateANewQuestionRequestBody.php
 src/Models/Operations/CreateANewQuestionResponse.php
 src/Models/Operations/ListAllQuestionsResponse.php
+docs/sdk/README.md
 USAGE.md

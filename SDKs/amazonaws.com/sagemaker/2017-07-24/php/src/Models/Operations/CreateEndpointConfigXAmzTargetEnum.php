@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateEndpointConfigXAmzTargetEnum: string
 {
     case SAGE_MAKER_CREATE_ENDPOINT_CONFIG = 'SageMaker.CreateEndpointConfig';

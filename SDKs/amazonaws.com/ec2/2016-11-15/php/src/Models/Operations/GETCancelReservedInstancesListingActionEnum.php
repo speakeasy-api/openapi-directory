@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETCancelReservedInstancesListingActionEnum: string
 {
     case CANCEL_RESERVED_INSTANCES_LISTING = 'CancelReservedInstancesListing';

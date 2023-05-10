@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeSubnetGroupsXAmzTargetEnum: string
 {
     case AMAZON_DAXV3_DESCRIBE_SUBNET_GROUPS = 'AmazonDAXV3.DescribeSubnetGroups';

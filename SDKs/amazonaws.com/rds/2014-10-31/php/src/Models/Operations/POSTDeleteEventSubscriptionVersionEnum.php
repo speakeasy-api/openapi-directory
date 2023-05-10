@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteEventSubscriptionVersionEnum: string
 {
     case TWO_THOUSAND_AND_FOURTEEN1031 = '2014-10-31';

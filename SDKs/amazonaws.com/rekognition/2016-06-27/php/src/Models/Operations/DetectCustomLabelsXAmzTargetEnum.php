@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DetectCustomLabelsXAmzTargetEnum: string
 {
     case REKOGNITION_SERVICE_DETECT_CUSTOM_LABELS = 'RekognitionService.DetectCustomLabels';

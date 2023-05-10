@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribePatchPropertiesXAmzTargetEnum: string
 {
     case AMAZON_SSM_DESCRIBE_PATCH_PROPERTIES = 'AmazonSSM.DescribePatchProperties';

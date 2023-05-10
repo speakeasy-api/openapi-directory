@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class ApplianceCluster
 {
     /**
-     * Immutable. Self-link of the GCP resource for the Appliance Cluster. For example: //transferappliance.googleapis.com/projects/my-project/locations/us-west1-a/appliances/my-appliance
+     * Immutable. Self-link of the Google Cloud resource for the Appliance Cluster. For example: //transferappliance.googleapis.com/projects/my-project/locations/us-west1-a/appliances/my-appliance
      * 
      * @var ?string $resourceLink
      */

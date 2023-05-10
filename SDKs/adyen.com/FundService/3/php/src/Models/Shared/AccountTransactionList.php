@@ -34,10 +34,10 @@ class AccountTransactionList
     /**
      * The list of transactions.
      * 
-     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\Transaction> $transactions
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\TransactionWrapper> $transactions
      */
 	#[\JMS\Serializer\Annotation\SerializedName('transactions')]
-    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\Transaction>')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\TransactionWrapper>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $transactions = null;
     

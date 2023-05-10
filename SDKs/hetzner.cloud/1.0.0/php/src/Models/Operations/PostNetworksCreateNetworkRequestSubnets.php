@@ -39,10 +39,21 @@ class PostNetworksCreateNetworkRequestSubnets
     #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Operations\PostNetworksCreateNetworkRequestSubnetsTypeEnum>')]
     public PostNetworksCreateNetworkRequestSubnetsTypeEnum $type;
     
+    /**
+     * ID of the robot vSwitch. Must be supplied if the subnet is of type vswitch.
+     * 
+     * @var ?int $vswitchId
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('vswitch_id')]
+    #[\JMS\Serializer\Annotation\Type('int')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?int $vswitchId = null;
+    
 	public function __construct()
 	{
 		$this->ipRange = null;
 		$this->networkZone = "";
 		$this->type = \OpenAPI\OpenAPI\Models\Operations\PostNetworksCreateNetworkRequestSubnetsTypeEnum::CLOUD;
+		$this->vswitchId = null;
 	}
 }

@@ -105,4 +105,5 @@ src/Models/Shared/RefreshTrustedAdvisorCheckRequest.php
 src/Models/Shared/ResolveCaseResponse.php
 src/Models/Shared/ResolveCaseRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

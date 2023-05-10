@@ -20,5 +20,5 @@ enum CheckSuiteConclusionEnum: string
     case ACTION_REQUIRED = 'action_required';
     case STARTUP_FAILURE = 'startup_failure';
     case STALE = 'stale';
-    case NULL = 'null';
+    case LESS_THAN_NIL_GREATER_THAN = '<nil>';
 }

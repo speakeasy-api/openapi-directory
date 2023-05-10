@@ -37,4 +37,6 @@ src/Models/Shared/Error500.php
 src/Models/Shared/Error400ErrorErrorSource.php
 src/Models/Shared/Error400Error.php
 src/Models/Shared/Error400.php
+docs/sdk/README.md
+docs/pricemetrics/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateCostCategoryDefinitionXAmzTargetEnum: string
 {
     case AWS_INSIGHTS_INDEX_SERVICE_UPDATE_COST_CATEGORY_DEFINITION = 'AWSInsightsIndexService.UpdateCostCategoryDefinition';

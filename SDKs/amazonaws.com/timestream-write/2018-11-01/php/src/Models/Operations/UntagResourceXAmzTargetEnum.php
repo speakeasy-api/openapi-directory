@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UntagResourceXAmzTargetEnum: string
 {
     case TIMESTREAM20181101_UNTAG_RESOURCE = 'Timestream_20181101.UntagResource';

@@ -18,6 +18,16 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class GoogleCloudDataplexV1DataQualitySpec
 {
     /**
+     * Optional. A filter applied to all rows in a single DataScan job. The filter needs to be a valid SQL expression for a WHERE clause in BigQuery standard SQL syntax. Example: col1 >= 0 AND col2 < 10
+     * 
+     * @var ?string $rowFilter
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('rowFilter')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $rowFilter = null;
+    
+    /**
      * The list of rules to evaluate against a data source. At least one rule is required.
      * 
      * @var ?array<\OpenAPI\OpenAPI\Models\Shared\GoogleCloudDataplexV1DataQualityRule> $rules
@@ -27,8 +37,20 @@ class GoogleCloudDataplexV1DataQualitySpec
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $rules = null;
     
+    /**
+     * Optional. The percentage of the records to be selected from the dataset for DataScan. Value can range between 0.0 and 100.0 with up to 3 significant decimal digits. Sampling is not applied if sampling_percent is not specified, 0 or 100.
+     * 
+     * @var ?float $samplingPercent
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('samplingPercent')]
+    #[\JMS\Serializer\Annotation\Type('float')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?float $samplingPercent = null;
+    
 	public function __construct()
 	{
+		$this->rowFilter = null;
 		$this->rules = null;
+		$this->samplingPercent = null;
 	}
 }

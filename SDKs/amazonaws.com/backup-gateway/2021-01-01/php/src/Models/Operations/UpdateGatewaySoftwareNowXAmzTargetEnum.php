@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateGatewaySoftwareNowXAmzTargetEnum: string
 {
     case BACKUP_ON_PREMISES_V20210101_UPDATE_GATEWAY_SOFTWARE_NOW = 'BackupOnPremises_v20210101.UpdateGatewaySoftwareNow';

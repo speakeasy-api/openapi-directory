@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeClustersXAmzTargetEnum: string
 {
     case AMAZON_DAXV3_DESCRIBE_CLUSTERS = 'AmazonDAXV3.DescribeClusters';

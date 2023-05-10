@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopInstanceXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_STOP_INSTANCE = 'Lightsail_20161128.StopInstance';

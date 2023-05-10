@@ -31,7 +31,7 @@ class GETDeleteVerifiedAccessTrustProviderRequest
     public ?bool $dryRun = null;
     
     /**
-     * The ID of the Amazon Web Services Verified Access trust provider.
+     * The ID of the Verified Access trust provider.
      * 
      * @var string $verifiedAccessTrustProviderId
      */

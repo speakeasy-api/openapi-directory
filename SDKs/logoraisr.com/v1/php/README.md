@@ -30,40 +30,65 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\PreviewsReadRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new PreviewsReadRequest();
+    $request->fileId = 'corrupti';
+
+    $response = $sdk->previews->previewsRead($request);
+
+    if ($response->previewResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### previews
+### [previews](docs/previews/README.md)
 
-* `previewsRead` - Get preview image of uploaded file
+* [previewsRead](docs/previews/README.md#previewsread) - Get preview image of uploaded file
 
-### processes
+### [processes](docs/processes/README.md)
 
-* `processesList` - Get process list.
+* [processesList](docs/processes/README.md#processeslist) - Get process list.
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `projectsCreate` - Create a new project.
-* `projectsList` - Get user project list.
-* `projectsRead` - Get project details.
+* [projectsCreate](docs/projects/README.md#projectscreate) - Create a new project.
+* [projectsList](docs/projects/README.md#projectslist) - Get user project list.
+* [projectsRead](docs/projects/README.md#projectsread) - Get project details.
 
-### reports
+### [reports](docs/reports/README.md)
 
-* `reportsCreate` - Create a new report.
-* `reportsList` - Get user report list.
-* `reportsRead` - Get report details.
+* [reportsCreate](docs/reports/README.md#reportscreate) - Create a new report.
+* [reportsList](docs/reports/README.md#reportslist) - Get user report list.
+* [reportsRead](docs/reports/README.md#reportsread) - Get report details.
 
-### results
+### [results](docs/results/README.md)
 
-* `resultsRead` - Get the result from image processing
+* [resultsRead](docs/results/README.md#resultsread) - Get the result from image processing
 
-### uploads
+### [uploads](docs/uploads/README.md)
 
-* `uploadsCreate` - Upload a new image
+* [uploadsCreate](docs/uploads/README.md#uploadscreate) - Upload a new image
 <!-- End SDK Available Operations -->
 
 ### Maturity

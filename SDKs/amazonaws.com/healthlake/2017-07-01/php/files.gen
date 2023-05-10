@@ -98,4 +98,5 @@ src/Models/Shared/StartFHIRImportJobRequest.php
 src/Models/Shared/TagResourceRequest.php
 src/Models/Shared/UntagResourceRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

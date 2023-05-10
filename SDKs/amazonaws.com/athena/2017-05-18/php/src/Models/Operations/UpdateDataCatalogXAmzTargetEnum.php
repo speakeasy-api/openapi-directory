@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateDataCatalogXAmzTargetEnum: string
 {
     case AMAZON_ATHENA_UPDATE_DATA_CATALOG = 'AmazonAthena.UpdateDataCatalog';

@@ -21,7 +21,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class ExecuteRequest
 {
     /**
-     * Plain english instructions. Provide as much detail as possible.
+     * Plain english instructions. Provide as much detail as possible, even if other fields are present.
      * 
      * @var string $instructions
      */

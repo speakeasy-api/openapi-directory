@@ -30,18 +30,43 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\CheckSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $requestSecurity = new CheckSecurity();
+    $requestSecurity->accessPointApiKeyHeader = 'YOUR_API_KEY_HERE';
+
+    $response = $sdk->check($requestSecurity);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `check` - Check
-* `executeAppActionEndpoint` - Execute App Action Endpoint
-* `getConfigurationLink` - Get Configuration Link
-* `listExposedActions` - List Exposed Actions
+* [check](docs/sdk/README.md#check) - Check
+* [executeAppActionEndpoint](docs/sdk/README.md#executeappactionendpoint) - Execute App Action Endpoint
+* [getConfigurationLink](docs/sdk/README.md#getconfigurationlink) - Get Configuration Link
+* [getExecutionLogEndpoint](docs/sdk/README.md#getexecutionlogendpoint) - Get Execution Log Endpoint
+* [listExposedActions](docs/sdk/README.md#listexposedactions) - List Exposed Actions
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ImportCatalogToGlueXAmzTargetEnum: string
 {
     case AWS_GLUE_IMPORT_CATALOG_TO_GLUE = 'AWSGlue.ImportCatalogToGlue';

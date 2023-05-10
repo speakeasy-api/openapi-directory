@@ -30,42 +30,71 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\GetSuggestionRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetSuggestionRequest();
+    $request->accept = 'corrupti';
+    $request->contentType = 'provident';
+    $request->accountName = 'distinctio';
+    $request->sellerId = 'quibusdam';
+    $request->sellerSkuId = 'unde';
+
+    $response = $sdk->getSuggestions->getSuggestion($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### getSuggestions
+### [getSuggestions](docs/getsuggestions/README.md)
 
-* `getSuggestion` - Get SKU Suggestion by ID
-* `getsuggestions` - Get all SKU suggestions
+* [getSuggestion](docs/getsuggestions/README.md#getsuggestion) - Get SKU Suggestion by ID
+* [getsuggestions](docs/getsuggestions/README.md#getsuggestions) - Get all SKU suggestions
 
-### getVersions
+### [getVersions](docs/getversions/README.md)
 
-* `getSuggestionbyversion` - Get Version by ID
-* `getVersions` - Get all Versions
+* [getSuggestionbyversion](docs/getversions/README.md#getsuggestionbyversion) - Get Version by ID
+* [getVersions](docs/getversions/README.md#getversions) - Get all Versions
 
-### manageSuggestions
+### [manageSuggestions](docs/managesuggestions/README.md)
 
-* `deleteSuggestion` - Delete SKU Suggestion
-* `saveSuggestion` - Send SKU Suggestion
+* [deleteSuggestion](docs/managesuggestions/README.md#deletesuggestion) - Delete SKU Suggestion
+* [saveSuggestion](docs/managesuggestions/README.md#savesuggestion) - Send SKU Suggestion
 
-### matchReceivedSKUs
+### [matchReceivedSKUs](docs/matchreceivedskus/README.md)
 
-* `match` - Match Received SKUs individually
-* `matchMultiple` - Match Multiple Received SKUs
+* [match](docs/matchreceivedskus/README.md#match) - Match Received SKUs individually
+* [matchMultiple](docs/matchreceivedskus/README.md#matchmultiple) - Match Multiple Received SKUs
 
-### skuApprovalSettings
+### [skuApprovalSettings](docs/skuapprovalsettings/README.md)
 
-* `getaccountconfig` - Get Account's Approval Settings
-* `getautoApprovevaluefromconfig` - Get autoApprove Status in Account Settings
-* `getselleraccountconfig` - Get Seller's Approval Settings
-* `putselleraccountconfig` - Save Seller's Approval Settings
-* `saveaccountconfig` - Save Account's Approval Settings
-* `saveautoapproveforaccount` - Activate autoApprove in Marketplace's Account
-* `saveautoapproveforaccountseller` - Activate autoApprove Setting for a Seller
+* [getaccountconfig](docs/skuapprovalsettings/README.md#getaccountconfig) - Get Account's Approval Settings
+* [getautoApprovevaluefromconfig](docs/skuapprovalsettings/README.md#getautoapprovevaluefromconfig) - Get autoApprove Status in Account Settings
+* [getselleraccountconfig](docs/skuapprovalsettings/README.md#getselleraccountconfig) - Get Seller's Approval Settings
+* [putselleraccountconfig](docs/skuapprovalsettings/README.md#putselleraccountconfig) - Save Seller's Approval Settings
+* [saveaccountconfig](docs/skuapprovalsettings/README.md#saveaccountconfig) - Save Account's Approval Settings
+* [saveautoapproveforaccount](docs/skuapprovalsettings/README.md#saveautoapproveforaccount) - Activate autoApprove in Marketplace's Account
+* [saveautoapproveforaccountseller](docs/skuapprovalsettings/README.md#saveautoapproveforaccountseller) - Activate autoApprove Setting for a Seller
 <!-- End SDK Available Operations -->
 
 ### Maturity

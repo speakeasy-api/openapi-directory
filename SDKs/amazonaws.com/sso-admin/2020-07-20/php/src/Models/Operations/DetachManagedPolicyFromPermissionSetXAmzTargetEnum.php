@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DetachManagedPolicyFromPermissionSetXAmzTargetEnum: string
 {
     case SWB_EXTERNAL_SERVICE_DETACH_MANAGED_POLICY_FROM_PERMISSION_SET = 'SWBExternalService.DetachManagedPolicyFromPermissionSet';

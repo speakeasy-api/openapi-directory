@@ -73,6 +73,8 @@ class SDK
 	
 	public Quotas $quotas;
 	
+	public Recommendations $recommendations;
+	
 	public Regionalinventory $regionalinventory;
 	
 	public Regions $regions;
@@ -359,6 +361,15 @@ class SDK
 		);
 		
 		$this->quotas = new Quotas(
+			$this->_defaultClient,
+			$this->_securityClient,
+			$this->_serverUrl,
+			$this->_language,
+			$this->_sdkVersion,
+			$this->_genVersion
+		);
+		
+		$this->recommendations = new Recommendations(
 			$this->_defaultClient,
 			$this->_securityClient,
 			$this->_serverUrl,

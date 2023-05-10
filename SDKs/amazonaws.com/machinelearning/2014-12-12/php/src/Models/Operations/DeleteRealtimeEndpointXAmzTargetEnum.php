@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteRealtimeEndpointXAmzTargetEnum: string
 {
     case AMAZON_ML20141212_DELETE_REALTIME_ENDPOINT = 'AmazonML_20141212.DeleteRealtimeEndpoint';

@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 
 
 /**
- * PutMetadataFlagRequestBodyBody - Stores the metadata information about a feature on a form or view.
+ * PutMetadataFlagRequestBodyBody - Stores the metadata information about a feature on a form.
  * 
  * @package OpenAPI\OpenAPI\Models\Operations
  * @access public

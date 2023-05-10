@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteTransitGatewayVpcAttachmentActionEnum: string
 {
     case DELETE_TRANSIT_GATEWAY_VPC_ATTACHMENT = 'DeleteTransitGatewayVpcAttachment';

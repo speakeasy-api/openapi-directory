@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListFleetsXAmzTargetEnum: string
 {
     case GAME_LIFT_LIST_FLEETS = 'GameLift.ListFleets';

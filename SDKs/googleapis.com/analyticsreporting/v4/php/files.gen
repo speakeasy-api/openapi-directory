@@ -101,4 +101,7 @@ src/Models/Shared/SearchUserActivityRequestActivityTypesEnum.php
 src/Models/Shared/SearchUserActivityRequest.php
 src/Models/Shared/UserTypeEnum.php
 src/Models/Shared/User.php
+docs/sdk/README.md
+docs/reports/README.md
+docs/useractivity/README.md
 USAGE.md

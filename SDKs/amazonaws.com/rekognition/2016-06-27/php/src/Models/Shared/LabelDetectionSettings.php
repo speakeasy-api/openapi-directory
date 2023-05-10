@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class LabelDetectionSettings
 {
     /**
-     * Contains filters for the object labels returned by DetectLabels. Filters can be inclusive, exclusive, or a combination of both and can be applied to individual l abels or entire label categories.
+     * Contains filters for the object labels returned by DetectLabels. Filters can be inclusive, exclusive, or a combination of both and can be applied to individual labels or entire label categories. To see a list of label categories, see <a href="https://docs.aws.amazon.com/rekognition/latest/dg/labels.html">Detecting Labels</a>.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GeneralLabelsSettings $generalLabels
      */

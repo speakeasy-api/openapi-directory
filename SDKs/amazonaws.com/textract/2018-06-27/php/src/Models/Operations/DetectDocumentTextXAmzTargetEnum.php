@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DetectDocumentTextXAmzTargetEnum: string
 {
     case TEXTRACT_DETECT_DOCUMENT_TEXT = 'Textract.DetectDocumentText';

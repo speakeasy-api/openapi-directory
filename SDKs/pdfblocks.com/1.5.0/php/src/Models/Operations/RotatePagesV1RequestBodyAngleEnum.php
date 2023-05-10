@@ -10,13 +10,13 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 
 
 /** The angle of rotation of the pages. Positive angles rotate the pages clockwise. Negative angles rotate the pages counter-clockwise. */
-enum RotatePagesV1RequestBodyAngleEnum: string
+enum RotatePagesV1RequestBodyAngleEnum: int
 {
-    case ZERO = '0';
-    case NINETY = '90';
-    case ONE_HUNDRED_AND_EIGHTY = '180';
-    case TWO_HUNDRED_AND_SEVENTY = '270';
-    case MINUS90 = '-90';
-    case MINUS180 = '-180';
-    case MINUS270 = '-270';
+    case ZERO = 0;
+    case NINETY = 90;
+    case ONE_HUNDRED_AND_EIGHTY = 180;
+    case TWO_HUNDRED_AND_SEVENTY = 270;
+    case MINUS90 = -90;
+    case MINUS180 = -180;
+    case MINUS270 = -270;
 }

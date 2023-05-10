@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdatePoolXAmzTargetEnum: string
 {
     case PINPOINT_SMS_VOICE_V2_UPDATE_POOL = 'PinpointSMSVoiceV2.UpdatePool';

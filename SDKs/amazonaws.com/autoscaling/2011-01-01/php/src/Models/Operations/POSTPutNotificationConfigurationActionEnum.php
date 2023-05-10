@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTPutNotificationConfigurationActionEnum: string
 {
     case PUT_NOTIFICATION_CONFIGURATION = 'PutNotificationConfiguration';

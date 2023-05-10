@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETTestTypeActionEnum: string
 {
     case TEST_TYPE = 'TestType';

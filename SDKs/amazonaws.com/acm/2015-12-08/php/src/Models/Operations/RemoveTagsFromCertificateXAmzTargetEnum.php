@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RemoveTagsFromCertificateXAmzTargetEnum: string
 {
     case CERTIFICATE_MANAGER_REMOVE_TAGS_FROM_CERTIFICATE = 'CertificateManager.RemoveTagsFromCertificate';

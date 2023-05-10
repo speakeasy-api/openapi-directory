@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDetachRolePolicyActionEnum: string
 {
     case DETACH_ROLE_POLICY = 'DetachRolePolicy';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListAutoScalingConfigurationsXAmzTargetEnum: string
 {
     case APP_RUNNER_LIST_AUTO_SCALING_CONFIGURATIONS = 'AppRunner.ListAutoScalingConfigurations';

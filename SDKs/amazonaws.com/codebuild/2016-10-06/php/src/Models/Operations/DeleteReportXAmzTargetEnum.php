@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteReportXAmzTargetEnum: string
 {
     case CODE_BUILD20161006_DELETE_REPORT = 'CodeBuild_20161006.DeleteReport';

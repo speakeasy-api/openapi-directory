@@ -280,4 +280,6 @@ src/Models/Shared/BucketBySession.php
 src/Models/Shared/BucketByActivity.php
 src/Models/Shared/AggregateBy.php
 src/Models/Shared/ListSessionsResponse.php
+docs/sdk/README.md
+docs/users/README.md
 USAGE.md

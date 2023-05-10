@@ -32,4 +32,7 @@ src/Models/Operations/GetPirateGenerateNameResponse.php
 src/Models/Operations/GetPirateTranslateSecurity.php
 src/Models/Operations/GetPirateTranslateRequest.php
 src/Models/Operations/GetPirateTranslateResponse.php
+docs/sdk/README.md
+docs/generation/README.md
+docs/translation/README.md
 USAGE.md

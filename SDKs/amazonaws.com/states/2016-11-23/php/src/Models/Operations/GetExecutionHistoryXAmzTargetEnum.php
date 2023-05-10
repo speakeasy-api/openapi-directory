@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetExecutionHistoryXAmzTargetEnum: string
 {
     case AWS_STEP_FUNCTIONS_GET_EXECUTION_HISTORY = 'AWSStepFunctions.GetExecutionHistory';

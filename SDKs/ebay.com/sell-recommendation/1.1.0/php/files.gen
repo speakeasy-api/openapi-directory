@@ -28,4 +28,6 @@ src/Models/Shared/MarketingRecommendation.php
 src/Models/Shared/Ad.php
 src/Models/Shared/BidPercentages.php
 src/Models/Shared/FindListingRecommendationRequest.php
+docs/sdk/README.md
+docs/listingrecommendation/README.md
 USAGE.md

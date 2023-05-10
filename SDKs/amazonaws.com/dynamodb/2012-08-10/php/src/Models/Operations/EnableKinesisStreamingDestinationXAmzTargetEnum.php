@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum EnableKinesisStreamingDestinationXAmzTargetEnum: string
 {
     case DYNAMO_DB20120810_ENABLE_KINESIS_STREAMING_DESTINATION = 'DynamoDB_20120810.EnableKinesisStreamingDestination';

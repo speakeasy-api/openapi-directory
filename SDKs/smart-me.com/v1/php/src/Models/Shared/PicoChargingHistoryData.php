@@ -47,10 +47,16 @@ class PicoChargingHistoryData
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $startTime = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('TransactionStopReason')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\PicoChargingHistoryDataTransactionStopReasonEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?PicoChargingHistoryDataTransactionStopReasonEnum $transactionStopReason = null;
+    
 	public function __construct()
 	{
 		$this->duration = null;
 		$this->energyUsed = null;
 		$this->startTime = null;
+		$this->transactionStopReason = null;
 	}
 }

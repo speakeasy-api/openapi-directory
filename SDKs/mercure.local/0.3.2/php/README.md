@@ -30,19 +30,50 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\GetWellKnownMercureRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetWellKnownMercureRequest();
+    $request->lastEventID = 'corrupti';
+    $request->lastEventIDQueryParameter = 'provident';
+    $request->topic = [
+        'quibusdam',
+        'unde',
+        'nulla',
+    ];
+
+    $response = $sdk->getWellKnownMercure($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getWellKnownMercure` - Subscribe to updates
-* `getWellKnownMercureSubscriptions` - Active subscriptions
-* `getWellKnownMercureSubscriptionsTopic` - Active subscriptions for the given topic
-* `getWellKnownMercureSubscriptionsTopicSubscriber` - Active subscription for the given topic and subscriber
-* `postWellKnownMercure` - Publish an update
+* [getWellKnownMercure](docs/sdk/README.md#getwellknownmercure) - Subscribe to updates
+* [getWellKnownMercureSubscriptions](docs/sdk/README.md#getwellknownmercuresubscriptions) - Active subscriptions
+* [getWellKnownMercureSubscriptionsTopic](docs/sdk/README.md#getwellknownmercuresubscriptionstopic) - Active subscriptions for the given topic
+* [getWellKnownMercureSubscriptionsTopicSubscriber](docs/sdk/README.md#getwellknownmercuresubscriptionstopicsubscriber) - Active subscription for the given topic and subscriber
+* [postWellKnownMercure](docs/sdk/README.md#postwellknownmercure) - Publish an update
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -104,4 +104,6 @@ src/Models/Shared/TestCase.php
 src/Models/Shared/FunctionMock.php
 src/Models/Shared/Result.php
 src/Models/Shared/Arg.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

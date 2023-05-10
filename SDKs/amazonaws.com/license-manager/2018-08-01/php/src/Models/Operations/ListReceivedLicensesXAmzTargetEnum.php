@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListReceivedLicensesXAmzTargetEnum: string
 {
     case AWS_LICENSE_MANAGER_LIST_RECEIVED_LICENSES = 'AWSLicenseManager.ListReceivedLicenses';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetECSServiceRecommendationsXAmzTargetEnum: string
 {
     case COMPUTE_OPTIMIZER_SERVICE_GET_ECS_SERVICE_RECOMMENDATIONS = 'ComputeOptimizerService.GetECSServiceRecommendations';

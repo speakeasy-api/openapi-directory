@@ -23,4 +23,5 @@ enum ScalingActivityStatusCodeEnum: string
     case SUCCESSFUL = 'Successful';
     case FAILED = 'Failed';
     case CANCELLED = 'Cancelled';
+    case WAITING_FOR_CONNECTION_DRAINING = 'WaitingForConnectionDraining';
 }

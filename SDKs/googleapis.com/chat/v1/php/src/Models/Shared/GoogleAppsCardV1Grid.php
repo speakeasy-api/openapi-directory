@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class GoogleAppsCardV1Grid
 {
     /**
-     * Represents the complete border style applied to items in a widget.
+     * The style options for the border of a card or widget, including the border type and color.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAppsCardV1BorderStyle $borderStyle
      */

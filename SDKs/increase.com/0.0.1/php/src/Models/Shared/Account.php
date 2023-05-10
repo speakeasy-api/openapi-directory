@@ -18,15 +18,6 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class Account
 {
     /**
-     * The Account's balances in the minor unit of its currency. For dollars, for example, these values will represent cents.
-     * 
-     * @var \OpenAPI\OpenAPI\Models\Shared\AccountBalances $balances
-     */
-	#[\JMS\Serializer\Annotation\SerializedName('balances')]
-    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\AccountBalances')]
-    public AccountBalances $balances;
-    
-    /**
      * The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) time at which the Account was created.
      * 
      * @var \DateTime $createdAt
@@ -118,7 +109,6 @@ class Account
     
 	public function __construct()
 	{
-		$this->balances = new \OpenAPI\OpenAPI\Models\Shared\AccountBalances();
 		$this->createdAt = new \DateTime();
 		$this->currency = \OpenAPI\OpenAPI\Models\Shared\AccountCurrencyEnum::CAD;
 		$this->entityId = "";

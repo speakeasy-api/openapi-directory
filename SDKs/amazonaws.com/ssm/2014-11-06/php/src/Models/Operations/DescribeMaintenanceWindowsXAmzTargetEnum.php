@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeMaintenanceWindowsXAmzTargetEnum: string
 {
     case AMAZON_SSM_DESCRIBE_MAINTENANCE_WINDOWS = 'AmazonSSM.DescribeMaintenanceWindows';

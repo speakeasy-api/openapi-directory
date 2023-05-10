@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateSecurityConfigXAmzTargetEnum: string
 {
     case OPEN_SEARCH_SERVERLESS_UPDATE_SECURITY_CONFIG = 'OpenSearchServerless.UpdateSecurityConfig';

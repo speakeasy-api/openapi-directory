@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListPoolOriginationIdentitiesXAmzTargetEnum: string
 {
     case PINPOINT_SMS_VOICE_V2_LIST_POOL_ORIGINATION_IDENTITIES = 'PinpointSMSVoiceV2.ListPoolOriginationIdentities';

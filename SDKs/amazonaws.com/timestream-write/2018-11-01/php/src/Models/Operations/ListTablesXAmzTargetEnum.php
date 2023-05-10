@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListTablesXAmzTargetEnum: string
 {
     case TIMESTREAM20181101_LIST_TABLES = 'Timestream_20181101.ListTables';

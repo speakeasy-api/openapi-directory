@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * FileVideoMediaMetadata - Additional metadata about video media. This may not be available immediately upon upload.
+ * FileVideoMediaMetadata - Additional metadata about video media. This might not be available immediately upon upload.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

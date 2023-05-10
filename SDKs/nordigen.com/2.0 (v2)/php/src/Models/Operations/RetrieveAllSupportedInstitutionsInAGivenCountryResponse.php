@@ -60,6 +60,14 @@ class RetrieveAllSupportedInstitutionsInAGivenCountryResponse
 	
     public ?array $retrieveAllSupportedInstitutionsInAGivenCountry404ApplicationJSONObject = null;
     
+    /**
+     * Nordigen rate limit exceeded
+     * 
+     * @var ?array<string, mixed> $retrieveAllSupportedInstitutionsInAGivenCountry429ApplicationJSONObject
+     */
+	
+    public ?array $retrieveAllSupportedInstitutionsInAGivenCountry429ApplicationJSONObject = null;
+    
 	public function __construct()
 	{
 		$this->contentType = "";
@@ -70,5 +78,6 @@ class RetrieveAllSupportedInstitutionsInAGivenCountryResponse
 		$this->retrieveAllSupportedInstitutionsInAGivenCountry401ApplicationJSONObject = null;
 		$this->retrieveAllSupportedInstitutionsInAGivenCountry403ApplicationJSONObject = null;
 		$this->retrieveAllSupportedInstitutionsInAGivenCountry404ApplicationJSONObject = null;
+		$this->retrieveAllSupportedInstitutionsInAGivenCountry429ApplicationJSONObject = null;
 	}
 }

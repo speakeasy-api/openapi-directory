@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeregisterInstancesFromLoadBalancerActionEnum: string
 {
     case DEREGISTER_INSTANCES_FROM_LOAD_BALANCER = 'DeregisterInstancesFromLoadBalancer';

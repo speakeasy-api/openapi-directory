@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETGETVpnConnectionDeviceSampleConfigurationActionEnum: string
 {
     case GET_VPN_CONNECTION_DEVICE_SAMPLE_CONFIGURATION = 'GetVpnConnectionDeviceSampleConfiguration';

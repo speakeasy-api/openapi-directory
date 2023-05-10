@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateRegexMatchSetXAmzTargetEnum: string
 {
     case AWSWAF_REGIONAL20161128_UPDATE_REGEX_MATCH_SET = 'AWSWAF_Regional_20161128.UpdateRegexMatchSet';

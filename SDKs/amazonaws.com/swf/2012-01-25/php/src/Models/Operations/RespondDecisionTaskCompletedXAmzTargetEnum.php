@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RespondDecisionTaskCompletedXAmzTargetEnum: string
 {
     case SIMPLE_WORKFLOW_SERVICE_RESPOND_DECISION_TASK_COMPLETED = 'SimpleWorkflowService.RespondDecisionTaskCompleted';

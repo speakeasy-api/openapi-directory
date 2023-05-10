@@ -30,4 +30,5 @@ src/Models/Operations/RotoballerArticlesByPlayerResponse.php
 src/Models/Shared/Article.php
 src/Models/Shared/PlayerInfo.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

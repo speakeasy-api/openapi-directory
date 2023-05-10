@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListCalculationExecutionsXAmzTargetEnum: string
 {
     case AMAZON_ATHENA_LIST_CALCULATION_EXECUTIONS = 'AmazonAthena.ListCalculationExecutions';

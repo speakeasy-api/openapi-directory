@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum SendPipelineExecutionStepFailureXAmzTargetEnum: string
 {
     case SAGE_MAKER_SEND_PIPELINE_EXECUTION_STEP_FAILURE = 'SageMaker.SendPipelineExecutionStepFailure';

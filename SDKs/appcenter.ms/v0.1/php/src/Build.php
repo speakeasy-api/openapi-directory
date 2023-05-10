@@ -646,12 +646,15 @@ class Build
      * @param \OpenAPI\OpenAPI\Models\Operations\BuildsListXamarinSDKBundlesRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\BuildsListXamarinSDKBundlesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\BuildsListXamarinSDKBundlesResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function buildsListXamarinSDKBundles(
         \OpenAPI\OpenAPI\Models\Operations\BuildsListXamarinSDKBundlesRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\BuildsListXamarinSDKBundlesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\BuildsListXamarinSDKBundlesResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/xamarin_sdk_bundles', \OpenAPI\OpenAPI\Models\Operations\BuildsListXamarinSDKBundlesRequest::class, $request);
         
@@ -689,12 +692,15 @@ class Build
      * @param \OpenAPI\OpenAPI\Models\Operations\BuildsListXcodeVersionsRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\BuildsListXcodeVersionsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\BuildsListXcodeVersionsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function buildsListXcodeVersions(
         \OpenAPI\OpenAPI\Models\Operations\BuildsListXcodeVersionsRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\BuildsListXcodeVersionsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\BuildsListXcodeVersionsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/xcode_versions', \OpenAPI\OpenAPI\Models\Operations\BuildsListXcodeVersionsRequest::class, $request);
         

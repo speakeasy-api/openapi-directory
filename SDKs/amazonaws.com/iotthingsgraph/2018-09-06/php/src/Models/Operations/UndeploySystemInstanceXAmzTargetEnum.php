@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UndeploySystemInstanceXAmzTargetEnum: string
 {
     case IOT_THINGS_GRAPH_FRONT_END_SERVICE_UNDEPLOY_SYSTEM_INSTANCE = 'IotThingsGraphFrontEndService.UndeploySystemInstance';

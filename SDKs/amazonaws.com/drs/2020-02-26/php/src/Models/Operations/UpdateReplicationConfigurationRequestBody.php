@@ -22,6 +22,16 @@ class UpdateReplicationConfigurationRequestBody
     public ?bool $associateDefaultSecurityGroup = null;
     
     /**
+     * Whether to allow the AWS replication agent to automatically replicate newly added disks.
+     * 
+     * @var ?bool $autoReplicateNewDisks
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('autoReplicateNewDisks')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $autoReplicateNewDisks = null;
+    
+    /**
      * Configure bandwidth throttling for the outbound data transfer rate of the Source Server in Mbps.
      * 
      * @var ?int $bandwidthThrottling
@@ -173,6 +183,7 @@ class UpdateReplicationConfigurationRequestBody
 	public function __construct()
 	{
 		$this->associateDefaultSecurityGroup = null;
+		$this->autoReplicateNewDisks = null;
 		$this->bandwidthThrottling = null;
 		$this->createPublicIP = null;
 		$this->dataPlaneRouting = null;

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeregisterTransitGatewayMulticastGroupSourcesActionEnum: string
 {
     case DEREGISTER_TRANSIT_GATEWAY_MULTICAST_GROUP_SOURCES = 'DeregisterTransitGatewayMulticastGroupSources';

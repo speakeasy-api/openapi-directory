@@ -9,11 +9,11 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-enum GetSchedulesScheduleABySizeSizeEnum: string
+enum GetSchedulesScheduleABySizeSizeEnum: int
 {
-    case ZERO = '0';
-    case TWO_HUNDRED = '200';
-    case FIVE_HUNDRED = '500';
-    case ONE_THOUSAND = '1000';
-    case TWO_THOUSAND = '2000';
+    case ZERO = 0;
+    case TWO_HUNDRED = 200;
+    case FIVE_HUNDRED = 500;
+    case ONE_THOUSAND = 1000;
+    case TWO_THOUSAND = 2000;
 }

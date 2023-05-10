@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetLicenseConversionTaskXAmzTargetEnum: string
 {
     case AWS_LICENSE_MANAGER_GET_LICENSE_CONVERSION_TASK = 'AWSLicenseManager.GetLicenseConversionTask';

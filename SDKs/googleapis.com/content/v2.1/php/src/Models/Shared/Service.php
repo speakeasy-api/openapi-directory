@@ -92,7 +92,7 @@ class Service
     public ?array $rateGroups = null;
     
     /**
-     * Type of locations this service ships orders to. Acceptable values are: - "`delivery`" - "`pickup`" 
+     * Type of locations this service ships orders to. Acceptable values are: - "`delivery`" - "`pickup`" - "`local_delivery`" 
      * 
      * @var ?string $shipmentType
      */
@@ -100,6 +100,16 @@ class Service
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $shipmentType = null;
+    
+    /**
+     * Stores that provide local delivery. Only valid with local delivery fulfillment.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\ServiceStoreConfig $storeConfig
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('storeConfig')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\ServiceStoreConfig')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?ServiceStoreConfig $storeConfig = null;
     
 	public function __construct()
 	{
@@ -114,5 +124,6 @@ class Service
 		$this->pickupService = null;
 		$this->rateGroups = null;
 		$this->shipmentType = null;
+		$this->storeConfig = null;
 	}
 }

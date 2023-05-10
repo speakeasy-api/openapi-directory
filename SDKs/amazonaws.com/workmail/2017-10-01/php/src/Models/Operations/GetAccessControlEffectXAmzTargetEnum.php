@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetAccessControlEffectXAmzTargetEnum: string
 {
     case WORK_MAIL_SERVICE_GET_ACCESS_CONTROL_EFFECT = 'WorkMailService.GetAccessControlEffect';

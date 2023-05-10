@@ -108,45 +108,4 @@ class FirewalledServices
 
         return $response;
     }
-	
-    /**
-     * Updates the accessibility settings for the given service ('ICMP', 'web', or 'SNMP')
-     * 
-     * Updates the accessibility settings for the given service ('ICMP', 'web', or 'SNMP')
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\UpdateNetworkFirewalledServiceRequest $request
-     * @return \OpenAPI\OpenAPI\Models\Operations\UpdateNetworkFirewalledServiceResponse
-     */
-	public function updateNetworkFirewalledService(
-        \OpenAPI\OpenAPI\Models\Operations\UpdateNetworkFirewalledServiceRequest $request,
-    ): \OpenAPI\OpenAPI\Models\Operations\UpdateNetworkFirewalledServiceResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/networks/{networkId}/firewalledServices/{service}', \OpenAPI\OpenAPI\Models\Operations\UpdateNetworkFirewalledServiceRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
-        if ($body === null) {
-            throw new \Exception('Request body is required');
-        }
-        $options = array_merge_recursive($options, $body);
-        
-        $httpResponse = $this->_securityClient->request('PUT', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\UpdateNetworkFirewalledServiceResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->updateNetworkFirewalledService200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
-            }
-        }
-
-        return $response;
-    }
 }

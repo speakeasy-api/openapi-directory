@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteOrganizationXAmzTargetEnum: string
 {
     case AWS_ORGANIZATIONS_V20161128_DELETE_ORGANIZATION = 'AWSOrganizationsV20161128.DeleteOrganization';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeClientVpnTargetNetworksActionEnum: string
 {
     case DESCRIBE_CLIENT_VPN_TARGET_NETWORKS = 'DescribeClientVpnTargetNetworks';

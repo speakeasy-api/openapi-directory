@@ -48,6 +48,16 @@ class ConnectorVersion
     public ?string $createTime = null;
     
     /**
+     * Output only. List of destination configs needed to create a connection.
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\DestinationConfigTemplate> $destinationConfigTemplates
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('destinationConfigTemplates')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\DestinationConfigTemplate>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $destinationConfigTemplates = null;
+    
+    /**
      * Output only. Display name.
      * 
      * @var ?string $displayName
@@ -162,6 +172,7 @@ class ConnectorVersion
 		$this->authConfigTemplates = null;
 		$this->configVariableTemplates = null;
 		$this->createTime = null;
+		$this->destinationConfigTemplates = null;
 		$this->displayName = null;
 		$this->egressControlConfig = null;
 		$this->labels = null;

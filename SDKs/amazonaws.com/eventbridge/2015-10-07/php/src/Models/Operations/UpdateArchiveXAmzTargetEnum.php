@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateArchiveXAmzTargetEnum: string
 {
     case AWS_EVENTS_UPDATE_ARCHIVE = 'AWSEvents.UpdateArchive';

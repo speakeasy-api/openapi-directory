@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteWorkerBlockXAmzTargetEnum: string
 {
     case M_TURK_REQUESTER_SERVICE_V20170117_DELETE_WORKER_BLOCK = 'MTurkRequesterServiceV20170117.DeleteWorkerBlock';

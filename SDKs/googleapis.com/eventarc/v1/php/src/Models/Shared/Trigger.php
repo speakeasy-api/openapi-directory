@@ -68,7 +68,7 @@ class Trigger
     public ?string $etag = null;
     
     /**
-     * Optional. EventDataContentType specifies the type of payload in MIME format that is expected from the CloudEvent data field. This will be set to `application/json` if the value is not defined.
+     * Optional. EventDataContentType specifies the type of payload in MIME format that is expected from the CloudEvent data field. This is set to `application/json` if the value is not defined.
      * 
      * @var ?string $eventDataContentType
      */

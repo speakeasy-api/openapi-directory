@@ -30,20 +30,50 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Shared\SecurityOption1;
+use \OpenAPI\OpenAPI\Models\Shared\SecurityOption2;
+use \OpenAPI\OpenAPI\Models\Operations\SmsConversionRequest;
+use \OpenAPI\OpenAPI\Models\Shared\DeliveredEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new SmsConversionRequest();
+    $request->delivered = DeliveredEnum::ZERO;
+    $request->messageId = 'provident';
+    $request->timestamp = 'distinctio';
+
+    $response = $sdk->smsConversion->smsConversion($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### smsConversion
+### [smsConversion](docs/smsconversion/README.md)
 
-* `smsConversion` - Tell Nexmo if your SMS message was successful
+* [smsConversion](docs/smsconversion/README.md#smsconversion) - Tell Nexmo if your SMS message was successful
 
-### voiceConversion
+### [voiceConversion](docs/voiceconversion/README.md)
 
-* `voiceConversion` - Tell Nexmo if your voice call was successful
+* [voiceConversion](docs/voiceconversion/README.md#voiceconversion) - Tell Nexmo if your voice call was successful
 <!-- End SDK Available Operations -->
 
 ### Maturity

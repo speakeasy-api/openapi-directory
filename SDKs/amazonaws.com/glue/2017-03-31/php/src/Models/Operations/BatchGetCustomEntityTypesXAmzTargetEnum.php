@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum BatchGetCustomEntityTypesXAmzTargetEnum: string
 {
     case AWS_GLUE_BATCH_GET_CUSTOM_ENTITY_TYPES = 'AWSGlue.BatchGetCustomEntityTypes';

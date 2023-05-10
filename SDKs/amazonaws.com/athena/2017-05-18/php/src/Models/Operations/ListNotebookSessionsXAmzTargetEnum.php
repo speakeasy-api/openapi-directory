@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListNotebookSessionsXAmzTargetEnum: string
 {
     case AMAZON_ATHENA_LIST_NOTEBOOK_SESSIONS = 'AmazonAthena.ListNotebookSessions';

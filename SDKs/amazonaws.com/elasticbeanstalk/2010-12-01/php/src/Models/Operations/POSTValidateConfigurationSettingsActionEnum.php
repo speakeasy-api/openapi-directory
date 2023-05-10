@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTValidateConfigurationSettingsActionEnum: string
 {
     case VALIDATE_CONFIGURATION_SETTINGS = 'ValidateConfigurationSettings';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UntagResourceXAmzTargetEnum: string
 {
     case BALDR_API_SERVICE_UNTAG_RESOURCE = 'BaldrApiService.UntagResource';

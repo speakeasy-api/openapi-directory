@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartOnDemandReplicationRunXAmzTargetEnum: string
 {
     case AWS_SERVER_MIGRATION_SERVICE_V20161024_START_ON_DEMAND_REPLICATION_RUN = 'AWSServerMigrationService_V2016_10_24.StartOnDemandReplicationRun';

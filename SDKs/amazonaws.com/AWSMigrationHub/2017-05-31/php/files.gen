@@ -105,4 +105,5 @@ src/Models/Shared/NotifyApplicationStateRequest.php
 src/Models/Shared/NotifyMigrationTaskStateRequest.php
 src/Models/Shared/PutResourceAttributesRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

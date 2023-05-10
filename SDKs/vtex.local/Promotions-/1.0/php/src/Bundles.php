@@ -52,7 +52,7 @@ class Bundles
      */
 	public function calculatediscountsandtaxesBundles(
         \OpenAPI\OpenAPI\Models\Operations\CalculatediscountsandtaxesBundlesRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\CalculatediscountsandtaxesBundlesResponse
     {
         $baseUrl = Bundles::CALCULATEDISCOUNTSANDTAXES_BUNDLES_SERVERS[0];

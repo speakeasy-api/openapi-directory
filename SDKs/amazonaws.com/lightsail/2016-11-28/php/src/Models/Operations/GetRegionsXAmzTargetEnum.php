@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetRegionsXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_GET_REGIONS = 'Lightsail_20161128.GetRegions';

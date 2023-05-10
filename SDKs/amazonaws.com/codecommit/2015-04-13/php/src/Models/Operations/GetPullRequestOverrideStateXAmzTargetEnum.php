@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetPullRequestOverrideStateXAmzTargetEnum: string
 {
     case CODE_COMMIT20150413_GET_PULL_REQUEST_OVERRIDE_STATE = 'CodeCommit_20150413.GetPullRequestOverrideState';

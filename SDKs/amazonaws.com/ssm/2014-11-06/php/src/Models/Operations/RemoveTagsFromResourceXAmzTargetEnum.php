@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RemoveTagsFromResourceXAmzTargetEnum: string
 {
     case AMAZON_SSM_REMOVE_TAGS_FROM_RESOURCE = 'AmazonSSM.RemoveTagsFromResource';

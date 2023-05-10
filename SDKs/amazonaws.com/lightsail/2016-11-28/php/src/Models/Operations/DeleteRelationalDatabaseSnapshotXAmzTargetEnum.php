@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteRelationalDatabaseSnapshotXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_DELETE_RELATIONAL_DATABASE_SNAPSHOT = 'Lightsail_20161128.DeleteRelationalDatabaseSnapshot';

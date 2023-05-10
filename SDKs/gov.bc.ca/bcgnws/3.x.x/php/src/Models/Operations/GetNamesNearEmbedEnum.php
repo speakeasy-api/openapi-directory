@@ -10,8 +10,8 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 
 
 /** A flag to indicate whether to embed the corresponding 'feature' into each matching name */
-enum GetNamesNearEmbedEnum: string
+enum GetNamesNearEmbedEnum: int
 {
-    case ZERO = '0';
-    case ONE = '1';
+    case ZERO = 0;
+    case ONE = 1;
 }

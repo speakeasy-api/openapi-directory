@@ -68,7 +68,7 @@ class DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluationsListReque
     public ?string $oauthToken = null;
     
     /**
-     * The standard list page size. If unspecified, at most 5 evaluations will be returned. The maximum value is 100; values above 100 will be coerced to 100.
+     * The standard list page size. If unspecified, at most `5` evaluations are returned. The maximum value is `100`. Values above `100` are coerced to `100`.
      * 
      * @var ?int $pageSize
      */

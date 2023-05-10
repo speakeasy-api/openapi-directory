@@ -42,6 +42,11 @@ class TransactionDetail
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $categoryId = null;
     
+    /**
+     * The name of the category.  If a split transaction, this will be 'Split'.
+     * 
+     * @var ?string $categoryName
+     */
 	#[\JMS\Serializer\Annotation\SerializedName('category_name')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]

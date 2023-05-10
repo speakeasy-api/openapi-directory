@@ -50,7 +50,7 @@ class Deployments
     ): \OpenAPI\OpenAPI\Models\Operations\CreateEnvironmentResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/environments/', \OpenAPI\OpenAPI\Models\Operations\CreateEnvironmentRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/environments', \OpenAPI\OpenAPI\Models\Operations\CreateEnvironmentRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
@@ -275,7 +275,7 @@ class Deployments
     ): \OpenAPI\OpenAPI\Models\Operations\GetDeploymentsForRepositoryResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/deployments/', \OpenAPI\OpenAPI\Models\Operations\GetDeploymentsForRepositoryRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/deployments', \OpenAPI\OpenAPI\Models\Operations\GetDeploymentsForRepositoryRequest::class, $request);
         
         $options = ['http_errors' => false];
         
@@ -353,7 +353,7 @@ class Deployments
     ): \OpenAPI\OpenAPI\Models\Operations\GetEnvironmentsForRepositoryResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/environments/', \OpenAPI\OpenAPI\Models\Operations\GetEnvironmentsForRepositoryRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/environments', \OpenAPI\OpenAPI\Models\Operations\GetEnvironmentsForRepositoryRequest::class, $request);
         
         $options = ['http_errors' => false];
         
@@ -957,7 +957,7 @@ class Deployments
     ): \OpenAPI\OpenAPI\Models\Operations\UpdateEnvironmentForRepositoryResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/environments/{environment_uuid}/changes/', \OpenAPI\OpenAPI\Models\Operations\UpdateEnvironmentForRepositoryRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/environments/{environment_uuid}/changes', \OpenAPI\OpenAPI\Models\Operations\UpdateEnvironmentForRepositoryRequest::class, $request);
         
         $options = ['http_errors' => false];
         

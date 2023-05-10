@@ -88,4 +88,10 @@ src/Models/Shared/PostList.php
 src/Models/Shared/UserBlogs.php
 src/Models/Shared/UserLocale.php
 src/Models/Shared/User.php
+docs/sdk/README.md
+docs/blogs/README.md
+docs/comments/README.md
+docs/pages/README.md
+docs/posts/README.md
+docs/users/README.md
 USAGE.md

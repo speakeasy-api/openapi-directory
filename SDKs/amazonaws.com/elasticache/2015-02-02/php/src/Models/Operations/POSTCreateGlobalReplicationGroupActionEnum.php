@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateGlobalReplicationGroupActionEnum: string
 {
     case CREATE_GLOBAL_REPLICATION_GROUP = 'CreateGlobalReplicationGroup';

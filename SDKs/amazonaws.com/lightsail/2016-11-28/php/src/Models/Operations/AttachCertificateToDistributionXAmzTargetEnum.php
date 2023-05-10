@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AttachCertificateToDistributionXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_ATTACH_CERTIFICATE_TO_DISTRIBUTION = 'Lightsail_20161128.AttachCertificateToDistribution';

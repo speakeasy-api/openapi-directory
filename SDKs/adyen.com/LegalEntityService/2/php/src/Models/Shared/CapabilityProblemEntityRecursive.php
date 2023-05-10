@@ -12,7 +12,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class CapabilityProblemEntityRecursive
 {
     /**
-     * $documents
+     * List of document IDs corresponding to the verification errors from capabilities.
      * 
      * @var ?array<string> $documents
      */

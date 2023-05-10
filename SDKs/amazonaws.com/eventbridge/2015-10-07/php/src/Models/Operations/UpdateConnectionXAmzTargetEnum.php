@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateConnectionXAmzTargetEnum: string
 {
     case AWS_EVENTS_UPDATE_CONNECTION = 'AWSEvents.UpdateConnection';

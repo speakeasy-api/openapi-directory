@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTRevokeSecurityGroupIngressActionEnum: string
 {
     case REVOKE_SECURITY_GROUP_INGRESS = 'RevokeSecurityGroupIngress';

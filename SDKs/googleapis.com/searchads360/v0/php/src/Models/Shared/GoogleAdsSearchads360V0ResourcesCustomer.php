@@ -58,6 +58,16 @@ class GoogleAdsSearchads360V0ResourcesCustomer
     public ?GoogleAdsSearchads360V0ResourcesConversionTrackingSetting $conversionTrackingSetting = null;
     
     /**
+     * Output only. The timestamp when this customer was created. The timestamp is in the customer's time zone and in "yyyy-MM-dd HH:mm:ss" format.
+     * 
+     * @var ?string $creationTime
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('creationTime')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $creationTime = null;
+    
+    /**
      * Immutable. The currency in which the account operates. A subset of the currency codes from the ISO 4217 standard is supported.
      * 
      * @var ?string $currencyCode
@@ -98,7 +108,7 @@ class GoogleAdsSearchads360V0ResourcesCustomer
     public ?string $engineId = null;
     
     /**
-     * The URL template for appending params to the final URL
+     * The URL template for appending params to the final URL.
      * 
      * @var ?string $finalUrlSuffix
      */
@@ -183,6 +193,7 @@ class GoogleAdsSearchads360V0ResourcesCustomer
 		$this->accountType = null;
 		$this->autoTaggingEnabled = null;
 		$this->conversionTrackingSetting = null;
+		$this->creationTime = null;
 		$this->currencyCode = null;
 		$this->descriptiveName = null;
 		$this->doubleClickCampaignManagerSetting = null;

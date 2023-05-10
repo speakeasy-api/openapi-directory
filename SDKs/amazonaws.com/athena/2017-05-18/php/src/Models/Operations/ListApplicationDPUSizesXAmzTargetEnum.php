@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListApplicationDPUSizesXAmzTargetEnum: string
 {
     case AMAZON_ATHENA_LIST_APPLICATION_DPU_SIZES = 'AmazonAthena.ListApplicationDPUSizes';

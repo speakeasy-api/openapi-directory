@@ -340,4 +340,5 @@ src/Models/Shared/SetSecurityGroupsInput.php
 src/Models/Shared/SetSubnetsOutput.php
 src/Models/Shared/SetSubnetsInput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

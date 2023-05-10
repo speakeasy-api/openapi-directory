@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateDefaultBranchXAmzTargetEnum: string
 {
     case CODE_COMMIT20150413_UPDATE_DEFAULT_BRANCH = 'CodeCommit_20150413.UpdateDefaultBranch';

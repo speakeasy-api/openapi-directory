@@ -51,4 +51,6 @@ src/Models/Shared/SiteVerificationWebResourceGettokenResponse.php
 src/Models/Shared/SiteVerificationWebResourceGettokenRequestSite.php
 src/Models/Shared/SiteVerificationWebResourceGettokenRequest.php
 src/Models/Shared/SiteVerificationWebResourceListResponse.php
+docs/sdk/README.md
+docs/webresource/README.md
 USAGE.md

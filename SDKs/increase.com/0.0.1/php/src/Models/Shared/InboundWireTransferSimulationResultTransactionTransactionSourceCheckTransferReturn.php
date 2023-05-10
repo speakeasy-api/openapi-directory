@@ -27,6 +27,33 @@ class InboundWireTransferSimulationResultTransactionTransactionSourceCheckTransf
     public string $fileId;
     
     /**
+     * The reason why the check was returned.
+     * 
+     * @var \OpenAPI\OpenAPI\Models\Shared\InboundWireTransferSimulationResultTransactionTransactionSourceCheckTransferReturnReasonEnum $reason
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('reason')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\InboundWireTransferSimulationResultTransactionTransactionSourceCheckTransferReturnReasonEnum>')]
+    public InboundWireTransferSimulationResultTransactionTransactionSourceCheckTransferReturnReasonEnum $reason;
+    
+    /**
+     * The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time at which the check was returned.
+     * 
+     * @var \DateTime $returnedAt
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('returned_at')]
+    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
+    public \DateTime $returnedAt;
+    
+    /**
+     * The identifier of the Transaction that was created to credit you for the returned check.
+     * 
+     * @var string $transactionId
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('transaction_id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    public string $transactionId;
+    
+    /**
      * The identifier of the returned Check Transfer.
      * 
      * @var string $transferId
@@ -38,6 +65,9 @@ class InboundWireTransferSimulationResultTransactionTransactionSourceCheckTransf
 	public function __construct()
 	{
 		$this->fileId = "";
+		$this->reason = \OpenAPI\OpenAPI\Models\Shared\InboundWireTransferSimulationResultTransactionTransactionSourceCheckTransferReturnReasonEnum::MAIL_DELIVERY_FAILURE;
+		$this->returnedAt = new \DateTime();
+		$this->transactionId = "";
 		$this->transferId = "";
 	}
 }

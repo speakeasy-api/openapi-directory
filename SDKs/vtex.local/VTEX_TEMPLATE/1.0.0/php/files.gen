@@ -27,4 +27,6 @@ src/Models/Operations/ShowPetByIdResponse.php
 src/Models/Shared/Error.php
 src/Models/Shared/Pet.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/pets/README.md
 USAGE.md

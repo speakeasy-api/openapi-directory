@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartDataSourceSyncJobXAmzTargetEnum: string
 {
     case AWS_KENDRA_FRONTEND_SERVICE_START_DATA_SOURCE_SYNC_JOB = 'AWSKendraFrontendService.StartDataSourceSyncJob';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteFirewallRuleXAmzTargetEnum: string
 {
     case ROUTE53_RESOLVER_DELETE_FIREWALL_RULE = 'Route53Resolver.DeleteFirewallRule';

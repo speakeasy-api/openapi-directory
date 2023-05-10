@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RegisterWebhookWithThirdPartyXAmzTargetEnum: string
 {
     case CODE_PIPELINE20150709_REGISTER_WEBHOOK_WITH_THIRD_PARTY = 'CodePipeline_20150709.RegisterWebhookWithThirdParty';

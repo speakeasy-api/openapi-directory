@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateRelationalDatabaseSnapshotXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_CREATE_RELATIONAL_DATABASE_SNAPSHOT = 'Lightsail_20161128.CreateRelationalDatabaseSnapshot';

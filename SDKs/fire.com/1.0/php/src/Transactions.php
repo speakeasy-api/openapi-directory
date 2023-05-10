@@ -38,28 +38,37 @@ class Transactions
 	}
 	
     /**
-     * List transactions for an account (v1)
+     * Filtered list of transactions for an account (v1)
      * 
-     * Retrieve a list of transactions against an account. Recommended to use the v3 endpoint instead.
+     * Retrieve a filtered list of transactions against an account. Recommended to use the v3 endpoint instead.
+     * * `dateRangeFrom` - A millisecond epoch time specifying the date range start date.
+     * * `dateRangeTo` - A millisecond epoch time specifying the date range end date.
+     * * `searchKeyword` - Search term to filter by from the reference field (`myRef`).
+     * * `transactionTypes` - One or more of the transaction types above. This field can be repeated multiple times to allow for multiple transaction types.
+     * * `offset` - The page offset. Defaults to 0. This is the record number that the returned list will start at. E.g. offset = 40 and limit = 20 will return records 40 to 59.
      * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\GetTransactionsByIdv1Request $request
-     * @return \OpenAPI\OpenAPI\Models\Operations\GetTransactionsByIdv1Response
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetTransactionsByAccountIdFilteredRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\GetTransactionsByAccountIdFilteredResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
-	public function getTransactionsByIdv1(
-        \OpenAPI\OpenAPI\Models\Operations\GetTransactionsByIdv1Request $request,
-    ): \OpenAPI\OpenAPI\Models\Operations\GetTransactionsByIdv1Response
+	public function getTransactionsByAccountIdFiltered(
+        \OpenAPI\OpenAPI\Models\Operations\GetTransactionsByAccountIdFilteredRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\GetTransactionsByAccountIdFilteredResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/accounts/{ican}/transactions', \OpenAPI\OpenAPI\Models\Operations\GetTransactionsByIdv1Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/accounts/{ican}/transactions/filter', \OpenAPI\OpenAPI\Models\Operations\GetTransactionsByAccountIdFilteredRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\GetTransactionsByIdv1Request::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\GetTransactionsByAccountIdFilteredRequest::class, $request, null));
         
         $httpResponse = $this->_securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \OpenAPI\OpenAPI\Models\Operations\GetTransactionsByIdv1Response();
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GetTransactionsByAccountIdFilteredResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -67,7 +76,47 @@ class Transactions
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->cardTransactionsv1 = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\GetTransactionsByIdv1CardTransactionsv1', 'json');
+                $response->cardTransactionsv1 = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\GetTransactionsByAccountIdFilteredCardTransactionsv1', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * List transactions for an account (v1)
+     * 
+     * Retrieve a list of transactions against an account. Recommended to use the v3 endpoint instead.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetTransactionsByAccountIdv1Request $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\GetTransactionsByAccountIdv1Response
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
+     */
+	public function getTransactionsByAccountIdv1(
+        \OpenAPI\OpenAPI\Models\Operations\GetTransactionsByAccountIdv1Request $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\GetTransactionsByAccountIdv1Response
+    {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/accounts/{ican}/transactions', \OpenAPI\OpenAPI\Models\Operations\GetTransactionsByAccountIdv1Request::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\GetTransactionsByAccountIdv1Request::class, $request, null));
+        
+        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GetTransactionsByAccountIdv1Response();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->cardTransactionsv1 = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\GetTransactionsByAccountIdv1CardTransactionsv1', 'json');
             }
         }
 
@@ -80,24 +129,24 @@ class Transactions
      * Retrieve a list of transactions against an account. Initially, use the optional `limit`, `dateRangeFrom` and `dateRangeTo` query params to limit your query, then use the embedded `next` or `prev` links in the response to get newer or older pages.
      * 
      * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\GetTransactionsByIdv3Request $request
-     * @return \OpenAPI\OpenAPI\Models\Operations\GetTransactionsByIdv3Response
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetTransactionsByAccountIdv3Request $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\GetTransactionsByAccountIdv3Response
      */
-	public function getTransactionsByIdv3(
-        \OpenAPI\OpenAPI\Models\Operations\GetTransactionsByIdv3Request $request,
-    ): \OpenAPI\OpenAPI\Models\Operations\GetTransactionsByIdv3Response
+	public function getTransactionsByAccountIdv3(
+        \OpenAPI\OpenAPI\Models\Operations\GetTransactionsByAccountIdv3Request $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\GetTransactionsByAccountIdv3Response
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v3/accounts/{ican}/transactions', \OpenAPI\OpenAPI\Models\Operations\GetTransactionsByIdv3Request::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v3/accounts/{ican}/transactions', \OpenAPI\OpenAPI\Models\Operations\GetTransactionsByAccountIdv3Request::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\GetTransactionsByIdv3Request::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\GetTransactionsByAccountIdv3Request::class, $request, null));
         
         $httpResponse = $this->_securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \OpenAPI\OpenAPI\Models\Operations\GetTransactionsByIdv3Response();
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GetTransactionsByAccountIdv3Response();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -105,50 +154,7 @@ class Transactions
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->cardTransactionsv3 = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\GetTransactionsByIdv3CardTransactionsv3', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Filtered list of transactions for an account (v1)
-     * 
-     * Retrieve a filtered list of transactions against an account. Recommended to use the v3 endpoint instead.
-     * * `dateRangeFrom` - A millisecond epoch time specifying the date range start date.
-     * * `dateRangeTo` - A millisecond epoch time specifying the date range end date.
-     * * `searchKeyword` - Search term to filter by from the reference field (`myRef`).
-     * * `transactionTypes` - One or more of the transaction types above. This field can be repeated multiple times to allow for multiple transaction types.
-     * * `offset` - The page offset. Defaults to 0. This is the record number that the returned list will start at. E.g. offset = 40 and limit = 20 will return records 40 to 59.
-     * 
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\GetTransactionsFilteredByIdRequest $request
-     * @return \OpenAPI\OpenAPI\Models\Operations\GetTransactionsFilteredByIdResponse
-     */
-	public function getTransactionsFilteredById(
-        \OpenAPI\OpenAPI\Models\Operations\GetTransactionsFilteredByIdRequest $request,
-    ): \OpenAPI\OpenAPI\Models\Operations\GetTransactionsFilteredByIdResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/accounts/{ican}/transactions/filter', \OpenAPI\OpenAPI\Models\Operations\GetTransactionsFilteredByIdRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\GetTransactionsFilteredByIdRequest::class, $request, null));
-        
-        $httpResponse = $this->_securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\GetTransactionsFilteredByIdResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->cardTransactionsv1 = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\GetTransactionsFilteredByIdCardTransactionsv1', 'json');
+                $response->cardTransactionsv3 = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\GetTransactionsByAccountIdv3CardTransactionsv3', 'json');
             }
         }
 

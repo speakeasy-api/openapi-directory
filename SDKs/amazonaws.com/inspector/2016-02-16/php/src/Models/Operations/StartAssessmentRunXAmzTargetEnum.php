@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartAssessmentRunXAmzTargetEnum: string
 {
     case INSPECTOR_SERVICE_START_ASSESSMENT_RUN = 'InspectorService.StartAssessmentRun';

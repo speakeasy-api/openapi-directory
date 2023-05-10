@@ -115,4 +115,5 @@ src/Models/Shared/SyncActionEnum.php
 src/Models/Shared/UpdateApplicationResponse.php
 src/Models/Shared/UpdateAttributeGroupResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -126,9 +126,11 @@ class AuthConfig
      * 
      * Get all global auth. module configs
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\FindAllGlobalAuthModulesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\FindAllGlobalAuthModulesResponse
      */
 	public function findAllGlobalAuthModules(
+        \OpenAPI\OpenAPI\Models\Operations\FindAllGlobalAuthModulesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\FindAllGlobalAuthModulesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -136,7 +138,8 @@ class AuthConfig
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

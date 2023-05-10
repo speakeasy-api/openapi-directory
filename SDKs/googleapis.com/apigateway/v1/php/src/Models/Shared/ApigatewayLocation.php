@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * ApigatewayLocation - A resource that represents Google Cloud Platform location.
+ * ApigatewayLocation - A resource that represents a Google Cloud location.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

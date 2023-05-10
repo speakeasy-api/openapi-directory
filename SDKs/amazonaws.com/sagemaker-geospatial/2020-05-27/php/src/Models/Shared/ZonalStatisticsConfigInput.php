@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * ZonalStatisticsConfigInput - <p/>
+ * ZonalStatisticsConfigInput - The structure representing input configuration of ZonalStatistics operation.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public
@@ -40,10 +40,16 @@ class ZonalStatisticsConfigInput
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $zoneS3Path;
     
+	#[\JMS\Serializer\Annotation\SerializedName('ZoneS3PathKmsKeyId')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $zoneS3PathKmsKeyId = null;
+    
 	public function __construct()
 	{
 		$this->statistics = [];
 		$this->targetBands = null;
 		$this->zoneS3Path = "";
+		$this->zoneS3PathKmsKeyId = null;
 	}
 }

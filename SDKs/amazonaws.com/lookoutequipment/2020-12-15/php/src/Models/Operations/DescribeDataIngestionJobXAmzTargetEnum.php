@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeDataIngestionJobXAmzTargetEnum: string
 {
     case AWS_LOOKOUT_EQUIPMENT_FRONTEND_SERVICE_DESCRIBE_DATA_INGESTION_JOB = 'AWSLookoutEquipmentFrontendService.DescribeDataIngestionJob';

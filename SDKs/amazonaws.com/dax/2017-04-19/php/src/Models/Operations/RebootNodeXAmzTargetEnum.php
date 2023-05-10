@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RebootNodeXAmzTargetEnum: string
 {
     case AMAZON_DAXV3_REBOOT_NODE = 'AmazonDAXV3.RebootNode';

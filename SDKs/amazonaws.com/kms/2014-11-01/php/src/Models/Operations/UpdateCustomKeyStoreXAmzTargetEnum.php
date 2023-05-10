@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateCustomKeyStoreXAmzTargetEnum: string
 {
     case TRENT_SERVICE_UPDATE_CUSTOM_KEY_STORE = 'TrentService.UpdateCustomKeyStore';

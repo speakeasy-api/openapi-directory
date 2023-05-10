@@ -965,11 +965,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\TestRoleRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TestRoleResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function testRole(
         \OpenAPI\OpenAPI\Models\Operations\TestRoleRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\TestRoleResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/2012-09-25/roleTests');
         

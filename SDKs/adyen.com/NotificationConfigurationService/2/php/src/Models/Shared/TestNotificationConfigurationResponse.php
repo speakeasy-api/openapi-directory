@@ -42,10 +42,10 @@ class TestNotificationConfigurationResponse
     /**
      * The notification message and related response messages.
      * 
-     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\ExchangeMessage> $exchangeMessages
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\ExchangeMessageWrapper> $exchangeMessages
      */
 	#[\JMS\Serializer\Annotation\SerializedName('exchangeMessages')]
-    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\ExchangeMessage>')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\ExchangeMessageWrapper>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $exchangeMessages = null;
     

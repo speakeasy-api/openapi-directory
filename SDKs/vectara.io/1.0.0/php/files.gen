@@ -88,4 +88,8 @@ src/Models/Shared/ServingBatchQueryRequest.php
 src/Models/Shared/ServingQueryRequest.php
 src/Models/Shared/QueryRequestRerankingConfig.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/adminservice/README.md
+docs/indexservice/README.md
+docs/queryservice/README.md
 USAGE.md

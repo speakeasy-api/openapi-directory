@@ -30,80 +30,105 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\GetContactRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetContactRequest();
+    $request->id = '89bd9d8d-69a6-474e-8f46-7cc8796ed151';
+
+    $response = $sdk->contacts->getContact($request);
+
+    if ($response->studentContactResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### contacts
+### [contacts](docs/contacts/README.md)
 
-* `getContact` - Returns a specific student contact
-* `getContacts` - Returns a list of student contacts
-* `getDistrictForStudentContact` - Returns the district for a student contact
-* `getStudentForContact` - Returns the student for a student contact
+* [getContact](docs/contacts/README.md#getcontact) - Returns a specific student contact
+* [getContacts](docs/contacts/README.md#getcontacts) - Returns a list of student contacts
+* [getDistrictForStudentContact](docs/contacts/README.md#getdistrictforstudentcontact) - Returns the district for a student contact
+* [getStudentForContact](docs/contacts/README.md#getstudentforcontact) - Returns the student for a student contact
 
-### districtAdmins
+### [districtAdmins](docs/districtadmins/README.md)
 
-* `getDistrictAdmin` - Returns a specific district admin
-* `getDistrictAdmins` - Returns a list of district admins
+* [getDistrictAdmin](docs/districtadmins/README.md#getdistrictadmin) - Returns a specific district admin
+* [getDistrictAdmins](docs/districtadmins/README.md#getdistrictadmins) - Returns a list of district admins
 
-### districts
+### [districts](docs/districts/README.md)
 
-* `getAdminsForDistrict` - Returns the admins for a district
-* `getDistrict` - Returns a specific district
-* `getDistrictStatus` - Returns the status of the district
-* `getDistricts` - Returns a list of districts. In practice this will only return the one district associated with the bearer token
-* `getSchoolsForDistrict` - Returns the schools for a district
-* `getSectionsForDistrict` - Returns the sections for a district
-* `getStudentsForDistrict` - Returns the students for a district
-* `getTeachersForDistrict` - Returns the teachers for a district
+* [getAdminsForDistrict](docs/districts/README.md#getadminsfordistrict) - Returns the admins for a district
+* [getDistrict](docs/districts/README.md#getdistrict) - Returns a specific district
+* [getDistrictStatus](docs/districts/README.md#getdistrictstatus) - Returns the status of the district
+* [getDistricts](docs/districts/README.md#getdistricts) - Returns a list of districts. In practice this will only return the one district associated with the bearer token
+* [getSchoolsForDistrict](docs/districts/README.md#getschoolsfordistrict) - Returns the schools for a district
+* [getSectionsForDistrict](docs/districts/README.md#getsectionsfordistrict) - Returns the sections for a district
+* [getStudentsForDistrict](docs/districts/README.md#getstudentsfordistrict) - Returns the students for a district
+* [getTeachersForDistrict](docs/districts/README.md#getteachersfordistrict) - Returns the teachers for a district
 
-### schoolAdmins
+### [schoolAdmins](docs/schooladmins/README.md)
 
-* `getSchoolAdmin` - Returns a specific school admin
-* `getSchoolAdmins` - Returns a list of school admins
-* `getSchoolsForSchoolAdmin` - Returns the schools for a school admin
+* [getSchoolAdmin](docs/schooladmins/README.md#getschooladmin) - Returns a specific school admin
+* [getSchoolAdmins](docs/schooladmins/README.md#getschooladmins) - Returns a list of school admins
+* [getSchoolsForSchoolAdmin](docs/schooladmins/README.md#getschoolsforschooladmin) - Returns the schools for a school admin
 
-### schools
+### [schools](docs/schools/README.md)
 
-* `getDistrictForSchool` - Returns the district for a school
-* `getSchool` - Returns a specific school
-* `getSchools` - Returns a list of schools
-* `getSectionsForSchool` - Returns the sections for a school
-* `getStudentsForSchool` - Returns the students for a school
-* `getTeachersForSchool` - Returns the teachers for a school
+* [getDistrictForSchool](docs/schools/README.md#getdistrictforschool) - Returns the district for a school
+* [getSchool](docs/schools/README.md#getschool) - Returns a specific school
+* [getSchools](docs/schools/README.md#getschools) - Returns a list of schools
+* [getSectionsForSchool](docs/schools/README.md#getsectionsforschool) - Returns the sections for a school
+* [getStudentsForSchool](docs/schools/README.md#getstudentsforschool) - Returns the students for a school
+* [getTeachersForSchool](docs/schools/README.md#getteachersforschool) - Returns the teachers for a school
 
-### sections
+### [sections](docs/sections/README.md)
 
-* `getDistrictForSection` - Returns the district for a section
-* `getSchoolForSection` - Returns the school for a section
-* `getSection` - Returns a specific section
-* `getSections` - Returns a list of sections
-* `getStudentsForSection` - Returns the students for a section
-* `getTeacherForSection` - Returns the primary teacher for a section
-* `getTeachersForSection` - Returns the teachers for a section
+* [getDistrictForSection](docs/sections/README.md#getdistrictforsection) - Returns the district for a section
+* [getSchoolForSection](docs/sections/README.md#getschoolforsection) - Returns the school for a section
+* [getSection](docs/sections/README.md#getsection) - Returns a specific section
+* [getSections](docs/sections/README.md#getsections) - Returns a list of sections
+* [getStudentsForSection](docs/sections/README.md#getstudentsforsection) - Returns the students for a section
+* [getTeacherForSection](docs/sections/README.md#getteacherforsection) - Returns the primary teacher for a section
+* [getTeachersForSection](docs/sections/README.md#getteachersforsection) - Returns the teachers for a section
 
-### students
+### [students](docs/students/README.md)
 
-* `getContactsForStudent` - Returns the contacts for a student
-* `getDistrictForStudent` - Returns the district for a student
-* `getSchoolForStudent` - Returns the primary school for a student
-* `getSectionsForStudent` - Returns the sections for a student
-* `getStudent` - Returns a specific student
-* `getStudents` - Returns a list of students
-* `getTeachersForStudent` - Returns the teachers for a student
+* [getContactsForStudent](docs/students/README.md#getcontactsforstudent) - Returns the contacts for a student
+* [getDistrictForStudent](docs/students/README.md#getdistrictforstudent) - Returns the district for a student
+* [getSchoolForStudent](docs/students/README.md#getschoolforstudent) - Returns the primary school for a student
+* [getSectionsForStudent](docs/students/README.md#getsectionsforstudent) - Returns the sections for a student
+* [getStudent](docs/students/README.md#getstudent) - Returns a specific student
+* [getStudents](docs/students/README.md#getstudents) - Returns a list of students
+* [getTeachersForStudent](docs/students/README.md#getteachersforstudent) - Returns the teachers for a student
 
-### teachers
+### [teachers](docs/teachers/README.md)
 
-* `getDistrictForTeacher` - Returns the district for a teacher
-* `getGradeLevelsForTeacher` - Returns the grade levels for sections a teacher teaches
-* `getSchoolForTeacher` - Retrieves school info for a teacher.
-* `getSectionsForTeacher` - Returns the sections for a teacher
-* `getStudentsForTeacher` - Returns the students for a teacher
-* `getTeacher` - Returns a specific teacher
-* `getTeachers` - Returns a list of teachers
+* [getDistrictForTeacher](docs/teachers/README.md#getdistrictforteacher) - Returns the district for a teacher
+* [getGradeLevelsForTeacher](docs/teachers/README.md#getgradelevelsforteacher) - Returns the grade levels for sections a teacher teaches
+* [getSchoolForTeacher](docs/teachers/README.md#getschoolforteacher) - Retrieves school info for a teacher.
+* [getSectionsForTeacher](docs/teachers/README.md#getsectionsforteacher) - Returns the sections for a teacher
+* [getStudentsForTeacher](docs/teachers/README.md#getstudentsforteacher) - Returns the students for a teacher
+* [getTeacher](docs/teachers/README.md#getteacher) - Returns a specific teacher
+* [getTeachers](docs/teachers/README.md#getteachers) - Returns a list of teachers
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -61,7 +61,7 @@ class Identification
      */
 	public function postV05PatientsOnFindJson(
         \OpenAPI\OpenAPI\Models\Operations\PostV05PatientsOnFindJsonRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05PatientsOnFindJsonResponse
     {
         $baseUrl = Identification::POST_V05_PATIENTS_ON_FIND_JSON_SERVERS[0];
@@ -125,7 +125,7 @@ class Identification
      */
 	public function postV05PatientsOnFindRaw(
         \OpenAPI\OpenAPI\Models\Operations\PostV05PatientsOnFindRawRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05PatientsOnFindRawResponse
     {
         $baseUrl = Identification::POST_V05_PATIENTS_ON_FIND_RAW_SERVERS[0];

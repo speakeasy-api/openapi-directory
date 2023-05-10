@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetContactMethodsXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_GET_CONTACT_METHODS = 'Lightsail_20161128.GetContactMethods';

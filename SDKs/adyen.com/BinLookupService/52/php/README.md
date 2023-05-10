@@ -30,17 +30,60 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\ThreeDSAvailabilityRequest;
+use \OpenAPI\OpenAPI\Models\Operations\PostGet3dsAvailabilitySecurity;
+use \OpenAPI\OpenAPI\Models\Shared\SchemeBasicAuth;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new ThreeDSAvailabilityRequest();
+    $request->additionalData = [
+        'provident' => 'distinctio',
+        'quibusdam' => 'unde',
+        'nulla' => 'corrupti',
+    ];
+    $request->brands = [
+        'vel',
+        'error',
+        'deserunt',
+        'suscipit',
+    ];
+    $request->cardNumber = 'iure';
+    $request->merchantAccount = 'magnam';
+    $request->recurringDetailReference = 'debitis';
+    $request->shopperReference = 'ipsa';
+
+    $requestSecurity = new PostGet3dsAvailabilitySecurity();
+    $requestSecurity->apiKeyAuth = 'YOUR_API_KEY_HERE';
+
+    $response = $sdk->general->postGet3dsAvailability($request, $requestSecurity);
+
+    if ($response->threeDSAvailabilityResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### general
+### [general](docs/general/README.md)
 
-* `postGet3dsAvailability` - Check if 3D Secure is available
-* `postGetCostEstimate` - Get a fees cost estimate
+* [postGet3dsAvailability](docs/general/README.md#postget3dsavailability) - Check if 3D Secure is available
+* [postGetCostEstimate](docs/general/README.md#postgetcostestimate) - Get a fees cost estimate
 <!-- End SDK Available Operations -->
 
 ### Maturity

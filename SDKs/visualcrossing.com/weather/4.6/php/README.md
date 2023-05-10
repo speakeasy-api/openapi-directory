@@ -30,32 +30,68 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest();
+    $request->aggregateHours = 'corrupti';
+    $request->allowAsynch = false;
+    $request->collectStationContributions = false;
+    $request->contentType = 'provident';
+    $request->endDateTime = 'distinctio';
+    $request->includeNormals = false;
+    $request->key = 'quibusdam';
+    $request->locations = 'unde';
+    $request->maxDistance = 'nulla';
+    $request->maxStations = 'corrupti';
+    $request->shortColumnNames = false;
+    $request->startDateTime = 'illum';
+    $request->unitGroup = 'vel';
+
+    $response = $sdk->historicalWeather->getVisualCrossingWebServicesRestServicesWeatherdataHistory($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### historicalWeather
+### [historicalWeather](docs/historicalweather/README.md)
 
-* `getVisualCrossingWebServicesRestServicesWeatherdataHistory` - Retrieves hourly or daily historical weather records.
+* [getVisualCrossingWebServicesRestServicesWeatherdataHistory](docs/historicalweather/README.md#getvisualcrossingwebservicesrestservicesweatherdatahistory) - Retrieves hourly or daily historical weather records.
 
-### timelineWeatherAPI15DayForecastRequest
+### [timelineWeatherAPI15DayForecastRequest](docs/timelineweatherapi15dayforecastrequest/README.md)
 
-* `getVisualCrossingWebServicesRestServicesTimelineLocation` - Historical and Forecast Weather API
+* [getVisualCrossingWebServicesRestServicesTimelineLocation](docs/timelineweatherapi15dayforecastrequest/README.md#getvisualcrossingwebservicesrestservicestimelinelocation) - Historical and Forecast Weather API
 
-### timelineWeatherAPIDateRangeRequest
+### [timelineWeatherAPIDateRangeRequest](docs/timelineweatherapidaterangerequest/README.md)
 
-* `getVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddate` - Historical and Forecast Weather API
+* [getVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddate](docs/timelineweatherapidaterangerequest/README.md#getvisualcrossingwebservicesrestservicestimelinelocationstartdateenddate) - Historical and Forecast Weather API
 
-### timelineWeatherAPISingleDateRequest
+### [timelineWeatherAPISingleDateRequest](docs/timelineweatherapisingledaterequest/README.md)
 
-* `getVisualCrossingWebServicesRestServicesTimelineLocationStartdate` - Historical and Forecast Weather API
+* [getVisualCrossingWebServicesRestServicesTimelineLocationStartdate](docs/timelineweatherapisingledaterequest/README.md#getvisualcrossingwebservicesrestservicestimelinelocationstartdate) - Historical and Forecast Weather API
 
-### weatherForecast
+### [weatherForecast](docs/weatherforecast/README.md)
 
-* `getVisualCrossingWebServicesRestServicesWeatherdataForecast` - Weather Forecast API
+* [getVisualCrossingWebServicesRestServicesWeatherdataForecast](docs/weatherforecast/README.md#getvisualcrossingwebservicesrestservicesweatherdataforecast) - Weather Forecast API
 <!-- End SDK Available Operations -->
 
 ### Maturity

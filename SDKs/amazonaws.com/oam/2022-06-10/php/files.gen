@@ -77,4 +77,5 @@ src/Models/Shared/ListTagsForResourceOutput.php
 src/Models/Shared/PutSinkPolicyOutput.php
 src/Models/Shared/UpdateLinkOutput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

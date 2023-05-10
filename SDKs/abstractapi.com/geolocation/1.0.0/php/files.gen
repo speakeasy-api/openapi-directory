@@ -26,4 +26,5 @@ src/Models/Shared/InlineResponse200Flag.php
 src/Models/Shared/InlineResponse200Security.php
 src/Models/Shared/InlineResponse200Timezone.php
 src/Models/Shared/InlineResponse200.php
+docs/sdk/README.md
 USAGE.md

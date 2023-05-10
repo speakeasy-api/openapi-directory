@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Shared;
 
 
-/** Denotes the state of etcd encryption. */
+/** The desired state of etcd encryption. */
 enum DatabaseEncryptionStateEnum: string
 {
     case UNKNOWN = 'UNKNOWN';

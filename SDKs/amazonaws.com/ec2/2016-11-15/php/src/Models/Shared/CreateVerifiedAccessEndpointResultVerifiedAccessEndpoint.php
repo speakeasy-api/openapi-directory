@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * CreateVerifiedAccessEndpointResultVerifiedAccessEndpoint - The ID of the Amazon Web Services Verified Access endpoint.
+ * CreateVerifiedAccessEndpointResultVerifiedAccessEndpoint - The ID of the Verified Access endpoint.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

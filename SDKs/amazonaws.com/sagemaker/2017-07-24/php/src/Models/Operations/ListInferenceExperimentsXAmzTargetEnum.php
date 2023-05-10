@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListInferenceExperimentsXAmzTargetEnum: string
 {
     case SAGE_MAKER_LIST_INFERENCE_EXPERIMENTS = 'SageMaker.ListInferenceExperiments';

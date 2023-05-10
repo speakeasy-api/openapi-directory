@@ -157,4 +157,16 @@ src/Models/Shared/V3StopsByDistanceResponse.php
 src/Models/Shared/V3StopGeosearch.php
 src/Models/Shared/V3StopsOnRouteResponse.php
 src/Models/Shared/V3StopOnRoute.php
+docs/sdk/README.md
+docs/departures/README.md
+docs/directions/README.md
+docs/disruptions/README.md
+docs/fareestimate/README.md
+docs/outlets/README.md
+docs/patterns/README.md
+docs/routetypes/README.md
+docs/routes/README.md
+docs/runs/README.md
+docs/search/README.md
+docs/stops/README.md
 USAGE.md

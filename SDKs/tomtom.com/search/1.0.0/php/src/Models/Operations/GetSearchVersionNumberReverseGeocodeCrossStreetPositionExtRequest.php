@@ -63,6 +63,7 @@ class GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest
      * If the "spatialKeys" flag is set, the response will also contain a proprietary geospatial keys for a specified location.
      * 
      * @var ?bool $spatialKeys
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=spatialKeys')]
     public ?bool $spatialKeys = null;

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AddTagsXAmzTargetEnum: string
 {
     case ELASTIC_MAP_REDUCE_ADD_TAGS = 'ElasticMapReduce.AddTags';

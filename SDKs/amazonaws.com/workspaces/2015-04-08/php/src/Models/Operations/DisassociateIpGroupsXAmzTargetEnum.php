@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DisassociateIpGroupsXAmzTargetEnum: string
 {
     case WORKSPACES_SERVICE_DISASSOCIATE_IP_GROUPS = 'WorkspacesService.DisassociateIpGroups';

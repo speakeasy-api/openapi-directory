@@ -139,4 +139,5 @@ src/Models/Shared/UpdateMigrationWorkflowResponse.php
 src/Models/Shared/UpdateWorkflowStepResponse.php
 src/Models/Shared/UpdateWorkflowStepGroupResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

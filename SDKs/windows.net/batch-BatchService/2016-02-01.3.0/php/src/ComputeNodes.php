@@ -278,8 +278,7 @@ class ComputeNodes
             $response->headers = $httpResponse->getHeaders();
             
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->computeNodeGetRemoteDesktop200ApplicationJSONBinaryString = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->computeNodeGetRemoteDesktop200ApplicationJSONBinaryString = $httpResponse->getBody()->getContents();
             }
         }
         else {

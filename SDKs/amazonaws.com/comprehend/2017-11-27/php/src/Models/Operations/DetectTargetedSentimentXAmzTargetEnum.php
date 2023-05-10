@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DetectTargetedSentimentXAmzTargetEnum: string
 {
     case COMPREHEND20171127_DETECT_TARGETED_SENTIMENT = 'Comprehend_20171127.DetectTargetedSentiment';

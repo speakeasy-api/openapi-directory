@@ -18,6 +18,16 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class GoogleCloudRecaptchaenterpriseV1RiskAnalysis
 {
     /**
+     * Extended verdict reasons to be used for experimentation only. The set of possible reasons is subject to change.
+     * 
+     * @var ?array<string> $extendedVerdictReasons
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('extendedVerdictReasons')]
+    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $extendedVerdictReasons = null;
+    
+    /**
      * Reasons contributing to the risk analysis verdict.
      * 
      * @var ?array<\OpenAPI\OpenAPI\Models\Shared\GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnum> $reasons
@@ -39,6 +49,7 @@ class GoogleCloudRecaptchaenterpriseV1RiskAnalysis
     
 	public function __construct()
 	{
+		$this->extendedVerdictReasons = null;
 		$this->reasons = null;
 		$this->score = null;
 	}

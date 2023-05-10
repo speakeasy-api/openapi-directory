@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteClusterParameterGroupActionEnum: string
 {
     case DELETE_CLUSTER_PARAMETER_GROUP = 'DeleteClusterParameterGroup';

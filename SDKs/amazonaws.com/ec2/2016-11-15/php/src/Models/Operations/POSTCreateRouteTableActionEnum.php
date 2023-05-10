@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateRouteTableActionEnum: string
 {
     case CREATE_ROUTE_TABLE = 'CreateRouteTable';

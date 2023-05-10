@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteConnectionXAmzTargetEnum: string
 {
     case AMAZON_DM_SV20160101_DELETE_CONNECTION = 'AmazonDMSv20160101.DeleteConnection';

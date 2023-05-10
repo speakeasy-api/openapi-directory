@@ -100,6 +100,9 @@ class TerminalSettingsStoreLevel
      * * Management API—Terminal settings read
      * * Management API—Terminal settings read and write
      * 
+     * For [sensitive terminal settings](https://docs.adyen.com/point-of-sale/automating-terminal-management/configure-terminals-api#sensitive-terminal-settings), your API credential must have the following role:
+     * * Management API—Terminal settings Advanced read and write
+     * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetMerchantsMerchantIdStoresReferenceTerminalSettingsRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\GetMerchantsMerchantIdStoresReferenceTerminalSettingsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetMerchantsMerchantIdStoresReferenceTerminalSettingsResponse
@@ -202,6 +205,9 @@ class TerminalSettingsStoreLevel
      * To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API—Terminal settings read
      * * Management API—Terminal settings read and write
+     * 
+     * For [sensitive terminal settings](https://docs.adyen.com/point-of-sale/automating-terminal-management/configure-terminals-api#sensitive-terminal-settings), your API credential must have the following role:
+     * * Management API—Terminal settings Advanced read and write
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetStoresStoreIdTerminalSettingsRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\GetStoresStoreIdTerminalSettingsSecurity $security
@@ -311,6 +317,9 @@ class TerminalSettingsStoreLevel
      * 
      * To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API—Terminal settings read and write
+     * 
+     * For [sensitive terminal settings](https://docs.adyen.com/point-of-sale/automating-terminal-management/configure-terminals-api#sensitive-terminal-settings), your API credential must have the following role:
+     * * Management API—Terminal settings Advanced read and write
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\PatchMerchantsMerchantIdStoresReferenceTerminalSettingsRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\PatchMerchantsMerchantIdStoresReferenceTerminalSettingsSecurity $security
@@ -422,6 +431,9 @@ class TerminalSettingsStoreLevel
      * 
      * To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API—Terminal settings read and write
+     * 
+     * For [sensitive terminal settings](https://docs.adyen.com/point-of-sale/automating-terminal-management/configure-terminals-api#sensitive-terminal-settings), your API credential must have the following role:
+     * * Management API—Terminal settings Advanced read and write
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\PatchStoresStoreIdTerminalSettingsRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\PatchStoresStoreIdTerminalSettingsSecurity $security

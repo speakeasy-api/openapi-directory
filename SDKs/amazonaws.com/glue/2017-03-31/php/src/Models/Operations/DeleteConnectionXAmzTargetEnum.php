@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteConnectionXAmzTargetEnum: string
 {
     case AWS_GLUE_DELETE_CONNECTION = 'AWSGlue.DeleteConnection';

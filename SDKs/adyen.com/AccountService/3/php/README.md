@@ -30,38 +30,67 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\CloseAccountHolderRequest;
+use \OpenAPI\OpenAPI\Models\Operations\PostCloseAccountHolderSecurity;
+use \OpenAPI\OpenAPI\Models\Shared\SchemeBasicAuth;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new CloseAccountHolderRequest();
+    $request->accountHolderCode = 'corrupti';
+
+    $requestSecurity = new PostCloseAccountHolderSecurity();
+    $requestSecurity->apiKeyAuth = 'YOUR_API_KEY_HERE';
+
+    $response = $sdk->accountHolders->postCloseAccountHolder($request, $requestSecurity);
+
+    if ($response->closeAccountHolderResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### accountHolders
+### [accountHolders](docs/accountholders/README.md)
 
-* `postCloseAccountHolder` - Close an account holder
-* `postCreateAccountHolder` - Create an account holder
-* `postGetAccountHolder` - Get an account holder
-* `postGetTaxForm` - Get a tax form
-* `postSuspendAccountHolder` - Suspend an account holder
-* `postUnSuspendAccountHolder` - Unsuspend an account holder
-* `postUpdateAccountHolder` - Update an account holder
-* `postUpdateAccountHolderState` - Update payout or processing state
+* [postCloseAccountHolder](docs/accountholders/README.md#postcloseaccountholder) - Close an account holder
+* [postCreateAccountHolder](docs/accountholders/README.md#postcreateaccountholder) - Create an account holder
+* [postGetAccountHolder](docs/accountholders/README.md#postgetaccountholder) - Get an account holder
+* [postGetTaxForm](docs/accountholders/README.md#postgettaxform) - Get a tax form
+* [postSuspendAccountHolder](docs/accountholders/README.md#postsuspendaccountholder) - Suspend an account holder
+* [postUnSuspendAccountHolder](docs/accountholders/README.md#postunsuspendaccountholder) - Unsuspend an account holder
+* [postUpdateAccountHolder](docs/accountholders/README.md#postupdateaccountholder) - Update an account holder
+* [postUpdateAccountHolderState](docs/accountholders/README.md#postupdateaccountholderstate) - Update payout or processing state
 
-### accounts
+### [accounts](docs/accounts/README.md)
 
-* `postCloseAccount` - Close an account
-* `postCreateAccount` - Create an account
-* `postUpdateAccount` - Update an account
+* [postCloseAccount](docs/accounts/README.md#postcloseaccount) - Close an account
+* [postCreateAccount](docs/accounts/README.md#postcreateaccount) - Create an account
+* [postUpdateAccount](docs/accounts/README.md#postupdateaccount) - Update an account
 
-### verification
+### [verification](docs/verification/README.md)
 
-* `postDeleteBankAccounts` - Delete bank accounts
-* `postDeleteLegalArrangements` - Delete legal arrangements
-* `postDeleteShareholders` - Delete shareholders
-* `postDeleteSignatories` - Delete signatories
-* `postGetUploadedDocuments` - Get documents
-* `postUploadDocument` - Upload a document
+* [postDeleteBankAccounts](docs/verification/README.md#postdeletebankaccounts) - Delete bank accounts
+* [postDeleteLegalArrangements](docs/verification/README.md#postdeletelegalarrangements) - Delete legal arrangements
+* [postDeleteShareholders](docs/verification/README.md#postdeleteshareholders) - Delete shareholders
+* [postDeleteSignatories](docs/verification/README.md#postdeletesignatories) - Delete signatories
+* [postGetUploadedDocuments](docs/verification/README.md#postgetuploadeddocuments) - Get documents
+* [postUploadDocument](docs/verification/README.md#postuploaddocument) - Upload a document
 <!-- End SDK Available Operations -->
 
 ### Maturity

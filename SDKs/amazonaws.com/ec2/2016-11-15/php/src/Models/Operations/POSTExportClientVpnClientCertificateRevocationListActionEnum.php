@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTExportClientVpnClientCertificateRevocationListActionEnum: string
 {
     case EXPORT_CLIENT_VPN_CLIENT_CERTIFICATE_REVOCATION_LIST = 'ExportClientVpnClientCertificateRevocationList';

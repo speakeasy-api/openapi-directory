@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeCacheClustersActionEnum: string
 {
     case DESCRIBE_CACHE_CLUSTERS = 'DescribeCacheClusters';

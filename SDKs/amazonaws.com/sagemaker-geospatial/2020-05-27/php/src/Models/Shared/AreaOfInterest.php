@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * AreaOfInterest - <p/>
+ * AreaOfInterest - The geographic extent of the Earth Observation job.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

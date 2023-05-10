@@ -185,4 +185,6 @@ src/Models/Shared/ListSavedReportsResponse.php
 src/Models/Shared/SiteStateEnum.php
 src/Models/Shared/Site.php
 src/Models/Shared/ListSitesResponse.php
+docs/sdk/README.md
+docs/accounts/README.md
 USAGE.md

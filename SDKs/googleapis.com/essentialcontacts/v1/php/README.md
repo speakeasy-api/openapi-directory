@@ -30,22 +30,72 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\EssentialcontactsProjectsContactsComputeRequest;
+use \OpenAPI\OpenAPI\Models\Shared\XgafvEnum;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+use \OpenAPI\OpenAPI\Models\Operations\EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum;
+use \OpenAPI\OpenAPI\Models\Operations\EssentialcontactsProjectsContactsComputeSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new EssentialcontactsProjectsContactsComputeRequest();
+    $request->dollarXgafv = XgafvEnum::TWO;
+    $request->accessToken = 'provident';
+    $request->alt = AltEnum::PROTO;
+    $request->callback = 'quibusdam';
+    $request->fields = 'unde';
+    $request->key = 'nulla';
+    $request->notificationCategories = [
+        EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum::PRODUCT_UPDATES,
+        EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum::SECURITY,
+        EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum::BILLING,
+    ];
+    $request->oauthToken = 'deserunt';
+    $request->pageSize = 384382;
+    $request->pageToken = 'iure';
+    $request->parent = 'magnam';
+    $request->prettyPrint = false;
+    $request->quotaUser = 'debitis';
+    $request->uploadType = 'ipsa';
+    $request->uploadProtocol = 'delectus';
+
+    $requestSecurity = new EssentialcontactsProjectsContactsComputeSecurity();
+    $requestSecurity->oauth2 = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+    $requestSecurity->oauth2c = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+
+    $response = $sdk->projects->essentialcontactsProjectsContactsCompute($request, $requestSecurity);
+
+    if ($response->googleCloudEssentialcontactsV1ComputeContactsResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `essentialcontactsProjectsContactsCompute` - Lists all contacts for the resource that are subscribed to the specified notification categories, including contacts inherited from any parent resources.
-* `essentialcontactsProjectsContactsCreate` - Adds a new contact for a resource.
-* `essentialcontactsProjectsContactsDelete` - Deletes a contact.
-* `essentialcontactsProjectsContactsGet` - Gets a single contact.
-* `essentialcontactsProjectsContactsList` - Lists the contacts that have been set on a resource.
-* `essentialcontactsProjectsContactsPatch` - Updates a contact. Note: A contact's email address cannot be changed.
-* `essentialcontactsProjectsContactsSendTestMessage` - Allows a contact admin to send a test message to contact to verify that it has been configured correctly.
+* [essentialcontactsProjectsContactsCompute](docs/projects/README.md#essentialcontactsprojectscontactscompute) - Lists all contacts for the resource that are subscribed to the specified notification categories, including contacts inherited from any parent resources.
+* [essentialcontactsProjectsContactsCreate](docs/projects/README.md#essentialcontactsprojectscontactscreate) - Adds a new contact for a resource.
+* [essentialcontactsProjectsContactsDelete](docs/projects/README.md#essentialcontactsprojectscontactsdelete) - Deletes a contact.
+* [essentialcontactsProjectsContactsGet](docs/projects/README.md#essentialcontactsprojectscontactsget) - Gets a single contact.
+* [essentialcontactsProjectsContactsList](docs/projects/README.md#essentialcontactsprojectscontactslist) - Lists the contacts that have been set on a resource.
+* [essentialcontactsProjectsContactsPatch](docs/projects/README.md#essentialcontactsprojectscontactspatch) - Updates a contact. Note: A contact's email address cannot be changed.
+* [essentialcontactsProjectsContactsSendTestMessage](docs/projects/README.md#essentialcontactsprojectscontactssendtestmessage) - Allows a contact admin to send a test message to contact to verify that it has been configured correctly.
 <!-- End SDK Available Operations -->
 
 ### Maturity

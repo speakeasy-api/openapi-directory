@@ -86,9 +86,11 @@ class PaymentMethod
      * 
      * Return a list of all Payment Methods for the current Vendor
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListPaymentMethodsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ListPaymentMethodsResponse
      */
 	public function listPaymentMethods(
+        \OpenAPI\OpenAPI\Models\Operations\ListPaymentMethodsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ListPaymentMethodsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -96,7 +98,8 @@ class PaymentMethod
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

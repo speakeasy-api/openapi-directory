@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETAttachClassicLinkVpcActionEnum: string
 {
     case ATTACH_CLASSIC_LINK_VPC = 'AttachClassicLinkVpc';

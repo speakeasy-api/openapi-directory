@@ -58,4 +58,7 @@ src/Models/Shared/FirmwareRiskRiskSummary.php
 src/Models/Shared/FirmwareRisk.php
 src/Models/Shared/VulnerableComponent.php
 src/Models/Shared/WeakCert.php
+docs/sdk/README.md
+docs/device/README.md
+docs/firmware/README.md
 USAGE.md

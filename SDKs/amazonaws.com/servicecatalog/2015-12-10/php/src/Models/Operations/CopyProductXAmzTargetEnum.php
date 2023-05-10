@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CopyProductXAmzTargetEnum: string
 {
     case AWS242_SERVICE_CATALOG_SERVICE_COPY_PRODUCT = 'AWS242ServiceCatalogService.CopyProduct';

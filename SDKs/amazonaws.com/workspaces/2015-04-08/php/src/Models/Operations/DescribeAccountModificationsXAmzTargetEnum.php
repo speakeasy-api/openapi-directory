@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeAccountModificationsXAmzTargetEnum: string
 {
     case WORKSPACES_SERVICE_DESCRIBE_ACCOUNT_MODIFICATIONS = 'WorkspacesService.DescribeAccountModifications';

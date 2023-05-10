@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeRaidArraysXAmzTargetEnum: string
 {
     case OPS_WORKS20130218_DESCRIBE_RAID_ARRAYS = 'OpsWorks_20130218.DescribeRaidArrays';

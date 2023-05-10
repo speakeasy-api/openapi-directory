@@ -256,4 +256,8 @@ src/Models/Shared/SearchDirectoryPeopleResponse.php
 src/Models/Shared/UpdateContactPhotoResponse.php
 src/Models/Shared/UpdateContactPhotoRequestSourcesEnum.php
 src/Models/Shared/UpdateContactPhotoRequest.php
+docs/sdk/README.md
+docs/contactgroups/README.md
+docs/othercontacts/README.md
+docs/people/README.md
 USAGE.md

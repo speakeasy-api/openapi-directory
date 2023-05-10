@@ -20,15 +20,15 @@ class CalendarEvent
     /**
      * Whether the calendar event is an all-day event.
      * 
-     * @var ?string $allDay
+     * @var ?bool $allDay
      */
 	
-    public ?string $allDay = null;
+    public ?bool $allDay = null;
     
     /**
      * The attendees of the calendar event.
      * 
-     * @var ?array<string, mixed> $attendees
+     * @var ?array<mixed> $attendees
      */
 	
     public ?array $attendees = null;
@@ -60,10 +60,10 @@ class CalendarEvent
     /**
      * The canceled date of the calendar event.
      * 
-     * @var ?string $canceledAt
+     * @var ?\DateTime $canceledAt
      */
 	
-    public ?string $canceledAt = null;
+    public ?\DateTime $canceledAt = null;
     
     /**
      * The conference-related information, such as details of a Google Meet conference.
@@ -76,18 +76,18 @@ class CalendarEvent
     /**
      * Creation time of the calendar event.
      * 
-     * @var ?string $createdAt
+     * @var ?\DateTime $createdAt
      */
 	
-    public ?string $createdAt = null;
+    public ?\DateTime $createdAt = null;
     
     /**
      * The creator email of the calendar event.
      * 
-     * @var ?array<string, mixed> $creator
+     * @var ?string $creator
      */
 	
-    public ?array $creator = null;
+    public ?string $creator = null;
     
     /**
      * Description of the calendar event
@@ -164,10 +164,10 @@ class CalendarEvent
     /**
      * Whether the calendar event is a recurring event.
      * 
-     * @var ?string $recurring
+     * @var ?bool $recurring
      */
 	
-    public ?string $recurring = null;
+    public ?bool $recurring = null;
     
     /**
      * The (inclusive) start time of the calendar event.
@@ -204,10 +204,10 @@ class CalendarEvent
     /**
      * Last modification time of the calendar event.
      * 
-     * @var ?string $updatedAt
+     * @var ?\DateTime $updatedAt
      */
 	
-    public ?string $updatedAt = null;
+    public ?\DateTime $updatedAt = null;
     
     /**
      * User GUID of the user calendar.

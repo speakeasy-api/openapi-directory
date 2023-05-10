@@ -30,99 +30,126 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Shared\SchemeBasicAuth;
+use \OpenAPI\OpenAPI\Models\Operations\DeleteCustomersAccountAnnouncementsAnnouncementIdRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new DeleteCustomersAccountAnnouncementsAnnouncementIdRequest();
+    $request->account = 548814;
+    $request->announcementId = 'provident';
+
+    $response = $sdk->announcements->deleteCustomersAccountAnnouncementsAnnouncementId($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### announcements
+### [announcements](docs/announcements/README.md)
 
-* `deleteCustomersAccountAnnouncementsAnnouncementId` - Delete an announcement audio file
-* `getAnnouncements` - List global announcements
-* `getCustomersAccountAnnouncements` - List of announcement audio files
-* `getCustomersAccountAnnouncementsAnnouncementId` - Represents an announcement audio file
-* `postAnnouncements` - Add a new announcement audio file
+* [deleteCustomersAccountAnnouncementsAnnouncementId](docs/announcements/README.md#deletecustomersaccountannouncementsannouncementid) - Delete an announcement audio file
+* [getAnnouncements](docs/announcements/README.md#getannouncements) - List global announcements
+* [getCustomersAccountAnnouncements](docs/announcements/README.md#getcustomersaccountannouncements) - List of announcement audio files
+* [getCustomersAccountAnnouncementsAnnouncementId](docs/announcements/README.md#getcustomersaccountannouncementsannouncementid) - Represents an announcement audio file
+* [postAnnouncements](docs/announcements/README.md#postannouncements) - Add a new announcement audio file
 
-### areacodes
+### [areacodes](docs/areacodes/README.md)
 
-* `getAreacodes` - List areacodes
-* `getNumbersAreacodes` - Search available numbers by areacode
+* [getAreacodes](docs/areacodes/README.md#getareacodes) - List areacodes
+* [getNumbersAreacodes](docs/areacodes/README.md#getnumbersareacodes) - Search available numbers by areacode
 
-### billing
+### [billing](docs/billing/README.md)
 
-* `getBilling` - List global billing detail
+* [getBilling](docs/billing/README.md#getbilling) - List global billing detail
 
-### calls
+### [calls](docs/calls/README.md)
 
-* `getCalls` - Validate a phone number by calling it once
-* `postCalls` - Create phone calls with or without announcements and scheduled hangups
+* [getCalls](docs/calls/README.md#getcalls) - Validate a phone number by calling it once
+* [postCalls](docs/calls/README.md#postcalls) - Create phone calls with or without announcements and scheduled hangups
 
-### charges
+### [charges](docs/charges/README.md)
 
-* `getCharges` - List charges
-* `postCharges` - Create charges for invoices
+* [getCharges](docs/charges/README.md#getcharges) - List charges
+* [postCharges](docs/charges/README.md#postcharges) - Create charges for invoices
 
-### contacts
+### [contacts](docs/contacts/README.md)
 
-* `getContacts` - List contacts
+* [getContacts](docs/contacts/README.md#getcontacts) - List contacts
 
-### customers
+### [customers](docs/customers/README.md)
 
-* `getCustomer` - Represents a customer
-* `getCustomers` - List all customers or find your own account
+* [getCustomer](docs/customers/README.md#getcustomer) - Represents a customer
+* [getCustomers](docs/customers/README.md#getcustomers) - List all customers or find your own account
 
-### echo
+### [echo](docs/echo/README.md)
 
-* `postSupportEcho` - Return your POSTed data for testing
+* [postSupportEcho](docs/echo/README.md#postsupportecho) - Return your POSTed data for testing
 
-### faxes
+### [faxes](docs/faxes/README.md)
 
-* `getFaxes` - List global ongoing faxes
+* [getFaxes](docs/faxes/README.md#getfaxes) - List global ongoing faxes
 
-### global
+### [global](docs/global/README.md)
 
-* `get` - List global resources
+* [get](docs/global/README.md#get) - List global resources
 
-### hosted
+### [hosted](docs/hosted/README.md)
 
-* `getHosted` - List Hosted VoIP domains
+* [getHosted](docs/hosted/README.md#gethosted) - List Hosted VoIP domains
 
-### mobile
+### [mobile](docs/mobile/README.md)
 
-* `getMobile` - List mobile accounts
+* [getMobile](docs/mobile/README.md#getmobile) - List mobile accounts
 
-### numbers
+### [numbers](docs/numbers/README.md)
 
-* `getNumbers` - List available SureVoIP Ofcom number allocations for purchase
+* [getNumbers](docs/numbers/README.md#getnumbers) - List available SureVoIP Ofcom number allocations for purchase
 
-### partners
+### [partners](docs/partners/README.md)
 
-* `getPartners` - List SureVoIP Partner accounts
+* [getPartners](docs/partners/README.md#getpartners) - List SureVoIP Partner accounts
 
-### porting
+### [porting](docs/porting/README.md)
 
-* `getPorting` - List ported numbers
+* [getPorting](docs/porting/README.md#getporting) - List ported numbers
 
-### sip
+### [sip](docs/sip/README.md)
 
-* `getSip` - List all SIP accounts
+* [getSip](docs/sip/README.md#getsip) - List all SIP accounts
 
-### sms
+### [sms](docs/sms/README.md)
 
-* `getSms` - List SMS
+* [getSms](docs/sms/README.md#getsms) - List SMS
 
-### support
+### [support](docs/support/README.md)
 
-* `getIpAddress` - Return the IP address from where your API request originated
-* `getServiceStatus` - List all Service Status messages
-* `getSupportIpAddress` - Return the IP address from where your API request originated
-* `getSupportServiceStatus` - List all Service Status messages
+* [getIpAddress](docs/support/README.md#getipaddress) - Return the IP address from where your API request originated
+* [getServiceStatus](docs/support/README.md#getservicestatus) - List all Service Status messages
+* [getSupportIpAddress](docs/support/README.md#getsupportipaddress) - Return the IP address from where your API request originated
+* [getSupportServiceStatus](docs/support/README.md#getsupportservicestatus) - List all Service Status messages
 
-### topups
+### [topups](docs/topups/README.md)
 
-* `getTopups` - List all account credit topups
+* [getTopups](docs/topups/README.md#gettopups) - List all account credit topups
 <!-- End SDK Available Operations -->
 
 ### Maturity

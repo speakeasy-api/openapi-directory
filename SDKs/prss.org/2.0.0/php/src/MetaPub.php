@@ -45,12 +45,15 @@ class MetaPub
      * @param \OpenAPI\OpenAPI\Models\Operations\GetApiV2MetapubProgramInformationBatchBatchIdRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\GetApiV2MetapubProgramInformationBatchBatchIdSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetApiV2MetapubProgramInformationBatchBatchIdResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getApiV2MetapubProgramInformationBatchBatchId(
         \OpenAPI\OpenAPI\Models\Operations\GetApiV2MetapubProgramInformationBatchBatchIdRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\GetApiV2MetapubProgramInformationBatchBatchIdSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetApiV2MetapubProgramInformationBatchBatchIdResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/api/v2/metapub/program-information/batch/{batch-id}', \OpenAPI\OpenAPI\Models\Operations\GetApiV2MetapubProgramInformationBatchBatchIdRequest::class, $request);
         
@@ -91,12 +94,15 @@ class MetaPub
      * @param \OpenAPI\OpenAPI\Models\Operations\PostApiV2MetapubProgramInformationBatchSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\PostApiV2MetapubProgramInformationBatchResponse
      * @see /api/epg-cd-mapping.html
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function postApiV2MetapubProgramInformationBatch(
         \OpenAPI\OpenAPI\Models\Operations\PostApiV2MetapubProgramInformationBatchRequestBody $request,
         \OpenAPI\OpenAPI\Models\Operations\PostApiV2MetapubProgramInformationBatchSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\PostApiV2MetapubProgramInformationBatchResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/api/v2/metapub/program-information/batch');
         

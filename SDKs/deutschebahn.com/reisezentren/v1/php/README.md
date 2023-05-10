@@ -30,18 +30,42 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetReisezentrenRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetReisezentrenRequest();
+    $request->name = 'Terrence Rau';
+
+    $response = $sdk->getReisezentren($request);
+
+    if ($response->travelCenterList !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getReisezentren` - Get all station infos
-* `getReisezentrenLocLatLon` - Get information about a station near a location
-* `getReisezentrenLocLatLonDist` - Get stations in a given radius
-* `getReisezentrenId` - Get information about a specific station
+* [getReisezentren](docs/sdk/README.md#getreisezentren) - Get all station infos
+* [getReisezentrenLocLatLon](docs/sdk/README.md#getreisezentrenloclatlon) - Get information about a station near a location
+* [getReisezentrenLocLatLonDist](docs/sdk/README.md#getreisezentrenloclatlondist) - Get stations in a given radius
+* [getReisezentrenId](docs/sdk/README.md#getreisezentrenid) - Get information about a specific station
 <!-- End SDK Available Operations -->
 
 ### Maturity

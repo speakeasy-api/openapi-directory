@@ -38,6 +38,46 @@ class RegionSecurityPolicies
 	}
 	
     /**
+     * Inserts a rule into a security policy.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesAddRuleRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesAddRuleSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesAddRuleResponse
+     */
+	public function computeRegionSecurityPoliciesAddRule(
+        \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesAddRuleRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesAddRuleSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesAddRuleResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/projects/{project}/regions/{region}/securityPolicies/{securityPolicy}/addRule', \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesAddRuleRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "securityPolicyRule", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesAddRuleRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesAddRuleResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Deletes the specified policy.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesDeleteRequest $request
@@ -107,6 +147,44 @@ class RegionSecurityPolicies
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->securityPolicy = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\SecurityPolicy', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Gets a rule at the specified priority.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesGetRuleRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesGetRuleSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesGetRuleResponse
+     */
+	public function computeRegionSecurityPoliciesGetRule(
+        \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesGetRuleRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesGetRuleSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesGetRuleResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/projects/{project}/regions/{region}/securityPolicies/{securityPolicy}/getRule', \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesGetRuleRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesGetRuleRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesGetRuleResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->securityPolicyRule = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\SecurityPolicyRule', 'json');
             }
         }
 
@@ -217,6 +295,84 @@ class RegionSecurityPolicies
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $response = new \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesPatchResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Patches a rule at the specified priority. To clear fields in the rule, leave the fields empty and specify them in the updateMask.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesPatchRuleRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesPatchRuleSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesPatchRuleResponse
+     */
+	public function computeRegionSecurityPoliciesPatchRule(
+        \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesPatchRuleRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesPatchRuleSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesPatchRuleResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/projects/{project}/regions/{region}/securityPolicies/{securityPolicy}/patchRule', \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesPatchRuleRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "securityPolicyRule", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesPatchRuleRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesPatchRuleResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Deletes a rule at the specified priority.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesRemoveRuleRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesRemoveRuleSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesRemoveRuleResponse
+     */
+	public function computeRegionSecurityPoliciesRemoveRule(
+        \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesRemoveRuleRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesRemoveRuleSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesRemoveRuleResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/projects/{project}/regions/{region}/securityPolicies/{securityPolicy}/removeRule', \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesRemoveRuleRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesRemoveRuleRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\ComputeRegionSecurityPoliciesRemoveRuleResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;

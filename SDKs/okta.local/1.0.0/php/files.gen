@@ -69,4 +69,8 @@ src/Models/Operations/GetUserRequest.php
 src/Models/Operations/GetUserResponse.php
 src/Models/Operations/ResetFactorsRequest.php
 src/Models/Operations/ResetFactorsResponse.php
+docs/sdk/README.md
+docs/createuser/README.md
+docs/credentialoperations/README.md
+docs/lifecycleoperations/README.md
 USAGE.md

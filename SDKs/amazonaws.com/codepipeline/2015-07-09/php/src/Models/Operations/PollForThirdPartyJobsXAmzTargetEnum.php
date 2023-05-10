@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PollForThirdPartyJobsXAmzTargetEnum: string
 {
     case CODE_PIPELINE20150709_POLL_FOR_THIRD_PARTY_JOBS = 'CodePipeline_20150709.PollForThirdPartyJobs';

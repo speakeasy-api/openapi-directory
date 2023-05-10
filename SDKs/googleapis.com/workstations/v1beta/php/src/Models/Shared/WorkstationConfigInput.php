@@ -48,6 +48,16 @@ class WorkstationConfigInput
     public ?string $displayName = null;
     
     /**
+     * Whether to enable linux auditd logging on the workstation. When enabled, a service account must also be specified that has logging.buckets.write permission on the project. Operating system audit logging is distinct from [Cloud Audit Logs](https://cloud.google.com/workstations/docs/audit-logging).
+     * 
+     * @var ?bool $enableAuditAgent
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('enableAuditAgent')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $enableAuditAgent = null;
+    
+    /**
      * A customer-managed encryption key for the Compute Engine resources of this workstation configuration.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\CustomerEncryptionKey $encryptionKey
@@ -58,7 +68,7 @@ class WorkstationConfigInput
     public ?CustomerEncryptionKey $encryptionKey = null;
     
     /**
-     * Checksum computed by the server. May be sent on update and delete requests to ensure that the client has an up-to-date value before proceeding.
+     * Checksum computed by the server. May be sent on update and delete requests to make sure that the client has an up-to-date value before proceeding.
      * 
      * @var ?string $etag
      */
@@ -70,12 +80,12 @@ class WorkstationConfigInput
     /**
      * Runtime host for a workstation.
      * 
-     * @var ?\OpenAPI\OpenAPI\Models\Shared\Host $host
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\HostInput $host
      */
 	#[\JMS\Serializer\Annotation\SerializedName('host')]
-    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\Host')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\HostInput')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?Host $host = null;
+    public ?HostInput $host = null;
     
     /**
      * How long to wait before automatically stopping an instance that hasn't received any user traffic. A value of 0 indicates that this instance should never time out due to idleness. Defaults to 20 minutes.
@@ -118,6 +128,16 @@ class WorkstationConfigInput
     public ?array $persistentDirectories = null;
     
     /**
+     * Readiness checks to perform when starting a workstation using this workstation configuration. Mark a workstation as running only after all specified readiness checks return 200 status codes.
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\ReadinessCheck> $readinessChecks
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('readinessChecks')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\ReadinessCheck>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $readinessChecks = null;
+    
+    /**
      * How long to wait before automatically stopping a workstation after it started. A value of 0 indicates that workstations using this configuration should never time out. Must be greater than 0 and less than 24 hours if encryption_key is set. Defaults to 12 hours.
      * 
      * @var ?string $runningTimeout
@@ -132,6 +152,7 @@ class WorkstationConfigInput
 		$this->annotations = null;
 		$this->container = null;
 		$this->displayName = null;
+		$this->enableAuditAgent = null;
 		$this->encryptionKey = null;
 		$this->etag = null;
 		$this->host = null;
@@ -139,6 +160,7 @@ class WorkstationConfigInput
 		$this->labels = null;
 		$this->name = null;
 		$this->persistentDirectories = null;
+		$this->readinessChecks = null;
 		$this->runningTimeout = null;
 	}
 }

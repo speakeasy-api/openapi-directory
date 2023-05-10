@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateLocationObjectStorageXAmzTargetEnum: string
 {
     case FMRS_SERVICE_UPDATE_LOCATION_OBJECT_STORAGE = 'FmrsService.UpdateLocationObjectStorage';

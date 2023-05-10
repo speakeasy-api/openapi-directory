@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteIpamScopeActionEnum: string
 {
     case DELETE_IPAM_SCOPE = 'DeleteIpamScope';

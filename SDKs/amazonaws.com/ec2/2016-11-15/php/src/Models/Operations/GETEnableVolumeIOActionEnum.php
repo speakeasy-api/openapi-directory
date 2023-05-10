@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETEnableVolumeIOActionEnum: string
 {
     case ENABLE_VOLUME_IO = 'EnableVolumeIO';

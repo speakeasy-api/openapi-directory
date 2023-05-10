@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutSubscriptionFilterXAmzTargetEnum: string
 {
     case LOGS20140328_PUT_SUBSCRIPTION_FILTER = 'Logs_20140328.PutSubscriptionFilter';

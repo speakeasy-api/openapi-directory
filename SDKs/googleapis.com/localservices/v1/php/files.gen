@@ -39,4 +39,7 @@ src/Models/Shared/GoogleTypeTimeZone.php
 src/Models/Shared/GoogleAdsHomeservicesLocalservicesV1PhoneLead.php
 src/Models/Shared/GoogleAdsHomeservicesLocalservicesV1MessageLead.php
 src/Models/Shared/GoogleAdsHomeservicesLocalservicesV1BookingLead.php
+docs/sdk/README.md
+docs/accountreports/README.md
+docs/detailedleadreports/README.md
 USAGE.md

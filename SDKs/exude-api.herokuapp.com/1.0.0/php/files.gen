@@ -27,4 +27,6 @@ src/Models/Operations/FilterStoppingsRequest.php
 src/Models/Operations/FilterStoppingsResponse.php
 src/Models/Shared/ExudeResponseBean.php
 src/Models/Shared/ExudeBean.php
+docs/sdk/README.md
+docs/exude/README.md
 USAGE.md

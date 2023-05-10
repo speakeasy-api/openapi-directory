@@ -31,4 +31,5 @@ src/Models/Shared/Categories.php
 src/Models/Shared/CategoryDetails.php
 src/Models/Shared/PointOfInterest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

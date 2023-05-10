@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CompareFacesXAmzTargetEnum: string
 {
     case REKOGNITION_SERVICE_COMPARE_FACES = 'RekognitionService.CompareFaces';

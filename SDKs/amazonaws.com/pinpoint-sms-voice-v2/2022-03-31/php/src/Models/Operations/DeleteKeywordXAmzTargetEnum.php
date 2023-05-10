@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteKeywordXAmzTargetEnum: string
 {
     case PINPOINT_SMS_VOICE_V2_DELETE_KEYWORD = 'PinpointSMSVoiceV2.DeleteKeyword';

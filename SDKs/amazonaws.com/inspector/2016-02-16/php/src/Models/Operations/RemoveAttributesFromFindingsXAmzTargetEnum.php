@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RemoveAttributesFromFindingsXAmzTargetEnum: string
 {
     case INSPECTOR_SERVICE_REMOVE_ATTRIBUTES_FROM_FINDINGS = 'InspectorService.RemoveAttributesFromFindings';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTModifyInstancePlacementActionEnum: string
 {
     case MODIFY_INSTANCE_PLACEMENT = 'ModifyInstancePlacement';

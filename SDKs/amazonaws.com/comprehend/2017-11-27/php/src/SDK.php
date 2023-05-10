@@ -709,7 +709,7 @@ class SDK
     }
 	
     /**
-     * Creates a new document classifier that you can use to categorize documents. To create a classifier, you provide a set of training documents that labeled with the categories that you want to use. After the classifier is trained you can use it to categorize a set of labeled documents into the categories. For more information, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/how-document-classification.html">Document Classification</a> in the Comprehend Developer Guide. 
+     * Creates a new document classifier that you can use to categorize documents. To create a classifier, you provide a set of training documents that are labeled with the categories that you want to use. For more information, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/training-classifier-model.html">Training classifier models</a> in the Comprehend Developer Guide. 
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\CreateDocumentClassifierRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\CreateDocumentClassifierResponse
@@ -4278,6 +4278,12 @@ class SDK
         else if ($httpResponse->getStatusCode() === 486) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
+                $response->resourceInUseException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 487) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
                 $response->internalServerException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
             }
         }
@@ -4346,6 +4352,12 @@ class SDK
             }
         }
         else if ($httpResponse->getStatusCode() === 484) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->resourceInUseException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 485) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->internalServerException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
@@ -4430,6 +4442,12 @@ class SDK
         else if ($httpResponse->getStatusCode() === 486) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
+                $response->resourceInUseException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 487) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
                 $response->internalServerException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
             }
         }
@@ -4498,6 +4516,12 @@ class SDK
             }
         }
         else if ($httpResponse->getStatusCode() === 484) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->resourceInUseException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 485) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->internalServerException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
@@ -4640,6 +4664,12 @@ class SDK
         else if ($httpResponse->getStatusCode() === 484) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
+                $response->resourceInUseException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 485) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
                 $response->internalServerException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
             }
         }
@@ -4708,6 +4738,12 @@ class SDK
             }
         }
         else if ($httpResponse->getStatusCode() === 484) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->resourceInUseException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 485) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->internalServerException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
@@ -4780,6 +4816,12 @@ class SDK
         else if ($httpResponse->getStatusCode() === 484) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
+                $response->resourceInUseException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 485) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
                 $response->internalServerException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
             }
         }
@@ -4850,6 +4892,12 @@ class SDK
         else if ($httpResponse->getStatusCode() === 484) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
+                $response->resourceInUseException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 485) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
                 $response->internalServerException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
             }
         }
@@ -4918,6 +4966,12 @@ class SDK
             }
         }
         else if ($httpResponse->getStatusCode() === 484) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->resourceInUseException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 485) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->internalServerException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopAccessLoggingXAmzTargetEnum: string
 {
     case MEDIA_STORE20170901_STOP_ACCESS_LOGGING = 'MediaStore_20170901.StopAccessLogging';

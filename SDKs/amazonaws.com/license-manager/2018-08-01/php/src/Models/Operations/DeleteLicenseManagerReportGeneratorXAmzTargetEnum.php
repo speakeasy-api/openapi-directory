@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteLicenseManagerReportGeneratorXAmzTargetEnum: string
 {
     case AWS_LICENSE_MANAGER_DELETE_LICENSE_MANAGER_REPORT_GENERATOR = 'AWSLicenseManager.DeleteLicenseManagerReportGenerator';

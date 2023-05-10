@@ -310,4 +310,5 @@ src/Models/Shared/UpdateOrganizationalUnitRequest.php
 src/Models/Shared/UpdatePolicyResponse.php
 src/Models/Shared/UpdatePolicyRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

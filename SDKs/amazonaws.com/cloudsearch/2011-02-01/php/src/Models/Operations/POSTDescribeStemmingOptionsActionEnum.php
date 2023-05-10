@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeStemmingOptionsActionEnum: string
 {
     case DESCRIBE_STEMMING_OPTIONS = 'DescribeStemmingOptions';

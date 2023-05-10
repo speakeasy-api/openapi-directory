@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTResetInstanceAttributeActionEnum: string
 {
     case RESET_INSTANCE_ATTRIBUTE = 'ResetInstanceAttribute';

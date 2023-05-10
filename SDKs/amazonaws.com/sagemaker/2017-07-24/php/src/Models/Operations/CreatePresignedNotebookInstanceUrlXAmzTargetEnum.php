@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreatePresignedNotebookInstanceUrlXAmzTargetEnum: string
 {
     case SAGE_MAKER_CREATE_PRESIGNED_NOTEBOOK_INSTANCE_URL = 'SageMaker.CreatePresignedNotebookInstanceUrl';

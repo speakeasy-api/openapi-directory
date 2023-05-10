@@ -198,6 +198,16 @@ class Conversion
     public ?bool $treatmentForUnderage = null;
     
     /**
+     * The user identifiers to enhance the conversion. The maximum number of user identifiers for each conversion is 5.
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\UserIdentifier> $userIdentifiers
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('userIdentifiers')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\UserIdentifier>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $userIdentifiers = null;
+    
+    /**
      * The value of the conversion.
      * 
      * @var ?float $value
@@ -227,6 +237,7 @@ class Conversion
 		$this->quantity = null;
 		$this->timestampMicros = null;
 		$this->treatmentForUnderage = null;
+		$this->userIdentifiers = null;
 		$this->value = null;
 	}
 }

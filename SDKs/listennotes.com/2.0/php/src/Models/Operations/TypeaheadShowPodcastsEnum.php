@@ -14,8 +14,8 @@ namespace OpenAPI\OpenAPI\Models\Operations;
  * 
  * 
  */
-enum TypeaheadShowPodcastsEnum: string
+enum TypeaheadShowPodcastsEnum: int
 {
-    case ZERO = '0';
-    case ONE = '1';
+    case ZERO = 0;
+    case ONE = 1;
 }

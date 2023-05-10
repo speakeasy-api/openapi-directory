@@ -88,9 +88,11 @@ class MyAPICredential
      * 
      * You can make this request with any of the Management API roles.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetMeSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetMeResponse
      */
 	public function getMe(
+        \OpenAPI\OpenAPI\Models\Operations\GetMeSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetMeResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -98,7 +100,8 @@ class MyAPICredential
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -130,9 +133,11 @@ class MyAPICredential
      * 
      * You can make this request with any of the Management API roles.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetMeAllowedOriginsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetMeAllowedOriginsResponse
      */
 	public function getMeAllowedOrigins(
+        \OpenAPI\OpenAPI\Models\Operations\GetMeAllowedOriginsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetMeAllowedOriginsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -140,7 +145,8 @@ class MyAPICredential
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

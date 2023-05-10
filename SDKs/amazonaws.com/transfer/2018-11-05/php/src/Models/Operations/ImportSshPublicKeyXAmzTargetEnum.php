@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ImportSshPublicKeyXAmzTargetEnum: string
 {
     case TRANSFER_SERVICE_IMPORT_SSH_PUBLIC_KEY = 'TransferService.ImportSshPublicKey';

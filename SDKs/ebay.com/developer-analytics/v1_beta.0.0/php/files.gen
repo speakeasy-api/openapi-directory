@@ -30,4 +30,7 @@ src/Models/Shared/RateLimitsResponse.php
 src/Models/Shared/RateLimit.php
 src/Models/Shared/Resource.php
 src/Models/Shared/Rate.php
+docs/sdk/README.md
+docs/ratelimit/README.md
+docs/userratelimit/README.md
 USAGE.md

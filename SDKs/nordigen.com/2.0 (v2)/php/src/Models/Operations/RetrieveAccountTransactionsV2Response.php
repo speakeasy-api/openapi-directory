@@ -21,7 +21,15 @@ class RetrieveAccountTransactionsV2Response
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
     /**
-     * $retrieveAccountTransactionsV2400ApplicationJSONObject
+     * Retrieve account transactions
+     * 
+     * @var ?array<string, mixed> $retrieveAccountTransactionsV2200ApplicationJSONObject
+     */
+	
+    public ?array $retrieveAccountTransactionsV2200ApplicationJSONObject = null;
+    
+    /**
+     * Date range error
      * 
      * @var ?array<string, mixed> $retrieveAccountTransactionsV2400ApplicationJSONObject
      */
@@ -29,7 +37,7 @@ class RetrieveAccountTransactionsV2Response
     public ?array $retrieveAccountTransactionsV2400ApplicationJSONObject = null;
     
     /**
-     * $retrieveAccountTransactionsV2401ApplicationJSONObject
+     * Failed Authentication
      * 
      * @var ?array<string, mixed> $retrieveAccountTransactionsV2401ApplicationJSONObject
      */
@@ -37,7 +45,7 @@ class RetrieveAccountTransactionsV2Response
     public ?array $retrieveAccountTransactionsV2401ApplicationJSONObject = null;
     
     /**
-     * $retrieveAccountTransactionsV2403ApplicationJSONObject
+     * Account Access Forbidden
      * 
      * @var ?array<string, mixed> $retrieveAccountTransactionsV2403ApplicationJSONObject
      */
@@ -45,7 +53,7 @@ class RetrieveAccountTransactionsV2Response
     public ?array $retrieveAccountTransactionsV2403ApplicationJSONObject = null;
     
     /**
-     * $retrieveAccountTransactionsV2404ApplicationJSONObject
+     * Account not found error
      * 
      * @var ?array<string, mixed> $retrieveAccountTransactionsV2404ApplicationJSONObject
      */
@@ -53,7 +61,7 @@ class RetrieveAccountTransactionsV2Response
     public ?array $retrieveAccountTransactionsV2404ApplicationJSONObject = null;
     
     /**
-     * $retrieveAccountTransactionsV2409ApplicationJSONObject
+     * Account state error
      * 
      * @var ?array<string, mixed> $retrieveAccountTransactionsV2409ApplicationJSONObject
      */
@@ -61,7 +69,7 @@ class RetrieveAccountTransactionsV2Response
     public ?array $retrieveAccountTransactionsV2409ApplicationJSONObject = null;
     
     /**
-     * $retrieveAccountTransactionsV2429ApplicationJSONObject
+     * Rate Limit Error
      * 
      * @var ?array<string, mixed> $retrieveAccountTransactionsV2429ApplicationJSONObject
      */
@@ -69,7 +77,7 @@ class RetrieveAccountTransactionsV2Response
     public ?array $retrieveAccountTransactionsV2429ApplicationJSONObject = null;
     
     /**
-     * $retrieveAccountTransactionsV2500ApplicationJSONObject
+     * Unknown Request Error
      * 
      * @var ?array<string, mixed> $retrieveAccountTransactionsV2500ApplicationJSONObject
      */
@@ -77,7 +85,7 @@ class RetrieveAccountTransactionsV2Response
     public ?array $retrieveAccountTransactionsV2500ApplicationJSONObject = null;
     
     /**
-     * $retrieveAccountTransactionsV2503ApplicationJSONObject
+     * Connection Error
      * 
      * @var ?array<string, mixed> $retrieveAccountTransactionsV2503ApplicationJSONObject
      */
@@ -89,6 +97,7 @@ class RetrieveAccountTransactionsV2Response
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
+		$this->retrieveAccountTransactionsV2200ApplicationJSONObject = null;
 		$this->retrieveAccountTransactionsV2400ApplicationJSONObject = null;
 		$this->retrieveAccountTransactionsV2401ApplicationJSONObject = null;
 		$this->retrieveAccountTransactionsV2403ApplicationJSONObject = null;

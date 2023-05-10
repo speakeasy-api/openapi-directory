@@ -32,6 +32,11 @@ class DatabaseInput
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $description = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('FederatedDatabase')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\FederatedDatabase')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?FederatedDatabase $federatedDatabase = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('LocationUri')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -60,6 +65,7 @@ class DatabaseInput
 	{
 		$this->createTableDefaultPermissions = null;
 		$this->description = null;
+		$this->federatedDatabase = null;
 		$this->locationUri = null;
 		$this->name = "";
 		$this->parameters = null;

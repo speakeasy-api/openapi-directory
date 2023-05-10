@@ -22,4 +22,6 @@ src/Utils/Utils.php
 src/Models/Operations/ConvertcurrencyRequest.php
 src/Models/Operations/Convertcurrency200ApplicationJSON.php
 src/Models/Operations/ConvertcurrencyResponse.php
+docs/sdk/README.md
+docs/livecurrencyrateconversion/README.md
 USAGE.md

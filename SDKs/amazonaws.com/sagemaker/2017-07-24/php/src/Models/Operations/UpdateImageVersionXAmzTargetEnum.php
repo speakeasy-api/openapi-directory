@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateImageVersionXAmzTargetEnum: string
 {
     case SAGE_MAKER_UPDATE_IMAGE_VERSION = 'SageMaker.UpdateImageVersion';

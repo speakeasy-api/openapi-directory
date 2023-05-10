@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ResendValidationEmailXAmzTargetEnum: string
 {
     case CERTIFICATE_MANAGER_RESEND_VALIDATION_EMAIL = 'CertificateManager.ResendValidationEmail';

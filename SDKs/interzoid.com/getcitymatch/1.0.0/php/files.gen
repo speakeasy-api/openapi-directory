@@ -22,4 +22,6 @@ src/Utils/Utils.php
 src/Models/Operations/GetcitymatchRequest.php
 src/Models/Operations/Getcitymatch200ApplicationJSON.php
 src/Models/Operations/GetcitymatchResponse.php
+docs/sdk/README.md
+docs/citynamesimilaritykey/README.md
 USAGE.md

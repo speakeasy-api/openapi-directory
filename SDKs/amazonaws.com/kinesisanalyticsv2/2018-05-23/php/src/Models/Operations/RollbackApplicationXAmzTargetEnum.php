@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RollbackApplicationXAmzTargetEnum: string
 {
     case KINESIS_ANALYTICS20180523_ROLLBACK_APPLICATION = 'KinesisAnalytics_20180523.RollbackApplication';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetRelationalDatabaseMetricDataXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_GET_RELATIONAL_DATABASE_METRIC_DATA = 'Lightsail_20161128.GetRelationalDatabaseMetricData';

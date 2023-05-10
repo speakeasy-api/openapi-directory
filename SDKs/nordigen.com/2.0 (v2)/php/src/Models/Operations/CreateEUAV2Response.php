@@ -52,6 +52,14 @@ class CreateEUAV2Response
 	
     public ?array $createEUAV2403ApplicationJSONObject = null;
     
+    /**
+     * Nordigen rate limit exceeded
+     * 
+     * @var ?array<string, mixed> $createEUAV2429ApplicationJSONObject
+     */
+	
+    public ?array $createEUAV2429ApplicationJSONObject = null;
+    
 	public function __construct()
 	{
 		$this->contentType = "";
@@ -61,5 +69,6 @@ class CreateEUAV2Response
 		$this->createEUAV2400ApplicationJSONObject = null;
 		$this->createEUAV2401ApplicationJSONObject = null;
 		$this->createEUAV2403ApplicationJSONObject = null;
+		$this->createEUAV2429ApplicationJSONObject = null;
 	}
 }

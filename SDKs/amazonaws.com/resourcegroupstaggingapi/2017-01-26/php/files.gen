@@ -66,4 +66,5 @@ src/Models/Shared/TagResourcesInput.php
 src/Models/Shared/UntagResourcesOutput.php
 src/Models/Shared/UntagResourcesInput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

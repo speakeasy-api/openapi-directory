@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 
 
 /**
- * PutLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetServer - Server where the traffic should be routed through
+ * PutLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetServer - Server where the traffic should be routed to. Only present for target type "server".
  * 
  * @package OpenAPI\OpenAPI\Models\Operations
  * @access public

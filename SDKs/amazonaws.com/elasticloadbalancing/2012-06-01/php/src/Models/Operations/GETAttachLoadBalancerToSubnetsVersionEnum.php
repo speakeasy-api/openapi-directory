@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETAttachLoadBalancerToSubnetsVersionEnum: string
 {
     case TWO_THOUSAND_AND_TWELVE0601 = '2012-06-01';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateFirewallRuleGroupAssociationXAmzTargetEnum: string
 {
     case ROUTE53_RESOLVER_UPDATE_FIREWALL_RULE_GROUP_ASSOCIATION = 'Route53Resolver.UpdateFirewallRuleGroupAssociation';

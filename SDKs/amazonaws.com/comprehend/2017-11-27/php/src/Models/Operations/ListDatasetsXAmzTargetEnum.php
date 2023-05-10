@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListDatasetsXAmzTargetEnum: string
 {
     case COMPREHEND20171127_LIST_DATASETS = 'Comprehend_20171127.ListDatasets';

@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 
 
 /** Version of the service to call. The current version is 1 */
-enum GetMapVersionNumberEnum: string
+enum GetMapVersionNumberEnum: int
 {
-    case ONE = '1';
+    case ONE = 1;
 }

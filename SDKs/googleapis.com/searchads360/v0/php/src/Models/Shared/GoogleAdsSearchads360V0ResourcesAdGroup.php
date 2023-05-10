@@ -38,6 +38,46 @@ class GoogleAdsSearchads360V0ResourcesAdGroup
     public ?string $cpcBidMicros = null;
     
     /**
+     * Output only. The timestamp when this ad_group was created. The timestamp is in the customer's time zone and in "yyyy-MM-dd HH:mm:ss" format.
+     * 
+     * @var ?string $creationTime
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('creationTime')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $creationTime = null;
+    
+    /**
+     * Output only. Date when the ad group ends serving ads. By default, the ad group ends on the ad group's end date. If this field is set, then the ad group ends at the end of the specified date in the customer's time zone. This field is only available for Microsoft Advertising and Facebook gateway accounts. Format: YYYY-MM-DD Example: 2019-03-14
+     * 
+     * @var ?string $endDate
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('endDate')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $endDate = null;
+    
+    /**
+     * Output only. ID of the ad group in the external engine account. This field is for non-Google Ads account only, for example, Yahoo Japan, Microsoft, Baidu etc. For Google Ads entity, use "ad_group.id" instead.
+     * 
+     * @var ?string $engineId
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('engineId')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $engineId = null;
+    
+    /**
+     * Output only. The Engine Status for ad group.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnum $engineStatus
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('engineStatus')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnum $engineStatus = null;
+    
+    /**
      * Output only. The ID of the ad group.
      * 
      * @var ?string $id
@@ -46,6 +86,36 @@ class GoogleAdsSearchads360V0ResourcesAdGroup
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
+    
+    /**
+     * Output only. The resource names of labels attached to this ad group.
+     * 
+     * @var ?array<string> $labels
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('labels')]
+    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $labels = null;
+    
+    /**
+     * Output only. The language of the ads and keywords in an ad group. This field is only available for Microsoft Advertising accounts. More details: https://docs.microsoft.com/en-us/advertising/guides/ad-languages?view=bingads-13#adlanguage
+     * 
+     * @var ?string $languageCode
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('languageCode')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $languageCode = null;
+    
+    /**
+     * Output only. The datetime when this ad group was last modified. The datetime is in the customer's time zone and in "yyyy-MM-dd HH:mm:ss.ssssss" format.
+     * 
+     * @var ?string $lastModifiedTime
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('lastModifiedTime')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $lastModifiedTime = null;
     
     /**
      * The name of the ad group. This field is required and should not be empty when creating new ad groups. It must contain fewer than 255 UTF-8 full-width characters. It must not contain any null (code point 0x0), NL line feed (code point 0xA) or carriage return (code point 0xD) characters.
@@ -68,6 +138,16 @@ class GoogleAdsSearchads360V0ResourcesAdGroup
     public ?string $resourceName = null;
     
     /**
+     * Output only. Date when this ad group starts serving ads. By default, the ad group starts now or the ad group's start date, whichever is later. If this field is set, then the ad group starts at the beginning of the specified date in the customer's time zone. This field is only available for Microsoft Advertising and Facebook gateway accounts. Format: YYYY-MM-DD Example: 2019-03-14
+     * 
+     * @var ?string $startDate
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('startDate')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $startDate = null;
+    
+    /**
      * The status of the ad group.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesAdGroupStatusEnum $status
@@ -76,6 +156,16 @@ class GoogleAdsSearchads360V0ResourcesAdGroup
     #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesAdGroupStatusEnum>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?GoogleAdsSearchads360V0ResourcesAdGroupStatusEnum $status = null;
+    
+    /**
+     * Settings for the targeting-related features, at the campaign and ad group levels. For more details about the targeting setting, visit https://support.google.com/google-ads/answer/7365594
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0CommonTargetingSetting $targetingSetting
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('targetingSetting')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0CommonTargetingSetting')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleAdsSearchads360V0CommonTargetingSetting $targetingSetting = null;
     
     /**
      * Immutable. The type of the ad group.
@@ -91,10 +181,19 @@ class GoogleAdsSearchads360V0ResourcesAdGroup
 	{
 		$this->adRotationMode = null;
 		$this->cpcBidMicros = null;
+		$this->creationTime = null;
+		$this->endDate = null;
+		$this->engineId = null;
+		$this->engineStatus = null;
 		$this->id = null;
+		$this->labels = null;
+		$this->languageCode = null;
+		$this->lastModifiedTime = null;
 		$this->name = null;
 		$this->resourceName = null;
+		$this->startDate = null;
 		$this->status = null;
+		$this->targetingSetting = null;
 		$this->type = null;
 	}
 }

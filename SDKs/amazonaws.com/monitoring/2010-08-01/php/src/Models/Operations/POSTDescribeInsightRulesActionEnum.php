@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeInsightRulesActionEnum: string
 {
     case DESCRIBE_INSIGHT_RULES = 'DescribeInsightRules';

@@ -38,7 +38,7 @@ class Manifest
     public ?array $muxStreams = null;
     
     /**
-     * Required. Type of the manifest, can be `HLS` or `DASH`.
+     * Required. Type of the manifest.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\ManifestTypeEnum $type
      */

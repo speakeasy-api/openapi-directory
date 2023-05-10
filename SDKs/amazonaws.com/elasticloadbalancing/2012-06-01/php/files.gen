@@ -288,4 +288,5 @@ src/Models/Shared/SetLoadBalancerListenerSSLCertificateInput.php
 src/Models/Shared/SetLoadBalancerPoliciesForBackendServerInput.php
 src/Models/Shared/SetLoadBalancerPoliciesOfListenerInput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

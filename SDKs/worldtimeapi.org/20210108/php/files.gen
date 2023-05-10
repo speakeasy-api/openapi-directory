@@ -40,4 +40,5 @@ src/Models/Operations/GetTimezoneAreaLocationRegionTxtRequest.php
 src/Models/Operations/GetTimezoneAreaLocationRegionTxtResponse.php
 src/Models/Shared/ErrorJsonResponse.php
 src/Models/Shared/DateTimeJsonResponse.php
+docs/sdk/README.md
 USAGE.md

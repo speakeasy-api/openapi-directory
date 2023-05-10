@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETUpdateServiceAccessPoliciesActionEnum: string
 {
     case UPDATE_SERVICE_ACCESS_POLICIES = 'UpdateServiceAccessPolicies';

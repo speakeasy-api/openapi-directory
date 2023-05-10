@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DisableProactiveEngagementXAmzTargetEnum: string
 {
     case AWS_SHIELD20160616_DISABLE_PROACTIVE_ENGAGEMENT = 'AWSShield_20160616.DisableProactiveEngagement';

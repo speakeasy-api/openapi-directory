@@ -30,32 +30,53 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $response = $sdk->account->getAccount();
+
+    if ($response->account !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### account
+### [account](docs/account/README.md)
 
-* `getAccount` - Get Account
+* [getAccount](docs/account/README.md#getaccount) - Get Account
 
-### captions
+### [captions](docs/captions/README.md)
 
-* `getCaptions` - Get Captions
+* [getCaptions](docs/captions/README.md#getcaptions) - Get Captions
 
-### jobs
+### [jobs](docs/jobs/README.md)
 
-* `deleteJobById` - Delete Job by Id
-* `getJobById` - Get Job By Id
-* `getListOfJobs` - Get List of Jobs
-* `submitTranscriptionJobJson` - Submit Transcription Job
-* `submitTranscriptionJobMultipart` - Submit Transcription Job
+* [deleteJobById](docs/jobs/README.md#deletejobbyid) - Delete Job by Id
+* [getJobById](docs/jobs/README.md#getjobbyid) - Get Job By Id
+* [getListOfJobs](docs/jobs/README.md#getlistofjobs) - Get List of Jobs
+* [submitTranscriptionJobJson](docs/jobs/README.md#submittranscriptionjobjson) - Submit Transcription Job
+* [submitTranscriptionJobMultipart](docs/jobs/README.md#submittranscriptionjobmultipart) - Submit Transcription Job
 
-### transcript
+### [transcript](docs/transcript/README.md)
 
-* `getTranscriptById` - Get Transcript By Id
+* [getTranscriptById](docs/transcript/README.md#gettranscriptbyid) - Get Transcript By Id
 <!-- End SDK Available Operations -->
 
 ### Maturity

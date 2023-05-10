@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetLifecyclePolicyPreviewXAmzTargetEnum: string
 {
     case AMAZON_EC2_CONTAINER_REGISTRY_V20150921_GET_LIFECYCLE_POLICY_PREVIEW = 'AmazonEC2ContainerRegistry_V20150921.GetLifecyclePolicyPreview';

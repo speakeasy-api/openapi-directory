@@ -201,4 +201,6 @@ src/Models/Shared/VolumeSnapshotTypeEnum.php
 src/Models/Shared/VolumeSnapshot.php
 src/Models/Shared/VolumeSnapshotInput.php
 src/Models/Shared/ListVolumeSnapshotsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

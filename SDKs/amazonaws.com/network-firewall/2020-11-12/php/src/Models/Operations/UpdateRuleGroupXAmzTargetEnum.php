@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateRuleGroupXAmzTargetEnum: string
 {
     case NETWORK_FIREWALL20201112_UPDATE_RULE_GROUP = 'NetworkFirewall_20201112.UpdateRuleGroup';

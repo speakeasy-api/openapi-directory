@@ -7009,9 +7009,11 @@ class Clinical
      * - Update `/api/lab_orders` status
      * 
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\SublabsCreateSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\SublabsCreateResponse
      */
 	public function sublabsCreate(
+        \OpenAPI\OpenAPI\Models\Operations\SublabsCreateSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\SublabsCreateResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -7019,7 +7021,8 @@ class Clinical
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

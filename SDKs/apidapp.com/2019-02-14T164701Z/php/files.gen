@@ -23,6 +23,7 @@ src/Models/Operations/DeleteKeyKeyResponse.php
 src/Models/Operations/GetAccountIdSecurity.php
 src/Models/Operations/GetAccountIdRequest.php
 src/Models/Operations/GetAccountIdResponse.php
+src/Models/Operations/GetBlockSecurity.php
 src/Models/Operations/GetBlockResponse.php
 src/Models/Operations/GetBlockIdSecurity.php
 src/Models/Operations/GetBlockIdRequest.php
@@ -33,6 +34,7 @@ src/Models/Operations/GetBlockIdTransactionResponse.php
 src/Models/Operations/GetBlockIdTransactionIndexSecurity.php
 src/Models/Operations/GetBlockIdTransactionIndexRequest.php
 src/Models/Operations/GetBlockIdTransactionIndexResponse.php
+src/Models/Operations/GetBlockchainSecurity.php
 src/Models/Operations/GetBlockchainResponse.php
 src/Models/Operations/GetBlockchainIdSecurity.php
 src/Models/Operations/GetBlockchainIdRequest.php
@@ -92,6 +94,7 @@ src/Models/Operations/OptionsWalletAccountIdRequest.php
 src/Models/Operations/OptionsWalletAccountIdResponse.php
 src/Models/Operations/OptionsWalletAccountIdPayRequest.php
 src/Models/Operations/OptionsWalletAccountIdPayResponse.php
+src/Models/Operations/PostAccountSecurity.php
 src/Models/Operations/PostAccountResponse.php
 src/Models/Operations/PostContractResponse.php
 src/Models/Operations/PostContractIdSecurity.php
@@ -101,6 +104,7 @@ src/Models/Operations/PostErc20Response.php
 src/Models/Operations/PostErc20AddressRequest.php
 src/Models/Operations/PostErc20AddressResponse.php
 src/Models/Operations/PostKeyResponse.php
+src/Models/Operations/PostTransactionSecurity.php
 src/Models/Operations/PostTransactionResponse.php
 src/Models/Operations/PostWalletResponse.php
 src/Models/Operations/PostWalletAccountResponse.php
@@ -110,4 +114,5 @@ src/Models/Operations/PostWalletAccountIdErc20Request.php
 src/Models/Operations/PostWalletAccountIdErc20Response.php
 src/Models/Operations/PostWalletAccountIdPayRequest.php
 src/Models/Operations/PostWalletAccountIdPayResponse.php
+docs/sdk/README.md
 USAGE.md

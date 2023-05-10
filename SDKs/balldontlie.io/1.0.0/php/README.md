@@ -30,31 +30,56 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\AllGamesExampleParametersRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new AllGamesExampleParametersRequest();
+    $request->seasons = '2018';
+    $request->teamIds = '1';
+
+    $response = $sdk->games->allGamesExampleParameters($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### games
+### [games](docs/games/README.md)
 
-* `allGamesExampleParameters` - all games (example parameters)
-* `specificGame` - specific game
+* [allGamesExampleParameters](docs/games/README.md#allgamesexampleparameters) - all games (example parameters)
+* [specificGame](docs/games/README.md#specificgame) - specific game
 
-### players
+### [players](docs/players/README.md)
 
-* `allPlayersSearch` - all players (search)
-* `specificPlayer` - specific player
+* [allPlayersSearch](docs/players/README.md#allplayerssearch) - all players (search)
+* [specificPlayer](docs/players/README.md#specificplayer) - specific player
 
-### stats
+### [stats](docs/stats/README.md)
 
-* `allStatsExampleParameters` - all stats (example parameters)
+* [allStatsExampleParameters](docs/stats/README.md#allstatsexampleparameters) - all stats (example parameters)
 
-### teams
+### [teams](docs/teams/README.md)
 
-* `allTeams` - all teams
-* `specificTeam` - specific team
+* [allTeams](docs/teams/README.md#allteams) - all teams
+* [specificTeam](docs/teams/README.md#specificteam) - specific team
 <!-- End SDK Available Operations -->
 
 ### Maturity

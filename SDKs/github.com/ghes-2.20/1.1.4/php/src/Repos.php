@@ -6262,7 +6262,7 @@ class Repos
      */
 	public function reposUploadReleaseAsset(
         \OpenAPI\OpenAPI\Models\Operations\ReposUploadReleaseAssetRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ReposUploadReleaseAssetResponse
     {
         $baseUrl = Repos::REPOS_UPLOAD_RELEASE_ASSET_SERVERS[0];

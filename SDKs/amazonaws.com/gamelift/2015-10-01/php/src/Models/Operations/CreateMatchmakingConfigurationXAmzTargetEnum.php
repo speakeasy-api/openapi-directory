@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateMatchmakingConfigurationXAmzTargetEnum: string
 {
     case GAME_LIFT_CREATE_MATCHMAKING_CONFIGURATION = 'GameLift.CreateMatchmakingConfiguration';

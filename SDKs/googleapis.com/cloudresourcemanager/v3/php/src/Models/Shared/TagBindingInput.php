@@ -37,9 +37,20 @@ class TagBindingInput
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $tagValue = null;
     
+    /**
+     * The namespaced name for the TagValue of the TagBinding. Must be in the format `{parent_id}/{tag_key_short_name}/{short_name}`. For methods that support TagValue namespaced name, only one of tag_value_namespaced_name or tag_value may be filled. Requests with both fields will be rejected.
+     * 
+     * @var ?string $tagValueNamespacedName
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('tagValueNamespacedName')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $tagValueNamespacedName = null;
+    
 	public function __construct()
 	{
 		$this->parent = null;
 		$this->tagValue = null;
+		$this->tagValueNamespacedName = null;
 	}
 }

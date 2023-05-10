@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListTagsForResourceXAmzTargetEnum: string
 {
     case HEALTH_LAKE_LIST_TAGS_FOR_RESOURCE = 'HealthLake.ListTagsForResource';

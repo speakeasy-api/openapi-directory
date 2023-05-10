@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTSendBounceActionEnum: string
 {
     case SEND_BOUNCE = 'SendBounce';

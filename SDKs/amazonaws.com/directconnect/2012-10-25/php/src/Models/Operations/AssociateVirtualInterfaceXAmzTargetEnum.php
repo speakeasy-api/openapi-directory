@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AssociateVirtualInterfaceXAmzTargetEnum: string
 {
     case OVERTURE_SERVICE_ASSOCIATE_VIRTUAL_INTERFACE = 'OvertureService.AssociateVirtualInterface';

@@ -127,4 +127,7 @@ src/Models/Shared/DomainVerificationSummaryStatusEnum.php
 src/Models/Shared/DomainVerificationSummaryTypeEnum.php
 src/Models/Shared/DomainVerificationSummaryUsageEnum.php
 src/Models/Shared/DomainVerificationSummary.php
+docs/sdk/README.md
+docs/v1/README.md
+docs/v2/README.md
 USAGE.md

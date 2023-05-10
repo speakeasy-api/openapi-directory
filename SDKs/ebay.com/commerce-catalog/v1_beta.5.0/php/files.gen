@@ -34,4 +34,7 @@ src/Models/Shared/Refinement.php
 src/Models/Shared/AspectDistribution.php
 src/Models/Shared/AspectValueDistribution.php
 src/Models/Shared/ProductSummary.php
+docs/sdk/README.md
+docs/product/README.md
+docs/productsummary/README.md
 USAGE.md

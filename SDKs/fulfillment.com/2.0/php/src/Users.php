@@ -42,9 +42,11 @@ class Users
      * 
      * Returns the user profile of the access token's owner. This could be useful if managing multiple accounts or confirming validity of a token.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetUsersMeSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetUsersMeResponse
      */
 	public function getUsersMe(
+        \OpenAPI\OpenAPI\Models\Operations\GetUsersMeSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetUsersMeResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -52,7 +54,8 @@ class Users
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RemoveTargetsXAmzTargetEnum: string
 {
     case AWS_EVENTS_REMOVE_TARGETS = 'AWSEvents.RemoveTargets';

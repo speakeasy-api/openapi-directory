@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTAssociateEnclaveCertificateIamRoleActionEnum: string
 {
     case ASSOCIATE_ENCLAVE_CERTIFICATE_IAM_ROLE = 'AssociateEnclaveCertificateIamRole';

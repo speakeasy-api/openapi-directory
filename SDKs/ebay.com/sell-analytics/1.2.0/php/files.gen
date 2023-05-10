@@ -24,6 +24,7 @@ src/Utils/Utils.php
 src/Models/Operations/GetCustomerServiceMetricSecurity.php
 src/Models/Operations/GetCustomerServiceMetricRequest.php
 src/Models/Operations/GetCustomerServiceMetricResponse.php
+src/Models/Operations/FindSellerStandardsProfilesSecurity.php
 src/Models/Operations/FindSellerStandardsProfilesResponse.php
 src/Models/Operations/GetSellerStandardsProfileSecurity.php
 src/Models/Operations/GetSellerStandardsProfileRequest.php
@@ -53,4 +54,8 @@ src/Models/Shared/Definition.php
 src/Models/Shared/Metadata.php
 src/Models/Shared/MetadataRecord.php
 src/Models/Shared/MetadataHeader.php
+docs/sdk/README.md
+docs/customerservicemetric/README.md
+docs/sellerstandardsprofile/README.md
+docs/trafficreport/README.md
 USAGE.md

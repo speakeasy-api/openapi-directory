@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ExportAutoScalingGroupRecommendationsXAmzTargetEnum: string
 {
     case COMPUTE_OPTIMIZER_SERVICE_EXPORT_AUTO_SCALING_GROUP_RECOMMENDATIONS = 'ComputeOptimizerService.ExportAutoScalingGroupRecommendations';

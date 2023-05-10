@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListResourceComplianceSummariesXAmzTargetEnum: string
 {
     case AMAZON_SSM_LIST_RESOURCE_COMPLIANCE_SUMMARIES = 'AmazonSSM.ListResourceComplianceSummaries';

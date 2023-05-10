@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetProtectionStatusXAmzTargetEnum: string
 {
     case AWSFMS20180101_GET_PROTECTION_STATUS = 'AWSFMS_20180101.GetProtectionStatus';

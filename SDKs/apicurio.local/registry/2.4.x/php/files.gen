@@ -135,8 +135,10 @@ src/Models/Operations/GetArtifactOwnerRequest.php
 src/Models/Operations/GetArtifactOwnerResponse.php
 src/Models/Operations/GetArtifactVersionMetaDataRequest.php
 src/Models/Operations/GetArtifactVersionMetaDataResponse.php
-src/Models/Operations/GetArtifactVersionMetaDataByContentRequest.php
-src/Models/Operations/GetArtifactVersionMetaDataByContentResponse.php
+src/Models/Operations/GetArtifactVersionMetaDataByContentJsonRequest.php
+src/Models/Operations/GetArtifactVersionMetaDataByContentJsonResponse.php
+src/Models/Operations/GetArtifactVersionMetaDataByContentRawRequest.php
+src/Models/Operations/GetArtifactVersionMetaDataByContentRawResponse.php
 src/Models/Operations/UpdateArtifactMetaDataRequest.php
 src/Models/Operations/UpdateArtifactMetaDataResponse.php
 src/Models/Operations/UpdateArtifactOwnerRequest.php
@@ -150,6 +152,8 @@ src/Models/Operations/CreateArtifactVersionJsonRequest.php
 src/Models/Operations/CreateArtifactVersionJsonResponse.php
 src/Models/Operations/CreateArtifactVersionRawRequest.php
 src/Models/Operations/CreateArtifactVersionRawResponse.php
+src/Models/Operations/DeleteArtifactVersionRequest.php
+src/Models/Operations/DeleteArtifactVersionResponse.php
 src/Models/Operations/GetArtifactVersionRequest.php
 src/Models/Operations/GetArtifactVersionResponse.php
 src/Models/Operations/GetArtifactVersionReferencesRequest.php
@@ -177,7 +181,7 @@ src/Models/Shared/ArtifactMetaData.php
 src/Models/Shared/ArtifactStateEnum.php
 src/Models/Shared/ArtifactReference.php
 src/Models/Shared/IfExistsEnum.php
-src/Models/Shared/ContentCreateRequest.php
+src/Models/Shared/ArtifactContent.php
 src/Models/Shared/ArtifactSearchResults.php
 src/Models/Shared/SearchedArtifact.php
 src/Models/Shared/SortByEnum.php
@@ -195,4 +199,16 @@ src/Models/Shared/SystemInfo.php
 src/Models/Shared/UserInfo.php
 src/Models/Shared/VersionSearchResults.php
 src/Models/Shared/SearchedVersion.php
+docs/sdk/README.md
+docs/admin/README.md
+docs/artifacttype/README.md
+docs/artifactrules/README.md
+docs/artifacts/README.md
+docs/globalrules/README.md
+docs/groups/README.md
+docs/metadata/README.md
+docs/search/README.md
+docs/system/README.md
+docs/users/README.md
+docs/versions/README.md
 USAGE.md

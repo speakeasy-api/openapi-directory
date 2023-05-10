@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDisableTransitGatewayRouteTablePropagationActionEnum: string
 {
     case DISABLE_TRANSIT_GATEWAY_ROUTE_TABLE_PROPAGATION = 'DisableTransitGatewayRouteTablePropagation';

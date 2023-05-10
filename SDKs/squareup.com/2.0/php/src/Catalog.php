@@ -197,9 +197,11 @@ class Catalog
      * Retrieves information about the Square Catalog API, such as batch size
      * limits that can be used by the `BatchUpsertCatalogObjects` endpoint.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\CatalogInfoSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\CatalogInfoResponse
      */
 	public function catalogInfo(
+        \OpenAPI\OpenAPI\Models\Operations\CatalogInfoSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\CatalogInfoResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -207,7 +209,8 @@ class Catalog
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

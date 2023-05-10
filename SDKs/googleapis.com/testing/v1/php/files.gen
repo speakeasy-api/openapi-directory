@@ -81,6 +81,7 @@ src/Models/Shared/AndroidInstrumentationTestOrchestratorOptionEnum.php
 src/Models/Shared/AndroidInstrumentationTest.php
 src/Models/Shared/ShardingOption.php
 src/Models/Shared/UniformSharding.php
+src/Models/Shared/SmartSharding.php
 src/Models/Shared/ManualSharding.php
 src/Models/Shared/TestTargetsForShard.php
 src/Models/Shared/TestExecutionStateEnum.php
@@ -129,4 +130,8 @@ src/Models/Shared/AndroidModelFormFactorEnum.php
 src/Models/Shared/AndroidModel.php
 src/Models/Shared/PerAndroidVersionInfoDeviceCapacityEnum.php
 src/Models/Shared/PerAndroidVersionInfo.php
+docs/sdk/README.md
+docs/applicationdetailservice/README.md
+docs/projects/README.md
+docs/testenvironmentcatalog/README.md
 USAGE.md

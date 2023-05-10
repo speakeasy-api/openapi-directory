@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequestInputData - The input data used to train a new `ProcessorVersion`.
+ * GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequestInputData - The input data used to train a new ProcessorVersion.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

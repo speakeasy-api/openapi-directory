@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeNotebookInstanceLifecycleConfigXAmzTargetEnum: string
 {
     case SAGE_MAKER_DESCRIBE_NOTEBOOK_INSTANCE_LIFECYCLE_CONFIG = 'SageMaker.DescribeNotebookInstanceLifecycleConfig';

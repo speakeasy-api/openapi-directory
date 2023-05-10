@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum BatchExecuteStatementXAmzTargetEnum: string
 {
     case REDSHIFT_DATA_BATCH_EXECUTE_STATEMENT = 'RedshiftData.BatchExecuteStatement';

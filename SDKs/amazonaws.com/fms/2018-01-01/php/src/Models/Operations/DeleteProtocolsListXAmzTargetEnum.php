@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteProtocolsListXAmzTargetEnum: string
 {
     case AWSFMS20180101_DELETE_PROTOCOLS_LIST = 'AWSFMS_20180101.DeleteProtocolsList';

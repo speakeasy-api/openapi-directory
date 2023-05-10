@@ -30,47 +30,89 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\CreateGameRequest;
+use \OpenAPI\OpenAPI\Models\Operations\CreateGameRequestBody;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new CreateGameRequest();
+    $request->requestBody = new CreateGameRequestBody();
+    $request->requestBody->clientToken = 'corrupti';
+    $request->requestBody->description = 'provident';
+    $request->requestBody->gameName = 'distinctio';
+    $request->requestBody->tags = [
+        'unde' => 'nulla',
+        'corrupti' => 'illum',
+        'vel' => 'error',
+        'deserunt' => 'suscipit',
+    ];
+    $request->xAmzAlgorithm = 'iure';
+    $request->xAmzContentSha256 = 'magnam';
+    $request->xAmzCredential = 'debitis';
+    $request->xAmzDate = 'ipsa';
+    $request->xAmzSecurityToken = 'delectus';
+    $request->xAmzSignature = 'tempora';
+    $request->xAmzSignedHeaders = 'suscipit';
+
+    $response = $sdk->createGame($request);
+
+    if ($response->createGameResult !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `createGame` -  Creates a new game with an empty configuration. After creating your game, you can update the configuration using <code>UpdateGameConfiguration</code> or <code>ImportGameConfiguration</code>. 
-* `createSnapshot` - Creates a snapshot of the game configuration.
-* `createStage` - Creates a new stage for stage-by-stage game development and deployment.
-* `deleteGame` - Deletes a game.
-* `deleteStage` - Deletes a stage from a game, along with the associated game runtime.
-* `disconnectPlayer` - <p>Disconnects a player from the game runtime.</p> <p> If a player has multiple connections, this operation attempts to close all of them. </p>
-* `exportSnapshot` - Exports a game configuration snapshot.
-* `getExtension` - Gets details about a specified extension.
-* `getExtensionVersion` - Gets details about a specified extension version.
-* `getGame` - Gets details about a game.
-* `getGameConfiguration` - Gets the configuration of the game.
-* `getGeneratedCodeJob` - Gets details about a job that is generating code for a snapshot.
-* `getPlayerConnectionStatus` - <p>Gets the status of a player's connection to the game runtime.</p> <p> It's possible for a single player to have multiple connections to the game runtime. If a player is not connected, this operation returns an empty list. </p>
-* `getSnapshot` - Gets a copy of the game configuration in a snapshot.
-* `getStage` - Gets information about a stage.
-* `getStageDeployment` - Gets information about a stage deployment.
-* `importGameConfiguration` - <p>Imports a game configuration.</p> <p> This operation replaces the current configuration of the game with the provided input. This is not a reversible operation. If you want to preserve the previous configuration, use <code>CreateSnapshot</code> to make a new snapshot before importing. </p>
-* `listExtensionVersions` - <p>Gets a paginated list of available versions for the extension.</p> <p> Each time an API change is made to an extension, the version is incremented. The list retrieved by this operation shows the versions that are currently available. </p>
-* `listExtensions` - <p>Gets a paginated list of available extensions.</p> <p> Extensions provide features that games can use from scripts. </p>
-* `listGames` - Gets a paginated list of games.
-* `listGeneratedCodeJobs` - Gets a paginated list of code generation jobs for a snapshot.
-* `listSnapshots` - Gets a paginated list of snapshot summaries from the game.
-* `listStageDeployments` - Gets a paginated list of stage deployment summaries from the game.
-* `listStages` - Gets a paginated list of stage summaries from the game.
-* `listTagsForResource` - Lists the tags associated with a GameSparks resource.
-* `startGeneratedCodeJob` -  Starts an asynchronous process that generates client code for system-defined and custom messages. The resulting code is collected as a .zip file and uploaded to a pre-signed Amazon S3 URL. 
-* `startStageDeployment` - <p>Deploys a snapshot to the stage and creates a new game runtime.</p> <p> After you call this operation, you can check the deployment status by using <code>GetStageDeployment</code>. </p> <p> If there are any players connected to the previous game runtime, then both runtimes persist. Existing connections to the previous runtime are maintained. When players disconnect and reconnect, they connect to the new runtime. After there are no connections to the previous game runtime, it is deleted. </p>
-* `tagResource` - Adds tags to a GameSparks resource.
-* `untagResource` - Removes tags from a GameSparks resource.
-* `updateGame` - Updates details of the game.
-* `updateGameConfiguration` - Updates one or more sections of the game configuration.
-* `updateSnapshot` - Updates the metadata of a GameSparks snapshot.
-* `updateStage` - Updates the metadata of a stage.
+* [createGame](docs/sdk/README.md#creategame) -  Creates a new game with an empty configuration. After creating your game, you can update the configuration using <code>UpdateGameConfiguration</code> or <code>ImportGameConfiguration</code>. 
+* [createSnapshot](docs/sdk/README.md#createsnapshot) - Creates a snapshot of the game configuration.
+* [createStage](docs/sdk/README.md#createstage) - Creates a new stage for stage-by-stage game development and deployment.
+* [deleteGame](docs/sdk/README.md#deletegame) - Deletes a game.
+* [deleteStage](docs/sdk/README.md#deletestage) - Deletes a stage from a game, along with the associated game runtime.
+* [disconnectPlayer](docs/sdk/README.md#disconnectplayer) - <p>Disconnects a player from the game runtime.</p> <p> If a player has multiple connections, this operation attempts to close all of them. </p>
+* [exportSnapshot](docs/sdk/README.md#exportsnapshot) - Exports a game configuration snapshot.
+* [getExtension](docs/sdk/README.md#getextension) - Gets details about a specified extension.
+* [getExtensionVersion](docs/sdk/README.md#getextensionversion) - Gets details about a specified extension version.
+* [getGame](docs/sdk/README.md#getgame) - Gets details about a game.
+* [getGameConfiguration](docs/sdk/README.md#getgameconfiguration) - Gets the configuration of the game.
+* [getGeneratedCodeJob](docs/sdk/README.md#getgeneratedcodejob) - Gets details about a job that is generating code for a snapshot.
+* [getPlayerConnectionStatus](docs/sdk/README.md#getplayerconnectionstatus) - <p>Gets the status of a player's connection to the game runtime.</p> <p> It's possible for a single player to have multiple connections to the game runtime. If a player is not connected, this operation returns an empty list. </p>
+* [getSnapshot](docs/sdk/README.md#getsnapshot) - Gets a copy of the game configuration in a snapshot.
+* [getStage](docs/sdk/README.md#getstage) - Gets information about a stage.
+* [getStageDeployment](docs/sdk/README.md#getstagedeployment) - Gets information about a stage deployment.
+* [importGameConfiguration](docs/sdk/README.md#importgameconfiguration) - <p>Imports a game configuration.</p> <p> This operation replaces the current configuration of the game with the provided input. This is not a reversible operation. If you want to preserve the previous configuration, use <code>CreateSnapshot</code> to make a new snapshot before importing. </p>
+* [listExtensionVersions](docs/sdk/README.md#listextensionversions) - <p>Gets a paginated list of available versions for the extension.</p> <p> Each time an API change is made to an extension, the version is incremented. The list retrieved by this operation shows the versions that are currently available. </p>
+* [listExtensions](docs/sdk/README.md#listextensions) - <p>Gets a paginated list of available extensions.</p> <p> Extensions provide features that games can use from scripts. </p>
+* [listGames](docs/sdk/README.md#listgames) - Gets a paginated list of games.
+* [listGeneratedCodeJobs](docs/sdk/README.md#listgeneratedcodejobs) - Gets a paginated list of code generation jobs for a snapshot.
+* [listSnapshots](docs/sdk/README.md#listsnapshots) - Gets a paginated list of snapshot summaries from the game.
+* [listStageDeployments](docs/sdk/README.md#liststagedeployments) - Gets a paginated list of stage deployment summaries from the game.
+* [listStages](docs/sdk/README.md#liststages) - Gets a paginated list of stage summaries from the game.
+* [listTagsForResource](docs/sdk/README.md#listtagsforresource) - Lists the tags associated with a GameSparks resource.
+* [startGeneratedCodeJob](docs/sdk/README.md#startgeneratedcodejob) -  Starts an asynchronous process that generates client code for system-defined and custom messages. The resulting code is collected as a .zip file and uploaded to a pre-signed Amazon S3 URL. 
+* [startStageDeployment](docs/sdk/README.md#startstagedeployment) - <p>Deploys a snapshot to the stage and creates a new game runtime.</p> <p> After you call this operation, you can check the deployment status by using <code>GetStageDeployment</code>. </p> <p> If there are any players connected to the previous game runtime, then both runtimes persist. Existing connections to the previous runtime are maintained. When players disconnect and reconnect, they connect to the new runtime. After there are no connections to the previous game runtime, it is deleted. </p>
+* [tagResource](docs/sdk/README.md#tagresource) - Adds tags to a GameSparks resource.
+* [untagResource](docs/sdk/README.md#untagresource) - Removes tags from a GameSparks resource.
+* [updateGame](docs/sdk/README.md#updategame) - Updates details of the game.
+* [updateGameConfiguration](docs/sdk/README.md#updategameconfiguration) - Updates one or more sections of the game configuration.
+* [updateSnapshot](docs/sdk/README.md#updatesnapshot) - Updates the metadata of a GameSparks snapshot.
+* [updateStage](docs/sdk/README.md#updatestage) - Updates the metadata of a stage.
 <!-- End SDK Available Operations -->
 
 ### Maturity

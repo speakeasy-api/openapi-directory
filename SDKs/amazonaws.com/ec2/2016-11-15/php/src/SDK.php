@@ -993,7 +993,7 @@ class SDK
     }
 	
     /**
-     * A trust provider is a third-party entity that creates, maintains, and manages identity information for users and devices. One or more trust providers can be attached to an Amazon Web Services Verified Access instance.
+     * Attaches the specified Amazon Web Services Verified Access trust provider to the specified Amazon Web Services Verified Access instance.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GETAttachVerifiedAccessTrustProviderRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GETAttachVerifiedAccessTrustProviderResponse
@@ -5745,7 +5745,7 @@ class SDK
     }
 	
     /**
-     * Detach a trust provider from an Amazon Web Services Verified Access instance.
+     * Detaches the specified Amazon Web Services Verified Access trust provider from the specified Amazon Web Services Verified Access instance.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GETDetachVerifiedAccessTrustProviderRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GETDetachVerifiedAccessTrustProviderResponse
@@ -8072,6 +8072,41 @@ class SDK
     }
 	
     /**
+     * Get details of available tunnel endpoint maintenance.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GETGETVpnTunnelReplacementStatusRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\GETGETVpnTunnelReplacementStatusResponse
+     */
+	public function getGETVpnTunnelReplacementStatus(
+        \OpenAPI\OpenAPI\Models\Operations\GETGETVpnTunnelReplacementStatusRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\GETGETVpnTunnelReplacementStatusResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/#Action=GetVpnTunnelReplacementStatus');
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\GETGETVpnTunnelReplacementStatusRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GETGETVpnTunnelReplacementStatusResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'text/xml')) {
+                $response->body = $httpResponse->getBody()->getContents();
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * <p>Uploads a client certificate revocation list to the specified Client VPN endpoint. Uploading a client certificate revocation list overwrites the existing client certificate revocation list.</p> <p>Uploading a client certificate revocation list resets existing client connections.</p>
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GETImportClientVpnClientCertificateRevocationListRequest $request
@@ -9148,7 +9183,7 @@ class SDK
     }
 	
     /**
-     * Modifies the configuration of an Amazon Web Services Verified Access endpoint.
+     * Modifies the configuration of the specified Amazon Web Services Verified Access endpoint.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GETModifyVerifiedAccessEndpointRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GETModifyVerifiedAccessEndpointResponse
@@ -9183,7 +9218,7 @@ class SDK
     }
 	
     /**
-     * Modifies the specified Verified Access endpoint policy.
+     * Modifies the specified Amazon Web Services Verified Access endpoint policy.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GETModifyVerifiedAccessEndpointPolicyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GETModifyVerifiedAccessEndpointPolicyResponse
@@ -9218,7 +9253,7 @@ class SDK
     }
 	
     /**
-     * Modifies the specified Verified Access group configuration.
+     * Modifies the specified Amazon Web Services Verified Access group configuration.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GETModifyVerifiedAccessGroupRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GETModifyVerifiedAccessGroupResponse
@@ -9253,7 +9288,7 @@ class SDK
     }
 	
     /**
-     * Modifies the specified Verified Access group policy.
+     * Modifies the specified Amazon Web Services Verified Access group policy.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GETModifyVerifiedAccessGroupPolicyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GETModifyVerifiedAccessGroupPolicyResponse
@@ -9288,7 +9323,7 @@ class SDK
     }
 	
     /**
-     * Modifies the configuration of the specified Verified Access instance.
+     * Modifies the configuration of the specified Amazon Web Services Verified Access instance.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GETModifyVerifiedAccessInstanceRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GETModifyVerifiedAccessInstanceResponse
@@ -10621,6 +10656,41 @@ class SDK
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $response = new \OpenAPI\OpenAPI\Models\Operations\GETReplaceTransitGatewayRouteResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'text/xml')) {
+                $response->body = $httpResponse->getBody()->getContents();
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Trigger replacement of specified VPN tunnel.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GETReplaceVpnTunnelRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\GETReplaceVpnTunnelResponse
+     */
+	public function getReplaceVpnTunnel(
+        \OpenAPI\OpenAPI\Models\Operations\GETReplaceVpnTunnelRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\GETReplaceVpnTunnelResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/#Action=ReplaceVpnTunnel');
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\GETReplaceVpnTunnelRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GETReplaceVpnTunnelResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -12704,7 +12774,7 @@ class SDK
     }
 	
     /**
-     * A trust provider is a third-party entity that creates, maintains, and manages identity information for users and devices. One or more trust providers can be attached to an Amazon Web Services Verified Access instance.
+     * Attaches the specified Amazon Web Services Verified Access trust provider to the specified Amazon Web Services Verified Access instance.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\POSTAttachVerifiedAccessTrustProviderRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\POSTAttachVerifiedAccessTrustProviderResponse
@@ -16022,7 +16092,7 @@ class SDK
     }
 	
     /**
-     * An Amazon Web Services Verified Access group is a collection of Amazon Web Services Verified Access endpoints who's associated applications have similar security requirements. Each instance within an Amazon Web Services Verified Access group shares an Amazon Web Services Verified Access policy. For example, you can group all Amazon Web Services Verified Access instances associated with “sales” applications together and use one common Amazon Web Services Verified Access policy.
+     * An Amazon Web Services Verified Access group is a collection of Amazon Web Services Verified Access endpoints who's associated applications have similar security requirements. Each instance within a Verified Access group shares an Verified Access policy. For example, you can group all Verified Access instances associated with "sales" applications together and use one common Verified Access policy.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\POSTCreateVerifiedAccessGroupRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\POSTCreateVerifiedAccessGroupResponse
@@ -16096,7 +16166,7 @@ class SDK
     }
 	
     /**
-     * A trust provider is a third-party entity that creates, maintains, and manages identity information for users and devices. When an application request is made, the identity information sent by the trust provider will be evaluated by Amazon Web Services Verified Access, before allowing or denying the application request.
+     * A trust provider is a third-party entity that creates, maintains, and manages identity information for users and devices. When an application request is made, the identity information sent by the trust provider is evaluated by Verified Access before allowing or denying the application request.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\POSTCreateVerifiedAccessTrustProviderRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\POSTCreateVerifiedAccessTrustProviderResponse
@@ -23874,7 +23944,7 @@ class SDK
     }
 	
     /**
-     * Describe Amazon Web Services Verified Access endpoints.
+     * Describes the specified Amazon Web Services Verified Access endpoints.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\POSTDescribeVerifiedAccessEndpointsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\POSTDescribeVerifiedAccessEndpointsResponse
@@ -23911,7 +23981,7 @@ class SDK
     }
 	
     /**
-     * Describe details of existing Verified Access groups.
+     * Describes the specified Verified Access groups.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\POSTDescribeVerifiedAccessGroupsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\POSTDescribeVerifiedAccessGroupsResponse
@@ -23948,7 +24018,7 @@ class SDK
     }
 	
     /**
-     * Describes the current logging configuration for the Amazon Web Services Verified Access instances.
+     * Describes the specified Amazon Web Services Verified Access instances.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\POSTDescribeVerifiedAccessInstanceLoggingConfigurationsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\POSTDescribeVerifiedAccessInstanceLoggingConfigurationsResponse
@@ -23985,7 +24055,7 @@ class SDK
     }
 	
     /**
-     * Describe Verified Access instances.
+     * Describes the specified Amazon Web Services Verified Access instances.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\POSTDescribeVerifiedAccessInstancesRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\POSTDescribeVerifiedAccessInstancesResponse
@@ -24022,7 +24092,7 @@ class SDK
     }
 	
     /**
-     * Describe details of existing Verified Access trust providers.
+     * Describes the specified Amazon Web Services Verified Access trust providers.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\POSTDescribeVerifiedAccessTrustProvidersRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\POSTDescribeVerifiedAccessTrustProvidersResponse
@@ -24793,7 +24863,7 @@ class SDK
     }
 	
     /**
-     * Detach a trust provider from an Amazon Web Services Verified Access instance.
+     * Detaches the specified Amazon Web Services Verified Access trust provider from the specified Amazon Web Services Verified Access instance.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\POSTDetachVerifiedAccessTrustProviderRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\POSTDetachVerifiedAccessTrustProviderResponse
@@ -28068,6 +28138,43 @@ class SDK
     }
 	
     /**
+     * Get details of available tunnel endpoint maintenance.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\POSTGetVpnTunnelReplacementStatusRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\POSTGetVpnTunnelReplacementStatusResponse
+     */
+	public function postGetVpnTunnelReplacementStatus(
+        \OpenAPI\OpenAPI\Models\Operations\POSTGetVpnTunnelReplacementStatusRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\POSTGetVpnTunnelReplacementStatusResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/#Action=GetVpnTunnelReplacementStatus');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "raw");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\POSTGetVpnTunnelReplacementStatusRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\POSTGetVpnTunnelReplacementStatusResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'text/xml')) {
+                $response->body = $httpResponse->getBody()->getContents();
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * <p>Uploads a client certificate revocation list to the specified Client VPN endpoint. Uploading a client certificate revocation list overwrites the existing client certificate revocation list.</p> <p>Uploading a client certificate revocation list resets existing client connections.</p>
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\POSTImportClientVpnClientCertificateRevocationListRequest $request
@@ -29934,7 +30041,7 @@ class SDK
     }
 	
     /**
-     * Modifies the configuration of an Amazon Web Services Verified Access endpoint.
+     * Modifies the configuration of the specified Amazon Web Services Verified Access endpoint.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\POSTModifyVerifiedAccessEndpointRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\POSTModifyVerifiedAccessEndpointResponse
@@ -29971,7 +30078,7 @@ class SDK
     }
 	
     /**
-     * Modifies the specified Verified Access endpoint policy.
+     * Modifies the specified Amazon Web Services Verified Access endpoint policy.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\POSTModifyVerifiedAccessEndpointPolicyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\POSTModifyVerifiedAccessEndpointPolicyResponse
@@ -30008,7 +30115,7 @@ class SDK
     }
 	
     /**
-     * Modifies the specified Verified Access group configuration.
+     * Modifies the specified Amazon Web Services Verified Access group configuration.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\POSTModifyVerifiedAccessGroupRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\POSTModifyVerifiedAccessGroupResponse
@@ -30045,7 +30152,7 @@ class SDK
     }
 	
     /**
-     * Modifies the specified Verified Access group policy.
+     * Modifies the specified Amazon Web Services Verified Access group policy.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\POSTModifyVerifiedAccessGroupPolicyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\POSTModifyVerifiedAccessGroupPolicyResponse
@@ -30082,7 +30189,7 @@ class SDK
     }
 	
     /**
-     * Modifies the configuration of the specified Verified Access instance.
+     * Modifies the configuration of the specified Amazon Web Services Verified Access instance.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\POSTModifyVerifiedAccessInstanceRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\POSTModifyVerifiedAccessInstanceResponse
@@ -31715,6 +31822,43 @@ class SDK
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $response = new \OpenAPI\OpenAPI\Models\Operations\POSTReplaceTransitGatewayRouteResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'text/xml')) {
+                $response->body = $httpResponse->getBody()->getContents();
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Trigger replacement of specified VPN tunnel.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\POSTReplaceVpnTunnelRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\POSTReplaceVpnTunnelResponse
+     */
+	public function postReplaceVpnTunnel(
+        \OpenAPI\OpenAPI\Models\Operations\POSTReplaceVpnTunnelRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\POSTReplaceVpnTunnelResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/#Action=ReplaceVpnTunnel');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "raw");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\POSTReplaceVpnTunnelRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\POSTReplaceVpnTunnelResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;

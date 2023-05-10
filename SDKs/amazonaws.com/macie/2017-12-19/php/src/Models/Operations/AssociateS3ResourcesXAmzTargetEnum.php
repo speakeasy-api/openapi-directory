@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AssociateS3ResourcesXAmzTargetEnum: string
 {
     case MACIE_SERVICE_ASSOCIATE_S3_RESOURCES = 'MacieService.AssociateS3Resources';

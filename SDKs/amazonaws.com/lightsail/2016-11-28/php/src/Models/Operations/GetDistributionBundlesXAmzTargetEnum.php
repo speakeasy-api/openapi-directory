@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetDistributionBundlesXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_GET_DISTRIBUTION_BUNDLES = 'Lightsail_20161128.GetDistributionBundles';

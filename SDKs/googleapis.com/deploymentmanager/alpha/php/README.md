@@ -30,66 +30,112 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\DeploymentmanagerCompositeTypesDeleteRequest;
+use \OpenAPI\OpenAPI\Models\Shared\XgafvEnum;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+use \OpenAPI\OpenAPI\Models\Operations\DeploymentmanagerCompositeTypesDeleteSecurity;
+use \OpenAPI\OpenAPI\Models\Operations\DeploymentmanagerCompositeTypesDeleteSecurityOption1;
+use \OpenAPI\OpenAPI\Models\Operations\DeploymentmanagerCompositeTypesDeleteSecurityOption2;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new DeploymentmanagerCompositeTypesDeleteRequest();
+    $request->dollarXgafv = XgafvEnum::TWO;
+    $request->accessToken = 'provident';
+    $request->alt = AltEnum::PROTO;
+    $request->callback = 'quibusdam';
+    $request->compositeType = 'unde';
+    $request->fields = 'nulla';
+    $request->key = 'corrupti';
+    $request->oauthToken = 'illum';
+    $request->prettyPrint = false;
+    $request->project = 'vel';
+    $request->quotaUser = 'error';
+    $request->uploadType = 'deserunt';
+    $request->uploadProtocol = 'suscipit';
+
+    $requestSecurity = new DeploymentmanagerCompositeTypesDeleteSecurity();
+    $requestSecurity->option1 = new DeploymentmanagerCompositeTypesDeleteSecurityOption1();
+    $requestSecurity->option1->oauth2 = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+    $requestSecurity->option1->oauth2c = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+
+    $response = $sdk->compositeTypes->deploymentmanagerCompositeTypesDelete($request, $requestSecurity);
+
+    if ($response->operation !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### compositeTypes
+### [compositeTypes](docs/compositetypes/README.md)
 
-* `deploymentmanagerCompositeTypesDelete` - Deletes a composite type.
-* `deploymentmanagerCompositeTypesGet` - Gets information about a specific composite type.
-* `deploymentmanagerCompositeTypesInsert` - Creates a composite type.
-* `deploymentmanagerCompositeTypesList` - Lists all composite types for Deployment Manager.
-* `deploymentmanagerCompositeTypesPatch` - Patches a composite type.
-* `deploymentmanagerCompositeTypesUpdate` - Updates a composite type.
+* [deploymentmanagerCompositeTypesDelete](docs/compositetypes/README.md#deploymentmanagercompositetypesdelete) - Deletes a composite type.
+* [deploymentmanagerCompositeTypesGet](docs/compositetypes/README.md#deploymentmanagercompositetypesget) - Gets information about a specific composite type.
+* [deploymentmanagerCompositeTypesInsert](docs/compositetypes/README.md#deploymentmanagercompositetypesinsert) - Creates a composite type.
+* [deploymentmanagerCompositeTypesList](docs/compositetypes/README.md#deploymentmanagercompositetypeslist) - Lists all composite types for Deployment Manager.
+* [deploymentmanagerCompositeTypesPatch](docs/compositetypes/README.md#deploymentmanagercompositetypespatch) - Patches a composite type.
+* [deploymentmanagerCompositeTypesUpdate](docs/compositetypes/README.md#deploymentmanagercompositetypesupdate) - Updates a composite type.
 
-### deployments
+### [deployments](docs/deployments/README.md)
 
-* `deploymentmanagerDeploymentsCancelPreview` - Cancels and removes the preview currently associated with the deployment.
-* `deploymentmanagerDeploymentsDelete` - Deletes a deployment and all of the resources in the deployment.
-* `deploymentmanagerDeploymentsGet` - Gets information about a specific deployment.
-* `deploymentmanagerDeploymentsGetIamPolicy` - Gets the access control policy for a resource. May be empty if no such policy or resource exists.
-* `deploymentmanagerDeploymentsInsert` - Creates a deployment and all of the resources described by the deployment manifest.
-* `deploymentmanagerDeploymentsList` - Lists all deployments for a given project.
-* `deploymentmanagerDeploymentsPatch` - Patches a deployment and all of the resources described by the deployment manifest.
-* `deploymentmanagerDeploymentsSetIamPolicy` - Sets the access control policy on the specified resource. Replaces any existing policy.
-* `deploymentmanagerDeploymentsStop` - Stops an ongoing operation. This does not roll back any work that has already been completed, but prevents any new work from being started.
-* `deploymentmanagerDeploymentsTestIamPermissions` - Returns permissions that a caller has on the specified resource.
-* `deploymentmanagerDeploymentsUpdate` - Updates a deployment and all of the resources described by the deployment manifest.
+* [deploymentmanagerDeploymentsCancelPreview](docs/deployments/README.md#deploymentmanagerdeploymentscancelpreview) - Cancels and removes the preview currently associated with the deployment.
+* [deploymentmanagerDeploymentsDelete](docs/deployments/README.md#deploymentmanagerdeploymentsdelete) - Deletes a deployment and all of the resources in the deployment.
+* [deploymentmanagerDeploymentsGet](docs/deployments/README.md#deploymentmanagerdeploymentsget) - Gets information about a specific deployment.
+* [deploymentmanagerDeploymentsGetIamPolicy](docs/deployments/README.md#deploymentmanagerdeploymentsgetiampolicy) - Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+* [deploymentmanagerDeploymentsInsert](docs/deployments/README.md#deploymentmanagerdeploymentsinsert) - Creates a deployment and all of the resources described by the deployment manifest.
+* [deploymentmanagerDeploymentsList](docs/deployments/README.md#deploymentmanagerdeploymentslist) - Lists all deployments for a given project.
+* [deploymentmanagerDeploymentsPatch](docs/deployments/README.md#deploymentmanagerdeploymentspatch) - Patches a deployment and all of the resources described by the deployment manifest.
+* [deploymentmanagerDeploymentsSetIamPolicy](docs/deployments/README.md#deploymentmanagerdeploymentssetiampolicy) - Sets the access control policy on the specified resource. Replaces any existing policy.
+* [deploymentmanagerDeploymentsStop](docs/deployments/README.md#deploymentmanagerdeploymentsstop) - Stops an ongoing operation. This does not roll back any work that has already been completed, but prevents any new work from being started.
+* [deploymentmanagerDeploymentsTestIamPermissions](docs/deployments/README.md#deploymentmanagerdeploymentstestiampermissions) - Returns permissions that a caller has on the specified resource.
+* [deploymentmanagerDeploymentsUpdate](docs/deployments/README.md#deploymentmanagerdeploymentsupdate) - Updates a deployment and all of the resources described by the deployment manifest.
 
-### manifests
+### [manifests](docs/manifests/README.md)
 
-* `deploymentmanagerManifestsGet` - Gets information about a specific manifest.
-* `deploymentmanagerManifestsList` - Lists all manifests for a given deployment.
+* [deploymentmanagerManifestsGet](docs/manifests/README.md#deploymentmanagermanifestsget) - Gets information about a specific manifest.
+* [deploymentmanagerManifestsList](docs/manifests/README.md#deploymentmanagermanifestslist) - Lists all manifests for a given deployment.
 
-### operations
+### [operations](docs/operations/README.md)
 
-* `deploymentmanagerOperationsGet` - Gets information about a specific operation.
-* `deploymentmanagerOperationsList` - Lists all operations for a project.
+* [deploymentmanagerOperationsGet](docs/operations/README.md#deploymentmanageroperationsget) - Gets information about a specific operation.
+* [deploymentmanagerOperationsList](docs/operations/README.md#deploymentmanageroperationslist) - Lists all operations for a project.
 
-### resources
+### [resources](docs/resources/README.md)
 
-* `deploymentmanagerResourcesGet` - Gets information about a single resource.
-* `deploymentmanagerResourcesList` - Lists all resources in a given deployment.
+* [deploymentmanagerResourcesGet](docs/resources/README.md#deploymentmanagerresourcesget) - Gets information about a single resource.
+* [deploymentmanagerResourcesList](docs/resources/README.md#deploymentmanagerresourceslist) - Lists all resources in a given deployment.
 
-### typeProviders
+### [typeProviders](docs/typeproviders/README.md)
 
-* `deploymentmanagerTypeProvidersDelete` - Deletes a type provider.
-* `deploymentmanagerTypeProvidersGet` - Gets information about a specific type provider.
-* `deploymentmanagerTypeProvidersGetType` - Gets a type info for a type provided by a TypeProvider.
-* `deploymentmanagerTypeProvidersInsert` - Creates a type provider.
-* `deploymentmanagerTypeProvidersList` - Lists all resource type providers for Deployment Manager.
-* `deploymentmanagerTypeProvidersListTypes` - Lists all the type info for a TypeProvider.
-* `deploymentmanagerTypeProvidersPatch` - Patches a type provider.
-* `deploymentmanagerTypeProvidersUpdate` - Updates a type provider.
+* [deploymentmanagerTypeProvidersDelete](docs/typeproviders/README.md#deploymentmanagertypeprovidersdelete) - Deletes a type provider.
+* [deploymentmanagerTypeProvidersGet](docs/typeproviders/README.md#deploymentmanagertypeprovidersget) - Gets information about a specific type provider.
+* [deploymentmanagerTypeProvidersGetType](docs/typeproviders/README.md#deploymentmanagertypeprovidersgettype) - Gets a type info for a type provided by a TypeProvider.
+* [deploymentmanagerTypeProvidersInsert](docs/typeproviders/README.md#deploymentmanagertypeprovidersinsert) - Creates a type provider.
+* [deploymentmanagerTypeProvidersList](docs/typeproviders/README.md#deploymentmanagertypeproviderslist) - Lists all resource type providers for Deployment Manager.
+* [deploymentmanagerTypeProvidersListTypes](docs/typeproviders/README.md#deploymentmanagertypeproviderslisttypes) - Lists all the type info for a TypeProvider.
+* [deploymentmanagerTypeProvidersPatch](docs/typeproviders/README.md#deploymentmanagertypeproviderspatch) - Patches a type provider.
+* [deploymentmanagerTypeProvidersUpdate](docs/typeproviders/README.md#deploymentmanagertypeprovidersupdate) - Updates a type provider.
 
-### types
+### [types](docs/types/README.md)
 
-* `deploymentmanagerTypesGet` - Gets information about a specific type.
-* `deploymentmanagerTypesList` - Lists all resource types for Deployment Manager.
+* [deploymentmanagerTypesGet](docs/types/README.md#deploymentmanagertypesget) - Gets information about a specific type.
+* [deploymentmanagerTypesList](docs/types/README.md#deploymentmanagertypeslist) - Lists all resource types for Deployment Manager.
 <!-- End SDK Available Operations -->
 
 ### Maturity

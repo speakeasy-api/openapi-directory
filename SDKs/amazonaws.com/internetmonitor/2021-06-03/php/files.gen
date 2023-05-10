@@ -18,6 +18,7 @@ src/Utils/SecurityClient.php
 src/Utils/SecurityMetadata.php
 src/Utils/SpeakeasyMetadata.php
 src/Utils/Utils.php
+src/Models/Operations/CreateMonitorRequestBodyInternetMeasurementsLogDelivery.php
 src/Models/Operations/CreateMonitorRequestBody.php
 src/Models/Operations/CreateMonitorRequest.php
 src/Models/Operations/CreateMonitorResponse.php
@@ -39,12 +40,15 @@ src/Models/Operations/TagResourceRequest.php
 src/Models/Operations/TagResourceResponse.php
 src/Models/Operations/UntagResourceRequest.php
 src/Models/Operations/UntagResourceResponse.php
+src/Models/Operations/UpdateMonitorRequestBodyInternetMeasurementsLogDelivery.php
 src/Models/Operations/UpdateMonitorRequestBodyStatusEnum.php
 src/Models/Operations/UpdateMonitorRequestBody.php
 src/Models/Operations/UpdateMonitorRequest.php
 src/Models/Operations/UpdateMonitorResponse.php
 src/Models/Shared/CreateMonitorOutput.php
 src/Models/Shared/MonitorConfigStateEnum.php
+src/Models/Shared/S3Config.php
+src/Models/Shared/LogDeliveryStatusEnum.php
 src/Models/Shared/GetHealthEventOutput.php
 src/Models/Shared/HealthEventStatusEnum.php
 src/Models/Shared/ImpactedLocation.php
@@ -58,6 +62,7 @@ src/Models/Shared/TriangulationEventTypeEnum.php
 src/Models/Shared/HealthEventImpactTypeEnum.php
 src/Models/Shared/GetMonitorOutput.php
 src/Models/Shared/MonitorProcessingStatusCodeEnum.php
+src/Models/Shared/InternetMeasurementsLogDelivery.php
 src/Models/Shared/ListHealthEventsOutput.php
 src/Models/Shared/HealthEvent.php
 src/Models/Shared/ListMonitorsOutput.php
@@ -65,4 +70,5 @@ src/Models/Shared/Monitor.php
 src/Models/Shared/ListTagsForResourceOutput.php
 src/Models/Shared/UpdateMonitorOutput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

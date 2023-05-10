@@ -22,4 +22,5 @@ enum InstanceStateEnum: string
     case SUSPENDED = 'SUSPENDED';
     case SUSPENDING = 'SUSPENDING';
     case RESUMING = 'RESUMING';
+    case REVERTING = 'REVERTING';
 }

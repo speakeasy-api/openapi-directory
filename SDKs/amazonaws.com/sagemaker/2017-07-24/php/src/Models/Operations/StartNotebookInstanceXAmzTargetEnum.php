@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartNotebookInstanceXAmzTargetEnum: string
 {
     case SAGE_MAKER_START_NOTEBOOK_INSTANCE = 'SageMaker.StartNotebookInstance';

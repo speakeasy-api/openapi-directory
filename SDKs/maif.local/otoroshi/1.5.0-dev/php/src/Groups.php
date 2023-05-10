@@ -42,9 +42,11 @@ class Groups
      * 
      * Get all service groups
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AllServiceGroupsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\AllServiceGroupsResponse
      */
 	public function allServiceGroups(
+        \OpenAPI\OpenAPI\Models\Operations\AllServiceGroupsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\AllServiceGroupsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -52,7 +54,8 @@ class Groups
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum BatchDeleteImageXAmzTargetEnum: string
 {
     case SPENCER_FRONTEND_SERVICE_BATCH_DELETE_IMAGE = 'SpencerFrontendService.BatchDeleteImage';

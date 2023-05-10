@@ -111,4 +111,5 @@ src/Models/Shared/PlayerGameProjection.php
 src/Models/Shared/TeamSeason.php
 src/Models/Shared/Tournament.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

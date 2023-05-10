@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeletePredictorXAmzTargetEnum: string
 {
     case AMAZON_FORECAST_DELETE_PREDICTOR = 'AmazonForecast.DeletePredictor';

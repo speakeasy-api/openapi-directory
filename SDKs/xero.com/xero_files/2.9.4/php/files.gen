@@ -77,4 +77,6 @@ src/Models/Shared/Folder.php
 src/Models/Shared/FileObject.php
 src/Models/Shared/User.php
 src/Models/Shared/Files.php
+docs/sdk/README.md
+docs/files/README.md
 USAGE.md

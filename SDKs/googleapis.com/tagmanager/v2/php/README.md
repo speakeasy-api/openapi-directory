@@ -30,67 +30,113 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\TagmanagerAccountsContainersCombineRequest;
+use \OpenAPI\OpenAPI\Models\Shared\XgafvEnum;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+use \OpenAPI\OpenAPI\Models\Operations\TagmanagerAccountsContainersCombineSettingSourceEnum;
+use \OpenAPI\OpenAPI\Models\Operations\TagmanagerAccountsContainersCombineSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new TagmanagerAccountsContainersCombineRequest();
+    $request->dollarXgafv = XgafvEnum::TWO;
+    $request->accessToken = 'provident';
+    $request->allowUserPermissionFeatureUpdate = false;
+    $request->alt = AltEnum::PROTO;
+    $request->callback = 'quibusdam';
+    $request->containerId = 'unde';
+    $request->fields = 'nulla';
+    $request->key = 'corrupti';
+    $request->oauthToken = 'illum';
+    $request->path = 'vel';
+    $request->prettyPrint = false;
+    $request->quotaUser = 'error';
+    $request->settingSource = TagmanagerAccountsContainersCombineSettingSourceEnum::CURRENT;
+    $request->uploadType = 'suscipit';
+    $request->uploadProtocol = 'iure';
+
+    $requestSecurity = new TagmanagerAccountsContainersCombineSecurity();
+    $requestSecurity->oauth2 = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+    $requestSecurity->oauth2c = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+
+    $response = $sdk->accounts->tagmanagerAccountsContainersCombine($request, $requestSecurity);
+
+    if ($response->container !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### accounts
+### [accounts](docs/accounts/README.md)
 
-* `tagmanagerAccountsContainersCombine` - Combines Containers.
-* `tagmanagerAccountsContainersCreate` - Creates a Container.
-* `tagmanagerAccountsContainersDestinationsLink` - Adds a Destination to this Container and removes it from the Container to which it is currently linked.
-* `tagmanagerAccountsContainersDestinationsList` - Lists all Destinations linked to a GTM Container.
-* `tagmanagerAccountsContainersEnvironmentsCreate` - Creates a GTM Environment.
-* `tagmanagerAccountsContainersEnvironmentsList` - Lists all GTM Environments of a GTM Container.
-* `tagmanagerAccountsContainersEnvironmentsReauthorize` - Re-generates the authorization code for a GTM Environment.
-* `tagmanagerAccountsContainersList` - Lists all Containers that belongs to a GTM Account.
-* `tagmanagerAccountsContainersLookup` - Looks up a Container by destination ID.
-* `tagmanagerAccountsContainersMoveTagId` - Move Tag ID out of a Container.
-* `tagmanagerAccountsContainersSnippet` - Gets the tagging snippet for a Container.
-* `tagmanagerAccountsContainersVersionHeadersLatest` - Gets the latest container version header
-* `tagmanagerAccountsContainersVersionHeadersList` - Lists all Container Versions of a GTM Container.
-* `tagmanagerAccountsContainersVersionsLive` - Gets the live (i.e. published) container version
-* `tagmanagerAccountsContainersVersionsPublish` - Publishes a Container Version.
-* `tagmanagerAccountsContainersVersionsSetLatest` - Sets the latest version used for synchronization of workspaces when detecting conflicts and errors.
-* `tagmanagerAccountsContainersVersionsUndelete` - Undeletes a Container Version.
-* `tagmanagerAccountsContainersWorkspacesBuiltInVariablesCreate` - Creates one or more GTM Built-In Variables.
-* `tagmanagerAccountsContainersWorkspacesBuiltInVariablesList` - Lists all the enabled Built-In Variables of a GTM Container.
-* `tagmanagerAccountsContainersWorkspacesBuiltInVariablesRevert` - Reverts changes to a GTM Built-In Variables in a GTM Workspace.
-* `tagmanagerAccountsContainersWorkspacesClientsCreate` - Creates a GTM Client.
-* `tagmanagerAccountsContainersWorkspacesClientsList` - Lists all GTM Clients of a GTM container workspace.
-* `tagmanagerAccountsContainersWorkspacesCreate` - Creates a Workspace.
-* `tagmanagerAccountsContainersWorkspacesCreateVersion` - Creates a Container Version from the entities present in the workspace, deletes the workspace, and sets the base container version to the newly created version.
-* `tagmanagerAccountsContainersWorkspacesFoldersCreate` - Creates a GTM Folder.
-* `tagmanagerAccountsContainersWorkspacesFoldersEntities` - List all entities in a GTM Folder.
-* `tagmanagerAccountsContainersWorkspacesFoldersList` - Lists all GTM Folders of a Container.
-* `tagmanagerAccountsContainersWorkspacesFoldersMoveEntitiesToFolder` - Moves entities to a GTM Folder.
-* `tagmanagerAccountsContainersWorkspacesGetStatus` - Finds conflicting and modified entities in the workspace.
-* `tagmanagerAccountsContainersWorkspacesGtagConfigCreate` - Creates a Google tag config.
-* `tagmanagerAccountsContainersWorkspacesGtagConfigList` - Lists all Google tag configs in a Container.
-* `tagmanagerAccountsContainersWorkspacesList` - Lists all Workspaces that belong to a GTM Container.
-* `tagmanagerAccountsContainersWorkspacesQuickPreview` - Quick previews a workspace by creating a fake container version from all entities in the provided workspace.
-* `tagmanagerAccountsContainersWorkspacesResolveConflict` - Resolves a merge conflict for a workspace entity by updating it to the resolved entity passed in the request.
-* `tagmanagerAccountsContainersWorkspacesSync` - Syncs a workspace to the latest container version by updating all unmodified workspace entities and displaying conflicts for modified entities.
-* `tagmanagerAccountsContainersWorkspacesTagsCreate` - Creates a GTM Tag.
-* `tagmanagerAccountsContainersWorkspacesTagsList` - Lists all GTM Tags of a Container.
-* `tagmanagerAccountsContainersWorkspacesTemplatesCreate` - Creates a GTM Custom Template.
-* `tagmanagerAccountsContainersWorkspacesTemplatesList` - Lists all GTM Templates of a GTM container workspace.
-* `tagmanagerAccountsContainersWorkspacesTriggersCreate` - Creates a GTM Trigger.
-* `tagmanagerAccountsContainersWorkspacesTriggersList` - Lists all GTM Triggers of a Container.
-* `tagmanagerAccountsContainersWorkspacesVariablesCreate` - Creates a GTM Variable.
-* `tagmanagerAccountsContainersWorkspacesVariablesList` - Lists all GTM Variables of a Container.
-* `tagmanagerAccountsContainersWorkspacesZonesCreate` - Creates a GTM Zone.
-* `tagmanagerAccountsContainersWorkspacesZonesList` - Lists all GTM Zones of a GTM container workspace.
-* `tagmanagerAccountsContainersWorkspacesZonesRevert` - Reverts changes to a GTM Zone in a GTM Workspace.
-* `tagmanagerAccountsList` - Lists all GTM Accounts that a user has access to.
-* `tagmanagerAccountsUserPermissionsCreate` - Creates a user's Account & Container access.
-* `tagmanagerAccountsUserPermissionsDelete` - Removes a user from the account, revoking access to it and all of its containers.
-* `tagmanagerAccountsUserPermissionsGet` - Gets a user's Account & Container access.
-* `tagmanagerAccountsUserPermissionsList` - List all users that have access to the account along with Account and Container user access granted to each of them.
-* `tagmanagerAccountsUserPermissionsUpdate` - Updates a user's Account & Container access.
+* [tagmanagerAccountsContainersCombine](docs/accounts/README.md#tagmanageraccountscontainerscombine) - Combines Containers.
+* [tagmanagerAccountsContainersCreate](docs/accounts/README.md#tagmanageraccountscontainerscreate) - Creates a Container.
+* [tagmanagerAccountsContainersDestinationsLink](docs/accounts/README.md#tagmanageraccountscontainersdestinationslink) - Adds a Destination to this Container and removes it from the Container to which it is currently linked.
+* [tagmanagerAccountsContainersDestinationsList](docs/accounts/README.md#tagmanageraccountscontainersdestinationslist) - Lists all Destinations linked to a GTM Container.
+* [tagmanagerAccountsContainersEnvironmentsCreate](docs/accounts/README.md#tagmanageraccountscontainersenvironmentscreate) - Creates a GTM Environment.
+* [tagmanagerAccountsContainersEnvironmentsList](docs/accounts/README.md#tagmanageraccountscontainersenvironmentslist) - Lists all GTM Environments of a GTM Container.
+* [tagmanagerAccountsContainersEnvironmentsReauthorize](docs/accounts/README.md#tagmanageraccountscontainersenvironmentsreauthorize) - Re-generates the authorization code for a GTM Environment.
+* [tagmanagerAccountsContainersList](docs/accounts/README.md#tagmanageraccountscontainerslist) - Lists all Containers that belongs to a GTM Account.
+* [tagmanagerAccountsContainersLookup](docs/accounts/README.md#tagmanageraccountscontainerslookup) - Looks up a Container by destination ID.
+* [tagmanagerAccountsContainersMoveTagId](docs/accounts/README.md#tagmanageraccountscontainersmovetagid) - Move Tag ID out of a Container.
+* [tagmanagerAccountsContainersSnippet](docs/accounts/README.md#tagmanageraccountscontainerssnippet) - Gets the tagging snippet for a Container.
+* [tagmanagerAccountsContainersVersionHeadersLatest](docs/accounts/README.md#tagmanageraccountscontainersversionheaderslatest) - Gets the latest container version header
+* [tagmanagerAccountsContainersVersionHeadersList](docs/accounts/README.md#tagmanageraccountscontainersversionheaderslist) - Lists all Container Versions of a GTM Container.
+* [tagmanagerAccountsContainersVersionsLive](docs/accounts/README.md#tagmanageraccountscontainersversionslive) - Gets the live (i.e. published) container version
+* [tagmanagerAccountsContainersVersionsPublish](docs/accounts/README.md#tagmanageraccountscontainersversionspublish) - Publishes a Container Version.
+* [tagmanagerAccountsContainersVersionsSetLatest](docs/accounts/README.md#tagmanageraccountscontainersversionssetlatest) - Sets the latest version used for synchronization of workspaces when detecting conflicts and errors.
+* [tagmanagerAccountsContainersVersionsUndelete](docs/accounts/README.md#tagmanageraccountscontainersversionsundelete) - Undeletes a Container Version.
+* [tagmanagerAccountsContainersWorkspacesBuiltInVariablesCreate](docs/accounts/README.md#tagmanageraccountscontainersworkspacesbuiltinvariablescreate) - Creates one or more GTM Built-In Variables.
+* [tagmanagerAccountsContainersWorkspacesBuiltInVariablesList](docs/accounts/README.md#tagmanageraccountscontainersworkspacesbuiltinvariableslist) - Lists all the enabled Built-In Variables of a GTM Container.
+* [tagmanagerAccountsContainersWorkspacesBuiltInVariablesRevert](docs/accounts/README.md#tagmanageraccountscontainersworkspacesbuiltinvariablesrevert) - Reverts changes to a GTM Built-In Variables in a GTM Workspace.
+* [tagmanagerAccountsContainersWorkspacesClientsCreate](docs/accounts/README.md#tagmanageraccountscontainersworkspacesclientscreate) - Creates a GTM Client.
+* [tagmanagerAccountsContainersWorkspacesClientsList](docs/accounts/README.md#tagmanageraccountscontainersworkspacesclientslist) - Lists all GTM Clients of a GTM container workspace.
+* [tagmanagerAccountsContainersWorkspacesCreate](docs/accounts/README.md#tagmanageraccountscontainersworkspacescreate) - Creates a Workspace.
+* [tagmanagerAccountsContainersWorkspacesCreateVersion](docs/accounts/README.md#tagmanageraccountscontainersworkspacescreateversion) - Creates a Container Version from the entities present in the workspace, deletes the workspace, and sets the base container version to the newly created version.
+* [tagmanagerAccountsContainersWorkspacesFoldersCreate](docs/accounts/README.md#tagmanageraccountscontainersworkspacesfolderscreate) - Creates a GTM Folder.
+* [tagmanagerAccountsContainersWorkspacesFoldersEntities](docs/accounts/README.md#tagmanageraccountscontainersworkspacesfoldersentities) - List all entities in a GTM Folder.
+* [tagmanagerAccountsContainersWorkspacesFoldersList](docs/accounts/README.md#tagmanageraccountscontainersworkspacesfolderslist) - Lists all GTM Folders of a Container.
+* [tagmanagerAccountsContainersWorkspacesFoldersMoveEntitiesToFolder](docs/accounts/README.md#tagmanageraccountscontainersworkspacesfoldersmoveentitiestofolder) - Moves entities to a GTM Folder.
+* [tagmanagerAccountsContainersWorkspacesGetStatus](docs/accounts/README.md#tagmanageraccountscontainersworkspacesgetstatus) - Finds conflicting and modified entities in the workspace.
+* [tagmanagerAccountsContainersWorkspacesGtagConfigCreate](docs/accounts/README.md#tagmanageraccountscontainersworkspacesgtagconfigcreate) - Creates a Google tag config.
+* [tagmanagerAccountsContainersWorkspacesGtagConfigList](docs/accounts/README.md#tagmanageraccountscontainersworkspacesgtagconfiglist) - Lists all Google tag configs in a Container.
+* [tagmanagerAccountsContainersWorkspacesList](docs/accounts/README.md#tagmanageraccountscontainersworkspaceslist) - Lists all Workspaces that belong to a GTM Container.
+* [tagmanagerAccountsContainersWorkspacesQuickPreview](docs/accounts/README.md#tagmanageraccountscontainersworkspacesquickpreview) - Quick previews a workspace by creating a fake container version from all entities in the provided workspace.
+* [tagmanagerAccountsContainersWorkspacesResolveConflict](docs/accounts/README.md#tagmanageraccountscontainersworkspacesresolveconflict) - Resolves a merge conflict for a workspace entity by updating it to the resolved entity passed in the request.
+* [tagmanagerAccountsContainersWorkspacesSync](docs/accounts/README.md#tagmanageraccountscontainersworkspacessync) - Syncs a workspace to the latest container version by updating all unmodified workspace entities and displaying conflicts for modified entities.
+* [tagmanagerAccountsContainersWorkspacesTagsCreate](docs/accounts/README.md#tagmanageraccountscontainersworkspacestagscreate) - Creates a GTM Tag.
+* [tagmanagerAccountsContainersWorkspacesTagsList](docs/accounts/README.md#tagmanageraccountscontainersworkspacestagslist) - Lists all GTM Tags of a Container.
+* [tagmanagerAccountsContainersWorkspacesTemplatesCreate](docs/accounts/README.md#tagmanageraccountscontainersworkspacestemplatescreate) - Creates a GTM Custom Template.
+* [tagmanagerAccountsContainersWorkspacesTemplatesList](docs/accounts/README.md#tagmanageraccountscontainersworkspacestemplateslist) - Lists all GTM Templates of a GTM container workspace.
+* [tagmanagerAccountsContainersWorkspacesTriggersCreate](docs/accounts/README.md#tagmanageraccountscontainersworkspacestriggerscreate) - Creates a GTM Trigger.
+* [tagmanagerAccountsContainersWorkspacesTriggersList](docs/accounts/README.md#tagmanageraccountscontainersworkspacestriggerslist) - Lists all GTM Triggers of a Container.
+* [tagmanagerAccountsContainersWorkspacesVariablesCreate](docs/accounts/README.md#tagmanageraccountscontainersworkspacesvariablescreate) - Creates a GTM Variable.
+* [tagmanagerAccountsContainersWorkspacesVariablesList](docs/accounts/README.md#tagmanageraccountscontainersworkspacesvariableslist) - Lists all GTM Variables of a Container.
+* [tagmanagerAccountsContainersWorkspacesZonesCreate](docs/accounts/README.md#tagmanageraccountscontainersworkspaceszonescreate) - Creates a GTM Zone.
+* [tagmanagerAccountsContainersWorkspacesZonesList](docs/accounts/README.md#tagmanageraccountscontainersworkspaceszoneslist) - Lists all GTM Zones of a GTM container workspace.
+* [tagmanagerAccountsContainersWorkspacesZonesRevert](docs/accounts/README.md#tagmanageraccountscontainersworkspaceszonesrevert) - Reverts changes to a GTM Zone in a GTM Workspace.
+* [tagmanagerAccountsList](docs/accounts/README.md#tagmanageraccountslist) - Lists all GTM Accounts that a user has access to.
+* [tagmanagerAccountsUserPermissionsCreate](docs/accounts/README.md#tagmanageraccountsuserpermissionscreate) - Creates a user's Account & Container access.
+* [tagmanagerAccountsUserPermissionsDelete](docs/accounts/README.md#tagmanageraccountsuserpermissionsdelete) - Removes a user from the account, revoking access to it and all of its containers.
+* [tagmanagerAccountsUserPermissionsGet](docs/accounts/README.md#tagmanageraccountsuserpermissionsget) - Gets a user's Account & Container access.
+* [tagmanagerAccountsUserPermissionsList](docs/accounts/README.md#tagmanageraccountsuserpermissionslist) - List all users that have access to the account along with Account and Container user access granted to each of them.
+* [tagmanagerAccountsUserPermissionsUpdate](docs/accounts/README.md#tagmanageraccountsuserpermissionsupdate) - Updates a user's Account & Container access.
 <!-- End SDK Available Operations -->
 
 ### Maturity

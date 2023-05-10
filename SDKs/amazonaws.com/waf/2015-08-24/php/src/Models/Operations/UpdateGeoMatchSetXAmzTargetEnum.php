@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateGeoMatchSetXAmzTargetEnum: string
 {
     case AWSWAF20150824_UPDATE_GEO_MATCH_SET = 'AWSWAF_20150824.UpdateGeoMatchSet';

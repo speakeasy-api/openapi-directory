@@ -409,11 +409,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DetectEntitiesRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DetectEntitiesResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function detectEntities(
         \OpenAPI\OpenAPI\Models\Operations\DetectEntitiesRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DetectEntitiesResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=ComprehendMedical_20181030.DetectEntities');
         

@@ -31,4 +31,6 @@ src/Models/Shared/BuyRecommendationResponse.php
 src/Models/Shared/ProductDetailsResponse.php
 src/Models/Shared/SortOptionResponseSortOptions.php
 src/Models/Shared/SortOptionResponse.php
+docs/sdk/README.md
+docs/amz/README.md
 USAGE.md

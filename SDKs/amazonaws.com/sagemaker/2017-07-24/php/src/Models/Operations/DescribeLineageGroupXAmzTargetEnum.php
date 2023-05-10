@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeLineageGroupXAmzTargetEnum: string
 {
     case SAGE_MAKER_DESCRIBE_LINEAGE_GROUP = 'SageMaker.DescribeLineageGroup';

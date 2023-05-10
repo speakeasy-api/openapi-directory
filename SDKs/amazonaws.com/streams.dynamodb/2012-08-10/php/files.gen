@@ -53,4 +53,5 @@ src/Models/Shared/ListStreamsOutput.php
 src/Models/Shared/Stream.php
 src/Models/Shared/ListStreamsInput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -350,4 +350,5 @@ src/Models/Shared/StartImportResponse.php
 src/Models/Shared/StartTestResponse.php
 src/Models/Shared/TerminateTargetInstancesResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutRecordBatchXAmzTargetEnum: string
 {
     case FIREHOSE20150804_PUT_RECORD_BATCH = 'Firehose_20150804.PutRecordBatch';

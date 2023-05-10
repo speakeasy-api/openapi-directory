@@ -15,6 +15,7 @@ class GetSearchVersionNumberNearbySearchExtRequest
      * Bottom right position of the bounding box. This is specified as a comma separated string composed of lat., lon.
      * 
      * @var ?string $btmRight
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=btmRight')]
     public ?string $btmRight = null;
@@ -137,6 +138,7 @@ class GetSearchVersionNumberNearbySearchExtRequest
      * Top left position of the bounding box. This is specified as a comma separated string composed of lat., lon.
      * 
      * @var ?string $topLeft
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=topLeft')]
     public ?string $topLeft = null;

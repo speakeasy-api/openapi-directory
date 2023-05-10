@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * AccessReview - Conveys information about a Kubernetes access review (e.g. kubectl auth can-i ...) that was involved in a finding.
+ * AccessReview - Conveys information about a Kubernetes access review (such as one returned by a [`kubectl auth can-i`](https://kubernetes.io/docs/reference/access-authn-authz/authorization/#checking-api-access) command) that was involved in a finding.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public
@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class AccessReview
 {
     /**
-     * Group is the API Group of the Resource. "*" means all.
+     * The API group of the resource. "*" means all.
      * 
      * @var ?string $group
      */
@@ -28,7 +28,7 @@ class AccessReview
     public ?string $group = null;
     
     /**
-     * Name is the name of the resource being requested. Empty means all.
+     * The name of the resource being requested. Empty means all.
      * 
      * @var ?string $name
      */
@@ -48,7 +48,7 @@ class AccessReview
     public ?string $ns = null;
     
     /**
-     * Resource is the optional resource type requested. "*" means all.
+     * The optional resource type requested. "*" means all.
      * 
      * @var ?string $resource
      */
@@ -58,7 +58,7 @@ class AccessReview
     public ?string $resource = null;
     
     /**
-     * Subresource is the optional subresource type.
+     * The optional subresource type.
      * 
      * @var ?string $subresource
      */
@@ -68,7 +68,7 @@ class AccessReview
     public ?string $subresource = null;
     
     /**
-     * Verb is a Kubernetes resource API verb, like: get, list, watch, create, update, delete, proxy. "*" means all.
+     * A Kubernetes resource API verb, like get, list, watch, create, update, delete, proxy. "*" means all.
      * 
      * @var ?string $verb
      */
@@ -78,7 +78,7 @@ class AccessReview
     public ?string $verb = null;
     
     /**
-     * Version is the API Version of the Resource. "*" means all.
+     * The API version of the resource. "*" means all.
      * 
      * @var ?string $version
      */

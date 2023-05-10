@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopCalculationExecutionXAmzTargetEnum: string
 {
     case AMAZON_ATHENA_STOP_CALCULATION_EXECUTION = 'AmazonAthena.StopCalculationExecution';

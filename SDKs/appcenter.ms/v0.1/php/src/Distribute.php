@@ -43,12 +43,15 @@ class Distribute
      * @param \OpenAPI\OpenAPI\Models\Operations\AppleMappingTestFlightGroupsRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\AppleMappingTestFlightGroupsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\AppleMappingTestFlightGroupsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function appleMappingTestFlightGroups(
         \OpenAPI\OpenAPI\Models\Operations\AppleMappingTestFlightGroupsRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\AppleMappingTestFlightGroupsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\AppleMappingTestFlightGroupsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/apple_test_flight_groups', \OpenAPI\OpenAPI\Models\Operations\AppleMappingTestFlightGroupsRequest::class, $request);
         
@@ -502,9 +505,11 @@ class Distribute
     /**
      * Returns all devices associated with the given user.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\DevicesUserDevicesListSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\DevicesUserDevicesListResponse
      */
 	public function devicesUserDevicesList(
+        \OpenAPI\OpenAPI\Models\Operations\DevicesUserDevicesListSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\DevicesUserDevicesListResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -512,7 +517,8 @@ class Distribute
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -789,12 +795,15 @@ class Distribute
      * @param \OpenAPI\OpenAPI\Models\Operations\ReleasesAvailableToTesterRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\ReleasesAvailableToTesterSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ReleasesAvailableToTesterResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function releasesAvailableToTester(
         \OpenAPI\OpenAPI\Models\Operations\ReleasesAvailableToTesterRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\ReleasesAvailableToTesterSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ReleasesAvailableToTesterResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/releases/filter_by_tester', \OpenAPI\OpenAPI\Models\Operations\ReleasesAvailableToTesterRequest::class, $request);
         
@@ -1395,11 +1404,14 @@ class Distribute
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ReleasesGetLatestPublicReleaseRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ReleasesGetLatestPublicReleaseResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function releasesGetLatestPublicRelease(
         \OpenAPI\OpenAPI\Models\Operations\ReleasesGetLatestPublicReleaseRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\ReleasesGetLatestPublicReleaseResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/public/sdk/apps/{app_secret}/releases/latest', \OpenAPI\OpenAPI\Models\Operations\ReleasesGetLatestPublicReleaseRequest::class, $request);
         

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RestoreBackupXAmzTargetEnum: string
 {
     case BALDR_API_SERVICE_RESTORE_BACKUP = 'BaldrApiService.RestoreBackup';

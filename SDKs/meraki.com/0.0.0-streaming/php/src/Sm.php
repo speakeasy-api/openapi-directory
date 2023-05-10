@@ -38,44 +38,6 @@ class Sm
 	}
 	
     /**
-     * Force check-in a set of devices
-     * 
-     * Force check-in a set of devices
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\CheckinNetworkSmDevicesRequest $request
-     * @return \OpenAPI\OpenAPI\Models\Operations\CheckinNetworkSmDevicesResponse
-     */
-	public function checkinNetworkSmDevices(
-        \OpenAPI\OpenAPI\Models\Operations\CheckinNetworkSmDevicesRequest $request,
-    ): \OpenAPI\OpenAPI\Models\Operations\CheckinNetworkSmDevicesResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/networks/{networkId}/sm/devices/checkin', \OpenAPI\OpenAPI\Models\Operations\CheckinNetworkSmDevicesRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
-        $options = array_merge_recursive($options, $body);
-        
-        $httpResponse = $this->_securityClient->request('PUT', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\CheckinNetworkSmDevicesResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->checkinNetworkSmDevices200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
      * Bypass activation lock attempt
      * 
      * Bypass activation lock attempt

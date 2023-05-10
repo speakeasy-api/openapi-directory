@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeImagesXAmzTargetEnum: string
 {
     case SPENCER_FRONTEND_SERVICE_DESCRIBE_IMAGES = 'SpencerFrontendService.DescribeImages';

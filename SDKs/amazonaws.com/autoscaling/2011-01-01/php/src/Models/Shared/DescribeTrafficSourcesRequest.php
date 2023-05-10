@@ -21,13 +21,13 @@ class DescribeTrafficSourcesRequest
     public ?string $nextToken = null;
     
 	
-    public string $trafficSourceType;
+    public ?string $trafficSourceType = null;
     
 	public function __construct()
 	{
 		$this->autoScalingGroupName = "";
 		$this->maxRecords = null;
 		$this->nextToken = null;
-		$this->trafficSourceType = "";
+		$this->trafficSourceType = null;
 	}
 }

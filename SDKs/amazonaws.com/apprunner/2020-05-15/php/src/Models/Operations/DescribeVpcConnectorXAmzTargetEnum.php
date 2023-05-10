@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeVpcConnectorXAmzTargetEnum: string
 {
     case APP_RUNNER_DESCRIBE_VPC_CONNECTOR = 'AppRunner.DescribeVpcConnector';

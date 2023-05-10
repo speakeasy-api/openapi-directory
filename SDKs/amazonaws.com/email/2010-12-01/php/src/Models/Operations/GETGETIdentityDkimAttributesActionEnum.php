@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETGETIdentityDkimAttributesActionEnum: string
 {
     case GET_IDENTITY_DKIM_ATTRIBUTES = 'GetIdentityDkimAttributes';

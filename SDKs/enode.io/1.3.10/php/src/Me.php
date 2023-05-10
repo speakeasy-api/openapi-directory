@@ -79,9 +79,11 @@ class Me
      * 
      * Returns metadata about the authenticated User, including a list of vendors for which the user has provided credentials.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetMeSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetMeResponse
      */
 	public function getMe(
+        \OpenAPI\OpenAPI\Models\Operations\GetMeSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetMeResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -89,7 +91,8 @@ class Me
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

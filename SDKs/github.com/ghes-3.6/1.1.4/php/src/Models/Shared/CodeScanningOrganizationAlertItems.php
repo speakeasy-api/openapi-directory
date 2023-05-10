@@ -149,7 +149,7 @@ class CodeScanningOrganizationAlertItems
 		$this->dismissedAt = new \DateTime();
 		$this->dismissedBy = new \OpenAPI\OpenAPI\Models\Shared\NullableSimpleUser();
 		$this->dismissedComment = null;
-		$this->dismissedReason = \OpenAPI\OpenAPI\Models\Shared\CodeScanningAlertDismissedReasonEnum::NULL;
+		$this->dismissedReason = \OpenAPI\OpenAPI\Models\Shared\CodeScanningAlertDismissedReasonEnum::LESS_THAN_NIL_GREATER_THAN;
 		$this->fixedAt = null;
 		$this->htmlUrl = "";
 		$this->instancesUrl = "";

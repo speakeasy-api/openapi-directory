@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * ServiceConfigInput - Describes the Service being deployed. Currently Supported : Cloud Run (fully managed). Next tag: 23
+ * ServiceConfigInput - Describes the Service being deployed. Currently Supported : Cloud Run (fully managed).
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public
@@ -28,7 +28,7 @@ class ServiceConfigInput
     public ?bool $allTrafficOnLatestRevision = null;
     
     /**
-     * The number of CPUs used in a single container instance. Default value is calculated from available memory. Supports the same values as Cloud Run, see https://cloud.google.com/run/docs/reference/rest/v1/Container#resourcerequirements Example: "1" indicates 1 vCPU
+     * [Preview] The number of CPUs used in a single container instance. Default value is calculated from available memory. Supports the same values as Cloud Run, see https://cloud.google.com/run/docs/reference/rest/v1/Container#resourcerequirements Example: "1" indicates 1 vCPU
      * 
      * @var ?string $availableCpu
      */
@@ -78,7 +78,7 @@ class ServiceConfigInput
     public ?int $maxInstanceCount = null;
     
     /**
-     * Sets the maximum number of concurrent requests that each instance can receive. Defaults to 1.
+     * [Preview] Sets the maximum number of concurrent requests that each instance can receive. Defaults to 1.
      * 
      * @var ?int $maxInstanceRequestConcurrency
      */

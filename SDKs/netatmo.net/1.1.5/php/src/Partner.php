@@ -79,9 +79,11 @@ class Partner
     /**
      * The method partnerdevices returns the list of device_id to which your partner application has access to.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\PartnerdevicesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\PartnerdevicesResponse
      */
 	public function partnerdevices(
+        \OpenAPI\OpenAPI\Models\Operations\PartnerdevicesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\PartnerdevicesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -89,7 +91,8 @@ class Partner
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

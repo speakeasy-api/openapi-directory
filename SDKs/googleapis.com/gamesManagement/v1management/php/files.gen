@@ -93,4 +93,10 @@ src/Models/Shared/EventsResetMultipleForAllRequest.php
 src/Models/Shared/PlayerScoreResetResponse.php
 src/Models/Shared/PlayerScoreResetAllResponse.php
 src/Models/Shared/ScoresResetMultipleForAllRequest.php
+docs/sdk/README.md
+docs/achievements/README.md
+docs/applications/README.md
+docs/events/README.md
+docs/players/README.md
+docs/scores/README.md
 USAGE.md

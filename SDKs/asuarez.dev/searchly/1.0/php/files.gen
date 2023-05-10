@@ -32,4 +32,7 @@ src/Models/Shared/APIResponseSimilarity.php
 src/Models/Shared/APIResponseSongResponseResults.php
 src/Models/Shared/APIResponseSongResponse.php
 src/Models/Shared/APIResponseSong.php
+docs/sdk/README.md
+docs/similarity/README.md
+docs/song/README.md
 USAGE.md

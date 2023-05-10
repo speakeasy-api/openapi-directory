@@ -12,6 +12,22 @@ use \OpenAPI\OpenAPI\Utils\SpeakeasyMetadata;
 class GetIsosRequest
 {
     /**
+     * Return only ISOs with the given architecture.
+     * 
+     * @var ?string $architecture
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=architecture')]
+    public ?string $architecture = null;
+    
+    /**
+     * Include Images with wildcard architecture (architecture is null). Works only if architecture filter is specified.
+     * 
+     * @var ?bool $includeArchitectureWildcard
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=include_architecture_wildcard')]
+    public ?bool $includeArchitectureWildcard = null;
+    
+    /**
      * Can be used to filter ISOs by their name. The response will only contain the ISO matching the specified name.
      * 
      * @var ?string $name
@@ -21,6 +37,8 @@ class GetIsosRequest
     
 	public function __construct()
 	{
+		$this->architecture = null;
+		$this->includeArchitectureWildcard = null;
 		$this->name = null;
 	}
 }

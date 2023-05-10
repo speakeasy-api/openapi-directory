@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTRebootDBClusterActionEnum: string
 {
     case REBOOT_DB_CLUSTER = 'RebootDBCluster';

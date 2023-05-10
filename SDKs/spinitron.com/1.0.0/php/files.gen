@@ -69,4 +69,9 @@ src/Models/Shared/SpinLinks.php
 src/Models/Shared/Spin.php
 src/Models/Shared/ValidationError.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/persona/README.md
+docs/playlist/README.md
+docs/show/README.md
+docs/spin/README.md
 USAGE.md

@@ -342,7 +342,7 @@ class UpdateNetworkSsidRequestBody
     public ?string $walledGardenRanges = null;
     
     /**
-     * The types of WPA encryption. ('WPA1 only', 'WPA1 and WPA2', 'WPA2 only', 'WPA3 Transition Mode' or 'WPA3 only')
+     * The types of WPA encryption. ('WPA1 only', 'WPA1 and WPA2', 'WPA2 only', 'WPA3 Transition Mode', 'WPA3 only' or 'WPA3 192-bit Security')
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Operations\UpdateNetworkSsidRequestBodyWpaEncryptionModeEnum $wpaEncryptionMode
      */

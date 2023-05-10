@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeclineHandshakeXAmzTargetEnum: string
 {
     case AWS_ORGANIZATIONS_V20161128_DECLINE_HANDSHAKE = 'AWSOrganizationsV20161128.DeclineHandshake';

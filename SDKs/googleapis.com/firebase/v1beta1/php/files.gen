@@ -183,4 +183,7 @@ src/Models/Shared/WebAppConfig.php
 src/Models/Shared/ListWebAppsResponse.php
 src/Models/Shared/RemoveWebAppRequest.php
 src/Models/Shared/UndeleteWebAppRequest.php
+docs/sdk/README.md
+docs/availableprojects/README.md
+docs/projects/README.md
 USAGE.md

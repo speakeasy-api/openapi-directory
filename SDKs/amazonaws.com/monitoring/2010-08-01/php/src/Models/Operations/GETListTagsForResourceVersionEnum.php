@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETListTagsForResourceVersionEnum: string
 {
     case TWO_THOUSAND_AND_TEN0801 = '2010-08-01';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDescribeSpotFleetRequestHistoryActionEnum: string
 {
     case DESCRIBE_SPOT_FLEET_REQUEST_HISTORY = 'DescribeSpotFleetRequestHistory';

@@ -56,11 +56,14 @@ class OauthAuthorizations
      * @param \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsCreateAuthorizationRequestBody $request
      * @return \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsCreateAuthorizationResponse
      * @see https://docs.github.com/enterprise-server@3.6/rest/reference/oauth-authorizations#create-a-new-authorization
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function oauthAuthorizationsCreateAuthorization(
         \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsCreateAuthorizationRequestBody $request,
     ): \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsCreateAuthorizationResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/authorizations');
         
@@ -112,11 +115,14 @@ class OauthAuthorizations
      * @param \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsDeleteAuthorizationRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsDeleteAuthorizationResponse
      * @see https://docs.github.com/enterprise-server@3.6/rest/reference/oauth-authorizations#delete-an-authorization
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function oauthAuthorizationsDeleteAuthorization(
         \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsDeleteAuthorizationRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsDeleteAuthorizationResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/authorizations/{authorization_id}', \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsDeleteAuthorizationRequest::class, $request);
         
@@ -154,11 +160,14 @@ class OauthAuthorizations
      * @param \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsDeleteGrantRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsDeleteGrantResponse
      * @see https://docs.github.com/enterprise-server@3.6/rest/reference/oauth-authorizations#delete-a-grant
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function oauthAuthorizationsDeleteGrant(
         \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsDeleteGrantRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsDeleteGrantResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/applications/grants/{grant_id}', \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsDeleteGrantRequest::class, $request);
         
@@ -194,11 +203,14 @@ class OauthAuthorizations
      * @param \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsGetAuthorizationRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsGetAuthorizationResponse
      * @see https://docs.github.com/enterprise-server@3.6/rest/reference/oauth-authorizations#get-a-single-authorization
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function oauthAuthorizationsGetAuthorization(
         \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsGetAuthorizationRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsGetAuthorizationResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/authorizations/{authorization_id}', \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsGetAuthorizationRequest::class, $request);
         
@@ -240,11 +252,14 @@ class OauthAuthorizations
      * @param \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsGetGrantRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsGetGrantResponse
      * @see https://docs.github.com/enterprise-server@3.6/rest/reference/oauth-authorizations#get-a-single-grant
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function oauthAuthorizationsGetGrant(
         \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsGetGrantRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsGetGrantResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/applications/grants/{grant_id}', \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsGetGrantRequest::class, $request);
         
@@ -294,11 +309,14 @@ class OauthAuthorizations
      * @param \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsGetOrCreateAuthorizationForAppRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsGetOrCreateAuthorizationForAppResponse
      * @see https://docs.github.com/enterprise-server@3.6/rest/reference/oauth-authorizations#get-or-create-an-authorization-for-a-specific-app
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function oauthAuthorizationsGetOrCreateAuthorizationForApp(
         \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsGetOrCreateAuthorizationForAppRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsGetOrCreateAuthorizationForAppResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/authorizations/clients/{client_id}', \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsGetOrCreateAuthorizationForAppRequest::class, $request);
         
@@ -359,11 +377,14 @@ class OauthAuthorizations
      * @param \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintResponse
      * @see https://docs.github.com/enterprise-server@3.6/rest/reference/oauth-authorizations#get-or-create-an-authorization-for-a-specific-app-and-fingerprint
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function oauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprint(
         \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/authorizations/clients/{client_id}/{fingerprint}', \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequest::class, $request);
         
@@ -410,11 +431,14 @@ class OauthAuthorizations
      * @param \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsListAuthorizationsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsListAuthorizationsResponse
      * @see https://docs.github.com/enterprise-server@3.6/rest/reference/oauth-authorizations#list-your-authorizations
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function oauthAuthorizationsListAuthorizations(
         \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsListAuthorizationsRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsListAuthorizationsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/authorizations');
         
@@ -461,11 +485,14 @@ class OauthAuthorizations
      * @param \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsListGrantsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsListGrantsResponse
      * @see https://docs.github.com/enterprise-server@3.6/rest/reference/oauth-authorizations#list-your-grants
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function oauthAuthorizationsListGrants(
         \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsListGrantsRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsListGrantsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/applications/grants');
         
@@ -514,11 +541,14 @@ class OauthAuthorizations
      * @param \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsUpdateAuthorizationRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsUpdateAuthorizationResponse
      * @see https://docs.github.com/enterprise-server@3.6/rest/reference/oauth-authorizations#update-an-existing-authorization
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function oauthAuthorizationsUpdateAuthorization(
         \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsUpdateAuthorizationRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsUpdateAuthorizationResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/authorizations/{authorization_id}', \OpenAPI\OpenAPI\Models\Operations\OauthAuthorizationsUpdateAuthorizationRequest::class, $request);
         

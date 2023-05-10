@@ -9,11 +9,29 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Shared;
 
 
-/** Payment product */
+/**
+ * * `T2P` - target-2-payments
+ * 
+ * * `SCT` - sepa-credit-transfers
+ * * `ISCT` - instant-sepa-credit-transfer
+ * * `CBCT` - cross-border-credit-transfers
+ * * `BACS` - Back Payment Scheme
+ * * `CHAPS` - CHAPS Payment Scheme
+ * * `FPS` - Faster Payment Scheme
+ * * `SWIFT` - Swift Payment Service
+ * * `BT` - Balance Transfer
+ * * `MT` - Money Transfer
+ */
 enum PaymentWriteRequestPaymentProductEnum: string
 {
     case T2_P = 'T2P';
     case SCT = 'SCT';
     case ISCT = 'ISCT';
     case CBCT = 'CBCT';
+    case BACS = 'BACS';
+    case CHAPS = 'CHAPS';
+    case FPS = 'FPS';
+    case SWIFT = 'SWIFT';
+    case BT = 'BT';
+    case MT = 'MT';
 }

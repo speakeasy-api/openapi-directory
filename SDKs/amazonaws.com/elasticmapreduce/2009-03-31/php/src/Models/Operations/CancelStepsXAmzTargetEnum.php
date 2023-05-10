@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CancelStepsXAmzTargetEnum: string
 {
     case ELASTIC_MAP_REDUCE_CANCEL_STEPS = 'ElasticMapReduce.CancelSteps';

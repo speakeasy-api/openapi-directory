@@ -48,4 +48,7 @@ src/Models/Shared/GoogleCloudKmsV1KeyOperationAttestationFormatEnum.php
 src/Models/Shared/GoogleCloudKmsV1KeyOperationAttestation.php
 src/Models/Shared/GoogleCloudKmsV1KeyOperationAttestationCertificateChains.php
 src/Models/Shared/GoogleCloudKmsInventoryV1ProtectedResourcesSummary.php
+docs/sdk/README.md
+docs/organizations/README.md
+docs/projects/README.md
 USAGE.md

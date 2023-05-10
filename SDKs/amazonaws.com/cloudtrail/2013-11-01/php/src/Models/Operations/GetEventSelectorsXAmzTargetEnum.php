@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetEventSelectorsXAmzTargetEnum: string
 {
     case COM_AMAZONAWS_CLOUDTRAIL_V20131101_CLOUD_TRAIL20131101_GET_EVENT_SELECTORS = 'com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.GetEventSelectors';

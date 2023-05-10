@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Shared;
 
 
-/** Output only. The approval state for the app. */
+/** Output only. The approval state for the app. The field is read-only. */
 enum AppAppApprovalStateEnum: string
 {
     case APP_APPROVAL_STATE_UNSPECIFIED = 'APP_APPROVAL_STATE_UNSPECIFIED';

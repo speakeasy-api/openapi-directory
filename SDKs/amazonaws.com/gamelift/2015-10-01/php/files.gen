@@ -621,4 +621,5 @@ src/Models/Shared/UpdateScriptInput.php
 src/Models/Shared/ValidateMatchmakingRuleSetOutput.php
 src/Models/Shared/ValidateMatchmakingRuleSetInput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

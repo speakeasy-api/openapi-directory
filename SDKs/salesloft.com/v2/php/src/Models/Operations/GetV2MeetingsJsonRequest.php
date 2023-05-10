@@ -20,15 +20,28 @@ class GetV2MeetingsJsonRequest
     public ?string $accountId = null;
     
     /**
-     * Filters meetings by event IDs
+     * Equality filters that are applied to the created_at field. A single filter can be used by itself or combined with other filters to create a range.
      * 
-     * @var ?array<int> $eventIds
+     * 
+     * ---CUSTOM---
+     * {"type":"object","keys":[{"name":"gt","type":"iso8601 string","description":"Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"gte","type":"iso8601 string","description":"Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lt","type":"iso8601 string","description":"Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lte","type":"iso8601 string","description":"Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."}]}
+     * 
+     * 
+     * @var ?array<string> $createdAt
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=false,name=created_at')]
+    public ?array $createdAt = null;
+    
+    /**
+     * List of event IDs. If both event_ids and i_cal_uids params are passed, this filters will be ORed. If a record can't be found, that record won't be returned and your request will be successful
+     * 
+     * @var ?array<string> $eventIds
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=false,name=event_ids')]
     public ?array $eventIds = null;
     
     /**
-     * Filters meetings by UIDs provided by calendar provider
+     * List of UIDs provided by calendar provider. If both event_ids and i_cal_uids params are passed, this filters will be ORed. If a record can't be found, that record won't be returned and your request will be successful
      * 
      * @var ?array<string> $iCalUids
      */
@@ -163,6 +176,7 @@ class GetV2MeetingsJsonRequest
 	public function __construct()
 	{
 		$this->accountId = null;
+		$this->createdAt = null;
 		$this->eventIds = null;
 		$this->iCalUids = null;
 		$this->ids = null;

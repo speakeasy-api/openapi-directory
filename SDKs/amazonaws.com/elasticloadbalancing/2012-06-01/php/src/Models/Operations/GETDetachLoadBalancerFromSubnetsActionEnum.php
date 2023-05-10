@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDetachLoadBalancerFromSubnetsActionEnum: string
 {
     case DETACH_LOAD_BALANCER_FROM_SUBNETS = 'DetachLoadBalancerFromSubnets';

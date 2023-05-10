@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListTagsXAmzTargetEnum: string
 {
     case BALDR_API_SERVICE_LIST_TAGS = 'BaldrApiService.ListTags';

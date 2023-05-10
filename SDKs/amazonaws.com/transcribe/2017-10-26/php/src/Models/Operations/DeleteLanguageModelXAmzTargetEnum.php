@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteLanguageModelXAmzTargetEnum: string
 {
     case TRANSCRIBE_DELETE_LANGUAGE_MODEL = 'Transcribe.DeleteLanguageModel';

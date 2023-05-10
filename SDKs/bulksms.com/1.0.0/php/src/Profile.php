@@ -42,9 +42,11 @@ class Profile
      * 
      * Returns information about your user profile
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetProfileSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetProfileResponse
      */
 	public function getProfile(
+        \OpenAPI\OpenAPI\Models\Operations\GetProfileSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetProfileResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -52,7 +54,8 @@ class Profile
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

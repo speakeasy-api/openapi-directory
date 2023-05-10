@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetDirectoryLimitsXAmzTargetEnum: string
 {
     case DIRECTORY_SERVICE20150416_GET_DIRECTORY_LIMITS = 'DirectoryService_20150416.GetDirectoryLimits';

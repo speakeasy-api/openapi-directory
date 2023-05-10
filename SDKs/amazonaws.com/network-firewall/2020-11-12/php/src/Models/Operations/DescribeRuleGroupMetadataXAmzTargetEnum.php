@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeRuleGroupMetadataXAmzTargetEnum: string
 {
     case NETWORK_FIREWALL20201112_DESCRIBE_RULE_GROUP_METADATA = 'NetworkFirewall_20201112.DescribeRuleGroupMetadata';

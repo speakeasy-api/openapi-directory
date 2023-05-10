@@ -428,4 +428,15 @@ src/Models/Shared/ServiceSettingsUpdateModel.php
 src/Models/Shared/ServiceOptionsUpdateModel.php
 src/Models/Shared/ServiceFeesUpdateModel.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/appointments/README.md
+docs/businessusers/README.md
+docs/calendars/README.md
+docs/companies/README.md
+docs/customers/README.md
+docs/locations/README.md
+docs/resourcegroups/README.md
+docs/resources/README.md
+docs/servicegroups/README.md
+docs/services/README.md
 USAGE.md

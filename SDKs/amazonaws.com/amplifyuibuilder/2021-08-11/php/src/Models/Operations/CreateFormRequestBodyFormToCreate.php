@@ -42,6 +42,11 @@ class CreateFormRequestBodyFormToCreate
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\OpenAPI\OpenAPI\Models\Shared\FormActionTypeEnum $formActionType = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('labelDecorator')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\LabelDecoratorEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?\OpenAPI\OpenAPI\Models\Shared\LabelDecoratorEnum $labelDecorator = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('name')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -83,6 +88,7 @@ class CreateFormRequestBodyFormToCreate
 		$this->dataType = null;
 		$this->fields = null;
 		$this->formActionType = null;
+		$this->labelDecorator = null;
 		$this->name = null;
 		$this->schemaVersion = null;
 		$this->sectionalElements = null;

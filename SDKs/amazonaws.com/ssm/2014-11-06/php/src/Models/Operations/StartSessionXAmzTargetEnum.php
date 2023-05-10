@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartSessionXAmzTargetEnum: string
 {
     case AMAZON_SSM_START_SESSION = 'AmazonSSM.StartSession';

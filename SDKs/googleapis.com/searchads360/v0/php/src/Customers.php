@@ -114,44 +114,4 @@ class Customers
 
         return $response;
     }
-	
-    /**
-     * Returns all rows that match the search stream query. List of thrown errors: [AuthenticationError]() [AuthorizationError]() [HeaderError]() [InternalError]() [QueryError]() [QuotaError]() [RequestError]()
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\Searchads360CustomersSearchAds360SearchStreamRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\Searchads360CustomersSearchAds360SearchStreamSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\Searchads360CustomersSearchAds360SearchStreamResponse
-     */
-	public function searchads360CustomersSearchAds360SearchStream(
-        \OpenAPI\OpenAPI\Models\Operations\Searchads360CustomersSearchAds360SearchStreamRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\Searchads360CustomersSearchAds360SearchStreamSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\Searchads360CustomersSearchAds360SearchStreamResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v0/customers/{customerId}/searchAds360:searchStream', \OpenAPI\OpenAPI\Models\Operations\Searchads360CustomersSearchAds360SearchStreamRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "googleAdsSearchads360V0ServicesSearchSearchAds360StreamRequest", "json");
-        $options = array_merge_recursive($options, $body);
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\Searchads360CustomersSearchAds360SearchStreamRequest::class, $request, null));
-        
-        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\Searchads360CustomersSearchAds360SearchStreamResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->googleAdsSearchads360V0ServicesSearchSearchAds360StreamResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ServicesSearchSearchAds360StreamResponse', 'json');
-            }
-        }
-
-        return $response;
-    }
 }

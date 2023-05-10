@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteDiskXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_DELETE_DISK = 'Lightsail_20161128.DeleteDisk';

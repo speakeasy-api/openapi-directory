@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * GoogleCloudDocumentaiV1beta3ProcessResponse - Response message for the process document method.
+ * GoogleCloudDocumentaiV1beta3ProcessResponse - Response message for the ProcessDocument method.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public
@@ -28,7 +28,7 @@ class GoogleCloudDocumentaiV1beta3ProcessResponse
     public ?GoogleCloudDocumentaiV1beta3Document $document = null;
     
     /**
-     * The name of the operation triggered by the processed document. If the human review process is not triggered, this field will be empty. It has the same response type and metadata as the long running operation returned by ReviewDocument method.
+     * The name of the operation triggered by the processed document. If the human review process isn't triggered, this field is empty. It has the same response type and metadata as the long-running operation returned by ReviewDocument.
      * 
      * @var ?string $humanReviewOperation
      */

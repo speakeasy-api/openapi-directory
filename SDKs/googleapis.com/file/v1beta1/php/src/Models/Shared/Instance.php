@@ -58,6 +58,16 @@ class Instance
     public ?string $description = null;
     
     /**
+     * Directory Services configuration for Kerberos-based authentication.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\DirectoryServicesConfig $directoryServices
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('directoryServices')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\DirectoryServicesConfig')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?DirectoryServicesConfig $directoryServices = null;
+    
+    /**
      * Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
      * 
      * @var ?string $etag
@@ -108,7 +118,7 @@ class Instance
     public ?string $maxCapacityGb = null;
     
     /**
-     * Output only. The max number of shares allowed.
+     * The max number of shares allowed.
      * 
      * @var ?string $maxShareCount
      */
@@ -213,6 +223,7 @@ class Instance
 		$this->capacityStepSizeGb = null;
 		$this->createTime = null;
 		$this->description = null;
+		$this->directoryServices = null;
 		$this->etag = null;
 		$this->fileShares = null;
 		$this->kmsKeyName = null;

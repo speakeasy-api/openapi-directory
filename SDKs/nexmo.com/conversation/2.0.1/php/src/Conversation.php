@@ -121,11 +121,14 @@ class Conversation
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ListConversationsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ListConversationsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function listConversations(
         \OpenAPI\OpenAPI\Models\Operations\ListConversationsRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\ListConversationsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/conversations');
         
@@ -160,7 +163,7 @@ class Conversation
      */
 	public function recordConversation(
         \OpenAPI\OpenAPI\Models\Operations\RecordConversationRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\RecordConversationResponse
     {
         $baseUrl = Conversation::RECORD_CONVERSATION_SERVERS[0];

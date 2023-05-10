@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTRunScheduledInstancesActionEnum: string
 {
     case RUN_SCHEDULED_INSTANCES = 'RunScheduledInstances';

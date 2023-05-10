@@ -33,4 +33,10 @@ src/Models/Operations/WardsInADistrictRequest.php
 src/Models/Operations/WardsInADistrictResponse.php
 src/Models/Operations/NeighborhoodInAStreetRequest.php
 src/Models/Operations/NeighborhoodInAStreetResponse.php
+docs/sdk/README.md
+docs/districtsinregion/README.md
+docs/streetsinaward/README.md
+docs/tanzaniaregions/README.md
+docs/wardsinadistrict/README.md
+docs/neighborhoodinastreet/README.md
 USAGE.md

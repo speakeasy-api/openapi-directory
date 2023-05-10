@@ -90,6 +90,15 @@ class PendingTransactionPendingTransactionSource
     public PendingTransactionPendingTransactionSourceInboundFundsHold $inboundFundsHold;
     
     /**
+     * A Real Time Payments Transfer Instruction object. This field will be present in the JSON response if and only if `category` is equal to `real_time_payments_transfer_instruction`.
+     * 
+     * @var \OpenAPI\OpenAPI\Models\Shared\PendingTransactionPendingTransactionSourceRealTimePaymentsTransferInstruction $realTimePaymentsTransferInstruction
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('real_time_payments_transfer_instruction')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\PendingTransactionPendingTransactionSourceRealTimePaymentsTransferInstruction')]
+    public PendingTransactionPendingTransactionSourceRealTimePaymentsTransferInstruction $realTimePaymentsTransferInstruction;
+    
+    /**
      * A Wire Drawdown Payment Instruction object. This field will be present in the JSON response if and only if `category` is equal to `wire_drawdown_payment_instruction`.
      * 
      * @var \OpenAPI\OpenAPI\Models\Shared\PendingTransactionPendingTransactionSourceWireDrawdownPaymentInstruction $wireDrawdownPaymentInstruction
@@ -117,6 +126,7 @@ class PendingTransactionPendingTransactionSource
 		$this->checkDepositInstruction = new \OpenAPI\OpenAPI\Models\Shared\PendingTransactionPendingTransactionSourceCheckDepositInstruction();
 		$this->checkTransferInstruction = new \OpenAPI\OpenAPI\Models\Shared\PendingTransactionPendingTransactionSourceCheckTransferInstruction();
 		$this->inboundFundsHold = new \OpenAPI\OpenAPI\Models\Shared\PendingTransactionPendingTransactionSourceInboundFundsHold();
+		$this->realTimePaymentsTransferInstruction = new \OpenAPI\OpenAPI\Models\Shared\PendingTransactionPendingTransactionSourceRealTimePaymentsTransferInstruction();
 		$this->wireDrawdownPaymentInstruction = new \OpenAPI\OpenAPI\Models\Shared\PendingTransactionPendingTransactionSourceWireDrawdownPaymentInstruction();
 		$this->wireTransferInstruction = new \OpenAPI\OpenAPI\Models\Shared\PendingTransactionPendingTransactionSourceWireTransferInstruction();
 	}

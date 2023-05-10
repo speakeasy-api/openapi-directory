@@ -36,4 +36,6 @@ src/Models/Shared/GoogleCloudPrivatecatalogV1beta1SearchProductsResponse.php
 src/Models/Shared/GoogleCloudPrivatecatalogV1beta1Product.php
 src/Models/Shared/GoogleCloudPrivatecatalogV1beta1SearchVersionsResponse.php
 src/Models/Shared/GoogleCloudPrivatecatalogV1beta1Version.php
+docs/sdk/README.md
+docs/organizations/README.md
 USAGE.md

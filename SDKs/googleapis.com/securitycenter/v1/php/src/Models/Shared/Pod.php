@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * Pod - Kubernetes Pod.
+ * Pod - A Kubernetes Pod.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

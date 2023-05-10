@@ -28,4 +28,5 @@ src/Models/Operations/PostToConnectionResponse.php
 src/Models/Shared/GetConnectionResponseIdentity.php
 src/Models/Shared/GetConnectionResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -40,9 +40,11 @@ class Users
     /**
      * Get access token details
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetAccessTokenSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetAccessTokenResponse
      */
 	public function getAccessToken(
+        \OpenAPI\OpenAPI\Models\Operations\GetAccessTokenSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetAccessTokenResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -50,7 +52,8 @@ class Users
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -74,9 +77,11 @@ class Users
     /**
      * Get user details
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetUserSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetUserResponse
      */
 	public function getUser(
+        \OpenAPI\OpenAPI\Models\Operations\GetUserSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetUserResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -84,7 +89,8 @@ class Users
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -108,9 +114,11 @@ class Users
     /**
      * List user subscriptions
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetUserSubscriptionListSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetUserSubscriptionListResponse
      */
 	public function getUserSubscriptionList(
+        \OpenAPI\OpenAPI\Models\Operations\GetUserSubscriptionListSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetUserSubscriptionListResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -118,7 +126,8 @@ class Users
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

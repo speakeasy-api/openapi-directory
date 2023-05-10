@@ -30,4 +30,6 @@ src/Models/Operations/GroupsSettingsGroupsUpdateRequest.php
 src/Models/Operations/GroupsSettingsGroupsUpdateResponse.php
 src/Models/Shared/Groups.php
 src/Models/Shared/AltEnum.php
+docs/sdk/README.md
+docs/groups/README.md
 USAGE.md

@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * CreateVerifiedAccessTrustProviderOidcOptions - Options for an OIDC-based, user-identity type trust provider.
+ * CreateVerifiedAccessTrustProviderOidcOptions - Describes the options when creating an Amazon Web Services Verified Access trust provider using the <code>user</code> type.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

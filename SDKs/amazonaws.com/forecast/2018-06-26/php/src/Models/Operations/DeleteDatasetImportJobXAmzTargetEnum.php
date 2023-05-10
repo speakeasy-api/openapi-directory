@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteDatasetImportJobXAmzTargetEnum: string
 {
     case AMAZON_FORECAST_DELETE_DATASET_IMPORT_JOB = 'AmazonForecast.DeleteDatasetImportJob';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTSetRulePrioritiesActionEnum: string
 {
     case SET_RULE_PRIORITIES = 'SetRulePriorities';

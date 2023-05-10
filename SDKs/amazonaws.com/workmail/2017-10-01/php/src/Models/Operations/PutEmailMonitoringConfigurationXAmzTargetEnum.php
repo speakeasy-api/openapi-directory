@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutEmailMonitoringConfigurationXAmzTargetEnum: string
 {
     case WORK_MAIL_SERVICE_PUT_EMAIL_MONITORING_CONFIGURATION = 'WorkMailService.PutEmailMonitoringConfiguration';

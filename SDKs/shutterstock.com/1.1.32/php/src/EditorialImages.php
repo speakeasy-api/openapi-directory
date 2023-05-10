@@ -42,17 +42,23 @@ class EditorialImages
      * 
      * Deprecated; use `GET /v2/editorial/images/categories` instead. This endpoint lists the categories that editorial images can belong to, which are separate from the categories that other types of assets can belong to.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetEditorialCategoriesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetEditorialCategoriesResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getEditorialCategories(
+        \OpenAPI\OpenAPI\Models\Operations\GetEditorialCategoriesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetEditorialCategoriesResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v2/editorial/categories');
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -285,12 +291,15 @@ class EditorialImages
      * @param \OpenAPI\OpenAPI\Models\Operations\GetEditorialLivefeedRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\GetEditorialLivefeedSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetEditorialLivefeedResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getEditorialLivefeed(
         \OpenAPI\OpenAPI\Models\Operations\GetEditorialLivefeedRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\GetEditorialLivefeedSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetEditorialLivefeedResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v2/editorial/livefeeds/{id}', \OpenAPI\OpenAPI\Models\Operations\GetEditorialLivefeedRequest::class, $request);
         
@@ -327,12 +336,15 @@ class EditorialImages
      * @param \OpenAPI\OpenAPI\Models\Operations\GetEditorialLivefeedItemsRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\GetEditorialLivefeedItemsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetEditorialLivefeedItemsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getEditorialLivefeedItems(
         \OpenAPI\OpenAPI\Models\Operations\GetEditorialLivefeedItemsRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\GetEditorialLivefeedItemsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetEditorialLivefeedItemsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v2/editorial/livefeeds/{id}/items', \OpenAPI\OpenAPI\Models\Operations\GetEditorialLivefeedItemsRequest::class, $request);
         
@@ -369,12 +381,15 @@ class EditorialImages
      * @param \OpenAPI\OpenAPI\Models\Operations\GetEditorialLivefeedListRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\GetEditorialLivefeedListSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetEditorialLivefeedListResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getEditorialLivefeedList(
         \OpenAPI\OpenAPI\Models\Operations\GetEditorialLivefeedListRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\GetEditorialLivefeedListSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetEditorialLivefeedListResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v2/editorial/livefeeds');
         
@@ -411,12 +426,15 @@ class EditorialImages
      * @param \OpenAPI\OpenAPI\Models\Operations\GetUpdatedEditorialImageRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\GetUpdatedEditorialImageSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetUpdatedEditorialImageResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getUpdatedEditorialImage(
         \OpenAPI\OpenAPI\Models\Operations\GetUpdatedEditorialImageRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\GetUpdatedEditorialImageSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetUpdatedEditorialImageResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v2/editorial/updated');
         
@@ -495,12 +513,15 @@ class EditorialImages
      * @param \OpenAPI\OpenAPI\Models\Operations\GetV2EditorialIdRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\GetV2EditorialIdSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetV2EditorialIdResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getV2EditorialId(
         \OpenAPI\OpenAPI\Models\Operations\GetV2EditorialIdRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\GetV2EditorialIdSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetV2EditorialIdResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v2/editorial/{id}', \OpenAPI\OpenAPI\Models\Operations\GetV2EditorialIdRequest::class, $request);
         
@@ -537,12 +558,15 @@ class EditorialImages
      * @param \OpenAPI\OpenAPI\Models\Shared\LicenseEditorialContentRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\LicenseEditorialImageSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\LicenseEditorialImageResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function licenseEditorialImage(
         \OpenAPI\OpenAPI\Models\Shared\LicenseEditorialContentRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\LicenseEditorialImageSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\LicenseEditorialImageResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v2/editorial/licenses');
         
@@ -626,9 +650,11 @@ class EditorialImages
      * 
      * This endpoint lists the categories that editorial images can belong to, which are separate from the categories that other types of assets can belong to.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListEditorialImageCategoriesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ListEditorialImageCategoriesResponse
      */
 	public function listEditorialImageCategories(
+        \OpenAPI\OpenAPI\Models\Operations\ListEditorialImageCategoriesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ListEditorialImageCategoriesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -636,7 +662,8 @@ class EditorialImages
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -665,12 +692,15 @@ class EditorialImages
      * @param \OpenAPI\OpenAPI\Models\Operations\SearchEditorialRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\SearchEditorialSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\SearchEditorialResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function searchEditorial(
         \OpenAPI\OpenAPI\Models\Operations\SearchEditorialRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\SearchEditorialSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\SearchEditorialResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v2/editorial/search');
         

@@ -189,15 +189,6 @@ class WireTransfer
     public WireTransferWireTransferSubmission $submission;
     
     /**
-     * If the transfer was created from a template, this will be the template's ID.
-     * 
-     * @var string $templateId
-     */
-	#[\JMS\Serializer\Annotation\SerializedName('template_id')]
-    #[\JMS\Serializer\Annotation\Type('string')]
-    public string $templateId;
-    
-    /**
      * The ID for the transaction funding the transfer.
      * 
      * @var string $transactionId
@@ -236,7 +227,6 @@ class WireTransfer
 		$this->routingNumber = "";
 		$this->status = \OpenAPI\OpenAPI\Models\Shared\WireTransferStatusEnum::CANCELED;
 		$this->submission = new \OpenAPI\OpenAPI\Models\Shared\WireTransferWireTransferSubmission();
-		$this->templateId = "";
 		$this->transactionId = "";
 		$this->type = \OpenAPI\OpenAPI\Models\Shared\WireTransferTypeEnum::WIRE_TRANSFER;
 	}

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteRetentionPolicyXAmzTargetEnum: string
 {
     case WORK_MAIL_SERVICE_DELETE_RETENTION_POLICY = 'WorkMailService.DeleteRetentionPolicy';

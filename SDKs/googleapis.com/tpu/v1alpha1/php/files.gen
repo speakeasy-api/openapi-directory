@@ -77,4 +77,6 @@ src/Models/Shared/ReimageNodeRequest.php
 src/Models/Shared/ListOperationsResponse.php
 src/Models/Shared/TensorFlowVersion.php
 src/Models/Shared/ListTensorFlowVersionsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

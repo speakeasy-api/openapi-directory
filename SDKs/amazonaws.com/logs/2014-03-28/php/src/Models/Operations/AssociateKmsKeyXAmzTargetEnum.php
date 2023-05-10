@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AssociateKmsKeyXAmzTargetEnum: string
 {
     case LOGS20140328_ASSOCIATE_KMS_KEY = 'Logs_20140328.AssociateKmsKey';

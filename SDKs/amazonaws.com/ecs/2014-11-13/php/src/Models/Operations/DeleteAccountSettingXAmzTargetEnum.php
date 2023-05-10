@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteAccountSettingXAmzTargetEnum: string
 {
     case AMAZON_EC2_CONTAINER_SERVICE_V20141113_DELETE_ACCOUNT_SETTING = 'AmazonEC2ContainerServiceV20141113.DeleteAccountSetting';

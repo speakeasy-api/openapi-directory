@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETRecordLifecycleActionHeartbeatActionEnum: string
 {
     case RECORD_LIFECYCLE_ACTION_HEARTBEAT = 'RecordLifecycleActionHeartbeat';

@@ -163,4 +163,6 @@ src/Models/Shared/CustomAttributeHistogramRequest.php
 src/Models/Shared/NumericBucketingOption.php
 src/Models/Shared/CompensationHistogramRequestTypeEnum.php
 src/Models/Shared/CompensationHistogramRequest.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

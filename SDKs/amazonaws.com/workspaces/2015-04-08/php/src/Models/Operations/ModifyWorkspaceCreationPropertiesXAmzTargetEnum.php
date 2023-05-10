@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ModifyWorkspaceCreationPropertiesXAmzTargetEnum: string
 {
     case WORKSPACES_SERVICE_MODIFY_WORKSPACE_CREATION_PROPERTIES = 'WorkspacesService.ModifyWorkspaceCreationProperties';

@@ -88,6 +88,16 @@ class DiaryAppointmentModel
     public ?\DateTime $end = null;
     
     /**
+     * Linked Guest Model:-
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\LinkedGuestModel> $linkedGuest
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('LinkedGuest')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\LinkedGuestModel>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $linkedGuest = null;
+    
+    /**
      * A collection of properties linked to the appointment:-
      * 
      * @var ?array<\OpenAPI\OpenAPI\Models\Shared\LinkedPropertiesModel> $linkedProperties
@@ -196,6 +206,7 @@ class DiaryAppointmentModel
 		$this->createdBy = null;
 		$this->eTag = null;
 		$this->end = null;
+		$this->linkedGuest = null;
 		$this->linkedProperties = null;
 		$this->nextRecurringDate = null;
 		$this->oid = null;

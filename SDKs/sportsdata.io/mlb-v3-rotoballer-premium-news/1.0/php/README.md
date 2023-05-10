@@ -30,17 +30,43 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\PremiumNewsRequest;
+use \OpenAPI\OpenAPI\Models\Operations\PremiumNewsFormatEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new PremiumNewsRequest();
+    $request->format = PremiumNewsFormatEnum::JSON;
+
+    $response = $sdk->premiumNews($request);
+
+    if ($response->news !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `premiumNews` - Premium News
-* `premiumNewsByDate` - Premium News by Date
-* `premiumNewsByPlayer` - Premium News by Player
+* [premiumNews](docs/sdk/README.md#premiumnews) - Premium News
+* [premiumNewsByDate](docs/sdk/README.md#premiumnewsbydate) - Premium News by Date
+* [premiumNewsByPlayer](docs/sdk/README.md#premiumnewsbyplayer) - Premium News by Player
 <!-- End SDK Available Operations -->
 
 ### Maturity

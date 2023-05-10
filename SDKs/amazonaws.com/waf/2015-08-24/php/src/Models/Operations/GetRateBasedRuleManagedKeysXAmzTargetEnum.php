@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetRateBasedRuleManagedKeysXAmzTargetEnum: string
 {
     case AWSWAF20150824_GET_RATE_BASED_RULE_MANAGED_KEYS = 'AWSWAF_20150824.GetRateBasedRuleManagedKeys';

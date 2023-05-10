@@ -128,6 +128,16 @@ class GoogleCloudIdentitytoolkitAdminV2TenantInput
     public ?GoogleCloudIdentitytoolkitAdminV2MonitoringConfig $monitoring = null;
     
     /**
+     * The reCAPTCHA Enterprise integration config.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleCloudIdentitytoolkitAdminV2RecaptchaConfigInput $recaptchaConfig
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('recaptchaConfig')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleCloudIdentitytoolkitAdminV2RecaptchaConfigInput')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleCloudIdentitytoolkitAdminV2RecaptchaConfigInput $recaptchaConfig = null;
+    
+    /**
      * Configures the regions where users are allowed to send verification SMS for the project or tenant. This is based on the calling code of the destination phone number.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleCloudIdentitytoolkitAdminV2SmsRegionConfig $smsRegionConfig
@@ -160,6 +170,7 @@ class GoogleCloudIdentitytoolkitAdminV2TenantInput
 		$this->inheritance = null;
 		$this->mfaConfig = null;
 		$this->monitoring = null;
+		$this->recaptchaConfig = null;
 		$this->smsRegionConfig = null;
 		$this->testPhoneNumbers = null;
 	}

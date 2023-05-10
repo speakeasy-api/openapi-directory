@@ -27,4 +27,5 @@ src/Models/Operations/GetUvResponse.php
 src/Models/Shared/Forecast.php
 src/Models/Shared/ProtectionResult.php
 src/Models/Shared/UvIndexResult.php
+docs/sdk/README.md
 USAGE.md

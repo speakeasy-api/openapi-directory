@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTPromoteReadReplicaDBClusterActionEnum: string
 {
     case PROMOTE_READ_REPLICA_DB_CLUSTER = 'PromoteReadReplicaDBCluster';

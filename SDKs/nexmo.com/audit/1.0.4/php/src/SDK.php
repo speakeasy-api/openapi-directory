@@ -188,9 +188,11 @@ class SDK
      * Get audit event types.
      * 
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetEventsOptionsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetEventsOptionsResponse
      */
 	public function getEventsOptions(
+        \OpenAPI\OpenAPI\Models\Operations\GetEventsOptionsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetEventsOptionsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -198,7 +200,8 @@ class SDK
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('OPTIONS', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('OPTIONS', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

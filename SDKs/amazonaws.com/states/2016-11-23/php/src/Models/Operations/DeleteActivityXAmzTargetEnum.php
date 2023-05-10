@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteActivityXAmzTargetEnum: string
 {
     case AWS_STEP_FUNCTIONS_DELETE_ACTIVITY = 'AWSStepFunctions.DeleteActivity';

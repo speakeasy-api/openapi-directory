@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * Properties - <p/>
+ * Properties - Properties associated with the Item.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

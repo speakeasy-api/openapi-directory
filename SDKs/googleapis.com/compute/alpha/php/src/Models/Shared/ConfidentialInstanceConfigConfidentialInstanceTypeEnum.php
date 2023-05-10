@@ -15,4 +15,5 @@ enum ConfidentialInstanceConfigConfidentialInstanceTypeEnum: string
     case CONFIDENTIAL_INSTANCE_TYPE_UNSPECIFIED = 'CONFIDENTIAL_INSTANCE_TYPE_UNSPECIFIED';
     case SEV = 'SEV';
     case SEV_SNP = 'SEV_SNP';
+    case TDX = 'TDX';
 }

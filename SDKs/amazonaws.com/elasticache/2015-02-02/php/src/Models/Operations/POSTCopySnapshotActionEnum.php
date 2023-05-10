@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCopySnapshotActionEnum: string
 {
     case COPY_SNAPSHOT = 'CopySnapshot';

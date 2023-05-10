@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum BatchDeleteBuildsXAmzTargetEnum: string
 {
     case CODE_BUILD20161006_BATCH_DELETE_BUILDS = 'CodeBuild_20161006.BatchDeleteBuilds';

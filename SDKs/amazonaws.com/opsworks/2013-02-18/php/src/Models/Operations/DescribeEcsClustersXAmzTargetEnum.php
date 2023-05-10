@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeEcsClustersXAmzTargetEnum: string
 {
     case OPS_WORKS20130218_DESCRIBE_ECS_CLUSTERS = 'OpsWorks_20130218.DescribeEcsClusters';

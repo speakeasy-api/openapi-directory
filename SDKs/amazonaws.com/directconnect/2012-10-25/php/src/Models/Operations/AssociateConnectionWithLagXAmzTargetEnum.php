@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AssociateConnectionWithLagXAmzTargetEnum: string
 {
     case OVERTURE_SERVICE_ASSOCIATE_CONNECTION_WITH_LAG = 'OvertureService.AssociateConnectionWithLag';

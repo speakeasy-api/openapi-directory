@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * DocumentClassifierOutputDataConfig - Provides output results configuration parameters for custom classifier jobs. 
+ * DocumentClassifierOutputDataConfig - Provide the location for output data from a custom classifier job. This field is mandatory if you are training a native classifier model.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

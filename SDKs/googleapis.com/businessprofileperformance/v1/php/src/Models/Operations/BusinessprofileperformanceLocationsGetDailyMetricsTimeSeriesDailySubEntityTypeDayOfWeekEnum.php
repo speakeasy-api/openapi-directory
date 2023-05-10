@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-/** Represents the day of the week. Eg: MONDAY. */
+/** Represents the day of the week. Eg: MONDAY. Currently supported DailyMetrics = NONE. */
 enum BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailySubEntityTypeDayOfWeekEnum: string
 {
     case DAY_OF_WEEK_UNSPECIFIED = 'DAY_OF_WEEK_UNSPECIFIED';

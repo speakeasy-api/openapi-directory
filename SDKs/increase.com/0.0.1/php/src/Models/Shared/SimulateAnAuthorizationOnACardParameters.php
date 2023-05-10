@@ -40,10 +40,21 @@ class SimulateAnAuthorizationOnACardParameters
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $digitalWalletTokenId = null;
     
+    /**
+     * The identifier of the Event Subscription to use. If provided, will override the default real time event subscription. Because you can only create one real time decision event subscription, you can use this field to route events to any specified event subscription for testing purposes.
+     * 
+     * @var ?string $eventSubscriptionId
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('event_subscription_id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $eventSubscriptionId = null;
+    
 	public function __construct()
 	{
 		$this->amount = 0;
 		$this->cardId = null;
 		$this->digitalWalletTokenId = null;
+		$this->eventSubscriptionId = null;
 	}
 }

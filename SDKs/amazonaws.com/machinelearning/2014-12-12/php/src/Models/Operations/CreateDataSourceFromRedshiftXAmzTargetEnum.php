@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateDataSourceFromRedshiftXAmzTargetEnum: string
 {
     case AMAZON_ML20141212_CREATE_DATA_SOURCE_FROM_REDSHIFT = 'AmazonML_20141212.CreateDataSourceFromRedshift';

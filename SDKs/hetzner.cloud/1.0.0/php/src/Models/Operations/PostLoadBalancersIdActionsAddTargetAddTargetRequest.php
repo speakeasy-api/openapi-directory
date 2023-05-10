@@ -12,14 +12,14 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 class PostLoadBalancersIdActionsAddTargetAddTargetRequest
 {
     /**
-     * IP targets where the traffic should be routed through. It is only possible to use the (Public or vSwitch) IPs of Hetzner Online Root Servers belonging to the project owner. IPs belonging to other users are blocked. Additionally IPs belonging to services provided by Hetzner Cloud (Servers, Load Balancers, ...) are blocked as well.
+     * IP targets where the traffic should be routed to. It is only possible to use the (Public or vSwitch) IPs of Hetzner Online Root Servers belonging to the project owner. IPs belonging to other users are blocked. Additionally IPs belonging to services provided by Hetzner Cloud (Servers, Load Balancers, ...) are blocked as well. Only present for target type "ip".
      * 
-     * @var ?\OpenAPI\OpenAPI\Models\Operations\PostLoadBalancersIdActionsAddTargetAddTargetRequestIp $ip
+     * @var ?\OpenAPI\OpenAPI\Models\Operations\PostLoadBalancersIdActionsAddTargetAddTargetRequestLoadBalancerTargetIP $ip
      */
 	#[\JMS\Serializer\Annotation\SerializedName('ip')]
-    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Operations\PostLoadBalancersIdActionsAddTargetAddTargetRequestIp')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Operations\PostLoadBalancersIdActionsAddTargetAddTargetRequestLoadBalancerTargetIP')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?PostLoadBalancersIdActionsAddTargetAddTargetRequestIp $ip = null;
+    public ?PostLoadBalancersIdActionsAddTargetAddTargetRequestLoadBalancerTargetIP $ip = null;
     
     /**
      * Configuration for label selector targets, required if type is `label_selector`

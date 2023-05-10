@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateDefaultMailDomainXAmzTargetEnum: string
 {
     case WORK_MAIL_SERVICE_UPDATE_DEFAULT_MAIL_DOMAIN = 'WorkMailService.UpdateDefaultMailDomain';

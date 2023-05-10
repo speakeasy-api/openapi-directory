@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DisassociateCreatedArtifactXAmzTargetEnum: string
 {
     case AWS_MIGRATION_HUB_DISASSOCIATE_CREATED_ARTIFACT = 'AWSMigrationHub.DisassociateCreatedArtifact';

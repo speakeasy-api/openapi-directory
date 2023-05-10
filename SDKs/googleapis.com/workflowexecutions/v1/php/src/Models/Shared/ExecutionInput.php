@@ -58,6 +58,16 @@ class ExecutionInput
     public ?array $labels = null;
     
     /**
+     * Describes an error related to the current state of the Execution resource.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\StateError $stateError
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('stateError')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\StateError')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?StateError $stateError = null;
+    
+    /**
      * Represents the current status of this execution.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\Status $status
@@ -73,6 +83,7 @@ class ExecutionInput
 		$this->callLogLevel = null;
 		$this->error = null;
 		$this->labels = null;
+		$this->stateError = null;
 		$this->status = null;
 	}
 }

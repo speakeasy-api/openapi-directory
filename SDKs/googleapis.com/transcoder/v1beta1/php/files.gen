@@ -87,4 +87,6 @@ src/Models/Shared/Progress.php
 src/Models/Shared/OriginUri.php
 src/Models/Shared/FailureDetail.php
 src/Models/Shared/ListJobsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

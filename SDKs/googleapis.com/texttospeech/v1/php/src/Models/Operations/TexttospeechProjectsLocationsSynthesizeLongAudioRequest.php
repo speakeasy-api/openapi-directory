@@ -71,7 +71,7 @@ class TexttospeechProjectsLocationsSynthesizeLongAudioRequest
     public ?string $oauthToken = null;
     
     /**
-     * The resource states of the request in the form of `projects/* /locations/* /voices/*`.
+     * The resource states of the request in the form of `projects/* /locations/*`.
      * 
      * @var string $parent
      */

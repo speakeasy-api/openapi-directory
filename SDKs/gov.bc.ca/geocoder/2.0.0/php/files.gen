@@ -103,4 +103,9 @@ src/Models/Operations/GetSitesSiteIDSubsitesOutputFormatOutputSrsEnum.php
 src/Models/Operations/GetSitesSiteIDSubsitesOutputFormatRequest.php
 src/Models/Operations/GetSitesSiteIDSubsitesOutputFormatResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/intersections/README.md
+docs/occupants/README.md
+docs/parcels/README.md
+docs/sites/README.md
 USAGE.md

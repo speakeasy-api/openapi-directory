@@ -52,4 +52,7 @@ src/Models/Shared/CreativeFilteringReasonsReasons.php
 src/Models/Shared/CreativeFilteringReasons.php
 src/Models/Shared/Creative.php
 src/Models/Shared/CreativesList.php
+docs/sdk/README.md
+docs/accounts/README.md
+docs/creatives/README.md
 USAGE.md

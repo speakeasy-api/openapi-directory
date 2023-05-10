@@ -111,4 +111,13 @@ src/Models/Shared/TagTypeMarshaller.php
 src/Models/Shared/TagLanguageMarshaller.php
 src/Models/Shared/TagLanguageMarshallerWrapped.php
 src/Models/Shared/TagTypeMarshallerWrapped.php
+docs/sdk/README.md
+docs/campaigns/README.md
+docs/languages/README.md
+docs/media/README.md
+docs/mediatypes/README.md
+docs/resources/README.md
+docs/sources/README.md
+docs/tags/README.md
+docs/usermedialists/README.md
 USAGE.md

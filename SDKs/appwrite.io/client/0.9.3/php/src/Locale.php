@@ -44,9 +44,11 @@ class Locale
      * 
      * ([IP Geolocation by DB-IP](https://db-ip.com))
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\LocaleGetSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\LocaleGetResponse
      */
 	public function localeGet(
+        \OpenAPI\OpenAPI\Models\Operations\LocaleGetSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\LocaleGetResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -54,7 +56,8 @@ class Locale
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -78,9 +81,11 @@ class Locale
      * 
      * List of all continents. You can use the locale header to get the data in a supported language.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\LocaleGetContinentsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\LocaleGetContinentsResponse
      */
 	public function localeGetContinents(
+        \OpenAPI\OpenAPI\Models\Operations\LocaleGetContinentsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\LocaleGetContinentsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -88,7 +93,8 @@ class Locale
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -112,9 +118,11 @@ class Locale
      * 
      * List of all countries. You can use the locale header to get the data in a supported language.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\LocaleGetCountriesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\LocaleGetCountriesResponse
      */
 	public function localeGetCountries(
+        \OpenAPI\OpenAPI\Models\Operations\LocaleGetCountriesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\LocaleGetCountriesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -122,7 +130,8 @@ class Locale
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -146,9 +155,11 @@ class Locale
      * 
      * List of all countries that are currently members of the EU. You can use the locale header to get the data in a supported language.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\LocaleGetCountriesEUSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\LocaleGetCountriesEUResponse
      */
 	public function localeGetCountriesEU(
+        \OpenAPI\OpenAPI\Models\Operations\LocaleGetCountriesEUSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\LocaleGetCountriesEUResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -156,7 +167,8 @@ class Locale
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -180,9 +192,11 @@ class Locale
      * 
      * List of all countries phone codes. You can use the locale header to get the data in a supported language.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\LocaleGetCountriesPhonesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\LocaleGetCountriesPhonesResponse
      */
 	public function localeGetCountriesPhones(
+        \OpenAPI\OpenAPI\Models\Operations\LocaleGetCountriesPhonesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\LocaleGetCountriesPhonesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -190,7 +204,8 @@ class Locale
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -214,9 +229,11 @@ class Locale
      * 
      * List of all currencies, including currency symbol, name, plural, and decimal digits for all major and minor currencies. You can use the locale header to get the data in a supported language.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\LocaleGetCurrenciesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\LocaleGetCurrenciesResponse
      */
 	public function localeGetCurrencies(
+        \OpenAPI\OpenAPI\Models\Operations\LocaleGetCurrenciesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\LocaleGetCurrenciesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -224,7 +241,8 @@ class Locale
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -248,9 +266,11 @@ class Locale
      * 
      * List of all languages classified by ISO 639-1 including 2-letter code, name in English, and name in the respective language.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\LocaleGetLanguagesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\LocaleGetLanguagesResponse
      */
 	public function localeGetLanguages(
+        \OpenAPI\OpenAPI\Models\Operations\LocaleGetLanguagesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\LocaleGetLanguagesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -258,7 +278,8 @@ class Locale
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

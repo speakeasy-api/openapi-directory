@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartRemediationExecutionXAmzTargetEnum: string
 {
     case STARLING_DOVE_SERVICE_START_REMEDIATION_EXECUTION = 'StarlingDoveService.StartRemediationExecution';

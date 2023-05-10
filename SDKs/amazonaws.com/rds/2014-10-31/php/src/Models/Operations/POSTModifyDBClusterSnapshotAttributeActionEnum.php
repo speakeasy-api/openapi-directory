@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTModifyDBClusterSnapshotAttributeActionEnum: string
 {
     case MODIFY_DB_CLUSTER_SNAPSHOT_ATTRIBUTE = 'ModifyDBClusterSnapshotAttribute';

@@ -310,6 +310,86 @@ class Projects
     }
 	
     /**
+     * Imports GooGet artifacts. The returned Operation will complete once the resources are imported. Package, Version, and File resources are created based on the imported artifacts. Imported artifacts that conflict with existing resources are ignored.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsImportRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsImportSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsImportResponse
+     */
+	public function artifactregistryProjectsLocationsRepositoriesGoogetArtifactsImport(
+        \OpenAPI\OpenAPI\Models\Operations\ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsImportRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsImportSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsImportResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{parent}/googetArtifacts:import', \OpenAPI\OpenAPI\Models\Operations\ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsImportRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "importGoogetArtifactsRequest", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsImportRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsImportResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Directly uploads a GooGet artifact. The returned Operation will complete once the resources are uploaded. Package, Version, and File resources are created based on the imported artifact. Imported artifacts that conflict with existing resources are ignored.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsUploadRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsUploadSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsUploadResponse
+     */
+	public function artifactregistryProjectsLocationsRepositoriesGoogetArtifactsUpload(
+        \OpenAPI\OpenAPI\Models\Operations\ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsUploadRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsUploadSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsUploadResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{parent}/googetArtifacts:create', \OpenAPI\OpenAPI\Models\Operations\ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsUploadRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "raw");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsUploadRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsUploadResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->uploadGoogetArtifactMediaResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\UploadGoogetArtifactMediaResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Directly uploads a KFP artifact. The returned Operation will complete once the resource is uploaded. Package, Version, and File resources will be created based on the uploaded artifact. Uploaded artifacts that conflict with existing resources will be overwritten.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ArtifactregistryProjectsLocationsRepositoriesKfpArtifactsUploadRequest $request

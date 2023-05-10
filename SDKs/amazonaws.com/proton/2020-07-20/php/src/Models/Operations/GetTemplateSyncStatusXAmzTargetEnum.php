@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetTemplateSyncStatusXAmzTargetEnum: string
 {
     case AWS_PROTON20200720_GET_TEMPLATE_SYNC_STATUS = 'AwsProton20200720.GetTemplateSyncStatus';

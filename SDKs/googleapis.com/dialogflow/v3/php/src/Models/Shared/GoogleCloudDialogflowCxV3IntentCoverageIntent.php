@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class GoogleCloudDialogflowCxV3IntentCoverageIntent
 {
     /**
-     * Whether or not the intent is covered by at least one of the agent's test cases.
+     * Whether the intent is covered by at least one of the agent's test cases.
      * 
      * @var ?bool $covered
      */

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetCrawlerMetricsXAmzTargetEnum: string
 {
     case AWS_GLUE_GET_CRAWLER_METRICS = 'AWSGlue.GetCrawlerMetrics';

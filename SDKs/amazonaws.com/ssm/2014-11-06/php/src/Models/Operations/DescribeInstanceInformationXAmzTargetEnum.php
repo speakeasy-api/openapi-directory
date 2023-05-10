@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeInstanceInformationXAmzTargetEnum: string
 {
     case AMAZON_SSM_DESCRIBE_INSTANCE_INFORMATION = 'AmazonSSM.DescribeInstanceInformation';

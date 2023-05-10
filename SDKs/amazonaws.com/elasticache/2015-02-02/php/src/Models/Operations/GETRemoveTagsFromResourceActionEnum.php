@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETRemoveTagsFromResourceActionEnum: string
 {
     case REMOVE_TAGS_FROM_RESOURCE = 'RemoveTagsFromResource';

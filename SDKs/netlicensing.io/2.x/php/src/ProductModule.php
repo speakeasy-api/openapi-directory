@@ -180,9 +180,11 @@ class ProductModule
      * 
      * Return a list of all Product Modules for the current Vendor
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListProductModulesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ListProductModulesResponse
      */
 	public function listProductModules(
+        \OpenAPI\OpenAPI\Models\Operations\ListProductModulesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ListProductModulesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -190,7 +192,8 @@ class ProductModule
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

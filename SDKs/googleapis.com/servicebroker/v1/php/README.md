@@ -30,23 +30,66 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\ServicebrokerGetIamPolicyRequest;
+use \OpenAPI\OpenAPI\Models\Shared\XgafvEnum;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+use \OpenAPI\OpenAPI\Models\Operations\ServicebrokerGetIamPolicySecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new ServicebrokerGetIamPolicyRequest();
+    $request->dollarXgafv = XgafvEnum::TWO;
+    $request->accessToken = 'provident';
+    $request->alt = AltEnum::PROTO;
+    $request->callback = 'quibusdam';
+    $request->fields = 'unde';
+    $request->key = 'nulla';
+    $request->oauthToken = 'corrupti';
+    $request->optionsRequestedPolicyVersion = 847252;
+    $request->prettyPrint = false;
+    $request->quotaUser = 'vel';
+    $request->resource = 'error';
+    $request->uploadType = 'deserunt';
+    $request->uploadProtocol = 'suscipit';
+
+    $requestSecurity = new ServicebrokerGetIamPolicySecurity();
+    $requestSecurity->oauth2 = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+    $requestSecurity->oauth2c = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+
+    $response = $sdk->v1->servicebrokerGetIamPolicy($request, $requestSecurity);
+
+    if ($response->body !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### v1
+### [v1](docs/v1/README.md)
 
-* `servicebrokerGetIamPolicy` - Gets the access control policy for a resource.
+* [servicebrokerGetIamPolicy](docs/v1/README.md#servicebrokergetiampolicy) - Gets the access control policy for a resource.
 Returns an empty policy if the resource exists and does not have a policy
 set.
-* `servicebrokerSetIamPolicy` - Sets the access control policy on the specified resource. Replaces any
+* [servicebrokerSetIamPolicy](docs/v1/README.md#servicebrokersetiampolicy) - Sets the access control policy on the specified resource. Replaces any
 existing policy.
 
 Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
-* `servicebrokerTestIamPermissions` - Returns permissions that a caller has on the specified resource.
+* [servicebrokerTestIamPermissions](docs/v1/README.md#servicebrokertestiampermissions) - Returns permissions that a caller has on the specified resource.
 If the resource does not exist, this will return an empty set of
 permissions, not a NOT_FOUND error.
 

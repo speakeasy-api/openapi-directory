@@ -35,4 +35,7 @@ src/Models/Shared/CollectInformation.php
 src/Models/Shared/SchemeBasicAuth.php
 src/Models/Shared/GetPciUrlResponse.php
 src/Models/Shared/GetPciUrlRequest.php
+docs/sdk/README.md
+docs/hostedonboardingpage/README.md
+docs/pcicompliancequestionnairepage/README.md
 USAGE.md

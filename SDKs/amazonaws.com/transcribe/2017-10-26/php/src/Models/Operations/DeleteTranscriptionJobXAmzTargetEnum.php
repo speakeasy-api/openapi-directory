@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteTranscriptionJobXAmzTargetEnum: string
 {
     case TRANSCRIBE_DELETE_TRANSCRIPTION_JOB = 'Transcribe.DeleteTranscriptionJob';

@@ -39,4 +39,6 @@ src/Models/Shared/RecurringTokenServiceEnum.php
 src/Models/Shared/Recurring.php
 src/Models/Shared/MerchantDetails.php
 src/Models/Shared/CostEstimateAssumptions.php
+docs/sdk/README.md
+docs/general/README.md
 USAGE.md

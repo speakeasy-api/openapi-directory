@@ -38,6 +38,26 @@ class GoogleCloudRetailV2alphaCatalogAttribute
     public ?GoogleCloudRetailV2alphaCatalogAttributeExactSearchableOptionEnum $exactSearchableOption = null;
     
     /**
+     * If you don't set the facet SearchRequest.FacetSpec.FacetKey.intervals to a numerical attribute, then a weekly pipeline calculates intervals using some percentiles on the distribution of all its product numerical attribute values. The calculated intervals might not be ideal for some attributes. Therefore, we give you the option the overwrite them. For any numerical attribute that is passed as a facet key in the request along with given intervals, the given intervals are the facet intervals returned in the response.
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\GoogleCloudRetailV2alphaInterval> $facetIntervals
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('facetIntervals')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\GoogleCloudRetailV2alphaInterval>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $facetIntervals = null;
+    
+    /**
+     * Each instance represents a list of attribute values to ignore as facet values for a specific time range.
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\GoogleCloudRetailV2alphaCatalogAttributeIgnoredFacetValues> $ignoredFacetValues
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('ignoredFacetValues')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\GoogleCloudRetailV2alphaCatalogAttributeIgnoredFacetValues>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $ignoredFacetValues = null;
+    
+    /**
      * Output only. Indicates whether this attribute has been used by any products. `True` if at least one Product is using this attribute in Product.attributes. Otherwise, this field is `False`. CatalogAttribute can be pre-loaded by using CatalogService.AddCatalogAttribute, CatalogService.ImportCatalogAttributes, or CatalogService.UpdateAttributesConfig APIs. This field is `False` for pre-loaded CatalogAttributes. Only pre-loaded catalog attributes that are neither in use by products nor predefined can be deleted. Catalog attributes that are either in use by products or are predefined attributes cannot be deleted; however, their configuration properties will reset to default values upon removal request. After catalog changes, it takes about 10 minutes for this field to update.
      * 
      * @var ?bool $inUse
@@ -111,6 +131,8 @@ class GoogleCloudRetailV2alphaCatalogAttribute
 	{
 		$this->dynamicFacetableOption = null;
 		$this->exactSearchableOption = null;
+		$this->facetIntervals = null;
+		$this->ignoredFacetValues = null;
 		$this->inUse = null;
 		$this->indexableOption = null;
 		$this->key = null;

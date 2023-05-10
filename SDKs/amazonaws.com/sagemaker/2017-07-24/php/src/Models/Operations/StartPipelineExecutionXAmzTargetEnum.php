@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartPipelineExecutionXAmzTargetEnum: string
 {
     case SAGE_MAKER_START_PIPELINE_EXECUTION = 'SageMaker.StartPipelineExecution';

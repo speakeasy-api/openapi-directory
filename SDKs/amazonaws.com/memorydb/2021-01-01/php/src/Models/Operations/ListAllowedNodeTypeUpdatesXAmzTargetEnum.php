@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListAllowedNodeTypeUpdatesXAmzTargetEnum: string
 {
     case AMAZON_MEMORY_DB_LIST_ALLOWED_NODE_TYPE_UPDATES = 'AmazonMemoryDB.ListAllowedNodeTypeUpdates';

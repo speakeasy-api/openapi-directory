@@ -107,4 +107,6 @@ src/Models/Shared/ListRuntimesResponse.php
 src/Models/Shared/RuntimeEnvironmentEnum.php
 src/Models/Shared/RuntimeStageEnum.php
 src/Models/Shared/Runtime.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

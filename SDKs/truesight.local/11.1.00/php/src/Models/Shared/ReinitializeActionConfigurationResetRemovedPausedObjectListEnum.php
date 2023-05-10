@@ -10,8 +10,8 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /** When set to <em>1</em>, reactivates the monitoring of all paused or removed objects. */
-enum ReinitializeActionConfigurationResetRemovedPausedObjectListEnum: string
+enum ReinitializeActionConfigurationResetRemovedPausedObjectListEnum: int
 {
-    case ZERO = '0';
-    case ONE = '1';
+    case ZERO = 0;
+    case ONE = 1;
 }

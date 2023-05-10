@@ -30,18 +30,56 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\MybusinesslodgingLocationsGetLodgingRequest;
+use \OpenAPI\OpenAPI\Models\Shared\XgafvEnum;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new MybusinesslodgingLocationsGetLodgingRequest();
+    $request->dollarXgafv = XgafvEnum::TWO;
+    $request->accessToken = 'provident';
+    $request->alt = AltEnum::PROTO;
+    $request->callback = 'quibusdam';
+    $request->fields = 'unde';
+    $request->key = 'nulla';
+    $request->name = 'Dallas Kassulke';
+    $request->oauthToken = 'suscipit';
+    $request->prettyPrint = false;
+    $request->quotaUser = 'iure';
+    $request->readMask = 'magnam';
+    $request->uploadType = 'debitis';
+    $request->uploadProtocol = 'ipsa';
+
+    $response = $sdk->locations->mybusinesslodgingLocationsGetLodging($request);
+
+    if ($response->lodging !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### locations
+### [locations](docs/locations/README.md)
 
-* `mybusinesslodgingLocationsGetLodging` - Returns the Lodging of a specific location.
-* `mybusinesslodgingLocationsLodgingGetGoogleUpdated` - Returns the Google updated Lodging of a specific location.
-* `mybusinesslodgingLocationsUpdateLodging` - Updates the Lodging of a specific location.
+* [mybusinesslodgingLocationsGetLodging](docs/locations/README.md#mybusinesslodginglocationsgetlodging) - Returns the Lodging of a specific location.
+* [mybusinesslodgingLocationsLodgingGetGoogleUpdated](docs/locations/README.md#mybusinesslodginglocationslodginggetgoogleupdated) - Returns the Google updated Lodging of a specific location.
+* [mybusinesslodgingLocationsUpdateLodging](docs/locations/README.md#mybusinesslodginglocationsupdatelodging) - Updates the Lodging of a specific location.
 <!-- End SDK Available Operations -->
 
 ### Maturity

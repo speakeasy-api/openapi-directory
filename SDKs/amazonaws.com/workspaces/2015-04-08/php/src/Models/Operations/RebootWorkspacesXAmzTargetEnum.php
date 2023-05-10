@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RebootWorkspacesXAmzTargetEnum: string
 {
     case WORKSPACES_SERVICE_REBOOT_WORKSPACES = 'WorkspacesService.RebootWorkspaces';

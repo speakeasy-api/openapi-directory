@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeTableReplicaAutoScalingXAmzTargetEnum: string
 {
     case DYNAMO_DB20120810_DESCRIBE_TABLE_REPLICA_AUTO_SCALING = 'DynamoDB_20120810.DescribeTableReplicaAutoScaling';

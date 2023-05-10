@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AddApplicationVpcConfigurationXAmzTargetEnum: string
 {
     case KINESIS_ANALYTICS20180523_ADD_APPLICATION_VPC_CONFIGURATION = 'KinesisAnalytics_20180523.AddApplicationVpcConfiguration';

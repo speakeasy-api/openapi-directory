@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTUpdateTagsForResourceActionEnum: string
 {
     case UPDATE_TAGS_FOR_RESOURCE = 'UpdateTagsForResource';

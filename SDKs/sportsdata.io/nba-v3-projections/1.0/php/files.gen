@@ -59,4 +59,5 @@ src/Models/Shared/PlayerSeasonProjection.php
 src/Models/Shared/StartingLineups.php
 src/Models/Shared/Lineup.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

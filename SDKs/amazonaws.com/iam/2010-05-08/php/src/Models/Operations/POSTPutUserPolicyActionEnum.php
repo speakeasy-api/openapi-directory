@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTPutUserPolicyActionEnum: string
 {
     case PUT_USER_POLICY = 'PutUserPolicy';

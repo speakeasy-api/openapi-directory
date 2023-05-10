@@ -44,4 +44,5 @@ src/Models/Shared/ListLinuxSubscriptionsResponse.php
 src/Models/Shared/Subscription.php
 src/Models/Shared/UpdateServiceSettingsResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

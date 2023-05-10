@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetWorkspaceSlugOrganizationsOrganizationIdActivitiesSortEnum: string
 {
     case OCCURRED_AT = 'occurred_at';

@@ -30,148 +30,172 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\AccidentStatsGetRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new AccidentStatsGetRequest();
+    $request->year = 548814;
+
+    $response = $sdk->accidentStats->accidentStatsGet($request);
+
+    if ($response->tflApiPresentationEntitiesAccidentStatsAccidentDetails !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### accidentStats
+### [accidentStats](docs/accidentstats/README.md)
 
-* `accidentStatsGet` - Gets all accident details for accidents occuring in the specified year
+* [accidentStatsGet](docs/accidentstats/README.md#accidentstatsget) - Gets all accident details for accidents occuring in the specified year
 
-### airQuality
+### [airQuality](docs/airquality/README.md)
 
-* `airQualityGet` - Gets air quality data feed
+* [airQualityGet](docs/airquality/README.md#airqualityget) - Gets air quality data feed
 
-### bikePoint
+### [bikePoint](docs/bikepoint/README.md)
 
-* `bikePointGet` - Gets the bike point with the given id.
-* `bikePointGetAll` - Gets all bike point locations. The Place object has an addtionalProperties array which contains the nbBikes, nbDocks and nbSpaces
+* [bikePointGet](docs/bikepoint/README.md#bikepointget) - Gets the bike point with the given id.
+* [bikePointGetAll](docs/bikepoint/README.md#bikepointgetall) - Gets all bike point locations. The Place object has an addtionalProperties array which contains the nbBikes, nbDocks and nbSpaces
             numbers which give the status of the BikePoint. A mismatch in these numbers i.e. nbDocks - (nbBikes + nbSpaces) != 0 indicates broken docks.
-* `bikePointSearch` - Search for bike stations by their name, a bike point's name often contains information about the name of the street
+* [bikePointSearch](docs/bikepoint/README.md#bikepointsearch) - Search for bike stations by their name, a bike point's name often contains information about the name of the street
             or nearby landmarks, for example. Note that the search result does not contain the PlaceProperties i.e. the status
             or occupancy of the BikePoint, to get that information you should retrieve the BikePoint by its id on /BikePoint/id.
 
-### cabwise
+### [cabwise](docs/cabwise/README.md)
 
-* `cabwiseGet` - Gets taxis and minicabs contact information
+* [cabwiseGet](docs/cabwise/README.md#cabwiseget) - Gets taxis and minicabs contact information
 
-### journey
+### [journey](docs/journey/README.md)
 
-* `journeyJourneyResults` - Perform a Journey Planner search from the parameters specified in simple types
-* `journeyMeta` - Gets a list of all of the available journey planner modes
+* [journeyJourneyResults](docs/journey/README.md#journeyjourneyresults) - Perform a Journey Planner search from the parameters specified in simple types
+* [journeyMeta](docs/journey/README.md#journeymeta) - Gets a list of all of the available journey planner modes
 
-### line
+### [line](docs/line/README.md)
 
-* `lineArrivals` - Get the list of arrival predictions for given line ids based at the given stop
-* `lineDisruption` - Get disruptions for the given line ids
-* `lineDisruptionByMode` - Get disruptions for all lines of the given modes.
-* `lineGet` - Gets lines that match the specified line ids.
-* `lineGetByMode` - Gets lines that serve the given modes.
-* `lineLineRoutesByIds` - Get all valid routes for given line ids, including the name and id of the originating and terminating stops for each route.
-* `lineMetaDisruptionCategories` - Gets a list of valid disruption categories
-* `lineMetaModes` - Gets a list of valid modes
-* `lineMetaServiceTypes` - Gets a list of valid ServiceTypes to filter on
-* `lineMetaSeverity` - Gets a list of valid severity codes
-* `lineRoute` - Get all valid routes for all lines, including the name and id of the originating and terminating stops for each route.
-* `lineRouteByMode` - Gets all lines and their valid routes for given modes, including the name and id of the originating and terminating stops for each route
-* `lineRouteSequence` - Gets all valid routes for given line id, including the sequence of stops on each route.
-* `lineSearch` - Search for lines or routes matching the query string
-* `lineStatus` - Gets the line status for given line ids during the provided dates e.g Minor Delays
-* `lineStatusByIds` - Gets the line status of for given line ids e.g Minor Delays
-* `lineStatusByMode` - Gets the line status of for all lines for the given modes
-* `lineStatusBySeverity` - Gets the line status for all lines with a given severity
+* [lineArrivals](docs/line/README.md#linearrivals) - Get the list of arrival predictions for given line ids based at the given stop
+* [lineDisruption](docs/line/README.md#linedisruption) - Get disruptions for the given line ids
+* [lineDisruptionByMode](docs/line/README.md#linedisruptionbymode) - Get disruptions for all lines of the given modes.
+* [lineGet](docs/line/README.md#lineget) - Gets lines that match the specified line ids.
+* [lineGetByMode](docs/line/README.md#linegetbymode) - Gets lines that serve the given modes.
+* [lineLineRoutesByIds](docs/line/README.md#linelineroutesbyids) - Get all valid routes for given line ids, including the name and id of the originating and terminating stops for each route.
+* [lineMetaDisruptionCategories](docs/line/README.md#linemetadisruptioncategories) - Gets a list of valid disruption categories
+* [lineMetaModes](docs/line/README.md#linemetamodes) - Gets a list of valid modes
+* [lineMetaServiceTypes](docs/line/README.md#linemetaservicetypes) - Gets a list of valid ServiceTypes to filter on
+* [lineMetaSeverity](docs/line/README.md#linemetaseverity) - Gets a list of valid severity codes
+* [lineRoute](docs/line/README.md#lineroute) - Get all valid routes for all lines, including the name and id of the originating and terminating stops for each route.
+* [lineRouteByMode](docs/line/README.md#lineroutebymode) - Gets all lines and their valid routes for given modes, including the name and id of the originating and terminating stops for each route
+* [lineRouteSequence](docs/line/README.md#lineroutesequence) - Gets all valid routes for given line id, including the sequence of stops on each route.
+* [lineSearch](docs/line/README.md#linesearch) - Search for lines or routes matching the query string
+* [lineStatus](docs/line/README.md#linestatus) - Gets the line status for given line ids during the provided dates e.g Minor Delays
+* [lineStatusByIds](docs/line/README.md#linestatusbyids) - Gets the line status of for given line ids e.g Minor Delays
+* [lineStatusByMode](docs/line/README.md#linestatusbymode) - Gets the line status of for all lines for the given modes
+* [lineStatusBySeverity](docs/line/README.md#linestatusbyseverity) - Gets the line status for all lines with a given severity
             A list of valid severity codes can be obtained from a call to Line/Meta/Severity
-* `lineStopPoints` - Gets a list of the stations that serve the given line id
-* `lineTimetable` - Gets the timetable for a specified station on the give line
-* `lineTimetableTo` - Gets the timetable for a specified station on the give line with specified destination
+* [lineStopPoints](docs/line/README.md#linestoppoints) - Gets a list of the stations that serve the given line id
+* [lineTimetable](docs/line/README.md#linetimetable) - Gets the timetable for a specified station on the give line
+* [lineTimetableTo](docs/line/README.md#linetimetableto) - Gets the timetable for a specified station on the give line with specified destination
 
-### mode
+### [mode](docs/mode/README.md)
 
-* `modeArrivals` - Gets the next arrival predictions for all stops of a given mode
-* `modeGetActiveServiceTypes` - Returns the service type active for a mode.
+* [modeArrivals](docs/mode/README.md#modearrivals) - Gets the next arrival predictions for all stops of a given mode
+* [modeGetActiveServiceTypes](docs/mode/README.md#modegetactiveservicetypes) - Returns the service type active for a mode.
             Currently only supports tube
 
-### occupancy
+### [occupancy](docs/occupancy/README.md)
 
-* `occupancyGet` - Gets the occupancy for a car park with a given id
-* `occupancyGetAllChargeConnectorStatus` - Gets the occupancy for all charge connectors
-* `occupancyGetBikePointsOccupancies` - Get the occupancy for bike points.
-* `occupancyGetChargeConnectorStatus` - Gets the occupancy for a charge connectors with a given id (sourceSystemPlaceId)
-* `getOccupancyCarPark` - Gets the occupancy for all car parks that have occupancy data
+* [occupancyGet](docs/occupancy/README.md#occupancyget) - Gets the occupancy for a car park with a given id
+* [occupancyGetAllChargeConnectorStatus](docs/occupancy/README.md#occupancygetallchargeconnectorstatus) - Gets the occupancy for all charge connectors
+* [occupancyGetBikePointsOccupancies](docs/occupancy/README.md#occupancygetbikepointsoccupancies) - Get the occupancy for bike points.
+* [occupancyGetChargeConnectorStatus](docs/occupancy/README.md#occupancygetchargeconnectorstatus) - Gets the occupancy for a charge connectors with a given id (sourceSystemPlaceId)
+* [getOccupancyCarPark](docs/occupancy/README.md#getoccupancycarpark) - Gets the occupancy for all car parks that have occupancy data
 
-### place
+### [place](docs/place/README.md)
 
-* `placeGet` - Gets the place with the given id.
-* `placeGetAt` - Gets any places of the given type whose geography intersects the given latitude and longitude. In practice this means the Place
+* [placeGet](docs/place/README.md#placeget) - Gets the place with the given id.
+* [placeGetAt](docs/place/README.md#placegetat) - Gets any places of the given type whose geography intersects the given latitude and longitude. In practice this means the Place
             must be polygonal e.g. a BoroughBoundary.
-* `placeGetByGeo` - Gets the places that lie within a geographic region. The geographic region of interest can either be specified
+* [placeGetByGeo](docs/place/README.md#placegetbygeo) - Gets the places that lie within a geographic region. The geographic region of interest can either be specified
             by using a lat/lon geo-point and a radius in metres to return places within the locus defined by the lat/lon of
             its centre or alternatively, by the use of a bounding box defined by the lat/lon of its north-west and south-east corners.
             Optionally filters on type and can strip properties for a smaller payload.
-* `placeGetByType` - Gets all places of a given type
-* `placeGetOverlay` - Gets the place overlay for a given set of co-ordinates and a given width/height.
-* `placeGetStreetsByPostCode` - Gets the set of streets associated with a post code.
-* `placeMetaCategories` - Gets a list of all of the available place property categories and keys.
-* `placeMetaPlaceTypes` - Gets a list of the available types of Place.
-* `placeSearch` - Gets all places that matches the given query
+* [placeGetByType](docs/place/README.md#placegetbytype) - Gets all places of a given type
+* [placeGetOverlay](docs/place/README.md#placegetoverlay) - Gets the place overlay for a given set of co-ordinates and a given width/height.
+* [placeGetStreetsByPostCode](docs/place/README.md#placegetstreetsbypostcode) - Gets the set of streets associated with a post code.
+* [placeMetaCategories](docs/place/README.md#placemetacategories) - Gets a list of all of the available place property categories and keys.
+* [placeMetaPlaceTypes](docs/place/README.md#placemetaplacetypes) - Gets a list of the available types of Place.
+* [placeSearch](docs/place/README.md#placesearch) - Gets all places that matches the given query
 
-### road
+### [road](docs/road/README.md)
 
-* `roadDisruptedStreets` - Gets a list of disrupted streets. If no date filters are provided, current disruptions are returned.
-* `roadDisruption` - Get active disruptions, filtered by road ids
-* `roadDisruptionById` - Gets a list of active disruptions filtered by disruption Ids.
-* `roadGet` - Gets all roads managed by TfL
-* `roadMetaCategories` - Gets a list of valid RoadDisruption categories
-* `roadMetaSeverities` - Gets a list of valid RoadDisruption severity codes
-* `roadStatus` - Gets the specified roads with the status aggregated over the date range specified, or now until the end of today if no dates are passed.
-* `getRoadIds` - Gets the road with the specified id (e.g. A1)
+* [roadDisruptedStreets](docs/road/README.md#roaddisruptedstreets) - Gets a list of disrupted streets. If no date filters are provided, current disruptions are returned.
+* [roadDisruption](docs/road/README.md#roaddisruption) - Get active disruptions, filtered by road ids
+* [roadDisruptionById](docs/road/README.md#roaddisruptionbyid) - Gets a list of active disruptions filtered by disruption Ids.
+* [roadGet](docs/road/README.md#roadget) - Gets all roads managed by TfL
+* [roadMetaCategories](docs/road/README.md#roadmetacategories) - Gets a list of valid RoadDisruption categories
+* [roadMetaSeverities](docs/road/README.md#roadmetaseverities) - Gets a list of valid RoadDisruption severity codes
+* [roadStatus](docs/road/README.md#roadstatus) - Gets the specified roads with the status aggregated over the date range specified, or now until the end of today if no dates are passed.
+* [getRoadIds](docs/road/README.md#getroadids) - Gets the road with the specified id (e.g. A1)
 
-### search
+### [search](docs/search/README.md)
 
-* `searchBusSchedules` - Searches the bus schedules folder on S3 for a given bus number.
-* `searchGet` - Search the site for occurrences of the query string. The maximum number of results returned is equal to the maximum page size
+* [searchBusSchedules](docs/search/README.md#searchbusschedules) - Searches the bus schedules folder on S3 for a given bus number.
+* [searchGet](docs/search/README.md#searchget) - Search the site for occurrences of the query string. The maximum number of results returned is equal to the maximum page size
             of 100. To return subsequent pages, use the paginated overload.
-* `searchMetaCategories` - Gets the available search categories.
-* `searchMetaSearchProviders` - Gets the available searchProvider names.
-* `searchMetaSorts` - Gets the available sorting options.
+* [searchMetaCategories](docs/search/README.md#searchmetacategories) - Gets the available search categories.
+* [searchMetaSearchProviders](docs/search/README.md#searchmetasearchproviders) - Gets the available searchProvider names.
+* [searchMetaSorts](docs/search/README.md#searchmetasorts) - Gets the available sorting options.
 
-### stopPoint
+### [stopPoint](docs/stoppoint/README.md)
 
-* `stopPointArrivalDepartures` - Gets the list of arrival and departure predictions for the given stop point id (overground, Elizabeth line and thameslink only)
-* `stopPointArrivals` - Gets the list of arrival predictions for the given stop point id
-* `stopPointCrowding` - Gets all the Crowding data (static) for the StopPointId, plus crowding data for a given line and optionally a particular direction.
-* `stopPointDirection` - Returns the canonical direction, "inbound" or "outbound", for a given pair of stop point Ids in the direction from -&gt; to.
-* `stopPointDisruption` - Gets all disruptions for the specified StopPointId, plus disruptions for any child Naptan records it may have.
-* `stopPointDisruptionByMode` - Gets a distinct list of disrupted stop points for the given modes
-* `stopPointGet` - Gets a list of StopPoints corresponding to the given list of stop ids.
-* `stopPointGetByGeoPoint` - Gets a list of StopPoints within {radius} by the specified criteria
-* `stopPointGetByMode` - Gets a list of StopPoints filtered by the modes available at that StopPoint.
-* `stopPointGetBySms` - Gets a StopPoint for a given sms code.
-* `stopPointGetByType` - Gets all stop points of a given type
-* `stopPointGetByTypeWithPagination` - Gets all the stop points of given type(s) with a page number
-* `stopPointGetCarParksById` - Get car parks corresponding to the given stop point id.
-* `stopPointGetServiceTypes` - Gets the service types for a given stoppoint
-* `stopPointGetTaxiRanksByIds` - Gets a list of taxi ranks corresponding to the given stop point id.
-* `stopPointMetaCategories` - Gets the list of available StopPoint additional information categories
-* `stopPointMetaModes` - Gets the list of available StopPoint modes
-* `stopPointMetaStopTypes` - Gets the list of available StopPoint types
-* `stopPointReachableFrom` - Gets Stopoints that are reachable from a station/line combination.
-* `stopPointRoute` - Returns the route sections for all the lines that service the given stop point ids
-* `stopPointSearch` - Search StopPoints by their common name, or their 5-digit Countdown Bus Stop Code.
-* `getStopPointSearch` - Search StopPoints by their common name, or their 5-digit Countdown Bus Stop Code.
-* `getStopPointIdPlaceTypes` - Get a list of places corresponding to a given id and place types.
+* [stopPointArrivalDepartures](docs/stoppoint/README.md#stoppointarrivaldepartures) - Gets the list of arrival and departure predictions for the given stop point id (overground, Elizabeth line and thameslink only)
+* [stopPointArrivals](docs/stoppoint/README.md#stoppointarrivals) - Gets the list of arrival predictions for the given stop point id
+* [stopPointCrowding](docs/stoppoint/README.md#stoppointcrowding) - Gets all the Crowding data (static) for the StopPointId, plus crowding data for a given line and optionally a particular direction.
+* [stopPointDirection](docs/stoppoint/README.md#stoppointdirection) - Returns the canonical direction, "inbound" or "outbound", for a given pair of stop point Ids in the direction from -&gt; to.
+* [stopPointDisruption](docs/stoppoint/README.md#stoppointdisruption) - Gets all disruptions for the specified StopPointId, plus disruptions for any child Naptan records it may have.
+* [stopPointDisruptionByMode](docs/stoppoint/README.md#stoppointdisruptionbymode) - Gets a distinct list of disrupted stop points for the given modes
+* [stopPointGet](docs/stoppoint/README.md#stoppointget) - Gets a list of StopPoints corresponding to the given list of stop ids.
+* [stopPointGetByGeoPoint](docs/stoppoint/README.md#stoppointgetbygeopoint) - Gets a list of StopPoints within {radius} by the specified criteria
+* [stopPointGetByMode](docs/stoppoint/README.md#stoppointgetbymode) - Gets a list of StopPoints filtered by the modes available at that StopPoint.
+* [stopPointGetBySms](docs/stoppoint/README.md#stoppointgetbysms) - Gets a StopPoint for a given sms code.
+* [stopPointGetByType](docs/stoppoint/README.md#stoppointgetbytype) - Gets all stop points of a given type
+* [stopPointGetByTypeWithPagination](docs/stoppoint/README.md#stoppointgetbytypewithpagination) - Gets all the stop points of given type(s) with a page number
+* [stopPointGetCarParksById](docs/stoppoint/README.md#stoppointgetcarparksbyid) - Get car parks corresponding to the given stop point id.
+* [stopPointGetServiceTypes](docs/stoppoint/README.md#stoppointgetservicetypes) - Gets the service types for a given stoppoint
+* [stopPointGetTaxiRanksByIds](docs/stoppoint/README.md#stoppointgettaxiranksbyids) - Gets a list of taxi ranks corresponding to the given stop point id.
+* [stopPointMetaCategories](docs/stoppoint/README.md#stoppointmetacategories) - Gets the list of available StopPoint additional information categories
+* [stopPointMetaModes](docs/stoppoint/README.md#stoppointmetamodes) - Gets the list of available StopPoint modes
+* [stopPointMetaStopTypes](docs/stoppoint/README.md#stoppointmetastoptypes) - Gets the list of available StopPoint types
+* [stopPointReachableFrom](docs/stoppoint/README.md#stoppointreachablefrom) - Gets Stopoints that are reachable from a station/line combination.
+* [stopPointRoute](docs/stoppoint/README.md#stoppointroute) - Returns the route sections for all the lines that service the given stop point ids
+* [stopPointSearch](docs/stoppoint/README.md#stoppointsearch) - Search StopPoints by their common name, or their 5-digit Countdown Bus Stop Code.
+* [getStopPointSearch](docs/stoppoint/README.md#getstoppointsearch) - Search StopPoints by their common name, or their 5-digit Countdown Bus Stop Code.
+* [getStopPointIdPlaceTypes](docs/stoppoint/README.md#getstoppointidplacetypes) - Get a list of places corresponding to a given id and place types.
 
-### travelTime
+### [travelTime](docs/traveltime/README.md)
 
-* `travelTimeGetCompareOverlay` - Gets the TravelTime overlay.
-* `travelTimeGetOverlay` - Gets the TravelTime overlay.
+* [travelTimeGetCompareOverlay](docs/traveltime/README.md#traveltimegetcompareoverlay) - Gets the TravelTime overlay.
+* [travelTimeGetOverlay](docs/traveltime/README.md#traveltimegetoverlay) - Gets the TravelTime overlay.
 
-### vehicle
+### [vehicle](docs/vehicle/README.md)
 
-* `vehicleGet` - Gets the predictions for a given list of vehicle Id's.
+* [vehicleGet](docs/vehicle/README.md#vehicleget) - Gets the predictions for a given list of vehicle Id's.
 <!-- End SDK Available Operations -->
 
 ### Maturity

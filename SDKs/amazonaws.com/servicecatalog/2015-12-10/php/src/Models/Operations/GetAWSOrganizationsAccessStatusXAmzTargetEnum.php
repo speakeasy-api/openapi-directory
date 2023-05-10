@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetAWSOrganizationsAccessStatusXAmzTargetEnum: string
 {
     case AWS242_SERVICE_CATALOG_SERVICE_GET_AWS_ORGANIZATIONS_ACCESS_STATUS = 'AWS242ServiceCatalogService.GetAWSOrganizationsAccessStatus';

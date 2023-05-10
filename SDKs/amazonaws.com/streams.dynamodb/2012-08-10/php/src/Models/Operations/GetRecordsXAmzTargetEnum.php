@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetRecordsXAmzTargetEnum: string
 {
     case DYNAMO_DB_STREAMS20120810_GET_RECORDS = 'DynamoDBStreams_20120810.GetRecords';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteUsageLimitActionEnum: string
 {
     case DELETE_USAGE_LIMIT = 'DeleteUsageLimit';

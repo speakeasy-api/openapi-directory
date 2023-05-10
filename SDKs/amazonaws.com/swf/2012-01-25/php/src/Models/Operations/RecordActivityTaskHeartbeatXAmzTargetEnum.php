@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RecordActivityTaskHeartbeatXAmzTargetEnum: string
 {
     case SIMPLE_WORKFLOW_SERVICE_RECORD_ACTIVITY_TASK_HEARTBEAT = 'SimpleWorkflowService.RecordActivityTaskHeartbeat';

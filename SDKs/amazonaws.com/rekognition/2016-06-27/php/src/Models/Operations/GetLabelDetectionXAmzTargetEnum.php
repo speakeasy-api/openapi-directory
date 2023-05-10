@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetLabelDetectionXAmzTargetEnum: string
 {
     case REKOGNITION_SERVICE_GET_LABEL_DETECTION = 'RekognitionService.GetLabelDetection';

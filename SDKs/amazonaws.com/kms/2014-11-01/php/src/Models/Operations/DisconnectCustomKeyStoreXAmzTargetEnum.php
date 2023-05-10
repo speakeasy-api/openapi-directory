@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DisconnectCustomKeyStoreXAmzTargetEnum: string
 {
     case TRENT_SERVICE_DISCONNECT_CUSTOM_KEY_STORE = 'TrentService.DisconnectCustomKeyStore';

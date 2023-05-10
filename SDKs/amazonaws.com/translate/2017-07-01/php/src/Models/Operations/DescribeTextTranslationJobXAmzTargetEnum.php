@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeTextTranslationJobXAmzTargetEnum: string
 {
     case AWS_SHINE_FRONTEND_SERVICE20170701_DESCRIBE_TEXT_TRANSLATION_JOB = 'AWSShineFrontendService_20170701.DescribeTextTranslationJob';

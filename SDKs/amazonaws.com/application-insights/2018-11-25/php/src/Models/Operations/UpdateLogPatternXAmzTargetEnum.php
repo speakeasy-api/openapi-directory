@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateLogPatternXAmzTargetEnum: string
 {
     case EC2_WINDOWS_BARLEY_SERVICE_UPDATE_LOG_PATTERN = 'EC2WindowsBarleyService.UpdateLogPattern';

@@ -67,4 +67,8 @@ src/Models/Shared/OfficeRolesEnum.php
 src/Models/Shared/Office.php
 src/Models/Shared/GeographicDivision.php
 src/Models/Shared/RepresentativeInfoData.php
+docs/sdk/README.md
+docs/divisions/README.md
+docs/elections/README.md
+docs/representatives/README.md
 USAGE.md

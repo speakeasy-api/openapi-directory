@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetWorkspaceSlugMembersSortEnum: string
 {
     case ACTIVITIES_COUNT = 'activities_count';

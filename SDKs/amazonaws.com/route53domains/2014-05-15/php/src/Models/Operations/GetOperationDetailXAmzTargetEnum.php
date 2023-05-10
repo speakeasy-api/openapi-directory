@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetOperationDetailXAmzTargetEnum: string
 {
     case ROUTE53_DOMAINS_V20140515_GET_OPERATION_DETAIL = 'Route53Domains_v20140515.GetOperationDetail';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteIdentityProviderXAmzTargetEnum: string
 {
     case AWS_COGNITO_IDENTITY_PROVIDER_SERVICE_DELETE_IDENTITY_PROVIDER = 'AWSCognitoIdentityProviderService.DeleteIdentityProvider';

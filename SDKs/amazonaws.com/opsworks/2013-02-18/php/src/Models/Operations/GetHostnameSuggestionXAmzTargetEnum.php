@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetHostnameSuggestionXAmzTargetEnum: string
 {
     case OPS_WORKS20130218_GET_HOSTNAME_SUGGESTION = 'OpsWorks_20130218.GetHostnameSuggestion';

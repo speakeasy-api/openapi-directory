@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * CustomIndicesInput - <p/>
+ * CustomIndicesInput - Input object defining the custom BandMath indices to compute.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListWebhooksXAmzTargetEnum: string
 {
     case CODE_PIPELINE20150709_LIST_WEBHOOKS = 'CodePipeline_20150709.ListWebhooks';

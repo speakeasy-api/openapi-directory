@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateWebACLXAmzTargetEnum: string
 {
     case AWSWAF20150824_UPDATE_WEB_ACL = 'AWSWAF_20150824.UpdateWebACL';

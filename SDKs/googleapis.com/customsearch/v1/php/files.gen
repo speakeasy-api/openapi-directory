@@ -53,4 +53,6 @@ src/Models/Shared/ResultLabels.php
 src/Models/Shared/Result.php
 src/Models/Shared/AltEnum.php
 src/Models/Shared/XgafvEnum.php
+docs/sdk/README.md
+docs/cse/README.md
 USAGE.md

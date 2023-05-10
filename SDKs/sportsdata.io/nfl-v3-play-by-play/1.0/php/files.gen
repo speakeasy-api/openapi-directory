@@ -35,4 +35,5 @@ src/Models/Shared/Play.php
 src/Models/Shared/ScoringPlay.php
 src/Models/Shared/PlayStat.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

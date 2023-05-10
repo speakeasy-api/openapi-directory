@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateSolutionXAmzTargetEnum: string
 {
     case AMAZON_PERSONALIZE_CREATE_SOLUTION = 'AmazonPersonalize.CreateSolution';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetEnvironmentAccountConnectionXAmzTargetEnum: string
 {
     case AWS_PROTON20200720_GET_ENVIRONMENT_ACCOUNT_CONNECTION = 'AwsProton20200720.GetEnvironmentAccountConnection';

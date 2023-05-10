@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDescribeReservedDBInstancesOfferingsActionEnum: string
 {
     case DESCRIBE_RESERVED_DB_INSTANCES_OFFERINGS = 'DescribeReservedDBInstancesOfferings';

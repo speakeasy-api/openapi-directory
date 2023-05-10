@@ -39,10 +39,21 @@ class TransferInstrumentReference
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $realLastFour = null;
     
+    /**
+     * Identifies if the TI was created from a trusted source.
+     * 
+     * @var ?bool $trustedSource
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('trustedSource')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $trustedSource = null;
+    
 	public function __construct()
 	{
 		$this->accountIdentifier = "";
 		$this->id = "";
 		$this->realLastFour = null;
+		$this->trustedSource = null;
 	}
 }

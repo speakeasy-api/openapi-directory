@@ -64,4 +64,7 @@ src/Models/Shared/ActionConfirmationBody.php
 src/Models/Shared/IntegratorObjectResult.php
 src/Models/Shared/ObjectTokenDataTypeEnum.php
 src/Models/Shared/ObjectToken.php
+docs/sdk/README.md
+docs/cards/README.md
+docs/sampleresponse/README.md
 USAGE.md

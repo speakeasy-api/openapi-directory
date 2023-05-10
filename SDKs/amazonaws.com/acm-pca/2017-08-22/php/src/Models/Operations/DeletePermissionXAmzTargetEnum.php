@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeletePermissionXAmzTargetEnum: string
 {
     case ACM_PRIVATE_CA_DELETE_PERMISSION = 'ACMPrivateCA.DeletePermission';

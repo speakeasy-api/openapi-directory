@@ -68,6 +68,16 @@ class MigratingVm
     public ?ReplicationCycle $currentSyncInfo = null;
     
     /**
+     * CutoverForecast holds information about future CutoverJobs of a MigratingVm.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\CutoverForecast $cutoverForecast
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('cutoverForecast')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\CutoverForecast')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?CutoverForecast $cutoverForecast = null;
+    
+    /**
      * The description attached to the migrating VM by the user.
      * 
      * @var ?string $description
@@ -234,6 +244,7 @@ class MigratingVm
 		$this->computeEngineVmDefaults = null;
 		$this->createTime = null;
 		$this->currentSyncInfo = null;
+		$this->cutoverForecast = null;
 		$this->description = null;
 		$this->displayName = null;
 		$this->error = null;

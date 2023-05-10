@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopIcd10CMInferenceJobXAmzTargetEnum: string
 {
     case COMPREHEND_MEDICAL20181030_STOP_ICD10_CM_INFERENCE_JOB = 'ComprehendMedical_20181030.StopICD10CMInferenceJob';

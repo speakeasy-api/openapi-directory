@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartContentModerationXAmzTargetEnum: string
 {
     case REKOGNITION_SERVICE_START_CONTENT_MODERATION = 'RekognitionService.StartContentModeration';

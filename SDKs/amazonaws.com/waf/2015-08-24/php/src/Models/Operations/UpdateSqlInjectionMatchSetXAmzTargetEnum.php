@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateSqlInjectionMatchSetXAmzTargetEnum: string
 {
     case AWSWAF20150824_UPDATE_SQL_INJECTION_MATCH_SET = 'AWSWAF_20150824.UpdateSqlInjectionMatchSet';

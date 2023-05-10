@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeServicesXAmzTargetEnum: string
 {
     case AWS_PRICE_LIST_SERVICE_DESCRIBE_SERVICES = 'AWSPriceListService.DescribeServices';

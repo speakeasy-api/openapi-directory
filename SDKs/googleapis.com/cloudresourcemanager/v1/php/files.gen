@@ -168,4 +168,8 @@ src/Models/Shared/ListAvailableOrgPolicyConstraintsRequest.php
 src/Models/Shared/ListOrgPoliciesResponse.php
 src/Models/Shared/ListOrgPoliciesRequest.php
 src/Models/Shared/SetOrgPolicyRequest.php
+docs/sdk/README.md
+docs/liens/README.md
+docs/organizations/README.md
+docs/projects/README.md
 USAGE.md

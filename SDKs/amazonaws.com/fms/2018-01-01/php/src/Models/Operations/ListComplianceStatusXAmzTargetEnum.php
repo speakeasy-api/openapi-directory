@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListComplianceStatusXAmzTargetEnum: string
 {
     case AWSFMS20180101_LIST_COMPLIANCE_STATUS = 'AWSFMS_20180101.ListComplianceStatus';

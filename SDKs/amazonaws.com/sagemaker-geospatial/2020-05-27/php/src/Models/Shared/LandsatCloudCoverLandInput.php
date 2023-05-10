@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * LandsatCloudCoverLandInput - <p/>
+ * LandsatCloudCoverLandInput - The structure representing Land Cloud Cover property for Landsat data collection.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

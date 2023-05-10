@@ -20,4 +20,5 @@ src/Utils/SpeakeasyMetadata.php
 src/Utils/Utils.php
 src/Models/Operations/PostPerfectpdfApiResponse.php
 src/Models/Shared/PerfectpdfApiBody.php
+docs/sdk/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CancelEnvironmentDeploymentXAmzTargetEnum: string
 {
     case AWS_PROTON20200720_CANCEL_ENVIRONMENT_DEPLOYMENT = 'AwsProton20200720.CancelEnvironmentDeployment';

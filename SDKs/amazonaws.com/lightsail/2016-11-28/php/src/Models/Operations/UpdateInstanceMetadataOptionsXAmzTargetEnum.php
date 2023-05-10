@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateInstanceMetadataOptionsXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_UPDATE_INSTANCE_METADATA_OPTIONS = 'Lightsail_20161128.UpdateInstanceMetadataOptions';

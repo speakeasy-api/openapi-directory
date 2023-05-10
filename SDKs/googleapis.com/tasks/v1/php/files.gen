@@ -77,4 +77,7 @@ src/Models/Shared/TaskLists.php
 src/Models/Shared/TaskLinks.php
 src/Models/Shared/Task.php
 src/Models/Shared/Tasks.php
+docs/sdk/README.md
+docs/tasklists/README.md
+docs/tasks/README.md
 USAGE.md

@@ -39,4 +39,5 @@ src/Models/Shared/OrderLineItemQuantitiesQuantityTypeEnum.php
 src/Models/Shared/OrderLineItemQuantitiesQuantityUOMEnum.php
 src/Models/Shared/OrderLineItemQuantities.php
 src/Models/Shared/OrderLineItem.php
+docs/sdk/README.md
 USAGE.md

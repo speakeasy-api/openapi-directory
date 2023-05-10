@@ -135,4 +135,5 @@ src/Models/Shared/UpdatePipeSourceKinesisStreamParameters.php
 src/Models/Shared/UpdatePipeSourceDynamoDBStreamParameters.php
 src/Models/Shared/UpdatePipeSourceActiveMQBrokerParameters.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

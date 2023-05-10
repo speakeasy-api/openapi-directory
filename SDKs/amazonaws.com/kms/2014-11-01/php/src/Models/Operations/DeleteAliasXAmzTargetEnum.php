@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteAliasXAmzTargetEnum: string
 {
     case TRENT_SERVICE_DELETE_ALIAS = 'TrentService.DeleteAlias';

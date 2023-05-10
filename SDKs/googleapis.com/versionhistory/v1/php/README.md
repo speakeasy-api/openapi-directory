@@ -30,19 +30,58 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\VersionhistoryPlatformsChannelsListRequest;
+use \OpenAPI\OpenAPI\Models\Shared\XgafvEnum;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new VersionhistoryPlatformsChannelsListRequest();
+    $request->dollarXgafv = XgafvEnum::TWO;
+    $request->accessToken = 'provident';
+    $request->alt = AltEnum::PROTO;
+    $request->callback = 'quibusdam';
+    $request->fields = 'unde';
+    $request->key = 'nulla';
+    $request->oauthToken = 'corrupti';
+    $request->pageSize = 847252;
+    $request->pageToken = 'vel';
+    $request->parent = 'error';
+    $request->prettyPrint = false;
+    $request->quotaUser = 'deserunt';
+    $request->uploadType = 'suscipit';
+    $request->uploadProtocol = 'iure';
+
+    $response = $sdk->platforms->versionhistoryPlatformsChannelsList($request);
+
+    if ($response->listChannelsResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### platforms
+### [platforms](docs/platforms/README.md)
 
-* `versionhistoryPlatformsChannelsList` - Returns list of channels that are available for a given platform.
-* `versionhistoryPlatformsChannelsVersionsList` - Returns list of version for the given platform/channel.
-* `versionhistoryPlatformsChannelsVersionsReleasesList` - Returns list of releases of the given version.
-* `versionhistoryPlatformsList` - Returns list of platforms that are available for a given product. The resource "product" has no resource name in its name.
+* [versionhistoryPlatformsChannelsList](docs/platforms/README.md#versionhistoryplatformschannelslist) - Returns list of channels that are available for a given platform.
+* [versionhistoryPlatformsChannelsVersionsList](docs/platforms/README.md#versionhistoryplatformschannelsversionslist) - Returns list of version for the given platform/channel.
+* [versionhistoryPlatformsChannelsVersionsReleasesList](docs/platforms/README.md#versionhistoryplatformschannelsversionsreleaseslist) - Returns list of releases of the given version.
+* [versionhistoryPlatformsList](docs/platforms/README.md#versionhistoryplatformslist) - Returns list of platforms that are available for a given product. The resource "product" has no resource name in its name.
 <!-- End SDK Available Operations -->
 
 ### Maturity

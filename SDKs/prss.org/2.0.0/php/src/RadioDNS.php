@@ -129,7 +129,7 @@ class RadioDNS
      * @return \OpenAPI\OpenAPI\Models\Operations\GetRadiodnsSpi31SIXmlResponse
      */
 	public function getRadiodnsSpi31SIXml(
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\GetRadiodnsSpi31SIXmlResponse
     {
         $baseUrl = RadioDNS::GET_RADIODNS_SPI31_SI_XML_SERVERS[0];
@@ -192,7 +192,7 @@ class RadioDNS
      */
 	public function getRadiodnsSpi31IdFqdnSidDatePIXml(
         \OpenAPI\OpenAPI\Models\Operations\GetRadiodnsSpi31IdFqdnSidDatePIXmlRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\GetRadiodnsSpi31IdFqdnSidDatePIXmlResponse
     {
         $baseUrl = RadioDNS::GET_RADIODNS_SPI31_ID_FQDN_SID_DATE_PI_XML_SERVERS[0];

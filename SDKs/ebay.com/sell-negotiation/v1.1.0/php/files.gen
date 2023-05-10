@@ -34,4 +34,6 @@ src/Models/Shared/Amount.php
 src/Models/Shared/TimeDuration.php
 src/Models/Shared/User.php
 src/Models/Shared/CreateOffersRequest.php
+docs/sdk/README.md
+docs/offer/README.md
 USAGE.md

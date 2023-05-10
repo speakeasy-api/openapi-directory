@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateMedicalVocabularyXAmzTargetEnum: string
 {
     case TRANSCRIBE_CREATE_MEDICAL_VOCABULARY = 'Transcribe.CreateMedicalVocabulary';

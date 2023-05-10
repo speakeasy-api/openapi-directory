@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteScheduledActionXAmzTargetEnum: string
 {
     case ANY_SCALE_FRONTEND_SERVICE_DELETE_SCHEDULED_ACTION = 'AnyScaleFrontendService.DeleteScheduledAction';

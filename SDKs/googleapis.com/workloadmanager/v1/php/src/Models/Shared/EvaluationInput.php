@@ -77,6 +77,16 @@ class EvaluationInput
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $ruleNames = null;
     
+    /**
+     * crontab format schedule for scheduled evaluation, example: 0 * /3 * * *
+     * 
+     * @var ?string $schedule
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('schedule')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $schedule = null;
+    
 	public function __construct()
 	{
 		$this->description = null;
@@ -85,5 +95,6 @@ class EvaluationInput
 		$this->resourceFilter = null;
 		$this->resourceStatus = null;
 		$this->ruleNames = null;
+		$this->schedule = null;
 	}
 }

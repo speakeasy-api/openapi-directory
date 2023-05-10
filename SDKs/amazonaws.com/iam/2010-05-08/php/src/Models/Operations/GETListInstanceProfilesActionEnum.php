@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETListInstanceProfilesActionEnum: string
 {
     case LIST_INSTANCE_PROFILES = 'ListInstanceProfiles';

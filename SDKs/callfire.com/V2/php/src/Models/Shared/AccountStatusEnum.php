@@ -15,5 +15,6 @@ enum AccountStatusEnum: string
     case ACTIVE = 'ACTIVE';
     case PENDING_CANCELLED = 'PENDING_CANCELLED';
     case CANCELLED = 'CANCELLED';
+    case ARCHIVING = 'ARCHIVING';
     case ARCHIVED = 'ARCHIVED';
 }

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTConfirmProductInstanceActionEnum: string
 {
     case CONFIRM_PRODUCT_INSTANCE = 'ConfirmProductInstance';

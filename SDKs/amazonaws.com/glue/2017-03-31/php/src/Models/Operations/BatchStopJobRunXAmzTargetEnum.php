@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum BatchStopJobRunXAmzTargetEnum: string
 {
     case AWS_GLUE_BATCH_STOP_JOB_RUN = 'AWSGlue.BatchStopJobRun';

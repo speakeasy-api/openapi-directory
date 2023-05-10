@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteProfileXAmzTargetEnum: string
 {
     case TRANSFER_SERVICE_DELETE_PROFILE = 'TransferService.DeleteProfile';

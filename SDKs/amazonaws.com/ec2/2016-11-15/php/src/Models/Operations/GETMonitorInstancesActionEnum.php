@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETMonitorInstancesActionEnum: string
 {
     case MONITOR_INSTANCES = 'MonitorInstances';

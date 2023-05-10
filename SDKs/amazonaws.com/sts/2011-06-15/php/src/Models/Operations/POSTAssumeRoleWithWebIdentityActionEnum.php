@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTAssumeRoleWithWebIdentityActionEnum: string
 {
     case ASSUME_ROLE_WITH_WEB_IDENTITY = 'AssumeRoleWithWebIdentity';

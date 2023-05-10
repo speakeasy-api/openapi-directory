@@ -32,4 +32,5 @@ src/Models/Operations/PremiumNewsByTeamRequest.php
 src/Models/Operations/PremiumNewsByTeamResponse.php
 src/Models/Shared/News.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

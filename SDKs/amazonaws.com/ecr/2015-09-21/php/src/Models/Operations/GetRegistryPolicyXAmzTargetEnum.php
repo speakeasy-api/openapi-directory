@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetRegistryPolicyXAmzTargetEnum: string
 {
     case AMAZON_EC2_CONTAINER_REGISTRY_V20150921_GET_REGISTRY_POLICY = 'AmazonEC2ContainerRegistry_V20150921.GetRegistryPolicy';

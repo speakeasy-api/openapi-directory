@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * Label - Label represents a generic name=value label. Label has separate name and value fields to support filtering with contains().
+ * Label - Represents a generic name-value label. A label has separate name and value fields to support filtering with the `contains()` function. For more information, see [Filtering on array-type fields](https://cloud.google.com/security-command-center/docs/how-to-api-list-findings#array-contains-filtering).
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public
@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class Label
 {
     /**
-     * Label name.
+     * Name of the label.
      * 
      * @var ?string $name
      */
@@ -28,7 +28,7 @@ class Label
     public ?string $name = null;
     
     /**
-     * Label value.
+     * Value that corresponds to the label's name.
      * 
      * @var ?string $value
      */

@@ -21,6 +21,16 @@ class ExportEarthObservationJobRequestBody
     public string $arn;
     
     /**
+     * A unique token that guarantees that the call to this API is idempotent.
+     * 
+     * @var ?string $clientToken
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('ClientToken')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $clientToken = null;
+    
+    /**
      * The Amazon Resource Name (ARN) of the IAM role that you specified for the job.
      * 
      * @var string $executionRoleArn
@@ -51,6 +61,7 @@ class ExportEarthObservationJobRequestBody
 	public function __construct()
 	{
 		$this->arn = "";
+		$this->clientToken = null;
 		$this->executionRoleArn = "";
 		$this->exportSourceImages = null;
 		$this->outputConfig = new \OpenAPI\OpenAPI\Models\Operations\ExportEarthObservationJobRequestBodyOutputConfig();

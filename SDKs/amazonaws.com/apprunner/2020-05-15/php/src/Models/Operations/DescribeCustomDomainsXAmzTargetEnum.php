@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeCustomDomainsXAmzTargetEnum: string
 {
     case APP_RUNNER_DESCRIBE_CUSTOM_DOMAINS = 'AppRunner.DescribeCustomDomains';

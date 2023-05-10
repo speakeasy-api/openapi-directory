@@ -58,6 +58,16 @@ class NfsExportOptions
     public ?array $ipRanges = null;
     
     /**
+     * The security flavors allowed for mount operations. The default is AUTH_SYS.
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\NfsExportOptionsSecurityFlavorsEnum> $securityFlavors
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('securityFlavors')]
+    #[\JMS\Serializer\Annotation\Type('array<enum<OpenAPI\OpenAPI\Models\Shared\NfsExportOptionsSecurityFlavorsEnum>>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $securityFlavors = null;
+    
+    /**
      * Either NO_ROOT_SQUASH, for allowing root access on the exported directory, or ROOT_SQUASH, for not allowing root access. The default is NO_ROOT_SQUASH.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\NfsExportOptionsSquashModeEnum $squashMode
@@ -73,6 +83,7 @@ class NfsExportOptions
 		$this->anonGid = null;
 		$this->anonUid = null;
 		$this->ipRanges = null;
+		$this->securityFlavors = null;
 		$this->squashMode = null;
 	}
 }

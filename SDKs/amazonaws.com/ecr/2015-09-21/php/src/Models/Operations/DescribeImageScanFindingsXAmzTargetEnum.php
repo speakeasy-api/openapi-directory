@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeImageScanFindingsXAmzTargetEnum: string
 {
     case AMAZON_EC2_CONTAINER_REGISTRY_V20150921_DESCRIBE_IMAGE_SCAN_FINDINGS = 'AmazonEC2ContainerRegistry_V20150921.DescribeImageScanFindings';

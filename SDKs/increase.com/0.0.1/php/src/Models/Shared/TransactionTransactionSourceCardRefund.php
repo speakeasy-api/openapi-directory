@@ -45,6 +45,69 @@ class TransactionTransactionSourceCardRefund
     public TransactionTransactionSourceCardRefundCurrencyEnum $currency;
     
     /**
+     * The Card Refund identifier.
+     * 
+     * @var string $id
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    public string $id;
+    
+    /**
+     * The merchant identifier (commonly abbreviated as MID) of the merchant the card is transacting with.
+     * 
+     * @var string $merchantAcceptorId
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('merchant_acceptor_id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    public string $merchantAcceptorId;
+    
+    /**
+     * The 4-digit MCC describing the merchant's business.
+     * 
+     * @var string $merchantCategoryCode
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('merchant_category_code')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    public string $merchantCategoryCode;
+    
+    /**
+     * The city the merchant resides in.
+     * 
+     * @var string $merchantCity
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('merchant_city')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    public string $merchantCity;
+    
+    /**
+     * The country the merchant resides in.
+     * 
+     * @var string $merchantCountry
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('merchant_country')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    public string $merchantCountry;
+    
+    /**
+     * The name of the merchant.
+     * 
+     * @var string $merchantName
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('merchant_name')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    public string $merchantName;
+    
+    /**
+     * The state the merchant resides in.
+     * 
+     * @var string $merchantState
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('merchant_state')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    public string $merchantState;
+    
+    /**
      * A constant representing the object's type. For this resource it will always be `card_refund`.
      * 
      * @var \OpenAPI\OpenAPI\Models\Shared\TransactionTransactionSourceCardRefundTypeEnum $type
@@ -58,6 +121,13 @@ class TransactionTransactionSourceCardRefund
 		$this->amount = 0;
 		$this->cardSettlementTransactionId = "";
 		$this->currency = \OpenAPI\OpenAPI\Models\Shared\TransactionTransactionSourceCardRefundCurrencyEnum::CAD;
+		$this->id = "";
+		$this->merchantAcceptorId = "";
+		$this->merchantCategoryCode = "";
+		$this->merchantCity = "";
+		$this->merchantCountry = "";
+		$this->merchantName = "";
+		$this->merchantState = "";
 		$this->type = \OpenAPI\OpenAPI\Models\Shared\TransactionTransactionSourceCardRefundTypeEnum::CARD_REFUND;
 	}
 }

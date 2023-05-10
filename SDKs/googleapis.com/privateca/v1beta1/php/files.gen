@@ -59,4 +59,6 @@ src/Models/Shared/AuditLogConfig.php
 src/Models/Shared/SetIamPolicyRequest.php
 src/Models/Shared/TestIamPermissionsResponse.php
 src/Models/Shared/TestIamPermissionsRequest.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

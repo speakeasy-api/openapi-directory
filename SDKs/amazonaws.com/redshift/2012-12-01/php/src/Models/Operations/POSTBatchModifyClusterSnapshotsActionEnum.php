@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTBatchModifyClusterSnapshotsActionEnum: string
 {
     case BATCH_MODIFY_CLUSTER_SNAPSHOTS = 'BatchModifyClusterSnapshots';

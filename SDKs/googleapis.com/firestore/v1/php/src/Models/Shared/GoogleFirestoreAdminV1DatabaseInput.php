@@ -38,6 +38,16 @@ class GoogleFirestoreAdminV1DatabaseInput
     public ?GoogleFirestoreAdminV1DatabaseConcurrencyModeEnum $concurrencyMode = null;
     
     /**
+     * State of delete protection for the database.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleFirestoreAdminV1DatabaseDeleteProtectionStateEnum $deleteProtectionState
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('deleteProtectionState')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\GoogleFirestoreAdminV1DatabaseDeleteProtectionStateEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleFirestoreAdminV1DatabaseDeleteProtectionStateEnum $deleteProtectionState = null;
+    
+    /**
      * This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
      * 
      * @var ?string $etag
@@ -81,6 +91,7 @@ class GoogleFirestoreAdminV1DatabaseInput
 	{
 		$this->appEngineIntegrationMode = null;
 		$this->concurrencyMode = null;
+		$this->deleteProtectionState = null;
 		$this->etag = null;
 		$this->locationId = null;
 		$this->name = null;

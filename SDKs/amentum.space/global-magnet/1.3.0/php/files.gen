@@ -25,4 +25,5 @@ src/Models/Operations/AppApiWMMEndpointsWMMMagneticField200ApplicationJSONInclin
 src/Models/Operations/AppApiWMMEndpointsWMMMagneticField200ApplicationJSONTotalIntensity.php
 src/Models/Operations/AppApiWMMEndpointsWMMMagneticField200ApplicationJSON.php
 src/Models/Operations/AppApiWMMEndpointsWMMMagneticFieldResponse.php
+docs/sdk/README.md
 USAGE.md

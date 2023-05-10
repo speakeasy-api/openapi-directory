@@ -150,4 +150,5 @@ src/Models/Shared/UntagResourceRequest.php
 src/Models/Shared/UploadLayerPartResponse.php
 src/Models/Shared/UploadLayerPartRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

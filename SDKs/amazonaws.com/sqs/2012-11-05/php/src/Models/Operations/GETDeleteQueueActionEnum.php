@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteQueueActionEnum: string
 {
     case DELETE_QUEUE = 'DeleteQueue';

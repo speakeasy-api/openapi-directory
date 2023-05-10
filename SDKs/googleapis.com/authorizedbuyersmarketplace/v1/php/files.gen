@@ -191,4 +191,6 @@ src/Models/Shared/PublisherProfile.php
 src/Models/Shared/PublisherProfileMobileApplicationAppStoreEnum.php
 src/Models/Shared/PublisherProfileMobileApplication.php
 src/Models/Shared/ListPublisherProfilesResponse.php
+docs/sdk/README.md
+docs/buyers/README.md
 USAGE.md

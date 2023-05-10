@@ -18,6 +18,16 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class MailOptions
 {
     /**
+     * Specifies whether the results should include encrypted content, unencrypted content, or both. Defaults to including both.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\MailOptionsClientSideEncryptedOptionEnum $clientSideEncryptedOption
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('clientSideEncryptedOption')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\MailOptionsClientSideEncryptedOptionEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?MailOptionsClientSideEncryptedOptionEnum $clientSideEncryptedOption = null;
+    
+    /**
      * Set to **true** to exclude drafts.
      * 
      * @var ?bool $excludeDrafts
@@ -29,6 +39,7 @@ class MailOptions
     
 	public function __construct()
 	{
+		$this->clientSideEncryptedOption = null;
 		$this->excludeDrafts = null;
 	}
 }

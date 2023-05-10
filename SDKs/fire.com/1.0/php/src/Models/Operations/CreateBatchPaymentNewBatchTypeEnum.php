@@ -14,4 +14,5 @@ enum CreateBatchPaymentNewBatchTypeEnum: string
 {
     case BANK_TRANSFER = 'BANK_TRANSFER';
     case INTERNAL_TRANSFER = 'INTERNAL_TRANSFER';
+    case INTERNATIONAL_TRANSFER = 'INTERNATIONAL_TRANSFER';
 }

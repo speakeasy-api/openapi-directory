@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AssociateAdminAccountXAmzTargetEnum: string
 {
     case AWSFMS20180101_ASSOCIATE_ADMIN_ACCOUNT = 'AWSFMS_20180101.AssociateAdminAccount';

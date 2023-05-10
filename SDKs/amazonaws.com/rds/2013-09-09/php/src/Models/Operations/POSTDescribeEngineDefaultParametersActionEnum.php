@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeEngineDefaultParametersActionEnum: string
 {
     case DESCRIBE_ENGINE_DEFAULT_PARAMETERS = 'DescribeEngineDefaultParameters';

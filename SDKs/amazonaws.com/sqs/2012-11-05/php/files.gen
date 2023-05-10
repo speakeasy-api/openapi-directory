@@ -207,4 +207,5 @@ src/Models/Shared/SetQueueAttributesRequest.php
 src/Models/Shared/TagQueueRequest.php
 src/Models/Shared/UntagQueueRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

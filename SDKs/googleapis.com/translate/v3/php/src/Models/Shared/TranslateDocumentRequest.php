@@ -48,6 +48,16 @@ class TranslateDocumentRequest
     public ?DocumentOutputConfig $documentOutputConfig = null;
     
     /**
+     * Optional. If true, enable auto rotation correction in DVS.
+     * 
+     * @var ?bool $enableRotationCorrection
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('enableRotationCorrection')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $enableRotationCorrection = null;
+    
+    /**
      * Optional. If true, use the text removal server to remove the shadow text on background image for native pdf translation. Shadow removal feature can only be enabled when is_translate_native_pdf_only: false && pdf_native_only: false
      * 
      * @var ?bool $enableShadowRemovalNativePdf
@@ -122,6 +132,7 @@ class TranslateDocumentRequest
 		$this->customizedAttribution = null;
 		$this->documentInputConfig = null;
 		$this->documentOutputConfig = null;
+		$this->enableRotationCorrection = null;
 		$this->enableShadowRemovalNativePdf = null;
 		$this->glossaryConfig = null;
 		$this->isTranslateNativePdfOnly = null;

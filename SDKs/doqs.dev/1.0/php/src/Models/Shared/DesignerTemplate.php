@@ -53,6 +53,10 @@ class DesignerTemplate
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $id = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('margin')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\Margin')]
+    public Margin $margin;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('name')]
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $name;
@@ -88,6 +92,7 @@ class DesignerTemplate
 		$this->format = \OpenAPI\OpenAPI\Models\Shared\FormatEnum::A0;
 		$this->headerHtml = null;
 		$this->id = null;
+		$this->margin = new \OpenAPI\OpenAPI\Models\Shared\Margin();
 		$this->name = "";
 		$this->orientation = \OpenAPI\OpenAPI\Models\Shared\OrientationEnum::LANDSCAPE;
 		$this->previewPayload = [];

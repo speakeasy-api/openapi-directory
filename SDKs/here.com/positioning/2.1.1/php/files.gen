@@ -24,4 +24,6 @@ src/Models/Operations/GetHealthResponse.php
 src/Models/Shared/ApiVersion.php
 src/Models/Shared/ApiHealthStatus.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/apiinformation/README.md
 USAGE.md

@@ -42,9 +42,11 @@ class V1System
      * 
      * Returns the health information for the official business registers based on usage.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\HealthCheckSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\HealthCheckResponse
      */
 	public function healthCheck(
+        \OpenAPI\OpenAPI\Models\Operations\HealthCheckSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\HealthCheckResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -52,7 +54,8 @@ class V1System
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -82,9 +85,11 @@ class V1System
      * 
      * Retrieve the list of all currently enabled countries
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\SystemCountriesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\SystemCountriesResponse
      */
 	public function systemCountries(
+        \OpenAPI\OpenAPI\Models\Operations\SystemCountriesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\SystemCountriesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -92,7 +97,8 @@ class V1System
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -122,9 +128,11 @@ class V1System
      * 
      * Retrieve pricing rules for your subscription plan
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\SystemPricelistSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\SystemPricelistResponse
      */
 	public function systemPricelist(
+        \OpenAPI\OpenAPI\Models\Operations\SystemPricelistSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\SystemPricelistResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -132,7 +140,8 @@ class V1System
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

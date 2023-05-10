@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETModifyInstanceMaintenanceOptionsActionEnum: string
 {
     case MODIFY_INSTANCE_MAINTENANCE_OPTIONS = 'ModifyInstanceMaintenanceOptions';

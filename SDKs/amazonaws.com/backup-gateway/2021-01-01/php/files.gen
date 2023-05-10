@@ -157,4 +157,5 @@ src/Models/Shared/UpdateGatewaySoftwareNowInput.php
 src/Models/Shared/UpdateHypervisorOutput.php
 src/Models/Shared/UpdateHypervisorInput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

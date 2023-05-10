@@ -144,4 +144,8 @@ src/Models/Shared/GoogleCloudVisionV1p1beta1AnnotateImageRequest.php
 src/Models/Shared/GoogleCloudVisionV1p1beta1Image.php
 src/Models/Shared/GoogleCloudVisionV1p1beta1ImageSource.php
 src/Models/Shared/GoogleCloudVisionV1p1beta1AsyncBatchAnnotateImagesRequest.php
+docs/sdk/README.md
+docs/files/README.md
+docs/images/README.md
+docs/projects/README.md
 USAGE.md

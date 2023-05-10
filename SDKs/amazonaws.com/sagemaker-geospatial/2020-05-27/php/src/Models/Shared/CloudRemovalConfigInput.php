@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * CloudRemovalConfigInput - <p/>
+ * CloudRemovalConfigInput - Input structure for Cloud Removal Operation type
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

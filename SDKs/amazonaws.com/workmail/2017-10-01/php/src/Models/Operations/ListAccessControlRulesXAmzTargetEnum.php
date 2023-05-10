@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListAccessControlRulesXAmzTargetEnum: string
 {
     case WORK_MAIL_SERVICE_LIST_ACCESS_CONTROL_RULES = 'WorkMailService.ListAccessControlRules';

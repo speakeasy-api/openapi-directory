@@ -48,4 +48,6 @@ src/Models/Shared/XgafvEnum.php
 src/Models/Shared/DownloadModelResponseModelFormatEnum.php
 src/Models/Shared/DownloadModelResponse.php
 src/Models/Shared/ListModelsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

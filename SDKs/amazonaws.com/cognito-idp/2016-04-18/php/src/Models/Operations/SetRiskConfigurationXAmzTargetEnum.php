@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum SetRiskConfigurationXAmzTargetEnum: string
 {
     case AWS_COGNITO_IDENTITY_PROVIDER_SERVICE_SET_RISK_CONFIGURATION = 'AWSCognitoIdentityProviderService.SetRiskConfiguration';

@@ -44,7 +44,7 @@ class WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstat
     public ?string $callback = null;
     
     /**
-     * If set, the request will be rejected if the latest version of the workstation on the server does not have this etag.
+     * If set, the request will be rejected if the latest version of the workstation on the server does not have this ETag.
      * 
      * @var ?string $etag
      */

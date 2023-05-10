@@ -28,7 +28,7 @@ class GoogleCloudChannelV1ProvisionedService
     public ?string $productId = null;
     
     /**
-     * Output only. Provisioning ID of the entitlement. For Google Workspace, this is the underlying Subscription ID. For Google Cloud Platform, this is the Billing Account ID of the billing subaccount."
+     * Output only. Provisioning ID of the entitlement. For Google Workspace, this is the underlying Subscription ID. For Google Cloud, this is the Billing Account ID of the billing subaccount."
      * 
      * @var ?string $provisioningId
      */

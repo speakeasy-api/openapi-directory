@@ -42,9 +42,11 @@ class Info
      * 
      * Show version info
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetVersionSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetVersionResponse
      */
 	public function getVersion(
+        \OpenAPI\OpenAPI\Models\Operations\GetVersionSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetVersionResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -52,7 +54,8 @@ class Info
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

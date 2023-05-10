@@ -118,6 +118,16 @@ class Execution
     public ?ExecutionStateEnum $state = null;
     
     /**
+     * Describes an error related to the current state of the Execution resource.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\StateError $stateError
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('stateError')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\StateError')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?StateError $stateError = null;
+    
+    /**
      * Represents the current status of this execution.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\Status $status
@@ -149,6 +159,7 @@ class Execution
 		$this->result = null;
 		$this->startTime = null;
 		$this->state = null;
+		$this->stateError = null;
 		$this->status = null;
 		$this->workflowRevisionId = null;
 	}

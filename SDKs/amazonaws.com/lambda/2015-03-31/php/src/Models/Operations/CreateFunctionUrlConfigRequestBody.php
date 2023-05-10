@@ -30,9 +30,20 @@ class CreateFunctionUrlConfigRequestBody
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?CreateFunctionUrlConfigRequestBodyCors $cors = null;
     
+    /**
+     * <p>Use one of the following options:</p> <ul> <li> <p> <code>BUFFERED</code> – This is the default option. Lambda invokes your function using the <code>Invoke</code> API operation. Invocation results are available when the payload is complete. The maximum payload size is 6 MB.</p> </li> <li> <p> <code>RESPONSE_STREAM</code> – Your function streams payload results as they become available. Lambda invokes your function using the <code>InvokeWithResponseStream</code> API operation. The maximum response payload size is 20 MB, however, you can <a href="https://docs.aws.amazon.com/servicequotas/latest/userguide/request-quota-increase.html">request a quota increase</a>.</p> </li> </ul>
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Operations\CreateFunctionUrlConfigRequestBodyInvokeModeEnum $invokeMode
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('InvokeMode')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Operations\CreateFunctionUrlConfigRequestBodyInvokeModeEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?CreateFunctionUrlConfigRequestBodyInvokeModeEnum $invokeMode = null;
+    
 	public function __construct()
 	{
 		$this->authType = \OpenAPI\OpenAPI\Models\Operations\CreateFunctionUrlConfigRequestBodyAuthTypeEnum::NONE;
 		$this->cors = null;
+		$this->invokeMode = null;
 	}
 }

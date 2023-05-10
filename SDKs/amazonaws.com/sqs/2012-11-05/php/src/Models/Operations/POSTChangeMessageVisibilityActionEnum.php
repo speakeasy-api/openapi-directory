@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTChangeMessageVisibilityActionEnum: string
 {
     case CHANGE_MESSAGE_VISIBILITY = 'ChangeMessageVisibility';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeAuthenticationProfilesActionEnum: string
 {
     case DESCRIBE_AUTHENTICATION_PROFILES = 'DescribeAuthenticationProfiles';

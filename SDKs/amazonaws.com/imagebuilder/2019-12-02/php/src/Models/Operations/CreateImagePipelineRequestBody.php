@@ -12,7 +12,7 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 class CreateImagePipelineRequestBody
 {
     /**
-     *  The idempotency token used to make this request idempotent.
+     * The idempotency token used to make this request idempotent.
      * 
      * @var string $clientToken
      */
@@ -31,7 +31,7 @@ class CreateImagePipelineRequestBody
     public ?string $containerRecipeArn = null;
     
     /**
-     *  The description of the image pipeline.
+     * The description of the image pipeline.
      * 
      * @var ?string $description
      */
@@ -41,7 +41,7 @@ class CreateImagePipelineRequestBody
     public ?string $description = null;
     
     /**
-     *  The Amazon Resource Name (ARN) of the distribution configuration that will be used to configure and distribute images created by this image pipeline.
+     * The Amazon Resource Name (ARN) of the distribution configuration that will be used to configure and distribute images created by this image pipeline.
      * 
      * @var ?string $distributionConfigurationArn
      */
@@ -51,7 +51,7 @@ class CreateImagePipelineRequestBody
     public ?string $distributionConfigurationArn = null;
     
     /**
-     *  Collects additional information about the image being created, including the operating system (OS) version and package list. This information is used to enhance the overall experience of using EC2 Image Builder. Enabled by default.
+     * Collects additional information about the image being created, including the operating system (OS) version and package list. This information is used to enhance the overall experience of using EC2 Image Builder. Enabled by default.
      * 
      * @var ?bool $enhancedImageMetadataEnabled
      */
@@ -61,7 +61,7 @@ class CreateImagePipelineRequestBody
     public ?bool $enhancedImageMetadataEnabled = null;
     
     /**
-     *  The Amazon Resource Name (ARN) of the image recipe that will be used to configure images created by this image pipeline.
+     * The Amazon Resource Name (ARN) of the image recipe that will be used to configure images created by this image pipeline.
      * 
      * @var ?string $imageRecipeArn
      */
@@ -69,6 +69,16 @@ class CreateImagePipelineRequestBody
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $imageRecipeArn = null;
+    
+    /**
+     * Contains settings for Image Builder image resource and container image scans.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Operations\CreateImagePipelineRequestBodyImageScanningConfiguration $imageScanningConfiguration
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('imageScanningConfiguration')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Operations\CreateImagePipelineRequestBodyImageScanningConfiguration')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?CreateImagePipelineRequestBodyImageScanningConfiguration $imageScanningConfiguration = null;
     
     /**
      * Configure image tests for your pipeline build. Tests run after building the image, to verify that the AMI or container image is valid before distributing it.
@@ -81,7 +91,7 @@ class CreateImagePipelineRequestBody
     public ?CreateImagePipelineRequestBodyImageTestsConfiguration $imageTestsConfiguration = null;
     
     /**
-     *  The Amazon Resource Name (ARN) of the infrastructure configuration that will be used to build images created by this image pipeline.
+     * The Amazon Resource Name (ARN) of the infrastructure configuration that will be used to build images created by this image pipeline.
      * 
      * @var string $infrastructureConfigurationArn
      */
@@ -90,7 +100,7 @@ class CreateImagePipelineRequestBody
     public string $infrastructureConfigurationArn;
     
     /**
-     *  The name of the image pipeline.
+     * The name of the image pipeline.
      * 
      * @var string $name
      */
@@ -109,7 +119,7 @@ class CreateImagePipelineRequestBody
     public ?CreateImagePipelineRequestBodySchedule $schedule = null;
     
     /**
-     *  The status of the image pipeline.
+     * The status of the image pipeline.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Operations\CreateImagePipelineRequestBodyStatusEnum $status
      */
@@ -119,7 +129,7 @@ class CreateImagePipelineRequestBody
     public ?CreateImagePipelineRequestBodyStatusEnum $status = null;
     
     /**
-     *  The tags of the image pipeline.
+     * The tags of the image pipeline.
      * 
      * @var ?array<string, string> $tags
      */
@@ -136,6 +146,7 @@ class CreateImagePipelineRequestBody
 		$this->distributionConfigurationArn = null;
 		$this->enhancedImageMetadataEnabled = null;
 		$this->imageRecipeArn = null;
+		$this->imageScanningConfiguration = null;
 		$this->imageTestsConfiguration = null;
 		$this->infrastructureConfigurationArn = "";
 		$this->name = "";

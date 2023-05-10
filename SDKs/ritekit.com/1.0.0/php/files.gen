@@ -43,4 +43,5 @@ src/Models/Operations/TextToImageRequest.php
 src/Models/Operations/TextToImageResponse.php
 src/Models/Operations/TrendingHashtagsRequest.php
 src/Models/Operations/TrendingHashtagsResponse.php
+docs/sdk/README.md
 USAGE.md

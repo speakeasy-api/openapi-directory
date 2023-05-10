@@ -128,6 +128,16 @@ class ContainerVersionHeader
     public ?string $numTags = null;
     
     /**
+     * Number of transformations in the container version.
+     * 
+     * @var ?string $numTransformations
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('numTransformations')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $numTransformations = null;
+    
+    /**
      * Number of triggers in the container version.
      * 
      * @var ?string $numTriggers
@@ -180,6 +190,7 @@ class ContainerVersionHeader
 		$this->numMacros = null;
 		$this->numRules = null;
 		$this->numTags = null;
+		$this->numTransformations = null;
 		$this->numTriggers = null;
 		$this->numVariables = null;
 		$this->numZones = null;

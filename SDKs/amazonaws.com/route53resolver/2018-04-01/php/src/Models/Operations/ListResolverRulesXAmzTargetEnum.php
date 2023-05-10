@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListResolverRulesXAmzTargetEnum: string
 {
     case ROUTE53_RESOLVER_LIST_RESOLVER_RULES = 'Route53Resolver.ListResolverRules';

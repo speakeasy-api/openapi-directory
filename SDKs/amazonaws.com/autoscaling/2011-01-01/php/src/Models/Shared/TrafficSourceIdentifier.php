@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * TrafficSourceIdentifier - <p>Describes the identifier of a traffic source.</p> <p>Currently, you must specify an Amazon Resource Name (ARN) for an existing VPC Lattice target group.</p>
+ * TrafficSourceIdentifier - Identifying information for a traffic source.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public
@@ -18,10 +18,14 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class TrafficSourceIdentifier
 {
 	
-    public ?string $identifier = null;
+    public string $identifier;
+    
+	
+    public ?string $type = null;
     
 	public function __construct()
 	{
-		$this->identifier = null;
+		$this->identifier = "";
+		$this->type = null;
 	}
 }

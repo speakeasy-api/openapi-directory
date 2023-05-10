@@ -42,7 +42,7 @@ class GetResourceSharesRequestBody
     public ?string $nextToken = null;
     
     /**
-     * Specifies that you want to retrieve details of only those resource shares that use the RAM permission with this <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resoure Name (ARN)</a>.
+     * Specifies that you want to retrieve details of only those resource shares that use the managed permission with this <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Name (ARN)</a>.
      * 
      * @var ?string $permissionArn
      */
@@ -50,6 +50,16 @@ class GetResourceSharesRequestBody
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $permissionArn = null;
+    
+    /**
+     * Specifies that you want to retrieve details for only those resource shares that use the specified version of the managed permission.
+     * 
+     * @var ?int $permissionVersion
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('permissionVersion')]
+    #[\JMS\Serializer\Annotation\Type('int')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?int $permissionVersion = null;
     
     /**
      * <p>Specifies that you want to retrieve details of only those resource shares that match the following:</p> <ul> <li> <p> <b> <code>SELF</code> </b> – resource shares that your account shares with other accounts</p> </li> <li> <p> <b> <code>OTHER-ACCOUNTS</code> </b> – resource shares that other accounts share with your account</p> </li> </ul>
@@ -96,6 +106,7 @@ class GetResourceSharesRequestBody
 		$this->name = null;
 		$this->nextToken = null;
 		$this->permissionArn = null;
+		$this->permissionVersion = null;
 		$this->resourceOwner = \OpenAPI\OpenAPI\Models\Operations\GetResourceSharesRequestBodyResourceOwnerEnum::SELF;
 		$this->resourceShareArns = null;
 		$this->resourceShareStatus = null;

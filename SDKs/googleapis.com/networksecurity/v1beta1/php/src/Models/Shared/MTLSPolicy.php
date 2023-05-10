@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class MTLSPolicy
 {
     /**
-     *  Defines the mechanism to obtain the Certificate Authority certificate to validate the client certificate.
+     * Required if the policy is to be used with Traffic Director. For external HTTPS load balancers it must be empty. Defines the mechanism to obtain the Certificate Authority certificate to validate the client certificate.
      * 
      * @var ?array<\OpenAPI\OpenAPI\Models\Shared\ValidationCA> $clientValidationCa
      */
@@ -27,8 +27,30 @@ class MTLSPolicy
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $clientValidationCa = null;
     
+    /**
+     * When the client presents an invalid certificate or no certificate to the load balancer, the `client_validation_mode` specifies how the client connection is handled. Required if the policy is to be used with the external HTTPS load balancing. For Traffic Director it must be empty.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\MTLSPolicyClientValidationModeEnum $clientValidationMode
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('clientValidationMode')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\MTLSPolicyClientValidationModeEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?MTLSPolicyClientValidationModeEnum $clientValidationMode = null;
+    
+    /**
+     * Reference to the TrustConfig from certificatemanager.googleapis.com namespace. If specified, the chain validation will be performed against certificates configured in the given TrustConfig. Allowed only if the policy is to be used with external HTTPS load balancers.
+     * 
+     * @var ?string $clientValidationTrustConfig
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('clientValidationTrustConfig')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $clientValidationTrustConfig = null;
+    
 	public function __construct()
 	{
 		$this->clientValidationCa = null;
+		$this->clientValidationMode = null;
+		$this->clientValidationTrustConfig = null;
 	}
 }

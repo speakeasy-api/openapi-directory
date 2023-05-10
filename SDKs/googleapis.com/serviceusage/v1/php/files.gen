@@ -106,4 +106,7 @@ src/Models/Shared/Method.php
 src/Models/Shared/DisableServiceRequestCheckIfServiceHasUsageEnum.php
 src/Models/Shared/DisableServiceRequest.php
 src/Models/Shared/ListServicesResponse.php
+docs/sdk/README.md
+docs/operations/README.md
+docs/services/README.md
 USAGE.md

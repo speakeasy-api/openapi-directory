@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateVpcEndpointXAmzTargetEnum: string
 {
     case OPEN_SEARCH_SERVERLESS_UPDATE_VPC_ENDPOINT = 'OpenSearchServerless.UpdateVpcEndpoint';

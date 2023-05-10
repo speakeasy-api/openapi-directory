@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTResetDBClusterParameterGroupActionEnum: string
 {
     case RESET_DB_CLUSTER_PARAMETER_GROUP = 'ResetDBClusterParameterGroup';

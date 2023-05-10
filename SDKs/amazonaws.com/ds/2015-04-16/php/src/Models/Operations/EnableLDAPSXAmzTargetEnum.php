@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum EnableLDAPSXAmzTargetEnum: string
 {
     case DIRECTORY_SERVICE20150416_ENABLE_LDAPS = 'DirectoryService_20150416.EnableLDAPS';

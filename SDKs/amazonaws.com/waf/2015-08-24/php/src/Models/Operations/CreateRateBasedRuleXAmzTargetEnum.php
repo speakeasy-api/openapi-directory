@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateRateBasedRuleXAmzTargetEnum: string
 {
     case AWSWAF20150824_CREATE_RATE_BASED_RULE = 'AWSWAF_20150824.CreateRateBasedRule';

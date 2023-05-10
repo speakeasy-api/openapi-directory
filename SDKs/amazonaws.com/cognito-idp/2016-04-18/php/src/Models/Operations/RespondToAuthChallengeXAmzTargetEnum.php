@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RespondToAuthChallengeXAmzTargetEnum: string
 {
     case AWS_COGNITO_IDENTITY_PROVIDER_SERVICE_RESPOND_TO_AUTH_CHALLENGE = 'AWSCognitoIdentityProviderService.RespondToAuthChallenge';

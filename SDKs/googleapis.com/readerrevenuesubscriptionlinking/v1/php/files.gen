@@ -30,4 +30,6 @@ src/Models/Shared/XgafvEnum.php
 src/Models/Shared/ReaderEntitlementsInput.php
 src/Models/Shared/ReaderEntitlements.php
 src/Models/Shared/Entitlement.php
+docs/sdk/README.md
+docs/publications/README.md
 USAGE.md

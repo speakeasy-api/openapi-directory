@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ExtendLicenseConsumptionXAmzTargetEnum: string
 {
     case AWS_LICENSE_MANAGER_EXTEND_LICENSE_CONSUMPTION = 'AWSLicenseManager.ExtendLicenseConsumption';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteLoadBalancerXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_DELETE_LOAD_BALANCER = 'Lightsail_20161128.DeleteLoadBalancer';

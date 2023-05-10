@@ -51,4 +51,6 @@ src/Models/Shared/XgafvEnum.php
 src/Models/Shared/GoogleCloudEssentialcontactsV1ListContactsResponse.php
 src/Models/Shared/GoogleCloudEssentialcontactsV1SendTestMessageRequestNotificationCategoryEnum.php
 src/Models/Shared/GoogleCloudEssentialcontactsV1SendTestMessageRequest.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

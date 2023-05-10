@@ -38,4 +38,5 @@ src/Models/Shared/ItemTypeEnum.php
 src/Models/Shared/PutObjectResponse.php
 src/Models/Shared/StorageClassEnum.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

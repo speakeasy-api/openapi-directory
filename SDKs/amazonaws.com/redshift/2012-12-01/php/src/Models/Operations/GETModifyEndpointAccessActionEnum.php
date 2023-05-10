@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETModifyEndpointAccessActionEnum: string
 {
     case MODIFY_ENDPOINT_ACCESS = 'ModifyEndpointAccess';

@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * Service - Details on a service within a cluster
+ * Service - Details on a service within a cluster.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

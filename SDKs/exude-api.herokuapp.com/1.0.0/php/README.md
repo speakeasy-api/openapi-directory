@@ -30,17 +30,47 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\FilterFileDataStoppingsRequest;
+use \OpenAPI\OpenAPI\Models\Operations\FilterFileDataStoppingsRequestBody;
+use \OpenAPI\OpenAPI\Models\Operations\FilterFileDataStoppingsRequestBodyFile;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new FilterFileDataStoppingsRequest();
+    $request->requestBody = new FilterFileDataStoppingsRequestBody();
+    $request->requestBody->file = new FilterFileDataStoppingsRequestBodyFile();
+    $request->requestBody->file->content = 'corrupti';
+    $request->requestBody->file->file = 'provident';
+    $request->type = 'distinctio';
+
+    $response = $sdk->exude->filterFileDataStoppings($request);
+
+    if ($response->exudeResponseBean !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### exude
+### [exude](docs/exude/README.md)
 
-* `filterFileDataStoppings` - Filter the stopping words from the provided input file
-* `filterStoppings` - Filter the stopping words from the provided input data or links
+* [filterFileDataStoppings](docs/exude/README.md#filterfiledatastoppings) - Filter the stopping words from the provided input file
+* [filterStoppings](docs/exude/README.md#filterstoppings) - Filter the stopping words from the provided input data or links
 <!-- End SDK Available Operations -->
 
 ### Maturity

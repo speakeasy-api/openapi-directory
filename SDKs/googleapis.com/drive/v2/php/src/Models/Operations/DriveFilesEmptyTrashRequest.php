@@ -20,6 +20,14 @@ class DriveFilesEmptyTrashRequest
     public ?\OpenAPI\OpenAPI\Models\Shared\AltEnum $alt = null;
     
     /**
+     * If set, empties the trash of the provided shared drive.
+     * 
+     * @var ?string $driveId
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=driveId')]
+    public ?string $driveId = null;
+    
+    /**
      * Deprecated. If an item is not in a shared drive and its last parent is deleted but the item itself is not, the item will be placed under its owner's root.
      * 
      * @var ?bool $enforceSingleParent
@@ -78,6 +86,7 @@ class DriveFilesEmptyTrashRequest
 	public function __construct()
 	{
 		$this->alt = null;
+		$this->driveId = null;
 		$this->enforceSingleParent = null;
 		$this->fields = null;
 		$this->key = null;

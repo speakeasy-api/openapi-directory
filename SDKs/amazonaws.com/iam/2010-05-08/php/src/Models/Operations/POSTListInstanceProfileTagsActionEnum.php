@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTListInstanceProfileTagsActionEnum: string
 {
     case LIST_INSTANCE_PROFILE_TAGS = 'ListInstanceProfileTags';

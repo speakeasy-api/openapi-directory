@@ -36,4 +36,6 @@ src/Models/Shared/GoogleDatastoreAdminV1beta1ExportEntitiesRequest.php
 src/Models/Shared/GoogleDatastoreAdminV1beta1EntityFilter.php
 src/Models/Shared/XgafvEnum.php
 src/Models/Shared/GoogleDatastoreAdminV1beta1ImportEntitiesRequest.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

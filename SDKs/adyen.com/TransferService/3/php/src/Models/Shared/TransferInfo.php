@@ -50,7 +50,12 @@ class TransferInfo
     public CounterpartyInfoV3 $counterparty;
     
     /**
-     * A human-readable description for the transfer. You can use alphanumeric characters and hyphens. We recommend sending a maximum of 140 characters, otherwise the description may be truncated.
+     * Your description for the transfer. It is used by most banks as the transfer description. We recommend sending a maximum of 140 characters, otherwise the description may be truncated.
+     * 
+     * 
+     * Supported characters: **[a-z] [A-Z] [0-9] / - ?** **: ( ) . , ' + Space**
+     * 
+     * Supported characters for **regular** and **fast** transfers to a US counterparty: **[a-z] [A-Z] [0-9] & $ % # @** **~ = + - _ ' " ! ?**
      * 
      * @var ?string $description
      */
@@ -131,6 +136,11 @@ class TransferInfo
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $referenceForBeneficiary = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('ultimateParty')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\UltimatePartyIdentification')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?UltimatePartyIdentification $ultimateParty = null;
+    
 	public function __construct()
 	{
 		$this->amount = new \OpenAPI\OpenAPI\Models\Shared\Amount();
@@ -143,5 +153,6 @@ class TransferInfo
 		$this->priority = null;
 		$this->reference = null;
 		$this->referenceForBeneficiary = null;
+		$this->ultimateParty = null;
 	}
 }

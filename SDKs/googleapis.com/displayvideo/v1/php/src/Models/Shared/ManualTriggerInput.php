@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * ManualTriggerInput - A single manual trigger in Display & Video 360.
+ * ManualTriggerInput - A single manual trigger in Display & Video 360. **Warning:** Line Items using manual triggers will stop serving in Display & Video 360 on **May 17, 2023**. Read our [feature deprecation announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

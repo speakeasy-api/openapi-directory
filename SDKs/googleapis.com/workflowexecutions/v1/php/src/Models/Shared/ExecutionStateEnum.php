@@ -17,4 +17,5 @@ enum ExecutionStateEnum: string
     case SUCCEEDED = 'SUCCEEDED';
     case FAILED = 'FAILED';
     case CANCELLED = 'CANCELLED';
+    case UNAVAILABLE = 'UNAVAILABLE';
 }

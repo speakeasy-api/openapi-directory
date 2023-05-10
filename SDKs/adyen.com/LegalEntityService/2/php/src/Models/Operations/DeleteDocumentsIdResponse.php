@@ -31,10 +31,10 @@ class DeleteDocumentsIdResponse
     /**
      * OK - the request has succeeded.
      * 
-     * @var ?array<string, mixed> $voidResponse
+     * @var ?array<string, mixed> $void
      */
 	
-    public ?array $voidResponse = null;
+    public ?array $void = null;
     
 	public function __construct()
 	{
@@ -42,6 +42,6 @@ class DeleteDocumentsIdResponse
 		$this->statusCode = 0;
 		$this->rawResponse = null;
 		$this->serviceError = null;
-		$this->voidResponse = null;
+		$this->void = null;
 	}
 }

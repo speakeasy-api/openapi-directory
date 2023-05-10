@@ -299,4 +299,5 @@ src/Models/Shared/UpdateApplicationMaintenanceConfigurationResponse.php
 src/Models/Shared/UpdateApplicationMaintenanceConfigurationRequest.php
 src/Models/Shared/ApplicationMaintenanceConfigurationUpdate.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint - The Amazon Web Services Verified Access endpoint details.
+ * ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint - The Verified Access endpoint details.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

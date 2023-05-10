@@ -146,6 +146,7 @@ src/Models/Shared/RevisionSpec.php
 src/Models/Shared/Volume.php
 src/Models/Shared/SecretVolumeSource.php
 src/Models/Shared/KeyToPath.php
+src/Models/Shared/EmptyDirVolumeSource.php
 src/Models/Shared/ConfigMapVolumeSource.php
 src/Models/Shared/LocalObjectReference.php
 src/Models/Shared/Container.php
@@ -190,6 +191,9 @@ src/Models/Shared/ExecutionReference.php
 src/Models/Shared/JobSpec.php
 src/Models/Shared/ExecutionTemplateSpec.php
 src/Models/Shared/ListJobsResponse.php
+src/Models/Shared/RunJobRequest.php
+src/Models/Shared/Overrides.php
+src/Models/Shared/ContainerOverride.php
 src/Models/Shared/ListRevisionsResponse.php
 src/Models/Shared/Revision.php
 src/Models/Shared/RevisionStatus.php
@@ -223,4 +227,7 @@ src/Models/Shared/AuditLogConfig.php
 src/Models/Shared/SetIamPolicyRequest.php
 src/Models/Shared/TestIamPermissionsResponse.php
 src/Models/Shared/TestIamPermissionsRequest.php
+docs/sdk/README.md
+docs/namespaces/README.md
+docs/projects/README.md
 USAGE.md

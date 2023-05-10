@@ -65,4 +65,5 @@ src/Models/Shared/ListResourcesInput.php
 src/Models/Shared/UpdateResourceOutput.php
 src/Models/Shared/UpdateResourceInput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteLoadBalancerPolicyActionEnum: string
 {
     case DELETE_LOAD_BALANCER_POLICY = 'DeleteLoadBalancerPolicy';

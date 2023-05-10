@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UntagResourceXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_UNTAG_RESOURCE = 'Lightsail_20161128.UntagResource';

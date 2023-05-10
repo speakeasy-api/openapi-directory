@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetDataProtectionPolicyXAmzTargetEnum: string
 {
     case LOGS20140328_GET_DATA_PROTECTION_POLICY = 'Logs_20140328.GetDataProtectionPolicy';

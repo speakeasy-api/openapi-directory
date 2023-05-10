@@ -67,4 +67,9 @@ src/Models/Shared/GoogleCloudWebriskV1RawHashes.php
 src/Models/Shared/GoogleCloudWebriskV1SearchUrisResponse.php
 src/Models/Shared/GoogleCloudWebriskV1SearchUrisResponseThreatUriThreatTypesEnum.php
 src/Models/Shared/GoogleCloudWebriskV1SearchUrisResponseThreatUri.php
+docs/sdk/README.md
+docs/hashes/README.md
+docs/projects/README.md
+docs/threatlists/README.md
+docs/uris/README.md
 USAGE.md

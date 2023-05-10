@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ResumeResourceXAmzTargetEnum: string
 {
     case AMAZON_FORECAST_RESUME_RESOURCE = 'AmazonForecast.ResumeResource';

@@ -28,6 +28,16 @@ class GoogleCloudChannelV1Entitlement
     public ?GoogleCloudChannelV1AssociationInfo $associationInfo = null;
     
     /**
+     * Optional. The billing account resource name that is used to pay for this entitlement.
+     * 
+     * @var ?string $billingAccount
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('billingAccount')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $billingAccount = null;
+    
+    /**
      * Commitment settings for commitment-based offers.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleCloudChannelV1CommitmentSettings $commitmentSettings
@@ -68,7 +78,7 @@ class GoogleCloudChannelV1Entitlement
     public ?string $offer = null;
     
     /**
-     * Extended entitlement parameters. When creating an entitlement, valid parameter names and values are defined in the Offer.parameter_definitions. For Google Workspace, the following Parameters may be accepted as input: - max_units: The maximum assignable units for a flexible offer OR - num_units: The total commitment for commitment-based offers The response may additionally include the following output-only Parameters: - assigned_units: The number of licenses assigned to users. For GCP billing subaccounts, the following Parameter may be accepted as input: - display_name: The display name of the billing subaccount.
+     * Extended entitlement parameters. When creating an entitlement, valid parameter names and values are defined in the Offer.parameter_definitions. For Google Workspace, the following Parameters may be accepted as input: - max_units: The maximum assignable units for a flexible offer OR - num_units: The total commitment for commitment-based offers The response may additionally include the following output-only Parameters: - assigned_units: The number of licenses assigned to users. For Google Cloud billing subaccounts, the following Parameter may be accepted as input: - display_name: The display name of the billing subaccount.
      * 
      * @var ?array<\OpenAPI\OpenAPI\Models\Shared\GoogleCloudChannelV1Parameter> $parameters
      */
@@ -140,6 +150,7 @@ class GoogleCloudChannelV1Entitlement
 	public function __construct()
 	{
 		$this->associationInfo = null;
+		$this->billingAccount = null;
 		$this->commitmentSettings = null;
 		$this->createTime = null;
 		$this->name = null;

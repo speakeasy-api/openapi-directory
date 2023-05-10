@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteCustomKeyStoreXAmzTargetEnum: string
 {
     case TRENT_SERVICE_DELETE_CUSTOM_KEY_STORE = 'TrentService.DeleteCustomKeyStore';

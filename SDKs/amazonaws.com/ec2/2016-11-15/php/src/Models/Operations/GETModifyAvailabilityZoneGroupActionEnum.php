@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETModifyAvailabilityZoneGroupActionEnum: string
 {
     case MODIFY_AVAILABILITY_ZONE_GROUP = 'ModifyAvailabilityZoneGroup';

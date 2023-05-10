@@ -107,6 +107,26 @@ class GoogleCloudContactcenterinsightsV1AnnotatorSelector
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $runSilenceAnnotator = null;
     
+    /**
+     * Whether to run the summarization annotator.
+     * 
+     * @var ?bool $runSummarizationAnnotator
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('runSummarizationAnnotator')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $runSummarizationAnnotator = null;
+    
+    /**
+     * Configuration for summarization.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleCloudContactcenterinsightsV1AnnotatorSelectorSummarizationConfig $summarizationConfig
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('summarizationConfig')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleCloudContactcenterinsightsV1AnnotatorSelectorSummarizationConfig')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleCloudContactcenterinsightsV1AnnotatorSelectorSummarizationConfig $summarizationConfig = null;
+    
 	public function __construct()
 	{
 		$this->issueModels = null;
@@ -118,5 +138,7 @@ class GoogleCloudContactcenterinsightsV1AnnotatorSelector
 		$this->runPhraseMatcherAnnotator = null;
 		$this->runSentimentAnnotator = null;
 		$this->runSilenceAnnotator = null;
+		$this->runSummarizationAnnotator = null;
+		$this->summarizationConfig = null;
 	}
 }

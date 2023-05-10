@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * NodePool - Provides GKE Node Pool information.
+ * NodePool - Provides GKE node pool information.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public
@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class NodePool
 {
     /**
-     * Kubernetes Node pool name.
+     * Kubernetes node pool name.
      * 
      * @var ?string $name
      */

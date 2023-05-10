@@ -463,9 +463,11 @@ class Institutions
      * 
      * List institution categories (including parent Categories)
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\PrivateCategoriesListSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\PrivateCategoriesListResponse
      */
 	public function privateCategoriesList(
+        \OpenAPI\OpenAPI\Models\Operations\PrivateCategoriesListSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\PrivateCategoriesListResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -473,7 +475,8 @@ class Institutions
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -930,9 +933,11 @@ class Institutions
      * 
      * Account institution details
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\PrivateInstitutionDetailsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\PrivateInstitutionDetailsResponse
      */
 	public function privateInstitutionDetails(
+        \OpenAPI\OpenAPI\Models\Operations\PrivateInstitutionDetailsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\PrivateInstitutionDetailsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -940,7 +945,8 @@ class Institutions
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -972,9 +978,11 @@ class Institutions
      * 
      * Account institution embargo options details
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\PrivateInstitutionEmbargoOptionsDetailsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\PrivateInstitutionEmbargoOptionsDetailsResponse
      */
 	public function privateInstitutionEmbargoOptionsDetails(
+        \OpenAPI\OpenAPI\Models\Operations\PrivateInstitutionEmbargoOptionsDetailsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\PrivateInstitutionEmbargoOptionsDetailsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -982,7 +990,8 @@ class Institutions
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1014,9 +1023,11 @@ class Institutions
      * 
      * Returns the groups for which the account has administrative privileges (assigned and inherited).
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\PrivateInstitutionGroupsListSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\PrivateInstitutionGroupsListResponse
      */
 	public function privateInstitutionGroupsList(
+        \OpenAPI\OpenAPI\Models\Operations\PrivateInstitutionGroupsListSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\PrivateInstitutionGroupsListResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -1024,7 +1035,8 @@ class Institutions
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1056,9 +1068,11 @@ class Institutions
      * 
      * Returns the roles available for groups and the institution group.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\PrivateInstitutionRolesListSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\PrivateInstitutionRolesListResponse
      */
 	public function privateInstitutionRolesList(
+        \OpenAPI\OpenAPI\Models\Operations\PrivateInstitutionRolesListSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\PrivateInstitutionRolesListResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -1066,7 +1080,8 @@ class Institutions
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

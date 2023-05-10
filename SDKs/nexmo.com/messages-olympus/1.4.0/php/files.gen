@@ -180,4 +180,5 @@ src/Models/Shared/MessageStatusViberUsageCurrencyEnum.php
 src/Models/Shared/MessageStatusViberUsage.php
 src/Models/Shared/MessageStatusViber.php
 src/Models/Callbacks/SendMessageMessageStatusResponse.php
+docs/sdk/README.md
 USAGE.md

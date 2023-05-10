@@ -23,4 +23,6 @@ enum InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedT
     case REFER_TO_IMAGE = 'refer_to_image';
     case STOP_PAYMENT_REQUESTED = 'stop_payment_requested';
     case RETURNED = 'returned';
+    case DUPLICATE_PRESENTMENT = 'duplicate_presentment';
+    case NOT_AUTHORIZED = 'not_authorized';
 }

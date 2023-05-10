@@ -30,78 +30,99 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $response = $sdk->console->getAemProductInfo();
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### console
+### [console](docs/console/README.md)
 
-* `getAemProductInfo`
-* `getBundleInfo`
-* `getConfigMgr`
-* `postBundle`
-* `postJmxRepository`
-* `postSamlConfiguration`
+* [getAemProductInfo](docs/console/README.md#getaemproductinfo)
+* [getBundleInfo](docs/console/README.md#getbundleinfo)
+* [getConfigMgr](docs/console/README.md#getconfigmgr)
+* [postBundle](docs/console/README.md#postbundle)
+* [postJmxRepository](docs/console/README.md#postjmxrepository)
+* [postSamlConfiguration](docs/console/README.md#postsamlconfiguration)
 
-### cq
+### [cq](docs/cq/README.md)
 
-* `getLoginPage`
-* `postCqActions`
+* [getLoginPage](docs/cq/README.md#getloginpage)
+* [postCqActions](docs/cq/README.md#postcqactions)
 
-### crx
+### [crx](docs/crx/README.md)
 
-* `getCrxdeStatus`
-* `getInstallStatus`
-* `getPackageManagerServlet`
-* `postPackageService`
-* `postPackageServiceJson`
-* `postPackageUpdate`
-* `postSetPassword`
+* [getCrxdeStatus](docs/crx/README.md#getcrxdestatus)
+* [getInstallStatus](docs/crx/README.md#getinstallstatus)
+* [getPackageManagerServlet](docs/crx/README.md#getpackagemanagerservlet)
+* [postPackageService](docs/crx/README.md#postpackageservice)
+* [postPackageServiceJson](docs/crx/README.md#postpackageservicejson)
+* [postPackageUpdate](docs/crx/README.md#postpackageupdate)
+* [postSetPassword](docs/crx/README.md#postsetpassword)
 
-### custom
+### [custom](docs/custom/README.md)
 
-* `getAemHealthCheck`
-* `postConfigAemHealthCheckServlet`
-* `postConfigAemPasswordReset`
+* [getAemHealthCheck](docs/custom/README.md#getaemhealthcheck)
+* [postConfigAemHealthCheckServlet](docs/custom/README.md#postconfigaemhealthcheckservlet)
+* [postConfigAemPasswordReset](docs/custom/README.md#postconfigaempasswordreset)
 
-### granite
+### [granite](docs/granite/README.md)
 
-* `sslSetup`
+* [sslSetup](docs/granite/README.md#sslsetup)
 
-### sling
+### [sling](docs/sling/README.md)
 
-* `deleteAgent`
-* `deleteNode`
-* `getAgent`
-* `getAgents`
-* `getAuthorizableKeystore`
-* `getKeystore`
-* `getNode`
-* `getPackage`
-* `getPackageFilter`
-* `getQuery`
-* `getTruststore`
-* `getTruststoreInfo`
-* `postAgent`
-* `postAuthorizableKeystore`
-* `postAuthorizables`
-* `postConfigAdobeGraniteSamlAuthenticationHandler`
-* `postConfigApacheFelixJettyBasedHttpService`
-* `postConfigApacheHttpComponentsProxyConfiguration`
-* `postConfigApacheSlingDavExServlet`
-* `postConfigApacheSlingGetServlet`
-* `postConfigApacheSlingReferrerFilter`
-* `postConfigProperty`
-* `postNode`
-* `postNodeRw`
-* `postPath`
-* `postQuery`
-* `postTreeActivation`
-* `postTruststore`
-* `postTruststorePkcs12`
+* [deleteAgent](docs/sling/README.md#deleteagent)
+* [deleteNode](docs/sling/README.md#deletenode)
+* [getAgent](docs/sling/README.md#getagent)
+* [getAgents](docs/sling/README.md#getagents)
+* [getAuthorizableKeystore](docs/sling/README.md#getauthorizablekeystore)
+* [getKeystore](docs/sling/README.md#getkeystore)
+* [getNode](docs/sling/README.md#getnode)
+* [getPackage](docs/sling/README.md#getpackage)
+* [getPackageFilter](docs/sling/README.md#getpackagefilter)
+* [getQuery](docs/sling/README.md#getquery)
+* [getTruststore](docs/sling/README.md#gettruststore)
+* [getTruststoreInfo](docs/sling/README.md#gettruststoreinfo)
+* [postAgent](docs/sling/README.md#postagent)
+* [postAuthorizableKeystore](docs/sling/README.md#postauthorizablekeystore)
+* [postAuthorizables](docs/sling/README.md#postauthorizables)
+* [postConfigAdobeGraniteSamlAuthenticationHandler](docs/sling/README.md#postconfigadobegranitesamlauthenticationhandler)
+* [postConfigApacheFelixJettyBasedHttpService](docs/sling/README.md#postconfigapachefelixjettybasedhttpservice)
+* [postConfigApacheHttpComponentsProxyConfiguration](docs/sling/README.md#postconfigapachehttpcomponentsproxyconfiguration)
+* [postConfigApacheSlingDavExServlet](docs/sling/README.md#postconfigapacheslingdavexservlet)
+* [postConfigApacheSlingGetServlet](docs/sling/README.md#postconfigapacheslinggetservlet)
+* [postConfigApacheSlingReferrerFilter](docs/sling/README.md#postconfigapacheslingreferrerfilter)
+* [postConfigProperty](docs/sling/README.md#postconfigproperty)
+* [postNode](docs/sling/README.md#postnode)
+* [postNodeRw](docs/sling/README.md#postnoderw)
+* [postPath](docs/sling/README.md#postpath)
+* [postQuery](docs/sling/README.md#postquery)
+* [postTreeActivation](docs/sling/README.md#posttreeactivation)
+* [postTruststore](docs/sling/README.md#posttruststore)
+* [postTruststorePkcs12](docs/sling/README.md#posttruststorepkcs12)
 <!-- End SDK Available Operations -->
 
 ### Maturity

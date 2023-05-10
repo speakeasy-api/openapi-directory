@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutConfigRuleXAmzTargetEnum: string
 {
     case STARLING_DOVE_SERVICE_PUT_CONFIG_RULE = 'StarlingDoveService.PutConfigRule';

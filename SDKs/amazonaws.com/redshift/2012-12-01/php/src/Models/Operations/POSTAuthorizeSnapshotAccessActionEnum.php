@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTAuthorizeSnapshotAccessActionEnum: string
 {
     case AUTHORIZE_SNAPSHOT_ACCESS = 'AuthorizeSnapshotAccess';

@@ -20,5 +20,5 @@ enum HybridTransactionDebtTransactionTypeEnum: string
     case BALANCED_ADJUSTMENT = 'balancedAdjustment';
     case CREDIT = 'credit';
     case CHARGE = 'charge';
-    case NULL = 'null';
+    case LESS_THAN_NIL_GREATER_THAN = '<nil>';
 }

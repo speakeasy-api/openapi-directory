@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeBatchPredictionsXAmzTargetEnum: string
 {
     case AMAZON_ML20141212_DESCRIBE_BATCH_PREDICTIONS = 'AmazonML_20141212.DescribeBatchPredictions';

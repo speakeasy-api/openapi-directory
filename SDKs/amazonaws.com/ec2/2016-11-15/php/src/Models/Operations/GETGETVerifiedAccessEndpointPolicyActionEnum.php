@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETGETVerifiedAccessEndpointPolicyActionEnum: string
 {
     case GET_VERIFIED_ACCESS_ENDPOINT_POLICY = 'GetVerifiedAccessEndpointPolicy';

@@ -42,11 +42,14 @@ class Search
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetSearchVersionNumberCSCategoryExtRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetSearchVersionNumberCSCategoryExtResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getSearchVersionNumberCSCategoryExt(
         \OpenAPI\OpenAPI\Models\Operations\GetSearchVersionNumberCSCategoryExtRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetSearchVersionNumberCSCategoryExtResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/search/{versionNumber}/cS/{category}.{ext}', \OpenAPI\OpenAPI\Models\Operations\GetSearchVersionNumberCSCategoryExtRequest::class, $request);
         
@@ -197,11 +200,14 @@ class Search
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getSearchVersionNumberRoutedSearchQueryPositionHeadingExt(
         \OpenAPI\OpenAPI\Models\Operations\GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/search/{versionNumber}/routedSearch/{query}/{position}/{heading}.{ext}', \OpenAPI\OpenAPI\Models\Operations\GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest::class, $request);
         
@@ -228,11 +234,14 @@ class Search
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetSearchVersionNumberSQueryExtRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetSearchVersionNumberSQueryExtResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getSearchVersionNumberSQueryExt(
         \OpenAPI\OpenAPI\Models\Operations\GetSearchVersionNumberSQueryExtRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetSearchVersionNumberSQueryExtResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/search/{versionNumber}/s/{query}.{ext}', \OpenAPI\OpenAPI\Models\Operations\GetSearchVersionNumberSQueryExtRequest::class, $request);
         

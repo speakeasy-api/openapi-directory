@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * ExportS3DataInput - <p/>
+ * ExportS3DataInput - The structure containing the Amazon S3 path to export the Earth Observation job output.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

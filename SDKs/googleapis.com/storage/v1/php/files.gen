@@ -408,4 +408,13 @@ src/Models/Shared/HmacKey.php
 src/Models/Shared/HmacKeyMetadata.php
 src/Models/Shared/HmacKeysMetadata.php
 src/Models/Shared/ServiceAccount.php
+docs/sdk/README.md
+docs/bucketaccesscontrols/README.md
+docs/buckets/README.md
+docs/channels/README.md
+docs/defaultobjectaccesscontrols/README.md
+docs/notifications/README.md
+docs/objectaccesscontrols/README.md
+docs/objects/README.md
+docs/projects/README.md
 USAGE.md

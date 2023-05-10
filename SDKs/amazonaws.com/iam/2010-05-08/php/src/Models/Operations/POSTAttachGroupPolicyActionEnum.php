@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTAttachGroupPolicyActionEnum: string
 {
     case ATTACH_GROUP_POLICY = 'AttachGroupPolicy';

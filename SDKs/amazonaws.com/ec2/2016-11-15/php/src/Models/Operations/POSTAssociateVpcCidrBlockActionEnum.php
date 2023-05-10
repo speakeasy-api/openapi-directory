@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTAssociateVpcCidrBlockActionEnum: string
 {
     case ASSOCIATE_VPC_CIDR_BLOCK = 'AssociateVpcCidrBlock';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ClaimGameServerXAmzTargetEnum: string
 {
     case GAME_LIFT_CLAIM_GAME_SERVER = 'GameLift.ClaimGameServer';

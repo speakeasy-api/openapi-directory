@@ -30,104 +30,141 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\UpdateBankAccountRequest;
+use \OpenAPI\OpenAPI\Models\Operations\UpdateBankAccountUpdateRequestBodyForBankAccount;
+use \OpenAPI\OpenAPI\Models\Operations\UpdateBankAccountUpdateRequestBodyForBankAccountAccountStatusEnum;
+use \OpenAPI\OpenAPI\Models\Operations\UpdateBankAccountUpdateRequestBodyForBankAccountDefaultAccountEnum;
+use \OpenAPI\OpenAPI\Models\Operations\UpdateBankAccountSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new UpdateBankAccountRequest();
+    $request->requestBody = new UpdateBankAccountUpdateRequestBodyForBankAccount();
+    $request->requestBody->accountName = 'corrupti';
+    $request->requestBody->accountStatus = UpdateBankAccountUpdateRequestBodyForBankAccountAccountStatusEnum::INACTIVE;
+    $request->requestBody->defaultAccount = UpdateBankAccountUpdateRequestBodyForBankAccountDefaultAccountEnum::NO;
+    $request->requestBody->referenceVersion = 1;
+    $request->bankAccountId = 'quibusdam';
+    $request->xApiKey = 'unde';
+
+    $requestSecurity = new UpdateBankAccountSecurity();
+    $requestSecurity->apiSecretKey = 'YOUR_API_KEY_HERE';
+
+    $response = $sdk->bankAccounts->updateBankAccount($request, $requestSecurity);
+
+    if ($response->updateBankAccount201ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### bankAccounts
+### [bankAccounts](docs/bankaccounts/README.md)
 
-* `updateBankAccount` - Update existing bank account details
-* `createBankAccount` - Create new bank account
-* `getAllBankAccounts` - Retrieve all the bank accounts of a particular investor
-* `getBankAccount` - Retrieve existing bank account from bank account id
+* [updateBankAccount](docs/bankaccounts/README.md#updatebankaccount) - Update existing bank account details
+* [createBankAccount](docs/bankaccounts/README.md#createbankaccount) - Create new bank account
+* [getAllBankAccounts](docs/bankaccounts/README.md#getallbankaccounts) - Retrieve all the bank accounts of a particular investor
+* [getBankAccount](docs/bankaccounts/README.md#getbankaccount) - Retrieve existing bank account from bank account id
 
-### fees
+### [fees](docs/fees/README.md)
 
-* `createFee` - Create Fee
+* [createFee](docs/fees/README.md#createfee) - Create Fee
 
-### financialProducts
+### [financialProducts](docs/financialproducts/README.md)
 
-* `getAllFinancialProducts` - Get All Financial Products
+* [getAllFinancialProducts](docs/financialproducts/README.md#getallfinancialproducts) - Get All Financial Products
 
-### investmentProductTransactions
+### [investmentProductTransactions](docs/investmentproducttransactions/README.md)
 
-* `executeBuyTrasaction` - Execute Buy Transaction(s)
-* `executeSellTrasaction` - Execute Sell Transaction(s)
+* [executeBuyTrasaction](docs/investmentproducttransactions/README.md#executebuytrasaction) - Execute Buy Transaction(s)
+* [executeSellTrasaction](docs/investmentproducttransactions/README.md#executeselltrasaction) - Execute Sell Transaction(s)
 
-### investmentProducts
+### [investmentProducts](docs/investmentproducts/README.md)
 
-* `getConfiguredInvestmentProductPrices` - Get Current Prices of all Investment Products
-* `getConfiguredInvestmentProducts` - Get Configured Investment Products
-* `getInvestmentProduct` - Get details of a given Investment Product
-* `getInvestmentProductPrice` - Get Current Price of an Investment Product
+* [getConfiguredInvestmentProductPrices](docs/investmentproducts/README.md#getconfiguredinvestmentproductprices) - Get Current Prices of all Investment Products
+* [getConfiguredInvestmentProducts](docs/investmentproducts/README.md#getconfiguredinvestmentproducts) - Get Configured Investment Products
+* [getInvestmentProduct](docs/investmentproducts/README.md#getinvestmentproduct) - Get details of a given Investment Product
+* [getInvestmentProductPrice](docs/investmentproducts/README.md#getinvestmentproductprice) - Get Current Price of an Investment Product
 
-### investorAccounts
+### [investorAccounts](docs/investoraccounts/README.md)
 
-* `getAllinvestorAccounts` - Retrieve all the investor accounts
-* `getinvestorAccount` - Retrieve existing investor account from account id
+* [getAllinvestorAccounts](docs/investoraccounts/README.md#getallinvestoraccounts) - Retrieve all the investor accounts
+* [getinvestorAccount](docs/investoraccounts/README.md#getinvestoraccount) - Retrieve existing investor account from account id
 
-### investors
+### [investors](docs/investors/README.md)
 
-* `createInvestor` - Create Investor
-* `getAllInvestors` - Get All Investors
-* `getInvestor` - Get Investor
-* `updateInvestor` - Update Investor
+* [createInvestor](docs/investors/README.md#createinvestor) - Create Investor
+* [getAllInvestors](docs/investors/README.md#getallinvestors) - Get All Investors
+* [getInvestor](docs/investors/README.md#getinvestor) - Get Investor
+* [updateInvestor](docs/investors/README.md#updateinvestor) - Update Investor
 
-### payments
+### [payments](docs/payments/README.md)
 
-* `createSinglePaymentIntent` - Create Single Payment Intent
-* `getAllPayments` - Get All Payments
-* `getPayment` - Get Payment by Transaction Id
-* `getPotPayments` - Get Payments by Pot Id
+* [createSinglePaymentIntent](docs/payments/README.md#createsinglepaymentintent) - Create Single Payment Intent
+* [getAllPayments](docs/payments/README.md#getallpayments) - Get All Payments
+* [getPayment](docs/payments/README.md#getpayment) - Get Payment by Transaction Id
+* [getPotPayments](docs/payments/README.md#getpotpayments) - Get Payments by Pot Id
 
-### portfolioTemplates
+### [portfolioTemplates](docs/portfoliotemplates/README.md)
 
-* `createPortfolioTemplate` - Create new Portfolio Template
-* `getAllPortfolioTemplates` - Get all the Portfolio templates
-* `getPortfolioTemplate` - Retrive existing Portfolio template
-* `updatePortfolioTemplate` - Update existing Portfolio template
+* [createPortfolioTemplate](docs/portfoliotemplates/README.md#createportfoliotemplate) - Create new Portfolio Template
+* [getAllPortfolioTemplates](docs/portfoliotemplates/README.md#getallportfoliotemplates) - Get all the Portfolio templates
+* [getPortfolioTemplate](docs/portfoliotemplates/README.md#getportfoliotemplate) - Retrive existing Portfolio template
+* [updatePortfolioTemplate](docs/portfoliotemplates/README.md#updateportfoliotemplate) - Update existing Portfolio template
 
-### potsHoldingsAndTransactions
+### [potsHoldingsAndTransactions](docs/potsholdingsandtransactions/README.md)
 
-* `updatePot` - Update existing Pot details
-* `createPot` - Create new pot
-* `getPot` - Retrive existing pot from pot id
-* `getPotHoldings` - Get current holdings of a pot
-* `getPotTransactions` - Get pending & past transactions of a pot
-* `getPotValue` - Get current value of a pot
-* `getPots` - Get all pots for an investor
-* `getTotalPotHoldings` - Get total holdings of an Investor
-* `getTotalPotValue` - Get total value of all pots of an investor
+* [updatePot](docs/potsholdingsandtransactions/README.md#updatepot) - Update existing Pot details
+* [createPot](docs/potsholdingsandtransactions/README.md#createpot) - Create new pot
+* [getPot](docs/potsholdingsandtransactions/README.md#getpot) - Retrive existing pot from pot id
+* [getPotHoldings](docs/potsholdingsandtransactions/README.md#getpotholdings) - Get current holdings of a pot
+* [getPotTransactions](docs/potsholdingsandtransactions/README.md#getpottransactions) - Get pending & past transactions of a pot
+* [getPotValue](docs/potsholdingsandtransactions/README.md#getpotvalue) - Get current value of a pot
+* [getPots](docs/potsholdingsandtransactions/README.md#getpots) - Get all pots for an investor
+* [getTotalPotHoldings](docs/potsholdingsandtransactions/README.md#gettotalpotholdings) - Get total holdings of an Investor
+* [getTotalPotValue](docs/potsholdingsandtransactions/README.md#gettotalpotvalue) - Get total value of all pots of an investor
 
-### rates
+### [rates](docs/rates/README.md)
 
-* `getRates` - Get Configured Rates
+* [getRates](docs/rates/README.md#getrates) - Get Configured Rates
 
-### rebalance
+### [rebalance](docs/rebalance/README.md)
 
-* `createRebalance` - Trigger rebalance process
-* `evaluateRebalance` - Evaluate rebalance
-* `getRebalanceDetails` - Retrieve rebalance request related details
+* [createRebalance](docs/rebalance/README.md#createrebalance) - Trigger rebalance process
+* [evaluateRebalance](docs/rebalance/README.md#evaluaterebalance) - Evaluate rebalance
+* [getRebalanceDetails](docs/rebalance/README.md#getrebalancedetails) - Retrieve rebalance request related details
 
-### switchInstruction
+### [switchInstruction](docs/switchinstruction/README.md)
 
-* `executeSwitchTrasaction` - Execute Switch Instruction
-* `getSwitch` - Retrieve Switch instruction from Switch ID
+* [executeSwitchTrasaction](docs/switchinstruction/README.md#executeswitchtrasaction) - Execute Switch Instruction
+* [getSwitch](docs/switchinstruction/README.md#getswitch) - Retrieve Switch instruction from Switch ID
 
-### testMethods
+### [testMethods](docs/testmethods/README.md)
 
-* `getBEGreeting` - Wealth Manager Greeting for BE
+* [getBEGreeting](docs/testmethods/README.md#getbegreeting) - Wealth Manager Greeting for BE
 
-### utility
+### [utility](docs/utility/README.md)
 
-* `copyFileToS3` - Upload a file
+* [copyFileToS3](docs/utility/README.md#copyfiletos3) - Upload a file
 
-### withdrawal
+### [withdrawal](docs/withdrawal/README.md)
 
-* `createWithdrawal` - Create Withdrawal
+* [createWithdrawal](docs/withdrawal/README.md#createwithdrawal) - Create Withdrawal
 <!-- End SDK Available Operations -->
 
 ### Maturity

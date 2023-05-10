@@ -30,22 +30,42 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $response = $sdk->books->getBooks();
+
+    if ($response->getBooks200ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### books
+### [books](docs/books/README.md)
 
-* `getBooks` - List all books
+* [getBooks](docs/books/README.md#getbooks) - List all books
 
-### sentences
+### [sentences](docs/sentences/README.md)
 
-* `getSentences` - A random sentence
-* `getSentencesFromBook` - Random sentences from a specific book
-* `getSpecificSentence` - A specific sentence
+* [getSentences](docs/sentences/README.md#getsentences) - A random sentence
+* [getSentencesFromBook](docs/sentences/README.md#getsentencesfrombook) - Random sentences from a specific book
+* [getSpecificSentence](docs/sentences/README.md#getspecificsentence) - A specific sentence
 <!-- End SDK Available Operations -->
 
 ### Maturity

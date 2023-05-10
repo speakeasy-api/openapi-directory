@@ -64,4 +64,5 @@ src/Models/Operations/GETReviewsFormatRequest.php
 src/Models/Operations/GETReviewsFormat200ApplicationJSONResults.php
 src/Models/Operations/GETReviewsFormat200ApplicationJSON.php
 src/Models/Operations/GETReviewsFormatResponse.php
+docs/sdk/README.md
 USAGE.md

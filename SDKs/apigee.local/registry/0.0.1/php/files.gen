@@ -111,4 +111,6 @@ src/Models/Shared/RollbackApiDeploymentRequest.php
 src/Models/Shared/RollbackApiSpecRequest.php
 src/Models/Shared/TagApiDeploymentRevisionRequest.php
 src/Models/Shared/TagApiSpecRevisionRequest.php
+docs/sdk/README.md
+docs/registry/README.md
 USAGE.md

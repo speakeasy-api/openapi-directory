@@ -21,6 +21,12 @@ src/Utils/Utils.php
 src/Models/Operations/CreateExtendedSourceServerRequestBody.php
 src/Models/Operations/CreateExtendedSourceServerRequest.php
 src/Models/Operations/CreateExtendedSourceServerResponse.php
+src/Models/Operations/CreateLaunchConfigurationTemplateRequestBodyLaunchDispositionEnum.php
+src/Models/Operations/CreateLaunchConfigurationTemplateRequestBodyLicensing.php
+src/Models/Operations/CreateLaunchConfigurationTemplateRequestBodyTargetInstanceTypeRightSizingMethodEnum.php
+src/Models/Operations/CreateLaunchConfigurationTemplateRequestBody.php
+src/Models/Operations/CreateLaunchConfigurationTemplateRequest.php
+src/Models/Operations/CreateLaunchConfigurationTemplateResponse.php
 src/Models/Operations/CreateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum.php
 src/Models/Operations/CreateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum.php
 src/Models/Operations/CreateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum.php
@@ -30,6 +36,9 @@ src/Models/Operations/CreateReplicationConfigurationTemplateResponse.php
 src/Models/Operations/DeleteJobRequestBody.php
 src/Models/Operations/DeleteJobRequest.php
 src/Models/Operations/DeleteJobResponse.php
+src/Models/Operations/DeleteLaunchConfigurationTemplateRequestBody.php
+src/Models/Operations/DeleteLaunchConfigurationTemplateRequest.php
+src/Models/Operations/DeleteLaunchConfigurationTemplateResponse.php
 src/Models/Operations/DeleteRecoveryInstanceRequestBody.php
 src/Models/Operations/DeleteRecoveryInstanceRequest.php
 src/Models/Operations/DeleteRecoveryInstanceResponse.php
@@ -46,6 +55,9 @@ src/Models/Operations/DescribeJobsRequestBodyFilters.php
 src/Models/Operations/DescribeJobsRequestBody.php
 src/Models/Operations/DescribeJobsRequest.php
 src/Models/Operations/DescribeJobsResponse.php
+src/Models/Operations/DescribeLaunchConfigurationTemplatesRequestBody.php
+src/Models/Operations/DescribeLaunchConfigurationTemplatesRequest.php
+src/Models/Operations/DescribeLaunchConfigurationTemplatesResponse.php
 src/Models/Operations/DescribeRecoveryInstancesRequestBodyFilters.php
 src/Models/Operations/DescribeRecoveryInstancesRequestBody.php
 src/Models/Operations/DescribeRecoveryInstancesRequest.php
@@ -124,6 +136,12 @@ src/Models/Operations/UpdateLaunchConfigurationRequestBodyTargetInstanceTypeRigh
 src/Models/Operations/UpdateLaunchConfigurationRequestBody.php
 src/Models/Operations/UpdateLaunchConfigurationRequest.php
 src/Models/Operations/UpdateLaunchConfigurationResponse.php
+src/Models/Operations/UpdateLaunchConfigurationTemplateRequestBodyLaunchDispositionEnum.php
+src/Models/Operations/UpdateLaunchConfigurationTemplateRequestBodyLicensing.php
+src/Models/Operations/UpdateLaunchConfigurationTemplateRequestBodyTargetInstanceTypeRightSizingMethodEnum.php
+src/Models/Operations/UpdateLaunchConfigurationTemplateRequestBody.php
+src/Models/Operations/UpdateLaunchConfigurationTemplateRequest.php
+src/Models/Operations/UpdateLaunchConfigurationTemplateResponse.php
 src/Models/Operations/UpdateReplicationConfigurationRequestBodyDataPlaneRoutingEnum.php
 src/Models/Operations/UpdateReplicationConfigurationRequestBodyDefaultLargeStagingDiskTypeEnum.php
 src/Models/Operations/UpdateReplicationConfigurationRequestBodyEbsEncryptionEnum.php
@@ -163,6 +181,11 @@ src/Models/Shared/DataReplicationInitiationStepStatusEnum.php
 src/Models/Shared/DataReplicationInitiationStepNameEnum.php
 src/Models/Shared/DataReplicationError.php
 src/Models/Shared/DataReplicationErrorStringEnum.php
+src/Models/Shared/CreateLaunchConfigurationTemplateResponse.php
+src/Models/Shared/LaunchConfigurationTemplate.php
+src/Models/Shared/TargetInstanceTypeRightSizingMethodEnum.php
+src/Models/Shared/Licensing.php
+src/Models/Shared/LaunchDispositionEnum.php
 src/Models/Shared/ReplicationConfigurationTemplate.php
 src/Models/Shared/PITPolicyRule.php
 src/Models/Shared/PITPolicyRuleUnitsEnum.php
@@ -180,6 +203,7 @@ src/Models/Shared/JobTypeEnum.php
 src/Models/Shared/JobStatusEnum.php
 src/Models/Shared/ParticipatingServer.php
 src/Models/Shared/InitiatedByEnum.php
+src/Models/Shared/DescribeLaunchConfigurationTemplatesResponse.php
 src/Models/Shared/DescribeRecoveryInstancesResponse.php
 src/Models/Shared/RecoveryInstance.php
 src/Models/Shared/RecoveryInstanceProperties.php
@@ -204,9 +228,6 @@ src/Models/Shared/DescribeReplicationConfigurationTemplatesResponse.php
 src/Models/Shared/DescribeSourceServersResponse.php
 src/Models/Shared/GetFailbackReplicationConfigurationResponse.php
 src/Models/Shared/LaunchConfiguration.php
-src/Models/Shared/TargetInstanceTypeRightSizingMethodEnum.php
-src/Models/Shared/Licensing.php
-src/Models/Shared/LaunchDispositionEnum.php
 src/Models/Shared/ReplicationConfiguration.php
 src/Models/Shared/ReplicationConfigurationReplicatedDisk.php
 src/Models/Shared/ReplicationConfigurationReplicatedDiskStagingDiskTypeEnum.php
@@ -222,5 +243,7 @@ src/Models/Shared/StartRecoveryRequestSourceServer.php
 src/Models/Shared/StartReplicationResponse.php
 src/Models/Shared/StopReplicationResponse.php
 src/Models/Shared/TerminateRecoveryInstancesResponse.php
+src/Models/Shared/UpdateLaunchConfigurationTemplateResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

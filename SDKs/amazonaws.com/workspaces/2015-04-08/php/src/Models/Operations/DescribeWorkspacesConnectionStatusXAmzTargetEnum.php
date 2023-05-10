@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeWorkspacesConnectionStatusXAmzTargetEnum: string
 {
     case WORKSPACES_SERVICE_DESCRIBE_WORKSPACES_CONNECTION_STATUS = 'WorkspacesService.DescribeWorkspacesConnectionStatus';

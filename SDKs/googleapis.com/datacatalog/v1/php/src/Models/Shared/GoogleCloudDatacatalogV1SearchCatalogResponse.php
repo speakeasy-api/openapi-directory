@@ -38,6 +38,16 @@ class GoogleCloudDatacatalogV1SearchCatalogResponse
     public ?array $results = null;
     
     /**
+     * The approximate total number of entries matched by the query.
+     * 
+     * @var ?int $totalSize
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('totalSize')]
+    #[\JMS\Serializer\Annotation\Type('int')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?int $totalSize = null;
+    
+    /**
      * Unreachable locations. Search results don't include data from those locations. To get additional information on an error, repeat the search request and restrict it to specific locations by setting the `SearchCatalogRequest.scope.restricted_locations` parameter.
      * 
      * @var ?array<string> $unreachable
@@ -51,6 +61,7 @@ class GoogleCloudDatacatalogV1SearchCatalogResponse
 	{
 		$this->nextPageToken = null;
 		$this->results = null;
+		$this->totalSize = null;
 		$this->unreachable = null;
 	}
 }

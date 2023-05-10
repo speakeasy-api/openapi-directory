@@ -348,6 +348,45 @@ class Financial
 	
     /**
      * 
+     * This endpoint provides information about an inaugural committee's Form 13 report of donations accepted.
+     * The data is aggregated by the contributor and the two-year period. We refer to two-year periods as a `cycle`.
+     * 
+     * 
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetTotalsInauguralCommitteesByContributorRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\GetTotalsInauguralCommitteesByContributorResponse
+     */
+	public function getTotalsInauguralCommitteesByContributor(
+        \OpenAPI\OpenAPI\Models\Operations\GetTotalsInauguralCommitteesByContributorRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\GetTotalsInauguralCommitteesByContributorResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/totals/inaugural_committees/by_contributor/');
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\GetTotalsInauguralCommitteesByContributorRequest::class, $request, null));
+        
+        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GetTotalsInauguralCommitteesByContributorResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if (true) { /** @phpstan-ignore-line */
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->inauguralDonationsPage = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\InauguralDonationsPage', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * 
      * This endpoint provides information about a committee's Form 3, Form 3X, or Form 3P financial reports,
      * which are aggregated by two-year period. We refer to two-year periods as a `cycle`.
      * 

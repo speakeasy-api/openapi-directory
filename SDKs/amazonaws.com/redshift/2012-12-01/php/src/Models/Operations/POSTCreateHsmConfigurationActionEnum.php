@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateHsmConfigurationActionEnum: string
 {
     case CREATE_HSM_CONFIGURATION = 'CreateHsmConfiguration';

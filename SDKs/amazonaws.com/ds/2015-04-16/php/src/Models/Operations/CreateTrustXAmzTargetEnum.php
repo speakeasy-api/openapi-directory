@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateTrustXAmzTargetEnum: string
 {
     case DIRECTORY_SERVICE20150416_CREATE_TRUST = 'DirectoryService_20150416.CreateTrust';

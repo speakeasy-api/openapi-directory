@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETUpdateConfigurationSetReputationMetricsEnabledActionEnum: string
 {
     case UPDATE_CONFIGURATION_SET_REPUTATION_METRICS_ENABLED = 'UpdateConfigurationSetReputationMetricsEnabled';

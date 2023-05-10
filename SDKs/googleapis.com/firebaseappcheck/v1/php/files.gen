@@ -174,4 +174,6 @@ src/Models/Shared/GoogleFirebaseAppcheckV1Service.php
 src/Models/Shared/GoogleFirebaseAppcheckV1BatchUpdateServicesRequest.php
 src/Models/Shared/GoogleFirebaseAppcheckV1UpdateServiceRequest.php
 src/Models/Shared/GoogleFirebaseAppcheckV1ListServicesResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

@@ -22,4 +22,6 @@ src/Utils/Utils.php
 src/Models/Operations/CreateDKIMRequest.php
 src/Models/Operations/CreateDKIMResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/dkimconfiguration/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum BatchDisassociateServiceActionFromProvisioningArtifactXAmzTargetEnum: string
 {
     case AWS242_SERVICE_CATALOG_SERVICE_BATCH_DISASSOCIATE_SERVICE_ACTION_FROM_PROVISIONING_ARTIFACT = 'AWS242ServiceCatalogService.BatchDisassociateServiceActionFromProvisioningArtifact';

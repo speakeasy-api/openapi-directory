@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTSearchTransitGatewayMulticastGroupsActionEnum: string
 {
     case SEARCH_TRANSIT_GATEWAY_MULTICAST_GROUPS = 'SearchTransitGatewayMulticastGroups';

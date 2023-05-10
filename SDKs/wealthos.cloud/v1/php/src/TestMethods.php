@@ -40,9 +40,11 @@ class TestMethods
     /**
      * Wealth Manager Greeting for BE
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetBEGreetingSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetBEGreetingResponse
      */
 	public function getBEGreeting(
+        \OpenAPI\OpenAPI\Models\Operations\GetBEGreetingSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetBEGreetingResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -50,7 +52,8 @@ class TestMethods
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

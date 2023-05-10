@@ -217,4 +217,16 @@ src/Models/Shared/TotalItems1.php
 src/Models/Shared/List1.php
 src/Models/Shared/Item2.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/changeseller/README.md
+docs/conversation/README.md
+docs/exportorderreport/README.md
+docs/feedv2deprecated/README.md
+docs/feedv3/README.md
+docs/invoice/README.md
+docs/orderhook/README.md
+docs/orders/README.md
+docs/payment/README.md
+docs/tracking/README.md
+docs/userorders/README.md
 USAGE.md

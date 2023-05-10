@@ -31,4 +31,6 @@ src/Models/Shared/ForwardPaging.php
 src/Models/Shared/NextPage.php
 src/Models/Shared/Error.php
 src/Models/Shared/ErrorDetail.php
+docs/sdk/README.md
+docs/domains/README.md
 USAGE.md

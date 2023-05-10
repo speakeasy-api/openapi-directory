@@ -43,4 +43,5 @@ src/Models/Shared/ManagedResourceSummary.php
 src/Models/Shared/ListZonalShiftsResponse.php
 src/Models/Shared/ZonalShiftSummary.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

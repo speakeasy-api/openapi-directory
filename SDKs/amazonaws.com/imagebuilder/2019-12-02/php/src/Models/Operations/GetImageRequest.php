@@ -33,7 +33,7 @@ class GetImageRequest
     public ?string $xAmzSignedHeaders = null;
     
     /**
-     * The Amazon Resource Name (ARN) of the image that you want to retrieve.
+     * The Amazon Resource Name (ARN) of the image that you want to get.
      * 
      * @var string $imageBuildVersionArn
      */

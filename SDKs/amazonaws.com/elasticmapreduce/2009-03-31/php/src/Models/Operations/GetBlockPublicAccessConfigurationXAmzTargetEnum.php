@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetBlockPublicAccessConfigurationXAmzTargetEnum: string
 {
     case ELASTIC_MAP_REDUCE_GET_BLOCK_PUBLIC_ACCESS_CONFIGURATION = 'ElasticMapReduce.GetBlockPublicAccessConfiguration';

@@ -76,7 +76,7 @@ class CrossSelling
      */
 	public function productSearchAccessories(
         \OpenAPI\OpenAPI\Models\Operations\ProductSearchAccessoriesRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ProductSearchAccessoriesResponse
     {
         $baseUrl = CrossSelling::PRODUCT_SEARCH_ACCESSORIES_SERVERS[0];
@@ -115,7 +115,7 @@ class CrossSelling
      */
 	public function productSearchShowTogether(
         \OpenAPI\OpenAPI\Models\Operations\ProductSearchShowTogetherRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ProductSearchShowTogetherResponse
     {
         $baseUrl = CrossSelling::PRODUCT_SEARCH_SHOW_TOGETHER_SERVERS[0];
@@ -154,7 +154,7 @@ class CrossSelling
      */
 	public function productSearchSimilars(
         \OpenAPI\OpenAPI\Models\Operations\ProductSearchSimilarsRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ProductSearchSimilarsResponse
     {
         $baseUrl = CrossSelling::PRODUCT_SEARCH_SIMILARS_SERVERS[0];
@@ -193,7 +193,7 @@ class CrossSelling
      */
 	public function productSearchSuggestions(
         \OpenAPI\OpenAPI\Models\Operations\ProductSearchSuggestionsRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ProductSearchSuggestionsResponse
     {
         $baseUrl = CrossSelling::PRODUCT_SEARCH_SUGGESTIONS_SERVERS[0];
@@ -232,7 +232,7 @@ class CrossSelling
      */
 	public function productSearchWhoBoughtAlsoBought(
         \OpenAPI\OpenAPI\Models\Operations\ProductSearchWhoBoughtAlsoBoughtRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ProductSearchWhoBoughtAlsoBoughtResponse
     {
         $baseUrl = CrossSelling::PRODUCT_SEARCH_WHO_BOUGHT_ALSO_BOUGHT_SERVERS[0];
@@ -275,7 +275,7 @@ class CrossSelling
      */
 	public function productSearchWhoSawAlsoBought(
         \OpenAPI\OpenAPI\Models\Operations\ProductSearchWhoSawAlsoBoughtRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ProductSearchWhoSawAlsoBoughtResponse
     {
         $baseUrl = CrossSelling::PRODUCT_SEARCH_WHO_SAW_ALSO_BOUGHT_SERVERS[0];
@@ -318,7 +318,7 @@ class CrossSelling
      */
 	public function productSearchWhoSawAlsoSaw(
         \OpenAPI\OpenAPI\Models\Operations\ProductSearchWhoSawAlsoSawRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ProductSearchWhoSawAlsoSawResponse
     {
         $baseUrl = CrossSelling::PRODUCT_SEARCH_WHO_SAW_ALSO_SAW_SERVERS[0];

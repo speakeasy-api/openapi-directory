@@ -30,17 +30,38 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $response = $sdk->apiInformation->getApiVersion();
+
+    if ($response->apiVersion !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### apiInformation
+### [apiInformation](docs/apiinformation/README.md)
 
-* `getApiVersion` - API version
-* `getHealth` - Service health
+* [getApiVersion](docs/apiinformation/README.md#getapiversion) - API version
+* [getHealth](docs/apiinformation/README.md#gethealth) - Service health
 <!-- End SDK Available Operations -->
 
 ### Maturity

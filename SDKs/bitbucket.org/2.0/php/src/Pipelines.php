@@ -270,7 +270,7 @@ class Pipelines
     ): \OpenAPI\OpenAPI\Models\Operations\CreatePipelineForRepositoryResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/pipelines/', \OpenAPI\OpenAPI\Models\Operations\CreatePipelineForRepositoryRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/pipelines', \OpenAPI\OpenAPI\Models\Operations\CreatePipelineForRepositoryRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
@@ -314,13 +314,16 @@ class Pipelines
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\CreatePipelineVariableForTeamRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\CreatePipelineVariableForTeamResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function createPipelineVariableForTeam(
         \OpenAPI\OpenAPI\Models\Operations\CreatePipelineVariableForTeamRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\CreatePipelineVariableForTeamResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/teams/{username}/pipelines_config/variables/', \OpenAPI\OpenAPI\Models\Operations\CreatePipelineVariableForTeamRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/teams/{username}/pipelines_config/variables', \OpenAPI\OpenAPI\Models\Operations\CreatePipelineVariableForTeamRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
@@ -361,13 +364,16 @@ class Pipelines
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\CreatePipelineVariableForUserRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\CreatePipelineVariableForUserResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function createPipelineVariableForUser(
         \OpenAPI\OpenAPI\Models\Operations\CreatePipelineVariableForUserRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\CreatePipelineVariableForUserResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/users/{selected_user}/pipelines_config/variables/', \OpenAPI\OpenAPI\Models\Operations\CreatePipelineVariableForUserRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/users/{selected_user}/pipelines_config/variables', \OpenAPI\OpenAPI\Models\Operations\CreatePipelineVariableForUserRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
@@ -459,7 +465,7 @@ class Pipelines
     ): \OpenAPI\OpenAPI\Models\Operations\CreateRepositoryPipelineKnownHostResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts/', \OpenAPI\OpenAPI\Models\Operations\CreateRepositoryPipelineKnownHostRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts', \OpenAPI\OpenAPI\Models\Operations\CreateRepositoryPipelineKnownHostRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
@@ -508,7 +514,7 @@ class Pipelines
     ): \OpenAPI\OpenAPI\Models\Operations\CreateRepositoryPipelineScheduleResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/', \OpenAPI\OpenAPI\Models\Operations\CreateRepositoryPipelineScheduleRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/pipelines_config/schedules', \OpenAPI\OpenAPI\Models\Operations\CreateRepositoryPipelineScheduleRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
@@ -555,7 +561,7 @@ class Pipelines
     ): \OpenAPI\OpenAPI\Models\Operations\CreateRepositoryPipelineVariableResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/pipelines_config/variables/', \OpenAPI\OpenAPI\Models\Operations\CreateRepositoryPipelineVariableRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/pipelines_config/variables', \OpenAPI\OpenAPI\Models\Operations\CreateRepositoryPipelineVariableRequest::class, $request);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
@@ -637,11 +643,14 @@ class Pipelines
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DeletePipelineVariableForTeamRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DeletePipelineVariableForTeamResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function deletePipelineVariableForTeam(
         \OpenAPI\OpenAPI\Models\Operations\DeletePipelineVariableForTeamRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DeletePipelineVariableForTeamResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{username}/pipelines_config/variables/{variable_uuid}', \OpenAPI\OpenAPI\Models\Operations\DeletePipelineVariableForTeamRequest::class, $request);
         
@@ -676,11 +685,14 @@ class Pipelines
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DeletePipelineVariableForUserRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DeletePipelineVariableForUserResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function deletePipelineVariableForUser(
         \OpenAPI\OpenAPI\Models\Operations\DeletePipelineVariableForUserRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DeletePipelineVariableForUserResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/users/{selected_user}/pipelines_config/variables/{variable_uuid}', \OpenAPI\OpenAPI\Models\Operations\DeletePipelineVariableForUserRequest::class, $request);
         
@@ -1261,7 +1273,7 @@ class Pipelines
     ): \OpenAPI\OpenAPI\Models\Operations\GetPipelineStepsForRepositoryResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/', \OpenAPI\OpenAPI\Models\Operations\GetPipelineStepsForRepositoryRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps', \OpenAPI\OpenAPI\Models\Operations\GetPipelineStepsForRepositoryRequest::class, $request);
         
         $options = ['http_errors' => false];
         
@@ -1400,11 +1412,14 @@ class Pipelines
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetPipelineVariableForTeamRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetPipelineVariableForTeamResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getPipelineVariableForTeam(
         \OpenAPI\OpenAPI\Models\Operations\GetPipelineVariableForTeamRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetPipelineVariableForTeamResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{username}/pipelines_config/variables/{variable_uuid}', \OpenAPI\OpenAPI\Models\Operations\GetPipelineVariableForTeamRequest::class, $request);
         
@@ -1443,11 +1458,14 @@ class Pipelines
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetPipelineVariableForUserRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetPipelineVariableForUserResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getPipelineVariableForUser(
         \OpenAPI\OpenAPI\Models\Operations\GetPipelineVariableForUserRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetPipelineVariableForUserResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/users/{selected_user}/pipelines_config/variables/{variable_uuid}', \OpenAPI\OpenAPI\Models\Operations\GetPipelineVariableForUserRequest::class, $request);
         
@@ -1528,13 +1546,16 @@ class Pipelines
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetPipelineVariablesForTeamRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetPipelineVariablesForTeamResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getPipelineVariablesForTeam(
         \OpenAPI\OpenAPI\Models\Operations\GetPipelineVariablesForTeamRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetPipelineVariablesForTeamResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/teams/{username}/pipelines_config/variables/', \OpenAPI\OpenAPI\Models\Operations\GetPipelineVariablesForTeamRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/teams/{username}/pipelines_config/variables', \OpenAPI\OpenAPI\Models\Operations\GetPipelineVariablesForTeamRequest::class, $request);
         
         $options = ['http_errors' => false];
         
@@ -1565,13 +1586,16 @@ class Pipelines
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetPipelineVariablesForUserRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetPipelineVariablesForUserResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getPipelineVariablesForUser(
         \OpenAPI\OpenAPI\Models\Operations\GetPipelineVariablesForUserRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetPipelineVariablesForUserResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/users/{selected_user}/pipelines_config/variables/', \OpenAPI\OpenAPI\Models\Operations\GetPipelineVariablesForUserRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/users/{selected_user}/pipelines_config/variables', \OpenAPI\OpenAPI\Models\Operations\GetPipelineVariablesForUserRequest::class, $request);
         
         $options = ['http_errors' => false];
         
@@ -1643,7 +1667,7 @@ class Pipelines
     ): \OpenAPI\OpenAPI\Models\Operations\GetPipelinesForRepositoryResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/pipelines/', \OpenAPI\OpenAPI\Models\Operations\GetPipelinesForRepositoryRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/pipelines', \OpenAPI\OpenAPI\Models\Operations\GetPipelinesForRepositoryRequest::class, $request);
         
         $options = ['http_errors' => false];
         
@@ -1721,7 +1745,7 @@ class Pipelines
     ): \OpenAPI\OpenAPI\Models\Operations\GetRepositoryPipelineCachesResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/pipelines-config/caches/', \OpenAPI\OpenAPI\Models\Operations\GetRepositoryPipelineCachesRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/pipelines-config/caches', \OpenAPI\OpenAPI\Models\Operations\GetRepositoryPipelineCachesRequest::class, $request);
         
         $options = ['http_errors' => false];
         
@@ -1841,7 +1865,7 @@ class Pipelines
     ): \OpenAPI\OpenAPI\Models\Operations\GetRepositoryPipelineKnownHostsResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts/', \OpenAPI\OpenAPI\Models\Operations\GetRepositoryPipelineKnownHostsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts', \OpenAPI\OpenAPI\Models\Operations\GetRepositoryPipelineKnownHostsRequest::class, $request);
         
         $options = ['http_errors' => false];
         
@@ -1919,7 +1943,7 @@ class Pipelines
     ): \OpenAPI\OpenAPI\Models\Operations\GetRepositoryPipelineScheduleExecutionsResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/{schedule_uuid}/executions/', \OpenAPI\OpenAPI\Models\Operations\GetRepositoryPipelineScheduleExecutionsRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/{schedule_uuid}/executions', \OpenAPI\OpenAPI\Models\Operations\GetRepositoryPipelineScheduleExecutionsRequest::class, $request);
         
         $options = ['http_errors' => false];
         
@@ -1961,7 +1985,7 @@ class Pipelines
     ): \OpenAPI\OpenAPI\Models\Operations\GetRepositoryPipelineSchedulesResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/', \OpenAPI\OpenAPI\Models\Operations\GetRepositoryPipelineSchedulesRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/pipelines_config/schedules', \OpenAPI\OpenAPI\Models\Operations\GetRepositoryPipelineSchedulesRequest::class, $request);
         
         $options = ['http_errors' => false];
         
@@ -2087,7 +2111,7 @@ class Pipelines
     ): \OpenAPI\OpenAPI\Models\Operations\GetRepositoryPipelineVariablesResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/pipelines_config/variables/', \OpenAPI\OpenAPI\Models\Operations\GetRepositoryPipelineVariablesRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/repositories/{workspace}/{repo_slug}/pipelines_config/variables', \OpenAPI\OpenAPI\Models\Operations\GetRepositoryPipelineVariablesRequest::class, $request);
         
         $options = ['http_errors' => false];
         
@@ -2203,11 +2227,14 @@ class Pipelines
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\UpdatePipelineVariableForTeamRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\UpdatePipelineVariableForTeamResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function updatePipelineVariableForTeam(
         \OpenAPI\OpenAPI\Models\Operations\UpdatePipelineVariableForTeamRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\UpdatePipelineVariableForTeamResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{username}/pipelines_config/variables/{variable_uuid}', \OpenAPI\OpenAPI\Models\Operations\UpdatePipelineVariableForTeamRequest::class, $request);
         
@@ -2251,11 +2278,14 @@ class Pipelines
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\UpdatePipelineVariableForUserRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\UpdatePipelineVariableForUserResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function updatePipelineVariableForUser(
         \OpenAPI\OpenAPI\Models\Operations\UpdatePipelineVariableForUserRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\UpdatePipelineVariableForUserResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/users/{selected_user}/pipelines_config/variables/{variable_uuid}', \OpenAPI\OpenAPI\Models\Operations\UpdatePipelineVariableForUserRequest::class, $request);
         

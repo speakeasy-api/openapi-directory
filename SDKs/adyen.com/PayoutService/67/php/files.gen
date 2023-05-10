@@ -55,10 +55,15 @@ src/Models/Shared/SubmitRequest.php
 src/Models/Shared/PayoutResponseResultCodeEnum.php
 src/Models/Shared/PayoutResponse.php
 src/Models/Shared/FraudResult.php
+src/Models/Shared/FraudCheckResultWrapper.php
 src/Models/Shared/FraudCheckResult.php
 src/Models/Shared/PayoutRequestShopperInteractionEnum.php
 src/Models/Shared/PayoutRequest.php
 src/Models/Shared/FundSource.php
 src/Models/Shared/ModifyResponse.php
 src/Models/Shared/ModifyRequest.php
+docs/sdk/README.md
+docs/initialization/README.md
+docs/instantpayouts/README.md
+docs/reviewing/README.md
 USAGE.md

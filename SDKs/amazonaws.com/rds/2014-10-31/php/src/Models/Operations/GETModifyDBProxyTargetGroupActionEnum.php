@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETModifyDBProxyTargetGroupActionEnum: string
 {
     case MODIFY_DB_PROXY_TARGET_GROUP = 'ModifyDBProxyTargetGroup';

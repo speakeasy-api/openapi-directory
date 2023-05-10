@@ -101,4 +101,8 @@ src/Models/Shared/GroupContentDetails.php
 src/Models/Shared/ListGroupsResponse.php
 src/Models/Shared/QueryResponse.php
 src/Models/Shared/ResultTableColumnHeader.php
+docs/sdk/README.md
+docs/groupitems/README.md
+docs/groups/README.md
+docs/reports/README.md
 USAGE.md

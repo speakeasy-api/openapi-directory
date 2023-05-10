@@ -27,6 +27,15 @@ class TransactionTransactionSourceInboundWireReversal
     public int $amount;
     
     /**
+     * The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time at which the reversal was created.
+     * 
+     * @var \DateTime $createdAt
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('created_at')]
+    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
+    public \DateTime $createdAt;
+    
+    /**
      * The description on the reversal message from Fedwire.
      * 
      * @var string $description
@@ -125,9 +134,19 @@ class TransactionTransactionSourceInboundWireReversal
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $receiverFinancialInstitutionInformation;
     
+    /**
+     * The ID for the Transaction associated with the transfer reversal.
+     * 
+     * @var string $transactionId
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('transaction_id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    public string $transactionId;
+    
 	public function __construct()
 	{
 		$this->amount = 0;
+		$this->createdAt = new \DateTime();
 		$this->description = "";
 		$this->financialInstitutionToFinancialInstitutionInformation = "";
 		$this->inputCycleDate = new \DateTime();
@@ -139,5 +158,6 @@ class TransactionTransactionSourceInboundWireReversal
 		$this->previousMessageInputSequenceNumber = "";
 		$this->previousMessageInputSource = "";
 		$this->receiverFinancialInstitutionInformation = "";
+		$this->transactionId = "";
 	}
 }

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateMonitoringScheduleXAmzTargetEnum: string
 {
     case SAGE_MAKER_UPDATE_MONITORING_SCHEDULE = 'SageMaker.UpdateMonitoringSchedule';

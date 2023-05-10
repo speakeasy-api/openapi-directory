@@ -38,4 +38,6 @@ src/Models/Operations/GetSocibWeatherStationResponse.php
 src/Models/Operations/GetWeatherDisplayRequest.php
 src/Models/Operations/GetWeatherDisplayResponse.php
 src/Models/Operations/GetWebCamsResponse.php
+docs/sdk/README.md
+docs/odweather/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateEnvironmentXAmzTargetEnum: string
 {
     case AWS_PROTON20200720_UPDATE_ENVIRONMENT = 'AwsProton20200720.UpdateEnvironment';

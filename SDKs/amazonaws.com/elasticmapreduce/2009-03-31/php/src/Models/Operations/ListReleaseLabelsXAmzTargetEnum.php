@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListReleaseLabelsXAmzTargetEnum: string
 {
     case ELASTIC_MAP_REDUCE_LIST_RELEASE_LABELS = 'ElasticMapReduce.ListReleaseLabels';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteWebACLXAmzTargetEnum: string
 {
     case AWSWAF_REGIONAL20161128_DELETE_WEB_ACL = 'AWSWAF_Regional_20161128.DeleteWebACL';

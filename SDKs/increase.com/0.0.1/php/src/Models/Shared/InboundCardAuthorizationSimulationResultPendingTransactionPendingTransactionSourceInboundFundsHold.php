@@ -36,6 +36,15 @@ class InboundCardAuthorizationSimulationResultPendingTransactionPendingTransacti
     public \DateTime $automaticallyReleasesAt;
     
     /**
+     * The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) time at which the hold was created.
+     * 
+     * @var \DateTime $createdAt
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('created_at')]
+    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
+    public \DateTime $createdAt;
+    
+    /**
      * The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) code for the hold's currency.
      * 
      * @var \OpenAPI\OpenAPI\Models\Shared\InboundCardAuthorizationSimulationResultPendingTransactionPendingTransactionSourceInboundFundsHoldCurrencyEnum $currency
@@ -52,6 +61,15 @@ class InboundCardAuthorizationSimulationResultPendingTransactionPendingTransacti
 	#[\JMS\Serializer\Annotation\SerializedName('held_transaction_id')]
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $heldTransactionId;
+    
+    /**
+     * The ID of the Pending Transaction representing the held funds.
+     * 
+     * @var string $pendingTransactionId
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('pending_transaction_id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    public string $pendingTransactionId;
     
     /**
      * When the hold was released (if it has been released).
@@ -75,8 +93,10 @@ class InboundCardAuthorizationSimulationResultPendingTransactionPendingTransacti
 	{
 		$this->amount = 0;
 		$this->automaticallyReleasesAt = new \DateTime();
+		$this->createdAt = new \DateTime();
 		$this->currency = \OpenAPI\OpenAPI\Models\Shared\InboundCardAuthorizationSimulationResultPendingTransactionPendingTransactionSourceInboundFundsHoldCurrencyEnum::CAD;
 		$this->heldTransactionId = "";
+		$this->pendingTransactionId = "";
 		$this->releasedAt = new \DateTime();
 		$this->status = \OpenAPI\OpenAPI\Models\Shared\InboundCardAuthorizationSimulationResultPendingTransactionPendingTransactionSourceInboundFundsHoldStatusEnum::HELD;
 	}

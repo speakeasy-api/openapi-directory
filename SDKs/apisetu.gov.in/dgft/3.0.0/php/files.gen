@@ -46,4 +46,6 @@ src/Models/Operations/ImporterExporterCodeVerificationAPI200ApplicationJSONBranc
 src/Models/Operations/ImporterExporterCodeVerificationAPI200ApplicationJSONDirectors.php
 src/Models/Operations/ImporterExporterCodeVerificationAPI200ApplicationJSON.php
 src/Models/Operations/ImporterExporterCodeVerificationAPIResponse.php
+docs/sdk/README.md
+docs/apis/README.md
 USAGE.md

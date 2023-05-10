@@ -26,4 +26,5 @@ src/Models/Shared/BatchPutMetricsError.php
 src/Models/Shared/PutMetricsErrorCodeEnum.php
 src/Models/Shared/RawMetricData.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

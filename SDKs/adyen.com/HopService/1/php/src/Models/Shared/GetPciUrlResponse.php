@@ -20,10 +20,10 @@ class GetPciUrlResponse
     /**
      * Information about any invalid fields.
      * 
-     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\ErrorFieldType> $invalidFields
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\ErrorFieldTypeWrapper> $invalidFields
      */
 	#[\JMS\Serializer\Annotation\SerializedName('invalidFields')]
-    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\ErrorFieldType>')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\ErrorFieldTypeWrapper>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $invalidFields = null;
     

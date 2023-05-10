@@ -29,4 +29,5 @@ src/Models/Operations/PremiumNewsByPlayerRequest.php
 src/Models/Operations/PremiumNewsByPlayerResponse.php
 src/Models/Shared/News.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

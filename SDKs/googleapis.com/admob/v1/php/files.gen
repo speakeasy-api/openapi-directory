@@ -89,4 +89,6 @@ src/Models/Shared/NetworkReportSpecSortConditionOrderEnum.php
 src/Models/Shared/NetworkReportSpecSortCondition.php
 src/Models/Shared/NetworkReportSpecDimensionFilterDimensionEnum.php
 src/Models/Shared/NetworkReportSpecDimensionFilter.php
+docs/sdk/README.md
+docs/accounts/README.md
 USAGE.md

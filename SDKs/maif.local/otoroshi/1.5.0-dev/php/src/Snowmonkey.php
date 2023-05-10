@@ -42,9 +42,11 @@ class Snowmonkey
      * 
      * Get current Snow Monkey config
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetSnowMonkeyConfigSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetSnowMonkeyConfigResponse
      */
 	public function getSnowMonkeyConfig(
+        \OpenAPI\OpenAPI\Models\Operations\GetSnowMonkeyConfigSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetSnowMonkeyConfigResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -52,7 +54,8 @@ class Snowmonkey
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -78,9 +81,11 @@ class Snowmonkey
      * 
      * Get all current Snow Monkey ourages
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetSnowMonkeyOutagesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetSnowMonkeyOutagesResponse
      */
 	public function getSnowMonkeyOutages(
+        \OpenAPI\OpenAPI\Models\Operations\GetSnowMonkeyOutagesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetSnowMonkeyOutagesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -88,7 +93,8 @@ class Snowmonkey
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -157,9 +163,11 @@ class Snowmonkey
      * 
      * Reset Snow Monkey Outages for the day
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ResetSnowMonkeySecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ResetSnowMonkeyResponse
      */
 	public function resetSnowMonkey(
+        \OpenAPI\OpenAPI\Models\Operations\ResetSnowMonkeySecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ResetSnowMonkeyResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -167,7 +175,8 @@ class Snowmonkey
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('DELETE', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -193,9 +202,11 @@ class Snowmonkey
      * 
      * Start the Snow Monkey
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\StartSnowMonkeySecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\StartSnowMonkeyResponse
      */
 	public function startSnowMonkey(
+        \OpenAPI\OpenAPI\Models\Operations\StartSnowMonkeySecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\StartSnowMonkeyResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -203,7 +214,8 @@ class Snowmonkey
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -229,9 +241,11 @@ class Snowmonkey
      * 
      * Stop the Snow Monkey
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\StopSnowMonkeySecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\StopSnowMonkeyResponse
      */
 	public function stopSnowMonkey(
+        \OpenAPI\OpenAPI\Models\Operations\StopSnowMonkeySecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\StopSnowMonkeyResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -239,7 +253,8 @@ class Snowmonkey
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

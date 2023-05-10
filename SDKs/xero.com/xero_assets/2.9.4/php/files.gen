@@ -51,4 +51,6 @@ src/Models/Shared/Setting.php
 src/Models/Shared/Assets.php
 src/Models/Shared/Pagination.php
 src/Models/Shared/AssetStatusQueryParamEnum.php
+docs/sdk/README.md
+docs/asset/README.md
 USAGE.md

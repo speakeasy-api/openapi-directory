@@ -42,7 +42,7 @@ class HealthStatus
     public ?string $forwardingRuleIp = null;
     
     /**
-     * Health state of the instance.
+     * Health state of the IPv4 address of the instance.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\HealthStatusHealthStateEnum $healthState
      */

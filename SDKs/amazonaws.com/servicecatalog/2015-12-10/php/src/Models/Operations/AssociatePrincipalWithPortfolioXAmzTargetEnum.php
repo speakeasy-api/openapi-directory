@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AssociatePrincipalWithPortfolioXAmzTargetEnum: string
 {
     case AWS242_SERVICE_CATALOG_SERVICE_ASSOCIATE_PRINCIPAL_WITH_PORTFOLIO = 'AWS242ServiceCatalogService.AssociatePrincipalWithPortfolio';

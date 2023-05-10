@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteRemediationConfigurationXAmzTargetEnum: string
 {
     case STARLING_DOVE_SERVICE_DELETE_REMEDIATION_CONFIGURATION = 'StarlingDoveService.DeleteRemediationConfiguration';

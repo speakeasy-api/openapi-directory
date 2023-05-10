@@ -47,8 +47,13 @@ src/Models/Shared/XgafvEnum.php
 src/Models/Shared/ListOperationsResponse.php
 src/Models/Shared/Operation.php
 src/Models/Shared/Status.php
+src/Models/Shared/WorkflowCallLogLevelEnum.php
 src/Models/Shared/WorkflowInput.php
 src/Models/Shared/WorkflowStateEnum.php
 src/Models/Shared/Workflow.php
+src/Models/Shared/StateErrorTypeEnum.php
+src/Models/Shared/StateError.php
 src/Models/Shared/ListWorkflowsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

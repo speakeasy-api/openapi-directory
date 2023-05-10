@@ -10,8 +10,8 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 
 
 /** If the 'name' parameter is specified, 'exactSpelling' specifies whether to include only names that exactly match the search text (exactSpelling=1), or whether to also include names with similar spellings (exactSpelling=0) */
-enum GetNamesNotOfficialSearchExactSpellingEnum: string
+enum GetNamesNotOfficialSearchExactSpellingEnum: int
 {
-    case ZERO = '0';
-    case ONE = '1';
+    case ZERO = 0;
+    case ONE = 1;
 }

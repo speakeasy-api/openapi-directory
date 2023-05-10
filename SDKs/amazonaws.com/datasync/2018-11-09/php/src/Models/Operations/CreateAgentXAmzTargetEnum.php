@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateAgentXAmzTargetEnum: string
 {
     case FMRS_SERVICE_CREATE_AGENT = 'FmrsService.CreateAgent';

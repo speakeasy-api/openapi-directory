@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTGetCallerIdentityActionEnum: string
 {
     case GET_CALLER_IDENTITY = 'GetCallerIdentity';

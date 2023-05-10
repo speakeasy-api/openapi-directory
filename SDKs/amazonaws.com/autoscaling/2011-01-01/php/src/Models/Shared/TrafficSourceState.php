@@ -18,14 +18,22 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class TrafficSourceState
 {
 	
+    public ?string $identifier = null;
+    
+	
     public ?string $state = null;
     
 	
     public ?string $trafficSource = null;
     
+	
+    public ?string $type = null;
+    
 	public function __construct()
 	{
+		$this->identifier = null;
 		$this->state = null;
 		$this->trafficSource = null;
+		$this->type = null;
 	}
 }

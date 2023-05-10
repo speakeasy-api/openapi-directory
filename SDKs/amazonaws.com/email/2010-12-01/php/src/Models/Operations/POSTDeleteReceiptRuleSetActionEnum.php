@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteReceiptRuleSetActionEnum: string
 {
     case DELETE_RECEIPT_RULE_SET = 'DeleteReceiptRuleSet';

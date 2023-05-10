@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DisassociateMacSecKeyXAmzTargetEnum: string
 {
     case OVERTURE_SERVICE_DISASSOCIATE_MAC_SEC_KEY = 'OvertureService.DisassociateMacSecKey';

@@ -125,6 +125,7 @@ src/Models/Operations/PutWorkspaceSlugOrganizationsOrganizationIdResponse.php
 src/Models/Operations/GetWorkspaceSlugReportsSecurity.php
 src/Models/Operations/GetWorkspaceSlugReportsRequest.php
 src/Models/Operations/GetWorkspaceSlugReportsResponse.php
+src/Models/Operations/GetUserSecurity.php
 src/Models/Operations/GetUserResponse.php
 src/Models/Operations/DeleteWorkspaceSlugWebhooksIdSecurity.php
 src/Models/Operations/DeleteWorkspaceSlugWebhooksIdRequest.php
@@ -141,6 +142,7 @@ src/Models/Operations/PostWorkspaceSlugWebhooksResponse.php
 src/Models/Operations/PutWorkspaceSlugWebhooksIdSecurity.php
 src/Models/Operations/PutWorkspaceSlugWebhooksIdRequest.php
 src/Models/Operations/PutWorkspaceSlugWebhooksIdResponse.php
+src/Models/Operations/GetWorkspacesSecurity.php
 src/Models/Operations/GetWorkspacesResponse.php
 src/Models/Operations/GetWorkspacesWorkspaceSlugSecurity.php
 src/Models/Operations/GetWorkspacesWorkspaceSlugRequest.php
@@ -158,4 +160,14 @@ src/Models/Shared/MemberAndIdentity.php
 src/Models/Shared/Note.php
 src/Models/Shared/Organization.php
 src/Models/Shared/WebhookSubscription.php
+docs/sdk/README.md
+docs/activities/README.md
+docs/activitytypes/README.md
+docs/members/README.md
+docs/notes/README.md
+docs/organizations/README.md
+docs/reports/README.md
+docs/users/README.md
+docs/webhooks/README.md
+docs/workspaces/README.md
 USAGE.md

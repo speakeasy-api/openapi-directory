@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDetachTrafficSourcesActionEnum: string
 {
     case DETACH_TRAFFIC_SOURCES = 'DetachTrafficSources';

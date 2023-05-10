@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteStateMachineXAmzTargetEnum: string
 {
     case AWS_STEP_FUNCTIONS_DELETE_STATE_MACHINE = 'AWSStepFunctions.DeleteStateMachine';

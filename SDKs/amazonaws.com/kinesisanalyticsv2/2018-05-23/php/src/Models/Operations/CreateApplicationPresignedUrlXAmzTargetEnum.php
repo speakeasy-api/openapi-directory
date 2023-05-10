@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateApplicationPresignedUrlXAmzTargetEnum: string
 {
     case KINESIS_ANALYTICS20180523_CREATE_APPLICATION_PRESIGNED_URL = 'KinesisAnalytics_20180523.CreateApplicationPresignedUrl';

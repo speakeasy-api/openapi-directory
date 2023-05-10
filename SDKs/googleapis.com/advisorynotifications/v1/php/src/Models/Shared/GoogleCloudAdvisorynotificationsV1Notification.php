@@ -48,6 +48,16 @@ class GoogleCloudAdvisorynotificationsV1Notification
     public ?string $name = null;
     
     /**
+     * Type of notification
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleCloudAdvisorynotificationsV1NotificationNotificationTypeEnum $notificationType
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('notificationType')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\GoogleCloudAdvisorynotificationsV1NotificationNotificationTypeEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleCloudAdvisorynotificationsV1NotificationNotificationTypeEnum $notificationType = null;
+    
+    /**
      * A subject line of a notification.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleCloudAdvisorynotificationsV1Subject $subject
@@ -62,6 +72,7 @@ class GoogleCloudAdvisorynotificationsV1Notification
 		$this->createTime = null;
 		$this->messages = null;
 		$this->name = null;
+		$this->notificationType = null;
 		$this->subject = null;
 	}
 }

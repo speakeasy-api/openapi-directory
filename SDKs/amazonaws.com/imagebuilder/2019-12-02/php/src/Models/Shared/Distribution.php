@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * Distribution -  Defines the settings for a specific Region.
+ * Distribution - Defines the settings for a specific Region.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

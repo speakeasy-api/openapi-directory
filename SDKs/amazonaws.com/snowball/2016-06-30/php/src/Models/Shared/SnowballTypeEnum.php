@@ -19,4 +19,5 @@ enum SnowballTypeEnum: string
     case SNC1_HDD = 'SNC1_HDD';
     case SNC1_SSD = 'SNC1_SSD';
     case V35_C = 'V3_5C';
+    case V35_S = 'V3_5S';
 }

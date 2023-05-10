@@ -40,12 +40,12 @@ class CommonFeatureSpec
     /**
      * **Fleet Observability**: The Hub-wide input for the FleetObservability feature.
      * 
-     * @var ?array<string, mixed> $fleetobservability
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\FleetObservabilityFeatureSpec $fleetobservability
      */
 	#[\JMS\Serializer\Annotation\SerializedName('fleetobservability')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\FleetObservabilityFeatureSpec')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $fleetobservability = null;
+    public ?FleetObservabilityFeatureSpec $fleetobservability = null;
     
     /**
      * **Multi-cluster Ingress**: The configuration for the MultiClusterIngress feature.

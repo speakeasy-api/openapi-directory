@@ -15,4 +15,6 @@ enum CVSSConfidentialityImpactEnum: string
     case IMPACT_HIGH = 'IMPACT_HIGH';
     case IMPACT_LOW = 'IMPACT_LOW';
     case IMPACT_NONE = 'IMPACT_NONE';
+    case IMPACT_PARTIAL = 'IMPACT_PARTIAL';
+    case IMPACT_COMPLETE = 'IMPACT_COMPLETE';
 }

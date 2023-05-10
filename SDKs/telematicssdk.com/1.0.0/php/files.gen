@@ -59,4 +59,12 @@ src/Models/Operations/RootV1StatisticsConsolidatedRequest.php
 src/Models/Operations/RootV1StatisticsConsolidatedResponse.php
 src/Models/Operations/RootV1StatisticsConsolidatedDailyRequest.php
 src/Models/Operations/RootV1StatisticsConsolidatedDailyResponse.php
+docs/sdk/README.md
+docs/twoformobileappoptional/README.md
+docs/two1userstatisticsoptional/README.md
+docs/two2usertripsoptional/README.md
+docs/two4usersafescoringoptional/README.md
+docs/threeforbackendoptional/README.md
+docs/consolidatedsafescoring/README.md
+docs/consolidatedstatistics/README.md
 USAGE.md

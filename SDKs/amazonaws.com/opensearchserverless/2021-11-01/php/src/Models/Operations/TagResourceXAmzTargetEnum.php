@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum TagResourceXAmzTargetEnum: string
 {
     case OPEN_SEARCH_SERVERLESS_TAG_RESOURCE = 'OpenSearchServerless.TagResource';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateSubscriptionXAmzTargetEnum: string
 {
     case AWS_SHIELD20160616_UPDATE_SUBSCRIPTION = 'AWSShield_20160616.UpdateSubscription';

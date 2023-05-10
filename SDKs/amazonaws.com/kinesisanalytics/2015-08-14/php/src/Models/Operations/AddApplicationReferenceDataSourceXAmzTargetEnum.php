@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AddApplicationReferenceDataSourceXAmzTargetEnum: string
 {
     case KINESIS_ANALYTICS20150814_ADD_APPLICATION_REFERENCE_DATA_SOURCE = 'KinesisAnalytics_20150814.AddApplicationReferenceDataSource';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutInboundDmarcSettingsXAmzTargetEnum: string
 {
     case WORK_MAIL_SERVICE_PUT_INBOUND_DMARC_SETTINGS = 'WorkMailService.PutInboundDmarcSettings';

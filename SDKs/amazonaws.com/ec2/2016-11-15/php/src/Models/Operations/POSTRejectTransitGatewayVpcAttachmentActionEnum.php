@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTRejectTransitGatewayVpcAttachmentActionEnum: string
 {
     case REJECT_TRANSIT_GATEWAY_VPC_ATTACHMENT = 'RejectTransitGatewayVpcAttachment';

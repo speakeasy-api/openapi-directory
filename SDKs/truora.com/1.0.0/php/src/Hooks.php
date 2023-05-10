@@ -157,9 +157,11 @@ class Hooks
      * 
      * Lists all the configured hooks in your account.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListHookSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ListHookResponse
      */
 	public function listHook(
+        \OpenAPI\OpenAPI\Models\Operations\ListHookSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ListHookResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -167,7 +169,8 @@ class Hooks
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

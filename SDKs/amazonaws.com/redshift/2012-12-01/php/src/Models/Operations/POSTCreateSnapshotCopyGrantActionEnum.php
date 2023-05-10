@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateSnapshotCopyGrantActionEnum: string
 {
     case CREATE_SNAPSHOT_COPY_GRANT = 'CreateSnapshotCopyGrant';

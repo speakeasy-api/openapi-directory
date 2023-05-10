@@ -30,71 +30,118 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\DeparturesGetForStopRequest;
+use \OpenAPI\OpenAPI\Models\Operations\DeparturesGetForStopExpandEnum;
+use \OpenAPI\OpenAPI\Models\Operations\DeparturesGetForStopRouteTypeEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new DeparturesGetForStopRequest();
+    $request->dateUtc = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-10-25T05:21:43.948Z');
+    $request->devid = 'distinctio';
+    $request->directionId = 844266;
+    $request->expand = [
+        DeparturesGetForStopExpandEnum::VEHICLE_POSITION,
+        DeparturesGetForStopExpandEnum::DIRECTION,
+        DeparturesGetForStopExpandEnum::VEHICLE_POSITION,
+    ];
+    $request->gtfs = false;
+    $request->includeCancelled = false;
+    $request->includeGeopath = false;
+    $request->lookBackwards = false;
+    $request->maxResults = 423655;
+    $request->platformNumbers = [
+        645894,
+        384382,
+        437587,
+    ];
+    $request->routeType = DeparturesGetForStopRouteTypeEnum::ONE;
+    $request->signature = 'debitis';
+    $request->stopId = 56713;
+    $request->token = 'delectus';
+
+    $response = $sdk->departures->departuresGetForStop($request);
+
+    if ($response->v3DeparturesResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### departures
+### [departures](docs/departures/README.md)
 
-* `departuresGetForStop` - View departures for all routes from a stop
-* `departuresGetForStopAndRoute` - View departures for a specific route from a stop
+* [departuresGetForStop](docs/departures/README.md#departuresgetforstop) - View departures for all routes from a stop
+* [departuresGetForStopAndRoute](docs/departures/README.md#departuresgetforstopandroute) - View departures for a specific route from a stop
 
-### directions
+### [directions](docs/directions/README.md)
 
-* `directionsForDirection` - View all routes for a direction of travel
-* `directionsForDirectionAndType` - View all routes of a particular type for a direction of travel
-* `directionsForRoute` - View directions that a route travels in
+* [directionsForDirection](docs/directions/README.md#directionsfordirection) - View all routes for a direction of travel
+* [directionsForDirectionAndType](docs/directions/README.md#directionsfordirectionandtype) - View all routes of a particular type for a direction of travel
+* [directionsForRoute](docs/directions/README.md#directionsforroute) - View directions that a route travels in
 
-### disruptions
+### [disruptions](docs/disruptions/README.md)
 
-* `disruptionsGetAllDisruptions` - View all disruptions for all route types
-* `disruptionsGetDisruptionById` - View a specific disruption
-* `disruptionsGetDisruptionModes` - Get all disruption modes
-* `disruptionsGetDisruptionsByRoute` - View all disruptions for a particular route
-* `disruptionsGetDisruptionsByRouteAndStop` - View all disruptions for a particular route and stop
-* `disruptionsGetDisruptionsByStop` - View all disruptions for a particular stop
+* [disruptionsGetAllDisruptions](docs/disruptions/README.md#disruptionsgetalldisruptions) - View all disruptions for all route types
+* [disruptionsGetDisruptionById](docs/disruptions/README.md#disruptionsgetdisruptionbyid) - View a specific disruption
+* [disruptionsGetDisruptionModes](docs/disruptions/README.md#disruptionsgetdisruptionmodes) - Get all disruption modes
+* [disruptionsGetDisruptionsByRoute](docs/disruptions/README.md#disruptionsgetdisruptionsbyroute) - View all disruptions for a particular route
+* [disruptionsGetDisruptionsByRouteAndStop](docs/disruptions/README.md#disruptionsgetdisruptionsbyrouteandstop) - View all disruptions for a particular route and stop
+* [disruptionsGetDisruptionsByStop](docs/disruptions/README.md#disruptionsgetdisruptionsbystop) - View all disruptions for a particular stop
 
-### fareEstimate
+### [fareEstimate](docs/fareestimate/README.md)
 
-* `fareEstimateGetFareEstimateByZone` - Estimate a fare by zone
+* [fareEstimateGetFareEstimateByZone](docs/fareestimate/README.md#fareestimategetfareestimatebyzone) - Estimate a fare by zone
 
-### outlets
+### [outlets](docs/outlets/README.md)
 
-* `outletsGetAllOutlets` - List all ticket outlets
-* `outletsGetOutletsByGeolocation` - List ticket outlets near a specific location
+* [outletsGetAllOutlets](docs/outlets/README.md#outletsgetalloutlets) - List all ticket outlets
+* [outletsGetOutletsByGeolocation](docs/outlets/README.md#outletsgetoutletsbygeolocation) - List ticket outlets near a specific location
 
-### patterns
+### [patterns](docs/patterns/README.md)
 
-* `patternsGetPatternByRun` - View the stopping pattern for a specific trip/service run
+* [patternsGetPatternByRun](docs/patterns/README.md#patternsgetpatternbyrun) - View the stopping pattern for a specific trip/service run
 
-### routeTypes
+### [routeTypes](docs/routetypes/README.md)
 
-* `routeTypesGetRouteTypes` - View all route types and their names
+* [routeTypesGetRouteTypes](docs/routetypes/README.md#routetypesgetroutetypes) - View all route types and their names
 
-### routes
+### [routes](docs/routes/README.md)
 
-* `routesOneOrMoreRoutes` - View route names and numbers for all routes
-* `routesRouteFromId` - View route name and number for specific route ID
+* [routesOneOrMoreRoutes](docs/routes/README.md#routesoneormoreroutes) - View route names and numbers for all routes
+* [routesRouteFromId](docs/routes/README.md#routesroutefromid) - View route name and number for specific route ID
 
-### runs
+### [runs](docs/runs/README.md)
 
-* `runsForRoute` - View all trip/service runs for a specific route ID
-* `runsForRouteAndRouteType` - View all trip/service runs for a specific route ID and route type
-* `runsForRun` - View all trip/service runs for a specific run_ref
-* `runsForRunAndRouteType` - View the trip/service run for a specific run_ref and route type
+* [runsForRoute](docs/runs/README.md#runsforroute) - View all trip/service runs for a specific route ID
+* [runsForRouteAndRouteType](docs/runs/README.md#runsforrouteandroutetype) - View all trip/service runs for a specific route ID and route type
+* [runsForRun](docs/runs/README.md#runsforrun) - View all trip/service runs for a specific run_ref
+* [runsForRunAndRouteType](docs/runs/README.md#runsforrunandroutetype) - View the trip/service run for a specific run_ref and route type
 
-### search
+### [search](docs/search/README.md)
 
-* `searchSearch` - View stops, routes and myki ticket outlets that match the search term
+* [searchSearch](docs/search/README.md#searchsearch) - View stops, routes and myki ticket outlets that match the search term
 
-### stops
+### [stops](docs/stops/README.md)
 
-* `stopsStopDetails` - View facilities at a specific stop (Metro and V/Line stations only)
-* `stopsStopsByGeolocation` - View all stops near a specific location
-* `stopsStopsForRoute` - View all stops on a specific route
+* [stopsStopDetails](docs/stops/README.md#stopsstopdetails) - View facilities at a specific stop (Metro and V/Line stations only)
+* [stopsStopsByGeolocation](docs/stops/README.md#stopsstopsbygeolocation) - View all stops near a specific location
+* [stopsStopsForRoute](docs/stops/README.md#stopsstopsforroute) - View all stops on a specific route
 <!-- End SDK Available Operations -->
 
 ### Maturity

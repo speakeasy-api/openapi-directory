@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * GoogleCloudDocumentaiV1beta3FetchProcessorTypesResponse - Response message for fetch processor types.
+ * GoogleCloudDocumentaiV1beta3FetchProcessorTypesResponse - Response message for the FetchProcessorTypes method.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

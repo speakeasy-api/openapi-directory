@@ -13,5 +13,4 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 enum StartRunRequestBodyWorkflowTypeEnum: string
 {
     case PRIVATE = 'PRIVATE';
-    case SERVICE = 'SERVICE';
 }

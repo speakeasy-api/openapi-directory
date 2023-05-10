@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListDocumentsXAmzTargetEnum: string
 {
     case AMAZON_SSM_LIST_DOCUMENTS = 'AmazonSSM.ListDocuments';

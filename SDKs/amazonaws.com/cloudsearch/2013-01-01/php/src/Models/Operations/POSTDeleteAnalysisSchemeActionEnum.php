@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteAnalysisSchemeActionEnum: string
 {
     case DELETE_ANALYSIS_SCHEME = 'DeleteAnalysisScheme';

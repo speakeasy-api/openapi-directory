@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateHubXAmzTargetEnum: string
 {
     case SAGE_MAKER_UPDATE_HUB = 'SageMaker.UpdateHub';

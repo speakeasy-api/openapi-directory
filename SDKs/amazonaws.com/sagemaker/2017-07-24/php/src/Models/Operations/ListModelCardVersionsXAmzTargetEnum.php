@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListModelCardVersionsXAmzTargetEnum: string
 {
     case SAGE_MAKER_LIST_MODEL_CARD_VERSIONS = 'SageMaker.ListModelCardVersions';

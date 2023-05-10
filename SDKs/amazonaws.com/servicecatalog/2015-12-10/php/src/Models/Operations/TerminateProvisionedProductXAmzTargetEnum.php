@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum TerminateProvisionedProductXAmzTargetEnum: string
 {
     case AWS242_SERVICE_CATALOG_SERVICE_TERMINATE_PROVISIONED_PRODUCT = 'AWS242ServiceCatalogService.TerminateProvisionedProduct';

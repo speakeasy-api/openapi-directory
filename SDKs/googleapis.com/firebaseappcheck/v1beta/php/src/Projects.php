@@ -1054,4 +1054,44 @@ class Projects
 
         return $response;
     }
+	
+    /**
+     * Verifies the given App Check token and returns token usage signals that callers may act upon. This method currently only supports App Check tokens exchanged from the following attestation providers: * Play Integrity API * App Attest * DeviceCheck (`DCDevice` tokens) * reCAPTCHA Enterprise * reCAPTCHA v3 * Custom providers App Check tokens exchanged from debug secrets are also supported. Calling this method on an otherwise valid App Check token with an unsupported provider will cause an HTTP 400 error to be returned. Returns whether this token was already consumed before this call. If this is the first time this method has seen the given App Check token, the field `already_consumed` will contain the value `false`. The given token will then be marked as `already_consumed` for all future invocations of this method for that token. Note that if the given App Check token is invalid, an HTTP 403 error is returned instead of a response object, regardless whether the token was already consumed. Currently, when evaluating whether an App Check token was already consumed, only calls to this exact method are counted. Use of the App Check token elsewhere will not mark the token as being already consumed.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\FirebaseappcheckProjectsVerifyAppCheckTokenRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\FirebaseappcheckProjectsVerifyAppCheckTokenSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\FirebaseappcheckProjectsVerifyAppCheckTokenResponse
+     */
+	public function firebaseappcheckProjectsVerifyAppCheckToken(
+        \OpenAPI\OpenAPI\Models\Operations\FirebaseappcheckProjectsVerifyAppCheckTokenRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\FirebaseappcheckProjectsVerifyAppCheckTokenSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\FirebaseappcheckProjectsVerifyAppCheckTokenResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1beta/{project}:verifyAppCheckToken', \OpenAPI\OpenAPI\Models\Operations\FirebaseappcheckProjectsVerifyAppCheckTokenRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "googleFirebaseAppcheckV1betaVerifyAppCheckTokenRequest", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\FirebaseappcheckProjectsVerifyAppCheckTokenRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\FirebaseappcheckProjectsVerifyAppCheckTokenResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->googleFirebaseAppcheckV1betaVerifyAppCheckTokenResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\GoogleFirebaseAppcheckV1betaVerifyAppCheckTokenResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
 }

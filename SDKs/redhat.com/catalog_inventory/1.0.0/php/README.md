@@ -30,82 +30,103 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $response = $sdk->getDocumentation();
+
+    if ($response->getDocumentation200ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getDocumentation` - Return this API document in JSON format
-* `postGraphQL` - Perform a GraphQL Query
+* [getDocumentation](docs/sdk/README.md#getdocumentation) - Return this API document in JSON format
+* [postGraphQL](docs/sdk/README.md#postgraphql) - Perform a GraphQL Query
 
-### serviceCredential
+### [serviceCredential](docs/servicecredential/README.md)
 
-* `listServiceCredentials` - List ServiceCredentials
-* `showServiceCredential` - Show an existing ServiceCredential
+* [listServiceCredentials](docs/servicecredential/README.md#listservicecredentials) - List ServiceCredentials
+* [showServiceCredential](docs/servicecredential/README.md#showservicecredential) - Show an existing ServiceCredential
 
-### serviceCredentialType
+### [serviceCredentialType](docs/servicecredentialtype/README.md)
 
-* `listServiceCredentialTypes` - List ServiceCredentialTypes
-* `showServiceCredentialType` - Show an existing ServiceCredentialType
+* [listServiceCredentialTypes](docs/servicecredentialtype/README.md#listservicecredentialtypes) - List ServiceCredentialTypes
+* [showServiceCredentialType](docs/servicecredentialtype/README.md#showservicecredentialtype) - Show an existing ServiceCredentialType
 
-### serviceInstance
+### [serviceInstance](docs/serviceinstance/README.md)
 
-* `listServiceInstances` - List ServiceInstances
-* `showServiceInstance` - Show an existing ServiceInstance
+* [listServiceInstances](docs/serviceinstance/README.md#listserviceinstances) - List ServiceInstances
+* [showServiceInstance](docs/serviceinstance/README.md#showserviceinstance) - Show an existing ServiceInstance
 
-### serviceInventory
+### [serviceInventory](docs/serviceinventory/README.md)
 
-* `listServiceInventories` - List ServiceInventories
-* `listServiceInventoryTags` - List Tags for ServiceInventory
-* `showServiceInventory` - Show an existing ServiceInventory
-* `tagServiceInventory` - Tag a ServiceInventory
-* `untagServiceInventory` - Untag a ServiceInventory
+* [listServiceInventories](docs/serviceinventory/README.md#listserviceinventories) - List ServiceInventories
+* [listServiceInventoryTags](docs/serviceinventory/README.md#listserviceinventorytags) - List Tags for ServiceInventory
+* [showServiceInventory](docs/serviceinventory/README.md#showserviceinventory) - Show an existing ServiceInventory
+* [tagServiceInventory](docs/serviceinventory/README.md#tagserviceinventory) - Tag a ServiceInventory
+* [untagServiceInventory](docs/serviceinventory/README.md#untagserviceinventory) - Untag a ServiceInventory
 
-### serviceOffering
+### [serviceOffering](docs/serviceoffering/README.md)
 
-* `appliedInventoriesTagsForServiceOffering` - Invokes computing of ServiceInventories tags for given ServiceOffering
-* `listServiceOfferingServiceInstances` - List ServiceInstances for ServiceOffering
-* `listServiceOfferingServiceOfferingNodes` - List ServiceOfferingNodes for ServiceOffering
-* `listServiceOfferingServicePlans` - List ServicePlans for ServiceOffering
-* `listServiceOfferings` - List ServiceOfferings
-* `orderServiceOffering` - Order an existing ServiceOffering
-* `showServiceOffering` - Show an existing ServiceOffering
+* [appliedInventoriesTagsForServiceOffering](docs/serviceoffering/README.md#appliedinventoriestagsforserviceoffering) - Invokes computing of ServiceInventories tags for given ServiceOffering
+* [listServiceOfferingServiceInstances](docs/serviceoffering/README.md#listserviceofferingserviceinstances) - List ServiceInstances for ServiceOffering
+* [listServiceOfferingServiceOfferingNodes](docs/serviceoffering/README.md#listserviceofferingserviceofferingnodes) - List ServiceOfferingNodes for ServiceOffering
+* [listServiceOfferingServicePlans](docs/serviceoffering/README.md#listserviceofferingserviceplans) - List ServicePlans for ServiceOffering
+* [listServiceOfferings](docs/serviceoffering/README.md#listserviceofferings) - List ServiceOfferings
+* [orderServiceOffering](docs/serviceoffering/README.md#orderserviceoffering) - Order an existing ServiceOffering
+* [showServiceOffering](docs/serviceoffering/README.md#showserviceoffering) - Show an existing ServiceOffering
 
-### serviceOfferingNode
+### [serviceOfferingNode](docs/serviceofferingnode/README.md)
 
-* `listServiceOfferingNodes` - List ServiceOfferingNodes
-* `showServiceOfferingNode` - Show an existing ServiceOfferingNode
+* [listServiceOfferingNodes](docs/serviceofferingnode/README.md#listserviceofferingnodes) - List ServiceOfferingNodes
+* [showServiceOfferingNode](docs/serviceofferingnode/README.md#showserviceofferingnode) - Show an existing ServiceOfferingNode
 
-### servicePlan
+### [servicePlan](docs/serviceplan/README.md)
 
-* `listServicePlans` - List ServicePlans
-* `showServicePlan` - Show an existing ServicePlan
+* [listServicePlans](docs/serviceplan/README.md#listserviceplans) - List ServicePlans
+* [showServicePlan](docs/serviceplan/README.md#showserviceplan) - Show an existing ServicePlan
 
-### source
+### [source](docs/source/README.md)
 
-* `incrementalRefreshSource` - Incremental Refresh an existing Source
-* `listSourceServiceInstances` - List ServiceInstances for Source
-* `listSourceServiceInventories` - List ServiceInventories for Source
-* `listSourceServiceOfferingNodes` - List ServiceOfferingNodes for Source
-* `listSourceServiceOfferings` - List ServiceOfferings for Source
-* `listSourceServicePlans` - List ServicePlans for Source
-* `listSourceTasks` - List Tasks for Source
-* `listSources` - List Sources
-* `refreshSource` -  Refresh an existing Source
-* `showSource` - Show an existing Source
+* [incrementalRefreshSource](docs/source/README.md#incrementalrefreshsource) - Incremental Refresh an existing Source
+* [listSourceServiceInstances](docs/source/README.md#listsourceserviceinstances) - List ServiceInstances for Source
+* [listSourceServiceInventories](docs/source/README.md#listsourceserviceinventories) - List ServiceInventories for Source
+* [listSourceServiceOfferingNodes](docs/source/README.md#listsourceserviceofferingnodes) - List ServiceOfferingNodes for Source
+* [listSourceServiceOfferings](docs/source/README.md#listsourceserviceofferings) - List ServiceOfferings for Source
+* [listSourceServicePlans](docs/source/README.md#listsourceserviceplans) - List ServicePlans for Source
+* [listSourceTasks](docs/source/README.md#listsourcetasks) - List Tasks for Source
+* [listSources](docs/source/README.md#listsources) - List Sources
+* [refreshSource](docs/source/README.md#refreshsource) -  Refresh an existing Source
+* [showSource](docs/source/README.md#showsource) - Show an existing Source
 
-### tags
+### [tags](docs/tags/README.md)
 
-* `listTags` - List Tags
+* [listTags](docs/tags/README.md#listtags) - List Tags
 
-### task
+### [task](docs/task/README.md)
 
-* `listTasks` - List Tasks
-* `showTask` - Show an existing Task
-* `updateTask` - Update an existing Task
+* [listTasks](docs/task/README.md#listtasks) - List Tasks
+* [showTask](docs/task/README.md#showtask) - Show an existing Task
+* [updateTask](docs/task/README.md#updatetask) - Update an existing Task
 <!-- End SDK Available Operations -->
 
 ### Maturity

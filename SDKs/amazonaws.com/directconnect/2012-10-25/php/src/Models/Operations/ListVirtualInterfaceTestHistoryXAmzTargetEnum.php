@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListVirtualInterfaceTestHistoryXAmzTargetEnum: string
 {
     case OVERTURE_SERVICE_LIST_VIRTUAL_INTERFACE_TEST_HISTORY = 'OvertureService.ListVirtualInterfaceTestHistory';

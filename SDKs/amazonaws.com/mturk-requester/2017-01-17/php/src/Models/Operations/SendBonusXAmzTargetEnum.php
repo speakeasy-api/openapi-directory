@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum SendBonusXAmzTargetEnum: string
 {
     case M_TURK_REQUESTER_SERVICE_V20170117_SEND_BONUS = 'MTurkRequesterServiceV20170117.SendBonus';

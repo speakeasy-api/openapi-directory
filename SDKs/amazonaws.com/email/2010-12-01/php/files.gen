@@ -710,4 +710,5 @@ src/Models/Shared/VerifyDomainIdentityRequest.php
 src/Models/Shared/VerifyEmailAddressRequest.php
 src/Models/Shared/VerifyEmailIdentityRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

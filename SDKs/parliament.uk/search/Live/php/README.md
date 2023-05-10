@@ -30,21 +30,41 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $response = $sdk->description->getDescription();
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### description
+### [description](docs/description/README.md)
 
-* `getDescription` - OpenSearch description document
+* [getDescription](docs/description/README.md#getdescription) - OpenSearch description document
 
-### query
+### [query](docs/query/README.md)
 
-* `getQuery` - Search results
-* `getQueryExtension` - Search results
+* [getQuery](docs/query/README.md#getquery) - Search results
+* [getQueryExtension](docs/query/README.md#getqueryextension) - Search results
 <!-- End SDK Available Operations -->
 
 ### Maturity

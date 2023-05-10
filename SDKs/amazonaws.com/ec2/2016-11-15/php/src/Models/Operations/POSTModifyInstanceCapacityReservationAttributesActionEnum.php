@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTModifyInstanceCapacityReservationAttributesActionEnum: string
 {
     case MODIFY_INSTANCE_CAPACITY_RESERVATION_ATTRIBUTES = 'ModifyInstanceCapacityReservationAttributes';

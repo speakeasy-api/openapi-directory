@@ -546,7 +546,7 @@ class Projects
     }
 	
     /**
-     * Lists the notification channels that have been created for the project.
+     * Lists the notification channels that have been created for the project. To list the types of notification channels that are supported, use the ListNotificationChannelDescriptors method.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\MonitoringProjectsNotificationChannelsListRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\MonitoringProjectsNotificationChannelsListSecurity $security

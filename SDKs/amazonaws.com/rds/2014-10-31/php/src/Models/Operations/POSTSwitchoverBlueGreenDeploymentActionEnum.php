@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTSwitchoverBlueGreenDeploymentActionEnum: string
 {
     case SWITCHOVER_BLUE_GREEN_DEPLOYMENT = 'SwitchoverBlueGreenDeployment';

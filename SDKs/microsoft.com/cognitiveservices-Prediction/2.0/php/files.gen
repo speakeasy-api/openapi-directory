@@ -43,4 +43,6 @@ src/Models/Shared/ImagePrediction.php
 src/Models/Shared/Prediction.php
 src/Models/Shared/BoundingBox.php
 src/Models/Shared/ImageUrl.php
+docs/sdk/README.md
+docs/imagepredictionapi/README.md
 USAGE.md

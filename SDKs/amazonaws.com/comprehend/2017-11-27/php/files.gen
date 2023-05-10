@@ -307,6 +307,8 @@ src/Models/Shared/TargetedSentimentEntityTypeEnum.php
 src/Models/Shared/MentionSentiment.php
 src/Models/Shared/BatchDetectTargetedSentimentRequest.php
 src/Models/Shared/ClassifyDocumentResponse.php
+src/Models/Shared/WarningsListItem.php
+src/Models/Shared/PageBasedWarningCodeEnum.php
 src/Models/Shared/DocumentLabel.php
 src/Models/Shared/ErrorsListItem.php
 src/Models/Shared/PageBasedErrorCodeEnum.php
@@ -344,6 +346,8 @@ src/Models/Shared/VpcConfig.php
 src/Models/Shared/DocumentClassifierOutputDataConfig.php
 src/Models/Shared/DocumentClassifierModeEnum.php
 src/Models/Shared/DocumentClassifierInputDataConfig.php
+src/Models/Shared/DocumentClassifierDocuments.php
+src/Models/Shared/DocumentClassifierDocumentTypeFormatEnum.php
 src/Models/Shared/DocumentClassifierDataFormatEnum.php
 src/Models/Shared/AugmentedManifestsListItem.php
 src/Models/Shared/SplitEnum.php
@@ -560,4 +564,5 @@ src/Models/Shared/UpdateFlywheelResponse.php
 src/Models/Shared/UpdateFlywheelRequest.php
 src/Models/Shared/UpdateDataSecurityConfig.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

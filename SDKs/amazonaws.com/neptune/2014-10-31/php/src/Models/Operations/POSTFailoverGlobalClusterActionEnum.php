@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTFailoverGlobalClusterActionEnum: string
 {
     case FAILOVER_GLOBAL_CLUSTER = 'FailoverGlobalCluster';

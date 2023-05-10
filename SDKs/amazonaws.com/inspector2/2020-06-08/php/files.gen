@@ -293,4 +293,5 @@ src/Models/Shared/CurrencyEnum.php
 src/Models/Shared/UpdateFilterResponse.php
 src/Models/Shared/UpdateOrganizationConfigurationResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteAppImageConfigXAmzTargetEnum: string
 {
     case SAGE_MAKER_DELETE_APP_IMAGE_CONFIG = 'SageMaker.DeleteAppImageConfig';

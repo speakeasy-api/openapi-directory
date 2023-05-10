@@ -195,4 +195,5 @@ src/Models/Shared/UpdatePricingRuleOutput.php
 src/Models/Shared/UpdateTieringInput.php
 src/Models/Shared/UpdateFreeTierConfig.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

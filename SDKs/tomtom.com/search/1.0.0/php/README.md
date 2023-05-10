@@ -30,46 +30,77 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\GetSearchVersionNumberAdditionalDataExtRequest;
+use \OpenAPI\OpenAPI\Models\Operations\GetSearchVersionNumberAdditionalDataExtExtEnum;
+use \OpenAPI\OpenAPI\Models\Operations\GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum;
+use \OpenAPI\OpenAPI\Models\Shared\VersionNumberEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetSearchVersionNumberAdditionalDataExtRequest();
+    $request->ext = GetSearchVersionNumberAdditionalDataExtExtEnum::JSON;
+    $request->geometries = 'corrupti';
+    $request->geometriesZoom = GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum::THIRTEEN;
+    $request->versionNumber = VersionNumberEnum::TWO;
+
+    $response = $sdk->additionalData->getSearchVersionNumberAdditionalDataExt($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### additionalData
+### [additionalData](docs/additionaldata/README.md)
 
-* `getSearchVersionNumberAdditionalDataExt` - Additional Data
+* [getSearchVersionNumberAdditionalDataExt](docs/additionaldata/README.md#getsearchversionnumberadditionaldataext) - Additional Data
 
-### filters
+### [filters](docs/filters/README.md)
 
-* `getSearchVersionNumberGeometryFilterExt` - Geometry Filter
-* `getSearchVersionNumberRoutedFilterPositionHeadingExt` - Routed Filter
-* `postSearchVersionNumberGeometryFilterExt` - Geometry Filter
-* `postSearchVersionNumberRoutedFilterPositionHeadingExt` - Routed Filter
+* [getSearchVersionNumberGeometryFilterExt](docs/filters/README.md#getsearchversionnumbergeometryfilterext) - Geometry Filter
+* [~~getSearchVersionNumberRoutedFilterPositionHeadingExt~~](docs/filters/README.md#getsearchversionnumberroutedfilterpositionheadingext) - Routed Filter :warning: **Deprecated**
+* [postSearchVersionNumberGeometryFilterExt](docs/filters/README.md#postsearchversionnumbergeometryfilterext) - Geometry Filter
+* [~~postSearchVersionNumberRoutedFilterPositionHeadingExt~~](docs/filters/README.md#postsearchversionnumberroutedfilterpositionheadingext) - Routed Filter :warning: **Deprecated**
 
-### geocoding
+### [geocoding](docs/geocoding/README.md)
 
-* `getSearchVersionNumberGeocodeQueryExt` - Geocode
-* `getSearchVersionNumberStructuredGeocodeExt` - Structured Geocode
+* [getSearchVersionNumberGeocodeQueryExt](docs/geocoding/README.md#getsearchversionnumbergeocodequeryext) - Geocode
+* [getSearchVersionNumberStructuredGeocodeExt](docs/geocoding/README.md#getsearchversionnumberstructuredgeocodeext) - Structured Geocode
 
-### reverseGeocoding
+### [reverseGeocoding](docs/reversegeocoding/README.md)
 
-* `getSearchVersionNumberReverseGeocodeCrossStreetPositionExt` - Cross Street lookup
-* `getSearchVersionNumberReverseGeocodePositionExt` - Reverse Geocode
+* [getSearchVersionNumberReverseGeocodeCrossStreetPositionExt](docs/reversegeocoding/README.md#getsearchversionnumberreversegeocodecrossstreetpositionext) - Cross Street lookup
+* [getSearchVersionNumberReverseGeocodePositionExt](docs/reversegeocoding/README.md#getsearchversionnumberreversegeocodepositionext) - Reverse Geocode
 
-### search
+### [search](docs/search/README.md)
 
-* `getSearchVersionNumberCSCategoryExt` - Low Bandwith Category Search
-* `getSearchVersionNumberCategorySearchQueryExt` - Category Search
-* `getSearchVersionNumberGeometrySearchQueryExt` - Geometry Search
-* `getSearchVersionNumberNearbySearchExt` - Nearby Search
-* `getSearchVersionNumberPoiSearchQueryExt` - Points of Interest Search
-* `getSearchVersionNumberRoutedSearchQueryPositionHeadingExt` - Routed Search
-* `getSearchVersionNumberSQueryExt` - Low bandwith Search
-* `getSearchVersionNumberSearchQueryExt` - Fuzzy Search
-* `postSearchVersionNumberGeometrySearchQueryExt` - Geometry Search
-* `postSearchVersionNumberSearchAlongRouteQueryExt` - Along Route Search
+* [~~getSearchVersionNumberCSCategoryExt~~](docs/search/README.md#getsearchversionnumbercscategoryext) - Low Bandwith Category Search :warning: **Deprecated**
+* [getSearchVersionNumberCategorySearchQueryExt](docs/search/README.md#getsearchversionnumbercategorysearchqueryext) - Category Search
+* [getSearchVersionNumberGeometrySearchQueryExt](docs/search/README.md#getsearchversionnumbergeometrysearchqueryext) - Geometry Search
+* [getSearchVersionNumberNearbySearchExt](docs/search/README.md#getsearchversionnumbernearbysearchext) - Nearby Search
+* [getSearchVersionNumberPoiSearchQueryExt](docs/search/README.md#getsearchversionnumberpoisearchqueryext) - Points of Interest Search
+* [~~getSearchVersionNumberRoutedSearchQueryPositionHeadingExt~~](docs/search/README.md#getsearchversionnumberroutedsearchquerypositionheadingext) - Routed Search :warning: **Deprecated**
+* [~~getSearchVersionNumberSQueryExt~~](docs/search/README.md#getsearchversionnumbersqueryext) - Low bandwith Search :warning: **Deprecated**
+* [getSearchVersionNumberSearchQueryExt](docs/search/README.md#getsearchversionnumbersearchqueryext) - Fuzzy Search
+* [postSearchVersionNumberGeometrySearchQueryExt](docs/search/README.md#postsearchversionnumbergeometrysearchqueryext) - Geometry Search
+* [postSearchVersionNumberSearchAlongRouteQueryExt](docs/search/README.md#postsearchversionnumbersearchalongroutequeryext) - Along Route Search
 <!-- End SDK Available Operations -->
 
 ### Maturity

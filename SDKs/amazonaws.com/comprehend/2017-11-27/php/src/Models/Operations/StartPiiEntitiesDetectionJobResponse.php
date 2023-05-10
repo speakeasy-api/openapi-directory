@@ -39,6 +39,14 @@ class StartPiiEntitiesDetectionJobResponse
     public mixed $kmsKeyValidationException = null;
     
     /**
+     * ResourceInUseException
+     * 
+     * @var mixed $resourceInUseException
+     */
+	
+    public mixed $resourceInUseException = null;
+    
+    /**
      * Success
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\StartPiiEntitiesDetectionJobResponse $startPiiEntitiesDetectionJobResponse
@@ -74,6 +82,7 @@ class StartPiiEntitiesDetectionJobResponse
 		$this->internalServerException = null;
 		$this->invalidRequestException = null;
 		$this->kmsKeyValidationException = null;
+		$this->resourceInUseException = null;
 		$this->startPiiEntitiesDetectionJobResponse = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;

@@ -125,6 +125,50 @@ class PaymentBatches
     }
 	
     /**
+     * Add an international transfer payment to the batch.
+     * 
+     * International transfers must be added to a batch using the Payee ID (**Mode 1**). Payees must be set up using the web application.
+     * 
+     * **Mode 1:** Use the payee IDs of existing approved payees set up against your account. These batches can be approved in the normal manner.
+     * 
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AddInternationalTransferBatchPaymentRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\AddInternationalTransferBatchPaymentResponse
+     */
+	public function addInternationalTransferBatchPayment(
+        \OpenAPI\OpenAPI\Models\Operations\AddInternationalTransferBatchPaymentRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\AddInternationalTransferBatchPaymentResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v2/batches/{batchUuid}/internationaltransfers', \OpenAPI\OpenAPI\Models\Operations\AddInternationalTransferBatchPaymentRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\AddInternationalTransferBatchPaymentResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->newBatchItemResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\AddInternationalTransferBatchPaymentNewBatchItemResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Cancel a batch
      * 
      * Cancels the Batch. You can only cancel a batch before it is submitted for approval (while it is in the OPEN state).
@@ -304,6 +348,38 @@ class PaymentBatches
     }
 	
     /**
+     * Remove a Payment from the Batch (International Transfers)
+     * 
+     * Removes a Payment from the Batch (International Transfers). You can only remove payments before the batch is submitted for approval (while it is in the OPEN state).
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\DeleteInternationalTransferBatchPaymentRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\DeleteInternationalTransferBatchPaymentResponse
+     */
+	public function deleteInternationalTransferBatchPayment(
+        \OpenAPI\OpenAPI\Models\Operations\DeleteInternationalTransferBatchPaymentRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\DeleteInternationalTransferBatchPaymentResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v2/batches/{batchUuid}/internationaltransfers/{itemUuid}', \OpenAPI\OpenAPI\Models\Operations\DeleteInternationalTransferBatchPaymentRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        
+        $httpResponse = $this->_securityClient->request('DELETE', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\DeleteInternationalTransferBatchPaymentResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+        }
+
+        return $response;
+    }
+	
+    /**
      * List batches
      * 
      * Returns the list of batch with the specified types and statuses.
@@ -378,7 +454,7 @@ class PaymentBatches
     }
 	
     /**
-     * List items in a Batch
+     * List items in a Batch (Bank Transfers)
      * 
      * Returns a paginated list of items in the specified batch.
      * 
@@ -415,7 +491,7 @@ class PaymentBatches
     }
 	
     /**
-     * List items in a Batch
+     * List items in a Batch (Internal Transfers)
      * 
      * Returns a paginated list of items in the specified batch.
      * 
@@ -445,6 +521,43 @@ class PaymentBatches
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->batchItems = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\GetItemsBatchInternalTrasnferBatchItems', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * List items in a Batch (International Transfers)
+     * 
+     * Returns a paginated list of items in the specified batch.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetItemsBatchInternationalTransferRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\GetItemsBatchInternationalTransferResponse
+     */
+	public function getItemsBatchInternationalTransfer(
+        \OpenAPI\OpenAPI\Models\Operations\GetItemsBatchInternationalTransferRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\GetItemsBatchInternationalTransferResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v2/batches/{batchUuid}/internationaltransfers', \OpenAPI\OpenAPI\Models\Operations\GetItemsBatchInternationalTransferRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\GetItemsBatchInternationalTransferRequest::class, $request, null));
+        
+        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GetItemsBatchInternationalTransferResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->batchItems = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\GetItemsBatchInternationalTransferBatchItems', 'json');
             }
         }
 
@@ -490,7 +603,7 @@ class PaymentBatches
     /**
      * Submit a batch for approval
      * 
-     * Submits the Batch (for approval in the case of a **BANK_TRANSFER**). If this is an **INTERNAL_TRANSFER** batch, the transfers are immediately queued for processing. If this is a **BANK_TRANSFER** batch, this will trigger requests for approval to the firework mobile apps of authorised users. Once those users approve the batch, it is queued for processing.
+     * Submits the Batch (for approval in the case of a **BANK_TRANSFER** or **INTERNATIONAL_TRANSFER**). If this is an **INTERNAL_TRANSFER** batch, the transfers are immediately queued for processing. If this is a **BANK_TRANSFER** or **INTERNATIONAL_TRANSFER** batch, this will trigger requests for approval to the firework mobile apps of authorised users. Once those users approve the batch, it is queued for processing.
      * 
      * You can only submit a batch while it is in the OPEN state.
      * 

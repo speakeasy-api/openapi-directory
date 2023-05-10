@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTPutConfigurationSetDeliveryOptionsActionEnum: string
 {
     case PUT_CONFIGURATION_SET_DELIVERY_OPTIONS = 'PutConfigurationSetDeliveryOptions';

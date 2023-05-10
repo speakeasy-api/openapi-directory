@@ -156,9 +156,11 @@ class Webhooks
      * }
      * ```
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetHookEventsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetHookEventsResponse
      */
 	public function getHookEvents(
+        \OpenAPI\OpenAPI\Models\Operations\GetHookEventsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetHookEventsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -166,7 +168,8 @@ class Webhooks
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

@@ -47,10 +47,21 @@ class VpnGatewayVpnGatewayInterface
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $ipAddress = null;
     
+    /**
+     * [Output Only] IPv6 address for this VPN interface associated with the VPN gateway. The IPv6 address must be a regional external IPv6 address. The format is RFC 5952 format (e.g. 2001:db8::2d9:51:0:0).
+     * 
+     * @var ?string $ipv6Address
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('ipv6Address')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $ipv6Address = null;
+    
 	public function __construct()
 	{
 		$this->id = null;
 		$this->interconnectAttachment = null;
 		$this->ipAddress = null;
+		$this->ipv6Address = null;
 	}
 }

@@ -187,6 +187,16 @@ class PropertyPerformanceResult
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $userRegionCode = null;
     
+    /**
+     * The total number of clicks on the "Website" button on Google for vacation rentals.
+     * 
+     * @var ?string $vrWebsiteButtonClicks
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('vrWebsiteButtonClicks')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $vrWebsiteButtonClicks = null;
+    
 	public function __construct()
 	{
 		$this->adsClickCount = null;
@@ -206,5 +216,6 @@ class PropertyPerformanceResult
 		$this->partnerPropertyId = null;
 		$this->propertyRegionCode = null;
 		$this->userRegionCode = null;
+		$this->vrWebsiteButtonClicks = null;
 	}
 }

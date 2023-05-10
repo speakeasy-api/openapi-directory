@@ -10,11 +10,11 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 
 
 /** Number identifying transport mode; values returned via RouteTypes API */
-enum PatternsGetPatternByRunRouteTypeEnum: string
+enum PatternsGetPatternByRunRouteTypeEnum: int
 {
-    case ZERO = '0';
-    case ONE = '1';
-    case TWO = '2';
-    case THREE = '3';
-    case FOUR = '4';
+    case ZERO = 0;
+    case ONE = 1;
+    case TWO = 2;
+    case THREE = 3;
+    case FOUR = 4;
 }

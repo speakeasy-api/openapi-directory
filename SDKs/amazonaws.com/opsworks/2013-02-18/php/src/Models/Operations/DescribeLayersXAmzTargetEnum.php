@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeLayersXAmzTargetEnum: string
 {
     case OPS_WORKS20130218_DESCRIBE_LAYERS = 'OpsWorks_20130218.DescribeLayers';

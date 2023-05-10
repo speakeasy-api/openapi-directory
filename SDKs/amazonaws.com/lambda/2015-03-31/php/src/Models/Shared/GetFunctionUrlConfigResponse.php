@@ -38,6 +38,11 @@ class GetFunctionUrlConfigResponse
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $functionUrl;
     
+	#[\JMS\Serializer\Annotation\SerializedName('InvokeMode')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\InvokeModeEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?InvokeModeEnum $invokeMode = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('LastModifiedTime')]
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $lastModifiedTime;
@@ -49,6 +54,7 @@ class GetFunctionUrlConfigResponse
 		$this->creationTime = "";
 		$this->functionArn = "";
 		$this->functionUrl = "";
+		$this->invokeMode = null;
 		$this->lastModifiedTime = "";
 	}
 }

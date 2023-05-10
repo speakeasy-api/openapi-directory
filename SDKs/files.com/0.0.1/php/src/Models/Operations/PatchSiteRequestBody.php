@@ -678,14 +678,6 @@ class PatchSiteRequestBody
     public ?bool $optOutGlobal = null;
     
     /**
-     * Notify site email of overages?
-     * 
-     * @var ?bool $overageNotify
-     */
-	#[SpeakeasyMetadata('multipartForm:name=overage_notify')]
-    public ?bool $overageNotify = null;
-    
-    /**
      * Shortest password length for users
      * 
      * @var ?int $passwordMinLength
@@ -1142,7 +1134,6 @@ class PatchSiteRequestBody
 		$this->officeIntegrationAvailable = null;
 		$this->officeIntegrationType = null;
 		$this->optOutGlobal = null;
-		$this->overageNotify = null;
 		$this->passwordMinLength = null;
 		$this->passwordRequireLetter = null;
 		$this->passwordRequireMixed = null;

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetDownloadUrlForLayerXAmzTargetEnum: string
 {
     case AMAZON_EC2_CONTAINER_REGISTRY_V20150921_GET_DOWNLOAD_URL_FOR_LAYER = 'AmazonEC2ContainerRegistry_V20150921.GetDownloadUrlForLayer';

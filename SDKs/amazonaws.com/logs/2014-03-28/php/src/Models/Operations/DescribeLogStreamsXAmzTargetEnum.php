@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeLogStreamsXAmzTargetEnum: string
 {
     case LOGS20140328_DESCRIBE_LOG_STREAMS = 'Logs_20140328.DescribeLogStreams';

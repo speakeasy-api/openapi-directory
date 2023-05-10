@@ -30,52 +30,86 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\AddUserToAccountRequestBody;
+use \OpenAPI\OpenAPI\Models\Operations\AddUserToAccountRequestBodyAccount;
+use \OpenAPI\OpenAPI\Models\Operations\AddUserToAccountRequestBodyUsers;
+use \OpenAPI\OpenAPI\Models\Operations\AddUserToAccountRequestBodyUsersIdentification;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new AddUserToAccountRequestBody();
+    $request->account = new AddUserToAccountRequestBodyAccount();
+    $request->account->accountId = 'corrupti';
+    $request->account->domain = 'provident';
+    $request->users = [
+        new AddUserToAccountRequestBodyUsers(),
+        new AddUserToAccountRequestBodyUsers(),
+        new AddUserToAccountRequestBodyUsers(),
+    ];
+
+    $response = $sdk->accounts->addUserToAccount($request);
+
+    if ($response->addUserToAccount201ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### accounts
+### [accounts](docs/accounts/README.md)
 
-* `addUserToAccount` - Add users to an account
-* `deleteAccount` - Delete account
-* `removeUserFromAccount` - Remove user from account
-* `upsertAccount` - Create or update account
+* [addUserToAccount](docs/accounts/README.md#addusertoaccount) - Add users to an account
+* [deleteAccount](docs/accounts/README.md#deleteaccount) - Delete account
+* [removeUserFromAccount](docs/accounts/README.md#removeuserfromaccount) - Remove user from account
+* [upsertAccount](docs/accounts/README.md#upsertaccount) - Create or update account
 
-### events
+### [events](docs/events/README.md)
 
-* `getEvents` - Get events
-* `trackJourneyEvent` - Track event
+* [getEvents](docs/events/README.md#getevents) - Get events
+* [~~trackJourneyEvent~~](docs/events/README.md#trackjourneyevent) - Track event :warning: **Deprecated**
 
-### properties
+### [properties](docs/properties/README.md)
 
-* `getAccountProperties` - Get account properties
-* `getUserProperties` - Get user properties
+* [getAccountProperties](docs/properties/README.md#getaccountproperties) - Get account properties
+* [getUserProperties](docs/properties/README.md#getuserproperties) - Get user properties
 
-### segments
+### [segments](docs/segments/README.md)
 
-* `getAccountSegments` - Get account segments
-* `getUserSegments` - Get user segments
+* [getAccountSegments](docs/segments/README.md#getaccountsegments) - Get account segments
+* [getUserSegments](docs/segments/README.md#getusersegments) - Get user segments
 
-### track
+### [track](docs/track/README.md)
 
-* `trackEvent` - Track event
+* [trackEvent](docs/track/README.md#trackevent) - Track event
 
-### users
+### [users](docs/users/README.md)
 
-* `deleteUser` - Delete user
-* `link` - Link web activity to user
-* `upsertUser` - Create or update user
+* [deleteUser](docs/users/README.md#deleteuser) - Delete user
+* [link](docs/users/README.md#link) - Link web activity to user
+* [upsertUser](docs/users/README.md#upsertuser) - Create or update user
 
-### validation
+### [validation](docs/validation/README.md)
 
-* `getValidity` - Validate API key
+* [getValidity](docs/validation/README.md#getvalidity) - Validate API key
 
-### websites
+### [websites](docs/websites/README.md)
 
-* `getTrackingSnippet` - Get snippet for a website
+* [getTrackingSnippet](docs/websites/README.md#gettrackingsnippet) - Get snippet for a website
 <!-- End SDK Available Operations -->
 
 ### Maturity

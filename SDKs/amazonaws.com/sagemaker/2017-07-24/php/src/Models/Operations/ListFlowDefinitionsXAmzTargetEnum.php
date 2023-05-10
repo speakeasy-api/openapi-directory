@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListFlowDefinitionsXAmzTargetEnum: string
 {
     case SAGE_MAKER_LIST_FLOW_DEFINITIONS = 'SageMaker.ListFlowDefinitions';

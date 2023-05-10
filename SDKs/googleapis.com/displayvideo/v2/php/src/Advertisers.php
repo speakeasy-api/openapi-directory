@@ -2406,7 +2406,7 @@ class Advertisers
     }
 	
     /**
-     * Activates a manual trigger. Each activation of the manual trigger must be at least 5 minutes apart, otherwise an error will be returned.
+     * Activates a manual trigger. Each activation of the manual trigger must be at least 5 minutes apart, otherwise an error will be returned. **Warning:** Line Items using manual triggers will stop serving in Display & Video 360 on **May 17, 2023**. Read our [feature deprecation announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DisplayvideoAdvertisersManualTriggersActivateRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\DisplayvideoAdvertisersManualTriggersActivateSecurity $security
@@ -2446,7 +2446,7 @@ class Advertisers
     }
 	
     /**
-     * Creates a new manual trigger. Returns the newly created manual trigger if successful.
+     * Creates a new manual trigger. Returns the newly created manual trigger if successful. **Warning:** Line Items using manual triggers will stop serving in Display & Video 360 on **May 17, 2023**. Read our [feature deprecation announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DisplayvideoAdvertisersManualTriggersCreateRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\DisplayvideoAdvertisersManualTriggersCreateSecurity $security
@@ -2486,7 +2486,7 @@ class Advertisers
     }
 	
     /**
-     * Deactivates a manual trigger.
+     * Deactivates a manual trigger. **Warning:** Line Items using manual triggers will stop serving in Display & Video 360 on **May 17, 2023**. Read our [feature deprecation announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DisplayvideoAdvertisersManualTriggersDeactivateRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\DisplayvideoAdvertisersManualTriggersDeactivateSecurity $security
@@ -2526,7 +2526,7 @@ class Advertisers
     }
 	
     /**
-     * Gets a manual trigger.
+     * Gets a manual trigger. **Warning:** Line Items using manual triggers will stop serving in Display & Video 360 on **May 17, 2023**. Read our [feature deprecation announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DisplayvideoAdvertisersManualTriggersGetRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\DisplayvideoAdvertisersManualTriggersGetSecurity $security
@@ -2564,7 +2564,7 @@ class Advertisers
     }
 	
     /**
-     * Lists manual triggers that are accessible to the current user for a given advertiser ID. The order is defined by the order_by parameter. A single advertiser_id is required.
+     * Lists manual triggers that are accessible to the current user for a given advertiser ID. The order is defined by the order_by parameter. A single advertiser_id is required. **Warning:** Line Items using manual triggers will stop serving in Display & Video 360 on **May 17, 2023**. Read our [feature deprecation announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DisplayvideoAdvertisersManualTriggersListRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\DisplayvideoAdvertisersManualTriggersListSecurity $security
@@ -2602,7 +2602,7 @@ class Advertisers
     }
 	
     /**
-     * Updates a manual trigger. Returns the updated manual trigger if successful.
+     * Updates a manual trigger. Returns the updated manual trigger if successful. **Warning:** Line Items using manual triggers will stop serving in Display & Video 360 on **May 17, 2023**. Read our [feature deprecation announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DisplayvideoAdvertisersManualTriggersPatchRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\DisplayvideoAdvertisersManualTriggersPatchSecurity $security

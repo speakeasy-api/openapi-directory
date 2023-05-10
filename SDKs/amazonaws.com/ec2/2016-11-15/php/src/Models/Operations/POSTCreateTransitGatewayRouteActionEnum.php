@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateTransitGatewayRouteActionEnum: string
 {
     case CREATE_TRANSIT_GATEWAY_ROUTE = 'CreateTransitGatewayRoute';

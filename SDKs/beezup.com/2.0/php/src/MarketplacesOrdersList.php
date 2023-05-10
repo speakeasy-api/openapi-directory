@@ -48,11 +48,14 @@ class MarketplacesOrdersList
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetOrderListFullRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetOrderListFullResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getOrderListFull(
         \OpenAPI\OpenAPI\Models\Operations\GetOrderListFullRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetOrderListFullResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v2/user/marketplaces/orders/list/full');
         
@@ -96,11 +99,14 @@ class MarketplacesOrdersList
      * 
      * @param \OpenAPI\OpenAPI\Models\Shared\OrderListRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetOrderListLightResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getOrderListLight(
         \OpenAPI\OpenAPI\Models\Shared\OrderListRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetOrderListLightResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v2/user/marketplaces/orders/list/light');
         

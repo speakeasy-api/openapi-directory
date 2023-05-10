@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETModifyLaunchTemplateActionEnum: string
 {
     case MODIFY_LAUNCH_TEMPLATE = 'ModifyLaunchTemplate';

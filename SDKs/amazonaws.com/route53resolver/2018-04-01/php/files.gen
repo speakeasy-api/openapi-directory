@@ -380,4 +380,5 @@ src/Models/Shared/UpdateResolverRuleResponse.php
 src/Models/Shared/UpdateResolverRuleRequest.php
 src/Models/Shared/ResolverRuleConfig.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

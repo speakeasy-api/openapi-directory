@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteFeatureGroupXAmzTargetEnum: string
 {
     case SAGE_MAKER_DELETE_FEATURE_GROUP = 'SageMaker.DeleteFeatureGroup';

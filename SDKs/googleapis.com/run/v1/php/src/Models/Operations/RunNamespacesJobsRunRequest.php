@@ -19,13 +19,8 @@ class RunNamespacesJobsRunRequest
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=$.xgafv')]
     public ?\OpenAPI\OpenAPI\Models\Shared\XgafvEnum $dollarXgafv = null;
     
-    /**
-     * $requestBody
-     * 
-     * @var ?array<string, mixed> $requestBody
-     */
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?array $requestBody = null;
+    public ?\OpenAPI\OpenAPI\Models\Shared\RunJobRequest $runJobRequest = null;
     
     /**
      * OAuth access token.
@@ -118,7 +113,7 @@ class RunNamespacesJobsRunRequest
 	public function __construct()
 	{
 		$this->dollarXgafv = null;
-		$this->requestBody = null;
+		$this->runJobRequest = null;
 		$this->accessToken = null;
 		$this->alt = null;
 		$this->callback = null;

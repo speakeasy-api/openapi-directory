@@ -57,7 +57,7 @@ class DataFlow
      */
 	public function postV05HealthInformationHipRequestJson(
         \OpenAPI\OpenAPI\Models\Operations\PostV05HealthInformationHipRequestJsonRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05HealthInformationHipRequestJsonResponse
     {
         $baseUrl = DataFlow::POST_V05_HEALTH_INFORMATION_HIP_REQUEST_JSON_SERVERS[0];
@@ -111,7 +111,7 @@ class DataFlow
      */
 	public function postV05HealthInformationHipRequestRaw(
         \OpenAPI\OpenAPI\Models\Operations\PostV05HealthInformationHipRequestRawRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05HealthInformationHipRequestRawResponse
     {
         $baseUrl = DataFlow::POST_V05_HEALTH_INFORMATION_HIP_REQUEST_RAW_SERVERS[0];

@@ -28,6 +28,16 @@ class EntityMapping
     public ?string $draftEntity = null;
     
     /**
+     * Type of draft entity.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\EntityMappingDraftTypeEnum $draftType
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('draftType')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\EntityMappingDraftTypeEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?EntityMappingDraftTypeEnum $draftType = null;
+    
+    /**
      * Entity mapping log entries. Multiple rules can be effective and contribute changes to a converted entity, such as a rule can handle the entity name, another rule can handle an entity type. In addition, rules which did not change the entity are also logged along with the reason preventing them to do so.
      * 
      * @var ?array<\OpenAPI\OpenAPI\Models\Shared\EntityMappingLogEntry> $mappingLog
@@ -47,10 +57,22 @@ class EntityMapping
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $sourceEntity = null;
     
+    /**
+     * Type of source entity.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\EntityMappingSourceTypeEnum $sourceType
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('sourceType')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\EntityMappingSourceTypeEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?EntityMappingSourceTypeEnum $sourceType = null;
+    
 	public function __construct()
 	{
 		$this->draftEntity = null;
+		$this->draftType = null;
 		$this->mappingLog = null;
 		$this->sourceEntity = null;
+		$this->sourceType = null;
 	}
 }

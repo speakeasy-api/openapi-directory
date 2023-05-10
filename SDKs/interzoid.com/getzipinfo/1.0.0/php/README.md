@@ -30,16 +30,41 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetzipcodeinfoRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetzipcodeinfoRequest();
+    $request->license = 'corrupti';
+    $request->zip = 'provident';
+
+    $response = $sdk->detailedZipCodeInformation->getzipcodeinfo($request);
+
+    if ($response->getzipcodeinfo200ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### detailedZipCodeInformation
+### [detailedZipCodeInformation](docs/detailedzipcodeinformation/README.md)
 
-* `getzipcodeinfo` - Gets detailed zip code information
+* [getzipcodeinfo](docs/detailedzipcodeinformation/README.md#getzipcodeinfo) - Gets detailed zip code information
 <!-- End SDK Available Operations -->
 
 ### Maturity

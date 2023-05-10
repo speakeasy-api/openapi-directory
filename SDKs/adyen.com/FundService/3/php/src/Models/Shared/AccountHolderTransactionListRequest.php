@@ -23,10 +23,10 @@ class AccountHolderTransactionListRequest
     /**
      * A list of accounts to include in the transaction list. If left blank, the last fifty (50) transactions for all accounts of the account holder will be included.
      * 
-     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\TransactionListForAccount> $transactionListsPerAccount
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\TransactionListForAccountWrapper> $transactionListsPerAccount
      */
 	#[\JMS\Serializer\Annotation\SerializedName('transactionListsPerAccount')]
-    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\TransactionListForAccount>')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\TransactionListForAccountWrapper>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $transactionListsPerAccount = null;
     

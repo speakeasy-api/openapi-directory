@@ -37,6 +37,11 @@ class FieldInputConfig
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $descriptiveText = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('fileUploaderConfig')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\FileUploaderFieldConfig')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?FileUploaderFieldConfig $fileUploaderConfig = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('isArray')]
     #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -97,6 +102,7 @@ class FieldInputConfig
 		$this->defaultCountryCode = null;
 		$this->defaultValue = null;
 		$this->descriptiveText = null;
+		$this->fileUploaderConfig = null;
 		$this->isArray = null;
 		$this->maxValue = null;
 		$this->minValue = null;

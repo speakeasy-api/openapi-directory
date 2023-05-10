@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AssociateDiscoveredResourceXAmzTargetEnum: string
 {
     case AWS_MIGRATION_HUB_ASSOCIATE_DISCOVERED_RESOURCE = 'AWSMigrationHub.AssociateDiscoveredResource';

@@ -166,4 +166,8 @@ src/Models/Operations/PostTruckRouteOutputFormatOutputSrsEnum.php
 src/Models/Operations/PostTruckRouteOutputFormatRequest.php
 src/Models/Operations/PostTruckRouteOutputFormatResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/directions/README.md
+docs/distance/README.md
+docs/route/README.md
 USAGE.md

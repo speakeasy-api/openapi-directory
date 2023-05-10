@@ -30,49 +30,93 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Shared\ClusterRequest;
+use \OpenAPI\OpenAPI\Models\Shared\ClusterConfiguration;
+use \OpenAPI\OpenAPI\Models\Shared\ClusterConfigurationClustering;
+use \OpenAPI\OpenAPI\Models\Shared\ClusterConfigurationRouting;
+use \OpenAPI\OpenAPI\Models\Shared\ClusterCustomer;
+use \OpenAPI\OpenAPI\Models\Shared\ClusterCustomerAddress;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new ClusterRequest();
+    $request->configuration = new ClusterConfiguration();
+    $request->configuration->clustering = new ClusterConfigurationClustering();
+    $request->configuration->clustering->maxQuantity = 50;
+    $request->configuration->clustering->minQuantity = 30;
+    $request->configuration->clustering->numClusters = 10;
+    $request->configuration->responseType = 'json';
+    $request->configuration->routing = new ClusterConfigurationRouting();
+    $request->configuration->routing->costPerMeter = 5488.14;
+    $request->configuration->routing->costPerSecond = 1;
+    $request->configuration->routing->profile = 'car';
+    $request->customers = [
+        new ClusterCustomer(),
+        new ClusterCustomer(),
+        new ClusterCustomer(),
+    ];
+
+    $response = $sdk->clusterAPI->asyncClusteringProblem($request);
+
+    if ($response->jobId !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### clusterAPI
+### [clusterAPI](docs/clusterapi/README.md)
 
-* `asyncClusteringProblem` - Batch Cluster Endpoint
-* `getClusterSolution` - GET Batch Solution Endpoint
-* `solveClusteringProblem` - POST Cluster Endpoint
+* [asyncClusteringProblem](docs/clusterapi/README.md#asyncclusteringproblem) - Batch Cluster Endpoint
+* [getClusterSolution](docs/clusterapi/README.md#getclustersolution) - GET Batch Solution Endpoint
+* [solveClusteringProblem](docs/clusterapi/README.md#solveclusteringproblem) - POST Cluster Endpoint
 
-### geocodingAPI
+### [geocodingAPI](docs/geocodingapi/README.md)
 
-* `getGeocode` - Geocoding Endpoint
+* [getGeocode](docs/geocodingapi/README.md#getgeocode) - Geocoding Endpoint
 
-### isochroneAPI
+### [isochroneAPI](docs/isochroneapi/README.md)
 
-* `getIsochrone` - Isochrone Endpoint
+* [getIsochrone](docs/isochroneapi/README.md#getisochrone) - Isochrone Endpoint
 
-### mapMatchingAPI
+### [mapMatchingAPI](docs/mapmatchingapi/README.md)
 
-* `postGPX` - Map-match a GPX file
+* [postGPX](docs/mapmatchingapi/README.md#postgpx) - Map-match a GPX file
 
-### matrixAPI
+### [matrixAPI](docs/matrixapi/README.md)
 
-* `calculateMatrix` - Batch Matrix Endpoint
-* `getMatrix` - GET Matrix Endpoint
-* `getMatrixSolution` - GET Batch Matrix Endpoint
-* `postMatrix` - POST Matrix Endpoint
+* [calculateMatrix](docs/matrixapi/README.md#calculatematrix) - Batch Matrix Endpoint
+* [getMatrix](docs/matrixapi/README.md#getmatrix) - GET Matrix Endpoint
+* [getMatrixSolution](docs/matrixapi/README.md#getmatrixsolution) - GET Batch Matrix Endpoint
+* [postMatrix](docs/matrixapi/README.md#postmatrix) - POST Matrix Endpoint
 
-### routeOptimizationAPI
+### [routeOptimizationAPI](docs/routeoptimizationapi/README.md)
 
-* `asyncVRP` - POST route optimization problem (batch mode)
-* `getSolution` - GET the solution (batch mode)
-* `solveVRP` - POST route optimization problem
+* [asyncVRP](docs/routeoptimizationapi/README.md#asyncvrp) - POST route optimization problem (batch mode)
+* [getSolution](docs/routeoptimizationapi/README.md#getsolution) - GET the solution (batch mode)
+* [solveVRP](docs/routeoptimizationapi/README.md#solvevrp) - POST route optimization problem
 
-### routingAPI
+### [routingAPI](docs/routingapi/README.md)
 
-* `getRoute` - GET Route Endpoint
-* `getRouteInfo` - Coverage information
-* `postRoute` - POST Route Endpoint
+* [getRoute](docs/routingapi/README.md#getroute) - GET Route Endpoint
+* [getRouteInfo](docs/routingapi/README.md#getrouteinfo) - Coverage information
+* [postRoute](docs/routingapi/README.md#postroute) - POST Route Endpoint
 <!-- End SDK Available Operations -->
 
 ### Maturity

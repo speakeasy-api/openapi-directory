@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 use \OpenAPI\OpenAPI\Utils\SpeakeasyMetadata;
 /**
- * EndUserAgreementRequest - EndUserAgreement.
+ * EndUserAgreementRequest - Represents an end-user agreement.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

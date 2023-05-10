@@ -36,4 +36,21 @@ enum SubscriptionCreateRequestEventTypeEnum: string
     case CONVERSATION_NEW_MESSAGE = 'conversation.newMessage';
     case CONVERSATION_PRIVACY_DELETION = 'conversation.privacyDeletion';
     case CONVERSATION_PROPERTY_CHANGE = 'conversation.propertyChange';
+    case CONTACT_MERGE = 'contact.merge';
+    case COMPANY_MERGE = 'company.merge';
+    case DEAL_MERGE = 'deal.merge';
+    case TICKET_MERGE = 'ticket.merge';
+    case PRODUCT_MERGE = 'product.merge';
+    case LINE_ITEM_MERGE = 'line_item.merge';
+    case CONTACT_RESTORE = 'contact.restore';
+    case COMPANY_RESTORE = 'company.restore';
+    case DEAL_RESTORE = 'deal.restore';
+    case TICKET_RESTORE = 'ticket.restore';
+    case PRODUCT_RESTORE = 'product.restore';
+    case LINE_ITEM_RESTORE = 'line_item.restore';
+    case CONTACT_ASSOCIATION_CHANGE = 'contact.associationChange';
+    case COMPANY_ASSOCIATION_CHANGE = 'company.associationChange';
+    case DEAL_ASSOCIATION_CHANGE = 'deal.associationChange';
+    case TICKET_ASSOCIATION_CHANGE = 'ticket.associationChange';
+    case LINE_ITEM_ASSOCIATION_CHANGE = 'line_item.associationChange';
 }

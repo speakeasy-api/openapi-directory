@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeClassicLinkInstancesActionEnum: string
 {
     case DESCRIBE_CLASSIC_LINK_INSTANCES = 'DescribeClassicLinkInstances';

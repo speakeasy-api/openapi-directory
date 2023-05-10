@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum TagResourceXAmzTargetEnum: string
 {
     case AWSWAF_REGIONAL20161128_TAG_RESOURCE = 'AWSWAF_Regional_20161128.TagResource';

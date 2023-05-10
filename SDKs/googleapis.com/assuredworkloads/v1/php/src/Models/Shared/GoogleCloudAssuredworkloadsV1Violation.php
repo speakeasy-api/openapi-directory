@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * GoogleCloudAssuredworkloadsV1Violation - Workload monitoring Violation. Next Id: 22
+ * GoogleCloudAssuredworkloadsV1Violation - Workload monitoring Violation. Next Id: 27
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public
@@ -28,7 +28,7 @@ class GoogleCloudAssuredworkloadsV1Violation
     public ?bool $acknowledged = null;
     
     /**
-     * Optional. Timestamp when this violation was acknowledged last. This will be absent when acknowledged field is marked as false.
+     * Optional. Timestamp when this violation was acknowledged first. Check exception_contexts to find the last time the violation was acknowledged when there are more than one violations. This field will be absent when acknowledged field is marked as false.
      * 
      * @var ?string $acknowledgementTime
      */

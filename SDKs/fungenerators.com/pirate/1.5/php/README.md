@@ -30,22 +30,50 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetPirateGenerateInsultRequest;
+use \OpenAPI\OpenAPI\Models\Operations\GetPirateGenerateInsultSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetPirateGenerateInsultRequest();
+    $request->limit = 548814;
+
+    $requestSecurity = new GetPirateGenerateInsultSecurity();
+    $requestSecurity->xFungeneratorsApiSecret = 'YOUR_API_KEY_HERE';
+
+    $response = $sdk->generation->getPirateGenerateInsult($request, $requestSecurity);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### generation
+### [generation](docs/generation/README.md)
 
-* `getPirateGenerateInsult` - Generate random pirate insults.
-* `getPirateGenerateLoremIpsum` - Generate pirate lorem ipsum.
-* `getPirateGenerateName` - Generate random pirate names.
+* [getPirateGenerateInsult](docs/generation/README.md#getpirategenerateinsult) - Generate random pirate insults.
+* [getPirateGenerateLoremIpsum](docs/generation/README.md#getpirategenerateloremipsum) - Generate pirate lorem ipsum.
+* [getPirateGenerateName](docs/generation/README.md#getpirategeneratename) - Generate random pirate names.
 
-### translation
+### [translation](docs/translation/README.md)
 
-* `getPirateTranslate` - Translate from English to pirate.
+* [getPirateTranslate](docs/translation/README.md#getpiratetranslate) - Translate from English to pirate.
 <!-- End SDK Available Operations -->
 
 ### Maturity

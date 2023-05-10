@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteGeoMatchSetXAmzTargetEnum: string
 {
     case AWSWAF20150824_DELETE_GEO_MATCH_SET = 'AWSWAF_20150824.DeleteGeoMatchSet';

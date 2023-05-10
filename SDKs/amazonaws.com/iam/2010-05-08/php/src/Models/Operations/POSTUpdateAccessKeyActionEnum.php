@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTUpdateAccessKeyActionEnum: string
 {
     case UPDATE_ACCESS_KEY = 'UpdateAccessKey';

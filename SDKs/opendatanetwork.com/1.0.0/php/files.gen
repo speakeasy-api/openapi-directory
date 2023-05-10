@@ -39,4 +39,5 @@ src/Models/Operations/GetSuggestionsResponse.php
 src/Models/Operations/GetValuesForVariablesFormatEnum.php
 src/Models/Operations/GetValuesForVariablesRequest.php
 src/Models/Operations/GetValuesForVariablesResponse.php
+docs/sdk/README.md
 USAGE.md

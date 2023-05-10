@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum VerifyTrustXAmzTargetEnum: string
 {
     case DIRECTORY_SERVICE20150416_VERIFY_TRUST = 'DirectoryService_20150416.VerifyTrust';

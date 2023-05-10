@@ -170,4 +170,15 @@ src/Models/Shared/HostConfig.php
 src/Models/Shared/ContainerId.php
 src/Models/Shared/CreateContainer.php
 src/Models/Shared/UpdateVolume.php
+docs/sdk/README.md
+docs/apiinfo/README.md
+docs/authentication/README.md
+docs/containergroups/README.md
+docs/fileshares/README.md
+docs/images/README.md
+docs/privatedockerimagesregistry/README.md
+docs/publicipaddresses/README.md
+docs/quota/README.md
+docs/singlecontainers/README.md
+docs/volumes/README.md
 USAGE.md

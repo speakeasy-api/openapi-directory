@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /** Service version number. The current value is 2. */
-enum VersionNumberEnum: string
+enum VersionNumberEnum: int
 {
-    case TWO = '2';
+    case TWO = 2;
 }

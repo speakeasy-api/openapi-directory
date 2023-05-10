@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CopyBackupToRegionXAmzTargetEnum: string
 {
     case BALDR_API_SERVICE_COPY_BACKUP_TO_REGION = 'BaldrApiService.CopyBackupToRegion';

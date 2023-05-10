@@ -39,4 +39,5 @@ src/Models/Shared/ControlOperationTypeEnum.php
 src/Models/Shared/ListEnabledControlsOutput.php
 src/Models/Shared/EnabledControlSummary.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

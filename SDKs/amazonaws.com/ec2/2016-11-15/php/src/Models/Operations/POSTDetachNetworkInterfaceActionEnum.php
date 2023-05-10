@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDetachNetworkInterfaceActionEnum: string
 {
     case DETACH_NETWORK_INTERFACE = 'DetachNetworkInterface';

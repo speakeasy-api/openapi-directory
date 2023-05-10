@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDecreaseNodeGroupsInGlobalReplicationGroupActionEnum: string
 {
     case DECREASE_NODE_GROUPS_IN_GLOBAL_REPLICATION_GROUP = 'DecreaseNodeGroupsInGlobalReplicationGroup';

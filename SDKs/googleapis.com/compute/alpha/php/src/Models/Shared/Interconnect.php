@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * Interconnect - Represents an Interconnect resource. An Interconnect resource is a dedicated connection between the GCP network and your on-premises network. For more information, read the Dedicated Interconnect Overview.
+ * Interconnect - Represents an Interconnect resource. An Interconnect resource is a dedicated connection between the Google Cloud network and your on-premises network. For more information, read the Dedicated Interconnect Overview.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public
@@ -26,6 +26,16 @@ class Interconnect
     #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $adminEnabled = null;
+    
+    /**
+     * [Output only] List of features available for this interconnect, which can take one of the following values: - MACSEC If present then the interconnect was created on MACsec capable hardware ports. If not present then the interconnect is provisioned on non-MACsec capable ports and MACsec enablement will fail.
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\InterconnectAvailableFeaturesEnum> $availableFeatures
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('availableFeatures')]
+    #[\JMS\Serializer\Annotation\Type('array<enum<OpenAPI\OpenAPI\Models\Shared\InterconnectAvailableFeaturesEnum>>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $availableFeatures = null;
     
     /**
      * [Output Only] A list of CircuitInfo objects, that describe the individual circuits in this LAG.
@@ -258,6 +268,16 @@ class Interconnect
     public ?string $remoteLocation = null;
     
     /**
+     * Optional. List of features requested for this interconnect, which can take one of the following values: - MACSEC If specified then the interconnect will be created on MACsec capable hardware ports. If not specified, the default value is false, which will allocate non-MACsec capable ports first if available. This parameter can only be provided during interconnect INSERT and cannot be changed using interconnect PATCH. Please review Interconnect Pricing for implications on enabling this flag.
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\InterconnectRequestedFeaturesEnum> $requestedFeatures
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('requestedFeatures')]
+    #[\JMS\Serializer\Annotation\Type('array<enum<OpenAPI\OpenAPI\Models\Shared\InterconnectRequestedFeaturesEnum>>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $requestedFeatures = null;
+    
+    /**
      * Target number of physical links in the link bundle, as requested by the customer.
      * 
      * @var ?int $requestedLinkCount
@@ -310,6 +330,7 @@ class Interconnect
 	public function __construct()
 	{
 		$this->adminEnabled = null;
+		$this->availableFeatures = null;
 		$this->circuitInfos = null;
 		$this->creationTimestamp = null;
 		$this->customerName = null;
@@ -333,6 +354,7 @@ class Interconnect
 		$this->peerIpAddress = null;
 		$this->provisionedLinkCount = null;
 		$this->remoteLocation = null;
+		$this->requestedFeatures = null;
 		$this->requestedLinkCount = null;
 		$this->satisfiesPzs = null;
 		$this->selfLink = null;

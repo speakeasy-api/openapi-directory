@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListDatasetImportJobsXAmzTargetEnum: string
 {
     case AMAZON_PERSONALIZE_LIST_DATASET_IMPORT_JOBS = 'AmazonPersonalize.ListDatasetImportJobs';

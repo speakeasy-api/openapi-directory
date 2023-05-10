@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UnlinkDeveloperIdentityXAmzTargetEnum: string
 {
     case AWS_COGNITO_IDENTITY_SERVICE_UNLINK_DEVELOPER_IDENTITY = 'AWSCognitoIdentityService.UnlinkDeveloperIdentity';

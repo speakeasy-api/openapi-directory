@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTRestartAppServerActionEnum: string
 {
     case RESTART_APP_SERVER = 'RestartAppServer';

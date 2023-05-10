@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETGETManagedPrefixListEntriesActionEnum: string
 {
     case GET_MANAGED_PREFIX_LIST_ENTRIES = 'GetManagedPrefixListEntries';

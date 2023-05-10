@@ -142,4 +142,14 @@ src/Models/Shared/Store.php
 src/Models/Shared/StoreSingle.php
 src/Models/Shared/Tag.php
 src/Models/Shared/TagSingle.php
+docs/sdk/README.md
+docs/creatorroles/README.md
+docs/creators/README.md
+docs/developers/README.md
+docs/games/README.md
+docs/genres/README.md
+docs/platforms/README.md
+docs/publishers/README.md
+docs/stores/README.md
+docs/tags/README.md
 USAGE.md

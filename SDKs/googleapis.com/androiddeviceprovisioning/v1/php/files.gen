@@ -116,4 +116,7 @@ src/Models/Shared/UpdateDeviceMetadataInBatchRequest.php
 src/Models/Shared/UpdateMetadataArguments.php
 src/Models/Shared/ListVendorCustomersResponse.php
 src/Models/Shared/ListVendorsResponse.php
+docs/sdk/README.md
+docs/customers/README.md
+docs/partners/README.md
 USAGE.md

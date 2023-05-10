@@ -30,16 +30,43 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\PlayByPlayRequest;
+use \OpenAPI\OpenAPI\Models\Operations\PlayByPlayFormatEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new PlayByPlayRequest();
+    $request->format = PlayByPlayFormatEnum::JSON;
+    $request->gameid = 'provident';
+
+    $response = $sdk->playByPlay($request);
+
+    if ($response->playByPlay !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `playByPlay` - Play By Play
-* `playByPlayDelta` - Play By Play Delta
+* [playByPlay](docs/sdk/README.md#playbyplay) - Play By Play
+* [playByPlayDelta](docs/sdk/README.md#playbyplaydelta) - Play By Play Delta
 <!-- End SDK Available Operations -->
 
 ### Maturity

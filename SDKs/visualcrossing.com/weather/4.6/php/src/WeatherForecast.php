@@ -52,7 +52,7 @@ class WeatherForecast
      */
 	public function getVisualCrossingWebServicesRestServicesWeatherdataForecast(
         \OpenAPI\OpenAPI\Models\Operations\GetVisualCrossingWebServicesRestServicesWeatherdataForecastRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\GetVisualCrossingWebServicesRestServicesWeatherdataForecastResponse
     {
         $baseUrl = WeatherForecast::GET_VISUAL_CROSSING_WEB_SERVICES_REST_SERVICES_WEATHERDATA_FORECAST_SERVERS[0];

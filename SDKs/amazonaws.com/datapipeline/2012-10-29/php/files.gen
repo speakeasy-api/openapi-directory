@@ -124,4 +124,5 @@ src/Models/Shared/TaskStatusEnum.php
 src/Models/Shared/ValidatePipelineDefinitionOutput.php
 src/Models/Shared/ValidatePipelineDefinitionInput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

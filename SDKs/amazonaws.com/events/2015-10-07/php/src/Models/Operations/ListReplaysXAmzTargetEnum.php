@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListReplaysXAmzTargetEnum: string
 {
     case AWS_EVENTS_LIST_REPLAYS = 'AWSEvents.ListReplays';

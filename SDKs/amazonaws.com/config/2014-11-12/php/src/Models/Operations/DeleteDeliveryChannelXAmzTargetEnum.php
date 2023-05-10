@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteDeliveryChannelXAmzTargetEnum: string
 {
     case STARLING_DOVE_SERVICE_DELETE_DELIVERY_CHANNEL = 'StarlingDoveService.DeleteDeliveryChannel';

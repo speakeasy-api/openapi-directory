@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * AssetValue - <p/>
+ * AssetValue - The structure containing the asset properties.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateConnectionXAmzTargetEnum: string
 {
     case OVERTURE_SERVICE_UPDATE_CONNECTION = 'OvertureService.UpdateConnection';

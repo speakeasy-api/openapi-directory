@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETUpdateStopwordOptionsActionEnum: string
 {
     case UPDATE_STOPWORD_OPTIONS = 'UpdateStopwordOptions';

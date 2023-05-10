@@ -401,44 +401,6 @@ class SwitchSettings
     }
 	
     /**
-     * Update the MTU configuration
-     * 
-     * Update the MTU configuration
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\UpdateNetworkSwitchSettingsMtuRequest $request
-     * @return \OpenAPI\OpenAPI\Models\Operations\UpdateNetworkSwitchSettingsMtuResponse
-     */
-	public function updateNetworkSwitchSettingsMtu(
-        \OpenAPI\OpenAPI\Models\Operations\UpdateNetworkSwitchSettingsMtuRequest $request,
-    ): \OpenAPI\OpenAPI\Models\Operations\UpdateNetworkSwitchSettingsMtuResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/networks/{networkId}/switch/settings/mtu', \OpenAPI\OpenAPI\Models\Operations\UpdateNetworkSwitchSettingsMtuRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
-        $options = array_merge_recursive($options, $body);
-        
-        $httpResponse = $this->_securityClient->request('PUT', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\UpdateNetworkSwitchSettingsMtuResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->updateNetworkSwitchSettingsMtu200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
      * Update multicast settings for a network
      * 
      * Update multicast settings for a network

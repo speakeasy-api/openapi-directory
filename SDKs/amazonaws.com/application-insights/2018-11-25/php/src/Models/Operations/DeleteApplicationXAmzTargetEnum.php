@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteApplicationXAmzTargetEnum: string
 {
     case EC2_WINDOWS_BARLEY_SERVICE_DELETE_APPLICATION = 'EC2WindowsBarleyService.DeleteApplication';

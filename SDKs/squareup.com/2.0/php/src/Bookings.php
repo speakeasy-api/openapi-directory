@@ -209,9 +209,11 @@ class Bookings
      * 
      * Retrieves a seller's booking profile.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\RetrieveBusinessBookingProfileSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\RetrieveBusinessBookingProfileResponse
      */
 	public function retrieveBusinessBookingProfile(
+        \OpenAPI\OpenAPI\Models\Operations\RetrieveBusinessBookingProfileSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\RetrieveBusinessBookingProfileResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -219,7 +221,8 @@ class Bookings
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

@@ -48,7 +48,7 @@ class Fleet
     public ?string $displayName = null;
     
     /**
-     * Output only. The full, unique resource name of this fleet in the format of `projects/{project}/locations/{location}/fleets/{fleet}`. Each GCP project can have at most one fleet resource, named "default".
+     * Output only. The full, unique resource name of this fleet in the format of `projects/{project}/locations/{location}/fleets/{fleet}`. Each Google Cloud project can have at most one fleet resource, named "default".
      * 
      * @var ?string $name
      */

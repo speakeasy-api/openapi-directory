@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteTrustXAmzTargetEnum: string
 {
     case DIRECTORY_SERVICE20150416_DELETE_TRUST = 'DirectoryService_20150416.DeleteTrust';

@@ -113,7 +113,7 @@ src/Models/Shared/CustomIndicesInput.php
 src/Models/Shared/Operation.php
 src/Models/Shared/InputConfigOutput.php
 src/Models/Shared/RasterDataCollectionQueryOutput.php
-src/Models/Shared/TimeRangeFilterInput.php
+src/Models/Shared/TimeRangeFilterOutput.php
 src/Models/Shared/PropertyFilters.php
 src/Models/Shared/PropertyFilter.php
 src/Models/Shared/Property.php
@@ -166,8 +166,10 @@ src/Models/Shared/ItemSource.php
 src/Models/Shared/Properties.php
 src/Models/Shared/Geometry.php
 src/Models/Shared/AssetValue.php
+src/Models/Shared/TimeRangeFilterInput.php
 src/Models/Shared/StartEarthObservationJobOutput.php
 src/Models/Shared/RasterDataCollectionQueryInput.php
 src/Models/Shared/StartVectorEnrichmentJobOutput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

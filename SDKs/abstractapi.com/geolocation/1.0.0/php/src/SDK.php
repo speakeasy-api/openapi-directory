@@ -84,7 +84,7 @@ class SDK
      */
 	public function getV1(
         \OpenAPI\OpenAPI\Models\Operations\GetV1Request $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\GetV1Response
     {
         $baseUrl = SDK::GET_V1_SERVERS[0];

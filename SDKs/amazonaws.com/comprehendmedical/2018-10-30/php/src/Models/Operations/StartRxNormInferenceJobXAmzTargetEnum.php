@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartRxNormInferenceJobXAmzTargetEnum: string
 {
     case COMPREHEND_MEDICAL20181030_START_RX_NORM_INFERENCE_JOB = 'ComprehendMedical_20181030.StartRxNormInferenceJob';

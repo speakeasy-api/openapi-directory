@@ -30,16 +30,44 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetV1VerificationResultRequest;
+use \OpenAPI\OpenAPI\Models\Operations\GetV1VerificationResultFormatEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetV1VerificationResultRequest();
+    $request->format = GetV1VerificationResultFormatEnum::XML;
+    $request->key = 'provident';
+    $request->otp = 'distinctio';
+    $request->tranId = 'quibusdam';
+
+    $response = $sdk->getV1VerificationResult($request);
+
+    if ($response->getV1VerificationResult200ApplicationJSONString !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getV1VerificationResult` - Verify that an OTP sent by the Send SMS Verification API is valid.
-* `postV1VerificationSend` - Send an SMS with verification code and a custom message for authentication purpose.
+* [getV1VerificationResult](docs/sdk/README.md#getv1verificationresult) - Verify that an OTP sent by the Send SMS Verification API is valid.
+* [postV1VerificationSend](docs/sdk/README.md#postv1verificationsend) - Send an SMS with verification code and a custom message for authentication purpose.
 <!-- End SDK Available Operations -->
 
 ### Maturity

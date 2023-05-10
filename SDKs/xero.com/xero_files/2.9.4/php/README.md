@@ -30,31 +30,68 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\CreateFileAssociationRequest;
+use \OpenAPI\OpenAPI\Models\Shared\Association;
+use \OpenAPI\OpenAPI\Models\Shared\ObjectGroupEnum;
+use \OpenAPI\OpenAPI\Models\Shared\ObjectTypeEnum;
+use \OpenAPI\OpenAPI\Models\Operations\CreateFileAssociationSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new CreateFileAssociationRequest();
+    $request->association = new Association();
+    $request->association->fileId = '89bd9d8d-69a6-474e-8f46-7cc8796ed151';
+    $request->association->objectGroup = ObjectGroupEnum::OVERPAYMENT;
+    $request->association->objectId = '05dfc2dd-f7cc-478c-a1ba-928fc816742c';
+    $request->association->objectType = ObjectTypeEnum::CURRENT;
+    $request->fileId = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c';
+    $request->xeroTenantId = 'esse';
+
+    $requestSecurity = new CreateFileAssociationSecurity();
+    $requestSecurity->oAuth2 = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+
+    $response = $sdk->files->createFileAssociation($request, $requestSecurity);
+
+    if ($response->association !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### files
+### [files](docs/files/README.md)
 
-* `createFileAssociation` - Creates a new file association
-* `createFolder` - Creates a new folder
-* `deleteFile` - Deletes a specific file
-* `deleteFileAssociation` - Deletes an existing file association
-* `deleteFolder` - Deletes a folder
-* `getAssociationsByObject` - Retrieves an association object using a unique object ID
-* `getFile` - Retrieves a file by a unique file ID
-* `getFileAssociations` - Retrieves a specific file associations
-* `getFileContent` - Retrieves the content of a specific file
-* `getFiles` - Retrieves files
-* `getFolder` - Retrieves specific folder by using a unique folder ID
-* `getFolders` - Retrieves folders
-* `getInbox` - Retrieves inbox folder
-* `updateFile` - Update a file
-* `updateFolder` - Updates an existing folder
-* `uploadFile` - Uploads a File
+* [createFileAssociation](docs/files/README.md#createfileassociation) - Creates a new file association
+* [createFolder](docs/files/README.md#createfolder) - Creates a new folder
+* [deleteFile](docs/files/README.md#deletefile) - Deletes a specific file
+* [deleteFileAssociation](docs/files/README.md#deletefileassociation) - Deletes an existing file association
+* [deleteFolder](docs/files/README.md#deletefolder) - Deletes a folder
+* [getAssociationsByObject](docs/files/README.md#getassociationsbyobject) - Retrieves an association object using a unique object ID
+* [getFile](docs/files/README.md#getfile) - Retrieves a file by a unique file ID
+* [getFileAssociations](docs/files/README.md#getfileassociations) - Retrieves a specific file associations
+* [getFileContent](docs/files/README.md#getfilecontent) - Retrieves the content of a specific file
+* [getFiles](docs/files/README.md#getfiles) - Retrieves files
+* [getFolder](docs/files/README.md#getfolder) - Retrieves specific folder by using a unique folder ID
+* [getFolders](docs/files/README.md#getfolders) - Retrieves folders
+* [getInbox](docs/files/README.md#getinbox) - Retrieves inbox folder
+* [updateFile](docs/files/README.md#updatefile) - Update a file
+* [updateFolder](docs/files/README.md#updatefolder) - Updates an existing folder
+* [uploadFile](docs/files/README.md#uploadfile) - Uploads a File
 <!-- End SDK Available Operations -->
 
 ### Maturity

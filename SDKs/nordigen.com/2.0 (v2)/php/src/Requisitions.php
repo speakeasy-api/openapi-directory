@@ -85,6 +85,12 @@ class Requisitions
                 $response->deleteRequisitionByIdV2404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
+        else if ($httpResponse->getStatusCode() === 429) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->deleteRequisitionByIdV2429ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
 
         return $response;
     }
@@ -116,7 +122,7 @@ class Requisitions
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->requisitionV2 = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\RequisitionV2', 'json');
+                $response->requisition = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Requisition', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 400) {
@@ -143,6 +149,12 @@ class Requisitions
                 $response->requisitionById404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
+        else if ($httpResponse->getStatusCode() === 429) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->requisitionById429ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
 
         return $response;
     }
@@ -150,11 +162,11 @@ class Requisitions
     /**
      * Create a new requisition
      * 
-     * @param \OpenAPI\OpenAPI\Models\Shared\RequisitionV2Request $request
+     * @param \OpenAPI\OpenAPI\Models\Shared\RequisitionRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\RequisitionCreatedResponse
      */
 	public function requisitionCreated(
-        \OpenAPI\OpenAPI\Models\Shared\RequisitionV2Request $request,
+        \OpenAPI\OpenAPI\Models\Shared\RequisitionRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\RequisitionCreatedResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -179,7 +191,7 @@ class Requisitions
         if ($httpResponse->getStatusCode() === 201) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->spectacularRequisitionV2 = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\SpectacularRequisitionV2', 'json');
+                $response->spectacularRequisition = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\SpectacularRequisition', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 400) {
@@ -204,6 +216,12 @@ class Requisitions
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->requisitionCreated404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 429) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->requisitionCreated429ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
 
@@ -238,7 +256,7 @@ class Requisitions
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->paginatedRequisitionV2List = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\PaginatedRequisitionV2List', 'json');
+                $response->paginatedRequisitionList = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\PaginatedRequisitionList', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 400) {
@@ -263,6 +281,12 @@ class Requisitions
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->retrieveAllRequisitions404ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 429) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->retrieveAllRequisitions429ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
             }
         }
 

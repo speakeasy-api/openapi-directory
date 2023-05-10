@@ -58,4 +58,7 @@ src/Models/Shared/User.php
 src/Models/Shared/Image.php
 src/Models/Shared/Pagination.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/gifs/README.md
+docs/stickers/README.md
 USAGE.md

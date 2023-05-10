@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETSetLoadBalancerPoliciesOfListenerActionEnum: string
 {
     case SET_LOAD_BALANCER_POLICIES_OF_LISTENER = 'SetLoadBalancerPoliciesOfListener';

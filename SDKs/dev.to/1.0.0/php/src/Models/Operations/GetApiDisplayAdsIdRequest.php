@@ -12,7 +12,7 @@ use \OpenAPI\OpenAPI\Utils\SpeakeasyMetadata;
 class GetApiDisplayAdsIdRequest
 {
     /**
-     * The ID of the user to unpublish.
+     * The ID of the display ad.
      * 
      * @var int $id
      */

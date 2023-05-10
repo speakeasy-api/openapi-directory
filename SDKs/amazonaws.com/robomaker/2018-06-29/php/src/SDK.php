@@ -211,11 +211,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\CancelDeploymentJobRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\CancelDeploymentJobResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function cancelDeploymentJob(
         \OpenAPI\OpenAPI\Models\Operations\CancelDeploymentJobRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\CancelDeploymentJobResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/cancelDeploymentJob');
         
@@ -531,11 +534,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\CreateDeploymentJobRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\CreateDeploymentJobResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function createDeploymentJob(
         \OpenAPI\OpenAPI\Models\Operations\CreateDeploymentJobRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\CreateDeploymentJobResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/createDeploymentJob');
         
@@ -613,11 +619,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\CreateFleetRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\CreateFleetResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function createFleet(
         \OpenAPI\OpenAPI\Models\Operations\CreateFleetRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\CreateFleetResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/createFleet');
         
@@ -677,11 +686,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\CreateRobotRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\CreateRobotResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function createRobot(
         \OpenAPI\OpenAPI\Models\Operations\CreateRobotRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\CreateRobotResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/createRobot');
         
@@ -1355,11 +1367,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DeleteFleetRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DeleteFleetResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function deleteFleet(
         \OpenAPI\OpenAPI\Models\Operations\DeleteFleetRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DeleteFleetResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/deleteFleet');
         
@@ -1413,11 +1428,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DeleteRobotRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DeleteRobotResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function deleteRobot(
         \OpenAPI\OpenAPI\Models\Operations\DeleteRobotRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DeleteRobotResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/deleteRobot');
         
@@ -1651,11 +1669,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DeregisterRobotRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DeregisterRobotResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function deregisterRobot(
         \OpenAPI\OpenAPI\Models\Operations\DeregisterRobotRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DeregisterRobotResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/deregisterRobot');
         
@@ -1715,11 +1736,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DescribeDeploymentJobRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DescribeDeploymentJobResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function describeDeploymentJob(
         \OpenAPI\OpenAPI\Models\Operations\DescribeDeploymentJobRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DescribeDeploymentJobResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/describeDeploymentJob');
         
@@ -1779,11 +1803,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DescribeFleetRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DescribeFleetResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function describeFleet(
         \OpenAPI\OpenAPI\Models\Operations\DescribeFleetRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DescribeFleetResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/describeFleet');
         
@@ -1843,11 +1870,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DescribeRobotRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DescribeRobotResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function describeRobot(
         \OpenAPI\OpenAPI\Models\Operations\DescribeRobotRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DescribeRobotResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/describeRobot');
         
@@ -2477,11 +2507,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ListDeploymentJobsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ListDeploymentJobsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function listDeploymentJobs(
         \OpenAPI\OpenAPI\Models\Operations\ListDeploymentJobsRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\ListDeploymentJobsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/listDeploymentJobs');
         
@@ -2542,11 +2575,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ListFleetsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ListFleetsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function listFleets(
         \OpenAPI\OpenAPI\Models\Operations\ListFleetsRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\ListFleetsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/listFleets');
         
@@ -2666,11 +2702,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ListRobotsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ListRobotsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function listRobots(
         \OpenAPI\OpenAPI\Models\Operations\ListRobotsRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\ListRobotsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/listRobots');
         
@@ -3197,11 +3236,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\RegisterRobotRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\RegisterRobotResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function registerRobot(
         \OpenAPI\OpenAPI\Models\Operations\RegisterRobotRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\RegisterRobotResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/registerRobot');
         
@@ -3407,11 +3449,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\SyncDeploymentJobRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\SyncDeploymentJobResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function syncDeploymentJob(
         \OpenAPI\OpenAPI\Models\Operations\SyncDeploymentJobRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\SyncDeploymentJobResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/syncDeploymentJob');
         

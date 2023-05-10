@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTListMetricsActionEnum: string
 {
     case LIST_METRICS = 'ListMetrics';

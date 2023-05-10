@@ -19,6 +19,9 @@ class PostAs2PartnersRequestBody
 	#[SpeakeasyMetadata('multipartForm:name=as2_station_id')]
     public int $as2StationId;
     
+	#[SpeakeasyMetadata('multipartForm:name=enable_dedicated_ips')]
+    public ?bool $enableDedicatedIps = null;
+    
     /**
      * AS2 Name
      * 
@@ -49,6 +52,7 @@ class PostAs2PartnersRequestBody
 	public function __construct()
 	{
 		$this->as2StationId = 0;
+		$this->enableDedicatedIps = null;
 		$this->name = "";
 		$this->publicCertificate = "";
 		$this->serverCertificate = null;

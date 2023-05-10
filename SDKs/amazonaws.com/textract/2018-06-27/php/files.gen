@@ -135,4 +135,5 @@ src/Models/Shared/StartExpenseAnalysisRequest.php
 src/Models/Shared/StartLendingAnalysisResponse.php
 src/Models/Shared/StartLendingAnalysisRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

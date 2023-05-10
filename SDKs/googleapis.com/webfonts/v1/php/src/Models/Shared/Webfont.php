@@ -18,6 +18,16 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class Webfont
 {
     /**
+     * Axis for variable fonts.
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\Axis> $axes
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('axes')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\Axis>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $axes = null;
+    
+    /**
      * The category of the font.
      * 
      * @var ?string $category
@@ -68,6 +78,16 @@ class Webfont
     public ?string $lastModified = null;
     
     /**
+     * Font URL for menu subset, a subset of the font that is enough to display the font name
+     * 
+     * @var ?string $menu
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('menu')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $menu = null;
+    
+    /**
      * The scripts supported by the font.
      * 
      * @var ?array<string> $subsets
@@ -99,11 +119,13 @@ class Webfont
     
 	public function __construct()
 	{
+		$this->axes = null;
 		$this->category = null;
 		$this->family = null;
 		$this->files = null;
 		$this->kind = null;
 		$this->lastModified = null;
+		$this->menu = null;
 		$this->subsets = null;
 		$this->variants = null;
 		$this->version = null;

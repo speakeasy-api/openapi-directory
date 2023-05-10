@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * ViewSunElevationInput - <p/>
+ * ViewSunElevationInput - The input structure for specifying ViewSunElevation angle property filter. 
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

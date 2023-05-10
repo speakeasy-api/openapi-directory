@@ -51,4 +51,7 @@ src/Models/Operations/AnalyticsManagementWebpropertiesListSecurity.php
 src/Models/Operations/AnalyticsManagementWebpropertiesListRequest.php
 src/Models/Operations/AnalyticsManagementWebpropertiesListResponse.php
 src/Models/Shared/AltEnum.php
+docs/sdk/README.md
+docs/data/README.md
+docs/management/README.md
 USAGE.md

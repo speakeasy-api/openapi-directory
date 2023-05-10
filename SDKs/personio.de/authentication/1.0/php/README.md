@@ -30,15 +30,40 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\PostAuthRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new PostAuthRequest();
+    $request->clientId = 'corrupti';
+    $request->clientSecret = 'provident';
+
+    $response = $sdk->postAuth($request);
+
+    if ($response->authenticationTokenResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `postAuth` - Request Authentication Token
+* [postAuth](docs/sdk/README.md#postauth) - Request Authentication Token
 <!-- End SDK Available Operations -->
 
 ### Maturity

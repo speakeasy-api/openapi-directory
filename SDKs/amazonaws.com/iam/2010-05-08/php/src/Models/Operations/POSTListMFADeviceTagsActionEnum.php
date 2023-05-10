@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTListMFADeviceTagsActionEnum: string
 {
     case LIST_MFA_DEVICE_TAGS = 'ListMFADeviceTags';

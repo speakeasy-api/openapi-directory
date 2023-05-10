@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteLocalGatewayRouteTableActionEnum: string
 {
     case DELETE_LOCAL_GATEWAY_ROUTE_TABLE = 'DeleteLocalGatewayRouteTable';

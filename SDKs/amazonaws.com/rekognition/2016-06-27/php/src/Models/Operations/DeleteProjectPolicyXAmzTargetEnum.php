@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteProjectPolicyXAmzTargetEnum: string
 {
     case REKOGNITION_SERVICE_DELETE_PROJECT_POLICY = 'RekognitionService.DeleteProjectPolicy';

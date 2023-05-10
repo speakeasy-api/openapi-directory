@@ -77,4 +77,48 @@ class InsightsAPI
 
         return $response;
     }
+	
+    /**
+     * Fetch podcasts by a publisher's domain name
+     * 
+     * Fetch podcasts by a publisher's domain name, e.g., nytimes.com, wondery.com, npr.org...
+     * Each request will return up to 10 podcasts. You can use the `page` parameter to paginate.
+     * 
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetPodcastsByDomainNameRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\GetPodcastsByDomainNameResponse
+     */
+	public function getPodcastsByDomainName(
+        \OpenAPI\OpenAPI\Models\Operations\GetPodcastsByDomainNameRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\GetPodcastsByDomainNameResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/podcasts/domains/{domain_name}', \OpenAPI\OpenAPI\Models\Operations\GetPodcastsByDomainNameRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\GetPodcastsByDomainNameRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GetPodcastsByDomainNameResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            $response->headers = $httpResponse->getHeaders();
+            
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->podcastDomainResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\PodcastDomainResponse', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 404 or $httpResponse->getStatusCode() === 429 or ($httpResponse->getStatusCode() >= 500 && $httpResponse->getStatusCode() < 600)) {
+        }
+
+        return $response;
+    }
 }

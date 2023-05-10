@@ -28,7 +28,7 @@ class CloudDlpInspection
     public ?bool $fullScan = null;
     
     /**
-     * The [type of information](https://cloud.google.com/dlp/docs/infotypes-reference) found, for example, `EMAIL_ADDRESS` or `STREET_ADDRESS`.
+     * The type of information (or *[infoType](https://cloud.google.com/dlp/docs/infotypes-reference)*) found, for example, `EMAIL_ADDRESS` or `STREET_ADDRESS`.
      * 
      * @var ?string $infoType
      */

@@ -21,10 +21,10 @@ class PackageData
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $architecture = null;
     
-	#[\JMS\Serializer\Annotation\SerializedName('binary')]
-    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\Binary')]
+	#[\JMS\Serializer\Annotation\SerializedName('binaryVersion')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\PackageVersion')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?Binary $binary = null;
+    public ?PackageVersion $binaryVersion = null;
     
     /**
      * The cpe_uri in [cpe format] (https://cpe.mitre.org/specification/) in which the vulnerability may manifest. Examples include distro or storage location for vulnerable jar.
@@ -121,6 +121,11 @@ class PackageData
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $patchedCve = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('sourceVersion')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\PackageVersion')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?PackageVersion $sourceVersion = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('unused')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -139,7 +144,7 @@ class PackageData
 	public function __construct()
 	{
 		$this->architecture = null;
-		$this->binary = null;
+		$this->binaryVersion = null;
 		$this->cpeUri = null;
 		$this->dependencyChain = null;
 		$this->fileLocation = null;
@@ -150,6 +155,7 @@ class PackageData
 		$this->package = null;
 		$this->packageType = null;
 		$this->patchedCve = null;
+		$this->sourceVersion = null;
 		$this->unused = null;
 		$this->version = null;
 	}

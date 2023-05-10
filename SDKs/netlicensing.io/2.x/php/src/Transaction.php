@@ -132,9 +132,11 @@ class Transaction
      * 
      * Return a list of all Transactions for the current Vendor
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListTransactionsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ListTransactionsResponse
      */
 	public function listTransactions(
+        \OpenAPI\OpenAPI\Models\Operations\ListTransactionsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ListTransactionsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -142,7 +144,8 @@ class Transaction
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

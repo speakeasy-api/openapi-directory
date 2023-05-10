@@ -36,6 +36,14 @@ class PutV2MeetingsIdJsonRequestBody
     public ?bool $noShow = null;
     
     /**
+     * Status of the meeting rescheduling progress. Possible values are: pending, booked, failed, retry
+     * 
+     * @var ?string $rescheduleStatus
+     */
+	#[SpeakeasyMetadata('form:name=reschedule_status')]
+    public ?string $rescheduleStatus = null;
+    
+    /**
      * Status of the meeting creation progress. Possible values are: pending, booked, failed, retry
      * 
      * @var ?string $status
@@ -48,6 +56,7 @@ class PutV2MeetingsIdJsonRequestBody
 		$this->eventId = null;
 		$this->iCalUid = null;
 		$this->noShow = null;
+		$this->rescheduleStatus = null;
 		$this->status = null;
 	}
 }

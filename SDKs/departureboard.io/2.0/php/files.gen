@@ -33,4 +33,8 @@ src/Models/Operations/GetNextDeparturesByCRSRequest.php
 src/Models/Operations/GetNextDeparturesByCRSResponse.php
 src/Models/Operations/GetServiceDetailsByIDRequest.php
 src/Models/Operations/GetServiceDetailsByIDResponse.php
+docs/sdk/README.md
+docs/departuresandarrivals/README.md
+docs/fastestandnextdepartures/README.md
+docs/serviceinformation/README.md
 USAGE.md

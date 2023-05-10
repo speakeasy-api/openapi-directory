@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DisableSagemakerServicecatalogPortfolioXAmzTargetEnum: string
 {
     case SAGE_MAKER_DISABLE_SAGEMAKER_SERVICECATALOG_PORTFOLIO = 'SageMaker.DisableSagemakerServicecatalogPortfolio';

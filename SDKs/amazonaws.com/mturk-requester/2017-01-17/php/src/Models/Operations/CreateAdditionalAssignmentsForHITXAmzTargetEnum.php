@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateAdditionalAssignmentsForHITXAmzTargetEnum: string
 {
     case M_TURK_REQUESTER_SERVICE_V20170117_CREATE_ADDITIONAL_ASSIGNMENTS_FOR_HIT = 'MTurkRequesterServiceV20170117.CreateAdditionalAssignmentsForHIT';

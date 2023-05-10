@@ -16,4 +16,6 @@ enum SettingNameEnum: string
     case CONTAINER_INSTANCE_LONG_ARN_FORMAT = 'containerInstanceLongArnFormat';
     case AWSVPC_TRUNKING = 'awsvpcTrunking';
     case CONTAINER_INSIGHTS = 'containerInsights';
+    case FARGATE_FIPS_MODE = 'fargateFIPSMode';
+    case TAG_RESOURCE_AUTHORIZATION = 'tagResourceAuthorization';
 }

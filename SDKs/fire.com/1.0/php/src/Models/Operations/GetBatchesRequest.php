@@ -20,7 +20,7 @@ class GetBatchesRequest
     public ?GetBatchesBatchStatusEnum $batchStatus = null;
     
     /**
-     * The type of the batch. Can be one of the 3 listed enums.
+     * The type of the batch. Can be one of the listed enums.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Operations\GetBatchesBatchTypesEnum $batchTypes
      */

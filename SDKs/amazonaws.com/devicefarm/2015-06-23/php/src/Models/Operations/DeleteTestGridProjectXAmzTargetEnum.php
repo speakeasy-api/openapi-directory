@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteTestGridProjectXAmzTargetEnum: string
 {
     case DEVICE_FARM20150623_DELETE_TEST_GRID_PROJECT = 'DeviceFarm_20150623.DeleteTestGridProject';

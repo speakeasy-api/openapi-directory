@@ -31,4 +31,6 @@ src/Models/Shared/Location.php
 src/Models/Shared/GeoCoordinates.php
 src/Models/Shared/Address.php
 src/Models/Shared/CharitySearchResponse.php
+docs/sdk/README.md
+docs/charityorg/README.md
 USAGE.md

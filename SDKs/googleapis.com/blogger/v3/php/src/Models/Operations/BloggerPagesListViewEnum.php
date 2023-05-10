@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum BloggerPagesListViewEnum: string
 {
     case VIEW_TYPE_UNSPECIFIED = 'VIEW_TYPE_UNSPECIFIED';

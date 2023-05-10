@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeTransitGatewayMulticastDomainsActionEnum: string
 {
     case DESCRIBE_TRANSIT_GATEWAY_MULTICAST_DOMAINS = 'DescribeTransitGatewayMulticastDomains';

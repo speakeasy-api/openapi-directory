@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateMobileDeviceAccessRuleXAmzTargetEnum: string
 {
     case WORK_MAIL_SERVICE_UPDATE_MOBILE_DEVICE_ACCESS_RULE = 'WorkMailService.UpdateMobileDeviceAccessRule';

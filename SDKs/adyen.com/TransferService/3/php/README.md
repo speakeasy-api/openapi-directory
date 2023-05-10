@@ -30,21 +30,56 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetTransactionsRequest;
+use \OpenAPI\OpenAPI\Models\Operations\GetTransactionsSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetTransactionsRequest();
+    $request->accountHolderId = 'corrupti';
+    $request->balanceAccountId = 'provident';
+    $request->balancePlatform = 'distinctio';
+    $request->createdSince = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-03-11T23:22:42.658Z');
+    $request->createdUntil = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-05-14T08:28:11.899Z');
+    $request->cursor = 'illum';
+    $request->limit = 423655;
+    $request->paymentInstrumentId = 'error';
+
+    $requestSecurity = new GetTransactionsSecurity();
+    $requestSecurity->apiKeyAuth = 'YOUR_API_KEY_HERE';
+
+    $response = $sdk->transactions->getTransactions($request, $requestSecurity);
+
+    if ($response->transactionSearchResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### transactions
+### [transactions](docs/transactions/README.md)
 
-* `getTransactions` - Get all transactions
-* `getTransactionsId` - Get a transaction
+* [getTransactions](docs/transactions/README.md#gettransactions) - Get all transactions
+* [getTransactionsId](docs/transactions/README.md#gettransactionsid) - Get a transaction
 
-### transfers
+### [transfers](docs/transfers/README.md)
 
-* `postTransfers` - Transfer funds
+* [postTransfers](docs/transfers/README.md#posttransfers) - Transfer funds
 <!-- End SDK Available Operations -->
 
 ### Maturity

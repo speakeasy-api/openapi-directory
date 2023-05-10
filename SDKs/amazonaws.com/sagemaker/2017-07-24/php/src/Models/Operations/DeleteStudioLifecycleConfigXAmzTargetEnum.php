@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteStudioLifecycleConfigXAmzTargetEnum: string
 {
     case SAGE_MAKER_DELETE_STUDIO_LIFECYCLE_CONFIG = 'SageMaker.DeleteStudioLifecycleConfig';

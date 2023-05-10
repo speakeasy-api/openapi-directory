@@ -28,7 +28,7 @@ class GoogleCloudDiscoveryengineV1alphaDocumentInfo
     public ?string $id = null;
     
     /**
-     * Required. The Document resource full name, of the form: projects/{project\_id}/locations/{location}/collections/{collection\_id}/dataStores/{data\_store\_id}/branches/{branch\_id}/documents/{document\_id}
+     * Required. The Document resource full name, of the form: `projects/{project_id}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}/branches/{branch_id}/documents/{document_id}`
      * 
      * @var ?string $name
      */

@@ -12,6 +12,16 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class HivePartitioningOptions
 {
     /**
+     * [Output-only] For permanent external tables, this field is populated with the hive partition keys in the order they were inferred. The types of the partition keys can be deduced by checking the table schema (which will include the partition keys). Not every API will populate this field in the output. For example, Tables.Get will populate it, but Tables.List will not contain this field.
+     * 
+     * @var ?array<string> $fields
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('fields')]
+    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $fields = null;
+    
+    /**
      * [Optional] When set, what mode of hive partitioning to use when reading data. The following modes are supported. (1) AUTO: automatically infer partition key name(s) and type(s). (2) STRINGS: automatically infer partition key name(s). All types are interpreted as strings. (3) CUSTOM: partition key schema is encoded in the source URI prefix. Not all storage formats support hive partitioning. Requesting hive partitioning on an unsupported format will lead to an error. Currently supported types include: AVRO, CSV, JSON, ORC and Parquet.
      * 
      * @var ?string $mode
@@ -43,6 +53,7 @@ class HivePartitioningOptions
     
 	public function __construct()
 	{
+		$this->fields = null;
 		$this->mode = null;
 		$this->requirePartitionFilter = null;
 		$this->sourceUriPrefix = null;

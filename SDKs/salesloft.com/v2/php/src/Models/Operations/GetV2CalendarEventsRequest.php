@@ -12,6 +12,16 @@ use \OpenAPI\OpenAPI\Utils\SpeakeasyMetadata;
 class GetV2CalendarEventsRequest
 {
     /**
+     * calendar_id of the user who created or included as a guest to the event.
+     * 
+     * 
+     * 
+     * @var ?string $calendarId
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=calendar_id')]
+    public ?string $calendarId = null;
+    
+    /**
      * Upper bound (exclusive) for a calendar event's start time to filter by.
      * 
      * Must be in ISO 8601 format.
@@ -89,6 +99,7 @@ class GetV2CalendarEventsRequest
     
 	public function __construct()
 	{
+		$this->calendarId = null;
 		$this->endTime = null;
 		$this->includePagingCounts = null;
 		$this->page = null;

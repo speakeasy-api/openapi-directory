@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETResetServiceSpecificCredentialActionEnum: string
 {
     case RESET_SERVICE_SPECIFIC_CREDENTIAL = 'ResetServiceSpecificCredential';

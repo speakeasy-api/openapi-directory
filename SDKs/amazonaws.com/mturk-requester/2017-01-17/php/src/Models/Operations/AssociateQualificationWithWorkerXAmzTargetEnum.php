@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AssociateQualificationWithWorkerXAmzTargetEnum: string
 {
     case M_TURK_REQUESTER_SERVICE_V20170117_ASSOCIATE_QUALIFICATION_WITH_WORKER = 'MTurkRequesterServiceV20170117.AssociateQualificationWithWorker';

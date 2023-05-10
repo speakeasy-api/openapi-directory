@@ -78,7 +78,7 @@ class GoogleCloudDocumentaiV1ProcessorType
     public ?array $sampleDocumentUris = null;
     
     /**
-     * The processor type, e.g., `OCR_PROCESSOR`, `INVOICE_PROCESSOR`, etc.
+     * The processor type, such as: `OCR_PROCESSOR`, `INVOICE_PROCESSOR`.
      * 
      * @var ?string $type
      */

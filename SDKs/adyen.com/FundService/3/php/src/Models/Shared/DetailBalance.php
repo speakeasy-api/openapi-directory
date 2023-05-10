@@ -14,20 +14,20 @@ class DetailBalance
     /**
      * The list of balances held by the account.
      * 
-     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\Amount> $balance
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\AmountWrapper> $balance
      */
 	#[\JMS\Serializer\Annotation\SerializedName('balance')]
-    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\Amount>')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\AmountWrapper>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $balance = null;
     
     /**
      * The list of pending balances held by the account.
      * 
-     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\Amount> $pendingBalance
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\AmountWrapper> $pendingBalance
      */
 	#[\JMS\Serializer\Annotation\SerializedName('pendingBalance')]
-    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\Amount>')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\AmountWrapper>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $pendingBalance = null;
     

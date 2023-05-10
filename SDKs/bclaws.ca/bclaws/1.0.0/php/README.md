@@ -30,28 +30,53 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetContentAspectIdRequest;
+use \OpenAPI\OpenAPI\Models\Operations\GetContentAspectIDAspectIDEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetContentAspectIdRequest();
+    $request->aspectId = GetContentAspectIDAspectIDEnum::OIC;
+
+    $response = $sdk->content->getContentAspectId($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### content
+### [content](docs/content/README.md)
 
-* `getContentAspectId` - Describes the documents and directories available within a specific 'aspect' (content group) of the BCLaws library
-* `getContentAspectIdCivixDocumentId` - Lists the metadata available for the specified index or directory from the BCLaws legislative respository
+* [getContentAspectId](docs/content/README.md#getcontentaspectid) - Describes the documents and directories available within a specific 'aspect' (content group) of the BCLaws library
+* [getContentAspectIdCivixDocumentId](docs/content/README.md#getcontentaspectidcivixdocumentid) - Lists the metadata available for the specified index or directory from the BCLaws legislative respository
 
-### document
+### [document](docs/document/README.md)
 
-* `getDocumentIdAspectIdCivixIndexIdCivixDocumentId` - Retrieves a specific document from the BCLaws legislative repository (HTML format)
-* `getDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchString` - Retrieves a specific document from the BCLaws legislative repository with search text highlighted (HTML format)
-* `getDocumentIdAspectIdCivixIndexIdCivixDocumentIdXml` - Retrieves a specific document from the BCLaws legislative repository (XML format)
-* `getDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlSearchSearchString` - Retrieves a specific document from the BCLaws legislative repository with search text highlighted (XML format)
+* [getDocumentIdAspectIdCivixIndexIdCivixDocumentId](docs/document/README.md#getdocumentidaspectidcivixindexidcivixdocumentid) - Retrieves a specific document from the BCLaws legislative repository (HTML format)
+* [getDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchString](docs/document/README.md#getdocumentidaspectidcivixindexidcivixdocumentidsearchsearchstring) - Retrieves a specific document from the BCLaws legislative repository with search text highlighted (HTML format)
+* [getDocumentIdAspectIdCivixIndexIdCivixDocumentIdXml](docs/document/README.md#getdocumentidaspectidcivixindexidcivixdocumentidxml) - Retrieves a specific document from the BCLaws legislative repository (XML format)
+* [getDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlSearchSearchString](docs/document/README.md#getdocumentidaspectidcivixindexidcivixdocumentidxmlsearchsearchstring) - Retrieves a specific document from the BCLaws legislative repository with search text highlighted (XML format)
 
-### search
+### [search](docs/search/README.md)
 
-* `getSearchAspectIdFullsearch` - A listing of metadata available for the specified aspect and search term from the BCLaws legislative repository
+* [getSearchAspectIdFullsearch](docs/search/README.md#getsearchaspectidfullsearch) - A listing of metadata available for the specified aspect and search term from the BCLaws legislative repository
 <!-- End SDK Available Operations -->
 
 ### Maturity

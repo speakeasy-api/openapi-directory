@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeDefaultClusterParametersActionEnum: string
 {
     case DESCRIBE_DEFAULT_CLUSTER_PARAMETERS = 'DescribeDefaultClusterParameters';

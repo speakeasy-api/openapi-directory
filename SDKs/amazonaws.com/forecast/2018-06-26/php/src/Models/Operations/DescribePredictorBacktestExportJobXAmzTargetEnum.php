@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribePredictorBacktestExportJobXAmzTargetEnum: string
 {
     case AMAZON_FORECAST_DESCRIBE_PREDICTOR_BACKTEST_EXPORT_JOB = 'AmazonForecast.DescribePredictorBacktestExportJob';

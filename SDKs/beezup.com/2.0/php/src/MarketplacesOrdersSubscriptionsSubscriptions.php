@@ -41,10 +41,10 @@ class MarketplacesOrdersSubscriptionsSubscriptions
      * Activate a subscription to the orders
      * 
      * At this moment, BeezUP will ensure that your callback url is respecting this specification: 
-     * - https://app.swaggerhub.com/apis/BeezUP/public_marketplaces_orders_subscriptions_consumer-dev/1.0#/Subscriptions/Verification
+     * - https://api.beezup.com/swaggerhub/apis/BeezUP/public_marketplaces_orders_subscriptions_consumer-dev/1.0#/Subscriptions/Verification
      * 
      * After that we will send you the orders related to your subscription, respecting this specification: 
-     * - https://app.swaggerhub.com/apis/BeezUP/public_marketplaces_orders_subscriptions_consumer-dev/1.0#/Subscriptions/PushOrders
+     * - https://api.beezup.com/swaggerhub/apis/BeezUP/public_marketplaces_orders_subscriptions_consumer-dev/1.0#/Subscriptions/PushOrders
      * 
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ActivateSubscriptionRequest $request

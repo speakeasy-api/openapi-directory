@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-enum CreateASupplementalDocumentForAnEntityDefaultApplicationJSON12StatusEnum: string
+enum CreateASupplementalDocumentForAnEntityDefaultApplicationJSON12StatusEnum: int
 {
-    case FOUR_HUNDRED_AND_THREE = '403';
+    case FOUR_HUNDRED_AND_THREE = 403;
 }

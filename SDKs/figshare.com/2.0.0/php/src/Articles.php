@@ -84,9 +84,11 @@ class Articles
      * 
      * Initiate a new Article Report for this Account. There is a limit of 1 report per day.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AccountArticleReportGenerateSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\AccountArticleReportGenerateResponse
      */
 	public function accountArticleReportGenerate(
+        \OpenAPI\OpenAPI\Models\Operations\AccountArticleReportGenerateSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\AccountArticleReportGenerateResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -94,7 +96,8 @@ class Articles
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

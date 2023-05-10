@@ -50,7 +50,7 @@ class StartEarthObservationJobRequestBody
     public StartEarthObservationJobRequestBodyJobConfig $jobConfig;
     
     /**
-     * The Amazon Key Management Service (KMS) key ID for server-side encryption.
+     * The Key Management Service key ID for server-side encryption.
      * 
      * @var ?string $kmsKeyId
      */

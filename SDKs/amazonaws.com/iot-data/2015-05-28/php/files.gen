@@ -43,4 +43,5 @@ src/Models/Shared/ListRetainedMessagesResponse.php
 src/Models/Shared/RetainedMessageSummary.php
 src/Models/Shared/UpdateThingShadowResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

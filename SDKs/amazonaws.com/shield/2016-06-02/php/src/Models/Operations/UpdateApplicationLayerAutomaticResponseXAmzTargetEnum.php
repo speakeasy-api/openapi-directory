@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateApplicationLayerAutomaticResponseXAmzTargetEnum: string
 {
     case AWS_SHIELD20160616_UPDATE_APPLICATION_LAYER_AUTOMATIC_RESPONSE = 'AWSShield_20160616.UpdateApplicationLayerAutomaticResponse';

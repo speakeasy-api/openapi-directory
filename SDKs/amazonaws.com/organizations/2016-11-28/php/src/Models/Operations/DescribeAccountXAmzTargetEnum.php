@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeAccountXAmzTargetEnum: string
 {
     case AWS_ORGANIZATIONS_V20161128_DESCRIBE_ACCOUNT = 'AWSOrganizationsV20161128.DescribeAccount';

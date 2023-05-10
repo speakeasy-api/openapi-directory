@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTUnassignIpv6AddressesActionEnum: string
 {
     case UNASSIGN_IPV6_ADDRESSES = 'UnassignIpv6Addresses';

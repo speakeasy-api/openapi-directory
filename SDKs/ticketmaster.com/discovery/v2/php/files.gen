@@ -132,4 +132,6 @@ src/Models/Shared/Market.php
 src/Models/Shared/VenueGeneralInfo.php
 src/Models/Shared/Dma.php
 src/Models/Shared/VenueBoxOfficeInfo.php
+docs/sdk/README.md
+docs/v2/README.md
 USAGE.md

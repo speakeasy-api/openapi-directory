@@ -521,6 +521,143 @@ class SDK
     }
 	
     /**
+     * Complete a Sandbox Real Time Payments Transfer
+     * 
+     * Simulates submission of a Real Time Payments transfer and handling the response from the destination financial institution. This transfer must first have a `status` of `pending_submission`.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\CompleteASandboxRealTimePaymentsTransferRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\CompleteASandboxRealTimePaymentsTransferResponse
+     */
+	public function completeASandboxRealTimePaymentsTransfer(
+        \OpenAPI\OpenAPI\Models\Operations\CompleteASandboxRealTimePaymentsTransferRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\CompleteASandboxRealTimePaymentsTransferResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/simulations/real_time_payments_transfers/{real_time_payments_transfer_id}/complete', \OpenAPI\OpenAPI\Models\Operations\CompleteASandboxRealTimePaymentsTransferRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "completeASandboxRealTimePaymentsTransferParameters", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\CompleteASandboxRealTimePaymentsTransferResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->realTimePaymentsTransfer = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\RealTimePaymentsTransfer', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->error = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Create a Bookkeeping Account
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Shared\CreateABookkeepingAccountParameters $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\CreateABookkeepingAccountResponse
+     */
+	public function createABookkeepingAccount(
+        \OpenAPI\OpenAPI\Models\Shared\CreateABookkeepingAccountParameters $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\CreateABookkeepingAccountResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/bookkeeping_accounts');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\CreateABookkeepingAccountResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->bookkeepingAccount = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\BookkeepingAccount', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->error = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Create a Bookkeeping Entry Set
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Shared\CreateABookkeepingEntrySetParameters $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\CreateABookkeepingEntrySetResponse
+     */
+	public function createABookkeepingEntrySet(
+        \OpenAPI\OpenAPI\Models\Shared\CreateABookkeepingEntrySetParameters $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\CreateABookkeepingEntrySetResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/bookkeeping_entry_sets');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\CreateABookkeepingEntrySetResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->bookkeepingEntrySet = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\BookkeepingEntrySet', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->error = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Create a Card
      * 
      * @param \OpenAPI\OpenAPI\Models\Shared\CreateACardParameters $request
@@ -825,6 +962,51 @@ class SDK
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->limit = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Limit', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->error = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Create a Real Time Payments Transfer
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Shared\CreateARealTimePaymentsTransferParameters $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\CreateARealTimePaymentsTransferResponse
+     */
+	public function createARealTimePaymentsTransfer(
+        \OpenAPI\OpenAPI\Models\Shared\CreateARealTimePaymentsTransferParameters $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\CreateARealTimePaymentsTransferResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/real_time_payments_transfers');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\CreateARealTimePaymentsTransferResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->realTimePaymentsTransfer = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\RealTimePaymentsTransfer', 'json');
             }
         }
         else {
@@ -1333,6 +1515,51 @@ class SDK
     }
 	
     /**
+     * Create an Export
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Shared\CreateAnExportParameters $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\CreateAnExportResponse
+     */
+	public function createAnExport(
+        \OpenAPI\OpenAPI\Models\Shared\CreateAnExportParameters $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\CreateAnExportResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/exports');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\CreateAnExportResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->export = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Export', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->error = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Create an External Account
      * 
      * @param \OpenAPI\OpenAPI\Models\Shared\CreateAnExternalAccountParameters $request
@@ -1653,6 +1880,88 @@ class SDK
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->achTransferList = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\AchTransferList', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->error = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * List Bookkeeping Accounts
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListBookkeepingAccountsRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\ListBookkeepingAccountsResponse
+     */
+	public function listBookkeepingAccounts(
+        \OpenAPI\OpenAPI\Models\Operations\ListBookkeepingAccountsRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\ListBookkeepingAccountsResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/bookkeeping_accounts');
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\ListBookkeepingAccountsRequest::class, $request, null));
+        
+        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\ListBookkeepingAccountsResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->bookkeepingAccountList = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\BookkeepingAccountList', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->error = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * List Bookkeeping Entries
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListBookkeepingEntriesRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\ListBookkeepingEntriesResponse
+     */
+	public function listBookkeepingEntries(
+        \OpenAPI\OpenAPI\Models\Operations\ListBookkeepingEntriesRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\ListBookkeepingEntriesResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/bookkeeping_entries');
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\ListBookkeepingEntriesRequest::class, $request, null));
+        
+        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\ListBookkeepingEntriesResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->bookkeepingEntryList = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\BookkeepingEntryList', 'json');
             }
         }
         else {
@@ -2117,6 +2426,47 @@ class SDK
     }
 	
     /**
+     * List Exports
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListExportsRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\ListExportsResponse
+     */
+	public function listExports(
+        \OpenAPI\OpenAPI\Models\Operations\ListExportsRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\ListExportsResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/exports');
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\ListExportsRequest::class, $request, null));
+        
+        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\ListExportsResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->exportList = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ExportList', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->error = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * List External Accounts
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ListExternalAccountsRequest $request
@@ -2404,6 +2754,88 @@ class SDK
     }
 	
     /**
+     * List Programs
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListProgramsRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\ListProgramsResponse
+     */
+	public function listPrograms(
+        \OpenAPI\OpenAPI\Models\Operations\ListProgramsRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\ListProgramsResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/programs');
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\ListProgramsRequest::class, $request, null));
+        
+        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\ListProgramsResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->programList = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ProgramList', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->error = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * List Real Time Payments Transfers
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListRealTimePaymentsTransfersRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\ListRealTimePaymentsTransfersResponse
+     */
+	public function listRealTimePaymentsTransfers(
+        \OpenAPI\OpenAPI\Models\Operations\ListRealTimePaymentsTransfersRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\ListRealTimePaymentsTransfersResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/real_time_payments_transfers');
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\ListRealTimePaymentsTransfersRequest::class, $request, null));
+        
+        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\ListRealTimePaymentsTransfersResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->realTimePaymentsTransferList = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\RealTimePaymentsTransferList', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->error = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * List Routing Numbers
      * 
      * You can use this API to confirm if a routing number is valid, such as when a user is providing you with bank account details. Since routing numbers uniquely identify a bank, this will always return 0 or 1 entry. In Sandbox, the only valid routing number for this method is 110000000.
@@ -2557,6 +2989,51 @@ class SDK
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->wireTransferList = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\WireTransferList', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->error = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Look up the balance for an Account
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Shared\LookUpTheBalanceForAnAccountParameters $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\LookUpTheBalanceForAnAccountResponse
+     */
+	public function lookUpTheBalanceForAnAccount(
+        \OpenAPI\OpenAPI\Models\Shared\LookUpTheBalanceForAnAccountParameters $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\LookUpTheBalanceForAnAccountResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/balance_lookups');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\LookUpTheBalanceForAnAccountResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->balanceLookup = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\BalanceLookup', 'json');
             }
         }
         else {
@@ -3134,6 +3611,46 @@ class SDK
     }
 	
     /**
+     * Retrieve a Program
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\RetrieveAProgramRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\RetrieveAProgramResponse
+     */
+	public function retrieveAProgram(
+        \OpenAPI\OpenAPI\Models\Operations\RetrieveAProgramRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\RetrieveAProgramResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/programs/{program_id}', \OpenAPI\OpenAPI\Models\Operations\RetrieveAProgramRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        
+        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\RetrieveAProgramResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->program = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Program', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->error = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Retrieve a Real-Time Decision
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\RetrieveARealTimeDecisionRequest $request
@@ -3161,6 +3678,46 @@ class SDK
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->realTimeDecision = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\RealTimeDecision', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->error = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Retrieve a Real Time Payments Transfer
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\RetrieveARealTimePaymentsTransferRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\RetrieveARealTimePaymentsTransferResponse
+     */
+	public function retrieveARealTimePaymentsTransfer(
+        \OpenAPI\OpenAPI\Models\Operations\RetrieveARealTimePaymentsTransferRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\RetrieveARealTimePaymentsTransferResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/real_time_payments_transfers/{real_time_payments_transfer_id}', \OpenAPI\OpenAPI\Models\Operations\RetrieveARealTimePaymentsTransferRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        
+        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\RetrieveARealTimePaymentsTransferResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->realTimePaymentsTransfer = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\RealTimePaymentsTransfer', 'json');
             }
         }
         else {
@@ -3654,6 +4211,46 @@ class SDK
     }
 	
     /**
+     * Retrieve an Export
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\RetrieveAnExportRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\RetrieveAnExportResponse
+     */
+	public function retrieveAnExport(
+        \OpenAPI\OpenAPI\Models\Operations\RetrieveAnExportRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\RetrieveAnExportResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/exports/{export_id}', \OpenAPI\OpenAPI\Models\Operations\RetrieveAnExportRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        
+        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\RetrieveAnExportResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->export = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Export', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->error = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Retrieve an External Account
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\RetrieveAnExternalAccountRequest $request
@@ -3970,6 +4567,53 @@ class SDK
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->checkDeposit = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\CheckDeposit', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->error = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Return a Sandbox Check Transfer
+     * 
+     * Simulates a [Check Transfer](#check-transfers) being returned via USPS to Increase. This transfer must first have a `status` of `mailed`.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ReturnASandboxCheckTransferRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\ReturnASandboxCheckTransferResponse
+     */
+	public function returnASandboxCheckTransfer(
+        \OpenAPI\OpenAPI\Models\Operations\ReturnASandboxCheckTransferRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\ReturnASandboxCheckTransferResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/simulations/check_transfers/{check_transfer_id}/return', \OpenAPI\OpenAPI\Models\Operations\ReturnASandboxCheckTransferRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "returnASandboxCheckTransferParameters", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\ReturnASandboxCheckTransferResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->checkTransfer = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\CheckTransfer', 'json');
             }
         }
         else {
@@ -4388,6 +5032,53 @@ class SDK
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->inboundWireDrawdownRequest = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\InboundWireDrawdownRequest', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->error = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Simulate an Interest Payment to your account
+     * 
+     * Simulates an interest payment to your account. In production, this happens automatically on the first of each month.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Shared\SimulateAnInterestPaymentToYourAccountParameters $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\SimulateAnInterestPaymentToYourAccountResponse
+     */
+	public function simulateAnInterestPaymentToYourAccount(
+        \OpenAPI\OpenAPI\Models\Shared\SimulateAnInterestPaymentToYourAccountParameters $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\SimulateAnInterestPaymentToYourAccountResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/simulations/interest_payment');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\SimulateAnInterestPaymentToYourAccountResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->interestPaymentSimulationResult = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\InterestPaymentSimulationResult', 'json');
             }
         }
         else {

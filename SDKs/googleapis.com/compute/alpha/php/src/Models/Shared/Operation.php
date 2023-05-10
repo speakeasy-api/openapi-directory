@@ -107,6 +107,11 @@ class Operation
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $insertTime = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('instancesBulkInsertOperationMetadata')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\InstancesBulkInsertOperationMetadata')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?InstancesBulkInsertOperationMetadata $instancesBulkInsertOperationMetadata = null;
+    
     /**
      * [Output Only] Type of the resource. Always `compute#operation` for Operation resources.
      * 
@@ -288,6 +293,7 @@ class Operation
 		$this->httpErrorStatusCode = null;
 		$this->id = null;
 		$this->insertTime = null;
+		$this->instancesBulkInsertOperationMetadata = null;
 		$this->kind = null;
 		$this->name = null;
 		$this->operationGroupId = null;

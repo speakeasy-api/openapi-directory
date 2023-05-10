@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateEnvironmentActionEnum: string
 {
     case CREATE_ENVIRONMENT = 'CreateEnvironment';

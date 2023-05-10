@@ -12,7 +12,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class RRSetRoutingPolicyLoadBalancerTarget
 {
     /**
-     * The frontend IP address of the
+     * The frontend IP address of the Load Balancer to health check.
      * 
      * @var ?string $ipAddress
      */
@@ -31,13 +31,18 @@ class RRSetRoutingPolicyLoadBalancerTarget
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $kind = null;
     
+    /**
+     * The type of Load Balancer specified by this target. Must match the configuration of the Load Balancer located at the LoadBalancerTarget's IP address/port and region.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum $loadBalancerType
+     */
 	#[\JMS\Serializer\Annotation\SerializedName('loadBalancerType')]
     #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum $loadBalancerType = null;
     
     /**
-     * The fully qualified url of the network on which the ILB is
+     * The fully qualified url of the network on which the ILB is present. This should be formatted like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
      * 
      * @var ?string $networkUrl
      */
@@ -47,7 +52,7 @@ class RRSetRoutingPolicyLoadBalancerTarget
     public ?string $networkUrl = null;
     
     /**
-     * Load Balancer to health check. The configured port of the Load Balancer.
+     * The configured port of the Load Balancer.
      * 
      * @var ?string $port
      */
@@ -57,7 +62,7 @@ class RRSetRoutingPolicyLoadBalancerTarget
     public ?string $port = null;
     
     /**
-     * present. This should be formatted like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network} The project ID in which the ILB exists.
+     * The project ID in which the ILB exists.
      * 
      * @var ?string $project
      */
@@ -67,7 +72,7 @@ class RRSetRoutingPolicyLoadBalancerTarget
     public ?string $project = null;
     
     /**
-     * The region for regional ILBs.
+     * The region in which the ILB exists.
      * 
      * @var ?string $region
      */

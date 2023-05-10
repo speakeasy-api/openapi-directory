@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateTableXAmzTargetEnum: string
 {
     case DYNAMO_DB20120810_CREATE_TABLE = 'DynamoDB_20120810.CreateTable';

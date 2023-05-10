@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopNotebookExecutionXAmzTargetEnum: string
 {
     case ELASTIC_MAP_REDUCE_STOP_NOTEBOOK_EXECUTION = 'ElasticMapReduce.StopNotebookExecution';

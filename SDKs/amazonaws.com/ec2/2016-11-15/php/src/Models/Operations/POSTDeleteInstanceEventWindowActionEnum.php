@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteInstanceEventWindowActionEnum: string
 {
     case DELETE_INSTANCE_EVENT_WINDOW = 'DeleteInstanceEventWindow';

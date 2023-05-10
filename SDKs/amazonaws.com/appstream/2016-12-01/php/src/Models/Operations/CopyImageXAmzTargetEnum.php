@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CopyImageXAmzTargetEnum: string
 {
     case PHOTON_ADMIN_PROXY_SERVICE_COPY_IMAGE = 'PhotonAdminProxyService.CopyImage';

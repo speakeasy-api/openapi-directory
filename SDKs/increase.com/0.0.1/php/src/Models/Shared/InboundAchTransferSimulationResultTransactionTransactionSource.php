@@ -90,6 +90,15 @@ class InboundAchTransferSimulationResultTransactionTransactionSource
     public InboundAchTransferSimulationResultTransactionTransactionSourceCardRefund $cardRefund;
     
     /**
+     * A Card Revenue Payment object. This field will be present in the JSON response if and only if `category` is equal to `card_revenue_payment`.
+     * 
+     * @var \OpenAPI\OpenAPI\Models\Shared\InboundAchTransferSimulationResultTransactionTransactionSourceCardRevenuePayment $cardRevenuePayment
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('card_revenue_payment')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\InboundAchTransferSimulationResultTransactionTransactionSourceCardRevenuePayment')]
+    public InboundAchTransferSimulationResultTransactionTransactionSourceCardRevenuePayment $cardRevenuePayment;
+    
+    /**
      * A Deprecated Card Refund object. This field will be present in the JSON response if and only if `category` is equal to `card_route_refund`.
      * 
      * @var \OpenAPI\OpenAPI\Models\Shared\InboundAchTransferSimulationResultTransactionTransactionSourceDeprecatedCardRefund $cardRouteRefund
@@ -198,6 +207,15 @@ class InboundAchTransferSimulationResultTransactionTransactionSource
     public InboundAchTransferSimulationResultTransactionTransactionSourceEmpyrealCashDeposit $empyrealCashDeposit;
     
     /**
+     * A Fee Payment object. This field will be present in the JSON response if and only if `category` is equal to `fee_payment`.
+     * 
+     * @var \OpenAPI\OpenAPI\Models\Shared\InboundAchTransferSimulationResultTransactionTransactionSourceFeePayment $feePayment
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('fee_payment')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\InboundAchTransferSimulationResultTransactionTransactionSourceFeePayment')]
+    public InboundAchTransferSimulationResultTransactionTransactionSourceFeePayment $feePayment;
+    
+    /**
      * A Inbound ACH Transfer object. This field will be present in the JSON response if and only if `category` is equal to `inbound_ach_transfer`.
      * 
      * @var \OpenAPI\OpenAPI\Models\Shared\InboundACHTransferSimulationResultTransactionTransactionSourceInboundACHTransfer $inboundAchTransfer
@@ -288,6 +306,15 @@ class InboundAchTransferSimulationResultTransactionTransactionSource
     public InboundAchTransferSimulationResultTransactionTransactionSourceInternalSource $internalSource;
     
     /**
+     * A Real Time Payments Transfer Acknowledgement object. This field will be present in the JSON response if and only if `category` is equal to `real_time_payments_transfer_acknowledgement`.
+     * 
+     * @var \OpenAPI\OpenAPI\Models\Shared\InboundAchTransferSimulationResultTransactionTransactionSourceRealTimePaymentsTransferAcknowledgement $realTimePaymentsTransferAcknowledgement
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('real_time_payments_transfer_acknowledgement')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\InboundAchTransferSimulationResultTransactionTransactionSourceRealTimePaymentsTransferAcknowledgement')]
+    public InboundAchTransferSimulationResultTransactionTransactionSourceRealTimePaymentsTransferAcknowledgement $realTimePaymentsTransferAcknowledgement;
+    
+    /**
      * A Sample Funds object. This field will be present in the JSON response if and only if `category` is equal to `sample_funds`.
      * 
      * @var \OpenAPI\OpenAPI\Models\Shared\InboundAchTransferSimulationResultTransactionTransactionSourceSampleFunds $sampleFunds
@@ -342,6 +369,7 @@ class InboundAchTransferSimulationResultTransactionTransactionSource
 		$this->achTransferReturn = new \OpenAPI\OpenAPI\Models\Shared\InboundACHTransferSimulationResultTransactionTransactionSourceACHTransferReturn();
 		$this->cardDisputeAcceptance = new \OpenAPI\OpenAPI\Models\Shared\InboundAchTransferSimulationResultTransactionTransactionSourceCardDisputeAcceptance();
 		$this->cardRefund = new \OpenAPI\OpenAPI\Models\Shared\InboundAchTransferSimulationResultTransactionTransactionSourceCardRefund();
+		$this->cardRevenuePayment = new \OpenAPI\OpenAPI\Models\Shared\InboundAchTransferSimulationResultTransactionTransactionSourceCardRevenuePayment();
 		$this->cardRouteRefund = new \OpenAPI\OpenAPI\Models\Shared\InboundAchTransferSimulationResultTransactionTransactionSourceDeprecatedCardRefund();
 		$this->cardRouteSettlement = new \OpenAPI\OpenAPI\Models\Shared\InboundAchTransferSimulationResultTransactionTransactionSourceDeprecatedCardSettlement();
 		$this->cardSettlement = new \OpenAPI\OpenAPI\Models\Shared\InboundAchTransferSimulationResultTransactionTransactionSourceCardSettlement();
@@ -354,6 +382,7 @@ class InboundAchTransferSimulationResultTransactionTransactionSource
 		$this->checkTransferStopPaymentRequest = new \OpenAPI\OpenAPI\Models\Shared\InboundAchTransferSimulationResultTransactionTransactionSourceCheckTransferStopPaymentRequest();
 		$this->disputeResolution = new \OpenAPI\OpenAPI\Models\Shared\InboundAchTransferSimulationResultTransactionTransactionSourceDisputeResolution();
 		$this->empyrealCashDeposit = new \OpenAPI\OpenAPI\Models\Shared\InboundAchTransferSimulationResultTransactionTransactionSourceEmpyrealCashDeposit();
+		$this->feePayment = new \OpenAPI\OpenAPI\Models\Shared\InboundAchTransferSimulationResultTransactionTransactionSourceFeePayment();
 		$this->inboundAchTransfer = new \OpenAPI\OpenAPI\Models\Shared\InboundACHTransferSimulationResultTransactionTransactionSourceInboundACHTransfer();
 		$this->inboundCheck = new \OpenAPI\OpenAPI\Models\Shared\InboundAchTransferSimulationResultTransactionTransactionSourceInboundCheck();
 		$this->inboundInternationalAchTransfer = new \OpenAPI\OpenAPI\Models\Shared\InboundACHTransferSimulationResultTransactionTransactionSourceInboundInternationalACHTransfer();
@@ -364,6 +393,7 @@ class InboundAchTransferSimulationResultTransactionTransactionSource
 		$this->inboundWireTransfer = new \OpenAPI\OpenAPI\Models\Shared\InboundAchTransferSimulationResultTransactionTransactionSourceInboundWireTransfer();
 		$this->interestPayment = new \OpenAPI\OpenAPI\Models\Shared\InboundAchTransferSimulationResultTransactionTransactionSourceInterestPayment();
 		$this->internalSource = new \OpenAPI\OpenAPI\Models\Shared\InboundAchTransferSimulationResultTransactionTransactionSourceInternalSource();
+		$this->realTimePaymentsTransferAcknowledgement = new \OpenAPI\OpenAPI\Models\Shared\InboundAchTransferSimulationResultTransactionTransactionSourceRealTimePaymentsTransferAcknowledgement();
 		$this->sampleFunds = new \OpenAPI\OpenAPI\Models\Shared\InboundAchTransferSimulationResultTransactionTransactionSourceSampleFunds();
 		$this->wireDrawdownPaymentIntention = new \OpenAPI\OpenAPI\Models\Shared\InboundAchTransferSimulationResultTransactionTransactionSourceWireDrawdownPaymentIntention();
 		$this->wireDrawdownPaymentRejection = new \OpenAPI\OpenAPI\Models\Shared\InboundAchTransferSimulationResultTransactionTransactionSourceWireDrawdownPaymentRejection();

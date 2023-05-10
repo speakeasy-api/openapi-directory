@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListHandshakesForAccountXAmzTargetEnum: string
 {
     case AWS_ORGANIZATIONS_V20161128_LIST_HANDSHAKES_FOR_ACCOUNT = 'AWSOrganizationsV20161128.ListHandshakesForAccount';

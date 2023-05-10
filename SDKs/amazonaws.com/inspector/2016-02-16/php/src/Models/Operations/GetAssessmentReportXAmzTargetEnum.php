@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetAssessmentReportXAmzTargetEnum: string
 {
     case INSPECTOR_SERVICE_GET_ASSESSMENT_REPORT = 'InspectorService.GetAssessmentReport';

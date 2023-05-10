@@ -18,6 +18,16 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class GoogleAdsSearchads360V0ResourcesCampaignCriterion
 {
     /**
+     * An age range criterion.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0CommonAgeRangeInfo $ageRange
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('ageRange')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0CommonAgeRangeInfo')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleAdsSearchads360V0CommonAgeRangeInfo $ageRange = null;
+    
+    /**
      * The modifier for the bids when the criterion matches. The modifier must be in the range: 0.1 - 10.0. Most targetable criteria types support modifiers. Use 0 to opt out of a Device type.
      * 
      * @var ?float $bidModifier
@@ -58,6 +68,26 @@ class GoogleAdsSearchads360V0ResourcesCampaignCriterion
     public ?string $displayName = null;
     
     /**
+     * A gender criterion.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0CommonGenderInfo $gender
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('gender')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0CommonGenderInfo')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleAdsSearchads360V0CommonGenderInfo $gender = null;
+    
+    /**
+     * A keyword criterion.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0CommonKeywordInfo $keyword
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('keyword')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0CommonKeywordInfo')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleAdsSearchads360V0CommonKeywordInfo $keyword = null;
+    
+    /**
      * A language criterion.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0CommonLanguageInfo $language
@@ -66,6 +96,16 @@ class GoogleAdsSearchads360V0ResourcesCampaignCriterion
     #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0CommonLanguageInfo')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?GoogleAdsSearchads360V0CommonLanguageInfo $language = null;
+    
+    /**
+     * Output only. The datetime when this campaign criterion was last modified. The datetime is in the customer's time zone and in "yyyy-MM-dd HH:mm:ss.ssssss" format.
+     * 
+     * @var ?string $lastModifiedTime
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('lastModifiedTime')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $lastModifiedTime = null;
     
     /**
      * A location criterion.
@@ -108,6 +148,16 @@ class GoogleAdsSearchads360V0ResourcesCampaignCriterion
     public ?string $resourceName = null;
     
     /**
+     * The status of the criterion.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesCampaignCriterionStatusEnum $status
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('status')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesCampaignCriterionStatusEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleAdsSearchads360V0ResourcesCampaignCriterionStatusEnum $status = null;
+    
+    /**
      * Output only. The type of the criterion.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesCampaignCriterionTypeEnum $type
@@ -117,17 +167,44 @@ class GoogleAdsSearchads360V0ResourcesCampaignCriterion
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?GoogleAdsSearchads360V0ResourcesCampaignCriterionTypeEnum $type = null;
     
+    /**
+     * A User List criterion. Represents a user list that is defined by the advertiser to be targeted.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0CommonUserListInfo $userList
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('userList')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0CommonUserListInfo')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleAdsSearchads360V0CommonUserListInfo $userList = null;
+    
+    /**
+     * Represents a criterion for targeting webpages of an advertiser's website.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0CommonWebpageInfo $webpage
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('webpage')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0CommonWebpageInfo')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleAdsSearchads360V0CommonWebpageInfo $webpage = null;
+    
 	public function __construct()
 	{
+		$this->ageRange = null;
 		$this->bidModifier = null;
 		$this->criterionId = null;
 		$this->device = null;
 		$this->displayName = null;
+		$this->gender = null;
+		$this->keyword = null;
 		$this->language = null;
+		$this->lastModifiedTime = null;
 		$this->location = null;
 		$this->locationGroup = null;
 		$this->negative = null;
 		$this->resourceName = null;
+		$this->status = null;
 		$this->type = null;
+		$this->userList = null;
+		$this->webpage = null;
 	}
 }

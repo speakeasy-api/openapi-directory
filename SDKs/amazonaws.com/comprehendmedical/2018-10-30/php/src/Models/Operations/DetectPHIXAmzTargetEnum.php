@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DetectPHIXAmzTargetEnum: string
 {
     case COMPREHEND_MEDICAL20181030_DETECT_PHI = 'ComprehendMedical_20181030.DetectPHI';

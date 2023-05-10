@@ -155,4 +155,13 @@ src/Models/Shared/UploadStatuses.php
 src/Models/Shared/UploadStatusQuery.php
 src/Models/Shared/UploadContentTypeEnum.php
 src/Models/Shared/Upload.php
+docs/sdk/README.md
+docs/boundaries/README.md
+docs/exports/README.md
+docs/farmorganizations/README.md
+docs/fields/README.md
+docs/layers/README.md
+docs/operations/README.md
+docs/resourceowners/README.md
+docs/uploads/README.md
 USAGE.md

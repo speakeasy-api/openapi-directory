@@ -66,7 +66,7 @@ class AirtravelMultileg
      */
 	public function airtravelMultileg(
         \OpenAPI\OpenAPI\Models\Shared\AirtravelMultilegRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\AirtravelMultilegResponse
     {
         $baseUrl = AirtravelMultileg::AIRTRAVEL_MULTILEG_SERVERS[0];
@@ -107,7 +107,7 @@ class AirtravelMultileg
      */
 	public function confirmCarbonOffset3(
         \OpenAPI\OpenAPI\Models\Operations\ConfirmCarbonOffset3RequestBody $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ConfirmCarbonOffset3Response
     {
         $baseUrl = AirtravelMultileg::CONFIRM_CARBON_OFFSET3_SERVERS[0];
@@ -145,7 +145,7 @@ class AirtravelMultileg
      */
 	public function confirmPayment3(
         \OpenAPI\OpenAPI\Models\Operations\ConfirmPayment3RequestBody $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ConfirmPayment3Response
     {
         $baseUrl = AirtravelMultileg::CONFIRM_PAYMENT3_SERVERS[0];
@@ -183,7 +183,7 @@ class AirtravelMultileg
      */
 	public function confirmPaymentOfTransaction3(
         \OpenAPI\OpenAPI\Models\Operations\ConfirmPaymentOfTransaction3RequestBody $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ConfirmPaymentOfTransaction3Response
     {
         $baseUrl = AirtravelMultileg::CONFIRM_PAYMENT_OF_TRANSACTION3_SERVERS[0];
@@ -221,7 +221,7 @@ class AirtravelMultileg
      */
 	public function confirmsPlanting3(
         \OpenAPI\OpenAPI\Models\Operations\ConfirmsPlanting3RequestBody $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ConfirmsPlanting3Response
     {
         $baseUrl = AirtravelMultileg::CONFIRMS_PLANTING3_SERVERS[0];

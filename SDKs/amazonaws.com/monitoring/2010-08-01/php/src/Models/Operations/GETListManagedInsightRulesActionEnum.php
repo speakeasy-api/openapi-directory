@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETListManagedInsightRulesActionEnum: string
 {
     case LIST_MANAGED_INSIGHT_RULES = 'ListManagedInsightRules';

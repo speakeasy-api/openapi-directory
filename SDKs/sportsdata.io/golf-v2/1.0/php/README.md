@@ -30,29 +30,55 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\CurrentSeasonRequest;
+use \OpenAPI\OpenAPI\Models\Operations\CurrentSeasonFormatEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new CurrentSeasonRequest();
+    $request->format = CurrentSeasonFormatEnum::JSON;
+
+    $response = $sdk->currentSeason($request);
+
+    if ($response->season !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `currentSeason` - Current Season
-* `dfsSlates` - DFS Slates
-* `injuries` - Injuries
-* `injuriesHistorical` - Injuries (Historical)
-* `leaderboard` - Leaderboard
-* `news` - News
-* `newsByDate` - News by Date
-* `newsByPlayer` - News by Player
-* `player` - Player
-* `playerSeasonStatsWWorldGolfRankings` - Player Season Stats (w/ World Golf Rankings)
-* `playerTournamentProjectedStatsWDraftkingsSalaries` - Player Tournament Projected Stats (w/ DraftKings Salaries)
-* `playerTournamentStatsByPlayer` - Player Tournament Stats By Player
-* `players` - Players
-* `schedule` - Schedule
-* `scheduleBySeason` - Schedule by Season
+* [currentSeason](docs/sdk/README.md#currentseason) - Current Season
+* [dfsSlates](docs/sdk/README.md#dfsslates) - DFS Slates
+* [injuries](docs/sdk/README.md#injuries) - Injuries
+* [injuriesHistorical](docs/sdk/README.md#injurieshistorical) - Injuries (Historical)
+* [leaderboard](docs/sdk/README.md#leaderboard) - Leaderboard
+* [news](docs/sdk/README.md#news) - News
+* [newsByDate](docs/sdk/README.md#newsbydate) - News by Date
+* [newsByPlayer](docs/sdk/README.md#newsbyplayer) - News by Player
+* [player](docs/sdk/README.md#player) - Player
+* [playerSeasonStatsWWorldGolfRankings](docs/sdk/README.md#playerseasonstatswworldgolfrankings) - Player Season Stats (w/ World Golf Rankings)
+* [playerTournamentProjectedStatsWDraftkingsSalaries](docs/sdk/README.md#playertournamentprojectedstatswdraftkingssalaries) - Player Tournament Projected Stats (w/ DraftKings Salaries)
+* [playerTournamentStatsByPlayer](docs/sdk/README.md#playertournamentstatsbyplayer) - Player Tournament Stats By Player
+* [players](docs/sdk/README.md#players) - Players
+* [schedule](docs/sdk/README.md#schedule) - Schedule
+* [scheduleBySeason](docs/sdk/README.md#schedulebyseason) - Schedule by Season
 <!-- End SDK Available Operations -->
 
 ### Maturity

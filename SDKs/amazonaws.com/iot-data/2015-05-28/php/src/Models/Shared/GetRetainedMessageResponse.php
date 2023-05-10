@@ -37,11 +37,17 @@ class GetRetainedMessageResponse
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $topic = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('userProperties')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $userProperties = null;
+    
 	public function __construct()
 	{
 		$this->lastModifiedTime = null;
 		$this->payload = null;
 		$this->qos = null;
 		$this->topic = null;
+		$this->userProperties = null;
 	}
 }

@@ -119,7 +119,7 @@ class WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsCreateRe
     public ?bool $validateOnly = null;
     
     /**
-     * Required. ID to use for the config.
+     * Required. ID to use for the workstation configuration.
      * 
      * @var ?string $workstationConfigId
      */

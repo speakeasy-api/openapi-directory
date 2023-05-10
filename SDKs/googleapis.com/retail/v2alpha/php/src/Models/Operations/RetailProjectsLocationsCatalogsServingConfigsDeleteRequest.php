@@ -44,20 +44,20 @@ class RetailProjectsLocationsCatalogsServingConfigsDeleteRequest
     public ?string $callback = null;
     
     /**
-     * This value only applies to the case when the target product is of type PRIMARY. When deleting a product of VARIANT/COLLECTION type, this value will be ignored. When set to true, the subsequent variant products will be deleted. When set to false, if the primary product has active variant products, an error will be returned.
-     * 
-     * @var ?bool $cascadeDelete
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=cascadeDelete')]
-    public ?bool $cascadeDelete = null;
-    
-    /**
      * Selector specifying which fields to include in a partial response.
      * 
      * @var ?string $fields
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?string $fields = null;
+    
+    /**
+     * This value only applies to the case when the target product is of type PRIMARY. When deleting a product of VARIANT/COLLECTION type, this value will be ignored. When set to true, the subsequent variant products will be deleted. When set to false, if the primary product has active variant products, an error will be returned.
+     * 
+     * @var ?bool $force
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=force')]
+    public ?bool $force = null;
     
     /**
      * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -121,8 +121,8 @@ class RetailProjectsLocationsCatalogsServingConfigsDeleteRequest
 		$this->accessToken = null;
 		$this->alt = null;
 		$this->callback = null;
-		$this->cascadeDelete = null;
 		$this->fields = null;
+		$this->force = null;
 		$this->key = null;
 		$this->name = "";
 		$this->oauthToken = null;

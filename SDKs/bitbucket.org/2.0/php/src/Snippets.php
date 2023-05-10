@@ -853,12 +853,15 @@ class Snippets
      * @param \OpenAPI\OpenAPI\Models\Operations\GetSnippetsWorkspaceEncodedIdWatchersRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\GetSnippetsWorkspaceEncodedIdWatchersSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetSnippetsWorkspaceEncodedIdWatchersResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getSnippetsWorkspaceEncodedIdWatchers(
         \OpenAPI\OpenAPI\Models\Operations\GetSnippetsWorkspaceEncodedIdWatchersRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\GetSnippetsWorkspaceEncodedIdWatchersSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetSnippetsWorkspaceEncodedIdWatchersResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/snippets/{workspace}/{encoded_id}/watchers', \OpenAPI\OpenAPI\Models\Operations\GetSnippetsWorkspaceEncodedIdWatchersRequest::class, $request);
         

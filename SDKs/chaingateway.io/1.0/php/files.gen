@@ -109,4 +109,9 @@ src/Models/Shared/SendEthereum.php
 src/Models/Shared/SendEthereumRequest.php
 src/Models/Shared/SendToken.php
 src/Models/Shared/SendTokenRequest.php
+docs/sdk/README.md
+docs/addressrequests/README.md
+docs/inforequests/README.md
+docs/subscriptionipnrequests/README.md
+docs/transactionrequests/README.md
 USAGE.md

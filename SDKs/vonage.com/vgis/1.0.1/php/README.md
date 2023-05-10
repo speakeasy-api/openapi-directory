@@ -30,47 +30,67 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $response = $sdk->accounts->getAccount();
+
+    if ($response->account !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### accounts
+### [accounts](docs/accounts/README.md)
 
-* `getAccount` - Account info
+* [getAccount](docs/accounts/README.md#getaccount) - Account info
 
-### calls
+### [calls](docs/calls/README.md)
 
-* `callAnswer` - Answer call (On supported devices)
-* `callHold` - Put call on hold
-* `callTransfer` - Transfer call
-* `callUnold` - Unhold
-* `callVMTransfer` - Send call to voicemail
-* `createCall` - Place a call
-* `destroyCall` - End a call
-* `getCallsCount` - Get calls count
-* `getRoles` - Get a call
-* `listCalls` - List active calls
+* [callAnswer](docs/calls/README.md#callanswer) - Answer call (On supported devices)
+* [callHold](docs/calls/README.md#callhold) - Put call on hold
+* [callTransfer](docs/calls/README.md#calltransfer) - Transfer call
+* [callUnold](docs/calls/README.md#callunold) - Unhold
+* [callVMTransfer](docs/calls/README.md#callvmtransfer) - Send call to voicemail
+* [createCall](docs/calls/README.md#createcall) - Place a call
+* [destroyCall](docs/calls/README.md#destroycall) - End a call
+* [getCallsCount](docs/calls/README.md#getcallscount) - Get calls count
+* [getRoles](docs/calls/README.md#getroles) - Get a call
+* [listCalls](docs/calls/README.md#listcalls) - List active calls
 
-### events
+### [events](docs/events/README.md)
 
-* `getEvent` - Get event
-* `getEventsCount` - Get events count
-* `listEvents` - List events
+* [getEvent](docs/events/README.md#getevent) - Get event
+* [getEventsCount](docs/events/README.md#geteventscount) - Get events count
+* [listEvents](docs/events/README.md#listevents) - List events
 
-### users
+### [users](docs/users/README.md)
 
-* `getUser` - User info
+* [getUser](docs/users/README.md#getuser) - User info
 
-### webhooks
+### [webhooks](docs/webhooks/README.md)
 
-* `createWebhook` - Create a new webhook subscription
-* `destroyWebhook` - Remove a web hook
-* `listWebhooks` - List web hooks
-* `renewWebhook` - Renews a web hook
-* `viewWebhook` - Get web hook details
+* [createWebhook](docs/webhooks/README.md#createwebhook) - Create a new webhook subscription
+* [destroyWebhook](docs/webhooks/README.md#destroywebhook) - Remove a web hook
+* [listWebhooks](docs/webhooks/README.md#listwebhooks) - List web hooks
+* [renewWebhook](docs/webhooks/README.md#renewwebhook) - Renews a web hook
+* [viewWebhook](docs/webhooks/README.md#viewwebhook) - Get web hook details
 <!-- End SDK Available Operations -->
 
 ### Maturity

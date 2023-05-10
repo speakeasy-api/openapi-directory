@@ -27,4 +27,6 @@ src/Models/Operations/AndroidpublisherPurchasesGetRequest.php
 src/Models/Operations/AndroidpublisherPurchasesGetResponse.php
 src/Models/Shared/AltEnum.php
 src/Models/Shared/SubscriptionPurchase.php
+docs/sdk/README.md
+docs/purchases/README.md
 USAGE.md

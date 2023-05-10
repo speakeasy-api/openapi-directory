@@ -78,6 +78,16 @@ class GooglePrivacyDlpV2CustomInfoType
     public ?GooglePrivacyDlpV2Regex $regex = null;
     
     /**
+     * Score is a summary of all elements in the data profile. A higher number means more sensitive.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GooglePrivacyDlpV2SensitivityScore $sensitivityScore
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('sensitivityScore')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GooglePrivacyDlpV2SensitivityScore')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GooglePrivacyDlpV2SensitivityScore $sensitivityScore = null;
+    
+    /**
      * A reference to a StoredInfoType to use with scanning.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GooglePrivacyDlpV2StoredType $storedType
@@ -105,6 +115,7 @@ class GooglePrivacyDlpV2CustomInfoType
 		$this->infoType = null;
 		$this->likelihood = null;
 		$this->regex = null;
+		$this->sensitivityScore = null;
 		$this->storedType = null;
 		$this->surrogateType = null;
 	}

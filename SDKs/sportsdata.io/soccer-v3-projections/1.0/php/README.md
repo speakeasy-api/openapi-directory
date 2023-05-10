@@ -30,20 +30,47 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\DfsSlatesByDateRequest;
+use \OpenAPI\OpenAPI\Models\Operations\DfsSlatesByDateFormatEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new DfsSlatesByDateRequest();
+    $request->date = 'corrupti';
+    $request->format = DfsSlatesByDateFormatEnum::XML;
+
+    $response = $sdk->dfsSlatesByDate($request);
+
+    if ($response->dfsSlates !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `dfsSlatesByDate` - Dfs Slates By Date
-* `injuredPlayersByCompetition` - Injured Players By Competition
-* `projectedPlayerGameStatsByCompetitionWDfsSalaries` - Projected Player Game Stats by Competition (w/ DFS Salaries)
-* `projectedPlayerGameStatsByDateWDfsSalaries` - Projected Player Game Stats by Date (w/ DFS Salaries)
-* `projectedPlayerGameStatsByPlayerWDfsSalaries` - Projected Player Game Stats by Player (w/ DFS Salaries)
-* `upcomingDfsSlatesByCompetition` - Upcoming Dfs Slates By Competition
+* [dfsSlatesByDate](docs/sdk/README.md#dfsslatesbydate) - Dfs Slates By Date
+* [injuredPlayersByCompetition](docs/sdk/README.md#injuredplayersbycompetition) - Injured Players By Competition
+* [projectedPlayerGameStatsByCompetitionWDfsSalaries](docs/sdk/README.md#projectedplayergamestatsbycompetitionwdfssalaries) - Projected Player Game Stats by Competition (w/ DFS Salaries)
+* [projectedPlayerGameStatsByDateWDfsSalaries](docs/sdk/README.md#projectedplayergamestatsbydatewdfssalaries) - Projected Player Game Stats by Date (w/ DFS Salaries)
+* [projectedPlayerGameStatsByPlayerWDfsSalaries](docs/sdk/README.md#projectedplayergamestatsbyplayerwdfssalaries) - Projected Player Game Stats by Player (w/ DFS Salaries)
+* [upcomingDfsSlatesByCompetition](docs/sdk/README.md#upcomingdfsslatesbycompetition) - Upcoming Dfs Slates By Competition
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -95,4 +95,6 @@ src/Models/Shared/AcademicCertificateSchemaIssuedToPersonPhoto.php
 src/Models/Shared/AcademicCertificateSchemaIssuedToPerson.php
 src/Models/Shared/AcademicCertificateSchemaIssuedTo.php
 src/Models/Shared/AcademicCertificateSchema.php
+docs/sdk/README.md
+docs/apis/README.md
 USAGE.md

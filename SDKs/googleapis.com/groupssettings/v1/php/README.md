@@ -30,18 +30,55 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GroupsSettingsGroupsGetRequest;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+use \OpenAPI\OpenAPI\Models\Operations\GroupsSettingsGroupsGetSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GroupsSettingsGroupsGetRequest();
+    $request->alt = AltEnum::JSON;
+    $request->fields = 'provident';
+    $request->groupUniqueId = 'distinctio';
+    $request->key = 'quibusdam';
+    $request->oauthToken = 'unde';
+    $request->prettyPrint = false;
+    $request->quotaUser = 'nulla';
+    $request->userIp = 'corrupti';
+
+    $requestSecurity = new GroupsSettingsGroupsGetSecurity();
+    $requestSecurity->oauth2 = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+    $requestSecurity->oauth2c = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+
+    $response = $sdk->groups->groupsSettingsGroupsGet($request, $requestSecurity);
+
+    if ($response->groups !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### groups
+### [groups](docs/groups/README.md)
 
-* `groupsSettingsGroupsGet` - Gets one resource by id.
-* `groupsSettingsGroupsPatch` - Updates an existing resource. This method supports patch semantics.
-* `groupsSettingsGroupsUpdate` - Updates an existing resource.
+* [groupsSettingsGroupsGet](docs/groups/README.md#groupssettingsgroupsget) - Gets one resource by id.
+* [groupsSettingsGroupsPatch](docs/groups/README.md#groupssettingsgroupspatch) - Updates an existing resource. This method supports patch semantics.
+* [groupsSettingsGroupsUpdate](docs/groups/README.md#groupssettingsgroupsupdate) - Updates an existing resource.
 <!-- End SDK Available Operations -->
 
 ### Maturity

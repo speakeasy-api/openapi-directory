@@ -100,6 +100,14 @@ class PostAutomationsRequestBody
     public ?string $path = null;
     
     /**
+     * If trigger type is `daily`, this specifies a day number to run in one of the supported intervals: `week`, `month`, `quarter`, `year`.
+     * 
+     * @var ?int $recurringDay
+     */
+	#[SpeakeasyMetadata('multipartForm:name=recurring_day')]
+    public ?int $recurringDay = null;
+    
+    /**
      * Custom schedule for running this automation.
      * 
      * @var ?array<string, mixed> $schedule
@@ -168,6 +176,7 @@ class PostAutomationsRequestBody
 		$this->interval = null;
 		$this->name = null;
 		$this->path = null;
+		$this->recurringDay = null;
 		$this->schedule = null;
 		$this->source = null;
 		$this->syncIds = null;

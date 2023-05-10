@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum BatchDescribeMergeConflictsXAmzTargetEnum: string
 {
     case CODE_COMMIT20150413_BATCH_DESCRIBE_MERGE_CONFLICTS = 'CodeCommit_20150413.BatchDescribeMergeConflicts';

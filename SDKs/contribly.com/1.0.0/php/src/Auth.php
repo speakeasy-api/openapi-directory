@@ -108,9 +108,11 @@ class Auth
     /**
      * Verify token and return details of the owning user
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\PostVerifySecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\PostVerifyResponse
      */
 	public function postVerify(
+        \OpenAPI\OpenAPI\Models\Operations\PostVerifySecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\PostVerifyResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -118,7 +120,8 @@ class Auth
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

@@ -29,4 +29,6 @@ src/Models/Shared/AcmeTxtRecord.php
 src/Models/Shared/AltEnum.php
 src/Models/Shared/XgafvEnum.php
 src/Models/Shared/RotateChallengesRequestInput.php
+docs/sdk/README.md
+docs/acmechallengesets/README.md
 USAGE.md

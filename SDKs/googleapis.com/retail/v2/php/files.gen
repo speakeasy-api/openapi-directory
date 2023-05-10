@@ -212,6 +212,9 @@ src/Models/Shared/GoogleCloudRetailV2ModelServingStateEnum.php
 src/Models/Shared/GoogleCloudRetailV2ModelTrainingStateEnum.php
 src/Models/Shared/GoogleCloudRetailV2Model.php
 src/Models/Shared/GoogleCloudRetailV2ModelInput.php
+src/Models/Shared/GoogleCloudRetailV2ModelModelFeaturesConfig.php
+src/Models/Shared/GoogleCloudRetailV2ModelFrequentlyBoughtTogetherFeaturesConfigContextProductsTypeEnum.php
+src/Models/Shared/GoogleCloudRetailV2ModelFrequentlyBoughtTogetherFeaturesConfig.php
 src/Models/Shared/GoogleCloudRetailV2ListModelsResponse.php
 src/Models/Shared/GoogleCloudRetailV2ModelServingConfigList.php
 src/Models/Shared/GoogleCloudRetailV2ServingConfigDiversityTypeEnum.php
@@ -260,4 +263,6 @@ src/Models/Shared/GoogleCloudRetailV2PurgeUserEventsRequest.php
 src/Models/Shared/GoogleCloudRetailV2RejoinUserEventsRequestUserEventRejoinScopeEnum.php
 src/Models/Shared/GoogleCloudRetailV2RejoinUserEventsRequest.php
 src/Models/Shared/GoogleLongrunningListOperationsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

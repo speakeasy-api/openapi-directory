@@ -276,4 +276,8 @@ src/Models/Shared/GoogleCloudChannelV1UnregisterSubscriberRequest.php
 src/Models/Shared/GoogleLongrunningListOperationsResponse.php
 src/Models/Shared/GoogleCloudChannelV1ListProductsResponse.php
 src/Models/Shared/GoogleCloudChannelV1ListSkusResponse.php
+docs/sdk/README.md
+docs/accounts/README.md
+docs/operations/README.md
+docs/products/README.md
 USAGE.md

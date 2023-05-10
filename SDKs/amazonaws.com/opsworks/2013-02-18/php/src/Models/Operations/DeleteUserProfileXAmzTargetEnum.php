@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteUserProfileXAmzTargetEnum: string
 {
     case OPS_WORKS20130218_DELETE_USER_PROFILE = 'OpsWorks_20130218.DeleteUserProfile';

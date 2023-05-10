@@ -18,6 +18,15 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 class PutServersId200ApplicationJSONServerIso
 {
     /**
+     * Type of cpu architecture this iso is compatible with. Null indicates no restriction on the architecture (wildcard).
+     * 
+     * @var \OpenAPI\OpenAPI\Models\Operations\PutServersId200ApplicationJSONServerIsoArchitectureEnum $architecture
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('architecture')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Operations\PutServersId200ApplicationJSONServerIsoArchitectureEnum>')]
+    public PutServersId200ApplicationJSONServerIsoArchitectureEnum $architecture;
+    
+    /**
      * ISO 8601 timestamp of deprecation, null if ISO is still available. After the deprecation time it will no longer be possible to attach the ISO to Servers.
      * 
      * @var string $deprecated
@@ -64,6 +73,7 @@ class PutServersId200ApplicationJSONServerIso
     
 	public function __construct()
 	{
+		$this->architecture = \OpenAPI\OpenAPI\Models\Operations\PutServersId200ApplicationJSONServerIsoArchitectureEnum::X86;
 		$this->deprecated = "";
 		$this->description = "";
 		$this->id = 0;

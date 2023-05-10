@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteProtectionXAmzTargetEnum: string
 {
     case AWS_SHIELD20160616_DELETE_PROTECTION = 'AWSShield_20160616.DeleteProtection';

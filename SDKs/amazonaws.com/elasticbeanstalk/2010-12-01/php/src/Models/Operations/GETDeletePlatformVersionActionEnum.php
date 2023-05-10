@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeletePlatformVersionActionEnum: string
 {
     case DELETE_PLATFORM_VERSION = 'DeletePlatformVersion';

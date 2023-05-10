@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ExecuteTransactionXAmzTargetEnum: string
 {
     case DYNAMO_DB20120810_EXECUTE_TRANSACTION = 'DynamoDB_20120810.ExecuteTransaction';

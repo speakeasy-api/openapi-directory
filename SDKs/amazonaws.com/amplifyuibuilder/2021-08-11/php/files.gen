@@ -106,6 +106,7 @@ src/Models/Shared/FormStyleConfig.php
 src/Models/Shared/SectionalElement.php
 src/Models/Shared/FieldPosition.php
 src/Models/Shared/FixedPositionEnum.php
+src/Models/Shared/LabelDecoratorEnum.php
 src/Models/Shared/FormActionTypeEnum.php
 src/Models/Shared/FieldConfig.php
 src/Models/Shared/FieldValidationConfiguration.php
@@ -113,6 +114,11 @@ src/Models/Shared/FieldInputConfig.php
 src/Models/Shared/ValueMappings.php
 src/Models/Shared/ValueMapping.php
 src/Models/Shared/FormInputValueProperty.php
+src/Models/Shared/FormInputValuePropertyBindingProperties.php
+src/Models/Shared/FormInputBindingPropertiesValue.php
+src/Models/Shared/FormInputBindingPropertiesValueProperties.php
+src/Models/Shared/FileUploaderFieldConfig.php
+src/Models/Shared/StorageAccessLevelEnum.php
 src/Models/Shared/FormDataTypeConfig.php
 src/Models/Shared/FormDataSourceTypeEnum.php
 src/Models/Shared/FormCTA.php
@@ -141,4 +147,5 @@ src/Models/Shared/UpdateComponentResponse.php
 src/Models/Shared/UpdateFormResponse.php
 src/Models/Shared/UpdateThemeResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

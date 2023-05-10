@@ -23,6 +23,7 @@ class GetTracksTrackIdFavoritersRequest
      * Offset of first result. Deprecated, use `linked_partitioning` instead.
      * 
      * @var ?int $offset
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=offset')]
     public ?int $offset = null;

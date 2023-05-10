@@ -149,6 +149,11 @@ src/Models/Operations/FirebaseappcheckProjectsServicesPatchSecurityOption2.php
 src/Models/Operations/FirebaseappcheckProjectsServicesPatchSecurity.php
 src/Models/Operations/FirebaseappcheckProjectsServicesPatchRequest.php
 src/Models/Operations/FirebaseappcheckProjectsServicesPatchResponse.php
+src/Models/Operations/FirebaseappcheckProjectsVerifyAppCheckTokenSecurityOption1.php
+src/Models/Operations/FirebaseappcheckProjectsVerifyAppCheckTokenSecurityOption2.php
+src/Models/Operations/FirebaseappcheckProjectsVerifyAppCheckTokenSecurity.php
+src/Models/Operations/FirebaseappcheckProjectsVerifyAppCheckTokenRequest.php
+src/Models/Operations/FirebaseappcheckProjectsVerifyAppCheckTokenResponse.php
 src/Models/Shared/GoogleFirebaseAppcheckV1betaBatchGetAppAttestConfigsResponse.php
 src/Models/Shared/GoogleFirebaseAppcheckV1betaAppAttestConfig.php
 src/Models/Shared/AltEnum.php
@@ -188,4 +193,8 @@ src/Models/Shared/GoogleFirebaseAppcheckV1betaService.php
 src/Models/Shared/GoogleFirebaseAppcheckV1betaBatchUpdateServicesRequest.php
 src/Models/Shared/GoogleFirebaseAppcheckV1betaUpdateServiceRequest.php
 src/Models/Shared/GoogleFirebaseAppcheckV1betaListServicesResponse.php
+src/Models/Shared/GoogleFirebaseAppcheckV1betaVerifyAppCheckTokenResponse.php
+src/Models/Shared/GoogleFirebaseAppcheckV1betaVerifyAppCheckTokenRequest.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

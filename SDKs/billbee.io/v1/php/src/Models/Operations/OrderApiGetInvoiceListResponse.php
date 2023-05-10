@@ -12,23 +12,18 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 class OrderApiGetInvoiceListResponse
 {
 	
+    public ?string $body = null;
+    
+	
     public string $contentType;
     
     /**
      * OK
      * 
-     * @var ?array<string, mixed> $orderApiGetInvoiceList200ApplicationJSONObject
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel $rechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel
      */
 	
-    public ?array $orderApiGetInvoiceList200ApplicationJSONObject = null;
-    
-    /**
-     * OK
-     * 
-     * @var ?array<string, mixed> $orderApiGetInvoiceList200TextJSONObject
-     */
-	
-    public ?array $orderApiGetInvoiceList200TextJSONObject = null;
+    public ?\OpenAPI\OpenAPI\Models\Shared\RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel $rechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel = null;
     
 	
     public int $statusCode;
@@ -38,9 +33,9 @@ class OrderApiGetInvoiceListResponse
     
 	public function __construct()
 	{
+		$this->body = null;
 		$this->contentType = "";
-		$this->orderApiGetInvoiceList200ApplicationJSONObject = null;
-		$this->orderApiGetInvoiceList200TextJSONObject = null;
+		$this->rechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
 	}

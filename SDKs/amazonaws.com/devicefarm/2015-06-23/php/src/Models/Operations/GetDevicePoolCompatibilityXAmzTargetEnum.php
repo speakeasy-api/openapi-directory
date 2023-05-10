@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetDevicePoolCompatibilityXAmzTargetEnum: string
 {
     case DEVICE_FARM20150623_GET_DEVICE_POOL_COMPATIBILITY = 'DeviceFarm_20150623.GetDevicePoolCompatibility';

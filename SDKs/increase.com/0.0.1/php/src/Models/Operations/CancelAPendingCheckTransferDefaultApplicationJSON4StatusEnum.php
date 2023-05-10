@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-enum CancelAPendingCheckTransferDefaultApplicationJSON4StatusEnum: string
+enum CancelAPendingCheckTransferDefaultApplicationJSON4StatusEnum: int
 {
-    case FOUR_HUNDRED_AND_TWENTY_TWO = '422';
+    case FOUR_HUNDRED_AND_TWENTY_TWO = 422;
 }

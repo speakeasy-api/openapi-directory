@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteApiDestinationXAmzTargetEnum: string
 {
     case AWS_EVENTS_DELETE_API_DESTINATION = 'AWSEvents.DeleteApiDestination';

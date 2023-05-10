@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTBatchDescribeTypeConfigurationsActionEnum: string
 {
     case BATCH_DESCRIBE_TYPE_CONFIGURATIONS = 'BatchDescribeTypeConfigurations';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETUntagInstanceProfileActionEnum: string
 {
     case UNTAG_INSTANCE_PROFILE = 'UntagInstanceProfile';

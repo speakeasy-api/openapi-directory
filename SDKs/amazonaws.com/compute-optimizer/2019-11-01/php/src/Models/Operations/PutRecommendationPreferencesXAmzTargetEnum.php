@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutRecommendationPreferencesXAmzTargetEnum: string
 {
     case COMPUTE_OPTIMIZER_SERVICE_PUT_RECOMMENDATION_PREFERENCES = 'ComputeOptimizerService.PutRecommendationPreferences';

@@ -116,4 +116,9 @@ src/Models/Shared/Request.php
 src/Models/Shared/Action.php
 src/Models/Shared/Payment1.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/configuration/README.md
+docs/installments/README.md
+docs/transactionflow/README.md
+docs/transactionprocess/README.md
 USAGE.md

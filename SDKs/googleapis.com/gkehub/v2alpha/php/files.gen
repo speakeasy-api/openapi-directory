@@ -38,4 +38,6 @@ src/Models/Shared/XgafvEnum.php
 src/Models/Shared/Operation.php
 src/Models/Shared/GoogleRpcStatus.php
 src/Models/Shared/ListOperationsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

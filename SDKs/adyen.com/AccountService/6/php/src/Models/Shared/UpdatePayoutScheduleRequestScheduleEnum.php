@@ -26,5 +26,10 @@ enum UpdatePayoutScheduleRequestScheduleEnum: string
     case HOLD = 'HOLD';
     case MONTHLY = 'MONTHLY';
     case WEEKLY = 'WEEKLY';
+    case WEEKLY_MON_TO_FRI_AU = 'WEEKLY_MON_TO_FRI_AU';
+    case WEEKLY_MON_TO_FRI_EU = 'WEEKLY_MON_TO_FRI_EU';
+    case WEEKLY_MON_TO_FRI_US = 'WEEKLY_MON_TO_FRI_US';
     case WEEKLY_ON_TUE_FRI_MIDNIGHT = 'WEEKLY_ON_TUE_FRI_MIDNIGHT';
+    case WEEKLY_SUN_TO_THU_AU = 'WEEKLY_SUN_TO_THU_AU';
+    case WEEKLY_SUN_TO_THU_US = 'WEEKLY_SUN_TO_THU_US';
 }

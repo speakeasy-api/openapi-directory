@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeInstanceAccessControlAttributeConfigurationXAmzTargetEnum: string
 {
     case SWB_EXTERNAL_SERVICE_DESCRIBE_INSTANCE_ACCESS_CONTROL_ATTRIBUTE_CONFIGURATION = 'SWBExternalService.DescribeInstanceAccessControlAttributeConfiguration';

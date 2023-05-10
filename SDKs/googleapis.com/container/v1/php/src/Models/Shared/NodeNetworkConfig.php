@@ -48,6 +48,16 @@ class NodeNetworkConfig
     public ?NetworkPerformanceConfig $networkPerformanceConfig = null;
     
     /**
+     * [PRIVATE FIELD] Config for pod CIDR size overprovisioning.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\PodCIDROverprovisionConfig $podCidrOverprovisionConfig
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('podCidrOverprovisionConfig')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\PodCIDROverprovisionConfig')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?PodCIDROverprovisionConfig $podCidrOverprovisionConfig = null;
+    
+    /**
      * The IP address range for pod IPs in this node pool. Only applicable if `create_pod_range` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) to pick a specific range to use. Only applicable if `ip_allocation_policy.use_ip_aliases` is true. This field cannot be changed after the node pool has been created.
      * 
      * @var ?string $podIpv4CidrBlock
@@ -72,6 +82,7 @@ class NodeNetworkConfig
 		$this->createPodRange = null;
 		$this->enablePrivateNodes = null;
 		$this->networkPerformanceConfig = null;
+		$this->podCidrOverprovisionConfig = null;
 		$this->podIpv4CidrBlock = null;
 		$this->podRange = null;
 	}

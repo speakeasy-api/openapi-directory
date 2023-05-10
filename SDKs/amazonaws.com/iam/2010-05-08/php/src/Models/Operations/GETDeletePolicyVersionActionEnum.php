@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeletePolicyVersionActionEnum: string
 {
     case DELETE_POLICY_VERSION = 'DeletePolicyVersion';

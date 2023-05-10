@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteVpcPeeringConnectionActionEnum: string
 {
     case DELETE_VPC_PEERING_CONNECTION = 'DeleteVpcPeeringConnection';

@@ -88,4 +88,7 @@ src/Models/Shared/SearchFoldersRequest.php
 src/Models/Shared/SetIamPolicyRequest.php
 src/Models/Shared/TestIamPermissionsResponse.php
 src/Models/Shared/TestIamPermissionsRequest.php
+docs/sdk/README.md
+docs/folders/README.md
+docs/operations/README.md
 USAGE.md

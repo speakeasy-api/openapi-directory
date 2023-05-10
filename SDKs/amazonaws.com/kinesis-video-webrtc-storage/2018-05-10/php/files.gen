@@ -22,4 +22,5 @@ src/Models/Operations/JoinStorageSessionRequestBody.php
 src/Models/Operations/JoinStorageSessionRequest.php
 src/Models/Operations/JoinStorageSessionResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

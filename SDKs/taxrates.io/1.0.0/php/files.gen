@@ -35,4 +35,7 @@ src/Models/Operations/AllTaxRates500ApplicationJSON.php
 src/Models/Operations/AllTaxRates200ApplicationJSONRates.php
 src/Models/Operations/AllTaxRates200ApplicationJSON.php
 src/Models/Operations/AllTaxRatesResponse.php
+docs/sdk/README.md
+docs/v1tax/README.md
+docs/v3tax/README.md
 USAGE.md

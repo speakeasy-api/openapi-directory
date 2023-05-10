@@ -57,6 +57,26 @@ class RouterBgpPeer
     public ?RouterBgpPeerBfd $bfd = null;
     
     /**
+     * A list of user-defined custom learned route IP address ranges for a BGP session.
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\RouterBgpPeerCustomLearnedIpRange> $customLearnedIpRanges
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('customLearnedIpRanges')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\RouterBgpPeerCustomLearnedIpRange>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $customLearnedIpRanges = null;
+    
+    /**
+     * The user-defined custom learned route priority for a BGP session. This value is applied to all custom learned route ranges for the session. You can choose a value from `0` to `65335`. If you don't provide a value, Google Cloud assigns a priority of `100` to the ranges.
+     * 
+     * @var ?int $customLearnedRoutePriority
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('customLearnedRoutePriority')]
+    #[\JMS\Serializer\Annotation\Type('int')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?int $customLearnedRoutePriority = null;
+    
+    /**
      * The status of the BGP peer connection. If set to FALSE, any active session with the peer is terminated and all associated routing information is removed. If set to TRUE, the peer connection can be established with routing information. The default is TRUE.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\RouterBgpPeerEnableEnum $enable
@@ -183,6 +203,8 @@ class RouterBgpPeer
 		$this->advertisedIpRanges = null;
 		$this->advertisedRoutePriority = null;
 		$this->bfd = null;
+		$this->customLearnedIpRanges = null;
+		$this->customLearnedRoutePriority = null;
 		$this->enable = null;
 		$this->enableIpv6 = null;
 		$this->interfaceName = null;

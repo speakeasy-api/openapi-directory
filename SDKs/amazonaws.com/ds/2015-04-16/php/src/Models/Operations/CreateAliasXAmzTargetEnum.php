@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateAliasXAmzTargetEnum: string
 {
     case DIRECTORY_SERVICE20150416_CREATE_ALIAS = 'DirectoryService_20150416.CreateAlias';

@@ -38,4 +38,5 @@ src/Models/Shared/StartNextPendingJobExecutionResponse.php
 src/Models/Shared/UpdateJobExecutionResponse.php
 src/Models/Shared/JobExecutionState.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

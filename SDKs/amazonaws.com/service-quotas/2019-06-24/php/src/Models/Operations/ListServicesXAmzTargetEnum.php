@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListServicesXAmzTargetEnum: string
 {
     case SERVICE_QUOTAS_V20190624_LIST_SERVICES = 'ServiceQuotasV20190624.ListServices';

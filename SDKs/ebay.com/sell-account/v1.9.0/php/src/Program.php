@@ -40,9 +40,11 @@ class Program
     /**
      * This method gets a list of the seller programs that the seller has opted-in to.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetOptedInProgramsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetOptedInProgramsResponse
      */
 	public function getOptedInPrograms(
+        \OpenAPI\OpenAPI\Models\Operations\GetOptedInProgramsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetOptedInProgramsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -50,7 +52,8 @@ class Program
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

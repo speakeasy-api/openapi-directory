@@ -87,4 +87,5 @@ src/Models/Shared/FederatedUser.php
 src/Models/Shared/GetFederationTokenRequest.php
 src/Models/Shared/GetSessionTokenRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

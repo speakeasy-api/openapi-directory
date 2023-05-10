@@ -369,6 +369,7 @@ src/Models/Shared/DatabaseFlags.php
 src/Models/Shared/BackupConfiguration.php
 src/Models/Shared/BackupRetentionSettingsRetentionUnitEnum.php
 src/Models/Shared/BackupRetentionSettings.php
+src/Models/Shared/AdvancedMachineFeatures.php
 src/Models/Shared/SqlActiveDirectoryConfig.php
 src/Models/Shared/SqlScheduledMaintenance.php
 src/Models/Shared/ReplicaConfiguration.php
@@ -417,4 +418,15 @@ src/Models/Shared/SqlServerUserDetails.php
 src/Models/Shared/UserPasswordValidationPolicy.php
 src/Models/Shared/PasswordStatus.php
 src/Models/Shared/UsersListResponse.php
+docs/sdk/README.md
+docs/backupruns/README.md
+docs/connect/README.md
+docs/databases/README.md
+docs/flags/README.md
+docs/instances/README.md
+docs/operations/README.md
+docs/projects/README.md
+docs/sslcerts/README.md
+docs/tiers/README.md
+docs/users/README.md
 USAGE.md

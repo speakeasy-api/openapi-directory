@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * Group - A group object that contains a specified group’s metadata and attributes.
+ * Group - A group object that contains the metadata and attributes for a specified group.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

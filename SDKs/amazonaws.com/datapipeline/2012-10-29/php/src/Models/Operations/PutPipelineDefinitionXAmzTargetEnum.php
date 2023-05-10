@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutPipelineDefinitionXAmzTargetEnum: string
 {
     case DATA_PIPELINE_PUT_PIPELINE_DEFINITION = 'DataPipeline.PutPipelineDefinition';

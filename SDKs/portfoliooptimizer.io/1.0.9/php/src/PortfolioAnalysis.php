@@ -128,52 +128,6 @@ class PortfolioAnalysis
     }
 	
     /**
-     * Conditional Value At Risk
-     * 
-     * Compute the conditional value at risk of one or several portfolio(s) from portfolio values.
-     * 
-     * References
-     * * [Wikipedia, Value at risk](https://en.wikipedia.org/wiki/Value_at_risk)
-     * * [Acerbi, C. and Tasche, D. (2002), Expected Shortfall: A Natural Coherent Alternative to Value at Risk. Economic Notes, 31: 379-388](https://onlinelibrary.wiley.com/doi/abs/10.1111/1468-0300.00091)
-     * 
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\PostPortfolioAnalysisConditionalValueAtRiskRequestBody $request
-     * @return \OpenAPI\OpenAPI\Models\Operations\PostPortfolioAnalysisConditionalValueAtRiskResponse
-     */
-	public function postPortfolioAnalysisConditionalValueAtRisk(
-        \OpenAPI\OpenAPI\Models\Operations\PostPortfolioAnalysisConditionalValueAtRiskRequestBody $request,
-    ): \OpenAPI\OpenAPI\Models\Operations\PostPortfolioAnalysisConditionalValueAtRiskResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/portfolio/analysis/conditional-value-at-risk');
-        
-        $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
-        if ($body === null) {
-            throw new \Exception('Request body is required');
-        }
-        $options = array_merge_recursive($options, $body);
-        
-        $httpResponse = $this->_securityClient->request('POST', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\PostPortfolioAnalysisConditionalValueAtRiskResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->postPortfolioAnalysisConditionalValueAtRisk200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\PostPortfolioAnalysisConditionalValueAtRisk200ApplicationJSON', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
      * Return Contributions
      * 
      * Perform a return contribution analysis of one or several portfolio(s), optionally using groups of assets.
@@ -812,52 +766,6 @@ class PortfolioAnalysis
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->postPortfolioAnalysisUlcerPerformanceIndex200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\PostPortfolioAnalysisUlcerPerformanceIndex200ApplicationJSON', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Value At Risk
-     * 
-     * Compute the value at risk of one or several portfolio(s) from portfolio values.
-     * 
-     * References
-     * * [Wikipedia, Value at risk](https://en.wikipedia.org/wiki/Value_at_risk)
-     * * [Acerbi, C. and Tasche, D. (2002), Expected Shortfall: A Natural Coherent Alternative to Value at Risk. Economic Notes, 31: 379-388](https://onlinelibrary.wiley.com/doi/abs/10.1111/1468-0300.00091)
-     * 
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\PostPortfolioAnalysisValueAtRiskRequestBody $request
-     * @return \OpenAPI\OpenAPI\Models\Operations\PostPortfolioAnalysisValueAtRiskResponse
-     */
-	public function postPortfolioAnalysisValueAtRisk(
-        \OpenAPI\OpenAPI\Models\Operations\PostPortfolioAnalysisValueAtRiskRequestBody $request,
-    ): \OpenAPI\OpenAPI\Models\Operations\PostPortfolioAnalysisValueAtRiskResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/portfolio/analysis/value-at-risk');
-        
-        $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
-        if ($body === null) {
-            throw new \Exception('Request body is required');
-        }
-        $options = array_merge_recursive($options, $body);
-        
-        $httpResponse = $this->_securityClient->request('POST', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\PostPortfolioAnalysisValueAtRiskResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->postPortfolioAnalysisValueAtRisk200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Operations\PostPortfolioAnalysisValueAtRisk200ApplicationJSON', 'json');
             }
         }
 

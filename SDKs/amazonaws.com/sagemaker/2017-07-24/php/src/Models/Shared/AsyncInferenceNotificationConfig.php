@@ -22,6 +22,16 @@ class AsyncInferenceNotificationConfig
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $errorTopic = null;
     
+    /**
+     * $includeInferenceResponseIn
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\AsyncNotificationTopicTypesEnum> $includeInferenceResponseIn
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('IncludeInferenceResponseIn')]
+    #[\JMS\Serializer\Annotation\Type('array<enum<OpenAPI\OpenAPI\Models\Shared\AsyncNotificationTopicTypesEnum>>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $includeInferenceResponseIn = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('SuccessTopic')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -30,6 +40,7 @@ class AsyncInferenceNotificationConfig
 	public function __construct()
 	{
 		$this->errorTopic = null;
+		$this->includeInferenceResponseIn = null;
 		$this->successTopic = null;
 	}
 }

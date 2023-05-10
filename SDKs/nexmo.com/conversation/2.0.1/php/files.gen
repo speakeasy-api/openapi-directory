@@ -133,4 +133,10 @@ src/Models/Shared/EventRetrieved.php
 src/Models/Shared/LegStateEnum.php
 src/Models/Shared/MemberActionEnum.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/conversation/README.md
+docs/event/README.md
+docs/leg/README.md
+docs/member/README.md
+docs/user/README.md
 USAGE.md

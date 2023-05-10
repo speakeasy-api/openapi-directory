@@ -42,4 +42,8 @@ src/Models/Operations/PhoneValidation400ApplicationJSON.php
 src/Models/Operations/PhoneValidation200ApplicationJSONAssociatedEmailAddresses.php
 src/Models/Operations/PhoneValidation200ApplicationJSON.php
 src/Models/Operations/PhoneValidationResponse.php
+docs/sdk/README.md
+docs/emailvalidation/README.md
+docs/maliciousurlscanner/README.md
+docs/phonevalidation/README.md
 USAGE.md

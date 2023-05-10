@@ -30,17 +30,43 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\RotoballerArticlesRequest;
+use \OpenAPI\OpenAPI\Models\Operations\RotoballerArticlesFormatEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new RotoballerArticlesRequest();
+    $request->format = RotoballerArticlesFormatEnum::JSON;
+
+    $response = $sdk->rotoballerArticles($request);
+
+    if ($response->articles !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `rotoballerArticles` - RotoBaller Articles
-* `rotoballerArticlesByDate` - RotoBaller Articles by Date
-* `rotoballerArticlesByPlayer` - RotoBaller Articles by Player
+* [rotoballerArticles](docs/sdk/README.md#rotoballerarticles) - RotoBaller Articles
+* [rotoballerArticlesByDate](docs/sdk/README.md#rotoballerarticlesbydate) - RotoBaller Articles by Date
+* [rotoballerArticlesByPlayer](docs/sdk/README.md#rotoballerarticlesbyplayer) - RotoBaller Articles by Player
 <!-- End SDK Available Operations -->
 
 ### Maturity

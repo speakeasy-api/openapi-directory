@@ -79,4 +79,11 @@ src/Models/Operations/ConfirmsPlanting3RequestBody.php
 src/Models/Operations/ConfirmsPlanting3Response.php
 src/Models/Shared/AirtravelMultilegRequest.php
 src/Models/Shared/Leg1.php
+docs/sdk/README.md
+docs/airtravelcoordinates/README.md
+docs/ecommercedelivery/README.md
+docs/requestapikey/README.md
+docs/roaddistance/README.md
+docs/urbandelivery/README.md
+docs/airtravelmultileg/README.md
 USAGE.md

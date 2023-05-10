@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateResourceServerXAmzTargetEnum: string
 {
     case AWS_COGNITO_IDENTITY_PROVIDER_SERVICE_UPDATE_RESOURCE_SERVER = 'AWSCognitoIdentityProviderService.UpdateResourceServer';

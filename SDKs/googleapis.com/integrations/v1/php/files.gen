@@ -158,6 +158,7 @@ src/Models/Shared/GoogleCloudIntegrationsV1alphaProvisionClientRequest.php
 src/Models/Shared/GoogleCloudIntegrationsV1alphaCloudKmsConfig.php
 src/Models/Shared/GoogleCloudIntegrationsV1alphaSwitchEncryptionRequest.php
 src/Models/Shared/GoogleCloudIntegrationsV1alphaListConnectionsResponse.php
+src/Models/Shared/GoogleCloudConnectorsV1ConnectionSubscriptionTypeEnum.php
 src/Models/Shared/GoogleCloudConnectorsV1Connection.php
 src/Models/Shared/GoogleCloudConnectorsV1ConnectionStatusStateEnum.php
 src/Models/Shared/GoogleCloudConnectorsV1ConnectionStatus.php
@@ -169,6 +170,7 @@ src/Models/Shared/GoogleCloudConnectorsV1SslConfig.php
 src/Models/Shared/GoogleCloudConnectorsV1Secret.php
 src/Models/Shared/GoogleCloudConnectorsV1ConfigVariable.php
 src/Models/Shared/GoogleCloudConnectorsV1NodeConfig.php
+src/Models/Shared/GoogleCloudConnectorsV1LogConfig.php
 src/Models/Shared/GoogleCloudConnectorsV1LockConfig.php
 src/Models/Shared/GoogleCloudConnectorsV1DestinationConfig.php
 src/Models/Shared/GoogleCloudConnectorsV1Destination.php
@@ -179,6 +181,7 @@ src/Models/Shared/GoogleCloudConnectorsV1AuthConfigSshPublicKey.php
 src/Models/Shared/GoogleCloudConnectorsV1AuthConfigOauth2JwtBearer.php
 src/Models/Shared/GoogleCloudConnectorsV1AuthConfigOauth2JwtBearerJwtClaims.php
 src/Models/Shared/GoogleCloudConnectorsV1AuthConfigOauth2ClientCredentials.php
+src/Models/Shared/GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlow.php
 src/Models/Shared/GoogleCloudIntegrationsV1alphaListRuntimeActionSchemasResponse.php
 src/Models/Shared/GoogleCloudIntegrationsV1alphaRuntimeActionSchema.php
 src/Models/Shared/GoogleCloudIntegrationsV1alphaListRuntimeEntitySchemasResponse.php
@@ -434,4 +437,8 @@ src/Models/Shared/GoogleCloudIntegrationsV1alphaListSfdcInstancesResponse.php
 src/Models/Shared/GoogleCloudIntegrationsV1alphaSfdcChannelInput.php
 src/Models/Shared/GoogleCloudIntegrationsV1alphaSfdcChannel.php
 src/Models/Shared/GoogleCloudIntegrationsV1alphaListSfdcChannelsResponse.php
+docs/sdk/README.md
+docs/callback/README.md
+docs/connectorplatformregions/README.md
+docs/projects/README.md
 USAGE.md

@@ -39,6 +39,14 @@ class StartDominantLanguageDetectionJobResponse
     public mixed $kmsKeyValidationException = null;
     
     /**
+     * ResourceInUseException
+     * 
+     * @var mixed $resourceInUseException
+     */
+	
+    public mixed $resourceInUseException = null;
+    
+    /**
      * Success
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\StartDominantLanguageDetectionJobResponse $startDominantLanguageDetectionJobResponse
@@ -74,6 +82,7 @@ class StartDominantLanguageDetectionJobResponse
 		$this->internalServerException = null;
 		$this->invalidRequestException = null;
 		$this->kmsKeyValidationException = null;
+		$this->resourceInUseException = null;
 		$this->startDominantLanguageDetectionJobResponse = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;

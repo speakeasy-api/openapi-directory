@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AdminSetUserSettingsXAmzTargetEnum: string
 {
     case AWS_COGNITO_IDENTITY_PROVIDER_SERVICE_ADMIN_SET_USER_SETTINGS = 'AWSCognitoIdentityProviderService.AdminSetUserSettings';

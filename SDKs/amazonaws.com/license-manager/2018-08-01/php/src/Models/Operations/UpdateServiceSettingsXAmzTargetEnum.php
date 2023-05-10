@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateServiceSettingsXAmzTargetEnum: string
 {
     case AWS_LICENSE_MANAGER_UPDATE_SERVICE_SETTINGS = 'AWSLicenseManager.UpdateServiceSettings';

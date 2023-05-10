@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteAuthenticationProfileActionEnum: string
 {
     case DELETE_AUTHENTICATION_PROFILE = 'DeleteAuthenticationProfile';

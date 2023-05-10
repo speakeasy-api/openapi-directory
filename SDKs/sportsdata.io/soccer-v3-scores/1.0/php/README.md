@@ -30,38 +30,64 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\AreasCountriesRequest;
+use \OpenAPI\OpenAPI\Models\Operations\AreasCountriesFormatEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new AreasCountriesRequest();
+    $request->format = AreasCountriesFormatEnum::JSON;
+
+    $response = $sdk->areasCountries($request);
+
+    if ($response->areas !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `areasCountries` - Areas (Countries)
-* `canceledMemberships` - Canceled Memberships
-* `competitionFixturesLeagueDetails` - Competition Fixtures (League Details)
-* `competitionHierarchyLeagueHierarchy` - Competition Hierarchy (League Hierarchy)
-* `competitionsLeagues` - Competitions (Leagues)
-* `gamesByDate` - Games by Date
-* `membershipsActive` - Memberships (Active)
-* `membershipsByCompetitionActive` - Memberships by Competition (Active)
-* `membershipsByCompetitionHistorical` - Memberships by Competition (Historical)
-* `membershipsByTeamActive` - Memberships by Team (Active)
-* `membershipsByTeamHistorical` - Memberships by Team (Historical)
-* `membershipsHistorical` - Memberships (Historical)
-* `membershipsRecentlyChanged` - Memberships (Recently Changed)
-* `player` - Player
-* `players` - Players
-* `playersByTeam` - Players by Team
-* `schedule` - Schedule
-* `seasonTeams` - Season Teams
-* `standings` - Standings
-* `teamGameStatsByDate` - Team Game Stats by Date
-* `teamSeasonStats` - Team Season Stats
-* `teams` - Teams
-* `upcomingScheduleByPlayer` - Upcoming Schedule By Player
-* `venues` - Venues
+* [areasCountries](docs/sdk/README.md#areascountries) - Areas (Countries)
+* [canceledMemberships](docs/sdk/README.md#canceledmemberships) - Canceled Memberships
+* [competitionFixturesLeagueDetails](docs/sdk/README.md#competitionfixturesleaguedetails) - Competition Fixtures (League Details)
+* [competitionHierarchyLeagueHierarchy](docs/sdk/README.md#competitionhierarchyleaguehierarchy) - Competition Hierarchy (League Hierarchy)
+* [competitionsLeagues](docs/sdk/README.md#competitionsleagues) - Competitions (Leagues)
+* [gamesByDate](docs/sdk/README.md#gamesbydate) - Games by Date
+* [membershipsActive](docs/sdk/README.md#membershipsactive) - Memberships (Active)
+* [membershipsByCompetitionActive](docs/sdk/README.md#membershipsbycompetitionactive) - Memberships by Competition (Active)
+* [membershipsByCompetitionHistorical](docs/sdk/README.md#membershipsbycompetitionhistorical) - Memberships by Competition (Historical)
+* [membershipsByTeamActive](docs/sdk/README.md#membershipsbyteamactive) - Memberships by Team (Active)
+* [membershipsByTeamHistorical](docs/sdk/README.md#membershipsbyteamhistorical) - Memberships by Team (Historical)
+* [membershipsHistorical](docs/sdk/README.md#membershipshistorical) - Memberships (Historical)
+* [membershipsRecentlyChanged](docs/sdk/README.md#membershipsrecentlychanged) - Memberships (Recently Changed)
+* [player](docs/sdk/README.md#player) - Player
+* [players](docs/sdk/README.md#players) - Players
+* [playersByTeam](docs/sdk/README.md#playersbyteam) - Players by Team
+* [schedule](docs/sdk/README.md#schedule) - Schedule
+* [seasonTeams](docs/sdk/README.md#seasonteams) - Season Teams
+* [standings](docs/sdk/README.md#standings) - Standings
+* [teamGameStatsByDate](docs/sdk/README.md#teamgamestatsbydate) - Team Game Stats by Date
+* [teamSeasonStats](docs/sdk/README.md#teamseasonstats) - Team Season Stats
+* [teams](docs/sdk/README.md#teams) - Teams
+* [upcomingScheduleByPlayer](docs/sdk/README.md#upcomingschedulebyplayer) - Upcoming Schedule By Player
+* [venues](docs/sdk/README.md#venues) - Venues
 <!-- End SDK Available Operations -->
 
 ### Maturity

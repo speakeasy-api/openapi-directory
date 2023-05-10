@@ -30,45 +30,73 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\DeleteAddressRequest;
+use \OpenAPI\OpenAPI\Models\Shared\DeleteAddressRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new DeleteAddressRequest();
+    $request->authorization = 'q9PdaWuD4j6DK6vsUgehhL8pgarSrS9m';
+    $request->deleteAddressRequest = new DeleteAddressRequest();
+    $request->deleteAddressRequest->ethereumaddress = 'corrupti';
+    $request->deleteAddressRequest->password = 'provident';
+
+    $response = $sdk->addressRequests->deleteAddress($request);
+
+    if ($response->deleteAddress !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### addressRequests
+### [addressRequests](docs/addressrequests/README.md)
 
-* `deleteAddress` - deleteAddress
-* `exportAddress` - exportAddress
-* `importAddress` - importAddress
-* `listAddresses` - listAddresses
-* `newAddress` - newAddress
+* [deleteAddress](docs/addressrequests/README.md#deleteaddress) - deleteAddress
+* [exportAddress](docs/addressrequests/README.md#exportaddress) - exportAddress
+* [importAddress](docs/addressrequests/README.md#importaddress) - importAddress
+* [listAddresses](docs/addressrequests/README.md#listaddresses) - listAddresses
+* [newAddress](docs/addressrequests/README.md#newaddress) - newAddress
 
-### infoRequests
+### [infoRequests](docs/inforequests/README.md)
 
-* `getBlock` - getBlock
-* `getEthereumBalance` - getEthereumBalance
-* `getExchangeRate` - getExchangeRate
-* `getGasPrice` - getGasPrice
-* `getLastBlockNumber` - getLastBlockNumber
-* `getToken` - getToken
-* `getTokenBalance` - getTokenBalance
-* `getTransactions` - getTransactions
+* [getBlock](docs/inforequests/README.md#getblock) - getBlock
+* [getEthereumBalance](docs/inforequests/README.md#getethereumbalance) - getEthereumBalance
+* [getExchangeRate](docs/inforequests/README.md#getexchangerate) - getExchangeRate
+* [getGasPrice](docs/inforequests/README.md#getgasprice) - getGasPrice
+* [getLastBlockNumber](docs/inforequests/README.md#getlastblocknumber) - getLastBlockNumber
+* [getToken](docs/inforequests/README.md#gettoken) - getToken
+* [getTokenBalance](docs/inforequests/README.md#gettokenbalance) - getTokenBalance
+* [getTransactions](docs/inforequests/README.md#gettransactions) - getTransactions
 
-### subscriptionIPNRequests
+### [subscriptionIPNRequests](docs/subscriptionipnrequests/README.md)
 
-* `listFailedIPNs` - listFailedIPNs
-* `listSubscribedAddresses` - listSubscribedAddresses
-* `resendFailedIPN` - resendFailedIPN
-* `subscribeAddress` - subscribeAddress
-* `unsubscribeAddress` - unsubscribeAddress
+* [listFailedIPNs](docs/subscriptionipnrequests/README.md#listfailedipns) - listFailedIPNs
+* [listSubscribedAddresses](docs/subscriptionipnrequests/README.md#listsubscribedaddresses) - listSubscribedAddresses
+* [resendFailedIPN](docs/subscriptionipnrequests/README.md#resendfailedipn) - resendFailedIPN
+* [subscribeAddress](docs/subscriptionipnrequests/README.md#subscribeaddress) - subscribeAddress
+* [unsubscribeAddress](docs/subscriptionipnrequests/README.md#unsubscribeaddress) - unsubscribeAddress
 
-### transactionRequests
+### [transactionRequests](docs/transactionrequests/README.md)
 
-* `clearAddress` - clearAddress
-* `sendEthereum` - sendEthereum
-* `sendToken` - sendToken
+* [clearAddress](docs/transactionrequests/README.md#clearaddress) - clearAddress
+* [sendEthereum](docs/transactionrequests/README.md#sendethereum) - sendEthereum
+* [sendToken](docs/transactionrequests/README.md#sendtoken) - sendToken
 <!-- End SDK Available Operations -->
 
 ### Maturity

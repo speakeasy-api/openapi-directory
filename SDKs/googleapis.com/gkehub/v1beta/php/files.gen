@@ -25,6 +25,12 @@ src/Models/Operations/GkehubProjectsLocationsFeaturesCreateResponse.php
 src/Models/Operations/GkehubProjectsLocationsFeaturesListSecurity.php
 src/Models/Operations/GkehubProjectsLocationsFeaturesListRequest.php
 src/Models/Operations/GkehubProjectsLocationsFeaturesListResponse.php
+src/Models/Operations/GkehubProjectsLocationsFleetsCreateSecurity.php
+src/Models/Operations/GkehubProjectsLocationsFleetsCreateRequest.php
+src/Models/Operations/GkehubProjectsLocationsFleetsCreateResponse.php
+src/Models/Operations/GkehubProjectsLocationsFleetsListSecurity.php
+src/Models/Operations/GkehubProjectsLocationsFleetsListRequest.php
+src/Models/Operations/GkehubProjectsLocationsFleetsListResponse.php
 src/Models/Operations/GkehubProjectsLocationsListSecurity.php
 src/Models/Operations/GkehubProjectsLocationsListRequest.php
 src/Models/Operations/GkehubProjectsLocationsListResponse.php
@@ -90,6 +96,10 @@ src/Models/Shared/Status.php
 src/Models/Shared/CommonFeatureSpec.php
 src/Models/Shared/MultiClusterIngressFeatureSpecBillingEnum.php
 src/Models/Shared/MultiClusterIngressFeatureSpec.php
+src/Models/Shared/FleetObservabilityFeatureSpec.php
+src/Models/Shared/FleetObservabilityLoggingConfig.php
+src/Models/Shared/FleetObservabilityRoutingConfigModeEnum.php
+src/Models/Shared/FleetObservabilityRoutingConfig.php
 src/Models/Shared/AnthosObservabilityFeatureSpec.php
 src/Models/Shared/AnthosObservabilityMembershipSpec.php
 src/Models/Shared/FeatureResourceStateStateEnum.php
@@ -129,6 +139,7 @@ src/Models/Shared/ConfigManagementPolicyControllerMonitoring.php
 src/Models/Shared/ConfigManagementHierarchyControllerConfig.php
 src/Models/Shared/ConfigManagementConfigSync.php
 src/Models/Shared/ConfigManagementOciConfig.php
+src/Models/Shared/ConfigManagementManaged.php
 src/Models/Shared/ConfigManagementGitConfig.php
 src/Models/Shared/ConfigManagementBinauthzConfig.php
 src/Models/Shared/MembershipSpecSecurityPolicyEnum.php
@@ -188,6 +199,11 @@ src/Models/Shared/ConfigManagementConfigSyncDeploymentState.php
 src/Models/Shared/ConfigManagementBinauthzStateWebhookEnum.php
 src/Models/Shared/ConfigManagementBinauthzState.php
 src/Models/Shared/ConfigManagementBinauthzVersion.php
+src/Models/Shared/Fleet.php
+src/Models/Shared/FleetInput.php
+src/Models/Shared/ListFleetsResponse.php
+src/Models/Shared/FleetLifecycleStateCodeEnum.php
+src/Models/Shared/FleetLifecycleState.php
 src/Models/Shared/ListLocationsResponse.php
 src/Models/Shared/Location.php
 src/Models/Shared/MembershipBinding.php
@@ -222,4 +238,6 @@ src/Models/Shared/Scope.php
 src/Models/Shared/ScopeLifecycleStateCodeEnum.php
 src/Models/Shared/ScopeLifecycleState.php
 src/Models/Shared/ListScopesResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

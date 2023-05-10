@@ -487,4 +487,5 @@ src/Models/Shared/UpdateFindingsFilterResponse.php
 src/Models/Shared/SuppressDataIdentifier.php
 src/Models/Shared/UpdateRevealConfigurationResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

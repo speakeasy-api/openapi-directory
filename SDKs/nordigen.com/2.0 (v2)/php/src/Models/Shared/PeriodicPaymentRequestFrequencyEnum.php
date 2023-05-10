@@ -9,6 +9,18 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Shared;
 
 
+/**
+ * * `Daily` - Daily
+ * 
+ * * `Weekly` - Weekly
+ * * `EveryTwoWeeks` - EveryTwoWeeks
+ * * `Monthly` - Monthly
+ * * `EveryTwoMonths` - EveryTwoMonths
+ * * `Quarterly` - Quarterly
+ * * `SemiAnnual` - SemiAnnual
+ * * `Annual` - Annual
+ * * `MonthlyVariable` - MonthlyVariable
+ */
 enum PeriodicPaymentRequestFrequencyEnum: string
 {
     case DAILY = 'Daily';

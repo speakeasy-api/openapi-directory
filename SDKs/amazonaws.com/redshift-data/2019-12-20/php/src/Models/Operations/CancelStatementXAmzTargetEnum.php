@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CancelStatementXAmzTargetEnum: string
 {
     case REDSHIFT_DATA_CANCEL_STATEMENT = 'RedshiftData.CancelStatement';

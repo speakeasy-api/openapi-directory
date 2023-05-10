@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateTaskExecutionXAmzTargetEnum: string
 {
     case FMRS_SERVICE_UPDATE_TASK_EXECUTION = 'FmrsService.UpdateTaskExecution';

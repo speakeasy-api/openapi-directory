@@ -82,4 +82,8 @@ src/Models/Shared/GdataDiffChecksumsResponse.php
 src/Models/Shared/GdataContentTypeInfo.php
 src/Models/Shared/ListReportTypesResponse.php
 src/Models/Shared/ReportType.php
+docs/sdk/README.md
+docs/jobs/README.md
+docs/media/README.md
+docs/reporttypes/README.md
 USAGE.md

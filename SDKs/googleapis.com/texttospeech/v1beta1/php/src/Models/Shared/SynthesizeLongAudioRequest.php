@@ -38,7 +38,7 @@ class SynthesizeLongAudioRequest
     public ?SynthesisInput $input = null;
     
     /**
-     * Specifies a Cloud Storage URI for the synthesis results. Must be specified in the format: `gs://bucket_name/object_name`, and the bucket must already exist.
+     * Required. Specifies a Cloud Storage URI for the synthesis results. Must be specified in the format: `gs://bucket_name/object_name`, and the bucket must already exist.
      * 
      * @var ?string $outputGcsUri
      */

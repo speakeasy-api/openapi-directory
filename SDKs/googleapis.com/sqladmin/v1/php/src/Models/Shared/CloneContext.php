@@ -87,6 +87,16 @@ class CloneContext
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $pointInTime = null;
     
+    /**
+     * (Point-in-time recovery for PostgreSQL only) Clone to an instance in the specified zone. If no zone is specified, clone to the same zone as the source instance.
+     * 
+     * @var ?string $preferredZone
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('preferredZone')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $preferredZone = null;
+    
 	public function __construct()
 	{
 		$this->allocatedIpRange = null;
@@ -96,5 +106,6 @@ class CloneContext
 		$this->kind = null;
 		$this->pitrTimestampMs = null;
 		$this->pointInTime = null;
+		$this->preferredZone = null;
 	}
 }

@@ -28,7 +28,7 @@ class GetUsersRequest
     public ?array $filter = null;
     
     /**
-     * If set, return records where the specified field is greater than the supplied value. Valid fields are `username`, `email`, `company`, `site_admin`, `password_validity_days`, `ssl_required`, `last_login_at`, `authenticate_until` or `not_site_admin`. Valid field combinations are `[ not_site_admin, username ]`.
+     * If set, return records where the specified field is greater than the supplied value. Valid fields are `password_validity_days`, `last_login_at` or `authenticate_until`.
      * 
      * @var ?array<string, mixed> $filterGt
      */
@@ -36,7 +36,7 @@ class GetUsersRequest
     public ?array $filterGt = null;
     
     /**
-     * If set, return records where the specified field is greater than or equal to the supplied value. Valid fields are `username`, `email`, `company`, `site_admin`, `password_validity_days`, `ssl_required`, `last_login_at`, `authenticate_until` or `not_site_admin`. Valid field combinations are `[ not_site_admin, username ]`.
+     * If set, return records where the specified field is greater than or equal the supplied value. Valid fields are `password_validity_days`, `last_login_at` or `authenticate_until`.
      * 
      * @var ?array<string, mixed> $filterGteq
      */
@@ -44,15 +44,7 @@ class GetUsersRequest
     public ?array $filterGteq = null;
     
     /**
-     * If set, return records where the specified field is equal to the supplied value. Valid fields are `username`, `email`, `company`, `site_admin`, `password_validity_days`, `ssl_required`, `last_login_at`, `authenticate_until` or `not_site_admin`. Valid field combinations are `[ not_site_admin, username ]`.
-     * 
-     * @var ?array<string, mixed> $filterLike
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_like')]
-    public ?array $filterLike = null;
-    
-    /**
-     * If set, return records where the specified field is less than the supplied value. Valid fields are `username`, `email`, `company`, `site_admin`, `password_validity_days`, `ssl_required`, `last_login_at`, `authenticate_until` or `not_site_admin`. Valid field combinations are `[ not_site_admin, username ]`.
+     * If set, return records where the specified field is less than the supplied value. Valid fields are `password_validity_days`, `last_login_at` or `authenticate_until`.
      * 
      * @var ?array<string, mixed> $filterLt
      */
@@ -60,12 +52,20 @@ class GetUsersRequest
     public ?array $filterLt = null;
     
     /**
-     * If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `username`, `email`, `company`, `site_admin`, `password_validity_days`, `ssl_required`, `last_login_at`, `authenticate_until` or `not_site_admin`. Valid field combinations are `[ not_site_admin, username ]`.
+     * If set, return records where the specified field is less than or equal the supplied value. Valid fields are `password_validity_days`, `last_login_at` or `authenticate_until`.
      * 
      * @var ?array<string, mixed> $filterLteq
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_lteq')]
     public ?array $filterLteq = null;
+    
+    /**
+     * If set, return records where the specified field is prefixed by the supplied value. Valid fields are `username`, `email` or `company`.
+     * 
+     * @var ?array<string, mixed> $filterPrefix
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_prefix')]
+    public ?array $filterPrefix = null;
     
     /**
      * comma-separated list of User IDs
@@ -161,9 +161,9 @@ class GetUsersRequest
 		$this->filter = null;
 		$this->filterGt = null;
 		$this->filterGteq = null;
-		$this->filterLike = null;
 		$this->filterLt = null;
 		$this->filterLteq = null;
+		$this->filterPrefix = null;
 		$this->ids = null;
 		$this->perPage = null;
 		$this->qAdmin = null;

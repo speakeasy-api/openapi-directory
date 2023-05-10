@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeLocationFsxOpenZfsXAmzTargetEnum: string
 {
     case FMRS_SERVICE_DESCRIBE_LOCATION_FSX_OPEN_ZFS = 'FmrsService.DescribeLocationFsxOpenZfs';

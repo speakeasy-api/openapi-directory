@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeConnectClientAddInsXAmzTargetEnum: string
 {
     case WORKSPACES_SERVICE_DESCRIBE_CONNECT_CLIENT_ADD_INS = 'WorkspacesService.DescribeConnectClientAddIns';

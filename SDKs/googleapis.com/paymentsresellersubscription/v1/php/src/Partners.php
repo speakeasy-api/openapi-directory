@@ -256,7 +256,7 @@ class Partners
     }
 	
     /**
-     * [Deprecated] New partners should be on auto-extend by default. Used by partners to extend a subscription service for their customers on an ongoing basis for the subscription to remain active and renewable. It should be called directly by the partner using service accounts.
+     * [Opt-in only] Most partners should be on auto-extend by default. Used by partners to extend a subscription service for their customers on an ongoing basis for the subscription to remain active and renewable. It should be called directly by the partner using service accounts.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\PaymentsresellersubscriptionPartnersSubscriptionsExtendResponse

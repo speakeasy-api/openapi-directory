@@ -85,4 +85,7 @@ src/Models/Shared/Rate.php
 src/Models/Shared/SummaryResponse.php
 src/Models/Shared/Summary.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/currencies/README.md
+docs/metals/README.md
 USAGE.md

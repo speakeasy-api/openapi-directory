@@ -54,6 +54,9 @@ src/Models/Operations/DisassociateThirdPartyFirewallResponse.php
 src/Models/Operations/GetAdminAccountXAmzTargetEnum.php
 src/Models/Operations/GetAdminAccountRequest.php
 src/Models/Operations/GetAdminAccountResponse.php
+src/Models/Operations/GetAdminScopeXAmzTargetEnum.php
+src/Models/Operations/GetAdminScopeRequest.php
+src/Models/Operations/GetAdminScopeResponse.php
 src/Models/Operations/GetAppsListXAmzTargetEnum.php
 src/Models/Operations/GetAppsListRequest.php
 src/Models/Operations/GetAppsListResponse.php
@@ -81,6 +84,12 @@ src/Models/Operations/GetThirdPartyFirewallAssociationStatusResponse.php
 src/Models/Operations/GetViolationDetailsXAmzTargetEnum.php
 src/Models/Operations/GetViolationDetailsRequest.php
 src/Models/Operations/GetViolationDetailsResponse.php
+src/Models/Operations/ListAdminAccountsForOrganizationXAmzTargetEnum.php
+src/Models/Operations/ListAdminAccountsForOrganizationRequest.php
+src/Models/Operations/ListAdminAccountsForOrganizationResponse.php
+src/Models/Operations/ListAdminsManagingAccountXAmzTargetEnum.php
+src/Models/Operations/ListAdminsManagingAccountRequest.php
+src/Models/Operations/ListAdminsManagingAccountResponse.php
 src/Models/Operations/ListAppsListsXAmzTargetEnum.php
 src/Models/Operations/ListAppsListsRequest.php
 src/Models/Operations/ListAppsListsResponse.php
@@ -111,6 +120,9 @@ src/Models/Operations/ListTagsForResourceResponse.php
 src/Models/Operations/ListThirdPartyFirewallFirewallPoliciesXAmzTargetEnum.php
 src/Models/Operations/ListThirdPartyFirewallFirewallPoliciesRequest.php
 src/Models/Operations/ListThirdPartyFirewallFirewallPoliciesResponse.php
+src/Models/Operations/PutAdminAccountXAmzTargetEnum.php
+src/Models/Operations/PutAdminAccountRequest.php
+src/Models/Operations/PutAdminAccountResponse.php
 src/Models/Operations/PutAppsListXAmzTargetEnum.php
 src/Models/Operations/PutAppsListRequest.php
 src/Models/Operations/PutAppsListResponse.php
@@ -151,6 +163,15 @@ src/Models/Shared/DisassociateThirdPartyFirewallResponse.php
 src/Models/Shared/DisassociateThirdPartyFirewallRequest.php
 src/Models/Shared/GetAdminAccountResponse.php
 src/Models/Shared/AccountRoleStatusEnum.php
+src/Models/Shared/GetAdminScopeResponse.php
+src/Models/Shared/OrganizationStatusEnum.php
+src/Models/Shared/AdminScope.php
+src/Models/Shared/RegionScope.php
+src/Models/Shared/PolicyTypeScope.php
+src/Models/Shared/SecurityServiceTypeEnum.php
+src/Models/Shared/OrganizationalUnitScope.php
+src/Models/Shared/AccountScope.php
+src/Models/Shared/GetAdminScopeRequest.php
 src/Models/Shared/GetAppsListResponse.php
 src/Models/Shared/AppsListData.php
 src/Models/Shared/App.php
@@ -164,12 +185,12 @@ src/Models/Shared/GetNotificationChannelResponse.php
 src/Models/Shared/GetPolicyResponse.php
 src/Models/Shared/Policy.php
 src/Models/Shared/SecurityServicePolicyData.php
-src/Models/Shared/SecurityServiceTypeEnum.php
 src/Models/Shared/PolicyOption.php
 src/Models/Shared/ThirdPartyFirewallPolicy.php
 src/Models/Shared/FirewallDeploymentModelEnum.php
 src/Models/Shared/NetworkFirewallPolicy.php
 src/Models/Shared/ResourceTag.php
+src/Models/Shared/CustomerPolicyStatusEnum.php
 src/Models/Shared/GetPolicyRequest.php
 src/Models/Shared/GetProtectionStatusResponse.php
 src/Models/Shared/GetProtectionStatusRequest.php
@@ -178,6 +199,7 @@ src/Models/Shared/ProtocolsListData.php
 src/Models/Shared/GetProtocolsListRequest.php
 src/Models/Shared/GetResourceSetResponse.php
 src/Models/Shared/ResourceSet.php
+src/Models/Shared/ResourceSetStatusEnum.php
 src/Models/Shared/GetResourceSetRequest.php
 src/Models/Shared/GetThirdPartyFirewallAssociationStatusResponse.php
 src/Models/Shared/MarketplaceSubscriptionOnboardingStatusEnum.php
@@ -237,6 +259,11 @@ src/Models/Shared/AwsEc2NetworkInterfaceViolation.php
 src/Models/Shared/AwsEc2InstanceViolation.php
 src/Models/Shared/Tag.php
 src/Models/Shared/GetViolationDetailsRequest.php
+src/Models/Shared/ListAdminAccountsForOrganizationResponse.php
+src/Models/Shared/AdminAccountSummary.php
+src/Models/Shared/ListAdminAccountsForOrganizationRequest.php
+src/Models/Shared/ListAdminsManagingAccountResponse.php
+src/Models/Shared/ListAdminsManagingAccountRequest.php
 src/Models/Shared/ListAppsListsResponse.php
 src/Models/Shared/AppsListDataSummary.php
 src/Models/Shared/ListAppsListsRequest.php
@@ -267,6 +294,7 @@ src/Models/Shared/ListTagsForResourceRequest.php
 src/Models/Shared/ListThirdPartyFirewallFirewallPoliciesResponse.php
 src/Models/Shared/ThirdPartyFirewallFirewallPolicy.php
 src/Models/Shared/ListThirdPartyFirewallFirewallPoliciesRequest.php
+src/Models/Shared/PutAdminAccountRequest.php
 src/Models/Shared/PutAppsListResponse.php
 src/Models/Shared/PutAppsListRequest.php
 src/Models/Shared/PutNotificationChannelRequest.php
@@ -279,4 +307,5 @@ src/Models/Shared/PutResourceSetRequest.php
 src/Models/Shared/TagResourceRequest.php
 src/Models/Shared/UntagResourceRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

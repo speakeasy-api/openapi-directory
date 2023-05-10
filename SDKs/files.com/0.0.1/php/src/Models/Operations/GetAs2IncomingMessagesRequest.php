@@ -44,20 +44,12 @@ class GetAs2IncomingMessagesRequest
     public ?array $filterGt = null;
     
     /**
-     * If set, return records where the specified field is greater than or equal to the supplied value. Valid fields are `created_at`.
+     * If set, return records where the specified field is greater than or equal the supplied value. Valid fields are `created_at`.
      * 
      * @var ?array<string, mixed> $filterGteq
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_gteq')]
     public ?array $filterGteq = null;
-    
-    /**
-     * If set, return records where the specified field is equal to the supplied value. Valid fields are `created_at`.
-     * 
-     * @var ?array<string, mixed> $filterLike
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_like')]
-    public ?array $filterLike = null;
     
     /**
      * If set, return records where the specified field is less than the supplied value. Valid fields are `created_at`.
@@ -68,7 +60,7 @@ class GetAs2IncomingMessagesRequest
     public ?array $filterLt = null;
     
     /**
-     * If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `created_at`.
+     * If set, return records where the specified field is less than or equal the supplied value. Valid fields are `created_at`.
      * 
      * @var ?array<string, mixed> $filterLteq
      */
@@ -98,7 +90,6 @@ class GetAs2IncomingMessagesRequest
 		$this->filter = null;
 		$this->filterGt = null;
 		$this->filterGteq = null;
-		$this->filterLike = null;
 		$this->filterLt = null;
 		$this->filterLteq = null;
 		$this->perPage = null;

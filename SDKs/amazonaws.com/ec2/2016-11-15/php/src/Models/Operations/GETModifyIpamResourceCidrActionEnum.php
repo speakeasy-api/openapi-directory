@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETModifyIpamResourceCidrActionEnum: string
 {
     case MODIFY_IPAM_RESOURCE_CIDR = 'ModifyIpamResourceCidr';

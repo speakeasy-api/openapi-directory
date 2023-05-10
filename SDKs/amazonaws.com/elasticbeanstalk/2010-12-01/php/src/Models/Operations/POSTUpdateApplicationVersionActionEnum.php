@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTUpdateApplicationVersionActionEnum: string
 {
     case UPDATE_APPLICATION_VERSION = 'UpdateApplicationVersion';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteEntityRecognizerXAmzTargetEnum: string
 {
     case COMPREHEND20171127_DELETE_ENTITY_RECOGNIZER = 'Comprehend_20171127.DeleteEntityRecognizer';

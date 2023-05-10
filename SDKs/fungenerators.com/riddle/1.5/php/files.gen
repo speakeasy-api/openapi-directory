@@ -38,4 +38,7 @@ src/Models/Operations/GetRiddleRandomResponse.php
 src/Models/Operations/GetRiddleSearchSecurity.php
 src/Models/Operations/GetRiddleSearchRequest.php
 src/Models/Operations/GetRiddleSearchResponse.php
+docs/sdk/README.md
+docs/privateriddles/README.md
+docs/randomriddle/README.md
 USAGE.md

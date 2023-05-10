@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTResyncMFADeviceActionEnum: string
 {
     case RESYNC_MFA_DEVICE = 'ResyncMFADevice';

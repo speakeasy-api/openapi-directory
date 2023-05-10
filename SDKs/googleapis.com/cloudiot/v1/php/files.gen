@@ -141,4 +141,6 @@ src/Models/Shared/TestIamPermissionsResponse.php
 src/Models/Shared/TestIamPermissionsRequest.php
 src/Models/Shared/ListDeviceRegistriesResponse.php
 src/Models/Shared/UnbindDeviceFromGatewayRequest.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListActivitiesXAmzTargetEnum: string
 {
     case AWS_STEP_FUNCTIONS_LIST_ACTIVITIES = 'AWSStepFunctions.ListActivities';

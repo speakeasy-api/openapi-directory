@@ -12,7 +12,6 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 /** Show videos with the specified aspect ratio */
 enum SearchVideosAspectRatioEnum: string
 {
-    case FOUR3 = '4_3';
-    case SIXTEEN9 = '16_9';
+    case ZERO = '0';
     case NONSTANDARD = 'nonstandard';
 }

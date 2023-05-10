@@ -38,7 +38,7 @@ class AnnotateTextRequest
     public ?AnnotateTextRequestEncodingTypeEnum $encodingType = null;
     
     /**
-     * All available features for sentiment, syntax, and semantic analysis. Setting each one to true will enable that specific analysis for the input. Next ID: 11
+     * All available features for sentiment, syntax, and semantic analysis. Setting each one to true will enable that specific analysis for the input. Next ID: 12
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\Features $features
      */

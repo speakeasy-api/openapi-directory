@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * Geometry - <p/>
+ * Geometry - The structure representing a Geometry in terms of Type and Coordinates as per GeoJson spec.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

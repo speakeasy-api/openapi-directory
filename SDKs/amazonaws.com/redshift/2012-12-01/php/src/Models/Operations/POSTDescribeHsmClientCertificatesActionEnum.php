@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeHsmClientCertificatesActionEnum: string
 {
     case DESCRIBE_HSM_CLIENT_CERTIFICATES = 'DescribeHsmClientCertificates';

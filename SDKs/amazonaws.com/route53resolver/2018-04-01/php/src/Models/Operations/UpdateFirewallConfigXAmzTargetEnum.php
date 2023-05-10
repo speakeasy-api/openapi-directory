@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateFirewallConfigXAmzTargetEnum: string
 {
     case ROUTE53_RESOLVER_UPDATE_FIREWALL_CONFIG = 'Route53Resolver.UpdateFirewallConfig';

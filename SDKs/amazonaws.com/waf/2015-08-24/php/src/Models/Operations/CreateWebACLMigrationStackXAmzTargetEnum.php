@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateWebACLMigrationStackXAmzTargetEnum: string
 {
     case AWSWAF20150824_CREATE_WEB_ACL_MIGRATION_STACK = 'AWSWAF_20150824.CreateWebACLMigrationStack';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETModifyPrivateDnsNameOptionsActionEnum: string
 {
     case MODIFY_PRIVATE_DNS_NAME_OPTIONS = 'ModifyPrivateDnsNameOptions';

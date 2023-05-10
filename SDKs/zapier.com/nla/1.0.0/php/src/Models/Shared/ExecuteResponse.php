@@ -27,6 +27,25 @@ class ExecuteResponse
     public string $actionUsed;
     
     /**
+     * The rest of the full results. Always returns an array of objects
+     * 
+     * @var array<array<string, mixed>> $additionalResults
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('additional_results')]
+    #[\JMS\Serializer\Annotation\Type('array<array<string, mixed>>')]
+    public array $additionalResults;
+    
+    /**
+     * A hint for the assistant on what to do next.
+     * 
+     * @var ?string $assistantHint
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('assistant_hint')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $assistantHint = null;
+    
+    /**
      * The error message if the execution failed.
      * 
      * @var ?string $error
@@ -65,6 +84,16 @@ class ExecuteResponse
     public ?array $result = null;
     
     /**
+     * Human readable labels for some of the keys in the result.
+     * 
+     * @var ?array<string, mixed> $resultFieldLabels
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('result_field_labels')]
+    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $resultFieldLabels = null;
+    
+    /**
      * The URL to run the action or review the AI choices the AI made for input_params given instructions.
      * 
      * @var string $reviewUrl
@@ -86,10 +115,13 @@ class ExecuteResponse
 	public function __construct()
 	{
 		$this->actionUsed = "";
+		$this->additionalResults = [];
+		$this->assistantHint = null;
 		$this->error = null;
 		$this->id = "";
 		$this->inputParams = [];
 		$this->result = null;
+		$this->resultFieldLabels = null;
 		$this->reviewUrl = "";
 		$this->status = null;
 	}

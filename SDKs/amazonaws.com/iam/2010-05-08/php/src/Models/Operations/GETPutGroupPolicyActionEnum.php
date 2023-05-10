@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETPutGroupPolicyActionEnum: string
 {
     case PUT_GROUP_POLICY = 'PutGroupPolicy';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteApplicationCloudWatchLoggingOptionXAmzTargetEnum: string
 {
     case KINESIS_ANALYTICS20180523_DELETE_APPLICATION_CLOUD_WATCH_LOGGING_OPTION = 'KinesisAnalytics_20180523.DeleteApplicationCloudWatchLoggingOption';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopEdgePackagingJobXAmzTargetEnum: string
 {
     case SAGE_MAKER_STOP_EDGE_PACKAGING_JOB = 'SageMaker.StopEdgePackagingJob';

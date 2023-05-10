@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateContainerXAmzTargetEnum: string
 {
     case MEDIA_STORE20170901_CREATE_CONTAINER = 'MediaStore_20170901.CreateContainer';

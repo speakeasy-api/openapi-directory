@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeAttackXAmzTargetEnum: string
 {
     case AWS_SHIELD20160616_DESCRIBE_ATTACK = 'AWSShield_20160616.DescribeAttack';

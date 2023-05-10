@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListCustomEntityTypesXAmzTargetEnum: string
 {
     case AWS_GLUE_LIST_CUSTOM_ENTITY_TYPES = 'AWSGlue.ListCustomEntityTypes';

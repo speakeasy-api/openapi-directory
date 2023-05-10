@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteGameServerGroupXAmzTargetEnum: string
 {
     case GAME_LIFT_DELETE_GAME_SERVER_GROUP = 'GameLift.DeleteGameServerGroup';

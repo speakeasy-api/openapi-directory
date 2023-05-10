@@ -39,6 +39,14 @@ class StartDocumentClassificationJobResponse
     public mixed $kmsKeyValidationException = null;
     
     /**
+     * ResourceInUseException
+     * 
+     * @var mixed $resourceInUseException
+     */
+	
+    public mixed $resourceInUseException = null;
+    
+    /**
      * ResourceNotFoundException
      * 
      * @var mixed $resourceNotFoundException
@@ -90,6 +98,7 @@ class StartDocumentClassificationJobResponse
 		$this->internalServerException = null;
 		$this->invalidRequestException = null;
 		$this->kmsKeyValidationException = null;
+		$this->resourceInUseException = null;
 		$this->resourceNotFoundException = null;
 		$this->resourceUnavailableException = null;
 		$this->startDocumentClassificationJobResponse = null;

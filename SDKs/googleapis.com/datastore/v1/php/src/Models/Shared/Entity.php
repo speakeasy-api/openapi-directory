@@ -28,7 +28,7 @@ class Entity
     public ?Key $key = null;
     
     /**
-     * The entity's properties. The map's keys are property names. A property name matching regex `__.*__` is reserved. A reserved property name is forbidden in certain documented contexts. The name must not contain more than 500 characters. The name cannot be `""`.
+     * The entity's properties. The map's keys are property names. A property name matching regex `__.*__` is reserved. A reserved property name is forbidden in certain documented contexts. The map keys, represented as UTF-8, must not exceed 1,500 bytes and cannot be empty.
      * 
      * @var ?array<string, \OpenAPI\OpenAPI\Models\Shared\Value> $properties
      */

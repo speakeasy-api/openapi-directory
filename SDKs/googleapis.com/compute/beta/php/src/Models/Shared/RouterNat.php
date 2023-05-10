@@ -18,6 +18,16 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class RouterNat
 {
     /**
+     * The network tier to use when automatically reserving IP addresses. Must be one of: PREMIUM, STANDARD. If not specified, PREMIUM tier will be used.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\RouterNatAutoNetworkTierEnum $autoNetworkTier
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('autoNetworkTier')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\RouterNatAutoNetworkTierEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?RouterNatAutoNetworkTierEnum $autoNetworkTier = null;
+    
+    /**
      * A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT only.
      * 
      * @var ?array<string> $drainNatIps
@@ -194,6 +204,7 @@ class RouterNat
     
 	public function __construct()
 	{
+		$this->autoNetworkTier = null;
 		$this->drainNatIps = null;
 		$this->enableDynamicPortAllocation = null;
 		$this->enableEndpointIndependentMapping = null;

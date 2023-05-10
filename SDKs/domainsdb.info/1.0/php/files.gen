@@ -55,4 +55,7 @@ src/Models/Shared/ZoneInfo.php
 src/Models/Shared/APIKeyInfo.php
 src/Models/Shared/ZoneStats.php
 src/Models/Shared/ZoneStatistics.php
+docs/sdk/README.md
+docs/domains/README.md
+docs/info/README.md
 USAGE.md

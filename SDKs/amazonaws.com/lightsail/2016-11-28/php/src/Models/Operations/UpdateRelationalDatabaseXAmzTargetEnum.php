@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateRelationalDatabaseXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_UPDATE_RELATIONAL_DATABASE = 'Lightsail_20161128.UpdateRelationalDatabase';

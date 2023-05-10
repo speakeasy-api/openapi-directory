@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateClientVpnEndpointActionEnum: string
 {
     case CREATE_CLIENT_VPN_ENDPOINT = 'CreateClientVpnEndpoint';

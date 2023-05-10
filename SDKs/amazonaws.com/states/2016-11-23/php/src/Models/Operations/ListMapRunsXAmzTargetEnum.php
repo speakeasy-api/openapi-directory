@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListMapRunsXAmzTargetEnum: string
 {
     case AWS_STEP_FUNCTIONS_LIST_MAP_RUNS = 'AWSStepFunctions.ListMapRuns';

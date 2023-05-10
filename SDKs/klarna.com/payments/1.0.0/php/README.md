@@ -30,24 +30,48 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\CancelAuthorizationRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new CancelAuthorizationRequest();
+    $request->authorizationToken = 'corrupti';
+
+    $response = $sdk->orders->cancelAuthorization($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### orders
+### [orders](docs/orders/README.md)
 
-* `cancelAuthorization` - Cancel an existing authorization
-* `createOrder` - Create a new order
-* `purchaseToken` - Generate a consumer token
+* [cancelAuthorization](docs/orders/README.md#cancelauthorization) - Cancel an existing authorization
+* [createOrder](docs/orders/README.md#createorder) - Create a new order
+* [purchaseToken](docs/orders/README.md#purchasetoken) - Generate a consumer token
 
-### sessions
+### [sessions](docs/sessions/README.md)
 
-* `createCreditSession` - Create a new payment session
-* `readCreditSession` - Read an existing payment session
-* `updateCreditSession` - Update an existing payment session
+* [createCreditSession](docs/sessions/README.md#createcreditsession) - Create a new payment session
+* [readCreditSession](docs/sessions/README.md#readcreditsession) - Read an existing payment session
+* [updateCreditSession](docs/sessions/README.md#updatecreditsession) - Update an existing payment session
 <!-- End SDK Available Operations -->
 
 ### Maturity

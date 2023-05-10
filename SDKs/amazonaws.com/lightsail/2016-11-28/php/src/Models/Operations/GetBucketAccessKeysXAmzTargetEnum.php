@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetBucketAccessKeysXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_GET_BUCKET_ACCESS_KEYS = 'Lightsail_20161128.GetBucketAccessKeys';

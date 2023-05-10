@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListGroupsOlderThanOrderingIdXAmzTargetEnum: string
 {
     case AWS_KENDRA_FRONTEND_SERVICE_LIST_GROUPS_OLDER_THAN_ORDERING_ID = 'AWSKendraFrontendService.ListGroupsOlderThanOrderingId';

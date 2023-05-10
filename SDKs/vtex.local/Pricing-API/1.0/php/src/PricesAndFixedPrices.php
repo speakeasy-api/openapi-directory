@@ -193,7 +193,7 @@ class PricesAndFixedPrices
      */
 	public function getComputedPricebypricetable(
         \OpenAPI\OpenAPI\Models\Operations\GetComputedPricebypricetableRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\GetComputedPricebypricetableResponse
     {
         $baseUrl = PricesAndFixedPrices::GET_COMPUTED_PRICEBYPRICETABLE_SERVERS[0];

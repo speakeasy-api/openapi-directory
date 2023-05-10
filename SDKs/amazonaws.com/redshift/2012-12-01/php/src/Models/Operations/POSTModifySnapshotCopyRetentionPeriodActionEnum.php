@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTModifySnapshotCopyRetentionPeriodActionEnum: string
 {
     case MODIFY_SNAPSHOT_COPY_RETENTION_PERIOD = 'ModifySnapshotCopyRetentionPeriod';

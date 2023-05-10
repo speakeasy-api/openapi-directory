@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetSagemakerServicecatalogPortfolioStatusXAmzTargetEnum: string
 {
     case SAGE_MAKER_GET_SAGEMAKER_SERVICECATALOG_PORTFOLIO_STATUS = 'SageMaker.GetSagemakerServicecatalogPortfolioStatus';

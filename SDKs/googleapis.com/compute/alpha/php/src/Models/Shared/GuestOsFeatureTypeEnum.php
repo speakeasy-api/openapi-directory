@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Shared;
 
 
-/** The ID of a supported feature. To add multiple values, use commas to separate values. Set to one or more of the following values: - VIRTIO_SCSI_MULTIQUEUE - WINDOWS - MULTI_IP_SUBNET - UEFI_COMPATIBLE - GVNIC - SEV_CAPABLE - SUSPEND_RESUME_COMPATIBLE - SEV_SNP_CAPABLE - TDX_CAPABLE For more information, see Enabling guest operating system features. */
+/** The ID of a supported feature. To add multiple values, use commas to separate values. Set to one or more of the following values: - VIRTIO_SCSI_MULTIQUEUE - WINDOWS - MULTI_IP_SUBNET - UEFI_COMPATIBLE - GVNIC - SEV_CAPABLE - SUSPEND_RESUME_COMPATIBLE - SEV_LIVE_MIGRATABLE - SEV_SNP_CAPABLE - TDX_CAPABLE For more information, see Enabling guest operating system features. */
 enum GuestOsFeatureTypeEnum: string
 {
     case BARE_METAL_LINUX_COMPATIBLE = 'BARE_METAL_LINUX_COMPATIBLE';
@@ -20,6 +20,7 @@ enum GuestOsFeatureTypeEnum: string
     case SEV_CAPABLE = 'SEV_CAPABLE';
     case SEV_LIVE_MIGRATABLE = 'SEV_LIVE_MIGRATABLE';
     case SEV_SNP_CAPABLE = 'SEV_SNP_CAPABLE';
+    case TDX_CAPABLE = 'TDX_CAPABLE';
     case UEFI_COMPATIBLE = 'UEFI_COMPATIBLE';
     case VIRTIO_SCSI_MULTIQUEUE = 'VIRTIO_SCSI_MULTIQUEUE';
     case WINDOWS = 'WINDOWS';

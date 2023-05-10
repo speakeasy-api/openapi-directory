@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutItemXAmzTargetEnum: string
 {
     case DYNAMO_DB20111205_PUT_ITEM = 'DynamoDB_20111205.PutItem';

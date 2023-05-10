@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETModifyGlobalClusterActionEnum: string
 {
     case MODIFY_GLOBAL_CLUSTER = 'ModifyGlobalCluster';

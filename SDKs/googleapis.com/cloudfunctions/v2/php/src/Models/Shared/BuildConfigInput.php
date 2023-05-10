@@ -18,17 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class BuildConfigInput
 {
     /**
-     * Specifies one of the Google provided buildpack stacks.
-     * 
-     * @var ?string $buildpackStack
-     */
-	#[\JMS\Serializer\Annotation\SerializedName('buildpackStack')]
-    #[\JMS\Serializer\Annotation\Type('string')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?string $buildpackStack = null;
-    
-    /**
-     * Optional. Docker Registry to use for this deployment. This configuration is only applicable to 1st Gen functions, 2nd Gen functions can only use Artifact Registry. If `docker_repository` field is specified, this field will be automatically set as `ARTIFACT_REGISTRY`. If unspecified, it currently defaults to `CONTAINER_REGISTRY`. This field may be overridden by the backend for eligible deployments.
+     * Docker Registry to use for this deployment. This configuration is only applicable to 1st Gen functions, 2nd Gen functions can only use Artifact Registry. If `docker_repository` field is specified, this field will be automatically set as `ARTIFACT_REGISTRY`. If unspecified, it currently defaults to `CONTAINER_REGISTRY`. This field may be overridden by the backend for eligible deployments.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\BuildConfigDockerRegistryEnum $dockerRegistry
      */
@@ -109,7 +99,6 @@ class BuildConfigInput
     
 	public function __construct()
 	{
-		$this->buildpackStack = null;
 		$this->dockerRegistry = null;
 		$this->dockerRepository = null;
 		$this->entryPoint = null;

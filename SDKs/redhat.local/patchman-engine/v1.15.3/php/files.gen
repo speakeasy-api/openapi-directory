@@ -121,4 +121,5 @@ src/Models/Shared/ModelsPackageUpdate.php
 src/Models/Shared/ControllersAdvisoriesSystemsResponse.php
 src/Models/Shared/ControllersSystemsAdvisoriesRequest.php
 src/Models/Shared/ControllersSystemsAdvisoriesResponse.php
+docs/sdk/README.md
 USAGE.md

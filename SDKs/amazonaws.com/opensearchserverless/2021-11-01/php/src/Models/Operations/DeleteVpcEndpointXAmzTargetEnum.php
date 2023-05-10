@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteVpcEndpointXAmzTargetEnum: string
 {
     case OPEN_SEARCH_SERVERLESS_DELETE_VPC_ENDPOINT = 'OpenSearchServerless.DeleteVpcEndpoint';

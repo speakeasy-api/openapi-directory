@@ -30,90 +30,133 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\AddOrUpdateAdditionalRatesRequest;
+use \OpenAPI\OpenAPI\Models\Shared\AdditionalRate;
+use \OpenAPI\OpenAPI\Models\Operations\AddOrUpdateAdditionalRatesSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new AddOrUpdateAdditionalRatesRequest();
+    $request->additionalRate = new AdditionalRate();
+    $request->additionalRate->changeReason = 'corrupti';
+    $request->additionalRate->costCenter1 = 'provident';
+    $request->additionalRate->costCenter2 = 'distinctio';
+    $request->additionalRate->costCenter3 = 'quibusdam';
+    $request->additionalRate->effectiveDate = 'unde';
+    $request->additionalRate->endCheckDate = 'nulla';
+    $request->additionalRate->job = 'corrupti';
+    $request->additionalRate->rate = 8472.52;
+    $request->additionalRate->rateCode = 'vel';
+    $request->additionalRate->rateNotes = 'error';
+    $request->additionalRate->ratePer = 'deserunt';
+    $request->additionalRate->shift = 'suscipit';
+    $request->companyId = 'iure';
+    $request->employeeId = 'magnam';
+
+    $requestSecurity = new AddOrUpdateAdditionalRatesSecurity();
+    $requestSecurity->paylocityAuth = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+
+    $response = $sdk->additionalRates->addOrUpdateAdditionalRates($request, $requestSecurity);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### additionalRates
+### [additionalRates](docs/additionalrates/README.md)
 
-* `addOrUpdateAdditionalRates` - Add/update additional rates
+* [addOrUpdateAdditionalRates](docs/additionalrates/README.md#addorupdateadditionalrates) - Add/update additional rates
 
-### clientCredentials
+### [clientCredentials](docs/clientcredentials/README.md)
 
-* `addClientSecret` - Obtain new client secret.
+* [addClientSecret](docs/clientcredentials/README.md#addclientsecret) - Obtain new client secret.
 
-### companyCodes
+### [companyCodes](docs/companycodes/README.md)
 
-* `getAllCompanyCodesAndDescriptionsByResource` - Get All Company Codes
+* [getAllCompanyCodesAndDescriptionsByResource](docs/companycodes/README.md#getallcompanycodesanddescriptionsbyresource) - Get All Company Codes
 
-### companySpecificSchema
+### [companySpecificSchema](docs/companyspecificschema/README.md)
 
-* `getCompanySpecificOpenAPIDocumentation` - Get Company-Specific Open API Documentation
+* [getCompanySpecificOpenAPIDocumentation](docs/companyspecificschema/README.md#getcompanyspecificopenapidocumentation) - Get Company-Specific Open API Documentation
 
-### customFields
+### [customFields](docs/customfields/README.md)
 
-* `getAllCustomFieldsByCategory` - Get All Custom Fields
+* [getAllCustomFieldsByCategory](docs/customfields/README.md#getallcustomfieldsbycategory) - Get All Custom Fields
 
-### directDeposit
+### [directDeposit](docs/directdeposit/README.md)
 
-* `getAllDirectDeposit` - Get All Direct Deposit
+* [getAllDirectDeposit](docs/directdeposit/README.md#getalldirectdeposit) - Get All Direct Deposit
 
-### earnings
+### [earnings](docs/earnings/README.md)
 
-* `addOrUpdateAnEmployeeEarning` - Add/Update Earning
-* `deleteEarningByEarningCodeAndStartDate` - Delete Earning by Earning Code and Start Date
-* `getAllEarnings` - Get All Earnings
-* `getEarningByEarningCodeAndStartDate` - Get Earning by Earning Code and Start Date
-* `getEarningsByEarningCode` - Get Earnings by Earning Code
+* [addOrUpdateAnEmployeeEarning](docs/earnings/README.md#addorupdateanemployeeearning) - Add/Update Earning
+* [deleteEarningByEarningCodeAndStartDate](docs/earnings/README.md#deleteearningbyearningcodeandstartdate) - Delete Earning by Earning Code and Start Date
+* [getAllEarnings](docs/earnings/README.md#getallearnings) - Get All Earnings
+* [getEarningByEarningCodeAndStartDate](docs/earnings/README.md#getearningbyearningcodeandstartdate) - Get Earning by Earning Code and Start Date
+* [getEarningsByEarningCode](docs/earnings/README.md#getearningsbyearningcode) - Get Earnings by Earning Code
 
-### emergencyContacts
+### [emergencyContacts](docs/emergencycontacts/README.md)
 
-* `addOrUpdateEmergencyContacts` - Add/update emergency contacts
+* [addOrUpdateEmergencyContacts](docs/emergencycontacts/README.md#addorupdateemergencycontacts) - Add/update emergency contacts
 
-### employee
+### [employee](docs/employee/README.md)
 
-* `addEmployee` - Add new employee
-* `getAllEmployees` - Get all employees
-* `getEmployee` - Get employee
-* `updateEmployee` - Update employee
+* [addEmployee](docs/employee/README.md#addemployee) - Add new employee
+* [getAllEmployees](docs/employee/README.md#getallemployees) - Get all employees
+* [getEmployee](docs/employee/README.md#getemployee) - Get employee
+* [updateEmployee](docs/employee/README.md#updateemployee) - Update employee
 
-### employeeBenefitSetup
+### [employeeBenefitSetup](docs/employeebenefitsetup/README.md)
 
-* `updateOrAddEmployeeBenefitSetup` - Add/update employee's benefit setup
+* [updateOrAddEmployeeBenefitSetup](docs/employeebenefitsetup/README.md#updateoraddemployeebenefitsetup) - Add/update employee's benefit setup
 
-### employeeStaging
+### [employeeStaging](docs/employeestaging/README.md)
 
-* `addNewEmployeeToWebLink` - Add new employee to Web Link
+* [addNewEmployeeToWebLink](docs/employeestaging/README.md#addnewemployeetoweblink) - Add new employee to Web Link
 
-### localTaxes
+### [localTaxes](docs/localtaxes/README.md)
 
-* `addLocalTax` - Add new local tax
-* `deleteLocalTaxByTaxCode` - Delete local tax by tax code
-* `getAllLocalTaxes` - Get all local taxes
-* `getLocalTaxByTaxCode` - Get local taxes by tax code
+* [addLocalTax](docs/localtaxes/README.md#addlocaltax) - Add new local tax
+* [deleteLocalTaxByTaxCode](docs/localtaxes/README.md#deletelocaltaxbytaxcode) - Delete local tax by tax code
+* [getAllLocalTaxes](docs/localtaxes/README.md#getalllocaltaxes) - Get all local taxes
+* [getLocalTaxByTaxCode](docs/localtaxes/README.md#getlocaltaxbytaxcode) - Get local taxes by tax code
 
-### nonPrimaryStateTax
+### [nonPrimaryStateTax](docs/nonprimarystatetax/README.md)
 
-* `addOrUpdateNonPrimaryStateTax` - Add/update non-primary state tax
+* [addOrUpdateNonPrimaryStateTax](docs/nonprimarystatetax/README.md#addorupdatenonprimarystatetax) - Add/update non-primary state tax
 
-### payStatements
+### [payStatements](docs/paystatements/README.md)
 
-* `getsEmployeePayStatementDetailDataBasedOnTheSpecifiedYear` - Get employee pay statement details data for the specified year.
-* `getsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDate` - Get employee pay statement details data for the specified year and check date.
-* `getsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYear` - Get employee pay statement summary data for the specified year.
-* `getsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDate` - Get employee pay statement summary data for the specified year and check date.
+* [getsEmployeePayStatementDetailDataBasedOnTheSpecifiedYear](docs/paystatements/README.md#getsemployeepaystatementdetaildatabasedonthespecifiedyear) - Get employee pay statement details data for the specified year.
+* [getsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDate](docs/paystatements/README.md#getsemployeepaystatementdetaildatabasedonthespecifiedyearandcheckdate) - Get employee pay statement details data for the specified year and check date.
+* [getsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYear](docs/paystatements/README.md#getsemployeepaystatementsummarydatabasedonthespecifiedyear) - Get employee pay statement summary data for the specified year.
+* [getsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDate](docs/paystatements/README.md#getsemployeepaystatementsummarydatabasedonthespecifiedyearandcheckdate) - Get employee pay statement summary data for the specified year and check date.
 
-### primaryStateTax
+### [primaryStateTax](docs/primarystatetax/README.md)
 
-* `addOrUpdatePrimaryStateTax` - Add/update primary state tax
+* [addOrUpdatePrimaryStateTax](docs/primarystatetax/README.md#addorupdateprimarystatetax) - Add/update primary state tax
 
-### sensitiveData
+### [sensitiveData](docs/sensitivedata/README.md)
 
-* `addOrUpdateSensitiveData` - Add/update sensitive data
-* `getSensitiveData` - Get sensitive data
+* [addOrUpdateSensitiveData](docs/sensitivedata/README.md#addorupdatesensitivedata) - Add/update sensitive data
+* [getSensitiveData](docs/sensitivedata/README.md#getsensitivedata) - Get sensitive data
 <!-- End SDK Available Operations -->
 
 ### Maturity

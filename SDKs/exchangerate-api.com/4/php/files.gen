@@ -22,4 +22,5 @@ src/Models/Operations/GetLatestBaseCurrencyRequest.php
 src/Models/Operations/GetLatestBaseCurrency404ApplicationJSON.php
 src/Models/Operations/GetLatestBaseCurrency200ApplicationJSON.php
 src/Models/Operations/GetLatestBaseCurrencyResponse.php
+docs/sdk/README.md
 USAGE.md

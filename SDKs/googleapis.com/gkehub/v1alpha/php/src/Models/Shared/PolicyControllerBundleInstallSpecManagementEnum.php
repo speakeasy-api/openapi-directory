@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Shared;
 
 
-/** Management specifies how the bundle will be managed by the controller. TODO (b/271878194): Remove this */
+/** Management specifies how the bundle will be managed by the controller. */
 enum PolicyControllerBundleInstallSpecManagementEnum: string
 {
     case MANAGEMENT_UNSPECIFIED = 'MANAGEMENT_UNSPECIFIED';

@@ -168,7 +168,7 @@ class FileImageMediaMetadata
     public ?string $meteringMode = null;
     
     /**
-     * The number of clockwise 90 degree rotations applied from the image's original orientation.
+     * The number of clockwise 90-degree rotations applied from the image's original orientation.
      * 
      * @var ?int $rotation
      */

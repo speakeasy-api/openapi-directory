@@ -30,6 +30,10 @@ class PeriodicPayment
     /**
      * Behavior when periodic payment dates fall on holiday.
      * 
+     * 
+     * * `following` - following
+     * * `preceding` - preceding
+     * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\PeriodicPaymentExecutionRuleEnum $executionRule
      */
 	#[\JMS\Serializer\Annotation\SerializedName('execution_rule')]

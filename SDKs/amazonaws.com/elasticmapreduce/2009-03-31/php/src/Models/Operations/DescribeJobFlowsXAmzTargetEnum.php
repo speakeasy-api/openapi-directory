@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeJobFlowsXAmzTargetEnum: string
 {
     case ELASTIC_MAP_REDUCE_DESCRIBE_JOB_FLOWS = 'ElasticMapReduce.DescribeJobFlows';

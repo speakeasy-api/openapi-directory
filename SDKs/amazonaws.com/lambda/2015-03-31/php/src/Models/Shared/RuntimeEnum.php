@@ -39,4 +39,5 @@ enum RuntimeEnum: string
     case PROVIDED = 'provided';
     case PROVIDED_AL2 = 'provided.al2';
     case NODEJS18_X = 'nodejs18.x';
+    case PYTHON310 = 'python3.10';
 }

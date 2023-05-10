@@ -30,17 +30,46 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetForecastRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetForecastRequest();
+    $request->alt = 1050;
+    $request->dt = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2018-02-04T04:39:06.467Z');
+    $request->lat = 78.67;
+    $request->lng = 115.67;
+    $request->ozone = 304.5;
+    $request->xAccessToken = 'corrupti';
+
+    $response = $sdk->getForecast($request);
+
+    if ($response->forecastResults !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getForecast` - Get hourly UV Index Forecast by location and date. Optional altitude, ozone level and datetime could be provided.
-* `getProtection` - Get daily protection time by location, UV Index from and UV Index to with 10 minutes accuracy. Optional altitide and ozone level could be provided.
-* `getUv` - Get real-time UV Index by location. Optional altitude, ozone level and datetime could be provided.
+* [getForecast](docs/sdk/README.md#getforecast) - Get hourly UV Index Forecast by location and date. Optional altitude, ozone level and datetime could be provided.
+* [getProtection](docs/sdk/README.md#getprotection) - Get daily protection time by location, UV Index from and UV Index to with 10 minutes accuracy. Optional altitide and ozone level could be provided.
+* [getUv](docs/sdk/README.md#getuv) - Get real-time UV Index by location. Optional altitude, ozone level and datetime could be provided.
 <!-- End SDK Available Operations -->
 
 ### Maturity

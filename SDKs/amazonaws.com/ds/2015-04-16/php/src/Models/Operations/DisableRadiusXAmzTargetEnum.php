@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DisableRadiusXAmzTargetEnum: string
 {
     case DIRECTORY_SERVICE20150416_DISABLE_RADIUS = 'DirectoryService_20150416.DisableRadius';

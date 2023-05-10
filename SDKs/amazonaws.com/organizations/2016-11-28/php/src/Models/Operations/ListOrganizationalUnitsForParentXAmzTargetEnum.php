@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListOrganizationalUnitsForParentXAmzTargetEnum: string
 {
     case AWS_ORGANIZATIONS_V20161128_LIST_ORGANIZATIONAL_UNITS_FOR_PARENT = 'AWSOrganizationsV20161128.ListOrganizationalUnitsForParent';

@@ -30,24 +30,53 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveRequest;
+use \OpenAPI\OpenAPI\Models\Operations\DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveRequest();
+    $request->appId = 548814;
+    $request->cardId = 'provident';
+
+    $requestSecurity = new DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveSecurity();
+    $requestSecurity->developerHapikey = 'YOUR_API_KEY_HERE';
+
+    $response = $sdk->cards->deleteCrmV3ExtensionsCardsAppIdCardIdArchive($request, $requestSecurity);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### cards
+### [cards](docs/cards/README.md)
 
-* `deleteCrmV3ExtensionsCardsAppIdCardIdArchive` - Delete a card
-* `getCrmV3ExtensionsCardsAppIdCardIdGetById` - Get a card.
-* `getCrmV3ExtensionsCardsAppIdGetAll` - Get all cards
-* `patchCrmV3ExtensionsCardsAppIdCardIdUpdate` - Update a card
-* `postCrmV3ExtensionsCardsAppIdCreate` - Create a new card
+* [deleteCrmV3ExtensionsCardsAppIdCardIdArchive](docs/cards/README.md#deletecrmv3extensionscardsappidcardidarchive) - Delete a card
+* [getCrmV3ExtensionsCardsAppIdCardIdGetById](docs/cards/README.md#getcrmv3extensionscardsappidcardidgetbyid) - Get a card.
+* [getCrmV3ExtensionsCardsAppIdGetAll](docs/cards/README.md#getcrmv3extensionscardsappidgetall) - Get all cards
+* [patchCrmV3ExtensionsCardsAppIdCardIdUpdate](docs/cards/README.md#patchcrmv3extensionscardsappidcardidupdate) - Update a card
+* [postCrmV3ExtensionsCardsAppIdCreate](docs/cards/README.md#postcrmv3extensionscardsappidcreate) - Create a new card
 
-### sampleResponse
+### [sampleResponse](docs/sampleresponse/README.md)
 
-* `getCrmV3ExtensionsCardsSampleResponseGetCardsSampleResponse` - Get sample card detail response
+* [getCrmV3ExtensionsCardsSampleResponseGetCardsSampleResponse](docs/sampleresponse/README.md#getcrmv3extensionscardssampleresponsegetcardssampleresponse) - Get sample card detail response
 <!-- End SDK Available Operations -->
 
 ### Maturity

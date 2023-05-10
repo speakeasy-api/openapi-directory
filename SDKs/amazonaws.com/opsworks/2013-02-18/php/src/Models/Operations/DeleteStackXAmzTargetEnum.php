@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteStackXAmzTargetEnum: string
 {
     case OPS_WORKS20130218_DELETE_STACK = 'OpsWorks_20130218.DeleteStack';

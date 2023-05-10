@@ -64,4 +64,8 @@ src/Models/Shared/GoogleCloudVideointelligenceV1LabelDetectionConfigLabelDetecti
 src/Models/Shared/GoogleCloudVideointelligenceV1LabelDetectionConfig.php
 src/Models/Shared/GoogleCloudVideointelligenceV1FaceDetectionConfig.php
 src/Models/Shared/GoogleCloudVideointelligenceV1ExplicitContentDetectionConfig.php
+docs/sdk/README.md
+docs/operations/README.md
+docs/projects/README.md
+docs/videos/README.md
 USAGE.md

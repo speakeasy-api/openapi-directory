@@ -27,6 +27,8 @@ class SDK
 	
 	public Edits $edits;
 	
+	public Externaltransactions $externaltransactions;
+	
 	public Generatedapks $generatedapks;
 	
 	public Grants $grants;
@@ -104,6 +106,15 @@ class SDK
 		);
 		
 		$this->edits = new Edits(
+			$this->_defaultClient,
+			$this->_securityClient,
+			$this->_serverUrl,
+			$this->_language,
+			$this->_sdkVersion,
+			$this->_genVersion
+		);
+		
+		$this->externaltransactions = new Externaltransactions(
 			$this->_defaultClient,
 			$this->_securityClient,
 			$this->_serverUrl,

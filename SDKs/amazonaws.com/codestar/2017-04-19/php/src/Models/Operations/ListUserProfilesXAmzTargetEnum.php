@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListUserProfilesXAmzTargetEnum: string
 {
     case CODE_STAR20170419_LIST_USER_PROFILES = 'CodeStar_20170419.ListUserProfiles';

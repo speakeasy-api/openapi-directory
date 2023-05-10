@@ -59,6 +59,11 @@ class ListEntitiesRequestBody
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $nextToken = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('OwnershipType')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Operations\ListEntitiesRequestBodyOwnershipTypeEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?ListEntitiesRequestBodyOwnershipTypeEnum $ownershipType = null;
+    
     /**
      * An object that contains two attributes, <code>SortBy</code> and <code>SortOrder</code>.
      * 
@@ -76,6 +81,7 @@ class ListEntitiesRequestBody
 		$this->filterList = null;
 		$this->maxResults = null;
 		$this->nextToken = null;
+		$this->ownershipType = null;
 		$this->sort = null;
 	}
 }

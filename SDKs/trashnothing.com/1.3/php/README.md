@@ -30,109 +30,61 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetGroupRequest;
+use \OpenAPI\OpenAPI\Models\Operations\GetGroupSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetGroupRequest();
+    $request->groupId = 'corrupti';
+
+    $requestSecurity = new GetGroupSecurity();
+    $requestSecurity->apiKey = 'YOUR_API_KEY_HERE';
+
+    $response = $sdk->groups->getGroup($request, $requestSecurity);
+
+    if ($response->group !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### groups
+### [groups](docs/groups/README.md)
 
-* `contactModerators` - Contact group moderators
-* `getGroup` - Retrieve a group
-* `getGroupsByIds` - Retrieve multiple groups
-* `joinGroups` - Join groups
-* `leaveGroup` - Leave a group
-* `searchGroups` - Search groups
-* `submitAnswers` - Submit group answers
+* [getGroup](docs/groups/README.md#getgroup) - Retrieve a group
+* [getGroupsByIds](docs/groups/README.md#getgroupsbyids) - Retrieve multiple groups
+* [searchGroups](docs/groups/README.md#searchgroups) - Search groups
 
-### messages
+### [posts](docs/posts/README.md)
 
-* `archiveAllConversations` - Archive all conversations
-* `archiveConversation` - Archive conversation
-* `blockConversation` - Block conversation
-* `deleteConversation` - Delete conversation
-* `getConversationMessages` - List conversation messages
-* `getConversations` - List conversations
-* `markAllConversationsRead` - Mark all conversations as read
-* `markConversationRead` - Mark conversation as read
-* `replyToConversation` - Reply to conversation
-* `reportConversation` - Report conversation
-* `searchConversations` - Search conversations
-* `unarchiveConversation` - Unarchive conversation
-* `unblockConversation` - Unblock conversation
+* [getAllPosts](docs/posts/README.md#getallposts) - List all posts
+* [getAllPostsChanges](docs/posts/README.md#getallpostschanges) - List all post changes
+* [getPost](docs/posts/README.md#getpost) - Retrieve a post
+* [getPostAndRelatedData](docs/posts/README.md#getpostandrelateddata) - Retrieve post display data
+* [getPosts](docs/posts/README.md#getposts) - List posts
+* [getPostsByIds](docs/posts/README.md#getpostsbyids) - Retrieve multiple posts
+* [searchPosts](docs/posts/README.md#searchposts) - Search posts
 
-### misc
+### [users](docs/users/README.md)
 
-* `sendFeedback` - Send feedback
-
-### photos
-
-* `deletePhoto` - Delete a photo
-* `getPhotosByIds` - Retrieve multiple photos
-* `rotatePhoto` - Rotate a photo
-* `uploadPhoto` - Create a photo
-
-### posts
-
-* `bookmarkPost` - Bookmark a post
-* `deleteBookmark` - Delete a post bookmark
-* `deletePost` - Delete a post
-* `getAllPosts` - List all posts
-* `getAllPostsChanges` - List all post changes
-* `getPost` - Retrieve a post
-* `getPostAndRelatedData` - Retrieve post display data
-* `getPosts` - List posts
-* `getPostsByIds` - Retrieve multiple posts
-* `promisePost` - Promise an offer post
-* `replyToPost` - Reply to a post
-* `reportPost` - Report a post
-* `satisfyPost` - Satisfy a post
-* `searchPosts` - Search posts
-* `sharePost` - Share a post
-* `submitPost` - Submit a post
-* `unpromisePost` - Unpromise an offer post
-* `updatePost` - Update a post
-* `withdrawPost` - Withdraw a post
-
-### stories
-
-* `getStories` - List stories
-* `getStory` - Retrieve a story
-* `likeStory` - Like a story
-* `submitStory` - Submit a story
-* `unlikeStory` - Unlike a story
-* `viewedStory` - Record story viewed
-
-### users
-
-* `changeEmail` - Change email address
-* `createAlert` - Create an email alert
-* `deleteAlert` - Delete an email alert
-* `getAlerts` - List current users' email alerts
-* `getCurrentUser` - Retrieve current user
-* `getCurrentUserGroups` - List current users' groups
-* `getCurrentUserPosts` - List current users' posts
-* `getPostLocations` - List current users' post locations
-* `getProfileImageFile` - Retrieve a users' profile image
-* `getProfileImages` - List current users' profile images
-* `getUser` - Retrieve a user
-* `getUserAndRelatedData` - Retrieve user display info
-* `getUserGroupNotices` - List current users' group notices
-* `getUserPosts` - List posts by a user
-* `removeUserFeedback` - Remove feedback on a user
-* `reportUser` - Report a user
-* `resendAccountVerificationEmail` - Resend account verification email
-* `savePostLocation` - Save a post location for the current user
-* `searchCurrentUserPosts` - Search current users' posts
-* `searchUserPosts` - Search posts by a user
-* `sendPasswordResetEmail` - Send password reset email
-* `setEmailNotBouncing` - Set users' email address as not bouncing
-* `setProfileImage` - Set a profile image
-* `submitUserFeedback` - Submit feedback on a user
-* `updateCurrentUser` - Update current user
-* `updateLocation` - Update location
+* [getUserPosts](docs/users/README.md#getuserposts) - List posts by a user
+* [searchUserPosts](docs/users/README.md#searchuserposts) - Search posts by a user
 <!-- End SDK Available Operations -->
 
 ### Maturity

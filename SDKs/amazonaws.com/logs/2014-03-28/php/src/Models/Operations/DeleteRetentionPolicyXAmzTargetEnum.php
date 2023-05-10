@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteRetentionPolicyXAmzTargetEnum: string
 {
     case LOGS20140328_DELETE_RETENTION_POLICY = 'Logs_20140328.DeleteRetentionPolicy';

@@ -24,4 +24,6 @@ src/Models/Operations/PostEventsV3SendResponse.php
 src/Models/Shared/Error.php
 src/Models/Shared/ErrorDetail.php
 src/Models/Shared/BehavioralEventHttpCompletionRequest.php
+docs/sdk/README.md
+docs/behavioraleventstracking/README.md
 USAGE.md

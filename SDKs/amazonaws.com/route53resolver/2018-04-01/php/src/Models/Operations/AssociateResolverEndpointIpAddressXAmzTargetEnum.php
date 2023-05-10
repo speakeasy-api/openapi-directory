@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AssociateResolverEndpointIpAddressXAmzTargetEnum: string
 {
     case ROUTE53_RESOLVER_ASSOCIATE_RESOLVER_ENDPOINT_IP_ADDRESS = 'Route53Resolver.AssociateResolverEndpointIpAddress';

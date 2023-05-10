@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListWorkflowsXAmzTargetEnum: string
 {
     case TRANSFER_SERVICE_LIST_WORKFLOWS = 'TransferService.ListWorkflows';

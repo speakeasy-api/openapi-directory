@@ -66,7 +66,7 @@ class EcommerceDelivery
      */
 	public function confirmCarbonOffset1(
         \OpenAPI\OpenAPI\Models\Operations\ConfirmCarbonOffset1RequestBody $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ConfirmCarbonOffset1Response
     {
         $baseUrl = EcommerceDelivery::CONFIRM_CARBON_OFFSET1_SERVERS[0];
@@ -104,7 +104,7 @@ class EcommerceDelivery
      */
 	public function confirmPayment1(
         \OpenAPI\OpenAPI\Models\Operations\ConfirmPayment1RequestBody $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ConfirmPayment1Response
     {
         $baseUrl = EcommerceDelivery::CONFIRM_PAYMENT1_SERVERS[0];
@@ -142,7 +142,7 @@ class EcommerceDelivery
      */
 	public function confirmPaymentOfTransaction1(
         \OpenAPI\OpenAPI\Models\Operations\ConfirmPaymentOfTransaction1RequestBody $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ConfirmPaymentOfTransaction1Response
     {
         $baseUrl = EcommerceDelivery::CONFIRM_PAYMENT_OF_TRANSACTION1_SERVERS[0];
@@ -180,7 +180,7 @@ class EcommerceDelivery
      */
 	public function confirmsPlanting2(
         \OpenAPI\OpenAPI\Models\Operations\ConfirmsPlanting2RequestBody $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ConfirmsPlanting2Response
     {
         $baseUrl = EcommerceDelivery::CONFIRMS_PLANTING2_SERVERS[0];
@@ -218,7 +218,7 @@ class EcommerceDelivery
      */
 	public function ecommerceDelivery(
         \OpenAPI\OpenAPI\Models\Operations\EcommerceDeliveryRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\EcommerceDeliveryResponse
     {
         $baseUrl = EcommerceDelivery::ECOMMERCE_DELIVERY_SERVERS[0];

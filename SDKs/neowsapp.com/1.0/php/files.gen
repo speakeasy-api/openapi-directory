@@ -50,4 +50,9 @@ src/Models/Shared/SentryImpactRiskObject.php
 src/Models/Shared/PageMetaData.php
 src/Models/Shared/Statistics.php
 src/Models/Shared/Url.php
+docs/sdk/README.md
+docs/feed/README.md
+docs/neo/README.md
+docs/neosentry/README.md
+docs/stats/README.md
 USAGE.md

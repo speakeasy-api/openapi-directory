@@ -68,7 +68,7 @@ class RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListRequest
     public ?string $oauthToken = null;
     
     /**
-     * Required. The parent Catalog of the resource. It must match this format: projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}
+     * Required. The parent Catalog of the resource. It must match this format: `projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}`
      * 
      * @var string $parent
      */

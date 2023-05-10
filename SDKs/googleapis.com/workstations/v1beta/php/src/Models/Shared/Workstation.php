@@ -58,7 +58,17 @@ class Workstation
     public ?string $displayName = null;
     
     /**
-     * Checksum computed by the server. May be sent on update and delete requests to ensure that the client has an up-to-date value before proceeding.
+     * Environment variables passed to the workstation container's entrypoint.
+     * 
+     * @var ?array<string, string> $env
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('env')]
+    #[\JMS\Serializer\Annotation\Type('array<string, string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $env = null;
+    
+    /**
+     * Checksum computed by the server. May be sent on update and delete requests to make sure that the client has an up-to-date value before proceeding.
      * 
      * @var ?string $etag
      */
@@ -143,6 +153,7 @@ class Workstation
 		$this->createTime = null;
 		$this->deleteTime = null;
 		$this->displayName = null;
+		$this->env = null;
 		$this->etag = null;
 		$this->host = null;
 		$this->labels = null;

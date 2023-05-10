@@ -72,4 +72,11 @@ src/Models/Operations/PriceOffersResponse.php
 src/Models/Operations/SeatDetailsSecurity.php
 src/Models/Operations/SeatDetailsRequest.php
 src/Models/Operations/SeatDetailsResponse.php
+docs/sdk/README.md
+docs/baggage/README.md
+docs/offers/README.md
+docs/orders/README.md
+docs/preflight/README.md
+docs/promotions/README.md
+docs/referencedata/README.md
 USAGE.md

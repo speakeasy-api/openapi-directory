@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateDBInstanceVersionEnum: string
 {
     case TWO_THOUSAND_AND_FOURTEEN0901 = '2014-09-01';

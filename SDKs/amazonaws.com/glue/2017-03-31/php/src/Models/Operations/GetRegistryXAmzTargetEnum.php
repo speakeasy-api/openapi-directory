@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetRegistryXAmzTargetEnum: string
 {
     case AWS_GLUE_GET_REGISTRY = 'AWSGlue.GetRegistry';

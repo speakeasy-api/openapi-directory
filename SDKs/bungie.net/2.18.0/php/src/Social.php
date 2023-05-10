@@ -112,9 +112,11 @@ class Social
     /**
      * Returns your Bungie Friend list
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\SocialGetFriendListSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\SocialGetFriendListResponse
      */
 	public function socialGetFriendList(
+        \OpenAPI\OpenAPI\Models\Operations\SocialGetFriendListSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\SocialGetFriendListResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -122,7 +124,8 @@ class Social
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -143,9 +146,11 @@ class Social
     /**
      * Returns your friend request queue.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\SocialGetFriendRequestListSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\SocialGetFriendRequestListResponse
      */
 	public function socialGetFriendRequestList(
+        \OpenAPI\OpenAPI\Models\Operations\SocialGetFriendRequestListSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\SocialGetFriendRequestListResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -153,7 +158,8 @@ class Social
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

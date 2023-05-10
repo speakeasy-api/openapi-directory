@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTResetSnapshotAttributeActionEnum: string
 {
     case RESET_SNAPSHOT_ATTRIBUTE = 'ResetSnapshotAttribute';

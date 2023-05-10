@@ -234,6 +234,46 @@ class Projects
     }
 	
     /**
+     * Revert an existing instance's file system to a specified snapshot.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\FileProjectsLocationsInstancesRevertRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\FileProjectsLocationsInstancesRevertSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\FileProjectsLocationsInstancesRevertResponse
+     */
+	public function fileProjectsLocationsInstancesRevert(
+        \OpenAPI\OpenAPI\Models\Operations\FileProjectsLocationsInstancesRevertRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\FileProjectsLocationsInstancesRevertSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\FileProjectsLocationsInstancesRevertResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{name}:revert', \OpenAPI\OpenAPI\Models\Operations\FileProjectsLocationsInstancesRevertRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "revertInstanceRequest", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\FileProjectsLocationsInstancesRevertRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\FileProjectsLocationsInstancesRevertResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Creates a snapshot.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\FileProjectsLocationsInstancesSnapshotsCreateRequest $request

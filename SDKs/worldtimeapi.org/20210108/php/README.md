@@ -30,26 +30,46 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $response = $sdk->getIp();
+
+    if ($response->dateTimeJsonResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getIp` - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
-* `getIpTxt` - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
-* `getIpIpv4` - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
-* `getIpIpv4Txt` - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
-* `getTimezone` - a listing of all timezones.
-* `getTimezoneTxt` - a listing of all timezones.
-* `getTimezoneArea` - a listing of all timezones available for that area.
-* `getTimezoneAreaTxt` - a listing of all timezones available for that area.
-* `getTimezoneAreaLocation` - request the current time for a timezone.
-* `getTimezoneAreaLocationTxt` - request the current time for a timezone.
-* `getTimezoneAreaLocationRegion` - request the current time for a timezone.
-* `getTimezoneAreaLocationRegionTxt` - request the current time for a timezone.
+* [getIp](docs/sdk/README.md#getip) - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
+* [getIpTxt](docs/sdk/README.md#getiptxt) - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
+* [getIpIpv4](docs/sdk/README.md#getipipv4) - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
+* [getIpIpv4Txt](docs/sdk/README.md#getipipv4txt) - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
+* [getTimezone](docs/sdk/README.md#gettimezone) - a listing of all timezones.
+* [getTimezoneTxt](docs/sdk/README.md#gettimezonetxt) - a listing of all timezones.
+* [getTimezoneArea](docs/sdk/README.md#gettimezonearea) - a listing of all timezones available for that area.
+* [getTimezoneAreaTxt](docs/sdk/README.md#gettimezoneareatxt) - a listing of all timezones available for that area.
+* [getTimezoneAreaLocation](docs/sdk/README.md#gettimezonearealocation) - request the current time for a timezone.
+* [getTimezoneAreaLocationTxt](docs/sdk/README.md#gettimezonearealocationtxt) - request the current time for a timezone.
+* [getTimezoneAreaLocationRegion](docs/sdk/README.md#gettimezonearealocationregion) - request the current time for a timezone.
+* [getTimezoneAreaLocationRegionTxt](docs/sdk/README.md#gettimezonearealocationregiontxt) - request the current time for a timezone.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -199,16 +199,16 @@ class Indexes
     }
 	
     /**
-     * Udpate index 
+     * Update index
      * 
      * Can only change the document identifier if it has not already been added before.
      * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\UdpateIndexRequestBody $request
-     * @return \OpenAPI\OpenAPI\Models\Operations\UdpateIndexResponse
+     * @param \OpenAPI\OpenAPI\Models\Operations\UpdateIndexRequestBody $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\UpdateIndexResponse
      */
-	public function udpateIndex(
-        \OpenAPI\OpenAPI\Models\Operations\UdpateIndexRequestBody $request,
-    ): \OpenAPI\OpenAPI\Models\Operations\UdpateIndexResponse
+	public function updateIndex(
+        \OpenAPI\OpenAPI\Models\Operations\UpdateIndexRequestBody $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\UpdateIndexResponse
     {
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/indexes/books');
@@ -221,7 +221,7 @@ class Indexes
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \OpenAPI\OpenAPI\Models\Operations\UdpateIndexResponse();
+        $response = new \OpenAPI\OpenAPI\Models\Operations\UpdateIndexResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;

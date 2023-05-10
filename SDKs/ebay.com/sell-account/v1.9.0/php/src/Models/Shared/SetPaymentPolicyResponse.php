@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * SetPaymentPolicyResponse - A complex type that is populated with a response containing a payment policy.
+ * SetPaymentPolicyResponse - Complex type that that gets populated with a response containing a payment policy.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

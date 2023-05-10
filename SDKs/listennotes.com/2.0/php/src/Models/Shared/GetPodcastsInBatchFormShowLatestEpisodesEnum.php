@@ -14,8 +14,8 @@ namespace OpenAPI\OpenAPI\Models\Shared;
  * 
  * 
  */
-enum GetPodcastsInBatchFormShowLatestEpisodesEnum: string
+enum GetPodcastsInBatchFormShowLatestEpisodesEnum: int
 {
-    case ZERO = '0';
-    case ONE = '1';
+    case ZERO = 0;
+    case ONE = 1;
 }

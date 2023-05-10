@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTAssociateEnvironmentOperationsRoleActionEnum: string
 {
     case ASSOCIATE_ENVIRONMENT_OPERATIONS_ROLE = 'AssociateEnvironmentOperationsRole';

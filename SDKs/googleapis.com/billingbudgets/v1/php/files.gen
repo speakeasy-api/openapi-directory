@@ -59,4 +59,6 @@ src/Models/Shared/GoogleTypeMoney.php
 src/Models/Shared/AltEnum.php
 src/Models/Shared/XgafvEnum.php
 src/Models/Shared/GoogleCloudBillingBudgetsV1ListBudgetsResponse.php
+docs/sdk/README.md
+docs/billingaccounts/README.md
 USAGE.md

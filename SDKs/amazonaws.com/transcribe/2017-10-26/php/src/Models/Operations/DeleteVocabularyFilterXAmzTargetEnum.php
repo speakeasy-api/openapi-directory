@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteVocabularyFilterXAmzTargetEnum: string
 {
     case TRANSCRIBE_DELETE_VOCABULARY_FILTER = 'Transcribe.DeleteVocabularyFilter';

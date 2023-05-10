@@ -243,6 +243,16 @@ class Product
     public ?string $description = null;
     
     /**
+     * The date time when an offer becomes visible in search results across Google’s YouTube surfaces, in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format. See [Disclosure date]( https://support.google.com/merchants/answer/13034208) for more information.
+     * 
+     * @var ?string $disclosureDate
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('disclosureDate')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $disclosureDate = null;
+    
+    /**
      * An identifier for an item for dynamic remarketing campaigns.
      * 
      * @var ?string $displayAdsId
@@ -892,6 +902,7 @@ class Product
 		$this->customLabel3 = null;
 		$this->customLabel4 = null;
 		$this->description = null;
+		$this->disclosureDate = null;
 		$this->displayAdsId = null;
 		$this->displayAdsLink = null;
 		$this->displayAdsSimilarIds = null;

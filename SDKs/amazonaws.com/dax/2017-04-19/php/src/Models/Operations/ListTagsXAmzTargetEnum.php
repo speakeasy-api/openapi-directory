@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListTagsXAmzTargetEnum: string
 {
     case AMAZON_DAXV3_LIST_TAGS = 'AmazonDAXV3.ListTags';

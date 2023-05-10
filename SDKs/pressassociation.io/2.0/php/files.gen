@@ -43,6 +43,7 @@ src/Models/Operations/GetCatalogueAssetResponse.php
 src/Models/Operations/GetCatalogueAssetDetailSecurity.php
 src/Models/Operations/GetCatalogueAssetDetailRequest.php
 src/Models/Operations/GetCatalogueAssetDetailResponse.php
+src/Models/Operations/ListCataloguesSecurity.php
 src/Models/Operations/ListCataloguesResponse.php
 src/Models/Operations/GetChannelSecurity.php
 src/Models/Operations/GetChannelRequest.php
@@ -59,6 +60,7 @@ src/Models/Operations/ListContributorResponse.php
 src/Models/Operations/GetFeatureSecurity.php
 src/Models/Operations/GetFeatureRequest.php
 src/Models/Operations/GetFeatureResponse.php
+src/Models/Operations/ListFeatureTypesSecurity.php
 src/Models/Operations/ListFeatureTypesResponse.php
 src/Models/Operations/ListFeaturesSecurity.php
 src/Models/Operations/ListFeaturesRequest.php
@@ -75,4 +77,12 @@ src/Models/Operations/ListPlatformsResponse.php
 src/Models/Operations/ListScheduleSecurity.php
 src/Models/Operations/ListScheduleRequest.php
 src/Models/Operations/ListScheduleResponse.php
+docs/sdk/README.md
+docs/asset/README.md
+docs/catalogue/README.md
+docs/channel/README.md
+docs/contributor/README.md
+docs/feature/README.md
+docs/platform/README.md
+docs/schedule/README.md
 USAGE.md

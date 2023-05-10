@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateCollectionXAmzTargetEnum: string
 {
     case OPEN_SEARCH_SERVERLESS_CREATE_COLLECTION = 'OpenSearchServerless.CreateCollection';

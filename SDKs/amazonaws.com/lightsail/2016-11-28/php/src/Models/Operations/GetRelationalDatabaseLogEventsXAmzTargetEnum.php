@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetRelationalDatabaseLogEventsXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_GET_RELATIONAL_DATABASE_LOG_EVENTS = 'Lightsail_20161128.GetRelationalDatabaseLogEvents';

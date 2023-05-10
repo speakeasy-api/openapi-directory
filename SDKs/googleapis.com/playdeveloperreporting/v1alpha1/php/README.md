@@ -30,23 +30,68 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\PlaydeveloperreportingAnomaliesListRequest;
+use \OpenAPI\OpenAPI\Models\Shared\XgafvEnum;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+use \OpenAPI\OpenAPI\Models\Operations\PlaydeveloperreportingAnomaliesListSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new PlaydeveloperreportingAnomaliesListRequest();
+    $request->dollarXgafv = XgafvEnum::TWO;
+    $request->accessToken = 'provident';
+    $request->alt = AltEnum::PROTO;
+    $request->callback = 'quibusdam';
+    $request->fields = 'unde';
+    $request->filter = 'nulla';
+    $request->key = 'corrupti';
+    $request->oauthToken = 'illum';
+    $request->pageSize = 423655;
+    $request->pageToken = 'error';
+    $request->parent = 'deserunt';
+    $request->prettyPrint = false;
+    $request->quotaUser = 'suscipit';
+    $request->uploadType = 'iure';
+    $request->uploadProtocol = 'magnam';
+
+    $requestSecurity = new PlaydeveloperreportingAnomaliesListSecurity();
+    $requestSecurity->oauth2 = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+    $requestSecurity->oauth2c = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+
+    $response = $sdk->anomalies->playdeveloperreportingAnomaliesList($request, $requestSecurity);
+
+    if ($response->googlePlayDeveloperReportingV1alpha1ListAnomaliesResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### anomalies
+### [anomalies](docs/anomalies/README.md)
 
-* `playdeveloperreportingAnomaliesList` - Lists anomalies in any of the datasets.
+* [playdeveloperreportingAnomaliesList](docs/anomalies/README.md#playdeveloperreportinganomalieslist) - Lists anomalies in any of the datasets.
 
-### vitals
+### [vitals](docs/vitals/README.md)
 
-* `playdeveloperreportingVitalsErrorsIssuesSearch` - Searches all error issues in which reports have been grouped.
-* `playdeveloperreportingVitalsErrorsReportsSearch` - Searches all error reports received for an app.
-* `playdeveloperreportingVitalsStuckbackgroundwakelockrateGet` - Describes the properties of the metric set.
-* `playdeveloperreportingVitalsStuckbackgroundwakelockrateQuery` - Queries the metrics in the metric set.
+* [playdeveloperreportingVitalsErrorsIssuesSearch](docs/vitals/README.md#playdeveloperreportingvitalserrorsissuessearch) - Searches all error issues in which reports have been grouped.
+* [playdeveloperreportingVitalsErrorsReportsSearch](docs/vitals/README.md#playdeveloperreportingvitalserrorsreportssearch) - Searches all error reports received for an app.
+* [playdeveloperreportingVitalsStuckbackgroundwakelockrateGet](docs/vitals/README.md#playdeveloperreportingvitalsstuckbackgroundwakelockrateget) - Describes the properties of the metric set.
+* [playdeveloperreportingVitalsStuckbackgroundwakelockrateQuery](docs/vitals/README.md#playdeveloperreportingvitalsstuckbackgroundwakelockratequery) - Queries the metrics in the metric set.
 <!-- End SDK Available Operations -->
 
 ### Maturity

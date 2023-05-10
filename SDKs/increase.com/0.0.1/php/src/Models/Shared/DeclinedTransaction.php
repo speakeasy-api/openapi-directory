@@ -83,11 +83,11 @@ class DeclinedTransaction
     /**
      * The type of the route this Declined Transaction came through.
      * 
-     * @var string $routeType
+     * @var \OpenAPI\OpenAPI\Models\Shared\DeclinedTransactionRouteTypeEnum $routeType
      */
 	#[\JMS\Serializer\Annotation\SerializedName('route_type')]
-    #[\JMS\Serializer\Annotation\Type('string')]
-    public string $routeType;
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\DeclinedTransactionRouteTypeEnum>')]
+    public DeclinedTransactionRouteTypeEnum $routeType;
     
     /**
      * This is an object giving more details on the network-level event that caused the Declined Transaction. For example, for a card transaction this lists the merchant's industry and location. Note that for backwards compatibility reasons, additional undocumented keys may appear in this object. These should be treated as deprecated and will be removed in the future.
@@ -116,7 +116,7 @@ class DeclinedTransaction
 		$this->description = "";
 		$this->id = "";
 		$this->routeId = "";
-		$this->routeType = "";
+		$this->routeType = \OpenAPI\OpenAPI\Models\Shared\DeclinedTransactionRouteTypeEnum::ACCOUNT_NUMBER;
 		$this->source = new \OpenAPI\OpenAPI\Models\Shared\DeclinedTransactionDeclinedTransactionSource();
 		$this->type = \OpenAPI\OpenAPI\Models\Shared\DeclinedTransactionTypeEnum::DECLINED_TRANSACTION;
 	}

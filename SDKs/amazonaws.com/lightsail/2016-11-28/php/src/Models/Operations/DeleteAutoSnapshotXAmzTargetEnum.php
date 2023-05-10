@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteAutoSnapshotXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_DELETE_AUTO_SNAPSHOT = 'Lightsail_20161128.DeleteAutoSnapshot';

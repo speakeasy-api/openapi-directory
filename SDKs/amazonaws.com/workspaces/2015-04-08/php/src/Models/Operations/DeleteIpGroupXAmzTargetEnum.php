@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteIpGroupXAmzTargetEnum: string
 {
     case WORKSPACES_SERVICE_DELETE_IP_GROUP = 'WorkspacesService.DeleteIpGroup';

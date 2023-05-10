@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateMapRunXAmzTargetEnum: string
 {
     case AWS_STEP_FUNCTIONS_UPDATE_MAP_RUN = 'AWSStepFunctions.UpdateMapRun';

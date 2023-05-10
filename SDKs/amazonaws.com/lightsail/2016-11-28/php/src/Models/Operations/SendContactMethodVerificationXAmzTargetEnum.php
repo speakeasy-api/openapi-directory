@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum SendContactMethodVerificationXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_SEND_CONTACT_METHOD_VERIFICATION = 'Lightsail_20161128.SendContactMethodVerification';

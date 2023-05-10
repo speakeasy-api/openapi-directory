@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetCatalogImportStatusXAmzTargetEnum: string
 {
     case AWS_GLUE_GET_CATALOG_IMPORT_STATUS = 'AWSGlue.GetCatalogImportStatus';

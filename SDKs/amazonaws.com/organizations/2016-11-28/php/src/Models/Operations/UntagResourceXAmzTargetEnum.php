@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UntagResourceXAmzTargetEnum: string
 {
     case AWS_ORGANIZATIONS_V20161128_UNTAG_RESOURCE = 'AWSOrganizationsV20161128.UntagResource';

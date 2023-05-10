@@ -42,16 +42,10 @@ class ResourceStatus
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $serviceIntegrationStatuses = null;
     
-	#[\JMS\Serializer\Annotation\SerializedName('upcomingMaintenance')]
-    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\ResourceStatusUpcomingMaintenance')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?ResourceStatusUpcomingMaintenance $upcomingMaintenance = null;
-    
 	public function __construct()
 	{
 		$this->physicalHost = null;
 		$this->scheduling = null;
 		$this->serviceIntegrationStatuses = null;
-		$this->upcomingMaintenance = null;
 	}
 }

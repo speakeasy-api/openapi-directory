@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AddApplicationInputProcessingConfigurationXAmzTargetEnum: string
 {
     case KINESIS_ANALYTICS20150814_ADD_APPLICATION_INPUT_PROCESSING_CONFIGURATION = 'KinesisAnalytics_20150814.AddApplicationInputProcessingConfiguration';

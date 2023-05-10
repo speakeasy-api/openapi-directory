@@ -42,11 +42,14 @@ class MarketplacesOrdersOrder
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ChangeOrderRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ChangeOrderResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function changeOrder(
         \OpenAPI\OpenAPI\Models\Operations\ChangeOrderRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\ChangeOrderResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/{changeOrderType}', \OpenAPI\OpenAPI\Models\Operations\ChangeOrderRequest::class, $request);
         
@@ -94,11 +97,14 @@ class MarketplacesOrdersOrder
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ClearMerchantOrderInfoRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ClearMerchantOrderInfoResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function clearMerchantOrderInfo(
         \OpenAPI\OpenAPI\Models\Operations\ClearMerchantOrderInfoRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\ClearMerchantOrderInfoResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/clearMerchantOrderInfo', \OpenAPI\OpenAPI\Models\Operations\ClearMerchantOrderInfoRequest::class, $request);
         
@@ -132,11 +138,14 @@ class MarketplacesOrdersOrder
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetOrderRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetOrderResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getOrder(
         \OpenAPI\OpenAPI\Models\Operations\GetOrderRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetOrderResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}', \OpenAPI\OpenAPI\Models\Operations\GetOrderRequest::class, $request);
         
@@ -179,11 +188,14 @@ class MarketplacesOrdersOrder
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetOrderHistoryRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetOrderHistoryResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getOrderHistory(
         \OpenAPI\OpenAPI\Models\Operations\GetOrderHistoryRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetOrderHistoryResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/history', \OpenAPI\OpenAPI\Models\Operations\GetOrderHistoryRequest::class, $request);
         
@@ -224,11 +236,14 @@ class MarketplacesOrdersOrder
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\HarvestOrderRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\HarvestOrderResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function harvestOrder(
         \OpenAPI\OpenAPI\Models\Operations\HarvestOrderRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\HarvestOrderResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/harvest', \OpenAPI\OpenAPI\Models\Operations\HarvestOrderRequest::class, $request);
         
@@ -275,11 +290,14 @@ class MarketplacesOrdersOrder
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\HeadOrderRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\HeadOrderResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function headOrder(
         \OpenAPI\OpenAPI\Models\Operations\HeadOrderRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\HeadOrderResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}', \OpenAPI\OpenAPI\Models\Operations\HeadOrderRequest::class, $request);
         
@@ -314,11 +332,14 @@ class MarketplacesOrdersOrder
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\SetMerchantOrderInfoRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\SetMerchantOrderInfoResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function setMerchantOrderInfo(
         \OpenAPI\OpenAPI\Models\Operations\SetMerchantOrderInfoRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\SetMerchantOrderInfoResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/setMerchantOrderInfo', \OpenAPI\OpenAPI\Models\Operations\SetMerchantOrderInfoRequest::class, $request);
         

@@ -22,13 +22,24 @@ class CreateMonitorRequestBody
     public ?string $clientToken = null;
     
     /**
-     * The maximum number of city-network combinations (that is, combinations of a city location and network, such as an ISP) to be monitored for your resources.
+     * Publish internet measurements to an Amazon S3 bucket in addition to CloudWatch Logs.
      * 
-     * @var int $maxCityNetworksToMonitor
+     * @var ?\OpenAPI\OpenAPI\Models\Operations\CreateMonitorRequestBodyInternetMeasurementsLogDelivery $internetMeasurementsLogDelivery
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('InternetMeasurementsLogDelivery')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Operations\CreateMonitorRequestBodyInternetMeasurementsLogDelivery')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?CreateMonitorRequestBodyInternetMeasurementsLogDelivery $internetMeasurementsLogDelivery = null;
+    
+    /**
+     * <p>The maximum number of city-networks to monitor for your resources. A city-network is the location (city) where clients access your application resources from and the network or ASN, such as an internet service provider (ISP), that clients access the resources through. This limit helps control billing costs.</p> <p>To learn more, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/IMCityNetworksMaximum.html">Choosing a city-network maximum value </a> in the Amazon CloudWatch Internet Monitor section of the <i>CloudWatch User Guide</i>.</p>
+     * 
+     * @var ?int $maxCityNetworksToMonitor
      */
 	#[\JMS\Serializer\Annotation\SerializedName('MaxCityNetworksToMonitor')]
     #[\JMS\Serializer\Annotation\Type('int')]
-    public int $maxCityNetworksToMonitor;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?int $maxCityNetworksToMonitor = null;
     
     /**
      * The name of the monitor. 
@@ -59,12 +70,24 @@ class CreateMonitorRequestBody
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $tags = null;
     
+    /**
+     * The percentage of the internet-facing traffic for your application that you want to monitor with this monitor.
+     * 
+     * @var ?int $trafficPercentageToMonitor
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('TrafficPercentageToMonitor')]
+    #[\JMS\Serializer\Annotation\Type('int')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?int $trafficPercentageToMonitor = null;
+    
 	public function __construct()
 	{
 		$this->clientToken = null;
-		$this->maxCityNetworksToMonitor = 0;
+		$this->internetMeasurementsLogDelivery = null;
+		$this->maxCityNetworksToMonitor = null;
 		$this->monitorName = "";
 		$this->resources = null;
 		$this->tags = null;
+		$this->trafficPercentageToMonitor = null;
 	}
 }

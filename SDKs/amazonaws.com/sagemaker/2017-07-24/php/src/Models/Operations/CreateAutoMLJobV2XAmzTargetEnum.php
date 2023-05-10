@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateAutoMLJobV2XAmzTargetEnum: string
 {
     case SAGE_MAKER_CREATE_AUTO_ML_JOB_V2 = 'SageMaker.CreateAutoMLJobV2';

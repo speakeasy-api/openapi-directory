@@ -28,6 +28,8 @@ class SDK
 	public DefaultSupportedIdps $defaultSupportedIdps;
 	
 	public Projects $projects;
+	
+	public V2 $v2;
 		
 	// SDK private variables namespaced with _ to avoid conflicts with API models
 	private ?\GuzzleHttp\ClientInterface $_defaultClient;
@@ -95,6 +97,15 @@ class SDK
 		);
 		
 		$this->projects = new Projects(
+			$this->_defaultClient,
+			$this->_securityClient,
+			$this->_serverUrl,
+			$this->_language,
+			$this->_sdkVersion,
+			$this->_genVersion
+		);
+		
+		$this->v2 = new V2(
 			$this->_defaultClient,
 			$this->_securityClient,
 			$this->_serverUrl,

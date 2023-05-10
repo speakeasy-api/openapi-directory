@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum SetIpAddressTypeXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_SET_IP_ADDRESS_TYPE = 'Lightsail_20161128.SetIpAddressType';

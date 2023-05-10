@@ -31,6 +31,7 @@ src/Models/Operations/GetApiV1AccountsRelationshipsResponse.php
 src/Models/Operations/GetApiV1AccountsSearchSecurity.php
 src/Models/Operations/GetApiV1AccountsSearchRequest.php
 src/Models/Operations/GetApiV1AccountsSearchResponse.php
+src/Models/Operations/GetApiV1AccountsVerifyCredentialsSecurity.php
 src/Models/Operations/GetApiV1AccountsVerifyCredentialsResponse.php
 src/Models/Operations/GetApiV1AccountsIdSecurity.php
 src/Models/Operations/GetApiV1AccountsIdRequest.php
@@ -87,6 +88,7 @@ src/Models/Operations/PostApiV1AccountsIdUnmuteResponse.php
 src/Models/Operations/PostApiV1AccountsIdUnpinSecurity.php
 src/Models/Operations/PostApiV1AccountsIdUnpinRequest.php
 src/Models/Operations/PostApiV1AccountsIdUnpinResponse.php
+src/Models/Operations/GetApiV1AppsVerifyCredentialsSecurity.php
 src/Models/Operations/GetApiV1AppsVerifyCredentialsResponse.php
 src/Models/Operations/PostApiV1AppsRequestBody.php
 src/Models/Operations/PostApiV1Apps200ApplicationJSON.php
@@ -113,10 +115,12 @@ src/Models/Operations/DeleteApiV1FeaturedTagsIdResponse.php
 src/Models/Operations/DeleteApiV1FiltersIdSecurity.php
 src/Models/Operations/DeleteApiV1FiltersIdRequest.php
 src/Models/Operations/DeleteApiV1FiltersIdResponse.php
+src/Models/Operations/DeleteApiV1ListsSecurity.php
 src/Models/Operations/DeleteApiV1ListsResponse.php
 src/Models/Operations/DeleteApiV1ListsIdAccountsSecurity.php
 src/Models/Operations/DeleteApiV1ListsIdAccountsRequest.php
 src/Models/Operations/DeleteApiV1ListsIdAccountsResponse.php
+src/Models/Operations/DeleteApiV1PushSubscriptionSecurity.php
 src/Models/Operations/DeleteApiV1PushSubscriptionResponse.php
 src/Models/Operations/DeleteApiV1ScheduledStatusesIdSecurity.php
 src/Models/Operations/DeleteApiV1ScheduledStatusesIdRequest.php
@@ -168,8 +172,11 @@ src/Models/Operations/GetApiV1EndorsementsResponse.php
 src/Models/Operations/GetApiV1FavouritesSecurity.php
 src/Models/Operations/GetApiV1FavouritesRequest.php
 src/Models/Operations/GetApiV1FavouritesResponse.php
+src/Models/Operations/GetApiV1FeaturedTagsSecurity.php
 src/Models/Operations/GetApiV1FeaturedTagsResponse.php
+src/Models/Operations/GetApiV1FeaturedTagsSuggestionsSecurity.php
 src/Models/Operations/GetApiV1FeaturedTagsSuggestionsResponse.php
+src/Models/Operations/GetApiV1FiltersSecurity.php
 src/Models/Operations/GetApiV1FiltersResponse.php
 src/Models/Operations/GetApiV1FiltersIdSecurity.php
 src/Models/Operations/GetApiV1FiltersIdRequest.php
@@ -180,6 +187,7 @@ src/Models/Operations/GetApiV1FollowRequestsResponse.php
 src/Models/Operations/GetApiV1InstanceResponse.php
 src/Models/Operations/GetApiV1InstanceActivityResponse.php
 src/Models/Operations/GetApiV1InstancePeersResponse.php
+src/Models/Operations/GetApiV1ListsSecurity.php
 src/Models/Operations/GetApiV1ListsResponse.php
 src/Models/Operations/GetApiV1ListsIdSecurity.php
 src/Models/Operations/GetApiV1ListsIdRequest.php
@@ -201,7 +209,9 @@ src/Models/Operations/GetApiV1NotificationsIdRequest.php
 src/Models/Operations/GetApiV1NotificationsIdResponse.php
 src/Models/Operations/GetApiV1PollsIdRequest.php
 src/Models/Operations/GetApiV1PollsIdResponse.php
+src/Models/Operations/GetApiV1PreferencesSecurity.php
 src/Models/Operations/GetApiV1PreferencesResponse.php
+src/Models/Operations/GetApiV1PushSubscriptionSecurity.php
 src/Models/Operations/GetApiV1PushSubscriptionResponse.php
 src/Models/Operations/GetApiV1ScheduledStatusesSecurity.php
 src/Models/Operations/GetApiV1ScheduledStatusesRequest.php
@@ -310,6 +320,7 @@ src/Models/Operations/PostApiV1MediaIdSecurity.php
 src/Models/Operations/PostApiV1MediaIdRequestBody.php
 src/Models/Operations/PostApiV1MediaIdRequest.php
 src/Models/Operations/PostApiV1MediaIdResponse.php
+src/Models/Operations/PostApiV1NotificationsClearSecurity.php
 src/Models/Operations/PostApiV1NotificationsClearResponse.php
 src/Models/Operations/PostApiV1NotificationsIdDismissSecurity.php
 src/Models/Operations/PostApiV1NotificationsIdDismissRequest.php
@@ -420,4 +431,9 @@ src/Models/Shared/StatusParams.php
 src/Models/Shared/Context.php
 src/Models/Shared/ReportCategoryEnum.php
 src/Models/Shared/Report.php
+docs/sdk/README.md
+docs/todosecurity/README.md
+docs/accounts/README.md
+docs/apps/README.md
+docs/oauth/README.md
 USAGE.md

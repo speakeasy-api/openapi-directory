@@ -44,4 +44,5 @@ src/Models/Shared/HTTPValidationError.php
 src/Models/Shared/ValidationError.php
 src/Models/Shared/SerpData.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

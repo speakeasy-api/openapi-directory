@@ -40,4 +40,7 @@ src/Models/Shared/AltEnum.php
 src/Models/Shared/XgafvEnum.php
 src/Models/Shared/Operation.php
 src/Models/Shared/Status.php
+docs/sdk/README.md
+docs/media/README.md
+docs/sdfdownloadtasks/README.md
 USAGE.md

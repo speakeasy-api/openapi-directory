@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UntagResourceXAmzTargetEnum: string
 {
     case CODE_PIPELINE20150709_UNTAG_RESOURCE = 'CodePipeline_20150709.UntagResource';

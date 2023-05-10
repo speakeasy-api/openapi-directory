@@ -30,10 +30,10 @@ class RecurringDetailsResult
     /**
      * Payment details stored for recurring payments.
      * 
-     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\RecurringDetail> $details
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\RecurringDetailWrapper> $details
      */
 	#[\JMS\Serializer\Annotation\SerializedName('details')]
-    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\RecurringDetail>')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\RecurringDetailWrapper>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $details = null;
     

@@ -44,4 +44,6 @@ src/Models/Shared/GetTerminalDetailsRequest.php
 src/Models/Shared/GetTerminalsUnderAccountResponse.php
 src/Models/Shared/MerchantAccount.php
 src/Models/Shared/GetTerminalsUnderAccountRequest.php
+docs/sdk/README.md
+docs/general/README.md
 USAGE.md

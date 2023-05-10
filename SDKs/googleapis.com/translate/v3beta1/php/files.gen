@@ -119,4 +119,6 @@ src/Models/Shared/DocumentInputConfig.php
 src/Models/Shared/TranslateTextResponse.php
 src/Models/Shared/Translation.php
 src/Models/Shared/TranslateTextRequest.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

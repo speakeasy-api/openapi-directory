@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateLocationEfsXAmzTargetEnum: string
 {
     case FMRS_SERVICE_CREATE_LOCATION_EFS = 'FmrsService.CreateLocationEfs';

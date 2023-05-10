@@ -29,4 +29,5 @@ src/Models/Shared/GetIceServerConfigResponse.php
 src/Models/Shared/IceServer.php
 src/Models/Shared/SendAlexaOfferToMasterResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

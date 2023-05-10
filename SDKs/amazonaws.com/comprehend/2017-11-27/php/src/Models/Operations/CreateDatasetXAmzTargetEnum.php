@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateDatasetXAmzTargetEnum: string
 {
     case COMPREHEND20171127_CREATE_DATASET = 'Comprehend_20171127.CreateDataset';

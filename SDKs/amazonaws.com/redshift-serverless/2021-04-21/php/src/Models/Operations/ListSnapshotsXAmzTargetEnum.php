@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListSnapshotsXAmzTargetEnum: string
 {
     case REDSHIFT_SERVERLESS_LIST_SNAPSHOTS = 'RedshiftServerless.ListSnapshots';

@@ -30,4 +30,6 @@ src/Models/Shared/DocKeywords.php
 src/Models/Shared/DocMultimedia.php
 src/Models/Shared/Doc.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/archive/README.md
 USAGE.md

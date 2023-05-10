@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteSnapshotScheduleActionEnum: string
 {
     case DELETE_SNAPSHOT_SCHEDULE = 'DeleteSnapshotSchedule';

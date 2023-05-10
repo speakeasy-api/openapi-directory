@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListOpsMetadataXAmzTargetEnum: string
 {
     case AMAZON_SSM_LIST_OPS_METADATA = 'AmazonSSM.ListOpsMetadata';

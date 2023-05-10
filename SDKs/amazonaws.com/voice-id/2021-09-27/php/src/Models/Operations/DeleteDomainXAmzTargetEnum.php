@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteDomainXAmzTargetEnum: string
 {
     case VOICE_ID_DELETE_DOMAIN = 'VoiceID.DeleteDomain';

@@ -99,4 +99,10 @@ src/Models/Operations/GetNamesNameIdOutputFormatResponse.php
 src/Models/Operations/GetNameAuthoritiesOutputFormatEnum.php
 src/Models/Operations/GetNameAuthoritiesRequest.php
 src/Models/Operations/GetNameAuthoritiesResponse.php
+docs/sdk/README.md
+docs/feature/README.md
+docs/featuretaxonomy/README.md
+docs/name/README.md
+docs/nameauthority/README.md
+docs/search/README.md
 USAGE.md

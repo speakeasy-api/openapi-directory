@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListDocumentClassifierSummariesXAmzTargetEnum: string
 {
     case COMPREHEND20171127_LIST_DOCUMENT_CLASSIFIER_SUMMARIES = 'Comprehend_20171127.ListDocumentClassifierSummaries';

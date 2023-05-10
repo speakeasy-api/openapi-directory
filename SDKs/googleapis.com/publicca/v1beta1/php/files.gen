@@ -25,4 +25,6 @@ src/Models/Operations/PubliccaProjectsLocationsExternalAccountKeysCreateResponse
 src/Models/Shared/ExternalAccountKey.php
 src/Models/Shared/AltEnum.php
 src/Models/Shared/XgafvEnum.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

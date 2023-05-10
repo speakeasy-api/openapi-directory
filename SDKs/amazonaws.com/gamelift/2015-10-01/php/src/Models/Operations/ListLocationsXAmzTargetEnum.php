@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListLocationsXAmzTargetEnum: string
 {
     case GAME_LIFT_LIST_LOCATIONS = 'GameLift.ListLocations';

@@ -188,6 +188,16 @@ class JobInput
     public ?JobRequestedStateEnum $requestedState = null;
     
     /**
+     * Additional job parameters that can only be updated during runtime using the projects.jobs.update method. These fields have no effect when specified during job creation.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\RuntimeUpdatableParams $runtimeUpdatableParams
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('runtimeUpdatableParams')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\RuntimeUpdatableParams')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?RuntimeUpdatableParams $runtimeUpdatableParams = null;
+    
+    /**
      * Reserved for future use. This field is set only in responses from the server; it is ignored if it is set in any requests.
      * 
      * @var ?bool $satisfiesPzs
@@ -286,6 +296,7 @@ class JobInput
 		$this->replaceJobId = null;
 		$this->replacedByJobId = null;
 		$this->requestedState = null;
+		$this->runtimeUpdatableParams = null;
 		$this->satisfiesPzs = null;
 		$this->stageStates = null;
 		$this->startTime = null;

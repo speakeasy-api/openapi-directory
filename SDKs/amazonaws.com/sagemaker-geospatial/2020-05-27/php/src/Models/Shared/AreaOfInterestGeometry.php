@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * AreaOfInterestGeometry - <p/>
+ * AreaOfInterestGeometry - A GeoJSON object representing the geographic extent in the coordinate space.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

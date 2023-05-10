@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTGetLaunchTemplateDataActionEnum: string
 {
     case GET_LAUNCH_TEMPLATE_DATA = 'GetLaunchTemplateData';

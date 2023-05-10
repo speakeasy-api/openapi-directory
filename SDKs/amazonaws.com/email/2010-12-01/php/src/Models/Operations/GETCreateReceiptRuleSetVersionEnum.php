@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETCreateReceiptRuleSetVersionEnum: string
 {
     case TWO_THOUSAND_AND_TEN1201 = '2010-12-01';

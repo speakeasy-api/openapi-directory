@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum SendTaskHeartbeatXAmzTargetEnum: string
 {
     case AWS_STEP_FUNCTIONS_SEND_TASK_HEARTBEAT = 'AWSStepFunctions.SendTaskHeartbeat';

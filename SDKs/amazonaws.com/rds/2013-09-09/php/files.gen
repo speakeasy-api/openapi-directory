@@ -445,4 +445,5 @@ src/Models/Shared/RestoreDBInstanceToPointInTimeResult.php
 src/Models/Shared/RestoreDBInstanceToPointInTimeMessage.php
 src/Models/Shared/RevokeDBSecurityGroupIngressMessage.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

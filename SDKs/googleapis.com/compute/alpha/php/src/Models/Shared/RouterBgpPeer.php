@@ -57,7 +57,7 @@ class RouterBgpPeer
     public ?RouterBgpPeerBfd $bfd = null;
     
     /**
-     * User-defined Custom Learned Route IP range list for a BGP session.
+     * A list of user-defined custom learned route IP address ranges for a BGP session.
      * 
      * @var ?array<\OpenAPI\OpenAPI\Models\Shared\RouterBgpPeerCustomLearnedIpRange> $customLearnedIpRanges
      */
@@ -67,7 +67,7 @@ class RouterBgpPeer
     public ?array $customLearnedIpRanges = null;
     
     /**
-     * User-defined Custom Learned Route Priority for a BGP session. This will be applied to all Custom Learned Route ranges of the BGP session, if not given, google-managed priority of 100 is used.
+     * The user-defined custom learned route priority for a BGP session. This value is applied to all custom learned route ranges for the session. You can choose a value from `0` to `65335`. If you don't provide a value, Google Cloud assigns a priority of `100` to the ranges.
      * 
      * @var ?int $customLearnedRoutePriority
      */

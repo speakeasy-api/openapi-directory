@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateReservedInstancesListingActionEnum: string
 {
     case CREATE_RESERVED_INSTANCES_LISTING = 'CreateReservedInstancesListing';

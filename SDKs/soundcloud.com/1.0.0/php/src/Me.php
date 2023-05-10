@@ -85,9 +85,11 @@ class Me
     /**
      * Returns the authenticated user’s information.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetMeSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetMeResponse
      */
 	public function getMe(
+        \OpenAPI\OpenAPI\Models\Operations\GetMeSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetMeResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -95,7 +97,8 @@ class Me
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -351,12 +354,15 @@ class Me
      * @param \OpenAPI\OpenAPI\Models\Operations\GetMeFavoritesIdsRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\GetMeFavoritesIdsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetMeFavoritesIdsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getMeFavoritesIds(
         \OpenAPI\OpenAPI\Models\Operations\GetMeFavoritesIdsRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\GetMeFavoritesIdsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetMeFavoritesIdsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/me/favorites/ids');
         
@@ -429,12 +435,15 @@ class Me
      * @param \OpenAPI\OpenAPI\Models\Operations\GetMeFollowersFollowerIdRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\GetMeFollowersFollowerIdSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetMeFollowersFollowerIdResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getMeFollowersFollowerId(
         \OpenAPI\OpenAPI\Models\Operations\GetMeFollowersFollowerIdRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\GetMeFollowersFollowerIdSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetMeFollowersFollowerIdResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/me/followers/{follower_id}', \OpenAPI\OpenAPI\Models\Operations\GetMeFollowersFollowerIdRequest::class, $request);
         
@@ -560,12 +569,15 @@ class Me
      * @param \OpenAPI\OpenAPI\Models\Operations\GetMeFollowingsUserIdRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\GetMeFollowingsUserIdSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetMeFollowingsUserIdResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getMeFollowingsUserId(
         \OpenAPI\OpenAPI\Models\Operations\GetMeFollowingsUserIdRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\GetMeFollowingsUserIdSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetMeFollowingsUserIdResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/me/followings/{user_id}', \OpenAPI\OpenAPI\Models\Operations\GetMeFollowingsUserIdRequest::class, $request);
         
@@ -705,12 +717,15 @@ class Me
      * @param \OpenAPI\OpenAPI\Models\Operations\GetMePlaylistsPlaylistIdRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\GetMePlaylistsPlaylistIdSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetMePlaylistsPlaylistIdResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getMePlaylistsPlaylistId(
         \OpenAPI\OpenAPI\Models\Operations\GetMePlaylistsPlaylistIdRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\GetMePlaylistsPlaylistIdSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetMePlaylistsPlaylistIdResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/me/playlists/{playlist_id}', \OpenAPI\OpenAPI\Models\Operations\GetMePlaylistsPlaylistIdRequest::class, $request);
         
@@ -786,12 +801,15 @@ class Me
      * @param \OpenAPI\OpenAPI\Models\Operations\GetMeTracksTrackIdRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\GetMeTracksTrackIdSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetMeTracksTrackIdResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getMeTracksTrackId(
         \OpenAPI\OpenAPI\Models\Operations\GetMeTracksTrackIdRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\GetMeTracksTrackIdSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetMeTracksTrackIdResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/me/tracks/{track_id}', \OpenAPI\OpenAPI\Models\Operations\GetMeTracksTrackIdRequest::class, $request);
         

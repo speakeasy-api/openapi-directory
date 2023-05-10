@@ -23,6 +23,14 @@ class UntagResourceResponse
     public mixed $invalidParameterException = null;
     
     /**
+     * MalformedArnException
+     * 
+     * @var mixed $malformedArnException
+     */
+	
+    public mixed $malformedArnException = null;
+    
+    /**
      * ServerInternalException
      * 
      * @var mixed $serverInternalException
@@ -45,6 +53,14 @@ class UntagResourceResponse
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
     /**
+     * UnknownResourceException
+     * 
+     * @var mixed $unknownResourceException
+     */
+	
+    public mixed $unknownResourceException = null;
+    
+    /**
      * Success
      * 
      * @var ?array<string, mixed> $untagResourceResponse
@@ -56,10 +72,12 @@ class UntagResourceResponse
 	{
 		$this->contentType = "";
 		$this->invalidParameterException = null;
+		$this->malformedArnException = null;
 		$this->serverInternalException = null;
 		$this->serviceUnavailableException = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
+		$this->unknownResourceException = null;
 		$this->untagResourceResponse = null;
 	}
 }

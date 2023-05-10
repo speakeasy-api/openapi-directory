@@ -64,7 +64,7 @@ class Authentication
      */
 	public function postUsers2FALogin(
         \OpenAPI\OpenAPI\Models\Shared\Users2FALoginRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostUsers2FALoginResponse
     {
         $baseUrl = Authentication::POST_USERS2_FA_LOGIN_SERVERS[0];
@@ -123,7 +123,7 @@ class Authentication
      */
 	public function postUsersLogin(
         \OpenAPI\OpenAPI\Models\Shared\UsersLoginRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostUsersLoginResponse
     {
         $baseUrl = Authentication::POST_USERS_LOGIN_SERVERS[0];

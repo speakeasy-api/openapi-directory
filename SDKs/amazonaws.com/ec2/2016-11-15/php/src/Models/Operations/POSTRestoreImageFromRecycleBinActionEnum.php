@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTRestoreImageFromRecycleBinActionEnum: string
 {
     case RESTORE_IMAGE_FROM_RECYCLE_BIN = 'RestoreImageFromRecycleBin';

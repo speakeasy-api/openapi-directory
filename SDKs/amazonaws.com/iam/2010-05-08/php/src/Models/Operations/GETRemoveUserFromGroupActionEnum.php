@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETRemoveUserFromGroupActionEnum: string
 {
     case REMOVE_USER_FROM_GROUP = 'RemoveUserFromGroup';

@@ -120,4 +120,5 @@ src/Models/Shared/ListGroupResourcesResponse.php
 src/Models/Shared/ListGroupsResponse.php
 src/Models/Shared/ListTagsForResourceResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

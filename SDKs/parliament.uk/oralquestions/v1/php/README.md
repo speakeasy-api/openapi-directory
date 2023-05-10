@@ -30,25 +30,49 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\PublishedEarlyDayMotionGetRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new PublishedEarlyDayMotionGetRequest();
+    $request->id = 548814;
+
+    $response = $sdk->earlyDayMotions->publishedEarlyDayMotionGet($request);
+
+    if ($response->apiResponseListPublishedWrittenQuestion !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### earlyDayMotions
+### [earlyDayMotions](docs/earlydaymotions/README.md)
 
-* `publishedEarlyDayMotionGet` - Returns a single Early Day Motion by ID
-* `getEarlyDayMotionsList` - Returns a list of Early Day Motions
+* [publishedEarlyDayMotionGet](docs/earlydaymotions/README.md#publishedearlydaymotionget) - Returns a single Early Day Motion by ID
+* [getEarlyDayMotionsList](docs/earlydaymotions/README.md#getearlydaymotionslist) - Returns a list of Early Day Motions
 
-### oralQuestionTimes
+### [oralQuestionTimes](docs/oralquestiontimes/README.md)
 
-* `publishedOralQuestionTimeGet` - Returns a list of oral question times
+* [publishedOralQuestionTimeGet](docs/oralquestiontimes/README.md#publishedoralquestiontimeget) - Returns a list of oral question times
 
-### oralQuestions
+### [oralQuestions](docs/oralquestions/README.md)
 
-* `publishedOralQuestionGet` - Returns a list of oral questions
+* [publishedOralQuestionGet](docs/oralquestions/README.md#publishedoralquestionget) - Returns a list of oral questions
 <!-- End SDK Available Operations -->
 
 ### Maturity

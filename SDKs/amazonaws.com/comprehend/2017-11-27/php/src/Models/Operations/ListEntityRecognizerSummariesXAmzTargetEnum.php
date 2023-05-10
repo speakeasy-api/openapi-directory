@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListEntityRecognizerSummariesXAmzTargetEnum: string
 {
     case COMPREHEND20171127_LIST_ENTITY_RECOGNIZER_SUMMARIES = 'Comprehend_20171127.ListEntityRecognizerSummaries';

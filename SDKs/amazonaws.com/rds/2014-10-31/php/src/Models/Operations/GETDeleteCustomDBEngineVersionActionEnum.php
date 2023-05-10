@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteCustomDBEngineVersionActionEnum: string
 {
     case DELETE_CUSTOM_DB_ENGINE_VERSION = 'DeleteCustomDBEngineVersion';

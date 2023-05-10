@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PeerVpcXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_PEER_VPC = 'Lightsail_20161128.PeerVpc';

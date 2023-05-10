@@ -85,4 +85,7 @@ src/Models/Shared/SerieResume.php
 src/Models/Shared/Serie.php
 src/Models/Shared/SetCardCount.php
 src/Models/Shared/Set.php
+docs/sdk/README.md
+docs/cards/README.md
+docs/filters/README.md
 USAGE.md

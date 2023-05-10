@@ -53,6 +53,16 @@ class AllocationPolicy
     public ?NetworkPolicy $network = null;
     
     /**
+     * PlacementPolicy describes a group placement policy for the VMs controlled by this AllocationPolicy.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\PlacementPolicy $placement
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('placement')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\PlacementPolicy')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?PlacementPolicy $placement = null;
+    
+    /**
      * Carries information about a Google Cloud service account.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\ServiceAccount $serviceAccount
@@ -68,6 +78,7 @@ class AllocationPolicy
 		$this->labels = null;
 		$this->location = null;
 		$this->network = null;
+		$this->placement = null;
 		$this->serviceAccount = null;
 	}
 }

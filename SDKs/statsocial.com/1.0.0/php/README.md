@@ -30,44 +30,69 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\GetApplicationsStatusRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetApplicationsStatusRequest();
+    $request->key = 'corrupti';
+
+    $response = $sdk->application->getApplicationsStatus($request);
+
+    if ($response->applicationStatus !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### application
+### [application](docs/application/README.md)
 
-* `getApplicationsStatus` - Used to understand API usage
+* [getApplicationsStatus](docs/application/README.md#getapplicationsstatus) - Used to understand API usage
 
-### customReports
+### [customReports](docs/customreports/README.md)
 
-* `getReportsCustomCreate` - Step 3 of executing custom report
-* `getReportsCustomGenerate` - Step 1 of executing custom report
-* `getReportsCustomInsert` - Step 2 of executing custom report
-* `postReportsCustomCreate` - Step 3 of executing custom report
-* `postReportsCustomGenerate` - Step 1 of executing custom report
-* `postReportsCustomInsert` - Step 2 of executing custom report
+* [getReportsCustomCreate](docs/customreports/README.md#getreportscustomcreate) - Step 3 of executing custom report
+* [getReportsCustomGenerate](docs/customreports/README.md#getreportscustomgenerate) - Step 1 of executing custom report
+* [getReportsCustomInsert](docs/customreports/README.md#getreportscustominsert) - Step 2 of executing custom report
+* [postReportsCustomCreate](docs/customreports/README.md#postreportscustomcreate) - Step 3 of executing custom report
+* [postReportsCustomGenerate](docs/customreports/README.md#postreportscustomgenerate) - Step 1 of executing custom report
+* [postReportsCustomInsert](docs/customreports/README.md#postreportscustominsert) - Step 2 of executing custom report
 
-### followerReports
+### [followerReports](docs/followerreports/README.md)
 
-* `getReportsTwitterCreate` - Used to create twitter follower report
-* `postReportsTwitterCreate` - Used to create twitter follower report
+* [getReportsTwitterCreate](docs/followerreports/README.md#getreportstwittercreate) - Used to create twitter follower report
+* [postReportsTwitterCreate](docs/followerreports/README.md#postreportstwittercreate) - Used to create twitter follower report
 
-### reports
+### [reports](docs/reports/README.md)
 
-* `getReports` - Obtain report output
-* `getReportsDates` - Get report dates available for a specific report
-* `getReportsStatus` - Get list of generated reports
-* `postReports` - Obtain report output
-* `postReportsDates` - Get report dates available for a specific report
-* `postReportsStatus` - Get list of generated reports
+* [getReports](docs/reports/README.md#getreports) - Obtain report output
+* [getReportsDates](docs/reports/README.md#getreportsdates) - Get report dates available for a specific report
+* [getReportsStatus](docs/reports/README.md#getreportsstatus) - Get list of generated reports
+* [postReports](docs/reports/README.md#postreports) - Obtain report output
+* [postReportsDates](docs/reports/README.md#postreportsdates) - Get report dates available for a specific report
+* [postReportsStatus](docs/reports/README.md#postreportsstatus) - Get list of generated reports
 
-### tweetReports
+### [tweetReports](docs/tweetreports/README.md)
 
-* `getReportsTweetCreate` - Used to create tweet reports
-* `postReportsTweetCreate` - Used to create tweet reports
+* [getReportsTweetCreate](docs/tweetreports/README.md#getreportstweetcreate) - Used to create tweet reports
+* [postReportsTweetCreate](docs/tweetreports/README.md#postreportstweetcreate) - Used to create tweet reports
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -307,4 +307,5 @@ src/Models/Shared/UpdateControlResponse.php
 src/Models/Shared/UpdateSettingsResponse.php
 src/Models/Shared/ValidateAssessmentReportIntegrityResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

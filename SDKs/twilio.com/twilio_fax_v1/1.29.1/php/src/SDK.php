@@ -103,7 +103,7 @@ class SDK
 	public function deleteFax(
         \OpenAPI\OpenAPI\Models\Operations\DeleteFaxRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\DeleteFaxSecurity $security,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\DeleteFaxResponse
     {
         $baseUrl = SDK::DELETE_FAX_SERVERS[0];
@@ -142,7 +142,7 @@ class SDK
 	public function deleteFaxMedia(
         \OpenAPI\OpenAPI\Models\Operations\DeleteFaxMediaRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\DeleteFaxMediaSecurity $security,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\DeleteFaxMediaResponse
     {
         $baseUrl = SDK::DELETE_FAX_MEDIA_SERVERS[0];
@@ -181,7 +181,7 @@ class SDK
 	public function fetchFax(
         \OpenAPI\OpenAPI\Models\Operations\FetchFaxRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\FetchFaxSecurity $security,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\FetchFaxResponse
     {
         $baseUrl = SDK::FETCH_FAX_SERVERS[0];
@@ -224,7 +224,7 @@ class SDK
 	public function fetchFaxMedia(
         \OpenAPI\OpenAPI\Models\Operations\FetchFaxMediaRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\FetchFaxMediaSecurity $security,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\FetchFaxMediaResponse
     {
         $baseUrl = SDK::FETCH_FAX_MEDIA_SERVERS[0];
@@ -267,7 +267,7 @@ class SDK
 	public function listFax(
         \OpenAPI\OpenAPI\Models\Operations\ListFaxRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\ListFaxSecurity $security,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ListFaxResponse
     {
         $baseUrl = SDK::LIST_FAX_SERVERS[0];
@@ -311,7 +311,7 @@ class SDK
 	public function listFaxMedia(
         \OpenAPI\OpenAPI\Models\Operations\ListFaxMediaRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\ListFaxMediaSecurity $security,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ListFaxMediaResponse
     {
         $baseUrl = SDK::LIST_FAX_MEDIA_SERVERS[0];

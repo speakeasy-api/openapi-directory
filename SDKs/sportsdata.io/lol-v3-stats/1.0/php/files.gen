@@ -106,4 +106,5 @@ src/Models/Shared/Team.php
 src/Models/Shared/Standing.php
 src/Models/Shared/Venue.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

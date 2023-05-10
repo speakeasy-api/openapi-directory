@@ -210,4 +210,8 @@ src/Models/Shared/GoogleAnalyticsAdminV1betaAccessInListFilter.php
 src/Models/Shared/GoogleAnalyticsAdminV1betaAccessBetweenFilter.php
 src/Models/Shared/GoogleAnalyticsAdminV1betaAccessDimension.php
 src/Models/Shared/GoogleAnalyticsAdminV1betaAccessDateRange.php
+docs/sdk/README.md
+docs/accountsummaries/README.md
+docs/accounts/README.md
+docs/properties/README.md
 USAGE.md

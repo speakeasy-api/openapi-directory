@@ -282,8 +282,7 @@ class GetTotalsEntityTypeRequest
     
     /**
      * 
-     * A unique identifier assigned to each candidate registered with the FEC.
-     * If a person runs for several offices, that person will have separate candidate IDs for each office. This is a filter for Leadership PAC sponsor.
+     * A unique identifier assigned to each candidate registered with the FEC. If a person runs for several offices, that person will have separate candidate IDs for each office. This is a filter for Leadership PAC sponsor.
      * 
      * 
      * @var ?array<string> $sponsorCandidateId

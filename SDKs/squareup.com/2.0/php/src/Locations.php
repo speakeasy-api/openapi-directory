@@ -90,9 +90,11 @@ class Locations
      * The `id` field of the [`Location`](https://developer.squareup.com/reference/square_2021-08-18/objects/Location) objects returned by this
      * endpoint correspond to that `location_id` parameter.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListLocationsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ListLocationsResponse
      */
 	public function listLocations(
+        \OpenAPI\OpenAPI\Models\Operations\ListLocationsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ListLocationsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -100,7 +102,8 @@ class Locations
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

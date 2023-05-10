@@ -12,7 +12,7 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 class GetResourceShareAssociationsRequestBody
 {
     /**
-     * Specifies that you want to retrieve only associations with this status.
+     * Specifies that you want to retrieve only associations that have this status.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Operations\GetResourceShareAssociationsRequestBodyAssociationStatusEnum $associationStatus
      */
@@ -22,7 +22,7 @@ class GetResourceShareAssociationsRequestBody
     public ?GetResourceShareAssociationsRequestBodyAssociationStatusEnum $associationStatus = null;
     
     /**
-     * <p>Specifies whether you want to retrieve the associations that involve a specified resource or principal.</p> <ul> <li> <p> <code>PRINCIPAL</code> – list the principals that are associated with the specified resource share.</p> </li> <li> <p> <code>RESOURCE</code> – list the resources that are associated with the specified resource share.</p> </li> </ul>
+     * <p>Specifies whether you want to retrieve the associations that involve a specified resource or principal.</p> <ul> <li> <p> <code>PRINCIPAL</code> – list the principals whose associations you want to see.</p> </li> <li> <p> <code>RESOURCE</code> – list the resources whose associations you want to see.</p> </li> </ul>
      * 
      * @var \OpenAPI\OpenAPI\Models\Operations\GetResourceShareAssociationsRequestBodyAssociationTypeEnum $associationType
      */
@@ -51,7 +51,7 @@ class GetResourceShareAssociationsRequestBody
     public ?string $nextToken = null;
     
     /**
-     * <p>Specifies the ID of the principal whose resource shares you want to retrieve. This can be an Amazon Web Services account ID, an organization ID, an organizational unit ID, or the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resoure Name (ARN)</a> of an individual IAM user or role.</p> <p>You cannot specify this parameter if the association type is <code>RESOURCE</code>.</p>
+     * <p>Specifies the ID of the principal whose resource shares you want to retrieve. This can be an Amazon Web Services account ID, an organization ID, an organizational unit ID, or the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Name (ARN)</a> of an individual IAM user or role.</p> <p>You cannot specify this parameter if the association type is <code>RESOURCE</code>.</p>
      * 
      * @var ?string $principal
      */
@@ -61,7 +61,7 @@ class GetResourceShareAssociationsRequestBody
     public ?string $principal = null;
     
     /**
-     * <p>Specifies the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resoure Name (ARN)</a> of the resource whose resource shares you want to retrieve.</p> <p>You cannot specify this parameter if the association type is <code>PRINCIPAL</code>.</p>
+     * <p>Specifies the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Name (ARN)</a> of a resource whose resource shares you want to retrieve.</p> <p>You cannot specify this parameter if the association type is <code>PRINCIPAL</code>.</p>
      * 
      * @var ?string $resourceArn
      */

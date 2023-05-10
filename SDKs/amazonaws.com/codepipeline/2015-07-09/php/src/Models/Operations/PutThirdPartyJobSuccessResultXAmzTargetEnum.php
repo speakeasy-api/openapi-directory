@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutThirdPartyJobSuccessResultXAmzTargetEnum: string
 {
     case CODE_PIPELINE20150709_PUT_THIRD_PARTY_JOB_SUCCESS_RESULT = 'CodePipeline_20150709.PutThirdPartyJobSuccessResult';

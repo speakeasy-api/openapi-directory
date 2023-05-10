@@ -20,4 +20,5 @@ enum SnowballCapacityEnum: string
     case T14 = 'T14';
     case T32 = 'T32';
     case NO_PREFERENCE = 'NoPreference';
+    case T240 = 'T240';
 }

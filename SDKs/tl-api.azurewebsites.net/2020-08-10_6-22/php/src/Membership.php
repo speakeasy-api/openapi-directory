@@ -42,9 +42,11 @@ class Membership
      * This will return all properties related to member entity
      *             
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\MembershipGetSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\MembershipGetResponse
      */
 	public function membershipGet(
+        \OpenAPI\OpenAPI\Models\Operations\MembershipGetSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\MembershipGetResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -52,7 +54,8 @@ class Membership
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * AdditionalResources - The choice level additional resources.
+ * AdditionalResources - <p>The choice level additional resources for a custom lens.</p> <p>This field does not apply to Amazon Web Services official lenses.</p>
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

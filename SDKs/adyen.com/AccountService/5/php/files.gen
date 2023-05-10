@@ -164,4 +164,8 @@ src/Models/Shared/DocumentDetailDocumentTypeEnum.php
 src/Models/Shared/DocumentDetail.php
 src/Models/Shared/GetUploadedDocumentsRequest.php
 src/Models/Shared/UploadDocumentRequest.php
+docs/sdk/README.md
+docs/accountholders/README.md
+docs/accounts/README.md
+docs/verification/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeEndpointsXAmzTargetEnum: string
 {
     case AMAZON_DM_SV20160101_DESCRIBE_ENDPOINTS = 'AmazonDMSv20160101.DescribeEndpoints';

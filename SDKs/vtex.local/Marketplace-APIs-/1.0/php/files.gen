@@ -75,4 +75,10 @@ src/Models/Shared/Matcher.php
 src/Models/Shared/SaveautoapproveforaccountRequest.php
 src/Models/Shared/SaveautoapproveforaccountsellerRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/getsuggestions/README.md
+docs/getversions/README.md
+docs/managesuggestions/README.md
+docs/matchreceivedskus/README.md
+docs/skuapprovalsettings/README.md
 USAGE.md

@@ -92,9 +92,11 @@ class Authentication
      * Deletes the auth token provided in Authorization header.
      * Deleting an expired or invalid token will result in 401 Unauthorized error.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\DeleteSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\DeleteResponse
      */
 	public function delete(
+        \OpenAPI\OpenAPI\Models\Operations\DeleteSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\DeleteResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -102,7 +104,8 @@ class Authentication
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('DELETE', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

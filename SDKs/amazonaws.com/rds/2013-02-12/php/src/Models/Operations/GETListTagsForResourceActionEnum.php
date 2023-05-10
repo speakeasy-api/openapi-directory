@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETListTagsForResourceActionEnum: string
 {
     case LIST_TAGS_FOR_RESOURCE = 'ListTagsForResource';

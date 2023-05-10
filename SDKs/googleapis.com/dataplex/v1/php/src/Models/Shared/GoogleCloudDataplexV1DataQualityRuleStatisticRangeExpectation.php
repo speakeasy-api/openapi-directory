@@ -37,6 +37,11 @@ class GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $minValue = null;
     
+    /**
+     * The aggregate metric to evaluate.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectationStatisticEnum $statistic
+     */
 	#[\JMS\Serializer\Annotation\SerializedName('statistic')]
     #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectationStatisticEnum>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdatePullRequestApprovalRuleContentXAmzTargetEnum: string
 {
     case CODE_COMMIT20150413_UPDATE_PULL_REQUEST_APPROVAL_RULE_CONTENT = 'CodeCommit_20150413.UpdatePullRequestApprovalRuleContent';

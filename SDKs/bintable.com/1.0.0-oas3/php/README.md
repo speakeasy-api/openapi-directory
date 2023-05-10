@@ -30,20 +30,44 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\BalanceLookupRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new BalanceLookupRequest();
+    $request->apiKey = 'corrupti';
+
+    $response = $sdk->balance->balanceLookup($request);
+
+    if ($response->body !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### balance
+### [balance](docs/balance/README.md)
 
-* `balanceLookup` - Check Balance
+* [balanceLookup](docs/balance/README.md#balancelookup) - Check Balance
 
-### lookup
+### [lookup](docs/lookup/README.md)
 
-* `binLookup` - Lookup for bin
+* [binLookup](docs/lookup/README.md#binlookup) - Lookup for bin
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DisassociateProductFromPortfolioXAmzTargetEnum: string
 {
     case AWS242_SERVICE_CATALOG_SERVICE_DISASSOCIATE_PRODUCT_FROM_PORTFOLIO = 'AWS242ServiceCatalogService.DisassociateProductFromPortfolio';

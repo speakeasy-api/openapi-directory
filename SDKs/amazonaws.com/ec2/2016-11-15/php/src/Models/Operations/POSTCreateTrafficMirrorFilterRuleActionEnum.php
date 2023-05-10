@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateTrafficMirrorFilterRuleActionEnum: string
 {
     case CREATE_TRAFFIC_MIRROR_FILTER_RULE = 'CreateTrafficMirrorFilterRule';

@@ -129,4 +129,10 @@ src/Models/Shared/BlockedResource.php
 src/Models/Shared/MobileFriendlyIssueRuleEnum.php
 src/Models/Shared/MobileFriendlyIssue.php
 src/Models/Shared/RunMobileFriendlyTestRequest.php
+docs/sdk/README.md
+docs/searchanalytics/README.md
+docs/sitemaps/README.md
+docs/sites/README.md
+docs/urlinspection/README.md
+docs/urltestingtools/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetFolderXAmzTargetEnum: string
 {
     case CODE_COMMIT20150413_GET_FOLDER = 'CodeCommit_20150413.GetFolder';

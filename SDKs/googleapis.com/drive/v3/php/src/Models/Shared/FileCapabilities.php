@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * FileCapabilities - Capabilities the current user has on this file. Each capability corresponds to a fine-grained action that a user may take.
+ * FileCapabilities - Capabilities the current user has on this file. Each capability corresponds to a fine-grained action that a user can take.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public
@@ -28,7 +28,7 @@ class FileCapabilities
     public ?bool $canAcceptOwnership = null;
     
     /**
-     * Whether the current user can add children to this folder. This is always false when the item is not a folder.
+     * Whether the current user can add children to this folder. This is always false when the item isn't a folder.
      * 
      * @var ?bool $canAddChildren
      */
@@ -38,7 +38,7 @@ class FileCapabilities
     public ?bool $canAddChildren = null;
     
     /**
-     * Whether the current user can add a folder from another drive (different shared drive or My Drive) to this folder. This is false when the item is not a folder. Only populated for items in shared drives.
+     * Whether the current user can add a folder from another drive (different shared drive or My Drive) to this folder. This is false when the item isn't a folder. Only populated for items in shared drives.
      * 
      * @var ?bool $canAddFolderFromAnotherDrive
      */
@@ -98,7 +98,7 @@ class FileCapabilities
     public ?bool $canComment = null;
     
     /**
-     * Whether the current user can copy this file. For an item in a shared drive, whether the current user can copy non-folder descendants of this item, or this item itself if it is not a folder.
+     * Whether the current user can copy this file. For an item in a shared drive, whether the current user can copy non-folder descendants of this item, or this item itself if it's not a folder.
      * 
      * @var ?bool $canCopy
      */
@@ -118,7 +118,7 @@ class FileCapabilities
     public ?bool $canDelete = null;
     
     /**
-     * Whether the current user can delete children of this folder. This is false when the item is not a folder. Only populated for items in shared drives.
+     * Whether the current user can delete children of this folder. This is false when the item isn't a folder. Only populated for items in shared drives.
      * 
      * @var ?bool $canDeleteChildren
      */
@@ -138,7 +138,7 @@ class FileCapabilities
     public ?bool $canDownload = null;
     
     /**
-     * Whether the current user can edit this file. Other factors may limit the type of changes a user can make to a file. For example, see canChangeCopyRequiresWriterPermission or canModifyContent.
+     * Whether the current user can edit this file. Other factors might limit the type of changes a user can make to a file. For example, see canChangeCopyRequiresWriterPermission or canModifyContent.
      * 
      * @var ?bool $canEdit
      */
@@ -148,7 +148,7 @@ class FileCapabilities
     public ?bool $canEdit = null;
     
     /**
-     * Whether the current user can list the children of this folder. This is always false when the item is not a folder.
+     * Whether the current user can list the children of this folder. This is always false when the item isn't a folder.
      * 
      * @var ?bool $canListChildren
      */
@@ -188,7 +188,7 @@ class FileCapabilities
     public ?bool $canModifyLabels = null;
     
     /**
-     * Whether the current user can move children of this folder outside of the shared drive. This is false when the item is not a folder. Only populated for items in shared drives.
+     * Whether the current user can move children of this folder outside of the shared drive. This is false when the item isn't a folder. Only populated for items in shared drives.
      * 
      * @var ?bool $canMoveChildrenOutOfDrive
      */
@@ -208,7 +208,7 @@ class FileCapabilities
     public ?bool $canMoveChildrenOutOfTeamDrive = null;
     
     /**
-     * Whether the current user can move children of this folder within this drive. This is false when the item is not a folder. Note that a request to move the child may still fail depending on the current user's access to the child and to the destination folder.
+     * Whether the current user can move children of this folder within this shared drive or My Drive. This is false when the item isn't a folder. Note that a request to move the child might still fail depending on the current user's access to the child and to the destination folder.
      * 
      * @var ?bool $canMoveChildrenWithinDrive
      */
@@ -238,7 +238,7 @@ class FileCapabilities
     public ?bool $canMoveItemIntoTeamDrive = null;
     
     /**
-     * Whether the current user can move this item outside of this drive by changing its parent. Note that a request to change the parent of the item may still fail depending on the new parent that is being added.
+     * Whether the current user can move this item outside of this shared drive or My Drive by changing its parent. Note that a request to change the parent of the item might still fail depending on the new parent that's being added.
      * 
      * @var ?bool $canMoveItemOutOfDrive
      */
@@ -258,7 +258,7 @@ class FileCapabilities
     public ?bool $canMoveItemOutOfTeamDrive = null;
     
     /**
-     * Whether the current user can move this item within this drive. Note that a request to change the parent of the item may still fail depending on the new parent that is being added and the parent that is being removed.
+     * Whether the current user can move this item within this shared drive or My Drive. Note that a request to change the parent of the item might still fail depending on the new parent that's being added and the parent that's being removed.
      * 
      * @var ?bool $canMoveItemWithinDrive
      */
@@ -308,7 +308,7 @@ class FileCapabilities
     public ?bool $canReadLabels = null;
     
     /**
-     * Whether the current user can read the revisions resource of this file. For a shared drive item, whether revisions of non-folder descendants of this item, or this item itself if it isn't a folder, can be read.
+     * Whether the current user can read the revisions resource of this file. For a shared drive item, whether revisions of non-folder descendants of this item, or this item itself if it's not a folder, can be read.
      * 
      * @var ?bool $canReadRevisions
      */
@@ -328,7 +328,7 @@ class FileCapabilities
     public ?bool $canReadTeamDrive = null;
     
     /**
-     * Whether the current user can remove children from this folder. This is always false when the item is not a folder. For a folder in a shared drive, use canDeleteChildren or canTrashChildren instead.
+     * Whether the current user can remove children from this folder. This is always false when the item isn't a folder. For a folder in a shared drive, use canDeleteChildren or canTrashChildren instead.
      * 
      * @var ?bool $canRemoveChildren
      */
@@ -378,7 +378,7 @@ class FileCapabilities
     public ?bool $canTrash = null;
     
     /**
-     * Whether the current user can trash children of this folder. This is false when the item is not a folder. Only populated for items in shared drives.
+     * Whether the current user can trash children of this folder. This is false when the item isn't a folder. Only populated for items in shared drives.
      * 
      * @var ?bool $canTrashChildren
      */

@@ -60,7 +60,7 @@ class RunNamespacesDomainmappingsGetRequest
     public ?string $key = null;
     
     /**
-     * The name of the domain mapping to retrieve. For Cloud Run (fully managed), replace {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+     * Required. The name of the domain mapping to retrieve. For Cloud Run (fully managed), replace {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
      * 
      * @var string $name
      */

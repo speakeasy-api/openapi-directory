@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetCloudFormationStackRecordsXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_GET_CLOUD_FORMATION_STACK_RECORDS = 'Lightsail_20161128.GetCloudFormationStackRecords';

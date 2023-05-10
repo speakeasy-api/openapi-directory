@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * GoogleAppsCardV1BorderStyle - Represents the complete border style applied to items in a widget.
+ * GoogleAppsCardV1BorderStyle - The style options for the border of a card or widget, including the border type and color.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

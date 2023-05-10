@@ -160,4 +160,5 @@ src/Models/Shared/UpdateBudgetActionRequest.php
 src/Models/Shared/UpdateNotificationRequest.php
 src/Models/Shared/UpdateSubscriberRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

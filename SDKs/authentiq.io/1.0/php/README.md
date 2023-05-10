@@ -30,30 +30,64 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\AuthorizeRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new AuthorizeRequest();
+    $request->clientId = 'corrupti';
+    $request->display = 'provident';
+    $request->maxAge = 715190;
+    $request->nonce = 'quibusdam';
+    $request->prompt = 'unde';
+    $request->redirectUri = 'nulla';
+    $request->responseMode = 'corrupti';
+    $request->responseType = 'illum';
+    $request->scope = 'vel';
+    $request->state = 'error';
+    $request->uiLocales = 'deserunt';
+
+    $response = $sdk->authentication->authorize($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### authentication
+### [authentication](docs/authentication/README.md)
 
-* `authorize` - Authenticate a user
-* `token` - Obtain an ID Token
-* `userInfo` - Retrieve a user profile
+* [authorize](docs/authentication/README.md#authorize) - Authenticate a user
+* [token](docs/authentication/README.md#token) - Obtain an ID Token
+* [userInfo](docs/authentication/README.md#userinfo) - Retrieve a user profile
 
-### clientManagement
+### [clientManagement](docs/clientmanagement/README.md)
 
-* `client` - List clients
-* `clientClientId` - Delete a client
-* `createClient` - Register a client
-* `getClient` - View a client
-* `updateClient` - Update a client
+* [client](docs/clientmanagement/README.md#client) - List clients
+* [clientClientId](docs/clientmanagement/README.md#clientclientid) - Delete a client
+* [createClient](docs/clientmanagement/README.md#createclient) - Register a client
+* [getClient](docs/clientmanagement/README.md#getclient) - View a client
+* [updateClient](docs/clientmanagement/README.md#updateclient) - Update a client
 
-### sessionManagement
+### [sessionManagement](docs/sessionmanagement/README.md)
 
-* `authorizeIframe` - Include a session iframe
+* [authorizeIframe](docs/sessionmanagement/README.md#authorizeiframe) - Include a session iframe
 <!-- End SDK Available Operations -->
 
 ### Maturity

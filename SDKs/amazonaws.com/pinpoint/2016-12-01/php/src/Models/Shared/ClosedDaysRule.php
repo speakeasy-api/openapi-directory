@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * ClosedDaysRule - Closed Days Rule. Part of Journey sending schedule.
+ * ClosedDaysRule - Specifies the rule settings for when messages can't be sent.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

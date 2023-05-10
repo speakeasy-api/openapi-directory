@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteQueryDefinitionXAmzTargetEnum: string
 {
     case LOGS20140328_DELETE_QUERY_DEFINITION = 'Logs_20140328.DeleteQueryDefinition';

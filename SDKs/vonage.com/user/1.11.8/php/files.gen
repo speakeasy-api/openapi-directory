@@ -40,4 +40,5 @@ src/Models/Shared/ValidationErrorsResponse.php
 src/Models/Shared/DetailedInvalidParam.php
 src/Models/Shared/UsersHalResponse.php
 src/Models/Shared/UsersEmbeddedObject.php
+docs/sdk/README.md
 USAGE.md

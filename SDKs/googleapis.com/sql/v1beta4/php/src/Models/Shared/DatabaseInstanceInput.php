@@ -18,16 +18,6 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class DatabaseInstanceInput
 {
     /**
-     * List all maintenance versions applicable on the instance
-     * 
-     * @var ?array<string> $availableMaintenanceVersions
-     */
-	#[\JMS\Serializer\Annotation\SerializedName('availableMaintenanceVersions')]
-    #[\JMS\Serializer\Annotation\Type('array<string>')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $availableMaintenanceVersions = null;
-    
-    /**
      * The backend type. `SECOND_GEN`: Cloud SQL database instance. `EXTERNAL`: A database server that is not managed by Google. This property is read-only; use the `tier` property in the `settings` object to determine the database type.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\DatabaseInstanceBackendTypeEnum $backendType
@@ -359,7 +349,6 @@ class DatabaseInstanceInput
     
 	public function __construct()
 	{
-		$this->availableMaintenanceVersions = null;
 		$this->backendType = null;
 		$this->connectionName = null;
 		$this->currentDiskSize = null;

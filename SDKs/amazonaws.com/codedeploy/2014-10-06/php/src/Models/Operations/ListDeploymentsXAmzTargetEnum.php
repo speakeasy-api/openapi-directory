@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListDeploymentsXAmzTargetEnum: string
 {
     case CODE_DEPLOY20141006_LIST_DEPLOYMENTS = 'CodeDeploy_20141006.ListDeployments';

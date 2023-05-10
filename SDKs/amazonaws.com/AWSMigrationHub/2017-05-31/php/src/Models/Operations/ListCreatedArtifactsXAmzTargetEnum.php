@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListCreatedArtifactsXAmzTargetEnum: string
 {
     case AWS_MIGRATION_HUB_LIST_CREATED_ARTIFACTS = 'AWSMigrationHub.ListCreatedArtifacts';

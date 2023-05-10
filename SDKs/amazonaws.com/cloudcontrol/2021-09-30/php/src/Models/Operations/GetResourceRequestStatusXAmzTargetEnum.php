@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetResourceRequestStatusXAmzTargetEnum: string
 {
     case CLOUD_API_SERVICE_GET_RESOURCE_REQUEST_STATUS = 'CloudApiService.GetResourceRequestStatus';

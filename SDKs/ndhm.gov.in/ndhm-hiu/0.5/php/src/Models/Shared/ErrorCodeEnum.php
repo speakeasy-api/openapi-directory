@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Shared;
 
 
-enum ErrorCodeEnum: string
+enum ErrorCodeEnum: int
 {
-    case ONE_THOUSAND = '1000';
-    case TEN_THOUSAND_AND_ONE = '10001';
+    case ONE_THOUSAND = 1000;
+    case TEN_THOUSAND_AND_ONE = 10001;
 }

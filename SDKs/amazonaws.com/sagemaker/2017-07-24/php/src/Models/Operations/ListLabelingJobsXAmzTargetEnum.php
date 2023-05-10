@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListLabelingJobsXAmzTargetEnum: string
 {
     case SAGE_MAKER_LIST_LABELING_JOBS = 'SageMaker.ListLabelingJobs';

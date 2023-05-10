@@ -512,4 +512,10 @@ src/Models/Shared/AccountTreeRequest.php
 src/Models/Shared/UserDeletionRequestId.php
 src/Models/Shared/UserDeletionRequestInput.php
 src/Models/Shared/UserDeletionRequest.php
+docs/sdk/README.md
+docs/data/README.md
+docs/management/README.md
+docs/metadata/README.md
+docs/provisioning/README.md
+docs/userdeletion/README.md
 USAGE.md

@@ -50,7 +50,7 @@ class CreateAnAchTransferParameters
     public int $amount;
     
     /**
-     * The description of the date of the transfer, usually in the format `YYYYMMDD`. This is included in the transfer data sent to the receiving bank.
+     * The description of the date of the transfer, usually in the format `YYMMDD`. This is included in the transfer data sent to the receiving bank.
      * 
      * @var ?string $companyDescriptiveDate
      */

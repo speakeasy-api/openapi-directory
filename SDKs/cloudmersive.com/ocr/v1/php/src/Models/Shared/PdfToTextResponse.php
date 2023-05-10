@@ -18,6 +18,26 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class PdfToTextResponse
 {
     /**
+     * When the job exceeds 25 pages, an Async Job ID is returned.  Use the CheckPdfOcrJobStatus API to check on the status of this job using the AsyncJobID and get the result when it finishes
+     * 
+     * @var ?string $asyncJobID
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('AsyncJobID')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $asyncJobID = null;
+    
+    /**
+     * Returns the job status of the Async Job, if applicable.  Possible states are STARTED and COMPLETED
+     * 
+     * @var ?string $asyncJobStatus
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('AsyncJobStatus')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $asyncJobStatus = null;
+    
+    /**
      * Page OCR results
      * 
      * @var ?array<\OpenAPI\OpenAPI\Models\Shared\OcrPageResult> $ocrPages
@@ -39,6 +59,8 @@ class PdfToTextResponse
     
 	public function __construct()
 	{
+		$this->asyncJobID = null;
+		$this->asyncJobStatus = null;
 		$this->ocrPages = null;
 		$this->successful = null;
 	}

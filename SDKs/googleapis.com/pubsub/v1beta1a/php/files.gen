@@ -115,4 +115,7 @@ src/Models/Shared/ListTopicsResponse.php
 src/Models/Shared/PublishRequest.php
 src/Models/Shared/PublishBatchResponse.php
 src/Models/Shared/PublishBatchRequest.php
+docs/sdk/README.md
+docs/subscriptions/README.md
+docs/topics/README.md
 USAGE.md

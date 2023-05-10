@@ -87,4 +87,12 @@ src/Models/Shared/GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum
 src/Models/Shared/GoogleSecuritySafebrowsingV4ThreatListDescriptor.php
 src/Models/Shared/GoogleSecuritySafebrowsingV4FindThreatMatchesResponse.php
 src/Models/Shared/GoogleSecuritySafebrowsingV4FindThreatMatchesRequest.php
+docs/sdk/README.md
+docs/encodedfullhashes/README.md
+docs/encodedupdates/README.md
+docs/fullhashes/README.md
+docs/threathits/README.md
+docs/threatlistupdates/README.md
+docs/threatlists/README.md
+docs/threatmatches/README.md
 USAGE.md

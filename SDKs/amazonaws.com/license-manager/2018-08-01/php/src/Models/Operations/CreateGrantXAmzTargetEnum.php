@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateGrantXAmzTargetEnum: string
 {
     case AWS_LICENSE_MANAGER_CREATE_GRANT = 'AWSLicenseManager.CreateGrant';

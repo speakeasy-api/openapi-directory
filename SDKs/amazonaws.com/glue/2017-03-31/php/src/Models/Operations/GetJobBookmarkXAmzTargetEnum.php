@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetJobBookmarkXAmzTargetEnum: string
 {
     case AWS_GLUE_GET_JOB_BOOKMARK = 'AWSGlue.GetJobBookmark';

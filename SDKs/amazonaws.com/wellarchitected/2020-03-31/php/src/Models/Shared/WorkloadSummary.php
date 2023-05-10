@@ -48,7 +48,7 @@ class WorkloadSummary
     public ?string $owner = null;
     
     /**
-     * A map from risk names to the count of how questions have that rating.
+     * A map from risk names to the count of how many questions have that rating.
      * 
      * @var ?array<string, int> $riskCounts
      */

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListDiscoveredResourcesXAmzTargetEnum: string
 {
     case STARLING_DOVE_SERVICE_LIST_DISCOVERED_RESOURCES = 'StarlingDoveService.ListDiscoveredResources';

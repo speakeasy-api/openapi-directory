@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeContainerInstancesXAmzTargetEnum: string
 {
     case AMAZON_EC2_CONTAINER_SERVICE_V20141113_DESCRIBE_CONTAINER_INSTANCES = 'AmazonEC2ContainerServiceV20141113.DescribeContainerInstances';

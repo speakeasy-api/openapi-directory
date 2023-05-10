@@ -25,6 +25,8 @@ enum CreateAnEventSubscriptionParametersSelectedEventCategoryEnum: string
     case ACH_TRANSFER_UPDATED = 'ach_transfer.updated';
     case CARD_CREATED = 'card.created';
     case CARD_UPDATED = 'card.updated';
+    case CARD_PAYMENT_CREATED = 'card_payment.created';
+    case CARD_PAYMENT_UPDATED = 'card_payment.updated';
     case CARD_DISPUTE_CREATED = 'card_dispute.created';
     case CARD_DISPUTE_UPDATED = 'card_dispute.updated';
     case CHECK_DEPOSIT_CREATED = 'check_deposit.created';

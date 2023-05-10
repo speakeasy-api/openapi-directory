@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteOpenIDConnectProviderActionEnum: string
 {
     case DELETE_OPEN_ID_CONNECT_PROVIDER = 'DeleteOpenIDConnectProvider';

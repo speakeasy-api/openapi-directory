@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETModifyTrafficMirrorFilterNetworkServicesActionEnum: string
 {
     case MODIFY_TRAFFIC_MIRROR_FILTER_NETWORK_SERVICES = 'ModifyTrafficMirrorFilterNetworkServices';

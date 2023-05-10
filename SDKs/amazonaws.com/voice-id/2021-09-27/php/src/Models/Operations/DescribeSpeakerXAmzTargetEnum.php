@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeSpeakerXAmzTargetEnum: string
 {
     case VOICE_ID_DESCRIBE_SPEAKER = 'VoiceID.DescribeSpeaker';

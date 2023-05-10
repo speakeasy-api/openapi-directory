@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeEndpointsXAmzTargetEnum: string
 {
     case TIMESTREAM20181101_DESCRIBE_ENDPOINTS = 'Timestream_20181101.DescribeEndpoints';

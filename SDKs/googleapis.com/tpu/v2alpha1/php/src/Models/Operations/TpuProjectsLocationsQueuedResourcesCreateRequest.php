@@ -87,7 +87,7 @@ class TpuProjectsLocationsQueuedResourcesCreateRequest
     public ?bool $prettyPrint = null;
     
     /**
-     * The unqualified resource name. Should follow the ^[A-Za-z0-9_.~+%-]+$ regex format.
+     * The unqualified resource name. Should follow the `^[A-Za-z0-9_.~+%-]+$` regex format.
      * 
      * @var ?string $queuedResourceId
      */

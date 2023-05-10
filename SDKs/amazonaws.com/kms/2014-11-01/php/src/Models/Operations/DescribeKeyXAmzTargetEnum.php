@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeKeyXAmzTargetEnum: string
 {
     case TRENT_SERVICE_DESCRIBE_KEY = 'TrentService.DescribeKey';

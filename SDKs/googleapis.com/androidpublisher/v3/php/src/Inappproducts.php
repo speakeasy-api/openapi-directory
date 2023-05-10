@@ -38,7 +38,7 @@ class Inappproducts
 	}
 	
     /**
-     * Deletes an in-app product (i.e. a managed product or a subscriptions).
+     * Deletes an in-app product (i.e. a managed product or a subscription).
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\AndroidpublisherInappproductsDeleteRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\AndroidpublisherInappproductsDeleteSecurity $security
@@ -110,7 +110,7 @@ class Inappproducts
     }
 	
     /**
-     * Creates an in-app product (i.e. a managed product or a subscriptions).
+     * Creates an in-app product (i.e. a managed product or a subscription).
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\AndroidpublisherInappproductsInsertRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\AndroidpublisherInappproductsInsertSecurity $security
@@ -188,7 +188,7 @@ class Inappproducts
     }
 	
     /**
-     * Patches an in-app product (i.e. a managed product or a subscriptions).
+     * Patches an in-app product (i.e. a managed product or a subscription).
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\AndroidpublisherInappproductsPatchRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\AndroidpublisherInappproductsPatchSecurity $security
@@ -228,7 +228,7 @@ class Inappproducts
     }
 	
     /**
-     * Updates an in-app product (i.e. a managed product or a subscriptions).
+     * Updates an in-app product (i.e. a managed product or a subscription).
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\AndroidpublisherInappproductsUpdateRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\AndroidpublisherInappproductsUpdateSecurity $security

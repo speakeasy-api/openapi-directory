@@ -30,18 +30,38 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $response = $sdk->deleteAMediaItem();
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `deleteAMediaItem` - Delete a media item
-* `listAndSearchMediaItems` - List and search media items
-* `retrieveAMediaItem` - Retrieve a media item
-* `updateAMediaItem` - Update a media item
+* [deleteAMediaItem](docs/sdk/README.md#deleteamediaitem) - Delete a media item
+* [listAndSearchMediaItems](docs/sdk/README.md#listandsearchmediaitems) - List and search media items
+* [retrieveAMediaItem](docs/sdk/README.md#retrieveamediaitem) - Retrieve a media item
+* [updateAMediaItem](docs/sdk/README.md#updateamediaitem) - Update a media item
 <!-- End SDK Available Operations -->
 
 ### Maturity

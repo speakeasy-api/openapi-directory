@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RefreshSchemasXAmzTargetEnum: string
 {
     case AMAZON_DM_SV20160101_REFRESH_SCHEMAS = 'AmazonDMSv20160101.RefreshSchemas';

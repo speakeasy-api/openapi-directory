@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeComponentConfigurationXAmzTargetEnum: string
 {
     case EC2_WINDOWS_BARLEY_SERVICE_DESCRIBE_COMPONENT_CONFIGURATION = 'EC2WindowsBarleyService.DescribeComponentConfiguration';

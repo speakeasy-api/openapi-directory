@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateAccessControlConfigurationXAmzTargetEnum: string
 {
     case AWS_KENDRA_FRONTEND_SERVICE_UPDATE_ACCESS_CONTROL_CONFIGURATION = 'AWSKendraFrontendService.UpdateAccessControlConfiguration';

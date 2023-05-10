@@ -132,6 +132,14 @@ class PutV2MeetingsSettingsIdJsonRequestBody
     public ?string $primaryCalendarName = null;
     
     /**
+     * Determines if a user enabled reschedule meetings feature
+     * 
+     * @var ?bool $rescheduleMeetingsEnabled
+     */
+	#[SpeakeasyMetadata('form:name=reschedule_meetings_enabled')]
+    public ?bool $rescheduleMeetingsEnabled = null;
+    
+    /**
      * Determines if meetings are scheduled with a 15 minute buffer between them
      * 
      * @var ?bool $scheduleBufferEnabled
@@ -196,6 +204,7 @@ class PutV2MeetingsSettingsIdJsonRequestBody
 		$this->primaryCalendarConnectionFailed = null;
 		$this->primaryCalendarId = null;
 		$this->primaryCalendarName = null;
+		$this->rescheduleMeetingsEnabled = null;
 		$this->scheduleBufferEnabled = null;
 		$this->scheduleDelay = null;
 		$this->shareEventDetail = null;

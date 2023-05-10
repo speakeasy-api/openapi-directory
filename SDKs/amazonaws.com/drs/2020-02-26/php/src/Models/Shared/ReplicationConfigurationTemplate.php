@@ -27,6 +27,11 @@ class ReplicationConfigurationTemplate
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $associateDefaultSecurityGroup = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('autoReplicateNewDisks')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $autoReplicateNewDisks = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('bandwidthThrottling')]
     #[\JMS\Serializer\Annotation\Type('int')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -120,6 +125,7 @@ class ReplicationConfigurationTemplate
 	{
 		$this->arn = null;
 		$this->associateDefaultSecurityGroup = null;
+		$this->autoReplicateNewDisks = null;
 		$this->bandwidthThrottling = null;
 		$this->createPublicIP = null;
 		$this->dataPlaneRouting = null;

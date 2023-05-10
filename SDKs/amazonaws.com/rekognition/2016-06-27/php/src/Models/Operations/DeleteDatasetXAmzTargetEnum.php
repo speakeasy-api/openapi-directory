@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteDatasetXAmzTargetEnum: string
 {
     case REKOGNITION_SERVICE_DELETE_DATASET = 'RekognitionService.DeleteDataset';

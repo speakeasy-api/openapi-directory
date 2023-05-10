@@ -486,4 +486,6 @@ src/Models/Shared/GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettingsAu
 src/Models/Shared/GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettings.php
 src/Models/Shared/GoogleCloudDialogflowCxV3ListSecuritySettingsResponse.php
 src/Models/Shared/GoogleLongrunningListOperationsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

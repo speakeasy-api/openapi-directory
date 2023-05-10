@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteWarmPoolActionEnum: string
 {
     case DELETE_WARM_POOL = 'DeleteWarmPool';

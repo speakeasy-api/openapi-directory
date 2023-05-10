@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateExportTaskXAmzTargetEnum: string
 {
     case LOGS20140328_CREATE_EXPORT_TASK = 'Logs_20140328.CreateExportTask';

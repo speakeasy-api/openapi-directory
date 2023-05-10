@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetTestGridSessionXAmzTargetEnum: string
 {
     case DEVICE_FARM20150623_GET_TEST_GRID_SESSION = 'DeviceFarm_20150623.GetTestGridSession';

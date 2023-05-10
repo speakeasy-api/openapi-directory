@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeProjectXAmzTargetEnum: string
 {
     case SAGE_MAKER_DESCRIBE_PROJECT = 'SageMaker.DescribeProject';

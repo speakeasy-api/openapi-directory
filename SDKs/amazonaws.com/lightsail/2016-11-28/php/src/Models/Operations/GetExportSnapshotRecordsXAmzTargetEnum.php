@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetExportSnapshotRecordsXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_GET_EXPORT_SNAPSHOT_RECORDS = 'Lightsail_20161128.GetExportSnapshotRecords';

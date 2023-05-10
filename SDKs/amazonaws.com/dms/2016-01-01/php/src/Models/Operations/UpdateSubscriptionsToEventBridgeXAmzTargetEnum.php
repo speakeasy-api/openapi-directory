@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateSubscriptionsToEventBridgeXAmzTargetEnum: string
 {
     case AMAZON_DM_SV20160101_UPDATE_SUBSCRIPTIONS_TO_EVENT_BRIDGE = 'AmazonDMSv20160101.UpdateSubscriptionsToEventBridge';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateConditionalForwarderXAmzTargetEnum: string
 {
     case DIRECTORY_SERVICE20150416_UPDATE_CONDITIONAL_FORWARDER = 'DirectoryService_20150416.UpdateConditionalForwarder';

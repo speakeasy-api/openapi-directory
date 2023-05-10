@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetDataCatalogEncryptionSettingsXAmzTargetEnum: string
 {
     case AWS_GLUE_GET_DATA_CATALOG_ENCRYPTION_SETTINGS = 'AWSGlue.GetDataCatalogEncryptionSettings';

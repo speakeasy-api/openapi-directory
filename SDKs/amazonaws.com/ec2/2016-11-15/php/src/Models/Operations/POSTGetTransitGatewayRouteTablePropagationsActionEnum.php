@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTGetTransitGatewayRouteTablePropagationsActionEnum: string
 {
     case GET_TRANSIT_GATEWAY_ROUTE_TABLE_PROPAGATIONS = 'GetTransitGatewayRouteTablePropagations';

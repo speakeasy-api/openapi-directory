@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /** Whether this province optionally observes a given holiday. */
-enum ProvinceOptionalEnum: string
+enum ProvinceOptionalEnum: int
 {
-    case ONE = '1';
+    case ONE = 1;
 }

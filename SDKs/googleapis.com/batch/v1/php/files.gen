@@ -82,6 +82,7 @@ src/Models/Shared/LogsPolicyDestinationEnum.php
 src/Models/Shared/LogsPolicy.php
 src/Models/Shared/AllocationPolicy.php
 src/Models/Shared/ServiceAccount.php
+src/Models/Shared/PlacementPolicy.php
 src/Models/Shared/NetworkPolicy.php
 src/Models/Shared/NetworkInterface.php
 src/Models/Shared/LocationPolicy.php
@@ -104,6 +105,7 @@ src/Models/Shared/Status.php
 src/Models/Shared/ListOperationsResponse.php
 src/Models/Shared/ReportAgentStateResponse.php
 src/Models/Shared/AgentTaskIntendedStateEnum.php
+src/Models/Shared/AgentTaskTaskSourceEnum.php
 src/Models/Shared/AgentTask.php
 src/Models/Shared/ReportAgentStateRequest.php
 src/Models/Shared/AgentMetadata.php
@@ -111,4 +113,6 @@ src/Models/Shared/AgentTimingInfo.php
 src/Models/Shared/AgentInfoStateEnum.php
 src/Models/Shared/AgentInfo.php
 src/Models/Shared/AgentTaskInfo.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

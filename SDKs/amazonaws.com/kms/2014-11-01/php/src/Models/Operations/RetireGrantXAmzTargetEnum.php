@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RetireGrantXAmzTargetEnum: string
 {
     case TRENT_SERVICE_RETIRE_GRANT = 'TrentService.RetireGrant';

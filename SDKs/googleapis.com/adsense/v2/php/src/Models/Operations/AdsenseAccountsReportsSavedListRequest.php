@@ -76,7 +76,7 @@ class AdsenseAccountsReportsSavedListRequest
     public ?int $pageSize = null;
     
     /**
-     * A page token, received from a previous `ListPayments` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListPayments` must match the call that provided the page token.
+     * A page token, received from a previous `ListSavedReports` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListSavedReports` must match the call that provided the page token.
      * 
      * @var ?string $pageToken
      */

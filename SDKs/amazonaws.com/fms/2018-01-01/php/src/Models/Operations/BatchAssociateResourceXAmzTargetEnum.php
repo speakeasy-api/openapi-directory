@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum BatchAssociateResourceXAmzTargetEnum: string
 {
     case AWSFMS20180101_BATCH_ASSOCIATE_RESOURCE = 'AWSFMS_20180101.BatchAssociateResource';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListArchivesXAmzTargetEnum: string
 {
     case AWS_EVENTS_LIST_ARCHIVES = 'AWSEvents.ListArchives';

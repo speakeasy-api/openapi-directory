@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutMobileDeviceAccessOverrideXAmzTargetEnum: string
 {
     case WORK_MAIL_SERVICE_PUT_MOBILE_DEVICE_ACCESS_OVERRIDE = 'WorkMailService.PutMobileDeviceAccessOverride';

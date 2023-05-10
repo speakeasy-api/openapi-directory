@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * GoogleChromeManagementV1TelemetryDeviceInfo - Information about a device associated with telemetry data.
+ * GoogleChromeManagementV1TelemetryDeviceInfo - Information about a device associated with telemetry data. * Granular Permission needed: TELEMETRY_API_DEVICE
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

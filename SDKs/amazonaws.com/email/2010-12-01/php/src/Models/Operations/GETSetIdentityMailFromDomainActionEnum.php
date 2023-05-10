@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETSetIdentityMailFromDomainActionEnum: string
 {
     case SET_IDENTITY_MAIL_FROM_DOMAIN = 'SetIdentityMailFromDomain';

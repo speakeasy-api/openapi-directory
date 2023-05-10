@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETRemoveTagsVersionEnum: string
 {
     case TWO_THOUSAND_AND_FIFTEEN1201 = '2015-12-01';

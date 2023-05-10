@@ -96,4 +96,6 @@ src/Models/Shared/ApigatewayTestIamPermissionsRequest.php
 src/Models/Shared/ApigatewayListLocationsResponse.php
 src/Models/Shared/ApigatewayLocation.php
 src/Models/Shared/ApigatewayListOperationsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutResourceAttributesXAmzTargetEnum: string
 {
     case AWS_MIGRATION_HUB_PUT_RESOURCE_ATTRIBUTES = 'AWSMigrationHub.PutResourceAttributes';

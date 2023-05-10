@@ -108,7 +108,7 @@ class GoogleCloudPaymentsResellerSubscriptionV1Subscription
     public ?GoogleCloudPaymentsResellerSubscriptionV1SubscriptionProcessingStateEnum $processingState = null;
     
     /**
-     * Required. Deprecated: consider using `line_items` as the input. Required. Resource name that identifies the purchased products. The format will be 'partners/{partner_id}/products/{product_id}'.
+     * Optional. Deprecated: consider using `line_items` as the input. Required. Resource name that identifies the purchased products. The format will be 'partners/{partner_id}/products/{product_id}'.
      * 
      * @var ?array<string> $products
      */

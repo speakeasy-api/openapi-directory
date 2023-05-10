@@ -389,11 +389,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\BatchGetDeploymentInstancesRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\BatchGetDeploymentInstancesResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function batchGetDeploymentInstances(
         \OpenAPI\OpenAPI\Models\Operations\BatchGetDeploymentInstancesRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\BatchGetDeploymentInstancesResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=CodeDeploy_20141006.BatchGetDeploymentInstances');
         
@@ -2037,11 +2040,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetDeploymentInstanceRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetDeploymentInstanceResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getDeploymentInstance(
         \OpenAPI\OpenAPI\Models\Operations\GetDeploymentInstanceRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetDeploymentInstanceResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=CodeDeploy_20141006.GetDeploymentInstance');
         
@@ -2525,11 +2531,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ListDeploymentInstancesRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ListDeploymentInstancesResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function listDeploymentInstances(
         \OpenAPI\OpenAPI\Models\Operations\ListDeploymentInstancesRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\ListDeploymentInstancesResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=CodeDeploy_20141006.ListDeploymentInstances');
         
@@ -3323,11 +3332,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\SkipWaitTimeForInstanceTerminationRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\SkipWaitTimeForInstanceTerminationResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function skipWaitTimeForInstanceTermination(
         \OpenAPI\OpenAPI\Models\Operations\SkipWaitTimeForInstanceTerminationRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\SkipWaitTimeForInstanceTerminationResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=CodeDeploy_20141006.SkipWaitTimeForInstanceTermination');
         

@@ -78,6 +78,16 @@ class GoogleAdsSearchads360V0CommonSegments
     public ?GoogleAdsSearchads360V0CommonSegmentsDeviceEnum $device = null;
     
     /**
+     * A Keyword criterion segment.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0CommonKeyword $keyword
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('keyword')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0CommonKeyword')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleAdsSearchads360V0CommonKeyword $keyword = null;
+    
+    /**
      * Month as represented by the date of the first day of a month. Formatted as yyyy-MM-dd.
      * 
      * @var ?string $month
@@ -125,6 +135,7 @@ class GoogleAdsSearchads360V0CommonSegments
 		$this->date = null;
 		$this->dayOfWeek = null;
 		$this->device = null;
+		$this->keyword = null;
 		$this->month = null;
 		$this->quarter = null;
 		$this->week = null;

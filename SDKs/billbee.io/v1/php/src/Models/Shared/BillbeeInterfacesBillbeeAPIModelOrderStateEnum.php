@@ -10,22 +10,22 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /** The current state of the order */
-enum BillbeeInterfacesBillbeeAPIModelOrderStateEnum: string
+enum BillbeeInterfacesBillbeeAPIModelOrderStateEnum: int
 {
-    case ONE = '1';
-    case TWO = '2';
-    case THREE = '3';
-    case FOUR = '4';
-    case FIVE = '5';
-    case SIX = '6';
-    case SEVEN = '7';
-    case EIGHT = '8';
-    case NINE = '9';
-    case TEN = '10';
-    case ELEVEN = '11';
-    case TWELVE = '12';
-    case THIRTEEN = '13';
-    case FOURTEEN = '14';
-    case FIFTEEN = '15';
-    case SIXTEEN = '16';
+    case ONE = 1;
+    case TWO = 2;
+    case THREE = 3;
+    case FOUR = 4;
+    case FIVE = 5;
+    case SIX = 6;
+    case SEVEN = 7;
+    case EIGHT = 8;
+    case NINE = 9;
+    case TEN = 10;
+    case ELEVEN = 11;
+    case TWELVE = 12;
+    case THIRTEEN = 13;
+    case FOURTEEN = 14;
+    case FIFTEEN = 15;
+    case SIXTEEN = 16;
 }

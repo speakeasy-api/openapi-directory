@@ -31,7 +31,7 @@ namespace OpenAPI\OpenAPI;
 class SDK
 {
 	public const SERVERS = [
-        /** DFlight API */
+        /** DFlight API v1.0.2 */
 		'https://dflight-api.ljaero.com/',
 	];
   	

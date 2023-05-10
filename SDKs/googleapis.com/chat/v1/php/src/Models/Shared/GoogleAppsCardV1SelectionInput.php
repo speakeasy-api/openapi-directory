@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * GoogleAppsCardV1SelectionInput - A widget that creates a UI item with options for users to select. For example, a dropdown menu or check list. Chat apps receive and can process the value of entered text during form input events. For details about working with form inputs, see [Receive form data](https://developers.google.com/chat/how-tos/dialogs#receive_form_data_from_dialogs). When you need to collect data from users that matches options you set, use a selection input. To collect abstract data from users, use the text input widget instead.
+ * GoogleAppsCardV1SelectionInput - A widget that creates one or more UI items that users can select. For example, a dropdown menu or checkboxes. You can use this widget to collect data that can be predicted or enumerated. Chat apps can process the value of items that users select or input. For details about working with form inputs, see [Receive form data](https://developers.google.com/chat/how-tos/dialogs#receive_form_data_from_dialogs). To collect undefined or abstract data from users, use the TextInput widget.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public
@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class GoogleAppsCardV1SelectionInput
 {
     /**
-     * An array of the selected items. For example, all the selected check boxes.
+     * An array of selectable items. For example, an array of radio buttons or checkboxes. Supports up to 100 items.
      * 
      * @var ?array<\OpenAPI\OpenAPI\Models\Shared\GoogleAppsCardV1SelectionItem> $items
      */
@@ -38,7 +38,7 @@ class GoogleAppsCardV1SelectionInput
     public ?string $label = null;
     
     /**
-     * The name by which the selection input is identified in a form input event. For details about working with form inputs, see [Receive form data](https://developers.google.com/chat/how-tos/dialogs#receive_form_data_from_dialogs).
+     * The name that identifies the selection input in a form input event. For details about working with form inputs, see [Receive form data](https://developers.google.com/chat/how-tos/dialogs#receive_form_data_from_dialogs).
      * 
      * @var ?string $name
      */
@@ -58,7 +58,7 @@ class GoogleAppsCardV1SelectionInput
     public ?GoogleAppsCardV1Action $onChangeAction = null;
     
     /**
-     * The way that an option appears to users. Different options support different types of interactions. For example, users can enable multiple check boxes, but can only select one value from a dropdown menu. Each selection input supports one type of selection. Mixing check boxes and switches, for example, is not supported.
+     * The type of items that are displayed to users in a `SelectionInput` widget. Selection types support different types of interactions. For example, users can select one or more checkboxes, but they can only select one value from a dropdown menu.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAppsCardV1SelectionInputTypeEnum $type
      */

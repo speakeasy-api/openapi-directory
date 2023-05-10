@@ -12,7 +12,7 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 class UpdateEnvironmentRequestBody
 {
     /**
-     * A list of key-value pairs containing the Apache Airflow configuration options you want to attach to your environment. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html">Apache Airflow configuration options</a>.
+     * A list of key-value pairs containing the Apache Airflow configuration options you want to attach to your environment. For more information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html">Apache Airflow configuration options</a>.
      * 
      * @var ?array<string, string> $airflowConfigurationOptions
      */
@@ -32,7 +32,7 @@ class UpdateEnvironmentRequestBody
     public ?string $airflowVersion = null;
     
     /**
-     * The relative path to the DAGs folder on your Amazon S3 bucket. For example, <code>dags</code>. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-folder.html">Adding or updating DAGs</a>.
+     * The relative path to the DAGs folder on your Amazon S3 bucket. For example, <code>dags</code>. For more information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-folder.html">Adding or updating DAGs</a>.
      * 
      * @var ?string $dagS3Path
      */
@@ -42,7 +42,7 @@ class UpdateEnvironmentRequestBody
     public ?string $dagS3Path = null;
     
     /**
-     * The environment class type. Valid values: <code>mw1.small</code>, <code>mw1.medium</code>, <code>mw1.large</code>. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/environment-class.html">Amazon MWAA environment class</a>.
+     * The environment class type. Valid values: <code>mw1.small</code>, <code>mw1.medium</code>, <code>mw1.large</code>. For more information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/environment-class.html">Amazon MWAA environment class</a>.
      * 
      * @var ?string $environmentClass
      */
@@ -52,7 +52,7 @@ class UpdateEnvironmentRequestBody
     public ?string $environmentClass = null;
     
     /**
-     * The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access Amazon Web Services resources in your environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon MWAA Execution role</a>.
+     * The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access Amazon Web Services resources in your environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. For more information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon MWAA Execution role</a>.
      * 
      * @var ?string $executionRoleArn
      */
@@ -92,7 +92,7 @@ class UpdateEnvironmentRequestBody
     public ?int $minWorkers = null;
     
     /**
-     * Defines the VPC networking components used to secure and enable network traffic between the Amazon Web Services resources for your environment. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon MWAA</a>.
+     * Defines the VPC networking components used to secure and enable network traffic between the Amazon Web Services resources for your environment. For more information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon MWAA</a>.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Operations\UpdateEnvironmentRequestBodyNetworkConfiguration $networkConfiguration
      */
@@ -102,7 +102,7 @@ class UpdateEnvironmentRequestBody
     public ?UpdateEnvironmentRequestBodyNetworkConfiguration $networkConfiguration = null;
     
     /**
-     * The version of the plugins.zip file on your Amazon S3 bucket. A version must be specified each time a plugins.zip file is updated. To learn more, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">How S3 Versioning works</a>.
+     * The version of the plugins.zip file on your Amazon S3 bucket. You must specify a version each time a <code>plugins.zip</code> file is updated. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">How S3 Versioning works</a>.
      * 
      * @var ?string $pluginsS3ObjectVersion
      */
@@ -112,7 +112,7 @@ class UpdateEnvironmentRequestBody
     public ?string $pluginsS3ObjectVersion = null;
     
     /**
-     * The relative path to the <code>plugins.zip</code> file on your Amazon S3 bucket. For example, <code>plugins.zip</code>. If specified, then the plugins.zip version is required. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import-plugins.html">Installing custom plugins</a>.
+     * The relative path to the <code>plugins.zip</code> file on your Amazon S3 bucket. For example, <code>plugins.zip</code>. If specified, then the plugins.zip version is required. For more information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import-plugins.html">Installing custom plugins</a>.
      * 
      * @var ?string $pluginsS3Path
      */
@@ -122,7 +122,7 @@ class UpdateEnvironmentRequestBody
     public ?string $pluginsS3Path = null;
     
     /**
-     * The version of the requirements.txt file on your Amazon S3 bucket. A version must be specified each time a requirements.txt file is updated. To learn more, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">How S3 Versioning works</a>.
+     * The version of the requirements.txt file on your Amazon S3 bucket. You must specify a version each time a <code>requirements.txt</code> file is updated. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">How S3 Versioning works</a>.
      * 
      * @var ?string $requirementsS3ObjectVersion
      */
@@ -132,7 +132,7 @@ class UpdateEnvironmentRequestBody
     public ?string $requirementsS3ObjectVersion = null;
     
     /**
-     * The relative path to the <code>requirements.txt</code> file on your Amazon S3 bucket. For example, <code>requirements.txt</code>. If specified, then a file version is required. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/working-dags-dependencies.html">Installing Python dependencies</a>.
+     * The relative path to the <code>requirements.txt</code> file on your Amazon S3 bucket. For example, <code>requirements.txt</code>. If specified, then a file version is required. For more information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/working-dags-dependencies.html">Installing Python dependencies</a>.
      * 
      * @var ?string $requirementsS3Path
      */
@@ -152,7 +152,7 @@ class UpdateEnvironmentRequestBody
     public ?int $schedulers = null;
     
     /**
-     * The Amazon Resource Name (ARN) of the Amazon S3 bucket where your DAG code and supporting files are stored. For example, <code>arn:aws:s3:::my-airflow-bucket-unique-name</code>. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-s3-bucket.html">Create an Amazon S3 bucket for Amazon MWAA</a>.
+     * The Amazon Resource Name (ARN) of the Amazon S3 bucket where your DAG code and supporting files are stored. For example, <code>arn:aws:s3:::my-airflow-bucket-unique-name</code>. For more information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-s3-bucket.html">Create an Amazon S3 bucket for Amazon MWAA</a>.
      * 
      * @var ?string $sourceBucketArn
      */
@@ -162,7 +162,27 @@ class UpdateEnvironmentRequestBody
     public ?string $sourceBucketArn = null;
     
     /**
-     * The Apache Airflow <i>Web server</i> access mode. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html">Apache Airflow access modes</a>.
+     * <p> The version of the startup shell script in your Amazon S3 bucket. You must specify the <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">version ID</a> that Amazon S3 assigns to the file every time you update the script. </p> <p> Version IDs are Unicode, UTF-8 encoded, URL-ready, opaque strings that are no more than 1,024 bytes long. The following is an example: </p> <p> <code>3sL4kqtJlcpXroDTDmJ+rmSpXd3dIbrHY+MTRCxf3vjVBH40Nr8X8gdRQBpUMLUo</code> </p> <p> For more information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/using-startup-script.html">Using a startup script</a>. </p>
+     * 
+     * @var ?string $startupScriptS3ObjectVersion
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('StartupScriptS3ObjectVersion')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $startupScriptS3ObjectVersion = null;
+    
+    /**
+     * <p>The relative path to the startup shell script in your Amazon S3 bucket. For example, <code>s3://mwaa-environment/startup.sh</code>.</p> <p> Amazon MWAA runs the script as your environment starts, and before running the Apache Airflow process. You can use this script to install dependencies, modify Apache Airflow configuration options, and set environment variables. For more information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/using-startup-script.html">Using a startup script</a>. </p>
+     * 
+     * @var ?string $startupScriptS3Path
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('StartupScriptS3Path')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $startupScriptS3Path = null;
+    
+    /**
+     * The Apache Airflow <i>Web server</i> access mode. For more information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html">Apache Airflow access modes</a>.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Operations\UpdateEnvironmentRequestBodyWebserverAccessModeEnum $webserverAccessMode
      */
@@ -198,6 +218,8 @@ class UpdateEnvironmentRequestBody
 		$this->requirementsS3Path = null;
 		$this->schedulers = null;
 		$this->sourceBucketArn = null;
+		$this->startupScriptS3ObjectVersion = null;
+		$this->startupScriptS3Path = null;
 		$this->webserverAccessMode = null;
 		$this->weeklyMaintenanceWindowStart = null;
 	}

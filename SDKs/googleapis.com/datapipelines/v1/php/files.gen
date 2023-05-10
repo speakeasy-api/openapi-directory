@@ -70,4 +70,6 @@ src/Models/Shared/GoogleCloudDatapipelinesV1SDKVersionSDKSupportStatusEnum.php
 src/Models/Shared/GoogleCloudDatapipelinesV1SDKVersion.php
 src/Models/Shared/GoogleCloudDatapipelinesV1ListPipelinesResponse.php
 src/Models/Shared/GoogleCloudDatapipelinesV1RunPipelineResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

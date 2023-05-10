@@ -65,4 +65,5 @@ src/Models/Shared/DeviceDescription.php
 src/Models/Shared/ListTagsForResourceResponse.php
 src/Models/Shared/UnclaimDeviceResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

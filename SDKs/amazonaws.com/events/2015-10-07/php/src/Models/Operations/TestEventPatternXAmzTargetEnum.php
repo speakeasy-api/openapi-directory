@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum TestEventPatternXAmzTargetEnum: string
 {
     case AWS_EVENTS_TEST_EVENT_PATTERN = 'AWSEvents.TestEventPattern';

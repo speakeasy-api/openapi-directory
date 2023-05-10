@@ -195,4 +195,7 @@ src/Models/Shared/UrlRestriction.php
 src/Models/Shared/Date.php
 src/Models/Shared/GetRemarketingTagResponse.php
 src/Models/Shared/ListUserListsResponse.php
+docs/sdk/README.md
+docs/bidders/README.md
+docs/buyers/README.md
 USAGE.md

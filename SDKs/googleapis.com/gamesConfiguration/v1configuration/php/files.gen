@@ -66,4 +66,7 @@ src/Models/Shared/GamesNumberFormatConfigurationNumberFormatTypeEnum.php
 src/Models/Shared/GamesNumberFormatConfiguration.php
 src/Models/Shared/GamesNumberAffixConfiguration.php
 src/Models/Shared/LeaderboardConfigurationListResponse.php
+docs/sdk/README.md
+docs/achievementconfigurations/README.md
+docs/leaderboardconfigurations/README.md
 USAGE.md

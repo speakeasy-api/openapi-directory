@@ -133,4 +133,13 @@ src/Models/Shared/Product.php
 src/Models/Shared/ProductList.php
 src/Models/Shared/Id.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/bankaccount/README.md
+docs/currency/README.md
+docs/document/README.md
+docs/documentblock/README.md
+docs/organization/README.md
+docs/partner/README.md
+docs/product/README.md
+docs/util/README.md
 USAGE.md

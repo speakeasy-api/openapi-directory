@@ -39,4 +39,6 @@ src/Models/Shared/Permission.php
 src/Models/Shared/Move.php
 src/Models/Shared/ParentT.php
 src/Models/Shared/AltEnum.php
+docs/sdk/README.md
+docs/activities/README.md
 USAGE.md

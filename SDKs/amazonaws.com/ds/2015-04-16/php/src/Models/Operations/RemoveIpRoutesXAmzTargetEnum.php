@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RemoveIpRoutesXAmzTargetEnum: string
 {
     case DIRECTORY_SERVICE20150416_REMOVE_IP_ROUTES = 'DirectoryService_20150416.RemoveIpRoutes';

@@ -19,4 +19,5 @@ enum BackupSourceInstanceTierEnum: string
     case BASIC_SSD = 'BASIC_SSD';
     case HIGH_SCALE_SSD = 'HIGH_SCALE_SSD';
     case ENTERPRISE = 'ENTERPRISE';
+    case ZONAL = 'ZONAL';
 }

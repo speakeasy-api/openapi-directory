@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateGlobalClusterActionEnum: string
 {
     case CREATE_GLOBAL_CLUSTER = 'CreateGlobalCluster';

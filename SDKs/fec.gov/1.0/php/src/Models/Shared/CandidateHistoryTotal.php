@@ -85,6 +85,12 @@ class CandidateHistoryTotal
      * 
      * A unique identifier assigned to each candidate registered with the FEC.
      * If a person runs for several offices, that person will have separate candidate IDs for each office.
+     * First character indicates office - [P]residential, [H]ouse, [S]enate].
+     * Second character is the last digit of the two-year period the ID was created.
+     * Third and fourth is the candidate state. Presidential IDs don't have state.
+     * Fifth and sixth is the district when the candidate first ran. This does not change if the
+     * candidate/member's district changes during re-districting. Presidential IDs don't have districts.
+     * The rest is sequence.
      * 
      * 
      * @var string $candidateId
@@ -450,6 +456,16 @@ class CandidateHistoryTotal
     public ?string $state = null;
     
     /**
+     * US state or territory where a candidate runs for office
+     * 
+     * @var ?string $stateFull
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('state_full')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $stateFull = null;
+    
+    /**
      * Transfers from authorized committees
      * 
      * @var ?float $transfersFromOtherAuthorizedCommittee
@@ -521,6 +537,7 @@ class CandidateHistoryTotal
 		$this->receipts = null;
 		$this->roundedElectionYears = null;
 		$this->state = null;
+		$this->stateFull = null;
 		$this->transfersFromOtherAuthorizedCommittee = null;
 		$this->twoYearPeriod = 0;
 	}

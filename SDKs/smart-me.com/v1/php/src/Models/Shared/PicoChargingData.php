@@ -158,6 +158,18 @@ class PicoChargingData
     public ?int $minStationCurrent = null;
     
     /**
+     * Received Signal Strength Indicator for the connection mode (wifi or mobile). 
+     * 
+     *             -127 (min) to 0 (Max)
+     * 
+     * @var ?int $rssi
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('RSSI')]
+    #[\JMS\Serializer\Annotation\Type('int')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?int $rssi = null;
+    
+    /**
      * The state of the charging station
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\PicoChargingDataStateEnum $state
@@ -193,6 +205,7 @@ class PicoChargingData
 		$this->maxLoadmanagementGroupCurrent = null;
 		$this->maxStationCurrent = null;
 		$this->minStationCurrent = null;
+		$this->rssi = null;
 		$this->state = null;
 		$this->valueDate = null;
 	}

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateLocationSmbXAmzTargetEnum: string
 {
     case FMRS_SERVICE_UPDATE_LOCATION_SMB = 'FmrsService.UpdateLocationSmb';

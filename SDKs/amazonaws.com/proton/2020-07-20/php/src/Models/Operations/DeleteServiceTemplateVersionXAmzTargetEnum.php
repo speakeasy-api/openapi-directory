@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteServiceTemplateVersionXAmzTargetEnum: string
 {
     case AWS_PROTON20200720_DELETE_SERVICE_TEMPLATE_VERSION = 'AwsProton20200720.DeleteServiceTemplateVersion';

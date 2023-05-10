@@ -15,6 +15,9 @@ class ModifyVpnTunnelOptionsRequest
     public ?bool $dryRun = null;
     
 	
+    public ?bool $skipTunnelReplacement = null;
+    
+	
     public ModifyVpnTunnelOptionsSpecification $tunnelOptions;
     
 	
@@ -26,6 +29,7 @@ class ModifyVpnTunnelOptionsRequest
 	public function __construct()
 	{
 		$this->dryRun = null;
+		$this->skipTunnelReplacement = null;
 		$this->tunnelOptions = new \OpenAPI\OpenAPI\Models\Shared\ModifyVpnTunnelOptionsSpecification();
 		$this->vpnConnectionId = "";
 		$this->vpnTunnelOutsideIpAddress = "";

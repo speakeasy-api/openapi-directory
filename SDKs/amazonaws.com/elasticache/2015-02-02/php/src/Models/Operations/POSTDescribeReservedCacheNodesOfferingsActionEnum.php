@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeReservedCacheNodesOfferingsActionEnum: string
 {
     case DESCRIBE_RESERVED_CACHE_NODES_OFFERINGS = 'DescribeReservedCacheNodesOfferings';

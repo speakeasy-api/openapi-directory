@@ -101,4 +101,10 @@ src/Models/Shared/WebhookCreateEventsEnum.php
 src/Models/Shared/WebhookCreateMetadataPolicyEnum.php
 src/Models/Shared/WebhookCreateSigningAlgoEnum.php
 src/Models/Shared/WebhookCreate.php
+docs/sdk/README.md
+docs/accounts/README.md
+docs/calls/README.md
+docs/events/README.md
+docs/users/README.md
+docs/webhooks/README.md
 USAGE.md

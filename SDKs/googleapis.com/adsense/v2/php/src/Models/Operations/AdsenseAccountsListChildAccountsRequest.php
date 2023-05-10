@@ -76,7 +76,7 @@ class AdsenseAccountsListChildAccountsRequest
     public ?int $pageSize = null;
     
     /**
-     * A page token, received from a previous `ListAccounts` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListAccounts` must match the call that provided the page token.
+     * A page token, received from a previous `ListChildAccounts` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListChildAccounts` must match the call that provided the page token.
      * 
      * @var ?string $pageToken
      */

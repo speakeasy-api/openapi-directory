@@ -28,4 +28,6 @@ src/Models/Shared/Paging.php
 src/Models/Shared/NextPage.php
 src/Models/Shared/Error.php
 src/Models/Shared/ErrorDetail.php
+docs/sdk/README.md
+docs/events/README.md
 USAGE.md

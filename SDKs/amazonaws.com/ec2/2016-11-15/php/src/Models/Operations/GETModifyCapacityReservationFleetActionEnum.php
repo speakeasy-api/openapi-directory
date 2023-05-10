@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETModifyCapacityReservationFleetActionEnum: string
 {
     case MODIFY_CAPACITY_RESERVATION_FLEET = 'ModifyCapacityReservationFleet';

@@ -19,12 +19,16 @@ class AddOrUpdateDocumentsRequest
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
     public ?array $requestBody = null;
     
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=csvDelimiter')]
+    public ?string $csvDelimiter = null;
+    
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=primaryKey')]
     public ?string $primaryKey = null;
     
 	public function __construct()
 	{
 		$this->requestBody = null;
+		$this->csvDelimiter = null;
 		$this->primaryKey = null;
 	}
 }

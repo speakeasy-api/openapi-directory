@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteNamedQueryXAmzTargetEnum: string
 {
     case AMAZON_ATHENA_DELETE_NAMED_QUERY = 'AmazonAthena.DeleteNamedQuery';

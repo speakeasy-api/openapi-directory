@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopBgpFailoverTestXAmzTargetEnum: string
 {
     case OVERTURE_SERVICE_STOP_BGP_FAILOVER_TEST = 'OvertureService.StopBgpFailoverTest';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum VerifySoftwareTokenXAmzTargetEnum: string
 {
     case AWS_COGNITO_IDENTITY_PROVIDER_SERVICE_VERIFY_SOFTWARE_TOKEN = 'AWSCognitoIdentityProviderService.VerifySoftwareToken';

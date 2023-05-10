@@ -817,4 +817,5 @@ src/Models/Shared/StandardsControlAssociationSummary.php
 src/Models/Shared/ListTagsForResourceResponse.php
 src/Models/Shared/UpdateFindingAggregatorResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

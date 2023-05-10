@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdatePrimaryEmailAddressXAmzTargetEnum: string
 {
     case WORK_MAIL_SERVICE_UPDATE_PRIMARY_EMAIL_ADDRESS = 'WorkMailService.UpdatePrimaryEmailAddress';

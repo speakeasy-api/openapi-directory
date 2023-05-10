@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDisassociateVpcCidrBlockActionEnum: string
 {
     case DISASSOCIATE_VPC_CIDR_BLOCK = 'DisassociateVpcCidrBlock';

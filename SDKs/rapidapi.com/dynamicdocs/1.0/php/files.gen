@@ -23,4 +23,6 @@ src/Models/Operations/CompileLatexCompilerEnum.php
 src/Models/Operations/CompileRequest.php
 src/Models/Operations/CompileResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/pdfgeneration/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetEc2RecommendationProjectedMetricsXAmzTargetEnum: string
 {
     case COMPUTE_OPTIMIZER_SERVICE_GET_EC2_RECOMMENDATION_PROJECTED_METRICS = 'ComputeOptimizerService.GetEC2RecommendationProjectedMetrics';

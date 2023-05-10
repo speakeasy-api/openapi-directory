@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class GoogleCloudChannelV1Plan
 {
     /**
-     * Reseller Billing account to charge after an offer transaction. Only present for Google Cloud Platform offers.
+     * Reseller Billing account to charge after an offer transaction. Only present for Google Cloud offers.
      * 
      * @var ?string $billingAccount
      */

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartAccessLoggingXAmzTargetEnum: string
 {
     case MEDIA_STORE20170901_START_ACCESS_LOGGING = 'MediaStore_20170901.StartAccessLogging';

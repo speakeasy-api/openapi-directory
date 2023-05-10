@@ -1527,4 +1527,5 @@ src/Models/Shared/UploadServerCertificateResponse.php
 src/Models/Shared/UploadServerCertificateRequest.php
 src/Models/Shared/UploadSigningCertificateRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

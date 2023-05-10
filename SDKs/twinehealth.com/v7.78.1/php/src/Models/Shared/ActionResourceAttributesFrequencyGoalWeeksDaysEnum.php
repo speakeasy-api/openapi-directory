@@ -10,13 +10,13 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /** Days of week that the action is scheduled for. Zero-indexed, ex 0 represents Sunday, etc. */
-enum ActionResourceAttributesFrequencyGoalWeeksDaysEnum: string
+enum ActionResourceAttributesFrequencyGoalWeeksDaysEnum: int
 {
-    case ZERO = '0';
-    case ONE = '1';
-    case TWO = '2';
-    case THREE = '3';
-    case FOUR = '4';
-    case FIVE = '5';
-    case SIX = '6';
+    case ZERO = 0;
+    case ONE = 1;
+    case TWO = 2;
+    case THREE = 3;
+    case FOUR = 4;
+    case FIVE = 5;
+    case SIX = 6;
 }

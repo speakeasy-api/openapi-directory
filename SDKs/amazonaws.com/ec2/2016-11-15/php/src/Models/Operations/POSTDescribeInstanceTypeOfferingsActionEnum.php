@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeInstanceTypeOfferingsActionEnum: string
 {
     case DESCRIBE_INSTANCE_TYPE_OFFERINGS = 'DescribeInstanceTypeOfferings';

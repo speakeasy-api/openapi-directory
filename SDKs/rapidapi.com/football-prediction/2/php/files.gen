@@ -45,4 +45,5 @@ src/Models/Operations/GetApiV2PredictionsIdRequest.php
 src/Models/Operations/GetApiV2PredictionsId404ApplicationJSON.php
 src/Models/Operations/GetApiV2PredictionsId200ApplicationJSON.php
 src/Models/Operations/GetApiV2PredictionsIdResponse.php
+docs/sdk/README.md
 USAGE.md

@@ -44,4 +44,5 @@ src/Models/Shared/ListApplicationsResponse.php
 src/Models/Shared/ApplicationSummary.php
 src/Models/Shared/ListTagsForResourceResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

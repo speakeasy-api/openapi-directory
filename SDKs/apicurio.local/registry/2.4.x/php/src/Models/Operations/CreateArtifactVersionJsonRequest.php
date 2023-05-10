@@ -27,10 +27,10 @@ class CreateArtifactVersionJsonRequest
      * * XML Schema (`XSD`)
      * 
      * 
-     * @var \OpenAPI\OpenAPI\Models\Shared\ContentCreateRequest $contentCreateRequest
+     * @var \OpenAPI\OpenAPI\Models\Shared\ArtifactContent $artifactContent
      */
 	#[SpeakeasyMetadata('request:mediaType=application/vnd.create.extended+json')]
-    public \OpenAPI\OpenAPI\Models\Shared\ContentCreateRequest $contentCreateRequest;
+    public \OpenAPI\OpenAPI\Models\Shared\ArtifactContent $artifactContent;
     
     /**
      * Specifies the artifact description of this new version of the artifact content. Description must be ASCII-only string. If this is not provided, the server will extract the description from the artifact content.
@@ -95,7 +95,7 @@ class CreateArtifactVersionJsonRequest
     
 	public function __construct()
 	{
-		$this->contentCreateRequest = new \OpenAPI\OpenAPI\Models\Shared\ContentCreateRequest();
+		$this->artifactContent = new \OpenAPI\OpenAPI\Models\Shared\ArtifactContent();
 		$this->xRegistryDescription = null;
 		$this->xRegistryDescriptionEncoded = null;
 		$this->xRegistryName = null;

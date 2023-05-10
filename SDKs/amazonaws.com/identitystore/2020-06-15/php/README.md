@@ -30,33 +30,71 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\CreateGroupRequest;
+use \OpenAPI\OpenAPI\Models\Shared\CreateGroupRequest;
+use \OpenAPI\OpenAPI\Models\Operations\CreateGroupXAmzTargetEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new CreateGroupRequest();
+    $request->createGroupRequest = new CreateGroupRequest();
+    $request->createGroupRequest->description = 'corrupti';
+    $request->createGroupRequest->displayName = 'provident';
+    $request->createGroupRequest->identityStoreId = 'distinctio';
+    $request->xAmzAlgorithm = 'quibusdam';
+    $request->xAmzContentSha256 = 'unde';
+    $request->xAmzCredential = 'nulla';
+    $request->xAmzDate = 'corrupti';
+    $request->xAmzSecurityToken = 'illum';
+    $request->xAmzSignature = 'vel';
+    $request->xAmzSignedHeaders = 'error';
+    $request->xAmzTarget = CreateGroupXAmzTargetEnum::AWS_IDENTITY_STORE_CREATE_GROUP;
+
+    $response = $sdk->createGroup($request);
+
+    if ($response->createGroupResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `createGroup` - Creates a group within the specified identity store.
-* `createGroupMembership` - Creates a relationship between a member and a group. The following identifiers must be specified: <code>GroupId</code>, <code>IdentityStoreId</code>, and <code>MemberId</code>.
-* `createUser` - Creates a new user within the specified identity store.
-* `deleteGroup` - Delete a group within an identity store given <code>GroupId</code>.
-* `deleteGroupMembership` - Delete a membership within a group given <code>MembershipId</code>.
-* `deleteUser` - Deletes a user within an identity store given <code>UserId</code>.
-* `describeGroup` - Retrieves the group metadata and attributes from <code>GroupId</code> in an identity store.
-* `describeGroupMembership` - Retrieves membership metadata and attributes from <code>MembershipId</code> in an identity store.
-* `describeUser` - Retrieves the user metadata and attributes from the <code>UserId</code> in an identity store.
-* `getGroupId` - Retrieves <code>GroupId</code> in an identity store.
-* `getGroupMembershipId` - Retrieves the <code>MembershipId</code> in an identity store.
-* `getUserId` - Retrieves the <code>UserId</code> in an identity store.
-* `isMemberInGroups` - Checks the user's membership in all requested groups and returns if the member exists in all queried groups.
-* `listGroupMemberships` - For the specified group in the specified identity store, returns the list of all <code>GroupMembership</code> objects and returns results in paginated form.
-* `listGroupMembershipsForMember` - For the specified member in the specified identity store, returns the list of all <code>GroupMembership</code> objects and returns results in paginated form.
-* `listGroups` - Lists all groups in the identity store. Returns a paginated list of complete <code>Group</code> objects. Filtering for a <code>Group</code> by the <code>DisplayName</code> attribute is deprecated. Instead, use the <code>GetGroupId</code> API action.
-* `listUsers` - Lists all users in the identity store. Returns a paginated list of complete <code>User</code> objects. Filtering for a <code>User</code> by the <code>UserName</code> attribute is deprecated. Instead, use the <code>GetUserId</code> API action.
-* `updateGroup` - For the specified group in the specified identity store, updates the group metadata and attributes.
-* `updateUser` - For the specified user in the specified identity store, updates the user metadata and attributes.
+* [createGroup](docs/sdk/README.md#creategroup) - Creates a group within the specified identity store.
+* [createGroupMembership](docs/sdk/README.md#creategroupmembership) - Creates a relationship between a member and a group. The following identifiers must be specified: <code>GroupId</code>, <code>IdentityStoreId</code>, and <code>MemberId</code>.
+* [createUser](docs/sdk/README.md#createuser) - Creates a user within the specified identity store.
+* [deleteGroup](docs/sdk/README.md#deletegroup) - Delete a group within an identity store given <code>GroupId</code>.
+* [deleteGroupMembership](docs/sdk/README.md#deletegroupmembership) - Delete a membership within a group given <code>MembershipId</code>.
+* [deleteUser](docs/sdk/README.md#deleteuser) - Deletes a user within an identity store given <code>UserId</code>.
+* [describeGroup](docs/sdk/README.md#describegroup) - Retrieves the group metadata and attributes from <code>GroupId</code> in an identity store.
+* [describeGroupMembership](docs/sdk/README.md#describegroupmembership) - Retrieves membership metadata and attributes from <code>MembershipId</code> in an identity store.
+* [describeUser](docs/sdk/README.md#describeuser) - Retrieves the user metadata and attributes from the <code>UserId</code> in an identity store.
+* [getGroupId](docs/sdk/README.md#getgroupid) - Retrieves <code>GroupId</code> in an identity store.
+* [getGroupMembershipId](docs/sdk/README.md#getgroupmembershipid) - Retrieves the <code>MembershipId</code> in an identity store.
+* [getUserId](docs/sdk/README.md#getuserid) - Retrieves the <code>UserId</code> in an identity store.
+* [isMemberInGroups](docs/sdk/README.md#ismemberingroups) - Checks the user's membership in all requested groups and returns if the member exists in all queried groups.
+* [listGroupMemberships](docs/sdk/README.md#listgroupmemberships) - For the specified group in the specified identity store, returns the list of all <code>GroupMembership</code> objects and returns results in paginated form.
+* [listGroupMembershipsForMember](docs/sdk/README.md#listgroupmembershipsformember) - For the specified member in the specified identity store, returns the list of all <code>GroupMembership</code> objects and returns results in paginated form.
+* [listGroups](docs/sdk/README.md#listgroups) - Lists all groups in the identity store. Returns a paginated list of complete <code>Group</code> objects. Filtering for a <code>Group</code> by the <code>DisplayName</code> attribute is deprecated. Instead, use the <code>GetGroupId</code> API action.
+* [listUsers](docs/sdk/README.md#listusers) - Lists all users in the identity store. Returns a paginated list of complete <code>User</code> objects. Filtering for a <code>User</code> by the <code>UserName</code> attribute is deprecated. Instead, use the <code>GetUserId</code> API action.
+* [updateGroup](docs/sdk/README.md#updategroup) - For the specified group in the specified identity store, updates the group metadata and attributes.
+* [updateUser](docs/sdk/README.md#updateuser) - For the specified user in the specified identity store, updates the user metadata and attributes.
 <!-- End SDK Available Operations -->
 
 ### Maturity

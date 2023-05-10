@@ -101,4 +101,5 @@ src/Models/Shared/ListRepositoryAssociationsResponse.php
 src/Models/Shared/RepositoryAssociationSummary.php
 src/Models/Shared/ListTagsForResourceResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum BatchGetVpcEndpointXAmzTargetEnum: string
 {
     case OPEN_SEARCH_SERVERLESS_BATCH_GET_VPC_ENDPOINT = 'OpenSearchServerless.BatchGetVpcEndpoint';

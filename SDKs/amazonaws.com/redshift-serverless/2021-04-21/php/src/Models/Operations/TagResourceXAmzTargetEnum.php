@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum TagResourceXAmzTargetEnum: string
 {
     case REDSHIFT_SERVERLESS_TAG_RESOURCE = 'RedshiftServerless.TagResource';

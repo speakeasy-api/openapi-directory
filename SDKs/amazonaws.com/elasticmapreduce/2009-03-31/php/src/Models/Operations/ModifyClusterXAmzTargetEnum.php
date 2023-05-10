@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ModifyClusterXAmzTargetEnum: string
 {
     case ELASTIC_MAP_REDUCE_MODIFY_CLUSTER = 'ElasticMapReduce.ModifyCluster';

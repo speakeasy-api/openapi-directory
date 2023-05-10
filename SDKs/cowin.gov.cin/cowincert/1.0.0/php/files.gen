@@ -22,4 +22,6 @@ src/Utils/Utils.php
 src/Models/Operations/GetCertificatePdfSecurity.php
 src/Models/Operations/GetCertificatePdfResponse.php
 src/Models/Shared/CertificateRequest.php
+docs/sdk/README.md
+docs/certificate/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateEventBusXAmzTargetEnum: string
 {
     case AWS_EVENTS_CREATE_EVENT_BUS = 'AWSEvents.CreateEventBus';

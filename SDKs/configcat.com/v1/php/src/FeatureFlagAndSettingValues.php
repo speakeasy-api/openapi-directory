@@ -142,6 +142,116 @@ class FeatureFlagAndSettingValues
     }
 	
     /**
+     * Post values
+     * 
+     * This endpoint replaces the values of a specified Config's Feature Flags or Settings identified by the `configId` parameter
+     * in a specified Environment identified by the `environmentId` parameter.
+     * 
+     * Only the `value`, `rolloutRules` and `percentageRules` attributes are modifiable by this endpoint.
+     * 
+     * **Important:** As this endpoint is doing a complete replace, it's important to set every other attribute that you don't 
+     * want to change in its original state. Not listing one means that it will reset.
+     * 
+     * For example: We have the following resource.
+     * ```
+     * {
+     *     "settingValues": [
+     * 		{
+     * 			"rolloutPercentageItems": [
+     * 				{
+     * 					"percentage": 30,
+     * 					"value": true
+     * 				},
+     * 				{
+     * 					"percentage": 70,
+     * 					"value": false
+     * 				}
+     * 			],
+     * 			"rolloutRules": [],
+     * 			"value": false,
+     * 			"settingId": 1
+     * 		}
+     * 	]
+     * }
+     * ```
+     * If we send a replace request body as below:
+     * ```
+     * { 
+     * 	"settingValues": [
+     * 		{
+     * 			"value": true,
+     * 			"settingId": 1
+     * 		}
+     * 	]
+     * }
+     * ```
+     * Then besides that the default value is set to `true`, all the Percentage Rules are deleted. 
+     * So we get a response like this:
+     * ```
+     * {
+     * 	"settingValues": [
+     * 		{
+     * 			"rolloutPercentageItems": [],
+     * 			"rolloutRules": [],
+     * 			"value": true,
+     * 			"setting": 
+     * 			{
+     * 				"settingId": 1
+     * 			}
+     * 		}
+     * 	]
+     * }
+     * ```
+     * 
+     * The `rolloutRules` property describes two types of rules:
+     * 
+     * - **Targeting rules**: When you want to add or update a targenting rule, the `comparator`, `comparisonAttribute`, and `comparisonValue` members are required.
+     * - **Segment rules**: When you want to add add or update a segment rule, the `segmentId` which identifies the desired segment and the `segmentComparator` members are required.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\PostSettingValuesRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\PostSettingValuesResponse
+     */
+	public function postSettingValues(
+        \OpenAPI\OpenAPI\Models\Operations\PostSettingValuesRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\PostSettingValuesResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/configs/{configId}/environments/{environmentId}/values', \OpenAPI\OpenAPI\Models\Operations\PostSettingValuesRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "updateSettingValuesWithIdModel", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\PostSettingValuesRequest::class, $request, null));
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\PostSettingValuesResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/hal+json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->configSettingValuesModel = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ConfigSettingValuesModel', 'json');
+            }
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->configSettingValuesModel = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ConfigSettingValuesModel', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 400 or $httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 404 or $httpResponse->getStatusCode() === 429) {
+        }
+
+        return $response;
+    }
+	
+    /**
      * Replace value
      * 
      * This endpoint replaces the whole value of a Feature Flag or Setting in a specified Environment.

@@ -18,6 +18,16 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class Scope
 {
     /**
+     * If true, all Memberships in the Fleet bind to this Scope.
+     * 
+     * @var ?bool $allMemberships
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('allMemberships')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $allMemberships = null;
+    
+    /**
      * Output only. When the scope was created.
      * 
      * @var ?string $createTime
@@ -79,6 +89,7 @@ class Scope
     
 	public function __construct()
 	{
+		$this->allMemberships = null;
 		$this->createTime = null;
 		$this->deleteTime = null;
 		$this->name = null;

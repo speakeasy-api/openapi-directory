@@ -30,27 +30,55 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetAccessTokensAccessTokensRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetAccessTokensAccessTokensRequest();
+    $request->accessTokens = 'corrupti';
+    $request->callback = 'provident';
+    $request->filter = 'distinctio';
+    $request->page = 844266;
+    $request->pagesize = 602763;
+
+    $response = $sdk->getAccessTokensAccessTokens($request);
+
+    if ($response->body !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getAccessTokensAccessTokens` - Reads the properties for a set of access tokens.
+* [getAccessTokensAccessTokens](docs/sdk/README.md#getaccesstokensaccesstokens) - Reads the properties for a set of access tokens.
  
 {accessTokens} can contain up to 20 access tokens. These are obtained by authenticating a user using OAuth 2.0.
  
 This method returns a list of access_tokens.
 
-* `getAccessTokensAccessTokensInvalidate` - Immediately expires the access tokens passed. This method is meant to allow an application to discard any active access tokens it no longer needs.
+* [getAccessTokensAccessTokensInvalidate](docs/sdk/README.md#getaccesstokensaccesstokensinvalidate) - Immediately expires the access tokens passed. This method is meant to allow an application to discard any active access tokens it no longer needs.
  
 {accessTokens} can contain up to 20 access tokens. These are obtained by authenticating a user using OAuth 2.0.
  
 This method returns a list of access_tokens.
 
-* `getAnswers` - Returns all the undeleted answers in the system.
+* [getAnswers](docs/sdk/README.md#getanswers) - Returns all the undeleted answers in the system.
  
 The sorts accepted by this method operate on the follow fields of the answer object:
  - activity - last_activity_date
@@ -63,7 +91,7 @@ The sorts accepted by this method operate on the follow fields of the answer obj
  
 This method returns a list of answers.
 
-* `getAnswersIds` - Gets the set of answers identified by ids.
+* [getAnswersIds](docs/sdk/README.md#getanswersids) - Gets the set of answers identified by ids.
  
 This is meant for batch fetcing of questions. A useful trick to poll for updates is to sort by activity, with a minimum date of the last time you polled.
  
@@ -80,7 +108,7 @@ The sorts accepted by this method operate on the follow fields of the answer obj
  
 This method returns a list of answers.
 
-* `getAnswersIdsComments` - Gets the comments on a set of answers.
+* [getAnswersIdsComments](docs/sdk/README.md#getanswersidscomments) - Gets the comments on a set of answers.
  
 If you know that you have an answer id and need the comments, use this method. If you know you have a question id, use /questions/{id}/comments. If you are unsure, use /posts/{id}/comments.
  
@@ -96,7 +124,7 @@ The sorts accepted by this method operate on the follow fields of the comment ob
  
 This method returns a list of comments.
 
-* `getAppsAccessTokensDeAuthenticate` - Passing valid access_tokens to this method causes the application that created them to be de-authorized by the user associated with each access_token. This will remove the application from their apps tab, and cause all other existing access_tokens to be destroyed.
+* [getAppsAccessTokensDeAuthenticate](docs/sdk/README.md#getappsaccesstokensdeauthenticate) - Passing valid access_tokens to this method causes the application that created them to be de-authorized by the user associated with each access_token. This will remove the application from their apps tab, and cause all other existing access_tokens to be destroyed.
  
 This method is meant for uninstalling applications, recovering from access_token leaks, or simply as a stronger form of /access-tokens/{accessTokens}/invalidate.
  
@@ -106,7 +134,7 @@ Nothing prevents a user from re-authenticate to an application that has de-authe
  
 This method returns a list of access_tokens.
 
-* `getBadges` - Returns all the badges in the system.
+* [getBadges](docs/sdk/README.md#getbadges) - Returns all the badges in the system.
  
 Badge sorts are a tad complicated. For the purposes of sorting (and min/max) tag_based is considered to be greater than named.
  
@@ -118,7 +146,7 @@ rank is the default sort.
  
 This method returns a list of badges.
 
-* `getBadgesName` - Gets all explicitly named badges in the system.
+* [getBadgesName](docs/sdk/README.md#getbadgesname) - Gets all explicitly named badges in the system.
  
 A named badged stands in opposition to a tag-based badge. These are referred to as general badges on the sites themselves.
  
@@ -128,13 +156,13 @@ rank is the default sort.
  
 This method returns a list of badges.
 
-* `getBadgesRecipients` - Returns recently awarded badges in the system.
+* [getBadgesRecipients](docs/sdk/README.md#getbadgesrecipients) - Returns recently awarded badges in the system.
  
 As these badges have been awarded, they will have the badge.user property set.
  
 This method returns a list of badges.
 
-* `getBadgesTags` - Returns the badges that are awarded for participation in specific tags.
+* [getBadgesTags](docs/sdk/README.md#getbadgestags) - Returns the badges that are awarded for participation in specific tags.
  
 For the rank sort, bronze is greater than silver which is greater than gold. Along with sort=rank, set max=gold for just gold badges, max=silver&min=silver for just silver, and min=bronze for just bronze.
  
@@ -142,7 +170,7 @@ rank is the default sort.
  
 This method returns a list of badges.
 
-* `getBadgesIds` - Gets the badges identified in id.
+* [getBadgesIds](docs/sdk/README.md#getbadgesids) - Gets the badges identified in id.
  
 Note that badge ids are not constant across sites, and thus should be looked up via the /badges method. A badge id on a single site is, however, guaranteed to be stable.
  
@@ -158,7 +186,7 @@ rank is the default sort.
  
 This method returns a list of badges.
 
-* `getBadgesIdsRecipients` - Returns recently awarded badges in the system, constrained to a certain set of badges.
+* [getBadgesIdsRecipients](docs/sdk/README.md#getbadgesidsrecipients) - Returns recently awarded badges in the system, constrained to a certain set of badges.
  
 As these badges have been awarded, they will have the badge.user property set.
  
@@ -166,7 +194,7 @@ As these badges have been awarded, they will have the badge.user property set.
  
 This method returns a list of badges.
 
-* `getComments` - Gets all the comments on the site.
+* [getComments](docs/sdk/README.md#getcomments) - Gets all the comments on the site.
  
 If you're filtering for interesting comments (by score, creation date, etc.) make use of the sort paramter with appropriate min and max values.
  
@@ -182,7 +210,7 @@ The sorts accepted by this method operate on the follow fields of the comment ob
  
 This method returns a list of comments.
 
-* `getCommentsIds` - Gets the comments identified in id.
+* [getCommentsIds](docs/sdk/README.md#getcommentsids) - Gets the comments identified in id.
  
 This method is most useful if you have a cache of comment ids obtained through other means (such as /questions/{id}/comments) but suspect the data may be stale.
  
@@ -198,7 +226,7 @@ The sorts accepted by this method operate on the follow fields of the comment ob
  
 This method returns a list of comments.
 
-* `getErrors` - Returns the various error codes that can be produced by the API.
+* [getErrors](docs/sdk/README.md#geterrors) - Returns the various error codes that can be produced by the API.
  
 This method is provided for discovery, documentation, and testing purposes, it is not expected many applications will consume it during normal operation.
  
@@ -206,13 +234,13 @@ For testing purposes, look into the /errors/{id} method which simulates errors g
  
 This method returns a list of errors.
 
-* `getErrorsId` - This method allows you to generate an error.
+* [getErrorsId](docs/sdk/README.md#geterrorsid) - This method allows you to generate an error.
  
 This method is only intended for use when testing an application or library. Unlike other methods in the API, its contract is not frozen, and new error codes may be added at any time.
  
 This method results in an error, which will be expressed with a 400 HTTP status code and setting the error* properties on the wrapper object.
 
-* `getEvents` - Returns a stream of events that have occurred on the site.
+* [getEvents](docs/sdk/README.md#getevents) - Returns a stream of events that have occurred on the site.
  
 The API considers the following "events":
  - posting a question
@@ -230,7 +258,7 @@ It is advised that developers batch events by ids and make as few subsequent req
  
 This method returns a list of events.
 
-* `getFiltersCreate` - Creates a new filter given a list of includes, excludes, a base filter, and whether or not this filter should be "unsafe".
+* [getFiltersCreate](docs/sdk/README.md#getfilterscreate) - Creates a new filter given a list of includes, excludes, a base filter, and whether or not this filter should be "unsafe".
  
 Filter "safety" is defined as follows. Any string returned as a result of an API call with a safe filter will be inline-able into HTML without script-injection concerns. That is to say, no additional sanitizing (encoding, HTML tag stripping, etc.) will be necessary on returned strings. Applications that wish to handle sanitizing themselves should create an unsafe filter. All filters are safe by default, under the assumption that double-encoding bugs are more desirable than script injections.
  
@@ -242,7 +270,7 @@ It is not expected that many applications will call this method at runtime, filt
  
 This method returns a single filter.
 
-* `getFiltersFilters` - Returns the fields included by the given filters, and the "safeness" of those filters.
+* [getFiltersFilters](docs/sdk/README.md#getfiltersfilters) - Returns the fields included by the given filters, and the "safeness" of those filters.
  
 It is not expected that this method will be consumed by many applications at runtime, it is provided to aid in debugging.
  
@@ -250,19 +278,19 @@ It is not expected that this method will be consumed by many applications at run
  
 This method returns a list of filters.
 
-* `getInbox` - Returns a user's inbox.
+* [getInbox](docs/sdk/README.md#getinbox) - Returns a user's inbox.
  
 This method requires an access_token, with a scope containing "read_inbox".
  
 This method returns a list of inbox items.
 
-* `getInboxUnread` - Returns the unread items in a user's inbox.
+* [getInboxUnread](docs/sdk/README.md#getinboxunread) - Returns the unread items in a user's inbox.
  
 This method requires an access_token, with a scope containing "read_inbox".
  
 This method returns a list of inbox items.
 
-* `getInfo` - Returns a collection of statistics about the site.
+* [getInfo](docs/sdk/README.md#getinfo) - Returns a collection of statistics about the site.
  
 Data to facilitate per-site customization, discover related sites, and aggregate statistics is all returned by this method.
  
@@ -270,51 +298,51 @@ This data is cached very aggressively, by design. Query sparingly, ideally no mo
  
 This method returns an info object.
 
-* `getMe` - Returns the user associated with the passed access_token.
+* [getMe](docs/sdk/README.md#getme) - Returns the user associated with the passed access_token.
  
 This method returns a user.
 
-* `getMeAnswers` - Returns the answers owned by the user associated with the given access_token.
+* [getMeAnswers](docs/sdk/README.md#getmeanswers) - Returns the answers owned by the user associated with the given access_token.
  
 This method returns a list of answers.
 
-* `getMeAssociated` - Returns all of a user's associated accounts, given an access_token for them.
+* [getMeAssociated](docs/sdk/README.md#getmeassociated) - Returns all of a user's associated accounts, given an access_token for them.
  
 This method returns a list of network users.
 
-* `getMeBadges` - Returns the badges earned by the user associated with the given access_token.
+* [getMeBadges](docs/sdk/README.md#getmebadges) - Returns the badges earned by the user associated with the given access_token.
  
 This method returns a list of badges.
 
-* `getMeComments` - Returns the comments owned by the user associated with the given access_token.
+* [getMeComments](docs/sdk/README.md#getmecomments) - Returns the comments owned by the user associated with the given access_token.
  
 This method returns a list of comments.
 
-* `getMeCommentsToId` - Returns the comments owned by the user associated with the given access_token that are in reply to the user identified by {toId}.
+* [getMeCommentsToId](docs/sdk/README.md#getmecommentstoid) - Returns the comments owned by the user associated with the given access_token that are in reply to the user identified by {toId}.
  
 This method returns a list of comments.
 
-* `getMeFavorites` - Returns the questions favorites by the user associated with the given access_token.
+* [getMeFavorites](docs/sdk/README.md#getmefavorites) - Returns the questions favorites by the user associated with the given access_token.
  
 This method returns a list of questions.
 
-* `getMeInbox` - Returns the user identified by access_token's inbox.
+* [getMeInbox](docs/sdk/README.md#getmeinbox) - Returns the user identified by access_token's inbox.
  
 This method requires an access_token, with a scope containing "read_inbox".
  
 This method returns a list of inbox items.
 
-* `getMeInboxUnread` - Returns the unread items in the user identified by access_token's inbox.
+* [getMeInboxUnread](docs/sdk/README.md#getmeinboxunread) - Returns the unread items in the user identified by access_token's inbox.
  
 This method requires an access_token, with a scope containing "read_inbox".
  
 This method returns a list of inbox items.
 
-* `getMeMentioned` - Returns the comments mentioning the user associated with the given access_token.
+* [getMeMentioned](docs/sdk/README.md#getmementioned) - Returns the comments mentioning the user associated with the given access_token.
  
 This method returns a list of comments.
 
-* `getMeMerges` - Returns a record of merges that have occurred involving a user identified by an access_token.
+* [getMeMerges](docs/sdk/README.md#getmemerges) - Returns a record of merges that have occurred involving a user identified by an access_token.
  
 This method allows you to take now invalid account ids and find what account they've become, or take currently valid account ids and find which ids were equivalent in the past.
  
@@ -326,86 +354,86 @@ Note that accounts are managed at a network level, users on a site may be merged
  
 This method returns a list of account_merge.
 
-* `getMeNotifications` - Returns a user's notifications, given an access_token.
+* [getMeNotifications](docs/sdk/README.md#getmenotifications) - Returns a user's notifications, given an access_token.
  
 This method requires an access_token, with a scope containing "read_inbox".
  
 This method returns a list of notifications.
 
-* `getMeNotificationsUnread` - Returns a user's unread notifications, given an access_token.
+* [getMeNotificationsUnread](docs/sdk/README.md#getmenotificationsunread) - Returns a user's unread notifications, given an access_token.
  
 This method requires an access_token, with a scope containing "read_inbox".
  
 This method returns a list of notifications.
 
-* `getMePrivileges` - Returns the privileges the user identified by access_token has.
+* [getMePrivileges](docs/sdk/README.md#getmeprivileges) - Returns the privileges the user identified by access_token has.
  
 This method returns a list of privileges.
 
-* `getMeQuestions` - Returns the questions owned by the user associated with the given access_token.
+* [getMeQuestions](docs/sdk/README.md#getmequestions) - Returns the questions owned by the user associated with the given access_token.
  
 This method returns a list of questions.
 
-* `getMeQuestionsFeatured` - Returns the questions that have active bounties offered by the user associated with the given access_token.
+* [getMeQuestionsFeatured](docs/sdk/README.md#getmequestionsfeatured) - Returns the questions that have active bounties offered by the user associated with the given access_token.
  
 This method returns a list of questions.
 
-* `getMeQuestionsNoAnswers` - Returns the questions owned by the user associated with the given access_token that have no answers.
+* [getMeQuestionsNoAnswers](docs/sdk/README.md#getmequestionsnoanswers) - Returns the questions owned by the user associated with the given access_token that have no answers.
  
 This method returns a list of questions.
 
-* `getMeQuestionsUnaccepted` - Returns the questions owned by the user associated with the given access_token that have no accepted answer.
+* [getMeQuestionsUnaccepted](docs/sdk/README.md#getmequestionsunaccepted) - Returns the questions owned by the user associated with the given access_token that have no accepted answer.
  
 This method returns a list of questions.
 
-* `getMeQuestionsUnanswered` - Returns the questions owned by the user associated with the given access_token that are not considered answered.
+* [getMeQuestionsUnanswered](docs/sdk/README.md#getmequestionsunanswered) - Returns the questions owned by the user associated with the given access_token that are not considered answered.
  
 This method returns a list of questions.
 
-* `getMeReputation` - Returns the reputation changed for the user associated with the given access_token.
+* [getMeReputation](docs/sdk/README.md#getmereputation) - Returns the reputation changed for the user associated with the given access_token.
  
 This method returns a list of reputation changes.
 
-* `getMeReputationHistory` - Returns user's public reputation history.
+* [getMeReputationHistory](docs/sdk/README.md#getmereputationhistory) - Returns user's public reputation history.
  
 This method returns a list of reputation_history.
 
-* `getMeReputationHistoryFull` - Returns user's full reputation history, including private events.
+* [getMeReputationHistoryFull](docs/sdk/README.md#getmereputationhistoryfull) - Returns user's full reputation history, including private events.
  
  This method requires an access_token, with a scope containing "private_info".
 
  
 This method returns a list of reputation_history.
 
-* `getMeSuggestedEdits` - Returns the suggested edits the user identified by access_token has submitted.
+* [getMeSuggestedEdits](docs/sdk/README.md#getmesuggestededits) - Returns the suggested edits the user identified by access_token has submitted.
  
 This method returns a list of suggested-edits.
 
-* `getMeTags` - Returns the tags the user identified by the access_token passed is active in.
+* [getMeTags](docs/sdk/README.md#getmetags) - Returns the tags the user identified by the access_token passed is active in.
  
 This method returns a list of tags.
 
-* `getMeTagsTagsTopAnswers` - Returns the top 30 answers the user associated with the given access_token has posted in response to questions with the given tags.
+* [getMeTagsTagsTopAnswers](docs/sdk/README.md#getmetagstagstopanswers) - Returns the top 30 answers the user associated with the given access_token has posted in response to questions with the given tags.
  
 This method returns a list of answers.
 
-* `getMeTagsTagsTopQuestions` - Returns the top 30 questions the user associated with the given access_token has posted in response to questions with the given tags.
+* [getMeTagsTagsTopQuestions](docs/sdk/README.md#getmetagstagstopquestions) - Returns the top 30 questions the user associated with the given access_token has posted in response to questions with the given tags.
  
 This method returns a list of questions.
 
-* `getMeTimeline` - Returns a subset of the actions the user identified by the passed access_token has taken on the site.
+* [getMeTimeline](docs/sdk/README.md#getmetimeline) - Returns a subset of the actions the user identified by the passed access_token has taken on the site.
  
 This method returns a list of user timeline objects.
 
-* `getMeTopAnswerTags` - Returns the user identified by access_token's top 30 tags by answer score.
+* [getMeTopAnswerTags](docs/sdk/README.md#getmetopanswertags) - Returns the user identified by access_token's top 30 tags by answer score.
  
 This method returns a list of top tag objects.
 
-* `getMeTopQuestionTags` - Returns the user identified by access_token's top 30 tags by question score.
+* [getMeTopQuestionTags](docs/sdk/README.md#getmetopquestiontags) - Returns the user identified by access_token's top 30 tags by question score.
  
 This method returns a list of top tag objects.
 
-* `getMeWritePermissions` - Returns the write permissions a user has via the api, given an access token.
+* [getMeWritePermissions](docs/sdk/README.md#getmewritepermissions) - Returns the write permissions a user has via the api, given an access token.
  
 The Stack Exchange API gives users the ability to create, edit, and delete certain types. This method returns whether the passed user is capable of performing those actions at all, as well as how many times a day they can.
  
@@ -413,19 +441,19 @@ This method does not consider the user's current quota (ie. if they've already e
  
 This method returns a list of write_permissions.
 
-* `getNotifications` - Returns a user's notifications.
+* [getNotifications](docs/sdk/README.md#getnotifications) - Returns a user's notifications.
  
 This method requires an access_token, with a scope containing "read_inbox".
  
 This method returns a list of notifications.
 
-* `getNotificationsUnread` - Returns a user's unread notifications.
+* [getNotificationsUnread](docs/sdk/README.md#getnotificationsunread) - Returns a user's unread notifications.
  
 This method requires an access_token, with a scope containing "read_inbox".
  
 This method returns a list of notifications.
 
-* `getPosts` - Fetches all posts (questions and answers) on the site.
+* [getPosts](docs/sdk/README.md#getposts) - Fetches all posts (questions and answers) on the site.
  
 In many ways this method is the union of /questions and /answers, returning both sets of data albeit only the common fields.
  
@@ -442,7 +470,7 @@ The sorts accepted by this method operate on the follow fields of the post objec
  
 This method returns a list of posts.
 
-* `getPostsIds` - Fetches a set of posts by ids.
+* [getPostsIds](docs/sdk/README.md#getpostsids) - Fetches a set of posts by ids.
  
 This method is meant for grabbing an object when unsure whether an id identifies a question or an answer. This is most common with user entered data.
  
@@ -459,7 +487,7 @@ The sorts accepted by this method operate on the follow fields of the post objec
  
 This method returns a list of posts.
 
-* `getPostsIdsComments` - Gets the comments on the posts identified in ids, regardless of the type of the posts.
+* [getPostsIdsComments](docs/sdk/README.md#getpostsidscomments) - Gets the comments on the posts identified in ids, regardless of the type of the posts.
  
 This method is meant for cases when you are unsure of the type of the post id provided. Generally, this would be due to obtaining the post id directly from a user.
  
@@ -475,13 +503,13 @@ The sorts accepted by this method operate on the follow fields of the comment ob
  
 This method returns a list of comments.
 
-* `getPostsIdsRevisions` - Returns edit revisions for the posts identified in ids.
+* [getPostsIdsRevisions](docs/sdk/README.md#getpostsidsrevisions) - Returns edit revisions for the posts identified in ids.
  
 {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for post_id, answer_id, or question_id on post, answer, and question objects respectively.
  
 This method returns a list of revisions.
 
-* `getPostsIdsSuggestedEdits` - Returns suggsted edits on the posts identified in ids.
+* [getPostsIdsSuggestedEdits](docs/sdk/README.md#getpostsidssuggestededits) - Returns suggsted edits on the posts identified in ids.
  
  - creation - creation_date
  - approval - approval_date
@@ -493,7 +521,7 @@ This method returns a list of revisions.
  
 This method returns a list of suggested-edits.
 
-* `getPrivileges` - Returns the earnable privileges on a site.
+* [getPrivileges](docs/sdk/README.md#getprivileges) - Returns the earnable privileges on a site.
  
 Privileges define abilities a user can earn (via reputation) on any Stack Exchange site.
  
@@ -501,7 +529,7 @@ While fairly stable, over time they do change. New ones are introduced with new 
  
 This method returns a list of privileges.
 
-* `getQuestions` - Gets all the questions on the site.
+* [getQuestions](docs/sdk/README.md#getquestions) - Gets all the questions on the site.
  
 This method allows you make fairly flexible queries across the entire corpus of questions on a site. For example, getting all questions asked in the the week of Jan 1st 2011 with scores of 10 or more is a single query with parameters sort=votes&min=10&fromdate=1293840000&todate=1294444800.
  
@@ -521,7 +549,7 @@ The sorts accepted by this method operate on the follow fields of the question o
  
 This method returns a list of questions.
 
-* `getQuestionsFeatured` - Returns all the questions with active bounties in the system.
+* [getQuestionsFeatured](docs/sdk/README.md#getquestionsfeatured) - Returns all the questions with active bounties in the system.
  
 The sorts accepted by this method operate on the follow fields of the question object:
  - activity - last_activity_date
@@ -534,7 +562,7 @@ The sorts accepted by this method operate on the follow fields of the question o
  
 This method returns a list of questions.
 
-* `getQuestionsNoAnswers` - Returns questions which have received no answers.
+* [getQuestionsNoAnswers](docs/sdk/README.md#getquestionsnoanswers) - Returns questions which have received no answers.
  
 Compare with /questions/unanswered which mearly returns questions that the sites consider insufficiently well answered.
  
@@ -553,7 +581,7 @@ The sorts accepted by this method operate on the follow fields of the question o
  
 This method returns a list of questions.
 
-* `getQuestionsUnanswered` - Returns questions the site considers to be unanswered.
+* [getQuestionsUnanswered](docs/sdk/README.md#getquestionsunanswered) - Returns questions the site considers to be unanswered.
  
 Note that just because a question has an answer, that does not mean it is considered answered. While the rules are subject to change, at this time a question must have at least one upvoted answer to be considered answered.
  
@@ -574,7 +602,7 @@ The sorts accepted by this method operate on the follow fields of the question o
  
 This method returns a list of questions.
 
-* `getQuestionsIds` - Returns the questions identified in {ids}.
+* [getQuestionsIds](docs/sdk/README.md#getquestionsids) - Returns the questions identified in {ids}.
  
 This is most useful for fetching fresh data when maintaining a cache of question ids, or polling for changes.
  
@@ -591,7 +619,7 @@ The sorts accepted by this method operate on the follow fields of the question o
  
 This method returns a list of questions.
 
-* `getQuestionsIdsAnswers` - Gets the answers to a set of questions identified in id.
+* [getQuestionsIdsAnswers](docs/sdk/README.md#getquestionsidsanswers) - Gets the answers to a set of questions identified in id.
  
 This method is most useful if you have a set of interesting questions, and you wish to obtain all of their answers at once or if you are polling for new or updates answers (in conjunction with sort=activity).
  
@@ -608,7 +636,7 @@ The sorts accepted by this method operate on the follow fields of the answer obj
  
 This method returns a list of answers.
 
-* `getQuestionsIdsComments` - Gets the comments on a question.
+* [getQuestionsIdsComments](docs/sdk/README.md#getquestionsidscomments) - Gets the comments on a question.
  
 If you know that you have an question id and need the comments, use this method. If you know you have a answer id, use /answers/{ids}/comments. If you are unsure, use /posts/{ids}/comments.
  
@@ -624,7 +652,7 @@ The sorts accepted by this method operate on the follow fields of the comment ob
  
 This method returns a list of comments.
 
-* `getQuestionsIdsLinked` - Gets questions which link to those questions identified in {ids}.
+* [getQuestionsIdsLinked](docs/sdk/README.md#getquestionsidslinked) - Gets questions which link to those questions identified in {ids}.
  
 This method only considers questions that are linked within a site, and will never return questions from another Stack Exchange site.
  
@@ -644,7 +672,7 @@ The sorts accepted by this method operate on the follow fields of the question o
  
 This method returns a list of questions.
 
-* `getQuestionsIdsRelated` - Returns questions that the site considers related to those identified in {ids}.
+* [getQuestionsIdsRelated](docs/sdk/README.md#getquestionsidsrelated) - Returns questions that the site considers related to those identified in {ids}.
  
 The algorithm for determining if questions are related is not documented, and subject to change at any time. Futhermore, these values are very heavily cached, and may not update immediately after a question has been editted. It is also not guaranteed that a question will be considered related to any number (even non-zero) of questions, and a consumer should be able to handle a variable number of returned questions.
  
@@ -662,7 +690,7 @@ The sorts accepted by this method operate on the follow fields of the question o
  
 This method returns a list of questions.
 
-* `getQuestionsIdsTimeline` - Returns a subset of the events that have happened to the questions identified in id.
+* [getQuestionsIdsTimeline](docs/sdk/README.md#getquestionsidstimeline) - Returns a subset of the events that have happened to the questions identified in id.
  
 This provides data similar to that found on a question's timeline page.
  
@@ -672,13 +700,13 @@ Voting data is scrubbed to deter inferencing of voter identity.
  
 This method returns a list of question timeline events.
 
-* `getRevisionsIds` - Returns edit revisions identified by ids in {ids}.
+* [getRevisionsIds](docs/sdk/README.md#getrevisionsids) - Returns edit revisions identified by ids in {ids}.
  
 {ids} can contain up to 20 semicolon delimited ids, to find ids programatically look for revision_guid on revision objects. Note that unlike most other id types in the API, revision_guid is a string.
  
 This method returns a list of revisions.
 
-* `getSearch` - Searches a site for any questions which fit the given criteria.
+* [getSearch](docs/sdk/README.md#getsearch) - Searches a site for any questions which fit the given criteria.
  
 This method is intentionally quite limited. For more general searching, you should use a proper internet search engine restricted to the domain of the site in question.
  
@@ -698,7 +726,7 @@ The sorts accepted by this method operate on the follow fields of the question o
  
 This method returns a list of questions.
 
-* `getSearchAdvanced` - Searches a site for any questions which fit the given criteria.
+* [getSearchAdvanced](docs/sdk/README.md#getsearchadvanced) - Searches a site for any questions which fit the given criteria.
  
 Search criteria are expressed using the following parameters:
   - q - a free form text parameter, will match all question properties based on an undocumented algorithm.
@@ -731,7 +759,7 @@ The sorts accepted by this method operate on the follow fields of the question o
  
 This method returns a list of questions.
 
-* `getSimilar` - Returns questions which are similar to a hypothetical one based on a title and tag combination.
+* [getSimilar](docs/sdk/README.md#getsimilar) - Returns questions which are similar to a hypothetical one based on a title and tag combination.
  
 This method is roughly equivalent to a site's related questions suggestion on the ask page.
  
@@ -753,7 +781,7 @@ The sorts accepted by this method operate on the follow fields of the question o
  
 This method returns a list of questions.
 
-* `getSites` - Returns all sites in the network.
+* [getSites](docs/sdk/README.md#getsites) - Returns all sites in the network.
  
 This method allows for discovery of new sites, and changes to existing ones. Be aware that unlike normal API methods, this method should be fetched very infrequently, it is very unusual for these values to change more than once on any given day. It is suggested that you cache its return for at least one day, unless your app encounters evidence that it has changed (such as from the /info method).
  
@@ -761,7 +789,7 @@ The pagesize parameter for this method is unbounded, in acknowledgement that for
  
 This method returns a list of sites.
 
-* `getSuggestedEdits` - Returns all the suggested edits in the systems.
+* [getSuggestedEdits](docs/sdk/README.md#getsuggestededits) - Returns all the suggested edits in the systems.
  
 This method returns a list of suggested-edits.
  
@@ -773,7 +801,7 @@ The sorts accepted by this method operate on the follow fields of the suggested_
  
  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
 
-* `getSuggestedEditsIds` - Returns suggested edits identified in ids.
+* [getSuggestedEditsIds](docs/sdk/README.md#getsuggestededitsids) - Returns suggested edits identified in ids.
  
 {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for suggested_edit_id on suggested_edit objects.
  
@@ -788,7 +816,7 @@ The sorts accepted by this method operate on the follow fields of the suggested_
  
 This method returns a list of suggested-edits.
 
-* `getTags` - Returns the tags found on a site.
+* [getTags](docs/sdk/README.md#gettags) - Returns the tags found on a site.
  
 The inname parameter lets a consumer filter down to tags that contain a certain substring. For example, inname=own would return both "download" and "owner" amongst others.
  
@@ -802,7 +830,7 @@ The sorts accepted by this method operate on the follow fields of the tag object
  
  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
 
-* `getTagsModeratorOnly` - Returns the tags found on a site that only moderators can use.
+* [getTagsModeratorOnly](docs/sdk/README.md#gettagsmoderatoronly) - Returns the tags found on a site that only moderators can use.
  
 The inname parameter lets a consumer filter down to tags that contain a certain substring. For example, inname=own would return both "download" and "owner" amongst others.
  
@@ -816,7 +844,7 @@ The sorts accepted by this method operate on the follow fields of the tag object
  
  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
 
-* `getTagsRequired` - Returns the tags found on a site that fulfill required tag constraints on questions.
+* [getTagsRequired](docs/sdk/README.md#gettagsrequired) - Returns the tags found on a site that fulfill required tag constraints on questions.
  
 The inname parameter lets a consumer filter down to tags that contain a certain substring. For example, inname=own would return both "download" and "owner" amongst others.
  
@@ -830,7 +858,7 @@ The sorts accepted by this method operate on the follow fields of the tag object
  
  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
 
-* `getTagsSynonyms` - Returns all tag synonyms found a site.
+* [getTagsSynonyms](docs/sdk/README.md#gettagssynonyms) - Returns all tag synonyms found a site.
  
 When searching for synonyms of specific tags, it is better to use /tags/{tags}/synonyms over this method.
  
@@ -845,7 +873,7 @@ The sorts accepted by this method operate on the follow fields of the tag_synony
  
 This method returns a list of tag_synonyms.
 
-* `getTagsTagsFaq` - Returns the frequently asked questions for the given set of tags in {tags}.
+* [getTagsTagsFaq](docs/sdk/README.md#gettagstagsfaq) - Returns the frequently asked questions for the given set of tags in {tags}.
  
 For a question to be returned, it must have all the tags in {tags} and be considered "frequently asked". The exact algorithm for determining whether a question is considered a FAQ is subject to change at any time.
  
@@ -853,7 +881,7 @@ For a question to be returned, it must have all the tags in {tags} and be consid
  
 This method returns a list of questions.
 
-* `getTagsTagsInfo` - Returns tag objects representing the tags in {tags} found on the site.
+* [getTagsTagsInfo](docs/sdk/README.md#gettagstagsinfo) - Returns tag objects representing the tags in {tags} found on the site.
  
 This method diverges from the standard naming patterns to avoid to conflicting with existing methods, due to the free form nature of tag names.
  
@@ -867,7 +895,7 @@ The sorts accepted by this method operate on the follow fields of the tag object
  
  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
 
-* `getTagsTagsRelated` - Returns the tags that are most related to those in {tags}.
+* [getTagsTagsRelated](docs/sdk/README.md#gettagstagsrelated) - Returns the tags that are most related to those in {tags}.
  
 Including multiple tags in {tags} is equivalent to asking for "tags related to tag #1 and tag #2" not "tags related to tag #1 or tag #2".
  
@@ -877,7 +905,7 @@ count on tag objects returned is the number of question with that tag that also 
  
 This method returns a list of tags.
 
-* `getTagsTagsSynonyms` - Gets all the synonyms that point to the tags identified in {tags}. If you're looking to discover all the tag synonyms on a site, use the /tags/synonyms methods instead of call this method on all tags.
+* [getTagsTagsSynonyms](docs/sdk/README.md#gettagstagssynonyms) - Gets all the synonyms that point to the tags identified in {tags}. If you're looking to discover all the tag synonyms on a site, use the /tags/synonyms methods instead of call this method on all tags.
  
 {tags} can contain up to 20 individual tags per request.
  
@@ -892,7 +920,7 @@ The sorts accepted by this method operate on the follow fields of the tag_synony
  
 This method returns a list of tag synonyms.
 
-* `getTagsTagsWikis` - Returns the wikis that go with the given set of tags in {tags}.
+* [getTagsTagsWikis](docs/sdk/README.md#gettagstagswikis) - Returns the wikis that go with the given set of tags in {tags}.
  
 Be aware that not all tags have wikis.
  
@@ -900,19 +928,19 @@ Be aware that not all tags have wikis.
  
 This method returns a list of tag wikis.
 
-* `getTagsTagTopAnswerersPeriod` - Returns the top 30 answerers active in a single tag, of either all-time or the last 30 days.
+* [getTagsTagTopAnswerersPeriod](docs/sdk/README.md#gettagstagtopanswerersperiod) - Returns the top 30 answerers active in a single tag, of either all-time or the last 30 days.
  
 This is a view onto the data presented on the tag info page on the sites.
  
 This method returns a list of tag score objects.
 
-* `getTagsTagTopAskersPeriod` - Returns the top 30 askers active in a single tag, of either all-time or the last 30 days.
+* [getTagsTagTopAskersPeriod](docs/sdk/README.md#gettagstagtopaskersperiod) - Returns the top 30 askers active in a single tag, of either all-time or the last 30 days.
  
 This is a view onto the data presented on the tag info page on the sites.
  
 This method returns a list of tag score objects.
 
-* `getUsers` - Returns all users on a site.
+* [getUsers](docs/sdk/README.md#getusers) - Returns all users on a site.
  
 This method returns a list of users.
  
@@ -928,7 +956,7 @@ The sorts accepted by this method operate on the follow fields of the user objec
  
 The inname parameter lets consumers filter the results down to just those users with a certain substring in their display name. For example, inname=kevin will return all users with both users named simply "Kevin" or those with Kevin as one of (or part of) their names; such as "Kevin Montrose".
 
-* `getUsersModerators` - Gets those users on a site who can exercise moderation powers.
+* [getUsersModerators](docs/sdk/README.md#getusersmoderators) - Gets those users on a site who can exercise moderation powers.
  
 Note, employees of Stack Exchange Inc. will be returned if they have been granted moderation powers on a site even if they have never been appointed or elected explicitly. This method checks abilities, not the manner in which they were obtained.
  
@@ -944,7 +972,7 @@ The sorts accepted by this method operate on the follow fields of the user objec
  
 This method returns a list of users.
 
-* `getUsersModeratorsElected` - Returns those users on a site who both have moderator powers, and were actually elected.
+* [getUsersModeratorsElected](docs/sdk/README.md#getusersmoderatorselected) - Returns those users on a site who both have moderator powers, and were actually elected.
  
 This method excludes Stack Exchange Inc. employees, unless they were actually elected moderators on a site (which can only have happened prior to their employment).
  
@@ -960,7 +988,7 @@ The sorts accepted by this method operate on the follow fields of the user objec
  
 This method returns a list of users.
 
-* `getUsersIds` - Gets the users identified in ids in {ids}.
+* [getUsersIds](docs/sdk/README.md#getusersids) - Gets the users identified in ids in {ids}.
  
 Typically this method will be called to fetch user profiles when you have obtained user ids from some other source, such as /questions.
  
@@ -978,7 +1006,7 @@ The sorts accepted by this method operate on the follow fields of the user objec
  
 This method returns a list of users.
 
-* `getUsersIdsAnswers` - Returns the answers the users in {ids} have posted.
+* [getUsersIdsAnswers](docs/sdk/README.md#getusersidsanswers) - Returns the answers the users in {ids} have posted.
  
 {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for user_id on user or shallow_user objects.
  
@@ -993,13 +1021,13 @@ The sorts accepted by this method operate on the follow fields of the answer obj
  
 This method returns a list of answers.
 
-* `getUsersIdsAssociated` - Returns all of a user's associated accounts, given their account_ids in {ids}.
+* [getUsersIdsAssociated](docs/sdk/README.md#getusersidsassociated) - Returns all of a user's associated accounts, given their account_ids in {ids}.
  
 {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for account_id on user objects.
  
 This method returns a list of network_users.
 
-* `getUsersIdsBadges` - Get the badges the users in {ids} have earned.
+* [getUsersIdsBadges](docs/sdk/README.md#getusersidsbadges) - Get the badges the users in {ids} have earned.
  
 Badge sorts are a tad complicated. For the purposes of sorting (and min/max) tag_based is considered to be greater than named.
  
@@ -1013,7 +1041,7 @@ rank is the default sort.
  
 This method returns a list of badges.
 
-* `getUsersIdsComments` - Get the comments posted by users in {ids}.
+* [getUsersIdsComments](docs/sdk/README.md#getusersidscomments) - Get the comments posted by users in {ids}.
  
 {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for user_id on user or shallow_user objects.
  
@@ -1027,7 +1055,7 @@ The sorts accepted by this method operate on the follow fields of the comment ob
  
 This method returns a list of comments.
 
-* `getUsersIdsCommentsToid` - Get the comments that the users in {ids} have posted in reply to the single user identified in {toid}.
+* [getUsersIdsCommentsToid](docs/sdk/README.md#getusersidscommentstoid) - Get the comments that the users in {ids} have posted in reply to the single user identified in {toid}.
  
 This method is useful for extracting conversations, especially over time or across multiple posts.
  
@@ -1043,7 +1071,7 @@ The sorts accepted by this method operate on the follow fields of the comment ob
  
 This method returns a list of comments.
 
-* `getUsersIdsFavorites` - Get the questions that users in {ids} have favorited.
+* [getUsersIdsFavorites](docs/sdk/README.md#getusersidsfavorites) - Get the questions that users in {ids} have favorited.
  
 This method is effectively a view onto a user's favorites tab.
  
@@ -1061,7 +1089,7 @@ The sorts accepted by this method operate on the follow fields of the question o
  
 This method returns a list of questions.
 
-* `getUsersIdsMentioned` - Gets all the comments that the users in {ids} were mentioned in.
+* [getUsersIdsMentioned](docs/sdk/README.md#getusersidsmentioned) - Gets all the comments that the users in {ids} were mentioned in.
  
 Note, to count as a mention the comment must be considered to be "in reply to" a user. Most importantly, this means that a comment can only be in reply to a single user.
  
@@ -1075,7 +1103,7 @@ The sorts accepted by this method operate on the follow fields of the comment ob
  
 This method returns a list of comments.
 
-* `getUsersIdsMerges` - Returns a record of merges that have occurred involving the passed account ids.
+* [getUsersIdsMerges](docs/sdk/README.md#getusersidsmerges) - Returns a record of merges that have occurred involving the passed account ids.
  
 This method allows you to take now invalid account ids and find what account they've become, or take currently valid account ids and find which ids were equivalent in the past.
  
@@ -1087,7 +1115,7 @@ Note that accounts are managed at a network level, users on a site may be merged
  
 This method returns a list of account_merge.
 
-* `getUsersIdsQuestions` - Gets the questions asked by the users in {ids}.
+* [getUsersIdsQuestions](docs/sdk/README.md#getusersidsquestions) - Gets the questions asked by the users in {ids}.
  
 {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for user_id on user or shallow_user objects.
  
@@ -1102,7 +1130,7 @@ The sorts accepted by this method operate on the follow fields of the question o
  
 This method returns a list of questions.
 
-* `getUsersIdsQuestionsFeatured` - Gets the questions on which the users in {ids} have active bounties.
+* [getUsersIdsQuestionsFeatured](docs/sdk/README.md#getusersidsquestionsfeatured) - Gets the questions on which the users in {ids} have active bounties.
  
 {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for user_id on user or shallow_user objects.
  
@@ -1117,7 +1145,7 @@ The sorts accepted by this method operate on the follow fields of the question o
  
 This method returns a list of questions.
 
-* `getUsersIdsQuestionsNoAnswers` - Gets the questions asked by the users in {ids} which have no answers.
+* [getUsersIdsQuestionsNoAnswers](docs/sdk/README.md#getusersidsquestionsnoanswers) - Gets the questions asked by the users in {ids} which have no answers.
  
 Questions returns by this method actually have zero undeleted answers. It is completely disjoint /users/{ids}/questions/unanswered and /users/{ids}/questions/unaccepted, which only return questions with at least one answer, subject to other contraints.
  
@@ -1134,7 +1162,7 @@ The sorts accepted by this method operate on the follow fields of the question o
  
 This method returns a list of questions.
 
-* `getUsersIdsQuestionsUnaccepted` - Gets the questions asked by the users in {ids} which have at least one answer, but no accepted answer.
+* [getUsersIdsQuestionsUnaccepted](docs/sdk/README.md#getusersidsquestionsunaccepted) - Gets the questions asked by the users in {ids} which have at least one answer, but no accepted answer.
  
 Questions returned by this method have answers, but the owner has not opted to accept any of them.
  
@@ -1151,7 +1179,7 @@ The sorts accepted by this method operate on the follow fields of the question o
  
 This method returns a list of questions.
 
-* `getUsersIdsQuestionsUnanswered` - Gets the questions asked by the users in {ids} which the site consideres unanswered, while still having at least one answer posted.
+* [getUsersIdsQuestionsUnanswered](docs/sdk/README.md#getusersidsquestionsunanswered) - Gets the questions asked by the users in {ids} which the site consideres unanswered, while still having at least one answer posted.
  
 These rules are subject to change, but currently any question without at least one upvoted or accepted answer is considered unanswered.
  
@@ -1170,7 +1198,7 @@ The sorts accepted by this method operate on the follow fields of the question o
  
 This method returns a list of questions.
 
-* `getUsersIdsReputation` - Gets a subset of the reputation changes for users in {ids}.
+* [getUsersIdsReputation](docs/sdk/README.md#getusersidsreputation) - Gets a subset of the reputation changes for users in {ids}.
  
 Reputation changes are intentionally scrubbed of some data to make it difficult to correlate votes on particular posts with user reputation changes. That being said, this method returns enough data for reasonable display of reputation trends.
  
@@ -1178,11 +1206,11 @@ Reputation changes are intentionally scrubbed of some data to make it difficult 
  
 This method returns a list of reputation objects.
 
-* `getUsersIdsReputationHistory` - Returns users' public reputation history.
+* [getUsersIdsReputationHistory](docs/sdk/README.md#getusersidsreputationhistory) - Returns users' public reputation history.
  
 This method returns a list of reputation_history.
 
-* `getUsersIdsSuggestedEdits` - Returns the suggested edits a users in {ids} have submitted.
+* [getUsersIdsSuggestedEdits](docs/sdk/README.md#getusersidssuggestededits) - Returns the suggested edits a users in {ids} have submitted.
  
 {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for user_id on user or shallow_user objects.
  
@@ -1197,7 +1225,7 @@ The sorts accepted by this method operate on the follow fields of the suggested_
  
 This method returns a list of suggested-edits.
 
-* `getUsersIdsTags` - Returns the tags the users identified in {ids} have been active in.
+* [getUsersIdsTags](docs/sdk/README.md#getusersidstags) - Returns the tags the users identified in {ids} have been active in.
  
 This route corresponds roughly to user's stats tab, but does not include tag scores. A subset of tag scores are available (on a single user basis) in /users/{id}/top-answer-tags and /users/{id}/top-question-tags.
  
@@ -1214,7 +1242,7 @@ The sorts accepted by this method operate on the follow fields of the tag object
  
 This method returns a list of tags.
 
-* `getUsersIdsTimeline` - Returns a subset of the actions the users in {ids} have taken on the site.
+* [getUsersIdsTimeline](docs/sdk/README.md#getusersidstimeline) - Returns a subset of the actions the users in {ids} have taken on the site.
  
 This method returns users' posts, edits, and earned badges in the order they were accomplished. It is possible to filter to just a window of activity using the fromdate and todate parameters.
  
@@ -1222,7 +1250,7 @@ This method returns users' posts, edits, and earned badges in the order they wer
  
 This method returns a list of user timeline objects.
 
-* `getUsersIdInbox` - Returns a user's inbox.
+* [getUsersIdInbox](docs/sdk/README.md#getusersidinbox) - Returns a user's inbox.
  
 This method requires an access_token, with a scope containing "read_inbox".
  
@@ -1232,7 +1260,7 @@ This method is effectively an alias for /inbox. It is provided for consumers who
  
 This method returns a list of inbox items.
 
-* `getUsersIdInboxUnread` - Returns the unread items in a user's inbox.
+* [getUsersIdInboxUnread](docs/sdk/README.md#getusersidinboxunread) - Returns the unread items in a user's inbox.
  
 This method requires an access_token, with a scope containing "read_inbox".
  
@@ -1242,19 +1270,19 @@ This method is effectively an alias for /inbox/unread. It is provided for consum
  
 This method returns a list of inbox items.
 
-* `getUsersIdNotifications` - Returns a user's notifications.
+* [getUsersIdNotifications](docs/sdk/README.md#getusersidnotifications) - Returns a user's notifications.
  
 This method requires an access_token, with a scope containing "read_inbox".
  
 This method returns a list of notifications.
 
-* `getUsersIdNotificationsUnread` - Returns a user's unread notifications.
+* [getUsersIdNotificationsUnread](docs/sdk/README.md#getusersidnotificationsunread) - Returns a user's unread notifications.
  
 This method requires an access_token, with a scope containing "read_inbox".
  
 This method returns a list of notifications.
 
-* `getUsersIdPrivileges` - Returns the privileges a user has.
+* [getUsersIdPrivileges](docs/sdk/README.md#getusersidprivileges) - Returns the privileges a user has.
  
 Applications are encouraged to calculate privileges themselves, without repeated queries to this method. A simple check against the results returned by /privileges and user.user_type would be sufficient.
  
@@ -1262,13 +1290,13 @@ Applications are encouraged to calculate privileges themselves, without repeated
  
 This method returns a list of privileges.
 
-* `getUsersIdReputationHistoryFull` - Returns a user's full reputation history, including private events.
+* [getUsersIdReputationHistoryFull](docs/sdk/README.md#getusersidreputationhistoryfull) - Returns a user's full reputation history, including private events.
  
 This method requires an access_token, with a scope containing "private_info".
  
 This method returns a list of reputation_history.
 
-* `getUsersIdTagsTagsTopAnswers` - Returns the top 30 answers a user has posted in response to questions with the given tags.
+* [getUsersIdTagsTagsTopAnswers](docs/sdk/README.md#getusersidtagstagstopanswers) - Returns the top 30 answers a user has posted in response to questions with the given tags.
  
 {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects. {tags} is limited to 5 tags, passing more will result in an error.
  
@@ -1283,7 +1311,7 @@ The sorts accepted by this method operate on the follow fields of the answer obj
  
 This method returns a list of answers.
 
-* `getUsersIdTagsTagsTopQuestions` - Returns the top 30 questions a user has asked with the given tags.
+* [getUsersIdTagsTagsTopQuestions](docs/sdk/README.md#getusersidtagstagstopquestions) - Returns the top 30 questions a user has asked with the given tags.
  
 {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects. {tags} is limited to 5 tags, passing more will result in an error.
  
@@ -1298,7 +1326,7 @@ The sorts accepted by this method operate on the follow fields of the question o
  
 This method returns a list of questions.
 
-* `getUsersIdTopAnswerTags` - Returns a single user's top tags by answer score.
+* [getUsersIdTopAnswerTags](docs/sdk/README.md#getusersidtopanswertags) - Returns a single user's top tags by answer score.
  
 This a subset of the data returned on a user's tags tab.
  
@@ -1306,7 +1334,7 @@ This a subset of the data returned on a user's tags tab.
  
 This method returns a list of top_tag objects.
 
-* `getUsersIdTopQuestionTags` - Returns a single user's top tags by question score.
+* [getUsersIdTopQuestionTags](docs/sdk/README.md#getusersidtopquestiontags) - Returns a single user's top tags by question score.
  
 This a subset of the data returned on a user's tags tab.
  
@@ -1314,7 +1342,7 @@ This a subset of the data returned on a user's tags tab.
  
 This method returns a list of top_tag objects.
 
-* `getUsersIdWritePermissions` - Returns the write permissions a user has via the api.
+* [getUsersIdWritePermissions](docs/sdk/README.md#getusersidwritepermissions) - Returns the write permissions a user has via the api.
  
 The Stack Exchange API gives users the ability to create, edit, and delete certain types. This method returns whether the passed user is capable of performing those actions at all, as well as how many times a day they can.
  
@@ -1322,19 +1350,19 @@ This method does not consider the user's current quota (ie. if they've already e
  
 This method returns a list of write_permissions.
 
-* `postCommentsIdDelete` - Deletes a comment.
+* [postCommentsIdDelete](docs/sdk/README.md#postcommentsiddelete) - Deletes a comment.
  
 Use an access_token with write_access to delete a comment.
  
 In practice, this method will never return an object.
 
-* `postCommentsIdEdit` - Edit an existing comment.
+* [postCommentsIdEdit](docs/sdk/README.md#postcommentsidedit) - Edit an existing comment.
  
 Use an access_token with write_access to edit an existing comment.
  
 This method return the created comment.
 
-* `postPostsIdCommentsAdd` - Create a new comment.
+* [postPostsIdCommentsAdd](docs/sdk/README.md#postpostsidcommentsadd) - Create a new comment.
  
 Use an access_token with write_access to create a new comment on a post.
  

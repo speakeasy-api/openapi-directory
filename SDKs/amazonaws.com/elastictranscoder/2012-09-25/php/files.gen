@@ -117,4 +117,5 @@ src/Models/Shared/UpdatePipelineResponse.php
 src/Models/Shared/UpdatePipelineNotificationsResponse.php
 src/Models/Shared/UpdatePipelineStatusResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

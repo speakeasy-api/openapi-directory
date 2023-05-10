@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeMyUserProfileXAmzTargetEnum: string
 {
     case OPS_WORKS20130218_DESCRIBE_MY_USER_PROFILE = 'OpsWorks_20130218.DescribeMyUserProfile';

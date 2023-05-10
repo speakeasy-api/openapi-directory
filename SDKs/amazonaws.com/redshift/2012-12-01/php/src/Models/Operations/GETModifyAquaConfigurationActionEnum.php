@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETModifyAquaConfigurationActionEnum: string
 {
     case MODIFY_AQUA_CONFIGURATION = 'ModifyAquaConfiguration';

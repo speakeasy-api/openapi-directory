@@ -73,7 +73,7 @@ class Document
     
 	public function __construct()
 	{
-		$this->category = \OpenAPI\OpenAPI\Models\Shared\DocumentCategoryEnum::FORM1099_INT;
+		$this->category = \OpenAPI\OpenAPI\Models\Shared\DocumentCategoryEnum::ACCOUNT_OPENING_DISCLOSURES;
 		$this->createdAt = new \DateTime();
 		$this->entityId = "";
 		$this->fileId = "";

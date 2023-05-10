@@ -23,11 +23,6 @@ class RollbackDetails
 	
     public ?int $percentageCompleteOnRollback = null;
     
-    /**
-     * Reports progress on replacing instances in an Auto Scaling group that has a warm pool. This includes separate details for instances in the warm pool and instances in the Auto Scaling group (the live pool).
-     * 
-     * @var ?\OpenAPI\OpenAPI\Models\Shared\InstanceRefreshProgressDetails $progressDetailsOnRollback
-     */
 	
     public ?InstanceRefreshProgressDetails $progressDetailsOnRollback = null;
     

@@ -39,6 +39,14 @@ class StartTopicsDetectionJobResponse
     public mixed $kmsKeyValidationException = null;
     
     /**
+     * ResourceInUseException
+     * 
+     * @var mixed $resourceInUseException
+     */
+	
+    public mixed $resourceInUseException = null;
+    
+    /**
      * Success
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\StartTopicsDetectionJobResponse $startTopicsDetectionJobResponse
@@ -74,6 +82,7 @@ class StartTopicsDetectionJobResponse
 		$this->internalServerException = null;
 		$this->invalidRequestException = null;
 		$this->kmsKeyValidationException = null;
+		$this->resourceInUseException = null;
 		$this->startTopicsDetectionJobResponse = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;

@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class ChannelInput
 {
     /**
-     * Optional. Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt their event data. It must match the pattern `projects/* /locations/* /keyRings/* /cryptoKeys/*`.
+     * Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt their event data. It must match the pattern `projects/* /locations/* /keyRings/* /cryptoKeys/*`.
      * 
      * @var ?string $cryptoKeyName
      */

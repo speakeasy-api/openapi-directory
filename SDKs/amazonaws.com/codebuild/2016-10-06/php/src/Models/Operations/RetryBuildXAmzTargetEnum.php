@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RetryBuildXAmzTargetEnum: string
 {
     case CODE_BUILD20161006_RETRY_BUILD = 'CodeBuild_20161006.RetryBuild';

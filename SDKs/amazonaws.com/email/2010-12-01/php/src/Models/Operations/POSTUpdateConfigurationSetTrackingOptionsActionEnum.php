@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTUpdateConfigurationSetTrackingOptionsActionEnum: string
 {
     case UPDATE_CONFIGURATION_SET_TRACKING_OPTIONS = 'UpdateConfigurationSetTrackingOptions';

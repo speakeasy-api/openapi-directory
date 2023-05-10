@@ -47,4 +47,6 @@ src/Models/Shared/Pagination.php
 src/Models/Shared/OrderSummary.php
 src/Models/Shared/OrderSummaryPricing.php
 src/Models/Shared/LineItemSummary.php
+docs/sdk/README.md
+docs/v1/README.md
 USAGE.md

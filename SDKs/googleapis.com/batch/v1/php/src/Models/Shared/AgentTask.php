@@ -67,6 +67,16 @@ class AgentTask
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $task = null;
     
+    /**
+     * TaskSource represents the source of the task.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\AgentTaskTaskSourceEnum $taskSource
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('taskSource')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\AgentTaskTaskSourceEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?AgentTaskTaskSourceEnum $taskSource = null;
+    
 	public function __construct()
 	{
 		$this->intendedState = null;
@@ -74,5 +84,6 @@ class AgentTask
 		$this->spec = null;
 		$this->status = null;
 		$this->task = null;
+		$this->taskSource = null;
 	}
 }

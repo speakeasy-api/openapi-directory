@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeConnectionsOnInterconnectXAmzTargetEnum: string
 {
     case OVERTURE_SERVICE_DESCRIBE_CONNECTIONS_ON_INTERCONNECT = 'OvertureService.DescribeConnectionsOnInterconnect';

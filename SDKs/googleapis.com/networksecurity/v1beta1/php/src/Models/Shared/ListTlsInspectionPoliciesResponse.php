@@ -37,9 +37,20 @@ class ListTlsInspectionPoliciesResponse
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $tlsInspectionPolicies = null;
     
+    /**
+     * Locations that could not be reached.
+     * 
+     * @var ?array<string> $unreachable
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('unreachable')]
+    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $unreachable = null;
+    
 	public function __construct()
 	{
 		$this->nextPageToken = null;
 		$this->tlsInspectionPolicies = null;
+		$this->unreachable = null;
 	}
 }

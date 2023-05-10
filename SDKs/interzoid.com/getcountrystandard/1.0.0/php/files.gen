@@ -22,4 +22,6 @@ src/Utils/Utils.php
 src/Models/Operations/GetcountrystandardRequest.php
 src/Models/Operations/Getcountrystandard200ApplicationJSON.php
 src/Models/Operations/GetcountrystandardResponse.php
+docs/sdk/README.md
+docs/countrynamestandardization/README.md
 USAGE.md

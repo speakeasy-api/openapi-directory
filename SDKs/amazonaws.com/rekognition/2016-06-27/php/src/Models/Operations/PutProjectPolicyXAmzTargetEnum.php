@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutProjectPolicyXAmzTargetEnum: string
 {
     case REKOGNITION_SERVICE_PUT_PROJECT_POLICY = 'RekognitionService.PutProjectPolicy';

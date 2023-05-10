@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum EnableKeyRotationXAmzTargetEnum: string
 {
     case TRENT_SERVICE_ENABLE_KEY_ROTATION = 'TrentService.EnableKeyRotation';

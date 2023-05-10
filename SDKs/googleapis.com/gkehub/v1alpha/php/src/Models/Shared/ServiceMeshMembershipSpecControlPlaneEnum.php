@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Shared;
 
 
-/** Enables automatic control plane management. */
+/** Deprecated: use `management` instead Enables automatic control plane management. */
 enum ServiceMeshMembershipSpecControlPlaneEnum: string
 {
     case CONTROL_PLANE_MANAGEMENT_UNSPECIFIED = 'CONTROL_PLANE_MANAGEMENT_UNSPECIFIED';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListInstancesXAmzTargetEnum: string
 {
     case ELASTIC_MAP_REDUCE_LIST_INSTANCES = 'ElasticMapReduce.ListInstances';

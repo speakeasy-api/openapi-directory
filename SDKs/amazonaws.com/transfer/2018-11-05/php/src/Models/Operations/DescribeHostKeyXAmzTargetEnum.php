@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeHostKeyXAmzTargetEnum: string
 {
     case TRANSFER_SERVICE_DESCRIBE_HOST_KEY = 'TransferService.DescribeHostKey';

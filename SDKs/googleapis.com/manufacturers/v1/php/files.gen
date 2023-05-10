@@ -71,4 +71,6 @@ src/Models/Shared/FeatureDescription.php
 src/Models/Shared/Count.php
 src/Models/Shared/Capacity.php
 src/Models/Shared/ListProductsResponse.php
+docs/sdk/README.md
+docs/accounts/README.md
 USAGE.md

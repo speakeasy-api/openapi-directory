@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDisableFastSnapshotRestoresActionEnum: string
 {
     case DISABLE_FAST_SNAPSHOT_RESTORES = 'DisableFastSnapshotRestores';

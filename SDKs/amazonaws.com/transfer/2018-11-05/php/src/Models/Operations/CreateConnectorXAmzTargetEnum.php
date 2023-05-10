@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateConnectorXAmzTargetEnum: string
 {
     case TRANSFER_SERVICE_CREATE_CONNECTOR = 'TransferService.CreateConnector';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateAcceleratorAttributesXAmzTargetEnum: string
 {
     case GLOBAL_ACCELERATOR_V20180706_UPDATE_ACCELERATOR_ATTRIBUTES = 'GlobalAccelerator_V20180706.UpdateAcceleratorAttributes';

@@ -17,10 +17,10 @@ class RequisitionCreatedResponse
     /**
      * Requisition has been successfully created
      * 
-     * @var ?\OpenAPI\OpenAPI\Models\Shared\SpectacularRequisitionV2 $spectacularRequisitionV2
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\SpectacularRequisition $spectacularRequisition
      */
 	
-    public ?\OpenAPI\OpenAPI\Models\Shared\SpectacularRequisitionV2 $spectacularRequisitionV2 = null;
+    public ?\OpenAPI\OpenAPI\Models\Shared\SpectacularRequisition $spectacularRequisition = null;
     
 	
     public int $statusCode;
@@ -60,15 +60,24 @@ class RequisitionCreatedResponse
 	
     public ?array $requisitionCreated404ApplicationJSONObject = null;
     
+    /**
+     * Nordigen rate limit exceeded
+     * 
+     * @var ?array<string, mixed> $requisitionCreated429ApplicationJSONObject
+     */
+	
+    public ?array $requisitionCreated429ApplicationJSONObject = null;
+    
 	public function __construct()
 	{
 		$this->contentType = "";
-		$this->spectacularRequisitionV2 = null;
+		$this->spectacularRequisition = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
 		$this->requisitionCreated400ApplicationJSONObject = null;
 		$this->requisitionCreated401ApplicationJSONObject = null;
 		$this->requisitionCreated403ApplicationJSONObject = null;
 		$this->requisitionCreated404ApplicationJSONObject = null;
+		$this->requisitionCreated429ApplicationJSONObject = null;
 	}
 }

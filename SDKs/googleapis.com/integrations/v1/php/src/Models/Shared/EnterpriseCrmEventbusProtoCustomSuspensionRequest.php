@@ -12,7 +12,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class EnterpriseCrmEventbusProtoCustomSuspensionRequest
 {
     /**
-     * Use this request to post all workflows associated with a given trigger id. Next available id: 10
+     * Use this request to post all workflows associated with a given trigger id. Next available id: 11
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest $postToQueueWithTriggerIdRequest
      */

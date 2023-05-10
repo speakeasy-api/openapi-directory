@@ -1,0 +1,89 @@
+# openapi/openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+### Composer
+
+To install the SDK first add the below to your `composer.json` file:
+
+```json
+{
+    "repositories": [
+        {
+            "type": "github",
+            "url": "<UNSET>.git"
+        }
+    ],
+    "require": {
+        "openapi/openapi": "*"
+    }
+}
+```
+
+Then run the following command:
+
+```bash
+composer update
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\FetchPhoneNumberRequest;
+use \OpenAPI\OpenAPI\Models\Operations\FetchPhoneNumberSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new FetchPhoneNumberRequest();
+    $request->phoneNumber = 'corrupti';
+
+    $requestSecurity = new FetchPhoneNumberSecurity();
+    $requestSecurity->password = 'YOUR_PASSWORD_HERE';
+    $requestSecurity->username = 'YOUR_USERNAME_HERE';
+
+    $response = $sdk->fetchPhoneNumber($request, $requestSecurity);
+
+    if ($response->routesV2PhoneNumber !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## Available Resources and Operations
+
+### [SDK](docs/sdk/README.md)
+
+* [fetchPhoneNumber](docs/sdk/README.md#fetchphonenumber) - Fetch the Inbound Processing Region assigned to a phone number.
+* [fetchSipDomain](docs/sdk/README.md#fetchsipdomain)
+* [fetchTrunks](docs/sdk/README.md#fetchtrunks) - Fetch the Inbound Processing Region assigned to a SIP Trunk.
+* [updatePhoneNumber](docs/sdk/README.md#updatephonenumber) - Assign an Inbound Processing Region to a phone number.
+* [updateSipDomain](docs/sdk/README.md#updatesipdomain)
+* [updateTrunks](docs/sdk/README.md#updatetrunks) - Assign an Inbound Processing Region to a SIP Trunk
+<!-- End SDK Available Operations -->
+
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically.
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

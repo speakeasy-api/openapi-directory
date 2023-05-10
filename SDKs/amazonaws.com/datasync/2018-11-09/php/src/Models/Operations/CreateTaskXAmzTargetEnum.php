@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateTaskXAmzTargetEnum: string
 {
     case FMRS_SERVICE_CREATE_TASK = 'FmrsService.CreateTask';

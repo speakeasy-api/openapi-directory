@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETCancelConversionTaskActionEnum: string
 {
     case CANCEL_CONVERSION_TASK = 'CancelConversionTask';

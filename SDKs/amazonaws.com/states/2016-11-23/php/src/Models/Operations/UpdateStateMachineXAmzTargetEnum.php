@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateStateMachineXAmzTargetEnum: string
 {
     case AWS_STEP_FUNCTIONS_UPDATE_STATE_MACHINE = 'AWSStepFunctions.UpdateStateMachine';

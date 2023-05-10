@@ -54,4 +54,5 @@ src/Models/Shared/DialogStateEnum.php
 src/Models/Shared/PredictedIntent.php
 src/Models/Shared/PutSessionResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

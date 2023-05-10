@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeInstanceEventWindowsActionEnum: string
 {
     case DESCRIBE_INSTANCE_EVENT_WINDOWS = 'DescribeInstanceEventWindows';

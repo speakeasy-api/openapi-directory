@@ -42,6 +42,8 @@ src/Models/Shared/Execution.php
 src/Models/Shared/ExecutionInput.php
 src/Models/Shared/Status.php
 src/Models/Shared/Step.php
+src/Models/Shared/StateErrorTypeEnum.php
+src/Models/Shared/StateError.php
 src/Models/Shared/Error.php
 src/Models/Shared/StackTrace.php
 src/Models/Shared/StackTraceElement.php
@@ -51,4 +53,6 @@ src/Models/Shared/XgafvEnum.php
 src/Models/Shared/ListExecutionsResponse.php
 src/Models/Shared/TriggerPubsubExecutionRequest.php
 src/Models/Shared/PubsubMessage.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

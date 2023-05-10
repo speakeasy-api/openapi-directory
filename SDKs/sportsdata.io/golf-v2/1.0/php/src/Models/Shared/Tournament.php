@@ -61,6 +61,11 @@ class Tournament
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('OddsCoverage')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $oddsCoverage = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('Par')]
     #[\JMS\Serializer\Annotation\Type('int')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -138,6 +143,7 @@ class Tournament
 		$this->isOver = null;
 		$this->location = null;
 		$this->name = null;
+		$this->oddsCoverage = null;
 		$this->par = null;
 		$this->purse = null;
 		$this->rounds = null;

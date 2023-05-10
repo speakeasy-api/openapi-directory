@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ResetParameterGroupXAmzTargetEnum: string
 {
     case AMAZON_MEMORY_DB_RESET_PARAMETER_GROUP = 'AmazonMemoryDB.ResetParameterGroup';

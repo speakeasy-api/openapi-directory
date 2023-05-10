@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTListChangeSetsActionEnum: string
 {
     case LIST_CHANGE_SETS = 'ListChangeSets';

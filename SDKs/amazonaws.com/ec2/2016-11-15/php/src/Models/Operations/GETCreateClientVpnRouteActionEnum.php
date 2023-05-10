@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETCreateClientVpnRouteActionEnum: string
 {
     case CREATE_CLIENT_VPN_ROUTE = 'CreateClientVpnRoute';

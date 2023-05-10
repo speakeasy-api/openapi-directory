@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateRestoreImageTaskActionEnum: string
 {
     case CREATE_RESTORE_IMAGE_TASK = 'CreateRestoreImageTask';

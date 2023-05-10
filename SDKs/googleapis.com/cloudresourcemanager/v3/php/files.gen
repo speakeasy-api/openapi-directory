@@ -89,6 +89,11 @@ src/Models/Operations/CloudresourcemanagerTagBindingsListResponse.php
 src/Models/Operations/CloudresourcemanagerTagKeysCreateSecurity.php
 src/Models/Operations/CloudresourcemanagerTagKeysCreateRequest.php
 src/Models/Operations/CloudresourcemanagerTagKeysCreateResponse.php
+src/Models/Operations/CloudresourcemanagerTagKeysGetNamespacedSecurityOption1.php
+src/Models/Operations/CloudresourcemanagerTagKeysGetNamespacedSecurityOption2.php
+src/Models/Operations/CloudresourcemanagerTagKeysGetNamespacedSecurity.php
+src/Models/Operations/CloudresourcemanagerTagKeysGetNamespacedRequest.php
+src/Models/Operations/CloudresourcemanagerTagKeysGetNamespacedResponse.php
 src/Models/Operations/CloudresourcemanagerTagKeysListSecurityOption1.php
 src/Models/Operations/CloudresourcemanagerTagKeysListSecurityOption2.php
 src/Models/Operations/CloudresourcemanagerTagKeysListSecurity.php
@@ -107,6 +112,11 @@ src/Models/Operations/CloudresourcemanagerTagValuesGetIamPolicySecurityOption2.p
 src/Models/Operations/CloudresourcemanagerTagValuesGetIamPolicySecurity.php
 src/Models/Operations/CloudresourcemanagerTagValuesGetIamPolicyRequest.php
 src/Models/Operations/CloudresourcemanagerTagValuesGetIamPolicyResponse.php
+src/Models/Operations/CloudresourcemanagerTagValuesGetNamespacedSecurityOption1.php
+src/Models/Operations/CloudresourcemanagerTagValuesGetNamespacedSecurityOption2.php
+src/Models/Operations/CloudresourcemanagerTagValuesGetNamespacedSecurity.php
+src/Models/Operations/CloudresourcemanagerTagValuesGetNamespacedRequest.php
+src/Models/Operations/CloudresourcemanagerTagValuesGetNamespacedResponse.php
 src/Models/Operations/CloudresourcemanagerTagValuesListSecurityOption1.php
 src/Models/Operations/CloudresourcemanagerTagValuesListSecurityOption2.php
 src/Models/Operations/CloudresourcemanagerTagValuesListSecurity.php
@@ -182,4 +192,13 @@ src/Models/Shared/TagHoldInput.php
 src/Models/Shared/ListTagHoldsResponse.php
 src/Models/Shared/TestIamPermissionsResponse.php
 src/Models/Shared/TestIamPermissionsRequest.php
+docs/sdk/README.md
+docs/effectivetags/README.md
+docs/folders/README.md
+docs/liens/README.md
+docs/organizations/README.md
+docs/projects/README.md
+docs/tagbindings/README.md
+docs/tagkeys/README.md
+docs/tagvalues/README.md
 USAGE.md

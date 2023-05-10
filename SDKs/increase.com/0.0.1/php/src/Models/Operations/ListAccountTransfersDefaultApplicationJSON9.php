@@ -18,12 +18,11 @@ class ListAccountTransfersDefaultApplicationJSON9
     /**
      * All errors related to parsing the request parameters.
      * 
-     * @var ?array<array<string, mixed>> $errors
+     * @var array<array<string, mixed>> $errors
      */
 	#[\JMS\Serializer\Annotation\SerializedName('errors')]
     #[\JMS\Serializer\Annotation\Type('array<array<string, mixed>>')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $errors = null;
+    public array $errors;
     
 	#[\JMS\Serializer\Annotation\SerializedName('status')]
     #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Operations\ListAccountTransfersDefaultApplicationJSON9StatusEnum>')]
@@ -40,7 +39,7 @@ class ListAccountTransfersDefaultApplicationJSON9
 	public function __construct()
 	{
 		$this->detail = "";
-		$this->errors = null;
+		$this->errors = [];
 		$this->status = \OpenAPI\OpenAPI\Models\Operations\ListAccountTransfersDefaultApplicationJSON9StatusEnum::FOUR_HUNDRED;
 		$this->title = "";
 		$this->type = \OpenAPI\OpenAPI\Models\Operations\ListAccountTransfersDefaultApplicationJSON9TypeEnum::INVALID_PARAMETERS_ERROR;

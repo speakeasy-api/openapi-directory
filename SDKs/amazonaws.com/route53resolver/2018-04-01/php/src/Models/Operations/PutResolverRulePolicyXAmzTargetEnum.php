@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutResolverRulePolicyXAmzTargetEnum: string
 {
     case ROUTE53_RESOLVER_PUT_RESOLVER_RULE_POLICY = 'Route53Resolver.PutResolverRulePolicy';

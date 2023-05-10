@@ -23,10 +23,10 @@ class DeleteLegalArrangementRequest
     /**
      * List of legal arrangements.
      * 
-     * @var array<\OpenAPI\OpenAPI\Models\Shared\LegalArrangementRequest> $legalArrangements
+     * @var array<\OpenAPI\OpenAPI\Models\Shared\LegalArrangementRequestWrapper> $legalArrangements
      */
 	#[\JMS\Serializer\Annotation\SerializedName('legalArrangements')]
-    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\LegalArrangementRequest>')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\LegalArrangementRequestWrapper>')]
     public array $legalArrangements;
     
 	public function __construct()

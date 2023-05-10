@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetPoliciesStatsXAmzTargetEnum: string
 {
     case OPEN_SEARCH_SERVERLESS_GET_POLICIES_STATS = 'OpenSearchServerless.GetPoliciesStats';

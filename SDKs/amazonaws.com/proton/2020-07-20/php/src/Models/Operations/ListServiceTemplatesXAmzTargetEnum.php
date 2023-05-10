@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListServiceTemplatesXAmzTargetEnum: string
 {
     case AWS_PROTON20200720_LIST_SERVICE_TEMPLATES = 'AwsProton20200720.ListServiceTemplates';

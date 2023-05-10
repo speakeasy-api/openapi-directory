@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartSegmentDetectionXAmzTargetEnum: string
 {
     case REKOGNITION_SERVICE_START_SEGMENT_DETECTION = 'RekognitionService.StartSegmentDetection';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetGameSessionLogUrlXAmzTargetEnum: string
 {
     case GAME_LIFT_GET_GAME_SESSION_LOG_URL = 'GameLift.GetGameSessionLogUrl';

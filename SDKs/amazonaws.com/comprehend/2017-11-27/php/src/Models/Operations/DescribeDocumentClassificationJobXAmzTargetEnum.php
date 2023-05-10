@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeDocumentClassificationJobXAmzTargetEnum: string
 {
     case COMPREHEND20171127_DESCRIBE_DOCUMENT_CLASSIFICATION_JOB = 'Comprehend_20171127.DescribeDocumentClassificationJob';

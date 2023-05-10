@@ -17,7 +17,23 @@ class PartyIdentification2
     public ?Address2 $address = null;
     
     /**
-     * First name of the individual. Required when `type` is **individual**.
+     * The date of birth of the individual in [ISO-8601](https://www.w3.org/TR/NOTE-datetime) format. For example, **YYYY-MM-DD**.
+     * 
+     * 
+     * Allowed only when `type` is **individual**.
+     * 
+     * @var ?\DateTime $dateOfBirth
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('dateOfBirth')]
+    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d', '', '|Y-m-d'>")]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?\DateTime $dateOfBirth = null;
+    
+    /**
+     * First name of the individual.
+     * 
+     * 
+     * Allowed only when `type` is **individual**.
      * 
      * @var ?string $firstName
      */
@@ -36,7 +52,10 @@ class PartyIdentification2
     public string $fullName;
     
     /**
-     * Last name of the individual. Required when `type` is **individual**.
+     * Last name of the individual.
+     * 
+     * 
+     * Allowed only when `type` is **individual**.
      * 
      * @var ?string $lastName
      */
@@ -44,6 +63,16 @@ class PartyIdentification2
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $lastName = null;
+    
+    /**
+     * Your unique reference of the party. This should be consistent for all transfers initiated to/from the same party/counterparty. e.g Your client's unique wallet or payee ID
+     * 
+     * @var ?string $reference
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('reference')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $reference = null;
     
     /**
      * The type of entity that owns the bank account.
@@ -61,9 +90,11 @@ class PartyIdentification2
 	public function __construct()
 	{
 		$this->address = null;
+		$this->dateOfBirth = null;
 		$this->firstName = null;
 		$this->fullName = "";
 		$this->lastName = null;
+		$this->reference = null;
 		$this->type = null;
 	}
 }

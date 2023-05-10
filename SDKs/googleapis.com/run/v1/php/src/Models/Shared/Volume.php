@@ -28,6 +28,16 @@ class Volume
     public ?ConfigMapVolumeSource $configMap = null;
     
     /**
+     * Ephemeral storage which can be backed by real disks (HD, SSD), network storage or memory (i.e. tmpfs). For now only in memory (tmpfs) is supported. It is ephemeral in the sense that when the sandbox is taken down, the data is destroyed with it (it does not persist across sandbox runs).
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\EmptyDirVolumeSource $emptyDir
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('emptyDir')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\EmptyDirVolumeSource')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?EmptyDirVolumeSource $emptyDir = null;
+    
+    /**
      * Volume's name. In Cloud Run Fully Managed, the name 'cloudsql' is reserved.
      * 
      * @var ?string $name
@@ -50,6 +60,7 @@ class Volume
 	public function __construct()
 	{
 		$this->configMap = null;
+		$this->emptyDir = null;
 		$this->name = null;
 		$this->secret = null;
 	}

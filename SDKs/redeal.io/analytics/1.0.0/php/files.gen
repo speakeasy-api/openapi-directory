@@ -23,4 +23,6 @@ src/Models/Operations/GetEventsTypeEnum.php
 src/Models/Operations/GetEventsRequest.php
 src/Models/Operations/GetEventsResponse.php
 src/Models/Shared/EventRecord.php
+docs/sdk/README.md
+docs/developers/README.md
 USAGE.md

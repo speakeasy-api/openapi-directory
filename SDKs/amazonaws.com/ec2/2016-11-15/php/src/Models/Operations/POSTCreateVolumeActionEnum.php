@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateVolumeActionEnum: string
 {
     case CREATE_VOLUME = 'CreateVolume';

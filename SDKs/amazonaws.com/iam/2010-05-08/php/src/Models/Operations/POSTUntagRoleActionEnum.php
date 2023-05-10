@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTUntagRoleActionEnum: string
 {
     case UNTAG_ROLE = 'UntagRole';

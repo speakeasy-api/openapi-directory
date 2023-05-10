@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTListSnapshotsInRecycleBinActionEnum: string
 {
     case LIST_SNAPSHOTS_IN_RECYCLE_BIN = 'ListSnapshotsInRecycleBin';

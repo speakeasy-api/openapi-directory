@@ -30,20 +30,54 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GETListsBestSellersHistoryJsonRequest;
+use \OpenAPI\OpenAPI\Models\Operations\GETListsBestSellersHistoryJsonSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GETListsBestSellersHistoryJsonRequest();
+    $request->ageGroup = 'corrupti';
+    $request->author = 'provident';
+    $request->contributor = 'distinctio';
+    $request->isbn = 'quibusdam';
+    $request->price = 'unde';
+    $request->publisher = 'nulla';
+    $request->title = 'Ms.';
+
+    $requestSecurity = new GETListsBestSellersHistoryJsonSecurity();
+    $requestSecurity->apiKey = 'YOUR_API_KEY_HERE';
+
+    $response = $sdk->getListsBestSellersHistoryJson($request, $requestSecurity);
+
+    if ($response->getListsBestSellersHistoryJSON200ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getListsBestSellersHistoryJson` - Best Seller History List
-* `getListsDateListJson` - Best Seller List by Date
-* `getListsFormat` - Best Seller List
-* `getListsNamesFormat` - Best Seller List Names
-* `getListsOverviewFormat` - Best Seller List Overview
-* `getReviewsFormat` - Reviews
+* [getListsBestSellersHistoryJson](docs/sdk/README.md#getlistsbestsellershistoryjson) - Best Seller History List
+* [getListsDateListJson](docs/sdk/README.md#getlistsdatelistjson) - Best Seller List by Date
+* [getListsFormat](docs/sdk/README.md#getlistsformat) - Best Seller List
+* [getListsNamesFormat](docs/sdk/README.md#getlistsnamesformat) - Best Seller List Names
+* [getListsOverviewFormat](docs/sdk/README.md#getlistsoverviewformat) - Best Seller List Overview
+* [getReviewsFormat](docs/sdk/README.md#getreviewsformat) - Reviews
 <!-- End SDK Available Operations -->
 
 ### Maturity

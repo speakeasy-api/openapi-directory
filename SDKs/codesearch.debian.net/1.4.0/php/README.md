@@ -30,17 +30,47 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\SearchRequest;
+use \OpenAPI\OpenAPI\Models\Operations\SearchMatchModeEnum;
+use \OpenAPI\OpenAPI\Models\Operations\SearchSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new SearchRequest();
+    $request->matchMode = SearchMatchModeEnum::REGEXP;
+    $request->query = 'provident';
+
+    $requestSecurity = new SearchSecurity();
+    $requestSecurity->apiKey = 'YOUR_API_KEY_HERE';
+
+    $response = $sdk->search->search($request, $requestSecurity);
+
+    if ($response->searchResults !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### search
+### [search](docs/search/README.md)
 
-* `search` - Searches through source code
-* `searchperpackage` - Like /search, but aggregates per package
+* [search](docs/search/README.md#search) - Searches through source code
+* [searchperpackage](docs/search/README.md#searchperpackage) - Like /search, but aggregates per package
 <!-- End SDK Available Operations -->
 
 ### Maturity

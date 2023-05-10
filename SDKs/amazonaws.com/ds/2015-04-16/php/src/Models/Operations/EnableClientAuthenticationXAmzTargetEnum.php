@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum EnableClientAuthenticationXAmzTargetEnum: string
 {
     case DIRECTORY_SERVICE20150416_ENABLE_CLIENT_AUTHENTICATION = 'DirectoryService_20150416.EnableClientAuthentication';

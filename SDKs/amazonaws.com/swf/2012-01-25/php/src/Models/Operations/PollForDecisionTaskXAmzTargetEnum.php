@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PollForDecisionTaskXAmzTargetEnum: string
 {
     case SIMPLE_WORKFLOW_SERVICE_POLL_FOR_DECISION_TASK = 'SimpleWorkflowService.PollForDecisionTask';

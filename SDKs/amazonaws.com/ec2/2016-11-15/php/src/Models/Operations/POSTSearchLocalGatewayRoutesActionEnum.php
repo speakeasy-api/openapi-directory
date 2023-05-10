@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTSearchLocalGatewayRoutesActionEnum: string
 {
     case SEARCH_LOCAL_GATEWAY_ROUTES = 'SearchLocalGatewayRoutes';

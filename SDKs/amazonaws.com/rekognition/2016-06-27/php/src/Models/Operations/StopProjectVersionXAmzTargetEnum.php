@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopProjectVersionXAmzTargetEnum: string
 {
     case REKOGNITION_SERVICE_STOP_PROJECT_VERSION = 'RekognitionService.StopProjectVersion';

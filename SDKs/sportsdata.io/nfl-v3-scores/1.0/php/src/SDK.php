@@ -558,6 +558,40 @@ class SDK
     }
 	
     /**
+     * Players by Team (Basic)
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\PlayersByTeamBasicRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\PlayersByTeamBasicResponse
+     */
+	public function playersByTeamBasic(
+        \OpenAPI\OpenAPI\Models\Operations\PlayersByTeamBasicRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\PlayersByTeamBasicResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/{format}/PlayersBasic/{team}', \OpenAPI\OpenAPI\Models\Operations\PlayersByTeamBasicRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        
+        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\PlayersByTeamBasicResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->playersByTeamBasic200ApplicationJSONAny = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Referees
      * 
      * Returns full list of NFL Referees
@@ -623,6 +657,42 @@ class SDK
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->schedules = $serializer->deserialize((string)$httpResponse->getBody(), 'array<OpenAPI\OpenAPI\Models\Shared\Schedule>', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Schedule (Basic)
+     * 
+     * Game schedule for a specified season.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ScheduleBasicRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\ScheduleBasicResponse
+     */
+	public function scheduleBasic(
+        \OpenAPI\OpenAPI\Models\Operations\ScheduleBasicRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\ScheduleBasicResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/{format}/SchedulesBasic/{season}', \OpenAPI\OpenAPI\Models\Operations\ScheduleBasicRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        
+        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\ScheduleBasicResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->scheduleBasics = $serializer->deserialize((string)$httpResponse->getBody(), 'array<OpenAPI\OpenAPI\Models\Shared\ScheduleBasic>', 'json');
             }
         }
 
@@ -731,6 +801,42 @@ class SDK
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->scores = $serializer->deserialize((string)$httpResponse->getBody(), 'array<OpenAPI\OpenAPI\Models\Shared\Score>', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Scores by Week (Basic)
+     * 
+     * Get game scores for a specified week of a season.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ScoresByWeekBasicRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\ScoresByWeekBasicResponse
+     */
+	public function scoresByWeekBasic(
+        \OpenAPI\OpenAPI\Models\Operations\ScoresByWeekBasicRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\ScoresByWeekBasicResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/{format}/ScoresBasic/{season}/{week}', \OpenAPI\OpenAPI\Models\Operations\ScoresByWeekBasicRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        
+        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\ScoresByWeekBasicResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->scoreBasics = $serializer->deserialize((string)$httpResponse->getBody(), 'array<OpenAPI\OpenAPI\Models\Shared\ScoreBasic>', 'json');
             }
         }
 
@@ -1121,6 +1227,42 @@ class SDK
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->teams = $serializer->deserialize((string)$httpResponse->getBody(), 'array<OpenAPI\OpenAPI\Models\Shared\Team>', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Teams (Basic)
+     * 
+     * Gets all teams, including pro bowl teams.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\TeamsBasicRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\TeamsBasicResponse
+     */
+	public function teamsBasic(
+        \OpenAPI\OpenAPI\Models\Operations\TeamsBasicRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\TeamsBasicResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/{format}/TeamsBasic', \OpenAPI\OpenAPI\Models\Operations\TeamsBasicRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        
+        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\TeamsBasicResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->teamBasics = $serializer->deserialize((string)$httpResponse->getBody(), 'array<OpenAPI\OpenAPI\Models\Shared\TeamBasic>', 'json');
             }
         }
 

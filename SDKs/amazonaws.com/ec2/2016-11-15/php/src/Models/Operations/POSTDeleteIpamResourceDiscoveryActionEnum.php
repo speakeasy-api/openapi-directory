@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteIpamResourceDiscoveryActionEnum: string
 {
     case DELETE_IPAM_RESOURCE_DISCOVERY = 'DeleteIpamResourceDiscovery';

@@ -9,12 +9,13 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-/** The types of WPA encryption. ('WPA1 only', 'WPA1 and WPA2', 'WPA2 only', 'WPA3 Transition Mode' or 'WPA3 only') */
+/** The types of WPA encryption. ('WPA1 only', 'WPA1 and WPA2', 'WPA2 only', 'WPA3 Transition Mode', 'WPA3 only' or 'WPA3 192-bit Security') */
 enum UpdateNetworkSsidRequestBodyWpaEncryptionModeEnum: string
 {
     case WPA1_AND_WPA2 = 'WPA1 and WPA2';
     case WPA1_ONLY = 'WPA1 only';
     case WPA2_ONLY = 'WPA2 only';
+    case WPA3192_BIT_SECURITY = 'WPA3 192-bit Security';
     case WPA3_TRANSITION_MODE = 'WPA3 Transition Mode';
     case WPA3_ONLY = 'WPA3 only';
 }

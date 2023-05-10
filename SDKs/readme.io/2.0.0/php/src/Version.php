@@ -152,9 +152,11 @@ class Version
      * 
      * Retrieve a list of versions associated with a project API key
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetVersionsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetVersionsResponse
      */
 	public function getVersions(
+        \OpenAPI\OpenAPI\Models\Operations\GetVersionsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetVersionsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -162,7 +164,8 @@ class Version
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetGroupIdXAmzTargetEnum: string
 {
     case AWS_IDENTITY_STORE_GET_GROUP_ID = 'AWSIdentityStore.GetGroupId';

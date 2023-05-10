@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeLoggingConfigurationXAmzTargetEnum: string
 {
     case NETWORK_FIREWALL20201112_DESCRIBE_LOGGING_CONFIGURATION = 'NetworkFirewall_20201112.DescribeLoggingConfiguration';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetServiceInstanceXAmzTargetEnum: string
 {
     case AWS_PROTON20200720_GET_SERVICE_INSTANCE = 'AwsProton20200720.GetServiceInstance';

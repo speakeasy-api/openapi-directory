@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteGrantXAmzTargetEnum: string
 {
     case AWS_LICENSE_MANAGER_DELETE_GRANT = 'AWSLicenseManager.DeleteGrant';

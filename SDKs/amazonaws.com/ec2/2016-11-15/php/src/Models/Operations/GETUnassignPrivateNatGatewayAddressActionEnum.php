@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETUnassignPrivateNatGatewayAddressActionEnum: string
 {
     case UNASSIGN_PRIVATE_NAT_GATEWAY_ADDRESS = 'UnassignPrivateNatGatewayAddress';

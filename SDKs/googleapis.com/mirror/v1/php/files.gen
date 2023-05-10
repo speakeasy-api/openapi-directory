@@ -133,4 +133,11 @@ src/Models/Shared/NotificationConfig.php
 src/Models/Shared/MenuItem.php
 src/Models/Shared/MenuValue.php
 src/Models/Shared/TimelineListResponse.php
+docs/sdk/README.md
+docs/accounts/README.md
+docs/contacts/README.md
+docs/locations/README.md
+docs/settings/README.md
+docs/subscriptions/README.md
+docs/timeline/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RegisterMailDomainXAmzTargetEnum: string
 {
     case WORK_MAIL_SERVICE_REGISTER_MAIL_DOMAIN = 'WorkMailService.RegisterMailDomain';

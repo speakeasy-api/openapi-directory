@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateMonitoringAlertXAmzTargetEnum: string
 {
     case SAGE_MAKER_UPDATE_MONITORING_ALERT = 'SageMaker.UpdateMonitoringAlert';

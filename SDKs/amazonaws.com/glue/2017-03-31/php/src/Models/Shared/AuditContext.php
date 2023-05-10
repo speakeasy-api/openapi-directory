@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * AuditContext - A structure containing information for audit.
+ * AuditContext - A structure containing the Lake Formation audit context.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

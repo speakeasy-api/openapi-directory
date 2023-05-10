@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteDatabaseXAmzTargetEnum: string
 {
     case TIMESTREAM20181101_DELETE_DATABASE = 'Timestream_20181101.DeleteDatabase';

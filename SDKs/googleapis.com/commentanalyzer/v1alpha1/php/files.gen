@@ -41,4 +41,6 @@ src/Models/Shared/ArticleAndParentComment.php
 src/Models/Shared/XgafvEnum.php
 src/Models/Shared/SuggestCommentScoreResponse.php
 src/Models/Shared/SuggestCommentScoreRequest.php
+docs/sdk/README.md
+docs/comments/README.md
 USAGE.md

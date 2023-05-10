@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeLifecycleHooksActionEnum: string
 {
     case DESCRIBE_LIFECYCLE_HOOKS = 'DescribeLifecycleHooks';

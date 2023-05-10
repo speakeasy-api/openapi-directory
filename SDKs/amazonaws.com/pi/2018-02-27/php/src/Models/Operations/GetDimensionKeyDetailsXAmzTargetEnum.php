@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetDimensionKeyDetailsXAmzTargetEnum: string
 {
     case PERFORMANCE_INSIGHTSV20180227_GET_DIMENSION_KEY_DETAILS = 'PerformanceInsightsv20180227.GetDimensionKeyDetails';

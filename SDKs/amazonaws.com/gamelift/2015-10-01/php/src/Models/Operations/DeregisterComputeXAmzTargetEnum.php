@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeregisterComputeXAmzTargetEnum: string
 {
     case GAME_LIFT_DEREGISTER_COMPUTE = 'GameLift.DeregisterCompute';

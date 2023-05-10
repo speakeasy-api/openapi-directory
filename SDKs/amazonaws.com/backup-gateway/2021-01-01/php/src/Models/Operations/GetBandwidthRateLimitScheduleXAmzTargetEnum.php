@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetBandwidthRateLimitScheduleXAmzTargetEnum: string
 {
     case BACKUP_ON_PREMISES_V20210101_GET_BANDWIDTH_RATE_LIMIT_SCHEDULE = 'BackupOnPremises_v20210101.GetBandwidthRateLimitSchedule';

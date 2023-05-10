@@ -64,4 +64,5 @@ src/Models/Operations/PostSearchUsersResponse.php
 src/Models/Operations/PostStartPhoneNumberAuthResponse.php
 src/Models/Operations/PostUpdateNotificationsResponse.php
 src/Models/Operations/PostUpdateUsernameResponse.php
+docs/sdk/README.md
 USAGE.md

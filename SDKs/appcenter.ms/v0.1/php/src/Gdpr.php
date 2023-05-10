@@ -144,9 +144,11 @@ class Gdpr
     /**
      * dataSubjectRightDeleteRequest
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\DataSubjectRightDeleteRequestSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\DataSubjectRightDeleteRequestResponse
      */
 	public function dataSubjectRightDeleteRequest(
+        \OpenAPI\OpenAPI\Models\Operations\DataSubjectRightDeleteRequestSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\DataSubjectRightDeleteRequestResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -154,7 +156,8 @@ class Gdpr
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -228,9 +231,11 @@ class Gdpr
     /**
      * dataSubjectRightExportRequest
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\DataSubjectRightExportRequestSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\DataSubjectRightExportRequestResponse
      */
 	public function dataSubjectRightExportRequest(
+        \OpenAPI\OpenAPI\Models\Operations\DataSubjectRightExportRequestSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\DataSubjectRightExportRequestResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -238,7 +243,8 @@ class Gdpr
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

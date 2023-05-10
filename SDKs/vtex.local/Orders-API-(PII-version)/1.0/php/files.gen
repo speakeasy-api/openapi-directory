@@ -88,4 +88,8 @@ src/Models/Shared/TotalItems.php
 src/Models/Shared/Paging.php
 src/Models/Shared/ListT.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/invoice/README.md
+docs/orders/README.md
+docs/payment/README.md
 USAGE.md

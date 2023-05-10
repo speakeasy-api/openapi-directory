@@ -30,27 +30,61 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\CreateSubAccountRequest;
+use \OpenAPI\OpenAPI\Models\Shared\NewSubaccountRequest;
+use \OpenAPI\OpenAPI\Models\Operations\CreateSubAccountSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new CreateSubAccountRequest();
+    $request->newSubaccountRequest = new NewSubaccountRequest();
+    $request->newSubaccountRequest->name = 'Subaccount department A';
+    $request->newSubaccountRequest->secret = 'Password123';
+    $request->newSubaccountRequest->usePrimaryAccountBalance = false;
+    $request->apiKey = 'corrupti';
+
+    $requestSecurity = new CreateSubAccountSecurity();
+    $requestSecurity->password = 'YOUR_PASSWORD_HERE';
+    $requestSecurity->username = 'YOUR_USERNAME_HERE';
+
+    $response = $sdk->subaccountManagement->createSubAccount($request, $requestSecurity);
+
+    if ($response->subaccountCreateResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### subaccountManagement
+### [subaccountManagement](docs/subaccountmanagement/README.md)
 
-* `createSubAccount` - Create subaccount
-* `modifySubaccount` - Modify a subaccount
-* `retrieveSubaccount` - Retrieve a subaccount
-* `retrieveSubaccountsList` - Retrieve list of subaccounts
+* [createSubAccount](docs/subaccountmanagement/README.md#createsubaccount) - Create subaccount
+* [modifySubaccount](docs/subaccountmanagement/README.md#modifysubaccount) - Modify a subaccount
+* [retrieveSubaccount](docs/subaccountmanagement/README.md#retrievesubaccount) - Retrieve a subaccount
+* [retrieveSubaccountsList](docs/subaccountmanagement/README.md#retrievesubaccountslist) - Retrieve list of subaccounts
 
-### transfers
+### [transfers](docs/transfers/README.md)
 
-* `retrieveBalanceTransfers` - Retrieve list of balance transfers
-* `retrieveCreditTransfers` - Retrieve list of credit transfers
-* `transferBalance` - Transfer balance
-* `transferCredit` - Transfer credit
-* `transferNumber` - Transfer number
+* [retrieveBalanceTransfers](docs/transfers/README.md#retrievebalancetransfers) - Retrieve list of balance transfers
+* [retrieveCreditTransfers](docs/transfers/README.md#retrievecredittransfers) - Retrieve list of credit transfers
+* [transferBalance](docs/transfers/README.md#transferbalance) - Transfer balance
+* [transferCredit](docs/transfers/README.md#transfercredit) - Transfer credit
+* [transferNumber](docs/transfers/README.md#transfernumber) - Transfer number
 <!-- End SDK Available Operations -->
 
 ### Maturity

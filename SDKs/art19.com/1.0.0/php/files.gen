@@ -247,4 +247,15 @@ src/Models/Shared/SeriesRelationshipsAListOfTagsAssociatedWithTheSeries.php
 src/Models/Shared/SeriesRelationships.php
 src/Models/Shared/Series.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/classification/README.md
+docs/classificationinclusion/README.md
+docs/credit/README.md
+docs/episode/README.md
+docs/image/README.md
+docs/mediaasset/README.md
+docs/network/README.md
+docs/person/README.md
+docs/season/README.md
+docs/series/README.md
 USAGE.md

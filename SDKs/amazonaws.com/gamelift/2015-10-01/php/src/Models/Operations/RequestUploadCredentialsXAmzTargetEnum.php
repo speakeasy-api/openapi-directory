@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RequestUploadCredentialsXAmzTargetEnum: string
 {
     case GAME_LIFT_REQUEST_UPLOAD_CREDENTIALS = 'GameLift.RequestUploadCredentials';

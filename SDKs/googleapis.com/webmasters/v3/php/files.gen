@@ -69,4 +69,8 @@ src/Models/Shared/WmxSitemapContent.php
 src/Models/Shared/SitemapsListResponse.php
 src/Models/Shared/WmxSite.php
 src/Models/Shared/SitesListResponse.php
+docs/sdk/README.md
+docs/searchanalytics/README.md
+docs/sitemaps/README.md
+docs/sites/README.md
 USAGE.md

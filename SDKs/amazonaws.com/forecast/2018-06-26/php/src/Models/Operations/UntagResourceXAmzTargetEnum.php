@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UntagResourceXAmzTargetEnum: string
 {
     case AMAZON_FORECAST_UNTAG_RESOURCE = 'AmazonForecast.UntagResource';

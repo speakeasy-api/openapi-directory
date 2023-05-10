@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ModifySelfservicePermissionsXAmzTargetEnum: string
 {
     case WORKSPACES_SERVICE_MODIFY_SELFSERVICE_PERMISSIONS = 'WorkspacesService.ModifySelfservicePermissions';

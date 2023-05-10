@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeAvailabilityOptionsVersionEnum: string
 {
     case TWO_THOUSAND_AND_ELEVEN0201 = '2011-02-01';

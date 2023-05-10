@@ -258,4 +258,10 @@ src/Models/Shared/ReviewsListResponse.php
 src/Models/Shared/ReviewsReplyResponse.php
 src/Models/Shared/ReviewReplyResult.php
 src/Models/Shared/ReviewsReplyRequest.php
+docs/sdk/README.md
+docs/edits/README.md
+docs/inappproducts/README.md
+docs/orders/README.md
+docs/purchases/README.md
+docs/reviews/README.md
 USAGE.md

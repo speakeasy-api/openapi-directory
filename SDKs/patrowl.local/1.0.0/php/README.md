@@ -30,29 +30,53 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\CleanScanPageRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new CleanScanPageRequest();
+    $request->scanId = 548814;
+
+    $response = $sdk->patrowlEngine->cleanScanPage($request);
+
+    if ($response->apiResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### patrowlEngine
+### [patrowlEngine](docs/patrowlengine/README.md)
 
-* `cleanScanPage` - Clean scan
-* `cleanScansPage` - Clean all scans
-* `getFindingPage` - Get findings on finished scans
-* `startScanPage` - Start a new scan
-* `statusScanPage` - Status of a scan
-* `statusScansPage` - Status on all scans
-* `stopScanPage` - Stop a scan
-* `stopScansPage` - Stop all scans
-* `getDefaultPage` - Index page
-* `getInfoPage` - Engine info page
-* `getLivenessPage` - Liveness page
-* `getReadinessPage` - Readiness page
-* `getTestPage` - Test page
-* `reloadConfigurationPage` - Configuration reloading page
+* [cleanScanPage](docs/patrowlengine/README.md#cleanscanpage) - Clean scan
+* [cleanScansPage](docs/patrowlengine/README.md#cleanscanspage) - Clean all scans
+* [getFindingPage](docs/patrowlengine/README.md#getfindingpage) - Get findings on finished scans
+* [startScanPage](docs/patrowlengine/README.md#startscanpage) - Start a new scan
+* [statusScanPage](docs/patrowlengine/README.md#statusscanpage) - Status of a scan
+* [statusScansPage](docs/patrowlengine/README.md#statusscanspage) - Status on all scans
+* [stopScanPage](docs/patrowlengine/README.md#stopscanpage) - Stop a scan
+* [stopScansPage](docs/patrowlengine/README.md#stopscanspage) - Stop all scans
+* [getDefaultPage](docs/patrowlengine/README.md#getdefaultpage) - Index page
+* [getInfoPage](docs/patrowlengine/README.md#getinfopage) - Engine info page
+* [getLivenessPage](docs/patrowlengine/README.md#getlivenesspage) - Liveness page
+* [getReadinessPage](docs/patrowlengine/README.md#getreadinesspage) - Readiness page
+* [getTestPage](docs/patrowlengine/README.md#gettestpage) - Test page
+* [reloadConfigurationPage](docs/patrowlengine/README.md#reloadconfigurationpage) - Configuration reloading page
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -136,7 +136,7 @@ class Event
      * - "default" - A regular event or not further specified. 
      * - "outOfOffice" - An out-of-office event. 
      * - "focusTime" - A focus-time event. 
-     * - "workingLocation" - A working location event.
+     * - "workingLocation" - A working location event. Developer Preview.
      * 
      * @var ?string $eventType
      */

@@ -58,4 +58,7 @@ src/Models/Shared/ProductSearchOperatorEnum.php
 src/Models/Shared/ProductSearch.php
 src/Models/Shared/SearchSuggestionsSearches.php
 src/Models/Shared/SearchSuggestions.php
+docs/sdk/README.md
+docs/autocomplete/README.md
+docs/productlistpage/README.md
 USAGE.md

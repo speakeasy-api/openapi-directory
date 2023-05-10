@@ -24,4 +24,5 @@ src/Models/Operations/GetV1VerificationResultResponse.php
 src/Models/Operations/PostV1VerificationSendFormatEnum.php
 src/Models/Operations/PostV1VerificationSendRequest.php
 src/Models/Operations/PostV1VerificationSendResponse.php
+docs/sdk/README.md
 USAGE.md

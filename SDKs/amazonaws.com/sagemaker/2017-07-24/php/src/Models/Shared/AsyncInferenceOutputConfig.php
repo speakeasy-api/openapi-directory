@@ -27,14 +27,21 @@ class AsyncInferenceOutputConfig
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?AsyncInferenceNotificationConfig $notificationConfig = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('S3FailurePath')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $s3FailurePath = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('S3OutputPath')]
     #[\JMS\Serializer\Annotation\Type('string')]
-    public string $s3OutputPath;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $s3OutputPath = null;
     
 	public function __construct()
 	{
 		$this->kmsKeyId = null;
 		$this->notificationConfig = null;
-		$this->s3OutputPath = "";
+		$this->s3FailurePath = null;
+		$this->s3OutputPath = null;
 	}
 }

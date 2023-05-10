@@ -327,4 +327,5 @@ src/Models/Shared/UpdateReportGroupInput.php
 src/Models/Shared/UpdateWebhookOutput.php
 src/Models/Shared/UpdateWebhookInput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

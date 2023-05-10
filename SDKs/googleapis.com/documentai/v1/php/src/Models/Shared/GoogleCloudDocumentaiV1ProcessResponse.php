@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * GoogleCloudDocumentaiV1ProcessResponse - Response message for the process document method.
+ * GoogleCloudDocumentaiV1ProcessResponse - Response message for the ProcessDocument method.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

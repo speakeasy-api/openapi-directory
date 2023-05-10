@@ -79,9 +79,12 @@ src/Models/Shared/AdBreak.php
 src/Models/Shared/AltEnum.php
 src/Models/Shared/XgafvEnum.php
 src/Models/Shared/ListJobTemplatesResponse.php
+src/Models/Shared/JobModeEnum.php
 src/Models/Shared/JobStateEnum.php
 src/Models/Shared/Job.php
 src/Models/Shared/JobInput.php
 src/Models/Shared/Status.php
 src/Models/Shared/ListJobsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

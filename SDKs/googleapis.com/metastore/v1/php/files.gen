@@ -34,6 +34,9 @@ src/Models/Operations/MetastoreProjectsLocationsOperationsCancelResponse.php
 src/Models/Operations/MetastoreProjectsLocationsOperationsListSecurity.php
 src/Models/Operations/MetastoreProjectsLocationsOperationsListRequest.php
 src/Models/Operations/MetastoreProjectsLocationsOperationsListResponse.php
+src/Models/Operations/MetastoreProjectsLocationsServicesAlterLocationSecurity.php
+src/Models/Operations/MetastoreProjectsLocationsServicesAlterLocationRequest.php
+src/Models/Operations/MetastoreProjectsLocationsServicesAlterLocationResponse.php
 src/Models/Operations/MetastoreProjectsLocationsServicesBackupsCreateSecurity.php
 src/Models/Operations/MetastoreProjectsLocationsServicesBackupsCreateRequest.php
 src/Models/Operations/MetastoreProjectsLocationsServicesBackupsCreateResponse.php
@@ -70,6 +73,12 @@ src/Models/Operations/MetastoreProjectsLocationsServicesMetadataImportsListRespo
 src/Models/Operations/MetastoreProjectsLocationsServicesMetadataImportsPatchSecurity.php
 src/Models/Operations/MetastoreProjectsLocationsServicesMetadataImportsPatchRequest.php
 src/Models/Operations/MetastoreProjectsLocationsServicesMetadataImportsPatchResponse.php
+src/Models/Operations/MetastoreProjectsLocationsServicesMoveTableToDatabaseSecurity.php
+src/Models/Operations/MetastoreProjectsLocationsServicesMoveTableToDatabaseRequest.php
+src/Models/Operations/MetastoreProjectsLocationsServicesMoveTableToDatabaseResponse.php
+src/Models/Operations/MetastoreProjectsLocationsServicesQueryMetadataSecurity.php
+src/Models/Operations/MetastoreProjectsLocationsServicesQueryMetadataRequest.php
+src/Models/Operations/MetastoreProjectsLocationsServicesQueryMetadataResponse.php
 src/Models/Operations/MetastoreProjectsLocationsServicesRestoreSecurity.php
 src/Models/Operations/MetastoreProjectsLocationsServicesRestoreRequest.php
 src/Models/Operations/MetastoreProjectsLocationsServicesRestoreResponse.php
@@ -89,6 +98,7 @@ src/Models/Shared/ListFederationsResponse.php
 src/Models/Shared/ListLocationsResponse.php
 src/Models/Shared/Location.php
 src/Models/Shared/ListOperationsResponse.php
+src/Models/Shared/AlterMetadataResourceLocationRequest.php
 src/Models/Shared/BackupStateEnum.php
 src/Models/Shared/Backup.php
 src/Models/Shared/BackupInput.php
@@ -140,8 +150,12 @@ src/Models/Shared/DatabaseDumpDatabaseTypeEnum.php
 src/Models/Shared/DatabaseDumpTypeEnum.php
 src/Models/Shared/DatabaseDump.php
 src/Models/Shared/ListMetadataImportsResponse.php
+src/Models/Shared/MoveTableToDatabaseRequest.php
+src/Models/Shared/QueryMetadataRequest.php
 src/Models/Shared/RestoreServiceRequestRestoreTypeEnum.php
 src/Models/Shared/RestoreServiceRequest.php
 src/Models/Shared/TestIamPermissionsResponse.php
 src/Models/Shared/TestIamPermissionsRequest.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

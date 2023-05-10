@@ -244,4 +244,5 @@ src/Models/Shared/UpdateServiceRequest.php
 src/Models/Shared/UpdateVpcIngressConnectionResponse.php
 src/Models/Shared/UpdateVpcIngressConnectionRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

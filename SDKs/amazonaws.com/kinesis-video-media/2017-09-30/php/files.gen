@@ -25,4 +25,5 @@ src/Models/Operations/GetMediaResponse.php
 src/Models/Shared/GetMediaOutput.php
 src/Models/Shared/StartSelectorTypeEnum.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

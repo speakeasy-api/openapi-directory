@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeTargetHealthActionEnum: string
 {
     case DESCRIBE_TARGET_HEALTH = 'DescribeTargetHealth';

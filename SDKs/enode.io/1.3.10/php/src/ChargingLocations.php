@@ -77,9 +77,11 @@ class ChargingLocations
      * 
      * Returns a list of Charging Locations registered to the User
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetCharginglocationsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetCharginglocationsResponse
      */
 	public function getCharginglocations(
+        \OpenAPI\OpenAPI\Models\Operations\GetCharginglocationsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetCharginglocationsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -87,7 +89,8 @@ class ChargingLocations
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

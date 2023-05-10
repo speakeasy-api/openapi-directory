@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeEndpointXAmzTargetEnum: string
 {
     case COMPREHEND20171127_DESCRIBE_ENDPOINT = 'Comprehend_20171127.DescribeEndpoint';

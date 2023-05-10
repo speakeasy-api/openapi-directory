@@ -30,29 +30,55 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Shared\Users2FALoginRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new Users2FALoginRequest();
+    $request->code = '123456';
+    $request->login2faToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c';
+
+    $response = $sdk->authentication->postUsers2FALogin($request);
+
+    if ($response->postUsersLoginSuccessResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### authentication
+### [authentication](docs/authentication/README.md)
 
-* `postUsers2FALogin` - Second factor authentication.
-* `postUsersLogin` - Create an authentication token
+* [postUsers2FALogin](docs/authentication/README.md#postusers2falogin) - Second factor authentication.
+* [postUsersLogin](docs/authentication/README.md#postuserslogin) - Create an authentication token
 
-### discovery
+### [discovery](docs/discovery/README.md)
 
-* `getNamespace` - Get namespace
-* `getNamespaces` - Get namespaces and repos
+* [getNamespace](docs/discovery/README.md#getnamespace) - Get namespace
+* [getNamespaces](docs/discovery/README.md#getnamespaces) - Get namespaces and repos
 
-### namespaces
+### [namespaces](docs/namespaces/README.md)
 
-* `getNamespaceDataByTimespan` - Get namespace data for timespan
-* `getNamespaceTimespanMetadata` - Get namespace metadata for timespan
-* `getNamespaceTimespans` - Get timespans with data
-* `getNamespaceYears` - Get years with data
+* [getNamespaceDataByTimespan](docs/namespaces/README.md#getnamespacedatabytimespan) - Get namespace data for timespan
+* [getNamespaceTimespanMetadata](docs/namespaces/README.md#getnamespacetimespanmetadata) - Get namespace metadata for timespan
+* [getNamespaceTimespans](docs/namespaces/README.md#getnamespacetimespans) - Get timespans with data
+* [getNamespaceYears](docs/namespaces/README.md#getnamespaceyears) - Get years with data
 <!-- End SDK Available Operations -->
 
 ### Maturity

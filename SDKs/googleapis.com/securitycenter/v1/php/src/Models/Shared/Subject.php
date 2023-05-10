@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * Subject - Represents a Kubernetes Subject.
+ * Subject - Represents a Kubernetes subject.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public
@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class Subject
 {
     /**
-     * Authentication type for subject.
+     * Authentication type for the subject.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\SubjectKindEnum $kind
      */
@@ -28,7 +28,7 @@ class Subject
     public ?SubjectKindEnum $kind = null;
     
     /**
-     * Name for subject.
+     * Name for the subject.
      * 
      * @var ?string $name
      */
@@ -38,7 +38,7 @@ class Subject
     public ?string $name = null;
     
     /**
-     * Namespace for subject.
+     * Namespace for the subject.
      * 
      * @var ?string $ns
      */

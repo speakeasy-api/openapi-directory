@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * GoogleCloudDocumentaiV1SetDefaultProcessorVersionRequest - Request message for the set default processor version method.
+ * GoogleCloudDocumentaiV1SetDefaultProcessorVersionRequest - Request message for the SetDefaultProcessorVersion method.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

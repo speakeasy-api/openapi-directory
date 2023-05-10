@@ -88,7 +88,7 @@ class GoogleCloudDocumentaiV1Processor
     public ?GoogleCloudDocumentaiV1ProcessorStateEnum $state = null;
     
     /**
-     * The processor type, e.g., `OCR_PROCESSOR`, `INVOICE_PROCESSOR`, etc. To get a list of processors types, see FetchProcessorTypes.
+     * The processor type, such as: `OCR_PROCESSOR`, `INVOICE_PROCESSOR`. To get a list of processor types, see FetchProcessorTypes.
      * 
      * @var ?string $type
      */

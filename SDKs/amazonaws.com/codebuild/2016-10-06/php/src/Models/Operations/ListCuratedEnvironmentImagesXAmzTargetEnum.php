@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListCuratedEnvironmentImagesXAmzTargetEnum: string
 {
     case CODE_BUILD20161006_LIST_CURATED_ENVIRONMENT_IMAGES = 'CodeBuild_20161006.ListCuratedEnvironmentImages';

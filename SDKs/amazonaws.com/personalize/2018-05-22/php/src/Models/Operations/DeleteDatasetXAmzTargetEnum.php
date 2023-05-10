@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteDatasetXAmzTargetEnum: string
 {
     case AMAZON_PERSONALIZE_DELETE_DATASET = 'AmazonPersonalize.DeleteDataset';

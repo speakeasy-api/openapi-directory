@@ -43,12 +43,15 @@ class Swagger
      * @param \OpenAPI\OpenAPI\Models\Operations\DeleteSwaggerRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\DeleteSwaggerSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\DeleteSwaggerResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function deleteSwagger(
         \OpenAPI\OpenAPI\Models\Operations\DeleteSwaggerRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\DeleteSwaggerSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\DeleteSwaggerResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/swagger/{id}', \OpenAPI\OpenAPI\Models\Operations\DeleteSwaggerRequest::class, $request);
         
@@ -76,12 +79,15 @@ class Swagger
      * @param \OpenAPI\OpenAPI\Models\Operations\UpdateSwaggerRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\UpdateSwaggerSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\UpdateSwaggerResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function updateSwagger(
         \OpenAPI\OpenAPI\Models\Operations\UpdateSwaggerRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\UpdateSwaggerSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\UpdateSwaggerResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/swagger/{id}', \OpenAPI\OpenAPI\Models\Operations\UpdateSwaggerRequest::class, $request);
         
@@ -114,12 +120,15 @@ class Swagger
      * @param \OpenAPI\OpenAPI\Models\Operations\UploadSwaggerRequestBody $request
      * @param \OpenAPI\OpenAPI\Models\Operations\UploadSwaggerSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\UploadSwaggerResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function uploadSwagger(
         \OpenAPI\OpenAPI\Models\Operations\UploadSwaggerRequestBody $request,
         \OpenAPI\OpenAPI\Models\Operations\UploadSwaggerSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\UploadSwaggerResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/swagger');
         

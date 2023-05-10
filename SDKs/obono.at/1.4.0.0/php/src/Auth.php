@@ -40,9 +40,11 @@ class Auth
     /**
      * Request a JWT access token using your obono username and password.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetAuthSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetAuthResponse
      */
 	public function getAuth(
+        \OpenAPI\OpenAPI\Models\Operations\GetAuthSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetAuthResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -50,7 +52,8 @@ class Auth
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

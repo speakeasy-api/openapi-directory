@@ -30,18 +30,45 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\RetrievePrefixPricingRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new RetrievePrefixPricingRequest();
+    $request->apiKey = 'corrupti';
+    $request->apiSecret = 'provident';
+    $request->prefix = 'distinctio';
+    $request->type = 'quibusdam';
+
+    $response = $sdk->pricing->retrievePrefixPricing($request);
+
+    if ($response->pricingCountriesResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### pricing
+### [pricing](docs/pricing/README.md)
 
-* `retrievePrefixPricing` - Retrieve outbound pricing for a specific dialing prefix.
-* `retrievePricingAllCountries` - Retrieve outbound pricing for all countries.
-* `retrievePricingCountry` - Retrieve outbound pricing for a specific country.
+* [retrievePrefixPricing](docs/pricing/README.md#retrieveprefixpricing) - Retrieve outbound pricing for a specific dialing prefix.
+* [retrievePricingAllCountries](docs/pricing/README.md#retrievepricingallcountries) - Retrieve outbound pricing for all countries.
+* [retrievePricingCountry](docs/pricing/README.md#retrievepricingcountry) - Retrieve outbound pricing for a specific country.
 <!-- End SDK Available Operations -->
 
 ### Maturity

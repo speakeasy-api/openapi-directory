@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteOrganizationConfigRuleXAmzTargetEnum: string
 {
     case STARLING_DOVE_SERVICE_DELETE_ORGANIZATION_CONFIG_RULE = 'StarlingDoveService.DeleteOrganizationConfigRule';

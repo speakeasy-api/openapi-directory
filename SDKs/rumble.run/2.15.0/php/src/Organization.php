@@ -208,9 +208,11 @@ class Organization
     /**
      * Get all agents
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetAgentsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetAgentsResponse
      */
 	public function getAgents(
+        \OpenAPI\OpenAPI\Models\Operations\GetAgentsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetAgentsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -218,7 +220,8 @@ class Organization
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -321,9 +324,11 @@ class Organization
     /**
      * Get API key details
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetKeySecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetKeyResponse
      */
 	public function getKey(
+        \OpenAPI\OpenAPI\Models\Operations\GetKeySecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetKeyResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -331,7 +336,8 @@ class Organization
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -355,9 +361,11 @@ class Organization
     /**
      * Get organization details
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetOrganizationSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetOrganizationResponse
      */
 	public function getOrganization(
+        \OpenAPI\OpenAPI\Models\Operations\GetOrganizationSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetOrganizationResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -365,7 +373,8 @@ class Organization
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -507,9 +516,11 @@ class Organization
     /**
      * Get all sites
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetSitesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetSitesResponse
      */
 	public function getSites(
+        \OpenAPI\OpenAPI\Models\Operations\GetSitesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetSitesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -517,7 +528,8 @@ class Organization
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -999,9 +1011,11 @@ class Organization
     /**
      * Remove the current API key
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\RemoveKeySecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\RemoveKeyResponse
      */
 	public function removeKey(
+        \OpenAPI\OpenAPI\Models\Operations\RemoveKeySecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\RemoveKeyResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -1009,7 +1023,8 @@ class Organization
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('DELETE', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1126,9 +1141,11 @@ class Organization
     /**
      * Rotate the API key secret and return the updated key
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\RotateKeySecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\RotateKeyResponse
      */
 	public function rotateKey(
+        \OpenAPI\OpenAPI\Models\Operations\RotateKeySecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\RotateKeyResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -1136,7 +1153,8 @@ class Organization
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('PATCH', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('PATCH', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

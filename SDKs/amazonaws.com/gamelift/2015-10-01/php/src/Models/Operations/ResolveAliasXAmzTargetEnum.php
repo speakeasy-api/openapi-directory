@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ResolveAliasXAmzTargetEnum: string
 {
     case GAME_LIFT_RESOLVE_ALIAS = 'GameLift.ResolveAlias';

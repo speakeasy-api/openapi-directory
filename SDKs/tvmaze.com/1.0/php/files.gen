@@ -140,4 +140,15 @@ src/Models/Shared/EpisodeVote.php
 src/Models/Shared/ShowVoteInput.php
 src/Models/Shared/ShowVote.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/auth/README.md
+docs/followednetworks/README.md
+docs/followedpeople/README.md
+docs/followedshows/README.md
+docs/followedwebchannels/README.md
+docs/markedepisodes/README.md
+docs/scrobbling/README.md
+docs/taggedshows/README.md
+docs/votedepisodes/README.md
+docs/votedshows/README.md
 USAGE.md

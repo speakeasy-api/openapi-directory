@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteCrawlerXAmzTargetEnum: string
 {
     case AWS_GLUE_DELETE_CRAWLER = 'AWSGlue.DeleteCrawler';

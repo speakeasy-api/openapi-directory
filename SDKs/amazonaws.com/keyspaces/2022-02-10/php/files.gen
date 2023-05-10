@@ -103,4 +103,5 @@ src/Models/Shared/UntagResourceRequest.php
 src/Models/Shared/UpdateTableResponse.php
 src/Models/Shared/UpdateTableRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

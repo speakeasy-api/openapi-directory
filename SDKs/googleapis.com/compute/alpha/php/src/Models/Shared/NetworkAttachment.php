@@ -93,7 +93,7 @@ class NetworkAttachment
     public ?string $name = null;
     
     /**
-     * [Output Only] The URL of the network which the Network Attachment belongs to.
+     * [Output Only] The URL of the network which the Network Attachment belongs to. Practically it is inferred by fetching the network of the first subnetwork associated. Because it is required that all the subnetworks must be from the same network, it is assured that the Network Attachment belongs to the same network as all the subnetworks.
      * 
      * @var ?string $network
      */

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateIPSetXAmzTargetEnum: string
 {
     case AWSWAF_REGIONAL20161128_CREATE_IP_SET = 'AWSWAF_Regional_20161128.CreateIPSet';

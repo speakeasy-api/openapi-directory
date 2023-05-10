@@ -34,31 +34,34 @@ class Card
      * * 03 = March
      * * 11 = November
      * 
-     * @var string $expiryMonth
+     * @var ?string $expiryMonth
      */
 	#[\JMS\Serializer\Annotation\SerializedName('expiryMonth')]
     #[\JMS\Serializer\Annotation\Type('string')]
-    public string $expiryMonth;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $expiryMonth = null;
     
     /**
      * The card expiry year.
      * 
      * Format: 4 digits. For example: 2020
      * 
-     * @var string $expiryYear
+     * @var ?string $expiryYear
      */
 	#[\JMS\Serializer\Annotation\SerializedName('expiryYear')]
     #[\JMS\Serializer\Annotation\Type('string')]
-    public string $expiryYear;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $expiryYear = null;
     
     /**
      * The name of the cardholder, as printed on the card.
      * 
-     * @var string $holderName
+     * @var ?string $holderName
      */
 	#[\JMS\Serializer\Annotation\SerializedName('holderName')]
     #[\JMS\Serializer\Annotation\Type('string')]
-    public string $holderName;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $holderName = null;
     
     /**
      * The issue number of the card (for some UK debit cards only).
@@ -75,11 +78,12 @@ class Card
      * 
      * When this value is returned in a response, only the last 4 digits of the card number are returned.
      * 
-     * @var string $number
+     * @var ?string $number
      */
 	#[\JMS\Serializer\Annotation\SerializedName('number')]
     #[\JMS\Serializer\Annotation\Type('string')]
-    public string $number;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $number = null;
     
     /**
      * The month component of the start date (for some UK debit cards only).
@@ -104,11 +108,11 @@ class Card
 	public function __construct()
 	{
 		$this->cvc = null;
-		$this->expiryMonth = "";
-		$this->expiryYear = "";
-		$this->holderName = "";
+		$this->expiryMonth = null;
+		$this->expiryYear = null;
+		$this->holderName = null;
 		$this->issueNumber = null;
-		$this->number = "";
+		$this->number = null;
 		$this->startMonth = null;
 		$this->startYear = null;
 	}

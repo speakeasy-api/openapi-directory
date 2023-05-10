@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTGetTransitGatewayPrefixListReferencesActionEnum: string
 {
     case GET_TRANSIT_GATEWAY_PREFIX_LIST_REFERENCES = 'GetTransitGatewayPrefixListReferences';

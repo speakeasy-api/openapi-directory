@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum BatchDeleteImportDataXAmzTargetEnum: string
 {
     case AWS_POSEIDON_SERVICE_V20151101_BATCH_DELETE_IMPORT_DATA = 'AWSPoseidonService_V2015_11_01.BatchDeleteImportData';

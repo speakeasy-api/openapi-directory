@@ -24,10 +24,10 @@ class ViasPersonalData
     /**
      * Array that contains information about the person's identification document. You can submit only one entry per document type.
      * 
-     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\PersonalDocumentData> $documentData
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\PersonalDocumentDataWrapper> $documentData
      */
 	#[\JMS\Serializer\Annotation\SerializedName('documentData')]
-    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\PersonalDocumentData>')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\PersonalDocumentDataWrapper>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $documentData = null;
     

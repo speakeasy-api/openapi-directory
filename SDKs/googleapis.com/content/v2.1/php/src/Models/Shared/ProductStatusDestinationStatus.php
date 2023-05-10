@@ -52,7 +52,7 @@ class ProductStatusDestinationStatus
     public ?array $pendingCountries = null;
     
     /**
-     * Destination approval status in `targetCountry` of the offer.
+     * Deprecated. Destination approval status in `targetCountry` of the offer.
      * 
      * @var ?string $status
      */

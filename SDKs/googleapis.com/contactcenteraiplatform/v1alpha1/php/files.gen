@@ -63,4 +63,8 @@ src/Models/Shared/ListLocationsResponse.php
 src/Models/Shared/Location.php
 src/Models/Shared/ListOperationsResponse.php
 src/Models/Shared/ContactCenterQuota.php
+src/Models/Shared/QuotaContactCenterInstanceSizeEnum.php
+src/Models/Shared/Quota.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

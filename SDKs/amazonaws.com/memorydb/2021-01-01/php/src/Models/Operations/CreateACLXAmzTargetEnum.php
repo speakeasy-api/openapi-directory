@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateACLXAmzTargetEnum: string
 {
     case AMAZON_MEMORY_DB_CREATE_ACL = 'AmazonMemoryDB.CreateACL';

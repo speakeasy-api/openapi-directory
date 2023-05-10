@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetPipelineDefinitionXAmzTargetEnum: string
 {
     case DATA_PIPELINE_GET_PIPELINE_DEFINITION = 'DataPipeline.GetPipelineDefinition';

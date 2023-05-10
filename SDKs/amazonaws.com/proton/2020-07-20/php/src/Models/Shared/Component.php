@@ -43,6 +43,11 @@ class Component
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $environmentName;
     
+	#[\JMS\Serializer\Annotation\SerializedName('lastClientRequestToken')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $lastClientRequestToken = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('lastDeploymentAttemptedAt')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -84,6 +89,7 @@ class Component
 		$this->deploymentStatusMessage = null;
 		$this->description = null;
 		$this->environmentName = "";
+		$this->lastClientRequestToken = null;
 		$this->lastDeploymentAttemptedAt = null;
 		$this->lastDeploymentSucceededAt = null;
 		$this->lastModifiedAt = new \DateTime();

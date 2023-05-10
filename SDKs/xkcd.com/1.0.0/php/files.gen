@@ -22,4 +22,5 @@ src/Models/Operations/GetInfo0JsonResponse.php
 src/Models/Operations/GetComicIdInfo0JsonRequest.php
 src/Models/Operations/GetComicIdInfo0JsonResponse.php
 src/Models/Shared/Comic.php
+docs/sdk/README.md
 USAGE.md

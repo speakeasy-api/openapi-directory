@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeEffectivePatchesForPatchBaselineXAmzTargetEnum: string
 {
     case AMAZON_SSM_DESCRIBE_EFFECTIVE_PATCHES_FOR_PATCH_BASELINE = 'AmazonSSM.DescribeEffectivePatchesForPatchBaseline';

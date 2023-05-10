@@ -32,4 +32,7 @@ src/Models/Shared/Country.php
 src/Models/Shared/EditsessionRequest.php
 src/Models/Shared/Public1.php
 src/Models/Shared/NewValue.php
+docs/sdk/README.md
+docs/segment/README.md
+docs/sessions/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteIdentityPolicyActionEnum: string
 {
     case DELETE_IDENTITY_POLICY = 'DeleteIdentityPolicy';

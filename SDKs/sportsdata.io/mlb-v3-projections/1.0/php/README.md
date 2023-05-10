@@ -30,21 +30,47 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\DepthChartsRequest;
+use \OpenAPI\OpenAPI\Models\Operations\DepthChartsFormatEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new DepthChartsRequest();
+    $request->format = DepthChartsFormatEnum::JSON;
+
+    $response = $sdk->depthCharts($request);
+
+    if ($response->teamDepthCharts !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `depthCharts` - Depth Charts
-* `dfsSlatesByDate` - DFS Slates by Date
-* `injuredPlayers` - Injured Players
-* `projectedPlayerGameStatsByDateWInjuriesDfsSalaries` - Projected Player Game Stats by Date (w/ Injuries, DFS Salaries)
-* `projectedPlayerGameStatsByPlayerWInjuriesDfsSalaries` - Projected Player Game Stats by Player (w/ Injuries, DFS Salaries)
-* `projectedPlayerSeasonStatsWithAdp` - Projected Player Season Stats (with ADP)
-* `startingLineupsByDate` - Starting Lineups by Date
+* [depthCharts](docs/sdk/README.md#depthcharts) - Depth Charts
+* [dfsSlatesByDate](docs/sdk/README.md#dfsslatesbydate) - DFS Slates by Date
+* [injuredPlayers](docs/sdk/README.md#injuredplayers) - Injured Players
+* [projectedPlayerGameStatsByDateWInjuriesDfsSalaries](docs/sdk/README.md#projectedplayergamestatsbydatewinjuriesdfssalaries) - Projected Player Game Stats by Date (w/ Injuries, DFS Salaries)
+* [projectedPlayerGameStatsByPlayerWInjuriesDfsSalaries](docs/sdk/README.md#projectedplayergamestatsbyplayerwinjuriesdfssalaries) - Projected Player Game Stats by Player (w/ Injuries, DFS Salaries)
+* [projectedPlayerSeasonStatsWithAdp](docs/sdk/README.md#projectedplayerseasonstatswithadp) - Projected Player Season Stats (with ADP)
+* [startingLineupsByDate](docs/sdk/README.md#startinglineupsbydate) - Starting Lineups by Date
 <!-- End SDK Available Operations -->
 
 ### Maturity

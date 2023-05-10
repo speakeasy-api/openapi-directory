@@ -332,4 +332,5 @@ src/Models/Shared/VariantImportItemSource.php
 src/Models/Shared/UpdateAnnotationStoreResponse.php
 src/Models/Shared/UpdateVariantStoreResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

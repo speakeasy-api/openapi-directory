@@ -455,9 +455,11 @@ class V1Company
      * 
      * Get current list of available ChangeTypes to subscribe to
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\CompanyMonitorChangeTypesListSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\CompanyMonitorChangeTypesListResponse
      */
 	public function companyMonitorChangeTypesList(
+        \OpenAPI\OpenAPI\Models\Operations\CompanyMonitorChangeTypesListSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\CompanyMonitorChangeTypesListResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -465,7 +467,8 @@ class V1Company
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -540,9 +543,11 @@ class V1Company
      * 
      * Query list of all registered monitors for logged in user
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\CompanyMonitorListSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\CompanyMonitorListResponse
      */
 	public function companyMonitorList(
+        \OpenAPI\OpenAPI\Models\Operations\CompanyMonitorListSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\CompanyMonitorListResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -550,7 +555,8 @@ class V1Company
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -713,9 +719,11 @@ class V1Company
      * 
      * Query list of registered callback URLs for logged in user
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\CompanyNotificationListSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\CompanyNotificationListResponse
      */
 	public function companyNotificationList(
+        \OpenAPI\OpenAPI\Models\Operations\CompanyNotificationListSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\CompanyNotificationListResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -723,7 +731,8 @@ class V1Company
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

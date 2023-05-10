@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETGenerateServiceLastAccessedDetailsActionEnum: string
 {
     case GENERATE_SERVICE_LAST_ACCESSED_DETAILS = 'GenerateServiceLastAccessedDetails';

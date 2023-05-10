@@ -45,9 +45,11 @@ class Sites
      * 
      * __Note:__ Square Online APIs are publicly available as part of an early access program. For more information, see [Early access program for Square Online APIs](https://developer.squareup.com/docs/online-api#early-access-program-for-square-online-apis).
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListSitesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ListSitesResponse
      */
 	public function listSites(
+        \OpenAPI\OpenAPI\Models\Operations\ListSitesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ListSitesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -55,7 +57,8 @@ class Sites
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

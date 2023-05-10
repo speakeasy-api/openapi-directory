@@ -124,6 +124,16 @@ class SearchRequest
     public ?string $onlyIn = null;
     
     /**
+     * The maximum number of search results per page. A valid value should be an integer between 1 and 10 (inclusive).
+     * 
+     * 
+     * 
+     * @var ?int $pageSize
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=page_size')]
+    public ?int $pageSize = null;
+    
+    /**
      * Only show episodes/podcasts/curated lists published after this timestamp (in milliseconds). If **published_before** & **published_after** are used at the same time, **published_before** should be bigger than **published_after**.
      * 
      * 
@@ -236,6 +246,7 @@ class SearchRequest
 		$this->ocid = null;
 		$this->offset = null;
 		$this->onlyIn = null;
+		$this->pageSize = null;
 		$this->publishedAfter = null;
 		$this->publishedBefore = null;
 		$this->q = "";

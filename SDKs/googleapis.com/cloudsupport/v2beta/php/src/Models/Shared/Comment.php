@@ -58,7 +58,7 @@ class Comment
     public ?string $name = null;
     
     /**
-     * Output only. An automatically generated plain text version of body with all rich text syntax stripped.
+     * Output only. DEPRECATED. An automatically generated plain text version of body with all rich text syntax stripped.
      * 
      * @var ?string $plainTextBody
      */

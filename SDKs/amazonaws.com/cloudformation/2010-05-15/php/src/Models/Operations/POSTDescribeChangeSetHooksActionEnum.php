@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeChangeSetHooksActionEnum: string
 {
     case DESCRIBE_CHANGE_SET_HOOKS = 'DescribeChangeSetHooks';

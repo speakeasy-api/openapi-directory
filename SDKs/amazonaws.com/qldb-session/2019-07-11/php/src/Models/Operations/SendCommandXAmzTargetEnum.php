@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum SendCommandXAmzTargetEnum: string
 {
     case QLDB_SESSION_SEND_COMMAND = 'QLDBSession.SendCommand';

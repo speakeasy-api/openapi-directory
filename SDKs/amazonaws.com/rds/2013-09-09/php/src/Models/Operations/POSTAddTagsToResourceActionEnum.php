@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTAddTagsToResourceActionEnum: string
 {
     case ADD_TAGS_TO_RESOURCE = 'AddTagsToResource';

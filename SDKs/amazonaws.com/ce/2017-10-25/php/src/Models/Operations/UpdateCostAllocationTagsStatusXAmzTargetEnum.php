@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateCostAllocationTagsStatusXAmzTargetEnum: string
 {
     case AWS_INSIGHTS_INDEX_SERVICE_UPDATE_COST_ALLOCATION_TAGS_STATUS = 'AWSInsightsIndexService.UpdateCostAllocationTagsStatus';

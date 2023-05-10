@@ -72,4 +72,5 @@ src/Models/Shared/OcrWord.php
 src/Models/Shared/OcrLanguageEnum.php
 src/Models/Shared/TagResult.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

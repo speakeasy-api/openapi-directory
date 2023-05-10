@@ -170,4 +170,5 @@ src/Models/Shared/StartBatchJobResponse.php
 src/Models/Shared/UpdateApplicationResponse.php
 src/Models/Shared/UpdateEnvironmentResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

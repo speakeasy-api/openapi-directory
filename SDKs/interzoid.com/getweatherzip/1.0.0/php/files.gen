@@ -22,4 +22,6 @@ src/Utils/Utils.php
 src/Models/Operations/GetweatherzipcodeRequest.php
 src/Models/Operations/Getweatherzipcode200ApplicationJSON.php
 src/Models/Operations/GetweatherzipcodeResponse.php
+docs/sdk/README.md
+docs/weatherbyzipcode/README.md
 USAGE.md

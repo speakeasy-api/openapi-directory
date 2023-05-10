@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateBuildXAmzTargetEnum: string
 {
     case GAME_LIFT_UPDATE_BUILD = 'GameLift.UpdateBuild';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopWorkspacesXAmzTargetEnum: string
 {
     case WORKSPACES_SERVICE_STOP_WORKSPACES = 'WorkspacesService.StopWorkspaces';

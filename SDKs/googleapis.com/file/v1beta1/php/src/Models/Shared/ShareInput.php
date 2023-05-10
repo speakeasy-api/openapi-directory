@@ -18,6 +18,16 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class ShareInput
 {
     /**
+     * Immutable. Full name of the Cloud Filestore Backup resource that this Share is restored from, in the format of projects/{project_id}/locations/{location_id}/backups/{backup_id}. Empty, if the Share is created from scratch and not restored from a backup.
+     * 
+     * @var ?string $backup
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('backup')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $backup = null;
+    
+    /**
      * File share capacity in gigabytes (GB). Filestore defines 1 GB as 1024^3 bytes. Must be greater than 0.
      * 
      * @var ?string $capacityGb
@@ -69,6 +79,7 @@ class ShareInput
     
 	public function __construct()
 	{
+		$this->backup = null;
 		$this->capacityGb = null;
 		$this->description = null;
 		$this->labels = null;

@@ -12,6 +12,16 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class SeriesAttributes
 {
     /**
+     * If `null` or `true`, the ART19 web player will render an Amazon subscription badge
+     * 
+     * @var ?bool $amazonSubscriptionBadgeEnabled
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('amazon_subscription_badge_enabled')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $amazonSubscriptionBadgeEnabled = null;
+    
+    /**
      * The Amazon Music subscription URL
      * 
      * @var ?string $amazonSubscriptionUrl
@@ -390,6 +400,7 @@ class SeriesAttributes
     
 	public function __construct()
 	{
+		$this->amazonSubscriptionBadgeEnabled = null;
 		$this->amazonSubscriptionUrl = null;
 		$this->castboxSubscriptionUrl = null;
 		$this->coverImageId = null;

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTGetInstanceTypesFromInstanceRequirementsActionEnum: string
 {
     case GET_INSTANCE_TYPES_FROM_INSTANCE_REQUIREMENTS = 'GetInstanceTypesFromInstanceRequirements';

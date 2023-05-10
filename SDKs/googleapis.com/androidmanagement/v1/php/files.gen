@@ -220,4 +220,7 @@ src/Models/Shared/WebTokenEnabledFeaturesEnum.php
 src/Models/Shared/WebTokenPermissionsEnum.php
 src/Models/Shared/WebToken.php
 src/Models/Shared/SignupUrl.php
+docs/sdk/README.md
+docs/enterprises/README.md
+docs/signupurls/README.md
 USAGE.md

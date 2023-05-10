@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteResourcesByExternalIdXAmzTargetEnum: string
 {
     case CODE_DEPLOY20141006_DELETE_RESOURCES_BY_EXTERNAL_ID = 'CodeDeploy_20141006.DeleteResourcesByExternalId';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutDeliveryChannelXAmzTargetEnum: string
 {
     case STARLING_DOVE_SERVICE_PUT_DELIVERY_CHANNEL = 'StarlingDoveService.PutDeliveryChannel';

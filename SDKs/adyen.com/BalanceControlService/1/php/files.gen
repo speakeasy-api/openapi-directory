@@ -28,4 +28,6 @@ src/Models/Shared/Amount.php
 src/Models/Shared/BalanceTransferRequestTypeEnum.php
 src/Models/Shared/BalanceTransferRequest.php
 src/Models/Shared/SchemeBasicAuth.php
+docs/sdk/README.md
+docs/general/README.md
 USAGE.md

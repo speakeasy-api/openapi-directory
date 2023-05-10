@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeQuerySuggestionsConfigXAmzTargetEnum: string
 {
     case AWS_KENDRA_FRONTEND_SERVICE_DESCRIBE_QUERY_SUGGESTIONS_CONFIG = 'AWSKendraFrontendService.DescribeQuerySuggestionsConfig';

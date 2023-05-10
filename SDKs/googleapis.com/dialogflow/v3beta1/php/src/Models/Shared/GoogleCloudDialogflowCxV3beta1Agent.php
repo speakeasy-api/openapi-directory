@@ -148,7 +148,7 @@ class GoogleCloudDialogflowCxV3beta1Agent
     public ?array $supportedLanguageCodes = null;
     
     /**
-     * Settings related to speech generating.
+     * Settings related to speech synthesizing.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleCloudDialogflowCxV3beta1TextToSpeechSettings $textToSpeechSettings
      */

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeAccountAssignmentDeletionStatusXAmzTargetEnum: string
 {
     case SWB_EXTERNAL_SERVICE_DESCRIBE_ACCOUNT_ASSIGNMENT_DELETION_STATUS = 'SWBExternalService.DescribeAccountAssignmentDeletionStatus';

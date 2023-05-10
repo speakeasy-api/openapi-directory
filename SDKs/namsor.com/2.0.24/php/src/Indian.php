@@ -276,4 +276,84 @@ class Indian
 
         return $response;
     }
+	
+    /**
+     * [USES 10 UNITS PER NAME] Infer the likely Indian state of Union territory according to ISO 3166-2:IN based on the name.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\SubclassificationIndianFullRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\SubclassificationIndianFullSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\SubclassificationIndianFullResponse
+     */
+	public function subclassificationIndianFull(
+        \OpenAPI\OpenAPI\Models\Operations\SubclassificationIndianFullRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\SubclassificationIndianFullSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\SubclassificationIndianFullResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/api2/json/subclassificationIndianFull/{fullName}', \OpenAPI\OpenAPI\Models\Operations\SubclassificationIndianFullRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\SubclassificationIndianFullResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->personalNameGeoSubclassificationOut = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\PersonalNameGeoSubclassificationOut', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 403) {
+        }
+
+        return $response;
+    }
+	
+    /**
+     * [USES 10 UNITS PER NAME] Infer the likely Indian state of Union territory according to ISO 3166-2:IN based on a list of up to 100 names.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Shared\BatchPersonalNameGeoIn $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\SubclassificationIndianFullBatchSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\SubclassificationIndianFullBatchResponse
+     */
+	public function subclassificationIndianFullBatch(
+        \OpenAPI\OpenAPI\Models\Shared\BatchPersonalNameGeoIn $request,
+        \OpenAPI\OpenAPI\Models\Operations\SubclassificationIndianFullBatchSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\SubclassificationIndianFullBatchResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/api2/json/subclassificationIndianFullBatch');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $options = array_merge_recursive($options, $body);
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\SubclassificationIndianFullBatchResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->batchPersonalNameGeoSubclassificationOut = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\BatchPersonalNameGeoSubclassificationOut', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 400 or $httpResponse->getStatusCode() === 401 or $httpResponse->getStatusCode() === 403) {
+        }
+
+        return $response;
+    }
 }

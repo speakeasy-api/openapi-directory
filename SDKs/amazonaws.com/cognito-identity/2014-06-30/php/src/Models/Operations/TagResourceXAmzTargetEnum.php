@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum TagResourceXAmzTargetEnum: string
 {
     case AWS_COGNITO_IDENTITY_SERVICE_TAG_RESOURCE = 'AWSCognitoIdentityService.TagResource';

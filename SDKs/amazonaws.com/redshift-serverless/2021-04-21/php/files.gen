@@ -237,4 +237,5 @@ src/Models/Shared/UpdateUsageLimitRequest.php
 src/Models/Shared/UpdateWorkgroupResponse.php
 src/Models/Shared/UpdateWorkgroupRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

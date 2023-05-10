@@ -149,4 +149,8 @@ src/Models/Shared/GoogleAppsDriveLabelsV2LongTextLimits.php
 src/Models/Shared/GoogleAppsDriveLabelsV2IntegerLimits.php
 src/Models/Shared/GoogleAppsDriveLabelsV2DateLimits.php
 src/Models/Shared/GoogleAppsDriveLabelsV2UserCapabilities.php
+docs/sdk/README.md
+docs/labels/README.md
+docs/limits/README.md
+docs/users/README.md
 USAGE.md

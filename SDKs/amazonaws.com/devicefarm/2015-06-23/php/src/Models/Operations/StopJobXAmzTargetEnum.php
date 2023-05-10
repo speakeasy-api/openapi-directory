@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopJobXAmzTargetEnum: string
 {
     case DEVICE_FARM20150623_STOP_JOB = 'DeviceFarm_20150623.StopJob';

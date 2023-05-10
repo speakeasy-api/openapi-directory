@@ -491,7 +491,7 @@ class SDK
     }
 	
     /**
-     *  Creates a new image. This request will create a new image along with all of the configured output resources defined in the distribution configuration. You must specify exactly one recipe for your image, using either a ContainerRecipeArn or an ImageRecipeArn.
+     * Creates a new image. This request will create a new image along with all of the configured output resources defined in the distribution configuration. You must specify exactly one recipe for your image, using either a ContainerRecipeArn or an ImageRecipeArn.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\CreateImageRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\CreateImageResponse
@@ -585,7 +585,7 @@ class SDK
     }
 	
     /**
-     *  Creates a new image pipeline. Image pipelines enable you to automate the creation and distribution of images.
+     * Creates a new image pipeline. Image pipelines enable you to automate the creation and distribution of images.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\CreateImagePipelineRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\CreateImagePipelineResponse
@@ -685,7 +685,7 @@ class SDK
     }
 	
     /**
-     *  Creates a new image recipe. Image recipes define how images are configured, tested, and assessed.
+     * Creates a new image recipe. Image recipes define how images are configured, tested, and assessed.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\CreateImageRecipeRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\CreateImageRecipeResponse
@@ -791,7 +791,7 @@ class SDK
     }
 	
     /**
-     *  Creates a new infrastructure configuration. An infrastructure configuration defines the environment in which your image will be built and tested.
+     * Creates a new infrastructure configuration. An infrastructure configuration defines the environment in which your image will be built and tested.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\CreateInfrastructureConfigurationRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\CreateInfrastructureConfigurationResponse
@@ -891,7 +891,7 @@ class SDK
     }
 	
     /**
-     *  Deletes a component build version.
+     * Deletes a component build version.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DeleteComponentRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DeleteComponentResponse
@@ -1047,7 +1047,7 @@ class SDK
     }
 	
     /**
-     *  Deletes a distribution configuration.
+     * Deletes a distribution configuration.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DeleteDistributionConfigurationRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DeleteDistributionConfigurationResponse
@@ -1203,7 +1203,7 @@ class SDK
     }
 	
     /**
-     *  Deletes an image pipeline.
+     * Deletes an image pipeline.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DeleteImagePipelineRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DeleteImagePipelineResponse
@@ -1281,7 +1281,7 @@ class SDK
     }
 	
     /**
-     *  Deletes an image recipe.
+     * Deletes an image recipe.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DeleteImageRecipeRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DeleteImageRecipeResponse
@@ -1359,7 +1359,7 @@ class SDK
     }
 	
     /**
-     *  Deletes an infrastructure configuration.
+     * Deletes an infrastructure configuration.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DeleteInfrastructureConfigurationRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DeleteInfrastructureConfigurationResponse
@@ -1437,7 +1437,7 @@ class SDK
     }
 	
     /**
-     *  Gets a component object.
+     * Gets a component object.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetComponentRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetComponentResponse
@@ -1509,7 +1509,7 @@ class SDK
     }
 	
     /**
-     *  Gets a component policy.
+     * Gets a component policy.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetComponentPolicyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetComponentPolicyResponse
@@ -1725,7 +1725,7 @@ class SDK
     }
 	
     /**
-     *  Gets a distribution configuration.
+     * Gets a distribution configuration.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetDistributionConfigurationRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetDistributionConfigurationResponse
@@ -1797,7 +1797,7 @@ class SDK
     }
 	
     /**
-     *  Gets an image.
+     * Gets an image.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetImageRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetImageResponse
@@ -1869,7 +1869,7 @@ class SDK
     }
 	
     /**
-     *  Gets an image pipeline.
+     * Gets an image pipeline.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetImagePipelineRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetImagePipelineResponse
@@ -1941,7 +1941,7 @@ class SDK
     }
 	
     /**
-     *  Gets an image policy.
+     * Gets an image policy.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetImagePolicyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetImagePolicyResponse
@@ -2013,7 +2013,7 @@ class SDK
     }
 	
     /**
-     *  Gets an image recipe.
+     * Gets an image recipe.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetImageRecipeRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetImageRecipeResponse
@@ -2085,7 +2085,7 @@ class SDK
     }
 	
     /**
-     *  Gets an image recipe policy.
+     * Gets an image recipe policy.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetImageRecipePolicyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetImageRecipePolicyResponse
@@ -2157,7 +2157,7 @@ class SDK
     }
 	
     /**
-     *  Gets an infrastructure configuration.
+     * Gets an infrastructure configuration.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetInfrastructureConfigurationRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetInfrastructureConfigurationResponse
@@ -2186,6 +2186,150 @@ class SDK
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->getInfrastructureConfigurationResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\GetInfrastructureConfigurationResponse', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 480) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->serviceException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 481) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->clientException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 482) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->serviceUnavailableException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 483) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->invalidRequestException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 484) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->forbiddenException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 485) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->callRateLimitExceededException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Get the runtime information that was logged for a specific runtime instance of the workflow.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetWorkflowExecutionRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\GetWorkflowExecutionResponse
+     */
+	public function getWorkflowExecution(
+        \OpenAPI\OpenAPI\Models\Operations\GetWorkflowExecutionRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\GetWorkflowExecutionResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/GetWorkflowExecution#workflowExecutionId');
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\GetWorkflowExecutionRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GetWorkflowExecutionResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->getWorkflowExecutionResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\GetWorkflowExecutionResponse', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 480) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->serviceException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 481) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->clientException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 482) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->serviceUnavailableException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 483) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->invalidRequestException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 484) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->forbiddenException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 485) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->callRateLimitExceededException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Get the runtime information that was logged for a specific runtime instance of the workflow step.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetWorkflowStepExecutionRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\GetWorkflowStepExecutionResponse
+     */
+	public function getWorkflowStepExecution(
+        \OpenAPI\OpenAPI\Models\Operations\GetWorkflowStepExecutionRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\GetWorkflowStepExecutionResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/GetWorkflowStepExecution#stepExecutionId');
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\GetWorkflowStepExecutionRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GetWorkflowStepExecutionResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->getWorkflowStepExecutionResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\GetWorkflowStepExecutionResponse', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 480) {
@@ -2387,7 +2531,7 @@ class SDK
     }
 	
     /**
-     * <p> Returns the list of component build versions for the specified semantic version.</p> <note> <p>The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign values for the first three, and can filter on all of them.</p> <p> <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the most recent versions or nodes when selecting the base image or components for your recipe. When you use a wildcard in any node, all nodes to the right of the first wildcard must also be wildcards.</p> </note>
+     * <p>Returns the list of component build versions for the specified semantic version.</p> <note> <p>The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign values for the first three, and can filter on all of them.</p> <p> <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the most recent versions or nodes when selecting the base image or components for your recipe. When you use a wildcard in any node, all nodes to the right of the first wildcard must also be wildcards.</p> </note>
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ListComponentBuildVersionsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ListComponentBuildVersionsResponse
@@ -2719,7 +2863,7 @@ class SDK
     }
 	
     /**
-     *  Returns a list of image build versions.
+     * Returns a list of image build versions.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ListImageBuildVersionsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ListImageBuildVersionsResponse
@@ -3063,7 +3207,7 @@ class SDK
     }
 	
     /**
-     *  Returns a list of image recipes.
+     * Returns a list of image recipes.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ListImageRecipesRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ListImageRecipesResponse
@@ -3097,6 +3241,172 @@ class SDK
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->listImageRecipesResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListImageRecipesResponse', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 480) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->serviceException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 481) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->clientException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 482) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->serviceUnavailableException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 483) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->invalidRequestException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 484) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->invalidPaginationTokenException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 485) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->forbiddenException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 486) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->callRateLimitExceededException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * <p>Returns a list of image scan aggregations for your account. You can filter by the type of key that Image Builder uses to group results. For example, if you want to get a list of findings by severity level for one of your pipelines, you might specify your pipeline with the <code>imagePipelineArn</code> filter. If you don't specify a filter, Image Builder returns an aggregation for your account.</p> <p>To streamline results, you can use the following filters in your request:</p> <ul> <li> <p> <code>accountId</code> </p> </li> <li> <p> <code>imageBuildVersionArn</code> </p> </li> <li> <p> <code>imagePipelineArn</code> </p> </li> <li> <p> <code>vulnerabilityId</code> </p> </li> </ul>
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListImageScanFindingAggregationsRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\ListImageScanFindingAggregationsResponse
+     */
+	public function listImageScanFindingAggregations(
+        \OpenAPI\OpenAPI\Models\Operations\ListImageScanFindingAggregationsRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\ListImageScanFindingAggregationsResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/ListImageScanFindingAggregations');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\ListImageScanFindingAggregationsRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\ListImageScanFindingAggregationsResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->listImageScanFindingAggregationsResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListImageScanFindingAggregationsResponse', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 480) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->serviceException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 481) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->clientException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 482) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->serviceUnavailableException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 483) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->invalidRequestException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 484) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->invalidPaginationTokenException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 485) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->forbiddenException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 486) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->callRateLimitExceededException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Returns a list of image scan findings for your account.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListImageScanFindingsRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\ListImageScanFindingsResponse
+     */
+	public function listImageScanFindings(
+        \OpenAPI\OpenAPI\Models\Operations\ListImageScanFindingsRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\ListImageScanFindingsResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/ListImageScanFindings');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\ListImageScanFindingsRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\ListImageScanFindingsResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->listImageScanFindingsResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListImageScanFindingsResponse', 'json');
             }
         }
         else if ($httpResponse->getStatusCode() === 480) {
@@ -3229,7 +3539,7 @@ class SDK
     }
 	
     /**
-     *  Returns a list of infrastructure configurations.
+     * Returns a list of infrastructure configurations.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ListInfrastructureConfigurationsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ListInfrastructureConfigurationsResponse
@@ -3312,7 +3622,7 @@ class SDK
     }
 	
     /**
-     *  Returns the list of tags for the specified resource.
+     * Returns the list of tags for the specified resource.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ListTagsForResourceRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ListTagsForResourceResponse
@@ -3365,7 +3675,173 @@ class SDK
     }
 	
     /**
-     *  Applies a policy to a component. We recommend that you call the RAM API <a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_CreateResourceShare.html">CreateResourceShare</a> to share resources. If you call the Image Builder API <code>PutComponentPolicy</code>, you must also call the RAM API <a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_PromoteResourceShareCreatedFromPolicy.html">PromoteResourceShareCreatedFromPolicy</a> in order for the resource to be visible to all principals with whom the resource is shared.
+     * Returns a list of workflow runtime instance metadata objects for a specific image build version.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListWorkflowExecutionsRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\ListWorkflowExecutionsResponse
+     */
+	public function listWorkflowExecutions(
+        \OpenAPI\OpenAPI\Models\Operations\ListWorkflowExecutionsRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\ListWorkflowExecutionsResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/ListWorkflowExecutions');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\ListWorkflowExecutionsRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\ListWorkflowExecutionsResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->listWorkflowExecutionsResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListWorkflowExecutionsResponse', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 480) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->serviceException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 481) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->clientException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 482) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->serviceUnavailableException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 483) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->invalidRequestException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 484) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->invalidPaginationTokenException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 485) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->forbiddenException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 486) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->callRateLimitExceededException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Shows runtime data for each step in a runtime instance of the workflow that you specify in the request.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListWorkflowStepExecutionsRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\ListWorkflowStepExecutionsResponse
+     */
+	public function listWorkflowStepExecutions(
+        \OpenAPI\OpenAPI\Models\Operations\ListWorkflowStepExecutionsRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\ListWorkflowStepExecutionsResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/ListWorkflowStepExecutions');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\ListWorkflowStepExecutionsRequest::class, $request, null));
+        $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\ListWorkflowStepExecutionsResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->listWorkflowStepExecutionsResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListWorkflowStepExecutionsResponse', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 480) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->serviceException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 481) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->clientException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 482) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->serviceUnavailableException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 483) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->invalidRequestException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 484) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->invalidPaginationTokenException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 485) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->forbiddenException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+        else if ($httpResponse->getStatusCode() === 486) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->callRateLimitExceededException = $serializer->deserialize((string)$httpResponse->getBody(), 'mixed', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Applies a policy to a component. We recommend that you call the RAM API <a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_CreateResourceShare.html">CreateResourceShare</a> to share resources. If you call the Image Builder API <code>PutComponentPolicy</code>, you must also call the RAM API <a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_PromoteResourceShareCreatedFromPolicy.html">PromoteResourceShareCreatedFromPolicy</a> in order for the resource to be visible to all principals with whom the resource is shared.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\PutComponentPolicyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\PutComponentPolicyResponse
@@ -3629,7 +4105,7 @@ class SDK
     }
 	
     /**
-     *  Applies a policy to an image recipe. We recommend that you call the RAM API <a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_CreateResourceShare.html">CreateResourceShare</a> to share resources. If you call the Image Builder API <code>PutImageRecipePolicy</code>, you must also call the RAM API <a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_PromoteResourceShareCreatedFromPolicy.html">PromoteResourceShareCreatedFromPolicy</a> in order for the resource to be visible to all principals with whom the resource is shared.
+     * Applies a policy to an image recipe. We recommend that you call the RAM API <a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_CreateResourceShare.html">CreateResourceShare</a> to share resources. If you call the Image Builder API <code>PutImageRecipePolicy</code>, you must also call the RAM API <a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_PromoteResourceShareCreatedFromPolicy.html">PromoteResourceShareCreatedFromPolicy</a> in order for the resource to be visible to all principals with whom the resource is shared.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\PutImageRecipePolicyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\PutImageRecipePolicyResponse
@@ -3717,7 +4193,7 @@ class SDK
     }
 	
     /**
-     *  Manually triggers a pipeline to create an image.
+     * Manually triggers a pipeline to create an image.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\StartImagePipelineExecutionRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\StartImagePipelineExecutionResponse
@@ -3811,7 +4287,7 @@ class SDK
     }
 	
     /**
-     *  Adds a tag to a resource.
+     * Adds a tag to a resource.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\TagResourceRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\TagResourceResponse
@@ -3869,7 +4345,7 @@ class SDK
     }
 	
     /**
-     *  Removes a tag from a resource.
+     * Removes a tag from a resource.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\UntagResourceRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\UntagResourceResponse
@@ -3923,7 +4399,7 @@ class SDK
     }
 	
     /**
-     *  Updates a new distribution configuration. Distribution configurations define and configure the outputs of your pipeline.
+     * Updates a new distribution configuration. Distribution configurations define and configure the outputs of your pipeline.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\UpdateDistributionConfigurationRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\UpdateDistributionConfigurationResponse
@@ -4017,7 +4493,7 @@ class SDK
     }
 	
     /**
-     * <p> Updates an image pipeline. Image pipelines enable you to automate the creation and distribution of images.</p> <note> <p>UpdateImagePipeline does not support selective updates for the pipeline. You must specify all of the required properties in the update request, not just the properties that have changed.</p> </note>
+     * <p>Updates an image pipeline. Image pipelines enable you to automate the creation and distribution of images.</p> <note> <p>UpdateImagePipeline does not support selective updates for the pipeline. You must specify all of the required properties in the update request, not just the properties that have changed.</p> </note>
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\UpdateImagePipelineRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\UpdateImagePipelineResponse
@@ -4105,7 +4581,7 @@ class SDK
     }
 	
     /**
-     *  Updates a new infrastructure configuration. An infrastructure configuration defines the environment in which your image will be built and tested.
+     * Updates a new infrastructure configuration. An infrastructure configuration defines the environment in which your image will be built and tested.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\UpdateInfrastructureConfigurationRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\UpdateInfrastructureConfigurationResponse

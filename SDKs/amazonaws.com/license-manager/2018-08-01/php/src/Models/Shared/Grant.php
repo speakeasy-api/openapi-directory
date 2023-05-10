@@ -50,6 +50,11 @@ class Grant
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $licenseArn;
     
+	#[\JMS\Serializer\Annotation\SerializedName('Options')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\Options')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?Options $options = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('ParentArn')]
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $parentArn;
@@ -72,6 +77,7 @@ class Grant
 		$this->granteePrincipalArn = "";
 		$this->homeRegion = "";
 		$this->licenseArn = "";
+		$this->options = null;
 		$this->parentArn = "";
 		$this->statusReason = null;
 		$this->version = "";

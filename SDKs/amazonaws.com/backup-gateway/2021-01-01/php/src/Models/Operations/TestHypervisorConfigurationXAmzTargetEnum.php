@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum TestHypervisorConfigurationXAmzTargetEnum: string
 {
     case BACKUP_ON_PREMISES_V20210101_TEST_HYPERVISOR_CONFIGURATION = 'BackupOnPremises_v20210101.TestHypervisorConfiguration';

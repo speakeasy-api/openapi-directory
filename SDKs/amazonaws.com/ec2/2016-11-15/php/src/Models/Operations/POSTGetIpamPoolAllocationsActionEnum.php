@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTGetIpamPoolAllocationsActionEnum: string
 {
     case GET_IPAM_POOL_ALLOCATIONS = 'GetIpamPoolAllocations';

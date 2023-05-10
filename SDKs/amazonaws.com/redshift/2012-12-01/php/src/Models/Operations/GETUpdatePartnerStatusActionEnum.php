@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETUpdatePartnerStatusActionEnum: string
 {
     case UPDATE_PARTNER_STATUS = 'UpdatePartnerStatus';

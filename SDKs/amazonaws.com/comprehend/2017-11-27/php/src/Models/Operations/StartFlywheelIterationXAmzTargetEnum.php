@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartFlywheelIterationXAmzTargetEnum: string
 {
     case COMPREHEND20171127_START_FLYWHEEL_ITERATION = 'Comprehend_20171127.StartFlywheelIteration';

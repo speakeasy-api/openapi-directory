@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum NotifyMigrationTaskStateXAmzTargetEnum: string
 {
     case AWS_MIGRATION_HUB_NOTIFY_MIGRATION_TASK_STATE = 'AWSMigrationHub.NotifyMigrationTaskState';

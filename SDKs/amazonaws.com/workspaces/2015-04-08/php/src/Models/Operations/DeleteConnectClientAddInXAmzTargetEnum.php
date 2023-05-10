@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteConnectClientAddInXAmzTargetEnum: string
 {
     case WORKSPACES_SERVICE_DELETE_CONNECT_CLIENT_ADD_IN = 'WorkspacesService.DeleteConnectClientAddIn';

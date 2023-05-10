@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteEnvironmentConfigurationActionEnum: string
 {
     case DELETE_ENVIRONMENT_CONFIGURATION = 'DeleteEnvironmentConfiguration';

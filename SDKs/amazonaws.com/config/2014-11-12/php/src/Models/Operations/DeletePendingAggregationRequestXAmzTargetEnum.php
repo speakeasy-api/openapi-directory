@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeletePendingAggregationRequestXAmzTargetEnum: string
 {
     case STARLING_DOVE_SERVICE_DELETE_PENDING_AGGREGATION_REQUEST = 'StarlingDoveService.DeletePendingAggregationRequest';

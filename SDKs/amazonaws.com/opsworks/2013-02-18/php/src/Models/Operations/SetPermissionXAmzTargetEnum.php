@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum SetPermissionXAmzTargetEnum: string
 {
     case OPS_WORKS20130218_SET_PERMISSION = 'OpsWorks_20130218.SetPermission';

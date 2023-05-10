@@ -30,19 +30,54 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\ApplyYaraRulesRequestBody;
+use \OpenAPI\OpenAPI\Models\Operations\ApplyYaraRulesRequestBodyFile;
+use \OpenAPI\OpenAPI\Models\Operations\ApplyYaraRulesRequestBodyIsUnpackingRequiredEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new ApplyYaraRulesRequestBody();
+    $request->file = new ApplyYaraRulesRequestBodyFile();
+    $request->file->content = 'corrupti';
+    $request->file->file = 'provident';
+    $request->isUnpackingRequired = ApplyYaraRulesRequestBodyIsUnpackingRequiredEnum::FALSE;
+    $request->rules = [
+        'unde',
+        'nulla',
+        'corrupti',
+        'illum',
+    ];
+
+    $response = $sdk->applyYaraRules($request);
+
+    if ($response->body !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `applyYaraRules` - apply given YARA rules to the given executable. (upto 10 rules)
-* `clean` - clean up the uploaded files
-* `emulationOutput` - try to get the emulation output after unpacking the file
-* `generatePartialYaraRule` - generate partial YARA rules for give executable. (Rule without the condition section)
-* `unpack` - try to unpack the given file
+* [applyYaraRules](docs/sdk/README.md#applyyararules) - apply given YARA rules to the given executable. (upto 10 rules)
+* [clean](docs/sdk/README.md#clean) - clean up the uploaded files
+* [emulationOutput](docs/sdk/README.md#emulationoutput) - try to get the emulation output after unpacking the file
+* [generatePartialYaraRule](docs/sdk/README.md#generatepartialyararule) - generate partial YARA rules for give executable. (Rule without the condition section)
+* [unpack](docs/sdk/README.md#unpack) - try to unpack the given file
 <!-- End SDK Available Operations -->
 
 ### Maturity

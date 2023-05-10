@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopStreamEncryptionXAmzTargetEnum: string
 {
     case KINESIS20131202_STOP_STREAM_ENCRYPTION = 'Kinesis_20131202.StopStreamEncryption';

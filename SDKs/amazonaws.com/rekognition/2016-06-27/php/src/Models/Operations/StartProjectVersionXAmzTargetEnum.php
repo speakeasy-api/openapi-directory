@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartProjectVersionXAmzTargetEnum: string
 {
     case REKOGNITION_SERVICE_START_PROJECT_VERSION = 'RekognitionService.StartProjectVersion';

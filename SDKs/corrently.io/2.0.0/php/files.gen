@@ -102,4 +102,17 @@ src/Models/Shared/Balance.php
 src/Models/Shared/Transactions.php
 src/Models/Shared/Tariffh0.php
 src/Models/Shared/Componentsh0.php
+docs/sdk/README.md
+docs/dispatchgreenenergydistributionapi/README.md
+docs/greenpowerindexgrunstromindex/README.md
+docs/meteringdecorator/README.md
+docs/ocpp/README.md
+docs/openmeter/README.md
+docs/smarthome/README.md
+docs/stromquittung/README.md
+docs/stromkontoledger/README.md
+docs/tse/README.md
+docs/tariffpriceapi/README.md
+docs/wimwechselprozesseimmesswesenstromstatusapi/README.md
+docs/easee/README.md
 USAGE.md

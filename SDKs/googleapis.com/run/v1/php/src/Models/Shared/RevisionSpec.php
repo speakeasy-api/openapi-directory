@@ -28,7 +28,7 @@ class RevisionSpec
     public ?int $containerConcurrency = null;
     
     /**
-     * Containers holds the single container that defines the unit of execution for this Revision. In the context of a Revision, we disallow a number of fields on this Container, including: name and lifecycle. In Cloud Run, only a single container may be provided. The runtime contract is documented here: https://github.com/knative/specs/blob/main/specs/serving/runtime-contract.md
+     * Containers holds the single container that defines the unit of execution for this Revision. In the context of a Revision, we disallow a number of fields on this Container, including: name and lifecycle. In Cloud Run, only a single container may be provided.
      * 
      * @var ?array<\OpenAPI\OpenAPI\Models\Shared\Container> $containers
      */

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeFleetLocationCapacityXAmzTargetEnum: string
 {
     case GAME_LIFT_DESCRIBE_FLEET_LOCATION_CAPACITY = 'GameLift.DescribeFleetLocationCapacity';

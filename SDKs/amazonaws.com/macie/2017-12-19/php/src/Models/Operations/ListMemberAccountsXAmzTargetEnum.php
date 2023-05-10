@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListMemberAccountsXAmzTargetEnum: string
 {
     case MACIE_SERVICE_LIST_MEMBER_ACCOUNTS = 'MacieService.ListMemberAccounts';

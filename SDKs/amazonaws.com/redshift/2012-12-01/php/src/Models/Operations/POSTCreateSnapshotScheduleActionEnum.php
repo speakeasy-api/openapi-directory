@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateSnapshotScheduleActionEnum: string
 {
     case CREATE_SNAPSHOT_SCHEDULE = 'CreateSnapshotSchedule';

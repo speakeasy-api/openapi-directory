@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 
 
 /** Version of the service to call. The current version is 1. */
-enum GetMapVersionNumberTileLayerStyleZoomXYFormatVersionNumberEnum: string
+enum GetMapVersionNumberTileLayerStyleZoomXYFormatVersionNumberEnum: int
 {
-    case ONE = '1';
+    case ONE = 1;
 }

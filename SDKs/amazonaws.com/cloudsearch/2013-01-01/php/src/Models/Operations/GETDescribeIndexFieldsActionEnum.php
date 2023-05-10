@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDescribeIndexFieldsActionEnum: string
 {
     case DESCRIBE_INDEX_FIELDS = 'DescribeIndexFields';

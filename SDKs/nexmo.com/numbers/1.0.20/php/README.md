@@ -30,19 +30,46 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Shared\NumberDetails;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new NumberDetails();
+    $request->country = 'GB';
+    $request->msisdn = '447700900000';
+    $request->targetApiKey = '1a2345b7';
+
+    $response = $sdk->buyANumber($request);
+
+    if ($response->response !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `buyANumber` - Buy a number
-* `cancelANumber` - Cancel a number
-* `getAvailableNumbers` - Search available numbers
-* `getOwnedNumbers` - List the numbers you own
-* `updateANumber` - Update a number
+* [buyANumber](docs/sdk/README.md#buyanumber) - Buy a number
+* [cancelANumber](docs/sdk/README.md#cancelanumber) - Cancel a number
+* [getAvailableNumbers](docs/sdk/README.md#getavailablenumbers) - Search available numbers
+* [getOwnedNumbers](docs/sdk/README.md#getownednumbers) - List the numbers you own
+* [updateANumber](docs/sdk/README.md#updateanumber) - Update a number
 <!-- End SDK Available Operations -->
 
 ### Maturity

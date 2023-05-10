@@ -21,9 +21,15 @@ class GetMonitorOutput
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     public \DateTime $createdAt;
     
+	#[\JMS\Serializer\Annotation\SerializedName('InternetMeasurementsLogDelivery')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\InternetMeasurementsLogDelivery')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?InternetMeasurementsLogDelivery $internetMeasurementsLogDelivery = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('MaxCityNetworksToMonitor')]
     #[\JMS\Serializer\Annotation\Type('int')]
-    public int $maxCityNetworksToMonitor;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?int $maxCityNetworksToMonitor = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('ModifiedAt')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
@@ -70,10 +76,16 @@ class GetMonitorOutput
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $tags = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('TrafficPercentageToMonitor')]
+    #[\JMS\Serializer\Annotation\Type('int')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?int $trafficPercentageToMonitor = null;
+    
 	public function __construct()
 	{
 		$this->createdAt = new \DateTime();
-		$this->maxCityNetworksToMonitor = 0;
+		$this->internetMeasurementsLogDelivery = null;
+		$this->maxCityNetworksToMonitor = null;
 		$this->modifiedAt = new \DateTime();
 		$this->monitorArn = "";
 		$this->monitorName = "";
@@ -82,5 +94,6 @@ class GetMonitorOutput
 		$this->resources = [];
 		$this->status = \OpenAPI\OpenAPI\Models\Shared\MonitorConfigStateEnum::PENDING;
 		$this->tags = null;
+		$this->trafficPercentageToMonitor = null;
 	}
 }

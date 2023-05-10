@@ -72,4 +72,8 @@ src/Models/Shared/CheckInRequest.php
 src/Models/Shared/WorkerStatus.php
 src/Models/Shared/DiskStatus.php
 src/Models/Shared/TimestampedEvent.php
+docs/sdk/README.md
+docs/pipelines/README.md
+docs/projects/README.md
+docs/workers/README.md
 USAGE.md

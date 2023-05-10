@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopReplicationToReplicaXAmzTargetEnum: string
 {
     case SECRETSMANAGER_STOP_REPLICATION_TO_REPLICA = 'secretsmanager.StopReplicationToReplica';

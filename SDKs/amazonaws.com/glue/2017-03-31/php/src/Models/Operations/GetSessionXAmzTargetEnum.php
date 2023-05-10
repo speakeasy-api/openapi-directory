@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetSessionXAmzTargetEnum: string
 {
     case AWS_GLUE_GET_SESSION = 'AWSGlue.GetSession';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartPiiEntitiesDetectionJobXAmzTargetEnum: string
 {
     case COMPREHEND20171127_START_PII_ENTITIES_DETECTION_JOB = 'Comprehend_20171127.StartPiiEntitiesDetectionJob';

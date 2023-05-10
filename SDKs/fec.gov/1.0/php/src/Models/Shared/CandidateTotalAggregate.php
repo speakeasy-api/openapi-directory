@@ -41,6 +41,11 @@ class CandidateTotalAggregate
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $state = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('state_full')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $stateFull = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('total_cash_on_hand_end_period')]
     #[\JMS\Serializer\Annotation\Type('float')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -84,6 +89,7 @@ class CandidateTotalAggregate
 		$this->office = null;
 		$this->party = null;
 		$this->state = null;
+		$this->stateFull = null;
 		$this->totalCashOnHandEndPeriod = null;
 		$this->totalDebtsOwedByCommittee = null;
 		$this->totalDisbursements = null;

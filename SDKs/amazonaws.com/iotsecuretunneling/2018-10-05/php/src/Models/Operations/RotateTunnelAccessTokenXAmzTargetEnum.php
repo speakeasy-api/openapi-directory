@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RotateTunnelAccessTokenXAmzTargetEnum: string
 {
     case IO_T_SECURED_TUNNELING_ROTATE_TUNNEL_ACCESS_TOKEN = 'IoTSecuredTunneling.RotateTunnelAccessToken';

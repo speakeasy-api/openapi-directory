@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * TextParagraph - A paragraph of text. Formatted text supported.
+ * TextParagraph - A paragraph of text. Formatted text supported. For more information about formatting text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

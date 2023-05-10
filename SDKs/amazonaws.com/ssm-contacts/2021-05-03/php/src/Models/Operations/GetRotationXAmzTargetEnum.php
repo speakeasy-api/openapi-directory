@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetRotationXAmzTargetEnum: string
 {
     case SSM_CONTACTS_GET_ROTATION = 'SSMContacts.GetRotation';

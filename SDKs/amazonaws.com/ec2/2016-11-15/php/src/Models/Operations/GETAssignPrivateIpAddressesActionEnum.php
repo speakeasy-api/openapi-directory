@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETAssignPrivateIpAddressesActionEnum: string
 {
     case ASSIGN_PRIVATE_IP_ADDRESSES = 'AssignPrivateIpAddresses';

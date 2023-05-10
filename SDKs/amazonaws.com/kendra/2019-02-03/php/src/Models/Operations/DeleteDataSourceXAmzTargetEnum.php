@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteDataSourceXAmzTargetEnum: string
 {
     case AWS_KENDRA_FRONTEND_SERVICE_DELETE_DATA_SOURCE = 'AWSKendraFrontendService.DeleteDataSource';

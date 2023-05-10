@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DisassociateTrialComponentXAmzTargetEnum: string
 {
     case SAGE_MAKER_DISASSOCIATE_TRIAL_COMPONENT = 'SageMaker.DisassociateTrialComponent';

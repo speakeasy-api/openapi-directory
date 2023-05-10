@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListUploadsXAmzTargetEnum: string
 {
     case DEVICE_FARM20150623_LIST_UPLOADS = 'DeviceFarm_20150623.ListUploads';

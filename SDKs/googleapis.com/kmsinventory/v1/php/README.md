@@ -30,21 +30,66 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\KmsinventoryOrganizationsProtectedResourcesSearchRequest;
+use \OpenAPI\OpenAPI\Models\Shared\XgafvEnum;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+use \OpenAPI\OpenAPI\Models\Operations\KmsinventoryOrganizationsProtectedResourcesSearchSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new KmsinventoryOrganizationsProtectedResourcesSearchRequest();
+    $request->dollarXgafv = XgafvEnum::TWO;
+    $request->accessToken = 'provident';
+    $request->alt = AltEnum::PROTO;
+    $request->callback = 'quibusdam';
+    $request->cryptoKey = 'unde';
+    $request->fields = 'nulla';
+    $request->key = 'corrupti';
+    $request->oauthToken = 'illum';
+    $request->pageSize = 423655;
+    $request->pageToken = 'error';
+    $request->prettyPrint = false;
+    $request->quotaUser = 'deserunt';
+    $request->scope = 'suscipit';
+    $request->uploadType = 'iure';
+    $request->uploadProtocol = 'magnam';
+
+    $requestSecurity = new KmsinventoryOrganizationsProtectedResourcesSearchSecurity();
+    $requestSecurity->oauth2 = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+    $requestSecurity->oauth2c = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+
+    $response = $sdk->organizations->kmsinventoryOrganizationsProtectedResourcesSearch($request, $requestSecurity);
+
+    if ($response->googleCloudKmsInventoryV1SearchProtectedResourcesResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### organizations
+### [organizations](docs/organizations/README.md)
 
-* `kmsinventoryOrganizationsProtectedResourcesSearch` - Returns metadata about the resources protected by the given Cloud KMS CryptoKey in the given Cloud organization.
+* [kmsinventoryOrganizationsProtectedResourcesSearch](docs/organizations/README.md#kmsinventoryorganizationsprotectedresourcessearch) - Returns metadata about the resources protected by the given Cloud KMS CryptoKey in the given Cloud organization.
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `kmsinventoryProjectsCryptoKeysList` - Returns cryptographic keys managed by Cloud KMS in a given Cloud project. Note that this data is sourced from snapshots, meaning it may not completely reflect the actual state of key metadata at call time.
-* `kmsinventoryProjectsLocationsKeyRingsCryptoKeysGetProtectedResourcesSummary` - Returns aggregate information about the resources protected by the given Cloud KMS CryptoKey. Only resources within the same Cloud organization as the key will be returned. The project that holds the key must be part of an organization in order for this call to succeed.
+* [kmsinventoryProjectsCryptoKeysList](docs/projects/README.md#kmsinventoryprojectscryptokeyslist) - Returns cryptographic keys managed by Cloud KMS in a given Cloud project. Note that this data is sourced from snapshots, meaning it may not completely reflect the actual state of key metadata at call time.
+* [kmsinventoryProjectsLocationsKeyRingsCryptoKeysGetProtectedResourcesSummary](docs/projects/README.md#kmsinventoryprojectslocationskeyringscryptokeysgetprotectedresourcessummary) - Returns aggregate information about the resources protected by the given Cloud KMS CryptoKey. Only resources within the same Cloud organization as the key will be returned. The project that holds the key must be part of an organization in order for this call to succeed.
 <!-- End SDK Available Operations -->
 
 ### Maturity

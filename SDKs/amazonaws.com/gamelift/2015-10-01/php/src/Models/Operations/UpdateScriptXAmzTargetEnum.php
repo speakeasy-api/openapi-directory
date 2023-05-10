@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateScriptXAmzTargetEnum: string
 {
     case GAME_LIFT_UPDATE_SCRIPT = 'GameLift.UpdateScript';

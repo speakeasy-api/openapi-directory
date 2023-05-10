@@ -26,4 +26,6 @@ src/Models/Shared/SubjectErasureResponse.php
 src/Models/Shared/ServiceError.php
 src/Models/Shared/SubjectErasureByPspReferenceRequest.php
 src/Models/Shared/SchemeBasicAuth.php
+docs/sdk/README.md
+docs/general/README.md
 USAGE.md

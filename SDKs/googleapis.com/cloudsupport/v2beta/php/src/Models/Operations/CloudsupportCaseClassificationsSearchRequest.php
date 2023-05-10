@@ -92,7 +92,7 @@ class CloudsupportCaseClassificationsSearchRequest
     public ?bool $prettyPrint = null;
     
     /**
-     * An expression written in the Cloud filter language. If non-empty, then only cases whose fields match the filter are returned. If empty, then no messages are filtered out.
+     * An expression written in the Google Cloud filter language. If non-empty, then only cases whose fields match the filter are returned. If empty, then no messages are filtered out.
      * 
      * @var ?string $query
      */

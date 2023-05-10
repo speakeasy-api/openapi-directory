@@ -48,7 +48,7 @@ class GoogleCloudOrgpolicyV2PolicySpec
     public ?bool $reset = null;
     
     /**
-     * Up to 10 policy rules are allowed. In policies for boolean constraints, the following requirements apply: - There must be one and only one policy rule where condition is unset. - Boolean policy rules with conditions must set `enforced` to the opposite of the policy rule without a condition. - During policy evaluation, policy rules with conditions that are true for a target resource take precedence.
+     * In policies for boolean constraints, the following requirements apply: - There must be one and only one policy rule where condition is unset. - Boolean policy rules with conditions must set `enforced` to the opposite of the policy rule without a condition. - During policy evaluation, policy rules with conditions that are true for a target resource take precedence.
      * 
      * @var ?array<\OpenAPI\OpenAPI\Models\Shared\GoogleCloudOrgpolicyV2PolicySpecPolicyRule> $rules
      */

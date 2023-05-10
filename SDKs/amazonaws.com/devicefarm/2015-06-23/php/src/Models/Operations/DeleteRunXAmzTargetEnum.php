@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteRunXAmzTargetEnum: string
 {
     case DEVICE_FARM20150623_DELETE_RUN = 'DeviceFarm_20150623.DeleteRun';

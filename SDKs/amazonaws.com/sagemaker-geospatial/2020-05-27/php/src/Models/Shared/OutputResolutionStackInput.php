@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * OutputResolutionStackInput - <p/>
+ * OutputResolutionStackInput - The input structure representing Output Resolution for Stacking Operation.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

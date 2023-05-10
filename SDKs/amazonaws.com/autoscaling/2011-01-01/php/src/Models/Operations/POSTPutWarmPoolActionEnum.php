@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTPutWarmPoolActionEnum: string
 {
     case PUT_WARM_POOL = 'PutWarmPool';

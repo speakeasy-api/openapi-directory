@@ -369,4 +369,5 @@ src/Models/Shared/UpdateWorkGroupInput.php
 src/Models/Shared/WorkGroupConfigurationUpdates.php
 src/Models/Shared/ResultConfigurationUpdates.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

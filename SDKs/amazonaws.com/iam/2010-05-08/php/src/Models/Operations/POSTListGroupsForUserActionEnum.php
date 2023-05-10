@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTListGroupsForUserActionEnum: string
 {
     case LIST_GROUPS_FOR_USER = 'ListGroupsForUser';

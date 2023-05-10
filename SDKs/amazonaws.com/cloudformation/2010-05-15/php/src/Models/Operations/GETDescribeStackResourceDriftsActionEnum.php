@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDescribeStackResourceDriftsActionEnum: string
 {
     case DESCRIBE_STACK_RESOURCE_DRIFTS = 'DescribeStackResourceDrifts';

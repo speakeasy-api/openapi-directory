@@ -58,6 +58,16 @@ class QueuedResource
     public ?QueueingPolicy $queueingPolicy = null;
     
     /**
+     * Name of the reservation in which the resource should be provisioned. Format: projects/{project}/locations/{zone}/reservations/{reservation}
+     * 
+     * @var ?string $reservationName
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('reservationName')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $reservationName = null;
+    
+    /**
      * QueuedResourceState defines the details of the QueuedResource request.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\QueuedResourceState $state
@@ -83,6 +93,7 @@ class QueuedResource
 		$this->guaranteed = null;
 		$this->name = null;
 		$this->queueingPolicy = null;
+		$this->reservationName = null;
 		$this->state = null;
 		$this->tpu = null;
 	}

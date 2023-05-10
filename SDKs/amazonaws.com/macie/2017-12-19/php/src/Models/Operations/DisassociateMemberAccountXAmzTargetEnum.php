@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DisassociateMemberAccountXAmzTargetEnum: string
 {
     case MACIE_SERVICE_DISASSOCIATE_MEMBER_ACCOUNT = 'MacieService.DisassociateMemberAccount';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteWebhookXAmzTargetEnum: string
 {
     case CODE_PIPELINE20150709_DELETE_WEBHOOK = 'CodePipeline_20150709.DeleteWebhook';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopHyperParameterTuningJobXAmzTargetEnum: string
 {
     case SAGE_MAKER_STOP_HYPER_PARAMETER_TUNING_JOB = 'SageMaker.StopHyperParameterTuningJob';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETGETAccessKeyLastUsedActionEnum: string
 {
     case GET_ACCESS_KEY_LAST_USED = 'GetAccessKeyLastUsed';

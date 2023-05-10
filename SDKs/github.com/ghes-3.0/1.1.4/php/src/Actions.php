@@ -2541,11 +2541,14 @@ class Actions
      * @param \OpenAPI\OpenAPI\Models\Operations\ActionsReRunWorkflowRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ActionsReRunWorkflowResponse
      * @see https://docs.github.com/enterprise-server@3.0/rest/reference/actions#re-run-a-workflow
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function actionsReRunWorkflow(
         \OpenAPI\OpenAPI\Models\Operations\ActionsReRunWorkflowRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\ActionsReRunWorkflowResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/repos/{owner}/{repo}/actions/runs/{run_id}/rerun', \OpenAPI\OpenAPI\Models\Operations\ActionsReRunWorkflowRequest::class, $request);
         

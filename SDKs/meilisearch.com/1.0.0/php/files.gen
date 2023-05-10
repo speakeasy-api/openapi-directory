@@ -2,6 +2,7 @@ src/Documents.php
 src/Dumps.php
 src/Indexes.php
 src/KeyManagement.php
+src/MultiSearch.php
 src/Search.php
 src/Settings.php
 src/Stats.php
@@ -49,8 +50,8 @@ src/Models/Operations/GetIndexesResponse.php
 src/Models/Operations/ShowIndexResponse.php
 src/Models/Operations/SwapIndexesRequestBody.php
 src/Models/Operations/SwapIndexesResponse.php
-src/Models/Operations/UdpateIndexRequestBody.php
-src/Models/Operations/UdpateIndexResponse.php
+src/Models/Operations/UpdateIndexRequestBody.php
+src/Models/Operations/UpdateIndexResponse.php
 src/Models/Operations/CreateAKeyRequestBody.php
 src/Models/Operations/CreateAKeyResponse.php
 src/Models/Operations/DeleteAKeyResponse.php
@@ -59,6 +60,9 @@ src/Models/Operations/GetKeysResponse.php
 src/Models/Operations/GetOneKeyResponse.php
 src/Models/Operations/UpdateAKeyRequestBody.php
 src/Models/Operations/UpdateAKeyResponse.php
+src/Models/Operations/SearchOneOrMoreIndexesRequestBodyQueries.php
+src/Models/Operations/SearchOneOrMoreIndexesRequestBody.php
+src/Models/Operations/SearchOneOrMoreIndexesResponse.php
 src/Models/Operations/SearchInIndexRequest.php
 src/Models/Operations/SearchInIndexResponse.php
 src/Models/Operations/SearchInIndex1RequestBody.php
@@ -116,4 +120,15 @@ src/Models/Operations/DeleteTasksResponse.php
 src/Models/Operations/GetAllTasksRequest.php
 src/Models/Operations/GetAllTasksResponse.php
 src/Models/Operations/GetOneTaskResponse.php
+docs/sdk/README.md
+docs/documents/README.md
+docs/dumps/README.md
+docs/indexes/README.md
+docs/keymanagement/README.md
+docs/multisearch/README.md
+docs/search/README.md
+docs/settings/README.md
+docs/stats/README.md
+docs/subroutes/README.md
+docs/tasks/README.md
 USAGE.md

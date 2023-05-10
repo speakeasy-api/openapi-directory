@@ -34,6 +34,7 @@ src/Models/Shared/ApnsFcmOptions.php
 src/Models/Shared/AndroidConfigPriorityEnum.php
 src/Models/Shared/AndroidConfig.php
 src/Models/Shared/AndroidNotificationNotificationPriorityEnum.php
+src/Models/Shared/AndroidNotificationProxyEnum.php
 src/Models/Shared/AndroidNotificationVisibilityEnum.php
 src/Models/Shared/AndroidNotification.php
 src/Models/Shared/LightSettings.php
@@ -42,4 +43,6 @@ src/Models/Shared/AndroidFcmOptions.php
 src/Models/Shared/AltEnum.php
 src/Models/Shared/SendMessageRequest.php
 src/Models/Shared/XgafvEnum.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

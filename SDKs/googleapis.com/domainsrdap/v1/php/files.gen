@@ -50,4 +50,11 @@ src/Models/Shared/Link.php
 src/Models/Shared/HttpBody.php
 src/Models/Shared/AltEnum.php
 src/Models/Shared/XgafvEnum.php
+docs/sdk/README.md
+docs/autnum/README.md
+docs/domain/README.md
+docs/entity/README.md
+docs/ip/README.md
+docs/nameserver/README.md
+docs/v1/README.md
 USAGE.md

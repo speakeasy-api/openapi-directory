@@ -123,4 +123,8 @@ src/Models/Shared/RewritingRuleSerializer.php
 src/Models/Shared/Project.php
 src/Models/Shared/ProjectSettingsSerializer.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/analysis/README.md
+docs/project/README.md
+docs/user/README.md
 USAGE.md

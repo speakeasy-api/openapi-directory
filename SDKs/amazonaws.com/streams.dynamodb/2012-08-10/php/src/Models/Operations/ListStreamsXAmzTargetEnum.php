@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListStreamsXAmzTargetEnum: string
 {
     case DYNAMO_DB_STREAMS20120810_LIST_STREAMS = 'DynamoDBStreams_20120810.ListStreams';

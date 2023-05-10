@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteSecurityPolicyXAmzTargetEnum: string
 {
     case OPEN_SEARCH_SERVERLESS_DELETE_SECURITY_POLICY = 'OpenSearchServerless.DeleteSecurityPolicy';

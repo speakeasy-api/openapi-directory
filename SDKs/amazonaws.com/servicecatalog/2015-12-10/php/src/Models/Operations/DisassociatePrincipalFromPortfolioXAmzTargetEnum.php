@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DisassociatePrincipalFromPortfolioXAmzTargetEnum: string
 {
     case AWS242_SERVICE_CATALOG_SERVICE_DISASSOCIATE_PRINCIPAL_FROM_PORTFOLIO = 'AWS242ServiceCatalogService.DisassociatePrincipalFromPortfolio';

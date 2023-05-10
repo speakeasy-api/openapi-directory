@@ -75,4 +75,7 @@ src/Models/Shared/AdmissionRuleEnforcementModeEnum.php
 src/Models/Shared/AdmissionRuleEvaluationModeEnum.php
 src/Models/Shared/AdmissionRule.php
 src/Models/Shared/AdmissionWhitelistPattern.php
+docs/sdk/README.md
+docs/projects/README.md
+docs/systempolicy/README.md
 USAGE.md

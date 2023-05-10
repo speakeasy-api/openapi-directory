@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RemoveTagsFromResourceXAmzTargetEnum: string
 {
     case DIRECTORY_SERVICE20150416_REMOVE_TAGS_FROM_RESOURCE = 'DirectoryService_20150416.RemoveTagsFromResource';

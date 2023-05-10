@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateImageBuilderStreamingURLXAmzTargetEnum: string
 {
     case PHOTON_ADMIN_PROXY_SERVICE_CREATE_IMAGE_BUILDER_STREAMING_URL = 'PhotonAdminProxyService.CreateImageBuilderStreamingURL';

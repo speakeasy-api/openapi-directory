@@ -14,10 +14,10 @@ class RetrieveAccountMetadataResponse
     /**
      * sample account metadata
      * 
-     * @var ?\OpenAPI\OpenAPI\Models\Shared\AccountV2 $accountV2
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\Account $account
      */
 	
-    public ?\OpenAPI\OpenAPI\Models\Shared\AccountV2 $accountV2 = null;
+    public ?\OpenAPI\OpenAPI\Models\Shared\Account $account = null;
     
 	
     public string $contentType;
@@ -29,7 +29,7 @@ class RetrieveAccountMetadataResponse
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
     /**
-     * $retrieveAccountMetadata401ApplicationJSONObject
+     * Invalid token
      * 
      * @var ?array<string, mixed> $retrieveAccountMetadata401ApplicationJSONObject
      */
@@ -37,7 +37,7 @@ class RetrieveAccountMetadataResponse
     public ?array $retrieveAccountMetadata401ApplicationJSONObject = null;
     
     /**
-     * $retrieveAccountMetadata403ApplicationJSONObject
+     * IP Access denied
      * 
      * @var ?array<string, mixed> $retrieveAccountMetadata403ApplicationJSONObject
      */
@@ -45,21 +45,30 @@ class RetrieveAccountMetadataResponse
     public ?array $retrieveAccountMetadata403ApplicationJSONObject = null;
     
     /**
-     * Account not found
+     * Account not found error
      * 
      * @var ?array<string, mixed> $retrieveAccountMetadata404ApplicationJSONObject
      */
 	
     public ?array $retrieveAccountMetadata404ApplicationJSONObject = null;
     
+    /**
+     * Nordigen rate limit exceeded
+     * 
+     * @var ?array<string, mixed> $retrieveAccountMetadata429ApplicationJSONObject
+     */
+	
+    public ?array $retrieveAccountMetadata429ApplicationJSONObject = null;
+    
 	public function __construct()
 	{
-		$this->accountV2 = null;
+		$this->account = null;
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
 		$this->retrieveAccountMetadata401ApplicationJSONObject = null;
 		$this->retrieveAccountMetadata403ApplicationJSONObject = null;
 		$this->retrieveAccountMetadata404ApplicationJSONObject = null;
+		$this->retrieveAccountMetadata429ApplicationJSONObject = null;
 	}
 }

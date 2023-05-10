@@ -62,6 +62,16 @@ class ClassifyDocumentResponse
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $labels = null;
     
+    /**
+     * $warnings
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\WarningsListItem> $warnings
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('Warnings')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\WarningsListItem>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $warnings = null;
+    
 	public function __construct()
 	{
 		$this->classes = null;
@@ -69,5 +79,6 @@ class ClassifyDocumentResponse
 		$this->documentType = null;
 		$this->errors = null;
 		$this->labels = null;
+		$this->warnings = null;
 	}
 }

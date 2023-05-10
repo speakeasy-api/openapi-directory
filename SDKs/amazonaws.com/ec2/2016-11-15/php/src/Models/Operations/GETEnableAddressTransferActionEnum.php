@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETEnableAddressTransferActionEnum: string
 {
     case ENABLE_ADDRESS_TRANSFER = 'EnableAddressTransfer';

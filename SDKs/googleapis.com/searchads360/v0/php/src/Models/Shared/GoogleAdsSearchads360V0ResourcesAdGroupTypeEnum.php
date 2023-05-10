@@ -31,4 +31,5 @@ enum GoogleAdsSearchads360V0ResourcesAdGroupTypeEnum: string
     case VIDEO_RESPONSIVE = 'VIDEO_RESPONSIVE';
     case VIDEO_EFFICIENT_REACH = 'VIDEO_EFFICIENT_REACH';
     case SMART_CAMPAIGN_ADS = 'SMART_CAMPAIGN_ADS';
+    case TRAVEL_ADS = 'TRAVEL_ADS';
 }

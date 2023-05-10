@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class Container
 {
     /**
-     * Optional container image id, when provided by the container runtime. Uniquely identifies the container image launched using a container image digest.
+     * Optional container image ID, if provided by the container runtime. Uniquely identifies the container image launched using a container image digest.
      * 
      * @var ?string $imageId
      */
@@ -38,7 +38,7 @@ class Container
     public ?array $labels = null;
     
     /**
-     * Container name.
+     * Name of the container.
      * 
      * @var ?string $name
      */
@@ -48,7 +48,7 @@ class Container
     public ?string $name = null;
     
     /**
-     * Container image URI provided when configuring a pod/container. May identify a container image version using mutable tags.
+     * Container image URI provided when configuring a pod or container. This string can identify a container image version using mutable tags.
      * 
      * @var ?string $uri
      */

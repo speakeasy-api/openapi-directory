@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeCustomerMetadataXAmzTargetEnum: string
 {
     case OVERTURE_SERVICE_DESCRIBE_CUSTOMER_METADATA = 'OvertureService.DescribeCustomerMetadata';

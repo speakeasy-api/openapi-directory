@@ -85,4 +85,10 @@ src/Models/Shared/SchemaPropertiesFieldName.php
 src/Models/Shared/SchemaProperties.php
 src/Models/Shared/Schema.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/addresses/README.md
+docs/profiles/README.md
+docs/prospects/README.md
+docs/purchaseinformation/README.md
+docs/schemas/README.md
 USAGE.md

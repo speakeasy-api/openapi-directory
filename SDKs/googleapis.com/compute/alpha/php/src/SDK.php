@@ -191,6 +191,8 @@ class SDK
 	
 	public SslPolicies $sslPolicies;
 	
+	public StoragePools $storagePools;
+	
 	public Subnetworks $subnetworks;
 	
 	public TargetGrpcProxies $targetGrpcProxies;
@@ -1016,6 +1018,15 @@ class SDK
 		);
 		
 		$this->sslPolicies = new SslPolicies(
+			$this->_defaultClient,
+			$this->_securityClient,
+			$this->_serverUrl,
+			$this->_language,
+			$this->_sdkVersion,
+			$this->_genVersion
+		);
+		
+		$this->storagePools = new StoragePools(
 			$this->_defaultClient,
 			$this->_securityClient,
 			$this->_serverUrl,

@@ -30,18 +30,45 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetRequest;
+use \OpenAPI\OpenAPI\Models\Shared\PossibleListsEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetRequest();
+    $request->list = PossibleListsEnum::NBS_ISCC;
+    $request->noduplicates = false;
+    $request->values = 'provident';
+
+    $response = $sdk->get($request);
+
+    if ($response->get200ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `get` - Get all colors of the default color name list
-* `getLists` - Get all colors of the default color name list
-* `getNames` - Get all colors of the default color name list
-* `getSwatch` - Generate a color swatch for any color
+* [get](docs/sdk/README.md#get) - Get all colors of the default color name list
+* [getLists](docs/sdk/README.md#getlists) - Get all colors of the default color name list
+* [getNames](docs/sdk/README.md#getnames) - Get all colors of the default color name list
+* [getSwatch](docs/sdk/README.md#getswatch) - Generate a color swatch for any color
 <!-- End SDK Available Operations -->
 
 ### Maturity

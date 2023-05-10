@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTSendCustomVerificationEmailActionEnum: string
 {
     case SEND_CUSTOM_VERIFICATION_EMAIL = 'SendCustomVerificationEmail';

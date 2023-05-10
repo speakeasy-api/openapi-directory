@@ -47,4 +47,6 @@ src/Models/Shared/TensorflowDataTypeEnum.php
 src/Models/Shared/Tensor.php
 src/Models/Shared/SeldonMessageList.php
 src/Models/Shared/Feedback.php
+docs/sdk/README.md
+docs/internal/README.md
 USAGE.md

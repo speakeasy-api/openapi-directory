@@ -30,30 +30,60 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\AreGamesInProgressRequest;
+use \OpenAPI\OpenAPI\Models\Operations\AreGamesInProgressFormatEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new AreGamesInProgressRequest();
+    $request->format = AreGamesInProgressFormatEnum::JSON;
+
+    $response = $sdk->areGamesInProgress($request);
+
+    if ($response->areGamesInProgress200ApplicationJSONBoolean !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `areGamesInProgress` - Are Games In Progress
-* `currentSeason` - Current Season
-* `gamesByDate` - Games by Date
-* `injuredPlayers` - Injured Players
-* `leagueHierarchy` - League Hierarchy
-* `playerDetailsByActive` - Player Details by Active
-* `playerDetailsByPlayer` - Player Details by Player
-* `playerDetailsByTeam` - Player Details by Team
-* `schedules` - Schedules
-* `stadiums` - Stadiums
-* `teamGameLogsBySeason` - Team Game Logs By Season
-* `teamGameStatsByDate` - Team Game Stats by Date
-* `teamSchedule` - Team Schedule
-* `teamSeasonStats` - Team Season Stats
-* `teams` - Teams
-* `tournamentHierarchy` - Tournament Hierarchy
+* [areGamesInProgress](docs/sdk/README.md#aregamesinprogress) - Are Games In Progress
+* [currentSeason](docs/sdk/README.md#currentseason) - Current Season
+* [gamesByDate](docs/sdk/README.md#gamesbydate) - Games by Date
+* [gamesByDateBasic](docs/sdk/README.md#gamesbydatebasic) - Games by Date (Basic)
+* [injuredPlayers](docs/sdk/README.md#injuredplayers) - Injured Players
+* [leagueHierarchy](docs/sdk/README.md#leaguehierarchy) - League Hierarchy
+* [playerDetailsByActive](docs/sdk/README.md#playerdetailsbyactive) - Player Details by Active
+* [playerDetailsByPlayer](docs/sdk/README.md#playerdetailsbyplayer) - Player Details by Player
+* [playerDetailsByTeam](docs/sdk/README.md#playerdetailsbyteam) - Player Details by Team
+* [playersByTeamBasic](docs/sdk/README.md#playersbyteambasic) - Players by Team (Basic)
+* [schedules](docs/sdk/README.md#schedules) - Schedules
+* [schedulesBasic](docs/sdk/README.md#schedulesbasic) - Schedules (Basic)
+* [stadiums](docs/sdk/README.md#stadiums) - Stadiums
+* [teamGameLogsBySeason](docs/sdk/README.md#teamgamelogsbyseason) - Team Game Logs By Season
+* [teamGameStatsByDate](docs/sdk/README.md#teamgamestatsbydate) - Team Game Stats by Date
+* [teamSchedule](docs/sdk/README.md#teamschedule) - Team Schedule
+* [teamSeasonStats](docs/sdk/README.md#teamseasonstats) - Team Season Stats
+* [teams](docs/sdk/README.md#teams) - Teams
+* [teamsBasic](docs/sdk/README.md#teamsbasic) - Teams (Basic)
+* [tournamentHierarchy](docs/sdk/README.md#tournamenthierarchy) - Tournament Hierarchy
 <!-- End SDK Available Operations -->
 
 ### Maturity

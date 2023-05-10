@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETSetDesiredCapacityVersionEnum: string
 {
     case TWO_THOUSAND_AND_ELEVEN0101 = '2011-01-01';

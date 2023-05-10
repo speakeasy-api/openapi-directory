@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteConnectionXAmzTargetEnum: string
 {
     case OVERTURE_SERVICE_DELETE_CONNECTION = 'OvertureService.DeleteConnection';

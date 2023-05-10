@@ -30,22 +30,53 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\CreateContactInMailinglistRequest;
+use \OpenAPI\OpenAPI\Models\Shared\CreateContactInMailingList;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new CreateContactInMailinglistRequest();
+    $request->createContactInMailingList = new CreateContactInMailingList();
+    $request->createContactInMailingList->email = 'Larue_Rau85@yahoo.com';
+    $request->createContactInMailingList->firstName = 'Karley';
+    $request->createContactInMailingList->lastName = 'Stamm';
+    $request->createContactInMailingList->unsubscribed = false;
+    $request->directoryId = 'vel';
+    $request->mailingListId = 'error';
+
+    $response = $sdk->createContactInMailinglist($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `createContactInMailinglist` - Create contact in mailing list
-* `generateDistributionLinks` - Generate distribution links
-* `getDistributions` - Get distributions for survey
-* `getEventSubscriptions` - Get event subscriptions
-* `getSurvey` - Get survey
-* `retrievedistributionlinks` - Retrieve distribution links
-* `webhookDelete` - Remove subscription to response event
-* `whenAResponseIsReceived` - Triggers when a response is submitted to a qualtrics survey
+* [createContactInMailinglist](docs/sdk/README.md#createcontactinmailinglist) - Create contact in mailing list
+* [generateDistributionLinks](docs/sdk/README.md#generatedistributionlinks) - Generate distribution links
+* [getDistributions](docs/sdk/README.md#getdistributions) - Get distributions for survey
+* [getEventSubscriptions](docs/sdk/README.md#geteventsubscriptions) - Get event subscriptions
+* [getSurvey](docs/sdk/README.md#getsurvey) - Get survey
+* [retrievedistributionlinks](docs/sdk/README.md#retrievedistributionlinks) - Retrieve distribution links
+* [webhookDelete](docs/sdk/README.md#webhookdelete) - Remove subscription to response event
+* [whenAResponseIsReceived](docs/sdk/README.md#whenaresponseisreceived) - Triggers when a response is submitted to a qualtrics survey
 <!-- End SDK Available Operations -->
 
 ### Maturity

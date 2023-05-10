@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDescribePartnersActionEnum: string
 {
     case DESCRIBE_PARTNERS = 'DescribePartners';

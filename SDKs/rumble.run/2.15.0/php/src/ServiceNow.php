@@ -40,9 +40,11 @@ class ServiceNow
     /**
      * Export an asset inventory as CSV for ServiceNow integration
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\SnowExportAssetsCSVSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\SnowExportAssetsCSVResponse
      */
 	public function snowExportAssetsCSV(
+        \OpenAPI\OpenAPI\Models\Operations\SnowExportAssetsCSVSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\SnowExportAssetsCSVResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -50,7 +52,8 @@ class ServiceNow
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -73,9 +76,11 @@ class ServiceNow
     /**
      * Exports the asset inventory as JSON
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\SnowExportAssetsJSONSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\SnowExportAssetsJSONResponse
      */
 	public function snowExportAssetsJSON(
+        \OpenAPI\OpenAPI\Models\Operations\SnowExportAssetsJSONSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\SnowExportAssetsJSONResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -83,7 +88,8 @@ class ServiceNow
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -107,9 +113,11 @@ class ServiceNow
     /**
      * Export a service inventory as CSV for ServiceNow integration
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\SnowExportServicesCSVSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\SnowExportServicesCSVResponse
      */
 	public function snowExportServicesCSV(
+        \OpenAPI\OpenAPI\Models\Operations\SnowExportServicesCSVSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\SnowExportServicesCSVResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -117,7 +125,8 @@ class ServiceNow
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

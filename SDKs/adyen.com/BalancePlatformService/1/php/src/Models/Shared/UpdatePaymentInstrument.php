@@ -26,10 +26,15 @@ class UpdatePaymentInstrument
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $balanceAccountId;
     
+    /**
+     * Contains the business account details. Returned when you create a payment instrument with `type` **bankAccount**.
+     * 
+     * @var mixed $bankAccount
+     */
 	#[\JMS\Serializer\Annotation\SerializedName('bankAccount')]
-    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\BankAccount')]
+    #[\JMS\Serializer\Annotation\Type('mixed')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?BankAccount $bankAccount = null;
+    public mixed $bankAccount = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('card')]
     #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\Card')]

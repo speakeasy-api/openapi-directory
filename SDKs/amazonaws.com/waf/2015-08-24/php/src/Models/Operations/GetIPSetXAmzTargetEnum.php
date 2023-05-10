@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetIPSetXAmzTargetEnum: string
 {
     case AWSWAF20150824_GET_IP_SET = 'AWSWAF_20150824.GetIPSet';

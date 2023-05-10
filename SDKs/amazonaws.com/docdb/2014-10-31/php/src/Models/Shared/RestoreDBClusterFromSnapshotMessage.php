@@ -29,6 +29,9 @@ class RestoreDBClusterFromSnapshotMessage
     public string $dbClusterIdentifier;
     
 	
+    public ?string $dbClusterParameterGroupName = null;
+    
+	
     public ?string $dbSubnetGroupName = null;
     
 	
@@ -77,6 +80,7 @@ class RestoreDBClusterFromSnapshotMessage
 	{
 		$this->availabilityZones = null;
 		$this->dbClusterIdentifier = "";
+		$this->dbClusterParameterGroupName = null;
 		$this->dbSubnetGroupName = null;
 		$this->deletionProtection = null;
 		$this->enableCloudwatchLogsExports = null;

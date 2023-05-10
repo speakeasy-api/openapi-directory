@@ -80,4 +80,10 @@ src/Models/Shared/MessengerAccountResponse.php
 src/Models/Shared/FourHundredAndThreeResponse.php
 src/Models/Shared/VSMAccountResponse.php
 src/Models/Shared/WAAccountResponse.php
+docs/sdk/README.md
+docs/account/README.md
+docs/application/README.md
+docs/facebookmessenger/README.md
+docs/viberservicemessage/README.md
+docs/whatsapp/README.md
 USAGE.md

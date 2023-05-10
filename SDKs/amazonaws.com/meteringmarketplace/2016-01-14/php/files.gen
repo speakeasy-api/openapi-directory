@@ -44,4 +44,5 @@ src/Models/Shared/RegisterUsageRequest.php
 src/Models/Shared/ResolveCustomerResult.php
 src/Models/Shared/ResolveCustomerRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -30,17 +30,43 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetRequest();
+    $request->xMarketId = 'corrupti';
+    $request->xShopperId = 'provident';
+    $request->orderId = 'distinctio';
+
+    $response = $sdk->v1->get($request);
+
+    if ($response->body !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### v1
+### [v1](docs/v1/README.md)
 
-* `get` - Retrieve details for specified order
-* `list` - Retrieve a list of orders for the authenticated shopper. Only one filter may be used at a time
+* [get](docs/v1/README.md#get) - Retrieve details for specified order
+* [list](docs/v1/README.md#list) - Retrieve a list of orders for the authenticated shopper. Only one filter may be used at a time
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -168,7 +168,7 @@ class Commitment
     public ?string $selfLink = null;
     
     /**
-     * Source commitment to be splitted into a new commitment.
+     * Source commitment to be split into a new commitment.
      * 
      * @var ?string $splitSourceCommitment
      */

@@ -136,4 +136,5 @@ src/Models/Shared/UnlinkDeveloperIdentityInput.php
 src/Models/Shared/UnlinkIdentityInput.php
 src/Models/Shared/UntagResourceInput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

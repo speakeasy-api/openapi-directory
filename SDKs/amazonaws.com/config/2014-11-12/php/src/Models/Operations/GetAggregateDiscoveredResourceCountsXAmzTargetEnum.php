@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetAggregateDiscoveredResourceCountsXAmzTargetEnum: string
 {
     case STARLING_DOVE_SERVICE_GET_AGGREGATE_DISCOVERED_RESOURCE_COUNTS = 'StarlingDoveService.GetAggregateDiscoveredResourceCounts';

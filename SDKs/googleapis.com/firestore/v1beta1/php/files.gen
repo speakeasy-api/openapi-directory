@@ -195,4 +195,6 @@ src/Models/Shared/GoogleFirestoreAdminV1beta1Index.php
 src/Models/Shared/GoogleFirestoreAdminV1beta1IndexFieldModeEnum.php
 src/Models/Shared/GoogleFirestoreAdminV1beta1IndexField.php
 src/Models/Shared/GoogleFirestoreAdminV1beta1ListIndexesResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

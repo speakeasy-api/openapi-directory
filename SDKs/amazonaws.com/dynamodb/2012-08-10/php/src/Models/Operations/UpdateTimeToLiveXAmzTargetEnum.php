@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateTimeToLiveXAmzTargetEnum: string
 {
     case DYNAMO_DB20120810_UPDATE_TIME_TO_LIVE = 'DynamoDB_20120810.UpdateTimeToLive';

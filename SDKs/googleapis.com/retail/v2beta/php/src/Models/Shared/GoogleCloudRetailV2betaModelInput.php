@@ -38,6 +38,16 @@ class GoogleCloudRetailV2betaModelInput
     public ?GoogleCloudRetailV2betaModelFilteringOptionEnum $filteringOption = null;
     
     /**
+     * Additional model features config.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleCloudRetailV2betaModelModelFeaturesConfig $modelFeaturesConfig
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('modelFeaturesConfig')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleCloudRetailV2betaModelModelFeaturesConfig')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleCloudRetailV2betaModelModelFeaturesConfig $modelFeaturesConfig = null;
+    
+    /**
      * Required. The fully qualified resource name of the model. Format: `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}` catalog_id has char limit of 50. recommendation_model_id has char limit of 40.
      * 
      * @var ?string $name
@@ -91,6 +101,7 @@ class GoogleCloudRetailV2betaModelInput
 	{
 		$this->displayName = null;
 		$this->filteringOption = null;
+		$this->modelFeaturesConfig = null;
 		$this->name = null;
 		$this->optimizationObjective = null;
 		$this->periodicTuningState = null;

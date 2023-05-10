@@ -42,6 +42,7 @@ src/Models/Shared/AULocalAccountIdentificationTypeEnum.php
 src/Models/Shared/AULocalAccountIdentification.php
 src/Models/Shared/BRLocalAccountIdentificationTypeEnum.php
 src/Models/Shared/BRLocalAccountIdentification.php
+src/Models/Shared/CALocalAccountIdentificationAccountTypeEnum.php
 src/Models/Shared/CALocalAccountIdentificationTypeEnum.php
 src/Models/Shared/CALocalAccountIdentification.php
 src/Models/Shared/CZLocalAccountIdentificationTypeEnum.php
@@ -84,8 +85,15 @@ src/Models/Shared/TransferPriorityEnum.php
 src/Models/Shared/TransferReasonEnum.php
 src/Models/Shared/TransferStatusEnum.php
 src/Models/Shared/Transfer.php
+src/Models/Shared/PaymentInstrument.php
+src/Models/Shared/ResourceReference.php
 src/Models/Shared/TransferInfoCategoryEnum.php
 src/Models/Shared/TransferInfoPriorityEnum.php
 src/Models/Shared/TransferInfo.php
+src/Models/Shared/UltimatePartyIdentificationTypeEnum.php
+src/Models/Shared/UltimatePartyIdentification.php
 src/Models/Shared/CounterpartyInfoV3.php
+docs/sdk/README.md
+docs/transactions/README.md
+docs/transfers/README.md
 USAGE.md

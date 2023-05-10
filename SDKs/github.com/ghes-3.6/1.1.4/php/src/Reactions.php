@@ -338,11 +338,14 @@ class Reactions
      * @param \OpenAPI\OpenAPI\Models\Operations\ReactionsCreateForTeamDiscussionCommentLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ReactionsCreateForTeamDiscussionCommentLegacyResponse
      * @see https://docs.github.com/enterprise-server@3.6/rest/reference/reactions/#create-reaction-for-a-team-discussion-comment-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function reactionsCreateForTeamDiscussionCommentLegacy(
         \OpenAPI\OpenAPI\Models\Operations\ReactionsCreateForTeamDiscussionCommentLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\ReactionsCreateForTeamDiscussionCommentLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions', \OpenAPI\OpenAPI\Models\Operations\ReactionsCreateForTeamDiscussionCommentLegacyRequest::class, $request);
         
@@ -428,11 +431,14 @@ class Reactions
      * @param \OpenAPI\OpenAPI\Models\Operations\ReactionsCreateForTeamDiscussionLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ReactionsCreateForTeamDiscussionLegacyResponse
      * @see https://docs.github.com/enterprise-server@3.6/rest/reference/reactions/#create-reaction-for-a-team-discussion-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function reactionsCreateForTeamDiscussionLegacy(
         \OpenAPI\OpenAPI\Models\Operations\ReactionsCreateForTeamDiscussionLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\ReactionsCreateForTeamDiscussionLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/discussions/{discussion_number}/reactions', \OpenAPI\OpenAPI\Models\Operations\ReactionsCreateForTeamDiscussionLegacyRequest::class, $request);
         
@@ -1003,11 +1009,14 @@ class Reactions
      * @param \OpenAPI\OpenAPI\Models\Operations\ReactionsListForTeamDiscussionCommentLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ReactionsListForTeamDiscussionCommentLegacyResponse
      * @see https://docs.github.com/enterprise-server@3.6/rest/reference/reactions/#list-reactions-for-a-team-discussion-comment-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function reactionsListForTeamDiscussionCommentLegacy(
         \OpenAPI\OpenAPI\Models\Operations\ReactionsListForTeamDiscussionCommentLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\ReactionsListForTeamDiscussionCommentLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions', \OpenAPI\OpenAPI\Models\Operations\ReactionsListForTeamDiscussionCommentLegacyRequest::class, $request);
         
@@ -1089,11 +1098,14 @@ class Reactions
      * @param \OpenAPI\OpenAPI\Models\Operations\ReactionsListForTeamDiscussionLegacyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ReactionsListForTeamDiscussionLegacyResponse
      * @see https://docs.github.com/enterprise-server@3.6/rest/reference/reactions/#list-reactions-for-a-team-discussion-legacy
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function reactionsListForTeamDiscussionLegacy(
         \OpenAPI\OpenAPI\Models\Operations\ReactionsListForTeamDiscussionLegacyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\ReactionsListForTeamDiscussionLegacyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/teams/{team_id}/discussions/{discussion_number}/reactions', \OpenAPI\OpenAPI\Models\Operations\ReactionsListForTeamDiscussionLegacyRequest::class, $request);
         

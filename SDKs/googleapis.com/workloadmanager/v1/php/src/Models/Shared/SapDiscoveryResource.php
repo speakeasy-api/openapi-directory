@@ -38,6 +38,16 @@ class SapDiscoveryResource
     public ?string $resourceKind = null;
     
     /**
+     * Indicates whether this is a new, updated, or missing resource.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\SapDiscoveryResourceResourceStateEnum $resourceState
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('resourceState')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\SapDiscoveryResourceResourceStateEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?SapDiscoveryResourceResourceStateEnum $resourceState = null;
+    
+    /**
      * The type of this resource.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\SapDiscoveryResourceResourceTypeEnum $resourceType
@@ -71,6 +81,7 @@ class SapDiscoveryResource
 	{
 		$this->relatedResources = null;
 		$this->resourceKind = null;
+		$this->resourceState = null;
 		$this->resourceType = null;
 		$this->resourceUri = null;
 		$this->updateTime = null;

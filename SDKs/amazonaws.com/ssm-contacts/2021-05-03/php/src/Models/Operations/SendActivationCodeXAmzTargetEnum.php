@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum SendActivationCodeXAmzTargetEnum: string
 {
     case SSM_CONTACTS_SEND_ACTIVATION_CODE = 'SSMContacts.SendActivationCode';

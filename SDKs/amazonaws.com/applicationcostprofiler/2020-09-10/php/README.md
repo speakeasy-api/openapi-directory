@@ -30,20 +30,52 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\DeleteReportDefinitionRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new DeleteReportDefinitionRequest();
+    $request->xAmzAlgorithm = 'corrupti';
+    $request->xAmzContentSha256 = 'provident';
+    $request->xAmzCredential = 'distinctio';
+    $request->xAmzDate = 'quibusdam';
+    $request->xAmzSecurityToken = 'unde';
+    $request->xAmzSignature = 'nulla';
+    $request->xAmzSignedHeaders = 'corrupti';
+    $request->reportId = 'illum';
+
+    $response = $sdk->deleteReportDefinition($request);
+
+    if ($response->deleteReportDefinitionResult !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `deleteReportDefinition` - Deletes the specified report definition in AWS Application Cost Profiler. This stops the report from being generated.
-* `getReportDefinition` - Retrieves the definition of a report already configured in AWS Application Cost Profiler.
-* `importApplicationUsage` - <p>Ingests application usage data from Amazon Simple Storage Service (Amazon S3).</p> <p>The data must already exist in the S3 location. As part of the action, AWS Application Cost Profiler copies the object from your S3 bucket to an S3 bucket owned by Amazon for processing asynchronously.</p>
-* `listReportDefinitions` - <p>Retrieves a list of all reports and their configurations for your AWS account.</p> <p>The maximum number of reports is one.</p>
-* `putReportDefinition` - Creates the report definition for a report in Application Cost Profiler.
-* `updateReportDefinition` - Updates existing report in AWS Application Cost Profiler.
+* [deleteReportDefinition](docs/sdk/README.md#deletereportdefinition) - Deletes the specified report definition in AWS Application Cost Profiler. This stops the report from being generated.
+* [getReportDefinition](docs/sdk/README.md#getreportdefinition) - Retrieves the definition of a report already configured in AWS Application Cost Profiler.
+* [importApplicationUsage](docs/sdk/README.md#importapplicationusage) - <p>Ingests application usage data from Amazon Simple Storage Service (Amazon S3).</p> <p>The data must already exist in the S3 location. As part of the action, AWS Application Cost Profiler copies the object from your S3 bucket to an S3 bucket owned by Amazon for processing asynchronously.</p>
+* [listReportDefinitions](docs/sdk/README.md#listreportdefinitions) - <p>Retrieves a list of all reports and their configurations for your AWS account.</p> <p>The maximum number of reports is one.</p>
+* [putReportDefinition](docs/sdk/README.md#putreportdefinition) - Creates the report definition for a report in Application Cost Profiler.
+* [updateReportDefinition](docs/sdk/README.md#updatereportdefinition) - Updates existing report in AWS Application Cost Profiler.
 <!-- End SDK Available Operations -->
 
 ### Maturity

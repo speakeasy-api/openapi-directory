@@ -38,7 +38,7 @@ class GoogleCloudDialogflowV2beta1AnswerFeedback
     public ?string $clickTime = null;
     
     /**
-     * Indicates whether the answer/item was clicked by the human agent or not. Default to false.
+     * Indicates whether the answer/item was clicked by the human agent or not. Default to false. For knowledge search, the answer record is considered to be clicked if the answer was copied or any URI was clicked.
      * 
      * @var ?bool $clicked
      */

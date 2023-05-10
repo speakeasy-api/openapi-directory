@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroup
 {
     /**
-     * A list of phase match rules that are included in this group.
+     * A list of phrase match rules that are included in this group.
      * 
      * @var ?array<\OpenAPI\OpenAPI\Models\Shared\GoogleCloudContactcenterinsightsV1PhraseMatchRule> $phraseMatchRules
      */

@@ -32,4 +32,5 @@ src/Models/Shared/EcRepeatedChars.php
 src/Models/Shared/EcTotal.php
 src/Models/Shared/EcWords.php
 src/Models/Shared/Ec.php
+docs/sdk/README.md
 USAGE.md

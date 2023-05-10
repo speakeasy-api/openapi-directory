@@ -122,4 +122,6 @@ src/Models/Shared/ScheduleTransferRunsRequest.php
 src/Models/Shared/StartManualTransferRunsResponse.php
 src/Models/Shared/StartManualTransferRunsRequest.php
 src/Models/Shared/TimeRange.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

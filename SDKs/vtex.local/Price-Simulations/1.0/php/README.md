@@ -30,28 +30,53 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetVCustomPricesSessionSchemaRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetVCustomPricesSessionSchemaRequest();
+    $request->accept = 'corrupti';
+    $request->contentType = 'provident';
+
+    $response = $sdk->customPrices->getVCustomPricesSessionSchema($request);
+
+    if ($response->requestBody !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### customPrices
+### [customPrices](docs/customprices/README.md)
 
-* `getVCustomPricesSessionSchema` - Get custom prices schema
-* `postVCustomPricesSessionSchema` - Create or Update custom prices schema
+* [getVCustomPricesSessionSchema](docs/customprices/README.md#getvcustompricessessionschema) - Get custom prices schema
+* [postVCustomPricesSessionSchema](docs/customprices/README.md#postvcustompricessessionschema) - Create or Update custom prices schema
 
-### priceAssociation
+### [priceAssociation](docs/priceassociation/README.md)
 
-* `deleteVCustomPricesRulesPriceAssociationId` - Disassociate price association by ID
-* `getVCustomPricesRulesPriceAssociationId` - Get price association by ID
-* `postVCustomPricesRules` - Create price association
-* `putVCustomPricesRulesPriceAssociationId` - Update price association by ID
+* [deleteVCustomPricesRulesPriceAssociationId](docs/priceassociation/README.md#deletevcustompricesrulespriceassociationid) - Disassociate price association by ID
+* [getVCustomPricesRulesPriceAssociationId](docs/priceassociation/README.md#getvcustompricesrulespriceassociationid) - Get price association by ID
+* [postVCustomPricesRules](docs/priceassociation/README.md#postvcustompricesrules) - Create price association
+* [putVCustomPricesRulesPriceAssociationId](docs/priceassociation/README.md#putvcustompricesrulespriceassociationid) - Update price association by ID
 
-### sessionManagement
+### [sessionManagement](docs/sessionmanagement/README.md)
 
-* `postSessions` - Update Order Configuration
+* [postSessions](docs/sessionmanagement/README.md#postsessions) - Update Order Configuration
 <!-- End SDK Available Operations -->
 
 ### Maturity

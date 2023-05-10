@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetOperationsForResourceXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_GET_OPERATIONS_FOR_RESOURCE = 'Lightsail_20161128.GetOperationsForResource';

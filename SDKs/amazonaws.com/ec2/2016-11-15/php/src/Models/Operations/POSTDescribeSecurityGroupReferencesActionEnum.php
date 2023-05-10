@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeSecurityGroupReferencesActionEnum: string
 {
     case DESCRIBE_SECURITY_GROUP_REFERENCES = 'DescribeSecurityGroupReferences';

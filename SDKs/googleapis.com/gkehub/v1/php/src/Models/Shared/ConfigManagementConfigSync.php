@@ -48,6 +48,16 @@ class ConfigManagementConfigSync
     public ?ConfigManagementGitConfig $git = null;
     
     /**
+     * Configuration for Managed Config Sync.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\ConfigManagementManaged $managed
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('managed')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\ConfigManagementManaged')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?ConfigManagementManaged $managed = null;
+    
+    /**
      * OCI repo configuration for a single cluster
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\ConfigManagementOciConfig $oci
@@ -82,6 +92,7 @@ class ConfigManagementConfigSync
 		$this->allowVerticalScale = null;
 		$this->enabled = null;
 		$this->git = null;
+		$this->managed = null;
 		$this->oci = null;
 		$this->preventDrift = null;
 		$this->sourceFormat = null;

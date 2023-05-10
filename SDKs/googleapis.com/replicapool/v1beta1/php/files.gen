@@ -116,4 +116,7 @@ src/Models/Shared/Replica.php
 src/Models/Shared/ReplicaStatus.php
 src/Models/Shared/ReplicasDeleteRequest.php
 src/Models/Shared/ReplicasListResponse.php
+docs/sdk/README.md
+docs/pools/README.md
+docs/replicas/README.md
 USAGE.md

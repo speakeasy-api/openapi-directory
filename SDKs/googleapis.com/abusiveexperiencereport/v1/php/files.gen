@@ -30,4 +30,7 @@ src/Models/Shared/SiteSummaryResponse.php
 src/Models/Shared/AltEnum.php
 src/Models/Shared/XgafvEnum.php
 src/Models/Shared/ViolatingSitesResponse.php
+docs/sdk/README.md
+docs/sites/README.md
+docs/violatingsites/README.md
 USAGE.md

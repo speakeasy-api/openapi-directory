@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutDataCatalogEncryptionSettingsXAmzTargetEnum: string
 {
     case AWS_GLUE_PUT_DATA_CATALOG_ENCRYPTION_SETTINGS = 'AWSGlue.PutDataCatalogEncryptionSettings';

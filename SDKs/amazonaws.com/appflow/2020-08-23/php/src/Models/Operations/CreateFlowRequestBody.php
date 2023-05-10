@@ -12,6 +12,16 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 class CreateFlowRequestBody
 {
     /**
+     * <p>The <code>clientToken</code> parameter is an idempotency token. It ensures that your <code>CreateFlow</code> request completes only once. You choose the value to pass. For example, if you don't receive a response from your request, you can safely retry the request with the same <code>clientToken</code> parameter value.</p> <p>If you omit a <code>clientToken</code> value, the Amazon Web Services SDK that you are using inserts a value for you. This way, the SDK can safely retry requests multiple times after a network error. You must provide your own value for other use cases.</p> <p>If you specify input parameters that differ from your first request, an error occurs. If you use a different value for <code>clientToken</code>, Amazon AppFlow considers it a new call to <code>CreateFlow</code>. The token is active for 8 hours.</p>
+     * 
+     * @var ?string $clientToken
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('clientToken')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $clientToken = null;
+    
+    /**
      *  A description of the flow you want to create. 
      * 
      * @var ?string $description
@@ -98,6 +108,7 @@ class CreateFlowRequestBody
     
 	public function __construct()
 	{
+		$this->clientToken = null;
 		$this->description = null;
 		$this->destinationFlowConfigList = [];
 		$this->flowName = "";

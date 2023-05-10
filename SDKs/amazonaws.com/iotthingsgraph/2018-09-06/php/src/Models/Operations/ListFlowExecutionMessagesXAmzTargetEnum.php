@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListFlowExecutionMessagesXAmzTargetEnum: string
 {
     case IOT_THINGS_GRAPH_FRONT_END_SERVICE_LIST_FLOW_EXECUTION_MESSAGES = 'IotThingsGraphFrontEndService.ListFlowExecutionMessages';

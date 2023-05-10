@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETValidateTemplateActionEnum: string
 {
     case VALIDATE_TEMPLATE = 'ValidateTemplate';

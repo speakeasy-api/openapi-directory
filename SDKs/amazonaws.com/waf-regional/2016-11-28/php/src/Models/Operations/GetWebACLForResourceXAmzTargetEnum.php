@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetWebACLForResourceXAmzTargetEnum: string
 {
     case AWSWAF_REGIONAL20161128_GET_WEB_ACL_FOR_RESOURCE = 'AWSWAF_Regional_20161128.GetWebACLForResource';

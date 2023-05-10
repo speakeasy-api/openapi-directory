@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETCreateLBCookieStickinessPolicyActionEnum: string
 {
     case CREATE_LB_COOKIE_STICKINESS_POLICY = 'CreateLBCookieStickinessPolicy';

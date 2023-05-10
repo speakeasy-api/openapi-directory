@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeprecateDomainXAmzTargetEnum: string
 {
     case SIMPLE_WORKFLOW_SERVICE_DEPRECATE_DOMAIN = 'SimpleWorkflowService.DeprecateDomain';

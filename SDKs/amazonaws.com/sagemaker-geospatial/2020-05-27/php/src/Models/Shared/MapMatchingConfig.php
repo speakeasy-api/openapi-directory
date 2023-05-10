@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * MapMatchingConfig - <p/>
+ * MapMatchingConfig - The input structure for Map Matching operation type.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

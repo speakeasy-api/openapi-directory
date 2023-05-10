@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeSpaceXAmzTargetEnum: string
 {
     case SAGE_MAKER_DESCRIBE_SPACE = 'SageMaker.DescribeSpace';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UntagResourceXAmzTargetEnum: string
 {
     case SWB_EXTERNAL_SERVICE_UNTAG_RESOURCE = 'SWBExternalService.UntagResource';

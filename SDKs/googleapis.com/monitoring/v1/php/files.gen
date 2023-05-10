@@ -176,4 +176,7 @@ src/Models/Shared/QueryInstantRequest.php
 src/Models/Shared/QueryExemplarsRequest.php
 src/Models/Shared/QueryRangeRequest.php
 src/Models/Shared/QuerySeriesRequest.php
+docs/sdk/README.md
+docs/locations/README.md
+docs/projects/README.md
 USAGE.md

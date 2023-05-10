@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * PropertyFilters - <p/>
+ * PropertyFilters - A list of PropertyFilter objects.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

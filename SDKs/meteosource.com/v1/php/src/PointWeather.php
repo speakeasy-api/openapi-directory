@@ -54,7 +54,6 @@ class PointWeather
      * * Meteosource API supports HTTP compression. To enable it, simply add an `Accept-Encoding: gzip` header to your request.
      * * When daylight saving time starts, one hourly record will be missing (typically `2:00:00 AM`). When daylight saving time ends, the hourly forecast will contain two records with duplicate times (typically `2:00:00 AM`).
      * 
-     * 
      * @param \OpenAPI\OpenAPI\Models\Operations\AirQualityAirQualityGetRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\AirQualityAirQualityGetSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\AirQualityAirQualityGetResponse
@@ -133,7 +132,6 @@ class PointWeather
      * * Meteosource API supports HTTP compression. To enable it, simply add an `Accept-Encoding: gzip` header to your request.
      * * When daylight saving time starts, one hourly record will be missing (typically `2:00:00 AM`). When daylight saving time ends, the hourly forecast will contain two records with duplicate times (typically `2:00:00 AM`).
      * * The detailed description of weather alerts is only available in English. The alert category is translated into selected language.
-     * 
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\PointPointGetRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\PointPointGetSecurity $security

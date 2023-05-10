@@ -23,6 +23,9 @@ class VpnTunnelOptionsSpecification
 	
     public ?int $dpdTimeoutSeconds = null;
     
+	
+    public ?bool $enableTunnelLifecycleControl = null;
+    
     /**
      * $ikeVersions
      * 
@@ -113,6 +116,7 @@ class VpnTunnelOptionsSpecification
 	{
 		$this->dpdTimeoutAction = null;
 		$this->dpdTimeoutSeconds = null;
+		$this->enableTunnelLifecycleControl = null;
 		$this->ikeVersions = null;
 		$this->logOptions = null;
 		$this->phase1DHGroupNumbers = null;

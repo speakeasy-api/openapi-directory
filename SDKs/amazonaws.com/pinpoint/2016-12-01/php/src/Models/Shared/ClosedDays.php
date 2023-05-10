@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * ClosedDays - The time when journey will stop sending messages.
+ * ClosedDays - The time when a journey will not send messages. QuietTime should be configured first and SendingSchedule should be set to true.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

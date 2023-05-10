@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartMedicalTranscriptionJobXAmzTargetEnum: string
 {
     case TRANSCRIBE_START_MEDICAL_TRANSCRIPTION_JOB = 'Transcribe.StartMedicalTranscriptionJob';

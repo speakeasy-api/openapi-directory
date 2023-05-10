@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeGlobalTableXAmzTargetEnum: string
 {
     case DYNAMO_DB20120810_DESCRIBE_GLOBAL_TABLE = 'DynamoDB_20120810.DescribeGlobalTable';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListRulesXAmzTargetEnum: string
 {
     case AWS_EVENTS_LIST_RULES = 'AWSEvents.ListRules';

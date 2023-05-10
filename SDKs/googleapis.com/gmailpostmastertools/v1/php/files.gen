@@ -42,4 +42,6 @@ src/Models/Shared/DeliveryErrorErrorClassEnum.php
 src/Models/Shared/DeliveryErrorErrorTypeEnum.php
 src/Models/Shared/DeliveryError.php
 src/Models/Shared/ListTrafficStatsResponse.php
+docs/sdk/README.md
+docs/domains/README.md
 USAGE.md

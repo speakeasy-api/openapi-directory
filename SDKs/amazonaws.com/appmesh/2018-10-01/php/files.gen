@@ -119,4 +119,5 @@ src/Models/Shared/UpdateRouteOutput.php
 src/Models/Shared/UpdateVirtualNodeOutput.php
 src/Models/Shared/UpdateVirtualRouterOutput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

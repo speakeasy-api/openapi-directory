@@ -57,4 +57,9 @@ src/Models/Shared/LoginResponse.php
 src/Models/Shared/RequestPasswordResetResponse.php
 src/Models/Shared/CreateUserResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/attendeessignins/README.md
+docs/authentication/README.md
+docs/passwords/README.md
+docs/teammembers/README.md
 USAGE.md

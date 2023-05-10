@@ -317,4 +317,8 @@ src/Models/Shared/GooglePrivacyDlpV2BigQueryField.php
 src/Models/Shared/GooglePrivacyDlpV2CreateStoredInfoTypeRequest.php
 src/Models/Shared/GooglePrivacyDlpV2ListStoredInfoTypesResponse.php
 src/Models/Shared/GooglePrivacyDlpV2UpdateStoredInfoTypeRequest.php
+docs/sdk/README.md
+docs/infotypes/README.md
+docs/locations/README.md
+docs/projects/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DetectKeyPhrasesXAmzTargetEnum: string
 {
     case COMPREHEND20171127_DETECT_KEY_PHRASES = 'Comprehend_20171127.DetectKeyPhrases';

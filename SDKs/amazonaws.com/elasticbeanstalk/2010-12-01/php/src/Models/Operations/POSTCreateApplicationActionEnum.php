@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateApplicationActionEnum: string
 {
     case CREATE_APPLICATION = 'CreateApplication';

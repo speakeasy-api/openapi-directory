@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteAppValidationConfigurationXAmzTargetEnum: string
 {
     case AWS_SERVER_MIGRATION_SERVICE_V20161024_DELETE_APP_VALIDATION_CONFIGURATION = 'AWSServerMigrationService_V2016_10_24.DeleteAppValidationConfiguration';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetUsersIdsQuestionsNoAnswersOrderEnum: string
 {
     case DESC = 'desc';

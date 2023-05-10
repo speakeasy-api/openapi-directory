@@ -28,6 +28,16 @@ class GoogleCloudConnectorsV1AuthConfig
     public ?array $additionalVariables = null;
     
     /**
+     * Identifier key for auth config
+     * 
+     * @var ?string $authKey
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('authKey')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $authKey = null;
+    
+    /**
      * The type of authentication configured.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleCloudConnectorsV1AuthConfigAuthTypeEnum $authType
@@ -36,6 +46,16 @@ class GoogleCloudConnectorsV1AuthConfig
     #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\GoogleCloudConnectorsV1AuthConfigAuthTypeEnum>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?GoogleCloudConnectorsV1AuthConfigAuthTypeEnum $authType = null;
+    
+    /**
+     * Parameters to support Oauth 2.0 Auth Code Grant Authentication. See https://www.rfc-editor.org/rfc/rfc6749#section-1.3.1 for more details.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlow $oauth2AuthCodeFlow
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('oauth2AuthCodeFlow')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlow')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlow $oauth2AuthCodeFlow = null;
     
     /**
      * Parameters to support Oauth 2.0 Client Credentials Grant Authentication. See https://tools.ietf.org/html/rfc6749#section-1.3.4 for more details.
@@ -80,7 +100,9 @@ class GoogleCloudConnectorsV1AuthConfig
 	public function __construct()
 	{
 		$this->additionalVariables = null;
+		$this->authKey = null;
 		$this->authType = null;
+		$this->oauth2AuthCodeFlow = null;
 		$this->oauth2ClientCredentials = null;
 		$this->oauth2JwtBearer = null;
 		$this->sshPublicKey = null;

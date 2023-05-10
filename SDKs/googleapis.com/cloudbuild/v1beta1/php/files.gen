@@ -47,4 +47,6 @@ src/Models/Shared/WorkerPool.php
 src/Models/Shared/WorkerConfig.php
 src/Models/Shared/NetworkConfig.php
 src/Models/Shared/ListWorkerPoolsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

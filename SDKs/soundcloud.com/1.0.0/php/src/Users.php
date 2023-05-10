@@ -142,12 +142,15 @@ class Users
      * @param \OpenAPI\OpenAPI\Models\Operations\GetUsersUserIdFavoritesRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\GetUsersUserIdFavoritesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetUsersUserIdFavoritesResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getUsersUserIdFavorites(
         \OpenAPI\OpenAPI\Models\Operations\GetUsersUserIdFavoritesRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\GetUsersUserIdFavoritesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetUsersUserIdFavoritesResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/users/{user_id}/favorites', \OpenAPI\OpenAPI\Models\Operations\GetUsersUserIdFavoritesRequest::class, $request);
         
@@ -280,12 +283,15 @@ class Users
      * @param \OpenAPI\OpenAPI\Models\Operations\GetUsersUserIdFollowingsFollowingIdRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\GetUsersUserIdFollowingsFollowingIdSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetUsersUserIdFollowingsFollowingIdResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getUsersUserIdFollowingsFollowingId(
         \OpenAPI\OpenAPI\Models\Operations\GetUsersUserIdFollowingsFollowingIdRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\GetUsersUserIdFollowingsFollowingIdSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetUsersUserIdFollowingsFollowingIdResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/users/{user_id}/followings/{following_id}', \OpenAPI\OpenAPI\Models\Operations\GetUsersUserIdFollowingsFollowingIdRequest::class, $request);
         

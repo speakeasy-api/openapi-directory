@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeEgressOnlyInternetGatewaysActionEnum: string
 {
     case DESCRIBE_EGRESS_ONLY_INTERNET_GATEWAYS = 'DescribeEgressOnlyInternetGateways';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeReplayXAmzTargetEnum: string
 {
     case AWS_EVENTS_DESCRIBE_REPLAY = 'AWSEvents.DescribeReplay';

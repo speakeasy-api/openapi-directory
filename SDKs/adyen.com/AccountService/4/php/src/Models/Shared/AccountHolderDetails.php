@@ -19,10 +19,10 @@ class AccountHolderDetails
     /**
      * Array of bank accounts associated with the account holder. For details about the required `bankAccountDetail` fields, see [Required information](https://docs.adyen.com/marketplaces-and-platforms/classic/verification-process/required-information).
      * 
-     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\BankAccountDetail> $bankAccountDetails
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\BankAccountDetailWrapper> $bankAccountDetails
      */
 	#[\JMS\Serializer\Annotation\SerializedName('bankAccountDetails')]
-    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\BankAccountDetail>')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\BankAccountDetailWrapper>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $bankAccountDetails = null;
     

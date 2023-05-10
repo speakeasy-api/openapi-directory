@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListOpsItemEventsXAmzTargetEnum: string
 {
     case AMAZON_SSM_LIST_OPS_ITEM_EVENTS = 'AmazonSSM.ListOpsItemEvents';

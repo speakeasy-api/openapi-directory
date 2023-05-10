@@ -26,4 +26,6 @@ src/Models/Operations/GetConnectionsSecurity.php
 src/Models/Operations/GetConnectionsRequest.php
 src/Models/Operations/GetConnectionsResponse.php
 src/Models/Shared/Connection.php
+docs/sdk/README.md
+docs/identity/README.md
 USAGE.md

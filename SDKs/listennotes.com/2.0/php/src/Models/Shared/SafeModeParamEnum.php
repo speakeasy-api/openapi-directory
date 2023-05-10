@@ -10,8 +10,8 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /** Whether or not to exclude podcasts with explicit language. 1 is yes, and 0 is no. */
-enum SafeModeParamEnum: string
+enum SafeModeParamEnum: int
 {
-    case ZERO = '0';
-    case ONE = '1';
+    case ZERO = 0;
+    case ONE = 1;
 }

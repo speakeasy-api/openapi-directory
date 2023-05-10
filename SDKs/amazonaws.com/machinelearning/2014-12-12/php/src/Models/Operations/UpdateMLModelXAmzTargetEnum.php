@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateMLModelXAmzTargetEnum: string
 {
     case AMAZON_ML20141212_UPDATE_ML_MODEL = 'AmazonML_20141212.UpdateMLModel';

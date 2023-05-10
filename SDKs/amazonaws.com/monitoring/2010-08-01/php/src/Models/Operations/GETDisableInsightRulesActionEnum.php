@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDisableInsightRulesActionEnum: string
 {
     case DISABLE_INSIGHT_RULES = 'DisableInsightRules';

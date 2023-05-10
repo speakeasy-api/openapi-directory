@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RunFleetAdvisorLsaAnalysisXAmzTargetEnum: string
 {
     case AMAZON_DM_SV20160101_RUN_FLEET_ADVISOR_LSA_ANALYSIS = 'AmazonDMSv20160101.RunFleetAdvisorLsaAnalysis';

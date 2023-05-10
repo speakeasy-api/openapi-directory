@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ProvisionPermissionSetXAmzTargetEnum: string
 {
     case SWB_EXTERNAL_SERVICE_PROVISION_PERMISSION_SET = 'SWBExternalService.ProvisionPermissionSet';

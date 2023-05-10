@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETRemoveRoleFromInstanceProfileActionEnum: string
 {
     case REMOVE_ROLE_FROM_INSTANCE_PROFILE = 'RemoveRoleFromInstanceProfile';

@@ -26,7 +26,9 @@ src/Models/Operations/AuthorizeResponse.php
 src/Models/Operations/TokenRequestBody.php
 src/Models/Operations/TokenRequest.php
 src/Models/Operations/TokenResponse.php
+src/Models/Operations/UserInfoSecurity.php
 src/Models/Operations/UserInfoResponse.php
+src/Models/Operations/ClientSecurity.php
 src/Models/Operations/ClientResponse.php
 src/Models/Operations/ClientClientIdSecurity.php
 src/Models/Operations/ClientClientIdRequest.php
@@ -48,4 +50,8 @@ src/Models/Shared/UserInfo.php
 src/Models/Shared/Address.php
 src/Models/Shared/Client.php
 src/Models/Shared/ProblemDetail.php
+docs/sdk/README.md
+docs/authentication/README.md
+docs/clientmanagement/README.md
+docs/sessionmanagement/README.md
 USAGE.md

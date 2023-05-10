@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum BatchDisassociateUserStackXAmzTargetEnum: string
 {
     case PHOTON_ADMIN_PROXY_SERVICE_BATCH_DISASSOCIATE_USER_STACK = 'PhotonAdminProxyService.BatchDisassociateUserStack';

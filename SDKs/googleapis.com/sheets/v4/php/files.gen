@@ -465,4 +465,6 @@ src/Models/Shared/BatchUpdateValuesByDataFilterRequest.php
 src/Models/Shared/DataFilterValueRangeMajorDimensionEnum.php
 src/Models/Shared/DataFilterValueRange.php
 src/Models/Shared/ClearValuesResponse.php
+docs/sdk/README.md
+docs/spreadsheets/README.md
 USAGE.md

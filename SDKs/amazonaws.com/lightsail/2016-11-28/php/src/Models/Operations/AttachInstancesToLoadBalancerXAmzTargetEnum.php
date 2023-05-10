@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AttachInstancesToLoadBalancerXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_ATTACH_INSTANCES_TO_LOAD_BALANCER = 'Lightsail_20161128.AttachInstancesToLoadBalancer';

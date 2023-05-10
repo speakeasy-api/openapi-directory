@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTGetGroupsForCapacityReservationActionEnum: string
 {
     case GET_GROUPS_FOR_CAPACITY_RESERVATION = 'GetGroupsForCapacityReservation';

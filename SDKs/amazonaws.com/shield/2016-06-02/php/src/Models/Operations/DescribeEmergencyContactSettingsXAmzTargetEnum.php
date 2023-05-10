@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeEmergencyContactSettingsXAmzTargetEnum: string
 {
     case AWS_SHIELD20160616_DESCRIBE_EMERGENCY_CONTACT_SETTINGS = 'AWSShield_20160616.DescribeEmergencyContactSettings';

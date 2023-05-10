@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteFileXAmzTargetEnum: string
 {
     case CODE_COMMIT20150413_DELETE_FILE = 'CodeCommit_20150413.DeleteFile';

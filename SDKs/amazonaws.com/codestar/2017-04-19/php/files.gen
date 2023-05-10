@@ -119,4 +119,5 @@ src/Models/Shared/UpdateTeamMemberRequest.php
 src/Models/Shared/UpdateUserProfileResult.php
 src/Models/Shared/UpdateUserProfileRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

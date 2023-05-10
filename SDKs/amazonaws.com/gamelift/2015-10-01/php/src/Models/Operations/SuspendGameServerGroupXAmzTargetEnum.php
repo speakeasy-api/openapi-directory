@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum SuspendGameServerGroupXAmzTargetEnum: string
 {
     case GAME_LIFT_SUSPEND_GAME_SERVER_GROUP = 'GameLift.SuspendGameServerGroup';

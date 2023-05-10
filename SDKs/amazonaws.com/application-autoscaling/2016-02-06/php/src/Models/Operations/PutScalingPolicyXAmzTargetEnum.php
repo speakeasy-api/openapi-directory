@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutScalingPolicyXAmzTargetEnum: string
 {
     case ANY_SCALE_FRONTEND_SERVICE_PUT_SCALING_POLICY = 'AnyScaleFrontendService.PutScalingPolicy';

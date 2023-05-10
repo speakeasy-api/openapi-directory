@@ -53,6 +53,16 @@ class CreateCompanyUserResponse
     public ?array $associatedMerchantAccounts = null;
     
     /**
+     * Set of authn apps available to this user
+     * 
+     * @var ?array<string> $authnApps
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('authnApps')]
+    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $authnApps = null;
+    
+    /**
      * The email address of the user.
      * 
      * @var string $email
@@ -108,6 +118,7 @@ class CreateCompanyUserResponse
 		$this->accountGroups = null;
 		$this->active = null;
 		$this->associatedMerchantAccounts = null;
+		$this->authnApps = null;
 		$this->email = "";
 		$this->id = "";
 		$this->name = null;

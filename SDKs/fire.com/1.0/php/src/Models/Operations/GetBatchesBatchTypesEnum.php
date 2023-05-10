@@ -9,10 +9,11 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-/** The type of the batch. Can be one of the 3 listed enums. */
+/** The type of the batch. Can be one of the listed enums. */
 enum GetBatchesBatchTypesEnum: string
 {
     case INTERNAL_TRANSFER = 'INTERNAL_TRANSFER';
     case BANK_TRANSFER = 'BANK_TRANSFER';
+    case INTERNATIONAL_TRANSFER = 'INTERNATIONAL_TRANSFER';
     case NEW_PAYEE = 'NEW_PAYEE';
 }

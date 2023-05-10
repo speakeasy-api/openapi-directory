@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetSearchSuggestionsXAmzTargetEnum: string
 {
     case SAGE_MAKER_GET_SEARCH_SUGGESTIONS = 'SageMaker.GetSearchSuggestions';

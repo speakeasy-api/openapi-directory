@@ -73,7 +73,7 @@ class Link
      */
 	public function postV05LinksLinkConfirmJson(
         \OpenAPI\OpenAPI\Models\Operations\PostV05LinksLinkConfirmJsonRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05LinksLinkConfirmJsonResponse
     {
         $baseUrl = Link::POST_V05_LINKS_LINK_CONFIRM_JSON_SERVERS[0];
@@ -127,7 +127,7 @@ class Link
      */
 	public function postV05LinksLinkConfirmRaw(
         \OpenAPI\OpenAPI\Models\Operations\PostV05LinksLinkConfirmRawRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05LinksLinkConfirmRawResponse
     {
         $baseUrl = Link::POST_V05_LINKS_LINK_CONFIRM_RAW_SERVERS[0];
@@ -186,7 +186,7 @@ class Link
      */
 	public function postV05LinksLinkInitJson(
         \OpenAPI\OpenAPI\Models\Operations\PostV05LinksLinkInitJsonRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05LinksLinkInitJsonResponse
     {
         $baseUrl = Link::POST_V05_LINKS_LINK_INIT_JSON_SERVERS[0];
@@ -245,7 +245,7 @@ class Link
      */
 	public function postV05LinksLinkInitRaw(
         \OpenAPI\OpenAPI\Models\Operations\PostV05LinksLinkInitRawRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05LinksLinkInitRawResponse
     {
         $baseUrl = Link::POST_V05_LINKS_LINK_INIT_RAW_SERVERS[0];
@@ -300,7 +300,7 @@ class Link
      */
 	public function postV05LinksLinkOnAddContextsJson(
         \OpenAPI\OpenAPI\Models\Operations\PostV05LinksLinkOnAddContextsJsonRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05LinksLinkOnAddContextsJsonResponse
     {
         $baseUrl = Link::POST_V05_LINKS_LINK_ON_ADD_CONTEXTS_JSON_SERVERS[0];
@@ -355,7 +355,7 @@ class Link
      */
 	public function postV05LinksLinkOnAddContextsRaw(
         \OpenAPI\OpenAPI\Models\Operations\PostV05LinksLinkOnAddContextsRawRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05LinksLinkOnAddContextsRawResponse
     {
         $baseUrl = Link::POST_V05_LINKS_LINK_ON_ADD_CONTEXTS_RAW_SERVERS[0];

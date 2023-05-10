@@ -58,6 +58,16 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion
     public ?string $cpcBidMicros = null;
     
     /**
+     * Output only. The timestamp when this ad group criterion was created. The timestamp is in the customer's time zone and in "yyyy-MM-dd HH:mm:ss" format.
+     * 
+     * @var ?string $creationTime
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('creationTime')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $creationTime = null;
+    
+    /**
      * Output only. The ID of the criterion.
      * 
      * @var ?string $criterionId
@@ -76,6 +86,16 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $effectiveCpcBidMicros = null;
+    
+    /**
+     * Output only. ID of the ad group criterion in the external engine account. This field is for non-Google Ads account only, for example, Yahoo Japan, Microsoft, Baidu etc. For Google Ads entity, use "ad_group_criterion.criterion_id" instead.
+     * 
+     * @var ?string $engineId
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('engineId')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $engineId = null;
     
     /**
      * Output only. The Engine Status for ad group criterion.
@@ -128,6 +148,16 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion
     public ?GoogleAdsSearchads360V0CommonKeywordInfo $keyword = null;
     
     /**
+     * Output only. The resource names of labels attached to this ad group criterion.
+     * 
+     * @var ?array<string> $labels
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('labels')]
+    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $labels = null;
+    
+    /**
      * Output only. The datetime when this ad group criterion was last modified. The datetime is in the customer's time zone and in "yyyy-MM-dd HH:mm:ss.ssssss" format.
      * 
      * @var ?string $lastModifiedTime
@@ -146,6 +176,26 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion
     #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0CommonListingGroupInfo')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?GoogleAdsSearchads360V0CommonListingGroupInfo $listingGroup = null;
+    
+    /**
+     * A location criterion.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0CommonLocationInfo $location
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('location')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0CommonLocationInfo')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleAdsSearchads360V0CommonLocationInfo $location = null;
+    
+    /**
+     * Immutable. Whether to target (`false`) or exclude (`true`) the criterion. This field is immutable. To switch a criterion from positive to negative, remove then re-add it.
+     * 
+     * @var ?bool $negative
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('negative')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $negative = null;
     
     /**
      * A container for ad group criterion quality information.
@@ -198,6 +248,16 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion
     public ?GoogleAdsSearchads360V0ResourcesAdGroupCriterionTypeEnum $type = null;
     
     /**
+     * A User List criterion. Represents a user list that is defined by the advertiser to be targeted.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0CommonUserListInfo $userList
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('userList')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0CommonUserListInfo')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleAdsSearchads360V0CommonUserListInfo $userList = null;
+    
+    /**
      * Represents a criterion for targeting webpages of an advertiser's website.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0CommonWebpageInfo $webpage
@@ -213,20 +273,26 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion
 		$this->ageRange = null;
 		$this->bidModifier = null;
 		$this->cpcBidMicros = null;
+		$this->creationTime = null;
 		$this->criterionId = null;
 		$this->effectiveCpcBidMicros = null;
+		$this->engineId = null;
 		$this->engineStatus = null;
 		$this->finalUrlSuffix = null;
 		$this->finalUrls = null;
 		$this->gender = null;
 		$this->keyword = null;
+		$this->labels = null;
 		$this->lastModifiedTime = null;
 		$this->listingGroup = null;
+		$this->location = null;
+		$this->negative = null;
 		$this->qualityInfo = null;
 		$this->resourceName = null;
 		$this->status = null;
 		$this->trackingUrlTemplate = null;
 		$this->type = null;
+		$this->userList = null;
 		$this->webpage = null;
 	}
 }

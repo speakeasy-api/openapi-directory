@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCancelSpotInstanceRequestsActionEnum: string
 {
     case CANCEL_SPOT_INSTANCE_REQUESTS = 'CancelSpotInstanceRequests';

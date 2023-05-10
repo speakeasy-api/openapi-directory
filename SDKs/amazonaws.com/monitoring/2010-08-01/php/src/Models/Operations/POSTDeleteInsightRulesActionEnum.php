@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteInsightRulesActionEnum: string
 {
     case DELETE_INSIGHT_RULES = 'DeleteInsightRules';

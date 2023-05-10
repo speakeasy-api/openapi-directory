@@ -36,8 +36,6 @@ class PointPointDailyAfternoonWindData
     public ?string $dir = null;
     
     /**
-     * Wind gust speed. (afternoon max)
-     * 
      * Units: metric = m/s, us = mph, uk = mph, ca = km/h
      * 
      * @var ?float $gusts

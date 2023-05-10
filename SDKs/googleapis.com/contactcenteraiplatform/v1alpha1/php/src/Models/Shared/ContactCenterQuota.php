@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class ContactCenterQuota
 {
     /**
-     * Reflects the count limit of contact centers on a billing account.
+     * Deprecated: Use the Quota fields instead. Reflects the count limit of contact centers on a billing account.
      * 
      * @var ?int $contactCenterCountLimit
      */
@@ -28,7 +28,7 @@ class ContactCenterQuota
     public ?int $contactCenterCountLimit = null;
     
     /**
-     * Reflects the count sum of contact centers on a billing account.
+     * Deprecated: Use the Quota fields instead. Reflects the count sum of contact centers on a billing account.
      * 
      * @var ?int $contactCenterCountSum
      */
@@ -37,9 +37,20 @@ class ContactCenterQuota
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?int $contactCenterCountSum = null;
     
+    /**
+     * Quota details per contact center instance type.
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\Quota> $quotas
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('quotas')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\Quota>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $quotas = null;
+    
 	public function __construct()
 	{
 		$this->contactCenterCountLimit = null;
 		$this->contactCenterCountSum = null;
+		$this->quotas = null;
 	}
 }

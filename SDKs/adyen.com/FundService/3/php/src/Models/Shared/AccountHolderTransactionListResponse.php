@@ -20,10 +20,10 @@ class AccountHolderTransactionListResponse
     /**
      * A list of the transactions.
      * 
-     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\AccountTransactionList> $accountTransactionLists
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\AccountTransactionListWrapper> $accountTransactionLists
      */
 	#[\JMS\Serializer\Annotation\SerializedName('accountTransactionLists')]
-    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\AccountTransactionList>')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\AccountTransactionListWrapper>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $accountTransactionLists = null;
     

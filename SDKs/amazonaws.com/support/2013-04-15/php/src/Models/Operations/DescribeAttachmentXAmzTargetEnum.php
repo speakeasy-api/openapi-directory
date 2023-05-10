@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeAttachmentXAmzTargetEnum: string
 {
     case AWS_SUPPORT20130415_DESCRIBE_ATTACHMENT = 'AWSSupport_20130415.DescribeAttachment';

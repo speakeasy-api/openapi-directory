@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDescribePrincipalIdFormatActionEnum: string
 {
     case DESCRIBE_PRINCIPAL_ID_FORMAT = 'DescribePrincipalIdFormat';

@@ -20,10 +20,19 @@ class PostApiDisplayAdsResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
+    /**
+     * successful
+     * 
+     * @var ?array<string, mixed> $postApiDisplayAds200ApplicationJSONObject
+     */
+	
+    public ?array $postApiDisplayAds200ApplicationJSONObject = null;
+    
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
+		$this->postApiDisplayAds200ApplicationJSONObject = null;
 	}
 }

@@ -138,6 +138,16 @@ class AttachedDiskInitializeParams
     public ?string $provisionedThroughput = null;
     
     /**
+     * Required for each regional disk associated with the instance. Specify the URLs of the zones where the disk should be replicated to. You must provide exactly two replica zones, and one zone must be the same as the instance zone. You can't use this option with boot disks.
+     * 
+     * @var ?array<string> $replicaZones
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('replicaZones')]
+    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $replicaZones = null;
+    
+    /**
      * Resource manager tags to be bound to the disk. Tag keys and values have the same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The field is ignored (both PUT & PATCH) when empty.
      * 
      * @var ?array<string, string> $resourceManagerTags
@@ -201,6 +211,7 @@ class AttachedDiskInitializeParams
 		$this->onUpdateAction = null;
 		$this->provisionedIops = null;
 		$this->provisionedThroughput = null;
+		$this->replicaZones = null;
 		$this->resourceManagerTags = null;
 		$this->resourcePolicies = null;
 		$this->sourceImage = null;

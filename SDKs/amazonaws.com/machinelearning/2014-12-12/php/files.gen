@@ -186,4 +186,5 @@ src/Models/Shared/UpdateEvaluationInput.php
 src/Models/Shared/UpdateMLModelOutput.php
 src/Models/Shared/UpdateMLModelInput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

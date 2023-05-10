@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopPipelineExecutionXAmzTargetEnum: string
 {
     case CODE_PIPELINE20150709_STOP_PIPELINE_EXECUTION = 'CodePipeline_20150709.StopPipelineExecution';

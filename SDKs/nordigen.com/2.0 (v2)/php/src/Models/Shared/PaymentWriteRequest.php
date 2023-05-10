@@ -20,11 +20,22 @@ class PaymentWriteRequest
     /**
      * Registered creditor account
      * 
-     * @var string $creditorAccount
+     * @var ?string $creditorAccount
      */
 	#[\JMS\Serializer\Annotation\SerializedName('creditor_account')]
     #[\JMS\Serializer\Annotation\Type('string')]
-    public string $creditorAccount;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $creditorAccount = null;
+    
+    /**
+     * Creditor account
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\CreditorAccountWriteRequest $creditorObject
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('creditor_object')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\CreditorAccountWriteRequest')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?CreditorAccountWriteRequest $creditorObject = null;
     
     /**
      * Payment Custom Payment ID
@@ -78,6 +89,18 @@ class PaymentWriteRequest
     /**
      * Payment product
      * 
+     * 
+     * * `T2P` - target-2-payments
+     * * `SCT` - sepa-credit-transfers
+     * * `ISCT` - instant-sepa-credit-transfer
+     * * `CBCT` - cross-border-credit-transfers
+     * * `BACS` - Back Payment Scheme
+     * * `CHAPS` - CHAPS Payment Scheme
+     * * `FPS` - Faster Payment Scheme
+     * * `SWIFT` - Swift Payment Service
+     * * `BT` - Balance Transfer
+     * * `MT` - Money Transfer
+     * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\PaymentWriteRequestPaymentProductEnum $paymentProduct
      */
 	#[\JMS\Serializer\Annotation\SerializedName('payment_product')]
@@ -114,9 +137,20 @@ class PaymentWriteRequest
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?\DateTime $requestedExecutionDate = null;
     
+    /**
+     * Indicates whether payment should be submitted separately
+     * 
+     * @var ?bool $submitPayment
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('submit_payment')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $submitPayment = null;
+    
 	public function __construct()
 	{
-		$this->creditorAccount = "";
+		$this->creditorAccount = null;
+		$this->creditorObject = null;
 		$this->customPaymentId = null;
 		$this->debtorAccount = null;
 		$this->description = null;
@@ -126,5 +160,6 @@ class PaymentWriteRequest
 		$this->periodicPayment = null;
 		$this->redirect = "";
 		$this->requestedExecutionDate = null;
+		$this->submitPayment = null;
 	}
 }

@@ -270,4 +270,11 @@ src/Models/Shared/ZebraTeam.php
 src/Models/Shared/MediaTypeEnum.php
 src/Models/Shared/Media.php
 src/Models/Shared/TeamRobot.php
+docs/sdk/README.md
+docs/tba/README.md
+docs/district/README.md
+docs/event/README.md
+docs/list/README.md
+docs/match/README.md
+docs/team/README.md
 USAGE.md

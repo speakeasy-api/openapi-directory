@@ -59,14 +59,6 @@ class PostInboxRecipientsRequestBody
 	#[SpeakeasyMetadata('multipartForm:name=share_after_create')]
     public ?bool $shareAfterCreate = null;
     
-    /**
-     * User ID.  Provide a value of `0` to operate the current session's user.
-     * 
-     * @var ?int $userId
-     */
-	#[SpeakeasyMetadata('multipartForm:name=user_id')]
-    public ?int $userId = null;
-    
 	public function __construct()
 	{
 		$this->company = null;
@@ -75,6 +67,5 @@ class PostInboxRecipientsRequestBody
 		$this->note = null;
 		$this->recipient = "";
 		$this->shareAfterCreate = null;
-		$this->userId = null;
 	}
 }

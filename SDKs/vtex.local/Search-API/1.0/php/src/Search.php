@@ -67,7 +67,7 @@ class Search
      */
 	public function productSearch(
         \OpenAPI\OpenAPI\Models\Operations\ProductSearchRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ProductSearchResponse
     {
         $baseUrl = Search::PRODUCT_SEARCH_SERVERS[0];
@@ -185,7 +185,7 @@ class Search
      */
 	public function productSearchFilteredandOrdered(
         \OpenAPI\OpenAPI\Models\Operations\ProductSearchFilteredandOrderedRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ProductSearchFilteredandOrderedResponse
     {
         $baseUrl = Search::PRODUCT_SEARCH_FILTEREDAND_ORDERED_SERVERS[0];
@@ -229,7 +229,7 @@ class Search
      */
 	public function searchbyproducturl(
         \OpenAPI\OpenAPI\Models\Operations\SearchbyproducturlRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\SearchbyproducturlResponse
     {
         $baseUrl = Search::SEARCHBYPRODUCTURL_SERVERS[0];

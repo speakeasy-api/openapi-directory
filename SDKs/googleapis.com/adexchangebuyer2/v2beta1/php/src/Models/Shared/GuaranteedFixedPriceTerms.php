@@ -38,7 +38,7 @@ class GuaranteedFixedPriceTerms
     public ?string $guaranteedImpressions = null;
     
     /**
-     * Count of guaranteed looks. Required for deal, optional for product.
+     * Count of guaranteed looks. Required for deal, optional for product. For CPD deals, buyer changes to guaranteed_looks will be ignored.
      * 
      * @var ?string $guaranteedLooks
      */
@@ -58,7 +58,7 @@ class GuaranteedFixedPriceTerms
     public ?string $impressionCap = null;
     
     /**
-     * Daily minimum looks for CPD deal types.
+     * Daily minimum looks for CPD deal types. For CPD deals, buyer should negotiate on this field instead of guaranteed_looks.
      * 
      * @var ?string $minimumDailyLooks
      */

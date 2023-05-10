@@ -88,7 +88,7 @@ class CloudStorageWorkload
     public ?Regional $region = null;
     
     /**
-     * The [storage class](https://cloud.google.com/storage/docs/storage-classes#classes) of the data and operation. For example: "standard" or "nearline".
+     * The [storage class](https://cloud.google.com/storage/docs/storage-classes#classes) of the data and operation. For example: "standard" and "nearline".
      * 
      * @var ?string $storageClass
      */

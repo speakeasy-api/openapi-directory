@@ -206,4 +206,5 @@ src/Models/Shared/UpdateEmergencyContactSettingsRequest.php
 src/Models/Shared/UpdateProtectionGroupRequest.php
 src/Models/Shared/UpdateSubscriptionRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

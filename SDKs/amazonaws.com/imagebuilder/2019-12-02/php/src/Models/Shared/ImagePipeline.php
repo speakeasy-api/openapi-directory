@@ -67,6 +67,11 @@ class ImagePipeline
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $imageRecipeArn = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('imageScanningConfiguration')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\ImageScanningConfiguration')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?ImageScanningConfiguration $imageScanningConfiguration = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('imageTestsConfiguration')]
     #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\ImageTestsConfiguration')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -119,6 +124,7 @@ class ImagePipeline
 		$this->distributionConfigurationArn = null;
 		$this->enhancedImageMetadataEnabled = null;
 		$this->imageRecipeArn = null;
+		$this->imageScanningConfiguration = null;
 		$this->imageTestsConfiguration = null;
 		$this->infrastructureConfigurationArn = null;
 		$this->name = null;

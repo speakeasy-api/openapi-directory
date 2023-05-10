@@ -344,9 +344,11 @@ class Me
      * 
      * Searches for the data of a billing plan usage for the user. Returns the data of a billing plan usage for the current month. For authentication use api credentials.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetBillingPlanUsageSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetBillingPlanUsageResponse
      */
 	public function getBillingPlanUsage(
+        \OpenAPI\OpenAPI\Models\Operations\GetBillingPlanUsageSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetBillingPlanUsageResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -354,7 +356,8 @@ class Me
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -384,9 +387,11 @@ class Me
      * 
      * Returns a list of verified caller ids. If the number is not shown in the list, then it is not verified. In this case sending of a verification code is required. For authentication use api credentials.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetCallerIdsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetCallerIdsResponse
      */
 	public function getCallerIds(
+        \OpenAPI\OpenAPI\Models\Operations\GetCallerIdsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetCallerIdsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -394,7 +399,8 @@ class Me
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

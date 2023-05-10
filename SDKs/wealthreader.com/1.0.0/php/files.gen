@@ -43,4 +43,6 @@ src/Models/Shared/UserInformationMaritalStatusEnum.php
 src/Models/Shared/UserInformation.php
 src/Models/Shared/PropertiesHistoricPrices.php
 src/Models/Shared/Properties.php
+docs/sdk/README.md
+docs/entitydata/README.md
 USAGE.md

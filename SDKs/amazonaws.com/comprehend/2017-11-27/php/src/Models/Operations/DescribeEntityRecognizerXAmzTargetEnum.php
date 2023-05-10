@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeEntityRecognizerXAmzTargetEnum: string
 {
     case COMPREHEND20171127_DESCRIBE_ENTITY_RECOGNIZER = 'Comprehend_20171127.DescribeEntityRecognizer';

@@ -264,4 +264,12 @@ src/Models/Shared/PatientAuthModeQueryResponse.php
 src/Models/Shared/PatientAuthInitResponseAuth.php
 src/Models/Shared/PatientAuthInitResponse.php
 src/Models/Shared/AuthMeta.php
+docs/sdk/README.md
+docs/gateway/README.md
+docs/consentflow/README.md
+docs/dataflow/README.md
+docs/identification/README.md
+docs/monitoring/README.md
+docs/subscriptions/README.md
+docs/userauth/README.md
 USAGE.md

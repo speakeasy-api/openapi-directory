@@ -203,4 +203,16 @@ src/Models/Shared/PatientAuthInitRequest.php
 src/Models/Shared/PatientAuthRequesterTypeEnum.php
 src/Models/Shared/PatientAuthRequester.php
 src/Models/Shared/AuthenticationModeEnum.php
+docs/sdk/README.md
+docs/consent/README.md
+docs/dataflow/README.md
+docs/discovery/README.md
+docs/hipfacing/README.md
+docs/hiufacing/README.md
+docs/identification/README.md
+docs/link/README.md
+docs/monitoring/README.md
+docs/profile/README.md
+docs/subscriptions/README.md
+docs/userauth/README.md
 USAGE.md

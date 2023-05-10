@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartRecommenderXAmzTargetEnum: string
 {
     case AMAZON_PERSONALIZE_START_RECOMMENDER = 'AmazonPersonalize.StartRecommender';

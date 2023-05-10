@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDescribeSSLPoliciesActionEnum: string
 {
     case DESCRIBE_SSL_POLICIES = 'DescribeSSLPolicies';

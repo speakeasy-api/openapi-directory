@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum OpenTunnelXAmzTargetEnum: string
 {
     case IO_T_SECURED_TUNNELING_OPEN_TUNNEL = 'IoTSecuredTunneling.OpenTunnel';

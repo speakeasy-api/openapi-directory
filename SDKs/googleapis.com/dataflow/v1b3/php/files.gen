@@ -331,6 +331,7 @@ src/Models/Shared/JobInput.php
 src/Models/Shared/Step.php
 src/Models/Shared/ExecutionStageStateExecutionStageStateEnum.php
 src/Models/Shared/ExecutionStageState.php
+src/Models/Shared/RuntimeUpdatableParams.php
 src/Models/Shared/PipelineDescription.php
 src/Models/Shared/TransformSummaryKindEnum.php
 src/Models/Shared/TransformSummary.php
@@ -524,4 +525,6 @@ src/Models/Shared/WorkerMessageCode.php
 src/Models/Shared/WorkerLifecycleEventEventEnum.php
 src/Models/Shared/WorkerLifecycleEvent.php
 src/Models/Shared/WorkerHealthReport.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

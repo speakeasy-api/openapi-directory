@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopSessionXAmzTargetEnum: string
 {
     case AWS_GLUE_STOP_SESSION = 'AWSGlue.StopSession';

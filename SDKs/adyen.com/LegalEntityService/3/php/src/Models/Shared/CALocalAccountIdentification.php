@@ -27,6 +27,19 @@ class CALocalAccountIdentification
     public string $accountNumber;
     
     /**
+     * The bank account type.
+     * 
+     * 
+     * Possible values: **checking** or **savings**. Defaults to **checking**.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\CALocalAccountIdentificationAccountTypeEnum $accountType
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('accountType')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\CALocalAccountIdentificationAccountTypeEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?CALocalAccountIdentificationAccountTypeEnum $accountType = null;
+    
+    /**
      * The 3-digit institution number, without separators or whitespace.
      * 
      * @var string $institutionNumber
@@ -56,6 +69,7 @@ class CALocalAccountIdentification
 	public function __construct()
 	{
 		$this->accountNumber = "";
+		$this->accountType = null;
 		$this->institutionNumber = "";
 		$this->transitNumber = "";
 		$this->type = \OpenAPI\OpenAPI\Models\Shared\CALocalAccountIdentificationTypeEnum::CA_LOCAL;

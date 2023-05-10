@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateWorkgroupXAmzTargetEnum: string
 {
     case REDSHIFT_SERVERLESS_CREATE_WORKGROUP = 'RedshiftServerless.CreateWorkgroup';

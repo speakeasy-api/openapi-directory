@@ -135,4 +135,15 @@ src/Models/Shared/Source.php
 src/Models/Shared/GraphQLResponse.php
 src/Models/Shared/GraphQLRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/servicecredential/README.md
+docs/servicecredentialtype/README.md
+docs/serviceinstance/README.md
+docs/serviceinventory/README.md
+docs/serviceoffering/README.md
+docs/serviceofferingnode/README.md
+docs/serviceplan/README.md
+docs/source/README.md
+docs/tags/README.md
+docs/task/README.md
 USAGE.md

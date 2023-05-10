@@ -11,11 +11,16 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 use \OpenAPI\OpenAPI\Utils\SpeakeasyMetadata;
 class PutApiDisplayAdsIdRequest
 {
+    /**
+     * $requestBody
+     * 
+     * @var ?array<string, mixed> $requestBody
+     */
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?PutApiDisplayAdsIdRequestBody $requestBody = null;
+    public ?array $requestBody = null;
     
     /**
-     * The ID of the user to unpublish.
+     * The ID of the display ad.
      * 
      * @var int $id
      */

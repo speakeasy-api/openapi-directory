@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateDeploymentGroupXAmzTargetEnum: string
 {
     case CODE_DEPLOY20141006_UPDATE_DEPLOYMENT_GROUP = 'CodeDeploy_20141006.UpdateDeploymentGroup';

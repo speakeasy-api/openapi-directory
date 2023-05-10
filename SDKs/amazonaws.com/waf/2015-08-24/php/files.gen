@@ -467,4 +467,5 @@ src/Models/Shared/UpdateXssMatchSetResponse.php
 src/Models/Shared/UpdateXssMatchSetRequest.php
 src/Models/Shared/XssMatchSetUpdate.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

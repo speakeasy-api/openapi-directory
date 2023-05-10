@@ -38,6 +38,16 @@ class WorkstationCluster
     public ?array $conditions = null;
     
     /**
+     * Output only. The private IP address of the control plane for this cluster. Workstation VMs need access to this IP address to work with the service, so make sure that your firewall rules allow egress from the workstation VMs to this address.
+     * 
+     * @var ?string $controlPlaneIp
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('controlPlaneIp')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $controlPlaneIp = null;
+    
+    /**
      * Output only. Time when this resource was created.
      * 
      * @var ?string $createTime
@@ -78,7 +88,7 @@ class WorkstationCluster
     public ?string $displayName = null;
     
     /**
-     * Checksum computed by the server. May be sent on update and delete requests to ensure that the client has an up-to-date value before proceeding.
+     * Checksum computed by the server. May be sent on update and delete requests to make sure that the client has an up-to-date value before proceeding.
      * 
      * @var ?string $etag
      */
@@ -171,6 +181,7 @@ class WorkstationCluster
 	{
 		$this->annotations = null;
 		$this->conditions = null;
+		$this->controlPlaneIp = null;
 		$this->createTime = null;
 		$this->degraded = null;
 		$this->deleteTime = null;

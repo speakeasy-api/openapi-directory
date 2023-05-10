@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * DeleteVerifiedAccessGroupResultVerifiedAccessGroup - The ID of the Amazon Web Services Verified Access group.
+ * DeleteVerifiedAccessGroupResultVerifiedAccessGroup - The ID of the Verified Access group.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

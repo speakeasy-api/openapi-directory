@@ -190,4 +190,5 @@ src/Models/Shared/StartRecommendationReportGenerationResponse.php
 src/Models/Shared/SourceCode.php
 src/Models/Shared/VersionControlEnum.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

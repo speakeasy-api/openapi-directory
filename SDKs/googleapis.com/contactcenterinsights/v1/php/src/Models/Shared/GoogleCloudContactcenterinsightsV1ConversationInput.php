@@ -88,6 +88,16 @@ class GoogleCloudContactcenterinsightsV1ConversationInput
     public ?GoogleCloudContactcenterinsightsV1AnalysisInput $latestAnalysis = null;
     
     /**
+     * Conversation summarization suggestion data.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleCloudContactcenterinsightsV1ConversationSummarizationSuggestionData $latestSummary
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('latestSummary')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleCloudContactcenterinsightsV1ConversationSummarizationSuggestionData')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleCloudContactcenterinsightsV1ConversationSummarizationSuggestionData $latestSummary = null;
+    
+    /**
      * Immutable. The conversation medium, if unspecified will default to PHONE_CALL.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleCloudContactcenterinsightsV1ConversationMediumEnum $medium
@@ -156,6 +166,7 @@ class GoogleCloudContactcenterinsightsV1ConversationInput
 		$this->labels = null;
 		$this->languageCode = null;
 		$this->latestAnalysis = null;
+		$this->latestSummary = null;
 		$this->medium = null;
 		$this->name = null;
 		$this->obfuscatedUserId = null;

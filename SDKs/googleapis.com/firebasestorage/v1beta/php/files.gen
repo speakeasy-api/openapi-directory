@@ -43,4 +43,6 @@ src/Models/Shared/Bucket.php
 src/Models/Shared/AltEnum.php
 src/Models/Shared/XgafvEnum.php
 src/Models/Shared/ListBucketsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-enum SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON6StatusEnum: string
+enum SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON6StatusEnum: int
 {
-    case FIVE_HUNDRED = '500';
+    case FIVE_HUNDRED = 500;
 }

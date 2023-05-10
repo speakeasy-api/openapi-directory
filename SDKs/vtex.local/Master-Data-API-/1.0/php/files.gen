@@ -94,4 +94,14 @@ src/Models/Shared/Scores.php
 src/Models/Shared/ArEVentilaO.php
 src/Models/Shared/Listversion.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/addresses/README.md
+docs/clusters/README.md
+docs/customerprofiles/README.md
+docs/documents/README.md
+docs/indices/README.md
+docs/schemas/README.md
+docs/scroll/README.md
+docs/search/README.md
+docs/versions/README.md
 USAGE.md

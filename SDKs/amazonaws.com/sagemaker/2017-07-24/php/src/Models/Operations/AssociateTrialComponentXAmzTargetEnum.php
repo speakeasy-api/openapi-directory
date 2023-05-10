@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AssociateTrialComponentXAmzTargetEnum: string
 {
     case SAGE_MAKER_ASSOCIATE_TRIAL_COMPONENT = 'SageMaker.AssociateTrialComponent';

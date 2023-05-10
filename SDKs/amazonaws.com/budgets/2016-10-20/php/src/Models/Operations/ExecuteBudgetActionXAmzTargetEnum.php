@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ExecuteBudgetActionXAmzTargetEnum: string
 {
     case AWS_BUDGET_SERVICE_GATEWAY_EXECUTE_BUDGET_ACTION = 'AWSBudgetServiceGateway.ExecuteBudgetAction';

@@ -39,4 +39,5 @@ src/Models/Shared/FetchPageRequest.php
 src/Models/Shared/ExecuteStatementRequest.php
 src/Models/Shared/CommitTransactionRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

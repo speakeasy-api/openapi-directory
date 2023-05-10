@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeprecateWorkflowTypeXAmzTargetEnum: string
 {
     case SIMPLE_WORKFLOW_SERVICE_DEPRECATE_WORKFLOW_TYPE = 'SimpleWorkflowService.DeprecateWorkflowType';

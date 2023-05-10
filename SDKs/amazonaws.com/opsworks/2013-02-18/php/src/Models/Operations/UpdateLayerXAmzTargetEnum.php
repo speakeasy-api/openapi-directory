@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateLayerXAmzTargetEnum: string
 {
     case OPS_WORKS20130218_UPDATE_LAYER = 'OpsWorks_20130218.UpdateLayer';

@@ -37,6 +37,11 @@ class PolicySummary
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $policyName = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('PolicyStatus')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\CustomerPolicyStatusEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?CustomerPolicyStatusEnum $policyStatus = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('RemediationEnabled')]
     #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -58,6 +63,7 @@ class PolicySummary
 		$this->policyArn = null;
 		$this->policyId = null;
 		$this->policyName = null;
+		$this->policyStatus = null;
 		$this->remediationEnabled = null;
 		$this->resourceType = null;
 		$this->securityServiceType = null;

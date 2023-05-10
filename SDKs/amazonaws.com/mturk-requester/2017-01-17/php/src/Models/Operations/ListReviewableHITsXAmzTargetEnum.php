@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListReviewableHITsXAmzTargetEnum: string
 {
     case M_TURK_REQUESTER_SERVICE_V20170117_LIST_REVIEWABLE_HI_TS = 'MTurkRequesterServiceV20170117.ListReviewableHITs';

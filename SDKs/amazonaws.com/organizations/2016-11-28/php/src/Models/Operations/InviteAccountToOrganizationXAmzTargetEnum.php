@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum InviteAccountToOrganizationXAmzTargetEnum: string
 {
     case AWS_ORGANIZATIONS_V20161128_INVITE_ACCOUNT_TO_ORGANIZATION = 'AWSOrganizationsV20161128.InviteAccountToOrganization';

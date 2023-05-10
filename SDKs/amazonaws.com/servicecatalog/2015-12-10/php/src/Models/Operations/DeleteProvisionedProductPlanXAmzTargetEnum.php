@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteProvisionedProductPlanXAmzTargetEnum: string
 {
     case AWS242_SERVICE_CATALOG_SERVICE_DELETE_PROVISIONED_PRODUCT_PLAN = 'AWS242ServiceCatalogService.DeleteProvisionedProductPlan';

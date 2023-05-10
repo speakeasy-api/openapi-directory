@@ -68,6 +68,14 @@ class FolderListForPathRequest
     public ?bool $searchAll = null;
     
     /**
+     * Search by field and direction. Valid fields are `path`, `size`, `modified_at_datetime`, `provided_modified_at`.  Valid directions are `asc` and `desc`.  Defaults to `{"path":"asc"}`.
+     * 
+     * @var ?array<string, mixed> $sortBy
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sort_by')]
+    public ?array $sortBy = null;
+    
+    /**
      * Include file previews?
      * 
      * @var ?bool $withPreviews
@@ -92,6 +100,7 @@ class FolderListForPathRequest
 		$this->previewSize = null;
 		$this->search = null;
 		$this->searchAll = null;
+		$this->sortBy = null;
 		$this->withPreviews = null;
 		$this->withPriorityColor = null;
 	}

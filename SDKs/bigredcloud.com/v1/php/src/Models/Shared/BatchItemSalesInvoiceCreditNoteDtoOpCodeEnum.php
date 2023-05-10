@@ -15,9 +15,9 @@ namespace OpenAPI\OpenAPI\Models\Shared;
  * 2 - Update
  * 3 - Delete
  */
-enum BatchItemSalesInvoiceCreditNoteDtoOpCodeEnum: string
+enum BatchItemSalesInvoiceCreditNoteDtoOpCodeEnum: int
 {
-    case ONE = '1';
-    case TWO = '2';
-    case THREE = '3';
+    case ONE = 1;
+    case TWO = 2;
+    case THREE = 3;
 }

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListStoredQueriesXAmzTargetEnum: string
 {
     case STARLING_DOVE_SERVICE_LIST_STORED_QUERIES = 'StarlingDoveService.ListStoredQueries';

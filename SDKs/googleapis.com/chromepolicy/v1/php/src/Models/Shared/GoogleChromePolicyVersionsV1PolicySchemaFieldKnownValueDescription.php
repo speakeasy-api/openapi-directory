@@ -28,6 +28,16 @@ class GoogleChromePolicyVersionsV1PolicySchemaFieldKnownValueDescription
     public ?string $description = null;
     
     /**
+     * Output only. Field conditions required for this value to be valid.
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\GoogleChromePolicyVersionsV1PolicySchemaFieldDependencies> $fieldDependencies
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('fieldDependencies')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\GoogleChromePolicyVersionsV1PolicySchemaFieldDependencies>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $fieldDependencies = null;
+    
+    /**
      * Output only. The string represenstation of the value that can be set for the field.
      * 
      * @var ?string $value
@@ -40,6 +50,7 @@ class GoogleChromePolicyVersionsV1PolicySchemaFieldKnownValueDescription
 	public function __construct()
 	{
 		$this->description = null;
+		$this->fieldDependencies = null;
 		$this->value = null;
 	}
 }

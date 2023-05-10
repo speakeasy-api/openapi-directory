@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListDomainsXAmzTargetEnum: string
 {
     case ROUTE53_DOMAINS_V20140515_LIST_DOMAINS = 'Route53Domains_v20140515.ListDomains';

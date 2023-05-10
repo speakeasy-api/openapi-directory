@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum SubmitAttachmentStateChangesXAmzTargetEnum: string
 {
     case AMAZON_EC2_CONTAINER_SERVICE_V20141113_SUBMIT_ATTACHMENT_STATE_CHANGES = 'AmazonEC2ContainerServiceV20141113.SubmitAttachmentStateChanges';

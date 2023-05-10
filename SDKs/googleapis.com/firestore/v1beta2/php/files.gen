@@ -75,4 +75,6 @@ src/Models/Shared/Status.php
 src/Models/Shared/GoogleFirestoreAdminV1beta2ListIndexesResponse.php
 src/Models/Shared/GoogleFirestoreAdminV1beta2ExportDocumentsRequest.php
 src/Models/Shared/GoogleFirestoreAdminV1beta2ImportDocumentsRequest.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

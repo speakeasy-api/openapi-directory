@@ -250,4 +250,5 @@ src/Models/Shared/UpdateCloudFormationCollectionFilter.php
 src/Models/Shared/OpsCenterIntegrationConfig.php
 src/Models/Shared/LogsAnomalyDetectionIntegrationConfig.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

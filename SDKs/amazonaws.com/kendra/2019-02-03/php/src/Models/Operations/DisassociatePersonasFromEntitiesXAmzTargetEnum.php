@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DisassociatePersonasFromEntitiesXAmzTargetEnum: string
 {
     case AWS_KENDRA_FRONTEND_SERVICE_DISASSOCIATE_PERSONAS_FROM_ENTITIES = 'AWSKendraFrontendService.DisassociatePersonasFromEntities';

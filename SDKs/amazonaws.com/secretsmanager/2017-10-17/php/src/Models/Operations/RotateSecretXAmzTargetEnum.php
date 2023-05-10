@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RotateSecretXAmzTargetEnum: string
 {
     case SECRETSMANAGER_ROTATE_SECRET = 'secretsmanager.RotateSecret';

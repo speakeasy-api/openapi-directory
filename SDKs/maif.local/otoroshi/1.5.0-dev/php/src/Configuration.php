@@ -42,9 +42,11 @@ class Configuration
      * 
      * Get the full configuration of Otoroshi
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GlobalConfigSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GlobalConfigResponse
      */
 	public function globalConfig(
+        \OpenAPI\OpenAPI\Models\Operations\GlobalConfigSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GlobalConfigResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -52,7 +54,8 @@ class Configuration
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

@@ -38,6 +38,11 @@ class CreateFunctionUrlConfigResponse
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $functionUrl;
     
+	#[\JMS\Serializer\Annotation\SerializedName('InvokeMode')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\InvokeModeEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?InvokeModeEnum $invokeMode = null;
+    
 	public function __construct()
 	{
 		$this->authType = \OpenAPI\OpenAPI\Models\Shared\FunctionUrlAuthTypeEnum::NONE;
@@ -45,5 +50,6 @@ class CreateFunctionUrlConfigResponse
 		$this->creationTime = "";
 		$this->functionArn = "";
 		$this->functionUrl = "";
+		$this->invokeMode = null;
 	}
 }

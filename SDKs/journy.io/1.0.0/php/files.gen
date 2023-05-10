@@ -297,4 +297,13 @@ src/Models/Operations/GetTrackingSnippet200ApplicationJSONData.php
 src/Models/Operations/GetTrackingSnippet200ApplicationJSONMeta.php
 src/Models/Operations/GetTrackingSnippet200ApplicationJSON.php
 src/Models/Operations/GetTrackingSnippetResponse.php
+docs/sdk/README.md
+docs/accounts/README.md
+docs/events/README.md
+docs/properties/README.md
+docs/segments/README.md
+docs/track/README.md
+docs/users/README.md
+docs/validation/README.md
+docs/websites/README.md
 USAGE.md

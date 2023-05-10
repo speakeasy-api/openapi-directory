@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTAuthorizeClientVpnIngressActionEnum: string
 {
     case AUTHORIZE_CLIENT_VPN_INGRESS = 'AuthorizeClientVpnIngress';

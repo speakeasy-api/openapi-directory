@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETSetDesiredCapacityActionEnum: string
 {
     case SET_DESIRED_CAPACITY = 'SetDesiredCapacity';

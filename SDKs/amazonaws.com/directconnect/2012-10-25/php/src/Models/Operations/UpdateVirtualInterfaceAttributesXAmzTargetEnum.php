@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateVirtualInterfaceAttributesXAmzTargetEnum: string
 {
     case OVERTURE_SERVICE_UPDATE_VIRTUAL_INTERFACE_ATTRIBUTES = 'OvertureService.UpdateVirtualInterfaceAttributes';

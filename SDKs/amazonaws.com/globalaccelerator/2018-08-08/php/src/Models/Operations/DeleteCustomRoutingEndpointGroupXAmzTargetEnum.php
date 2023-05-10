@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteCustomRoutingEndpointGroupXAmzTargetEnum: string
 {
     case GLOBAL_ACCELERATOR_V20180706_DELETE_CUSTOM_ROUTING_ENDPOINT_GROUP = 'GlobalAccelerator_V20180706.DeleteCustomRoutingEndpointGroup';

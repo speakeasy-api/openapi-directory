@@ -83,4 +83,8 @@ src/Models/Shared/UserActivity.php
 src/Models/Shared/UpdateActivityResponse.php
 src/Models/Shared/UpdateActivityRequest.php
 src/Models/Shared/QueueActivityReportEventEnum.php
+docs/sdk/README.md
+docs/config/README.md
+docs/intent/README.md
+docs/queues/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeregisterPatchBaselineForPatchGroupXAmzTargetEnum: string
 {
     case AMAZON_SSM_DEREGISTER_PATCH_BASELINE_FOR_PATCH_GROUP = 'AmazonSSM.DeregisterPatchBaselineForPatchGroup';

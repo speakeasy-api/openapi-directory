@@ -361,8 +361,8 @@ class GetCommitteeCommitteeIdFilingsRequest
     public ?array $reportYear = null;
     
     /**
-     * Requests for additional information (RFAIs) sent to filers. The request type is based on the type of document filed:
      * 
+     * Requests for additional information (RFAIs) sent to filers. The request type is based on the type of document filed:
      *     - 1 Statement of Organization
      *     - 2 Report of Receipts and Expenditures (Form 3 and 3X)
      *     - 3 Second Notice - Reports

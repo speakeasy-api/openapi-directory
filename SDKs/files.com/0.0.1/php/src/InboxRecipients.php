@@ -93,6 +93,9 @@ class InboxRecipients
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "request", "multipart");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
         $options = array_merge_recursive($options, $body);
         
         $httpResponse = $this->_defaultClient->request('POST', $url, $options);

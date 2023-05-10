@@ -78,7 +78,7 @@ class Process
     public ?array $libraries = null;
     
     /**
-     * The process name visible in utilities like `top` and `ps`; it can be accessed via `/proc/[pid]/comm` and changed with `prctl(PR_SET_NAME)`.
+     * The process name, as displayed in utilities like `top` and `ps`. This name can be accessed through `/proc/[pid]/comm` and changed with `prctl(PR_SET_NAME)`.
      * 
      * @var ?string $name
      */
@@ -88,7 +88,7 @@ class Process
     public ?string $name = null;
     
     /**
-     * The parent process id.
+     * The parent process ID.
      * 
      * @var ?string $parentPid
      */
@@ -98,7 +98,7 @@ class Process
     public ?string $parentPid = null;
     
     /**
-     * The process id.
+     * The process ID.
      * 
      * @var ?string $pid
      */

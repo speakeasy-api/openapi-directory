@@ -94,4 +94,7 @@ src/Models/Shared/VmResourceBasedCud.php
 src/Models/Shared/XgafvEnum.php
 src/Models/Shared/EstimateCostScenarioWithListPriceResponse.php
 src/Models/Shared/EstimateCostScenarioWithListPriceRequest.php
+docs/sdk/README.md
+docs/billingaccounts/README.md
+docs/v1beta/README.md
 USAGE.md

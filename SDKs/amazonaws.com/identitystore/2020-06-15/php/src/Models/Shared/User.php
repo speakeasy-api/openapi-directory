@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * User - A user object that contains a specified user’s metadata and attributes.
+ * User - A user object that contains the metadata and attributes for a specified user.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

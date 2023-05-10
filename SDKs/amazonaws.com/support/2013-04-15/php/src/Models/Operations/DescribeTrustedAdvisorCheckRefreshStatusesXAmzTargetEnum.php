@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeTrustedAdvisorCheckRefreshStatusesXAmzTargetEnum: string
 {
     case AWS_SUPPORT20130415_DESCRIBE_TRUSTED_ADVISOR_CHECK_REFRESH_STATUSES = 'AWSSupport_20130415.DescribeTrustedAdvisorCheckRefreshStatuses';

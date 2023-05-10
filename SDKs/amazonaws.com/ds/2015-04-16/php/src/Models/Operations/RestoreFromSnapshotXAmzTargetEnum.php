@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RestoreFromSnapshotXAmzTargetEnum: string
 {
     case DIRECTORY_SERVICE20150416_RESTORE_FROM_SNAPSHOT = 'DirectoryService_20150416.RestoreFromSnapshot';

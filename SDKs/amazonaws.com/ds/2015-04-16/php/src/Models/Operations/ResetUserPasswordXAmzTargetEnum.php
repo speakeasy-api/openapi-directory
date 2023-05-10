@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ResetUserPasswordXAmzTargetEnum: string
 {
     case DIRECTORY_SERVICE20150416_RESET_USER_PASSWORD = 'DirectoryService_20150416.ResetUserPassword';

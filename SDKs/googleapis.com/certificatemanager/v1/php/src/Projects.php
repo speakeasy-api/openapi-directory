@@ -428,46 +428,6 @@ class Projects
     }
 	
     /**
-     * Updates a DnsAuthorization.
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsDnsAuthorizationsPatchRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsDnsAuthorizationsPatchSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsDnsAuthorizationsPatchResponse
-     */
-	public function certificatemanagerProjectsLocationsDnsAuthorizationsPatch(
-        \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsDnsAuthorizationsPatchRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsDnsAuthorizationsPatchSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsDnsAuthorizationsPatchResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{name}', \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsDnsAuthorizationsPatchRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "dnsAuthorizationInput", "json");
-        $options = array_merge_recursive($options, $body);
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsDnsAuthorizationsPatchRequest::class, $request, null));
-        
-        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsDnsAuthorizationsPatchResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
      * Lists information about the supported locations for this service.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsListRequest $request
@@ -546,82 +506,6 @@ class Projects
     }
 	
     /**
-     * Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsOperationsDeleteRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsOperationsDeleteSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsOperationsDeleteResponse
-     */
-	public function certificatemanagerProjectsLocationsOperationsDelete(
-        \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsOperationsDeleteRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsOperationsDeleteSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsOperationsDeleteResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{name}', \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsOperationsDeleteRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsOperationsDeleteRequest::class, $request, null));
-        
-        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsOperationsDeleteResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->empty = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsOperationsGetRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsOperationsGetSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsOperationsGetResponse
-     */
-	public function certificatemanagerProjectsLocationsOperationsGet(
-        \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsOperationsGetRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsOperationsGetSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsOperationsGetResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{name}', \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsOperationsGetRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsOperationsGetRequest::class, $request, null));
-        
-        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsOperationsGetResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
      * Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsOperationsListRequest $request
@@ -653,6 +537,200 @@ class Projects
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->listOperationsResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListOperationsResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Creates a new TrustConfig in a given project and location.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsCreateRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsCreateSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsCreateResponse
+     */
+	public function certificatemanagerProjectsLocationsTrustConfigsCreate(
+        \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsCreateRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsCreateSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsCreateResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{parent}/trustConfigs', \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsCreateRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "trustConfigInput", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsCreateRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsCreateResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Deletes a single TrustConfig.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsDeleteRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsDeleteSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsDeleteResponse
+     */
+	public function certificatemanagerProjectsLocationsTrustConfigsDelete(
+        \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsDeleteRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsDeleteSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsDeleteResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{name}', \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsDeleteRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsDeleteRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsDeleteResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Gets details of a single TrustConfig.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsGetRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsGetSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsGetResponse
+     */
+	public function certificatemanagerProjectsLocationsTrustConfigsGet(
+        \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsGetRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsGetSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsGetResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{name}', \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsGetRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsGetRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsGetResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->trustConfig = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\TrustConfig', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Lists TrustConfigs in a given project and location.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsListRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsListSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsListResponse
+     */
+	public function certificatemanagerProjectsLocationsTrustConfigsList(
+        \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsListRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsListSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsListResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{parent}/trustConfigs', \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsListRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsListRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsListResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->listTrustConfigsResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListTrustConfigsResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Updates a TrustConfig.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsPatchRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsPatchSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsPatchResponse
+     */
+	public function certificatemanagerProjectsLocationsTrustConfigsPatch(
+        \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsPatchRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsPatchSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsPatchResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{name}', \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsPatchRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "trustConfigInput", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsPatchRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('PATCH', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\CertificatemanagerProjectsLocationsTrustConfigsPatchResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
             }
         }
 

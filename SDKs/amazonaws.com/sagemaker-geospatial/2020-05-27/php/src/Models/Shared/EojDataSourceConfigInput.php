@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * EojDataSourceConfigInput - <p/>
+ * EojDataSourceConfigInput - Union representing different data sources to be used as input for an Earth Observation job.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

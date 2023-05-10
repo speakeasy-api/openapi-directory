@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListResourcesXAmzTargetEnum: string
 {
     case CLOUD_API_SERVICE_LIST_RESOURCES = 'CloudApiService.ListResources';

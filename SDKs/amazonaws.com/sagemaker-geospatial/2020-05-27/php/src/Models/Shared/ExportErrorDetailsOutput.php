@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * ExportErrorDetailsOutput - <p/>
+ * ExportErrorDetailsOutput - The structure representing the errors in an export EarthObservationJob operation.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

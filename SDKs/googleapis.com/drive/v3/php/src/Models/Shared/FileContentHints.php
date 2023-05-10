@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class FileContentHints
 {
     /**
-     * Text to be indexed for the file to improve fullText queries. This is limited to 128 KB in length and may contain HTML elements. For more information, see Manage file metadata.
+     * Text to be indexed for the file to improve fullText queries. This is limited to 128 KB in length and might contain HTML elements. For more information, see Manage file metadata.
      * 
      * @var ?string $indexableText
      */

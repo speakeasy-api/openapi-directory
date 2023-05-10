@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTUpdateAvailabilityOptionsActionEnum: string
 {
     case UPDATE_AVAILABILITY_OPTIONS = 'UpdateAvailabilityOptions';

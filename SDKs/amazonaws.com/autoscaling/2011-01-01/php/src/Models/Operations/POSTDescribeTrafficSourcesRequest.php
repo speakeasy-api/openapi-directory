@@ -14,6 +14,22 @@ class POSTDescribeTrafficSourcesRequest
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=Action')]
     public POSTDescribeTrafficSourcesActionEnum $action;
     
+    /**
+     * Pagination limit
+     * 
+     * @var ?string $maxRecords
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=MaxRecords')]
+    public ?string $maxRecords = null;
+    
+    /**
+     * Pagination token
+     * 
+     * @var ?string $nextToken
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=NextToken')]
+    public ?string $nextToken = null;
+    
 	#[SpeakeasyMetadata('request:mediaType=text/xml')]
     public ?string $requestBody = null;
     
@@ -44,6 +60,8 @@ class POSTDescribeTrafficSourcesRequest
 	public function __construct()
 	{
 		$this->action = \OpenAPI\OpenAPI\Models\Operations\POSTDescribeTrafficSourcesActionEnum::DESCRIBE_TRAFFIC_SOURCES;
+		$this->maxRecords = null;
+		$this->nextToken = null;
 		$this->requestBody = null;
 		$this->version = \OpenAPI\OpenAPI\Models\Operations\POSTDescribeTrafficSourcesVersionEnum::TWO_THOUSAND_AND_ELEVEN0101;
 		$this->xAmzAlgorithm = null;

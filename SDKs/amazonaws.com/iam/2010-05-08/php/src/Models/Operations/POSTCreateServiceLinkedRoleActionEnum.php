@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateServiceLinkedRoleActionEnum: string
 {
     case CREATE_SERVICE_LINKED_ROLE = 'CreateServiceLinkedRole';

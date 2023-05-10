@@ -43,4 +43,5 @@ src/Models/Shared/Location.php
 src/Models/Shared/AddressWithTimeZone.php
 src/Models/Shared/LocationsHalResponse.php
 src/Models/Shared/LocationsEmbeddedObject.php
+docs/sdk/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AttachPolicyXAmzTargetEnum: string
 {
     case AWS_ORGANIZATIONS_V20161128_ATTACH_POLICY = 'AWSOrganizationsV20161128.AttachPolicy';

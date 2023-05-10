@@ -31,4 +31,5 @@ src/Models/Shared/MappingJobOptionTypeEnum.php
 src/Models/Shared/MappingJobStateCodeEnum.php
 src/Models/Shared/MappingJob.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

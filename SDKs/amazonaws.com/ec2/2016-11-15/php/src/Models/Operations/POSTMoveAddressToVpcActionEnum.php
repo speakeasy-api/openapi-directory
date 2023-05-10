@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTMoveAddressToVpcActionEnum: string
 {
     case MOVE_ADDRESS_TO_VPC = 'MoveAddressToVpc';

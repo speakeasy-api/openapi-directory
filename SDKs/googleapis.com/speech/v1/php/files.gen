@@ -59,13 +59,15 @@ src/Models/Shared/Status.php
 src/Models/Shared/AltEnum.php
 src/Models/Shared/XgafvEnum.php
 src/Models/Shared/ListOperationsResponse.php
+src/Models/Shared/CustomClassInput.php
 src/Models/Shared/CustomClass.php
 src/Models/Shared/ClassItem.php
-src/Models/Shared/CreateCustomClassRequest.php
+src/Models/Shared/CreateCustomClassRequestInput.php
 src/Models/Shared/ListCustomClassesResponse.php
+src/Models/Shared/PhraseSetInput.php
 src/Models/Shared/PhraseSet.php
 src/Models/Shared/Phrase.php
-src/Models/Shared/CreatePhraseSetRequest.php
+src/Models/Shared/CreatePhraseSetRequestInput.php
 src/Models/Shared/ListPhraseSetResponse.php
 src/Models/Shared/LongRunningRecognizeRequestInput.php
 src/Models/Shared/TranscriptOutputConfig.php
@@ -78,7 +80,7 @@ src/Models/Shared/RecognitionMetadataOriginalMediaTypeEnum.php
 src/Models/Shared/RecognitionMetadataRecordingDeviceTypeEnum.php
 src/Models/Shared/RecognitionMetadata.php
 src/Models/Shared/SpeakerDiarizationConfigInput.php
-src/Models/Shared/SpeechAdaptation.php
+src/Models/Shared/SpeechAdaptationInput.php
 src/Models/Shared/ABNFGrammar.php
 src/Models/Shared/RecognitionAudio.php
 src/Models/Shared/RecognizeResponse.php
@@ -87,4 +89,8 @@ src/Models/Shared/SpeechRecognitionResult.php
 src/Models/Shared/SpeechRecognitionAlternative.php
 src/Models/Shared/WordInfo.php
 src/Models/Shared/RecognizeRequestInput.php
+docs/sdk/README.md
+docs/operations/README.md
+docs/projects/README.md
+docs/speech/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteDirectoryXAmzTargetEnum: string
 {
     case DIRECTORY_SERVICE20150416_DELETE_DIRECTORY = 'DirectoryService_20150416.DeleteDirectory';

@@ -42,9 +42,11 @@ class Stats
      * 
      * Get global otoroshi stats
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GlobalLiveStatsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GlobalLiveStatsResponse
      */
 	public function globalLiveStats(
+        \OpenAPI\OpenAPI\Models\Operations\GlobalLiveStatsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GlobalLiveStatsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -52,7 +54,8 @@ class Stats
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

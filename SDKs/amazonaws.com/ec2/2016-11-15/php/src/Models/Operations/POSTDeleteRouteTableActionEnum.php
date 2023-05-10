@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteRouteTableActionEnum: string
 {
     case DELETE_ROUTE_TABLE = 'DeleteRouteTable';

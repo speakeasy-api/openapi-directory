@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETCreateAccessKeyActionEnum: string
 {
     case CREATE_ACCESS_KEY = 'CreateAccessKey';

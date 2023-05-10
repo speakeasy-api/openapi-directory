@@ -30,26 +30,71 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Shared\RemoveBgJson;
+use \OpenAPI\OpenAPI\Models\Shared\RemoveBgJsonChannelsEnum;
+use \OpenAPI\OpenAPI\Models\Shared\RemoveBgJsonFormatEnum;
+use \OpenAPI\OpenAPI\Models\Shared\RemoveBgJsonSizeEnum;
+use \OpenAPI\OpenAPI\Models\Shared\RemoveBgJsonTypeEnum;
+use \OpenAPI\OpenAPI\Models\Shared\RemoveBgJsonTypeLevelEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new RemoveBgJson();
+    $request->addShadow = false;
+    $request->bgColor = 'corrupti';
+    $request->bgImageUrl = 'provident';
+    $request->channels = RemoveBgJsonChannelsEnum::ALPHA;
+    $request->crop = false;
+    $request->cropMargin = 'quibusdam';
+    $request->format = RemoveBgJsonFormatEnum::JPG;
+    $request->imageFileB64 = 'nulla';
+    $request->imageUrl = 'https://www.remove.bg/example-hd.jpg';
+    $request->position = 'corrupti';
+    $request->roi = 'illum';
+    $request->scale = 'vel';
+    $request->semitransparency = false;
+    $request->size = RemoveBgJsonSizeEnum::FULL;
+    $request->type = RemoveBgJsonTypeEnum::PRODUCT;
+    $request->typeLevel = RemoveBgJsonTypeLevelEnum::ONE;
+
+    $response = $sdk->backgroundRemoval->postRemovebgForm($request);
+
+    if ($response->removeBgJsonResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### backgroundRemoval
+### [backgroundRemoval](docs/backgroundremoval/README.md)
 
-* `postRemovebgForm` - Remove the background of an image
-* `postRemovebgJson` - Remove the background of an image
-* `postRemovebgMultipart` - Remove the background of an image
+* [postRemovebgForm](docs/backgroundremoval/README.md#postremovebgform) - Remove the background of an image
+* [postRemovebgJson](docs/backgroundremoval/README.md#postremovebgjson) - Remove the background of an image
+* [postRemovebgMultipart](docs/backgroundremoval/README.md#postremovebgmultipart) - Remove the background of an image
 
-### fetchAccountInfo
+### [fetchAccountInfo](docs/fetchaccountinfo/README.md)
 
-* `getAccount` - Fetch credit balance and free API calls.
+* [getAccount](docs/fetchaccountinfo/README.md#getaccount) - Fetch credit balance and free API calls.
 
-### improvementProgram
+### [improvementProgram](docs/improvementprogram/README.md)
 
-* `postImproveForm` - Submit an image to the remove.bg Improvement program
+* [postImproveForm](docs/improvementprogram/README.md#postimproveform) - Submit an image to the remove.bg Improvement program
 * Contribute an image that remove.bg is currently not able to remove the background from properly
 * Help us make remove.bg better
 * Get better results for similiar images in the future
@@ -63,7 +108,7 @@ Requires either an API Key to be provided in the `X-API-Key` request header or a
 
 Please note that submissions are used on a best-effort basis and the extent of expected improvement varies depending on many factors, including the number of provided images, their complexity and visual similarity. Improvements usually take several weeks to become effective.
 
-* `postImproveJson` - Submit an image to the remove.bg Improvement program
+* [postImproveJson](docs/improvementprogram/README.md#postimprovejson) - Submit an image to the remove.bg Improvement program
 * Contribute an image that remove.bg is currently not able to remove the background from properly
 * Help us make remove.bg better
 * Get better results for similiar images in the future
@@ -77,7 +122,7 @@ Requires either an API Key to be provided in the `X-API-Key` request header or a
 
 Please note that submissions are used on a best-effort basis and the extent of expected improvement varies depending on many factors, including the number of provided images, their complexity and visual similarity. Improvements usually take several weeks to become effective.
 
-* `postImproveMultipart` - Submit an image to the remove.bg Improvement program
+* [postImproveMultipart](docs/improvementprogram/README.md#postimprovemultipart) - Submit an image to the remove.bg Improvement program
 * Contribute an image that remove.bg is currently not able to remove the background from properly
 * Help us make remove.bg better
 * Get better results for similiar images in the future

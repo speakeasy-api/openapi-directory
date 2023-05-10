@@ -48,6 +48,16 @@ class GoogleCloudContactcenterinsightsV1RuntimeAnnotation
     public ?GoogleCloudContactcenterinsightsV1ArticleSuggestionData $articleSuggestion = null;
     
     /**
+     * Conversation summarization suggestion data.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleCloudContactcenterinsightsV1ConversationSummarizationSuggestionData $conversationSummarizationSuggestion
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('conversationSummarizationSuggestion')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleCloudContactcenterinsightsV1ConversationSummarizationSuggestionData')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleCloudContactcenterinsightsV1ConversationSummarizationSuggestionData $conversationSummarizationSuggestion = null;
+    
+    /**
      * The time at which this annotation was created.
      * 
      * @var ?string $createTime
@@ -122,6 +132,7 @@ class GoogleCloudContactcenterinsightsV1RuntimeAnnotation
 		$this->annotationId = null;
 		$this->answerFeedback = null;
 		$this->articleSuggestion = null;
+		$this->conversationSummarizationSuggestion = null;
 		$this->createTime = null;
 		$this->dialogflowInteraction = null;
 		$this->endBoundary = null;

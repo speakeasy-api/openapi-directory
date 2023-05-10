@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum EnableAllFeaturesXAmzTargetEnum: string
 {
     case AWS_ORGANIZATIONS_V20161128_ENABLE_ALL_FEATURES = 'AWSOrganizationsV20161128.EnableAllFeatures';

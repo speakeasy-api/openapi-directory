@@ -10,8 +10,8 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /** Whether this holiday is observed by federally-regulated industries. */
-enum HolidayFederalEnum: string
+enum HolidayFederalEnum: int
 {
-    case ONE = '1';
-    case ZERO = '0';
+    case ONE = 1;
+    case ZERO = 0;
 }

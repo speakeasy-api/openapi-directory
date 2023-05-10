@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeServiceActionXAmzTargetEnum: string
 {
     case AWS242_SERVICE_CATALOG_SERVICE_DESCRIBE_SERVICE_ACTION = 'AWS242ServiceCatalogService.DescribeServiceAction';

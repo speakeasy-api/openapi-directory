@@ -16,4 +16,5 @@ enum ServiceActionAssociationErrorCodeEnum: string
     case LIMIT_EXCEEDED = 'LIMIT_EXCEEDED';
     case RESOURCE_NOT_FOUND = 'RESOURCE_NOT_FOUND';
     case THROTTLING = 'THROTTLING';
+    case INVALID_PARAMETER = 'INVALID_PARAMETER';
 }

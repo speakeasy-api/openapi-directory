@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETBatchStopUpdateActionActionEnum: string
 {
     case BATCH_STOP_UPDATE_ACTION = 'BatchStopUpdateAction';

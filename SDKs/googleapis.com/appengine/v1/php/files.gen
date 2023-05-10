@@ -291,4 +291,7 @@ src/Models/Shared/InstanceVmLivenessEnum.php
 src/Models/Shared/Instance.php
 src/Models/Shared/ListInstancesResponse.php
 src/Models/Shared/ListVersionsResponse.php
+docs/sdk/README.md
+docs/apps/README.md
+docs/projects/README.md
 USAGE.md

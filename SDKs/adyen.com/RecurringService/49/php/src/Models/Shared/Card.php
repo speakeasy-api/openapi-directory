@@ -46,20 +46,22 @@ class Card
      * 
      * Format: 4 digits. For example: 2020
      * 
-     * @var string $expiryYear
+     * @var ?string $expiryYear
      */
 	#[\JMS\Serializer\Annotation\SerializedName('expiryYear')]
     #[\JMS\Serializer\Annotation\Type('string')]
-    public string $expiryYear;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $expiryYear = null;
     
     /**
      * The name of the cardholder, as printed on the card.
      * 
-     * @var string $holderName
+     * @var ?string $holderName
      */
 	#[\JMS\Serializer\Annotation\SerializedName('holderName')]
     #[\JMS\Serializer\Annotation\Type('string')]
-    public string $holderName;
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $holderName = null;
     
     /**
      * The issue number of the card (for some UK debit cards only).
@@ -107,8 +109,8 @@ class Card
 	{
 		$this->cvc = null;
 		$this->expiryMonth = null;
-		$this->expiryYear = "";
-		$this->holderName = "";
+		$this->expiryYear = null;
+		$this->holderName = null;
 		$this->issueNumber = null;
 		$this->number = null;
 		$this->startMonth = null;

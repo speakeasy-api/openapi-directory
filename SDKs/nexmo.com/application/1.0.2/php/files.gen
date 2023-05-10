@@ -46,4 +46,5 @@ src/Models/Shared/Application.php
 src/Models/Shared/Keys.php
 src/Models/Shared/Applications.php
 src/Models/Shared/Embedded.php
+docs/sdk/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateCertificateAuthorityAuditReportXAmzTargetEnum: string
 {
     case ACM_PRIVATE_CA_CREATE_CERTIFICATE_AUTHORITY_AUDIT_REPORT = 'ACMPrivateCA.CreateCertificateAuthorityAuditReport';

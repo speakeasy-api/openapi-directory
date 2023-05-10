@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateAccountXAmzTargetEnum: string
 {
     case AWS_ORGANIZATIONS_V20161128_CREATE_ACCOUNT = 'AWSOrganizationsV20161128.CreateAccount';

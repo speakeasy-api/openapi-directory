@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AssociatePersonasToEntitiesXAmzTargetEnum: string
 {
     case AWS_KENDRA_FRONTEND_SERVICE_ASSOCIATE_PERSONAS_TO_ENTITIES = 'AWSKendraFrontendService.AssociatePersonasToEntities';

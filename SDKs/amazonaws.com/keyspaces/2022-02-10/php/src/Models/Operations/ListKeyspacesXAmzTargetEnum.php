@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListKeyspacesXAmzTargetEnum: string
 {
     case KEYSPACES_SERVICE_LIST_KEYSPACES = 'KeyspacesService.ListKeyspaces';

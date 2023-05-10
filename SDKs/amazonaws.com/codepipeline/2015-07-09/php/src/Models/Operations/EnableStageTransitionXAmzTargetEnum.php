@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum EnableStageTransitionXAmzTargetEnum: string
 {
     case CODE_PIPELINE20150709_ENABLE_STAGE_TRANSITION = 'CodePipeline_20150709.EnableStageTransition';

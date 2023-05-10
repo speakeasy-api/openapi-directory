@@ -10,8 +10,8 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /** When set to <em>1</em>, clears the report schedule. */
-enum ReinitializeActionConfigurationResetReportSettingsEnum: string
+enum ReinitializeActionConfigurationResetReportSettingsEnum: int
 {
-    case ZERO = '0';
-    case ONE = '1';
+    case ZERO = 0;
+    case ONE = 1;
 }

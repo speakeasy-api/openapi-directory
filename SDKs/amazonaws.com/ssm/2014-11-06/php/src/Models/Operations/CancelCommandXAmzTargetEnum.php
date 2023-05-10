@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CancelCommandXAmzTargetEnum: string
 {
     case AMAZON_SSM_CANCEL_COMMAND = 'AmazonSSM.CancelCommand';

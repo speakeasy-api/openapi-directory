@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETVerifyDomainDkimActionEnum: string
 {
     case VERIFY_DOMAIN_DKIM = 'VerifyDomainDkim';

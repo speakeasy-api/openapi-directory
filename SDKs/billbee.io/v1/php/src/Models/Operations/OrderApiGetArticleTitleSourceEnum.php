@@ -10,10 +10,10 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 
 
 /** The source field for the article title. 0 = Order Position (default), 1 = Article Title, 2 = Article Invoice Text */
-enum OrderApiGetArticleTitleSourceEnum: string
+enum OrderApiGetArticleTitleSourceEnum: int
 {
-    case ZERO = '0';
-    case ONE = '1';
-    case TWO = '2';
-    case THREE = '3';
+    case ZERO = 0;
+    case ONE = 1;
+    case TWO = 2;
+    case THREE = 3;
 }

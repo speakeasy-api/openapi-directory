@@ -53,4 +53,6 @@ src/Models/Shared/ExchangeMessage.php
 src/Models/Shared/TestNotificationConfigurationRequestEventTypesEnum.php
 src/Models/Shared/TestNotificationConfigurationRequest.php
 src/Models/Shared/UpdateNotificationConfigurationRequest.php
+docs/sdk/README.md
+docs/general/README.md
 USAGE.md

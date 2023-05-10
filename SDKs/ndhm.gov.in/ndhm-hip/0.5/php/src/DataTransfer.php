@@ -63,7 +63,7 @@ class DataTransfer
      */
 	public function postV05HealthInformationTransferJson(
         \OpenAPI\OpenAPI\Models\Operations\PostV05HealthInformationTransferJsonRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05HealthInformationTransferJsonResponse
     {
         $baseUrl = DataTransfer::POST_V05_HEALTH_INFORMATION_TRANSFER_JSON_SERVERS[0];
@@ -123,7 +123,7 @@ class DataTransfer
      */
 	public function postV05HealthInformationTransferRaw(
         \OpenAPI\OpenAPI\Models\Operations\PostV05HealthInformationTransferRawRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05HealthInformationTransferRawResponse
     {
         $baseUrl = DataTransfer::POST_V05_HEALTH_INFORMATION_TRANSFER_RAW_SERVERS[0];

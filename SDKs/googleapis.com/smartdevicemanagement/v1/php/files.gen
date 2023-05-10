@@ -45,4 +45,6 @@ src/Models/Shared/GoogleHomeEnterpriseSdmV1ListStructuresResponse.php
 src/Models/Shared/GoogleHomeEnterpriseSdmV1Structure.php
 src/Models/Shared/GoogleHomeEnterpriseSdmV1Room.php
 src/Models/Shared/GoogleHomeEnterpriseSdmV1ListRoomsResponse.php
+docs/sdk/README.md
+docs/enterprises/README.md
 USAGE.md

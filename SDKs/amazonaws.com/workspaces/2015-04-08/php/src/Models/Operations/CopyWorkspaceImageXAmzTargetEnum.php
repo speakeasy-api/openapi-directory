@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CopyWorkspaceImageXAmzTargetEnum: string
 {
     case WORKSPACES_SERVICE_COPY_WORKSPACE_IMAGE = 'WorkspacesService.CopyWorkspaceImage';

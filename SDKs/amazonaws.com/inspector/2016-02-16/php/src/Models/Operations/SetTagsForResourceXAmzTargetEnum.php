@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum SetTagsForResourceXAmzTargetEnum: string
 {
     case INSPECTOR_SERVICE_SET_TAGS_FOR_RESOURCE = 'InspectorService.SetTagsForResource';

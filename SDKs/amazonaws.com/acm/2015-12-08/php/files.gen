@@ -113,4 +113,5 @@ src/Models/Shared/DomainValidationOption.php
 src/Models/Shared/ResendValidationEmailRequest.php
 src/Models/Shared/UpdateCertificateOptionsRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

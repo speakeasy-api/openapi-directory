@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteReplicationSubnetGroupXAmzTargetEnum: string
 {
     case AMAZON_DM_SV20160101_DELETE_REPLICATION_SUBNET_GROUP = 'AmazonDMSv20160101.DeleteReplicationSubnetGroup';

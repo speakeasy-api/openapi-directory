@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteCacheSecurityGroupActionEnum: string
 {
     case DELETE_CACHE_SECURITY_GROUP = 'DeleteCacheSecurityGroup';

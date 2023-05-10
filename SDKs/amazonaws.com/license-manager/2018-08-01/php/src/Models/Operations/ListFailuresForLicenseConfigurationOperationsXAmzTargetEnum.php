@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListFailuresForLicenseConfigurationOperationsXAmzTargetEnum: string
 {
     case AWS_LICENSE_MANAGER_LIST_FAILURES_FOR_LICENSE_CONFIGURATION_OPERATIONS = 'AWSLicenseManager.ListFailuresForLicenseConfigurationOperations';

@@ -52,4 +52,5 @@ src/Models/Shared/ReportDefinition.php
 src/Models/Shared/PutReportDefinitionResult.php
 src/Models/Shared/UpdateReportDefinitionResult.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

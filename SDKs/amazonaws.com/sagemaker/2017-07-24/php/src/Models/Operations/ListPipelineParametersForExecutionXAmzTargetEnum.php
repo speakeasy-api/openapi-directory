@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListPipelineParametersForExecutionXAmzTargetEnum: string
 {
     case SAGE_MAKER_LIST_PIPELINE_PARAMETERS_FOR_EXECUTION = 'SageMaker.ListPipelineParametersForExecution';

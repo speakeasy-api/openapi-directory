@@ -161,4 +161,5 @@ src/Models/Shared/ListTagsForResourceOutput.php
 src/Models/Shared/ListTagsForStreamOutput.php
 src/Models/Shared/StartEdgeConfigurationUpdateOutput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

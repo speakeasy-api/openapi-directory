@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETGETHostReservationPurchasePreviewActionEnum: string
 {
     case GET_HOST_RESERVATION_PURCHASE_PREVIEW = 'GetHostReservationPurchasePreview';

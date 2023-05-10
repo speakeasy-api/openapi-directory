@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum SignXAmzTargetEnum: string
 {
     case TRENT_SERVICE_SIGN = 'TrentService.Sign';

@@ -56,6 +56,7 @@ src/Models/Operations/GetInlineScriptTag200ApplicationJSONInlineScriptTagTrigger
 src/Models/Operations/GetInlineScriptTag200ApplicationJSONInlineScriptTag.php
 src/Models/Operations/GetInlineScriptTag200ApplicationJSON.php
 src/Models/Operations/GetInlineScriptTagResponse.php
+src/Models/Operations/GetInlineScriptTagsSecurity.php
 src/Models/Operations/GetInlineScriptTags200ApplicationJSONInlineScriptTagsDisplayScopeEnum.php
 src/Models/Operations/GetInlineScriptTags200ApplicationJSONInlineScriptTagsTriggerEventEnum.php
 src/Models/Operations/GetInlineScriptTags200ApplicationJSONInlineScriptTags.php
@@ -89,6 +90,7 @@ src/Models/Operations/GetShopScriptTag200ApplicationJSONScriptTagDisplayScopeEnu
 src/Models/Operations/GetShopScriptTag200ApplicationJSONScriptTag.php
 src/Models/Operations/GetShopScriptTag200ApplicationJSON.php
 src/Models/Operations/GetShopScriptTagResponse.php
+src/Models/Operations/GetShopScriptTagsSecurity.php
 src/Models/Operations/GetShopScriptTags200ApplicationJSONScriptTagsDisplayScopeEnum.php
 src/Models/Operations/GetShopScriptTags200ApplicationJSONScriptTags.php
 src/Models/Operations/GetShopScriptTags200ApplicationJSON.php
@@ -119,6 +121,7 @@ src/Models/Operations/GetScriptTag200ApplicationJSONScriptTagDisplayScopeEnum.ph
 src/Models/Operations/GetScriptTag200ApplicationJSONScriptTag.php
 src/Models/Operations/GetScriptTag200ApplicationJSON.php
 src/Models/Operations/GetScriptTagResponse.php
+src/Models/Operations/GetScriptTagsSecurity.php
 src/Models/Operations/GetScriptTags200ApplicationJSONScriptTagsDisplayScopeEnum.php
 src/Models/Operations/GetScriptTags200ApplicationJSONScriptTags.php
 src/Models/Operations/GetScriptTags200ApplicationJSON.php
@@ -132,7 +135,14 @@ src/Models/Operations/UpdateScriptTag200ApplicationJSONScriptTagDisplayScopeEnum
 src/Models/Operations/UpdateScriptTag200ApplicationJSONScriptTag.php
 src/Models/Operations/UpdateScriptTag200ApplicationJSON.php
 src/Models/Operations/UpdateScriptTagResponse.php
+src/Models/Operations/DeleteInstallationSecurity.php
 src/Models/Operations/DeleteInstallation200ApplicationJSONUsageCharge.php
 src/Models/Operations/DeleteInstallation200ApplicationJSON.php
 src/Models/Operations/DeleteInstallationResponse.php
+docs/sdk/README.md
+docs/applicationcharge/README.md
+docs/inlinescript/README.md
+docs/script/README.md
+docs/scriptdeprecated/README.md
+docs/uninstallation/README.md
 USAGE.md

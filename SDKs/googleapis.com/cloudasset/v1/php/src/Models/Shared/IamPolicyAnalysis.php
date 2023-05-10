@@ -38,6 +38,16 @@ class IamPolicyAnalysis
     public ?array $analysisResults = null;
     
     /**
+     * A list of DeniedAccess, which contains all access tuples in the analysis_results that are denied by IAM deny policies. If no access tuples are denied, the list is empty. This is only populated when IamPolicyAnalysisQuery.Options.include_deny_policy_analysis is true.
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\DeniedAccess> $deniedAccesses
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('deniedAccesses')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\DeniedAccess>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $deniedAccesses = null;
+    
+    /**
      * Represents whether all entries in the analysis_results have been fully explored to answer the query.
      * 
      * @var ?bool $fullyExplored
@@ -61,6 +71,7 @@ class IamPolicyAnalysis
 	{
 		$this->analysisQuery = null;
 		$this->analysisResults = null;
+		$this->deniedAccesses = null;
 		$this->fullyExplored = null;
 		$this->nonCriticalErrors = null;
 	}

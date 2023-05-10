@@ -73,4 +73,6 @@ src/Models/Shared/ReportStatus.php
 src/Models/Shared/ReportKey.php
 src/Models/Shared/ListReportsResponse.php
 src/Models/Shared/RunQueryRequest.php
+docs/sdk/README.md
+docs/queries/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetInstanceProfileXAmzTargetEnum: string
 {
     case DEVICE_FARM20150623_GET_INSTANCE_PROFILE = 'DeviceFarm_20150623.GetInstanceProfile';

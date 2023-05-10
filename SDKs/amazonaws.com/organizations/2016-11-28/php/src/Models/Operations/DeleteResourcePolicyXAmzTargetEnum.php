@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteResourcePolicyXAmzTargetEnum: string
 {
     case AWS_ORGANIZATIONS_V20161128_DELETE_RESOURCE_POLICY = 'AWSOrganizationsV20161128.DeleteResourcePolicy';

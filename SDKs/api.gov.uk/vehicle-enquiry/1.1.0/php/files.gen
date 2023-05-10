@@ -27,4 +27,6 @@ src/Models/Shared/Vehicle.php
 src/Models/Shared/ErrorResponse.php
 src/Models/Shared/Errors.php
 src/Models/Shared/VehicleRequest.php
+docs/sdk/README.md
+docs/vehicle/README.md
 USAGE.md

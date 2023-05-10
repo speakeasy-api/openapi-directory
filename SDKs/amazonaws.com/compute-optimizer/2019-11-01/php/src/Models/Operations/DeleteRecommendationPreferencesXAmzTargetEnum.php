@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteRecommendationPreferencesXAmzTargetEnum: string
 {
     case COMPUTE_OPTIMIZER_SERVICE_DELETE_RECOMMENDATION_PREFERENCES = 'ComputeOptimizerService.DeleteRecommendationPreferences';

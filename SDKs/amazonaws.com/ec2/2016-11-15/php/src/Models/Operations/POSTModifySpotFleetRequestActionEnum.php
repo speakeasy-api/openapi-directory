@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTModifySpotFleetRequestActionEnum: string
 {
     case MODIFY_SPOT_FLEET_REQUEST = 'ModifySpotFleetRequest';

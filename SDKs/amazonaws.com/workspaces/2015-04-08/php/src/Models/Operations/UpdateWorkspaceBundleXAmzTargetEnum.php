@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateWorkspaceBundleXAmzTargetEnum: string
 {
     case WORKSPACES_SERVICE_UPDATE_WORKSPACE_BUNDLE = 'WorkspacesService.UpdateWorkspaceBundle';

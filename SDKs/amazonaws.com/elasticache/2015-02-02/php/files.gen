@@ -674,4 +674,5 @@ src/Models/Shared/StartMigrationMessage.php
 src/Models/Shared/CustomerNodeEndpoint.php
 src/Models/Shared/TestFailoverMessage.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

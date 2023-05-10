@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateWorkgroupXAmzTargetEnum: string
 {
     case REDSHIFT_SERVERLESS_UPDATE_WORKGROUP = 'RedshiftServerless.UpdateWorkgroup';

@@ -22,7 +22,17 @@ class UpdateMonitorRequestBody
     public ?string $clientToken = null;
     
     /**
-     * The maximum number of city-network combinations (that is, combinations of a city location and network, such as an ISP) to be monitored for your resources.
+     * Publish internet measurements to an Amazon S3 bucket in addition to CloudWatch Logs.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Operations\UpdateMonitorRequestBodyInternetMeasurementsLogDelivery $internetMeasurementsLogDelivery
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('InternetMeasurementsLogDelivery')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Operations\UpdateMonitorRequestBodyInternetMeasurementsLogDelivery')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?UpdateMonitorRequestBodyInternetMeasurementsLogDelivery $internetMeasurementsLogDelivery = null;
+    
+    /**
+     * The maximum number of city-networks to monitor for your resources. A city-network is the location (city) where clients access your application resources from and the network or ASN, such as an internet service provider, that clients access the resources through.
      * 
      * @var ?int $maxCityNetworksToMonitor
      */
@@ -61,12 +71,24 @@ class UpdateMonitorRequestBody
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?UpdateMonitorRequestBodyStatusEnum $status = null;
     
+    /**
+     * The percentage of the internet-facing traffic for your application that you want to monitor with this monitor.
+     * 
+     * @var ?int $trafficPercentageToMonitor
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('TrafficPercentageToMonitor')]
+    #[\JMS\Serializer\Annotation\Type('int')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?int $trafficPercentageToMonitor = null;
+    
 	public function __construct()
 	{
 		$this->clientToken = null;
+		$this->internetMeasurementsLogDelivery = null;
 		$this->maxCityNetworksToMonitor = null;
 		$this->resourcesToAdd = null;
 		$this->resourcesToRemove = null;
 		$this->status = null;
+		$this->trafficPercentageToMonitor = null;
 	}
 }

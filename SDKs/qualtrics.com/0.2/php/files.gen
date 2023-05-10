@@ -52,4 +52,5 @@ src/Models/Shared/RetrieveDistributionLinksResponseResultElements.php
 src/Models/Shared/RetrieveDistributionLinksResponseResult.php
 src/Models/Shared/RetrieveDistributionLinksResponse.php
 src/Models/Shared/SubscribeToEventBody.php
+docs/sdk/README.md
 USAGE.md

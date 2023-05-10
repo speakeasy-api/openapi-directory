@@ -37,4 +37,5 @@ src/Models/Shared/ConceptTaxonomy.php
 src/Models/Shared/Concept.php
 src/Models/Shared/ConceptRelation.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

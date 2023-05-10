@@ -100,6 +100,14 @@ class CloudassetAnalyzeIamPolicyRequest
     public ?bool $analysisQueryOptionsExpandRoles = null;
     
     /**
+     * Optional. If true, the response includes deny policy analysis results, and you can see which access tuples are denied. Default is false.
+     * 
+     * @var ?bool $analysisQueryOptionsIncludeDenyPolicyAnalysis
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=analysisQuery.options.includeDenyPolicyAnalysis')]
+    public ?bool $analysisQueryOptionsIncludeDenyPolicyAnalysis = null;
+    
+    /**
      * Optional. If true, the result will output the relevant membership relationships between groups and other groups, and between groups and principals. Default is false.
      * 
      * @var ?bool $analysisQueryOptionsOutputGroupEdges
@@ -224,6 +232,7 @@ class CloudassetAnalyzeIamPolicyRequest
 		$this->analysisQueryOptionsExpandGroups = null;
 		$this->analysisQueryOptionsExpandResources = null;
 		$this->analysisQueryOptionsExpandRoles = null;
+		$this->analysisQueryOptionsIncludeDenyPolicyAnalysis = null;
 		$this->analysisQueryOptionsOutputGroupEdges = null;
 		$this->analysisQueryOptionsOutputResourceEdges = null;
 		$this->analysisQueryResourceSelectorFullResourceName = null;

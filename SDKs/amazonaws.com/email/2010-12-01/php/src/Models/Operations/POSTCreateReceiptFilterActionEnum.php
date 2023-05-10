@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateReceiptFilterActionEnum: string
 {
     case CREATE_RECEIPT_FILTER = 'CreateReceiptFilter';

@@ -15,17 +15,17 @@ namespace OpenAPI\OpenAPI\Models\Shared;
  *  For the time being, we will not return this information for any membership that is in a cross save pairing. The gist is that, once the pairing occurs, we do not currently have a consistent way to get that information for the profile's original Platform, and thus gameVersions would be too inconsistent (based on the last platform they happened to play on) for the info to be useful.
  *  If we ever can get this data, this field will be deprecated and replaced with data on the DestinyLinkedProfileResponse itself, with game versions per linked Platform. But since we can't get that, we have this as a stop-gap measure for getting the data in the only situation that we currently need it.
  */
-enum DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum: string
+enum DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum: int
 {
-    case ZERO = '0';
-    case ONE = '1';
-    case TWO = '2';
-    case FOUR = '4';
-    case EIGHT = '8';
-    case SIXTEEN = '16';
-    case THIRTY_TWO = '32';
-    case SIXTY_FOUR = '64';
-    case ONE_HUNDRED_AND_TWENTY_EIGHT = '128';
-    case TWO_HUNDRED_AND_FIFTY_SIX = '256';
-    case FIVE_HUNDRED_AND_TWELVE = '512';
+    case ZERO = 0;
+    case ONE = 1;
+    case TWO = 2;
+    case FOUR = 4;
+    case EIGHT = 8;
+    case SIXTEEN = 16;
+    case THIRTY_TWO = 32;
+    case SIXTY_FOUR = 64;
+    case ONE_HUNDRED_AND_TWENTY_EIGHT = 128;
+    case TWO_HUNDRED_AND_FIFTY_SIX = 256;
+    case FIVE_HUNDRED_AND_TWELVE = 512;
 }

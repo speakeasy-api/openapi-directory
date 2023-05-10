@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * AmiDistributionConfiguration -  Define and configure the output AMIs of the pipeline.
+ * AmiDistributionConfiguration - Define and configure the output AMIs of the pipeline.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

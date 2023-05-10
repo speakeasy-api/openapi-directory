@@ -165,4 +165,5 @@ src/Models/Shared/UpdateComponentConfigurationRequest.php
 src/Models/Shared/UpdateLogPatternResponse.php
 src/Models/Shared/UpdateLogPatternRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

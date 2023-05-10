@@ -73,11 +73,14 @@ class Filters
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetSearchVersionNumberRoutedFilterPositionHeadingExtResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getSearchVersionNumberRoutedFilterPositionHeadingExt(
         \OpenAPI\OpenAPI\Models\Operations\GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetSearchVersionNumberRoutedFilterPositionHeadingExtResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/search/{versionNumber}/routedFilter/{position}/{heading}.{ext}', \OpenAPI\OpenAPI\Models\Operations\GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest::class, $request);
         
@@ -136,11 +139,14 @@ class Filters
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\PostSearchVersionNumberRoutedFilterPositionHeadingExtResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function postSearchVersionNumberRoutedFilterPositionHeadingExt(
         \OpenAPI\OpenAPI\Models\Operations\PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\PostSearchVersionNumberRoutedFilterPositionHeadingExtResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/search/{versionNumber}/routedFilter/{position}/{heading}.{ext}', \OpenAPI\OpenAPI\Models\Operations\PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest::class, $request);
         

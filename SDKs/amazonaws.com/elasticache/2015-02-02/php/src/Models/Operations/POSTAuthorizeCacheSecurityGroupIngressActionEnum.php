@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTAuthorizeCacheSecurityGroupIngressActionEnum: string
 {
     case AUTHORIZE_CACHE_SECURITY_GROUP_INGRESS = 'AuthorizeCacheSecurityGroupIngress';

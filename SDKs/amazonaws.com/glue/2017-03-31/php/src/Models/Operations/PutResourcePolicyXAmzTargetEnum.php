@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutResourcePolicyXAmzTargetEnum: string
 {
     case AWS_GLUE_PUT_RESOURCE_POLICY = 'AWSGlue.PutResourcePolicy';

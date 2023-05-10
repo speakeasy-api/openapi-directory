@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateBackupXAmzTargetEnum: string
 {
     case OPS_WORKS_CMV20161101_CREATE_BACKUP = 'OpsWorksCM_V2016_11_01.CreateBackup';

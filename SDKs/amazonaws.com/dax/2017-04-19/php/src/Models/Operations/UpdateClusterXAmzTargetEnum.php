@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateClusterXAmzTargetEnum: string
 {
     case AMAZON_DAXV3_UPDATE_CLUSTER = 'AmazonDAXV3.UpdateCluster';

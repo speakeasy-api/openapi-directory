@@ -346,9 +346,11 @@ class Loyalty
      * 
      * Replaced with [RetrieveLoyaltyProgram](https://developer.squareup.com/reference/square_2021-08-18/loyalty-api/retrieve-loyalty-program) when used with the keyword `main`.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListLoyaltyProgramsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ListLoyaltyProgramsResponse
      */
 	public function listLoyaltyPrograms(
+        \OpenAPI\OpenAPI\Models\Operations\ListLoyaltyProgramsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ListLoyaltyProgramsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -356,7 +358,8 @@ class Loyalty
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

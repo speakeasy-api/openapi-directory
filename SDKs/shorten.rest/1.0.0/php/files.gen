@@ -52,4 +52,8 @@ src/Models/Shared/GetClicksModel.php
 src/Models/Shared/ClickModel.php
 src/Models/Shared/ClickModelPg.php
 src/Models/Shared/ClicksFilterModel.php
+docs/sdk/README.md
+docs/alias/README.md
+docs/click/README.md
+docs/statistics/README.md
 USAGE.md

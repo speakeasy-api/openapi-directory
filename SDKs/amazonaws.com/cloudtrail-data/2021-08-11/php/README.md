@@ -30,15 +30,56 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\PutAuditEventsRequest;
+use \OpenAPI\OpenAPI\Models\Operations\PutAuditEventsRequestBody;
+use \OpenAPI\OpenAPI\Models\Shared\AuditEvent;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new PutAuditEventsRequest();
+    $request->requestBody = new PutAuditEventsRequestBody();
+    $request->requestBody->auditEvents = [
+        new AuditEvent(),
+        new AuditEvent(),
+        new AuditEvent(),
+    ];
+    $request->xAmzAlgorithm = 'provident';
+    $request->xAmzContentSha256 = 'distinctio';
+    $request->xAmzCredential = 'quibusdam';
+    $request->xAmzDate = 'unde';
+    $request->xAmzSecurityToken = 'nulla';
+    $request->xAmzSignature = 'corrupti';
+    $request->xAmzSignedHeaders = 'illum';
+    $request->channelArn = 'vel';
+    $request->externalId = 'error';
+
+    $response = $sdk->putAuditEvents($request);
+
+    if ($response->putAuditEventsResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `putAuditEvents` - Ingests your application events into CloudTrail Lake. A required parameter, <code>auditEvents</code>, accepts the JSON records (also called <i>payload</i>) of events that you want CloudTrail to ingest. You can add up to 100 of these events (or up to 1 MB) per <code>PutAuditEvents</code> request.
+* [putAuditEvents](docs/sdk/README.md#putauditevents) - Ingests your application events into CloudTrail Lake. A required parameter, <code>auditEvents</code>, accepts the JSON records (also called <i>payload</i>) of events that you want CloudTrail to ingest. You can add up to 100 of these events (or up to 1 MB) per <code>PutAuditEvents</code> request.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetComplianceSummaryByResourceTypeXAmzTargetEnum: string
 {
     case STARLING_DOVE_SERVICE_GET_COMPLIANCE_SUMMARY_BY_RESOURCE_TYPE = 'StarlingDoveService.GetComplianceSummaryByResourceType';

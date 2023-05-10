@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum BatchStartRecommendationsXAmzTargetEnum: string
 {
     case AMAZON_DM_SV20160101_BATCH_START_RECOMMENDATIONS = 'AmazonDMSv20160101.BatchStartRecommendations';

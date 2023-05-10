@@ -61,4 +61,5 @@ src/Models/Shared/UpdateS3ResourcesRequest.php
 src/Models/Shared/S3ResourceClassificationUpdate.php
 src/Models/Shared/ClassificationTypeUpdate.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

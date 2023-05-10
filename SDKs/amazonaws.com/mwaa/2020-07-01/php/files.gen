@@ -73,4 +73,5 @@ src/Models/Shared/StatisticSet.php
 src/Models/Shared/Dimension.php
 src/Models/Shared/UpdateEnvironmentOutput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

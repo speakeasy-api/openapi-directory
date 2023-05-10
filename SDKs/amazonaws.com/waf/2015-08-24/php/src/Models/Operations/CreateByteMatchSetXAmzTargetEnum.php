@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateByteMatchSetXAmzTargetEnum: string
 {
     case AWSWAF20150824_CREATE_BYTE_MATCH_SET = 'AWSWAF_20150824.CreateByteMatchSet';

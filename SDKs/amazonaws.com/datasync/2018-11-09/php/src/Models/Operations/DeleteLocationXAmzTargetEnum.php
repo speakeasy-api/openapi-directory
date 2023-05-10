@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteLocationXAmzTargetEnum: string
 {
     case FMRS_SERVICE_DELETE_LOCATION = 'FmrsService.DeleteLocation';

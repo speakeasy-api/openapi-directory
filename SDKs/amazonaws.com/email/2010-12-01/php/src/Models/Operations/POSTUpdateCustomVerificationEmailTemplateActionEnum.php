@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTUpdateCustomVerificationEmailTemplateActionEnum: string
 {
     case UPDATE_CUSTOM_VERIFICATION_EMAIL_TEMPLATE = 'UpdateCustomVerificationEmailTemplate';

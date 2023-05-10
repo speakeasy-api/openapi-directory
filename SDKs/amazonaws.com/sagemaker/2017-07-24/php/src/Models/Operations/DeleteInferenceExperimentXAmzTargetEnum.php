@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteInferenceExperimentXAmzTargetEnum: string
 {
     case SAGE_MAKER_DELETE_INFERENCE_EXPERIMENT = 'SageMaker.DeleteInferenceExperiment';

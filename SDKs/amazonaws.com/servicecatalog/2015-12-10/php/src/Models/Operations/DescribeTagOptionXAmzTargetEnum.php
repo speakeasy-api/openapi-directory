@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeTagOptionXAmzTargetEnum: string
 {
     case AWS242_SERVICE_CATALOG_SERVICE_DESCRIBE_TAG_OPTION = 'AWS242ServiceCatalogService.DescribeTagOption';

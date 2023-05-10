@@ -19,9 +19,9 @@ namespace OpenAPI\OpenAPI\Models\Shared;
  * * `2` - Search for numbers that end with `pattern`
  * 
  */
-enum SearchPatternEnum: string
+enum SearchPatternEnum: int
 {
-    case ZERO = '0';
-    case ONE = '1';
-    case TWO = '2';
+    case ZERO = 0;
+    case ONE = 1;
+    case TWO = 2;
 }

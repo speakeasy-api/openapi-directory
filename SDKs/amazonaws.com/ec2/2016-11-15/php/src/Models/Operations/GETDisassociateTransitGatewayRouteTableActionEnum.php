@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDisassociateTransitGatewayRouteTableActionEnum: string
 {
     case DISASSOCIATE_TRANSIT_GATEWAY_ROUTE_TABLE = 'DisassociateTransitGatewayRouteTable';

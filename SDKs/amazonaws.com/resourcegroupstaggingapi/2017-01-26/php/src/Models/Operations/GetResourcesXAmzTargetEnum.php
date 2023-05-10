@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetResourcesXAmzTargetEnum: string
 {
     case RESOURCE_GROUPS_TAGGING_API20170126_GET_RESOURCES = 'ResourceGroupsTaggingAPI_20170126.GetResources';

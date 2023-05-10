@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteServerXAmzTargetEnum: string
 {
     case TRANSFER_SERVICE_DELETE_SERVER = 'TransferService.DeleteServer';

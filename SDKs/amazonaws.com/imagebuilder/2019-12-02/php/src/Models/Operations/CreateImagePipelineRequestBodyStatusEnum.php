@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
-/**  The status of the image pipeline. */
+/** The status of the image pipeline. */
 enum CreateImagePipelineRequestBodyStatusEnum: string
 {
     case DISABLED = 'DISABLED';

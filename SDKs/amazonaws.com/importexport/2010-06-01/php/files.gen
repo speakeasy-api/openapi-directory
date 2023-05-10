@@ -96,4 +96,5 @@ src/Models/Shared/GetStatusInput.php
 src/Models/Shared/ListJobsInput.php
 src/Models/Shared/UpdateJobInput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

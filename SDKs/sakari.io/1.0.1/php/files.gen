@@ -186,4 +186,13 @@ src/Models/Shared/EventTypeEnum.php
 src/Models/Shared/AccountEventPayload.php
 src/Models/Shared/MessageEventPayload.php
 src/Models/Callbacks/WebhooksUnsubscribeEventResponse.php
+docs/sdk/README.md
+docs/authentication/README.md
+docs/campaigns/README.md
+docs/contacts/README.md
+docs/conversations/README.md
+docs/messages/README.md
+docs/templates/README.md
+docs/tools/README.md
+docs/webhooks/README.md
 USAGE.md

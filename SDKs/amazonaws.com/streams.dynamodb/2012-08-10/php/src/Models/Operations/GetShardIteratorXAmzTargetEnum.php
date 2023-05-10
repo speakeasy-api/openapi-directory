@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetShardIteratorXAmzTargetEnum: string
 {
     case DYNAMO_DB_STREAMS20120810_GET_SHARD_ITERATOR = 'DynamoDBStreams_20120810.GetShardIterator';

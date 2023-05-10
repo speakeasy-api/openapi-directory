@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetSavingsPlansCoverageXAmzTargetEnum: string
 {
     case AWS_INSIGHTS_INDEX_SERVICE_GET_SAVINGS_PLANS_COVERAGE = 'AWSInsightsIndexService.GetSavingsPlansCoverage';

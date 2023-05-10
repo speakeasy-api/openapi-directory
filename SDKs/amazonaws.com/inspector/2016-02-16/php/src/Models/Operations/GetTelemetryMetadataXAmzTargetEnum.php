@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetTelemetryMetadataXAmzTargetEnum: string
 {
     case INSPECTOR_SERVICE_GET_TELEMETRY_METADATA = 'InspectorService.GetTelemetryMetadata';

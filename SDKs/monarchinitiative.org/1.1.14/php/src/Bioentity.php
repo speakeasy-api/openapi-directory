@@ -79,11 +79,14 @@ class Bioentity
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetAnatomyGeneByTaxonAssociationsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetAnatomyGeneByTaxonAssociationsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getAnatomyGeneByTaxonAssociations(
         \OpenAPI\OpenAPI\Models\Operations\GetAnatomyGeneByTaxonAssociationsRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetAnatomyGeneByTaxonAssociationsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/bioentity/anatomy/{id}/genes/{taxid}', \OpenAPI\OpenAPI\Models\Operations\GetAnatomyGeneByTaxonAssociationsRequest::class, $request);
         
@@ -440,11 +443,14 @@ class Bioentity
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetDiseaseModelTaxonAssociationsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetDiseaseModelTaxonAssociationsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getDiseaseModelTaxonAssociations(
         \OpenAPI\OpenAPI\Models\Operations\GetDiseaseModelTaxonAssociationsRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetDiseaseModelTaxonAssociationsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/bioentity/disease/{id}/models/{taxon}', \OpenAPI\OpenAPI\Models\Operations\GetDiseaseModelTaxonAssociationsRequest::class, $request);
         
@@ -1700,11 +1706,14 @@ class Bioentity
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetGotermGeneAssociationsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetGotermGeneAssociationsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getGotermGeneAssociations(
         \OpenAPI\OpenAPI\Models\Operations\GetGotermGeneAssociationsRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetGotermGeneAssociationsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/bioentity/goterm/{id}/genes', \OpenAPI\OpenAPI\Models\Operations\GetGotermGeneAssociationsRequest::class, $request);
         
@@ -2231,11 +2240,14 @@ class Bioentity
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetPhenotypeGeneByTaxonAssociationsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetPhenotypeGeneByTaxonAssociationsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getPhenotypeGeneByTaxonAssociations(
         \OpenAPI\OpenAPI\Models\Operations\GetPhenotypeGeneByTaxonAssociationsRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetPhenotypeGeneByTaxonAssociationsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/bioentity/phenotype/{id}/gene/{taxid}/ids', \OpenAPI\OpenAPI\Models\Operations\GetPhenotypeGeneByTaxonAssociationsRequest::class, $request);
         

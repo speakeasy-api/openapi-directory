@@ -33,4 +33,6 @@ src/Models/Operations/GetPagesbyContentType200ApplicationJSONDataSections.php
 src/Models/Operations/GetPagesbyContentType200ApplicationJSONData.php
 src/Models/Operations/GetPagesbyContentType200ApplicationJSON.php
 src/Models/Operations/GetPagesbyContentTypeResponse.php
+docs/sdk/README.md
+docs/pages/README.md
 USAGE.md

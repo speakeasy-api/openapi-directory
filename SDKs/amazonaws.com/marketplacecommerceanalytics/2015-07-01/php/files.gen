@@ -31,4 +31,5 @@ src/Models/Shared/StartSupportDataExportResult.php
 src/Models/Shared/StartSupportDataExportRequest.php
 src/Models/Shared/SupportDataSetTypeEnum.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

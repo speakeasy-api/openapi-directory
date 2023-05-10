@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetNamespaceXAmzTargetEnum: string
 {
     case ROUTE53_AUTO_NAMING_V20170314_GET_NAMESPACE = 'Route53AutoNaming_v20170314.GetNamespace';

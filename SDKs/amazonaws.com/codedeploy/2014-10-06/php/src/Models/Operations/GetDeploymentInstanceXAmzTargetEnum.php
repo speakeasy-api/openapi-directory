@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetDeploymentInstanceXAmzTargetEnum: string
 {
     case CODE_DEPLOY20141006_GET_DEPLOYMENT_INSTANCE = 'CodeDeploy_20141006.GetDeploymentInstance';

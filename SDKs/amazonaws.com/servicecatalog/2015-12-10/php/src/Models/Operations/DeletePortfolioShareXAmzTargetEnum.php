@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeletePortfolioShareXAmzTargetEnum: string
 {
     case AWS242_SERVICE_CATALOG_SERVICE_DELETE_PORTFOLIO_SHARE = 'AWS242ServiceCatalogService.DeletePortfolioShare';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListQualificationTypesXAmzTargetEnum: string
 {
     case M_TURK_REQUESTER_SERVICE_V20170117_LIST_QUALIFICATION_TYPES = 'MTurkRequesterServiceV20170117.ListQualificationTypes';

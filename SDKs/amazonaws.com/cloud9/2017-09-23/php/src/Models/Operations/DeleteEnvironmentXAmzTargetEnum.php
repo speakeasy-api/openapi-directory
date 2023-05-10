@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteEnvironmentXAmzTargetEnum: string
 {
     case AWS_CLOUD9_WORKSPACE_MANAGEMENT_SERVICE_DELETE_ENVIRONMENT = 'AWSCloud9WorkspaceManagementService.DeleteEnvironment';

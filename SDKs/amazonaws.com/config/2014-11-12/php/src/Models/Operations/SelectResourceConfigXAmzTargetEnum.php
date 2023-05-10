@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum SelectResourceConfigXAmzTargetEnum: string
 {
     case STARLING_DOVE_SERVICE_SELECT_RESOURCE_CONFIG = 'StarlingDoveService.SelectResourceConfig';

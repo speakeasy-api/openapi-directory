@@ -47,9 +47,11 @@ class Uninstallation
      * アンインストール時の注意点については、[アプリのアンインストール](https://app.shop-pro.jp/open_api#section/API/アプリのインストール)を参照して下さい。
      * 
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\DeleteInstallationSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\DeleteInstallationResponse
      */
 	public function deleteInstallation(
+        \OpenAPI\OpenAPI\Models\Operations\DeleteInstallationSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\DeleteInstallationResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -57,7 +59,8 @@ class Uninstallation
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('DELETE', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

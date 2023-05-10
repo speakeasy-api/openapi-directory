@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteAccountPasswordPolicyActionEnum: string
 {
     case DELETE_ACCOUNT_PASSWORD_POLICY = 'DeleteAccountPasswordPolicy';

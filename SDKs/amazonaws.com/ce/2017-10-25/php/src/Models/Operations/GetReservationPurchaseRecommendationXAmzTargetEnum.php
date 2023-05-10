@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetReservationPurchaseRecommendationXAmzTargetEnum: string
 {
     case AWS_INSIGHTS_INDEX_SERVICE_GET_RESERVATION_PURCHASE_RECOMMENDATION = 'AWSInsightsIndexService.GetReservationPurchaseRecommendation';

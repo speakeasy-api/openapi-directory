@@ -40,4 +40,7 @@ src/Models/Operations/StatusResponse.php
 src/Models/Shared/ApiResponse.php
 src/Models/Shared/Queue.php
 src/Models/Shared/QueueMessage.php
+docs/sdk/README.md
+docs/queues/README.md
+docs/status/README.md
 USAGE.md

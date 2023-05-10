@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETGETAccountPasswordPolicyActionEnum: string
 {
     case GET_ACCOUNT_PASSWORD_POLICY = 'GetAccountPasswordPolicy';

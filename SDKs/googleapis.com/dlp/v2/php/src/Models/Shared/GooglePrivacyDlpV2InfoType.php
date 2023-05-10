@@ -28,6 +28,16 @@ class GooglePrivacyDlpV2InfoType
     public ?string $name = null;
     
     /**
+     * Score is a summary of all elements in the data profile. A higher number means more sensitive.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GooglePrivacyDlpV2SensitivityScore $sensitivityScore
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('sensitivityScore')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GooglePrivacyDlpV2SensitivityScore')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GooglePrivacyDlpV2SensitivityScore $sensitivityScore = null;
+    
+    /**
      * Optional version name for this InfoType.
      * 
      * @var ?string $version
@@ -40,6 +50,7 @@ class GooglePrivacyDlpV2InfoType
 	public function __construct()
 	{
 		$this->name = null;
+		$this->sensitivityScore = null;
 		$this->version = null;
 	}
 }

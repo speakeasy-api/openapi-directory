@@ -179,6 +179,17 @@ class PostV2CalendarEventsUpsertRequestBody
 	#[SpeakeasyMetadata('form:name=title')]
     public ?string $title = null;
     
+    /**
+     *   Last modification time of the event in the ISO 8601 format with a time zone offset. The event will not be updated if the 'updated_at' timestamp from the payload is earlier than the one in the database.
+     * 
+     *   Example: `2022-02-14T10:12:59+00:00`.
+     * 
+     * 
+     * @var ?string $updatedAt
+     */
+	#[SpeakeasyMetadata('form:name=updated_at')]
+    public ?string $updatedAt = null;
+    
 	public function __construct()
 	{
 		$this->allDay = null;
@@ -195,5 +206,6 @@ class PostV2CalendarEventsUpsertRequestBody
 		$this->startTime = new \DateTime();
 		$this->status = null;
 		$this->title = null;
+		$this->updatedAt = null;
 	}
 }

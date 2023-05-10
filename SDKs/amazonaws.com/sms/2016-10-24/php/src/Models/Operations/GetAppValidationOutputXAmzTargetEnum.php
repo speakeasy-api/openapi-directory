@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetAppValidationOutputXAmzTargetEnum: string
 {
     case AWS_SERVER_MIGRATION_SERVICE_V20161024_GET_APP_VALIDATION_OUTPUT = 'AWSServerMigrationService_V2016_10_24.GetAppValidationOutput';

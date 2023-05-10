@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ModifyBackupAttributesXAmzTargetEnum: string
 {
     case BALDR_API_SERVICE_MODIFY_BACKUP_ATTRIBUTES = 'BaldrApiService.ModifyBackupAttributes';

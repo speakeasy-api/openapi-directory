@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Shared;
 
 
-/** Health state of the instance. */
+/** Health state of the IPv4 address of the instance. */
 enum HealthStatusHealthStateEnum: string
 {
     case HEALTHY = 'HEALTHY';

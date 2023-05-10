@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteParameterGroupXAmzTargetEnum: string
 {
     case AMAZON_MEMORY_DB_DELETE_PARAMETER_GROUP = 'AmazonMemoryDB.DeleteParameterGroup';

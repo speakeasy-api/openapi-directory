@@ -32,6 +32,7 @@ src/Models/Operations/DevicelistResponse.php
 src/Models/Operations/GetthermstateSecurity.php
 src/Models/Operations/GetthermstateRequest.php
 src/Models/Operations/GetthermstateResponse.php
+src/Models/Operations/GetuserSecurity.php
 src/Models/Operations/GetuserResponse.php
 src/Models/Operations/GethomecoachsdataSecurity.php
 src/Models/Operations/GethomecoachsdataRequest.php
@@ -41,6 +42,7 @@ src/Models/Operations/GetmeasureScaleEnum.php
 src/Models/Operations/GetmeasureTypeEnum.php
 src/Models/Operations/GetmeasureRequest.php
 src/Models/Operations/GetmeasureResponse.php
+src/Models/Operations/PartnerdevicesSecurity.php
 src/Models/Operations/PartnerdevicesResponse.php
 src/Models/Operations/GetpublicdataSecurity.php
 src/Models/Operations/GetpublicdataRequiredDataEnum.php
@@ -160,4 +162,12 @@ src/Models/Shared/NAWelcomeCamera.php
 src/Models/Shared/NAWelcomeGlobalInfo.php
 src/Models/Shared/NAWelcomePersonsAwayResponse.php
 src/Models/Shared/NAWelcomePersonsHomeResponse.php
+docs/sdk/README.md
+docs/deprecated/README.md
+docs/healthyhomecoach/README.md
+docs/partner/README.md
+docs/public/README.md
+docs/station/README.md
+docs/thermostat/README.md
+docs/welcome/README.md
 USAGE.md

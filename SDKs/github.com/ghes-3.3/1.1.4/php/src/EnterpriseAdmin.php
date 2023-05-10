@@ -94,7 +94,7 @@ class EnterpriseAdmin
      */
 	public function enterpriseAdminAddAuthorizedSshKey(
         \OpenAPI\OpenAPI\Models\Operations\EnterpriseAdminAddAuthorizedSshKeyRequestBody $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\EnterpriseAdminAddAuthorizedSshKeyResponse
     {
         $baseUrl = EnterpriseAdmin::ENTERPRISE_ADMIN_ADD_AUTHORIZED_SSH_KEY_SERVERS[0];
@@ -225,7 +225,7 @@ class EnterpriseAdmin
      */
 	public function enterpriseAdminCreateEnterpriseServerLicense(
         \OpenAPI\OpenAPI\Models\Operations\EnterpriseAdminCreateEnterpriseServerLicenseRequestBody $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\EnterpriseAdminCreateEnterpriseServerLicenseResponse
     {
         $baseUrl = EnterpriseAdmin::ENTERPRISE_ADMIN_CREATE_ENTERPRISE_SERVER_LICENSE_SERVERS[0];
@@ -1059,7 +1059,7 @@ class EnterpriseAdmin
      */
 	public function enterpriseAdminEnableOrDisableMaintenanceMode(
         \OpenAPI\OpenAPI\Models\Operations\EnterpriseAdminEnableOrDisableMaintenanceModeRequestBody $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\EnterpriseAdminEnableOrDisableMaintenanceModeResponse
     {
         $baseUrl = EnterpriseAdmin::ENTERPRISE_ADMIN_ENABLE_OR_DISABLE_MAINTENANCE_MODE_SERVERS[0];
@@ -1141,7 +1141,7 @@ class EnterpriseAdmin
      * @see https://docs.github.com/enterprise-server@3.3/rest/reference/enterprise-admin#get-all-authorized-ssh-keys
      */
 	public function enterpriseAdminGetAllAuthorizedSshKeys(
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\EnterpriseAdminGetAllAuthorizedSshKeysResponse
     {
         $baseUrl = EnterpriseAdmin::ENTERPRISE_ADMIN_GET_ALL_AUTHORIZED_SSH_KEYS_SERVERS[0];
@@ -1379,7 +1379,7 @@ class EnterpriseAdmin
      * @see https://docs.github.com/enterprise-server@3.3/rest/reference/enterprise-admin#get-the-configuration-status
      */
 	public function enterpriseAdminGetConfigurationStatus(
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\EnterpriseAdminGetConfigurationStatusResponse
     {
         $baseUrl = EnterpriseAdmin::ENTERPRISE_ADMIN_GET_CONFIGURATION_STATUS_SERVERS[0];
@@ -1676,7 +1676,7 @@ class EnterpriseAdmin
      * @see https://docs.github.com/enterprise-server@3.3/rest/reference/enterprise-admin#get-the-maintenance-status
      */
 	public function enterpriseAdminGetMaintenanceStatus(
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\EnterpriseAdminGetMaintenanceStatusResponse
     {
         $baseUrl = EnterpriseAdmin::ENTERPRISE_ADMIN_GET_MAINTENANCE_STATUS_SERVERS[0];
@@ -2123,7 +2123,7 @@ class EnterpriseAdmin
      * @see https://docs.github.com/enterprise-server@3.3/rest/reference/enterprise-admin#get-settings
      */
 	public function enterpriseAdminGetSettings(
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\EnterpriseAdminGetSettingsResponse
     {
         $baseUrl = EnterpriseAdmin::ENTERPRISE_ADMIN_GET_SETTINGS_SERVERS[0];
@@ -2826,7 +2826,7 @@ class EnterpriseAdmin
      */
 	public function enterpriseAdminRemoveAuthorizedSshKey(
         \OpenAPI\OpenAPI\Models\Operations\EnterpriseAdminRemoveAuthorizedSshKeyRequestBody $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\EnterpriseAdminRemoveAuthorizedSshKeyResponse
     {
         $baseUrl = EnterpriseAdmin::ENTERPRISE_ADMIN_REMOVE_AUTHORIZED_SSH_KEY_SERVERS[0];
@@ -3278,7 +3278,7 @@ class EnterpriseAdmin
      */
 	public function enterpriseAdminSetSettings(
         \OpenAPI\OpenAPI\Models\Operations\EnterpriseAdminSetSettingsRequestBody $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\EnterpriseAdminSetSettingsResponse
     {
         $baseUrl = EnterpriseAdmin::ENTERPRISE_ADMIN_SET_SETTINGS_SERVERS[0];
@@ -3321,7 +3321,7 @@ class EnterpriseAdmin
      * @see https://docs.github.com/enterprise-server@3.3/rest/reference/enterprise-admin#start-a-configuration-process
      */
 	public function enterpriseAdminStartConfigurationProcess(
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\EnterpriseAdminStartConfigurationProcessResponse
     {
         $baseUrl = EnterpriseAdmin::ENTERPRISE_ADMIN_START_CONFIGURATION_PROCESS_SERVERS[0];
@@ -3985,7 +3985,7 @@ class EnterpriseAdmin
      */
 	public function enterpriseAdminUpgradeLicense(
         \OpenAPI\OpenAPI\Models\Operations\EnterpriseAdminUpgradeLicenseRequestBody $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\EnterpriseAdminUpgradeLicenseResponse
     {
         $baseUrl = EnterpriseAdmin::ENTERPRISE_ADMIN_UPGRADE_LICENSE_SERVERS[0];

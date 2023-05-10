@@ -63,9 +63,8 @@ class StaticT
         $response->rawResponse = $httpResponse;
         
         if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->getEndpoints200ApplicationJSONObject = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            if (Utils\Utils::matchContentType($contentType, 'text/yaml')) {
+                $response->body = $httpResponse->getBody()->getContents();
             }
         }
         else {

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ProvideAnomalyFeedbackXAmzTargetEnum: string
 {
     case AWS_INSIGHTS_INDEX_SERVICE_PROVIDE_ANOMALY_FEEDBACK = 'AWSInsightsIndexService.ProvideAnomalyFeedback';

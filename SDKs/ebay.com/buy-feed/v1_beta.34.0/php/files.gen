@@ -42,4 +42,9 @@ src/Models/Shared/ItemPriorityResponse.php
 src/Models/Shared/ItemPriority.php
 src/Models/Shared/ItemSnapshotResponse.php
 src/Models/Shared/ItemSnapshot.php
+docs/sdk/README.md
+docs/item/README.md
+docs/itemgroup/README.md
+docs/itempriority/README.md
+docs/itemsnapshot/README.md
 USAGE.md

@@ -17,4 +17,7 @@ enum PublishingOrganizationEnum: string
     case ADS = 'ADS';
     case PHOTOS = 'PHOTOS';
     case STREET_VIEW = 'STREET_VIEW';
+    case SHOPPING = 'SHOPPING';
+    case GEO = 'GEO';
+    case GENERATIVE_AI = 'GENERATIVE_AI';
 }

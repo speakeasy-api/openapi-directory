@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum SetTaskStatusXAmzTargetEnum: string
 {
     case DATA_PIPELINE_SET_TASK_STATUS = 'DataPipeline.SetTaskStatus';

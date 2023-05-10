@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CheckDomainAvailabilityXAmzTargetEnum: string
 {
     case ROUTE53_DOMAINS_V20140515_CHECK_DOMAIN_AVAILABILITY = 'Route53Domains_v20140515.CheckDomainAvailability';

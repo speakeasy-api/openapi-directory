@@ -21,7 +21,7 @@ class CancelImageCreationRequestBody
     public string $clientToken;
     
     /**
-     * The Amazon Resource Name (ARN) of the image whose creation you want to cancel.
+     * The Amazon Resource Name (ARN) of the image that you want to cancel creation for.
      * 
      * @var string $imageBuildVersionArn
      */

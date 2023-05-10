@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartFleetXAmzTargetEnum: string
 {
     case PHOTON_ADMIN_PROXY_SERVICE_START_FLEET = 'PhotonAdminProxyService.StartFleet';

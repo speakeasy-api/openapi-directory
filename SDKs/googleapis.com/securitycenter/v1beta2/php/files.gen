@@ -37,4 +37,6 @@ src/Models/Shared/AltEnum.php
 src/Models/Shared/XgafvEnum.php
 src/Models/Shared/WebSecurityScannerSettingsServiceEnablementStateEnum.php
 src/Models/Shared/WebSecurityScannerSettings.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

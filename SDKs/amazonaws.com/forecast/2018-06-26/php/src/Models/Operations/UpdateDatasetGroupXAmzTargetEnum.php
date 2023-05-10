@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateDatasetGroupXAmzTargetEnum: string
 {
     case AMAZON_FORECAST_UPDATE_DATASET_GROUP = 'AmazonForecast.UpdateDatasetGroup';

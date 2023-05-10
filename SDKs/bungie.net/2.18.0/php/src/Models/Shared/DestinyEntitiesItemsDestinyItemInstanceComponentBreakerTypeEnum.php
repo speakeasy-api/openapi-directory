@@ -10,10 +10,10 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /** If populated, this item has a breaker type corresponding to the given value. See DestinyBreakerTypeDefinition for more details. */
-enum DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnum: string
+enum DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnum: int
 {
-    case ZERO = '0';
-    case ONE = '1';
-    case TWO = '2';
-    case THREE = '3';
+    case ZERO = 0;
+    case ONE = 1;
+    case TWO = 2;
+    case THREE = 3;
 }

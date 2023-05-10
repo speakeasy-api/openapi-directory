@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListPoliciesForTargetXAmzTargetEnum: string
 {
     case AWS_ORGANIZATIONS_V20161128_LIST_POLICIES_FOR_TARGET = 'AWSOrganizationsV20161128.ListPoliciesForTarget';

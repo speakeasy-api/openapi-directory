@@ -168,6 +168,7 @@ src/Models/Shared/Status.php
 src/Models/Shared/GoogleFirestoreAdminV1ListIndexesResponse.php
 src/Models/Shared/GoogleFirestoreAdminV1DatabaseAppEngineIntegrationModeEnum.php
 src/Models/Shared/GoogleFirestoreAdminV1DatabaseConcurrencyModeEnum.php
+src/Models/Shared/GoogleFirestoreAdminV1DatabaseDeleteProtectionStateEnum.php
 src/Models/Shared/GoogleFirestoreAdminV1DatabaseTypeEnum.php
 src/Models/Shared/GoogleFirestoreAdminV1Database.php
 src/Models/Shared/GoogleFirestoreAdminV1DatabaseInput.php
@@ -242,4 +243,6 @@ src/Models/Shared/GoogleFirestoreAdminV1ListDatabasesResponse.php
 src/Models/Shared/GoogleLongrunningListOperationsResponse.php
 src/Models/Shared/Location.php
 src/Models/Shared/ListLocationsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

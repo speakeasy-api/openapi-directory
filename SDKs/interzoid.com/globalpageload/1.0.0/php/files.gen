@@ -22,4 +22,6 @@ src/Utils/Utils.php
 src/Models/Operations/GlobalpageloadRequest.php
 src/Models/Operations/Globalpageload200ApplicationJSON.php
 src/Models/Operations/GlobalpageloadResponse.php
+docs/sdk/README.md
+docs/pageloadperformancetime/README.md
 USAGE.md

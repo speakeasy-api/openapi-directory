@@ -258,4 +258,5 @@ src/Models/Shared/UpdateVocabularyRequest.php
 src/Models/Shared/UpdateVocabularyFilterResponse.php
 src/Models/Shared/UpdateVocabularyFilterRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

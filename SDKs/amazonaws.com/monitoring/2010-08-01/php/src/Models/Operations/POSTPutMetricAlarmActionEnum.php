@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTPutMetricAlarmActionEnum: string
 {
     case PUT_METRIC_ALARM = 'PutMetricAlarm';

@@ -650,4 +650,9 @@ enum RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceTy
     case R7G12XLARGE = 'r7g.12xlarge';
     case R7G16XLARGE = 'r7g.16xlarge';
     case R7G_METAL = 'r7g.metal';
+    case C6IN_METAL = 'c6in.metal';
+    case M6IN_METAL = 'm6in.metal';
+    case M6IDN_METAL = 'm6idn.metal';
+    case R6IN_METAL = 'r6in.metal';
+    case R6IDN_METAL = 'r6idn.metal';
 }

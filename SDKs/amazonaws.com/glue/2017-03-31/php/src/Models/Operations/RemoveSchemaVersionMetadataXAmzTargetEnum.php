@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RemoveSchemaVersionMetadataXAmzTargetEnum: string
 {
     case AWS_GLUE_REMOVE_SCHEMA_VERSION_METADATA = 'AWSGlue.RemoveSchemaVersionMetadata';

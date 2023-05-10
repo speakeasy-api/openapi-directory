@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateDeliveryStreamXAmzTargetEnum: string
 {
     case FIREHOSE20150804_CREATE_DELIVERY_STREAM = 'Firehose_20150804.CreateDeliveryStream';

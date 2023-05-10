@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETPutLifecycleHookActionEnum: string
 {
     case PUT_LIFECYCLE_HOOK = 'PutLifecycleHook';

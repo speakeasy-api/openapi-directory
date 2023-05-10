@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTAddSourceIdentifierToSubscriptionActionEnum: string
 {
     case ADD_SOURCE_IDENTIFIER_TO_SUBSCRIPTION = 'AddSourceIdentifierToSubscription';

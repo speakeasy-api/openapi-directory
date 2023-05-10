@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * ResourceSharePermissionSummary - Information about an RAM permission that is associated with a resource share and any of its resources of a specified type.
+ * ResourceSharePermissionSummary - Information about an RAM permission.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public
@@ -32,6 +32,11 @@ class ResourceSharePermissionSummary
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $defaultVersion = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('featureSet')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\PermissionFeatureSetEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?PermissionFeatureSetEnum $featureSet = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('isResourceTypeDefault')]
     #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -47,6 +52,11 @@ class ResourceSharePermissionSummary
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('permissionType')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\PermissionTypeEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?PermissionTypeEnum $permissionType = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('resourceType')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -56,6 +66,16 @@ class ResourceSharePermissionSummary
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $status = null;
+    
+    /**
+     * $tags
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\Tag> $tags
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('tags')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\Tag>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $tags = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('version')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -67,11 +87,14 @@ class ResourceSharePermissionSummary
 		$this->arn = null;
 		$this->creationTime = null;
 		$this->defaultVersion = null;
+		$this->featureSet = null;
 		$this->isResourceTypeDefault = null;
 		$this->lastUpdatedTime = null;
 		$this->name = null;
+		$this->permissionType = null;
 		$this->resourceType = null;
 		$this->status = null;
+		$this->tags = null;
 		$this->version = null;
 	}
 }

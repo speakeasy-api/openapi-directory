@@ -194,6 +194,162 @@ class Projects
     }
 	
     /**
+     * Creates a new GatewaySecurityPolicy in a given project and location.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesCreateRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesCreateSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesCreateResponse
+     */
+	public function networksecurityProjectsLocationsGatewaySecurityPoliciesCreate(
+        \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesCreateRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesCreateSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesCreateResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{parent}/gatewaySecurityPolicies', \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesCreateRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "gatewaySecurityPolicyInput", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesCreateRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesCreateResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Lists GatewaySecurityPolicies in a given project and location.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesListRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesListSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesListResponse
+     */
+	public function networksecurityProjectsLocationsGatewaySecurityPoliciesList(
+        \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesListRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesListSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesListResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{parent}/gatewaySecurityPolicies', \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesListRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesListRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesListResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->listGatewaySecurityPoliciesResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListGatewaySecurityPoliciesResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Creates a new GatewaySecurityPolicy in a given project and location.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateResponse
+     */
+	public function networksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreate(
+        \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{parent}/rules', \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "gatewaySecurityPolicyRuleInput", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Lists GatewaySecurityPolicyRules in a given project and location.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesListRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesListSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesListResponse
+     */
+	public function networksecurityProjectsLocationsGatewaySecurityPoliciesRulesList(
+        \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesListRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesListSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesListResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{parent}/rules', \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesListRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesListRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesListResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->listGatewaySecurityPolicyRulesResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListGatewaySecurityPolicyRulesResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Lists information about the supported locations for this service.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsListRequest $request
@@ -350,82 +506,6 @@ class Projects
     }
 	
     /**
-     * Deletes a single ServerTlsPolicy.
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsServerTlsPoliciesDeleteRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsServerTlsPoliciesDeleteSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsServerTlsPoliciesDeleteResponse
-     */
-	public function networksecurityProjectsLocationsServerTlsPoliciesDelete(
-        \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsServerTlsPoliciesDeleteRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsServerTlsPoliciesDeleteSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsServerTlsPoliciesDeleteResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{name}', \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsServerTlsPoliciesDeleteRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsServerTlsPoliciesDeleteRequest::class, $request, null));
-        
-        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsServerTlsPoliciesDeleteResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Gets details of a single ServerTlsPolicy.
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsServerTlsPoliciesGetRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsServerTlsPoliciesGetSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsServerTlsPoliciesGetResponse
-     */
-	public function networksecurityProjectsLocationsServerTlsPoliciesGet(
-        \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsServerTlsPoliciesGetRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsServerTlsPoliciesGetSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsServerTlsPoliciesGetResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{name}', \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsServerTlsPoliciesGetRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsServerTlsPoliciesGetRequest::class, $request, null));
-        
-        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsServerTlsPoliciesGetResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->serverTlsPolicy = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ServerTlsPolicy', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsServerTlsPoliciesGetIamPolicyRequest $request
@@ -495,46 +575,6 @@ class Projects
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->listServerTlsPoliciesResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListServerTlsPoliciesResponse', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Updates the parameters of a single ServerTlsPolicy.
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsServerTlsPoliciesPatchRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsServerTlsPoliciesPatchSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsServerTlsPoliciesPatchResponse
-     */
-	public function networksecurityProjectsLocationsServerTlsPoliciesPatch(
-        \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsServerTlsPoliciesPatchRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsServerTlsPoliciesPatchSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsServerTlsPoliciesPatchResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{name}', \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsServerTlsPoliciesPatchRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "serverTlsPolicyInput", "json");
-        $options = array_merge_recursive($options, $body);
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsServerTlsPoliciesPatchRequest::class, $request, null));
-        
-        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsServerTlsPoliciesPatchResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
             }
         }
 
@@ -615,6 +655,278 @@ class Projects
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->googleIamV1TestIamPermissionsResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\GoogleIamV1TestIamPermissionsResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Creates a new TlsInspectionPolicy in a given project and location.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsTlsInspectionPoliciesCreateRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsTlsInspectionPoliciesCreateSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsTlsInspectionPoliciesCreateResponse
+     */
+	public function networksecurityProjectsLocationsTlsInspectionPoliciesCreate(
+        \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsTlsInspectionPoliciesCreateRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsTlsInspectionPoliciesCreateSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsTlsInspectionPoliciesCreateResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{parent}/tlsInspectionPolicies', \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsTlsInspectionPoliciesCreateRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "tlsInspectionPolicyInput", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsTlsInspectionPoliciesCreateRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsTlsInspectionPoliciesCreateResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Lists TlsInspectionPolicies in a given project and location.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsTlsInspectionPoliciesListRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsTlsInspectionPoliciesListSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsTlsInspectionPoliciesListResponse
+     */
+	public function networksecurityProjectsLocationsTlsInspectionPoliciesList(
+        \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsTlsInspectionPoliciesListRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsTlsInspectionPoliciesListSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsTlsInspectionPoliciesListResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{parent}/tlsInspectionPolicies', \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsTlsInspectionPoliciesListRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsTlsInspectionPoliciesListRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsTlsInspectionPoliciesListResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->listTlsInspectionPoliciesResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListTlsInspectionPoliciesResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Creates a new UrlList in a given project and location.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsCreateRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsCreateSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsCreateResponse
+     */
+	public function networksecurityProjectsLocationsUrlListsCreate(
+        \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsCreateRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsCreateSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsCreateResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{parent}/urlLists', \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsCreateRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "urlListInput", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsCreateRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsCreateResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Deletes a single UrlList.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsDeleteRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsDeleteSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsDeleteResponse
+     */
+	public function networksecurityProjectsLocationsUrlListsDelete(
+        \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsDeleteRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsDeleteSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsDeleteResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{name}', \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsDeleteRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsDeleteRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsDeleteResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Gets details of a single UrlList.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsGetRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsGetSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsGetResponse
+     */
+	public function networksecurityProjectsLocationsUrlListsGet(
+        \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsGetRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsGetSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsGetResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{name}', \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsGetRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsGetRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsGetResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->urlList = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\UrlList', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Lists UrlLists in a given project and location.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsListRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsListSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsListResponse
+     */
+	public function networksecurityProjectsLocationsUrlListsList(
+        \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsListRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsListSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsListResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{parent}/urlLists', \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsListRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsListRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsListResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->listUrlListsResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListUrlListsResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Updates the parameters of a single UrlList.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsPatchRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsPatchSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsPatchResponse
+     */
+	public function networksecurityProjectsLocationsUrlListsPatch(
+        \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsPatchRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsPatchSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsPatchResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{name}', \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsPatchRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "urlListInput", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsPatchRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('PATCH', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\NetworksecurityProjectsLocationsUrlListsPatchResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
             }
         }
 

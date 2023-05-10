@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteAutoScalingConfigurationXAmzTargetEnum: string
 {
     case APP_RUNNER_DELETE_AUTO_SCALING_CONFIGURATION = 'AppRunner.DeleteAutoScalingConfiguration';

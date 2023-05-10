@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteRepositoryXAmzTargetEnum: string
 {
     case AWS_PROTON20200720_DELETE_REPOSITORY = 'AwsProton20200720.DeleteRepository';

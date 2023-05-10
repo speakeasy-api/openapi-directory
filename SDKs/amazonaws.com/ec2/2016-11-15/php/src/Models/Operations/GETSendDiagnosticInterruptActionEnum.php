@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETSendDiagnosticInterruptActionEnum: string
 {
     case SEND_DIAGNOSTIC_INTERRUPT = 'SendDiagnosticInterrupt';

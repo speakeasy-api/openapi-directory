@@ -28,7 +28,7 @@ class IamBinding
     public ?IamBindingActionEnum $action = null;
     
     /**
-     * A single identity requesting access for a Cloud Platform resource, e.g. "foo@google.com".
+     * A single identity requesting access for a Cloud Platform resource, for example, "foo@google.com".
      * 
      * @var ?string $member
      */

@@ -30,45 +30,83 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\GetDirectionsOutputFormatRequest;
+use \OpenAPI\OpenAPI\Models\Operations\GetDirectionsOutputFormatCriteriaEnum;
+use \OpenAPI\OpenAPI\Models\Operations\GetDirectionsOutputFormatDistanceUnitEnum;
+use \OpenAPI\OpenAPI\Models\Operations\GetDirectionsOutputFormatOutputFormatEnum;
+use \OpenAPI\OpenAPI\Models\Operations\GetDirectionsOutputFormatOutputSrsEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetDirectionsOutputFormatRequest();
+    $request->correctSide = false;
+    $request->criteria = GetDirectionsOutputFormatCriteriaEnum::FASTEST;
+    $request->departure = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-07-27T21:52:56.087Z');
+    $request->disable = 'quibusdam';
+    $request->distanceUnit = GetDirectionsOutputFormatDistanceUnitEnum::MI;
+    $request->outputFormat = GetDirectionsOutputFormatOutputFormatEnum::HTML;
+    $request->outputSRS = GetDirectionsOutputFormatOutputSrsEnum::TWENTY_SIX_THOUSAND_NINE_HUNDRED_AND_EIGHT;
+    $request->points = 'illum';
+    $request->roundTrip = false;
+    $request->routeDescription = 'vel';
+
+    $response = $sdk->directions->getDirectionsOutputFormat($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### directions
+### [directions](docs/directions/README.md)
 
-* `getDirectionsOutputFormat` - Get the directions, path, distance and travel time between a series of geographic points
-* `getOptimalDirectionsOutputFormat` - Get the directions, optimal path, distance and travel time between a start point and a series of end points which are reordered to minimize total distance or time.
-* `getTruckDirectionsOutputFormat` - Get the directions, path, distance and travel time between a series of geographic points for a commercial vehicle
-* `getTruckOptimalDirectionsOutputFormat` - Get the directions, optimal path, distance and travel time between a start point and a series of end points which are reordered to minimize total distance or time for a commercial vehicle
-* `postDirectionsOutputFormat` - Get the directions, path, distance and travel time between a series of geographic points
-* `postOptimalDirectionsOutputFormat` - Get the directions, optimal path, distance and travel time between a start point and one or more end points which are reordered to minimize total distance or time.
-* `postTruckDirectionsOutputFormat` - Get the directions, path, distance and travel time between a series of geographic points
-* `postTruckOptimalDirectionsOutputFormat` - Get the directions, optimal path, distance and travel time between a start point and one or more end points which are reordered to minimize total distance or time.
+* [getDirectionsOutputFormat](docs/directions/README.md#getdirectionsoutputformat) - Get the directions, path, distance and travel time between a series of geographic points
+* [getOptimalDirectionsOutputFormat](docs/directions/README.md#getoptimaldirectionsoutputformat) - Get the directions, optimal path, distance and travel time between a start point and a series of end points which are reordered to minimize total distance or time.
+* [getTruckDirectionsOutputFormat](docs/directions/README.md#gettruckdirectionsoutputformat) - Get the directions, path, distance and travel time between a series of geographic points for a commercial vehicle
+* [getTruckOptimalDirectionsOutputFormat](docs/directions/README.md#gettruckoptimaldirectionsoutputformat) - Get the directions, optimal path, distance and travel time between a start point and a series of end points which are reordered to minimize total distance or time for a commercial vehicle
+* [postDirectionsOutputFormat](docs/directions/README.md#postdirectionsoutputformat) - Get the directions, path, distance and travel time between a series of geographic points
+* [postOptimalDirectionsOutputFormat](docs/directions/README.md#postoptimaldirectionsoutputformat) - Get the directions, optimal path, distance and travel time between a start point and one or more end points which are reordered to minimize total distance or time.
+* [postTruckDirectionsOutputFormat](docs/directions/README.md#posttruckdirectionsoutputformat) - Get the directions, path, distance and travel time between a series of geographic points
+* [postTruckOptimalDirectionsOutputFormat](docs/directions/README.md#posttruckoptimaldirectionsoutputformat) - Get the directions, optimal path, distance and travel time between a start point and one or more end points which are reordered to minimize total distance or time.
 
-### distance
+### [distance](docs/distance/README.md)
 
-* `getDistanceOutputFormat` - Get distance and travel time between two geographic points
-* `getDistanceBetweenPairsOutputFormat` - Get distance and travel time between each pair of geographic points
-* `getTruckDistanceOutputFormat` - Get distance and travel time between two geographic points for a commercial vehicle
-* `getTruckDistanceBetweenPairsOutputFormat` - Get distance and travel time between each pair of geographic points for a commercial vehicle
-* `postDistanceOutputFormat` - Get distance and travel time between two geographic points
-* `postDistanceBetweenPairsOutputFormat` - Get distance and travel time between each pair of geographic points
-* `postTruckDistanceOutputFormat` - Get distance and travel time between two geographic points
-* `postTruckDistanceBetweenPairsOutputFormat` - Get distance and travel time between each pair of geographic points
+* [getDistanceOutputFormat](docs/distance/README.md#getdistanceoutputformat) - Get distance and travel time between two geographic points
+* [getDistanceBetweenPairsOutputFormat](docs/distance/README.md#getdistancebetweenpairsoutputformat) - Get distance and travel time between each pair of geographic points
+* [getTruckDistanceOutputFormat](docs/distance/README.md#gettruckdistanceoutputformat) - Get distance and travel time between two geographic points for a commercial vehicle
+* [getTruckDistanceBetweenPairsOutputFormat](docs/distance/README.md#gettruckdistancebetweenpairsoutputformat) - Get distance and travel time between each pair of geographic points for a commercial vehicle
+* [postDistanceOutputFormat](docs/distance/README.md#postdistanceoutputformat) - Get distance and travel time between two geographic points
+* [postDistanceBetweenPairsOutputFormat](docs/distance/README.md#postdistancebetweenpairsoutputformat) - Get distance and travel time between each pair of geographic points
+* [postTruckDistanceOutputFormat](docs/distance/README.md#posttruckdistanceoutputformat) - Get distance and travel time between two geographic points
+* [postTruckDistanceBetweenPairsOutputFormat](docs/distance/README.md#posttruckdistancebetweenpairsoutputformat) - Get distance and travel time between each pair of geographic points
 
-### route
+### [route](docs/route/README.md)
 
-* `getOptimalRouteOutputFormat` - Get the optimal path, distance and travel time between a start point and a series of end points which are reordered to minimize total distance or time.
-* `getRouteOutputFormat` - Get the path, distance and travel time between a series of geographic points
-* `getTruckOptimalRouteOutputFormat` - Get the optimal path, distance and travel time between a start point and a series of end points which are reordered to minimize total distance or time for a commercial vehicle
-* `getTruckRouteOutputFormat` - Get the path, distance and travel time between a series of geographic points for a commercial vehicle
-* `postOptimalRouteOutputFormat` - Get the path, distance and travel time between a start point and a series of end points which are reordered to minimize total distance or time.
-* `postRouteOutputFormat` - Get the path, distance and travel time between a series of geographic points
-* `postTruckOptimalRouteOutputFormat` - Get the path, distance and travel time between a start point and a series of end points which are reordered to minimize total distance or time.
-* `postTruckRouteOutputFormat` - Get the path, distance and travel time between a series of geographic points
+* [getOptimalRouteOutputFormat](docs/route/README.md#getoptimalrouteoutputformat) - Get the optimal path, distance and travel time between a start point and a series of end points which are reordered to minimize total distance or time.
+* [getRouteOutputFormat](docs/route/README.md#getrouteoutputformat) - Get the path, distance and travel time between a series of geographic points
+* [getTruckOptimalRouteOutputFormat](docs/route/README.md#gettruckoptimalrouteoutputformat) - Get the optimal path, distance and travel time between a start point and a series of end points which are reordered to minimize total distance or time for a commercial vehicle
+* [getTruckRouteOutputFormat](docs/route/README.md#gettruckrouteoutputformat) - Get the path, distance and travel time between a series of geographic points for a commercial vehicle
+* [postOptimalRouteOutputFormat](docs/route/README.md#postoptimalrouteoutputformat) - Get the path, distance and travel time between a start point and a series of end points which are reordered to minimize total distance or time.
+* [postRouteOutputFormat](docs/route/README.md#postrouteoutputformat) - Get the path, distance and travel time between a series of geographic points
+* [postTruckOptimalRouteOutputFormat](docs/route/README.md#posttruckoptimalrouteoutputformat) - Get the path, distance and travel time between a start point and a series of end points which are reordered to minimize total distance or time.
+* [postTruckRouteOutputFormat](docs/route/README.md#posttruckrouteoutputformat) - Get the path, distance and travel time between a series of geographic points
 <!-- End SDK Available Operations -->
 
 ### Maturity

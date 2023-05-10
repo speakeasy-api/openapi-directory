@@ -116,6 +116,84 @@ class Projects
     }
 	
     /**
+     * Creates a fleet.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GkehubProjectsLocationsFleetsCreateRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\GkehubProjectsLocationsFleetsCreateSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\GkehubProjectsLocationsFleetsCreateResponse
+     */
+	public function gkehubProjectsLocationsFleetsCreate(
+        \OpenAPI\OpenAPI\Models\Operations\GkehubProjectsLocationsFleetsCreateRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\GkehubProjectsLocationsFleetsCreateSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\GkehubProjectsLocationsFleetsCreateResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1beta/{parent}/fleets', \OpenAPI\OpenAPI\Models\Operations\GkehubProjectsLocationsFleetsCreateRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "fleetInput", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\GkehubProjectsLocationsFleetsCreateRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GkehubProjectsLocationsFleetsCreateResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Returns all fleets within an organization or a project that the caller has access to.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GkehubProjectsLocationsFleetsListRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\GkehubProjectsLocationsFleetsListSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\GkehubProjectsLocationsFleetsListResponse
+     */
+	public function gkehubProjectsLocationsFleetsList(
+        \OpenAPI\OpenAPI\Models\Operations\GkehubProjectsLocationsFleetsListRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\GkehubProjectsLocationsFleetsListSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\GkehubProjectsLocationsFleetsListResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1beta/{parent}/fleets', \OpenAPI\OpenAPI\Models\Operations\GkehubProjectsLocationsFleetsListRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\GkehubProjectsLocationsFleetsListRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\GkehubProjectsLocationsFleetsListResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->listFleetsResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListFleetsResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Lists information about the supported locations for this service.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GkehubProjectsLocationsListRequest $request

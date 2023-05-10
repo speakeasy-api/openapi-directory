@@ -30,22 +30,53 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\CommunicationRequest;
+use \OpenAPI\OpenAPI\Models\Shared\Post;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new CommunicationRequest();
+    $request->requestBody = [
+        new Post(),
+        new Post(),
+        new Post(),
+    ];
+    $request->all = false;
+
+    $response = $sdk->textAnalysis->communication($request);
+
+    if ($response->predictionResults !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### textAnalysis
+### [textAnalysis](docs/textanalysis/README.md)
 
-* `communication` - Communication & Tonality
-* `ekmanEmotion` - Emotion Analysis
-* `emotion` - Emotion Analysis
-* `languageDetection` - Language Detection
-* `personality` - Personality Traits
-* `sentiment` - Sentiment Analysis
-* `topicSentiment` - Extracts topics and sentiments and relates them.
+* [communication](docs/textanalysis/README.md#communication) - Communication & Tonality
+* [ekmanEmotion](docs/textanalysis/README.md#ekmanemotion) - Emotion Analysis
+* [emotion](docs/textanalysis/README.md#emotion) - Emotion Analysis
+* [languageDetection](docs/textanalysis/README.md#languagedetection) - Language Detection
+* [personality](docs/textanalysis/README.md#personality) - Personality Traits
+* [sentiment](docs/textanalysis/README.md#sentiment) - Sentiment Analysis
+* [topicSentiment](docs/textanalysis/README.md#topicsentiment) - Extracts topics and sentiments and relates them.
 <!-- End SDK Available Operations -->
 
 ### Maturity

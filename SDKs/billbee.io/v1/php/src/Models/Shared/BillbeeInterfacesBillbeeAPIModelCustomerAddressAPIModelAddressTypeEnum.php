@@ -10,8 +10,8 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /** The type of the address */
-enum BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModelAddressTypeEnum: string
+enum BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModelAddressTypeEnum: int
 {
-    case ONE = '1';
-    case TWO = '2';
+    case ONE = 1;
+    case TWO = 2;
 }

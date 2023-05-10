@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CancelDataQualityRulesetEvaluationRunXAmzTargetEnum: string
 {
     case AWS_GLUE_CANCEL_DATA_QUALITY_RULESET_EVALUATION_RUN = 'AWSGlue.CancelDataQualityRulesetEvaluationRun';

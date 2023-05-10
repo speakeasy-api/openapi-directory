@@ -401,4 +401,17 @@ src/Models/Operations/UpdateWorkspace403ApplicationJSON.php
 src/Models/Operations/UpdateWorkspace200ApplicationJSONWorkspace.php
 src/Models/Operations/UpdateWorkspace200ApplicationJSON.php
 src/Models/Operations/UpdateWorkspaceResponse.php
+docs/sdk/README.md
+docs/api/README.md
+docs/apiversion/README.md
+docs/collections/README.md
+docs/environments/README.md
+docs/import/README.md
+docs/mocks/README.md
+docs/monitors/README.md
+docs/relations/README.md
+docs/schema/README.md
+docs/user/README.md
+docs/webhooks/README.md
+docs/workspaces/README.md
 USAGE.md

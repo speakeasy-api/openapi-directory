@@ -110,4 +110,42 @@ class Users
 
         return $response;
     }
+	
+    /**
+     * Update a user
+     * 
+     * Updates a user.
+     * 
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\PutV2UsersIdJsonRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\PutV2UsersIdJsonResponse
+     */
+	public function putV2UsersIdJson(
+        \OpenAPI\OpenAPI\Models\Operations\PutV2UsersIdJsonRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\PutV2UsersIdJsonResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v2/users/{id}.json', \OpenAPI\OpenAPI\Models\Operations\PutV2UsersIdJsonRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "form");
+        $options = array_merge_recursive($options, $body);
+        
+        $httpResponse = $this->_defaultClient->request('PUT', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\PutV2UsersIdJsonResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, '*/*')) {
+                $response->body = $httpResponse->getBody()->getContents();
+            }
+        }
+
+        return $response;
+    }
 }

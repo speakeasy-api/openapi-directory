@@ -74,9 +74,11 @@ class FactOfTheDay
     /**
      * Get the list of supported fact of the day categories.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetFactFodCategoriesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetFactFodCategoriesResponse
      */
 	public function getFactFodCategories(
+        \OpenAPI\OpenAPI\Models\Operations\GetFactFodCategoriesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetFactFodCategoriesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -84,7 +86,8 @@ class FactOfTheDay
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

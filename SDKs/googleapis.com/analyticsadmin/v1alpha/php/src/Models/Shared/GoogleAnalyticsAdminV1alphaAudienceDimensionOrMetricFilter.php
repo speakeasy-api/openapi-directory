@@ -38,7 +38,7 @@ class GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilter
     public ?GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterBetweenFilter $betweenFilter = null;
     
     /**
-     * Required. Immutable. The dimension name or metric name to filter.
+     * Required. Immutable. The dimension name or metric name to filter. If the field name refers to a custom dimension or metric, a scope prefix will be added to the front of the custom dimensions or metric name. For more on scope prefixes or custom dimensions/metrics, reference the [Google Analytics Data API documentation] (https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#custom_dimensions).
      * 
      * @var ?string $fieldName
      */
@@ -48,7 +48,7 @@ class GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilter
     public ?string $fieldName = null;
     
     /**
-     * Optional. If set, specifies the time window for which to evaluate data in number of days. If not set, then audience data is evaluated against lifetime data (i.e., infinite time window). For example, if set to 1 day, only the current day's data is evaluated. The reference point is the current day when at_any_point_in_time is unset or false. It can only be set when Audience scope is ACROSS_ALL_SESSIONS and cannot be greater than 60 days.
+     * Optional. If set, specifies the time window for which to evaluate data in number of days. If not set, then audience data is evaluated against lifetime data (For example, infinite time window). For example, if set to 1 day, only the current day's data is evaluated. The reference point is the current day when at_any_point_in_time is unset or false. It can only be set when Audience scope is ACROSS_ALL_SESSIONS and cannot be greater than 60 days.
      * 
      * @var ?int $inAnyNDayPeriod
      */

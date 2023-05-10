@@ -30,21 +30,76 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\LanguageDocumentsAnalyzeEntitiesRequest;
+use \OpenAPI\OpenAPI\Models\Shared\XgafvEnum;
+use \OpenAPI\OpenAPI\Models\Shared\AnalyzeEntitiesRequest;
+use \OpenAPI\OpenAPI\Models\Shared\Document;
+use \OpenAPI\OpenAPI\Models\Shared\DocumentTypeEnum;
+use \OpenAPI\OpenAPI\Models\Shared\AnalyzeEntitiesRequestEncodingTypeEnum;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+use \OpenAPI\OpenAPI\Models\Operations\LanguageDocumentsAnalyzeEntitiesSecurity;
+use \OpenAPI\OpenAPI\Models\Operations\LanguageDocumentsAnalyzeEntitiesSecurityOption1;
+use \OpenAPI\OpenAPI\Models\Operations\LanguageDocumentsAnalyzeEntitiesSecurityOption2;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new LanguageDocumentsAnalyzeEntitiesRequest();
+    $request->dollarXgafv = XgafvEnum::TWO;
+    $request->analyzeEntitiesRequest = new AnalyzeEntitiesRequest();
+    $request->analyzeEntitiesRequest->document = new Document();
+    $request->analyzeEntitiesRequest->document->content = 'provident';
+    $request->analyzeEntitiesRequest->document->gcsContentUri = 'distinctio';
+    $request->analyzeEntitiesRequest->document->language = 'quibusdam';
+    $request->analyzeEntitiesRequest->document->type = DocumentTypeEnum::PLAIN_TEXT;
+    $request->analyzeEntitiesRequest->encodingType = AnalyzeEntitiesRequestEncodingTypeEnum::UTF32;
+    $request->accessToken = 'corrupti';
+    $request->alt = AltEnum::PROTO;
+    $request->callback = 'vel';
+    $request->fields = 'error';
+    $request->key = 'deserunt';
+    $request->oauthToken = 'suscipit';
+    $request->prettyPrint = false;
+    $request->quotaUser = 'iure';
+    $request->uploadType = 'magnam';
+    $request->uploadProtocol = 'debitis';
+
+    $requestSecurity = new LanguageDocumentsAnalyzeEntitiesSecurity();
+    $requestSecurity->option1 = new LanguageDocumentsAnalyzeEntitiesSecurityOption1();
+    $requestSecurity->option1->oauth2 = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+    $requestSecurity->option1->oauth2c = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+
+    $response = $sdk->documents->languageDocumentsAnalyzeEntities($request, $requestSecurity);
+
+    if ($response->analyzeEntitiesResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### documents
+### [documents](docs/documents/README.md)
 
-* `languageDocumentsAnalyzeEntities` - Finds named entities (currently proper names and common nouns) in the text along with entity types, salience, mentions for each entity, and other properties.
-* `languageDocumentsAnalyzeEntitySentiment` - Finds entities, similar to AnalyzeEntities in the text and analyzes sentiment associated with each entity and its mentions.
-* `languageDocumentsAnalyzeSentiment` - Analyzes the sentiment of the provided text.
-* `languageDocumentsAnalyzeSyntax` - Analyzes the syntax of the text and provides sentence boundaries and tokenization along with part of speech tags, dependency trees, and other properties.
-* `languageDocumentsAnnotateText` - A convenience method that provides all the features that analyzeSentiment, analyzeEntities, and analyzeSyntax provide in one call.
-* `languageDocumentsClassifyText` - Classifies a document into categories.
+* [languageDocumentsAnalyzeEntities](docs/documents/README.md#languagedocumentsanalyzeentities) - Finds named entities (currently proper names and common nouns) in the text along with entity types, salience, mentions for each entity, and other properties.
+* [languageDocumentsAnalyzeEntitySentiment](docs/documents/README.md#languagedocumentsanalyzeentitysentiment) - Finds entities, similar to AnalyzeEntities in the text and analyzes sentiment associated with each entity and its mentions.
+* [languageDocumentsAnalyzeSentiment](docs/documents/README.md#languagedocumentsanalyzesentiment) - Analyzes the sentiment of the provided text.
+* [languageDocumentsAnalyzeSyntax](docs/documents/README.md#languagedocumentsanalyzesyntax) - Analyzes the syntax of the text and provides sentence boundaries and tokenization along with part of speech tags, dependency trees, and other properties.
+* [languageDocumentsAnnotateText](docs/documents/README.md#languagedocumentsannotatetext) - A convenience method that provides all the features that analyzeSentiment, analyzeEntities, and analyzeSyntax provide in one call.
+* [languageDocumentsClassifyText](docs/documents/README.md#languagedocumentsclassifytext) - Classifies a document into categories.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetComputeAccessXAmzTargetEnum: string
 {
     case GAME_LIFT_GET_COMPUTE_ACCESS = 'GameLift.GetComputeAccess';

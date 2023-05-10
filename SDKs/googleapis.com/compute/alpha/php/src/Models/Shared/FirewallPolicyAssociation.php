@@ -58,6 +58,16 @@ class FirewallPolicyAssociation
     public ?string $name = null;
     
     /**
+     * An integer indicating the priority of an association. The priority must be a positive value between 1 and 2147483647. Firewall Policies are evaluated from highest to lowest priority where 1 is the highest priority and 2147483647 is the lowest priority. The default value is `1000`. If two associations have the same priority then lexicographical order on association names is applied.
+     * 
+     * @var ?int $priority
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('priority')]
+    #[\JMS\Serializer\Annotation\Type('int')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?int $priority = null;
+    
+    /**
      * [Output Only] The short name of the firewall policy of the association.
      * 
      * @var ?string $shortName
@@ -73,6 +83,7 @@ class FirewallPolicyAssociation
 		$this->displayName = null;
 		$this->firewallPolicyId = null;
 		$this->name = null;
+		$this->priority = null;
 		$this->shortName = null;
 	}
 }

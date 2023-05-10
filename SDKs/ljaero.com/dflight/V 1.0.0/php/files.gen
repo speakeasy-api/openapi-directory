@@ -124,4 +124,13 @@ src/Models/Shared/WxPolyResponse.php
 src/Models/Shared/WxByPolygon.php
 src/Models/Shared/WxRouteResponse.php
 src/Models/Shared/WxByRoute.php
+docs/sdk/README.md
+docs/aerodromes/README.md
+docs/airspace/README.md
+docs/flightrestrictions/README.md
+docs/restrictedpublicvenues/README.md
+docs/specialsecurityareas/README.md
+docs/surfaceobstacles/README.md
+docs/uasoperatingareas/README.md
+docs/weather/README.md
 USAGE.md

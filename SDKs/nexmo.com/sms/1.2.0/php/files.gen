@@ -32,4 +32,5 @@ src/Models/Shared/NewMessageTypeEnum.php
 src/Models/Shared/NewMessage.php
 src/Models/Shared/DeliveryReceipt.php
 src/Models/Callbacks/SendAnSmsDeliveryReceiptResponse.php
+docs/sdk/README.md
 USAGE.md

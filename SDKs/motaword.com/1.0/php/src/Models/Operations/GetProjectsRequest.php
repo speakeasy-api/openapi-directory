@@ -43,6 +43,7 @@ class GetProjectsRequest
      * deprecated. use `status[]` param.
      * 
      * @var ?bool $withCompleted
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=with_completed')]
     public ?bool $withCompleted = null;
@@ -51,6 +52,7 @@ class GetProjectsRequest
      * deprecated. use `status[]` param.
      * 
      * @var ?bool $withPending
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=with_pending')]
     public ?bool $withPending = null;
@@ -59,6 +61,7 @@ class GetProjectsRequest
      * deprecated. use `status[]` param.
      * 
      * @var ?bool $withStarted
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=with_started')]
     public ?bool $withStarted = null;

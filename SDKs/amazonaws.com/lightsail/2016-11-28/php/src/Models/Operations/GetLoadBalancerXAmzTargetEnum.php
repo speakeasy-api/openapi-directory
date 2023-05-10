@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetLoadBalancerXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_GET_LOAD_BALANCER = 'Lightsail_20161128.GetLoadBalancer';

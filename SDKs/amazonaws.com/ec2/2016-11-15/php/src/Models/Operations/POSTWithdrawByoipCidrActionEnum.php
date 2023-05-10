@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTWithdrawByoipCidrActionEnum: string
 {
     case WITHDRAW_BYOIP_CIDR = 'WithdrawByoipCidr';

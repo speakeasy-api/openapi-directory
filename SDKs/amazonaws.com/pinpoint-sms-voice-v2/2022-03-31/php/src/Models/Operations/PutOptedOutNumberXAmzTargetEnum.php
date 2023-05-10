@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutOptedOutNumberXAmzTargetEnum: string
 {
     case PINPOINT_SMS_VOICE_V2_PUT_OPTED_OUT_NUMBER = 'PinpointSMSVoiceV2.PutOptedOutNumber';

@@ -35,11 +35,6 @@ class InstanceRefresh
 	
     public ?int $percentageComplete = null;
     
-    /**
-     * Describes the preferences for an instance refresh.
-     * 
-     * @var ?\OpenAPI\OpenAPI\Models\Shared\RefreshPreferences $preferences
-     */
 	
     public ?RefreshPreferences $preferences = null;
     

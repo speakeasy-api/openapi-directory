@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UntagResourceXAmzTargetEnum: string
 {
     case AMAZON_DAXV3_UNTAG_RESOURCE = 'AmazonDAXV3.UntagResource';

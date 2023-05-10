@@ -78,4 +78,6 @@ src/Models/Shared/HttpRequest.php
 src/Models/Shared/ReportResponse.php
 src/Models/Shared/ReportError.php
 src/Models/Shared/ReportRequest.php
+docs/sdk/README.md
+docs/services/README.md
 USAGE.md

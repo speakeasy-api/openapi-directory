@@ -30,33 +30,89 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\CreatePodcastRequestBody;
+use \OpenAPI\OpenAPI\Models\Operations\CreatePodcastRequestBodyFileLogo;
+use \OpenAPI\OpenAPI\Models\Shared\Podcast;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new CreatePodcastRequestBody();
+    $request->fileLogo = new CreatePodcastRequestBodyFileLogo();
+    $request->fileLogo->content = 'corrupti';
+    $request->fileLogo->fileLogo = 'provident';
+    $request->podcast = new Podcast();
+    $request->podcast->author = 'distinctio';
+    $request->podcast->block = false;
+    $request->podcast->categories = [
+        'unde',
+        'nulla',
+        'corrupti',
+        'illum',
+    ];
+    $request->podcast->copyright = 'vel';
+    $request->podcast->country = 'Netherlands Antilles';
+    $request->podcast->description = 'deserunt';
+    $request->podcast->explicit = false;
+    $request->podcast->image = 'suscipit';
+    $request->podcast->key = 'iure';
+    $request->podcast->keywords = [
+        'debitis',
+        'ipsa',
+    ];
+    $request->podcast->language = 'delectus';
+    $request->podcast->link = 'tempora';
+    $request->podcast->ownerEmail = 'suscipit';
+    $request->podcast->ownerName = 'molestiae';
+    $request->podcast->showType = 'minus';
+    $request->podcast->subtitle = 'placeat';
+    $request->podcast->summary = 'voluptatum';
+    $request->podcast->title = 'Ms.';
+
+    $response = $sdk->apiV2->createPodcast($request);
+
+    if ($response->body !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### apiV2
+### [apiV2](docs/apiv2/README.md)
 
-* `createPodcast` - Create podcast
-* `createPodcastEpisode` - Create podcast episode
-* `deletePodcast` - Delete podcast
-* `deletePodcast1` - Delete podcast episode
-* `getPartnerAggregatorStations` - List stations
-* `getPodcast` - Get podcast
-* `getPodcastCategories` - Get the list of Categories that can be used to filter podcasts in the search podcasts request
-* `getPodcastCountries` - Get the list of Countries that can be used to filter podcasts in the search podcasts request
-* `getPodcastEpisode` - Get podcast episode
-* `getPodcastEpisodes` - Get podcast episodes
-* `getPodcastLanguages` - Get the list of Languages that can be used to filter podcasts in the search podcasts request
-* `getStationCountries` - Get the list of Countries that can be used to filter stations in the search stations request
-* `getStationGenres` - Get the list of Genres that can be used to filter stations in the search stations request
-* `getStationLanguages` - Get the list of Languages that can be used to filter stations in the search stations request
-* `searchPodcasts` - Search podcasts
-* `searchStations` - Search stations
-* `updatePodcast` - Update podcast
-* `updatePodcastEpisode` - Update podcast episode
+* [createPodcast](docs/apiv2/README.md#createpodcast) - Create podcast
+* [createPodcastEpisode](docs/apiv2/README.md#createpodcastepisode) - Create podcast episode
+* [deletePodcast](docs/apiv2/README.md#deletepodcast) - Delete podcast
+* [deletePodcast1](docs/apiv2/README.md#deletepodcast1) - Delete podcast episode
+* [getPartnerAggregatorStations](docs/apiv2/README.md#getpartneraggregatorstations) - List stations
+* [getPodcast](docs/apiv2/README.md#getpodcast) - Get podcast
+* [getPodcastCategories](docs/apiv2/README.md#getpodcastcategories) - Get the list of Categories that can be used to filter podcasts in the search podcasts request
+* [getPodcastCountries](docs/apiv2/README.md#getpodcastcountries) - Get the list of Countries that can be used to filter podcasts in the search podcasts request
+* [getPodcastEpisode](docs/apiv2/README.md#getpodcastepisode) - Get podcast episode
+* [getPodcastEpisodes](docs/apiv2/README.md#getpodcastepisodes) - Get podcast episodes
+* [getPodcastLanguages](docs/apiv2/README.md#getpodcastlanguages) - Get the list of Languages that can be used to filter podcasts in the search podcasts request
+* [getStationCountries](docs/apiv2/README.md#getstationcountries) - Get the list of Countries that can be used to filter stations in the search stations request
+* [getStationGenres](docs/apiv2/README.md#getstationgenres) - Get the list of Genres that can be used to filter stations in the search stations request
+* [getStationLanguages](docs/apiv2/README.md#getstationlanguages) - Get the list of Languages that can be used to filter stations in the search stations request
+* [searchPodcasts](docs/apiv2/README.md#searchpodcasts) - Search podcasts
+* [searchStations](docs/apiv2/README.md#searchstations) - Search stations
+* [updatePodcast](docs/apiv2/README.md#updatepodcast) - Update podcast
+* [updatePodcastEpisode](docs/apiv2/README.md#updatepodcastepisode) - Update podcast episode
 <!-- End SDK Available Operations -->
 
 ### Maturity

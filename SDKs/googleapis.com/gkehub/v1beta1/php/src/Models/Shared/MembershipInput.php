@@ -78,6 +78,16 @@ class MembershipInput
     public ?array $labels = null;
     
     /**
+     * This field informs Fleet-based applications/services/UIs with the necessary information for where each underlying Cluster reports its metrics.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\MonitoringConfig $monitoringConfig
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('monitoringConfig')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\MonitoringConfig')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?MonitoringConfig $monitoringConfig = null;
+    
+    /**
      * State of the Membership resource.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\MembershipStateInput $state
@@ -95,6 +105,7 @@ class MembershipInput
 		$this->externalId = null;
 		$this->infrastructureType = null;
 		$this->labels = null;
+		$this->monitoringConfig = null;
 		$this->state = null;
 	}
 }

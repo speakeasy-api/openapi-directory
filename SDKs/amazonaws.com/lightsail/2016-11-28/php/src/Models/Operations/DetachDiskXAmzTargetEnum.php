@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DetachDiskXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_DETACH_DISK = 'Lightsail_20161128.DetachDisk';

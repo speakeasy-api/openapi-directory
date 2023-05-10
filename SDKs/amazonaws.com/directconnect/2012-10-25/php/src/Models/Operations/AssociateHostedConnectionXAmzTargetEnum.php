@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AssociateHostedConnectionXAmzTargetEnum: string
 {
     case OVERTURE_SERVICE_ASSOCIATE_HOSTED_CONNECTION = 'OvertureService.AssociateHostedConnection';

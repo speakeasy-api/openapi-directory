@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETModifyLocalGatewayRouteActionEnum: string
 {
     case MODIFY_LOCAL_GATEWAY_ROUTE = 'ModifyLocalGatewayRoute';

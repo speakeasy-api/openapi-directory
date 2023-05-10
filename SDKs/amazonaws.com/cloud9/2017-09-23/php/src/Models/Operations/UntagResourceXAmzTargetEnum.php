@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UntagResourceXAmzTargetEnum: string
 {
     case AWS_CLOUD9_WORKSPACE_MANAGEMENT_SERVICE_UNTAG_RESOURCE = 'AWSCloud9WorkspaceManagementService.UntagResource';

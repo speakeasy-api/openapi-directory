@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListSecurityConfigsXAmzTargetEnum: string
 {
     case OPEN_SEARCH_SERVERLESS_LIST_SECURITY_CONFIGS = 'OpenSearchServerless.ListSecurityConfigs';

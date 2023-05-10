@@ -45,4 +45,6 @@ src/Models/Shared/XgafvEnum.php
 src/Models/Shared/LicenseAssignment.php
 src/Models/Shared/LicenseAssignmentInsert.php
 src/Models/Shared/LicenseAssignmentList.php
+docs/sdk/README.md
+docs/licenseassignments/README.md
 USAGE.md

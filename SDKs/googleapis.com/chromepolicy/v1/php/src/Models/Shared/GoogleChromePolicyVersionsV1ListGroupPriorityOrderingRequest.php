@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class GoogleChromePolicyVersionsV1ListGroupPriorityOrderingRequest
 {
     /**
-     * Required. The namespace of the policy type for the request.
+     * The namespace of the policy type for the request.
      * 
      * @var ?string $policyNamespace
      */
@@ -26,6 +26,16 @@ class GoogleChromePolicyVersionsV1ListGroupPriorityOrderingRequest
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $policyNamespace = null;
+    
+    /**
+     * The schema name of the policy for the request.
+     * 
+     * @var ?string $policySchema
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('policySchema')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $policySchema = null;
     
     /**
      * The key used to identify the target on which the policy will be applied.
@@ -40,6 +50,7 @@ class GoogleChromePolicyVersionsV1ListGroupPriorityOrderingRequest
 	public function __construct()
 	{
 		$this->policyNamespace = null;
+		$this->policySchema = null;
 		$this->policyTargetKey = null;
 	}
 }

@@ -201,6 +201,14 @@ class Meeting
     public ?string $recipientName = null;
     
     /**
+     * Status of the meeting rescheduling progress. Possible values are: pending, booked, failed, retry
+     * 
+     * @var ?string $rescheduleStatus
+     */
+	
+    public ?string $rescheduleStatus = null;
+    
+    /**
      * Start time of the meeting
      * 
      * @var ?\DateTime $startTime
@@ -279,6 +287,7 @@ class Meeting
 		$this->person = null;
 		$this->recipientEmail = null;
 		$this->recipientName = null;
+		$this->rescheduleStatus = null;
 		$this->startTime = null;
 		$this->status = null;
 		$this->step = null;

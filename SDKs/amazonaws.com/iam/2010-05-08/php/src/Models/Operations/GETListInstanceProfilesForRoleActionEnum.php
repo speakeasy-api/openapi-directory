@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETListInstanceProfilesForRoleActionEnum: string
 {
     case LIST_INSTANCE_PROFILES_FOR_ROLE = 'ListInstanceProfilesForRole';

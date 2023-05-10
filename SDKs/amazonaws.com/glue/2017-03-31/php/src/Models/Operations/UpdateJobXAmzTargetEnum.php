@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateJobXAmzTargetEnum: string
 {
     case AWS_GLUE_UPDATE_JOB = 'AWSGlue.UpdateJob';

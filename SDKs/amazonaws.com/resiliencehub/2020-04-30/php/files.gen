@@ -290,4 +290,5 @@ src/Models/Shared/UpdateAppVersionAppComponentResponse.php
 src/Models/Shared/UpdateAppVersionResourceResponse.php
 src/Models/Shared/UpdateResiliencyPolicyResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

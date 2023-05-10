@@ -64,4 +64,6 @@ src/Models/Shared/GoogleIdentityAccesscontextmanagerV1OsConstraintOsTypeEnum.php
 src/Models/Shared/GoogleIdentityAccesscontextmanagerV1OsConstraint.php
 src/Models/Shared/AltEnum.php
 src/Models/Shared/XgafvEnum.php
+docs/sdk/README.md
+docs/assets/README.md
 USAGE.md

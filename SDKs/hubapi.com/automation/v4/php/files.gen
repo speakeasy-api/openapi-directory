@@ -106,4 +106,9 @@ src/Models/Shared/ActionFunction.php
 src/Models/Shared/CollectionResponseActionFunctionIdentifierNoPaging.php
 src/Models/Shared/ActionRevision.php
 src/Models/Shared/CollectionResponseActionRevisionForwardPaging.php
+docs/sdk/README.md
+docs/callbacks/README.md
+docs/definitions/README.md
+docs/functions/README.md
+docs/revisions/README.md
 USAGE.md

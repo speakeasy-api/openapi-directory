@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetTerminologyXAmzTargetEnum: string
 {
     case AWS_SHINE_FRONTEND_SERVICE20170701_GET_TERMINOLOGY = 'AWSShineFrontendService_20170701.GetTerminology';

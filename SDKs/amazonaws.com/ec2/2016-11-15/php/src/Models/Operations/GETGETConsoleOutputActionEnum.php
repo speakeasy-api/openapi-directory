@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETGETConsoleOutputActionEnum: string
 {
     case GET_CONSOLE_OUTPUT = 'GetConsoleOutput';

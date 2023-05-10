@@ -967,7 +967,7 @@ class SDK
     }
 	
     /**
-     * Stores the metadata information about a feature on a form or view.
+     * Stores the metadata information about a feature on a form.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\PutMetadataFlagRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\PutMetadataFlagResponse

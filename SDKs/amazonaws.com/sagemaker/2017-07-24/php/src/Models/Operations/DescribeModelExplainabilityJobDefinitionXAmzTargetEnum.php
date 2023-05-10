@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeModelExplainabilityJobDefinitionXAmzTargetEnum: string
 {
     case SAGE_MAKER_DESCRIBE_MODEL_EXPLAINABILITY_JOB_DEFINITION = 'SageMaker.DescribeModelExplainabilityJobDefinition';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETAcceptVpcEndpointConnectionsActionEnum: string
 {
     case ACCEPT_VPC_ENDPOINT_CONNECTIONS = 'AcceptVpcEndpointConnections';

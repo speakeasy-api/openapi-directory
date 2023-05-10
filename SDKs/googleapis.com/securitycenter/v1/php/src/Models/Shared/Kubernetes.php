@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class Kubernetes
 {
     /**
-     * Provides information on any Kubernetes access reviews (i.e. privilege checks) relevant to the finding.
+     * Provides information on any Kubernetes access reviews (privilege checks) relevant to the finding.
      * 
      * @var ?array<\OpenAPI\OpenAPI\Models\Shared\AccessReview> $accessReviews
      */
@@ -28,7 +28,7 @@ class Kubernetes
     public ?array $accessReviews = null;
     
     /**
-     * Provides Kubernetes role binding information for findings that involve RoleBindings or ClusterRoleBindings.
+     * Provides Kubernetes role binding information for findings that involve [RoleBindings or ClusterRoleBindings](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control).
      * 
      * @var ?array<\OpenAPI\OpenAPI\Models\Shared\GoogleCloudSecuritycenterV1Binding> $bindings
      */
@@ -38,7 +38,7 @@ class Kubernetes
     public ?array $bindings = null;
     
     /**
-     * GKE Node Pools associated with the finding. This field will contain NodePool information for each Node, when it is available.
+     * GKE [node pools](https://cloud.google.com/kubernetes-engine/docs/concepts/node-pools) associated with the finding. This field contains node pool information for each node, when it is available.
      * 
      * @var ?array<\OpenAPI\OpenAPI\Models\Shared\NodePool> $nodePools
      */
@@ -48,7 +48,7 @@ class Kubernetes
     public ?array $nodePools = null;
     
     /**
-     * Provides Kubernetes Node information.
+     * Provides Kubernetes [node](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-architecture#nodes) information.
      * 
      * @var ?array<\OpenAPI\OpenAPI\Models\Shared\Node> $nodes
      */
@@ -58,7 +58,7 @@ class Kubernetes
     public ?array $nodes = null;
     
     /**
-     * Kubernetes Pods associated with the finding. This field will contain Pod records for each container that is owned by a Pod.
+     * Kubernetes [Pods](https://cloud.google.com/kubernetes-engine/docs/concepts/pod) associated with the finding. This field contains Pod records for each container that is owned by a Pod.
      * 
      * @var ?array<\OpenAPI\OpenAPI\Models\Shared\Pod> $pods
      */
@@ -68,7 +68,7 @@ class Kubernetes
     public ?array $pods = null;
     
     /**
-     * Provides Kubernetes role information for findings that involve Roles or ClusterRoles.
+     * Provides Kubernetes role information for findings that involve [Roles or ClusterRoles](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control).
      * 
      * @var ?array<\OpenAPI\OpenAPI\Models\Shared\Role> $roles
      */

@@ -18,5 +18,5 @@ enum SaveTransactionWithIdFlagColorEnum: string
     case GREEN = 'green';
     case BLUE = 'blue';
     case PURPLE = 'purple';
-    case NULL = 'null';
+    case LESS_THAN_NIL_GREATER_THAN = '<nil>';
 }

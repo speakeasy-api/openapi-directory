@@ -30,17 +30,38 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $response = $sdk->health->getUtilityV1HealthHeartbeat();
+
+    if ($response->getUtilityV1HealthHeartbeat200ApplicationJSONString !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### health
+### [health](docs/health/README.md)
 
-* `getUtilityV1HealthHeartbeat`
-* `getUtilityV1HealthThreadinfo`
+* [getUtilityV1HealthHeartbeat](docs/health/README.md#getutilityv1healthheartbeat)
+* [getUtilityV1HealthThreadinfo](docs/health/README.md#getutilityv1healththreadinfo)
 <!-- End SDK Available Operations -->
 
 ### Maturity

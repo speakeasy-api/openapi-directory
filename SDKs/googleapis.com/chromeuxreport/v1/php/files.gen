@@ -46,4 +46,6 @@ src/Models/Shared/KeyFormFactorEnum.php
 src/Models/Shared/Key.php
 src/Models/Shared/QueryRequestFormFactorEnum.php
 src/Models/Shared/QueryRequest.php
+docs/sdk/README.md
+docs/records/README.md
 USAGE.md

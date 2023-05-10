@@ -42,9 +42,11 @@ class Utility
      * 
      * Return a list of all License Types supported by the service
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\LicenseTypesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\LicenseTypesResponse
      */
 	public function licenseTypes(
+        \OpenAPI\OpenAPI\Models\Operations\LicenseTypesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\LicenseTypesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -52,7 +54,8 @@ class Utility
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -81,9 +84,11 @@ class Utility
      * 
      * Return a list of all licensing models supported by the service
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\LicensingModelsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\LicensingModelsResponse
      */
 	public function licensingModels(
+        \OpenAPI\OpenAPI\Models\Operations\LicensingModelsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\LicensingModelsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -91,7 +96,8 @@ class Utility
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartVirtualMachinesMetadataSyncXAmzTargetEnum: string
 {
     case BACKUP_ON_PREMISES_V20210101_START_VIRTUAL_MACHINES_METADATA_SYNC = 'BackupOnPremises_v20210101.StartVirtualMachinesMetadataSync';

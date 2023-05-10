@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DisassociateBudgetFromResourceXAmzTargetEnum: string
 {
     case AWS242_SERVICE_CATALOG_SERVICE_DISASSOCIATE_BUDGET_FROM_RESOURCE = 'AWS242ServiceCatalogService.DisassociateBudgetFromResource';

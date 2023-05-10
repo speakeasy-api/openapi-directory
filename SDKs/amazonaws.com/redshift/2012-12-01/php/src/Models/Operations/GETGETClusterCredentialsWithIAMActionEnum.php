@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETGETClusterCredentialsWithIAMActionEnum: string
 {
     case GET_CLUSTER_CREDENTIALS_WITH_IAM = 'GetClusterCredentialsWithIAM';

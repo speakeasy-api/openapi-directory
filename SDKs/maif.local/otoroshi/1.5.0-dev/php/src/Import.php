@@ -42,9 +42,11 @@ class Import
      * 
      * Export the full state of Otoroshi
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\FullExportSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\FullExportResponse
      */
 	public function fullExport(
+        \OpenAPI\OpenAPI\Models\Operations\FullExportSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\FullExportResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -52,7 +54,8 @@ class Import
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

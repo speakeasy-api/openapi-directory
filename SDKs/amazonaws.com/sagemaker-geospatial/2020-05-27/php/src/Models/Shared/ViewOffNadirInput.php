@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * ViewOffNadirInput - <p/>
+ * ViewOffNadirInput - The input structure for specifying ViewOffNadir property filter. ViewOffNadir refers to the angle from the sensor between nadir (straight down) and the scene center. Measured in degrees (0-90).
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

@@ -440,11 +440,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\AttachPrincipalPolicyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\AttachPrincipalPolicyResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function attachPrincipalPolicy(
         \OpenAPI\OpenAPI\Models\Operations\AttachPrincipalPolicyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\AttachPrincipalPolicyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/principal-policies/{policyName}#x-amzn-iot-principal', \OpenAPI\OpenAPI\Models\Operations\AttachPrincipalPolicyRequest::class, $request);
         
@@ -7619,11 +7622,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DetachPrincipalPolicyRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DetachPrincipalPolicyResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function detachPrincipalPolicy(
         \OpenAPI\OpenAPI\Models\Operations\DetachPrincipalPolicyRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DetachPrincipalPolicyResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/principal-policies/{policyName}#x-amzn-iot-principal', \OpenAPI\OpenAPI\Models\Operations\DetachPrincipalPolicyRequest::class, $request);
         
@@ -10846,11 +10852,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ListPolicyPrincipalsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ListPolicyPrincipalsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function listPolicyPrincipals(
         \OpenAPI\OpenAPI\Models\Operations\ListPolicyPrincipalsRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\ListPolicyPrincipalsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/policy-principals#x-amzn-iot-policy');
         
@@ -10989,11 +10998,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ListPrincipalPoliciesRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ListPrincipalPoliciesResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function listPrincipalPolicies(
         \OpenAPI\OpenAPI\Models\Operations\ListPrincipalPoliciesRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\ListPrincipalPoliciesResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/principal-policies#x-amzn-iot-principal');
         

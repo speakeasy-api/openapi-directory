@@ -30,28 +30,52 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetContentproSearchRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetContentproSearchRequest();
+    $request->terms = 'corrupti';
+
+    $response = $sdk->contentproSearch->getContentproSearch($request);
+
+    if ($response->getContentproSearch200ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### contentproSearch
+### [contentproSearch](docs/contentprosearch/README.md)
 
-* `getContentproSearch` - Send search terms to receive the most relevant articles and companies.
+* [getContentproSearch](docs/contentprosearch/README.md#getcontentprosearch) - Send search terms to receive the most relevant articles and companies.
 
-### contentproSimilarText
+### [contentproSimilarText](docs/contentprosimilartext/README.md)
 
-* `postContentproSimilarText` - The /contentpro-similar-text endpoint accepts and arbitrary piece of text and returns similar articles and blogs written by companies.
+* [postContentproSimilarText](docs/contentprosimilartext/README.md#postcontentprosimilartext) - The /contentpro-similar-text endpoint accepts and arbitrary piece of text and returns similar articles and blogs written by companies.
 
-### search
+### [search](docs/search/README.md)
 
-* `getSearch` - Send search terms to receive the most relevant companies along with text snippets.
+* [getSearch](docs/search/README.md#getsearch) - Send search terms to receive the most relevant companies along with text snippets.
 
-### similar
+### [similar](docs/similar/README.md)
 
-* `getSimilar` - Send a company website to receive a list of companies related to them.
+* [getSimilar](docs/similar/README.md#getsimilar) - Send a company website to receive a list of companies related to them.
 <!-- End SDK Available Operations -->
 
 ### Maturity

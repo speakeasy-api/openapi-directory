@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteClientVpnRouteActionEnum: string
 {
     case DELETE_CLIENT_VPN_ROUTE = 'DeleteClientVpnRoute';

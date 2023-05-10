@@ -32,7 +32,7 @@ class ListResourceSharePermissionsRequestBody
     public ?string $nextToken = null;
     
     /**
-     * Specifies the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resoure Name (ARN)</a> of the resource share for which you want to retrieve the associated permissions.
+     * Specifies the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Name (ARN)</a> of the resource share for which you want to retrieve the associated permissions.
      * 
      * @var string $resourceShareArn
      */

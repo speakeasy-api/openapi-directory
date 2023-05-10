@@ -123,4 +123,5 @@ src/Models/Shared/ModifyLunaClientRequest.php
 src/Models/Shared/RemoveTagsFromResourceResponse.php
 src/Models/Shared/RemoveTagsFromResourceRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

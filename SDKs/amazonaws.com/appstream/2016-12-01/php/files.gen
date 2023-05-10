@@ -386,4 +386,5 @@ src/Models/Shared/UpdateStackResult.php
 src/Models/Shared/UpdateStackRequest.php
 src/Models/Shared/StackAttributeEnum.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

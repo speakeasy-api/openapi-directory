@@ -62,6 +62,8 @@ class Airspace
      *     - *ceiling*: upper limit of the airspace
      *     - *ceiling_uom*: unit of measure used for the numeric floor value: FT (feet) or FL (flight level)
      *     - *ceiling_ref*: reference level used for the numeric ceiling value: AGL, MSL, or STD (standard atmosphere, used for flight level values)
+     *     - *ceiling_ref*: reference level used for the numeric ceiling value: AGL, MSL, or STD (standard atmosphere, used for flight level values)
+     *     - *schedule*: default activation days/times (other times by NOTAM)
      * * MAA (Miscellaneous Activity Area)
      *     - *name*
      *     - *maa_type*: one of the following - ULTRALIGHT, PARACHUTE JUMP AREA, AEROBATIC PRACTICE, GLIDER, HANG GLIDER, SPACE LAUNCH ACTIVITY
@@ -138,6 +140,7 @@ class Airspace
      *     - *ceiling*: upper limit of the airspace
      *     - *ceiling_uom*: unit of measure used for the numeric floor value: FT (feet) or FL (flight level)
      *     - *ceiling_ref*: reference level used for the numeric ceiling value: AGL, MSL, or STD (standard atmosphere, used for flight level values)
+     *     - *schedule*: default activation days/times (other times by NOTAM)
      * * MAA (Miscellaneous Activity Area)
      *     - *name*
      *     - *maa_type*: one of the following - ULTRALIGHT, PARACHUTE JUMP AREA, AEROBATIC PRACTICE, GLIDER, HANG GLIDER, SPACE LAUNCH ACTIVITY
@@ -214,6 +217,7 @@ class Airspace
      *     - *ceiling*: upper limit of the airspace
      *     - *ceiling_uom*: unit of measure used for the numeric floor value: FT (feet) or FL (flight level)
      *     - *ceiling_ref*: reference level used for the numeric ceiling value: AGL, MSL, or STD (standard atmosphere, used for flight level values)
+     *     - *schedule*: default activation days/times (other times by NOTAM)
      * * MAA (Miscellaneous Activity Area)
      *     - *name*
      *     - *maa_type*: one of the following - ULTRALIGHT, PARACHUTE JUMP AREA, AEROBATIC PRACTICE, GLIDER, HANG GLIDER, SPACE LAUNCH ACTIVITY

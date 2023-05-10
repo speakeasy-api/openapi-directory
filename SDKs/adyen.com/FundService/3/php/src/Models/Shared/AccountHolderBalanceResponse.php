@@ -20,10 +20,10 @@ class AccountHolderBalanceResponse
     /**
      * A list of each account and their balances.
      * 
-     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\AccountDetailBalance> $balancePerAccount
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\AccountDetailBalanceWrapper> $balancePerAccount
      */
 	#[\JMS\Serializer\Annotation\SerializedName('balancePerAccount')]
-    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\AccountDetailBalance>')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\AccountDetailBalanceWrapper>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $balancePerAccount = null;
     

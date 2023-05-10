@@ -170,9 +170,11 @@ class User
     /**
      * Returns a list of accounts associated with signed in user. This is useful for OAuth implementations that do not give you access to the token response.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\UserGetMembershipDataForCurrentUserSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\UserGetMembershipDataForCurrentUserResponse
      */
 	public function userGetMembershipDataForCurrentUser(
+        \OpenAPI\OpenAPI\Models\Operations\UserGetMembershipDataForCurrentUserSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\UserGetMembershipDataForCurrentUserResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -180,7 +182,8 @@ class User
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

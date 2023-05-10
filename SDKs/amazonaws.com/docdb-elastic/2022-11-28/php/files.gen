@@ -69,4 +69,5 @@ src/Models/Shared/ListTagsForResourceResponse.php
 src/Models/Shared/RestoreClusterFromSnapshotOutput.php
 src/Models/Shared/UpdateClusterOutput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

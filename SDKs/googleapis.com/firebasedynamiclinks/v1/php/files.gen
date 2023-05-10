@@ -71,4 +71,8 @@ src/Models/Shared/GetIosPostInstallAttributionRequest.php
 src/Models/Shared/DeviceInfo.php
 src/Models/Shared/GetIosReopenAttributionResponse.php
 src/Models/Shared/GetIosReopenAttributionRequest.php
+docs/sdk/README.md
+docs/managedshortlinks/README.md
+docs/shortlinks/README.md
+docs/v1/README.md
 USAGE.md

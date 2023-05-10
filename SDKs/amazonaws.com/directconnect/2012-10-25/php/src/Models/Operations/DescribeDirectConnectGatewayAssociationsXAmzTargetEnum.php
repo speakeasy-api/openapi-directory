@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeDirectConnectGatewayAssociationsXAmzTargetEnum: string
 {
     case OVERTURE_SERVICE_DESCRIBE_DIRECT_CONNECT_GATEWAY_ASSOCIATIONS = 'OvertureService.DescribeDirectConnectGatewayAssociations';

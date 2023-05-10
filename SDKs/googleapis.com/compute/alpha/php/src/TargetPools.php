@@ -470,6 +470,46 @@ class TargetPools
     }
 	
     /**
+     * Sets the Google Cloud Armor security policy for the specified target pool. For more information, see Google Cloud Armor Overview
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ComputeTargetPoolsSetSecurityPolicyRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\ComputeTargetPoolsSetSecurityPolicySecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\ComputeTargetPoolsSetSecurityPolicyResponse
+     */
+	public function computeTargetPoolsSetSecurityPolicy(
+        \OpenAPI\OpenAPI\Models\Operations\ComputeTargetPoolsSetSecurityPolicyRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\ComputeTargetPoolsSetSecurityPolicySecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\ComputeTargetPoolsSetSecurityPolicyResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/projects/{project}/regions/{region}/targetPools/{targetPool}/setSecurityPolicy', \OpenAPI\OpenAPI\Models\Operations\ComputeTargetPoolsSetSecurityPolicyRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "securityPolicyReference", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\ComputeTargetPoolsSetSecurityPolicyRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\ComputeTargetPoolsSetSecurityPolicyResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Returns permissions that a caller has on the specified resource.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ComputeTargetPoolsTestIamPermissionsRequest $request

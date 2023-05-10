@@ -432,4 +432,15 @@ src/Models/Shared/WorkTypeDetailsApiModel.php
 src/Models/Shared/WorkTypeDeleteApiModel.php
 src/Models/Shared/WorkTypeCreateApiModel.php
 src/Models/Shared/WorkTypeUpdateApiModel.php
+docs/sdk/README.md
+docs/client/README.md
+docs/estimation/README.md
+docs/general/README.md
+docs/invoice/README.md
+docs/order/README.md
+docs/payment/README.md
+docs/paymentlink/README.md
+docs/product/README.md
+docs/tax/README.md
+docs/worktype/README.md
 USAGE.md

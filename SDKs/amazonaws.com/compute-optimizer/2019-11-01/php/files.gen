@@ -156,6 +156,7 @@ src/Models/Shared/RecommendationSource.php
 src/Models/Shared/RecommendationSourceTypeEnum.php
 src/Models/Shared/InstanceRecommendationOption.php
 src/Models/Shared/PlatformDifferenceEnum.php
+src/Models/Shared/InstanceStateEnum.php
 src/Models/Shared/InstanceRecommendationFindingReasonCodeEnum.php
 src/Models/Shared/GetEc2InstanceRecommendationsRequest.php
 src/Models/Shared/GetEc2RecommendationProjectedMetricsResponse.php
@@ -217,4 +218,5 @@ src/Models/Shared/PutRecommendationPreferencesRequest.php
 src/Models/Shared/UpdateEnrollmentStatusResponse.php
 src/Models/Shared/UpdateEnrollmentStatusRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

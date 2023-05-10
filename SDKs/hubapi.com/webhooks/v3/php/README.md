@@ -30,27 +30,55 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\DeleteWebhooksV3AppIdSettingsClearRequest;
+use \OpenAPI\OpenAPI\Models\Operations\DeleteWebhooksV3AppIdSettingsClearSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new DeleteWebhooksV3AppIdSettingsClearRequest();
+    $request->appId = 548814;
+
+    $requestSecurity = new DeleteWebhooksV3AppIdSettingsClearSecurity();
+    $requestSecurity->developerHapikey = 'YOUR_API_KEY_HERE';
+
+    $response = $sdk->settings->deleteWebhooksV3AppIdSettingsClear($request, $requestSecurity);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### settings
+### [settings](docs/settings/README.md)
 
-* `deleteWebhooksV3AppIdSettingsClear`
-* `getWebhooksV3AppIdSettingsGetAll`
-* `putWebhooksV3AppIdSettingsConfigure`
+* [deleteWebhooksV3AppIdSettingsClear](docs/settings/README.md#deletewebhooksv3appidsettingsclear)
+* [getWebhooksV3AppIdSettingsGetAll](docs/settings/README.md#getwebhooksv3appidsettingsgetall)
+* [putWebhooksV3AppIdSettingsConfigure](docs/settings/README.md#putwebhooksv3appidsettingsconfigure)
 
-### subscriptions
+### [subscriptions](docs/subscriptions/README.md)
 
-* `deleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchive`
-* `getWebhooksV3AppIdSubscriptionsSubscriptionIdGetById`
-* `getWebhooksV3AppIdSubscriptionsGetAll`
-* `patchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdate`
-* `postWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatch`
-* `postWebhooksV3AppIdSubscriptionsCreate`
+* [deleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchive](docs/subscriptions/README.md#deletewebhooksv3appidsubscriptionssubscriptionidarchive)
+* [getWebhooksV3AppIdSubscriptionsSubscriptionIdGetById](docs/subscriptions/README.md#getwebhooksv3appidsubscriptionssubscriptionidgetbyid)
+* [getWebhooksV3AppIdSubscriptionsGetAll](docs/subscriptions/README.md#getwebhooksv3appidsubscriptionsgetall)
+* [patchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdate](docs/subscriptions/README.md#patchwebhooksv3appidsubscriptionssubscriptionidupdate)
+* [postWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatch](docs/subscriptions/README.md#postwebhooksv3appidsubscriptionsbatchupdateupdatebatch)
+* [postWebhooksV3AppIdSubscriptionsCreate](docs/subscriptions/README.md#postwebhooksv3appidsubscriptionscreate)
 <!-- End SDK Available Operations -->
 
 ### Maturity

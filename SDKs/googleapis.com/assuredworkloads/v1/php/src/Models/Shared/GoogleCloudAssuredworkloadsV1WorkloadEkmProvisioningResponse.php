@@ -30,12 +30,12 @@ class GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse
     /**
      * Detailed error message if Ekm provisioning fails
      * 
-     * @var ?string $ekmProvisioningErrorMessage
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorMappingEnum $ekmProvisioningErrorMapping
      */
-	#[\JMS\Serializer\Annotation\SerializedName('ekmProvisioningErrorMessage')]
-    #[\JMS\Serializer\Annotation\Type('string')]
+	#[\JMS\Serializer\Annotation\SerializedName('ekmProvisioningErrorMapping')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorMappingEnum>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?string $ekmProvisioningErrorMessage = null;
+    public ?GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorMappingEnum $ekmProvisioningErrorMapping = null;
     
     /**
      * Indicates Ekm enrollment Provisioning of a given workload.
@@ -50,7 +50,7 @@ class GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse
 	public function __construct()
 	{
 		$this->ekmProvisioningErrorDomain = null;
-		$this->ekmProvisioningErrorMessage = null;
+		$this->ekmProvisioningErrorMapping = null;
 		$this->ekmProvisioningState = null;
 	}
 }

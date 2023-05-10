@@ -16,5 +16,4 @@ enum WorkflowStatusEnum: string
     case UPDATING = 'UPDATING';
     case DELETED = 'DELETED';
     case FAILED = 'FAILED';
-    case INACTIVE = 'INACTIVE';
 }

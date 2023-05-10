@@ -458,4 +458,5 @@ src/Models/Shared/TestConnectionMessage.php
 src/Models/Shared/UpdateSubscriptionsToEventBridgeResponse.php
 src/Models/Shared/UpdateSubscriptionsToEventBridgeMessage.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

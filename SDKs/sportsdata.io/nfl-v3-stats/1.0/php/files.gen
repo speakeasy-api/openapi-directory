@@ -271,4 +271,5 @@ src/Models/Shared/TeamSeason.php
 src/Models/Shared/Team.php
 src/Models/Shared/Timeframe.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

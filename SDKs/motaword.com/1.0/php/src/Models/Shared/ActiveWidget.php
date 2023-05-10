@@ -18,6 +18,16 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class ActiveWidget
 {
     /**
+     * Is the Active Widget in admin mode? This changes a couple of behaviors in the widget to configure some rules like elements, sections, pages, etc.
+     * 
+     * @var ?bool $adminMode
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('admin_mode')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $adminMode = null;
+    
+    /**
      * When true, hash params are included in filenames. When false, params are ignored.
      * 
      * @var ?bool $allowHashInUrl
@@ -58,6 +68,16 @@ class ActiveWidget
     public ?\DateTime $createdAt = null;
     
     /**
+     * When true, Active ecosystem will print debug-level logs from all Active modules.
+     * 
+     * @var ?bool $debugMode
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('debug_mode')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $debugMode = null;
+    
+    /**
      * Continuous project exclusive elements and rules
      * 
      * @var ?string $elements
@@ -86,6 +106,16 @@ class ActiveWidget
     #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $forceCacheRefreshInterval = null;
+    
+    /**
+     * When true, Active ecosystem will collect all strings on TMS no matter if the translation is present in the cache.
+     * 
+     * @var ?bool $hitBackendForExisting
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('hit_backend_for_existing')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $hitBackendForExisting = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('id')]
     #[\JMS\Serializer\Annotation\Type('int')]
@@ -289,13 +319,16 @@ class ActiveWidget
     
 	public function __construct()
 	{
+		$this->adminMode = null;
 		$this->allowHashInUrl = null;
 		$this->allowQueryInUrl = null;
 		$this->autoDetectSourceLanguage = null;
 		$this->createdAt = null;
+		$this->debugMode = null;
 		$this->elements = null;
 		$this->followUser = null;
 		$this->forceCacheRefreshInterval = null;
+		$this->hitBackendForExisting = null;
 		$this->id = null;
 		$this->languageMappings = null;
 		$this->live = null;

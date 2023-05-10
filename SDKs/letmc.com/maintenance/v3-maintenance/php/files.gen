@@ -28,4 +28,6 @@ src/Models/Operations/MaintenanceControllerCreateMaintenanceJobRawResponse.php
 src/Models/Shared/MaintenanceIssueModelIssuePriorityEnum.php
 src/Models/Shared/MaintenanceIssueModel.php
 src/Models/Shared/MaintenanceDocumentModel.php
+docs/sdk/README.md
+docs/maintenancecontroller/README.md
 USAGE.md

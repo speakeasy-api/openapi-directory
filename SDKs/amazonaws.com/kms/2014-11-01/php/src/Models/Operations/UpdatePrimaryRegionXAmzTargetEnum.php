@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdatePrimaryRegionXAmzTargetEnum: string
 {
     case TRENT_SERVICE_UPDATE_PRIMARY_REGION = 'TrentService.UpdatePrimaryRegion';

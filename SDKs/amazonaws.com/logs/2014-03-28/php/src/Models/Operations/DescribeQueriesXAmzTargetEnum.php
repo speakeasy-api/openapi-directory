@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeQueriesXAmzTargetEnum: string
 {
     case LOGS20140328_DESCRIBE_QUERIES = 'Logs_20140328.DescribeQueries';

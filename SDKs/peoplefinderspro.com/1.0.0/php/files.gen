@@ -35,4 +35,5 @@ src/Models/Operations/PostEmailEnrichResponse.php
 src/Models/Operations/PostPhoneEnrichRequestBody.php
 src/Models/Operations/PostPhoneEnrichRequest.php
 src/Models/Operations/PostPhoneEnrichResponse.php
+docs/sdk/README.md
 USAGE.md

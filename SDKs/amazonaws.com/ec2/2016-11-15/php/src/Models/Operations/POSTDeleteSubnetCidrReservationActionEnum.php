@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteSubnetCidrReservationActionEnum: string
 {
     case DELETE_SUBNET_CIDR_RESERVATION = 'DeleteSubnetCidrReservation';

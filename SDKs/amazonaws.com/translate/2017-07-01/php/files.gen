@@ -133,4 +133,5 @@ src/Models/Shared/UntagResourceRequest.php
 src/Models/Shared/UpdateParallelDataResponse.php
 src/Models/Shared/UpdateParallelDataRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

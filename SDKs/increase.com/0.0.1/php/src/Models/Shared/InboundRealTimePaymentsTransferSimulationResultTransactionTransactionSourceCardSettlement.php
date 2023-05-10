@@ -27,6 +27,15 @@ class InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourc
     public int $amount;
     
     /**
+     * The Card Authorization that was created prior to this Card Settlement, if on exists.
+     * 
+     * @var string $cardAuthorization
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('card_authorization')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    public string $cardAuthorization;
+    
+    /**
      * The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) code for the transaction's settlement currency.
      * 
      * @var \OpenAPI\OpenAPI\Models\Shared\InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardSettlementCurrencyEnum $currency
@@ -35,22 +44,65 @@ class InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourc
     #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardSettlementCurrencyEnum>')]
     public InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardSettlementCurrencyEnum $currency;
     
+    /**
+     * The Card Settlement identifier.
+     * 
+     * @var string $id
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    public string $id;
+    
+    /**
+     * The merchant identifier (commonly abbreviated as MID) of the merchant the card is transacting with.
+     * 
+     * @var string $merchantAcceptorId
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('merchant_acceptor_id')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    public string $merchantAcceptorId;
+    
+    /**
+     * The 4-digit MCC describing the merchant's business.
+     * 
+     * @var string $merchantCategoryCode
+     */
 	#[\JMS\Serializer\Annotation\SerializedName('merchant_category_code')]
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $merchantCategoryCode;
     
+    /**
+     * The city the merchant resides in.
+     * 
+     * @var string $merchantCity
+     */
 	#[\JMS\Serializer\Annotation\SerializedName('merchant_city')]
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $merchantCity;
     
+    /**
+     * The country the merchant resides in.
+     * 
+     * @var string $merchantCountry
+     */
 	#[\JMS\Serializer\Annotation\SerializedName('merchant_country')]
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $merchantCountry;
     
+    /**
+     * The name of the merchant.
+     * 
+     * @var string $merchantName
+     */
 	#[\JMS\Serializer\Annotation\SerializedName('merchant_name')]
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $merchantName;
     
+    /**
+     * The state the merchant resides in.
+     * 
+     * @var string $merchantState
+     */
 	#[\JMS\Serializer\Annotation\SerializedName('merchant_state')]
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $merchantState;
@@ -94,7 +146,10 @@ class InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourc
 	public function __construct()
 	{
 		$this->amount = 0;
+		$this->cardAuthorization = "";
 		$this->currency = \OpenAPI\OpenAPI\Models\Shared\InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardSettlementCurrencyEnum::CAD;
+		$this->id = "";
+		$this->merchantAcceptorId = "";
 		$this->merchantCategoryCode = "";
 		$this->merchantCity = "";
 		$this->merchantCountry = "";

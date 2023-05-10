@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteHsmXAmzTargetEnum: string
 {
     case CLOUD_HSM_FRONTEND_SERVICE_DELETE_HSM = 'CloudHsmFrontendService.DeleteHsm';

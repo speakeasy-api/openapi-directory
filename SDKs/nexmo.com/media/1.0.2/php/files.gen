@@ -32,4 +32,5 @@ src/Models/Operations/RetrieveAMediaItemResponse.php
 src/Models/Operations/UpdateAMediaItemRequestBody.php
 src/Models/Operations/UpdateAMediaItemResponse.php
 src/Models/Shared/Media.php
+docs/sdk/README.md
 USAGE.md

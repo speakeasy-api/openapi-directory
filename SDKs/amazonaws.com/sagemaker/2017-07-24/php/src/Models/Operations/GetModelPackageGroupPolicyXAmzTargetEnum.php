@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetModelPackageGroupPolicyXAmzTargetEnum: string
 {
     case SAGE_MAKER_GET_MODEL_PACKAGE_GROUP_POLICY = 'SageMaker.GetModelPackageGroupPolicy';

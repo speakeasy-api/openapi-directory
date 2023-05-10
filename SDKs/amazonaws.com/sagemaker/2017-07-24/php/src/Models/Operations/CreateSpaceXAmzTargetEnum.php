@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateSpaceXAmzTargetEnum: string
 {
     case SAGE_MAKER_CREATE_SPACE = 'SageMaker.CreateSpace';

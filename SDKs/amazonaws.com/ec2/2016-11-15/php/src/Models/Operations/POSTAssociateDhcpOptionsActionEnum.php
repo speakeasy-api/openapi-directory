@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTAssociateDhcpOptionsActionEnum: string
 {
     case ASSOCIATE_DHCP_OPTIONS = 'AssociateDhcpOptions';

@@ -776,4 +776,5 @@ src/Models/Shared/UpdateStackSetInput.php
 src/Models/Shared/UpdateTerminationProtectionInput.php
 src/Models/Shared/ValidateTemplateInput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetUsageForecastXAmzTargetEnum: string
 {
     case AWS_INSIGHTS_INDEX_SERVICE_GET_USAGE_FORECAST = 'AWSInsightsIndexService.GetUsageForecast';

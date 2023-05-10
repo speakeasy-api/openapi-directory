@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum IsMemberInGroupsXAmzTargetEnum: string
 {
     case AWS_IDENTITY_STORE_IS_MEMBER_IN_GROUPS = 'AWSIdentityStore.IsMemberInGroups';

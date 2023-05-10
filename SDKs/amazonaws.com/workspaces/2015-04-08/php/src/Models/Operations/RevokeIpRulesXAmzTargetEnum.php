@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RevokeIpRulesXAmzTargetEnum: string
 {
     case WORKSPACES_SERVICE_REVOKE_IP_RULES = 'WorkspacesService.RevokeIpRules';

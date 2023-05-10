@@ -262,4 +262,10 @@ src/Models/Shared/SignInBehaviorRedirectConditionEnum.php
 src/Models/Shared/SignInBehavior.php
 src/Models/Shared/SamlSsoInfo.php
 src/Models/Shared/ListInboundSsoAssignmentsResponse.php
+docs/sdk/README.md
+docs/customers/README.md
+docs/devices/README.md
+docs/groups/README.md
+docs/inboundsamlssoprofiles/README.md
+docs/inboundssoassignments/README.md
 USAGE.md

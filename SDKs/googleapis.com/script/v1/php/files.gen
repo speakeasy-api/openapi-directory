@@ -138,4 +138,8 @@ src/Models/Shared/ListVersionsResponse.php
 src/Models/Shared/Operation.php
 src/Models/Shared/Status.php
 src/Models/Shared/ExecutionRequest.php
+docs/sdk/README.md
+docs/processes/README.md
+docs/projects/README.md
+docs/scripts/README.md
 USAGE.md

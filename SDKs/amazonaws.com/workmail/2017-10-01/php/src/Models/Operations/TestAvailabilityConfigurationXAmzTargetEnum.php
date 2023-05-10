@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum TestAvailabilityConfigurationXAmzTargetEnum: string
 {
     case WORK_MAIL_SERVICE_TEST_AVAILABILITY_CONFIGURATION = 'WorkMailService.TestAvailabilityConfiguration';

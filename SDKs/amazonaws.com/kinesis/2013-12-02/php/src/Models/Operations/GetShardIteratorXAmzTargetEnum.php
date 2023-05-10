@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetShardIteratorXAmzTargetEnum: string
 {
     case KINESIS20131202_GET_SHARD_ITERATOR = 'Kinesis_20131202.GetShardIterator';

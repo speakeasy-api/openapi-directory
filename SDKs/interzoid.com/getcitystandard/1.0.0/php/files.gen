@@ -22,4 +22,6 @@ src/Utils/Utils.php
 src/Models/Operations/GetcitystandardRequest.php
 src/Models/Operations/Getcitystandard200ApplicationJSON.php
 src/Models/Operations/GetcitystandardResponse.php
+docs/sdk/README.md
+docs/citydatastandardization/README.md
 USAGE.md

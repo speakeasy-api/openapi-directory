@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeLocalGatewayVirtualInterfaceGroupsActionEnum: string
 {
     case DESCRIBE_LOCAL_GATEWAY_VIRTUAL_INTERFACE_GROUPS = 'DescribeLocalGatewayVirtualInterfaceGroups';

@@ -30,20 +30,45 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\CrawlRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new CrawlRequest();
+    $request->query = 'corrupti';
+
+    $response = $sdk->crawl($request);
+
+    if ($response->crawl200ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `crawl` - Crawl
-* `getTheStatusOfTheAPIService` - Status
-* `images` - Images
-* `news` - News
-* `search` - Search
-* `serp` - SERP
+* [crawl](docs/sdk/README.md#crawl) - Crawl
+* [getTheStatusOfTheAPIService](docs/sdk/README.md#getthestatusoftheapiservice) - Status
+* [images](docs/sdk/README.md#images) - Images
+* [news](docs/sdk/README.md#news) - News
+* [search](docs/sdk/README.md#search) - Search
+* [serp](docs/sdk/README.md#serp) - SERP
 <!-- End SDK Available Operations -->
 
 ### Maturity

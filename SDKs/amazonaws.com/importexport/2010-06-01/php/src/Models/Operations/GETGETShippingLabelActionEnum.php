@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETGETShippingLabelActionEnum: string
 {
     case GET_SHIPPING_LABEL = 'GetShippingLabel';

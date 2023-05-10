@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateRotationXAmzTargetEnum: string
 {
     case SSM_CONTACTS_UPDATE_ROTATION = 'SSMContacts.UpdateRotation';

@@ -78,6 +78,44 @@ class TagKeys
     }
 	
     /**
+     * Retrieves a TagKey by its namespaced name. This method will return `PERMISSION_DENIED` if the key does not exist or the user does not have permission to view it.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\CloudresourcemanagerTagKeysGetNamespacedRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\CloudresourcemanagerTagKeysGetNamespacedSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\CloudresourcemanagerTagKeysGetNamespacedResponse
+     */
+	public function cloudresourcemanagerTagKeysGetNamespaced(
+        \OpenAPI\OpenAPI\Models\Operations\CloudresourcemanagerTagKeysGetNamespacedRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\CloudresourcemanagerTagKeysGetNamespacedSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\CloudresourcemanagerTagKeysGetNamespacedResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v3/tagKeys/namespaced');
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\CloudresourcemanagerTagKeysGetNamespacedRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\CloudresourcemanagerTagKeysGetNamespacedResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->tagKey = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\TagKey', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Lists all TagKeys for a parent resource.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\CloudresourcemanagerTagKeysListRequest $request

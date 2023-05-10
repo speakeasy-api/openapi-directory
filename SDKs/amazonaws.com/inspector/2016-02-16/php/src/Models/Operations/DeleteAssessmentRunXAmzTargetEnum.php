@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteAssessmentRunXAmzTargetEnum: string
 {
     case INSPECTOR_SERVICE_DELETE_ASSESSMENT_RUN = 'InspectorService.DeleteAssessmentRun';

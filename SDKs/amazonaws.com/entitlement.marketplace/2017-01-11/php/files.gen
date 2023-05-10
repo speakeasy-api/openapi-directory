@@ -29,4 +29,5 @@ src/Models/Shared/Entitlement.php
 src/Models/Shared/EntitlementValue.php
 src/Models/Shared/GetEntitlementsRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -58,7 +58,7 @@ class TaskSpec
     public ?string $timeoutSeconds = null;
     
     /**
-     * Optional. List of volumes that can be mounted by containers belonging to the task. More info: https://kubernetes.io/docs/concepts/storage/volumes
+     * Optional. List of volumes that can be mounted by containers belonging to the task.
      * 
      * @var ?array<\OpenAPI\OpenAPI\Models\Shared\Volume> $volumes
      */

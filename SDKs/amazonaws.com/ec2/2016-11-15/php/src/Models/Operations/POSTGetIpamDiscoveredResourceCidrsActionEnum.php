@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTGetIpamDiscoveredResourceCidrsActionEnum: string
 {
     case GET_IPAM_DISCOVERED_RESOURCE_CIDRS = 'GetIpamDiscoveredResourceCidrs';

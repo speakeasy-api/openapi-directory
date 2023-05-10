@@ -12,7 +12,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class RouterBgpPeerCustomLearnedIpRange
 {
     /**
-     * The Custom Learned Route IP range. Must be a valid CIDR-formatted prefix. If an IP is provided without a subnet mask, it is interpreted as a /32 singular IP range for IPv4, and /128 for IPv6.
+     * The custom learned route IP address range. Must be a valid CIDR-formatted prefix. If an IP address is provided without a subnet mask, it is interpreted as, for IPv4, a `/32` singular IP address range, and, for IPv6, `/128`.
      * 
      * @var ?string $range
      */

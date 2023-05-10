@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum TestMetricFilterXAmzTargetEnum: string
 {
     case LOGS20140328_TEST_METRIC_FILTER = 'Logs_20140328.TestMetricFilter';

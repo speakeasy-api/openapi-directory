@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteMLModelXAmzTargetEnum: string
 {
     case AMAZON_ML20141212_DELETE_ML_MODEL = 'AmazonML_20141212.DeleteMLModel';

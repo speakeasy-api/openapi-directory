@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutJobFailureResultXAmzTargetEnum: string
 {
     case CODE_PIPELINE20150709_PUT_JOB_FAILURE_RESULT = 'CodePipeline_20150709.PutJobFailureResult';

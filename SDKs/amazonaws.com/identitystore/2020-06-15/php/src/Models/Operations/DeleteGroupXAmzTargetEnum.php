@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteGroupXAmzTargetEnum: string
 {
     case AWS_IDENTITY_STORE_DELETE_GROUP = 'AWSIdentityStore.DeleteGroup';

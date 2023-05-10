@@ -289,4 +289,5 @@ src/Models/Shared/UpdateListenerRequest.php
 src/Models/Shared/WithdrawByoipCidrResponse.php
 src/Models/Shared/WithdrawByoipCidrRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

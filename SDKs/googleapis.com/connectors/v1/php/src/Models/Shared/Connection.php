@@ -118,6 +118,16 @@ class Connection
     public ?LockConfig $lockConfig = null;
     
     /**
+     * Log configuration for the connection.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\ConnectorsLogConfig $logConfig
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('logConfig')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\ConnectorsLogConfig')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?ConnectorsLogConfig $logConfig = null;
+    
+    /**
      * Output only. Resource name of the Connection. Format: projects/{project}/locations/{location}/connections/{connection}
      * 
      * @var ?string $name
@@ -178,6 +188,16 @@ class Connection
     public ?ConnectionStatus $status = null;
     
     /**
+     * Output only. This subscription type enum value states if the metrics should be sent for billing or not.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\ConnectionSubscriptionTypeEnum $subscriptionType
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('subscriptionType')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\ConnectionSubscriptionTypeEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?ConnectionSubscriptionTypeEnum $subscriptionType = null;
+    
+    /**
      * Optional. Suspended indicates if a user has suspended a connection or not.
      * 
      * @var ?bool $suspended
@@ -209,12 +229,14 @@ class Connection
 		$this->imageLocation = null;
 		$this->labels = null;
 		$this->lockConfig = null;
+		$this->logConfig = null;
 		$this->name = null;
 		$this->nodeConfig = null;
 		$this->serviceAccount = null;
 		$this->serviceDirectory = null;
 		$this->sslConfig = null;
 		$this->status = null;
+		$this->subscriptionType = null;
 		$this->suspended = null;
 		$this->updateTime = null;
 	}

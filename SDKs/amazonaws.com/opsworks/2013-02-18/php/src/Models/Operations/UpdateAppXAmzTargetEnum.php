@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateAppXAmzTargetEnum: string
 {
     case OPS_WORKS20130218_UPDATE_APP = 'OpsWorks_20130218.UpdateApp';

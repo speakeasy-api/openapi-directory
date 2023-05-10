@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum SkipWaitTimeForInstanceTerminationXAmzTargetEnum: string
 {
     case CODE_DEPLOY20141006_SKIP_WAIT_TIME_FOR_INSTANCE_TERMINATION = 'CodeDeploy_20141006.SkipWaitTimeForInstanceTermination';

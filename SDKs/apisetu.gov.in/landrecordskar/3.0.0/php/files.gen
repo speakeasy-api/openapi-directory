@@ -95,4 +95,6 @@ src/Models/Shared/ConsentArtifactSchemaConsentUser.php
 src/Models/Shared/ConsentArtifactSchemaConsent.php
 src/Models/Shared/ConsentArtifactSchemaSignature.php
 src/Models/Shared/ConsentArtifactSchema.php
+docs/sdk/README.md
+docs/apis/README.md
 USAGE.md

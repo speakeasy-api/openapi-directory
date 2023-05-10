@@ -116,6 +116,44 @@ class Projects
     }
 	
     /**
+     * Verifies that Cloud KMS can successfully connect to the external key manager specified by an EkmConnection. If there is an error connecting to the EKM, this method returns a FAILED_PRECONDITION status containing structured information as described at https://cloud.google.com/kms/docs/reference/ekm_errors.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\CloudkmsProjectsLocationsEkmConnectionsVerifyConnectivityRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\CloudkmsProjectsLocationsEkmConnectionsVerifyConnectivitySecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\CloudkmsProjectsLocationsEkmConnectionsVerifyConnectivityResponse
+     */
+	public function cloudkmsProjectsLocationsEkmConnectionsVerifyConnectivity(
+        \OpenAPI\OpenAPI\Models\Operations\CloudkmsProjectsLocationsEkmConnectionsVerifyConnectivityRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\CloudkmsProjectsLocationsEkmConnectionsVerifyConnectivitySecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\CloudkmsProjectsLocationsEkmConnectionsVerifyConnectivityResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{name}:verifyConnectivity', \OpenAPI\OpenAPI\Models\Operations\CloudkmsProjectsLocationsEkmConnectionsVerifyConnectivityRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\CloudkmsProjectsLocationsEkmConnectionsVerifyConnectivityRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\CloudkmsProjectsLocationsEkmConnectionsVerifyConnectivityResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->verifyConnectivityResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Generate random bytes using the Cloud KMS randomness source in the provided location.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\CloudkmsProjectsLocationsGenerateRandomBytesRequest $request

@@ -59,7 +59,7 @@ class ConsentFlow
      */
 	public function postV05ConsentsHipNotifyJson(
         \OpenAPI\OpenAPI\Models\Operations\PostV05ConsentsHipNotifyJsonRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05ConsentsHipNotifyJsonResponse
     {
         $baseUrl = ConsentFlow::POST_V05_CONSENTS_HIP_NOTIFY_JSON_SERVERS[0];
@@ -115,7 +115,7 @@ class ConsentFlow
      */
 	public function postV05ConsentsHipNotifyRaw(
         \OpenAPI\OpenAPI\Models\Operations\PostV05ConsentsHipNotifyRawRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05ConsentsHipNotifyRawResponse
     {
         $baseUrl = ConsentFlow::POST_V05_CONSENTS_HIP_NOTIFY_RAW_SERVERS[0];

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AddTagsToResourceXAmzTargetEnum: string
 {
     case AMAZON_DM_SV20160101_ADD_TAGS_TO_RESOURCE = 'AmazonDMSv20160101.AddTagsToResource';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteVerifiedEmailAddressActionEnum: string
 {
     case DELETE_VERIFIED_EMAIL_ADDRESS = 'DeleteVerifiedEmailAddress';

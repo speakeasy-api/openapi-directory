@@ -28,6 +28,36 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row
     public ?GoogleAdsSearchads360V0ResourcesAdGroup $adGroup = null;
     
     /**
+     * An ad group ad.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesAdGroupAd $adGroupAd
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('adGroupAd')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesAdGroupAd')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleAdsSearchads360V0ResourcesAdGroupAd $adGroupAd = null;
+    
+    /**
+     * A relationship between an ad group ad and a label.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesAdGroupAdLabel $adGroupAdLabel
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('adGroupAdLabel')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesAdGroupAdLabel')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleAdsSearchads360V0ResourcesAdGroupAdLabel $adGroupAdLabel = null;
+    
+    /**
+     * An ad group audience view. Includes performance data from interests and remarketing lists for Display Network and YouTube Network ads, and remarketing lists for search ads (RLSA), aggregated at the audience level.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesAdGroupAudienceView $adGroupAudienceView
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('adGroupAudienceView')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesAdGroupAudienceView')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleAdsSearchads360V0ResourcesAdGroupAudienceView $adGroupAudienceView = null;
+    
+    /**
      * Represents an ad group bid modifier.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesAdGroupBidModifier $adGroupBidModifier
@@ -46,6 +76,36 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row
     #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesAdGroupCriterion')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?GoogleAdsSearchads360V0ResourcesAdGroupCriterion $adGroupCriterion = null;
+    
+    /**
+     * A relationship between an ad group criterion and a label.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesAdGroupCriterionLabel $adGroupCriterionLabel
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('adGroupCriterionLabel')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesAdGroupCriterionLabel')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleAdsSearchads360V0ResourcesAdGroupCriterionLabel $adGroupCriterionLabel = null;
+    
+    /**
+     * A relationship between an ad group and a label.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesAdGroupLabel $adGroupLabel
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('adGroupLabel')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesAdGroupLabel')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleAdsSearchads360V0ResourcesAdGroupLabel $adGroupLabel = null;
+    
+    /**
+     * An age range view.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesAgeRangeView $ageRangeView
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('ageRangeView')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesAgeRangeView')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleAdsSearchads360V0ResourcesAgeRangeView $ageRangeView = null;
     
     /**
      * A bidding strategy.
@@ -68,6 +128,16 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row
     public ?GoogleAdsSearchads360V0ResourcesCampaign $campaign = null;
     
     /**
+     * A campaign audience view. Includes performance data from interests and remarketing lists for Display Network and YouTube Network ads, and remarketing lists for search ads (RLSA), aggregated by campaign and audience criterion. This view only includes audiences attached at the campaign level.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesCampaignAudienceView $campaignAudienceView
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('campaignAudienceView')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesCampaignAudienceView')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleAdsSearchads360V0ResourcesCampaignAudienceView $campaignAudienceView = null;
+    
+    /**
      * A campaign budget.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesCampaignBudget $campaignBudget
@@ -86,6 +156,16 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row
     #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesCampaignCriterion')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?GoogleAdsSearchads360V0ResourcesCampaignCriterion $campaignCriterion = null;
+    
+    /**
+     * Represents a relationship between a campaign and a label.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesCampaignLabel $campaignLabel
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('campaignLabel')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesCampaignLabel')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleAdsSearchads360V0ResourcesCampaignLabel $campaignLabel = null;
     
     /**
      * A conversion action.
@@ -138,6 +218,26 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row
     public ?GoogleAdsSearchads360V0ResourcesCustomerManagerLink $customerManagerLink = null;
     
     /**
+     * A dynamic search ads search term view.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesDynamicSearchAdsSearchTermView $dynamicSearchAdsSearchTermView
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('dynamicSearchAdsSearchTermView')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesDynamicSearchAdsSearchTermView')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleAdsSearchads360V0ResourcesDynamicSearchAdsSearchTermView $dynamicSearchAdsSearchTermView = null;
+    
+    /**
+     * A gender view.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesGenderView $genderView
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('genderView')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesGenderView')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleAdsSearchads360V0ResourcesGenderView $genderView = null;
+    
+    /**
      * A keyword view.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesKeywordView $keywordView
@@ -146,6 +246,26 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row
     #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesKeywordView')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?GoogleAdsSearchads360V0ResourcesKeywordView $keywordView = null;
+    
+    /**
+     * A label.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesLabel $label
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('label')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesLabel')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleAdsSearchads360V0ResourcesLabel $label = null;
+    
+    /**
+     * A location view summarizes the performance of campaigns by Location criteria.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesLocationView $locationView
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('locationView')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesLocationView')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleAdsSearchads360V0ResourcesLocationView $locationView = null;
     
     /**
      * Metrics data.
@@ -177,23 +297,57 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?GoogleAdsSearchads360V0CommonSegments $segments = null;
     
+    /**
+     * A user list. This is a list of users a customer may target.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesUserList $userList
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('userList')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesUserList')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleAdsSearchads360V0ResourcesUserList $userList = null;
+    
+    /**
+     * A webpage view.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesWebpageView $webpageView
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('webpageView')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleAdsSearchads360V0ResourcesWebpageView')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GoogleAdsSearchads360V0ResourcesWebpageView $webpageView = null;
+    
 	public function __construct()
 	{
 		$this->adGroup = null;
+		$this->adGroupAd = null;
+		$this->adGroupAdLabel = null;
+		$this->adGroupAudienceView = null;
 		$this->adGroupBidModifier = null;
 		$this->adGroupCriterion = null;
+		$this->adGroupCriterionLabel = null;
+		$this->adGroupLabel = null;
+		$this->ageRangeView = null;
 		$this->biddingStrategy = null;
 		$this->campaign = null;
+		$this->campaignAudienceView = null;
 		$this->campaignBudget = null;
 		$this->campaignCriterion = null;
+		$this->campaignLabel = null;
 		$this->conversionAction = null;
 		$this->customColumns = null;
 		$this->customer = null;
 		$this->customerClient = null;
 		$this->customerManagerLink = null;
+		$this->dynamicSearchAdsSearchTermView = null;
+		$this->genderView = null;
 		$this->keywordView = null;
+		$this->label = null;
+		$this->locationView = null;
 		$this->metrics = null;
 		$this->productGroupView = null;
 		$this->segments = null;
+		$this->userList = null;
+		$this->webpageView = null;
 	}
 }

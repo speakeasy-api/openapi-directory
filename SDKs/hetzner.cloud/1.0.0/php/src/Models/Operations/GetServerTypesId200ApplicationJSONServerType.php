@@ -12,6 +12,15 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 class GetServerTypesId200ApplicationJSONServerType
 {
     /**
+     * Type of cpu architecture
+     * 
+     * @var \OpenAPI\OpenAPI\Models\Operations\GetServerTypesId200ApplicationJSONServerTypeArchitectureEnum $architecture
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('architecture')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Operations\GetServerTypesId200ApplicationJSONServerTypeArchitectureEnum>')]
+    public GetServerTypesId200ApplicationJSONServerTypeArchitectureEnum $architecture;
+    
+    /**
      * Number of cpu cores a Server of this type will have
      * 
      * @var float $cores
@@ -103,6 +112,7 @@ class GetServerTypesId200ApplicationJSONServerType
     
 	public function __construct()
 	{
+		$this->architecture = \OpenAPI\OpenAPI\Models\Operations\GetServerTypesId200ApplicationJSONServerTypeArchitectureEnum::X86;
 		$this->cores = 0;
 		$this->cpuType = \OpenAPI\OpenAPI\Models\Operations\GetServerTypesId200ApplicationJSONServerTypeCpuTypeEnum::SHARED;
 		$this->deprecated = false;

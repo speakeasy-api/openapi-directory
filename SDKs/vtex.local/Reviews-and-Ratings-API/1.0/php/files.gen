@@ -47,4 +47,7 @@ src/Models/Operations/SaveReviewResponse.php
 src/Models/Shared/SaveMultipleReviewsRequest.php
 src/Models/Shared/SaveReviewRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/rating/README.md
+docs/review/README.md
 USAGE.md

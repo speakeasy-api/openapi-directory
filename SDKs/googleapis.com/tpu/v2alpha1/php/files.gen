@@ -64,9 +64,6 @@ src/Models/Operations/TpuProjectsLocationsQueuedResourcesDeleteResponse.php
 src/Models/Operations/TpuProjectsLocationsQueuedResourcesListSecurity.php
 src/Models/Operations/TpuProjectsLocationsQueuedResourcesListRequest.php
 src/Models/Operations/TpuProjectsLocationsQueuedResourcesListResponse.php
-src/Models/Operations/TpuProjectsLocationsQueuedResourcesResetSecurity.php
-src/Models/Operations/TpuProjectsLocationsQueuedResourcesResetRequest.php
-src/Models/Operations/TpuProjectsLocationsQueuedResourcesResetResponse.php
 src/Models/Operations/TpuProjectsLocationsRuntimeVersionsGetSecurity.php
 src/Models/Operations/TpuProjectsLocationsRuntimeVersionsGetRequest.php
 src/Models/Operations/TpuProjectsLocationsRuntimeVersionsGetResponse.php
@@ -123,4 +120,6 @@ src/Models/Shared/Guaranteed.php
 src/Models/Shared/ListQueuedResourcesResponse.php
 src/Models/Shared/RuntimeVersion.php
 src/Models/Shared/ListRuntimeVersionsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

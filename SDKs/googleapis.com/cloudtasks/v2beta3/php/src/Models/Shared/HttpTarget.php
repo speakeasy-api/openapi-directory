@@ -38,6 +38,26 @@ class HttpTarget
     public ?HttpTargetHttpMethodEnum $httpMethod = null;
     
     /**
+     * Contains information needed for generating an [OAuth token](https://developers.google.com/identity/protocols/OAuth2). This type of authorization should generally only be used when calling Google APIs hosted on *.googleapis.com.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\OAuthToken $oauthToken
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('oauthToken')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\OAuthToken')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?OAuthToken $oauthToken = null;
+    
+    /**
+     * Contains information needed for generating an [OpenID Connect token](https://developers.google.com/identity/protocols/OpenIDConnect). This type of authorization can be used for many scenarios, including calling Cloud Run, or endpoints where you intend to validate the token yourself.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\OidcToken $oidcToken
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('oidcToken')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\OidcToken')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?OidcToken $oidcToken = null;
+    
+    /**
      * URI Override. When specified, all the HTTP tasks inside the queue will be partially or fully overridden depending on the configured values.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\UriOverride $uriOverride
@@ -51,6 +71,8 @@ class HttpTarget
 	{
 		$this->headerOverrides = null;
 		$this->httpMethod = null;
+		$this->oauthToken = null;
+		$this->oidcToken = null;
 		$this->uriOverride = null;
 	}
 }

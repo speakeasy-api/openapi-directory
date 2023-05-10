@@ -98,4 +98,8 @@ src/Models/Shared/Seats.php
 src/Models/Shared/RenewalSettings.php
 src/Models/Shared/ChangePlanRequest.php
 src/Models/Shared/Subscriptions.php
+docs/sdk/README.md
+docs/customers/README.md
+docs/resellernotify/README.md
+docs/subscriptions/README.md
 USAGE.md

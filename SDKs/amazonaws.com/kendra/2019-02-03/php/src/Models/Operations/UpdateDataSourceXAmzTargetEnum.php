@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateDataSourceXAmzTargetEnum: string
 {
     case AWS_KENDRA_FRONTEND_SERVICE_UPDATE_DATA_SOURCE = 'AWSKendraFrontendService.UpdateDataSource';

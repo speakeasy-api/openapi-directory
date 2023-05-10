@@ -337,10 +337,13 @@ class Requests
      * Empty the request journal
      * 
      * @return \OpenAPI\OpenAPI\Models\Operations\PostAdminRequestsResetResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function postAdminRequestsReset(
     ): \OpenAPI\OpenAPI\Models\Operations\PostAdminRequestsResetResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/__admin/requests/reset');
         

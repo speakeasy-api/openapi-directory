@@ -230,6 +230,46 @@ class Addresses
     }
 	
     /**
+     * Moves the specified address resource.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ComputeAddressesMoveRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\ComputeAddressesMoveSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\ComputeAddressesMoveResponse
+     */
+	public function computeAddressesMove(
+        \OpenAPI\OpenAPI\Models\Operations\ComputeAddressesMoveRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\ComputeAddressesMoveSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\ComputeAddressesMoveResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/projects/{project}/regions/{region}/addresses/{address}/move', \OpenAPI\OpenAPI\Models\Operations\ComputeAddressesMoveRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "regionAddressesMoveRequest", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\ComputeAddressesMoveRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\ComputeAddressesMoveResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Sets the labels on an Address. To learn more about labels, read the Labeling Resources documentation.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ComputeAddressesSetLabelsRequest $request

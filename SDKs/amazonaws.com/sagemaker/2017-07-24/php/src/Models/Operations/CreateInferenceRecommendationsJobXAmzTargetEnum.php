@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateInferenceRecommendationsJobXAmzTargetEnum: string
 {
     case SAGE_MAKER_CREATE_INFERENCE_RECOMMENDATIONS_JOB = 'SageMaker.CreateInferenceRecommendationsJob';

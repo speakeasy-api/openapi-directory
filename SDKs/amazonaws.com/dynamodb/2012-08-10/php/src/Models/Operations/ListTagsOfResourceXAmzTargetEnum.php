@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListTagsOfResourceXAmzTargetEnum: string
 {
     case DYNAMO_DB20120810_LIST_TAGS_OF_RESOURCE = 'DynamoDB_20120810.ListTagsOfResource';

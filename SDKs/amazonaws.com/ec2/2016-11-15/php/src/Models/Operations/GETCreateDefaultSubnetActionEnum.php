@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETCreateDefaultSubnetActionEnum: string
 {
     case CREATE_DEFAULT_SUBNET = 'CreateDefaultSubnet';

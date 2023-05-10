@@ -11,6 +11,11 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 class UpdateComponentInput
 {
+	#[\JMS\Serializer\Annotation\SerializedName('clientToken')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $clientToken = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('deploymentType')]
     #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\ComponentDeploymentUpdateTypeEnum>')]
     public ComponentDeploymentUpdateTypeEnum $deploymentType;
@@ -46,6 +51,7 @@ class UpdateComponentInput
     
 	public function __construct()
 	{
+		$this->clientToken = null;
 		$this->deploymentType = \OpenAPI\OpenAPI\Models\Shared\ComponentDeploymentUpdateTypeEnum::NONE;
 		$this->description = null;
 		$this->name = "";

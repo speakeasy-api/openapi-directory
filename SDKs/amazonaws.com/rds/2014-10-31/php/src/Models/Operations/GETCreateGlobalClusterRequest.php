@@ -47,7 +47,7 @@ class GETCreateGlobalClusterRequest
     public ?string $engineVersion = null;
     
     /**
-     * The cluster identifier of the new global database cluster.
+     * The cluster identifier of the new global database cluster. This parameter is stored as a lowercase string.
      * 
      * @var ?string $globalClusterIdentifier
      */

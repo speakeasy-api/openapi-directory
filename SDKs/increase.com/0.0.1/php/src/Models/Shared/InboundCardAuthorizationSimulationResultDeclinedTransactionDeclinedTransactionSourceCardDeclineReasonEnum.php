@@ -22,4 +22,6 @@ enum InboundCardAuthorizationSimulationResultDeclinedTransactionDeclinedTransact
     case WEBHOOK_DECLINED = 'webhook_declined';
     case WEBHOOK_TIMED_OUT = 'webhook_timed_out';
     case DECLINED_BY_STAND_IN_PROCESSING = 'declined_by_stand_in_processing';
+    case INVALID_PHYSICAL_CARD = 'invalid_physical_card';
+    case MISSING_ORIGINAL_AUTHORIZATION = 'missing_original_authorization';
 }

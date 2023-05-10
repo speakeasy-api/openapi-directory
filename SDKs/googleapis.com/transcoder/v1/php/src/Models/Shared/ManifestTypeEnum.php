@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Shared;
 
 
-/** Required. Type of the manifest, can be `HLS` or `DASH`. */
+/** Required. Type of the manifest. */
 enum ManifestTypeEnum: string
 {
     case MANIFEST_TYPE_UNSPECIFIED = 'MANIFEST_TYPE_UNSPECIFIED';

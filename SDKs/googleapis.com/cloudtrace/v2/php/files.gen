@@ -50,4 +50,6 @@ src/Models/Shared/Links.php
 src/Models/Shared/LinkTypeEnum.php
 src/Models/Shared/Link.php
 src/Models/Shared/XgafvEnum.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum TestIdentityProviderXAmzTargetEnum: string
 {
     case TRANSFER_SERVICE_TEST_IDENTITY_PROVIDER = 'TransferService.TestIdentityProvider';

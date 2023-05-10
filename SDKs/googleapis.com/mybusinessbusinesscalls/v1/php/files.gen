@@ -37,4 +37,6 @@ src/Models/Shared/AltEnum.php
 src/Models/Shared/XgafvEnum.php
 src/Models/Shared/BusinessCallsSettingsCallsStateEnum.php
 src/Models/Shared/BusinessCallsSettings.php
+docs/sdk/README.md
+docs/locations/README.md
 USAGE.md

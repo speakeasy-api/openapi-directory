@@ -351,4 +351,8 @@ src/Models/Shared/ListServiceLevelObjectivesResponse.php
 src/Models/Shared/ListUptimeCheckIpsResponse.php
 src/Models/Shared/UptimeCheckIpRegionEnum.php
 src/Models/Shared/UptimeCheckIp.php
+docs/sdk/README.md
+docs/projects/README.md
+docs/services/README.md
+docs/uptimecheckips/README.md
 USAGE.md

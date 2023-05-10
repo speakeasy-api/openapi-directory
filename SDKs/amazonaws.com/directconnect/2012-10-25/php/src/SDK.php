@@ -141,11 +141,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\AllocateConnectionOnInterconnectRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\AllocateConnectionOnInterconnectResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function allocateConnectionOnInterconnect(
         \OpenAPI\OpenAPI\Models\Operations\AllocateConnectionOnInterconnectRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\AllocateConnectionOnInterconnectResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=OvertureService.AllocateConnectionOnInterconnect');
         
@@ -1925,11 +1928,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DescribeConnectionLoaRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DescribeConnectionLoaResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function describeConnectionLoa(
         \OpenAPI\OpenAPI\Models\Operations\DescribeConnectionLoaRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DescribeConnectionLoaResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=OvertureService.DescribeConnectionLoa');
         
@@ -2029,11 +2035,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DescribeConnectionsOnInterconnectRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DescribeConnectionsOnInterconnectResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function describeConnectionsOnInterconnect(
         \OpenAPI\OpenAPI\Models\Operations\DescribeConnectionsOnInterconnectRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DescribeConnectionsOnInterconnectResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=OvertureService.DescribeConnectionsOnInterconnect');
         
@@ -2388,11 +2397,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DescribeInterconnectLoaRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DescribeInterconnectLoaResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function describeInterconnectLoa(
         \OpenAPI\OpenAPI\Models\Operations\DescribeInterconnectLoaRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DescribeInterconnectLoaResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=OvertureService.DescribeInterconnectLoa');
         

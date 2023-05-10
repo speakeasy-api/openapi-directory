@@ -442,9 +442,11 @@ class Test
     /**
      * Lists account data
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\TestGdprExportAccountSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\TestGdprExportAccountResponse
      */
 	public function testGdprExportAccount(
+        \OpenAPI\OpenAPI\Models\Operations\TestGdprExportAccountSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\TestGdprExportAccountResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -452,7 +454,8 @@ class Test
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -474,9 +477,11 @@ class Test
     /**
      * Lists all the endpoints available for Test accounts data
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\TestGdprExportAccountsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\TestGdprExportAccountsResponse
      */
 	public function testGdprExportAccounts(
+        \OpenAPI\OpenAPI\Models\Operations\TestGdprExportAccountsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\TestGdprExportAccountsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -484,7 +489,8 @@ class Test
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -580,9 +586,11 @@ class Test
     /**
      * Lists feature flag data
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\TestGdprExportFeatureFlagSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\TestGdprExportFeatureFlagResponse
      */
 	public function testGdprExportFeatureFlag(
+        \OpenAPI\OpenAPI\Models\Operations\TestGdprExportFeatureFlagSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\TestGdprExportFeatureFlagResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -590,7 +598,8 @@ class Test
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

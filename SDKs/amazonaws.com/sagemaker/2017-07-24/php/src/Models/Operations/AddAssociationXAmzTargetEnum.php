@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AddAssociationXAmzTargetEnum: string
 {
     case SAGE_MAKER_ADD_ASSOCIATION = 'SageMaker.AddAssociation';

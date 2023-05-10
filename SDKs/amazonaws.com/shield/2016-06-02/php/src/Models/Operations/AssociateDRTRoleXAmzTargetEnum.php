@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AssociateDRTRoleXAmzTargetEnum: string
 {
     case AWS_SHIELD20160616_ASSOCIATE_DRT_ROLE = 'AWSShield_20160616.AssociateDRTRole';

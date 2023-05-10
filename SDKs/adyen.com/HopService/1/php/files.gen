@@ -26,6 +26,7 @@ src/Models/Operations/PostGetPciQuestionnaireUrlSecurity.php
 src/Models/Operations/PostGetPciQuestionnaireUrlResponse.php
 src/Models/Shared/ServiceError.php
 src/Models/Shared/GetOnboardingUrlResponse.php
+src/Models/Shared/ErrorFieldTypeWrapper.php
 src/Models/Shared/ErrorFieldType.php
 src/Models/Shared/FieldTypeFieldNameEnum.php
 src/Models/Shared/FieldType.php
@@ -35,4 +36,7 @@ src/Models/Shared/CollectInformation.php
 src/Models/Shared/SchemeBasicAuth.php
 src/Models/Shared/GetPciUrlResponse.php
 src/Models/Shared/GetPciUrlRequest.php
+docs/sdk/README.md
+docs/hostedonboardingpage/README.md
+docs/pcicompliancequestionnairepage/README.md
 USAGE.md

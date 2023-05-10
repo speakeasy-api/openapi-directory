@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetParametersByPathXAmzTargetEnum: string
 {
     case AMAZON_SSM_GET_PARAMETERS_BY_PATH = 'AmazonSSM.GetParametersByPath';

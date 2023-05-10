@@ -43,4 +43,9 @@ src/Models/Shared/SimilarCompanySearch.php
 src/Models/Shared/Snippet.php
 src/Models/Shared/InputCompany.php
 src/Models/Shared/SimilarCompany.php
+docs/sdk/README.md
+docs/contentprosearch/README.md
+docs/contentprosimilartext/README.md
+docs/search/README.md
+docs/similar/README.md
 USAGE.md

@@ -677,6 +677,16 @@ class GoogleAdsSearchads360V0CommonMetrics
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?float $valuePerConversionsByConversionDate = null;
     
+    /**
+     * Clicks that Search Ads 360 has successfully recorded and forwarded to an advertiser's landing page.
+     * 
+     * @var ?float $visits
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('visits')]
+    #[\JMS\Serializer\Annotation\Type('float')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?float $visits = null;
+    
 	public function __construct()
 	{
 		$this->absoluteTopImpressionPercentage = null;
@@ -745,5 +755,6 @@ class GoogleAdsSearchads360V0CommonMetrics
 		$this->valuePerAllConversionsByConversionDate = null;
 		$this->valuePerConversion = null;
 		$this->valuePerConversionsByConversionDate = null;
+		$this->visits = null;
 	}
 }

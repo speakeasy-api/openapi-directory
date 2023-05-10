@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListPermissionsXAmzTargetEnum: string
 {
     case ACM_PRIVATE_CA_LIST_PERMISSIONS = 'ACMPrivateCA.ListPermissions';

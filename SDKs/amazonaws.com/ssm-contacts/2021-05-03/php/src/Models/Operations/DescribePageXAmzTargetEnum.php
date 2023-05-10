@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribePageXAmzTargetEnum: string
 {
     case SSM_CONTACTS_DESCRIBE_PAGE = 'SSMContacts.DescribePage';

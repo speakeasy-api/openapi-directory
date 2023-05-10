@@ -323,11 +323,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ExecuteSqlRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ExecuteSqlResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function executeSql(
         \OpenAPI\OpenAPI\Models\Operations\ExecuteSqlRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\ExecuteSqlResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/ExecuteSql');
         

@@ -31,4 +31,5 @@ src/Models/Shared/CreateTokenResponse.php
 src/Models/Shared/RegisterClientResponse.php
 src/Models/Shared/StartDeviceAuthorizationResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

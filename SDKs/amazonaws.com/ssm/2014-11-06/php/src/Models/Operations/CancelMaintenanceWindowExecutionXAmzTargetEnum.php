@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CancelMaintenanceWindowExecutionXAmzTargetEnum: string
 {
     case AMAZON_SSM_CANCEL_MAINTENANCE_WINDOW_EXECUTION = 'AmazonSSM.CancelMaintenanceWindowExecution';

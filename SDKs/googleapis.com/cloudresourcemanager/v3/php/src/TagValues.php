@@ -156,6 +156,44 @@ class TagValues
     }
 	
     /**
+     * Retrieves a TagValue by its namespaced name. This method will return `PERMISSION_DENIED` if the value does not exist or the user does not have permission to view it.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\CloudresourcemanagerTagValuesGetNamespacedRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\CloudresourcemanagerTagValuesGetNamespacedSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\CloudresourcemanagerTagValuesGetNamespacedResponse
+     */
+	public function cloudresourcemanagerTagValuesGetNamespaced(
+        \OpenAPI\OpenAPI\Models\Operations\CloudresourcemanagerTagValuesGetNamespacedRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\CloudresourcemanagerTagValuesGetNamespacedSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\CloudresourcemanagerTagValuesGetNamespacedResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v3/tagValues/namespaced');
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\CloudresourcemanagerTagValuesGetNamespacedRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\CloudresourcemanagerTagValuesGetNamespacedResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->tagValue = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\TagValue', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Lists all TagValues for a specific TagKey.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\CloudresourcemanagerTagValuesListRequest $request

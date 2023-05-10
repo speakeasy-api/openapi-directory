@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETStopDBClusterActionEnum: string
 {
     case STOP_DB_CLUSTER = 'StopDBCluster';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DisableClientAuthenticationXAmzTargetEnum: string
 {
     case DIRECTORY_SERVICE20150416_DISABLE_CLIENT_AUTHENTICATION = 'DirectoryService_20150416.DisableClientAuthentication';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTGetSpotPlacementScoresActionEnum: string
 {
     case GET_SPOT_PLACEMENT_SCORES = 'GetSpotPlacementScores';

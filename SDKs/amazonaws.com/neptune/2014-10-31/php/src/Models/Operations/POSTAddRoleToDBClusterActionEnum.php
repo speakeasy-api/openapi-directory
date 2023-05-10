@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTAddRoleToDBClusterActionEnum: string
 {
     case ADD_ROLE_TO_DB_CLUSTER = 'AddRoleToDBCluster';

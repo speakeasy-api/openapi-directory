@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTEnableSerialConsoleAccessActionEnum: string
 {
     case ENABLE_SERIAL_CONSOLE_ACCESS = 'EnableSerialConsoleAccess';

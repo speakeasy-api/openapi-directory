@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateSecurityGroupActionEnum: string
 {
     case CREATE_SECURITY_GROUP = 'CreateSecurityGroup';

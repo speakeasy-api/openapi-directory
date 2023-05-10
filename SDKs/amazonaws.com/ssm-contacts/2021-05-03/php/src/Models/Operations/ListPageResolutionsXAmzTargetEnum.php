@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListPageResolutionsXAmzTargetEnum: string
 {
     case SSM_CONTACTS_LIST_PAGE_RESOLUTIONS = 'SSMContacts.ListPageResolutions';

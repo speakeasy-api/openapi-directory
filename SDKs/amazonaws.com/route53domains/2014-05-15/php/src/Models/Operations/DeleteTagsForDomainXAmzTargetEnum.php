@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteTagsForDomainXAmzTargetEnum: string
 {
     case ROUTE53_DOMAINS_V20140515_DELETE_TAGS_FOR_DOMAIN = 'Route53Domains_v20140515.DeleteTagsForDomain';

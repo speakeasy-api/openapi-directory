@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateRuleGroupXAmzTargetEnum: string
 {
     case AWSWAF20150824_UPDATE_RULE_GROUP = 'AWSWAF_20150824.UpdateRuleGroup';

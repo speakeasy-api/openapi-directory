@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteContactMethodXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_DELETE_CONTACT_METHOD = 'Lightsail_20161128.DeleteContactMethod';

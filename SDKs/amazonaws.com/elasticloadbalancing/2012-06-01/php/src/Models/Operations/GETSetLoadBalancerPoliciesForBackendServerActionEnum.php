@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETSetLoadBalancerPoliciesForBackendServerActionEnum: string
 {
     case SET_LOAD_BALANCER_POLICIES_FOR_BACKEND_SERVER = 'SetLoadBalancerPoliciesForBackendServer';

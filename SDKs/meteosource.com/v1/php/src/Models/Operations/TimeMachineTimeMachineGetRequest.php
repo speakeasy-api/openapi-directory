@@ -12,7 +12,7 @@ use \OpenAPI\OpenAPI\Utils\SpeakeasyMetadata;
 class TimeMachineTimeMachineGetRequest
 {
     /**
-     * The UTC day of the data in the past. Specify in `YYYY-MM-DD` format, e.g. `2021-08-24`.
+     * The day of the data in the past. Specify in `YYYY-MM-DD` format, e.g. `2021-08-24`.
      * 
      * 
      * 

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateCoipPoolActionEnum: string
 {
     case CREATE_COIP_POOL = 'CreateCoipPool';

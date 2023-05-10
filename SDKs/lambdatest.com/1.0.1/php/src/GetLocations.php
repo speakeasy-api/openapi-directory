@@ -42,9 +42,11 @@ class GetLocations
      * 
      * Fetch list of available Geolocations
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\LocationsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\LocationsResponse
      */
 	public function locations(
+        \OpenAPI\OpenAPI\Models\Operations\LocationsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\LocationsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -52,7 +54,8 @@ class GetLocations
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

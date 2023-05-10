@@ -30,22 +30,56 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetApiV1DonationsCarbonCalculateRequest;
+use \OpenAPI\OpenAPI\Models\Operations\GetApiV1DonationsCarbonCalculateTransportationMethodEnum;
+use \OpenAPI\OpenAPI\Models\Operations\GetApiV1DonationsCarbonCalculateSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetApiV1DonationsCarbonCalculateRequest();
+    $request->destinationAddress = 5488.14;
+    $request->distanceMi = 5928.45;
+    $request->originAddress = 7151.9;
+    $request->transportationMethod = GetApiV1DonationsCarbonCalculateTransportationMethodEnum::SEA;
+    $request->weightLb = 6027.63;
+
+    $requestSecurity = new GetApiV1DonationsCarbonCalculateSecurity();
+    $requestSecurity->password = 'YOUR_PASSWORD_HERE';
+    $requestSecurity->username = 'YOUR_USERNAME_HERE';
+
+    $response = $sdk->getApiV1DonationsCarbonCalculate($request, $requestSecurity);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getApiV1DonationsCarbonCalculate` - Calculate shipping carbon offset
-* `getApiV1DonationsCarbonStats` - Retrieve carbon offset stats
-* `getApiV1DonationsCryptoCalculate` - Calculate crypto carbon offset
-* `getApiV1DonationsIndex` - List your donations
-* `getApiV1DonationsShow` - Retrieve a donation
-* `getApiV1NonprofitsList` - Search a nonprofit
-* `getApiV1NonprofitsShow` - Show a nonprofit
-* `postApiV1DonationsCreate` - Create a donation
+* [getApiV1DonationsCarbonCalculate](docs/sdk/README.md#getapiv1donationscarboncalculate) - Calculate shipping carbon offset
+* [getApiV1DonationsCarbonStats](docs/sdk/README.md#getapiv1donationscarbonstats) - Retrieve carbon offset stats
+* [getApiV1DonationsCryptoCalculate](docs/sdk/README.md#getapiv1donationscryptocalculate) - Calculate crypto carbon offset
+* [getApiV1DonationsIndex](docs/sdk/README.md#getapiv1donationsindex) - List your donations
+* [getApiV1DonationsShow](docs/sdk/README.md#getapiv1donationsshow) - Retrieve a donation
+* [getApiV1NonprofitsList](docs/sdk/README.md#getapiv1nonprofitslist) - Search a nonprofit
+* [getApiV1NonprofitsShow](docs/sdk/README.md#getapiv1nonprofitsshow) - Show a nonprofit
+* [postApiV1DonationsCreate](docs/sdk/README.md#postapiv1donationscreate) - Create a donation
 <!-- End SDK Available Operations -->
 
 ### Maturity

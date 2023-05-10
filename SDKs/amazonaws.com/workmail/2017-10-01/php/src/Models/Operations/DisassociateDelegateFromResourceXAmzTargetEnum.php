@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DisassociateDelegateFromResourceXAmzTargetEnum: string
 {
     case WORK_MAIL_SERVICE_DISASSOCIATE_DELEGATE_FROM_RESOURCE = 'WorkMailService.DisassociateDelegateFromResource';

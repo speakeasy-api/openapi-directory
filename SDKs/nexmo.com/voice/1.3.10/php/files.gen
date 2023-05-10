@@ -100,4 +100,9 @@ src/Models/Shared/StopTalkResponse.php
 src/Models/Shared/StartStreamResponse.php
 src/Models/Shared/StartStreamRequest.php
 src/Models/Shared/StopStreamResponse.php
+docs/sdk/README.md
+docs/calls/README.md
+docs/playdtmf/README.md
+docs/playtts/README.md
+docs/streamaudio/README.md
 USAGE.md

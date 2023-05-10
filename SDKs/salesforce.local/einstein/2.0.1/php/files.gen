@@ -36,6 +36,7 @@ src/Models/Operations/GenerateTokenV2Response.php
 src/Models/Operations/RevokeRefreshTokenV2Security.php
 src/Models/Operations/RevokeRefreshTokenV2Request.php
 src/Models/Operations/RevokeRefreshTokenV2Response.php
+src/Models/Operations/GetApiUsagePlansV2Security.php
 src/Models/Operations/GetApiUsagePlansV2Response.php
 src/Models/Operations/DeleteDatasetSecurity.php
 src/Models/Operations/DeleteDatasetRequest.php
@@ -212,4 +213,17 @@ src/Models/Shared/CellLocation.php
 src/Models/Shared/ImageClassificationResponse.php
 src/Models/Shared/ImageClassificationRequest.php
 src/Models/Shared/V2VisionTrainParams.php
+docs/sdk/README.md
+docs/authorization/README.md
+docs/checkapiusage/README.md
+docs/languagedatasets/README.md
+docs/languageexamples/README.md
+docs/languagemodels/README.md
+docs/languageprediction/README.md
+docs/languagetraining/README.md
+docs/visiondatasets/README.md
+docs/visionexamples/README.md
+docs/visionmodels/README.md
+docs/visionprediction/README.md
+docs/visiontraining/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteProgressUpdateStreamXAmzTargetEnum: string
 {
     case AWS_MIGRATION_HUB_DELETE_PROGRESS_UPDATE_STREAM = 'AWSMigrationHub.DeleteProgressUpdateStream';

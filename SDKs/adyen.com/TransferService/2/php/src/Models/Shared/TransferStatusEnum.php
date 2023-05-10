@@ -17,6 +17,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
  */
 enum TransferStatusEnum: string
 {
+    case APPROVAL_PENDING = 'approvalPending';
     case ATM_WITHDRAWAL = 'atmWithdrawal';
     case ATM_WITHDRAWAL_REVERSAL_PENDING = 'atmWithdrawalReversalPending';
     case ATM_WITHDRAWAL_REVERSED = 'atmWithdrawalReversed';

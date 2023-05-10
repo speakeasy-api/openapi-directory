@@ -161,6 +161,7 @@ src/Models/Operations/ListCustomDescriptorsResponse.php
 src/Models/Operations/ListCustomInstrumentsSecurity.php
 src/Models/Operations/ListCustomInstrumentsRequest.php
 src/Models/Operations/ListCustomInstrumentsResponse.php
+src/Models/Operations/GetEditorialCategoriesSecurity.php
 src/Models/Operations/GetEditorialCategoriesResponse.php
 src/Models/Operations/GetEditorialImageSecurity.php
 src/Models/Operations/GetEditorialImageRequest.php
@@ -205,6 +206,7 @@ src/Models/Operations/LicenseEditorialImageSecurity.php
 src/Models/Operations/LicenseEditorialImageResponse.php
 src/Models/Operations/LicenseEditorialImagesSecurity.php
 src/Models/Operations/LicenseEditorialImagesResponse.php
+src/Models/Operations/ListEditorialImageCategoriesSecurity.php
 src/Models/Operations/ListEditorialImageCategoriesResponse.php
 src/Models/Operations/SearchEditorialSecurity.php
 src/Models/Operations/SearchEditorialSortEnum.php
@@ -224,6 +226,7 @@ src/Models/Operations/GetEditorialVideoLicenseListRequest.php
 src/Models/Operations/GetEditorialVideoLicenseListResponse.php
 src/Models/Operations/LicenseEditorialVideoSecurity.php
 src/Models/Operations/LicenseEditorialVideoResponse.php
+src/Models/Operations/ListEditorialVideoCategoriesSecurity.php
 src/Models/Operations/ListEditorialVideoCategoriesResponse.php
 src/Models/Operations/SearchEditorialVideosSecurity.php
 src/Models/Operations/SearchEditorialVideosResolutionEnum.php
@@ -377,8 +380,11 @@ src/Models/Operations/EchoRequest.php
 src/Models/Operations/EchoResponse.php
 src/Models/Operations/ValidateRequest.php
 src/Models/Operations/ValidateResponse.php
+src/Models/Operations/GetAccessTokenSecurity.php
 src/Models/Operations/GetAccessTokenResponse.php
+src/Models/Operations/GetUserSecurity.php
 src/Models/Operations/GetUserResponse.php
+src/Models/Operations/GetUserSubscriptionListSecurity.php
 src/Models/Operations/GetUserSubscriptionListResponse.php
 src/Models/Operations/AddVideoCollectionItemsSecurity.php
 src/Models/Operations/AddVideoCollectionItemsRequest.php
@@ -682,4 +688,18 @@ src/Models/Shared/LicenseVideoResult.php
 src/Models/Shared/LicenseVideoRequest.php
 src/Models/Shared/LicenseVideoSizeEnum.php
 src/Models/Shared/LicenseVideo.php
+docs/sdk/README.md
+docs/audio/README.md
+docs/catalog/README.md
+docs/computervision/README.md
+docs/contributors/README.md
+docs/custommusic/README.md
+docs/editorialimages/README.md
+docs/editorialvideo/README.md
+docs/images/README.md
+docs/oauth/README.md
+docs/soundeffects/README.md
+docs/test/README.md
+docs/users/README.md
+docs/videos/README.md
 USAGE.md

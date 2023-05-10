@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateDomainXAmzTargetEnum: string
 {
     case VOICE_ID_UPDATE_DOMAIN = 'VoiceID.UpdateDomain';

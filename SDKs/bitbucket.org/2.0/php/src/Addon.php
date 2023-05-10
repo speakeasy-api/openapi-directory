@@ -55,9 +55,11 @@ class Addon
      *   -H "Authorization: JWT <JWT Token>"
      * ```
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\DeleteAddonSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\DeleteAddonResponse
      */
 	public function deleteAddon(
+        \OpenAPI\OpenAPI\Models\Operations\DeleteAddonSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\DeleteAddonResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -65,7 +67,8 @@ class Addon
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('DELETE', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -176,9 +179,11 @@ class Addon
      * Gets a list of all [linkers](/cloud/bitbucket/modules/linker/)
      * for the authenticated application.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetAddonLinkersSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetAddonLinkersResponse
      */
 	public function getAddonLinkers(
+        \OpenAPI\OpenAPI\Models\Operations\GetAddonLinkersSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetAddonLinkersResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -186,7 +191,8 @@ class Addon
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -440,9 +446,11 @@ class Addon
      * Note that the scopes of the application cannot be increased
      * in the new descriptor nor reduced to none.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\PutAddonSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\PutAddonResponse
      */
 	public function putAddon(
+        \OpenAPI\OpenAPI\Models\Operations\PutAddonSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\PutAddonResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -450,7 +458,8 @@ class Addon
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('PUT', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('PUT', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

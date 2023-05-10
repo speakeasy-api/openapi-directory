@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDescribeStaleSecurityGroupsActionEnum: string
 {
     case DESCRIBE_STALE_SECURITY_GROUPS = 'DescribeStaleSecurityGroups';

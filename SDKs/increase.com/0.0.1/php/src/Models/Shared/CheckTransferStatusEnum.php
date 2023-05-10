@@ -14,7 +14,6 @@ enum CheckTransferStatusEnum: string
 {
     case PENDING_APPROVAL = 'pending_approval';
     case PENDING_SUBMISSION = 'pending_submission';
-    case SUBMITTING = 'submitting';
     case SUBMITTED = 'submitted';
     case PENDING_MAILING = 'pending_mailing';
     case MAILED = 'mailed';

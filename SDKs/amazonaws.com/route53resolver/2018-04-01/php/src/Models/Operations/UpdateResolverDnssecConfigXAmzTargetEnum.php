@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateResolverDnssecConfigXAmzTargetEnum: string
 {
     case ROUTE53_RESOLVER_UPDATE_RESOLVER_DNSSEC_CONFIG = 'Route53Resolver.UpdateResolverDnssecConfig';

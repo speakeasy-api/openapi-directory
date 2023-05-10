@@ -322,9 +322,11 @@ class SDK
     /**
      * Delete a list
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1ListsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1ListsResponse
      */
 	public function deleteApiV1Lists(
+        \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1ListsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1ListsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -332,7 +334,8 @@ class SDK
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('DELETE', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -404,9 +407,11 @@ class SDK
     /**
      * Updates the current push subscription. Only the data part can be updated. To change fundamentals, a new subscription must be created instead.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1PushSubscriptionSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1PushSubscriptionResponse
      */
 	public function deleteApiV1PushSubscription(
+        \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1PushSubscriptionSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\DeleteApiV1PushSubscriptionResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -414,7 +419,8 @@ class SDK
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('DELETE', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1166,9 +1172,11 @@ class SDK
     /**
      * View your featured tags.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetApiV1FeaturedTagsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetApiV1FeaturedTagsResponse
      */
 	public function getApiV1FeaturedTags(
+        \OpenAPI\OpenAPI\Models\Operations\GetApiV1FeaturedTagsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetApiV1FeaturedTagsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -1176,7 +1184,8 @@ class SDK
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1204,9 +1213,11 @@ class SDK
     /**
      * Shows your 10 most-used tags, with usage history for the past week.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetApiV1FeaturedTagsSuggestionsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetApiV1FeaturedTagsSuggestionsResponse
      */
 	public function getApiV1FeaturedTagsSuggestions(
+        \OpenAPI\OpenAPI\Models\Operations\GetApiV1FeaturedTagsSuggestionsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetApiV1FeaturedTagsSuggestionsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -1214,7 +1225,8 @@ class SDK
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1242,9 +1254,11 @@ class SDK
     /**
      * getApiV1Filters
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetApiV1FiltersSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetApiV1FiltersResponse
      */
 	public function getApiV1Filters(
+        \OpenAPI\OpenAPI\Models\Operations\GetApiV1FiltersSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetApiV1FiltersResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -1252,7 +1266,8 @@ class SDK
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1463,9 +1478,11 @@ class SDK
     /**
      * Fetch all lists that the user owns.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetApiV1ListsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetApiV1ListsResponse
      */
 	public function getApiV1Lists(
+        \OpenAPI\OpenAPI\Models\Operations\GetApiV1ListsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetApiV1ListsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -1473,7 +1490,8 @@ class SDK
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1802,9 +1820,11 @@ class SDK
     /**
      * Shows your 10 most-used tags, with usage history for the past week.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetApiV1PreferencesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetApiV1PreferencesResponse
      */
 	public function getApiV1Preferences(
+        \OpenAPI\OpenAPI\Models\Operations\GetApiV1PreferencesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetApiV1PreferencesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -1812,7 +1832,8 @@ class SDK
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1840,9 +1861,11 @@ class SDK
     /**
      * View the PushSubscription currently associated with this access token.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetApiV1PushSubscriptionSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetApiV1PushSubscriptionResponse
      */
 	public function getApiV1PushSubscription(
+        \OpenAPI\OpenAPI\Models\Operations\GetApiV1PushSubscriptionSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetApiV1PushSubscriptionResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -1850,7 +1873,8 @@ class SDK
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -3293,9 +3317,11 @@ class SDK
     /**
      * Clear all notifications from the server.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\PostApiV1NotificationsClearSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\PostApiV1NotificationsClearResponse
      */
 	public function postApiV1NotificationsClear(
+        \OpenAPI\OpenAPI\Models\Operations\PostApiV1NotificationsClearSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\PostApiV1NotificationsClearResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -3303,7 +3329,8 @@ class SDK
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

@@ -159,4 +159,13 @@ src/Models/Shared/SchoolAdminsResponse.php
 src/Models/Shared/StudentContactsForStudentResponse.php
 src/Models/Shared/GradeLevelsResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/contacts/README.md
+docs/districtadmins/README.md
+docs/districts/README.md
+docs/schooladmins/README.md
+docs/schools/README.md
+docs/sections/README.md
+docs/students/README.md
+docs/teachers/README.md
 USAGE.md

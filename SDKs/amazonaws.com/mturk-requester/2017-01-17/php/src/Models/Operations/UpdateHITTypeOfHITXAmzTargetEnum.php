@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateHITTypeOfHITXAmzTargetEnum: string
 {
     case M_TURK_REQUESTER_SERVICE_V20170117_UPDATE_HIT_TYPE_OF_HIT = 'MTurkRequesterServiceV20170117.UpdateHITTypeOfHIT';

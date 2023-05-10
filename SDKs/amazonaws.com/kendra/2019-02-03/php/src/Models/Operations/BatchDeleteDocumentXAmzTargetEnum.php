@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum BatchDeleteDocumentXAmzTargetEnum: string
 {
     case AWS_KENDRA_FRONTEND_SERVICE_BATCH_DELETE_DOCUMENT = 'AWSKendraFrontendService.BatchDeleteDocument';

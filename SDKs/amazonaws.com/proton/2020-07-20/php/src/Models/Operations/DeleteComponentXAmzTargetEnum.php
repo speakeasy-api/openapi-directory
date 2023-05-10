@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteComponentXAmzTargetEnum: string
 {
     case AWS_PROTON20200720_DELETE_COMPONENT = 'AwsProton20200720.DeleteComponent';

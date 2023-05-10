@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopMatchmakingXAmzTargetEnum: string
 {
     case GAME_LIFT_STOP_MATCHMAKING = 'GameLift.StopMatchmaking';

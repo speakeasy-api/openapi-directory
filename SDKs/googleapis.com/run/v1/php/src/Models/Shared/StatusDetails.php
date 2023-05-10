@@ -38,7 +38,7 @@ class StatusDetails
     public ?string $group = null;
     
     /**
-     * The kind attribute of the resource associated with the status StatusReason. On some operations may differ from the requested resource Kind. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * The kind attribute of the resource associated with the status StatusReason. On some operations may differ from the requested resource Kind.
      * 
      * @var ?string $kind
      */
@@ -68,7 +68,7 @@ class StatusDetails
     public ?int $retryAfterSeconds = null;
     
     /**
-     * UID of the resource. (when there is a single resource which can be described). More info: https://kubernetes.io/docs/user-guide/identifiers#uids
+     * UID of the resource. (when there is a single resource which can be described).
      * 
      * @var ?string $uid
      */

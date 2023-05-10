@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListTranscriptionJobsXAmzTargetEnum: string
 {
     case TRANSCRIBE_LIST_TRANSCRIPTION_JOBS = 'Transcribe.ListTranscriptionJobs';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateEndpointGroupXAmzTargetEnum: string
 {
     case GLOBAL_ACCELERATOR_V20180706_UPDATE_ENDPOINT_GROUP = 'GlobalAccelerator_V20180706.UpdateEndpointGroup';

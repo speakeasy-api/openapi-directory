@@ -188,6 +188,16 @@ class Model
     public ?array $optimalTrialIds = null;
     
     /**
+     * Remote Model Info
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\RemoteModelInfo $remoteModelInfo
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('remoteModelInfo')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\RemoteModelInfo')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?RemoteModelInfo $remoteModelInfo = null;
+    
+    /**
      * Information for all training runs in increasing order of start_time.
      * 
      * @var ?array<\OpenAPI\OpenAPI\Models\Shared\TrainingRun> $trainingRuns
@@ -217,6 +227,7 @@ class Model
 		$this->modelReference = null;
 		$this->modelType = null;
 		$this->optimalTrialIds = null;
+		$this->remoteModelInfo = null;
 		$this->trainingRuns = null;
 	}
 }

@@ -287,4 +287,5 @@ src/Models/Shared/UpdateConnectorProfileResponse.php
 src/Models/Shared/UpdateConnectorRegistrationResponse.php
 src/Models/Shared/UpdateFlowResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

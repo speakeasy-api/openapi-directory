@@ -10,8 +10,8 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 
 
 /** When facets is set to 1, a count of all facets will be included in the response. */
-enum GetQueryJsonFacetsEnum: string
+enum GetQueryJsonFacetsEnum: int
 {
-    case ZERO = '0';
-    case ONE = '1';
+    case ZERO = 0;
+    case ONE = 1;
 }

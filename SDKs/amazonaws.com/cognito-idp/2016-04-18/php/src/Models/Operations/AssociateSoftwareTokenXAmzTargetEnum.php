@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AssociateSoftwareTokenXAmzTargetEnum: string
 {
     case AWS_COGNITO_IDENTITY_PROVIDER_SERVICE_ASSOCIATE_SOFTWARE_TOKEN = 'AWSCognitoIdentityProviderService.AssociateSoftwareToken';

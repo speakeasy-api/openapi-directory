@@ -88,7 +88,7 @@ class Membership
     public ?MembershipInfrastructureTypeEnum $infrastructureType = null;
     
     /**
-     * Optional. GCP labels for this membership.
+     * Optional. Labels for this membership.
      * 
      * @var ?array<string, string> $labels
      */
@@ -106,6 +106,16 @@ class Membership
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $lastConnectionTime = null;
+    
+    /**
+     * This field informs Fleet-based applications/services/UIs with the necessary information for where each underlying Cluster reports its metrics.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\MonitoringConfig $monitoringConfig
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('monitoringConfig')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\MonitoringConfig')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?MonitoringConfig $monitoringConfig = null;
     
     /**
      * Output only. The full, unique name of this Membership resource in the format `projects/* /locations/* /memberships/{membership_id}`, set during creation. `membership_id` must be a valid RFC 1123 compliant DNS label: 1. At most 63 characters in length 2. It must consist of lower case alphanumeric characters or `-` 3. It must start and end with an alphanumeric character Which can be expressed as the regex: `[a-z0-9]([-a-z0-9]*[a-z0-9])?`, with a maximum length of 63 characters.
@@ -158,6 +168,7 @@ class Membership
 		$this->infrastructureType = null;
 		$this->labels = null;
 		$this->lastConnectionTime = null;
+		$this->monitoringConfig = null;
 		$this->name = null;
 		$this->state = null;
 		$this->uniqueId = null;

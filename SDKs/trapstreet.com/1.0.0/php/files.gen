@@ -21,4 +21,5 @@ src/Utils/Utils.php
 src/Models/Operations/GetAddressRequest.php
 src/Models/Operations/GetAddress200ApplicationJSON.php
 src/Models/Operations/GetAddressResponse.php
+docs/sdk/README.md
 USAGE.md

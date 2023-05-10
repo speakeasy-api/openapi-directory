@@ -970,6 +970,10 @@ src/Models/Operations/GETGETVpnConnectionDeviceTypesActionEnum.php
 src/Models/Operations/GETGETVpnConnectionDeviceTypesVersionEnum.php
 src/Models/Operations/GETGETVpnConnectionDeviceTypesRequest.php
 src/Models/Operations/GETGETVpnConnectionDeviceTypesResponse.php
+src/Models/Operations/GETGETVpnTunnelReplacementStatusActionEnum.php
+src/Models/Operations/GETGETVpnTunnelReplacementStatusVersionEnum.php
+src/Models/Operations/GETGETVpnTunnelReplacementStatusRequest.php
+src/Models/Operations/GETGETVpnTunnelReplacementStatusResponse.php
 src/Models/Operations/GETImportClientVpnClientCertificateRevocationListActionEnum.php
 src/Models/Operations/GETImportClientVpnClientCertificateRevocationListVersionEnum.php
 src/Models/Operations/GETImportClientVpnClientCertificateRevocationListRequest.php
@@ -1327,6 +1331,10 @@ src/Models/Operations/GETReplaceTransitGatewayRouteActionEnum.php
 src/Models/Operations/GETReplaceTransitGatewayRouteVersionEnum.php
 src/Models/Operations/GETReplaceTransitGatewayRouteRequest.php
 src/Models/Operations/GETReplaceTransitGatewayRouteResponse.php
+src/Models/Operations/GETReplaceVpnTunnelActionEnum.php
+src/Models/Operations/GETReplaceVpnTunnelVersionEnum.php
+src/Models/Operations/GETReplaceVpnTunnelRequest.php
+src/Models/Operations/GETReplaceVpnTunnelResponse.php
 src/Models/Operations/GETReportInstanceStatusActionEnum.php
 src/Models/Operations/GETReportInstanceStatusReasonCodeEnum.php
 src/Models/Operations/GETReportInstanceStatusStatusEnum.php
@@ -3238,6 +3246,10 @@ src/Models/Operations/POSTGetVpnConnectionDeviceTypesActionEnum.php
 src/Models/Operations/POSTGetVpnConnectionDeviceTypesVersionEnum.php
 src/Models/Operations/POSTGetVpnConnectionDeviceTypesRequest.php
 src/Models/Operations/POSTGetVpnConnectionDeviceTypesResponse.php
+src/Models/Operations/POSTGetVpnTunnelReplacementStatusActionEnum.php
+src/Models/Operations/POSTGetVpnTunnelReplacementStatusVersionEnum.php
+src/Models/Operations/POSTGetVpnTunnelReplacementStatusRequest.php
+src/Models/Operations/POSTGetVpnTunnelReplacementStatusResponse.php
 src/Models/Operations/POSTImportClientVpnClientCertificateRevocationListActionEnum.php
 src/Models/Operations/POSTImportClientVpnClientCertificateRevocationListVersionEnum.php
 src/Models/Operations/POSTImportClientVpnClientCertificateRevocationListRequest.php
@@ -3638,6 +3650,10 @@ src/Models/Operations/POSTReplaceTransitGatewayRouteActionEnum.php
 src/Models/Operations/POSTReplaceTransitGatewayRouteVersionEnum.php
 src/Models/Operations/POSTReplaceTransitGatewayRouteRequest.php
 src/Models/Operations/POSTReplaceTransitGatewayRouteResponse.php
+src/Models/Operations/POSTReplaceVpnTunnelActionEnum.php
+src/Models/Operations/POSTReplaceVpnTunnelVersionEnum.php
+src/Models/Operations/POSTReplaceVpnTunnelRequest.php
+src/Models/Operations/POSTReplaceVpnTunnelResponse.php
 src/Models/Operations/POSTReportInstanceStatusActionEnum.php
 src/Models/Operations/POSTReportInstanceStatusVersionEnum.php
 src/Models/Operations/POSTReportInstanceStatusRequest.php
@@ -4761,6 +4777,8 @@ src/Models/Shared/GetVerifiedAccessGroupPolicyResult.php
 src/Models/Shared/GetVpnConnectionDeviceSampleConfigurationResult.php
 src/Models/Shared/GetVpnConnectionDeviceTypesResultVpnConnectionDeviceTypes.php
 src/Models/Shared/GetVpnConnectionDeviceTypesResult.php
+src/Models/Shared/GetVpnTunnelReplacementStatusResultMaintenanceDetails.php
+src/Models/Shared/GetVpnTunnelReplacementStatusResult.php
 src/Models/Shared/ImportClientVpnClientCertificateRevocationListResult.php
 src/Models/Shared/ImportVolumeResultConversionTaskImportInstancePlatformEnum.php
 src/Models/Shared/ImportVolumeResultConversionTaskImportInstanceVolumesImageFormatEnum.php
@@ -5069,6 +5087,7 @@ src/Models/Shared/ReplaceTransitGatewayRouteResultRouteTransitGatewayAttachments
 src/Models/Shared/ReplaceTransitGatewayRouteResultRouteTypeEnum.php
 src/Models/Shared/ReplaceTransitGatewayRouteResultRoute.php
 src/Models/Shared/ReplaceTransitGatewayRouteResult.php
+src/Models/Shared/ReplaceVpnTunnelResult.php
 src/Models/Shared/ResetAddressAttributeResultAddressPtrRecordUpdate.php
 src/Models/Shared/ResetAddressAttributeResultAddress.php
 src/Models/Shared/ResetAddressAttributeResult.php
@@ -8075,6 +8094,7 @@ src/Models/Shared/GetVerifiedAccessEndpointPolicyRequest.php
 src/Models/Shared/GetVerifiedAccessGroupPolicyRequest.php
 src/Models/Shared/GetVpnConnectionDeviceSampleConfigurationRequest.php
 src/Models/Shared/GetVpnConnectionDeviceTypesRequest.php
+src/Models/Shared/GetVpnTunnelReplacementStatusRequest.php
 src/Models/Shared/ImportClientVpnClientCertificateRevocationListRequest.php
 src/Models/Shared/ImportImageResultLicenseSpecifications.php
 src/Models/Shared/ImportImageResultSnapshotDetailsUserBucket.php
@@ -8443,6 +8463,7 @@ src/Models/Shared/ReplaceNetworkAclEntryRequest.php
 src/Models/Shared/ReplaceRouteRequest.php
 src/Models/Shared/ReplaceRouteTableAssociationRequest.php
 src/Models/Shared/ReplaceTransitGatewayRouteRequest.php
+src/Models/Shared/ReplaceVpnTunnelRequest.php
 src/Models/Shared/ReportInstanceStatusRequestReasonCodesEnum.php
 src/Models/Shared/ReportInstanceStatusRequestStatusEnum.php
 src/Models/Shared/ReportInstanceStatusRequest.php
@@ -8962,4 +8983,5 @@ src/Models/Shared/UpdateSecurityGroupRuleDescriptionsIngressRequestSecurityGroup
 src/Models/Shared/UpdateSecurityGroupRuleDescriptionsIngressRequest.php
 src/Models/Shared/WithdrawByoipCidrRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

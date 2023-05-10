@@ -158,6 +158,7 @@ src/Models/Shared/DeployJobRunFailureCauseEnum.php
 src/Models/Shared/DeployJobRun.php
 src/Models/Shared/DeployJobRunMetadata.php
 src/Models/Shared/CloudRunMetadata.php
+src/Models/Shared/DeployArtifact.php
 src/Models/Shared/CreateChildRolloutJobRun.php
 src/Models/Shared/AdvanceChildRolloutJobRun.php
 src/Models/Shared/ListRolloutsResponse.php
@@ -182,4 +183,6 @@ src/Models/Shared/ListTargetsResponse.php
 src/Models/Shared/SetIamPolicyRequest.php
 src/Models/Shared/TestIamPermissionsResponse.php
 src/Models/Shared/TestIamPermissionsRequest.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

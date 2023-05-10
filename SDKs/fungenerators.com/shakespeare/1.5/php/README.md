@@ -30,26 +30,54 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetShakespeareGenerateInsultRequest;
+use \OpenAPI\OpenAPI\Models\Operations\GetShakespeareGenerateInsultSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetShakespeareGenerateInsultRequest();
+    $request->limit = 548814;
+
+    $requestSecurity = new GetShakespeareGenerateInsultSecurity();
+    $requestSecurity->xFungeneratorsApiSecret = 'YOUR_API_KEY_HERE';
+
+    $response = $sdk->generation->getShakespeareGenerateInsult($request, $requestSecurity);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### generation
+### [generation](docs/generation/README.md)
 
-* `getShakespeareGenerateInsult` - Generate random Shakespeare style insults.
-* `getShakespeareGenerateLoremIpsum` - Generate Shakespeare lorem ipsum.
-* `getShakespeareGenerateName` - Generate random Shakespearen names.
+* [getShakespeareGenerateInsult](docs/generation/README.md#getshakespearegenerateinsult) - Generate random Shakespeare style insults.
+* [getShakespeareGenerateLoremIpsum](docs/generation/README.md#getshakespearegenerateloremipsum) - Generate Shakespeare lorem ipsum.
+* [getShakespeareGenerateName](docs/generation/README.md#getshakespearegeneratename) - Generate random Shakespearen names.
 
-### translation
+### [translation](docs/translation/README.md)
 
-* `getShakespeareTranslate` - Translate from English to Shakespeare English.
+* [getShakespeareTranslate](docs/translation/README.md#getshakespearetranslate) - Translate from English to Shakespeare English.
 
-### works
+### [works](docs/works/README.md)
 
-* `getShakespeareQuote` - Get a random Shakespeare quote.
+* [getShakespeareQuote](docs/works/README.md#getshakespearequote) - Get a random Shakespeare quote.
 <!-- End SDK Available Operations -->
 
 ### Maturity

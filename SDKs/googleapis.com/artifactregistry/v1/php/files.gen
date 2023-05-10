@@ -48,6 +48,12 @@ src/Models/Operations/ArtifactregistryProjectsLocationsRepositoriesGetIamPolicyS
 src/Models/Operations/ArtifactregistryProjectsLocationsRepositoriesGetIamPolicySecurity.php
 src/Models/Operations/ArtifactregistryProjectsLocationsRepositoriesGetIamPolicyRequest.php
 src/Models/Operations/ArtifactregistryProjectsLocationsRepositoriesGetIamPolicyResponse.php
+src/Models/Operations/ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsImportSecurity.php
+src/Models/Operations/ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsImportRequest.php
+src/Models/Operations/ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsImportResponse.php
+src/Models/Operations/ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsUploadSecurity.php
+src/Models/Operations/ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsUploadRequest.php
+src/Models/Operations/ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsUploadResponse.php
 src/Models/Operations/ArtifactregistryProjectsLocationsRepositoriesKfpArtifactsUploadSecurity.php
 src/Models/Operations/ArtifactregistryProjectsLocationsRepositoriesKfpArtifactsUploadRequest.php
 src/Models/Operations/ArtifactregistryProjectsLocationsRepositoriesKfpArtifactsUploadResponse.php
@@ -152,6 +158,9 @@ src/Models/Shared/Hash.php
 src/Models/Shared/Policy.php
 src/Models/Shared/Binding.php
 src/Models/Shared/Expr.php
+src/Models/Shared/ImportGoogetArtifactsRequest.php
+src/Models/Shared/ImportGoogetArtifactsGcsSource.php
+src/Models/Shared/UploadGoogetArtifactMediaResponse.php
 src/Models/Shared/UploadKfpArtifactMediaResponse.php
 src/Models/Shared/UploadKfpArtifactRequest.php
 src/Models/Shared/ListRepositoriesResponse.php
@@ -173,4 +182,6 @@ src/Models/Shared/TestIamPermissionsRequest.php
 src/Models/Shared/ImportYumArtifactsRequest.php
 src/Models/Shared/ImportYumArtifactsGcsSource.php
 src/Models/Shared/UploadYumArtifactMediaResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

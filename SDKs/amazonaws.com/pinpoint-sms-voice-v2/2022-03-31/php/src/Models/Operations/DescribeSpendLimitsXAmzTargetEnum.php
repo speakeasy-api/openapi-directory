@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeSpendLimitsXAmzTargetEnum: string
 {
     case PINPOINT_SMS_VOICE_V2_DESCRIBE_SPEND_LIMITS = 'PinpointSMSVoiceV2.DescribeSpendLimits';

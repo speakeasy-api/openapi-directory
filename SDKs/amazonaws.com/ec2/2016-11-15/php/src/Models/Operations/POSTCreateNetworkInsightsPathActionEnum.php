@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateNetworkInsightsPathActionEnum: string
 {
     case CREATE_NETWORK_INSIGHTS_PATH = 'CreateNetworkInsightsPath';

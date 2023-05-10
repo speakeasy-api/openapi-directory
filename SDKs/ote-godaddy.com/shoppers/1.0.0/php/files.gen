@@ -48,4 +48,6 @@ src/Models/Shared/ShopperStatusBillingStateEnum.php
 src/Models/Shared/ShopperStatus.php
 src/Models/Shared/ShopperUpdateMarketIdEnum.php
 src/Models/Shared/ShopperUpdate.php
+docs/sdk/README.md
+docs/v1/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PostV1OrderFeedbackActionEnum: string
 {
     case APPROVE = 'APPROVE';

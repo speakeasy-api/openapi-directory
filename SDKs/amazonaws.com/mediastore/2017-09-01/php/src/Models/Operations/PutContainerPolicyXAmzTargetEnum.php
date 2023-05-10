@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutContainerPolicyXAmzTargetEnum: string
 {
     case MEDIA_STORE20170901_PUT_CONTAINER_POLICY = 'MediaStore_20170901.PutContainerPolicy';

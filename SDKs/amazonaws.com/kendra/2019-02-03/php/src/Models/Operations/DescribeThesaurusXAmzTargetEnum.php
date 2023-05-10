@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeThesaurusXAmzTargetEnum: string
 {
     case AWS_KENDRA_FRONTEND_SERVICE_DESCRIBE_THESAURUS = 'AWSKendraFrontendService.DescribeThesaurus';

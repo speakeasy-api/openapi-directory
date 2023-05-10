@@ -12,6 +12,9 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 class GetEndpointsResponse
 {
 	
+    public ?string $body = null;
+    
+	
     public string $contentType;
     
     /**
@@ -28,20 +31,12 @@ class GetEndpointsResponse
 	
     public ?\Psr\Http\Message\ResponseInterface $rawResponse = null;
     
-    /**
-     * YAML representation of our OpenAPI definition.
-     * 
-     * @var ?array<string, mixed> $getEndpoints200ApplicationJSONObject
-     */
-	
-    public ?array $getEndpoints200ApplicationJSONObject = null;
-    
 	public function __construct()
 	{
+		$this->body = null;
 		$this->contentType = "";
 		$this->error = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->getEndpoints200ApplicationJSONObject = null;
 	}
 }

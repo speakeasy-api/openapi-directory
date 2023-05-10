@@ -30,42 +30,67 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\ClearUserSessionsRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new ClearUserSessionsRequest();
+    $request->requestBody = 'corrupti';
+    $request->userId = 'provident';
+
+    $response = $sdk->clearUserSessions($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `clearUserSessions` - Clear User Sessions
-* `findUser` - Find User
-* `getAssignedAppLinks` - Get Assigned App Links
-* `getCurrentUser` - Get Current User
-* `getGroupsForUser` - Get Groups for User
-* `getUser` - Get User
-* `resetFactors` - Reset Factors
+* [clearUserSessions](docs/sdk/README.md#clearusersessions) - Clear User Sessions
+* [findUser](docs/sdk/README.md#finduser) - Find User
+* [getAssignedAppLinks](docs/sdk/README.md#getassignedapplinks) - Get Assigned App Links
+* [getCurrentUser](docs/sdk/README.md#getcurrentuser) - Get Current User
+* [getGroupsForUser](docs/sdk/README.md#getgroupsforuser) - Get Groups for User
+* [getUser](docs/sdk/README.md#getuser) - Get User
+* [resetFactors](docs/sdk/README.md#resetfactors) - Reset Factors
 
-### createUser
+### [createUser](docs/createuser/README.md)
 
-* `createUserInGroup` - Create User in Group
+* [createUserInGroup](docs/createuser/README.md#createuseringroup) - Create User in Group
 
-### credentialOperations
+### [credentialOperations](docs/credentialoperations/README.md)
 
-* `changePassword` - Change Password
-* `changeRecoveryQuestion` - Change Recovery Question
-* `forgotPasswordOneTimeCode` - Forgot Password (One Time Code)
-* `setRecoveryCredential` - Set Recovery Credential
+* [changePassword](docs/credentialoperations/README.md#changepassword) - Change Password
+* [changeRecoveryQuestion](docs/credentialoperations/README.md#changerecoveryquestion) - Change Recovery Question
+* [forgotPasswordOneTimeCode](docs/credentialoperations/README.md#forgotpasswordonetimecode) - Forgot Password (One Time Code)
+* [setRecoveryCredential](docs/credentialoperations/README.md#setrecoverycredential) - Set Recovery Credential
 
-### lifecycleOperations
+### [lifecycleOperations](docs/lifecycleoperations/README.md)
 
-* `activateUser` - Activate User
-* `deactivateUser` - Deactivate User
-* `resetPassword` - Reset Password
-* `setTempPassword` - Set Temp Password
-* `suspendUser` - Suspend User
-* `unlockUser` - Unlock User
-* `unsuspendUser` - Unsuspend User
+* [activateUser](docs/lifecycleoperations/README.md#activateuser) - Activate User
+* [deactivateUser](docs/lifecycleoperations/README.md#deactivateuser) - Deactivate User
+* [resetPassword](docs/lifecycleoperations/README.md#resetpassword) - Reset Password
+* [setTempPassword](docs/lifecycleoperations/README.md#settemppassword) - Set Temp Password
+* [suspendUser](docs/lifecycleoperations/README.md#suspenduser) - Suspend User
+* [unlockUser](docs/lifecycleoperations/README.md#unlockuser) - Unlock User
+* [unsuspendUser](docs/lifecycleoperations/README.md#unsuspenduser) - Unsuspend User
 <!-- End SDK Available Operations -->
 
 ### Maturity

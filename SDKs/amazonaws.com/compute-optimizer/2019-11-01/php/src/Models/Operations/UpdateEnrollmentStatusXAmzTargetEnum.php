@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateEnrollmentStatusXAmzTargetEnum: string
 {
     case COMPUTE_OPTIMIZER_SERVICE_UPDATE_ENROLLMENT_STATUS = 'ComputeOptimizerService.UpdateEnrollmentStatus';

@@ -10,18 +10,13 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * TargetTrackingMetricStat - <p>This structure defines the CloudWatch metric to return, along with the statistic, period, and unit.</p> <p>For more information about the CloudWatch terminology below, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html">Amazon CloudWatch concepts</a> in the <i>Amazon CloudWatch User Guide</i>.</p>
+ * TargetTrackingMetricStat - <p>This structure defines the CloudWatch metric to return, along with the statistic and unit.</p> <p>For more information about the CloudWatch terminology below, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html">Amazon CloudWatch concepts</a> in the <i>Amazon CloudWatch User Guide</i>.</p>
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public
  */
 class TargetTrackingMetricStat
 {
-    /**
-     * Represents a specific metric. 
-     * 
-     * @var \OpenAPI\OpenAPI\Models\Shared\Metric $metric
-     */
 	
     public Metric $metric;
     

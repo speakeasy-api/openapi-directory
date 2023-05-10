@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateNumberOfDomainControllersXAmzTargetEnum: string
 {
     case DIRECTORY_SERVICE20150416_UPDATE_NUMBER_OF_DOMAIN_CONTROLLERS = 'DirectoryService_20150416.UpdateNumberOfDomainControllers';

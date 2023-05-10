@@ -34,4 +34,8 @@ src/Models/Operations/ValidateResponse.php
 src/Models/Operations/ValidateUrlRequest.php
 src/Models/Operations/ValidateUrlResponse.php
 src/Models/Shared/ValidationResult.php
+docs/sdk/README.md
+docs/conversion/README.md
+docs/metadata/README.md
+docs/validation/README.md
 USAGE.md

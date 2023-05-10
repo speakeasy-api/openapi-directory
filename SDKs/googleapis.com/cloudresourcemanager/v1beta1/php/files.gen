@@ -109,4 +109,7 @@ src/Models/Shared/ResourceId.php
 src/Models/Shared/GetAncestryResponse.php
 src/Models/Shared/Ancestor.php
 src/Models/Shared/ListProjectsResponse.php
+docs/sdk/README.md
+docs/organizations/README.md
+docs/projects/README.md
 USAGE.md

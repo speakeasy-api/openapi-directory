@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetCommitXAmzTargetEnum: string
 {
     case CODE_COMMIT20150413_GET_COMMIT = 'CodeCommit_20150413.GetCommit';

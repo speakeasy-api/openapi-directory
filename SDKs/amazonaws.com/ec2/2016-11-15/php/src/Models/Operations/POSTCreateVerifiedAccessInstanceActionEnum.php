@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateVerifiedAccessInstanceActionEnum: string
 {
     case CREATE_VERIFIED_ACCESS_INSTANCE = 'CreateVerifiedAccessInstance';

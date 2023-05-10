@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTModifyCurrentDBClusterCapacityActionEnum: string
 {
     case MODIFY_CURRENT_DB_CLUSTER_CAPACITY = 'ModifyCurrentDBClusterCapacity';

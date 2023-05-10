@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AddTagsToStreamXAmzTargetEnum: string
 {
     case KINESIS20131202_ADD_TAGS_TO_STREAM = 'Kinesis_20131202.AddTagsToStream';

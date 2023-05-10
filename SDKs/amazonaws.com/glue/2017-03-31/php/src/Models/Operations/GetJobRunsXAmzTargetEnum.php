@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetJobRunsXAmzTargetEnum: string
 {
     case AWS_GLUE_GET_JOB_RUNS = 'AWSGlue.GetJobRuns';

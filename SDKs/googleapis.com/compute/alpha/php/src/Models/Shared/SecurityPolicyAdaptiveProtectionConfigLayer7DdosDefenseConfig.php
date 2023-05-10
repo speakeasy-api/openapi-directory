@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig - Configuration options for L7 DDoS detection.
+ * SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig - Configuration options for L7 DDoS detection. This field is only supported in Global Security Policies of type CLOUD_ARMOR.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public
@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
 {
     /**
-     * If set to true, enables CAAP for L7 DDoS detection.
+     * If set to true, enables CAAP for L7 DDoS detection. This field is only supported in Global Security Policies of type CLOUD_ARMOR.
      * 
      * @var ?bool $enable
      */
@@ -28,7 +28,7 @@ class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
     public ?bool $enable = null;
     
     /**
-     * Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.
+     * Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules. This field is only supported in Global Security Policies of type CLOUD_ARMOR.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigRuleVisibilityEnum $ruleVisibility
      */

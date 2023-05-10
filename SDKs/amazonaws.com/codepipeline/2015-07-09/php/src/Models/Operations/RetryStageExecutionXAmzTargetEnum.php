@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RetryStageExecutionXAmzTargetEnum: string
 {
     case CODE_PIPELINE20150709_RETRY_STAGE_EXECUTION = 'CodePipeline_20150709.RetryStageExecution';

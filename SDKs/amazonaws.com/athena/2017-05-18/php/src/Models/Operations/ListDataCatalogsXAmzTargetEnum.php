@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListDataCatalogsXAmzTargetEnum: string
 {
     case AMAZON_ATHENA_LIST_DATA_CATALOGS = 'AmazonAthena.ListDataCatalogs';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetContainerServicePowersXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_GET_CONTAINER_SERVICE_POWERS = 'Lightsail_20161128.GetContainerServicePowers';

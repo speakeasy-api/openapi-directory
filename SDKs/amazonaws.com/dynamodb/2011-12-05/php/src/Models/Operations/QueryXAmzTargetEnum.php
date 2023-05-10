@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum QueryXAmzTargetEnum: string
 {
     case DYNAMO_DB20111205_QUERY = 'DynamoDB_20111205.Query';

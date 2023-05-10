@@ -40,9 +40,11 @@ class SellerStandardsProfile
     /**
      * This call retrieves all the standards profiles for the associated seller. A standards profile is a set of eBay seller metrics and the seller's associated compliance values (either TOP_RATED, ABOVE_STANDARD, or BELOW_STANDARD). A seller's multiple profiles are distinguished by two criteria, a &quot;program&quot; and a &quot;cycle.&quot; A profile's program is one of three regions where the seller may have done business, or PROGRAM_GLOBAL to indicate all marketplaces where the seller has done business. The cycle value specifies whether the standards compliance values were determined at the last official eBay evaluation or at the time of the request.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\FindSellerStandardsProfilesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\FindSellerStandardsProfilesResponse
      */
 	public function findSellerStandardsProfiles(
+        \OpenAPI\OpenAPI\Models\Operations\FindSellerStandardsProfilesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\FindSellerStandardsProfilesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -50,7 +52,8 @@ class SellerStandardsProfile
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

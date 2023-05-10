@@ -31,7 +31,7 @@ class GETDetachVerifiedAccessTrustProviderRequest
     public ?bool $dryRun = null;
     
     /**
-     * The ID of the Amazon Web Services Verified Access instance.
+     * The ID of the Verified Access instance.
      * 
      * @var string $verifiedAccessInstanceId
      */
@@ -39,7 +39,7 @@ class GETDetachVerifiedAccessTrustProviderRequest
     public string $verifiedAccessInstanceId;
     
     /**
-     * The ID of the Amazon Web Services Verified Access trust provider.
+     * The ID of the Verified Access trust provider.
      * 
      * @var string $verifiedAccessTrustProviderId
      */

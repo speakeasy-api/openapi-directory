@@ -28,7 +28,7 @@ class GetExternalEventsRequest
     public ?array $filter = null;
     
     /**
-     * If set, return records where the specified field is greater than the supplied value. Valid fields are `created_at`, `event_type`, `remote_server_type`, `status` or `folder_behavior_id`. Valid field combinations are `[ event_type, status, created_at ]`, `[ event_type, created_at ]` or `[ status, created_at ]`.
+     * If set, return records where the specified field is greater than the supplied value. Valid fields are `created_at`.
      * 
      * @var ?array<string, mixed> $filterGt
      */
@@ -36,7 +36,7 @@ class GetExternalEventsRequest
     public ?array $filterGt = null;
     
     /**
-     * If set, return records where the specified field is greater than or equal to the supplied value. Valid fields are `created_at`, `event_type`, `remote_server_type`, `status` or `folder_behavior_id`. Valid field combinations are `[ event_type, status, created_at ]`, `[ event_type, created_at ]` or `[ status, created_at ]`.
+     * If set, return records where the specified field is greater than or equal the supplied value. Valid fields are `created_at`.
      * 
      * @var ?array<string, mixed> $filterGteq
      */
@@ -44,15 +44,7 @@ class GetExternalEventsRequest
     public ?array $filterGteq = null;
     
     /**
-     * If set, return records where the specified field is equal to the supplied value. Valid fields are `created_at`, `event_type`, `remote_server_type`, `status` or `folder_behavior_id`. Valid field combinations are `[ event_type, status, created_at ]`, `[ event_type, created_at ]` or `[ status, created_at ]`.
-     * 
-     * @var ?array<string, mixed> $filterLike
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_like')]
-    public ?array $filterLike = null;
-    
-    /**
-     * If set, return records where the specified field is less than the supplied value. Valid fields are `created_at`, `event_type`, `remote_server_type`, `status` or `folder_behavior_id`. Valid field combinations are `[ event_type, status, created_at ]`, `[ event_type, created_at ]` or `[ status, created_at ]`.
+     * If set, return records where the specified field is less than the supplied value. Valid fields are `created_at`.
      * 
      * @var ?array<string, mixed> $filterLt
      */
@@ -60,12 +52,20 @@ class GetExternalEventsRequest
     public ?array $filterLt = null;
     
     /**
-     * If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `created_at`, `event_type`, `remote_server_type`, `status` or `folder_behavior_id`. Valid field combinations are `[ event_type, status, created_at ]`, `[ event_type, created_at ]` or `[ status, created_at ]`.
+     * If set, return records where the specified field is less than or equal the supplied value. Valid fields are `created_at`.
      * 
      * @var ?array<string, mixed> $filterLteq
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_lteq')]
     public ?array $filterLteq = null;
+    
+    /**
+     * If set, return records where the specified field is prefixed by the supplied value. Valid fields are `remote_server_type`.
+     * 
+     * @var ?array<string, mixed> $filterPrefix
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_prefix')]
+    public ?array $filterPrefix = null;
     
     /**
      * Number of records to show per page.  (Max: 10,000, 1,000 or less is recommended).
@@ -89,9 +89,9 @@ class GetExternalEventsRequest
 		$this->filter = null;
 		$this->filterGt = null;
 		$this->filterGteq = null;
-		$this->filterLike = null;
 		$this->filterLt = null;
 		$this->filterLteq = null;
+		$this->filterPrefix = null;
 		$this->perPage = null;
 		$this->sortBy = null;
 	}

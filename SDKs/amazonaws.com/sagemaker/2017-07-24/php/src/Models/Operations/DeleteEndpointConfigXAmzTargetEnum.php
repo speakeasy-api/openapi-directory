@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteEndpointConfigXAmzTargetEnum: string
 {
     case SAGE_MAKER_DELETE_ENDPOINT_CONFIG = 'SageMaker.DeleteEndpointConfig';

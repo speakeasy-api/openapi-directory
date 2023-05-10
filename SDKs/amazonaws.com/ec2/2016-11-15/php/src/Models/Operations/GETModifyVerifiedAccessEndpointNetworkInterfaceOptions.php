@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 
 use \OpenAPI\OpenAPI\Utils\SpeakeasyMetadata;
 /**
- * GETModifyVerifiedAccessEndpointNetworkInterfaceOptions - Options for a network-interface type Verified Access endpoint.
+ * GETModifyVerifiedAccessEndpointNetworkInterfaceOptions - Describes the options when modifying a Verified Access endpoint with the <code>network-interface</code> type.
  * 
  * @package OpenAPI\OpenAPI\Models\Operations
  * @access public

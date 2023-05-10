@@ -26,6 +26,43 @@ class CreditorAccountWrite
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $account;
     
+    /**
+     * * `AT` - Austria
+     * 
+     * * `BE` - Belgium
+     * * `BG` - Bulgaria
+     * * `HR` - Croatia
+     * * `CY` - Cyprus
+     * * `CZ` - Czechia
+     * * `DK` - Denmark
+     * * `EE` - Estonia
+     * * `FI` - Finland
+     * * `FR` - France
+     * * `DE` - Germany
+     * * `GR` - Greece
+     * * `HU` - Hungary
+     * * `IS` - Iceland
+     * * `IE` - Ireland
+     * * `IT` - Italy
+     * * `LV` - Latvia
+     * * `LI` - Liechtenstein
+     * * `LT` - Lithuania
+     * * `LU` - Luxembourg
+     * * `MT` - Malta
+     * * `NL` - Netherlands
+     * * `NO` - Norway
+     * * `PL` - Poland
+     * * `PT` - Portugal
+     * * `RO` - Romania
+     * * `SK` - Slovakia
+     * * `SI` - Slovenia
+     * * `ES` - Spain
+     * * `SE` - Sweden
+     * * `GB` - United Kingdom
+     * * `US` - United States of America
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\AddressCountryEnumEnum $addressCountry
+     */
 	#[\JMS\Serializer\Annotation\SerializedName('address_country')]
     #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\AddressCountryEnumEnum>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -111,6 +148,10 @@ class CreditorAccountWrite
     
     /**
      * Creditor account type
+     * 
+     * 
+     * * `IBAN` - IBAN
+     * * `SCAN` - SortCodeAccountNumber
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\CreditorAccountWriteTypeEnum $type
      */

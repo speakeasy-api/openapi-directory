@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETGETPredictiveScalingForecastActionEnum: string
 {
     case GET_PREDICTIVE_SCALING_FORECAST = 'GetPredictiveScalingForecast';

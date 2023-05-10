@@ -36,4 +36,6 @@ src/Models/Shared/XgafvEnum.php
 src/Models/Shared/GoogleIamV1SetIamPolicyRequest.php
 src/Models/Shared/GoogleIamV1TestIamPermissionsResponse.php
 src/Models/Shared/GoogleIamV1TestIamPermissionsRequest.php
+docs/sdk/README.md
+docs/v1/README.md
 USAGE.md

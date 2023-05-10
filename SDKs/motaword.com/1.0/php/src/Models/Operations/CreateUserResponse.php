@@ -14,6 +14,14 @@ class CreateUserResponse
 	
     public string $contentType;
     
+    /**
+     * Invalid information given for user!
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\Error $error
+     */
+	
+    public ?\OpenAPI\OpenAPI\Models\Shared\Error $error = null;
+    
 	
     public int $statusCode;
     
@@ -31,6 +39,7 @@ class CreateUserResponse
 	public function __construct()
 	{
 		$this->contentType = "";
+		$this->error = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
 		$this->user = null;

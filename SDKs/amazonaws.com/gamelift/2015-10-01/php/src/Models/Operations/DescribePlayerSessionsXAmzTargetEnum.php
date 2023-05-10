@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribePlayerSessionsXAmzTargetEnum: string
 {
     case GAME_LIFT_DESCRIBE_PLAYER_SESSIONS = 'GameLift.DescribePlayerSessions';

@@ -327,4 +327,5 @@ src/Models/Shared/UpdateApplicationInput.php
 src/Models/Shared/UpdateDeploymentGroupOutput.php
 src/Models/Shared/UpdateDeploymentGroupInput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

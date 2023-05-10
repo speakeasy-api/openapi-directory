@@ -98,6 +98,16 @@ class Evaluation
     public ?array $ruleVersions = null;
     
     /**
+     * crontab format schedule for scheduled evaluation, example: 0 * /3 * * *
+     * 
+     * @var ?string $schedule
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('schedule')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $schedule = null;
+    
+    /**
      * Output only. [Output only] Update time stamp
      * 
      * @var ?string $updateTime
@@ -117,6 +127,7 @@ class Evaluation
 		$this->resourceStatus = null;
 		$this->ruleNames = null;
 		$this->ruleVersions = null;
+		$this->schedule = null;
 		$this->updateTime = null;
 	}
 }

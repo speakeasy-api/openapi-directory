@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListServiceQuotaIncreaseRequestsInTemplateXAmzTargetEnum: string
 {
     case SERVICE_QUOTAS_V20190624_LIST_SERVICE_QUOTA_INCREASE_REQUESTS_IN_TEMPLATE = 'ServiceQuotasV20190624.ListServiceQuotaIncreaseRequestsInTemplate';

@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class GoogleCloudRunV2Container
 {
     /**
-     * Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+     * Arguments to the entrypoint. The docker image's CMD is used if this is not provided.
      * 
      * @var ?array<string> $args
      */
@@ -28,7 +28,7 @@ class GoogleCloudRunV2Container
     public ?array $args = null;
     
     /**
-     * Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+     * Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided.
      * 
      * @var ?array<string> $command
      */
@@ -36,6 +36,16 @@ class GoogleCloudRunV2Container
     #[\JMS\Serializer\Annotation\Type('array<string>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $command = null;
+    
+    /**
+     * Container names which must start before this container.
+     * 
+     * @var ?array<string> $dependsOn
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('dependsOn')]
+    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $dependsOn = null;
     
     /**
      * List of environment variables to set in the container.
@@ -48,7 +58,7 @@ class GoogleCloudRunV2Container
     public ?array $env = null;
     
     /**
-     * Required. Name of the container image in Dockerhub, Google Artifact Registry, or Google Container Registry. If the host is not provided, Dockerhub is assumed. More info: https://kubernetes.io/docs/concepts/containers/images
+     * Required. Name of the container image in Dockerhub, Google Artifact Registry, or Google Container Registry. If the host is not provided, Dockerhub is assumed.
      * 
      * @var ?string $image
      */
@@ -131,6 +141,7 @@ class GoogleCloudRunV2Container
 	{
 		$this->args = null;
 		$this->command = null;
+		$this->dependsOn = null;
 		$this->env = null;
 		$this->image = null;
 		$this->livenessProbe = null;

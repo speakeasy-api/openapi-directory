@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DisableAddOnXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_DISABLE_ADD_ON = 'Lightsail_20161128.DisableAddOn';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeprecateActivityTypeXAmzTargetEnum: string
 {
     case SIMPLE_WORKFLOW_SERVICE_DEPRECATE_ACTIVITY_TYPE = 'SimpleWorkflowService.DeprecateActivityType';

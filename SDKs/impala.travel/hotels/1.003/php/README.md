@@ -30,31 +30,56 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\CancelBookingRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new CancelBookingRequest();
+    $request->bookingId = 'corrupti';
+
+    $response = $sdk->bookings->cancelBooking($request);
+
+    if ($response->booking !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### bookings
+### [bookings](docs/bookings/README.md)
 
-* `cancelBooking` - Cancel a booking
-* `createBooking` - Create a booking
-* `listBookings` - List all bookings
-* `retrieveBooking` - Retrieve a booking
-* `updateBooking` - Change a booking
-* `updateBookingContact` - Change a booking contact
+* [cancelBooking](docs/bookings/README.md#cancelbooking) - Cancel a booking
+* [createBooking](docs/bookings/README.md#createbooking) - Create a booking
+* [listBookings](docs/bookings/README.md#listbookings) - List all bookings
+* [retrieveBooking](docs/bookings/README.md#retrievebooking) - Retrieve a booking
+* [updateBooking](docs/bookings/README.md#updatebooking) - Change a booking
+* [updateBookingContact](docs/bookings/README.md#updatebookingcontact) - Change a booking contact
 
-### hotels
+### [hotels](docs/hotels/README.md)
 
-* `listHotels` - List all hotels
-* `retrieveHotel` - Retrieve a hotel
+* [listHotels](docs/hotels/README.md#listhotels) - List all hotels
+* [retrieveHotel](docs/hotels/README.md#retrievehotel) - Retrieve a hotel
 
-### rateCalendar
+### [rateCalendar](docs/ratecalendar/README.md)
 
-* `listRatePlanForHotelForRatePlanId` - List a rate plan (rate calendar) for a hotel (Beta endpoint).
-* `listRatePlansForHotel` - List all rate plans (rate calendar) for a hotel (Beta endpoint)
+* [listRatePlanForHotelForRatePlanId](docs/ratecalendar/README.md#listrateplanforhotelforrateplanid) - List a rate plan (rate calendar) for a hotel (Beta endpoint).
+* [listRatePlansForHotel](docs/ratecalendar/README.md#listrateplansforhotel) - List all rate plans (rate calendar) for a hotel (Beta endpoint)
 <!-- End SDK Available Operations -->
 
 ### Maturity

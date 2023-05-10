@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateSourceControlFromJobXAmzTargetEnum: string
 {
     case AWS_GLUE_UPDATE_SOURCE_CONTROL_FROM_JOB = 'AWSGlue.UpdateSourceControlFromJob';

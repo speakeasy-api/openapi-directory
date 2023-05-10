@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * GoogleChromeManagementV1PeripheralsReport - Peripherals report.
+ * GoogleChromeManagementV1PeripheralsReport - Peripherals report. * Granular permission needed: TELEMETRY_API_PERIPHERALS_REPORT
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

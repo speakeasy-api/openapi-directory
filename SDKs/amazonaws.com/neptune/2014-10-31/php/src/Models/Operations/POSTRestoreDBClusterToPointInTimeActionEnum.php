@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTRestoreDBClusterToPointInTimeActionEnum: string
 {
     case RESTORE_DB_CLUSTER_TO_POINT_IN_TIME = 'RestoreDBClusterToPointInTime';

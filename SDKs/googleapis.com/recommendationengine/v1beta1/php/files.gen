@@ -118,4 +118,6 @@ src/Models/Shared/GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigEv
 src/Models/Shared/GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigPredictItemLevelEnum.php
 src/Models/Shared/GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfig.php
 src/Models/Shared/GoogleLongrunningListOperationsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

@@ -189,4 +189,8 @@ src/Models/Shared/TemplateDefinitionNew.php
 src/Models/Shared/Template.php
 src/Models/Shared/Workspace.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/documents/README.md
+docs/templates/README.md
+docs/workspaces/README.md
 USAGE.md

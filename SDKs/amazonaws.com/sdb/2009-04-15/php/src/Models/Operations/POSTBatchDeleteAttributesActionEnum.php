@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTBatchDeleteAttributesActionEnum: string
 {
     case BATCH_DELETE_ATTRIBUTES = 'BatchDeleteAttributes';

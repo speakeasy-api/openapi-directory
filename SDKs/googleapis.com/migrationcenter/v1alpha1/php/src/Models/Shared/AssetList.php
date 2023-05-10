@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class AssetList
 {
     /**
-     * A list of asset IDs
+     * Required. A list of asset IDs
      * 
      * @var ?array<string> $assetIds
      */

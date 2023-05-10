@@ -25,4 +25,5 @@ src/Models/Operations/PostV1OrderFeedbackResponse.php
 src/Models/Operations/PostV1OrderScreenFormatEnum.php
 src/Models/Operations/PostV1OrderScreenRequest.php
 src/Models/Operations/PostV1OrderScreenResponse.php
+docs/sdk/README.md
 USAGE.md

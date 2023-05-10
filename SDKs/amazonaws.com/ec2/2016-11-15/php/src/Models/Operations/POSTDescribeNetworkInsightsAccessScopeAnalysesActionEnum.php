@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeNetworkInsightsAccessScopeAnalysesActionEnum: string
 {
     case DESCRIBE_NETWORK_INSIGHTS_ACCESS_SCOPE_ANALYSES = 'DescribeNetworkInsightsAccessScopeAnalyses';

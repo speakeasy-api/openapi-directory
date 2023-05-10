@@ -18,6 +18,16 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class Workflow
 {
     /**
+     * Optional. Describes the level of platform logging to apply to calls and call responses during executions of this workflow. If both the workflow and the execution specify a logging level, the execution level takes precedence.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\WorkflowCallLogLevelEnum $callLogLevel
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('callLogLevel')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\WorkflowCallLogLevelEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?WorkflowCallLogLevelEnum $callLogLevel = null;
+    
+    /**
      * Output only. The timestamp for when the workflow was created.
      * 
      * @var ?string $createTime
@@ -26,6 +36,16 @@ class Workflow
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $createTime = null;
+    
+    /**
+     * Optional. The resource name of a KMS crypto key used to encrypt or decrypt the data associated with the workflow. Format: projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{cryptoKey} Using `-` as a wildcard for the `{project}` or not providing one at all will infer the project from the account. If not provided, data associated with the workflow will not be CMEK-encrypted.
+     * 
+     * @var ?string $cryptoKeyName
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('cryptoKeyName')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $cryptoKeyName = null;
     
     /**
      * Description of the workflow provided by the user. Must be at most 1000 unicode characters long.
@@ -108,6 +128,16 @@ class Workflow
     public ?WorkflowStateEnum $state = null;
     
     /**
+     * Describes an error related to the current state of the workflow.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\StateError $stateError
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('stateError')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\StateError')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?StateError $stateError = null;
+    
+    /**
      * Output only. The timestamp for when the workflow was last updated.
      * 
      * @var ?string $updateTime
@@ -119,7 +149,9 @@ class Workflow
     
 	public function __construct()
 	{
+		$this->callLogLevel = null;
 		$this->createTime = null;
+		$this->cryptoKeyName = null;
 		$this->description = null;
 		$this->labels = null;
 		$this->name = null;
@@ -128,6 +160,7 @@ class Workflow
 		$this->serviceAccount = null;
 		$this->sourceContents = null;
 		$this->state = null;
+		$this->stateError = null;
 		$this->updateTime = null;
 	}
 }

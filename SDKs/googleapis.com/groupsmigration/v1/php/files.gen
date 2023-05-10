@@ -25,4 +25,6 @@ src/Models/Operations/GroupsmigrationArchiveInsertResponse.php
 src/Models/Shared/Groups.php
 src/Models/Shared/AltEnum.php
 src/Models/Shared/XgafvEnum.php
+docs/sdk/README.md
+docs/archive/README.md
 USAGE.md

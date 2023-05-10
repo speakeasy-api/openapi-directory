@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateAutoScalingGroupActionEnum: string
 {
     case CREATE_AUTO_SCALING_GROUP = 'CreateAutoScalingGroup';

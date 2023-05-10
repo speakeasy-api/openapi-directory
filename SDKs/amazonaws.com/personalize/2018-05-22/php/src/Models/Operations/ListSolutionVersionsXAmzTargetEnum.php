@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListSolutionVersionsXAmzTargetEnum: string
 {
     case AMAZON_PERSONALIZE_LIST_SOLUTION_VERSIONS = 'AmazonPersonalize.ListSolutionVersions';

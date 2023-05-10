@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteSshPublicKeyXAmzTargetEnum: string
 {
     case TRANSFER_SERVICE_DELETE_SSH_PUBLIC_KEY = 'TransferService.DeleteSshPublicKey';

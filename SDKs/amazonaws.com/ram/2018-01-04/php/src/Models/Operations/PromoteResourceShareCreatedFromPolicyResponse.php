@@ -23,6 +23,14 @@ class PromoteResourceShareCreatedFromPolicyResponse
     public mixed $invalidParameterException = null;
     
     /**
+     * InvalidStateTransitionException
+     * 
+     * @var mixed $invalidStateTransitionException
+     */
+	
+    public mixed $invalidStateTransitionException = null;
+    
+    /**
      * MalformedArnException
      * 
      * @var mixed $malformedArnException
@@ -92,10 +100,19 @@ class PromoteResourceShareCreatedFromPolicyResponse
 	
     public mixed $unknownResourceException = null;
     
+    /**
+     * UnmatchedPolicyPermissionException
+     * 
+     * @var mixed $unmatchedPolicyPermissionException
+     */
+	
+    public mixed $unmatchedPolicyPermissionException = null;
+    
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->invalidParameterException = null;
+		$this->invalidStateTransitionException = null;
 		$this->malformedArnException = null;
 		$this->missingRequiredParameterException = null;
 		$this->operationNotPermittedException = null;
@@ -106,5 +123,6 @@ class PromoteResourceShareCreatedFromPolicyResponse
 		$this->serverInternalException = null;
 		$this->serviceUnavailableException = null;
 		$this->unknownResourceException = null;
+		$this->unmatchedPolicyPermissionException = null;
 	}
 }

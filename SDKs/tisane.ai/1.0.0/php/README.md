@@ -30,21 +30,46 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetFamilyDetailsRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetFamilyDetailsRequest();
+    $request->ocpApimSubscriptionKey = '{{apiKey}}';
+    $request->id = '{family_id}';
+
+    $response = $sdk->languageModelDirectAccess->getFamilyDetails($request);
+
+    if ($response->getFamilyDetails200ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### languageModelDirectAccess
+### [languageModelDirectAccess](docs/languagemodeldirectaccess/README.md)
 
-* `getFamilyDetails` - Get family details
-* `listFeatureValues` - List feature values
-* `listHypernyms` - List hypernyms
-* `listHyponyms` - List hyponyms
-* `listInflectedForms` - List inflected forms
-* `listWordSenses` - List word senses
+* [getFamilyDetails](docs/languagemodeldirectaccess/README.md#getfamilydetails) - Get family details
+* [listFeatureValues](docs/languagemodeldirectaccess/README.md#listfeaturevalues) - List feature values
+* [listHypernyms](docs/languagemodeldirectaccess/README.md#listhypernyms) - List hypernyms
+* [listHyponyms](docs/languagemodeldirectaccess/README.md#listhyponyms) - List hyponyms
+* [listInflectedForms](docs/languagemodeldirectaccess/README.md#listinflectedforms) - List inflected forms
+* [listWordSenses](docs/languagemodeldirectaccess/README.md#listwordsenses) - List word senses
 <!-- End SDK Available Operations -->
 
 ### Maturity

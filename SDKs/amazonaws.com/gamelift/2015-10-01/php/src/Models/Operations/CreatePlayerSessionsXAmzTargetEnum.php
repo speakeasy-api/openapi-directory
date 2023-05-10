@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreatePlayerSessionsXAmzTargetEnum: string
 {
     case GAME_LIFT_CREATE_PLAYER_SESSIONS = 'GameLift.CreatePlayerSessions';

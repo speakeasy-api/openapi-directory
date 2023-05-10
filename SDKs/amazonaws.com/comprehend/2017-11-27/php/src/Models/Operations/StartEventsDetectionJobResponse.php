@@ -39,6 +39,14 @@ class StartEventsDetectionJobResponse
     public mixed $kmsKeyValidationException = null;
     
     /**
+     * ResourceInUseException
+     * 
+     * @var mixed $resourceInUseException
+     */
+	
+    public mixed $resourceInUseException = null;
+    
+    /**
      * Success
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\StartEventsDetectionJobResponse $startEventsDetectionJobResponse
@@ -74,6 +82,7 @@ class StartEventsDetectionJobResponse
 		$this->internalServerException = null;
 		$this->invalidRequestException = null;
 		$this->kmsKeyValidationException = null;
+		$this->resourceInUseException = null;
 		$this->startEventsDetectionJobResponse = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;

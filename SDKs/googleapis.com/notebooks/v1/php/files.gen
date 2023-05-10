@@ -246,4 +246,6 @@ src/Models/Shared/ScheduleStateEnum.php
 src/Models/Shared/Schedule.php
 src/Models/Shared/ScheduleInput.php
 src/Models/Shared/ListSchedulesResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

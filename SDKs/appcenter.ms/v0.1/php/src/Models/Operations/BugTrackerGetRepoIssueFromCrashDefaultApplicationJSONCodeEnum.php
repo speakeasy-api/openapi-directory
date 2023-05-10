@@ -10,10 +10,10 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 
 
 /** The status code return by the API. It can be 400 or 404 or 409 or 500. */
-enum BugTrackerGetRepoIssueFromCrashDefaultApplicationJSONCodeEnum: string
+enum BugTrackerGetRepoIssueFromCrashDefaultApplicationJSONCodeEnum: int
 {
-    case FOUR_HUNDRED = '400';
-    case FOUR_HUNDRED_AND_FOUR = '404';
-    case FOUR_HUNDRED_AND_NINE = '409';
-    case FIVE_HUNDRED = '500';
+    case FOUR_HUNDRED = 400;
+    case FOUR_HUNDRED_AND_FOUR = 404;
+    case FOUR_HUNDRED_AND_NINE = 409;
+    case FIVE_HUNDRED = 500;
 }

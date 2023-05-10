@@ -37,11 +37,17 @@ class ResourceSetSummary
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $name = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('ResourceSetStatus')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\ResourceSetStatusEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?ResourceSetStatusEnum $resourceSetStatus = null;
+    
 	public function __construct()
 	{
 		$this->description = null;
 		$this->id = null;
 		$this->lastUpdateTime = null;
 		$this->name = null;
+		$this->resourceSetStatus = null;
 	}
 }

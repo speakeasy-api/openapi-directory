@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateLicenseVersionXAmzTargetEnum: string
 {
     case AWS_LICENSE_MANAGER_CREATE_LICENSE_VERSION = 'AWSLicenseManager.CreateLicenseVersion';

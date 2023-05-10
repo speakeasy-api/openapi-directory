@@ -149,10 +149,13 @@ class User
      * This endpoint is **DEPRECATED**. Please use [/v0.2/users](/api/conversation.v2#get-users).
      * 
      * @return \OpenAPI\OpenAPI\Models\Operations\GetUsersResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getUsers(
     ): \OpenAPI\OpenAPI\Models\Operations\GetUsersResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/users');
         

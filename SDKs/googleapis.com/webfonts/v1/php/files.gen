@@ -19,11 +19,15 @@ src/Utils/SecurityClient.php
 src/Utils/SecurityMetadata.php
 src/Utils/SpeakeasyMetadata.php
 src/Utils/Utils.php
+src/Models/Operations/WebfontsWebfontsListCapabilityEnum.php
 src/Models/Operations/WebfontsWebfontsListSortEnum.php
 src/Models/Operations/WebfontsWebfontsListRequest.php
 src/Models/Operations/WebfontsWebfontsListResponse.php
 src/Models/Shared/WebfontList.php
 src/Models/Shared/Webfont.php
+src/Models/Shared/Axis.php
 src/Models/Shared/AltEnum.php
 src/Models/Shared/XgafvEnum.php
+docs/sdk/README.md
+docs/webfonts/README.md
 USAGE.md

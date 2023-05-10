@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListAWSServiceAccessForOrganizationXAmzTargetEnum: string
 {
     case AWS_ORGANIZATIONS_V20161128_LIST_AWS_SERVICE_ACCESS_FOR_ORGANIZATION = 'AWSOrganizationsV20161128.ListAWSServiceAccessForOrganization';

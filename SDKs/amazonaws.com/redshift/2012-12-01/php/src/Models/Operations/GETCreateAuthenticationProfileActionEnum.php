@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETCreateAuthenticationProfileActionEnum: string
 {
     case CREATE_AUTHENTICATION_PROFILE = 'CreateAuthenticationProfile';

@@ -30,18 +30,38 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $response = $sdk->entityData->getEntities();
+
+    if ($response->entities !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### entityData
+### [entityData](docs/entitydata/README.md)
 
-* `getEntities` - Obtiene el listado de entidades soportadas
-* `getErrorCodes` - Listado de códigos de error
-* `postEntities` - Obtiene los activos financieros y el detalle de su composición
+* [getEntities](docs/entitydata/README.md#getentities) - Obtiene el listado de entidades soportadas
+* [getErrorCodes](docs/entitydata/README.md#geterrorcodes) - Listado de códigos de error
+* [postEntities](docs/entitydata/README.md#postentities) - Obtiene los activos financieros y el detalle de su composición
 <!-- End SDK Available Operations -->
 
 ### Maturity

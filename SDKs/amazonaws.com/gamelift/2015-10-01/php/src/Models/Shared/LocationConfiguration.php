@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * LocationConfiguration - A remote location where a multi-location fleet can deploy EC2 instances for game hosting. 
+ * LocationConfiguration - A remote location where a multi-location fleet can deploy game servers for game hosting. 
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

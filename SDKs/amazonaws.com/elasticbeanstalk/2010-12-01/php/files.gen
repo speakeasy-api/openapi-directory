@@ -492,4 +492,5 @@ src/Models/Shared/ValidationMessage.php
 src/Models/Shared/ValidationSeverityEnum.php
 src/Models/Shared/ValidateConfigurationSettingsMessage.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -25,4 +25,6 @@ src/Models/Shared/LegalAgreement.php
 src/Models/Shared/ErrorLimit.php
 src/Models/Shared/ErrorField.php
 src/Models/Shared/Error.php
+docs/sdk/README.md
+docs/v1/README.md
 USAGE.md

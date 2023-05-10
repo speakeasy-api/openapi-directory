@@ -351,4 +351,5 @@ src/Models/Shared/UpdateDirectConnectGatewayAssociationRequest.php
 src/Models/Shared/UpdateLagRequest.php
 src/Models/Shared/UpdateVirtualInterfaceAttributesRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

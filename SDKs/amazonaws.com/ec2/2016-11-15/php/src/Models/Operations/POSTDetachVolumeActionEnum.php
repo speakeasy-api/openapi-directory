@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDetachVolumeActionEnum: string
 {
     case DETACH_VOLUME = 'DetachVolume';

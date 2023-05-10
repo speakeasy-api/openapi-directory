@@ -68,4 +68,7 @@ src/Models/Shared/GoogleTypeExpr.php
 src/Models/Shared/GoogleCloudOrgpolicyV2AlternatePolicySpecInput.php
 src/Models/Shared/GoogleCloudOrgpolicyV2AlternatePolicySpec.php
 src/Models/Shared/GoogleCloudOrgpolicyV2ListPoliciesResponse.php
+docs/sdk/README.md
+docs/organizations/README.md
+docs/projects/README.md
 USAGE.md

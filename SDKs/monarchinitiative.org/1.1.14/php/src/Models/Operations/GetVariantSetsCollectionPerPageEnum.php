@@ -10,12 +10,12 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 
 
 /** Results per page {error_msg} */
-enum GetVariantSetsCollectionPerPageEnum: string
+enum GetVariantSetsCollectionPerPageEnum: int
 {
-    case TWO = '2';
-    case TEN = '10';
-    case TWENTY = '20';
-    case THIRTY = '30';
-    case FORTY = '40';
-    case FIFTY = '50';
+    case TWO = 2;
+    case TEN = 10;
+    case TWENTY = 20;
+    case THIRTY = 30;
+    case FORTY = 40;
+    case FIFTY = 50;
 }

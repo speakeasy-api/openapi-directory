@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListPartnerEventSourceAccountsXAmzTargetEnum: string
 {
     case AWS_EVENTS_LIST_PARTNER_EVENT_SOURCE_ACCOUNTS = 'AWSEvents.ListPartnerEventSourceAccounts';

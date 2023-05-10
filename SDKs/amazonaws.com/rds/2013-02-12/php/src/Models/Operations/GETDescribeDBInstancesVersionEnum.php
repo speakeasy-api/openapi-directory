@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDescribeDBInstancesVersionEnum: string
 {
     case TWO_THOUSAND_AND_THIRTEEN0212 = '2013-02-12';

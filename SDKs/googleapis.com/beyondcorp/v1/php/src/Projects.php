@@ -232,6 +232,46 @@ class Projects
     }
 	
     /**
+     * Updates the parameters of a single AppConnector.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsAppConnectorsPatchRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsAppConnectorsPatchSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsAppConnectorsPatchResponse
+     */
+	public function beyondcorpProjectsLocationsAppConnectorsPatch(
+        \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsAppConnectorsPatchRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsAppConnectorsPatchSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsAppConnectorsPatchResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{name}', \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsAppConnectorsPatchRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "googleCloudBeyondcorpAppconnectorsV1AppConnectorInput", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsAppConnectorsPatchRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('PATCH', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsAppConnectorsPatchResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->googleLongrunningOperation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\GoogleLongrunningOperation', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Report status for a given connector.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsAppConnectorsReportStatusRequest $request
@@ -388,164 +428,6 @@ class Projects
     }
 	
     /**
-     * Creates a new ClientConnectorService in a given project and location.
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientConnectorServicesCreateRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientConnectorServicesCreateSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientConnectorServicesCreateResponse
-     */
-	public function beyondcorpProjectsLocationsClientConnectorServicesCreate(
-        \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientConnectorServicesCreateRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientConnectorServicesCreateSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientConnectorServicesCreateResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{parent}/clientConnectorServices', \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientConnectorServicesCreateRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "clientConnectorServiceInput", "json");
-        $options = array_merge_recursive($options, $body);
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientConnectorServicesCreateRequest::class, $request, null));
-        
-        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientConnectorServicesCreateResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->googleLongrunningOperation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\GoogleLongrunningOperation', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Lists ClientConnectorServices in a given project and location.
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientConnectorServicesListRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientConnectorServicesListSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientConnectorServicesListResponse
-     */
-	public function beyondcorpProjectsLocationsClientConnectorServicesList(
-        \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientConnectorServicesListRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientConnectorServicesListSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientConnectorServicesListResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{parent}/clientConnectorServices', \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientConnectorServicesListRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientConnectorServicesListRequest::class, $request, null));
-        
-        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientConnectorServicesListResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->listClientConnectorServicesResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListClientConnectorServicesResponse', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Updates the parameters of a single ClientConnectorService.
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientConnectorServicesPatchRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientConnectorServicesPatchSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientConnectorServicesPatchResponse
-     */
-	public function beyondcorpProjectsLocationsClientConnectorServicesPatch(
-        \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientConnectorServicesPatchRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientConnectorServicesPatchSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientConnectorServicesPatchResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{name}', \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientConnectorServicesPatchRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "clientConnectorServiceInput", "json");
-        $options = array_merge_recursive($options, $body);
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientConnectorServicesPatchRequest::class, $request, null));
-        
-        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
-        $httpResponse = $client->request('PATCH', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientConnectorServicesPatchResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->googleLongrunningOperation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\GoogleLongrunningOperation', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Creates a new ClientGateway in a given project and location.
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientGatewaysCreateRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientGatewaysCreateSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientGatewaysCreateResponse
-     */
-	public function beyondcorpProjectsLocationsClientGatewaysCreate(
-        \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientGatewaysCreateRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientGatewaysCreateSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientGatewaysCreateResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{parent}/clientGateways', \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientGatewaysCreateRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "clientGatewayInput", "json");
-        $options = array_merge_recursive($options, $body);
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientGatewaysCreateRequest::class, $request, null));
-        
-        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
-        $httpResponse = $client->request('POST', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientGatewaysCreateResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->googleLongrunningOperation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\GoogleLongrunningOperation', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientGatewaysGetIamPolicyRequest $request
@@ -577,44 +459,6 @@ class Projects
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->googleIamV1Policy = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\GoogleIamV1Policy', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Lists ClientGateways in a given project and location.
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientGatewaysListRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientGatewaysListSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientGatewaysListResponse
-     */
-	public function beyondcorpProjectsLocationsClientGatewaysList(
-        \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientGatewaysListRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientGatewaysListSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientGatewaysListResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{parent}/clientGateways', \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientGatewaysListRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientGatewaysListRequest::class, $request, null));
-        
-        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\BeyondcorpProjectsLocationsClientGatewaysListResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->listClientGatewaysResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListClientGatewaysResponse', 'json');
             }
         }
 

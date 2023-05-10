@@ -48,4 +48,6 @@ src/Models/Shared/OBFundsConfirmationResponse1.php
 src/Models/Shared/OBFundsConfirmation1DataInstructedAmount.php
 src/Models/Shared/OBFundsConfirmation1Data.php
 src/Models/Shared/OBFundsConfirmation1.php
+docs/sdk/README.md
+docs/fundsconfirmations/README.md
 USAGE.md

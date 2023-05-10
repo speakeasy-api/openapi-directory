@@ -9,7 +9,11 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Shared;
 
 
-/** Behavior when periodic payment dates fall on holiday. */
+/**
+ * * `following` - following
+ * 
+ * * `preceding` - preceding
+ */
 enum PeriodicPaymentRequestExecutionRuleEnum: string
 {
     case FOLLOWING = 'following';

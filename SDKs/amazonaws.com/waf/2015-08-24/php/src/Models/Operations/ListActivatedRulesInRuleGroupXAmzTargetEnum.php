@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListActivatedRulesInRuleGroupXAmzTargetEnum: string
 {
     case AWSWAF20150824_LIST_ACTIVATED_RULES_IN_RULE_GROUP = 'AWSWAF_20150824.ListActivatedRulesInRuleGroup';

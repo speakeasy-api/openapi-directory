@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDescribeEnvironmentHealthActionEnum: string
 {
     case DESCRIBE_ENVIRONMENT_HEALTH = 'DescribeEnvironmentHealth';

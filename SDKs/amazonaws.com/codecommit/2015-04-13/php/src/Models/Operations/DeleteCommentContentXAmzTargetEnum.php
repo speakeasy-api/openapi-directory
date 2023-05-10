@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteCommentContentXAmzTargetEnum: string
 {
     case CODE_COMMIT20150413_DELETE_COMMENT_CONTENT = 'CodeCommit_20150413.DeleteCommentContent';

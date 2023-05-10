@@ -255,6 +255,7 @@ src/Models/Shared/BlueGreenInfo.php
 src/Models/Shared/PlacementPolicyTypeEnum.php
 src/Models/Shared/PlacementPolicy.php
 src/Models/Shared/NodeNetworkConfig.php
+src/Models/Shared/PodCIDROverprovisionConfig.php
 src/Models/Shared/NetworkPerformanceConfigExternalIpEgressBandwidthTierEnum.php
 src/Models/Shared/NetworkPerformanceConfigTotalEgressBandwidthTierEnum.php
 src/Models/Shared/NetworkPerformanceConfig.php
@@ -333,6 +334,7 @@ src/Models/Shared/IPAllocationPolicyIpv6AccessTypeEnum.php
 src/Models/Shared/IPAllocationPolicyStackTypeEnum.php
 src/Models/Shared/IPAllocationPolicy.php
 src/Models/Shared/IPAllocationPolicyInput.php
+src/Models/Shared/AdditionalPodRangesConfig.php
 src/Models/Shared/IdentityServiceConfig.php
 src/Models/Shared/Fleet.php
 src/Models/Shared/DatabaseEncryptionStateEnum.php
@@ -357,6 +359,7 @@ src/Models/Shared/IstioConfig.php
 src/Models/Shared/HttpLoadBalancing.php
 src/Models/Shared/HorizontalPodAutoscaling.php
 src/Models/Shared/GkeBackupAgentConfig.php
+src/Models/Shared/GcsFuseCsiDriverConfig.php
 src/Models/Shared/GcpFilestoreCsiDriverConfig.php
 src/Models/Shared/GcePersistentDiskCsiDriverConfig.php
 src/Models/Shared/DnsCacheConfig.php
@@ -409,4 +412,6 @@ src/Models/Shared/ClusterUpdateDesiredStackTypeEnum.php
 src/Models/Shared/ClusterUpdate.php
 src/Models/Shared/ILBSubsettingConfig.php
 src/Models/Shared/IntraNodeVisibilityConfig.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

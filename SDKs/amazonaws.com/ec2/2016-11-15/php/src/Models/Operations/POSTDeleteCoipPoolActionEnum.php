@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteCoipPoolActionEnum: string
 {
     case DELETE_COIP_POOL = 'DeleteCoipPool';

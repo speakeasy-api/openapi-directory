@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateResourceXAmzTargetEnum: string
 {
     case CLOUD_API_SERVICE_UPDATE_RESOURCE = 'CloudApiService.UpdateResource';

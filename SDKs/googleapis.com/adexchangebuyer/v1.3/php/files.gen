@@ -116,4 +116,12 @@ src/Models/Shared/PretargetingConfigExcludedPlacements.php
 src/Models/Shared/PretargetingConfigPlacements.php
 src/Models/Shared/PretargetingConfig.php
 src/Models/Shared/PretargetingConfigList.php
+docs/sdk/README.md
+docs/accounts/README.md
+docs/billinginfo/README.md
+docs/budget/README.md
+docs/creatives/README.md
+docs/directdeals/README.md
+docs/performancereport/README.md
+docs/pretargetingconfig/README.md
 USAGE.md

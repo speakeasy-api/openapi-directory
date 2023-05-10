@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateIdentityPoolXAmzTargetEnum: string
 {
     case AWS_COGNITO_IDENTITY_SERVICE_UPDATE_IDENTITY_POOL = 'AWSCognitoIdentityService.UpdateIdentityPool';

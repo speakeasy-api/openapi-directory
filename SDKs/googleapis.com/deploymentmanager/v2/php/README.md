@@ -30,45 +30,94 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\DeploymentmanagerDeploymentsCancelPreviewRequest;
+use \OpenAPI\OpenAPI\Models\Shared\XgafvEnum;
+use \OpenAPI\OpenAPI\Models\Shared\DeploymentsCancelPreviewRequest;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+use \OpenAPI\OpenAPI\Models\Operations\DeploymentmanagerDeploymentsCancelPreviewSecurity;
+use \OpenAPI\OpenAPI\Models\Operations\DeploymentmanagerDeploymentsCancelPreviewSecurityOption1;
+use \OpenAPI\OpenAPI\Models\Operations\DeploymentmanagerDeploymentsCancelPreviewSecurityOption2;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new DeploymentmanagerDeploymentsCancelPreviewRequest();
+    $request->dollarXgafv = XgafvEnum::TWO;
+    $request->deploymentsCancelPreviewRequest = new DeploymentsCancelPreviewRequest();
+    $request->deploymentsCancelPreviewRequest->fingerprint = 'provident';
+    $request->accessToken = 'distinctio';
+    $request->alt = AltEnum::PROTO;
+    $request->callback = 'unde';
+    $request->deployment = 'nulla';
+    $request->fields = 'corrupti';
+    $request->key = 'illum';
+    $request->oauthToken = 'vel';
+    $request->prettyPrint = false;
+    $request->project = 'error';
+    $request->quotaUser = 'deserunt';
+    $request->uploadType = 'suscipit';
+    $request->uploadProtocol = 'iure';
+
+    $requestSecurity = new DeploymentmanagerDeploymentsCancelPreviewSecurity();
+    $requestSecurity->option1 = new DeploymentmanagerDeploymentsCancelPreviewSecurityOption1();
+    $requestSecurity->option1->oauth2 = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+    $requestSecurity->option1->oauth2c = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+
+    $response = $sdk->deployments->deploymentmanagerDeploymentsCancelPreview($request, $requestSecurity);
+
+    if ($response->operation !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### deployments
+### [deployments](docs/deployments/README.md)
 
-* `deploymentmanagerDeploymentsCancelPreview` - Cancels and removes the preview currently associated with the deployment.
-* `deploymentmanagerDeploymentsDelete` - Deletes a deployment and all of the resources in the deployment.
-* `deploymentmanagerDeploymentsGet` - Gets information about a specific deployment.
-* `deploymentmanagerDeploymentsGetIamPolicy` - Gets the access control policy for a resource. May be empty if no such policy or resource exists.
-* `deploymentmanagerDeploymentsInsert` - Creates a deployment and all of the resources described by the deployment manifest.
-* `deploymentmanagerDeploymentsList` - Lists all deployments for a given project.
-* `deploymentmanagerDeploymentsPatch` - Patches a deployment and all of the resources described by the deployment manifest.
-* `deploymentmanagerDeploymentsSetIamPolicy` - Sets the access control policy on the specified resource. Replaces any existing policy.
-* `deploymentmanagerDeploymentsStop` - Stops an ongoing operation. This does not roll back any work that has already been completed, but prevents any new work from being started.
-* `deploymentmanagerDeploymentsTestIamPermissions` - Returns permissions that a caller has on the specified resource.
-* `deploymentmanagerDeploymentsUpdate` - Updates a deployment and all of the resources described by the deployment manifest.
+* [deploymentmanagerDeploymentsCancelPreview](docs/deployments/README.md#deploymentmanagerdeploymentscancelpreview) - Cancels and removes the preview currently associated with the deployment.
+* [deploymentmanagerDeploymentsDelete](docs/deployments/README.md#deploymentmanagerdeploymentsdelete) - Deletes a deployment and all of the resources in the deployment.
+* [deploymentmanagerDeploymentsGet](docs/deployments/README.md#deploymentmanagerdeploymentsget) - Gets information about a specific deployment.
+* [deploymentmanagerDeploymentsGetIamPolicy](docs/deployments/README.md#deploymentmanagerdeploymentsgetiampolicy) - Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+* [deploymentmanagerDeploymentsInsert](docs/deployments/README.md#deploymentmanagerdeploymentsinsert) - Creates a deployment and all of the resources described by the deployment manifest.
+* [deploymentmanagerDeploymentsList](docs/deployments/README.md#deploymentmanagerdeploymentslist) - Lists all deployments for a given project.
+* [deploymentmanagerDeploymentsPatch](docs/deployments/README.md#deploymentmanagerdeploymentspatch) - Patches a deployment and all of the resources described by the deployment manifest.
+* [deploymentmanagerDeploymentsSetIamPolicy](docs/deployments/README.md#deploymentmanagerdeploymentssetiampolicy) - Sets the access control policy on the specified resource. Replaces any existing policy.
+* [deploymentmanagerDeploymentsStop](docs/deployments/README.md#deploymentmanagerdeploymentsstop) - Stops an ongoing operation. This does not roll back any work that has already been completed, but prevents any new work from being started.
+* [deploymentmanagerDeploymentsTestIamPermissions](docs/deployments/README.md#deploymentmanagerdeploymentstestiampermissions) - Returns permissions that a caller has on the specified resource.
+* [deploymentmanagerDeploymentsUpdate](docs/deployments/README.md#deploymentmanagerdeploymentsupdate) - Updates a deployment and all of the resources described by the deployment manifest.
 
-### manifests
+### [manifests](docs/manifests/README.md)
 
-* `deploymentmanagerManifestsGet` - Gets information about a specific manifest.
-* `deploymentmanagerManifestsList` - Lists all manifests for a given deployment.
+* [deploymentmanagerManifestsGet](docs/manifests/README.md#deploymentmanagermanifestsget) - Gets information about a specific manifest.
+* [deploymentmanagerManifestsList](docs/manifests/README.md#deploymentmanagermanifestslist) - Lists all manifests for a given deployment.
 
-### operations
+### [operations](docs/operations/README.md)
 
-* `deploymentmanagerOperationsGet` - Gets information about a specific operation.
-* `deploymentmanagerOperationsList` - Lists all operations for a project.
+* [deploymentmanagerOperationsGet](docs/operations/README.md#deploymentmanageroperationsget) - Gets information about a specific operation.
+* [deploymentmanagerOperationsList](docs/operations/README.md#deploymentmanageroperationslist) - Lists all operations for a project.
 
-### resources
+### [resources](docs/resources/README.md)
 
-* `deploymentmanagerResourcesGet` - Gets information about a single resource.
-* `deploymentmanagerResourcesList` - Lists all resources in a given deployment.
+* [deploymentmanagerResourcesGet](docs/resources/README.md#deploymentmanagerresourcesget) - Gets information about a single resource.
+* [deploymentmanagerResourcesList](docs/resources/README.md#deploymentmanagerresourceslist) - Lists all resources in a given deployment.
 
-### types
+### [types](docs/types/README.md)
 
-* `deploymentmanagerTypesList` - Lists all resource types for Deployment Manager.
+* [deploymentmanagerTypesList](docs/types/README.md#deploymentmanagertypeslist) - Lists all resource types for Deployment Manager.
 <!-- End SDK Available Operations -->
 
 ### Maturity

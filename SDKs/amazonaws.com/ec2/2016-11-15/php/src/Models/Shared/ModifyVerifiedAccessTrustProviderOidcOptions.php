@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * ModifyVerifiedAccessTrustProviderOidcOptions - OpenID Connect options for an <code>oidc</code>-type, user-identity based trust provider.
+ * ModifyVerifiedAccessTrustProviderOidcOptions - Options for an OpenID Connect-compatible user-identity trust provider.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public
@@ -18,10 +18,34 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class ModifyVerifiedAccessTrustProviderOidcOptions
 {
 	
+    public ?string $authorizationEndpoint = null;
+    
+	
+    public ?string $clientId = null;
+    
+	
+    public ?string $clientSecret = null;
+    
+	
+    public ?string $issuer = null;
+    
+	
     public ?string $scope = null;
+    
+	
+    public ?string $tokenEndpoint = null;
+    
+	
+    public ?string $userInfoEndpoint = null;
     
 	public function __construct()
 	{
+		$this->authorizationEndpoint = null;
+		$this->clientId = null;
+		$this->clientSecret = null;
+		$this->issuer = null;
 		$this->scope = null;
+		$this->tokenEndpoint = null;
+		$this->userInfoEndpoint = null;
 	}
 }

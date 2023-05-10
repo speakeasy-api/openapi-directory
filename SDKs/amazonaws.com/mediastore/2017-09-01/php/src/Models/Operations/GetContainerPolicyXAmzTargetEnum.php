@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetContainerPolicyXAmzTargetEnum: string
 {
     case MEDIA_STORE20170901_GET_CONTAINER_POLICY = 'MediaStore_20170901.GetContainerPolicy';

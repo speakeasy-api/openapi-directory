@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListProgressUpdateStreamsXAmzTargetEnum: string
 {
     case AWS_MIGRATION_HUB_LIST_PROGRESS_UPDATE_STREAMS = 'AWSMigrationHub.ListProgressUpdateStreams';

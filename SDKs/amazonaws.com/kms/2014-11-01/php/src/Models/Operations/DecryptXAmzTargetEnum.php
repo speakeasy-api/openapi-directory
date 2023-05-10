@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DecryptXAmzTargetEnum: string
 {
     case TRENT_SERVICE_DECRYPT = 'TrentService.Decrypt';

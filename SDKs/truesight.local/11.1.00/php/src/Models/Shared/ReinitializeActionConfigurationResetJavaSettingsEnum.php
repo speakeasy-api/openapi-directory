@@ -10,8 +10,8 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /** When set to <em>1</em>, removes the custom Java settings (path and credentials). The KM will try to automatically find a suitable JRE. */
-enum ReinitializeActionConfigurationResetJavaSettingsEnum: string
+enum ReinitializeActionConfigurationResetJavaSettingsEnum: int
 {
-    case ZERO = '0';
-    case ONE = '1';
+    case ZERO = 0;
+    case ONE = 1;
 }

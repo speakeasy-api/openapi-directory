@@ -161,4 +161,5 @@ src/Models/Shared/UpdateReplicationSetAction.php
 src/Models/Shared/DeleteRegionAction.php
 src/Models/Shared/AddRegionAction.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

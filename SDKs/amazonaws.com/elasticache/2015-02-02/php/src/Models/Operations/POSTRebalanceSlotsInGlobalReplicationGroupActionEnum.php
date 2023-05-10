@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTRebalanceSlotsInGlobalReplicationGroupActionEnum: string
 {
     case REBALANCE_SLOTS_IN_GLOBAL_REPLICATION_GROUP = 'RebalanceSlotsInGlobalReplicationGroup';

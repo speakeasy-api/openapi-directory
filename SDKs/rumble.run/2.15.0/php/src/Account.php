@@ -698,9 +698,11 @@ class Account
     /**
      * Get all SSO group mappings
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetAccountGroupMappingsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetAccountGroupMappingsResponse
      */
 	public function getAccountGroupMappings(
+        \OpenAPI\OpenAPI\Models\Operations\GetAccountGroupMappingsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetAccountGroupMappingsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -708,7 +710,8 @@ class Account
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -731,9 +734,11 @@ class Account
     /**
      * Get all groups
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetAccountGroupsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetAccountGroupsResponse
      */
 	public function getAccountGroups(
+        \OpenAPI\OpenAPI\Models\Operations\GetAccountGroupsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetAccountGroupsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -741,7 +746,8 @@ class Account
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -802,9 +808,11 @@ class Account
     /**
      * Get all active API keys
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetAccountKeysSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetAccountKeysResponse
      */
 	public function getAccountKeys(
+        \OpenAPI\OpenAPI\Models\Operations\GetAccountKeysSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetAccountKeysResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -812,7 +820,8 @@ class Account
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -836,9 +845,11 @@ class Account
     /**
      * Get license details
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetAccountLicenseSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetAccountLicenseResponse
      */
 	public function getAccountLicense(
+        \OpenAPI\OpenAPI\Models\Operations\GetAccountLicenseSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetAccountLicenseResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -846,7 +857,8 @@ class Account
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -1144,9 +1156,11 @@ class Account
     /**
      * Get all users
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetAccountUsersSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetAccountUsersResponse
      */
 	public function getAccountUsers(
+        \OpenAPI\OpenAPI\Models\Operations\GetAccountUsersSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetAccountUsersResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -1154,7 +1168,8 @@ class Account
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

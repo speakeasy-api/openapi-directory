@@ -227,4 +227,11 @@ src/Models/Operations/PostAdminSettingsRequestBodyLogNormalTypeEnum.php
 src/Models/Operations/PostAdminSettingsRequestBodyLogNormal.php
 src/Models/Operations/PostAdminSettingsResponse.php
 src/Models/Operations/PostAdminShutdownResponse.php
+docs/sdk/README.md
+docs/nearmisses/README.md
+docs/recordings/README.md
+docs/requests/README.md
+docs/scenarios/README.md
+docs/stubmappings/README.md
+docs/system/README.md
 USAGE.md

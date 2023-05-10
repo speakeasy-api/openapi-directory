@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ExportTableToPointInTimeXAmzTargetEnum: string
 {
     case DYNAMO_DB20120810_EXPORT_TABLE_TO_POINT_IN_TIME = 'DynamoDB_20120810.ExportTableToPointInTime';

@@ -195,4 +195,15 @@ src/Models/Shared/UserResponseData.php
 src/Models/Shared/UserResponse.php
 src/Models/Shared/User.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/accounts/README.md
+docs/budgets/README.md
+docs/categories/README.md
+docs/deprecated/README.md
+docs/months/README.md
+docs/payeelocations/README.md
+docs/payees/README.md
+docs/scheduledtransactions/README.md
+docs/transactions/README.md
+docs/user/README.md
 USAGE.md

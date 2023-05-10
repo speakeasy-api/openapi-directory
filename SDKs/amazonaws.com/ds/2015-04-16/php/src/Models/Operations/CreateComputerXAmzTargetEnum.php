@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateComputerXAmzTargetEnum: string
 {
     case DIRECTORY_SERVICE20150416_CREATE_COMPUTER = 'DirectoryService_20150416.CreateComputer';

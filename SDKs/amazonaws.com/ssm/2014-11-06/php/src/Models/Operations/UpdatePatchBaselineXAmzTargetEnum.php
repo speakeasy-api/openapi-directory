@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdatePatchBaselineXAmzTargetEnum: string
 {
     case AMAZON_SSM_UPDATE_PATCH_BASELINE = 'AmazonSSM.UpdatePatchBaseline';

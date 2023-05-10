@@ -22,4 +22,5 @@ src/Models/Operations/GetBng2latlongEastingNorthingRequest.php
 src/Models/Operations/GetBng2latlongEastingNorthing200ApplicationJSONStatusEnum.php
 src/Models/Operations/GetBng2latlongEastingNorthing200ApplicationJSON.php
 src/Models/Operations/GetBng2latlongEastingNorthingResponse.php
+docs/sdk/README.md
 USAGE.md

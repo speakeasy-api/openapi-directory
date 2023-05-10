@@ -118,6 +118,8 @@ class SDK
 	
 	public AssetsKurtosis $assetsKurtosis;
 	
+	public AssetsMonteCarloReturnsSimulation $assetsMonteCarloReturnsSimulation;
+	
 	public AssetsPrices $assetsPrices;
 	
 	public AssetsReturns $assetsReturns;
@@ -134,7 +136,11 @@ class SDK
 	
 	public PortfolioAnalysis $portfolioAnalysis;
 	
+	public PortfolioAnalysisConditionalValueAtRisk $portfolioAnalysisConditionalValueAtRisk;
+	
 	public PortfolioAnalysisSharpeRatio $portfolioAnalysisSharpeRatio;
+	
+	public PortfolioAnalysisValueAtRisk $portfolioAnalysisValueAtRisk;
 	
 	public PortfolioConstruction $portfolioConstruction;
 	
@@ -233,6 +239,15 @@ class SDK
 			$this->_genVersion
 		);
 		
+		$this->assetsMonteCarloReturnsSimulation = new AssetsMonteCarloReturnsSimulation(
+			$this->_defaultClient,
+			$this->_securityClient,
+			$this->_serverUrl,
+			$this->_language,
+			$this->_sdkVersion,
+			$this->_genVersion
+		);
+		
 		$this->assetsPrices = new AssetsPrices(
 			$this->_defaultClient,
 			$this->_securityClient,
@@ -305,7 +320,25 @@ class SDK
 			$this->_genVersion
 		);
 		
+		$this->portfolioAnalysisConditionalValueAtRisk = new PortfolioAnalysisConditionalValueAtRisk(
+			$this->_defaultClient,
+			$this->_securityClient,
+			$this->_serverUrl,
+			$this->_language,
+			$this->_sdkVersion,
+			$this->_genVersion
+		);
+		
 		$this->portfolioAnalysisSharpeRatio = new PortfolioAnalysisSharpeRatio(
+			$this->_defaultClient,
+			$this->_securityClient,
+			$this->_serverUrl,
+			$this->_language,
+			$this->_sdkVersion,
+			$this->_genVersion
+		);
+		
+		$this->portfolioAnalysisValueAtRisk = new PortfolioAnalysisValueAtRisk(
 			$this->_defaultClient,
 			$this->_securityClient,
 			$this->_serverUrl,

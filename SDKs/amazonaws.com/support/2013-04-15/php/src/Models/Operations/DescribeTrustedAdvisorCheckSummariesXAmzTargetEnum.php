@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeTrustedAdvisorCheckSummariesXAmzTargetEnum: string
 {
     case AWS_SUPPORT20130415_DESCRIBE_TRUSTED_ADVISOR_CHECK_SUMMARIES = 'AWSSupport_20130415.DescribeTrustedAdvisorCheckSummaries';

@@ -296,4 +296,12 @@ src/Models/Shared/TypesListResponse.php
 src/Models/Shared/Type.php
 src/Models/Shared/TypeLabelEntry.php
 src/Models/Shared/BaseType.php
+docs/sdk/README.md
+docs/compositetypes/README.md
+docs/deployments/README.md
+docs/manifests/README.md
+docs/operations/README.md
+docs/resources/README.md
+docs/typeproviders/README.md
+docs/types/README.md
 USAGE.md

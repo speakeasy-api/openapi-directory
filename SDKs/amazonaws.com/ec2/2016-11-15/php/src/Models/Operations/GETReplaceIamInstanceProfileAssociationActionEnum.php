@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETReplaceIamInstanceProfileAssociationActionEnum: string
 {
     case REPLACE_IAM_INSTANCE_PROFILE_ASSOCIATION = 'ReplaceIamInstanceProfileAssociation';

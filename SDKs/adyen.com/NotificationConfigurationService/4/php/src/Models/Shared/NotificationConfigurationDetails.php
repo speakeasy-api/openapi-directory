@@ -44,10 +44,10 @@ class NotificationConfigurationDetails
     /**
      * Contains objects that define event types and their subscription settings.
      * 
-     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\NotificationEventConfiguration> $eventConfigs
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\NotificationEventConfigurationWrapper> $eventConfigs
      */
 	#[\JMS\Serializer\Annotation\SerializedName('eventConfigs')]
-    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\NotificationEventConfiguration>')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\NotificationEventConfigurationWrapper>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $eventConfigs = null;
     

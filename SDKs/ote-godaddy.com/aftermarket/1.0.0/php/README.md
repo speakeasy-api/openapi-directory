@@ -30,18 +30,45 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\AftermarketListingExpiryCreate;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = [
+        new AftermarketListingExpiryCreate(),
+        new AftermarketListingExpiryCreate(),
+        new AftermarketListingExpiryCreate(),
+    ]
+
+    $response = $sdk->v1->addExpiryListingsJson($request);
+
+    if ($response->body !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### v1
+### [v1](docs/v1/README.md)
 
-* `addExpiryListingsJson` - Add expiry listings into GoDaddy Auction
-* `addExpiryListingsRaw` - Add expiry listings into GoDaddy Auction
-* `deleteListings` - Remove listings from GoDaddy Auction
+* [addExpiryListingsJson](docs/v1/README.md#addexpirylistingsjson) - Add expiry listings into GoDaddy Auction
+* [addExpiryListingsRaw](docs/v1/README.md#addexpirylistingsraw) - Add expiry listings into GoDaddy Auction
+* [deleteListings](docs/v1/README.md#deletelistings) - Remove listings from GoDaddy Auction
 <!-- End SDK Available Operations -->
 
 ### Maturity

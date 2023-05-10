@@ -55,6 +55,14 @@ class CreateFleetLocationsResponse
     public mixed $invalidRequestException = null;
     
     /**
+     * LimitExceededException
+     * 
+     * @var mixed $limitExceededException
+     */
+	
+    public mixed $limitExceededException = null;
+    
+    /**
      * NotFoundException
      * 
      * @var mixed $notFoundException
@@ -92,6 +100,7 @@ class CreateFleetLocationsResponse
 		$this->internalServiceException = null;
 		$this->invalidFleetStatusException = null;
 		$this->invalidRequestException = null;
+		$this->limitExceededException = null;
 		$this->notFoundException = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;

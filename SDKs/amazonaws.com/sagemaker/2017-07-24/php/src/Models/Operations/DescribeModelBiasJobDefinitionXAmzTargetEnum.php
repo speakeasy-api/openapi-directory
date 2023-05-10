@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeModelBiasJobDefinitionXAmzTargetEnum: string
 {
     case SAGE_MAKER_DESCRIBE_MODEL_BIAS_JOB_DEFINITION = 'SageMaker.DescribeModelBiasJobDefinition';

@@ -25,7 +25,7 @@ class PostAssetsCorrelationMatrixBoundsRequestBody
     public array $assetsCorrelationMatrix;
     
     /**
-     * assetsGroup[k] is the indexes of the assets belonging to the assets group
+     * assetsGroup[k] is the indexes of the assets belonging to the assets group k
      * 
      * @var array<int> $assetsGroup
      */

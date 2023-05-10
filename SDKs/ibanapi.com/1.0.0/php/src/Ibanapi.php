@@ -42,9 +42,11 @@ class Ibanapi
      * 
      * Returns the account balance and expiry
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetBalanceSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetBalanceResponse
      */
 	public function getBalance(
+        \OpenAPI\OpenAPI\Models\Operations\GetBalanceSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetBalanceResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -52,7 +54,8 @@ class Ibanapi
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

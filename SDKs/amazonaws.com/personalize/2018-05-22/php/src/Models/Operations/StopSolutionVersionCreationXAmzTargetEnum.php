@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopSolutionVersionCreationXAmzTargetEnum: string
 {
     case AMAZON_PERSONALIZE_STOP_SOLUTION_VERSION_CREATION = 'AmazonPersonalize.StopSolutionVersionCreation';

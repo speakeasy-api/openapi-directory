@@ -46,11 +46,14 @@ class DeprecatedServices
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\MerchantCancellationRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\MerchantCancellationResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function merchantCancellation(
         \OpenAPI\OpenAPI\Models\Operations\MerchantCancellationRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\MerchantCancellationResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/merchant/cancellation');
         

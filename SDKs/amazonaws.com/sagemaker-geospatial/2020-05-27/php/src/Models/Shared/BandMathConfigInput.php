@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * BandMathConfigInput - <p/>
+ * BandMathConfigInput - Input structure for the BandMath operation type. Defines Predefined and CustomIndices to be computed using BandMath.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

@@ -31,6 +31,14 @@ class JWTObtainResponse
     public ?array $jwtObtain403ApplicationJSONObject = null;
     
     /**
+     * Nordigen rate limit exceeded
+     * 
+     * @var ?array<string, mixed> $jwtObtain429ApplicationJSONObject
+     */
+	
+    public ?array $jwtObtain429ApplicationJSONObject = null;
+    
+    /**
      * Obtain JWT response.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\SpectacularJWTObtain $spectacularJWTObtain
@@ -49,6 +57,7 @@ class JWTObtainResponse
 		$this->contentType = "";
 		$this->jwtObtain401ApplicationJSONObject = null;
 		$this->jwtObtain403ApplicationJSONObject = null;
+		$this->jwtObtain429ApplicationJSONObject = null;
 		$this->spectacularJWTObtain = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetDocumentAnalysisXAmzTargetEnum: string
 {
     case TEXTRACT_GET_DOCUMENT_ANALYSIS = 'Textract.GetDocumentAnalysis';

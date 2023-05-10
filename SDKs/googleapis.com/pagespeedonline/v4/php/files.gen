@@ -40,4 +40,6 @@ src/Models/Shared/PagespeedApiFormatStringV4ArgsSecondaryRects.php
 src/Models/Shared/PagespeedApiFormatStringV4Args.php
 src/Models/Shared/PagespeedApiFormatStringV4.php
 src/Models/Shared/AltEnum.php
+docs/sdk/README.md
+docs/pagespeedapi/README.md
 USAGE.md

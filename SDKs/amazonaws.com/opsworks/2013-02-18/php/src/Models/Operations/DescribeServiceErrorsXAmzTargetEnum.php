@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeServiceErrorsXAmzTargetEnum: string
 {
     case OPS_WORKS20130218_DESCRIBE_SERVICE_ERRORS = 'OpsWorks_20130218.DescribeServiceErrors';

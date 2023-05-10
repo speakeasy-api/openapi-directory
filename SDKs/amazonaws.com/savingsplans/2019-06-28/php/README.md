@@ -30,23 +30,67 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\CreateSavingsPlanRequest;
+use \OpenAPI\OpenAPI\Models\Operations\CreateSavingsPlanRequestBody;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new CreateSavingsPlanRequest();
+    $request->requestBody = new CreateSavingsPlanRequestBody();
+    $request->requestBody->clientToken = 'corrupti';
+    $request->requestBody->commitment = 'provident';
+    $request->requestBody->purchaseTime = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-04-24T16:27:50.833Z');
+    $request->requestBody->savingsPlanOfferingId = 'unde';
+    $request->requestBody->tags = [
+        'corrupti' => 'illum',
+        'vel' => 'error',
+        'deserunt' => 'suscipit',
+        'iure' => 'magnam',
+    ];
+    $request->requestBody->upfrontPaymentAmount = 'debitis';
+    $request->xAmzAlgorithm = 'ipsa';
+    $request->xAmzContentSha256 = 'delectus';
+    $request->xAmzCredential = 'tempora';
+    $request->xAmzDate = 'suscipit';
+    $request->xAmzSecurityToken = 'molestiae';
+    $request->xAmzSignature = 'minus';
+    $request->xAmzSignedHeaders = 'placeat';
+
+    $response = $sdk->createSavingsPlan($request);
+
+    if ($response->createSavingsPlanResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `createSavingsPlan` - Creates a Savings Plan.
-* `deleteQueuedSavingsPlan` - Deletes the queued purchase for the specified Savings Plan.
-* `describeSavingsPlanRates` - Describes the specified Savings Plans rates.
-* `describeSavingsPlans` - Describes the specified Savings Plans.
-* `describeSavingsPlansOfferingRates` - Describes the specified Savings Plans offering rates.
-* `describeSavingsPlansOfferings` - Describes the specified Savings Plans offerings.
-* `listTagsForResource` - Lists the tags for the specified resource.
-* `tagResource` - Adds the specified tags to the specified resource.
-* `untagResource` - Removes the specified tags from the specified resource.
+* [createSavingsPlan](docs/sdk/README.md#createsavingsplan) - Creates a Savings Plan.
+* [deleteQueuedSavingsPlan](docs/sdk/README.md#deletequeuedsavingsplan) - Deletes the queued purchase for the specified Savings Plan.
+* [describeSavingsPlanRates](docs/sdk/README.md#describesavingsplanrates) - Describes the specified Savings Plans rates.
+* [describeSavingsPlans](docs/sdk/README.md#describesavingsplans) - Describes the specified Savings Plans.
+* [describeSavingsPlansOfferingRates](docs/sdk/README.md#describesavingsplansofferingrates) - Describes the specified Savings Plans offering rates.
+* [describeSavingsPlansOfferings](docs/sdk/README.md#describesavingsplansofferings) - Describes the specified Savings Plans offerings.
+* [listTagsForResource](docs/sdk/README.md#listtagsforresource) - Lists the tags for the specified resource.
+* [tagResource](docs/sdk/README.md#tagresource) - Adds the specified tags to the specified resource.
+* [untagResource](docs/sdk/README.md#untagresource) - Removes the specified tags from the specified resource.
 <!-- End SDK Available Operations -->
 
 ### Maturity

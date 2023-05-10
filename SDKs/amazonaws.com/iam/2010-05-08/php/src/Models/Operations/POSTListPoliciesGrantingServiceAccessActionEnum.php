@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTListPoliciesGrantingServiceAccessActionEnum: string
 {
     case LIST_POLICIES_GRANTING_SERVICE_ACCESS = 'ListPoliciesGrantingServiceAccess';

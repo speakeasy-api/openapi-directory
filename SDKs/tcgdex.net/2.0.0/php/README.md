@@ -30,51 +30,71 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $response = $sdk->cards->cards();
+
+    if ($response->cardResumes !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### cards
+### [cards](docs/cards/README.md)
 
-* `cards` - fetch the list of cards
-* `findPetsByTags` - Finds Card by Global ID
-* `getSetsSetCardLocalId`
+* [cards](docs/cards/README.md#cards) - fetch the list of cards
+* [findPetsByTags](docs/cards/README.md#findpetsbytags) - Finds Card by Global ID
+* [getSetsSetCardLocalId](docs/cards/README.md#getsetssetcardlocalid)
 
-### filters
+### [filters](docs/filters/README.md)
 
-* `getCategories`
-* `getCategoriesCategory`
-* `getDexIds`
-* `getDexIdsDexId`
-* `getEnergyTypes`
-* `getEnergyTypesEnergyType`
-* `getHp`
-* `getHpHp`
-* `getIllustrators`
-* `getIllustratorsIllustrator`
-* `getRarities`
-* `getRaritiesRarity`
-* `getRegulationMarks`
-* `getRegulationMarksRegulationMark`
-* `getRetreats`
-* `getRetreatsRetreat`
-* `getSeries`
-* `getSeriesSerie`
-* `getSets`
-* `getSetsSet`
-* `getStages`
-* `getStagesStage`
-* `getSuffixes`
-* `getSuffixesSuffix`
-* `getTrainerTypes`
-* `getTrainerTypesTrainerType`
-* `getTypes`
-* `getTypesType`
-* `getVariants`
-* `getVariantsVariant`
+* [getCategories](docs/filters/README.md#getcategories)
+* [getCategoriesCategory](docs/filters/README.md#getcategoriescategory)
+* [getDexIds](docs/filters/README.md#getdexids)
+* [getDexIdsDexId](docs/filters/README.md#getdexidsdexid)
+* [getEnergyTypes](docs/filters/README.md#getenergytypes)
+* [getEnergyTypesEnergyType](docs/filters/README.md#getenergytypesenergytype)
+* [getHp](docs/filters/README.md#gethp)
+* [getHpHp](docs/filters/README.md#gethphp)
+* [getIllustrators](docs/filters/README.md#getillustrators)
+* [getIllustratorsIllustrator](docs/filters/README.md#getillustratorsillustrator)
+* [getRarities](docs/filters/README.md#getrarities)
+* [getRaritiesRarity](docs/filters/README.md#getraritiesrarity)
+* [getRegulationMarks](docs/filters/README.md#getregulationmarks)
+* [getRegulationMarksRegulationMark](docs/filters/README.md#getregulationmarksregulationmark)
+* [getRetreats](docs/filters/README.md#getretreats)
+* [getRetreatsRetreat](docs/filters/README.md#getretreatsretreat)
+* [getSeries](docs/filters/README.md#getseries)
+* [getSeriesSerie](docs/filters/README.md#getseriesserie)
+* [getSets](docs/filters/README.md#getsets)
+* [getSetsSet](docs/filters/README.md#getsetsset)
+* [getStages](docs/filters/README.md#getstages)
+* [getStagesStage](docs/filters/README.md#getstagesstage)
+* [getSuffixes](docs/filters/README.md#getsuffixes)
+* [getSuffixesSuffix](docs/filters/README.md#getsuffixessuffix)
+* [getTrainerTypes](docs/filters/README.md#gettrainertypes)
+* [getTrainerTypesTrainerType](docs/filters/README.md#gettrainertypestrainertype)
+* [getTypes](docs/filters/README.md#gettypes)
+* [getTypesType](docs/filters/README.md#gettypestype)
+* [getVariants](docs/filters/README.md#getvariants)
+* [getVariantsVariant](docs/filters/README.md#getvariantsvariant)
 <!-- End SDK Available Operations -->
 
 ### Maturity

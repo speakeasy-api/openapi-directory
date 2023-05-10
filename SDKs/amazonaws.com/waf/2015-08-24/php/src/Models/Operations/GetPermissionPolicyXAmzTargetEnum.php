@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetPermissionPolicyXAmzTargetEnum: string
 {
     case AWSWAF20150824_GET_PERMISSION_POLICY = 'AWSWAF_20150824.GetPermissionPolicy';

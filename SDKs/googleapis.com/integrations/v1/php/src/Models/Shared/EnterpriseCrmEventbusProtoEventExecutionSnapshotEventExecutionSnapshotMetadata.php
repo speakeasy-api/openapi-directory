@@ -32,6 +32,16 @@ class EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMeta
     public ?int $taskAttemptNum = null;
     
     /**
+     * the task label associated with this snapshot. Could be empty.
+     * 
+     * @var ?string $taskLabel
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('taskLabel')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $taskLabel = null;
+    
+    /**
      * the task name associated with this snapshot. Could be empty.
      * 
      * @var ?string $taskName
@@ -55,6 +65,7 @@ class EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMeta
 	{
 		$this->eventAttemptNum = null;
 		$this->taskAttemptNum = null;
+		$this->taskLabel = null;
 		$this->taskName = null;
 		$this->taskNumber = null;
 	}

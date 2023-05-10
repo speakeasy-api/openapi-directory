@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeScheduledActionsXAmzTargetEnum: string
 {
     case ANY_SCALE_FRONTEND_SERVICE_DESCRIBE_SCHEDULED_ACTIONS = 'AnyScaleFrontendService.DescribeScheduledActions';

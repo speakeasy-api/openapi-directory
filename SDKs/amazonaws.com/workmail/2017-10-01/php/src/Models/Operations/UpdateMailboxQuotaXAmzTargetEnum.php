@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateMailboxQuotaXAmzTargetEnum: string
 {
     case WORK_MAIL_SERVICE_UPDATE_MAILBOX_QUOTA = 'WorkMailService.UpdateMailboxQuota';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RegisterInstanceXAmzTargetEnum: string
 {
     case OPS_WORKS20130218_REGISTER_INSTANCE = 'OpsWorks_20130218.RegisterInstance';

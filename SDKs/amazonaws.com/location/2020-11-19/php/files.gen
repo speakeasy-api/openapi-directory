@@ -307,4 +307,5 @@ src/Models/Shared/UpdatePlaceIndexResponse.php
 src/Models/Shared/UpdateRouteCalculatorResponse.php
 src/Models/Shared/UpdateTrackerResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

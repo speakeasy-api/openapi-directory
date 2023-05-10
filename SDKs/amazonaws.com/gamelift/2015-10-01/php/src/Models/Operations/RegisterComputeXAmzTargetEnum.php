@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RegisterComputeXAmzTargetEnum: string
 {
     case GAME_LIFT_REGISTER_COMPUTE = 'GameLift.RegisterCompute';

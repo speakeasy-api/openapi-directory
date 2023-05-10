@@ -56,4 +56,8 @@ src/Models/Shared/Holiday.php
 src/Models/Shared/ProvinceIdEnum.php
 src/Models/Shared/ProvinceOptionalEnum.php
 src/Models/Shared/Province.php
+docs/sdk/README.md
+docs/holidays/README.md
+docs/info/README.md
+docs/provinces/README.md
 USAGE.md

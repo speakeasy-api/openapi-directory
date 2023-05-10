@@ -134,6 +134,8 @@ src/Models/Shared/AntennaDownlinkConfig.php
 src/Models/Shared/DataflowEndpointGroupIdResponse.php
 src/Models/Shared/EndpointDetails.php
 src/Models/Shared/SecurityDetails.php
+src/Models/Shared/CapabilityHealthEnum.php
+src/Models/Shared/CapabilityHealthReasonEnum.php
 src/Models/Shared/DataflowEndpoint.php
 src/Models/Shared/EndpointStatusEnum.php
 src/Models/Shared/SocketAddress.php
@@ -193,8 +195,8 @@ src/Models/Shared/SatelliteListItem.php
 src/Models/Shared/ListTagsForResourceResponse.php
 src/Models/Shared/RegisterAgentResponse.php
 src/Models/Shared/ComponentVersion.php
-src/Models/Shared/ComponentTypeEnum.php
 src/Models/Shared/UpdateAgentStatusResponse.php
 src/Models/Shared/ComponentStatusData.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

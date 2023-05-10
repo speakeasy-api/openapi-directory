@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ConvertRecoveryPointToSnapshotXAmzTargetEnum: string
 {
     case REDSHIFT_SERVERLESS_CONVERT_RECOVERY_POINT_TO_SNAPSHOT = 'RedshiftServerless.ConvertRecoveryPointToSnapshot';

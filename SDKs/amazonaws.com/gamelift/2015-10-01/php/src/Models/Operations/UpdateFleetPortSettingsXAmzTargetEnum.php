@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateFleetPortSettingsXAmzTargetEnum: string
 {
     case GAME_LIFT_UPDATE_FLEET_PORT_SETTINGS = 'GameLift.UpdateFleetPortSettings';

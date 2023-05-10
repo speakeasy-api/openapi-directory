@@ -12,7 +12,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 /** **Required when the state is dismissed.** The reason for dismissing or closing the alert. Can be one of: `false positive`, `won't fix`, and `used in tests`. */
 enum CodeScanningAlertDismissedReasonEnum: string
 {
-    case NULL = 'null';
+    case LESS_THAN_NIL_GREATER_THAN = '<nil>';
     case FALSE_POSITIVE = 'false positive';
     case WON_T_FIX = 'won\'t fix';
     case USED_IN_TESTS = 'used in tests';

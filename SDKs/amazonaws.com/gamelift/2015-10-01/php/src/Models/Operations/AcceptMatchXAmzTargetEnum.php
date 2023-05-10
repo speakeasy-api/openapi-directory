@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AcceptMatchXAmzTargetEnum: string
 {
     case GAME_LIFT_ACCEPT_MATCH = 'GameLift.AcceptMatch';

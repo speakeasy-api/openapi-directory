@@ -1,0 +1,462 @@
+# me
+
+### Available Operations
+
+* [createApiCredential](#createapicredential) - Create api credentials
+* [deleteApiCredential](#deleteapicredential) - Delete api credentials
+* [disableApiCredentials](#disableapicredentials) - Disable specified API credentials
+* [enableApiCredentials](#enableapicredentials) - Enable specified API credentials
+* [findApiCredentials](#findapicredentials) - Find api credentials
+* [getAccount](#getaccount) - Find account details
+* [getApiCredential](#getapicredential) - Find a specific api credential
+* [getBillingPlanUsage](#getbillingplanusage) - Find plan usage
+* [getCallerIds](#getcallerids) - Find caller ids
+* [getCreditUsage](#getcreditusage) - Find credit usage
+* [sendVerificationCodeToCallerId](#sendverificationcodetocallerid) - Create a caller id
+* [verifyCallerId](#verifycallerid) - Verify a caller id
+
+## createApiCredential
+
+Creates an API credentials for the CallFire API. This endpoint requires full CallFire account credentials to be used, authenticated using Basic Authentication. At the moment user provides only the name for the credentials. The generated credentials can be used to access any CallFire APIs. For authentication use account credentials.
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\ApiCredentialInput;
+use \OpenAPI\OpenAPI\Models\Operations\CreateApiCredentialSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new ApiCredentialInput();
+    $request->enabled = false;
+    $request->id = 56418;
+    $request->name = 'Viola Hahn';
+
+    $requestSecurity = new CreateApiCredentialSecurity();
+    $requestSecurity->password = 'YOUR_PASSWORD_HERE';
+    $requestSecurity->username = 'YOUR_USERNAME_HERE';
+
+    $response = $sdk->me->createApiCredential($request, $requestSecurity);
+
+    if ($response->apiCredential !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+## deleteApiCredential
+
+Deletes a specified API credential. Currently, removes the ability to access the API. Only ACCOUNT_HOLDER can invoke this API. For authentication use account credentials.
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\DeleteApiCredentialRequest;
+use \OpenAPI\OpenAPI\Models\Operations\DeleteApiCredentialSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new DeleteApiCredentialRequest();
+    $request->id = 976405;
+
+    $requestSecurity = new DeleteApiCredentialSecurity();
+    $requestSecurity->password = 'YOUR_PASSWORD_HERE';
+    $requestSecurity->username = 'YOUR_USERNAME_HERE';
+
+    $response = $sdk->me->deleteApiCredential($request, $requestSecurity);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+## disableApiCredentials
+
+Disables a specified API credential. Currently, removes the ability to access the API. Only ACCOUNT_HOLDER can invoke this API. For authentication use account credentials.
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\DisableApiCredentialsRequest;
+use \OpenAPI\OpenAPI\Models\Operations\DisableApiCredentialsSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new DisableApiCredentialsRequest();
+    $request->id = 377752;
+
+    $requestSecurity = new DisableApiCredentialsSecurity();
+    $requestSecurity->password = 'YOUR_PASSWORD_HERE';
+    $requestSecurity->username = 'YOUR_USERNAME_HERE';
+
+    $response = $sdk->me->disableApiCredentials($request, $requestSecurity);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+## enableApiCredentials
+
+Enables a specified API credential. Currently, adds the ability to access the API. Only ACCOUNT_HOLDER can invoke this API. For authentication use account credentials.
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\EnableApiCredentialsRequest;
+use \OpenAPI\OpenAPI\Models\Operations\EnableApiCredentialsSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new EnableApiCredentialsRequest();
+    $request->id = 617658;
+
+    $requestSecurity = new EnableApiCredentialsSecurity();
+    $requestSecurity->password = 'YOUR_PASSWORD_HERE';
+    $requestSecurity->username = 'YOUR_USERNAME_HERE';
+
+    $response = $sdk->me->enableApiCredentials($request, $requestSecurity);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+## findApiCredentials
+
+Searches for all credentials generated by user. Returns a paged list of the API credentials. Only ACCOUNT_HOLDER can invoke this API. For authentication use account credentials.
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\FindApiCredentialsRequest;
+use \OpenAPI\OpenAPI\Models\Operations\FindApiCredentialsSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new FindApiCredentialsRequest();
+    $request->fields = 'eos';
+    $request->limit = 542499;
+    $request->name = 'Ginger Bergstrom';
+    $request->offset = 478596;
+
+    $requestSecurity = new FindApiCredentialsSecurity();
+    $requestSecurity->password = 'YOUR_PASSWORD_HERE';
+    $requestSecurity->username = 'YOUR_USERNAME_HERE';
+
+    $response = $sdk->me->findApiCredentials($request, $requestSecurity);
+
+    if ($response->apiCredentialPage !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+## getAccount
+
+Searches for the user account details. Details include name, email, and basic account permissions. For authentication use api credentials.
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetAccountRequest;
+use \OpenAPI\OpenAPI\Models\Operations\GetAccountSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetAccountRequest();
+    $request->fields = 'voluptate';
+
+    $requestSecurity = new GetAccountSecurity();
+    $requestSecurity->password = 'YOUR_PASSWORD_HERE';
+    $requestSecurity->username = 'YOUR_USERNAME_HERE';
+
+    $response = $sdk->me->getAccount($request, $requestSecurity);
+
+    if ($response->account !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+## getApiCredential
+
+Returns an API credential instance for a given api credential id. Only ACCOUNT_HOLDER can invoke this API. For authentication use account credentials.
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetApiCredentialRequest;
+use \OpenAPI\OpenAPI\Models\Operations\GetApiCredentialSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetApiCredentialRequest();
+    $request->fields = 'dolorum';
+    $request->id = 536579;
+
+    $requestSecurity = new GetApiCredentialSecurity();
+    $requestSecurity->password = 'YOUR_PASSWORD_HERE';
+    $requestSecurity->username = 'YOUR_USERNAME_HERE';
+
+    $response = $sdk->me->getApiCredential($request, $requestSecurity);
+
+    if ($response->apiCredential !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+## getBillingPlanUsage
+
+Searches for the data of a billing plan usage for the user. Returns the data of a billing plan usage for the current month. For authentication use api credentials.
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetBillingPlanUsageSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $requestSecurity = new GetBillingPlanUsageSecurity();
+    $requestSecurity->password = 'YOUR_PASSWORD_HERE';
+    $requestSecurity->username = 'YOUR_USERNAME_HERE';
+
+    $response = $sdk->me->getBillingPlanUsage($requestSecurity);
+
+    if ($response->billingPlanUsage !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+## getCallerIds
+
+Returns a list of verified caller ids. If the number is not shown in the list, then it is not verified. In this case sending of a verification code is required. For authentication use api credentials.
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetCallerIdsSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $requestSecurity = new GetCallerIdsSecurity();
+    $requestSecurity->password = 'YOUR_PASSWORD_HERE';
+    $requestSecurity->username = 'YOUR_USERNAME_HERE';
+
+    $response = $sdk->me->getCallerIds($requestSecurity);
+
+    if ($response->callerIdList !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+## getCreditUsage
+
+Find credit usage for the user. Returns credits usage for time period specified or if unspecified then total for all time. For authentication use api credentials.
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetCreditUsageRequest;
+use \OpenAPI\OpenAPI\Models\Operations\GetCreditUsageSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetCreditUsageRequest();
+    $request->intervalBegin = 607045;
+    $request->intervalEnd = 896672;
+
+    $requestSecurity = new GetCreditUsageSecurity();
+    $requestSecurity->password = 'YOUR_PASSWORD_HERE';
+    $requestSecurity->username = 'YOUR_USERNAME_HERE';
+
+    $response = $sdk->me->getCreditUsage($request, $requestSecurity);
+
+    if ($response->creditUsage !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+## sendVerificationCodeToCallerId
+
+Generates and sends a verification code to the phone number provided in the path. The verification code is delivered via a phone call. This code needs to be submitted to the verify caller id API endpoint to complete verification. For authentication use api credentials.
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\SendVerificationCodeToCallerIdRequest;
+use \OpenAPI\OpenAPI\Models\Operations\SendVerificationCodeToCallerIdSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new SendVerificationCodeToCallerIdRequest();
+    $request->callerid = 'distinctio';
+
+    $requestSecurity = new SendVerificationCodeToCallerIdSecurity();
+    $requestSecurity->password = 'YOUR_PASSWORD_HERE';
+    $requestSecurity->username = 'YOUR_USERNAME_HERE';
+
+    $response = $sdk->me->sendVerificationCodeToCallerId($request, $requestSecurity);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+## verifyCallerId
+
+With the verification code received from the Create caller id endpoint, a call to this endpoint is required to finish verification. For authentication use api credentials.
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\VerifyCallerIdRequest;
+use \OpenAPI\OpenAPI\Models\Shared\CallerIdVerificationRequest;
+use \OpenAPI\OpenAPI\Models\Operations\VerifyCallerIdSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new VerifyCallerIdRequest();
+    $request->callerIdVerificationRequest = new CallerIdVerificationRequest();
+    $request->callerIdVerificationRequest->verificationCode = 'asperiores';
+    $request->callerid = 'nihil';
+
+    $requestSecurity = new VerifyCallerIdSecurity();
+    $requestSecurity->password = 'YOUR_PASSWORD_HERE';
+    $requestSecurity->username = 'YOUR_USERNAME_HERE';
+
+    $response = $sdk->me->verifyCallerId($request, $requestSecurity);
+
+    if ($response->verifyCallerId200ApplicationJSONBoolean !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```

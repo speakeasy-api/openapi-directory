@@ -18,6 +18,16 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class AlloyDbSettingsInput
 {
     /**
+     * EncryptionConfig describes the encryption config of a cluster that is encrypted with a CMEK (customer-managed encryption key).
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\EncryptionConfig $encryptionConfig
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('encryptionConfig')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\EncryptionConfig')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?EncryptionConfig $encryptionConfig = null;
+    
+    /**
      * The username/password for a database user. Used for specifying initial users at cluster creation time.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\UserPasswordInput $initialUser
@@ -59,6 +69,7 @@ class AlloyDbSettingsInput
     
 	public function __construct()
 	{
+		$this->encryptionConfig = null;
 		$this->initialUser = null;
 		$this->labels = null;
 		$this->primaryInstanceSettings = null;

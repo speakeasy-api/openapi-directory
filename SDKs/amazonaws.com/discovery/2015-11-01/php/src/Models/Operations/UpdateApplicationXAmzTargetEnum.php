@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateApplicationXAmzTargetEnum: string
 {
     case AWS_POSEIDON_SERVICE_V20151101_UPDATE_APPLICATION = 'AWSPoseidonService_V2015_11_01.UpdateApplication';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteMonitoringScheduleXAmzTargetEnum: string
 {
     case SAGE_MAKER_DELETE_MONITORING_SCHEDULE = 'SageMaker.DeleteMonitoringSchedule';

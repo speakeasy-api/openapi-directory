@@ -42,9 +42,11 @@ class Health
      * 
      * Check the Appwrite HTTP server is up and responsive.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\HealthGetSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\HealthGetResponse
      */
 	public function healthGet(
+        \OpenAPI\OpenAPI\Models\Operations\HealthGetSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\HealthGetResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -52,7 +54,8 @@ class Health
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -72,9 +75,11 @@ class Health
      * 
      * Check the Appwrite Anti Virus server is up and connection is successful.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\HealthGetAntiVirusSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\HealthGetAntiVirusResponse
      */
 	public function healthGetAntiVirus(
+        \OpenAPI\OpenAPI\Models\Operations\HealthGetAntiVirusSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\HealthGetAntiVirusResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -82,7 +87,8 @@ class Health
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -102,9 +108,11 @@ class Health
      * 
      * Check the Appwrite in-memory cache server is up and connection is successful.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\HealthGetCacheSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\HealthGetCacheResponse
      */
 	public function healthGetCache(
+        \OpenAPI\OpenAPI\Models\Operations\HealthGetCacheSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\HealthGetCacheResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -112,7 +120,8 @@ class Health
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -132,9 +141,11 @@ class Health
      * 
      * Check the Appwrite database server is up and connection is successful.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\HealthGetDBSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\HealthGetDBResponse
      */
 	public function healthGetDB(
+        \OpenAPI\OpenAPI\Models\Operations\HealthGetDBSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\HealthGetDBResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -142,7 +153,8 @@ class Health
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -162,9 +174,11 @@ class Health
      * 
      * Get the number of certificates that are waiting to be issued against [Letsencrypt](https://letsencrypt.org/) in the Appwrite internal queue server.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\HealthGetQueueCertificatesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\HealthGetQueueCertificatesResponse
      */
 	public function healthGetQueueCertificates(
+        \OpenAPI\OpenAPI\Models\Operations\HealthGetQueueCertificatesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\HealthGetQueueCertificatesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -172,7 +186,8 @@ class Health
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -190,9 +205,11 @@ class Health
     /**
      * Get Functions Queue
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\HealthGetQueueFunctionsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\HealthGetQueueFunctionsResponse
      */
 	public function healthGetQueueFunctions(
+        \OpenAPI\OpenAPI\Models\Operations\HealthGetQueueFunctionsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\HealthGetQueueFunctionsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -200,7 +217,8 @@ class Health
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -220,9 +238,11 @@ class Health
      * 
      * Get the number of logs that are waiting to be processed in the Appwrite internal queue server.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\HealthGetQueueLogsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\HealthGetQueueLogsResponse
      */
 	public function healthGetQueueLogs(
+        \OpenAPI\OpenAPI\Models\Operations\HealthGetQueueLogsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\HealthGetQueueLogsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -230,7 +250,8 @@ class Health
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -250,9 +271,11 @@ class Health
      * 
      * Get the number of tasks that are waiting to be processed in the Appwrite internal queue server.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\HealthGetQueueTasksSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\HealthGetQueueTasksResponse
      */
 	public function healthGetQueueTasks(
+        \OpenAPI\OpenAPI\Models\Operations\HealthGetQueueTasksSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\HealthGetQueueTasksResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -260,7 +283,8 @@ class Health
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -280,9 +304,11 @@ class Health
      * 
      * Get the number of usage stats that are waiting to be processed in the Appwrite internal queue server.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\HealthGetQueueUsageSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\HealthGetQueueUsageResponse
      */
 	public function healthGetQueueUsage(
+        \OpenAPI\OpenAPI\Models\Operations\HealthGetQueueUsageSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\HealthGetQueueUsageResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -290,7 +316,8 @@ class Health
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -310,9 +337,11 @@ class Health
      * 
      * Get the number of webhooks that are waiting to be processed in the Appwrite internal queue server.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\HealthGetQueueWebhooksSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\HealthGetQueueWebhooksResponse
      */
 	public function healthGetQueueWebhooks(
+        \OpenAPI\OpenAPI\Models\Operations\HealthGetQueueWebhooksSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\HealthGetQueueWebhooksResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -320,7 +349,8 @@ class Health
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -340,9 +370,11 @@ class Health
      * 
      * Check the Appwrite local storage device is up and connection is successful.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\HealthGetStorageLocalSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\HealthGetStorageLocalResponse
      */
 	public function healthGetStorageLocal(
+        \OpenAPI\OpenAPI\Models\Operations\HealthGetStorageLocalSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\HealthGetStorageLocalResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -350,7 +382,8 @@ class Health
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -370,9 +403,11 @@ class Health
      * 
      * Check the Appwrite server time is synced with Google remote NTP server. We use this technology to smoothly handle leap seconds with no disruptive events. The [Network Time Protocol](https://en.wikipedia.org/wiki/Network_Time_Protocol) (NTP) is used by hundreds of millions of computers and devices to synchronize their clocks over the Internet. If your computer sets its own clock, it likely uses NTP.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\HealthGetTimeSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\HealthGetTimeResponse
      */
 	public function healthGetTime(
+        \OpenAPI\OpenAPI\Models\Operations\HealthGetTimeSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\HealthGetTimeResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -380,7 +415,8 @@ class Health
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

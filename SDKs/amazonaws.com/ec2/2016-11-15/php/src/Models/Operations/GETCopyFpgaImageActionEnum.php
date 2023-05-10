@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETCopyFpgaImageActionEnum: string
 {
     case COPY_FPGA_IMAGE = 'CopyFpgaImage';

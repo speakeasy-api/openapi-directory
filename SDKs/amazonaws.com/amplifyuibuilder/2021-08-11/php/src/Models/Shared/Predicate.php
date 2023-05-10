@@ -37,6 +37,11 @@ class Predicate
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $operand = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('operandType')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $operandType = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('operator')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -57,6 +62,7 @@ class Predicate
 		$this->and = null;
 		$this->field = null;
 		$this->operand = null;
+		$this->operandType = null;
 		$this->operator = null;
 		$this->or = null;
 	}

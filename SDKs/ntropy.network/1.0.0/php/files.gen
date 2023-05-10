@@ -34,4 +34,10 @@ src/Models/Operations/GetABatchOfBusinessTransactionClassificationResultsRequest
 src/Models/Operations/GetABatchOfBusinessTransactionClassificationResults200ApplicationJSONResults.php
 src/Models/Operations/GetABatchOfBusinessTransactionClassificationResults200ApplicationJSON.php
 src/Models/Operations/GetABatchOfBusinessTransactionClassificationResultsResponse.php
+docs/sdk/README.md
+docs/batch/README.md
+docs/batch1/README.md
+docs/business/README.md
+docs/classifier/README.md
+docs/consumer/README.md
 USAGE.md

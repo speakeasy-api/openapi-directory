@@ -57,4 +57,8 @@ src/Models/Shared/LanguagesResource.php
 src/Models/Shared/TranslationsListResponse.php
 src/Models/Shared/TranslationsResource.php
 src/Models/Shared/TranslateTextRequest.php
+docs/sdk/README.md
+docs/detections/README.md
+docs/languages/README.md
+docs/translations/README.md
 USAGE.md

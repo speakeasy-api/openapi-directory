@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetImpersonationRoleEffectXAmzTargetEnum: string
 {
     case WORK_MAIL_SERVICE_GET_IMPERSONATION_ROLE_EFFECT = 'WorkMailService.GetImpersonationRoleEffect';

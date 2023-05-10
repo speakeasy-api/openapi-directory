@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETModifyEventSubscriptionActionEnum: string
 {
     case MODIFY_EVENT_SUBSCRIPTION = 'ModifyEventSubscription';

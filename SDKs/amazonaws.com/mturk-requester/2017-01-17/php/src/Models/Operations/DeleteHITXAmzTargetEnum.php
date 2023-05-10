@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteHITXAmzTargetEnum: string
 {
     case M_TURK_REQUESTER_SERVICE_V20170117_DELETE_HIT = 'MTurkRequesterServiceV20170117.DeleteHIT';

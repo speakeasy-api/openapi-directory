@@ -38,7 +38,7 @@ class GoogleCloudChannelV1ReportResultsMetadata
     public ?GoogleCloudChannelV1DateRange $precedingDateRange = null;
     
     /**
-     * The ID and description of a report that was used to generate report data. For example, "GCP Daily Spend", "Google Workspace License Activity", etc.
+     * The ID and description of a report that was used to generate report data. For example, "Google Cloud Daily Spend", "Google Workspace License Activity", etc.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleCloudChannelV1Report $report
      */

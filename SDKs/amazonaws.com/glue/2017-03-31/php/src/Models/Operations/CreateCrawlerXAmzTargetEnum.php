@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateCrawlerXAmzTargetEnum: string
 {
     case AWS_GLUE_CREATE_CRAWLER = 'AWSGlue.CreateCrawler';

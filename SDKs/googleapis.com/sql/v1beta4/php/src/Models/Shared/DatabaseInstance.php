@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class DatabaseInstance
 {
     /**
-     * List all maintenance versions applicable on the instance
+     * Output only. List all maintenance versions applicable on the instance
      * 
      * @var ?array<string> $availableMaintenanceVersions
      */

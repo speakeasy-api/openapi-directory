@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteDataRepositoryAssociationXAmzTargetEnum: string
 {
     case AWS_SIMBA_API_SERVICE_V20180301_DELETE_DATA_REPOSITORY_ASSOCIATION = 'AWSSimbaAPIService_v20180301.DeleteDataRepositoryAssociation';

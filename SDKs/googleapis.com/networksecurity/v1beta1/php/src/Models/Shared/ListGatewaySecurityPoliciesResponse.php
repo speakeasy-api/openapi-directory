@@ -37,9 +37,20 @@ class ListGatewaySecurityPoliciesResponse
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $nextPageToken = null;
     
+    /**
+     * Locations that could not be reached.
+     * 
+     * @var ?array<string> $unreachable
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('unreachable')]
+    #[\JMS\Serializer\Annotation\Type('array<string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $unreachable = null;
+    
 	public function __construct()
 	{
 		$this->gatewaySecurityPolicies = null;
 		$this->nextPageToken = null;
+		$this->unreachable = null;
 	}
 }

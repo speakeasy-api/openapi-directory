@@ -219,4 +219,5 @@ src/Models/Shared/UpdateClusterVersionResponse.php
 src/Models/Shared/UpdateNodegroupConfigResponse.php
 src/Models/Shared/UpdateNodegroupVersionResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

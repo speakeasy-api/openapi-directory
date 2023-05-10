@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteItemXAmzTargetEnum: string
 {
     case DYNAMO_DB20111205_DELETE_ITEM = 'DynamoDB_20111205.DeleteItem';

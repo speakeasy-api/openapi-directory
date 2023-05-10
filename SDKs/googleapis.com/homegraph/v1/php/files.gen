@@ -55,4 +55,7 @@ src/Models/Shared/AgentOtherDeviceId.php
 src/Models/Shared/DeviceNames.php
 src/Models/Shared/DeviceInfo.php
 src/Models/Shared/SyncRequest.php
+docs/sdk/README.md
+docs/agentusers/README.md
+docs/devices/README.md
 USAGE.md

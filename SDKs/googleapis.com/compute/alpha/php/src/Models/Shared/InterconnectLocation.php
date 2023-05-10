@@ -38,6 +38,26 @@ class InterconnectLocation
     public ?string $availabilityZone = null;
     
     /**
+     * [Output only] List of features available at this interconnect location, which can take one of the following values: - MACSEC 
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\InterconnectLocationAvailableFeaturesEnum> $availableFeatures
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('availableFeatures')]
+    #[\JMS\Serializer\Annotation\Type('array<enum<OpenAPI\OpenAPI\Models\Shared\InterconnectLocationAvailableFeaturesEnum>>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $availableFeatures = null;
+    
+    /**
+     * [Output only] List of link types available at this interconnect location, which can take one of the following values: - LINK_TYPE_ETHERNET_10G_LR - LINK_TYPE_ETHERNET_100G_LR 
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\InterconnectLocationAvailableLinkTypesEnum> $availableLinkTypes
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('availableLinkTypes')]
+    #[\JMS\Serializer\Annotation\Type('array<enum<OpenAPI\OpenAPI\Models\Shared\InterconnectLocationAvailableLinkTypesEnum>>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $availableLinkTypes = null;
+    
+    /**
      * [Output Only] Metropolitan area designator that indicates which city an interconnect is located. For example: "Chicago, IL", "Amsterdam, Netherlands".
      * 
      * @var ?string $city
@@ -191,6 +211,8 @@ class InterconnectLocation
 	{
 		$this->address = null;
 		$this->availabilityZone = null;
+		$this->availableFeatures = null;
+		$this->availableLinkTypes = null;
 		$this->city = null;
 		$this->continent = null;
 		$this->creationTimestamp = null;

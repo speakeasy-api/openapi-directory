@@ -471,11 +471,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\CreateTagsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\CreateTagsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function createTags(
         \OpenAPI\OpenAPI\Models\Operations\CreateTagsRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\CreateTagsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/2015-02-01/create-tags/{FileSystemId}', \OpenAPI\OpenAPI\Models\Operations\CreateTagsRequest::class, $request);
         
@@ -794,11 +797,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DeleteTagsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DeleteTagsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function deleteTags(
         \OpenAPI\OpenAPI\Models\Operations\DeleteTagsRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DeleteTagsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/2015-02-01/delete-tags/{FileSystemId}', \OpenAPI\OpenAPI\Models\Operations\DeleteTagsRequest::class, $request);
         
@@ -1376,11 +1382,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DescribeTagsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DescribeTagsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function describeTags(
         \OpenAPI\OpenAPI\Models\Operations\DescribeTagsRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DescribeTagsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/2015-02-01/tags/{FileSystemId}/', \OpenAPI\OpenAPI\Models\Operations\DescribeTagsRequest::class, $request);
         

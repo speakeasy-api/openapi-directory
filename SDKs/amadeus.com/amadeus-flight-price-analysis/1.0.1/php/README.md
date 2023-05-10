@@ -30,16 +30,44 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetItineraryPriceMetricsRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetItineraryPriceMetricsRequest();
+    $request->currencyCode = 'corrupti';
+    $request->departureDate = 'provident';
+    $request->destinationIataCode = 'distinctio';
+    $request->oneWay = false;
+    $request->originIataCode = 'quibusdam';
+
+    $response = $sdk->priceMetrics->getItineraryPriceMetrics($request);
+
+    if ($response->getItineraryPriceMetrics200ApplicationVndAmadeusPlusJsonObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### priceMetrics
+### [priceMetrics](docs/pricemetrics/README.md)
 
-* `getItineraryPriceMetrics` - GET itinerary price metric
+* [getItineraryPriceMetrics](docs/pricemetrics/README.md#getitinerarypricemetrics) - GET itinerary price metric
 <!-- End SDK Available Operations -->
 
 ### Maturity

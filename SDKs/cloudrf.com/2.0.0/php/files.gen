@@ -66,4 +66,8 @@ src/Models/Shared/Antenna.php
 src/Models/Shared/Point.php
 src/Models/Shared/Feature.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/analyse/README.md
+docs/create/README.md
+docs/manage/README.md
 USAGE.md

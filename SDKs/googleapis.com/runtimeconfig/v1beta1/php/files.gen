@@ -104,4 +104,6 @@ src/Models/Shared/Cardinality.php
 src/Models/Shared/ListWaitersResponse.php
 src/Models/Shared/TestIamPermissionsResponse.php
 src/Models/Shared/TestIamPermissionsRequest.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

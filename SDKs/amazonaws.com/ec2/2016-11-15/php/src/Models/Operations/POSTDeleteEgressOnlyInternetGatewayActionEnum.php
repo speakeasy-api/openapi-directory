@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteEgressOnlyInternetGatewayActionEnum: string
 {
     case DELETE_EGRESS_ONLY_INTERNET_GATEWAY = 'DeleteEgressOnlyInternetGateway';

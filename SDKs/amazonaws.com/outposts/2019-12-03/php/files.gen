@@ -160,4 +160,5 @@ src/Models/Shared/UpdateSiteOutput.php
 src/Models/Shared/UpdateSiteAddressOutput.php
 src/Models/Shared/UpdateSiteRackPhysicalPropertiesOutput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

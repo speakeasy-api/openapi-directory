@@ -30,76 +30,105 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetAccountHoldersIdRequest;
+use \OpenAPI\OpenAPI\Models\Operations\GetAccountHoldersIdSecurity;
+use \OpenAPI\OpenAPI\Models\Shared\SchemeBasicAuth;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetAccountHoldersIdRequest();
+    $request->id = '89bd9d8d-69a6-474e-8f46-7cc8796ed151';
+
+    $requestSecurity = new GetAccountHoldersIdSecurity();
+    $requestSecurity->apiKeyAuth = 'YOUR_API_KEY_HERE';
+
+    $response = $sdk->accountHolders->getAccountHoldersId($request, $requestSecurity);
+
+    if ($response->accountHolder !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### accountHolders
+### [accountHolders](docs/accountholders/README.md)
 
-* `getAccountHoldersId` - Get an account holder
-* `getAccountHoldersIdBalanceAccounts` - Get all balance accounts of an account holder
-* `patchAccountHoldersId` - Update an account holder
-* `postAccountHolders` - Create an account holder
+* [getAccountHoldersId](docs/accountholders/README.md#getaccountholdersid) - Get an account holder
+* [getAccountHoldersIdBalanceAccounts](docs/accountholders/README.md#getaccountholdersidbalanceaccounts) - Get all balance accounts of an account holder
+* [patchAccountHoldersId](docs/accountholders/README.md#patchaccountholdersid) - Update an account holder
+* [postAccountHolders](docs/accountholders/README.md#postaccountholders) - Create an account holder
 
-### balanceAccounts
+### [balanceAccounts](docs/balanceaccounts/README.md)
 
-* `getBalanceAccountsId` - Get a balance account
-* `getBalanceAccountsIdPaymentInstruments` - Get all payment instruments for a balance account
-* `patchBalanceAccountsId` - Update a balance account
-* `postBalanceAccounts` - Create a balance account
+* [getBalanceAccountsId](docs/balanceaccounts/README.md#getbalanceaccountsid) - Get a balance account
+* [getBalanceAccountsIdPaymentInstruments](docs/balanceaccounts/README.md#getbalanceaccountsidpaymentinstruments) - Get all payment instruments for a balance account
+* [patchBalanceAccountsId](docs/balanceaccounts/README.md#patchbalanceaccountsid) - Update a balance account
+* [postBalanceAccounts](docs/balanceaccounts/README.md#postbalanceaccounts) - Create a balance account
 
-### bankAccountValidation
+### [bankAccountValidation](docs/bankaccountvalidation/README.md)
 
-* `postValidateBankAccountIdentification` - Validate a bank account
+* [postValidateBankAccountIdentification](docs/bankaccountvalidation/README.md#postvalidatebankaccountidentification) - Validate a bank account
 
-### documents
+### [documents](docs/documents/README.md)
 
-* `deleteDocumentsId` - Delete a document
-* `getDocumentsId` - Get a document
-* `patchDocumentsId` - Update a document
-* `postDocuments` - Upload a document for verification checks
+* [deleteDocumentsId](docs/documents/README.md#deletedocumentsid) - Delete a document
+* [getDocumentsId](docs/documents/README.md#getdocumentsid) - Get a document
+* [patchDocumentsId](docs/documents/README.md#patchdocumentsid) - Update a document
+* [postDocuments](docs/documents/README.md#postdocuments) - Upload a document for verification checks
 
-### legalEntities
+### [legalEntities](docs/legalentities/README.md)
 
-* `getLegalEntitiesId` - Get a legal entity
-* `patchLegalEntitiesId` - Update a legal entity
-* `postLegalEntities` - Create a legal entity
+* [getLegalEntitiesId](docs/legalentities/README.md#getlegalentitiesid) - Get a legal entity
+* [patchLegalEntitiesId](docs/legalentities/README.md#patchlegalentitiesid) - Update a legal entity
+* [postLegalEntities](docs/legalentities/README.md#postlegalentities) - Create a legal entity
 
-### paymentInstrumentGroups
+### [paymentInstrumentGroups](docs/paymentinstrumentgroups/README.md)
 
-* `getPaymentInstrumentGroupsId` - Get a payment instrument group
-* `getPaymentInstrumentGroupsIdTransactionRules` - Get all transaction rules for a payment instrument group
-* `postPaymentInstrumentGroups` - Create a payment instrument group
+* [getPaymentInstrumentGroupsId](docs/paymentinstrumentgroups/README.md#getpaymentinstrumentgroupsid) - Get a payment instrument group
+* [getPaymentInstrumentGroupsIdTransactionRules](docs/paymentinstrumentgroups/README.md#getpaymentinstrumentgroupsidtransactionrules) - Get all transaction rules for a payment instrument group
+* [postPaymentInstrumentGroups](docs/paymentinstrumentgroups/README.md#postpaymentinstrumentgroups) - Create a payment instrument group
 
-### paymentInstruments
+### [paymentInstruments](docs/paymentinstruments/README.md)
 
-* `getPaymentInstrumentsId` - Get a payment instrument
-* `getPaymentInstrumentsIdReveal` - Get the reveal information of a payment instrument
-* `getPaymentInstrumentsIdTransactionRules` - Get all transaction rules for a payment instrument
-* `patchPaymentInstrumentsId` - Update a payment instrument
-* `postPaymentInstruments` - Create a payment instrument
+* [getPaymentInstrumentsId](docs/paymentinstruments/README.md#getpaymentinstrumentsid) - Get a payment instrument
+* [getPaymentInstrumentsIdReveal](docs/paymentinstruments/README.md#getpaymentinstrumentsidreveal) - Get the PAN of a payment instrument
+* [getPaymentInstrumentsIdTransactionRules](docs/paymentinstruments/README.md#getpaymentinstrumentsidtransactionrules) - Get all transaction rules for a payment instrument
+* [patchPaymentInstrumentsId](docs/paymentinstruments/README.md#patchpaymentinstrumentsid) - Update a payment instrument
+* [postPaymentInstruments](docs/paymentinstruments/README.md#postpaymentinstruments) - Create a payment instrument
 
-### platform
+### [platform](docs/platform/README.md)
 
-* `getBalancePlatformsId` - Get a balance platform
-* `getBalancePlatformsIdAccountHolders` - Get all account holders under a balance platform
+* [getBalancePlatformsId](docs/platform/README.md#getbalanceplatformsid) - Get a balance platform
+* [getBalancePlatformsIdAccountHolders](docs/platform/README.md#getbalanceplatformsidaccountholders) - Get all account holders under a balance platform
 
-### transactionRules
+### [transactionRules](docs/transactionrules/README.md)
 
-* `deleteTransactionRulesTransactionRuleId` - Delete a transaction rule
-* `getTransactionRulesTransactionRuleId` - Get a transaction rule
-* `patchTransactionRulesTransactionRuleId` - Update a transaction rule
-* `postTransactionRules` - Create a transaction rule
+* [deleteTransactionRulesTransactionRuleId](docs/transactionrules/README.md#deletetransactionrulestransactionruleid) - Delete a transaction rule
+* [getTransactionRulesTransactionRuleId](docs/transactionrules/README.md#gettransactionrulestransactionruleid) - Get a transaction rule
+* [patchTransactionRulesTransactionRuleId](docs/transactionrules/README.md#patchtransactionrulestransactionruleid) - Update a transaction rule
+* [postTransactionRules](docs/transactionrules/README.md#posttransactionrules) - Create a transaction rule
 
-### transferInstruments
+### [transferInstruments](docs/transferinstruments/README.md)
 
-* `deleteTransferInstrumentsId` - Delete a transfer instrument
-* `getTransferInstrumentsId` - Get a transfer instrument
-* `patchTransferInstrumentsId` - Update a transfer instrument
-* `postTransferInstruments` - Create a transfer instrument
+* [deleteTransferInstrumentsId](docs/transferinstruments/README.md#deletetransferinstrumentsid) - Delete a transfer instrument
+* [getTransferInstrumentsId](docs/transferinstruments/README.md#gettransferinstrumentsid) - Get a transfer instrument
+* [patchTransferInstrumentsId](docs/transferinstruments/README.md#patchtransferinstrumentsid) - Update a transfer instrument
+* [postTransferInstruments](docs/transferinstruments/README.md#posttransferinstruments) - Create a transfer instrument
 <!-- End SDK Available Operations -->
 
 ### Maturity

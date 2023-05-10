@@ -79,6 +79,10 @@ class DebtorAccountWrite
     /**
      * Debtor account type
      * 
+     * 
+     * * `IBAN` - IBAN
+     * * `SCAN` - SortCodeAccountNumber
+     * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\DebtorAccountWriteTypeEnum $type
      */
 	#[\JMS\Serializer\Annotation\SerializedName('type')]

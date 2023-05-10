@@ -157,4 +157,6 @@ src/Models/Shared/TestIamPermissionsResponse.php
 src/Models/Shared/TestIamPermissionsRequest.php
 src/Models/Shared/ListLocationsResponse.php
 src/Models/Shared/Location.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

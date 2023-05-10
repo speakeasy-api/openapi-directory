@@ -110,4 +110,16 @@ src/Models/Operations/GetUpdatePathwayResponse.php
 src/Models/Operations/PostCreatePathwayFormatEnum.php
 src/Models/Operations/PostCreatePathwayRequest.php
 src/Models/Operations/PostCreatePathwayResponse.php
+docs/sdk/README.md
+docs/allfunctions/README.md
+docs/curationtags/README.md
+docs/download/README.md
+docs/history/README.md
+docs/ontologytags/README.md
+docs/organismlist/README.md
+docs/pathwayinformation/README.md
+docs/pathwaylist/README.md
+docs/search/README.md
+docs/usermanagement/README.md
+docs/writecreateupdatedelete/README.md
 USAGE.md

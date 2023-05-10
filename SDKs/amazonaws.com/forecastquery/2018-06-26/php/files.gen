@@ -31,4 +31,5 @@ src/Models/Shared/QueryForecastRequest.php
 src/Models/Shared/QueryWhatIfForecastResponse.php
 src/Models/Shared/QueryWhatIfForecastRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

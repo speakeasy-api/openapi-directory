@@ -301,4 +301,6 @@ src/Models/Shared/ContainerAccess.php
 src/Models/Shared/AccountAccessPermissionEnum.php
 src/Models/Shared/AccountAccess.php
 src/Models/Shared/ListUserPermissionsResponse.php
+docs/sdk/README.md
+docs/accounts/README.md
 USAGE.md

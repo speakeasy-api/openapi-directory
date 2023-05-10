@@ -38,4 +38,6 @@ src/Models/Shared/PricingCountriesResponse.php
 src/Models/Shared/CountryObject.php
 src/Models/Shared/NetworkObject.php
 src/Models/Shared/PricingCountryResponse.php
+docs/sdk/README.md
+docs/pricing/README.md
 USAGE.md

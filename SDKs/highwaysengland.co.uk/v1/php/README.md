@@ -30,37 +30,61 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\AreasGetRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new AreasGetRequest();
+    $request->version = 'corrupti';
+
+    $response = $sdk->areas->areasGet($request);
+
+    if ($response->areaResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### areas
+### [areas](docs/areas/README.md)
 
-* `areasGet` - Returns list of areas
-* `getVVersionAreasAreaIds` - Returns details of selected area
+* [areasGet](docs/areas/README.md#areasget) - Returns list of areas
+* [getVVersionAreasAreaIds](docs/areas/README.md#getvversionareasareaids) - Returns details of selected area
 
-### quality
+### [quality](docs/quality/README.md)
 
-* `qualityGetDailyDataQualityForSite` - Get Site DailyQuality
-* `qualityGetOverallDataQualityForSites` - Get Site OverallQuality
+* [qualityGetDailyDataQualityForSite](docs/quality/README.md#qualitygetdailydataqualityforsite) - Get Site DailyQuality
+* [qualityGetOverallDataQualityForSites](docs/quality/README.md#qualitygetoveralldataqualityforsites) - Get Site OverallQuality
 
-### reports
+### [reports](docs/reports/README.md)
 
-* `reportsIndex` - Gets the daily report.
-* `getVVersionReportsStartDateToEndDateReportType` - Gets the daily report.
+* [reportsIndex](docs/reports/README.md#reportsindex) - Gets the daily report.
+* [getVVersionReportsStartDateToEndDateReportType](docs/reports/README.md#getvversionreportsstartdatetoenddatereporttype) - Gets the daily report.
 
-### siteTypes
+### [siteTypes](docs/sitetypes/README.md)
 
-* `siteTypesGetSitesForPublicFacingAPI` - Returns the layer metadata for the LayerId specified.
-* `siteTypesIndex` - Return list of site types
+* [siteTypesGetSitesForPublicFacingAPI](docs/sitetypes/README.md#sitetypesgetsitesforpublicfacingapi) - Returns the layer metadata for the LayerId specified.
+* [siteTypesIndex](docs/sitetypes/README.md#sitetypesindex) - Return list of site types
 
-### sites
+### [sites](docs/sites/README.md)
 
-* `sitesIndex` - Get a list of sites
-* `getVVersionSitesSiteIds` - Get selected sites
+* [sitesIndex](docs/sites/README.md#sitesindex) - Get a list of sites
+* [getVVersionSitesSiteIds](docs/sites/README.md#getvversionsitessiteids) - Get selected sites
 <!-- End SDK Available Operations -->
 
 ### Maturity

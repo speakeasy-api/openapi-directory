@@ -19,11 +19,11 @@ namespace OpenAPI\OpenAPI\Models\Shared;
  *   <li>`30` - 30fps</li>
  * </ul>
  */
-enum OutputFpsEnum: string
+enum OutputFpsEnum: int
 {
-    case TWELVE = '12';
-    case FIFTEEN = '15';
-    case TWENTY_FOUR = '24';
-    case TWENTY_FIVE = '25';
-    case THIRTY = '30';
+    case TWELVE = 12;
+    case FIFTEEN = 15;
+    case TWENTY_FOUR = 24;
+    case TWENTY_FIVE = 25;
+    case THIRTY = 30;
 }

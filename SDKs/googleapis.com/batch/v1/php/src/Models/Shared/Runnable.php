@@ -78,6 +78,16 @@ class Runnable
     public ?bool $ignoreExitStatus = null;
     
     /**
+     * Labels for this Runnable.
+     * 
+     * @var ?array<string, string> $labels
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('labels')]
+    #[\JMS\Serializer\Annotation\Type('array<string, string>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $labels = null;
+    
+    /**
      * Script runnable.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\Script $script
@@ -105,6 +115,7 @@ class Runnable
 		$this->container = null;
 		$this->environment = null;
 		$this->ignoreExitStatus = null;
+		$this->labels = null;
 		$this->script = null;
 		$this->timeout = null;
 	}

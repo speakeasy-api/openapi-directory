@@ -682,4 +682,5 @@ src/Models/Shared/RefreshStrategyEnum.php
 src/Models/Shared/TerminateInstanceInAutoScalingGroupType.php
 src/Models/Shared/UpdateAutoScalingGroupType.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

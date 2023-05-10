@@ -570,4 +570,13 @@ src/Models/Shared/OBWritePaymentDetailsResponse1DataPaymentStatusStatusDetail.ph
 src/Models/Shared/OBWritePaymentDetailsResponse1DataPaymentStatus.php
 src/Models/Shared/OBWritePaymentDetailsResponse1Data.php
 src/Models/Shared/OBWritePaymentDetailsResponse1.php
+docs/sdk/README.md
+docs/domesticpayments/README.md
+docs/domesticscheduledpayments/README.md
+docs/domesticstandingorders/README.md
+docs/filepayments/README.md
+docs/internationalpayments/README.md
+docs/internationalscheduledpayments/README.md
+docs/internationalstandingorders/README.md
+docs/paymentdetails/README.md
 USAGE.md

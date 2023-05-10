@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDisassociateNatGatewayAddressActionEnum: string
 {
     case DISASSOCIATE_NAT_GATEWAY_ADDRESS = 'DisassociateNatGatewayAddress';

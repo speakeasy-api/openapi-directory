@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDisableAddressTransferActionEnum: string
 {
     case DISABLE_ADDRESS_TRANSFER = 'DisableAddressTransfer';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListVpcIngressConnectionsXAmzTargetEnum: string
 {
     case APP_RUNNER_LIST_VPC_INGRESS_CONNECTIONS = 'AppRunner.ListVpcIngressConnections';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopDataCollectionByAgentIdsXAmzTargetEnum: string
 {
     case AWS_POSEIDON_SERVICE_V20151101_STOP_DATA_COLLECTION_BY_AGENT_IDS = 'AWSPoseidonService_V2015_11_01.StopDataCollectionByAgentIds';

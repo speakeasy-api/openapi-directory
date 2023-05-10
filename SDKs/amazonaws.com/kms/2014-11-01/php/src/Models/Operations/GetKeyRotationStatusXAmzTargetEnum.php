@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetKeyRotationStatusXAmzTargetEnum: string
 {
     case TRENT_SERVICE_GET_KEY_ROTATION_STATUS = 'TrentService.GetKeyRotationStatus';

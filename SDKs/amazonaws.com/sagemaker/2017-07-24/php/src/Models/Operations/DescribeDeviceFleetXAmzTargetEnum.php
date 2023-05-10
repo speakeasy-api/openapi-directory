@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeDeviceFleetXAmzTargetEnum: string
 {
     case SAGE_MAKER_DESCRIBE_DEVICE_FLEET = 'SageMaker.DescribeDeviceFleet';

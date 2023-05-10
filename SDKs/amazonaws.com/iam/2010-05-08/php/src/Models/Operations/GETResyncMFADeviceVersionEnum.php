@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETResyncMFADeviceVersionEnum: string
 {
     case TWO_THOUSAND_AND_TEN0508 = '2010-05-08';

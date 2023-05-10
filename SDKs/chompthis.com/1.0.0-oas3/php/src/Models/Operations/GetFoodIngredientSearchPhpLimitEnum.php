@@ -17,9 +17,9 @@ namespace OpenAPI\OpenAPI\Models\Operations;
  * > ```&limit=3```
  * 
  */
-enum GetFoodIngredientSearchPhpLimitEnum: string
+enum GetFoodIngredientSearchPhpLimitEnum: int
 {
-    case ONE = '1';
-    case TWO = '2';
-    case THREE = '3';
+    case ONE = 1;
+    case TWO = 2;
+    case THREE = 3;
 }

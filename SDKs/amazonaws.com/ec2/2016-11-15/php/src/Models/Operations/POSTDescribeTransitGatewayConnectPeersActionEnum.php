@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeTransitGatewayConnectPeersActionEnum: string
 {
     case DESCRIBE_TRANSIT_GATEWAY_CONNECT_PEERS = 'DescribeTransitGatewayConnectPeers';

@@ -17,5 +17,5 @@ enum ConditionsCancellationPolicyEnum: string
     case FREE_CANCELLATION48 = 'FREE_CANCELLATION_48';
     case FREE_CANCELLATION_WEEK = 'FREE_CANCELLATION_WEEK';
     case NON_REFUNDABLE = 'NON_REFUNDABLE';
-    case NULL = 'null';
+    case LESS_THAN_NIL_GREATER_THAN = '<nil>';
 }

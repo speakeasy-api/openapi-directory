@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteVirtualMFADeviceActionEnum: string
 {
     case DELETE_VIRTUAL_MFA_DEVICE = 'DeleteVirtualMFADevice';

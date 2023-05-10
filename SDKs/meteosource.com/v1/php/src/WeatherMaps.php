@@ -53,7 +53,6 @@ class WeatherMaps
      * * The finest resolution is not available for maps covering very large regions. The resulting map will be automatically downscaled in this case, to guarantee high-speed responses.
      * * Weather maps are only supported for forecasts, not for archive data.
      * 
-     * 
      * @param \OpenAPI\OpenAPI\Models\Operations\MapMapGetRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\MapMapGetSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\MapMapGetResponse

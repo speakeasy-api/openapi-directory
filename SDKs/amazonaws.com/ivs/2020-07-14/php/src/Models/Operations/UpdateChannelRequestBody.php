@@ -31,6 +31,16 @@ class UpdateChannelRequestBody
     public ?bool $authorized = null;
     
     /**
+     * Whether the channel allows insecure RTMP ingest. Default: <code>false</code>.
+     * 
+     * @var ?bool $insecureIngest
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('insecureIngest')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $insecureIngest = null;
+    
+    /**
      * Channel latency mode. Use <code>NORMAL</code> to broadcast and deliver live video up to Full HD. Use <code>LOW</code> for near-real-time interaction with viewers. (Note: In the Amazon IVS console, <code>LOW</code> and <code>NORMAL</code> correspond to Ultra-low and Standard, respectively.)
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Operations\UpdateChannelRequestBodyLatencyModeEnum $latencyMode
@@ -74,6 +84,7 @@ class UpdateChannelRequestBody
 	{
 		$this->arn = "";
 		$this->authorized = null;
+		$this->insecureIngest = null;
 		$this->latencyMode = null;
 		$this->name = null;
 		$this->recordingConfigurationArn = null;

@@ -123,4 +123,5 @@ src/Models/Shared/UpdateGroupRequest.php
 src/Models/Shared/AttributeOperation.php
 src/Models/Shared/UpdateUserRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -65,7 +65,7 @@ class Discovery
      */
 	public function postV05CareContextsDiscoverJson(
         \OpenAPI\OpenAPI\Models\Operations\PostV05CareContextsDiscoverJsonRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05CareContextsDiscoverJsonResponse
     {
         $baseUrl = Discovery::POST_V05_CARE_CONTEXTS_DISCOVER_JSON_SERVERS[0];
@@ -133,7 +133,7 @@ class Discovery
      */
 	public function postV05CareContextsDiscoverRaw(
         \OpenAPI\OpenAPI\Models\Operations\PostV05CareContextsDiscoverRawRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05CareContextsDiscoverRawResponse
     {
         $baseUrl = Discovery::POST_V05_CARE_CONTEXTS_DISCOVER_RAW_SERVERS[0];

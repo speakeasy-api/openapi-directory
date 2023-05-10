@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETConfigureHealthCheckActionEnum: string
 {
     case CONFIGURE_HEALTH_CHECK = 'ConfigureHealthCheck';

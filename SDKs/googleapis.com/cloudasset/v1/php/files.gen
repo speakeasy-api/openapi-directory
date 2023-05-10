@@ -166,6 +166,13 @@ src/Models/Shared/AnalyzeIamPolicyResponse.php
 src/Models/Shared/IamPolicyAnalysis.php
 src/Models/Shared/IamPolicyAnalysisStateCodeEnum.php
 src/Models/Shared/IamPolicyAnalysisState.php
+src/Models/Shared/DeniedAccess.php
+src/Models/Shared/GoogleCloudAssetV1DeniedAccessDenyDetail.php
+src/Models/Shared/GoogleCloudAssetV1DeniedAccessResource.php
+src/Models/Shared/GoogleCloudAssetV1DeniedAccessIdentity.php
+src/Models/Shared/GoogleIamV2DenyRule.php
+src/Models/Shared/GoogleCloudAssetV1DeniedAccessAccess.php
+src/Models/Shared/GoogleCloudAssetV1DeniedAccessAccessTuple.php
 src/Models/Shared/IamPolicyAnalysisResult.php
 src/Models/Shared/GoogleCloudAssetV1IdentityList.php
 src/Models/Shared/GoogleCloudAssetV1Identity.php
@@ -232,4 +239,10 @@ src/Models/Shared/VersionedResource.php
 src/Models/Shared/RelatedResources.php
 src/Models/Shared/RelatedResource.php
 src/Models/Shared/AttachedResource.php
+docs/sdk/README.md
+docs/assets/README.md
+docs/effectiveiampolicies/README.md
+docs/feeds/README.md
+docs/savedqueries/README.md
+docs/v1/README.md
 USAGE.md

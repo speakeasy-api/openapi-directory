@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateCertificateOptionsXAmzTargetEnum: string
 {
     case CERTIFICATE_MANAGER_UPDATE_CERTIFICATE_OPTIONS = 'CertificateManager.UpdateCertificateOptions';

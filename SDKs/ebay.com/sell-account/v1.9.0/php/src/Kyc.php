@@ -40,9 +40,11 @@ class Kyc
     /**
      * <span class="tablenote"><b>Note:</b>This method was originally created to see which onboarding requirements were still pending for sellers being onboarded for eBay managed payments, but now that all seller accounts are onboarded globally, this method should now just returne an empty payload with a <code>204 No Content</code> HTTP status code. </span>
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\GetKYCSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\GetKYCResponse
      */
 	public function getKYC(
+        \OpenAPI\OpenAPI\Models\Operations\GetKYCSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\GetKYCResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -50,7 +52,8 @@ class Kyc
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

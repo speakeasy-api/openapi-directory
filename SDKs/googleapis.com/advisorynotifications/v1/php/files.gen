@@ -26,6 +26,7 @@ src/Models/Operations/AdvisorynotificationsOrganizationsLocationsNotificationsLi
 src/Models/Operations/AdvisorynotificationsOrganizationsLocationsNotificationsListViewEnum.php
 src/Models/Operations/AdvisorynotificationsOrganizationsLocationsNotificationsListRequest.php
 src/Models/Operations/AdvisorynotificationsOrganizationsLocationsNotificationsListResponse.php
+src/Models/Shared/GoogleCloudAdvisorynotificationsV1NotificationNotificationTypeEnum.php
 src/Models/Shared/GoogleCloudAdvisorynotificationsV1Notification.php
 src/Models/Shared/GoogleCloudAdvisorynotificationsV1Subject.php
 src/Models/Shared/GoogleCloudAdvisorynotificationsV1TextLocalizationStateEnum.php
@@ -38,4 +39,6 @@ src/Models/Shared/GoogleCloudAdvisorynotificationsV1CsvCsvRow.php
 src/Models/Shared/AltEnum.php
 src/Models/Shared/XgafvEnum.php
 src/Models/Shared/GoogleCloudAdvisorynotificationsV1ListNotificationsResponse.php
+docs/sdk/README.md
+docs/organizations/README.md
 USAGE.md

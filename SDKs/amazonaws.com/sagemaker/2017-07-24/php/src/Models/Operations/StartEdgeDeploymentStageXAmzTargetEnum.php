@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartEdgeDeploymentStageXAmzTargetEnum: string
 {
     case SAGE_MAKER_START_EDGE_DEPLOYMENT_STAGE = 'SageMaker.StartEdgeDeploymentStage';

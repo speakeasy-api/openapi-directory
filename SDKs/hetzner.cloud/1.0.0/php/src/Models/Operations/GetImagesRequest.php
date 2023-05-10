@@ -12,6 +12,14 @@ use \OpenAPI\OpenAPI\Utils\SpeakeasyMetadata;
 class GetImagesRequest
 {
     /**
+     * Return only Images with the given architecture.
+     * 
+     * @var ?string $architecture
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=architecture')]
+    public ?string $architecture = null;
+    
+    /**
      * Can be used multiple times. Server ID linked to the Image. Only available for Images of type `backup`
      * 
      * @var ?string $boundTo
@@ -69,6 +77,7 @@ class GetImagesRequest
     
 	public function __construct()
 	{
+		$this->architecture = null;
 		$this->boundTo = null;
 		$this->includeDeprecated = null;
 		$this->labelSelector = null;

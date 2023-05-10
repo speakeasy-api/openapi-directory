@@ -20,5 +20,6 @@ enum CreateAFileParametersPurposeEnum: string
     case TRUST_FORMATION_DOCUMENT = 'trust_formation_document';
     case DIGITAL_WALLET_ARTWORK = 'digital_wallet_artwork';
     case DIGITAL_WALLET_APP_ICON = 'digital_wallet_app_icon';
+    case DOCUMENT_REQUEST = 'document_request';
     case ENTITY_SUPPLEMENTAL_DOCUMENT = 'entity_supplemental_document';
 }

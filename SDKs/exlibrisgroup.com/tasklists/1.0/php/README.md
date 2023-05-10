@@ -30,34 +30,65 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\GetAlmawsV1TaskListsRsLendingRequestsRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetAlmawsV1TaskListsRsLendingRequestsRequest();
+    $request->library = 'corrupti';
+    $request->partner = 'provident';
+    $request->printed = 'distinctio';
+    $request->reported = 'quibusdam';
+    $request->requestedFormat = 'unde';
+    $request->status = 'nulla';
+    $request->suppliedFormat = 'corrupti';
+
+    $response = $sdk->lendingRequests->getAlmawsV1TaskListsRsLendingRequests($request);
+
+    if ($response->getAlmawsV1TaskListsRsLendingRequests200ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### lendingRequests
+### [lendingRequests](docs/lendingrequests/README.md)
 
-* `getAlmawsV1TaskListsRsLendingRequests` - Get Lending Requests
-* `postAlmawsV1TaskListsRsLendingRequests` - Act on Lending Requests
+* [getAlmawsV1TaskListsRsLendingRequests](docs/lendingrequests/README.md#getalmawsv1tasklistsrslendingrequests) - Get Lending Requests
+* [postAlmawsV1TaskListsRsLendingRequests](docs/lendingrequests/README.md#postalmawsv1tasklistsrslendingrequests) - Act on Lending Requests
 
-### printouts
+### [printouts](docs/printouts/README.md)
 
-* `getAlmawsV1TaskListsPrintouts` - Retrieve Printouts
-* `getAlmawsV1TaskListsPrintoutsPrintoutId` - Retrieve a Printout
-* `postAlmawsV1TaskListsPrintouts` - Act on Printouts
-* `postAlmawsV1TaskListsPrintoutsPrintoutId` - Printout Service
+* [getAlmawsV1TaskListsPrintouts](docs/printouts/README.md#getalmawsv1tasklistsprintouts) - Retrieve Printouts
+* [getAlmawsV1TaskListsPrintoutsPrintoutId](docs/printouts/README.md#getalmawsv1tasklistsprintoutsprintoutid) - Retrieve a Printout
+* [postAlmawsV1TaskListsPrintouts](docs/printouts/README.md#postalmawsv1tasklistsprintouts) - Act on Printouts
+* [postAlmawsV1TaskListsPrintoutsPrintoutId](docs/printouts/README.md#postalmawsv1tasklistsprintoutsprintoutid) - Printout Service
 
-### requestedResources
+### [requestedResources](docs/requestedresources/README.md)
 
-* `getAlmawsV1TaskListsRequestedResources` - Get Requested Resources
-* `postAlmawsV1TaskListsRequestedResources` - Act on Requested Resources
+* [getAlmawsV1TaskListsRequestedResources](docs/requestedresources/README.md#getalmawsv1tasklistsrequestedresources) - Get Requested Resources
+* [postAlmawsV1TaskListsRequestedResources](docs/requestedresources/README.md#postalmawsv1tasklistsrequestedresources) - Act on Requested Resources
 
-### test
+### [test](docs/test/README.md)
 
-* `getAlmawsV1TaskListsTest` - GET Task-lists Test API
-* `postAlmawsV1TaskListsTest` - POST Task-lists Test API
+* [getAlmawsV1TaskListsTest](docs/test/README.md#getalmawsv1taskliststest) - GET Task-lists Test API
+* [postAlmawsV1TaskListsTest](docs/test/README.md#postalmawsv1taskliststest) - POST Task-lists Test API
 <!-- End SDK Available Operations -->
 
 ### Maturity

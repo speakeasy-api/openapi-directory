@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateUpdatedImageXAmzTargetEnum: string
 {
     case PHOTON_ADMIN_PROXY_SERVICE_CREATE_UPDATED_IMAGE = 'PhotonAdminProxyService.CreateUpdatedImage';

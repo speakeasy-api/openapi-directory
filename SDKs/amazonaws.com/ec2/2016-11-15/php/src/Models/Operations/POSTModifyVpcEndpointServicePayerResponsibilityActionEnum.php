@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTModifyVpcEndpointServicePayerResponsibilityActionEnum: string
 {
     case MODIFY_VPC_ENDPOINT_SERVICE_PAYER_RESPONSIBILITY = 'ModifyVpcEndpointServicePayerResponsibility';

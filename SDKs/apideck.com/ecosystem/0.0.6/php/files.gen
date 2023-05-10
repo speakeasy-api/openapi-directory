@@ -87,4 +87,10 @@ src/Models/Shared/CardSettings.php
 src/Models/Shared/GetListingResponse.php
 src/Models/Shared/GetProductsResponse.php
 src/Models/Shared/GetProductResponse.php
+docs/sdk/README.md
+docs/category/README.md
+docs/collection/README.md
+docs/ecosystem/README.md
+docs/listing/README.md
+docs/product/README.md
 USAGE.md

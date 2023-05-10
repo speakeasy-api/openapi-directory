@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETEnableSnapshotCopyActionEnum: string
 {
     case ENABLE_SNAPSHOT_COPY = 'EnableSnapshotCopy';

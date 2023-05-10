@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GenerateChangeSetXAmzTargetEnum: string
 {
     case AWS_SERVER_MIGRATION_SERVICE_V20161024_GENERATE_CHANGE_SET = 'AWSServerMigrationService_V2016_10_24.GenerateChangeSet';

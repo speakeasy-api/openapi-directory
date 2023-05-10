@@ -52,7 +52,7 @@ class TimelineWeatherAPIDateRangeRequest
      */
 	public function getVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddate(
         \OpenAPI\OpenAPI\Models\Operations\GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddateRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddateResponse
     {
         $baseUrl = TimelineWeatherAPIDateRangeRequest::GET_VISUAL_CROSSING_WEB_SERVICES_REST_SERVICES_TIMELINE_LOCATION_STARTDATE_ENDDATE_SERVERS[0];

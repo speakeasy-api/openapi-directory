@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * GoogleCloudDocumentaiV1ListEvaluationsResponse - The response from ListEvaluations.
+ * GoogleCloudDocumentaiV1ListEvaluationsResponse - The response from `ListEvaluations`.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

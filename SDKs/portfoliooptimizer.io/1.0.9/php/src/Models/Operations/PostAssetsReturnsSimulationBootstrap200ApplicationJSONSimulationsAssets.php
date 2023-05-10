@@ -12,7 +12,7 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 class PostAssetsReturnsSimulationBootstrap200ApplicationJSONSimulationsAssets
 {
     /**
-     * assetReturns[t] is the simulated return of the i-th asset for the t-th time period, in percentage
+     * assetReturns[t] is the simulated return of the i-th asset for the t-th time period
      * 
      * @var array<float> $assetReturns
      */

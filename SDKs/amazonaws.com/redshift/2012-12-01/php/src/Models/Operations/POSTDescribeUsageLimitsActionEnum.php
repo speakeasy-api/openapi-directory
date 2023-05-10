@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeUsageLimitsActionEnum: string
 {
     case DESCRIBE_USAGE_LIMITS = 'DescribeUsageLimits';

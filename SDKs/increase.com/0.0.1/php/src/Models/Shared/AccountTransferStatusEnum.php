@@ -12,10 +12,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 /** The lifecycle status of the transfer. */
 enum AccountTransferStatusEnum: string
 {
-    case PENDING_SUBMISSION = 'pending_submission';
     case PENDING_APPROVAL = 'pending_approval';
     case CANCELED = 'canceled';
-    case REQUIRES_ATTENTION = 'requires_attention';
-    case FLAGGED_BY_OPERATOR = 'flagged_by_operator';
     case COMPLETE = 'complete';
 }

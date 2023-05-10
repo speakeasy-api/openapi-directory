@@ -38,7 +38,7 @@ class WorkstationClusterInput
     public ?string $displayName = null;
     
     /**
-     * Checksum computed by the server. May be sent on update and delete requests to ensure that the client has an up-to-date value before proceeding.
+     * Checksum computed by the server. May be sent on update and delete requests to make sure that the client has an up-to-date value before proceeding.
      * 
      * @var ?string $etag
      */

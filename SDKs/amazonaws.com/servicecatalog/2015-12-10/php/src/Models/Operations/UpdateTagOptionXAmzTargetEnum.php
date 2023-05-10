@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateTagOptionXAmzTargetEnum: string
 {
     case AWS242_SERVICE_CATALOG_SERVICE_UPDATE_TAG_OPTION = 'AWS242ServiceCatalogService.UpdateTagOption';

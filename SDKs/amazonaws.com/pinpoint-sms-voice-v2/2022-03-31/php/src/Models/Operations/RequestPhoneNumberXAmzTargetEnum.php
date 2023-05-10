@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RequestPhoneNumberXAmzTargetEnum: string
 {
     case PINPOINT_SMS_VOICE_V2_REQUEST_PHONE_NUMBER = 'PinpointSMSVoiceV2.RequestPhoneNumber';

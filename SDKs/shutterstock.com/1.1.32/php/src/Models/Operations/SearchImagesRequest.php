@@ -135,6 +135,7 @@ class SearchImagesRequest
      * (Deprecated; use height_from and height_to instead) Show images with the specified height
      * 
      * @var ?int $height
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=height')]
     public ?int $height = null;
@@ -311,6 +312,7 @@ class SearchImagesRequest
      * (Deprecated; use width_from and width_to instead) Show images with the specified width
      * 
      * @var ?int $width
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=width')]
     public ?int $width = null;

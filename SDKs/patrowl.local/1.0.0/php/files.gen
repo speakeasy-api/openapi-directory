@@ -46,4 +46,6 @@ src/Models/Shared/ScanDefinitionAssetsCriticityEnum.php
 src/Models/Shared/ScanDefinitionAssetsDatatypeEnum.php
 src/Models/Shared/ScanDefinitionAssets.php
 src/Models/Shared/ScanDefinition.php
+docs/sdk/README.md
+docs/patrowlengine/README.md
 USAGE.md

@@ -28,4 +28,6 @@ src/Models/Shared/APIErrorErrors.php
 src/Models/Shared/APIError.php
 src/Models/Shared/VeteranStatusRequestGenderEnum.php
 src/Models/Shared/VeteranStatusRequest.php
+docs/sdk/README.md
+docs/veteranconfirmationstatus/README.md
 USAGE.md

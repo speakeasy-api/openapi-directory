@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ActivateContactChannelXAmzTargetEnum: string
 {
     case SSM_CONTACTS_ACTIVATE_CONTACT_CHANNEL = 'SSMContacts.ActivateContactChannel';

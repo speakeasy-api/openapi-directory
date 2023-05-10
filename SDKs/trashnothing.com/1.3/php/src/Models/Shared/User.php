@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Shared;
 
 
-/**
- * User - User data
- * 
- * @package OpenAPI\OpenAPI\Models\Shared
- * @access public
- */
 class User
 {
     /**

@@ -87,6 +87,7 @@ src/Models/Operations/GetNumbersNumeralEgyptianResponse.php
 src/Models/Operations/GetNumbersNumeralRomanSecurity.php
 src/Models/Operations/GetNumbersNumeralRomanRequest.php
 src/Models/Operations/GetNumbersNumeralRomanResponse.php
+src/Models/Operations/GetNumbersNodSecurity.php
 src/Models/Operations/GetNumbersNodResponse.php
 src/Models/Operations/GetNumbersPiSecurity.php
 src/Models/Operations/GetNumbersPiRequest.php
@@ -103,4 +104,14 @@ src/Models/Operations/GetNumbersCurrencyResponse.php
 src/Models/Operations/GetNumbersOrdinalSecurity.php
 src/Models/Operations/GetNumbersOrdinalRequest.php
 src/Models/Operations/GetNumbersOrdinalResponse.php
+docs/sdk/README.md
+docs/baseconversion/README.md
+docs/numberchecks/README.md
+docs/numberfacts/README.md
+docs/numbergeneration/README.md
+docs/numbersystemsconversion/README.md
+docs/numberoftheday/README.md
+docs/pi/README.md
+docs/prime/README.md
+docs/spell/README.md
 USAGE.md

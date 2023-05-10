@@ -28,7 +28,7 @@ class DatabaseEncryption
     public ?string $keyName = null;
     
     /**
-     * Denotes the state of etcd encryption.
+     * The desired state of etcd encryption.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\DatabaseEncryptionStateEnum $state
      */

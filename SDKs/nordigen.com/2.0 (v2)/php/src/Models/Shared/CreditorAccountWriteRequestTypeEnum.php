@@ -9,7 +9,11 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Shared;
 
 
-/** Creditor account type */
+/**
+ * * `IBAN` - IBAN
+ * 
+ * * `SCAN` - SortCodeAccountNumber
+ */
 enum CreditorAccountWriteRequestTypeEnum: string
 {
     case IBAN = 'IBAN';

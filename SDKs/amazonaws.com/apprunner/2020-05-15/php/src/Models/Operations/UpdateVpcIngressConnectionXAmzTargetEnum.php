@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateVpcIngressConnectionXAmzTargetEnum: string
 {
     case APP_RUNNER_UPDATE_VPC_INGRESS_CONNECTION = 'AppRunner.UpdateVpcIngressConnection';

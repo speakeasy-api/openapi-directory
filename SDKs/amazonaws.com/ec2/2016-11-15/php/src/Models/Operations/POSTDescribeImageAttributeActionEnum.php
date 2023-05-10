@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeImageAttributeActionEnum: string
 {
     case DESCRIBE_IMAGE_ATTRIBUTE = 'DescribeImageAttribute';

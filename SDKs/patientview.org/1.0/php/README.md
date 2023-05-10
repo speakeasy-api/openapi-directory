@@ -30,42 +30,66 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GetBasicUserInformationRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetBasicUserInformationRequest();
+    $request->token = 'corrupti';
+
+    $response = $sdk->authController->getBasicUserInformation($request);
+
+    if ($response->body !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### authController
+### [authController](docs/authcontroller/README.md)
 
-* `getBasicUserInformation` - Get Basic User Information
-* `logIn` - Log In
-* `logOut` - Log Out
+* [getBasicUserInformation](docs/authcontroller/README.md#getbasicuserinformation) - Get Basic User Information
+* [logIn](docs/authcontroller/README.md#login) - Log In
+* [logOut](docs/authcontroller/README.md#logout) - Log Out
 
-### observationController
+### [observationController](docs/observationcontroller/README.md)
 
-* `getObservationsByCode` - Get Observations of a Certain Type For a User
-* `getObservationsByCodes` - Get Observations of Multiple Types For a User
-* `getPatientEnteredObservationsByCode` - Get patient entered Observations of a Certain Type For a User
+* [getObservationsByCode](docs/observationcontroller/README.md#getobservationsbycode) - Get Observations of a Certain Type For a User
+* [getObservationsByCodes](docs/observationcontroller/README.md#getobservationsbycodes) - Get Observations of Multiple Types For a User
+* [getPatientEnteredObservationsByCode](docs/observationcontroller/README.md#getpatiententeredobservationsbycode) - Get patient entered Observations of a Certain Type For a User
 
-### observationHeadingController
+### [observationHeadingController](docs/observationheadingcontroller/README.md)
 
-* `getAvailableObservationHeadings` - Get Available Observations Types For a User
-* `getPatientEnteredObservationHeadings` - Get Available Patient Entered Observations Types For a User
+* [getAvailableObservationHeadings](docs/observationheadingcontroller/README.md#getavailableobservationheadings) - Get Available Observations Types For a User
+* [getPatientEnteredObservationHeadings](docs/observationheadingcontroller/README.md#getpatiententeredobservationheadings) - Get Available Patient Entered Observations Types For a User
 
-### patientController
+### [patientController](docs/patientcontroller/README.md)
 
-* `getBasicPatientDetails` - Get Basic Patient Information
+* [getBasicPatientDetails](docs/patientcontroller/README.md#getbasicpatientdetails) - Get Basic Patient Information
 
-### patientManagementController
+### [patientManagementController](docs/patientmanagementcontroller/README.md)
 
-* `getPatientManagement` - getPatientManagement
-* `getPatientManagementDiagnoses` - getPatientManagementDiagnoses
-* `getPatientManagementLookupTypes` - getPatientManagementLookupTypes
-* `savePatientManagement` - savePatientManagement
-* `savePatientManagementSurgeries` - savePatientManagementSurgeries
-* `validatePatientManagement` - validatePatientManagement
+* [getPatientManagement](docs/patientmanagementcontroller/README.md#getpatientmanagement) - getPatientManagement
+* [getPatientManagementDiagnoses](docs/patientmanagementcontroller/README.md#getpatientmanagementdiagnoses) - getPatientManagementDiagnoses
+* [getPatientManagementLookupTypes](docs/patientmanagementcontroller/README.md#getpatientmanagementlookuptypes) - getPatientManagementLookupTypes
+* [savePatientManagement](docs/patientmanagementcontroller/README.md#savepatientmanagement) - savePatientManagement
+* [savePatientManagementSurgeries](docs/patientmanagementcontroller/README.md#savepatientmanagementsurgeries) - savePatientManagementSurgeries
+* [validatePatientManagement](docs/patientmanagementcontroller/README.md#validatepatientmanagement) - validatePatientManagement
 <!-- End SDK Available Operations -->
 
 ### Maturity

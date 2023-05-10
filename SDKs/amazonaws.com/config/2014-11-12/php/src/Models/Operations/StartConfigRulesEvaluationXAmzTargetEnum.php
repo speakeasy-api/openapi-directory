@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartConfigRulesEvaluationXAmzTargetEnum: string
 {
     case STARLING_DOVE_SERVICE_START_CONFIG_RULES_EVALUATION = 'StarlingDoveService.StartConfigRulesEvaluation';

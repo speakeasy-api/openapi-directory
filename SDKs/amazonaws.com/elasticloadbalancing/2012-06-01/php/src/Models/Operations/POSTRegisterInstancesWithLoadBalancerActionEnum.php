@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTRegisterInstancesWithLoadBalancerActionEnum: string
 {
     case REGISTER_INSTANCES_WITH_LOAD_BALANCER = 'RegisterInstancesWithLoadBalancer';

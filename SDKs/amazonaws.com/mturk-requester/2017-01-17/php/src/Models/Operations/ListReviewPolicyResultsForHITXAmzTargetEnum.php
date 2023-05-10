@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListReviewPolicyResultsForHITXAmzTargetEnum: string
 {
     case M_TURK_REQUESTER_SERVICE_V20170117_LIST_REVIEW_POLICY_RESULTS_FOR_HIT = 'MTurkRequesterServiceV20170117.ListReviewPolicyResultsForHIT';

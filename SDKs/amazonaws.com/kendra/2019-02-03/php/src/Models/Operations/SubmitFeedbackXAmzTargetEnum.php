@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum SubmitFeedbackXAmzTargetEnum: string
 {
     case AWS_KENDRA_FRONTEND_SERVICE_SUBMIT_FEEDBACK = 'AWSKendraFrontendService.SubmitFeedback';

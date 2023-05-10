@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetOfferingStatusXAmzTargetEnum: string
 {
     case DEVICE_FARM20150623_GET_OFFERING_STATUS = 'DeviceFarm_20150623.GetOfferingStatus';

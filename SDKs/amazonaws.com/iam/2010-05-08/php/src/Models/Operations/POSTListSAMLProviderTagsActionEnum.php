@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTListSAMLProviderTagsActionEnum: string
 {
     case LIST_SAML_PROVIDER_TAGS = 'ListSAMLProviderTags';

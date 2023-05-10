@@ -38,16 +38,6 @@ class Model
     public ?string $dataset = null;
     
     /**
-     * Output only. Timestamp when the model training finished and ready to be used for translation.
-     * 
-     * @var ?string $deployTime
-     */
-	#[\JMS\Serializer\Annotation\SerializedName('deployTime')]
-    #[\JMS\Serializer\Annotation\Type('string')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?string $deployTime = null;
-    
-    /**
      * The name of the model to show in the interface. The name can be up to 32 characters long and can consist only of ASCII Latin letters A-Z and a-z, underscores (_), and ASCII digits 0-9.
      * 
      * @var ?string $displayName
@@ -131,7 +121,6 @@ class Model
 	{
 		$this->createTime = null;
 		$this->dataset = null;
-		$this->deployTime = null;
 		$this->displayName = null;
 		$this->name = null;
 		$this->sourceLanguageCode = null;

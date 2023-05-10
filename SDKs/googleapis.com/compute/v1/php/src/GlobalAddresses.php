@@ -192,6 +192,46 @@ class GlobalAddresses
     }
 	
     /**
+     * Moves the specified address resource from one project to another project.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ComputeGlobalAddressesMoveRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\ComputeGlobalAddressesMoveSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\ComputeGlobalAddressesMoveResponse
+     */
+	public function computeGlobalAddressesMove(
+        \OpenAPI\OpenAPI\Models\Operations\ComputeGlobalAddressesMoveRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\ComputeGlobalAddressesMoveSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\ComputeGlobalAddressesMoveResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/projects/{project}/global/addresses/{address}/move', \OpenAPI\OpenAPI\Models\Operations\ComputeGlobalAddressesMoveRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "globalAddressesMoveRequest", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\ComputeGlobalAddressesMoveRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\ComputeGlobalAddressesMoveResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Sets the labels on a GlobalAddress. To learn more about labels, read the Labeling Resources documentation.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ComputeGlobalAddressesSetLabelsRequest $request

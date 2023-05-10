@@ -41,4 +41,6 @@ src/Models/Shared/SignBlobResponse.php
 src/Models/Shared/SignBlobRequest.php
 src/Models/Shared/SignJwtResponse.php
 src/Models/Shared/SignJwtRequest.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

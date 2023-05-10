@@ -22,4 +22,5 @@ src/Models/Operations/GetFormatEnum.php
 src/Models/Operations/GetLangEnum.php
 src/Models/Operations/GetRequest.php
 src/Models/Operations/GetResponse.php
+docs/sdk/README.md
 USAGE.md

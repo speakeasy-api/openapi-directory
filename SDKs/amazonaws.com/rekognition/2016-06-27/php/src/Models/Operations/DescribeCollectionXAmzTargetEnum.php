@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeCollectionXAmzTargetEnum: string
 {
     case REKOGNITION_SERVICE_DESCRIBE_COLLECTION = 'RekognitionService.DescribeCollection';

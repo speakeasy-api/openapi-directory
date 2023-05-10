@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeregisterTaskFromMaintenanceWindowXAmzTargetEnum: string
 {
     case AMAZON_SSM_DEREGISTER_TASK_FROM_MAINTENANCE_WINDOW = 'AmazonSSM.DeregisterTaskFromMaintenanceWindow';

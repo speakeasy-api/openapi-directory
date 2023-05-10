@@ -594,6 +594,129 @@ class Payments
     }
 	
     /**
+     * Initiate the payment on bank's side.
+     * 
+     * Complete the payment and return payment details as a response.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\PaymentsSubmitCreateFormRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\PaymentsSubmitCreateFormResponse
+     */
+	public function paymentsSubmitCreateForm(
+        \OpenAPI\OpenAPI\Models\Operations\PaymentsSubmitCreateFormRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\PaymentsSubmitCreateFormResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/api/v2/payments/{id}/submit/', \OpenAPI\OpenAPI\Models\Operations\PaymentsSubmitCreateFormRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "paymentReadRequest1", "form");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\PaymentsSubmitCreateFormResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->paymentRead = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\PaymentRead', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Initiate the payment on bank's side.
+     * 
+     * Complete the payment and return payment details as a response.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\PaymentsSubmitCreateJsonRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\PaymentsSubmitCreateJsonResponse
+     */
+	public function paymentsSubmitCreateJson(
+        \OpenAPI\OpenAPI\Models\Operations\PaymentsSubmitCreateJsonRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\PaymentsSubmitCreateJsonResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/api/v2/payments/{id}/submit/', \OpenAPI\OpenAPI\Models\Operations\PaymentsSubmitCreateJsonRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "paymentReadRequest", "json");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\PaymentsSubmitCreateJsonResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->paymentRead = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\PaymentRead', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Initiate the payment on bank's side.
+     * 
+     * Complete the payment and return payment details as a response.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\PaymentsSubmitCreateMultipartRequest $request
+     * @return \OpenAPI\OpenAPI\Models\Operations\PaymentsSubmitCreateMultipartResponse
+     */
+	public function paymentsSubmitCreateMultipart(
+        \OpenAPI\OpenAPI\Models\Operations\PaymentsSubmitCreateMultipartRequest $request,
+    ): \OpenAPI\OpenAPI\Models\Operations\PaymentsSubmitCreateMultipartResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/api/v2/payments/{id}/submit/', \OpenAPI\OpenAPI\Models\Operations\PaymentsSubmitCreateMultipartRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "paymentReadRequest1", "multipart");
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\PaymentsSubmitCreateMultipartResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->paymentRead = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\PaymentRead', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Retrieve all payment creditor accounts
      * 
      * @return \OpenAPI\OpenAPI\Models\Operations\RetrieveAllPaymentCreditorAccountsResponse

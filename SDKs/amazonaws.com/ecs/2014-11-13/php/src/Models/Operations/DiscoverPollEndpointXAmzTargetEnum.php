@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DiscoverPollEndpointXAmzTargetEnum: string
 {
     case AMAZON_EC2_CONTAINER_SERVICE_V20141113_DISCOVER_POLL_ENDPOINT = 'AmazonEC2ContainerServiceV20141113.DiscoverPollEndpoint';

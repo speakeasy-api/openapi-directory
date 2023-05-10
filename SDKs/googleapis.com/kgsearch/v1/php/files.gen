@@ -24,4 +24,6 @@ src/Models/Operations/KgsearchEntitiesSearchResponse.php
 src/Models/Shared/SearchResponse.php
 src/Models/Shared/AltEnum.php
 src/Models/Shared/XgafvEnum.php
+docs/sdk/README.md
+docs/entities/README.md
 USAGE.md

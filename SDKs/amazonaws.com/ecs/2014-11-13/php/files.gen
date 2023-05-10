@@ -443,4 +443,5 @@ src/Models/Shared/UpdateTaskProtectionRequest.php
 src/Models/Shared/UpdateTaskSetResponse.php
 src/Models/Shared/UpdateTaskSetRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

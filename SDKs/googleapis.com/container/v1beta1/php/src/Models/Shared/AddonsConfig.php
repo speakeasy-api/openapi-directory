@@ -68,6 +68,16 @@ class AddonsConfig
     public ?GcpFilestoreCsiDriverConfig $gcpFilestoreCsiDriverConfig = null;
     
     /**
+     * Configuration for the Cloud Storage Fuse CSI driver.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GcsFuseCsiDriverConfig $gcsFuseCsiDriverConfig
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('gcsFuseCsiDriverConfig')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GcsFuseCsiDriverConfig')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?GcsFuseCsiDriverConfig $gcsFuseCsiDriverConfig = null;
+    
+    /**
      * Configuration for the Backup for GKE Agent.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GkeBackupAgentConfig $gkeBackupAgentConfig
@@ -144,6 +154,7 @@ class AddonsConfig
 		$this->dnsCacheConfig = null;
 		$this->gcePersistentDiskCsiDriverConfig = null;
 		$this->gcpFilestoreCsiDriverConfig = null;
+		$this->gcsFuseCsiDriverConfig = null;
 		$this->gkeBackupAgentConfig = null;
 		$this->horizontalPodAutoscaling = null;
 		$this->httpLoadBalancing = null;

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeTimeBasedAutoScalingXAmzTargetEnum: string
 {
     case OPS_WORKS20130218_DESCRIBE_TIME_BASED_AUTO_SCALING = 'OpsWorks_20130218.DescribeTimeBasedAutoScaling';

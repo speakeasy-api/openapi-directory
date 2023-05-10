@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeScalingParametersActionEnum: string
 {
     case DESCRIBE_SCALING_PARAMETERS = 'DescribeScalingParameters';

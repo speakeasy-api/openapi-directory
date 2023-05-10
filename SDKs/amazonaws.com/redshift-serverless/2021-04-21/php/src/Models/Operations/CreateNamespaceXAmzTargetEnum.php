@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateNamespaceXAmzTargetEnum: string
 {
     case REDSHIFT_SERVERLESS_CREATE_NAMESPACE = 'RedshiftServerless.CreateNamespace';

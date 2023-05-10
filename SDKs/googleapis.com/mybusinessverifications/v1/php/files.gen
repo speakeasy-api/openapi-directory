@@ -59,4 +59,7 @@ src/Models/Shared/VerificationToken.php
 src/Models/Shared/GenerateVerificationTokenResponse.php
 src/Models/Shared/GenerateVerificationTokenRequest.php
 src/Models/Shared/Location.php
+docs/sdk/README.md
+docs/locations/README.md
+docs/verificationtokens/README.md
 USAGE.md

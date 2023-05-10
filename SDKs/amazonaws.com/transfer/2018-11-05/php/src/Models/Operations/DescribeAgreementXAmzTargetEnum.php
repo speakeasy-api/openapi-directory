@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeAgreementXAmzTargetEnum: string
 {
     case TRANSFER_SERVICE_DESCRIBE_AGREEMENT = 'TransferService.DescribeAgreement';

@@ -310,4 +310,14 @@ src/Models/Shared/SubtaskInformationPreviousStateEnum.php
 src/Models/Shared/SubtaskInformationStateEnum.php
 src/Models/Shared/SubtaskInformation.php
 src/Models/Shared/TaskUpdateParameter.php
+docs/sdk/README.md
+docs/accounts/README.md
+docs/applications/README.md
+docs/certificates/README.md
+docs/computenodes/README.md
+docs/files/README.md
+docs/jobschedules/README.md
+docs/jobs/README.md
+docs/pools/README.md
+docs/tasks/README.md
 USAGE.md

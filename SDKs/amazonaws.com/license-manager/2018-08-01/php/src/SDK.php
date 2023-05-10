@@ -461,7 +461,7 @@ class SDK
     }
 	
     /**
-     * Creates a grant for the specified license. A grant shares the use of license entitlements with specific Amazon Web Services accounts.
+     * Creates a grant for the specified license. A grant shares the use of license entitlements with a specific Amazon Web Services account, an organization, or an organizational unit (OU). For more information, see <a href="https://docs.aws.amazon.com/license-manager/latest/userguide/granted-licenses.html">Granted licenses in License Manager</a> in the <i>License Manager User Guide</i>.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\CreateGrantRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\CreateGrantResponse
@@ -543,7 +543,7 @@ class SDK
     }
 	
     /**
-     * Creates a new version of the specified grant.
+     * Creates a new version of the specified grant. For more information, see <a href="https://docs.aws.amazon.com/license-manager/latest/userguide/granted-licenses.html">Granted licenses in License Manager</a> in the <i>License Manager User Guide</i>.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\CreateGrantVersionRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\CreateGrantVersionResponse
@@ -2889,7 +2889,7 @@ class SDK
     }
 	
     /**
-     * Lists grants that are received but not accepted.
+     * Lists grants that are received. Received grants are grants created while specifying the recipient as this Amazon Web Services account, your organization, or an organizational unit (OU) to which this member account belongs.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ListReceivedGrantsRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\ListReceivedGrantsResponse

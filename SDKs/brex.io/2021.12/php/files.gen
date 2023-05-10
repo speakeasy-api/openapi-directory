@@ -77,6 +77,7 @@ src/Models/Operations/CompanyIdSuperRequest.php
 src/Models/Operations/CompanyIdSuperDefaultApplicationJSON.php
 src/Models/Operations/CompanyIdSuper200ApplicationJSON.php
 src/Models/Operations/CompanyIdSuperResponse.php
+src/Models/Operations/CompanyMonitorChangeTypesListSecurity.php
 src/Models/Operations/CompanyMonitorChangeTypesListDefaultApplicationJSON.php
 src/Models/Operations/CompanyMonitorChangeTypesListResponse.php
 src/Models/Operations/CompanyMonitorIdSecurity.php
@@ -84,6 +85,7 @@ src/Models/Operations/CompanyMonitorIdRequest.php
 src/Models/Operations/CompanyMonitorIdDefaultApplicationJSON.php
 src/Models/Operations/CompanyMonitorId200ApplicationJSON.php
 src/Models/Operations/CompanyMonitorIdResponse.php
+src/Models/Operations/CompanyMonitorListSecurity.php
 src/Models/Operations/CompanyMonitorListDefaultApplicationJSON.php
 src/Models/Operations/CompanyMonitorList200ApplicationJSON.php
 src/Models/Operations/CompanyMonitorListResponse.php
@@ -102,6 +104,7 @@ src/Models/Operations/CompanyNotificationIdRequest.php
 src/Models/Operations/CompanyNotificationIdDefaultApplicationJSON.php
 src/Models/Operations/CompanyNotificationId200ApplicationJSON.php
 src/Models/Operations/CompanyNotificationIdResponse.php
+src/Models/Operations/CompanyNotificationListSecurity.php
 src/Models/Operations/CompanyNotificationListDefaultApplicationJSON.php
 src/Models/Operations/CompanyNotificationList200ApplicationJSON.php
 src/Models/Operations/CompanyNotificationListResponse.php
@@ -162,6 +165,7 @@ src/Models/Operations/NifComprehensiveRequest.php
 src/Models/Operations/NifComprehensiveDefaultApplicationJSON.php
 src/Models/Operations/NifComprehensive200ApplicationJSON.php
 src/Models/Operations/NifComprehensiveResponse.php
+src/Models/Operations/PepMonitorListSecurity.php
 src/Models/Operations/PepMonitorListDefaultApplicationJSON.php
 src/Models/Operations/PepMonitorList200ApplicationJSON.php
 src/Models/Operations/PepMonitorListResponse.php
@@ -252,12 +256,15 @@ src/Models/Operations/ProductUpdateActionRequest.php
 src/Models/Operations/ProductUpdateActionDefaultApplicationJSON.php
 src/Models/Operations/ProductUpdateAction200ApplicationJSON.php
 src/Models/Operations/ProductUpdateActionResponse.php
+src/Models/Operations/HealthCheckSecurity.php
 src/Models/Operations/HealthCheckDefaultApplicationJSON.php
 src/Models/Operations/HealthCheck200ApplicationJSON.php
 src/Models/Operations/HealthCheckResponse.php
+src/Models/Operations/SystemCountriesSecurity.php
 src/Models/Operations/SystemCountriesDefaultApplicationJSON.php
 src/Models/Operations/SystemCountries200ApplicationJSON.php
 src/Models/Operations/SystemCountriesResponse.php
+src/Models/Operations/SystemPricelistSecurity.php
 src/Models/Operations/SystemPricelistDefaultApplicationJSON.php
 src/Models/Operations/SystemPricelist200ApplicationJSON.php
 src/Models/Operations/SystemPricelistResponse.php
@@ -305,4 +312,14 @@ src/Models/Shared/Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetRe
 src/Models/Shared/Oneapi1v11einVerification1lookupGetResponses200ContentApplication1jsonSchemaPropertiesMatchedEinCompanies.php
 src/Models/Shared/Oneapi1v11ibanVerification1checkIbanPostResponses200ContentApplication1jsonSchema.php
 src/Models/Shared/Oneapi1v11company1search1name1Percent7BcountryPercent7D1Percent7BnamePercent7DGetResponses200ContentApplication1jsonSchema.php
+docs/sdk/README.md
+docs/v1company/README.md
+docs/v1einverification/README.md
+docs/v1ibanverification/README.md
+docs/v1nifverification/README.md
+docs/v1pepsanction/README.md
+docs/v1product/README.md
+docs/v1system/README.md
+docs/v1tinverification/README.md
+docs/v1vatverification/README.md
 USAGE.md

@@ -66,7 +66,7 @@ class RoadDistance
      */
 	public function confirmCarbonOffset5(
         \OpenAPI\OpenAPI\Models\Operations\ConfirmCarbonOffset5RequestBody $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ConfirmCarbonOffset5Response
     {
         $baseUrl = RoadDistance::CONFIRM_CARBON_OFFSET5_SERVERS[0];
@@ -104,7 +104,7 @@ class RoadDistance
      */
 	public function confirmPayment5(
         \OpenAPI\OpenAPI\Models\Operations\ConfirmPayment5RequestBody $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ConfirmPayment5Response
     {
         $baseUrl = RoadDistance::CONFIRM_PAYMENT5_SERVERS[0];
@@ -142,7 +142,7 @@ class RoadDistance
      */
 	public function confirmPaymentOfTransaction5(
         \OpenAPI\OpenAPI\Models\Operations\ConfirmPaymentOfTransaction5RequestBody $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ConfirmPaymentOfTransaction5Response
     {
         $baseUrl = RoadDistance::CONFIRM_PAYMENT_OF_TRANSACTION5_SERVERS[0];
@@ -180,7 +180,7 @@ class RoadDistance
      */
 	public function confirmsPlanting5(
         \OpenAPI\OpenAPI\Models\Operations\ConfirmsPlanting5RequestBody $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\ConfirmsPlanting5Response
     {
         $baseUrl = RoadDistance::CONFIRMS_PLANTING5_SERVERS[0];
@@ -218,7 +218,7 @@ class RoadDistance
      */
 	public function roadDistance(
         \OpenAPI\OpenAPI\Models\Operations\RoadDistanceRequestBody $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\RoadDistanceResponse
     {
         $baseUrl = RoadDistance::ROAD_DISTANCE_SERVERS[0];

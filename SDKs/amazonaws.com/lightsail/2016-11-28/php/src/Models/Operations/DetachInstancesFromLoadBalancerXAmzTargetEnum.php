@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DetachInstancesFromLoadBalancerXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_DETACH_INSTANCES_FROM_LOAD_BALANCER = 'Lightsail_20161128.DetachInstancesFromLoadBalancer';

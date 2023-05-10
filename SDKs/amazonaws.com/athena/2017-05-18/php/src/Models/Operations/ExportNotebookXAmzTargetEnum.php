@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ExportNotebookXAmzTargetEnum: string
 {
     case AMAZON_ATHENA_EXPORT_NOTEBOOK = 'AmazonAthena.ExportNotebook';

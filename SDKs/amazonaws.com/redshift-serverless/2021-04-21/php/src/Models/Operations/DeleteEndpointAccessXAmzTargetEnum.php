@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteEndpointAccessXAmzTargetEnum: string
 {
     case REDSHIFT_SERVERLESS_DELETE_ENDPOINT_ACCESS = 'RedshiftServerless.DeleteEndpointAccess';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteChangeSetActionEnum: string
 {
     case DELETE_CHANGE_SET = 'DeleteChangeSet';

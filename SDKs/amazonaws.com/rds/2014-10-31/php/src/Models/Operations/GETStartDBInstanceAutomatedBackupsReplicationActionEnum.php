@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETStartDBInstanceAutomatedBackupsReplicationActionEnum: string
 {
     case START_DB_INSTANCE_AUTOMATED_BACKUPS_REPLICATION = 'StartDBInstanceAutomatedBackupsReplication';

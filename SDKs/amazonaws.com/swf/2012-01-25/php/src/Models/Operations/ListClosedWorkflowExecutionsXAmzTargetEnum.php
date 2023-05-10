@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListClosedWorkflowExecutionsXAmzTargetEnum: string
 {
     case SIMPLE_WORKFLOW_SERVICE_LIST_CLOSED_WORKFLOW_EXECUTIONS = 'SimpleWorkflowService.ListClosedWorkflowExecutions';

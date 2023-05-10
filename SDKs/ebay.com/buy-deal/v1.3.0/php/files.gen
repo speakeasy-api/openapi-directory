@@ -45,4 +45,8 @@ src/Models/Shared/Coupon.php
 src/Models/Shared/EventSearchResponse.php
 src/Models/Shared/EventItemSearchResponse.php
 src/Models/Shared/EventItem.php
+docs/sdk/README.md
+docs/dealitem/README.md
+docs/event/README.md
+docs/eventitem/README.md
 USAGE.md

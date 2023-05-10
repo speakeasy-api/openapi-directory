@@ -17,10 +17,10 @@ class RequisitionByIdResponse
     /**
      * Get requisition by ID
      * 
-     * @var ?\OpenAPI\OpenAPI\Models\Shared\RequisitionV2 $requisitionV2
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\Requisition $requisition
      */
 	
-    public ?\OpenAPI\OpenAPI\Models\Shared\RequisitionV2 $requisitionV2 = null;
+    public ?\OpenAPI\OpenAPI\Models\Shared\Requisition $requisition = null;
     
 	
     public int $statusCode;
@@ -60,15 +60,24 @@ class RequisitionByIdResponse
 	
     public ?array $requisitionById404ApplicationJSONObject = null;
     
+    /**
+     * Nordigen rate limit exceeded
+     * 
+     * @var ?array<string, mixed> $requisitionById429ApplicationJSONObject
+     */
+	
+    public ?array $requisitionById429ApplicationJSONObject = null;
+    
 	public function __construct()
 	{
 		$this->contentType = "";
-		$this->requisitionV2 = null;
+		$this->requisition = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
 		$this->requisitionById400ApplicationJSONObject = null;
 		$this->requisitionById401ApplicationJSONObject = null;
 		$this->requisitionById403ApplicationJSONObject = null;
 		$this->requisitionById404ApplicationJSONObject = null;
+		$this->requisitionById429ApplicationJSONObject = null;
 	}
 }

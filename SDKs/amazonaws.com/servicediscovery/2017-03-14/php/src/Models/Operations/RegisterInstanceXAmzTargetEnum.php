@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RegisterInstanceXAmzTargetEnum: string
 {
     case ROUTE53_AUTO_NAMING_V20170314_REGISTER_INSTANCE = 'Route53AutoNaming_v20170314.RegisterInstance';

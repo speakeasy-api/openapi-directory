@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum WriteRecordsXAmzTargetEnum: string
 {
     case TIMESTREAM20181101_WRITE_RECORDS = 'Timestream_20181101.WriteRecords';

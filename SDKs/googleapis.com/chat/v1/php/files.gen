@@ -166,4 +166,7 @@ src/Models/Shared/DialogAction.php
 src/Models/Shared/Dialog.php
 src/Models/Shared/ActionStatusStatusCodeEnum.php
 src/Models/Shared/ActionStatus.php
+docs/sdk/README.md
+docs/media/README.md
+docs/spaces/README.md
 USAGE.md

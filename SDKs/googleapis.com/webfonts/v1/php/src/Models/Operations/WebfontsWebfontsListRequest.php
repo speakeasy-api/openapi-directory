@@ -44,6 +44,22 @@ class WebfontsWebfontsListRequest
     public ?string $callback = null;
     
     /**
+     * Controls the font urls in `Webfont.files`, by default, static ttf fonts are sent.
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Operations\WebfontsWebfontsListCapabilityEnum> $capability
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=capability')]
+    public ?array $capability = null;
+    
+    /**
+     * Filters by Webfont.family, using literal match. If not set, returns all families
+     * 
+     * @var ?array<string> $family
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=family')]
+    public ?array $family = null;
+    
+    /**
      * Selector specifying which fields to include in a partial response.
      * 
      * @var ?string $fields
@@ -92,6 +108,14 @@ class WebfontsWebfontsListRequest
     public ?WebfontsWebfontsListSortEnum $sort = null;
     
     /**
+     * Filters by Webfont.subset, if subset is found in Webfont.subsets. If not set, returns all families.
+     * 
+     * @var ?string $subset
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=subset')]
+    public ?string $subset = null;
+    
+    /**
      * Legacy upload protocol for media (e.g. "media", "multipart").
      * 
      * @var ?string $uploadType
@@ -113,12 +137,15 @@ class WebfontsWebfontsListRequest
 		$this->accessToken = null;
 		$this->alt = null;
 		$this->callback = null;
+		$this->capability = null;
+		$this->family = null;
 		$this->fields = null;
 		$this->key = null;
 		$this->oauthToken = null;
 		$this->prettyPrint = null;
 		$this->quotaUser = null;
 		$this->sort = null;
+		$this->subset = null;
 		$this->uploadType = null;
 		$this->uploadProtocol = null;
 	}

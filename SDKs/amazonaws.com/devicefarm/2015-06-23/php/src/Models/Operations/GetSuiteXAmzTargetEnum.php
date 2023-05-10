@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetSuiteXAmzTargetEnum: string
 {
     case DEVICE_FARM20150623_GET_SUITE = 'DeviceFarm_20150623.GetSuite';

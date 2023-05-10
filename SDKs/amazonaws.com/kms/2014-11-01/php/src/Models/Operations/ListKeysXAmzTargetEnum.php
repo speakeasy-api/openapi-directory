@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListKeysXAmzTargetEnum: string
 {
     case TRENT_SERVICE_LIST_KEYS = 'TrentService.ListKeys';

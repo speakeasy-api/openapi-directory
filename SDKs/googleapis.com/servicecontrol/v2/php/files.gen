@@ -43,4 +43,6 @@ src/Models/Shared/Auth.php
 src/Models/Shared/Api.php
 src/Models/Shared/XgafvEnum.php
 src/Models/Shared/ReportRequest.php
+docs/sdk/README.md
+docs/services/README.md
 USAGE.md

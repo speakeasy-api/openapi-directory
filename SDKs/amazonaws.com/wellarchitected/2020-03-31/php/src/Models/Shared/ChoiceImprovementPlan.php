@@ -33,7 +33,7 @@ class ChoiceImprovementPlan
     public ?string $displayText = null;
     
     /**
-     * <p>The improvement plan URL for a question.</p> <p>This value is only available if the question has been answered.</p>
+     * <p>The improvement plan URL for a question in an Amazon Web Services official lenses.</p> <p>This value is only available if the question has been answered.</p> <p>This value does not apply to custom lenses.</p>
      * 
      * @var ?string $improvementPlanUrl
      */

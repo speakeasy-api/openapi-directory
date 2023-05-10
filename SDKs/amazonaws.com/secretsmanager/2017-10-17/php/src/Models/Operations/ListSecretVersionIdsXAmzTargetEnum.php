@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListSecretVersionIdsXAmzTargetEnum: string
 {
     case SECRETSMANAGER_LIST_SECRET_VERSION_IDS = 'secretsmanager.ListSecretVersionIds';

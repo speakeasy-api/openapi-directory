@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class WidgetMarkup
 {
     /**
-     * A list of buttons. Buttons is also oneof data and only one of these fields should be set.
+     * A list of buttons. Buttons is also `oneof data` and only one of these fields should be set.
      * 
      * @var ?array<\OpenAPI\OpenAPI\Models\Shared\Button> $buttons
      */
@@ -48,7 +48,7 @@ class WidgetMarkup
     public ?KeyValue $keyValue = null;
     
     /**
-     * A paragraph of text. Formatted text supported.
+     * A paragraph of text. Formatted text supported. For more information about formatting text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\TextParagraph $textParagraph
      */

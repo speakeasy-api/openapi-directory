@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteWorkspaceBundleXAmzTargetEnum: string
 {
     case WORKSPACES_SERVICE_DELETE_WORKSPACE_BUNDLE = 'WorkspacesService.DeleteWorkspaceBundle';

@@ -23,6 +23,7 @@ class LicenseImagesRequest
      * (Deprecated) Image format
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Operations\LicenseImagesFormatEnum $format
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=format')]
     public ?LicenseImagesFormatEnum $format = null;

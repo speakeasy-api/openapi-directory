@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class PaymentInstrumentRevealInfo
 {
     /**
-     * The cvc of the card.
+     * The CVC2 value of the card.
      * 
      * @var string $cvc
      */
@@ -31,7 +31,7 @@ class PaymentInstrumentRevealInfo
     public Expiry $expiration;
     
     /**
-     * The pan number of the card.
+     * The primary account number (PAN) of the card.
      * 
      * @var string $pan
      */

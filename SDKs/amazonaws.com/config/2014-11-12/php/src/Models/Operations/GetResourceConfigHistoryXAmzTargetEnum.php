@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetResourceConfigHistoryXAmzTargetEnum: string
 {
     case STARLING_DOVE_SERVICE_GET_RESOURCE_CONFIG_HISTORY = 'StarlingDoveService.GetResourceConfigHistory';

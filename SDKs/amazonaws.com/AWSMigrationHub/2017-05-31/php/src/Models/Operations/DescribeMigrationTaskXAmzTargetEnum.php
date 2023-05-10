@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeMigrationTaskXAmzTargetEnum: string
 {
     case AWS_MIGRATION_HUB_DESCRIBE_MIGRATION_TASK = 'AWSMigrationHub.DescribeMigrationTask';

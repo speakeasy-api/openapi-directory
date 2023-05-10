@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UntagResourceXAmzTargetEnum: string
 {
     case REDSHIFT_SERVERLESS_UNTAG_RESOURCE = 'RedshiftServerless.UntagResource';

@@ -179,9 +179,11 @@ class Token
      * 
      * Return a list of all tokens for the current Vendor
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListTokensSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ListTokensResponse
      */
 	public function listTokens(
+        \OpenAPI\OpenAPI\Models\Operations\ListTokensSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ListTokensResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -189,7 +191,8 @@ class Token
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

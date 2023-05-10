@@ -21,7 +21,7 @@ enum GoogleCloudMlV1AcceleratorConfigTypeEnum: string
     case NVIDIA_TESLA_A100 = 'NVIDIA_TESLA_A100';
     case TPU_V2 = 'TPU_V2';
     case TPU_V3 = 'TPU_V3';
-    case TPU_V4 = 'TPU_V4';
     case TPU_V2_POD = 'TPU_V2_POD';
     case TPU_V3_POD = 'TPU_V3_POD';
+    case TPU_V4_POD = 'TPU_V4_POD';
 }

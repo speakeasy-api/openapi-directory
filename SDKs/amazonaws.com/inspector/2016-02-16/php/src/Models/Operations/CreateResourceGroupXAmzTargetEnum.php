@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateResourceGroupXAmzTargetEnum: string
 {
     case INSPECTOR_SERVICE_CREATE_RESOURCE_GROUP = 'InspectorService.CreateResourceGroup';

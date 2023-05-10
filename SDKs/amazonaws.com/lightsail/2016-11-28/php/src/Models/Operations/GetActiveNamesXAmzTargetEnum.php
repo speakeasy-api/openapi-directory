@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetActiveNamesXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_GET_ACTIVE_NAMES = 'Lightsail_20161128.GetActiveNames';

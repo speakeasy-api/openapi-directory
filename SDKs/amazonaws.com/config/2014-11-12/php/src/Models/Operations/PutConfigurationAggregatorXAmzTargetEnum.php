@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutConfigurationAggregatorXAmzTargetEnum: string
 {
     case STARLING_DOVE_SERVICE_PUT_CONFIGURATION_AGGREGATOR = 'StarlingDoveService.PutConfigurationAggregator';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListContainersXAmzTargetEnum: string
 {
     case MEDIA_STORE20170901_LIST_CONTAINERS = 'MediaStore_20170901.ListContainers';

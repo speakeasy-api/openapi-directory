@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTCreateLaunchConfigurationActionEnum: string
 {
     case CREATE_LAUNCH_CONFIGURATION = 'CreateLaunchConfiguration';

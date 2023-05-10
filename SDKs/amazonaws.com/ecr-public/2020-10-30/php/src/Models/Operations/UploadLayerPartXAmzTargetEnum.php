@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UploadLayerPartXAmzTargetEnum: string
 {
     case SPENCER_FRONTEND_SERVICE_UPLOAD_LAYER_PART = 'SpencerFrontendService.UploadLayerPart';

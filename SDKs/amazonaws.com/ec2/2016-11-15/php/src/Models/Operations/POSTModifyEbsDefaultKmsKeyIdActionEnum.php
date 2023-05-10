@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTModifyEbsDefaultKmsKeyIdActionEnum: string
 {
     case MODIFY_EBS_DEFAULT_KMS_KEY_ID = 'ModifyEbsDefaultKmsKeyId';

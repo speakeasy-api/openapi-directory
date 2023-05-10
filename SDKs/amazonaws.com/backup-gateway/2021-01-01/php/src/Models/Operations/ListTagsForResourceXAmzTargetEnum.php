@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListTagsForResourceXAmzTargetEnum: string
 {
     case BACKUP_ON_PREMISES_V20210101_LIST_TAGS_FOR_RESOURCE = 'BackupOnPremises_v20210101.ListTagsForResource';

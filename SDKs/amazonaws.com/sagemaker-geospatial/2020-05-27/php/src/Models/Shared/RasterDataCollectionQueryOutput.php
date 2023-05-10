@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * RasterDataCollectionQueryOutput - <p/>
+ * RasterDataCollectionQueryOutput - The output structure contains the Raster Data Collection Query input along with some additional metadata.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public
@@ -36,8 +36,8 @@ class RasterDataCollectionQueryOutput
     public string $rasterDataCollectionName;
     
 	#[\JMS\Serializer\Annotation\SerializedName('TimeRangeFilter')]
-    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\TimeRangeFilterInput')]
-    public TimeRangeFilterInput $timeRangeFilter;
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\TimeRangeFilterOutput')]
+    public TimeRangeFilterOutput $timeRangeFilter;
     
 	public function __construct()
 	{
@@ -45,6 +45,6 @@ class RasterDataCollectionQueryOutput
 		$this->propertyFilters = null;
 		$this->rasterDataCollectionArn = "";
 		$this->rasterDataCollectionName = "";
-		$this->timeRangeFilter = new \OpenAPI\OpenAPI\Models\Shared\TimeRangeFilterInput();
+		$this->timeRangeFilter = new \OpenAPI\OpenAPI\Models\Shared\TimeRangeFilterOutput();
 	}
 }

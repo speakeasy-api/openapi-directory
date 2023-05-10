@@ -38,7 +38,7 @@ class Projects
 	}
 	
     /**
-     * Fetches processor types. Note that we do not use ListProcessorTypes here because it is not paginated.
+     * Fetches processor types. Note that we don't use ListProcessorTypes here, because it isn't paginated.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DocumentaiProjectsLocationsFetchProcessorTypesRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\DocumentaiProjectsLocationsFetchProcessorTypesSecurity $security
@@ -190,7 +190,7 @@ class Projects
     }
 	
     /**
-     * Creates a processor from the type processor that the user chose. The processor will be at "ENABLED" state by default after its creation.
+     * Creates a processor from the ProcessorType provided. The processor will be at `ENABLED` state by default after its creation.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DocumentaiProjectsLocationsProcessorsCreateRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\DocumentaiProjectsLocationsProcessorsCreateSecurity $security
@@ -662,7 +662,7 @@ class Projects
     }
 	
     /**
-     * Trains a new processor version. Operation metadata is returned as cloud_documentai_core.TrainProcessorVersionMetadata.
+     * Trains a new processor version. Operation metadata is returned as TrainProcessorVersionMetadata.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DocumentaiProjectsLocationsProcessorsProcessorVersionsTrainRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\DocumentaiProjectsLocationsProcessorsProcessorVersionsTrainSecurity $security

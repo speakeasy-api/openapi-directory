@@ -11,6 +11,11 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 class UpdateServiceInstanceInput
 {
+	#[\JMS\Serializer\Annotation\SerializedName('clientToken')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $clientToken = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('deploymentType')]
     #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\DeploymentUpdateTypeEnum>')]
     public DeploymentUpdateTypeEnum $deploymentType;
@@ -40,6 +45,7 @@ class UpdateServiceInstanceInput
     
 	public function __construct()
 	{
+		$this->clientToken = null;
 		$this->deploymentType = \OpenAPI\OpenAPI\Models\Shared\DeploymentUpdateTypeEnum::NONE;
 		$this->name = "";
 		$this->serviceName = "";

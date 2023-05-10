@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetSessionXAmzTargetEnum: string
 {
     case AMAZON_ATHENA_GET_SESSION = 'AmazonAthena.GetSession';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteAnomalySubscriptionXAmzTargetEnum: string
 {
     case AWS_INSIGHTS_INDEX_SERVICE_DELETE_ANOMALY_SUBSCRIPTION = 'AWSInsightsIndexService.DeleteAnomalySubscription';

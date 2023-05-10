@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum SetLoadBasedAutoScalingXAmzTargetEnum: string
 {
     case OPS_WORKS20130218_SET_LOAD_BASED_AUTO_SCALING = 'OpsWorks_20130218.SetLoadBasedAutoScaling';

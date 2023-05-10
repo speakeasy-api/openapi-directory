@@ -146,4 +146,6 @@ src/Models/Shared/OSPolicyAssignmentInstanceFilterInventory.php
 src/Models/Shared/OSPolicyAssignmentLabelSet.php
 src/Models/Shared/ListOSPolicyAssignmentsResponse.php
 src/Models/Shared/ListOSPolicyAssignmentRevisionsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

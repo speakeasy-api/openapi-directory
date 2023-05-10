@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UntagProjectXAmzTargetEnum: string
 {
     case CODE_STAR20170419_UNTAG_PROJECT = 'CodeStar_20170419.UntagProject';

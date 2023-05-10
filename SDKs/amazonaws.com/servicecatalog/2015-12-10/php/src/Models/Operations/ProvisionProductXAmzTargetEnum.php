@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ProvisionProductXAmzTargetEnum: string
 {
     case AWS242_SERVICE_CATALOG_SERVICE_PROVISION_PRODUCT = 'AWS242ServiceCatalogService.ProvisionProduct';

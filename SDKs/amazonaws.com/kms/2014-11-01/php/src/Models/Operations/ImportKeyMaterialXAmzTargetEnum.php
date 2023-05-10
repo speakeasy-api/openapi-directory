@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ImportKeyMaterialXAmzTargetEnum: string
 {
     case TRENT_SERVICE_IMPORT_KEY_MATERIAL = 'TrentService.ImportKeyMaterial';

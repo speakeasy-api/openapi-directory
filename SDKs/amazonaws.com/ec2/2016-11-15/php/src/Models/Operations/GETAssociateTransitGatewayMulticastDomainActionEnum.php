@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETAssociateTransitGatewayMulticastDomainActionEnum: string
 {
     case ASSOCIATE_TRANSIT_GATEWAY_MULTICAST_DOMAIN = 'AssociateTransitGatewayMulticastDomain';

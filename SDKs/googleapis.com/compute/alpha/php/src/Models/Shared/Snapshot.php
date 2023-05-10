@@ -268,6 +268,16 @@ class Snapshot
     public ?CustomerEncryptionKey $sourceDiskEncryptionKey = null;
     
     /**
+     * The source disk whose recovery checkpoint will be used to create this snapshot.
+     * 
+     * @var ?string $sourceDiskForRecoveryCheckpoint
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('sourceDiskForRecoveryCheckpoint')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $sourceDiskForRecoveryCheckpoint = null;
+    
+    /**
      * [Output Only] The ID value of the disk used to create this snapshot. This value may be used to determine whether the snapshot was taken from the current or a previous instance of a given disk name.
      * 
      * @var ?string $sourceDiskId
@@ -395,6 +405,7 @@ class Snapshot
 		$this->snapshotType = null;
 		$this->sourceDisk = null;
 		$this->sourceDiskEncryptionKey = null;
+		$this->sourceDiskForRecoveryCheckpoint = null;
 		$this->sourceDiskId = null;
 		$this->sourceInstantSnapshot = null;
 		$this->sourceInstantSnapshotId = null;

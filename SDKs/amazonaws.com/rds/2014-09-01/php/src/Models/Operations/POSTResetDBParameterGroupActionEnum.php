@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTResetDBParameterGroupActionEnum: string
 {
     case RESET_DB_PARAMETER_GROUP = 'ResetDBParameterGroup';

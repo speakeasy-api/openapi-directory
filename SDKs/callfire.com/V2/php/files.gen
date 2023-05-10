@@ -240,7 +240,9 @@ src/Models/Operations/GetAccountResponse.php
 src/Models/Operations/GetApiCredentialSecurity.php
 src/Models/Operations/GetApiCredentialRequest.php
 src/Models/Operations/GetApiCredentialResponse.php
+src/Models/Operations/GetBillingPlanUsageSecurity.php
 src/Models/Operations/GetBillingPlanUsageResponse.php
+src/Models/Operations/GetCallerIdsSecurity.php
 src/Models/Operations/GetCallerIdsResponse.php
 src/Models/Operations/GetCreditUsageSecurity.php
 src/Models/Operations/GetCreditUsageRequest.php
@@ -544,4 +546,16 @@ src/Models/Shared/Webhook.php
 src/Models/Shared/ItemListWebhookResource.php
 src/Models/Shared/WebhookResource.php
 src/Models/Shared/WebhookPage.php
+docs/sdk/README.md
+docs/calls/README.md
+docs/campaigns/README.md
+docs/contacts/README.md
+docs/keywords/README.md
+docs/me/README.md
+docs/media/README.md
+docs/numbers/README.md
+docs/orders/README.md
+docs/reports/README.md
+docs/texts/README.md
+docs/webhooks/README.md
 USAGE.md

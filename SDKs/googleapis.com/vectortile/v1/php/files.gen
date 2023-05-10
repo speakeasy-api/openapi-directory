@@ -30,4 +30,6 @@ src/Models/Shared/Row.php
 src/Models/Shared/TileCoordinates.php
 src/Models/Shared/AltEnum.php
 src/Models/Shared/XgafvEnum.php
+docs/sdk/README.md
+docs/terraintiles/README.md
 USAGE.md

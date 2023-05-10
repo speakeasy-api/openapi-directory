@@ -236,4 +236,11 @@ src/Models/Shared/TwoHundredResultResultAstRules.php
 src/Models/Shared/TwoHundredResultResultAst.php
 src/Models/Shared/TwoHundredResultResult.php
 src/Models/Shared/TwoHundredResult.php
+docs/sdk/README.md
+docs/compileapi/README.md
+docs/configapi/README.md
+docs/dataapi/README.md
+docs/healthapi/README.md
+docs/policyapi/README.md
+docs/queryapi/README.md
 USAGE.md

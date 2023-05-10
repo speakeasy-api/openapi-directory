@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DisassociateConnectionAliasXAmzTargetEnum: string
 {
     case WORKSPACES_SERVICE_DISASSOCIATE_CONNECTION_ALIAS = 'WorkspacesService.DisassociateConnectionAlias';

@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * Model - The properties of a model as returned by the <a>Search</a> API.
+ * Model - The properties of a model as returned by the <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutResourcePolicyXAmzTargetEnum: string
 {
     case AWS_ORGANIZATIONS_V20161128_PUT_RESOURCE_POLICY = 'AWSOrganizationsV20161128.PutResourcePolicy';

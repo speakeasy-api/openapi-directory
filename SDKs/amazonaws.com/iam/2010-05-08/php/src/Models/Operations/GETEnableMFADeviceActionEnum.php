@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETEnableMFADeviceActionEnum: string
 {
     case ENABLE_MFA_DEVICE = 'EnableMFADevice';

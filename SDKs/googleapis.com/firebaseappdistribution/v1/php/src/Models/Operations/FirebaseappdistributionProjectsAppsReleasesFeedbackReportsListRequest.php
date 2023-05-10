@@ -52,14 +52,6 @@ class FirebaseappdistributionProjectsAppsReleasesFeedbackReportsListRequest
     public ?string $fields = null;
     
     /**
-     * The expression to filter feedback reports listed in the response. To learn more about filtering, refer to [Google's AIP-160 standard](http://aip.dev/160). Supported fields: - `tester` - `createTime` supports `<`, `<=`, `>` and `>=`, and expects an RFC-3339 formatted string Example: - `createTime <= "2023-03-10T00:00:00+04:00"` - `tester = "projects/-/testers/*@example.com"`
-     * 
-     * @var ?string $filter
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter')]
-    public ?string $filter = null;
-    
-    /**
      * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
      * 
      * @var ?string $key
@@ -74,14 +66,6 @@ class FirebaseappdistributionProjectsAppsReleasesFeedbackReportsListRequest
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=oauth_token')]
     public ?string $oauthToken = null;
-    
-    /**
-     * The fields used to order releases. Supported fields: - `createTime` - `tester` To specify descending order for a field, append a "desc" suffix, for example, `createTime desc`. If this parameter is not set, releases are ordered by `createTime` in descending order.
-     * 
-     * @var ?string $orderBy
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=orderBy')]
-    public ?string $orderBy = null;
     
     /**
      * The maximum number of feedback reports to return. The service may return fewer than this value. The valid range is [1-100]; If unspecified (0), at most 25 feedback reports are returned. Values above 100 are coerced to 100.
@@ -146,10 +130,8 @@ class FirebaseappdistributionProjectsAppsReleasesFeedbackReportsListRequest
 		$this->alt = null;
 		$this->callback = null;
 		$this->fields = null;
-		$this->filter = null;
 		$this->key = null;
 		$this->oauthToken = null;
-		$this->orderBy = null;
 		$this->pageSize = null;
 		$this->pageToken = null;
 		$this->parent = "";

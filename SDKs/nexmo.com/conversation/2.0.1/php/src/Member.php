@@ -148,11 +148,14 @@ class Member
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\GetMembersRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\GetMembersResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function getMembers(
         \OpenAPI\OpenAPI\Models\Operations\GetMembersRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\GetMembersResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/conversations/{conversation_id}/members', \OpenAPI\OpenAPI\Models\Operations\GetMembersRequest::class, $request);
         

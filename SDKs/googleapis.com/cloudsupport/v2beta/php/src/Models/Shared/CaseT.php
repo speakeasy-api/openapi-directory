@@ -28,6 +28,16 @@ class CaseT
     public ?CaseClassification $classification = null;
     
     /**
+     * A user-supplied email address to send case update notifications for. This should only be used in BYOID flows, where we cannot infer the user's email address directly from their EUCs.
+     * 
+     * @var ?string $contactEmail
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('contactEmail')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $contactEmail = null;
+    
+    /**
      * Output only. The time this case was created.
      * 
      * @var ?string $createTime
@@ -98,7 +108,7 @@ class CaseT
     public ?string $name = null;
     
     /**
-     * The priority of this case. If this is set, do not set severity.
+     * The priority of this case.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\CasePriorityEnum $priority
      */
@@ -108,7 +118,7 @@ class CaseT
     public ?CasePriorityEnum $priority = null;
     
     /**
-     * The severity of this case. Deprecated. Use priority instead.
+     * REMOVED. The severity of this case. Use priority instead.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\CaseSeverityEnum $severity
      */
@@ -170,6 +180,7 @@ class CaseT
 	public function __construct()
 	{
 		$this->classification = null;
+		$this->contactEmail = null;
 		$this->createTime = null;
 		$this->creator = null;
 		$this->description = null;

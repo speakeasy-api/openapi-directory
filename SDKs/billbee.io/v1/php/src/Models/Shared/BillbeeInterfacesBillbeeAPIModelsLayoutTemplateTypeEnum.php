@@ -9,12 +9,12 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Shared;
 
 
-enum BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnum: string
+enum BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnum: int
 {
-    case ZERO = '0';
-    case ONE = '1';
-    case TWO = '2';
-    case THREE = '3';
-    case FOUR = '4';
-    case FIVE = '5';
+    case ZERO = 0;
+    case ONE = 1;
+    case TWO = 2;
+    case THREE = 3;
+    case FOUR = 4;
+    case FIVE = 5;
 }

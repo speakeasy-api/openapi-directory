@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETListAttachedUserPoliciesActionEnum: string
 {
     case LIST_ATTACHED_USER_POLICIES = 'ListAttachedUserPolicies';

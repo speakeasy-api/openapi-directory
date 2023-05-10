@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetMailDomainXAmzTargetEnum: string
 {
     case WORK_MAIL_SERVICE_GET_MAIL_DOMAIN = 'WorkMailService.GetMailDomain';

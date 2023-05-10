@@ -98,4 +98,6 @@ src/Models/Shared/V2ModelContentCategoriesVersionEnum.php
 src/Models/Shared/V2Model.php
 src/Models/Shared/ClassifyTextResponse.php
 src/Models/Shared/ClassifyTextRequest.php
+docs/sdk/README.md
+docs/documents/README.md
 USAGE.md

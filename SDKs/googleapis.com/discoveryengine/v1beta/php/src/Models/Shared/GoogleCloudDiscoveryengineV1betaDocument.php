@@ -28,7 +28,7 @@ class GoogleCloudDiscoveryengineV1betaDocument
     public ?string $id = null;
     
     /**
-     * The JSON string representation of the document. It should conform to the registered schema or an INVALID_ARGUMENT error is thrown.
+     * The JSON string representation of the document. It should conform to the registered Schema.schema or an `INVALID_ARGUMENT` error is thrown.
      * 
      * @var ?string $jsonData
      */
@@ -68,7 +68,7 @@ class GoogleCloudDiscoveryengineV1betaDocument
     public ?string $schemaId = null;
     
     /**
-     * The structured JSON data for the document. It should conform to the registered schema or an INVALID_ARGUMENT error is thrown.
+     * The structured JSON data for the document. It should conform to the registered Schema.schema or an `INVALID_ARGUMENT` error is thrown.
      * 
      * @var ?array<string, mixed> $structData
      */

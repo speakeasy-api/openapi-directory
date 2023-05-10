@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListExperienceEntitiesXAmzTargetEnum: string
 {
     case AWS_KENDRA_FRONTEND_SERVICE_LIST_EXPERIENCE_ENTITIES = 'AWSKendraFrontendService.ListExperienceEntities';

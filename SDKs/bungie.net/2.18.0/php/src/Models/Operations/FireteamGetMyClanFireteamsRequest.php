@@ -47,6 +47,7 @@ class FireteamGetMyClanFireteamsRequest
      * Deprecated parameter, ignored.
      * 
      * @var int $page
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
 	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=page')]
     public int $page;

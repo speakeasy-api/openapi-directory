@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListIcd10CMInferenceJobsXAmzTargetEnum: string
 {
     case COMPREHEND_MEDICAL20181030_LIST_ICD10_CM_INFERENCE_JOBS = 'ComprehendMedical_20181030.ListICD10CMInferenceJobs';

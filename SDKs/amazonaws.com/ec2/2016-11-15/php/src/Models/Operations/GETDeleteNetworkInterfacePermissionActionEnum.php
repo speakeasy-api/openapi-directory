@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteNetworkInterfacePermissionActionEnum: string
 {
     case DELETE_NETWORK_INTERFACE_PERMISSION = 'DeleteNetworkInterfacePermission';

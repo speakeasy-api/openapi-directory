@@ -197,6 +197,16 @@ class GoogleCloudAssuredworkloadsV1Workload
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse $saaEnrollmentResponse = null;
     
+    /**
+     * Optional. Indicates whether the e-mail notification for a violation is enabled for a workload. This value will be by default True, and if not present will be considered as true. This should only be updated via updateWorkload call. Any Changes to this field during the createWorkload call will not be honored.
+     * 
+     * @var ?bool $violationNotificationsEnabled
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('violationNotificationsEnabled')]
+    #[\JMS\Serializer\Annotation\Type('bool')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?bool $violationNotificationsEnabled = null;
+    
 	public function __construct()
 	{
 		$this->billingAccount = null;
@@ -217,5 +227,6 @@ class GoogleCloudAssuredworkloadsV1Workload
 		$this->resourceSettings = null;
 		$this->resources = null;
 		$this->saaEnrollmentResponse = null;
+		$this->violationNotificationsEnabled = null;
 	}
 }

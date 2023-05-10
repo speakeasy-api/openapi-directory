@@ -31,7 +31,7 @@ class GETModifyVerifiedAccessGroupPolicyRequest
     public ?bool $dryRun = null;
     
     /**
-     * The Amazon Web Services Verified Access policy document.
+     * The Verified Access policy document.
      * 
      * @var ?string $policyDocument
      */
@@ -47,7 +47,7 @@ class GETModifyVerifiedAccessGroupPolicyRequest
     public bool $policyEnabled;
     
     /**
-     * The ID of the Amazon Web Services Verified Access group.
+     * The ID of the Verified Access group.
      * 
      * @var string $verifiedAccessGroupId
      */

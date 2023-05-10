@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListResourceInventoryXAmzTargetEnum: string
 {
     case AWS_LICENSE_MANAGER_LIST_RESOURCE_INVENTORY = 'AWSLicenseManager.ListResourceInventory';

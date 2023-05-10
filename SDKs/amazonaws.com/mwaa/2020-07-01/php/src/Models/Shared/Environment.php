@@ -127,6 +127,16 @@ class Environment
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $sourceBucketArn = null;
     
+	#[\JMS\Serializer\Annotation\SerializedName('StartupScriptS3ObjectVersion')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $startupScriptS3ObjectVersion = null;
+    
+	#[\JMS\Serializer\Annotation\SerializedName('StartupScriptS3Path')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?string $startupScriptS3Path = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('Status')]
     #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\EnvironmentStatusEnum>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -180,6 +190,8 @@ class Environment
 		$this->schedulers = null;
 		$this->serviceRoleArn = null;
 		$this->sourceBucketArn = null;
+		$this->startupScriptS3ObjectVersion = null;
+		$this->startupScriptS3Path = null;
 		$this->status = null;
 		$this->tags = null;
 		$this->webserverAccessMode = null;

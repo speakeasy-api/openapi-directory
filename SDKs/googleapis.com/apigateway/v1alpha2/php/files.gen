@@ -59,4 +59,6 @@ src/Models/Shared/ApigatewayLocation.php
 src/Models/Shared/ApigatewayOperation.php
 src/Models/Shared/ApigatewayStatus.php
 src/Models/Shared/ApigatewayListOperationsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

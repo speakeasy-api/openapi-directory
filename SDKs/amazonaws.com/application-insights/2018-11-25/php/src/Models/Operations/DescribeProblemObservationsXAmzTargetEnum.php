@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeProblemObservationsXAmzTargetEnum: string
 {
     case EC2_WINDOWS_BARLEY_SERVICE_DESCRIBE_PROBLEM_OBSERVATIONS = 'EC2WindowsBarleyService.DescribeProblemObservations';

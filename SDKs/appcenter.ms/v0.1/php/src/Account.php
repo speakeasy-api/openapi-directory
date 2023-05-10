@@ -40,9 +40,11 @@ class Account
     /**
      * usersGetUserMetadata
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\UsersGetUserMetadataSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\UsersGetUserMetadataResponse
      */
 	public function usersGetUserMetadata(
+        \OpenAPI\OpenAPI\Models\Operations\UsersGetUserMetadataSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\UsersGetUserMetadataResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -50,7 +52,8 @@ class Account
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -314,12 +317,15 @@ class Account
      * @param \OpenAPI\OpenAPI\Models\Operations\AppInvitationsCreateByEmailRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\AppInvitationsCreateByEmailSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\AppInvitationsCreateByEmailResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function appInvitationsCreateByEmail(
         \OpenAPI\OpenAPI\Models\Operations\AppInvitationsCreateByEmailRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\AppInvitationsCreateByEmailSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\AppInvitationsCreateByEmailResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/invitations/{user_email}', \OpenAPI\OpenAPI\Models\Operations\AppInvitationsCreateByEmailRequest::class, $request);
         
@@ -1439,9 +1445,11 @@ class Account
     /**
      * Returns a list of azure subscriptions for the user
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\AzureSubscriptionListForUserSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\AzureSubscriptionListForUserResponse
      */
 	public function azureSubscriptionListForUser(
+        \OpenAPI\OpenAPI\Models\Operations\AzureSubscriptionListForUserSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\AzureSubscriptionListForUserResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -1449,7 +1457,8 @@ class Account
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -2514,9 +2523,11 @@ class Account
     /**
      * Returns all invitations sent by the caller
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\InvitationsSentSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\InvitationsSentResponse
      */
 	public function invitationsSent(
+        \OpenAPI\OpenAPI\Models\Operations\InvitationsSentSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\InvitationsSentResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -2524,7 +2535,8 @@ class Account
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -3109,9 +3121,11 @@ class Account
     /**
      * Returns a list of organizations the requesting user has access to
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\OrganizationsListSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\OrganizationsListResponse
      */
 	public function organizationsList(
+        \OpenAPI\OpenAPI\Models\Operations\OrganizationsListSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\OrganizationsListResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -3119,7 +3133,8 @@ class Account
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -3147,9 +3162,11 @@ class Account
     /**
      * Returns a list organizations in which the requesting user is an admin
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\OrganizationsListAdministeredSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\OrganizationsListAdministeredResponse
      */
 	public function organizationsListAdministered(
+        \OpenAPI\OpenAPI\Models\Operations\OrganizationsListAdministeredSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\OrganizationsListAdministeredResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -3157,7 +3174,8 @@ class Account
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -3233,9 +3251,11 @@ class Account
     /**
      * Gets all service connections of the service type for GDPR export.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\SharedconnectionConnectionsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\SharedconnectionConnectionsResponse
      */
 	public function sharedconnectionConnections(
+        \OpenAPI\OpenAPI\Models\Operations\SharedconnectionConnectionsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\SharedconnectionConnectionsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -3243,7 +3263,8 @@ class Account
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -3851,9 +3872,11 @@ class Account
     /**
      * Returns api tokens for the authenticated user
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\UserApiTokensListSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\UserApiTokensListResponse
      */
 	public function userApiTokensList(
+        \OpenAPI\OpenAPI\Models\Operations\UserApiTokensListSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\UserApiTokensListResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -3861,7 +3884,8 @@ class Account
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -3946,9 +3970,11 @@ class Account
     /**
      * Returns the user profile data
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\UsersGetSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\UsersGetResponse
      */
 	public function usersGet(
+        \OpenAPI\OpenAPI\Models\Operations\UsersGetSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\UsersGetResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -3956,7 +3982,8 @@ class Account
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeMatchmakingRuleSetsXAmzTargetEnum: string
 {
     case GAME_LIFT_DESCRIBE_MATCHMAKING_RULE_SETS = 'GameLift.DescribeMatchmakingRuleSets';

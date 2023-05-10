@@ -42,12 +42,16 @@ class PathParameters
                 continue;
             }
 
-            switch ($metadata->style) {
-                case "simple":
-                    $parsed = array_merge_recursive($parsed, $this->parseSimplePathParams($metadata, $value));
-                    break;
-                default:
-                    throw new \Exception("Unsupported style: " . $metadata->style);
+            if (!empty($metadata->serialization)) {
+                $parsed = array_merge_recursive($parsed, $this->parseSerializationParams($metadata, $value));
+            } else {
+                switch ($metadata->style) {
+                    case "simple":
+                        $parsed = array_merge_recursive($parsed, $this->parseSimplePathParams($metadata, $value));
+                        break;
+                    default:
+                        throw new \Exception("Unsupported style: " . $metadata->style);
+                }
             }
         }
 
@@ -126,5 +130,26 @@ class PathParameters
         }
 
         return $metadata;
+    }
+
+    /**
+     * @param ParamsMetadata $metadata
+     * @param mixed $value
+     * @return array<string, string>
+     */
+    private function parseSerializationParams(ParamsMetadata $metadata, mixed $value): array
+    {
+        $params = [];
+
+        switch ($metadata->serialization) {
+            case "json":
+                $serializer = JSON::createSerializer();
+                $params[$metadata->name] = urlencode($serializer->serialize($value, 'json'));
+                break;
+            default:
+                throw new \Exception("Unsupported serialization: " . $metadata->serialization);
+        }
+
+        return $params;
     }
 }

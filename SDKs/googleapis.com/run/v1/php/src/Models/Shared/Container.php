@@ -58,7 +58,7 @@ class Container
     public ?array $envFrom = null;
     
     /**
-     * Required. Name of the container image in Dockerhub, Google Artifact Registry, or Google Container Registry. If the host is not provided, Dockerhub is assumed. More info: https://kubernetes.io/docs/concepts/containers/images
+     * Required. Name of the container image in Dockerhub, Google Artifact Registry, or Google Container Registry. If the host is not provided, Dockerhub is assumed.
      * 
      * @var ?string $image
      */
@@ -68,7 +68,7 @@ class Container
     public ?string $image = null;
     
     /**
-     * Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images
+     * Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise.
      * 
      * @var ?string $imagePullPolicy
      */
@@ -88,7 +88,7 @@ class Container
     public ?Probe $livenessProbe = null;
     
     /**
-     * Name of the container specified as a DNS_LABEL (RFC 1123). More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-label-names
+     * Name of the container specified as a DNS_LABEL (RFC 1123).
      * 
      * @var ?string $name
      */

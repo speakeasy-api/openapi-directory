@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTListServerCertificatesActionEnum: string
 {
     case LIST_SERVER_CERTIFICATES = 'ListServerCertificates';

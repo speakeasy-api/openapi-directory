@@ -18,7 +18,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class PolicyControllerTemplateLibraryConfig
 {
     /**
-     * Whether the standard template library should be installed or not. TODO (b/271878194): Remove this
+     * Whether the standard template library should be installed or not.
      * 
      * @var ?bool $included
      */
@@ -28,7 +28,7 @@ class PolicyControllerTemplateLibraryConfig
     public ?bool $included = null;
     
     /**
-     * Configures the manner in which the template library is installed on the cluster. TODO (b/271878194): Decrement this
+     * Configures the manner in which the template library is installed on the cluster.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\PolicyControllerTemplateLibraryConfigInstallationEnum $installation
      */

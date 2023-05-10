@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ClearQuerySuggestionsXAmzTargetEnum: string
 {
     case AWS_KENDRA_FRONTEND_SERVICE_CLEAR_QUERY_SUGGESTIONS = 'AWSKendraFrontendService.ClearQuerySuggestions';

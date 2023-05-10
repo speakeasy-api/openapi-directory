@@ -119,4 +119,7 @@ src/Models/Shared/GoogleChromePolicyVersionsV1AdditionalTargetKeyName.php
 src/Models/Shared/GoogleChromePolicyVersionsV1ListPolicySchemasResponse.php
 src/Models/Shared/GoogleChromePolicyVersionsV1UploadPolicyFileResponse.php
 src/Models/Shared/GoogleChromePolicyVersionsV1UploadPolicyFileRequest.php
+docs/sdk/README.md
+docs/customers/README.md
+docs/media/README.md
 USAGE.md

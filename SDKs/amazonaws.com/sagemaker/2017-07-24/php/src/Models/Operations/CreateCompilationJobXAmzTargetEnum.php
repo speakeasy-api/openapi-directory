@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateCompilationJobXAmzTargetEnum: string
 {
     case SAGE_MAKER_CREATE_COMPILATION_JOB = 'SageMaker.CreateCompilationJob';

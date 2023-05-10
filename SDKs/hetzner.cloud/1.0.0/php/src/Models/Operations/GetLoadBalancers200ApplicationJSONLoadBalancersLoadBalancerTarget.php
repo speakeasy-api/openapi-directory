@@ -12,7 +12,7 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 class GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTarget
 {
     /**
-     * List of health statuses of the services on this target
+     * List of health statuses of the services on this target. Only present for target types "server" and "ip".
      * 
      * @var ?array<\OpenAPI\OpenAPI\Models\Operations\GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetHealthStatus> $healthStatus
      */
@@ -22,27 +22,27 @@ class GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTarget
     public ?array $healthStatus = null;
     
     /**
-     * IP targets where the traffic should be routed through. It is only possible to use the (Public or vSwitch) IPs of Hetzner Online Root Servers belonging to the project owner. IPs belonging to other users are blocked. Additionally IPs belonging to services provided by Hetzner Cloud (Servers, Load Balancers, ...) are blocked as well.
+     * IP targets where the traffic should be routed to. It is only possible to use the (Public or vSwitch) IPs of Hetzner Online Root Servers belonging to the project owner. IPs belonging to other users are blocked. Additionally IPs belonging to services provided by Hetzner Cloud (Servers, Load Balancers, ...) are blocked as well. Only present for target type "ip".
      * 
-     * @var ?\OpenAPI\OpenAPI\Models\Operations\GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetIp $ip
+     * @var ?\OpenAPI\OpenAPI\Models\Operations\GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetLoadBalancerTargetIP $ip
      */
 	#[\JMS\Serializer\Annotation\SerializedName('ip')]
-    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Operations\GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetIp')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Operations\GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetLoadBalancerTargetIP')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetIp $ip = null;
+    public ?GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetLoadBalancerTargetIP $ip = null;
     
     /**
-     * Label selector and a list of selected targets
+     * Label selector used to determine targets. Only present for target type "label_selector".
      * 
-     * @var ?\OpenAPI\OpenAPI\Models\Operations\GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetLabelSelector $labelSelector
+     * @var ?\OpenAPI\OpenAPI\Models\Operations\GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetLoadBalancerTargetLabelSelector $labelSelector
      */
 	#[\JMS\Serializer\Annotation\SerializedName('label_selector')]
-    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Operations\GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetLabelSelector')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Operations\GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetLoadBalancerTargetLabelSelector')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetLabelSelector $labelSelector = null;
+    public ?GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetLoadBalancerTargetLabelSelector $labelSelector = null;
     
     /**
-     * Server where the traffic should be routed through
+     * Server where the traffic should be routed to. Only present for target type "server".
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Operations\GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetLoadBalancerTargetServer $server
      */
@@ -52,12 +52,12 @@ class GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTarget
     public ?GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetLoadBalancerTargetServer $server = null;
     
     /**
-     * List of selected targets
+     * List of resolved label selector target Servers. Only present for type "label_selector".
      * 
-     * @var ?array<\OpenAPI\OpenAPI\Models\Operations\GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetTargets> $targets
+     * @var ?array<\OpenAPI\OpenAPI\Models\Operations\GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetLoadBalancerTargetTarget> $targets
      */
 	#[\JMS\Serializer\Annotation\SerializedName('targets')]
-    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Operations\GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetTargets>')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Operations\GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetLoadBalancerTargetTarget>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $targets = null;
     
@@ -71,7 +71,7 @@ class GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTarget
     public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetTypeEnum $type;
     
     /**
-     * Use the private network IP instead of the public IP. Default value is false.
+     * Use the private network IP instead of the public IP. Default value is false. Only present for target types "server" and "label_selector".
      * 
      * @var ?bool $usePrivateIp
      */

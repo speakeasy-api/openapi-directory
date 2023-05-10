@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteListenerActionEnum: string
 {
     case DELETE_LISTENER = 'DeleteListener';

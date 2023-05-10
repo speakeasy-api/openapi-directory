@@ -42,6 +42,7 @@ src/Models/Operations/PostLikesTracksTrackIdResponse.php
 src/Models/Operations/DeleteMeFollowingsUserIdSecurity.php
 src/Models/Operations/DeleteMeFollowingsUserIdRequest.php
 src/Models/Operations/DeleteMeFollowingsUserIdResponse.php
+src/Models/Operations/GetMeSecurity.php
 src/Models/Operations/GetMeResponse.php
 src/Models/Operations/GetMeActivitiesSecurity.php
 src/Models/Operations/GetMeActivitiesRequest.php
@@ -263,4 +264,14 @@ src/Models/Shared/TrackMetadataRequestTrackSharingEnum.php
 src/Models/Shared/TrackMetadataRequestTrack.php
 src/Models/Shared/TrackMetadataRequest.php
 src/Models/Shared/WebProfiles.php
+docs/sdk/README.md
+docs/likes/README.md
+docs/me/README.md
+docs/miscellaneous/README.md
+docs/oauth/README.md
+docs/playlists/README.md
+docs/reposts/README.md
+docs/search/README.md
+docs/tracks/README.md
+docs/users/README.md
 USAGE.md

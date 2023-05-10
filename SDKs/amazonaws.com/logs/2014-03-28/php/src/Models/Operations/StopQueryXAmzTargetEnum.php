@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopQueryXAmzTargetEnum: string
 {
     case LOGS20140328_STOP_QUERY = 'Logs_20140328.StopQuery';

@@ -31,7 +31,7 @@ class RunProjectsLocationsServicesPatchRequest
     public ?string $accessToken = null;
     
     /**
-     * This field is currently not used by Cloud Run; setting it does not have any effect.
+     * If set to true, and if the Service does not exist, it will create a new one. The caller must have 'run.services.create' permissions if this is set to true and the Service does not exist.
      * 
      * @var ?bool $allowMissing
      */

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateStudioSessionMappingXAmzTargetEnum: string
 {
     case ELASTIC_MAP_REDUCE_UPDATE_STUDIO_SESSION_MAPPING = 'ElasticMapReduce.UpdateStudioSessionMapping';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteVpnConnectionActionEnum: string
 {
     case DELETE_VPN_CONNECTION = 'DeleteVpnConnection';

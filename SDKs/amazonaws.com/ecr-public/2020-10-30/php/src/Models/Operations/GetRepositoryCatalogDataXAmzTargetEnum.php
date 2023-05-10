@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetRepositoryCatalogDataXAmzTargetEnum: string
 {
     case SPENCER_FRONTEND_SERVICE_GET_REPOSITORY_CATALOG_DATA = 'SpencerFrontendService.GetRepositoryCatalogData';

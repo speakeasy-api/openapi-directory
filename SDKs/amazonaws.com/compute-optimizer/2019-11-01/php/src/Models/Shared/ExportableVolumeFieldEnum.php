@@ -39,4 +39,5 @@ enum ExportableVolumeFieldEnum: string
     case RECOMMENDATION_OPTIONS_SAVINGS_OPPORTUNITY_PERCENTAGE = 'RecommendationOptionsSavingsOpportunityPercentage';
     case RECOMMENDATION_OPTIONS_ESTIMATED_MONTHLY_SAVINGS_CURRENCY = 'RecommendationOptionsEstimatedMonthlySavingsCurrency';
     case RECOMMENDATION_OPTIONS_ESTIMATED_MONTHLY_SAVINGS_VALUE = 'RecommendationOptionsEstimatedMonthlySavingsValue';
+    case ROOT_VOLUME = 'RootVolume';
 }

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeTargetGroupAttributesActionEnum: string
 {
     case DESCRIBE_TARGET_GROUP_ATTRIBUTES = 'DescribeTargetGroupAttributes';

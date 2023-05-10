@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDisableVpcClassicLinkActionEnum: string
 {
     case DISABLE_VPC_CLASSIC_LINK = 'DisableVpcClassicLink';

@@ -112,7 +112,7 @@ class Files
     }
 	
     /**
-     * Permanently deletes all of the user's trashed files.
+     * Permanently deletes all trashed files of a user or shared drive.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DriveFilesEmptyTrashRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\DriveFilesEmptyTrashSecurity $security
@@ -606,7 +606,7 @@ class Files
     }
 	
     /**
-     * Subscribes to changes to a file. While you can establish a channel for changes to a file on a shared drive, a change to a shared drive file won't create a notification.
+     * Subscribe to changes on a file.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DriveFilesWatchRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\DriveFilesWatchSecurity $security

@@ -76,4 +76,6 @@ src/Models/Shared/ExtendedPricingOptions.php
 src/Models/Shared/CoverageEnum.php
 src/Models/Shared/OriginDestination.php
 src/Models/Shared/DateTimeRange.php
+docs/sdk/README.md
+docs/shopping/README.md
 USAGE.md

@@ -170,4 +170,13 @@ src/Models/Shared/PhoneViewModel.php
 src/Models/Shared/RepeatViewModel.php
 src/Models/Shared/ServiceAllocationListViewModel.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/appointments/README.md
+docs/availability/README.md
+docs/customers/README.md
+docs/locations/README.md
+docs/resourcegroups/README.md
+docs/resources/README.md
+docs/servicegroups/README.md
+docs/services/README.md
 USAGE.md

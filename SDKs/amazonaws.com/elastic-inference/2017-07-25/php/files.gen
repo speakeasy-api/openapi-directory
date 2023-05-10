@@ -47,4 +47,5 @@ src/Models/Shared/ElasticInferenceAcceleratorHealth.php
 src/Models/Shared/Filter.php
 src/Models/Shared/ListTagsForResourceResult.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

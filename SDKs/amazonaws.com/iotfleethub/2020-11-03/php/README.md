@@ -30,22 +30,64 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\CreateApplicationRequest;
+use \OpenAPI\OpenAPI\Models\Operations\CreateApplicationRequestBody;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new CreateApplicationRequest();
+    $request->requestBody = new CreateApplicationRequestBody();
+    $request->requestBody->applicationDescription = 'corrupti';
+    $request->requestBody->applicationName = 'provident';
+    $request->requestBody->clientToken = 'distinctio';
+    $request->requestBody->roleArn = 'quibusdam';
+    $request->requestBody->tags = [
+        'nulla' => 'corrupti',
+        'illum' => 'vel',
+        'error' => 'deserunt',
+    ];
+    $request->xAmzAlgorithm = 'suscipit';
+    $request->xAmzContentSha256 = 'iure';
+    $request->xAmzCredential = 'magnam';
+    $request->xAmzDate = 'debitis';
+    $request->xAmzSecurityToken = 'ipsa';
+    $request->xAmzSignature = 'delectus';
+    $request->xAmzSignedHeaders = 'tempora';
+
+    $response = $sdk->createApplication($request);
+
+    if ($response->createApplicationResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `createApplication` - <p>Creates a Fleet Hub for AWS IoT Device Management web application.</p> <note> <p>Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.</p> </note>
-* `deleteApplication` - <p>Deletes a Fleet Hub for AWS IoT Device Management web application.</p> <note> <p>Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.</p> </note>
-* `describeApplication` - <p>Gets information about a Fleet Hub for AWS IoT Device Management web application.</p> <note> <p>Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.</p> </note>
-* `listApplications` - <p>Gets a list of Fleet Hub for AWS IoT Device Management web applications for the current account.</p> <note> <p>Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.</p> </note>
-* `listTagsForResource` - <p>Lists the tags for the specified resource.</p> <note> <p>Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.</p> </note>
-* `tagResource` - <p>Adds to or modifies the tags of the specified resource. Tags are metadata which can be used to manage a resource.</p> <note> <p>Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.</p> </note>
-* `untagResource` - <p>Removes the specified tags (metadata) from the resource.</p> <note> <p>Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.</p> </note>
-* `updateApplication` - <p>Updates information about a Fleet Hub for a AWS IoT Device Management web application.</p> <note> <p>Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.</p> </note>
+* [createApplication](docs/sdk/README.md#createapplication) - <p>Creates a Fleet Hub for AWS IoT Device Management web application.</p> <note> <p>Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.</p> </note>
+* [deleteApplication](docs/sdk/README.md#deleteapplication) - <p>Deletes a Fleet Hub for AWS IoT Device Management web application.</p> <note> <p>Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.</p> </note>
+* [describeApplication](docs/sdk/README.md#describeapplication) - <p>Gets information about a Fleet Hub for AWS IoT Device Management web application.</p> <note> <p>Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.</p> </note>
+* [listApplications](docs/sdk/README.md#listapplications) - <p>Gets a list of Fleet Hub for AWS IoT Device Management web applications for the current account.</p> <note> <p>Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.</p> </note>
+* [listTagsForResource](docs/sdk/README.md#listtagsforresource) - <p>Lists the tags for the specified resource.</p> <note> <p>Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.</p> </note>
+* [tagResource](docs/sdk/README.md#tagresource) - <p>Adds to or modifies the tags of the specified resource. Tags are metadata which can be used to manage a resource.</p> <note> <p>Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.</p> </note>
+* [untagResource](docs/sdk/README.md#untagresource) - <p>Removes the specified tags (metadata) from the resource.</p> <note> <p>Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.</p> </note>
+* [updateApplication](docs/sdk/README.md#updateapplication) - <p>Updates information about a Fleet Hub for a AWS IoT Device Management web application.</p> <note> <p>Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.</p> </note>
 <!-- End SDK Available Operations -->
 
 ### Maturity

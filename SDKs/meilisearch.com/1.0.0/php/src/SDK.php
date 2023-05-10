@@ -22,6 +22,8 @@ class SDK
 	
 	public KeyManagement $keyManagement;
 	
+	public MultiSearch $multiSearch;
+	
 	public Search $search;
 	
 	public Settings $settings;
@@ -107,6 +109,15 @@ class SDK
 		);
 		
 		$this->keyManagement = new KeyManagement(
+			$this->_defaultClient,
+			$this->_securityClient,
+			$this->_serverUrl,
+			$this->_language,
+			$this->_sdkVersion,
+			$this->_genVersion
+		);
+		
+		$this->multiSearch = new MultiSearch(
 			$this->_defaultClient,
 			$this->_securityClient,
 			$this->_serverUrl,

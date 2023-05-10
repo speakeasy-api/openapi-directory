@@ -30,17 +30,54 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\AcmednsAcmeChallengeSetsGetRequest;
+use \OpenAPI\OpenAPI\Models\Shared\XgafvEnum;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new AcmednsAcmeChallengeSetsGetRequest();
+    $request->dollarXgafv = XgafvEnum::TWO;
+    $request->accessToken = 'provident';
+    $request->alt = AltEnum::PROTO;
+    $request->callback = 'quibusdam';
+    $request->fields = 'unde';
+    $request->key = 'nulla';
+    $request->oauthToken = 'corrupti';
+    $request->prettyPrint = false;
+    $request->quotaUser = 'illum';
+    $request->rootDomain = 'vel';
+    $request->uploadType = 'error';
+    $request->uploadProtocol = 'deserunt';
+
+    $response = $sdk->acmeChallengeSets->acmednsAcmeChallengeSetsGet($request);
+
+    if ($response->acmeChallengeSet !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### acmeChallengeSets
+### [acmeChallengeSets](docs/acmechallengesets/README.md)
 
-* `acmednsAcmeChallengeSetsGet` - Gets the ACME challenge set for a given domain name. Domain names must be provided in Punycode.
-* `acmednsAcmeChallengeSetsRotateChallenges` - Rotate the ACME challenges for a given domain name. By default, removes any challenges that are older than 30 days. Domain names must be provided in Punycode.
+* [acmednsAcmeChallengeSetsGet](docs/acmechallengesets/README.md#acmednsacmechallengesetsget) - Gets the ACME challenge set for a given domain name. Domain names must be provided in Punycode.
+* [acmednsAcmeChallengeSetsRotateChallenges](docs/acmechallengesets/README.md#acmednsacmechallengesetsrotatechallenges) - Rotate the ACME challenges for a given domain name. By default, removes any challenges that are older than 30 days. Domain names must be provided in Punycode.
 <!-- End SDK Available Operations -->
 
 ### Maturity

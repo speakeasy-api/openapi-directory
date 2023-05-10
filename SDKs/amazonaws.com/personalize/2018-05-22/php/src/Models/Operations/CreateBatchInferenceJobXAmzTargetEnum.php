@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateBatchInferenceJobXAmzTargetEnum: string
 {
     case AMAZON_PERSONALIZE_CREATE_BATCH_INFERENCE_JOB = 'AmazonPersonalize.CreateBatchInferenceJob';

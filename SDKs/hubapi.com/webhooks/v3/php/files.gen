@@ -68,4 +68,7 @@ src/Models/Shared/BatchInputSubscriptionBatchUpdateRequest.php
 src/Models/Shared/SubscriptionBatchUpdateRequest.php
 src/Models/Shared/SubscriptionCreateRequestEventTypeEnum.php
 src/Models/Shared/SubscriptionCreateRequest.php
+docs/sdk/README.md
+docs/settings/README.md
+docs/subscriptions/README.md
 USAGE.md

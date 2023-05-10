@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateListenerXAmzTargetEnum: string
 {
     case GLOBAL_ACCELERATOR_V20180706_CREATE_LISTENER = 'GlobalAccelerator_V20180706.CreateListener';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateGovCloudAccountXAmzTargetEnum: string
 {
     case AWS_ORGANIZATIONS_V20161128_CREATE_GOV_CLOUD_ACCOUNT = 'AWSOrganizationsV20161128.CreateGovCloudAccount';

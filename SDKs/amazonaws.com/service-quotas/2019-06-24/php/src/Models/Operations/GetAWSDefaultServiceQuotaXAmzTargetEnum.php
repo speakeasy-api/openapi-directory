@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetAWSDefaultServiceQuotaXAmzTargetEnum: string
 {
     case SERVICE_QUOTAS_V20190624_GET_AWS_DEFAULT_SERVICE_QUOTA = 'ServiceQuotasV20190624.GetAWSDefaultServiceQuota';

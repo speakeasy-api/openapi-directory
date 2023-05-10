@@ -10,18 +10,42 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 
 use \OpenAPI\OpenAPI\Utils\SpeakeasyMetadata;
 /**
- * GETModifyVerifiedAccessTrustProviderOidcOptions - OpenID Connect options for an <code>oidc</code>-type, user-identity based trust provider.
+ * GETModifyVerifiedAccessTrustProviderOidcOptions - Options for an OpenID Connect-compatible user-identity trust provider.
  * 
  * @package OpenAPI\OpenAPI\Models\Operations
  * @access public
  */
 class GETModifyVerifiedAccessTrustProviderOidcOptions
 {
+	#[SpeakeasyMetadata('queryParam:name=AuthorizationEndpoint')]
+    public ?string $authorizationEndpoint = null;
+    
+	#[SpeakeasyMetadata('queryParam:name=ClientId')]
+    public ?string $clientId = null;
+    
+	#[SpeakeasyMetadata('queryParam:name=ClientSecret')]
+    public ?string $clientSecret = null;
+    
+	#[SpeakeasyMetadata('queryParam:name=Issuer')]
+    public ?string $issuer = null;
+    
 	#[SpeakeasyMetadata('queryParam:name=Scope')]
     public ?string $scope = null;
     
+	#[SpeakeasyMetadata('queryParam:name=TokenEndpoint')]
+    public ?string $tokenEndpoint = null;
+    
+	#[SpeakeasyMetadata('queryParam:name=UserInfoEndpoint')]
+    public ?string $userInfoEndpoint = null;
+    
 	public function __construct()
 	{
+		$this->authorizationEndpoint = null;
+		$this->clientId = null;
+		$this->clientSecret = null;
+		$this->issuer = null;
 		$this->scope = null;
+		$this->tokenEndpoint = null;
+		$this->userInfoEndpoint = null;
 	}
 }

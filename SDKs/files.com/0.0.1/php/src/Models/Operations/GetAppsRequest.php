@@ -28,44 +28,12 @@ class GetAppsRequest
     public ?array $filter = null;
     
     /**
-     * If set, return records where the specified field is greater than the supplied value. Valid fields are `name` and `app_type`. Valid field combinations are `[ name, app_type ]` and `[ app_type, name ]`.
+     * If set, return records where the specified field is prefixed by the supplied value. Valid fields are `name`.
      * 
-     * @var ?array<string, mixed> $filterGt
+     * @var ?array<string, mixed> $filterPrefix
      */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_gt')]
-    public ?array $filterGt = null;
-    
-    /**
-     * If set, return records where the specified field is greater than or equal to the supplied value. Valid fields are `name` and `app_type`. Valid field combinations are `[ name, app_type ]` and `[ app_type, name ]`.
-     * 
-     * @var ?array<string, mixed> $filterGteq
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_gteq')]
-    public ?array $filterGteq = null;
-    
-    /**
-     * If set, return records where the specified field is equal to the supplied value. Valid fields are `name` and `app_type`. Valid field combinations are `[ name, app_type ]` and `[ app_type, name ]`.
-     * 
-     * @var ?array<string, mixed> $filterLike
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_like')]
-    public ?array $filterLike = null;
-    
-    /**
-     * If set, return records where the specified field is less than the supplied value. Valid fields are `name` and `app_type`. Valid field combinations are `[ name, app_type ]` and `[ app_type, name ]`.
-     * 
-     * @var ?array<string, mixed> $filterLt
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_lt')]
-    public ?array $filterLt = null;
-    
-    /**
-     * If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `name` and `app_type`. Valid field combinations are `[ name, app_type ]` and `[ app_type, name ]`.
-     * 
-     * @var ?array<string, mixed> $filterLteq
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_lteq')]
-    public ?array $filterLteq = null;
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_prefix')]
+    public ?array $filterPrefix = null;
     
     /**
      * Number of records to show per page.  (Max: 10,000, 1,000 or less is recommended).
@@ -87,11 +55,7 @@ class GetAppsRequest
 	{
 		$this->cursor = null;
 		$this->filter = null;
-		$this->filterGt = null;
-		$this->filterGteq = null;
-		$this->filterLike = null;
-		$this->filterLt = null;
-		$this->filterLteq = null;
+		$this->filterPrefix = null;
 		$this->perPage = null;
 		$this->sortBy = null;
 	}

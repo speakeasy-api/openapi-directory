@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDisassociateDataShareConsumerVersionEnum: string
 {
     case TWO_THOUSAND_AND_TWELVE1201 = '2012-12-01';

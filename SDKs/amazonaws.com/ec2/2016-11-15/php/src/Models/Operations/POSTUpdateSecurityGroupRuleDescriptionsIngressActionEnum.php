@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTUpdateSecurityGroupRuleDescriptionsIngressActionEnum: string
 {
     case UPDATE_SECURITY_GROUP_RULE_DESCRIPTIONS_INGRESS = 'UpdateSecurityGroupRuleDescriptionsIngress';

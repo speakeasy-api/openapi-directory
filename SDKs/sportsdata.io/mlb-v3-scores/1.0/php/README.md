@@ -30,32 +30,61 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\AreGamesInProgressRequest;
+use \OpenAPI\OpenAPI\Models\Operations\AreGamesInProgressFormatEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new AreGamesInProgressRequest();
+    $request->format = AreGamesInProgressFormatEnum::JSON;
+
+    $response = $sdk->areGamesInProgress($request);
+
+    if ($response->areGamesInProgress200ApplicationJSONBoolean !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `areGamesInProgress` - Are Games In Progress
-* `currentSeason` - Current Season
-* `gamesByDate` - Games by Date
-* `news` - News
-* `newsByDate` - News by Date
-* `newsByPlayer` - News by Player
-* `playerDetailsByActive` - Player Details by Active
-* `playerDetailsByFreeAgents` - Player Details by Free Agents
-* `playerDetailsByPlayer` - Player Details by Player
-* `playersByTeam` - Players by Team
-* `schedules` - Schedules
-* `stadiums` - Stadiums
-* `standings` - Standings
-* `teamGameLogsBySeason` - Team Game Logs By Season
-* `teamGameStatsByDate` - Team Game Stats by Date
-* `teamSeasonStats` - Team Season Stats
-* `teamsActive` - Teams (Active)
-* `teamsAll` - Teams (All)
+* [areGamesInProgress](docs/sdk/README.md#aregamesinprogress) - Are Games In Progress
+* [currentSeason](docs/sdk/README.md#currentseason) - Current Season
+* [gamesByDate](docs/sdk/README.md#gamesbydate) - Games by Date
+* [gamesByDateBasic](docs/sdk/README.md#gamesbydatebasic) - Games by Date (Basic)
+* [news](docs/sdk/README.md#news) - News
+* [newsByDate](docs/sdk/README.md#newsbydate) - News by Date
+* [newsByPlayer](docs/sdk/README.md#newsbyplayer) - News by Player
+* [playerDetailsByActive](docs/sdk/README.md#playerdetailsbyactive) - Player Details by Active
+* [playerDetailsByFreeAgents](docs/sdk/README.md#playerdetailsbyfreeagents) - Player Details by Free Agents
+* [playerDetailsByPlayer](docs/sdk/README.md#playerdetailsbyplayer) - Player Details by Player
+* [playersByTeam](docs/sdk/README.md#playersbyteam) - Players by Team
+* [playersByTeamBasic](docs/sdk/README.md#playersbyteambasic) - Players by Team (Basic)
+* [schedules](docs/sdk/README.md#schedules) - Schedules
+* [schedulesBasic](docs/sdk/README.md#schedulesbasic) - Schedules (Basic)
+* [stadiums](docs/sdk/README.md#stadiums) - Stadiums
+* [standings](docs/sdk/README.md#standings) - Standings
+* [teamGameLogsBySeason](docs/sdk/README.md#teamgamelogsbyseason) - Team Game Logs By Season
+* [teamGameStatsByDate](docs/sdk/README.md#teamgamestatsbydate) - Team Game Stats by Date
+* [teamSeasonStats](docs/sdk/README.md#teamseasonstats) - Team Season Stats
+* [teamsActive](docs/sdk/README.md#teamsactive) - Teams (Active)
+* [teamsAll](docs/sdk/README.md#teamsall) - Teams (All)
 <!-- End SDK Available Operations -->
 
 ### Maturity

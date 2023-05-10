@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteCertificateXAmzTargetEnum: string
 {
     case CERTIFICATE_MANAGER_DELETE_CERTIFICATE = 'CertificateManager.DeleteCertificate';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateSubnetGroupXAmzTargetEnum: string
 {
     case AMAZON_MEMORY_DB_CREATE_SUBNET_GROUP = 'AmazonMemoryDB.CreateSubnetGroup';

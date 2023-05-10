@@ -30,50 +30,80 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\CreateConversationRequestBody;
+use \OpenAPI\OpenAPI\Models\Shared\ConversationProperties;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new CreateConversationRequestBody();
+    $request->displayName = 'Customer Chat';
+    $request->imageUrl = 'https://example.com/image.png';
+    $request->name = 'customer_chat';
+    $request->properties = new ConversationProperties();
+    $request->properties->ttl = 60;
+
+    $response = $sdk->conversation->createConversation($request);
+
+    if ($response->createConversation200ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### conversation
+### [conversation](docs/conversation/README.md)
 
-* `createConversation` - Create a conversation
-* `deleteConversation` - Delete a conversation
-* `listConversations` - List conversations
-* `recordConversation` - Record a conversation
-* `replaceConversation` - Update a conversation
-* `retrieveConversation` - Retrieve a conversation
+* [createConversation](docs/conversation/README.md#createconversation) - Create a conversation
+* [deleteConversation](docs/conversation/README.md#deleteconversation) - Delete a conversation
+* [~~listConversations~~](docs/conversation/README.md#listconversations) - List conversations :warning: **Deprecated**
+* [recordConversation](docs/conversation/README.md#recordconversation) - Record a conversation
+* [replaceConversation](docs/conversation/README.md#replaceconversation) - Update a conversation
+* [retrieveConversation](docs/conversation/README.md#retrieveconversation) - Retrieve a conversation
 
-### event
+### [event](docs/event/README.md)
 
-* `createEvent` - Create an event
-* `deleteEvent` - Delete an event
-* `getEvent` - Retrieve an event
-* `getEvents` - List events
+* [createEvent](docs/event/README.md#createevent) - Create an event
+* [deleteEvent](docs/event/README.md#deleteevent) - Delete an event
+* [getEvent](docs/event/README.md#getevent) - Retrieve an event
+* [~~getEvents~~](docs/event/README.md#getevents) - List events :warning: **Deprecated**
 
-### leg
+### [leg](docs/leg/README.md)
 
-* `deleteLeg` - Delete a leg
-* `listLegs` - List legs
+* [deleteLeg](docs/leg/README.md#deleteleg) - Delete a leg
+* [listLegs](docs/leg/README.md#listlegs) - List legs
 
-### member
+### [member](docs/member/README.md)
 
-* `createMember` - Create a member
-* `deleteMember` - Delete a member
-* `getMember` - Retrieve a member
-* `getMembers` - List members
-* `updateMember` - Update a member
+* [createMember](docs/member/README.md#createmember) - Create a member
+* [deleteMember](docs/member/README.md#deletemember) - Delete a member
+* [getMember](docs/member/README.md#getmember) - Retrieve a member
+* [~~getMembers~~](docs/member/README.md#getmembers) - List members :warning: **Deprecated**
+* [updateMember](docs/member/README.md#updatemember) - Update a member
 
-### user
+### [user](docs/user/README.md)
 
-* `createUser` - Create a user
-* `deleteUser` - Delete a user
-* `getUser` - Retrieve a user
-* `getUsers` - List users
-* `getuserConversations` - List user conversations
-* `updateUser` - Update a user
+* [createUser](docs/user/README.md#createuser) - Create a user
+* [deleteUser](docs/user/README.md#deleteuser) - Delete a user
+* [getUser](docs/user/README.md#getuser) - Retrieve a user
+* [~~getUsers~~](docs/user/README.md#getusers) - List users :warning: **Deprecated**
+* [getuserConversations](docs/user/README.md#getuserconversations) - List user conversations
+* [updateUser](docs/user/README.md#updateuser) - Update a user
 <!-- End SDK Available Operations -->
 
 ### Maturity

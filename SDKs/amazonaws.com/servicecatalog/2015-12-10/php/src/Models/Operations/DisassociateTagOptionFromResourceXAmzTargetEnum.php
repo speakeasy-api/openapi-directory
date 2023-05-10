@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DisassociateTagOptionFromResourceXAmzTargetEnum: string
 {
     case AWS242_SERVICE_CATALOG_SERVICE_DISASSOCIATE_TAG_OPTION_FROM_RESOURCE = 'AWS242ServiceCatalogService.DisassociateTagOptionFromResource';

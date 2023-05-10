@@ -50,12 +50,12 @@ class GoogleCloudDataplexV1DataScan
     /**
      * DataProfileScan related setting.
      * 
-     * @var ?array<string, mixed> $dataProfileSpec
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\GoogleCloudDataplexV1DataProfileSpec $dataProfileSpec
      */
 	#[\JMS\Serializer\Annotation\SerializedName('dataProfileSpec')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\GoogleCloudDataplexV1DataProfileSpec')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $dataProfileSpec = null;
+    public ?GoogleCloudDataplexV1DataProfileSpec $dataProfileSpec = null;
     
     /**
      * The output of a DataQualityScan.

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RevokeGrantXAmzTargetEnum: string
 {
     case TRENT_SERVICE_REVOKE_GRANT = 'TrentService.RevokeGrant';

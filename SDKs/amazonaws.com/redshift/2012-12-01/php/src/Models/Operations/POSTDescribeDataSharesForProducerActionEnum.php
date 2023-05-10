@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeDataSharesForProducerActionEnum: string
 {
     case DESCRIBE_DATA_SHARES_FOR_PRODUCER = 'DescribeDataSharesForProducer';

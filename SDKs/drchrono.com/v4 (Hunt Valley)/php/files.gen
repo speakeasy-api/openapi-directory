@@ -722,6 +722,7 @@ src/Models/Operations/ReminderProfilesReadResponse.php
 src/Models/Operations/ReminderProfilesUpdateSecurity.php
 src/Models/Operations/ReminderProfilesUpdateRequest.php
 src/Models/Operations/ReminderProfilesUpdateResponse.php
+src/Models/Operations/SublabsCreateSecurity.php
 src/Models/Operations/SublabsCreateResponse.php
 src/Models/Operations/SublabsDeleteSecurity.php
 src/Models/Operations/SublabsDeleteRequest.php
@@ -1053,4 +1054,9 @@ src/Models/Shared/TaskTaskReminder.php
 src/Models/Shared/TaskTaskNote.php
 src/Models/Shared/TaskPriorityEnum.php
 src/Models/Shared/Task.php
+docs/sdk/README.md
+docs/administrative/README.md
+docs/billing/README.md
+docs/clinical/README.md
+docs/practicemanagement/README.md
 USAGE.md

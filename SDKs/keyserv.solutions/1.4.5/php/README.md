@@ -30,45 +30,69 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\KeysApiCurrentRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new KeysApiCurrentRequest();
+    $request->serial = 'corrupti';
+
+    $response = $sdk->keysApi->keysApiCurrent($request);
+
+    if ($response->keysApiCurrent200ApplicationJSONOneOf !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### keysApi
+### [keysApi](docs/keysapi/README.md)
 
-* `keysApiCurrent`
-* `keysApiCustom`
-* `keysApiExpiry`
-* `keysApiFind`
+* [keysApiCurrent](docs/keysapi/README.md#keysapicurrent)
+* [keysApiCustom](docs/keysapi/README.md#keysapicustom)
+* [keysApiExpiry](docs/keysapi/README.md#keysapiexpiry)
+* [keysApiFind](docs/keysapi/README.md#keysapifind)
 
-### productsApi
+### [productsApi](docs/productsapi/README.md)
 
-* `productsApiCount`
-* `productsApiDeleteProduct`
-* `productsApiDeleteProduct2`
-* `productsApiFind`
-* `productsApiList`
-* `productsApiPatchProduct`
-* `productsApiPatchProduct2`
-* `productsApiSave`
+* [productsApiCount](docs/productsapi/README.md#productsapicount)
+* [productsApiDeleteProduct](docs/productsapi/README.md#productsapideleteproduct)
+* [productsApiDeleteProduct2](docs/productsapi/README.md#productsapideleteproduct2)
+* [productsApiFind](docs/productsapi/README.md#productsapifind)
+* [productsApiList](docs/productsapi/README.md#productsapilist)
+* [productsApiPatchProduct](docs/productsapi/README.md#productsapipatchproduct)
+* [productsApiPatchProduct2](docs/productsapi/README.md#productsapipatchproduct2)
+* [productsApiSave](docs/productsapi/README.md#productsapisave)
 
-### subscriptionsApi
+### [subscriptionsApi](docs/subscriptionsapi/README.md)
 
-* `subscriptionsApiCount`
-* `subscriptionsApiDeleteSubscription`
-* `subscriptionsApiDeleteSubscription2`
-* `subscriptionsApiDisable`
-* `subscriptionsApiDisable2`
-* `subscriptionsApiEnable`
-* `subscriptionsApiEnable2`
-* `subscriptionsApiFind`
-* `subscriptionsApiList`
-* `subscriptionsApiPutSubscription`
-* `subscriptionsApiPutSubscription2`
-* `subscriptionsApiSave`
+* [subscriptionsApiCount](docs/subscriptionsapi/README.md#subscriptionsapicount)
+* [subscriptionsApiDeleteSubscription](docs/subscriptionsapi/README.md#subscriptionsapideletesubscription)
+* [subscriptionsApiDeleteSubscription2](docs/subscriptionsapi/README.md#subscriptionsapideletesubscription2)
+* [subscriptionsApiDisable](docs/subscriptionsapi/README.md#subscriptionsapidisable)
+* [subscriptionsApiDisable2](docs/subscriptionsapi/README.md#subscriptionsapidisable2)
+* [subscriptionsApiEnable](docs/subscriptionsapi/README.md#subscriptionsapienable)
+* [subscriptionsApiEnable2](docs/subscriptionsapi/README.md#subscriptionsapienable2)
+* [subscriptionsApiFind](docs/subscriptionsapi/README.md#subscriptionsapifind)
+* [subscriptionsApiList](docs/subscriptionsapi/README.md#subscriptionsapilist)
+* [subscriptionsApiPutSubscription](docs/subscriptionsapi/README.md#subscriptionsapiputsubscription)
+* [subscriptionsApiPutSubscription2](docs/subscriptionsapi/README.md#subscriptionsapiputsubscription2)
+* [subscriptionsApiSave](docs/subscriptionsapi/README.md#subscriptionsapisave)
 <!-- End SDK Available Operations -->
 
 ### Maturity

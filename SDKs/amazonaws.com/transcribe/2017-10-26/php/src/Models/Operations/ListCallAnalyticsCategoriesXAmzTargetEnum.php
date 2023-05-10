@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListCallAnalyticsCategoriesXAmzTargetEnum: string
 {
     case TRANSCRIBE_LIST_CALL_ANALYTICS_CATEGORIES = 'Transcribe.ListCallAnalyticsCategories';

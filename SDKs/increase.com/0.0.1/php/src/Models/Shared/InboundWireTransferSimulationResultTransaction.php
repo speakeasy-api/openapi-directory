@@ -83,11 +83,11 @@ class InboundWireTransferSimulationResultTransaction
     /**
      * The type of the route this Transaction came through.
      * 
-     * @var string $routeType
+     * @var \OpenAPI\OpenAPI\Models\Shared\InboundWireTransferSimulationResultTransactionRouteTypeEnum $routeType
      */
 	#[\JMS\Serializer\Annotation\SerializedName('route_type')]
-    #[\JMS\Serializer\Annotation\Type('string')]
-    public string $routeType;
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\InboundWireTransferSimulationResultTransactionRouteTypeEnum>')]
+    public InboundWireTransferSimulationResultTransactionRouteTypeEnum $routeType;
     
     /**
      * This is an object giving more details on the network-level event that caused the Transaction. Note that for backwards compatibility reasons, additional undocumented keys may appear in this object. These should be treated as deprecated and will be removed in the future.
@@ -116,7 +116,7 @@ class InboundWireTransferSimulationResultTransaction
 		$this->description = "";
 		$this->id = "";
 		$this->routeId = "";
-		$this->routeType = "";
+		$this->routeType = \OpenAPI\OpenAPI\Models\Shared\InboundWireTransferSimulationResultTransactionRouteTypeEnum::ACCOUNT_NUMBER;
 		$this->source = new \OpenAPI\OpenAPI\Models\Shared\InboundWireTransferSimulationResultTransactionTransactionSource();
 		$this->type = \OpenAPI\OpenAPI\Models\Shared\InboundWireTransferSimulationResultTransactionTypeEnum::TRANSACTION;
 	}

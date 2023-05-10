@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutConformancePackXAmzTargetEnum: string
 {
     case STARLING_DOVE_SERVICE_PUT_CONFORMANCE_PACK = 'StarlingDoveService.PutConformancePack';

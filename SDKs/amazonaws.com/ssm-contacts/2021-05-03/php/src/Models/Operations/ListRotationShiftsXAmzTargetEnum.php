@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListRotationShiftsXAmzTargetEnum: string
 {
     case SSM_CONTACTS_LIST_ROTATION_SHIFTS = 'SSMContacts.ListRotationShifts';

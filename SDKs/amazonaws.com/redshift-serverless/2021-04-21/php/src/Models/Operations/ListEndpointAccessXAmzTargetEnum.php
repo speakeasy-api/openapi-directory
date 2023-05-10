@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListEndpointAccessXAmzTargetEnum: string
 {
     case REDSHIFT_SERVERLESS_LIST_ENDPOINT_ACCESS = 'RedshiftServerless.ListEndpointAccess';

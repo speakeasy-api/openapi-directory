@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ScheduleKeyDeletionXAmzTargetEnum: string
 {
     case TRENT_SERVICE_SCHEDULE_KEY_DELETION = 'TrentService.ScheduleKeyDeletion';

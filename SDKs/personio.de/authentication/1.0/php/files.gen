@@ -22,4 +22,5 @@ src/Models/Operations/PostAuthRequest.php
 src/Models/Operations/PostAuthResponse.php
 src/Models/Shared/AuthenticationTokenResponseData.php
 src/Models/Shared/AuthenticationTokenResponse.php
+docs/sdk/README.md
 USAGE.md

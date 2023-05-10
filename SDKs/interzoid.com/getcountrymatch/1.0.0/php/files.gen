@@ -22,4 +22,6 @@ src/Utils/Utils.php
 src/Models/Operations/GetcountrymatchRequest.php
 src/Models/Operations/Getcountrymatch200ApplicationJSON.php
 src/Models/Operations/GetcountrymatchResponse.php
+docs/sdk/README.md
+docs/countrymatchsimilaritykey/README.md
 USAGE.md

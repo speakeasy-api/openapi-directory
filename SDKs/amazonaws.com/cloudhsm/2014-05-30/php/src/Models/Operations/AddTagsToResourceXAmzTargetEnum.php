@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AddTagsToResourceXAmzTargetEnum: string
 {
     case CLOUD_HSM_FRONTEND_SERVICE_ADD_TAGS_TO_RESOURCE = 'CloudHsmFrontendService.AddTagsToResource';

@@ -206,4 +206,5 @@ src/Models/Shared/UpdatePricingPlanResponse.php
 src/Models/Shared/UpdateSceneResponse.php
 src/Models/Shared/UpdateWorkspaceResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

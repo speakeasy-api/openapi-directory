@@ -30,48 +30,77 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\DevicesRequest;
+use \OpenAPI\OpenAPI\Models\Operations\DevicesSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new DevicesRequest();
+    $request->os = 'corrupti';
+
+    $requestSecurity = new DevicesSecurity();
+    $requestSecurity->password = 'YOUR_PASSWORD_HERE';
+    $requestSecurity->username = 'YOUR_USERNAME_HERE';
+
+    $response = $sdk->getDevices->devices($request, $requestSecurity);
+
+    if ($response->osDevices !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### getDevices
+### [getDevices](docs/getdevices/README.md)
 
-* `devices` - Fetch all available device combinations.
+* [devices](docs/getdevices/README.md#devices) - Fetch all available device combinations.
 
-### getLocations
+### [getLocations](docs/getlocations/README.md)
 
-* `locations` - Fetch Locations
+* [locations](docs/getlocations/README.md#locations) - Fetch Locations
 
-### getOSBrowsers
+### [getOSBrowsers](docs/getosbrowsers/README.md)
 
-* `osBrowsers` - Fetch all available os-browser combinations.
+* [osBrowsers](docs/getosbrowsers/README.md#osbrowsers) - Fetch all available os-browser combinations.
 
-### getProfiles
+### [getProfiles](docs/getprofiles/README.md)
 
-* `profiles` - Fetch login profiles
+* [profiles](docs/getprofiles/README.md#profiles) - Fetch login profiles
 
-### getResolutions
+### [getResolutions](docs/getresolutions/README.md)
 
-* `resolutions` - Fetch all available resolution on different OS
+* [resolutions](docs/getresolutions/README.md#resolutions) - Fetch all available resolution on different OS
 
-### getScreenshots
+### [getScreenshots](docs/getscreenshots/README.md)
 
-* `screenshots` - Fetch specified screenshot details
+* [screenshots](docs/getscreenshots/README.md#screenshots) - Fetch specified screenshot details
 
-### getZippedScreenshots
+### [getZippedScreenshots](docs/getzippedscreenshots/README.md)
 
-* `zippedScreenshots` - Fetch Zipped Screenshots
+* [zippedScreenshots](docs/getzippedscreenshots/README.md#zippedscreenshots) - Fetch Zipped Screenshots
 
-### startScreenshotTest
+### [startScreenshotTest](docs/startscreenshottest/README.md)
 
-* `startScreenshotTest` - Start Screenshot Test
+* [startScreenshotTest](docs/startscreenshottest/README.md#startscreenshottest) - Start Screenshot Test
 
-### stopScreenshotTest
+### [stopScreenshotTest](docs/stopscreenshottest/README.md)
 
-* `stopScreenshotsTest` - Stop specified screenshot test
+* [stopScreenshotsTest](docs/stopscreenshottest/README.md#stopscreenshotstest) - Stop specified screenshot test
 <!-- End SDK Available Operations -->
 
 ### Maturity

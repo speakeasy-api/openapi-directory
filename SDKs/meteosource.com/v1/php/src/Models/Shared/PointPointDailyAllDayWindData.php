@@ -36,8 +36,6 @@ class PointPointDailyAllDayWindData
     public ?string $dir = null;
     
     /**
-     * Wind gust speed. (allday max)
-     * 
      * Units: metric = m/s, us = mph, uk = mph, ca = km/h
      * 
      * @var ?float $gusts

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteDhcpOptionsActionEnum: string
 {
     case DELETE_DHCP_OPTIONS = 'DeleteDhcpOptions';

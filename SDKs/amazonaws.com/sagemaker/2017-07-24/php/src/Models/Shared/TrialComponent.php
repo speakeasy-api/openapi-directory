@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * TrialComponent - The properties of a trial component as returned by the <a>Search</a> API.
+ * TrialComponent - The properties of a trial component as returned by the <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

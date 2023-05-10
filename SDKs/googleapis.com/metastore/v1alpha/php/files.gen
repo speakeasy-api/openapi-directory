@@ -166,4 +166,6 @@ src/Models/Shared/RemoveIamPolicyResponse.php
 src/Models/Shared/RemoveIamPolicyRequest.php
 src/Models/Shared/RestoreServiceRequestRestoreTypeEnum.php
 src/Models/Shared/RestoreServiceRequest.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

@@ -45,12 +45,15 @@ class Receipts
      * @param \OpenAPI\OpenAPI\Models\Operations\ReceiptsPhotoToCSVRequestBody $request
      * @param \OpenAPI\OpenAPI\Models\Operations\ReceiptsPhotoToCSVSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ReceiptsPhotoToCSVResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function receiptsPhotoToCSV(
         \OpenAPI\OpenAPI\Models\Operations\ReceiptsPhotoToCSVRequestBody $request,
         \OpenAPI\OpenAPI\Models\Operations\ReceiptsPhotoToCSVSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ReceiptsPhotoToCSVResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/ocr/receipts/photo/to/csv');
         

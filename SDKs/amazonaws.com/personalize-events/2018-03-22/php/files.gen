@@ -32,4 +32,5 @@ src/Models/Shared/MetricAttribution.php
 src/Models/Shared/Item.php
 src/Models/Shared/User.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

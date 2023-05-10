@@ -10,8 +10,8 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /** When set to <em>1</em>, reverts any manually performed configuration changes to the default Hardware Sentry values. */
-enum ReinitializeActionConfigurationResetOtherAlertSettingsEnum: string
+enum ReinitializeActionConfigurationResetOtherAlertSettingsEnum: int
 {
-    case ZERO = '0';
-    case ONE = '1';
+    case ZERO = 0;
+    case ONE = 1;
 }

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum BatchUpdateClusterXAmzTargetEnum: string
 {
     case AMAZON_MEMORY_DB_BATCH_UPDATE_CLUSTER = 'AmazonMemoryDB.BatchUpdateCluster';

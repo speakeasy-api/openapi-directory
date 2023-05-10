@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeSnapshotsXAmzTargetEnum: string
 {
     case AMAZON_MEMORY_DB_DESCRIBE_SNAPSHOTS = 'AmazonMemoryDB.DescribeSnapshots';

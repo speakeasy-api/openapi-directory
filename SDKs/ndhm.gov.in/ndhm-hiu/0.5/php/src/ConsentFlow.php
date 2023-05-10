@@ -79,7 +79,7 @@ class ConsentFlow
      */
 	public function postV05ConsentRequestsOnInitJson(
         \OpenAPI\OpenAPI\Models\Operations\PostV05ConsentRequestsOnInitJsonRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05ConsentRequestsOnInitJsonResponse
     {
         $baseUrl = ConsentFlow::POST_V05_CONSENT_REQUESTS_ON_INIT_JSON_SERVERS[0];
@@ -135,7 +135,7 @@ class ConsentFlow
      */
 	public function postV05ConsentRequestsOnInitRaw(
         \OpenAPI\OpenAPI\Models\Operations\PostV05ConsentRequestsOnInitRawRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05ConsentRequestsOnInitRawResponse
     {
         $baseUrl = ConsentFlow::POST_V05_CONSENT_REQUESTS_ON_INIT_RAW_SERVERS[0];
@@ -189,7 +189,7 @@ class ConsentFlow
      */
 	public function postV05ConsentRequestsOnStatusJson(
         \OpenAPI\OpenAPI\Models\Operations\PostV05ConsentRequestsOnStatusJsonRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05ConsentRequestsOnStatusJsonResponse
     {
         $baseUrl = ConsentFlow::POST_V05_CONSENT_REQUESTS_ON_STATUS_JSON_SERVERS[0];
@@ -243,7 +243,7 @@ class ConsentFlow
      */
 	public function postV05ConsentRequestsOnStatusRaw(
         \OpenAPI\OpenAPI\Models\Operations\PostV05ConsentRequestsOnStatusRawRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05ConsentRequestsOnStatusRawResponse
     {
         $baseUrl = ConsentFlow::POST_V05_CONSENT_REQUESTS_ON_STATUS_RAW_SERVERS[0];
@@ -301,7 +301,7 @@ class ConsentFlow
      */
 	public function postV05ConsentsHiuNotify(
         \OpenAPI\OpenAPI\Models\Operations\PostV05ConsentsHiuNotifyRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05ConsentsHiuNotifyResponse
     {
         $baseUrl = ConsentFlow::POST_V05_CONSENTS_HIU_NOTIFY_SERVERS[0];
@@ -356,7 +356,7 @@ class ConsentFlow
      */
 	public function postV05ConsentsOnFetchJson(
         \OpenAPI\OpenAPI\Models\Operations\PostV05ConsentsOnFetchJsonRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05ConsentsOnFetchJsonResponse
     {
         $baseUrl = ConsentFlow::POST_V05_CONSENTS_ON_FETCH_JSON_SERVERS[0];
@@ -411,7 +411,7 @@ class ConsentFlow
      */
 	public function postV05ConsentsOnFetchRaw(
         \OpenAPI\OpenAPI\Models\Operations\PostV05ConsentsOnFetchRawRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05ConsentsOnFetchRawResponse
     {
         $baseUrl = ConsentFlow::POST_V05_CONSENTS_ON_FETCH_RAW_SERVERS[0];

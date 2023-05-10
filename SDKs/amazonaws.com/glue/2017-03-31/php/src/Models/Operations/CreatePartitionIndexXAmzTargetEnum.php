@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreatePartitionIndexXAmzTargetEnum: string
 {
     case AWS_GLUE_CREATE_PARTITION_INDEX = 'AWSGlue.CreatePartitionIndex';

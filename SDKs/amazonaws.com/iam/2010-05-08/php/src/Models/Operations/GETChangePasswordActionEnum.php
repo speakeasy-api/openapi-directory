@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETChangePasswordActionEnum: string
 {
     case CHANGE_PASSWORD = 'ChangePassword';

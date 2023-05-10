@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ResendContactReachabilityEmailXAmzTargetEnum: string
 {
     case ROUTE53_DOMAINS_V20140515_RESEND_CONTACT_REACHABILITY_EMAIL = 'Route53Domains_v20140515.ResendContactReachabilityEmail';

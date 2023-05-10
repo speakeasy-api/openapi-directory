@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteClusterXAmzTargetEnum: string
 {
     case AMAZON_DAXV3_DELETE_CLUSTER = 'AmazonDAXV3.DeleteCluster';

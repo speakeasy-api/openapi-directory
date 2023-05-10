@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetPrincipalTagAttributeMapXAmzTargetEnum: string
 {
     case AWS_COGNITO_IDENTITY_SERVICE_GET_PRINCIPAL_TAG_ATTRIBUTE_MAP = 'AWSCognitoIdentityService.GetPrincipalTagAttributeMap';

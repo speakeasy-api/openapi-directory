@@ -31,4 +31,6 @@ src/Models/Shared/RatingAspectDistribution.php
 src/Models/Shared/MarketPriceDetail.php
 src/Models/Shared/Amount.php
 src/Models/Shared/Image.php
+docs/sdk/README.md
+docs/merchandisedproduct/README.md
 USAGE.md

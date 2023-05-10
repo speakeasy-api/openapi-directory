@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeletePartnerActionEnum: string
 {
     case DELETE_PARTNER = 'DeletePartner';

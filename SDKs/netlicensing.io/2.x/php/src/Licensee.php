@@ -177,9 +177,11 @@ class Licensee
      * 
      * Return a list of all Licensees for the current Vendor
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListLicenseesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ListLicenseesResponse
      */
 	public function listLicensees(
+        \OpenAPI\OpenAPI\Models\Operations\ListLicenseesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ListLicenseesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -187,7 +189,8 @@ class Licensee
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

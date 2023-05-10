@@ -1,0 +1,9 @@
+# SDK
+
+## Overview
+
+Provides methods for detection, risk analysis, and de-identification of privacy-sensitive fragments in text, images, and Google Cloud Platform storage repositories.
+
+<https://cloud.google.com/dlp/docs/>
+### Available Operations
+

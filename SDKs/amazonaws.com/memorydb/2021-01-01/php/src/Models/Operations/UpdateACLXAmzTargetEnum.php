@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateACLXAmzTargetEnum: string
 {
     case AMAZON_MEMORY_DB_UPDATE_ACL = 'AmazonMemoryDB.UpdateACL';

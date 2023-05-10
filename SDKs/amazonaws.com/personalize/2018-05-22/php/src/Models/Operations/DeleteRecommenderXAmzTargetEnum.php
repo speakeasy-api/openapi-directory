@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteRecommenderXAmzTargetEnum: string
 {
     case AMAZON_PERSONALIZE_DELETE_RECOMMENDER = 'AmazonPersonalize.DeleteRecommender';

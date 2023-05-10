@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RegisterApplicationRevisionXAmzTargetEnum: string
 {
     case CODE_DEPLOY20141006_REGISTER_APPLICATION_REVISION = 'CodeDeploy_20141006.RegisterApplicationRevision';

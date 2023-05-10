@@ -40,4 +40,6 @@ src/Models/Shared/XgafvEnum.php
 src/Models/Shared/GoogleExampleLibraryagentV1ListBooksResponse.php
 src/Models/Shared/GoogleExampleLibraryagentV1ListShelvesResponse.php
 src/Models/Shared/GoogleExampleLibraryagentV1Shelf.php
+docs/sdk/README.md
+docs/shelves/README.md
 USAGE.md

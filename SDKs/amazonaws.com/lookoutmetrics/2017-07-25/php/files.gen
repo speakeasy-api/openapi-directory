@@ -211,4 +211,5 @@ src/Models/Shared/UpdateAlertResponse.php
 src/Models/Shared/UpdateAnomalyDetectorResponse.php
 src/Models/Shared/UpdateMetricSetResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -381,4 +381,15 @@ src/Models/Shared/ReplyList.php
 src/Models/Shared/Revision.php
 src/Models/Shared/RevisionList.php
 src/Models/Shared/TeamDriveList.php
+docs/sdk/README.md
+docs/about/README.md
+docs/changes/README.md
+docs/channels/README.md
+docs/comments/README.md
+docs/drives/README.md
+docs/files/README.md
+docs/permissions/README.md
+docs/replies/README.md
+docs/revisions/README.md
+docs/teamdrives/README.md
 USAGE.md

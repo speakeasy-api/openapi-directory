@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RenewCertificateXAmzTargetEnum: string
 {
     case CERTIFICATE_MANAGER_RENEW_CERTIFICATE = 'CertificateManager.RenewCertificate';

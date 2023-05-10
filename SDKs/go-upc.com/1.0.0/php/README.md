@@ -30,16 +30,41 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\GetProductInfoRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetProductInfoRequest();
+    $request->code = 'corrupti';
+
+    $response = $sdk->product->getProductInfo($request);
+
+    if ($response->getProductInfo200ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### product
+### [product](docs/product/README.md)
 
-* `getProductInfo` - Retrieve product info for a particular barcode number (UPC, EAN, or ISBN).
+* [getProductInfo](docs/product/README.md#getproductinfo) - Retrieve product info for a particular barcode number (UPC, EAN, or ISBN).
 <!-- End SDK Available Operations -->
 
 ### Maturity

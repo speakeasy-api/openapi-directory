@@ -63,4 +63,6 @@ src/Models/Shared/GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembers
 src/Models/Shared/GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembershipRelevanceEnum.php
 src/Models/Shared/GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembership.php
 src/Models/Shared/GoogleCloudPolicysimulatorV1AccessTuple.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

@@ -34,4 +34,5 @@ src/Models/Shared/RecurringDetailsResult.php
 src/Models/Shared/RecurringDetailsRequest.php
 src/Models/Shared/RecurringContractEnum.php
 src/Models/Shared/Recurring.php
+docs/sdk/README.md
 USAGE.md

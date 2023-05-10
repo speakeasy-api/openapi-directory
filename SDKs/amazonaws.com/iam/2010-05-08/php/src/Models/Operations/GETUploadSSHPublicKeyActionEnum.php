@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETUploadSSHPublicKeyActionEnum: string
 {
     case UPLOAD_SSH_PUBLIC_KEY = 'UploadSSHPublicKey';

@@ -30,27 +30,54 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\HolidayRequest;
+use \OpenAPI\OpenAPI\Models\Operations\HolidayOptionalEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new HolidayRequest();
+    $request->holidayId = 2;
+    $request->optional = HolidayOptionalEnum::TRUE;
+    $request->year = 592845;
+
+    $response = $sdk->holidays->holiday($request);
+
+    if ($response->holiday200ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### holidays
+### [holidays](docs/holidays/README.md)
 
-* `holiday` - Get a holiday by id
-* `holidays` - Get all holidays
+* [holiday](docs/holidays/README.md#holiday) - Get a holiday by id
+* [holidays](docs/holidays/README.md#holidays) - Get all holidays
 
-### info
+### [info](docs/info/README.md)
 
-* `root` - root
-* `spec` - Get JSON schema
+* [root](docs/info/README.md#root) - root
+* [spec](docs/info/README.md#spec) - Get JSON schema
 
-### provinces
+### [provinces](docs/provinces/README.md)
 
-* `province` - Get a province or territory by abbreviation
-* `provinces` - Get all provinces
+* [province](docs/provinces/README.md#province) - Get a province or territory by abbreviation
+* [provinces](docs/provinces/README.md#provinces) - Get all provinces
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AttachLoadBalancerTlsCertificateXAmzTargetEnum: string
 {
     case LIGHTSAIL20161128_ATTACH_LOAD_BALANCER_TLS_CERTIFICATE = 'Lightsail_20161128.AttachLoadBalancerTlsCertificate';

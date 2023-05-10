@@ -39,4 +39,6 @@ src/Models/Shared/XgafvEnum.php
 src/Models/Shared/ListOperationsResponse.php
 src/Models/Shared/Operation.php
 src/Models/Shared/Status.php
+docs/sdk/README.md
+docs/operations/README.md
 USAGE.md

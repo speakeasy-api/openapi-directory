@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDetachVerifiedAccessTrustProviderActionEnum: string
 {
     case DETACH_VERIFIED_ACCESS_TRUST_PROVIDER = 'DetachVerifiedAccessTrustProvider';

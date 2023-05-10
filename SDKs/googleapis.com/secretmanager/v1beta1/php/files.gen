@@ -89,4 +89,6 @@ src/Models/Shared/TestIamPermissionsResponse.php
 src/Models/Shared/TestIamPermissionsRequest.php
 src/Models/Shared/AccessSecretVersionResponse.php
 src/Models/Shared/ListSecretVersionsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

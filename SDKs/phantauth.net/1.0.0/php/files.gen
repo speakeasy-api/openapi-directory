@@ -54,4 +54,11 @@ src/Models/Operations/GetUserUsernameTokenKindResponse.php
 src/Models/Operations/PostUserRequestBodyAddress.php
 src/Models/Operations/PostUserRequestBody.php
 src/Models/Operations/PostUserResponse.php
+docs/sdk/README.md
+docs/client/README.md
+docs/domain/README.md
+docs/fleet/README.md
+docs/team/README.md
+docs/tenant/README.md
+docs/user/README.md
 USAGE.md

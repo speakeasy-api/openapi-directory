@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeDRTAccessXAmzTargetEnum: string
 {
     case AWS_SHIELD20160616_DESCRIBE_DRT_ACCESS = 'AWSShield_20160616.DescribeDRTAccess';

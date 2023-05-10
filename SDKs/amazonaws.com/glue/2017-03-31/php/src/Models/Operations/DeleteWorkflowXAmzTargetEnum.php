@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteWorkflowXAmzTargetEnum: string
 {
     case AWS_GLUE_DELETE_WORKFLOW = 'AWSGlue.DeleteWorkflow';

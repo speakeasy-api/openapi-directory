@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateRepositoryDescriptionXAmzTargetEnum: string
 {
     case CODE_COMMIT20150413_UPDATE_REPOSITORY_DESCRIPTION = 'CodeCommit_20150413.UpdateRepositoryDescription';

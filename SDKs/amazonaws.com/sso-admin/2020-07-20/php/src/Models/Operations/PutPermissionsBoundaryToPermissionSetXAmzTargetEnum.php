@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutPermissionsBoundaryToPermissionSetXAmzTargetEnum: string
 {
     case SWB_EXTERNAL_SERVICE_PUT_PERMISSIONS_BOUNDARY_TO_PERMISSION_SET = 'SWBExternalService.PutPermissionsBoundaryToPermissionSet';

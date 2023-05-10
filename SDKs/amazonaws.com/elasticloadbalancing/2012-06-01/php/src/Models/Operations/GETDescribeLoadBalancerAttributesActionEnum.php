@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDescribeLoadBalancerAttributesActionEnum: string
 {
     case DESCRIBE_LOAD_BALANCER_ATTRIBUTES = 'DescribeLoadBalancerAttributes';

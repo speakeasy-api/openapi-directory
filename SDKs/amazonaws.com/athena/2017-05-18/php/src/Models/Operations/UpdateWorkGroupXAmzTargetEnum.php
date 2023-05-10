@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateWorkGroupXAmzTargetEnum: string
 {
     case AMAZON_ATHENA_UPDATE_WORK_GROUP = 'AmazonAthena.UpdateWorkGroup';

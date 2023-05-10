@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetContactReachabilityStatusXAmzTargetEnum: string
 {
     case ROUTE53_DOMAINS_V20140515_GET_CONTACT_REACHABILITY_STATUS = 'Route53Domains_v20140515.GetContactReachabilityStatus';

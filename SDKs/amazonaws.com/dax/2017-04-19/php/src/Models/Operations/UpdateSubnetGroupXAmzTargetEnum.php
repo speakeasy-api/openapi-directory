@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateSubnetGroupXAmzTargetEnum: string
 {
     case AMAZON_DAXV3_UPDATE_SUBNET_GROUP = 'AmazonDAXV3.UpdateSubnetGroup';

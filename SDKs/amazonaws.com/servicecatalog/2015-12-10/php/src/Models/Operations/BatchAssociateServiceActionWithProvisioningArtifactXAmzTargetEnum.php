@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum BatchAssociateServiceActionWithProvisioningArtifactXAmzTargetEnum: string
 {
     case AWS242_SERVICE_CATALOG_SERVICE_BATCH_ASSOCIATE_SERVICE_ACTION_WITH_PROVISIONING_ARTIFACT = 'AWS242ServiceCatalogService.BatchAssociateServiceActionWithProvisioningArtifact';

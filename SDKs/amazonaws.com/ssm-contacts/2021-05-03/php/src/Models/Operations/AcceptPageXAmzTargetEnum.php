@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AcceptPageXAmzTargetEnum: string
 {
     case SSM_CONTACTS_ACCEPT_PAGE = 'SSMContacts.AcceptPage';

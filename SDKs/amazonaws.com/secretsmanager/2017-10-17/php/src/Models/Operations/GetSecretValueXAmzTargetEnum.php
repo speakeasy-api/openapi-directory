@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetSecretValueXAmzTargetEnum: string
 {
     case SECRETSMANAGER_GET_SECRET_VALUE = 'secretsmanager.GetSecretValue';

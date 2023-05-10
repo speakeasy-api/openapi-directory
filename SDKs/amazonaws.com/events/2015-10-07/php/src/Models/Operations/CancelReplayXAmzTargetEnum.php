@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CancelReplayXAmzTargetEnum: string
 {
     case AWS_EVENTS_CANCEL_REPLAY = 'AWSEvents.CancelReplay';

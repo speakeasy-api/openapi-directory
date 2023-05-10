@@ -42,11 +42,6 @@ class ContainerDetail
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $environment = null;
     
-    /**
-     * The amount of ephemeral storage to allocate for the task. This parameter is used to expand the total amount of ephemeral storage available, beyond the default amount, for tasks hosted on Fargate.
-     * 
-     * @var ?\OpenAPI\OpenAPI\Models\Shared\EphemeralStorage $ephemeralStorage
-     */
 	#[\JMS\Serializer\Annotation\SerializedName('ephemeralStorage')]
     #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\EphemeralStorage')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]

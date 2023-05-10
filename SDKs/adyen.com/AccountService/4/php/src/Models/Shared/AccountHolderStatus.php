@@ -14,10 +14,10 @@ class AccountHolderStatus
     /**
      * A list of events scheduled for the account holder.
      * 
-     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\AccountEvent> $events
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\AccountEventWrapper> $events
      */
 	#[\JMS\Serializer\Annotation\SerializedName('events')]
-    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\AccountEvent>')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\AccountEventWrapper>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $events = null;
     

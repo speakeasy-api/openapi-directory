@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetSampledRequestsXAmzTargetEnum: string
 {
     case AWSWAF20150824_GET_SAMPLED_REQUESTS = 'AWSWAF_20150824.GetSampledRequests';

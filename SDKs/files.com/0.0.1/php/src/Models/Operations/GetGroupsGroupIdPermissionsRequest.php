@@ -28,44 +28,12 @@ class GetGroupsGroupIdPermissionsRequest
     public ?array $filter = null;
     
     /**
-     * If set, return records where the specified field is greater than the supplied value. Valid fields are `group_id`, `user_id` or `path`. Valid field combinations are `[ group_id, path ]` and `[ user_id, path ]`.
+     * If set, return records where the specified field is prefixed by the supplied value. Valid fields are `path`.
      * 
-     * @var ?array<string, mixed> $filterGt
+     * @var ?array<string, mixed> $filterPrefix
      */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_gt')]
-    public ?array $filterGt = null;
-    
-    /**
-     * If set, return records where the specified field is greater than or equal to the supplied value. Valid fields are `group_id`, `user_id` or `path`. Valid field combinations are `[ group_id, path ]` and `[ user_id, path ]`.
-     * 
-     * @var ?array<string, mixed> $filterGteq
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_gteq')]
-    public ?array $filterGteq = null;
-    
-    /**
-     * If set, return records where the specified field is equal to the supplied value. Valid fields are `group_id`, `user_id` or `path`. Valid field combinations are `[ group_id, path ]` and `[ user_id, path ]`.
-     * 
-     * @var ?array<string, mixed> $filterLike
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_like')]
-    public ?array $filterLike = null;
-    
-    /**
-     * If set, return records where the specified field is less than the supplied value. Valid fields are `group_id`, `user_id` or `path`. Valid field combinations are `[ group_id, path ]` and `[ user_id, path ]`.
-     * 
-     * @var ?array<string, mixed> $filterLt
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_lt')]
-    public ?array $filterLt = null;
-    
-    /**
-     * If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `group_id`, `user_id` or `path`. Valid field combinations are `[ group_id, path ]` and `[ user_id, path ]`.
-     * 
-     * @var ?array<string, mixed> $filterLteq
-     */
-	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_lteq')]
-    public ?array $filterLteq = null;
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter_prefix')]
+    public ?array $filterPrefix = null;
     
     /**
      * DEPRECATED: Group ID.  If provided, will scope permissions to this group. Use `filter[group_id]` instead.`
@@ -119,11 +87,7 @@ class GetGroupsGroupIdPermissionsRequest
 	{
 		$this->cursor = null;
 		$this->filter = null;
-		$this->filterGt = null;
-		$this->filterGteq = null;
-		$this->filterLike = null;
-		$this->filterLt = null;
-		$this->filterLteq = null;
+		$this->filterPrefix = null;
 		$this->groupId = "";
 		$this->includeGroups = null;
 		$this->path = null;

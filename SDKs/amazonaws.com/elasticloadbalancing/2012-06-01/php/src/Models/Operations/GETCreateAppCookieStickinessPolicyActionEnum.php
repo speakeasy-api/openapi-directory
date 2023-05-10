@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETCreateAppCookieStickinessPolicyActionEnum: string
 {
     case CREATE_APP_COOKIE_STICKINESS_POLICY = 'CreateAppCookieStickinessPolicy';

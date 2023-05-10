@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTSetReceiptRulePositionActionEnum: string
 {
     case SET_RECEIPT_RULE_POSITION = 'SetReceiptRulePosition';

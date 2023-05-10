@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteDataCatalogXAmzTargetEnum: string
 {
     case AMAZON_ATHENA_DELETE_DATA_CATALOG = 'AmazonAthena.DeleteDataCatalog';

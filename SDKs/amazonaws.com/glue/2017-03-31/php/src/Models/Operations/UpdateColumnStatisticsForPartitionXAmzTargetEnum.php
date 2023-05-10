@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateColumnStatisticsForPartitionXAmzTargetEnum: string
 {
     case AWS_GLUE_UPDATE_COLUMN_STATISTICS_FOR_PARTITION = 'AWSGlue.UpdateColumnStatisticsForPartition';

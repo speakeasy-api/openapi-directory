@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTAddUserToGroupActionEnum: string
 {
     case ADD_USER_TO_GROUP = 'AddUserToGroup';

@@ -52,7 +52,7 @@ class HistoricalWeather
      */
 	public function getVisualCrossingWebServicesRestServicesWeatherdataHistory(
         \OpenAPI\OpenAPI\Models\Operations\GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\GetVisualCrossingWebServicesRestServicesWeatherdataHistoryResponse
     {
         $baseUrl = HistoricalWeather::GET_VISUAL_CROSSING_WEB_SERVICES_REST_SERVICES_WEATHERDATA_HISTORY_SERVERS[0];

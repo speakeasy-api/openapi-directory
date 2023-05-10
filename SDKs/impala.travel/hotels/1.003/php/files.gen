@@ -110,4 +110,8 @@ src/Models/Shared/AdjustmentConditionsRules.php
 src/Models/Shared/AdjustmentConditionsTypeEnum.php
 src/Models/Shared/AdjustmentConditions.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/bookings/README.md
+docs/hotels/README.md
+docs/ratecalendar/README.md
 USAGE.md

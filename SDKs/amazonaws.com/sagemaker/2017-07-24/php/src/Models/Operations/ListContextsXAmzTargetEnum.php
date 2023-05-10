@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListContextsXAmzTargetEnum: string
 {
     case SAGE_MAKER_LIST_CONTEXTS = 'SageMaker.ListContexts';

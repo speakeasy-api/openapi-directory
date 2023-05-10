@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETModifyCacheSubnetGroupActionEnum: string
 {
     case MODIFY_CACHE_SUBNET_GROUP = 'ModifyCacheSubnetGroup';

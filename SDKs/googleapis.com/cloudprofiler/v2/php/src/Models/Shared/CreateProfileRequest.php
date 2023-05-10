@@ -28,7 +28,7 @@ class CreateProfileRequest
     public ?Deployment $deployment = null;
     
     /**
-     * Required. One or more profile types that the agent is capable of providing.
+     * One or more profile types that the agent is capable of providing.
      * 
      * @var ?array<\OpenAPI\OpenAPI\Models\Shared\CreateProfileRequestProfileTypeEnum> $profileType
      */

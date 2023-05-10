@@ -40,9 +40,11 @@ class Export
     /**
      * Top asset hardware products as CSV
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ExportAssetTopHWCSVSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ExportAssetTopHWCSVResponse
      */
 	public function exportAssetTopHWCSV(
+        \OpenAPI\OpenAPI\Models\Operations\ExportAssetTopHWCSVSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ExportAssetTopHWCSVResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -50,7 +52,8 @@ class Export
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -73,9 +76,11 @@ class Export
     /**
      * Top asset operating systems as CSV
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ExportAssetTopOSCSVSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ExportAssetTopOSCSVResponse
      */
 	public function exportAssetTopOSCSV(
+        \OpenAPI\OpenAPI\Models\Operations\ExportAssetTopOSCSVSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ExportAssetTopOSCSVResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -83,7 +88,8 @@ class Export
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -106,9 +112,11 @@ class Export
     /**
      * Top asset tags as CSV
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ExportAssetTopTagsCSVSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ExportAssetTopTagsCSVResponse
      */
 	public function exportAssetTopTagsCSV(
+        \OpenAPI\OpenAPI\Models\Operations\ExportAssetTopTagsCSVSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ExportAssetTopTagsCSVResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -116,7 +124,8 @@ class Export
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -139,9 +148,11 @@ class Export
     /**
      * Top asset types as CSV
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ExportAssetTopTypesCSVSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ExportAssetTopTypesCSVResponse
      */
 	public function exportAssetTopTypesCSV(
+        \OpenAPI\OpenAPI\Models\Operations\ExportAssetTopTypesCSVSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ExportAssetTopTypesCSVResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -149,7 +160,8 @@ class Export
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -278,8 +290,7 @@ class Export
         
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->exportAssetsJSONL200ApplicationJSONBinaryString = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->exportAssetsJSONL200ApplicationJSONBinaryString = $httpResponse->getBody()->getContents();
             }
         }
         else if ($httpResponse->getStatusCode() === 401) {
@@ -436,8 +447,7 @@ class Export
         
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->exportServicesJSONL200ApplicationJSONBinaryString = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->exportServicesJSONL200ApplicationJSONBinaryString = $httpResponse->getBody()->getContents();
             }
         }
         else if ($httpResponse->getStatusCode() === 401) {
@@ -449,9 +459,11 @@ class Export
     /**
      * Top service products as CSV
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ExportServicesTopProductsCSVSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ExportServicesTopProductsCSVResponse
      */
 	public function exportServicesTopProductsCSV(
+        \OpenAPI\OpenAPI\Models\Operations\ExportServicesTopProductsCSVSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ExportServicesTopProductsCSVResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -459,7 +471,8 @@ class Export
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -482,9 +495,11 @@ class Export
     /**
      * Top service protocols as CSV
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ExportServicesTopProtocolsCSVSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ExportServicesTopProtocolsCSVResponse
      */
 	public function exportServicesTopProtocolsCSV(
+        \OpenAPI\OpenAPI\Models\Operations\ExportServicesTopProtocolsCSVSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ExportServicesTopProtocolsCSVResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -492,7 +507,8 @@ class Export
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -515,9 +531,11 @@ class Export
     /**
      * Top TCP services as CSV
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ExportServicesTopTCPCSVSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ExportServicesTopTCPCSVResponse
      */
 	public function exportServicesTopTCPCSV(
+        \OpenAPI\OpenAPI\Models\Operations\ExportServicesTopTCPCSVSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ExportServicesTopTCPCSVResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -525,7 +543,8 @@ class Export
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -548,9 +567,11 @@ class Export
     /**
      * Top UDP services as CSV
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ExportServicesTopUDPCSVSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ExportServicesTopUDPCSVResponse
      */
 	public function exportServicesTopUDPCSV(
+        \OpenAPI\OpenAPI\Models\Operations\ExportServicesTopUDPCSVSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ExportServicesTopUDPCSVResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -558,7 +579,8 @@ class Export
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -581,9 +603,11 @@ class Export
     /**
      * Site list as CSV
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ExportSitesCSVSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ExportSitesCSVResponse
      */
 	public function exportSitesCSV(
+        \OpenAPI\OpenAPI\Models\Operations\ExportSitesCSVSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ExportSitesCSVResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -591,7 +615,8 @@ class Export
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -681,8 +706,7 @@ class Export
         
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->exportSitesJSONL200ApplicationJSONBinaryString = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->exportSitesJSONL200ApplicationJSONBinaryString = $httpResponse->getBody()->getContents();
             }
         }
         else if ($httpResponse->getStatusCode() === 401) {
@@ -839,8 +863,7 @@ class Export
         
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->exportWirelessJSONL200ApplicationJSONBinaryString = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->exportWirelessJSONL200ApplicationJSONBinaryString = $httpResponse->getBody()->getContents();
             }
         }
         else if ($httpResponse->getStatusCode() === 401) {

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListNamedQueriesXAmzTargetEnum: string
 {
     case AMAZON_ATHENA_LIST_NAMED_QUERIES = 'AmazonAthena.ListNamedQueries';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTGetFlowLogsIntegrationTemplateActionEnum: string
 {
     case GET_FLOW_LOGS_INTEGRATION_TEMPLATE = 'GetFlowLogsIntegrationTemplate';

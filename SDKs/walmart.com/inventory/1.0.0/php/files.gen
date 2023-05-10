@@ -103,4 +103,6 @@ src/Models/Operations/UpdateMultiNodeInventory200ApplicationJSONNodesErrors.php
 src/Models/Operations/UpdateMultiNodeInventory200ApplicationJSONNodes.php
 src/Models/Operations/UpdateMultiNodeInventory200ApplicationJSON.php
 src/Models/Operations/UpdateMultiNodeInventoryResponse.php
+docs/sdk/README.md
+docs/inventory/README.md
 USAGE.md

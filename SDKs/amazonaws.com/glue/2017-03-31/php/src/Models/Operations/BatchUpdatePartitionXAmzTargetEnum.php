@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum BatchUpdatePartitionXAmzTargetEnum: string
 {
     case AWS_GLUE_BATCH_UPDATE_PARTITION = 'AWSGlue.BatchUpdatePartition';

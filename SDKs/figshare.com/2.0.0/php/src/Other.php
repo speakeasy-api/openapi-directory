@@ -194,9 +194,11 @@ class Other
      * 
      * Account information for token/personal token
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\PrivateAccountSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\PrivateAccountResponse
      */
 	public function privateAccount(
+        \OpenAPI\OpenAPI\Models\Operations\PrivateAccountSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\PrivateAccountResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -204,7 +206,8 @@ class Other
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
@@ -285,9 +288,11 @@ class Other
      * 
      * This is a private endpoint that requires OAuth. It will return a list with figshare public licenses AND licenses defined for account's institution.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\PrivateLicensesListSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\PrivateLicensesListResponse
      */
 	public function privateLicensesList(
+        \OpenAPI\OpenAPI\Models\Operations\PrivateLicensesListSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\PrivateLicensesListResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -295,7 +300,8 @@ class Other
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

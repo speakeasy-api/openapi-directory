@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETReleaseHostsActionEnum: string
 {
     case RELEASE_HOSTS = 'ReleaseHosts';

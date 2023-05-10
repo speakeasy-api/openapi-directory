@@ -42,9 +42,11 @@ class GetProfiles
      * 
      * Fetch login profiles
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ProfilesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ProfilesResponse
      */
 	public function profiles(
+        \OpenAPI\OpenAPI\Models\Operations\ProfilesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ProfilesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -52,7 +54,8 @@ class GetProfiles
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

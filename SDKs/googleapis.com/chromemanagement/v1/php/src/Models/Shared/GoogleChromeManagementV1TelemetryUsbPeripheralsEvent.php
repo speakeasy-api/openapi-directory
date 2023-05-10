@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * GoogleChromeManagementV1TelemetryUsbPeripheralsEvent - `TelemetryUsbPeripheralsEvent` is triggered USB devices are either added or removed.
+ * GoogleChromeManagementV1TelemetryUsbPeripheralsEvent - `TelemetryUsbPeripheralsEvent` is triggered USB devices are either added or removed. * Granular permission needed: TELEMETRY_API_PERIPHERALS_REPORT
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

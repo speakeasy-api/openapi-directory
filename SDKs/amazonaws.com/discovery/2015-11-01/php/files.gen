@@ -164,4 +164,5 @@ src/Models/Shared/StopDataCollectionByAgentIdsResponse.php
 src/Models/Shared/StopDataCollectionByAgentIdsRequest.php
 src/Models/Shared/UpdateApplicationRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

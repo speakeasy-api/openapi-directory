@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetServiceSettingXAmzTargetEnum: string
 {
     case AMAZON_SSM_GET_SERVICE_SETTING = 'AmazonSSM.GetServiceSetting';

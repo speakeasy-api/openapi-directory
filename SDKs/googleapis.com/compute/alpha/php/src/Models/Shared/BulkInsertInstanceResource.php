@@ -27,16 +27,6 @@ class BulkInsertInstanceResource
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $count = null;
     
-    /**
-     * Represents an Instance resource. An instance is a virtual machine that is hosted on Google Cloud Platform. For more information, read Virtual Machine Instances.
-     * 
-     * @var ?\OpenAPI\OpenAPI\Models\Shared\Instance $instance
-     */
-	#[\JMS\Serializer\Annotation\SerializedName('instance')]
-    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\Instance')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?Instance $instance = null;
-    
 	#[\JMS\Serializer\Annotation\SerializedName('instanceProperties')]
     #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\InstanceProperties')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -95,7 +85,6 @@ class BulkInsertInstanceResource
 	public function __construct()
 	{
 		$this->count = null;
-		$this->instance = null;
 		$this->instanceProperties = null;
 		$this->locationPolicy = null;
 		$this->minCount = null;

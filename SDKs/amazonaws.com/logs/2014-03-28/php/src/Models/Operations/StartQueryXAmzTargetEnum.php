@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StartQueryXAmzTargetEnum: string
 {
     case LOGS20140328_START_QUERY = 'Logs_20140328.StartQuery';

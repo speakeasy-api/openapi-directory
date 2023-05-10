@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDescribeVpcClassicLinkDnsSupportActionEnum: string
 {
     case DESCRIBE_VPC_CLASSIC_LINK_DNS_SUPPORT = 'DescribeVpcClassicLinkDnsSupport';

@@ -20,7 +20,7 @@ class SpeechProjectsLocationsCustomClassesCreateRequest
     public ?\OpenAPI\OpenAPI\Models\Shared\XgafvEnum $dollarXgafv = null;
     
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\OpenAPI\OpenAPI\Models\Shared\CreateCustomClassRequest $createCustomClassRequest = null;
+    public ?\OpenAPI\OpenAPI\Models\Shared\CreateCustomClassRequestInput $createCustomClassRequestInput = null;
     
     /**
      * OAuth access token.
@@ -113,7 +113,7 @@ class SpeechProjectsLocationsCustomClassesCreateRequest
 	public function __construct()
 	{
 		$this->dollarXgafv = null;
-		$this->createCustomClassRequest = null;
+		$this->createCustomClassRequestInput = null;
 		$this->accessToken = null;
 		$this->alt = null;
 		$this->callback = null;

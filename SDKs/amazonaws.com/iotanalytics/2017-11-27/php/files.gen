@@ -222,4 +222,5 @@ src/Models/Shared/RunPipelineActivityResponse.php
 src/Models/Shared/SampleChannelDataResponse.php
 src/Models/Shared/StartPipelineReprocessingResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

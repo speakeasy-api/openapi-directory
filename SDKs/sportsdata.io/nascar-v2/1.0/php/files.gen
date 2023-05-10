@@ -43,4 +43,5 @@ src/Models/Shared/Race.php
 src/Models/Shared/DriverRace.php
 src/Models/Shared/Series.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

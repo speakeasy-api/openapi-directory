@@ -30,32 +30,74 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\TasksTasklistsDeleteRequest;
+use \OpenAPI\OpenAPI\Models\Shared\XgafvEnum;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+use \OpenAPI\OpenAPI\Models\Operations\TasksTasklistsDeleteSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new TasksTasklistsDeleteRequest();
+    $request->dollarXgafv = XgafvEnum::TWO;
+    $request->accessToken = 'provident';
+    $request->alt = AltEnum::PROTO;
+    $request->callback = 'quibusdam';
+    $request->fields = 'unde';
+    $request->key = 'nulla';
+    $request->oauthToken = 'corrupti';
+    $request->prettyPrint = false;
+    $request->quotaUser = 'illum';
+    $request->tasklist = 'vel';
+    $request->uploadType = 'error';
+    $request->uploadProtocol = 'deserunt';
+
+    $requestSecurity = new TasksTasklistsDeleteSecurity();
+    $requestSecurity->oauth2 = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+    $requestSecurity->oauth2c = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+
+    $response = $sdk->tasklists->tasksTasklistsDelete($request, $requestSecurity);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### tasklists
+### [tasklists](docs/tasklists/README.md)
 
-* `tasksTasklistsDelete` - Deletes the authenticated user's specified task list.
-* `tasksTasklistsGet` - Returns the authenticated user's specified task list.
-* `tasksTasklistsInsert` - Creates a new task list and adds it to the authenticated user's task lists.
-* `tasksTasklistsList` - Returns all the authenticated user's task lists.
-* `tasksTasklistsPatch` - Updates the authenticated user's specified task list. This method supports patch semantics.
-* `tasksTasklistsUpdate` - Updates the authenticated user's specified task list.
+* [tasksTasklistsDelete](docs/tasklists/README.md#taskstasklistsdelete) - Deletes the authenticated user's specified task list.
+* [tasksTasklistsGet](docs/tasklists/README.md#taskstasklistsget) - Returns the authenticated user's specified task list.
+* [tasksTasklistsInsert](docs/tasklists/README.md#taskstasklistsinsert) - Creates a new task list and adds it to the authenticated user's task lists.
+* [tasksTasklistsList](docs/tasklists/README.md#taskstasklistslist) - Returns all the authenticated user's task lists.
+* [tasksTasklistsPatch](docs/tasklists/README.md#taskstasklistspatch) - Updates the authenticated user's specified task list. This method supports patch semantics.
+* [tasksTasklistsUpdate](docs/tasklists/README.md#taskstasklistsupdate) - Updates the authenticated user's specified task list.
 
-### tasks
+### [tasks](docs/tasks/README.md)
 
-* `tasksTasksClear` - Clears all completed tasks from the specified task list. The affected tasks will be marked as 'hidden' and no longer be returned by default when retrieving all tasks for a task list.
-* `tasksTasksDelete` - Deletes the specified task from the task list.
-* `tasksTasksGet` - Returns the specified task.
-* `tasksTasksInsert` - Creates a new task on the specified task list.
-* `tasksTasksList` - Returns all tasks in the specified task list.
-* `tasksTasksMove` - Moves the specified task to another position in the task list. This can include putting it as a child task under a new parent and/or move it to a different position among its sibling tasks.
-* `tasksTasksPatch` - Updates the specified task. This method supports patch semantics.
-* `tasksTasksUpdate` - Updates the specified task.
+* [tasksTasksClear](docs/tasks/README.md#taskstasksclear) - Clears all completed tasks from the specified task list. The affected tasks will be marked as 'hidden' and no longer be returned by default when retrieving all tasks for a task list.
+* [tasksTasksDelete](docs/tasks/README.md#taskstasksdelete) - Deletes the specified task from the task list.
+* [tasksTasksGet](docs/tasks/README.md#taskstasksget) - Returns the specified task.
+* [tasksTasksInsert](docs/tasks/README.md#taskstasksinsert) - Creates a new task on the specified task list.
+* [tasksTasksList](docs/tasks/README.md#taskstaskslist) - Returns all tasks in the specified task list.
+* [tasksTasksMove](docs/tasks/README.md#taskstasksmove) - Moves the specified task to another position in the task list. This can include putting it as a child task under a new parent and/or move it to a different position among its sibling tasks.
+* [tasksTasksPatch](docs/tasks/README.md#taskstaskspatch) - Updates the specified task. This method supports patch semantics.
+* [tasksTasksUpdate](docs/tasks/README.md#taskstasksupdate) - Updates the specified task.
 <!-- End SDK Available Operations -->
 
 ### Maturity

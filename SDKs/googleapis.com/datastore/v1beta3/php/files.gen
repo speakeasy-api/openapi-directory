@@ -114,4 +114,6 @@ src/Models/Shared/QueryResultBatchEntityResultTypeEnum.php
 src/Models/Shared/QueryResultBatchMoreResultsEnum.php
 src/Models/Shared/QueryResultBatch.php
 src/Models/Shared/RunQueryRequest.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

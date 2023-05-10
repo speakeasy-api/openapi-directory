@@ -31,6 +31,22 @@ class BatchGetPartitionResponse
     public mixed $entityNotFoundException = null;
     
     /**
+     * FederationSourceException
+     * 
+     * @var mixed $federationSourceException
+     */
+	
+    public mixed $federationSourceException = null;
+    
+    /**
+     * FederationSourceRetryableException
+     * 
+     * @var mixed $federationSourceRetryableException
+     */
+	
+    public mixed $federationSourceRetryableException = null;
+    
+    /**
      * GlueEncryptionException
      * 
      * @var mixed $glueEncryptionException
@@ -81,6 +97,8 @@ class BatchGetPartitionResponse
 		$this->batchGetPartitionResponse = null;
 		$this->contentType = "";
 		$this->entityNotFoundException = null;
+		$this->federationSourceException = null;
+		$this->federationSourceRetryableException = null;
 		$this->glueEncryptionException = null;
 		$this->internalServiceException = null;
 		$this->invalidInputException = null;

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListPermissionSetProvisioningStatusXAmzTargetEnum: string
 {
     case SWB_EXTERNAL_SERVICE_LIST_PERMISSION_SET_PROVISIONING_STATUS = 'SWBExternalService.ListPermissionSetProvisioningStatus';

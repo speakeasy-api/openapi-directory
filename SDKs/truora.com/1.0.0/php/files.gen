@@ -69,6 +69,7 @@ src/Models/Operations/CreateHookResponse.php
 src/Models/Operations/DeletHookSecurity.php
 src/Models/Operations/DeletHookRequest.php
 src/Models/Operations/DeletHookResponse.php
+src/Models/Operations/ListHookSecurity.php
 src/Models/Operations/ListHookResponse.php
 src/Models/Operations/UpdateHookSecurity.php
 src/Models/Operations/UpdateHookRequest.php
@@ -163,4 +164,12 @@ src/Models/Shared/BatchUploadInput.php
 src/Models/Shared/CreateReportInput.php
 src/Models/Shared/ReportsOutput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/behavior/README.md
+docs/checks/README.md
+docs/continuous/README.md
+docs/customtype/README.md
+docs/hooks/README.md
+docs/pdf/README.md
+docs/reports/README.md
 USAGE.md

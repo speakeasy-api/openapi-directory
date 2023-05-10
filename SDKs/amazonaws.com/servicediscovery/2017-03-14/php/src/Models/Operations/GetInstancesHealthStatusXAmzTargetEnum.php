@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetInstancesHealthStatusXAmzTargetEnum: string
 {
     case ROUTE53_AUTO_NAMING_V20170314_GET_INSTANCES_HEALTH_STATUS = 'Route53AutoNaming_v20170314.GetInstancesHealthStatus';

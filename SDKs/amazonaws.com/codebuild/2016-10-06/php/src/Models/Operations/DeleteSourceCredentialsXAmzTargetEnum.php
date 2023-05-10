@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteSourceCredentialsXAmzTargetEnum: string
 {
     case CODE_BUILD20161006_DELETE_SOURCE_CREDENTIALS = 'CodeBuild_20161006.DeleteSourceCredentials';

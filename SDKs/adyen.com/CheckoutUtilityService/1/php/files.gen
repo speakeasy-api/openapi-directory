@@ -21,4 +21,5 @@ src/Utils/Utils.php
 src/Models/Operations/PostOriginKeysResponse.php
 src/Models/Shared/CheckoutUtilityResponse.php
 src/Models/Shared/CheckoutUtilityRequest.php
+docs/sdk/README.md
 USAGE.md

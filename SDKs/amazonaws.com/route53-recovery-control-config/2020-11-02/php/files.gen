@@ -104,4 +104,5 @@ src/Models/Shared/UpdateControlPanelResponse.php
 src/Models/Shared/UpdateRoutingControlResponse.php
 src/Models/Shared/UpdateSafetyRuleResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

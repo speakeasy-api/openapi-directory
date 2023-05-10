@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListCertificateAuthoritiesXAmzTargetEnum: string
 {
     case ACM_PRIVATE_CA_LIST_CERTIFICATE_AUTHORITIES = 'ACMPrivateCA.ListCertificateAuthorities';

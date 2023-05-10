@@ -185,4 +185,11 @@ src/Models/Shared/SendTokenRequestTo.php
 src/Models/Shared/SendTokenRequest.php
 src/Models/Shared/GetFaucetResponseData.php
 src/Models/Shared/GetFaucetResponse.php
+docs/sdk/README.md
+docs/insight/README.md
+docs/jsonrpc/README.md
+docs/ntp1/README.md
+docs/testnetfaucet/README.md
+docs/testnetinsight/README.md
+docs/testnetntp1/README.md
 USAGE.md

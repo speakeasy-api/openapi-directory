@@ -12,12 +12,12 @@ use \OpenAPI\OpenAPI\Utils\SpeakeasyMetadata;
 class GetBundleNotificationsRequest
 {
     /**
-     * Bundle ID to notify on
+     * If set, return records where the specified field is equal to the supplied value.
      * 
-     * @var ?int $bundleId
+     * @var ?string $bundleId
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=bundle_id')]
-    public ?int $bundleId = null;
+    public ?string $bundleId = null;
     
     /**
      * Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
@@ -28,12 +28,28 @@ class GetBundleNotificationsRequest
     public ?string $cursor = null;
     
     /**
+     * If set, return records where the specified field is equal to the supplied value. Valid fields are `bundle_id`.
+     * 
+     * @var ?array<string, mixed> $filter
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter')]
+    public ?array $filter = null;
+    
+    /**
      * Number of records to show per page.  (Max: 10,000, 1,000 or less is recommended).
      * 
      * @var ?int $perPage
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=per_page')]
     public ?int $perPage = null;
+    
+    /**
+     * If set, sort records by the specified field in either `asc` or `desc` direction (e.g. `sort_by[bundle_id]=desc`). Valid fields are `bundle_id`.
+     * 
+     * @var ?array<string, mixed> $sortBy
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sort_by')]
+    public ?array $sortBy = null;
     
     /**
      * User ID.  Provide a value of `0` to operate the current session's user.
@@ -47,7 +63,9 @@ class GetBundleNotificationsRequest
 	{
 		$this->bundleId = null;
 		$this->cursor = null;
+		$this->filter = null;
 		$this->perPage = null;
+		$this->sortBy = null;
 		$this->userId = null;
 	}
 }

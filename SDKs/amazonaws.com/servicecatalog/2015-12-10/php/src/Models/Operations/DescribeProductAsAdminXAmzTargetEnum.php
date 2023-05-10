@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeProductAsAdminXAmzTargetEnum: string
 {
     case AWS242_SERVICE_CATALOG_SERVICE_DESCRIBE_PRODUCT_AS_ADMIN = 'AWS242ServiceCatalogService.DescribeProductAsAdmin';

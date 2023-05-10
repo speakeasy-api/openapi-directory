@@ -30,18 +30,49 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\GetServiceSettingsRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GetServiceSettingsRequest();
+    $request->xAmzAlgorithm = 'corrupti';
+    $request->xAmzContentSha256 = 'provident';
+    $request->xAmzCredential = 'distinctio';
+    $request->xAmzDate = 'quibusdam';
+    $request->xAmzSecurityToken = 'unde';
+    $request->xAmzSignature = 'nulla';
+    $request->xAmzSignedHeaders = 'corrupti';
+
+    $response = $sdk->getServiceSettings($request);
+
+    if ($response->getServiceSettingsResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getServiceSettings` - Lists the Linux subscriptions service settings.
-* `listLinuxSubscriptionInstances` - Lists the running Amazon EC2 instances that were discovered with commercial Linux subscriptions.
-* `listLinuxSubscriptions` - Lists the Linux subscriptions that have been discovered. If you have linked your organization, the returned results will include data aggregated across your accounts in Organizations.
-* `updateServiceSettings` - Updates the service settings for Linux subscriptions.
+* [getServiceSettings](docs/sdk/README.md#getservicesettings) - Lists the Linux subscriptions service settings.
+* [listLinuxSubscriptionInstances](docs/sdk/README.md#listlinuxsubscriptioninstances) - Lists the running Amazon EC2 instances that were discovered with commercial Linux subscriptions.
+* [listLinuxSubscriptions](docs/sdk/README.md#listlinuxsubscriptions) - Lists the Linux subscriptions that have been discovered. If you have linked your organization, the returned results will include data aggregated across your accounts in Organizations.
+* [updateServiceSettings](docs/sdk/README.md#updateservicesettings) - Updates the service settings for Linux subscriptions.
 <!-- End SDK Available Operations -->
 
 ### Maturity

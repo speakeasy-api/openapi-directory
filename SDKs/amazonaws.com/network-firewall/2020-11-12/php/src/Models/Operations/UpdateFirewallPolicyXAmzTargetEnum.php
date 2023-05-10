@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateFirewallPolicyXAmzTargetEnum: string
 {
     case NETWORK_FIREWALL20201112_UPDATE_FIREWALL_POLICY = 'NetworkFirewall_20201112.UpdateFirewallPolicy';

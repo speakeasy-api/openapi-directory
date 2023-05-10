@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * GoogleChromeManagementV1TelemetryUserDevice - Telemetry data collected for a managed user and device.
+ * GoogleChromeManagementV1TelemetryUserDevice - Telemetry data collected for a managed user and device. * Granular permission needed: TELEMETRY_API_DEVICE
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

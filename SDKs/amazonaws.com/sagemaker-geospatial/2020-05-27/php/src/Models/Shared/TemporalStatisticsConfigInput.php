@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * TemporalStatisticsConfigInput - <p/>
+ * TemporalStatisticsConfigInput - The structure representing the configuration for Temporal Statistics operation.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

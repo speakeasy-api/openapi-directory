@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETRestoreDBInstanceFromDBSnapshotActionEnum: string
 {
     case RESTORE_DB_INSTANCE_FROM_DB_SNAPSHOT = 'RestoreDBInstanceFromDBSnapshot';

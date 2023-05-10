@@ -30,21 +30,51 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\TaxRatesByCountryCodeRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new TaxRatesByCountryCodeRequest();
+    $request->countryCode = 'US';
+    $request->date = '2020-09-02';
+    $request->domain = 'api.taxrates.io';
+    $request->filter = 'corrupti';
+    $request->productCodes = 'C010';
+    $request->province = 'provident';
+    $request->zip = '71642';
+
+    $response = $sdk->v1Tax->taxRatesByCountryCode($request);
+
+    if ($response->taxRatesByCountryCode200ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### v1Tax
+### [v1Tax](docs/v1tax/README.md)
 
-* `taxRatesByCountryCode` - Tax rates by Country Code
-* `taxRatesByIpAddress` - Tax rates by IP address
+* [taxRatesByCountryCode](docs/v1tax/README.md#taxratesbycountrycode) - Tax rates by Country Code
+* [taxRatesByIpAddress](docs/v1tax/README.md#taxratesbyipaddress) - Tax rates by IP address
 
-### v3Tax
+### [v3Tax](docs/v3tax/README.md)
 
-* `allTaxRates` - All tax rates
+* [allTaxRates](docs/v3tax/README.md#alltaxrates) - All tax rates
 <!-- End SDK Available Operations -->
 
 ### Maturity

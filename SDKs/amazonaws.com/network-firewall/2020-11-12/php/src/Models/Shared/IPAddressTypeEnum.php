@@ -13,4 +13,5 @@ enum IPAddressTypeEnum: string
 {
     case DUALSTACK = 'DUALSTACK';
     case IPV4 = 'IPV4';
+    case IPV6 = 'IPV6';
 }

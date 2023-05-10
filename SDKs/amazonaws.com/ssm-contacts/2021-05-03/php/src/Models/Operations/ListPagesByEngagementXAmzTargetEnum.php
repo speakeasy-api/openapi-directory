@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListPagesByEngagementXAmzTargetEnum: string
 {
     case SSM_CONTACTS_LIST_PAGES_BY_ENGAGEMENT = 'SSMContacts.ListPagesByEngagement';

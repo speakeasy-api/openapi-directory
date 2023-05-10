@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListGitHubAccountTokenNamesXAmzTargetEnum: string
 {
     case CODE_DEPLOY20141006_LIST_GIT_HUB_ACCOUNT_TOKEN_NAMES = 'CodeDeploy_20141006.ListGitHubAccountTokenNames';

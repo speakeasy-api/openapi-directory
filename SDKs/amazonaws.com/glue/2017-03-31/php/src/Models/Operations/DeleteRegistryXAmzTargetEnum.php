@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteRegistryXAmzTargetEnum: string
 {
     case AWS_GLUE_DELETE_REGISTRY = 'AWSGlue.DeleteRegistry';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateResourceXAmzTargetEnum: string
 {
     case CLOUD_API_SERVICE_CREATE_RESOURCE = 'CloudApiService.CreateResource';

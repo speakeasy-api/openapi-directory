@@ -32,7 +32,17 @@ class ListPermissionsRequestBody
     public ?string $nextToken = null;
     
     /**
-     * Specifies that you want to list permissions for only the specified resource type. For example, to list only permissions that apply to EC2 subnets, specify <code>ec2:Subnet</code>. You can use the <a>ListResourceTypes</a> operation to get the specific string required.
+     * <p>Specifies that you want to list only permissions of this type:</p> <ul> <li> <p> <code>AWS</code> – returns only Amazon Web Services managed permissions.</p> </li> <li> <p> <code>LOCAL</code> – returns only customer managed permissions</p> </li> <li> <p> <code>ALL</code> – returns both Amazon Web Services managed permissions and customer managed permissions.</p> </li> </ul> <p>If you don't specify this parameter, the default is <code>All</code>.</p>
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Operations\ListPermissionsRequestBodyPermissionTypeEnum $permissionType
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('permissionType')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Operations\ListPermissionsRequestBodyPermissionTypeEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?ListPermissionsRequestBodyPermissionTypeEnum $permissionType = null;
+    
+    /**
+     * <p>Specifies that you want to list only those permissions that apply to the specified resource type. This parameter is not case sensitive.</p> <p>For example, to list only permissions that apply to Amazon EC2 subnets, specify <code>ec2:subnet</code>. You can use the <a>ListResourceTypes</a> operation to get the specific string required.</p>
      * 
      * @var ?string $resourceType
      */
@@ -45,6 +55,7 @@ class ListPermissionsRequestBody
 	{
 		$this->maxResults = null;
 		$this->nextToken = null;
+		$this->permissionType = null;
 		$this->resourceType = null;
 	}
 }

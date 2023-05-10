@@ -18,6 +18,16 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class ClusterUpdate
 {
     /**
+     * AdditionalPodRangesConfig is the configuration for additional pod secondary ranges supporting the ClusterUpdate message.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\AdditionalPodRangesConfig $additionalPodRangesConfig
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('additionalPodRangesConfig')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\AdditionalPodRangesConfig')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?AdditionalPodRangesConfig $additionalPodRangesConfig = null;
+    
+    /**
      * Configuration for the addons that can be automatically spun up in the cluster, enabling additional functionality.
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\AddonsConfig $desiredAddonsConfig
@@ -126,6 +136,16 @@ class ClusterUpdate
     #[\JMS\Serializer\Annotation\Type('bool')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $desiredEnablePrivateEndpoint = null;
+    
+    /**
+     * Fleet is the fleet configuration for the cluster.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\Fleet $desiredFleet
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('desiredFleet')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\Fleet')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?Fleet $desiredFleet = null;
     
     /**
      * GatewayAPIConfig contains the desired config of Gateway API on this cluster.
@@ -487,8 +507,19 @@ class ClusterUpdate
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $etag = null;
     
+    /**
+     * AdditionalPodRangesConfig is the configuration for additional pod secondary ranges supporting the ClusterUpdate message.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\AdditionalPodRangesConfig $removedAdditionalPodRangesConfig
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('removedAdditionalPodRangesConfig')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\AdditionalPodRangesConfig')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?AdditionalPodRangesConfig $removedAdditionalPodRangesConfig = null;
+    
 	public function __construct()
 	{
+		$this->additionalPodRangesConfig = null;
 		$this->desiredAddonsConfig = null;
 		$this->desiredAuthenticatorGroupsConfig = null;
 		$this->desiredBinaryAuthorization = null;
@@ -500,6 +531,7 @@ class ClusterUpdate
 		$this->desiredDefaultSnatStatus = null;
 		$this->desiredDnsConfig = null;
 		$this->desiredEnablePrivateEndpoint = null;
+		$this->desiredFleet = null;
 		$this->desiredGatewayApiConfig = null;
 		$this->desiredGcfsConfig = null;
 		$this->desiredIdentityServiceConfig = null;
@@ -536,5 +568,6 @@ class ClusterUpdate
 		$this->desiredWorkloadCertificates = null;
 		$this->desiredWorkloadIdentityConfig = null;
 		$this->etag = null;
+		$this->removedAdditionalPodRangesConfig = null;
 	}
 }

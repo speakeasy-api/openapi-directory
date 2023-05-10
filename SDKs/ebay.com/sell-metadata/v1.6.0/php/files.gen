@@ -68,4 +68,7 @@ src/Models/Shared/ReturnPolicyResponse.php
 src/Models/Shared/ReturnPolicy.php
 src/Models/Shared/ReturnPolicyDetails.php
 src/Models/Shared/TimeDuration.php
+docs/sdk/README.md
+docs/country/README.md
+docs/marketplace/README.md
 USAGE.md

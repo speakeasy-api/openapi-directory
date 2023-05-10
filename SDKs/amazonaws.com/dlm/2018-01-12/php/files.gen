@@ -78,4 +78,5 @@ src/Models/Shared/LifecyclePolicy.php
 src/Models/Shared/PolicyDetails.php
 src/Models/Shared/ListTagsForResourceResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

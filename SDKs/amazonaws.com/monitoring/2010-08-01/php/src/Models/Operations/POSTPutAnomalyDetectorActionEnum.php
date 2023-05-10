@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTPutAnomalyDetectorActionEnum: string
 {
     case PUT_ANOMALY_DETECTOR = 'PutAnomalyDetector';

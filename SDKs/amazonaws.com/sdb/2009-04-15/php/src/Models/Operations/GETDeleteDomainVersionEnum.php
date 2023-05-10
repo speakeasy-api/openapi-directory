@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteDomainVersionEnum: string
 {
     case TWO_THOUSAND_AND_NINE0415 = '2009-04-15';

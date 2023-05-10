@@ -81,4 +81,6 @@ src/Models/Shared/GoogleCloudRecommenderV1beta1MarkRecommendationSucceededReques
 src/Models/Shared/GoogleCloudRecommenderV1beta1RecommenderConfigInput.php
 src/Models/Shared/GoogleCloudRecommenderV1beta1RecommenderConfig.php
 src/Models/Shared/GoogleCloudRecommenderV1beta1RecommenderGenerationConfig.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

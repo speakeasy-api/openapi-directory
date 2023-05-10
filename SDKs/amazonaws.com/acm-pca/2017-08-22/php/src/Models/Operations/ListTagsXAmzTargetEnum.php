@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListTagsXAmzTargetEnum: string
 {
     case ACM_PRIVATE_CA_LIST_TAGS = 'ACMPrivateCA.ListTags';

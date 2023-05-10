@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListLanguageModelsXAmzTargetEnum: string
 {
     case TRANSCRIBE_LIST_LANGUAGE_MODELS = 'Transcribe.ListLanguageModels';

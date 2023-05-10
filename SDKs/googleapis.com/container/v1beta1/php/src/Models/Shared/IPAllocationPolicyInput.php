@@ -18,6 +18,16 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 class IPAllocationPolicyInput
 {
     /**
+     * AdditionalPodRangesConfig is the configuration for additional pod secondary ranges supporting the ClusterUpdate message.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\AdditionalPodRangesConfig $additionalPodRangesConfig
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('additionalPodRangesConfig')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\AdditionalPodRangesConfig')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?AdditionalPodRangesConfig $additionalPodRangesConfig = null;
+    
+    /**
      * If true, allow allocation of cluster CIDR ranges that overlap with certain kinds of network routes. By default we do not allow cluster CIDR ranges to intersect with any user declared routes. With allow_route_overlap == true, we allow overlapping with CIDR ranges that are larger than the cluster CIDR range. If this field is set to true, then cluster and services CIDRs must be fully-specified (e.g. `10.96.0.0/14`, but not `/14`), which means: 1) When `use_ip_aliases` is true, `cluster_ipv4_cidr_block` and `services_ipv4_cidr_block` must be fully-specified. 2) When `use_ip_aliases` is false, `cluster.cluster_ipv4_cidr` muse be fully-specified.
      * 
      * @var ?bool $allowRouteOverlap
@@ -96,6 +106,16 @@ class IPAllocationPolicyInput
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $nodeIpv4CidrBlock = null;
+    
+    /**
+     * [PRIVATE FIELD] Config for pod CIDR size overprovisioning.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\PodCIDROverprovisionConfig $podCidrOverprovisionConfig
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('podCidrOverprovisionConfig')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\PodCIDROverprovisionConfig')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?PodCIDROverprovisionConfig $podCidrOverprovisionConfig = null;
     
     /**
      * This field is deprecated, use services_ipv4_cidr_block.
@@ -179,6 +199,7 @@ class IPAllocationPolicyInput
     
 	public function __construct()
 	{
+		$this->additionalPodRangesConfig = null;
 		$this->allowRouteOverlap = null;
 		$this->clusterIpv4Cidr = null;
 		$this->clusterIpv4CidrBlock = null;
@@ -187,6 +208,7 @@ class IPAllocationPolicyInput
 		$this->ipv6AccessType = null;
 		$this->nodeIpv4Cidr = null;
 		$this->nodeIpv4CidrBlock = null;
+		$this->podCidrOverprovisionConfig = null;
 		$this->servicesIpv4Cidr = null;
 		$this->servicesIpv4CidrBlock = null;
 		$this->servicesSecondaryRangeName = null;

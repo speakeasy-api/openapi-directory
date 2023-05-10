@@ -43,4 +43,5 @@ src/Models/Shared/CategoryResults.php
 src/Models/Shared/FullCategory.php
 src/Models/Shared/LawResult.php
 src/Models/Shared/PocResults.php
+docs/sdk/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTAssociateTrunkInterfaceActionEnum: string
 {
     case ASSOCIATE_TRUNK_INTERFACE = 'AssociateTrunkInterface';

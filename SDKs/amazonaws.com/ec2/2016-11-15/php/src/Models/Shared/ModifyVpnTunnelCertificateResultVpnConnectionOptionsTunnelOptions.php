@@ -23,6 +23,9 @@ class ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions
 	
     public ?int $dpdTimeoutSeconds = null;
     
+	
+    public ?bool $enableTunnelLifecycleControl = null;
+    
     /**
      * $ikeVersions
      * 
@@ -116,6 +119,7 @@ class ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions
 	{
 		$this->dpdTimeoutAction = null;
 		$this->dpdTimeoutSeconds = null;
+		$this->enableTunnelLifecycleControl = null;
 		$this->ikeVersions = null;
 		$this->logOptions = null;
 		$this->outsideIpAddress = null;

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListResourceSetResourcesXAmzTargetEnum: string
 {
     case AWSFMS20180101_LIST_RESOURCE_SET_RESOURCES = 'AWSFMS_20180101.ListResourceSetResources';

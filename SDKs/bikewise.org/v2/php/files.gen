@@ -31,4 +31,7 @@ src/Models/Operations/GETVersionLocationsFormatResponse.php
 src/Models/Operations/GETVersionLocationsMarkersFormatIncidentTypeEnum.php
 src/Models/Operations/GETVersionLocationsMarkersFormatRequest.php
 src/Models/Operations/GETVersionLocationsMarkersFormatResponse.php
+docs/sdk/README.md
+docs/incidents/README.md
+docs/locations/README.md
 USAGE.md

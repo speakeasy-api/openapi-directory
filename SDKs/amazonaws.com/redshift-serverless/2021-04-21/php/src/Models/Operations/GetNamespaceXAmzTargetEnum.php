@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetNamespaceXAmzTargetEnum: string
 {
     case REDSHIFT_SERVERLESS_GET_NAMESPACE = 'RedshiftServerless.GetNamespace';

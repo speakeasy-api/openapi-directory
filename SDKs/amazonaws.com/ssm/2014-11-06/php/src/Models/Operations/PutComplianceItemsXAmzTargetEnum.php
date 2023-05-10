@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutComplianceItemsXAmzTargetEnum: string
 {
     case AMAZON_SSM_PUT_COMPLIANCE_ITEMS = 'AmazonSSM.PutComplianceItems';

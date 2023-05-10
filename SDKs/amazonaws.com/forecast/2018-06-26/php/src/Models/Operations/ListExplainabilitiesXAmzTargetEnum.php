@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListExplainabilitiesXAmzTargetEnum: string
 {
     case AMAZON_FORECAST_LIST_EXPLAINABILITIES = 'AmazonForecast.ListExplainabilities';

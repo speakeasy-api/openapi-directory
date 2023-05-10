@@ -194,7 +194,7 @@ class Category
     public ?string $note = null;
     
     /**
-     * If category is hidden this is the id of the category group it originally belonged to before it was hidden.
+     * DEPRECATED: No longer used.  Value will always be null.
      * 
      * @var ?string $originalCategoryGroupId
      */

@@ -84,9 +84,11 @@ class Infrastructure
      * 
      * Get list of infrastructure nodes. Only admin users can retrieve this information.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListNodesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ListNodesResponse
      */
 	public function listNodes(
+        \OpenAPI\OpenAPI\Models\Operations\ListNodesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ListNodesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -94,7 +96,8 @@ class Infrastructure
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

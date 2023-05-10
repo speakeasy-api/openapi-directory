@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteLagXAmzTargetEnum: string
 {
     case OVERTURE_SERVICE_DELETE_LAG = 'OvertureService.DeleteLag';

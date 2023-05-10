@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListAssociationsForLicenseConfigurationXAmzTargetEnum: string
 {
     case AWS_LICENSE_MANAGER_LIST_ASSOCIATIONS_FOR_LICENSE_CONFIGURATION = 'AWSLicenseManager.ListAssociationsForLicenseConfiguration';

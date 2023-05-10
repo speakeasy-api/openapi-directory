@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutKeyPolicyXAmzTargetEnum: string
 {
     case TRENT_SERVICE_PUT_KEY_POLICY = 'TrentService.PutKeyPolicy';

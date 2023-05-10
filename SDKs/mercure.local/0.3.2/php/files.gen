@@ -30,4 +30,5 @@ src/Models/Operations/PostWellKnownMercureResponse.php
 src/Models/Shared/Subscriptions.php
 src/Models/Shared/Subscription.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

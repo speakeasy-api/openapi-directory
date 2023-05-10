@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum PutFirewallRuleGroupPolicyXAmzTargetEnum: string
 {
     case ROUTE53_RESOLVER_PUT_FIREWALL_RULE_GROUP_POLICY = 'Route53Resolver.PutFirewallRuleGroupPolicy';

@@ -92,4 +92,6 @@ src/Models/Shared/OutdatedLibrary.php
 src/Models/Shared/Form.php
 src/Models/Shared/ListFindingsResponse.php
 src/Models/Shared/ListScanRunsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

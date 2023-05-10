@@ -10,9 +10,9 @@ namespace OpenAPI\OpenAPI\Models\Operations;
 
 
 /** The status code return by the API. It can be 400 or 403 or 500. */
-enum AnalyticsEventsDeleteLogsDefaultApplicationJSONErrorCodeEnum: string
+enum AnalyticsEventsDeleteLogsDefaultApplicationJSONErrorCodeEnum: int
 {
-    case FOUR_HUNDRED = '400';
-    case FOUR_HUNDRED_AND_THREE = '403';
-    case FIVE_HUNDRED = '500';
+    case FOUR_HUNDRED = 400;
+    case FOUR_HUNDRED_AND_THREE = 403;
+    case FIVE_HUNDRED = 500;
 }

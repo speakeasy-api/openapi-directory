@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum StopTrainingEntityRecognizerXAmzTargetEnum: string
 {
     case COMPREHEND20171127_STOP_TRAINING_ENTITY_RECOGNIZER = 'Comprehend_20171127.StopTrainingEntityRecognizer';

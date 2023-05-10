@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum BatchDetectSyntaxXAmzTargetEnum: string
 {
     case COMPREHEND20171127_BATCH_DETECT_SYNTAX = 'Comprehend_20171127.BatchDetectSyntax';

@@ -24,4 +24,5 @@ src/Models/Shared/ResultStandardizedCoefficients.php
 src/Models/Shared/ResultCalls.php
 src/Models/Shared/Error.php
 src/Models/Shared/RegressionApiBody.php
+docs/sdk/README.md
 USAGE.md

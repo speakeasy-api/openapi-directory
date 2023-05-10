@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteEndpointAccessActionEnum: string
 {
     case DELETE_ENDPOINT_ACCESS = 'DeleteEndpointAccess';

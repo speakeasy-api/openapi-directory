@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTGetContextKeysForPrincipalPolicyActionEnum: string
 {
     case GET_CONTEXT_KEYS_FOR_PRINCIPAL_POLICY = 'GetContextKeysForPrincipalPolicy';

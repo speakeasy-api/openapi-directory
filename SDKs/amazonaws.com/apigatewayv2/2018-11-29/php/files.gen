@@ -367,4 +367,5 @@ src/Models/Shared/UpdateVpcLinkResponseVpcLinkStatusEnum.php
 src/Models/Shared/UpdateVpcLinkResponseVpcLinkVersionEnum.php
 src/Models/Shared/UpdateVpcLinkResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

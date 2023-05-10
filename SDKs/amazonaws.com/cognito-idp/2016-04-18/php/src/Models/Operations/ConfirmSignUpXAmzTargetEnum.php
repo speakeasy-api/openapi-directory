@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ConfirmSignUpXAmzTargetEnum: string
 {
     case AWS_COGNITO_IDENTITY_PROVIDER_SERVICE_CONFIRM_SIGN_UP = 'AWSCognitoIdentityProviderService.ConfirmSignUp';

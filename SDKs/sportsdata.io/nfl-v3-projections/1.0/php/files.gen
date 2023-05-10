@@ -80,4 +80,5 @@ src/Models/Shared/FantasyDefenseGameProjection.php
 src/Models/Shared/FantasyDefenseSeasonProjection.php
 src/Models/Shared/PlayerSeasonProjection.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

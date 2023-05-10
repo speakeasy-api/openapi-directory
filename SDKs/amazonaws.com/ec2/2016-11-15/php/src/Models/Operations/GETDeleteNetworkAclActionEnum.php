@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteNetworkAclActionEnum: string
 {
     case DELETE_NETWORK_ACL = 'DeleteNetworkAcl';

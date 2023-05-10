@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateBlueprintXAmzTargetEnum: string
 {
     case AWS_GLUE_CREATE_BLUEPRINT = 'AWSGlue.CreateBlueprint';

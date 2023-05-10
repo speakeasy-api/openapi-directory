@@ -23,6 +23,7 @@ src/Utils/SecurityClient.php
 src/Utils/SecurityMetadata.php
 src/Utils/SpeakeasyMetadata.php
 src/Utils/Utils.php
+src/Models/Operations/GetAuthSecurity.php
 src/Models/Operations/GetAuthResponse.php
 src/Models/Operations/AddBelegRequest.php
 src/Models/Operations/AddBelegResponse.php
@@ -80,4 +81,10 @@ src/Models/Shared/Belege.php
 src/Models/Shared/Monatsbeleg.php
 src/Models/Shared/Registrierkasse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/auth/README.md
+docs/beleg/README.md
+docs/export/README.md
+docs/monatsbelege/README.md
+docs/registrierkasse/README.md
 USAGE.md

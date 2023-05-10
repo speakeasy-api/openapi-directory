@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateTagsForDomainXAmzTargetEnum: string
 {
     case ROUTE53_DOMAINS_V20140515_UPDATE_TAGS_FOR_DOMAIN = 'Route53Domains_v20140515.UpdateTagsForDomain';

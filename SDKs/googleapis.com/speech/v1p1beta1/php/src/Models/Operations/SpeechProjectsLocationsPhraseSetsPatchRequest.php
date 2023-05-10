@@ -20,7 +20,7 @@ class SpeechProjectsLocationsPhraseSetsPatchRequest
     public ?\OpenAPI\OpenAPI\Models\Shared\XgafvEnum $dollarXgafv = null;
     
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public ?\OpenAPI\OpenAPI\Models\Shared\PhraseSet $phraseSet = null;
+    public ?\OpenAPI\OpenAPI\Models\Shared\PhraseSetInput $phraseSetInput = null;
     
     /**
      * OAuth access token.
@@ -121,7 +121,7 @@ class SpeechProjectsLocationsPhraseSetsPatchRequest
 	public function __construct()
 	{
 		$this->dollarXgafv = null;
-		$this->phraseSet = null;
+		$this->phraseSetInput = null;
 		$this->accessToken = null;
 		$this->alt = null;
 		$this->callback = null;

@@ -37,6 +37,16 @@ class EksPodPropertiesDetail
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?bool $hostNetwork = null;
     
+    /**
+     * Describes and uniquely identifies Kubernetes resources. For example, the compute environment that a pod runs in or the <code>jobID</code> for a job running in the pod. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/">Understanding Kubernetes Objects</a> in the <i>Kubernetes documentation</i>.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\EksMetadata $metadata
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('metadata')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\EksMetadata')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?EksMetadata $metadata = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('nodeName')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -67,6 +77,7 @@ class EksPodPropertiesDetail
 		$this->containers = null;
 		$this->dnsPolicy = null;
 		$this->hostNetwork = null;
+		$this->metadata = null;
 		$this->nodeName = null;
 		$this->podName = null;
 		$this->serviceAccountName = null;

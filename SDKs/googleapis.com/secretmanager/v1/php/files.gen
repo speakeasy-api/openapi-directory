@@ -101,4 +101,6 @@ src/Models/Shared/DestroySecretVersionRequest.php
 src/Models/Shared/DisableSecretVersionRequest.php
 src/Models/Shared/EnableSecretVersionRequest.php
 src/Models/Shared/ListSecretVersionsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

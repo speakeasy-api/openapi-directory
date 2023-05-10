@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeactivateEventSourceXAmzTargetEnum: string
 {
     case AWS_EVENTS_DEACTIVATE_EVENT_SOURCE = 'AWSEvents.DeactivateEventSource';

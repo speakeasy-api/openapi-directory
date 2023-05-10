@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteClientBrandingXAmzTargetEnum: string
 {
     case WORKSPACES_SERVICE_DELETE_CLIENT_BRANDING = 'WorkspacesService.DeleteClientBranding';

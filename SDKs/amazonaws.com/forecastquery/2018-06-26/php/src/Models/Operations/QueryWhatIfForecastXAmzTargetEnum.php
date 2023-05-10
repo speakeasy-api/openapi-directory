@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum QueryWhatIfForecastXAmzTargetEnum: string
 {
     case AMAZON_FORECAST_RUNTIME_QUERY_WHAT_IF_FORECAST = 'AmazonForecastRuntime.QueryWhatIfForecast';

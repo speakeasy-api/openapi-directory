@@ -352,82 +352,6 @@ class Projects
     }
 	
     /**
-     * Deletes a notification config.
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsNotificationConfigsDeleteRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsNotificationConfigsDeleteSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsNotificationConfigsDeleteResponse
-     */
-	public function securitycenterProjectsNotificationConfigsDelete(
-        \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsNotificationConfigsDeleteRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsNotificationConfigsDeleteSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsNotificationConfigsDeleteResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{name}', \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsNotificationConfigsDeleteRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsNotificationConfigsDeleteRequest::class, $request, null));
-        
-        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
-        $httpResponse = $client->request('DELETE', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsNotificationConfigsDeleteResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->empty = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
-     * Gets a notification config.
-     * 
-     * @param \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsNotificationConfigsGetRequest $request
-     * @param \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsNotificationConfigsGetSecurity $security
-     * @return \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsNotificationConfigsGetResponse
-     */
-	public function securitycenterProjectsNotificationConfigsGet(
-        \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsNotificationConfigsGetRequest $request,
-        \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsNotificationConfigsGetSecurity $security,
-    ): \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsNotificationConfigsGetResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{name}', \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsNotificationConfigsGetRequest::class, $request);
-        
-        $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsNotificationConfigsGetRequest::class, $request, null));
-        
-        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
-        $httpResponse = $client->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsNotificationConfigsGetResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->notificationConfig = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\NotificationConfig', 'json');
-            }
-        }
-
-        return $response;
-    }
-	
-    /**
      * Lists notification configs.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsNotificationConfigsListRequest $request
@@ -459,6 +383,236 @@ class Projects
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->listNotificationConfigsResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListNotificationConfigsResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the given CRM parent, and also creates inherited SecurityHealthAnalyticsCustomModules for all CRM descendants of the given parent. These modules are enabled by default.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesCreateRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesCreateSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesCreateResponse
+     */
+	public function securitycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesCreate(
+        \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesCreateRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesCreateSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesCreateResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{parent}/customModules', \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesCreateRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "googleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModuleInput", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesCreateRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesCreateResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->googleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Deletes the specified SecurityHealthAnalyticsCustomModule and all of its descendants in the CRM hierarchy. This method is only supported for resident custom modules.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesDeleteRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesDeleteSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesDeleteResponse
+     */
+	public function securitycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesDelete(
+        \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesDeleteRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesDeleteSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesDeleteResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{name}', \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesDeleteRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesDeleteRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('DELETE', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesDeleteResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->empty = $serializer->deserialize((string)$httpResponse->getBody(), 'array<string, mixed>', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Returns a list of all SecurityHealthAnalyticsCustomModules for the given parent. This includes resident modules defined at the scope of the parent, and inherited modules, inherited from CRM ancestors.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListResponse
+     */
+	public function securitycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesList(
+        \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{parent}/customModules', \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->listSecurityHealthAnalyticsCustomModulesResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListSecurityHealthAnalyticsCustomModulesResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Returns a list of all resident SecurityHealthAnalyticsCustomModules under the given CRM parent and all of the parent’s CRM descendants.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListDescendantRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListDescendantSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListDescendantResponse
+     */
+	public function securitycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListDescendant(
+        \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListDescendantRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListDescendantSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListDescendantResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{parent}/customModules:listDescendant', \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListDescendantRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListDescendantRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListDescendantResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->listDescendantSecurityHealthAnalyticsCustomModulesResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListDescendantSecurityHealthAnalyticsCustomModulesResponse', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Retrieves an EffectiveSecurityHealthAnalyticsCustomModule.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesGetRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesGetSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesGetResponse
+     */
+	public function securitycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesGet(
+        \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesGetRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesGetSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesGetResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{name}', \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesGetRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesGetRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesGetResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->googleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCustomModule = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\GoogleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCustomModule', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
+     * Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the given parent. This includes resident modules defined at the scope of the parent, and inherited modules, inherited from CRM ancestors.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesListRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesListSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesListResponse
+     */
+	public function securitycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesList(
+        \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesListRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesListSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesListResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/{parent}/effectiveCustomModules', \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesListRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesListRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesListResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->listEffectiveSecurityHealthAnalyticsCustomModulesResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\ListEffectiveSecurityHealthAnalyticsCustomModulesResponse', 'json');
             }
         }
 

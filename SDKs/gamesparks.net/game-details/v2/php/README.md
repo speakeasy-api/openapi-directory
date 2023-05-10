@@ -30,127 +30,160 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\GETAnalyticsDataUsingGETRequest;
+use \OpenAPI\OpenAPI\Models\Operations\GETAnalyticsDataUsingGETDataTypeEnum;
+use \OpenAPI\OpenAPI\Models\Operations\GETAnalyticsDataUsingGETPrecisionEnum;
+use \OpenAPI\OpenAPI\Models\Operations\GETAnalyticsDataUsingGETStageEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new GETAnalyticsDataUsingGETRequest();
+    $request->apiKey = 'corrupti';
+    $request->dataType = GETAnalyticsDataUsingGETDataTypeEnum::SESSION_ANALYTIC;
+    $request->endDate = DateTime::createFromFormat('Y-m-d', '2021-04-24');
+    $request->keys = 'unde';
+    $request->precision = GETAnalyticsDataUsingGETPrecisionEnum::MONTHLY;
+    $request->stage = GETAnalyticsDataUsingGETStageEnum::PREVIEW;
+    $request->startDate = DateTime::createFromFormat('Y-m-d', '2021-09-24');
+
+    $response = $sdk->analytics->getAnalyticsDataUsingGET($request);
+
+    if ($response->analyticsDataSwaggerModels !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### analytics
+### [analytics](docs/analytics/README.md)
 
-* `getAnalyticsDataUsingGET` - Returns the results of executed query defined by the parameters passed in
-* `getDataCountUsingGET` - Returns the count of executed query
-* `getRetentionUsingGET` - Returns the percentage of user retention over the last 30 days
+* [getAnalyticsDataUsingGET](docs/analytics/README.md#getanalyticsdatausingget) - Returns the results of executed query defined by the parameters passed in
+* [getDataCountUsingGET](docs/analytics/README.md#getdatacountusingget) - Returns the count of executed query
+* [getRetentionUsingGET](docs/analytics/README.md#getretentionusingget) - Returns the percentage of user retention over the last 30 days
 
-### billingDetails
+### [billingDetails](docs/billingdetails/README.md)
 
-* `getBillingDetails` - Retrieves the Billing Details
-* `putBillingDetails` - Updates the Billing Details
+* [getBillingDetails](docs/billingdetails/README.md#getbillingdetails) - Retrieves the Billing Details
+* [putBillingDetails](docs/billingdetails/README.md#putbillingdetails) - Updates the Billing Details
 
-### credentials
+### [credentials](docs/credentials/README.md)
 
-* `updateCredentialSecretUsingPOST` - Resets the secret of a credential
+* [updateCredentialSecretUsingPOST](docs/credentials/README.md#updatecredentialsecretusingpost) - Resets the secret of a credential
 
-### experiments
+### [experiments](docs/experiments/README.md)
 
-* `createExperimentUsingPOST` - createExperiment
-* `deleteExperimentUsingDELETE` - deleteExperiment
-* `doActionExperimentUsingPOST` - doActionExperiment
-* `getExperimentUsingGET` - getExperiment
-* `getExperimentsUsingGET` - getExperiments
-* `updateExperimentUsingPUT` - updateExperiment
+* [createExperimentUsingPOST](docs/experiments/README.md#createexperimentusingpost) - createExperiment
+* [deleteExperimentUsingDELETE](docs/experiments/README.md#deleteexperimentusingdelete) - deleteExperiment
+* [doActionExperimentUsingPOST](docs/experiments/README.md#doactionexperimentusingpost) - doActionExperiment
+* [getExperimentUsingGET](docs/experiments/README.md#getexperimentusingget) - getExperiment
+* [getExperimentsUsingGET](docs/experiments/README.md#getexperimentsusingget) - getExperiments
+* [updateExperimentUsingPUT](docs/experiments/README.md#updateexperimentusingput) - updateExperiment
 
-### gamesAdmin
+### [gamesAdmin](docs/gamesadmin/README.md)
 
-* `getGamesEndpointsUsingGET` - getGamesEndpoints
-* `listDeletedUsingGET` - listDeleted
-* `listUsingGET` - list
-* `restoreDeletedGameUsingPOST` - restoreDeletedGame
+* [getGamesEndpointsUsingGET](docs/gamesadmin/README.md#getgamesendpointsusingget) - getGamesEndpoints
+* [listDeletedUsingGET](docs/gamesadmin/README.md#listdeletedusingget) - listDeleted
+* [listUsingGET](docs/gamesadmin/README.md#listusingget) - list
+* [restoreDeletedGameUsingPOST](docs/gamesadmin/README.md#restoredeletedgameusingpost) - restoreDeletedGame
 
-### manage
+### [manage](docs/manage/README.md)
 
-* `copySnapshotToExistingGameUsingPOST` - copySnapshotToExistingGame
-* `createQueryUsingPOST` - createQuery
-* `createScreenUsingPOST` - createScreen
-* `createSnapshotUsingPOST` - createSnapshot
-* `createSnippetUsingPOST` - createSnippet
-* `deleteQueryUsingDELETE` - deleteQuery
-* `deleteScreenUsingDELETE` - deleteScreen
-* `deleteSnapshotUsingDELETE` - deleteSnapshot
-* `deleteSnippetUsingDELETE` - deleteSnippet
-* `getQueryUsingGET` - getQuery
-* `getScreenUsingGET` - getScreen
-* `getSnippetUsingGET` - getSnippet
-* `listExecutableScreensUsingGET` - listExecutableScreens
-* `listQueriesUsingGET` - listQueries
-* `listScreensUsingGET` - listScreens
-* `listSnapshotsUsingGET` - listSnapshots
-* `listSnippetsUsingGET` - listSnippets
-* `publishSnapshotUsingPOST` - publishSnapshot
-* `revertSnapshotUsingPOST` - revertSnapshot
-* `updateQueryUsingPUT` - updateQuery
-* `updateScreenUsingPUT` - updateScreen
-* `updateSnippetUsingPUT` - updateSnippet
+* [copySnapshotToExistingGameUsingPOST](docs/manage/README.md#copysnapshottoexistinggameusingpost) - copySnapshotToExistingGame
+* [createQueryUsingPOST](docs/manage/README.md#createqueryusingpost) - createQuery
+* [createScreenUsingPOST](docs/manage/README.md#createscreenusingpost) - createScreen
+* [createSnapshotUsingPOST](docs/manage/README.md#createsnapshotusingpost) - createSnapshot
+* [createSnippetUsingPOST](docs/manage/README.md#createsnippetusingpost) - createSnippet
+* [deleteQueryUsingDELETE](docs/manage/README.md#deletequeryusingdelete) - deleteQuery
+* [deleteScreenUsingDELETE](docs/manage/README.md#deletescreenusingdelete) - deleteScreen
+* [deleteSnapshotUsingDELETE](docs/manage/README.md#deletesnapshotusingdelete) - deleteSnapshot
+* [deleteSnippetUsingDELETE](docs/manage/README.md#deletesnippetusingdelete) - deleteSnippet
+* [getQueryUsingGET](docs/manage/README.md#getqueryusingget) - getQuery
+* [getScreenUsingGET](docs/manage/README.md#getscreenusingget) - getScreen
+* [getSnippetUsingGET](docs/manage/README.md#getsnippetusingget) - getSnippet
+* [listExecutableScreensUsingGET](docs/manage/README.md#listexecutablescreensusingget) - listExecutableScreens
+* [listQueriesUsingGET](docs/manage/README.md#listqueriesusingget) - listQueries
+* [listScreensUsingGET](docs/manage/README.md#listscreensusingget) - listScreens
+* [listSnapshotsUsingGET](docs/manage/README.md#listsnapshotsusingget) - listSnapshots
+* [listSnippetsUsingGET](docs/manage/README.md#listsnippetsusingget) - listSnippets
+* [publishSnapshotUsingPOST](docs/manage/README.md#publishsnapshotusingpost) - publishSnapshot
+* [revertSnapshotUsingPOST](docs/manage/README.md#revertsnapshotusingpost) - revertSnapshot
+* [updateQueryUsingPUT](docs/manage/README.md#updatequeryusingput) - updateQuery
+* [updateScreenUsingPUT](docs/manage/README.md#updatescreenusingput) - updateScreen
+* [updateSnippetUsingPUT](docs/manage/README.md#updatesnippetusingput) - updateSnippet
 
-### notifications
+### [notifications](docs/notifications/README.md)
 
-* `getGameSummaryUsingGET` - getGameSummary
+* [getGameSummaryUsingGET](docs/notifications/README.md#getgamesummaryusingget) - getGameSummary
 
-### pushNotificationTest
+### [pushNotificationTest](docs/pushnotificationtest/README.md)
 
-* `testPushAmazonNotificationsUsingPOST` - testPushAmazonNotifications
-* `testPushAppleDevNotificationsUsingPOST` - testPushAppleDevNotifications
-* `testPushAppleProdNotificationsUsingPOST` - testPushAppleProdNotifications
-* `testPushGoogleNotificationsUsingPOST` - testPushGoogleNotifications
-* `testViberIntegrationNotificationsUsingPOST` - testViberIntegrationNotifications
-* `testViberProductionNotificationsUsingPOST` - testViberProductionNotifications
-* `testWindows8NotificationsUsingPOST` - testWindows8Notifications
-* `testWindowsPhone8NotificationsUsingPOST` - testWindowsPhone8Notifications
+* [testPushAmazonNotificationsUsingPOST](docs/pushnotificationtest/README.md#testpushamazonnotificationsusingpost) - testPushAmazonNotifications
+* [testPushAppleDevNotificationsUsingPOST](docs/pushnotificationtest/README.md#testpushappledevnotificationsusingpost) - testPushAppleDevNotifications
+* [testPushAppleProdNotificationsUsingPOST](docs/pushnotificationtest/README.md#testpushappleprodnotificationsusingpost) - testPushAppleProdNotifications
+* [testPushGoogleNotificationsUsingPOST](docs/pushnotificationtest/README.md#testpushgooglenotificationsusingpost) - testPushGoogleNotifications
+* [testViberIntegrationNotificationsUsingPOST](docs/pushnotificationtest/README.md#testviberintegrationnotificationsusingpost) - testViberIntegrationNotifications
+* [testViberProductionNotificationsUsingPOST](docs/pushnotificationtest/README.md#testviberproductionnotificationsusingpost) - testViberProductionNotifications
+* [testWindows8NotificationsUsingPOST](docs/pushnotificationtest/README.md#testwindows8notificationsusingpost) - testWindows8Notifications
+* [testWindowsPhone8NotificationsUsingPOST](docs/pushnotificationtest/README.md#testwindowsphone8notificationsusingpost) - testWindowsPhone8Notifications
 
-### region
+### [region](docs/region/README.md)
 
-* `getGameRegionOptionsUsingGET` - getGameRegionOptions
-* `getRegionOptionsUsingGET` - getRegionOptions
-* `setGameRegionUsingPOST` - setGameRegion
+* [getGameRegionOptionsUsingGET](docs/region/README.md#getgameregionoptionsusingget) - getGameRegionOptions
+* [getRegionOptionsUsingGET](docs/region/README.md#getregionoptionsusingget) - getRegionOptions
+* [setGameRegionUsingPOST](docs/region/README.md#setgameregionusingpost) - setGameRegion
 
-### scripts
+### [scripts](docs/scripts/README.md)
 
-* `exportZipUsingGET` - exportZip
-* `getScriptDifferencesUsingGET` - getScriptDifferences
-* `getScriptVersionsUsingGET` - getScriptVersions
-* `getScriptVersionsUsingGET1` - getScriptVersions
-* `importAcceptUsingPOST` - importAccept
-* `importZipUsingPOST` - importZip
+* [exportZipUsingGET](docs/scripts/README.md#exportzipusingget) - exportZip
+* [getScriptDifferencesUsingGET](docs/scripts/README.md#getscriptdifferencesusingget) - getScriptDifferences
+* [getScriptVersionsUsingGET](docs/scripts/README.md#getscriptversionsusingget) - getScriptVersions
+* [getScriptVersionsUsingGET1](docs/scripts/README.md#getscriptversionsusingget1) - getScriptVersions
+* [importAcceptUsingPOST](docs/scripts/README.md#importacceptusingpost) - importAccept
+* [importZipUsingPOST](docs/scripts/README.md#importzipusingpost) - importZip
 
-### segmentQueryFilters
+### [segmentQueryFilters](docs/segmentqueryfilters/README.md)
 
-* `getSegmentQueryFiltersConfigUsingGET` - getSegmentQueryFiltersConfig
-* `getSegmentQueryFiltersUsingGET` - getSegmentQueryFilters
-* `getSegmentQueryStandardFiltersUsingGET` - getSegmentQueryStandardFilters
-* `updateSegmentQueryFiltersConfigUsingPUT` - updateSegmentQueryFiltersConfig
+* [getSegmentQueryFiltersConfigUsingGET](docs/segmentqueryfilters/README.md#getsegmentqueryfiltersconfigusingget) - getSegmentQueryFiltersConfig
+* [getSegmentQueryFiltersUsingGET](docs/segmentqueryfilters/README.md#getsegmentqueryfiltersusingget) - getSegmentQueryFilters
+* [getSegmentQueryStandardFiltersUsingGET](docs/segmentqueryfilters/README.md#getsegmentquerystandardfiltersusingget) - getSegmentQueryStandardFilters
+* [updateSegmentQueryFiltersConfigUsingPUT](docs/segmentqueryfilters/README.md#updatesegmentqueryfiltersconfigusingput) - updateSegmentQueryFiltersConfig
 
-### snapshots
+### [snapshots](docs/snapshots/README.md)
 
-* `copySnapshotToExistingGameUsingPOST1` - copySnapshotToExistingGame
-* `copySnapshotToNewGameUsingPOST` - copySnapshotToNewGame
-* `createSnapshotsUsingPOST` - createSnapshots
-* `deleteSnapshotUsingDELETE1` - deleteSnapshot
-* `getLiveSnapshotIdUsingGET` - getLiveSnapshotId
-* `getSnapshotUsingGET` - getSnapshot
-* `getSnapshotsUsingGET` - getSnapshots
-* `getSnapshotsUsingGET1` - getSnapshots
-* `publishSnapshotUsingPOST1` - publishSnapshot
-* `revertToSnapshotUsingPOST` - revertToSnapshot
-* `unpublishSnapshotUsingPOST` - unpublishSnapshot
+* [copySnapshotToExistingGameUsingPOST1](docs/snapshots/README.md#copysnapshottoexistinggameusingpost1) - copySnapshotToExistingGame
+* [copySnapshotToNewGameUsingPOST](docs/snapshots/README.md#copysnapshottonewgameusingpost) - copySnapshotToNewGame
+* [createSnapshotsUsingPOST](docs/snapshots/README.md#createsnapshotsusingpost) - createSnapshots
+* [deleteSnapshotUsingDELETE1](docs/snapshots/README.md#deletesnapshotusingdelete1) - deleteSnapshot
+* [getLiveSnapshotIdUsingGET](docs/snapshots/README.md#getlivesnapshotidusingget) - getLiveSnapshotId
+* [getSnapshotUsingGET](docs/snapshots/README.md#getsnapshotusingget) - getSnapshot
+* [getSnapshotsUsingGET](docs/snapshots/README.md#getsnapshotsusingget) - getSnapshots
+* [getSnapshotsUsingGET1](docs/snapshots/README.md#getsnapshotsusingget1) - getSnapshots
+* [publishSnapshotUsingPOST1](docs/snapshots/README.md#publishsnapshotusingpost1) - publishSnapshot
+* [revertToSnapshotUsingPOST](docs/snapshots/README.md#reverttosnapshotusingpost) - revertToSnapshot
+* [unpublishSnapshotUsingPOST](docs/snapshots/README.md#unpublishsnapshotusingpost) - unpublishSnapshot
 
-### testHarness
+### [testHarness](docs/testharness/README.md)
 
-* `createTestHarnessScenarioUsingPOST` - createTestHarnessScenario
-* `deleteTestHarnessScenarioUsingDELETE` - deleteTestHarnessScenario
-* `getTestHarnessScenarioUsingGET` - getTestHarnessScenario
-* `getTestHarnessScenariosUsingGET` - getTestHarnessScenarios
-* `updateTestHarnessScenarioUsingPUT` - updateTestHarnessScenario
+* [createTestHarnessScenarioUsingPOST](docs/testharness/README.md#createtestharnessscenariousingpost) - createTestHarnessScenario
+* [deleteTestHarnessScenarioUsingDELETE](docs/testharness/README.md#deletetestharnessscenariousingdelete) - deleteTestHarnessScenario
+* [getTestHarnessScenarioUsingGET](docs/testharness/README.md#gettestharnessscenariousingget) - getTestHarnessScenario
+* [getTestHarnessScenariosUsingGET](docs/testharness/README.md#gettestharnessscenariosusingget) - getTestHarnessScenarios
+* [updateTestHarnessScenarioUsingPUT](docs/testharness/README.md#updatetestharnessscenariousingput) - updateTestHarnessScenario
 <!-- End SDK Available Operations -->
 
 ### Maturity

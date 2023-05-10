@@ -43,12 +43,15 @@ class Crash
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashGroupsGetRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashGroupsGetSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\CrashGroupsGetResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function crashGroupsGet(
         \OpenAPI\OpenAPI\Models\Operations\CrashGroupsGetRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\CrashGroupsGetSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\CrashGroupsGetResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}', \OpenAPI\OpenAPI\Models\Operations\CrashGroupsGetRequest::class, $request);
         
@@ -86,12 +89,15 @@ class Crash
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashGroupsGetStacktraceRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashGroupsGetStacktraceSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\CrashGroupsGetStacktraceResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function crashGroupsGetStacktrace(
         \OpenAPI\OpenAPI\Models\Operations\CrashGroupsGetStacktraceRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\CrashGroupsGetStacktraceSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\CrashGroupsGetStacktraceResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/stacktrace', \OpenAPI\OpenAPI\Models\Operations\CrashGroupsGetStacktraceRequest::class, $request);
         
@@ -130,12 +136,15 @@ class Crash
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashGroupsListRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashGroupsListSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\CrashGroupsListResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function crashGroupsList(
         \OpenAPI\OpenAPI\Models\Operations\CrashGroupsListRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\CrashGroupsListSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\CrashGroupsListResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/crash_groups', \OpenAPI\OpenAPI\Models\Operations\CrashGroupsListRequest::class, $request);
         
@@ -174,12 +183,15 @@ class Crash
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashGroupsUpdateRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashGroupsUpdateSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\CrashGroupsUpdateResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function crashGroupsUpdate(
         \OpenAPI\OpenAPI\Models\Operations\CrashGroupsUpdateRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\CrashGroupsUpdateSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\CrashGroupsUpdateResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}', \OpenAPI\OpenAPI\Models\Operations\CrashGroupsUpdateRequest::class, $request);
         
@@ -222,12 +234,15 @@ class Crash
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashesDeleteRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashesDeleteSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\CrashesDeleteResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function crashesDelete(
         \OpenAPI\OpenAPI\Models\Operations\CrashesDeleteRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\CrashesDeleteSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\CrashesDeleteResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}', \OpenAPI\OpenAPI\Models\Operations\CrashesDeleteRequest::class, $request);
         
@@ -266,12 +281,15 @@ class Crash
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashesGetRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashesGetSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\CrashesGetResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function crashesGet(
         \OpenAPI\OpenAPI\Models\Operations\CrashesGetRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\CrashesGetSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\CrashesGetResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}', \OpenAPI\OpenAPI\Models\Operations\CrashesGetRequest::class, $request);
         
@@ -310,12 +328,15 @@ class Crash
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashesGetAppCrashesInfoRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashesGetAppCrashesInfoSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\CrashesGetAppCrashesInfoResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function crashesGetAppCrashesInfo(
         \OpenAPI\OpenAPI\Models\Operations\CrashesGetAppCrashesInfoRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\CrashesGetAppCrashesInfoSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\CrashesGetAppCrashesInfoResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/crashes_info', \OpenAPI\OpenAPI\Models\Operations\CrashesGetAppCrashesInfoRequest::class, $request);
         
@@ -353,12 +374,15 @@ class Crash
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashesGetAppVersionsRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashesGetAppVersionsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\CrashesGetAppVersionsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function crashesGetAppVersions(
         \OpenAPI\OpenAPI\Models\Operations\CrashesGetAppVersionsRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\CrashesGetAppVersionsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\CrashesGetAppVersionsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/versions', \OpenAPI\OpenAPI\Models\Operations\CrashesGetAppVersionsRequest::class, $request);
         
@@ -396,12 +420,15 @@ class Crash
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashesGetCrashAttachmentLocationRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashesGetCrashAttachmentLocationSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\CrashesGetCrashAttachmentLocationResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function crashesGetCrashAttachmentLocation(
         \OpenAPI\OpenAPI\Models\Operations\CrashesGetCrashAttachmentLocationRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\CrashesGetCrashAttachmentLocationSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\CrashesGetCrashAttachmentLocationResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/crashes/{crash_id}/attachments/{attachment_id}/location', \OpenAPI\OpenAPI\Models\Operations\CrashesGetCrashAttachmentLocationRequest::class, $request);
         
@@ -439,12 +466,15 @@ class Crash
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashesGetCrashTextAttachmentContentRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashesGetCrashTextAttachmentContentSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\CrashesGetCrashTextAttachmentContentResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function crashesGetCrashTextAttachmentContent(
         \OpenAPI\OpenAPI\Models\Operations\CrashesGetCrashTextAttachmentContentRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\CrashesGetCrashTextAttachmentContentSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\CrashesGetCrashTextAttachmentContentResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/crashes/{crash_id}/attachments/{attachment_id}/text', \OpenAPI\OpenAPI\Models\Operations\CrashesGetCrashTextAttachmentContentRequest::class, $request);
         
@@ -481,12 +511,15 @@ class Crash
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashesGetNativeCrashRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashesGetNativeCrashSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\CrashesGetNativeCrashResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function crashesGetNativeCrash(
         \OpenAPI\OpenAPI\Models\Operations\CrashesGetNativeCrashRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\CrashesGetNativeCrashSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\CrashesGetNativeCrashResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}/native', \OpenAPI\OpenAPI\Models\Operations\CrashesGetNativeCrashRequest::class, $request);
         
@@ -523,12 +556,15 @@ class Crash
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashesGetNativeCrashDownloadRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashesGetNativeCrashDownloadSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\CrashesGetNativeCrashDownloadResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function crashesGetNativeCrashDownload(
         \OpenAPI\OpenAPI\Models\Operations\CrashesGetNativeCrashDownloadRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\CrashesGetNativeCrashDownloadSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\CrashesGetNativeCrashDownloadResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}/native/download', \OpenAPI\OpenAPI\Models\Operations\CrashesGetNativeCrashDownloadRequest::class, $request);
         
@@ -565,12 +601,15 @@ class Crash
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashesGetRawCrashLocationRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashesGetRawCrashLocationSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\CrashesGetRawCrashLocationResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function crashesGetRawCrashLocation(
         \OpenAPI\OpenAPI\Models\Operations\CrashesGetRawCrashLocationRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\CrashesGetRawCrashLocationSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\CrashesGetRawCrashLocationResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}/raw/location', \OpenAPI\OpenAPI\Models\Operations\CrashesGetRawCrashLocationRequest::class, $request);
         
@@ -608,12 +647,15 @@ class Crash
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashesGetStacktraceRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashesGetStacktraceSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\CrashesGetStacktraceResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function crashesGetStacktrace(
         \OpenAPI\OpenAPI\Models\Operations\CrashesGetStacktraceRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\CrashesGetStacktraceSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\CrashesGetStacktraceResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}/stacktrace', \OpenAPI\OpenAPI\Models\Operations\CrashesGetStacktraceRequest::class, $request);
         
@@ -652,12 +694,15 @@ class Crash
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashesListRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashesListSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\CrashesListResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function crashesList(
         \OpenAPI\OpenAPI\Models\Operations\CrashesListRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\CrashesListSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\CrashesListResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes', \OpenAPI\OpenAPI\Models\Operations\CrashesListRequest::class, $request);
         
@@ -696,12 +741,15 @@ class Crash
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashesListAttachmentsRequest $request
      * @param \OpenAPI\OpenAPI\Models\Operations\CrashesListAttachmentsSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\CrashesListAttachmentsResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function crashesListAttachments(
         \OpenAPI\OpenAPI\Models\Operations\CrashesListAttachmentsRequest $request,
         \OpenAPI\OpenAPI\Models\Operations\CrashesListAttachmentsSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\CrashesListAttachmentsResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/v0.1/apps/{owner_name}/{app_name}/crashes/{crash_id}/attachments', \OpenAPI\OpenAPI\Models\Operations\CrashesListAttachmentsRequest::class, $request);
         

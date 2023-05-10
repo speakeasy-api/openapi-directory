@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETAttachLoadBalancersActionEnum: string
 {
     case ATTACH_LOAD_BALANCERS = 'AttachLoadBalancers';

@@ -30,30 +30,75 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\SecretmanagerProjectsLocationsListRequest;
+use \OpenAPI\OpenAPI\Models\Shared\XgafvEnum;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+use \OpenAPI\OpenAPI\Models\Operations\SecretmanagerProjectsLocationsListSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new SecretmanagerProjectsLocationsListRequest();
+    $request->dollarXgafv = XgafvEnum::TWO;
+    $request->accessToken = 'provident';
+    $request->alt = AltEnum::PROTO;
+    $request->callback = 'quibusdam';
+    $request->fields = 'unde';
+    $request->filter = 'nulla';
+    $request->key = 'corrupti';
+    $request->name = 'Ben Mueller';
+    $request->oauthToken = 'iure';
+    $request->pageSize = 297534;
+    $request->pageToken = 'debitis';
+    $request->prettyPrint = false;
+    $request->quotaUser = 'ipsa';
+    $request->uploadType = 'delectus';
+    $request->uploadProtocol = 'tempora';
+
+    $requestSecurity = new SecretmanagerProjectsLocationsListSecurity();
+    $requestSecurity->oauth2 = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+    $requestSecurity->oauth2c = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+
+    $response = $sdk->projects->secretmanagerProjectsLocationsList($request, $requestSecurity);
+
+    if ($response->listLocationsResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `secretmanagerProjectsLocationsList` - Lists information about the supported locations for this service.
-* `secretmanagerProjectsSecretsAddVersion` - Creates a new SecretVersion containing secret data and attaches it to an existing Secret.
-* `secretmanagerProjectsSecretsCreate` - Creates a new Secret containing no SecretVersions.
-* `secretmanagerProjectsSecretsDelete` - Deletes a Secret.
-* `secretmanagerProjectsSecretsGetIamPolicy` - Gets the access control policy for a secret. Returns empty policy if the secret exists and does not have a policy set.
-* `secretmanagerProjectsSecretsList` - Lists Secrets.
-* `secretmanagerProjectsSecretsPatch` - Updates metadata of an existing Secret.
-* `secretmanagerProjectsSecretsSetIamPolicy` - Sets the access control policy on the specified secret. Replaces any existing policy. Permissions on SecretVersions are enforced according to the policy set on the associated Secret.
-* `secretmanagerProjectsSecretsTestIamPermissions` - Returns permissions that a caller has for the specified secret. If the secret does not exist, this call returns an empty set of permissions, not a NOT_FOUND error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-* `secretmanagerProjectsSecretsVersionsAccess` - Accesses a SecretVersion. This call returns the secret data. `projects/*/secrets/*/versions/latest` is an alias to the most recently created SecretVersion.
-* `secretmanagerProjectsSecretsVersionsDestroy` - Destroys a SecretVersion. Sets the state of the SecretVersion to DESTROYED and irrevocably destroys the secret data.
-* `secretmanagerProjectsSecretsVersionsDisable` - Disables a SecretVersion. Sets the state of the SecretVersion to DISABLED.
-* `secretmanagerProjectsSecretsVersionsEnable` - Enables a SecretVersion. Sets the state of the SecretVersion to ENABLED.
-* `secretmanagerProjectsSecretsVersionsGet` - Gets metadata for a SecretVersion. `projects/*/secrets/*/versions/latest` is an alias to the most recently created SecretVersion.
-* `secretmanagerProjectsSecretsVersionsList` - Lists SecretVersions. This call does not return secret data.
+* [secretmanagerProjectsLocationsList](docs/projects/README.md#secretmanagerprojectslocationslist) - Lists information about the supported locations for this service.
+* [secretmanagerProjectsSecretsAddVersion](docs/projects/README.md#secretmanagerprojectssecretsaddversion) - Creates a new SecretVersion containing secret data and attaches it to an existing Secret.
+* [secretmanagerProjectsSecretsCreate](docs/projects/README.md#secretmanagerprojectssecretscreate) - Creates a new Secret containing no SecretVersions.
+* [secretmanagerProjectsSecretsDelete](docs/projects/README.md#secretmanagerprojectssecretsdelete) - Deletes a Secret.
+* [secretmanagerProjectsSecretsGetIamPolicy](docs/projects/README.md#secretmanagerprojectssecretsgetiampolicy) - Gets the access control policy for a secret. Returns empty policy if the secret exists and does not have a policy set.
+* [secretmanagerProjectsSecretsList](docs/projects/README.md#secretmanagerprojectssecretslist) - Lists Secrets.
+* [secretmanagerProjectsSecretsPatch](docs/projects/README.md#secretmanagerprojectssecretspatch) - Updates metadata of an existing Secret.
+* [secretmanagerProjectsSecretsSetIamPolicy](docs/projects/README.md#secretmanagerprojectssecretssetiampolicy) - Sets the access control policy on the specified secret. Replaces any existing policy. Permissions on SecretVersions are enforced according to the policy set on the associated Secret.
+* [secretmanagerProjectsSecretsTestIamPermissions](docs/projects/README.md#secretmanagerprojectssecretstestiampermissions) - Returns permissions that a caller has for the specified secret. If the secret does not exist, this call returns an empty set of permissions, not a NOT_FOUND error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
+* [secretmanagerProjectsSecretsVersionsAccess](docs/projects/README.md#secretmanagerprojectssecretsversionsaccess) - Accesses a SecretVersion. This call returns the secret data. `projects/*/secrets/*/versions/latest` is an alias to the most recently created SecretVersion.
+* [secretmanagerProjectsSecretsVersionsDestroy](docs/projects/README.md#secretmanagerprojectssecretsversionsdestroy) - Destroys a SecretVersion. Sets the state of the SecretVersion to DESTROYED and irrevocably destroys the secret data.
+* [secretmanagerProjectsSecretsVersionsDisable](docs/projects/README.md#secretmanagerprojectssecretsversionsdisable) - Disables a SecretVersion. Sets the state of the SecretVersion to DISABLED.
+* [secretmanagerProjectsSecretsVersionsEnable](docs/projects/README.md#secretmanagerprojectssecretsversionsenable) - Enables a SecretVersion. Sets the state of the SecretVersion to ENABLED.
+* [secretmanagerProjectsSecretsVersionsGet](docs/projects/README.md#secretmanagerprojectssecretsversionsget) - Gets metadata for a SecretVersion. `projects/*/secrets/*/versions/latest` is an alias to the most recently created SecretVersion.
+* [secretmanagerProjectsSecretsVersionsList](docs/projects/README.md#secretmanagerprojectssecretsversionslist) - Lists SecretVersions. This call does not return secret data.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -38,4 +38,6 @@ src/Models/Shared/BiddingFunctionInput.php
 src/Models/Shared/AltEnum.php
 src/Models/Shared/XgafvEnum.php
 src/Models/Shared/ListBiddingFunctionsResponse.php
+docs/sdk/README.md
+docs/bidders/README.md
 USAGE.md

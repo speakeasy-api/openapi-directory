@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListRepositorySyncDefinitionsXAmzTargetEnum: string
 {
     case AWS_PROTON20200720_LIST_REPOSITORY_SYNC_DEFINITIONS = 'AwsProton20200720.ListRepositorySyncDefinitions';

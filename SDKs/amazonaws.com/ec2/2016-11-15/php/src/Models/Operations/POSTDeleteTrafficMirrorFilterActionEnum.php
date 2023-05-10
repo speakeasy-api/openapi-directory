@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteTrafficMirrorFilterActionEnum: string
 {
     case DELETE_TRAFFIC_MIRROR_FILTER = 'DeleteTrafficMirrorFilter';

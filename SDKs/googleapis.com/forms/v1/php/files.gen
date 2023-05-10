@@ -163,4 +163,6 @@ src/Models/Shared/WatchTarget.php
 src/Models/Shared/CloudPubsubTopic.php
 src/Models/Shared/CreateWatchRequestInput.php
 src/Models/Shared/ListWatchesResponse.php
+docs/sdk/README.md
+docs/forms/README.md
 USAGE.md

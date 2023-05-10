@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeCopyProductStatusXAmzTargetEnum: string
 {
     case AWS242_SERVICE_CATALOG_SERVICE_DESCRIBE_COPY_PRODUCT_STATUS = 'AWS242ServiceCatalogService.DescribeCopyProductStatus';

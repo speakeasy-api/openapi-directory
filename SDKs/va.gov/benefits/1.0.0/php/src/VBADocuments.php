@@ -249,9 +249,11 @@ class VBADocuments
     /**
      * Get a location for subsequent document upload PUT request
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\PostBenefitsDocumentUploadSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\PostBenefitsDocumentUploadResponse
      */
 	public function postBenefitsDocumentUpload(
+        \OpenAPI\OpenAPI\Models\Operations\PostBenefitsDocumentUploadSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\PostBenefitsDocumentUploadResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -259,7 +261,8 @@ class VBADocuments
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('POST', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

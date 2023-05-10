@@ -731,11 +731,14 @@ class SDK
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\DeleteSubscriptionRequest $request
      * @return \OpenAPI\OpenAPI\Models\Operations\DeleteSubscriptionResponse
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
 	public function deleteSubscription(
         \OpenAPI\OpenAPI\Models\Operations\DeleteSubscriptionRequest $request,
     ): \OpenAPI\OpenAPI\Models\Operations\DeleteSubscriptionResponse
     {
+        trigger_error('Method ' . __METHOD__ . ' is deprecated', E_USER_DEPRECATED);
+        
         $baseUrl = $this->_serverUrl;
         $url = Utils\Utils::generateUrl($baseUrl, '/#X-Amz-Target=AWSShield_20160616.DeleteSubscription');
         

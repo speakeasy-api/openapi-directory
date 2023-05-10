@@ -46,4 +46,5 @@ src/Models/Operations/TraderGradesRequest.php
 src/Models/Operations/TraderGradesResponse.php
 src/Models/Operations/TradingIndicatorRequest.php
 src/Models/Operations/TradingIndicatorResponse.php
+docs/sdk/README.md
 USAGE.md

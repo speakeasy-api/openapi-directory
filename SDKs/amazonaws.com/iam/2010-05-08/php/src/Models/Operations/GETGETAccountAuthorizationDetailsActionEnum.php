@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETGETAccountAuthorizationDetailsActionEnum: string
 {
     case GET_ACCOUNT_AUTHORIZATION_DETAILS = 'GetAccountAuthorizationDetails';

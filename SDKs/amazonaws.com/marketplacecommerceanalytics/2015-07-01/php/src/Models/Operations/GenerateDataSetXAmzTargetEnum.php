@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GenerateDataSetXAmzTargetEnum: string
 {
     case MARKETPLACE_COMMERCE_ANALYTICS20150701_GENERATE_DATA_SET = 'MarketplaceCommerceAnalytics20150701.GenerateDataSet';

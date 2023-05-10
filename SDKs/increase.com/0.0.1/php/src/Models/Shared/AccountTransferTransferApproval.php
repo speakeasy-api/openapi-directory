@@ -26,8 +26,18 @@ class AccountTransferTransferApproval
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
     public \DateTime $approvedAt;
     
+    /**
+     * If the Transfer was approved by a user in the dashboard, the email address of that user.
+     * 
+     * @var string $approvedBy
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('approved_by')]
+    #[\JMS\Serializer\Annotation\Type('string')]
+    public string $approvedBy;
+    
 	public function __construct()
 	{
 		$this->approvedAt = new \DateTime();
+		$this->approvedBy = "";
 	}
 }

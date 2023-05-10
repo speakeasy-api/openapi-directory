@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDescribeAdjustmentTypesActionEnum: string
 {
     case DESCRIBE_ADJUSTMENT_TYPES = 'DescribeAdjustmentTypes';

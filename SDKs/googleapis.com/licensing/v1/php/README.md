@@ -30,22 +30,66 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\LicensingLicenseAssignmentsDeleteRequest;
+use \OpenAPI\OpenAPI\Models\Shared\XgafvEnum;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+use \OpenAPI\OpenAPI\Models\Operations\LicensingLicenseAssignmentsDeleteSecurity;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new LicensingLicenseAssignmentsDeleteRequest();
+    $request->dollarXgafv = XgafvEnum::TWO;
+    $request->accessToken = 'provident';
+    $request->alt = AltEnum::PROTO;
+    $request->callback = 'quibusdam';
+    $request->fields = 'unde';
+    $request->key = 'nulla';
+    $request->oauthToken = 'corrupti';
+    $request->prettyPrint = false;
+    $request->productId = 'illum';
+    $request->quotaUser = 'vel';
+    $request->skuId = 'error';
+    $request->uploadType = 'deserunt';
+    $request->uploadProtocol = 'suscipit';
+    $request->userId = 'iure';
+
+    $requestSecurity = new LicensingLicenseAssignmentsDeleteSecurity();
+    $requestSecurity->oauth2 = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+    $requestSecurity->oauth2c = 'Bearer YOUR_ACCESS_TOKEN_HERE';
+
+    $response = $sdk->licenseAssignments->licensingLicenseAssignmentsDelete($request, $requestSecurity);
+
+    if ($response->empty !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### licenseAssignments
+### [licenseAssignments](docs/licenseassignments/README.md)
 
-* `licensingLicenseAssignmentsDelete` - Revoke a license.
-* `licensingLicenseAssignmentsGet` - Get a specific user's license by product SKU.
-* `licensingLicenseAssignmentsInsert` - Assign a license.
-* `licensingLicenseAssignmentsListForProduct` - List all users assigned licenses for a specific product SKU.
-* `licensingLicenseAssignmentsListForProductAndSku` - List all users assigned licenses for a specific product SKU.
-* `licensingLicenseAssignmentsPatch` - Reassign a user's product SKU with a different SKU in the same product. This method supports patch semantics.
-* `licensingLicenseAssignmentsUpdate` - Reassign a user's product SKU with a different SKU in the same product.
+* [licensingLicenseAssignmentsDelete](docs/licenseassignments/README.md#licensinglicenseassignmentsdelete) - Revoke a license.
+* [licensingLicenseAssignmentsGet](docs/licenseassignments/README.md#licensinglicenseassignmentsget) - Get a specific user's license by product SKU.
+* [licensingLicenseAssignmentsInsert](docs/licenseassignments/README.md#licensinglicenseassignmentsinsert) - Assign a license.
+* [licensingLicenseAssignmentsListForProduct](docs/licenseassignments/README.md#licensinglicenseassignmentslistforproduct) - List all users assigned licenses for a specific product SKU.
+* [licensingLicenseAssignmentsListForProductAndSku](docs/licenseassignments/README.md#licensinglicenseassignmentslistforproductandsku) - List all users assigned licenses for a specific product SKU.
+* [licensingLicenseAssignmentsPatch](docs/licenseassignments/README.md#licensinglicenseassignmentspatch) - Reassign a user's product SKU with a different SKU in the same product. This method supports patch semantics.
+* [licensingLicenseAssignmentsUpdate](docs/licenseassignments/README.md#licensinglicenseassignmentsupdate) - Reassign a user's product SKU with a different SKU in the same product.
 <!-- End SDK Available Operations -->
 
 ### Maturity

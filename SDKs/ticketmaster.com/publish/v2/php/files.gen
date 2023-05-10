@@ -98,4 +98,5 @@ src/Models/Shared/EndDates.php
 src/Models/Shared/AccessDates.php
 src/Models/Shared/ExtensionDataRelatedEntityTypeEnum.php
 src/Models/Shared/ExtensionData.php
+docs/sdk/README.md
 USAGE.md

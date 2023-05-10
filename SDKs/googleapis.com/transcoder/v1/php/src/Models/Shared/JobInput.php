@@ -58,6 +58,16 @@ class JobInput
     public ?array $labels = null;
     
     /**
+     * The processing mode of the job. The default is `PROCESSING_MODE_INTERACTIVE`.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\JobModeEnum $mode
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('mode')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\JobModeEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?JobModeEnum $mode = null;
+    
+    /**
      * The resource name of the job. Format: `projects/{project_number}/locations/{location}/jobs/{job}`
      * 
      * @var ?string $name
@@ -103,6 +113,7 @@ class JobInput
 		$this->error = null;
 		$this->inputUri = null;
 		$this->labels = null;
+		$this->mode = null;
 		$this->name = null;
 		$this->outputUri = null;
 		$this->templateId = null;

@@ -30,24 +30,49 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\EmailValidationRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new EmailValidationRequest();
+    $request->userEmailHere = 'example@example.com';
+    $request->yourApiKeyHere = 'asd24#sdfs322#';
+
+    $response = $sdk->emailValidation->emailValidation($request);
+
+    if ($response->emailValidation200ApplicationJSONObject !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### emailValidation
+### [emailValidation](docs/emailvalidation/README.md)
 
-* `emailValidation` - Email Validation
+* [emailValidation](docs/emailvalidation/README.md#emailvalidation) - Email Validation
 
-### maliciousUrlScanner
+### [maliciousUrlScanner](docs/maliciousurlscanner/README.md)
 
-* `maliciousUrlScanner` - Malicious URL Scanner
+* [maliciousUrlScanner](docs/maliciousurlscanner/README.md#maliciousurlscanner) - Malicious URL Scanner
 
-### phoneValidation
+### [phoneValidation](docs/phonevalidation/README.md)
 
-* `phoneValidation` - Phone Validation
+* [phoneValidation](docs/phonevalidation/README.md#phonevalidation) - Phone Validation
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Shared;
 
 
-/** Authentication type for subject. */
+/** Authentication type for the subject. */
 enum SubjectKindEnum: string
 {
     case AUTH_TYPE_UNSPECIFIED = 'AUTH_TYPE_UNSPECIFIED';

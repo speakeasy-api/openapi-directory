@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeRescoreExecutionPlanXAmzTargetEnum: string
 {
     case AWS_KENDRA_RERANKING_FRONTEND_SERVICE_DESCRIBE_RESCORE_EXECUTION_PLAN = 'AWSKendraRerankingFrontendService.DescribeRescoreExecutionPlan';

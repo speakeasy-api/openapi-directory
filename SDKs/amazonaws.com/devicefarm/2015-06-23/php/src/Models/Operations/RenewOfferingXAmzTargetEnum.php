@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RenewOfferingXAmzTargetEnum: string
 {
     case DEVICE_FARM20150623_RENEW_OFFERING = 'DeviceFarm_20150623.RenewOffering';

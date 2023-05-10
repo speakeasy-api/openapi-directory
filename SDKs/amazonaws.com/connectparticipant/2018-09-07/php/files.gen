@@ -63,4 +63,5 @@ src/Models/Shared/SendMessageResponse.php
 src/Models/Shared/StartAttachmentUploadResponse.php
 src/Models/Shared/UploadMetadata.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

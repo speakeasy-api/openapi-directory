@@ -42,4 +42,8 @@ src/Models/Operations/GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlSearchS
 src/Models/Operations/GetSearchAspectIDFullsearchAspectIDEnum.php
 src/Models/Operations/GetSearchAspectIdFullsearchRequest.php
 src/Models/Operations/GetSearchAspectIdFullsearchResponse.php
+docs/sdk/README.md
+docs/content/README.md
+docs/document/README.md
+docs/search/README.md
 USAGE.md

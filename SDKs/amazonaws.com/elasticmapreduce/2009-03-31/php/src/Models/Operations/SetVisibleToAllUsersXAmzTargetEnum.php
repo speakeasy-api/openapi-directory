@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum SetVisibleToAllUsersXAmzTargetEnum: string
 {
     case ELASTIC_MAP_REDUCE_SET_VISIBLE_TO_ALL_USERS = 'ElasticMapReduce.SetVisibleToAllUsers';

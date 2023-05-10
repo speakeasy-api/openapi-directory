@@ -30,23 +30,64 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\IdeahubIdeasListRequest;
+use \OpenAPI\OpenAPI\Models\Shared\XgafvEnum;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new IdeahubIdeasListRequest();
+    $request->dollarXgafv = XgafvEnum::TWO;
+    $request->accessToken = 'provident';
+    $request->alt = AltEnum::PROTO;
+    $request->callback = 'quibusdam';
+    $request->fields = 'unde';
+    $request->filter = 'nulla';
+    $request->key = 'corrupti';
+    $request->oauthToken = 'illum';
+    $request->orderBy = 'vel';
+    $request->pageSize = 623564;
+    $request->pageToken = 'deserunt';
+    $request->parent = 'suscipit';
+    $request->prettyPrint = false;
+    $request->quotaUser = 'iure';
+    $request->uploadType = 'magnam';
+    $request->uploadProtocol = 'debitis';
+
+    $response = $sdk->ideas->ideahubIdeasList($request);
+
+    if ($response->googleSearchIdeahubV1alphaListIdeasResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### ideas
+### [ideas](docs/ideas/README.md)
 
-* `ideahubIdeasList` - List ideas for a given Creator and filter and sort options.
+* [ideahubIdeasList](docs/ideas/README.md#ideahubideaslist) - List ideas for a given Creator and filter and sort options.
 
-### platforms
+### [platforms](docs/platforms/README.md)
 
-* `ideahubPlatformsPropertiesIdeaActivitiesCreate` - Creates an idea activity entry.
-* `ideahubPlatformsPropertiesIdeasList` - List ideas for a given Creator and filter and sort options.
-* `ideahubPlatformsPropertiesLocalesList` - Returns which locales ideas are available in for a given Creator.
-* `ideahubPlatformsPropertiesTopicStatesPatch` - Update a topic state resource.
+* [ideahubPlatformsPropertiesIdeaActivitiesCreate](docs/platforms/README.md#ideahubplatformspropertiesideaactivitiescreate) - Creates an idea activity entry.
+* [ideahubPlatformsPropertiesIdeasList](docs/platforms/README.md#ideahubplatformspropertiesideaslist) - List ideas for a given Creator and filter and sort options.
+* [ideahubPlatformsPropertiesLocalesList](docs/platforms/README.md#ideahubplatformspropertieslocaleslist) - Returns which locales ideas are available in for a given Creator.
+* [ideahubPlatformsPropertiesTopicStatesPatch](docs/platforms/README.md#ideahubplatformspropertiestopicstatespatch) - Update a topic state resource.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DescribeEffectivePolicyXAmzTargetEnum: string
 {
     case AWS_ORGANIZATIONS_V20161128_DESCRIBE_EFFECTIVE_POLICY = 'AWSOrganizationsV20161128.DescribeEffectivePolicy';

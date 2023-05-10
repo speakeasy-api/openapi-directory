@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeregisterDBProxyTargetsActionEnum: string
 {
     case DEREGISTER_DB_PROXY_TARGETS = 'DeregisterDBProxyTargets';

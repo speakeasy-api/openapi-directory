@@ -858,26 +858,6 @@ class SiteEntity
     public ?bool $optOutGlobal = null;
     
     /**
-     * Last time the site was notified about an overage
-     * 
-     * @var ?\DateTime $overageNotifiedAt
-     */
-	#[\JMS\Serializer\Annotation\SerializedName('overage_notified_at')]
-    #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?\DateTime $overageNotifiedAt = null;
-    
-    /**
-     * Notify site email of overages?
-     * 
-     * @var ?bool $overageNotify
-     */
-	#[\JMS\Serializer\Annotation\SerializedName('overage_notify')]
-    #[\JMS\Serializer\Annotation\Type('bool')]
-    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?bool $overageNotify = null;
-    
-    /**
      * Is this site's billing overdue?
      * 
      * @var ?bool $overdue
@@ -1506,8 +1486,6 @@ class SiteEntity
 		$this->officeIntegrationType = null;
 		$this->oncehubLink = null;
 		$this->optOutGlobal = null;
-		$this->overageNotifiedAt = null;
-		$this->overageNotify = null;
 		$this->overdue = null;
 		$this->passwordMinLength = null;
 		$this->passwordRequireLetter = null;

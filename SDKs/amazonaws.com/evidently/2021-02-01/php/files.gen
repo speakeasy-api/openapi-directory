@@ -217,4 +217,5 @@ src/Models/Shared/UpdateLaunchResponse.php
 src/Models/Shared/UpdateProjectResponse.php
 src/Models/Shared/UpdateProjectDataDeliveryResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

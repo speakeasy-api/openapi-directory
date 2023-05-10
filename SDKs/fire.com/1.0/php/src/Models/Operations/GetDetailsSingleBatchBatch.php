@@ -48,7 +48,7 @@ class GetDetailsSingleBatchBatch
     public ?string $callbackUrl = null;
     
     /**
-     * All payments in the batch must be the same currency - either EUR or GBP
+     * All payments in the batch must be the same currency.
      * 
      * @var ?string $currency
      */
@@ -138,7 +138,7 @@ class GetDetailsSingleBatchBatch
     public ?GetDetailsSingleBatchBatchStatusEnum $status = null;
     
     /**
-     * The type of the batch - can be one of the listed 3
+     * The type of the batch - can be one of the listed enums
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Operations\GetDetailsSingleBatchBatchTypeEnum $type
      */

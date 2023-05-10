@@ -79,4 +79,5 @@ src/Models/Shared/Player.php
 src/Models/Shared/PlayerSeason.php
 src/Models/Shared/PlayerTournamentProjection.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

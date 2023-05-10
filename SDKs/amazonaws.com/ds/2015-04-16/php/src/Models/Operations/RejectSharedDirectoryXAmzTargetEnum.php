@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RejectSharedDirectoryXAmzTargetEnum: string
 {
     case DIRECTORY_SERVICE20150416_REJECT_SHARED_DIRECTORY = 'DirectoryService_20150416.RejectSharedDirectory';

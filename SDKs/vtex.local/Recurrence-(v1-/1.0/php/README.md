@@ -30,26 +30,60 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\AddrecurrenceitemRequest;
+use \OpenAPI\OpenAPI\Models\Shared\AddrecurrenceitemRequest;
+use \OpenAPI\OpenAPI\Models\Shared\Frequency;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new AddrecurrenceitemRequest();
+    $request->accept = 'application/json';
+    $request->contentType = 'application/json';
+    $request->requestBody = [
+        new AddrecurrenceitemRequest(),
+        new AddrecurrenceitemRequest(),
+        new AddrecurrenceitemRequest(),
+    ];
+    $request->recurrenceId = 'provident';
+
+    $response = $sdk->miscellaneous->addrecurrenceitem($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### miscellaneous
+### [miscellaneous](docs/miscellaneous/README.md)
 
-* `addrecurrenceitem` - Add Subscription item
-* `getRecurrencebyemail` - Get Subscriptions
-* `getRecurrencebyrecurrenceId` - Get Subscription by recurrenceId
-* `getpaymentaccounts` - Get payment accounts
-* `getrecurrenceaddresses` - Get Subscription addresses
-* `getrecurrencesettings` - Get Subscription settings
-* `getselfrecurrence` - Get self Subscription
-* `reindexrecurrence` - Reindex Subscription
-* `updatepartialrecurrence` - Update partial Subscription
-* `updaterecurrence` - Update Subscription
-* `updaterecurrencesettings` - Update Subscription settings
+* [addrecurrenceitem](docs/miscellaneous/README.md#addrecurrenceitem) - Add Subscription item
+* [getRecurrencebyemail](docs/miscellaneous/README.md#getrecurrencebyemail) - Get Subscriptions
+* [getRecurrencebyrecurrenceId](docs/miscellaneous/README.md#getrecurrencebyrecurrenceid) - Get Subscription by recurrenceId
+* [getpaymentaccounts](docs/miscellaneous/README.md#getpaymentaccounts) - Get payment accounts
+* [getrecurrenceaddresses](docs/miscellaneous/README.md#getrecurrenceaddresses) - Get Subscription addresses
+* [getrecurrencesettings](docs/miscellaneous/README.md#getrecurrencesettings) - Get Subscription settings
+* [getselfrecurrence](docs/miscellaneous/README.md#getselfrecurrence) - Get self Subscription
+* [reindexrecurrence](docs/miscellaneous/README.md#reindexrecurrence) - Reindex Subscription
+* [updatepartialrecurrence](docs/miscellaneous/README.md#updatepartialrecurrence) - Update partial Subscription
+* [updaterecurrence](docs/miscellaneous/README.md#updaterecurrence) - Update Subscription
+* [updaterecurrencesettings](docs/miscellaneous/README.md#updaterecurrencesettings) - Update Subscription settings
 <!-- End SDK Available Operations -->
 
 ### Maturity

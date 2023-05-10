@@ -79,4 +79,6 @@ src/Models/Shared/AnnotateTextResponse.php
 src/Models/Shared/AnnotateTextRequestEncodingTypeEnum.php
 src/Models/Shared/AnnotateTextRequest.php
 src/Models/Shared/Features.php
+docs/sdk/README.md
+docs/documents/README.md
 USAGE.md

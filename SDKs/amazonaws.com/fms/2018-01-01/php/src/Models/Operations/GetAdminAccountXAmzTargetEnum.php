@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetAdminAccountXAmzTargetEnum: string
 {
     case AWSFMS20180101_GET_ADMIN_ACCOUNT = 'AWSFMS_20180101.GetAdminAccount';

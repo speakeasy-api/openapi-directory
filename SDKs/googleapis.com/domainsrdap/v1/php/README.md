@@ -30,40 +30,77 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Operations\DomainsrdapAutnumGetRequest;
+use \OpenAPI\OpenAPI\Models\Shared\XgafvEnum;
+use \OpenAPI\OpenAPI\Models\Shared\AltEnum;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new DomainsrdapAutnumGetRequest();
+    $request->dollarXgafv = XgafvEnum::TWO;
+    $request->accessToken = 'provident';
+    $request->alt = AltEnum::PROTO;
+    $request->autnumId = 'quibusdam';
+    $request->callback = 'unde';
+    $request->fields = 'nulla';
+    $request->key = 'corrupti';
+    $request->oauthToken = 'illum';
+    $request->prettyPrint = false;
+    $request->quotaUser = 'vel';
+    $request->uploadType = 'error';
+    $request->uploadProtocol = 'deserunt';
+
+    $response = $sdk->autnum->domainsrdapAutnumGet($request);
+
+    if ($response->rdapResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### autnum
+### [autnum](docs/autnum/README.md)
 
-* `domainsrdapAutnumGet` - The RDAP API recognizes this command from the RDAP specification but does not support it. The response is a formatted 501 error.
+* [domainsrdapAutnumGet](docs/autnum/README.md#domainsrdapautnumget) - The RDAP API recognizes this command from the RDAP specification but does not support it. The response is a formatted 501 error.
 
-### domain
+### [domain](docs/domain/README.md)
 
-* `domainsrdapDomainGet` - Look up RDAP information for a domain by name.
+* [domainsrdapDomainGet](docs/domain/README.md#domainsrdapdomainget) - Look up RDAP information for a domain by name.
 
-### entity
+### [entity](docs/entity/README.md)
 
-* `domainsrdapEntityGet` - The RDAP API recognizes this command from the RDAP specification but does not support it. The response is a formatted 501 error.
+* [domainsrdapEntityGet](docs/entity/README.md#domainsrdapentityget) - The RDAP API recognizes this command from the RDAP specification but does not support it. The response is a formatted 501 error.
 
-### ip
+### [ip](docs/ip/README.md)
 
-* `domainsrdapIpGet` - The RDAP API recognizes this command from the RDAP specification but does not support it. The response is a formatted 501 error.
+* [domainsrdapIpGet](docs/ip/README.md#domainsrdapipget) - The RDAP API recognizes this command from the RDAP specification but does not support it. The response is a formatted 501 error.
 
-### nameserver
+### [nameserver](docs/nameserver/README.md)
 
-* `domainsrdapNameserverGet` - The RDAP API recognizes this command from the RDAP specification but does not support it. The response is a formatted 501 error.
+* [domainsrdapNameserverGet](docs/nameserver/README.md#domainsrdapnameserverget) - The RDAP API recognizes this command from the RDAP specification but does not support it. The response is a formatted 501 error.
 
-### v1
+### [v1](docs/v1/README.md)
 
-* `domainsrdapGetDomains` - The RDAP API recognizes this command from the RDAP specification but does not support it. The response is a formatted 501 error.
-* `domainsrdapGetEntities` - The RDAP API recognizes this command from the RDAP specification but does not support it. The response is a formatted 501 error.
-* `domainsrdapGetHelp` - Get help information for the RDAP API, including links to documentation.
-* `domainsrdapGetIp` - The RDAP API recognizes this command from the RDAP specification but does not support it. The response is a formatted 501 error.
-* `domainsrdapGetNameservers` - The RDAP API recognizes this command from the RDAP specification but does not support it. The response is a formatted 501 error.
+* [domainsrdapGetDomains](docs/v1/README.md#domainsrdapgetdomains) - The RDAP API recognizes this command from the RDAP specification but does not support it. The response is a formatted 501 error.
+* [domainsrdapGetEntities](docs/v1/README.md#domainsrdapgetentities) - The RDAP API recognizes this command from the RDAP specification but does not support it. The response is a formatted 501 error.
+* [domainsrdapGetHelp](docs/v1/README.md#domainsrdapgethelp) - Get help information for the RDAP API, including links to documentation.
+* [domainsrdapGetIp](docs/v1/README.md#domainsrdapgetip) - The RDAP API recognizes this command from the RDAP specification but does not support it. The response is a formatted 501 error.
+* [domainsrdapGetNameservers](docs/v1/README.md#domainsrdapgetnameservers) - The RDAP API recognizes this command from the RDAP specification but does not support it. The response is a formatted 501 error.
 <!-- End SDK Available Operations -->
 
 ### Maturity

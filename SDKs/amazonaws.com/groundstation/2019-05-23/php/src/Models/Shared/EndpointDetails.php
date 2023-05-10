@@ -27,6 +27,21 @@ class EndpointDetails
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?DataflowEndpoint $endpoint = null;
     
+    /**
+     * $healthReasons
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\CapabilityHealthReasonEnum> $healthReasons
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('healthReasons')]
+    #[\JMS\Serializer\Annotation\Type('array<enum<OpenAPI\OpenAPI\Models\Shared\CapabilityHealthReasonEnum>>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $healthReasons = null;
+    
+	#[\JMS\Serializer\Annotation\SerializedName('healthStatus')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\CapabilityHealthEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?CapabilityHealthEnum $healthStatus = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('securityDetails')]
     #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\SecurityDetails')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -36,6 +51,8 @@ class EndpointDetails
 	{
 		$this->awsGroundStationAgentEndpoint = null;
 		$this->endpoint = null;
+		$this->healthReasons = null;
+		$this->healthStatus = null;
 		$this->securityDetails = null;
 	}
 }

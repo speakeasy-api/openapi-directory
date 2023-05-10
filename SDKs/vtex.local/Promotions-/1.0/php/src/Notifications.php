@@ -52,7 +52,7 @@ class Notifications
      */
 	public function usagenotification(
         \OpenAPI\OpenAPI\Models\Operations\UsagenotificationRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\UsagenotificationResponse
     {
         $baseUrl = Notifications::USAGENOTIFICATION_SERVERS[0];

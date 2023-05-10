@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetIdentityProviderByIdentifierXAmzTargetEnum: string
 {
     case AWS_COGNITO_IDENTITY_PROVIDER_SERVICE_GET_IDENTITY_PROVIDER_BY_IDENTIFIER = 'AWSCognitoIdentityProviderService.GetIdentityProviderByIdentifier';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetAccessPolicyXAmzTargetEnum: string
 {
     case OPEN_SEARCH_SERVERLESS_GET_ACCESS_POLICY = 'OpenSearchServerless.GetAccessPolicy';

@@ -20,10 +20,10 @@ class GetNotificationConfigurationListResponse
     /**
      * Details of the notification subscription configurations.
      * 
-     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\NotificationConfigurationDetails> $configurations
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\NotificationConfigurationDetailsWrapper> $configurations
      */
 	#[\JMS\Serializer\Annotation\SerializedName('configurations')]
-    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\NotificationConfigurationDetails>')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\NotificationConfigurationDetailsWrapper>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $configurations = null;
     

@@ -87,7 +87,7 @@ class DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendRequest
     public ?string $quotaUser = null;
     
     /**
-     * Required. Full resource name of the format: projects/* /locations/global/collections/* /dataStores/* /servingConfigs/* Before you can request recommendations from your model, you must create at least one serving config for it.
+     * Required. Full resource name of the format: `projects/* /locations/global/collections/* /dataStores/* /servingConfigs/*` Before you can request recommendations from your model, you must create at least one serving config for it.
      * 
      * @var string $servingConfig
      */

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDeleteDBSubnetGroupActionEnum: string
 {
     case DELETE_DB_SUBNET_GROUP = 'DeleteDBSubnetGroup';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDeleteClusterSecurityGroupActionEnum: string
 {
     case DELETE_CLUSTER_SECURITY_GROUP = 'DeleteClusterSecurityGroup';

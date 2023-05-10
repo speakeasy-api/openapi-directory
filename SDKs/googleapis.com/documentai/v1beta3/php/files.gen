@@ -121,6 +121,7 @@ src/Models/Shared/GoogleCloudDocumentaiV1beta3NormalizedVertex.php
 src/Models/Shared/GoogleCloudDocumentaiV1beta3DocumentPageDetectedLanguage.php
 src/Models/Shared/GoogleCloudDocumentaiV1beta3DocumentPageMatrix.php
 src/Models/Shared/GoogleCloudDocumentaiV1beta3DocumentPageToken.php
+src/Models/Shared/GoogleCloudDocumentaiV1beta3DocumentPageTokenStyleInfo.php
 src/Models/Shared/GoogleCloudDocumentaiV1beta3DocumentPageTokenDetectedBreakTypeEnum.php
 src/Models/Shared/GoogleCloudDocumentaiV1beta3DocumentPageTokenDetectedBreak.php
 src/Models/Shared/GoogleCloudDocumentaiV1beta3DocumentPageTable.php
@@ -190,4 +191,6 @@ src/Models/Shared/GoogleCloudDocumentaiV1beta3RawDocument.php
 src/Models/Shared/GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequest.php
 src/Models/Shared/GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequestInputData.php
 src/Models/Shared/GoogleCloudDocumentaiV1beta3SetDefaultProcessorVersionRequest.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

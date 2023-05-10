@@ -22,4 +22,5 @@ src/Models/Operations/ConvertAPIRequestBody.php
 src/Models/Operations/ConvertAPIFormatEnum.php
 src/Models/Operations/ConvertAPIRequest.php
 src/Models/Operations/ConvertAPIResponse.php
+docs/sdk/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteUserXAmzTargetEnum: string
 {
     case AWS_IDENTITY_STORE_DELETE_USER = 'AWSIdentityStore.DeleteUser';

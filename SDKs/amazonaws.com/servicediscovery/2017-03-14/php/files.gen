@@ -195,4 +195,5 @@ src/Models/Shared/UpdateServiceRequest.php
 src/Models/Shared/ServiceChange.php
 src/Models/Shared/DnsConfigChange.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

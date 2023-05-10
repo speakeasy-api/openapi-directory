@@ -34,6 +34,9 @@ src/Models/Operations/FileProjectsLocationsInstancesListResponse.php
 src/Models/Operations/FileProjectsLocationsInstancesRestoreSecurity.php
 src/Models/Operations/FileProjectsLocationsInstancesRestoreRequest.php
 src/Models/Operations/FileProjectsLocationsInstancesRestoreResponse.php
+src/Models/Operations/FileProjectsLocationsInstancesRevertSecurity.php
+src/Models/Operations/FileProjectsLocationsInstancesRevertRequest.php
+src/Models/Operations/FileProjectsLocationsInstancesRevertResponse.php
 src/Models/Operations/FileProjectsLocationsInstancesSnapshotsCreateSecurity.php
 src/Models/Operations/FileProjectsLocationsInstancesSnapshotsCreateRequest.php
 src/Models/Operations/FileProjectsLocationsInstancesSnapshotsCreateResponse.php
@@ -82,6 +85,7 @@ src/Models/Shared/NfsExportOptionsSquashModeEnum.php
 src/Models/Shared/NfsExportOptions.php
 src/Models/Shared/ListInstancesResponse.php
 src/Models/Shared/RestoreInstanceRequest.php
+src/Models/Shared/RevertInstanceRequest.php
 src/Models/Shared/SnapshotInput.php
 src/Models/Shared/SnapshotStateEnum.php
 src/Models/Shared/Snapshot.php
@@ -89,4 +93,6 @@ src/Models/Shared/ListSnapshotsResponse.php
 src/Models/Shared/ListLocationsResponse.php
 src/Models/Shared/Location.php
 src/Models/Shared/ListOperationsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

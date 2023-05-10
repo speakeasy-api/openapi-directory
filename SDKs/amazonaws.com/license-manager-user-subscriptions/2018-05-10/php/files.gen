@@ -82,4 +82,5 @@ src/Models/Shared/StartProductSubscriptionResponse.php
 src/Models/Shared/StopProductSubscriptionResponse.php
 src/Models/Shared/UpdateIdentityProviderSettingsResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

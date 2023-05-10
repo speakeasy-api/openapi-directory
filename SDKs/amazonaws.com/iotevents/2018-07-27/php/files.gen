@@ -188,4 +188,5 @@ src/Models/Shared/UpdateAlarmModelResponse.php
 src/Models/Shared/UpdateDetectorModelResponse.php
 src/Models/Shared/UpdateInputResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

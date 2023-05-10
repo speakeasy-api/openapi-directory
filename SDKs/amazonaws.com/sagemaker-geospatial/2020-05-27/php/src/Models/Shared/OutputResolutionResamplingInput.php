@@ -10,7 +10,7 @@ namespace OpenAPI\OpenAPI\Models\Shared;
 
 
 /**
- * OutputResolutionResamplingInput - <p/>
+ * OutputResolutionResamplingInput - OutputResolution Configuration indicating the target resolution for the output of Resampling operation.
  * 
  * @package OpenAPI\OpenAPI\Models\Shared
  * @access public

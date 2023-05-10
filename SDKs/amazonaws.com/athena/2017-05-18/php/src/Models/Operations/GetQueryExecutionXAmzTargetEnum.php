@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetQueryExecutionXAmzTargetEnum: string
 {
     case AMAZON_ATHENA_GET_QUERY_EXECUTION = 'AmazonAthena.GetQueryExecution';

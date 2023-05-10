@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListCreateAccountStatusXAmzTargetEnum: string
 {
     case AWS_ORGANIZATIONS_V20161128_LIST_CREATE_ACCOUNT_STATUS = 'AWSOrganizationsV20161128.ListCreateAccountStatus';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum NotifyResourceDeploymentStatusChangeXAmzTargetEnum: string
 {
     case AWS_PROTON20200720_NOTIFY_RESOURCE_DEPLOYMENT_STATUS_CHANGE = 'AwsProton20200720.NotifyResourceDeploymentStatusChange';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ViewBillingXAmzTargetEnum: string
 {
     case ROUTE53_DOMAINS_V20140515_VIEW_BILLING = 'Route53Domains_v20140515.ViewBilling';

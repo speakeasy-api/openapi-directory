@@ -26,6 +26,7 @@ src/Utils/Utils.php
 src/Models/Operations/GetFactFodSecurity.php
 src/Models/Operations/GetFactFodRequest.php
 src/Models/Operations/GetFactFodResponse.php
+src/Models/Operations/GetFactFodCategoriesSecurity.php
 src/Models/Operations/GetFactFodCategoriesResponse.php
 src/Models/Operations/GetFactNumbersSecurity.php
 src/Models/Operations/GetFactNumbersRequest.php
@@ -57,4 +58,10 @@ src/Models/Operations/GetFactRandomResponse.php
 src/Models/Operations/GetFactSearchSecurity.php
 src/Models/Operations/GetFactSearchRequest.php
 src/Models/Operations/GetFactSearchResponse.php
+docs/sdk/README.md
+docs/factoftheday/README.md
+docs/numberfacts/README.md
+docs/onthisday/README.md
+docs/privatefacts/README.md
+docs/randomfacts/README.md
 USAGE.md

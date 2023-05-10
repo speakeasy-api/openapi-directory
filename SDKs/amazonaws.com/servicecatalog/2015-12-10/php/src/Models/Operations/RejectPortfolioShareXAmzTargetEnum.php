@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum RejectPortfolioShareXAmzTargetEnum: string
 {
     case AWS242_SERVICE_CATALOG_SERVICE_REJECT_PORTFOLIO_SHARE = 'AWS242ServiceCatalogService.RejectPortfolioShare';

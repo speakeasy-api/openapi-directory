@@ -17,6 +17,21 @@ namespace OpenAPI\OpenAPI\Models\Shared;
  */
 class FormInputValueProperty
 {
+	#[\JMS\Serializer\Annotation\SerializedName('bindingProperties')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\FormInputValuePropertyBindingProperties')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?FormInputValuePropertyBindingProperties $bindingProperties = null;
+    
+    /**
+     * $concat
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\FormInputValueProperty> $concat
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('concat')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\FormInputValueProperty>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $concat = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('value')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -24,6 +39,8 @@ class FormInputValueProperty
     
 	public function __construct()
 	{
+		$this->bindingProperties = null;
+		$this->concat = null;
 		$this->value = null;
 	}
 }

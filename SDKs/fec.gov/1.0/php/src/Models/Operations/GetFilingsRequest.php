@@ -54,6 +54,12 @@ class GetFilingsRequest
      * 
      * A unique identifier assigned to each candidate registered with the FEC.
      * If a person runs for several offices, that person will have separate candidate IDs for each office.
+     * First character indicates office - [P]residential, [H]ouse, [S]enate].
+     * Second character is the last digit of the two-year period the ID was created.
+     * Third and fourth is the candidate state. Presidential IDs don't have state.
+     * Fifth and sixth is the district when the candidate first ran. This does not change if the
+     * candidate/member's district changes during re-districting. Presidential IDs don't have districts.
+     * The rest is sequence.
      * 
      * 
      * @var ?array<string> $candidateId
@@ -372,8 +378,8 @@ class GetFilingsRequest
     public ?array $reportYear = null;
     
     /**
-     * Requests for additional information (RFAIs) sent to filers. The request type is based on the type of document filed:
      * 
+     * Requests for additional information (RFAIs) sent to filers. The request type is based on the type of document filed:
      *     - 1 Statement of Organization
      *     - 2 Report of Receipts and Expenditures (Form 3 and 3X)
      *     - 3 Second Notice - Reports

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeactivateContactChannelXAmzTargetEnum: string
 {
     case SSM_CONTACTS_DEACTIVATE_CONTACT_CHANNEL = 'SSMContacts.DeactivateContactChannel';

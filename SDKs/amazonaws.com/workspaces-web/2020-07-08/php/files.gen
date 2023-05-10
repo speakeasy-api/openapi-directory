@@ -210,4 +210,5 @@ src/Models/Shared/UpdateTrustStoreResponse.php
 src/Models/Shared/UpdateUserAccessLoggingSettingsResponse.php
 src/Models/Shared/UpdateUserSettingsResponse.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum UpdateAliasXAmzTargetEnum: string
 {
     case TRENT_SERVICE_UPDATE_ALIAS = 'TrentService.UpdateAlias';

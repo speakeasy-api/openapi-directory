@@ -180,4 +180,5 @@ src/Models/Shared/PathElement.php
 src/Models/Shared/Substring.php
 src/Models/Shared/ValidatePolicyFindingTypeEnum.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

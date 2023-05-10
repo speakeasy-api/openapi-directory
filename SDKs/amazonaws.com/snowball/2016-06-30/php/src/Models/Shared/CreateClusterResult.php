@@ -22,8 +22,19 @@ class CreateClusterResult
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $clusterId = null;
     
+    /**
+     * $jobListEntries
+     * 
+     * @var ?array<\OpenAPI\OpenAPI\Models\Shared\JobListEntry> $jobListEntries
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('JobListEntries')]
+    #[\JMS\Serializer\Annotation\Type('array<OpenAPI\OpenAPI\Models\Shared\JobListEntry>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?array $jobListEntries = null;
+    
 	public function __construct()
 	{
 		$this->clusterId = null;
+		$this->jobListEntries = null;
 	}
 }

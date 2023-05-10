@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListTrainingJobsForHyperParameterTuningJobXAmzTargetEnum: string
 {
     case SAGE_MAKER_LIST_TRAINING_JOBS_FOR_HYPER_PARAMETER_TUNING_JOB = 'SageMaker.ListTrainingJobsForHyperParameterTuningJob';

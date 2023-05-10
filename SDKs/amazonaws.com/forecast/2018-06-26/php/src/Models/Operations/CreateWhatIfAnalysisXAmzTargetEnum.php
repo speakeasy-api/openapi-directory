@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum CreateWhatIfAnalysisXAmzTargetEnum: string
 {
     case AMAZON_FORECAST_CREATE_WHAT_IF_ANALYSIS = 'AmazonForecast.CreateWhatIfAnalysis';

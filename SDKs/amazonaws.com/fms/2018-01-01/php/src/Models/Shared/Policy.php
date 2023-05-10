@@ -60,6 +60,11 @@ class Policy
     #[\JMS\Serializer\Annotation\Type('string')]
     public string $policyName;
     
+	#[\JMS\Serializer\Annotation\SerializedName('PolicyStatus')]
+    #[\JMS\Serializer\Annotation\Type('enum<OpenAPI\OpenAPI\Models\Shared\CustomerPolicyStatusEnum>')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?CustomerPolicyStatusEnum $policyStatus = null;
+    
 	#[\JMS\Serializer\Annotation\SerializedName('PolicyUpdateToken')]
     #[\JMS\Serializer\Annotation\Type('string')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
@@ -116,6 +121,7 @@ class Policy
 		$this->policyDescription = null;
 		$this->policyId = null;
 		$this->policyName = "";
+		$this->policyStatus = null;
 		$this->policyUpdateToken = null;
 		$this->remediationEnabled = false;
 		$this->resourceSetIds = null;

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum BatchDescribeModelPackageXAmzTargetEnum: string
 {
     case SAGE_MAKER_BATCH_DESCRIBE_MODEL_PACKAGE = 'SageMaker.BatchDescribeModelPackage';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum EnableEnhancedMonitoringXAmzTargetEnum: string
 {
     case KINESIS20131202_ENABLE_ENHANCED_MONITORING = 'Kinesis_20131202.EnableEnhancedMonitoring';

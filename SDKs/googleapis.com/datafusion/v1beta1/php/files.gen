@@ -110,4 +110,6 @@ src/Models/Shared/ListLocationsResponse.php
 src/Models/Shared/Location.php
 src/Models/Shared/ListOperationsResponse.php
 src/Models/Shared/ListAvailableVersionsResponse.php
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

@@ -146,4 +146,5 @@ src/Models/Shared/ParameterNameValue.php
 src/Models/Shared/UpdateSubnetGroupResponse.php
 src/Models/Shared/UpdateSubnetGroupRequest.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

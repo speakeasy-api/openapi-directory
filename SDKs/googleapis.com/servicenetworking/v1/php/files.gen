@@ -160,4 +160,7 @@ src/Models/Shared/SecondaryIpRange.php
 src/Models/Shared/ValidateConsumerConfigRequest.php
 src/Models/Shared/RangeReservation.php
 src/Models/Shared/ConsumerProject.php
+docs/sdk/README.md
+docs/operations/README.md
+docs/services/README.md
 USAGE.md

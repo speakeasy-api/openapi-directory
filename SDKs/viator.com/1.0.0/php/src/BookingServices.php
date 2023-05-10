@@ -691,7 +691,7 @@ class BookingServices
      */
 	public function cancelBooking(
         \OpenAPI\OpenAPI\Models\Operations\CancelBookingRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\CancelBookingResponse
     {
         $baseUrl = BookingServices::CANCEL_BOOKING_SERVERS[0];
@@ -780,7 +780,7 @@ class BookingServices
      */
 	public function cancelBookingQuote(
         \OpenAPI\OpenAPI\Models\Operations\CancelBookingQuoteRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\CancelBookingQuoteResponse
     {
         $baseUrl = BookingServices::CANCEL_BOOKING_QUOTE_SERVERS[0];
@@ -854,7 +854,7 @@ class BookingServices
      */
 	public function cancellationReasons(
         \OpenAPI\OpenAPI\Models\Operations\CancellationReasonsRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\CancellationReasonsResponse
     {
         $baseUrl = BookingServices::CANCELLATION_REASONS_SERVERS[0];

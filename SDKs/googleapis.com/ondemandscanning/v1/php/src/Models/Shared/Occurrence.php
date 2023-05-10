@@ -168,6 +168,16 @@ class Occurrence
     public ?string $resourceUri = null;
     
     /**
+     * The occurrence representing an SBOM reference as applied to a specific resource. The occurrence follows the DSSE specification. See https://github.com/secure-systems-lab/dsse/blob/master/envelope.md for more details.
+     * 
+     * @var ?\OpenAPI\OpenAPI\Models\Shared\SBOMReferenceOccurrence $sbomReference
+     */
+	#[\JMS\Serializer\Annotation\SerializedName('sbomReference')]
+    #[\JMS\Serializer\Annotation\Type('OpenAPI\OpenAPI\Models\Shared\SBOMReferenceOccurrence')]
+    #[\JMS\Serializer\Annotation\SkipWhenEmpty]
+    public ?SBOMReferenceOccurrence $sbomReference = null;
+    
+    /**
      * Output only. The time this occurrence was last updated.
      * 
      * @var ?string $updateTime
@@ -214,6 +224,7 @@ class Occurrence
 		$this->package = null;
 		$this->remediation = null;
 		$this->resourceUri = null;
+		$this->sbomReference = null;
 		$this->updateTime = null;
 		$this->upgrade = null;
 		$this->vulnerability = null;

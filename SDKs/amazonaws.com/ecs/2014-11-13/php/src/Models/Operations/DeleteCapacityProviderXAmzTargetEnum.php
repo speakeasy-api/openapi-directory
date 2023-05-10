@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteCapacityProviderXAmzTargetEnum: string
 {
     case AMAZON_EC2_CONTAINER_SERVICE_V20141113_DELETE_CAPACITY_PROVIDER = 'AmazonEC2ContainerServiceV20141113.DeleteCapacityProvider';

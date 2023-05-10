@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTModifyDBClusterParameterGroupActionEnum: string
 {
     case MODIFY_DB_CLUSTER_PARAMETER_GROUP = 'ModifyDBClusterParameterGroup';

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum AdminDisableProviderForUserXAmzTargetEnum: string
 {
     case AWS_COGNITO_IDENTITY_PROVIDER_SERVICE_ADMIN_DISABLE_PROVIDER_FOR_USER = 'AWSCognitoIdentityProviderService.AdminDisableProviderForUser';

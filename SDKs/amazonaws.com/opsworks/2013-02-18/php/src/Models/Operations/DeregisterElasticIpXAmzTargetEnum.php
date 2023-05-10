@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeregisterElasticIpXAmzTargetEnum: string
 {
     case OPS_WORKS20130218_DEREGISTER_ELASTIC_IP = 'OpsWorks_20130218.DeregisterElasticIp';

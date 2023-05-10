@@ -22,4 +22,5 @@ src/Models/Operations/IpGeolocationWithConfidenceAreaAndHazardReportApiRequest.p
 src/Models/Operations/IpGeolocationWithConfidenceAreaAndHazardReportApiResponse.php
 src/Models/Operations/IpGeolocationWithConfidenceAreaApiRequest.php
 src/Models/Operations/IpGeolocationWithConfidenceAreaApiResponse.php
+docs/sdk/README.md
 USAGE.md

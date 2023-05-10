@@ -172,9 +172,11 @@ class EditorialVideo
      * 
      * This endpoint lists the categories that editorial videos can belong to, which are separate from the categories that other types of assets can belong to.
      * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ListEditorialVideoCategoriesSecurity $security
      * @return \OpenAPI\OpenAPI\Models\Operations\ListEditorialVideoCategoriesResponse
      */
 	public function listEditorialVideoCategories(
+        \OpenAPI\OpenAPI\Models\Operations\ListEditorialVideoCategoriesSecurity $security,
     ): \OpenAPI\OpenAPI\Models\Operations\ListEditorialVideoCategoriesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -182,7 +184,8 @@ class EditorialVideo
         
         $options = ['http_errors' => false];
         
-        $httpResponse = $this->_defaultClient->request('GET', $url, $options);
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 

@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum ListOfferingTransactionsXAmzTargetEnum: string
 {
     case DEVICE_FARM20150623_LIST_OFFERING_TRANSACTIONS = 'DeviceFarm_20150623.ListOfferingTransactions';

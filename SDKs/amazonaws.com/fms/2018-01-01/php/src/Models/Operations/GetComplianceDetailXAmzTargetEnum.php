@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetComplianceDetailXAmzTargetEnum: string
 {
     case AWSFMS20180101_GET_COMPLIANCE_DETAIL = 'AWSFMS_20180101.GetComplianceDetail';

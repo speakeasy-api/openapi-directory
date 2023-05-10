@@ -69,4 +69,6 @@ src/Models/Shared/AltEnum.php
 src/Models/Shared/XgafvEnum.php
 src/Models/Shared/ListJobsResponse.php
 src/Models/Shared/ListMeta.php
+docs/sdk/README.md
+docs/namespaces/README.md
 USAGE.md

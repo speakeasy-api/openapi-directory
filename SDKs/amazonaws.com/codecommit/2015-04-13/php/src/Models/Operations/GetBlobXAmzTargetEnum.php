@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GetBlobXAmzTargetEnum: string
 {
     case CODE_COMMIT20150413_GET_BLOB = 'CodeCommit_20150413.GetBlob';

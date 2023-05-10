@@ -23,6 +23,22 @@ class GetTablesResponse
     public mixed $entityNotFoundException = null;
     
     /**
+     * FederationSourceException
+     * 
+     * @var mixed $federationSourceException
+     */
+	
+    public mixed $federationSourceException = null;
+    
+    /**
+     * FederationSourceRetryableException
+     * 
+     * @var mixed $federationSourceRetryableException
+     */
+	
+    public mixed $federationSourceRetryableException = null;
+    
+    /**
      * Success
      * 
      * @var ?\OpenAPI\OpenAPI\Models\Shared\GetTablesResponse $getTablesResponse
@@ -72,6 +88,8 @@ class GetTablesResponse
 	{
 		$this->contentType = "";
 		$this->entityNotFoundException = null;
+		$this->federationSourceException = null;
+		$this->federationSourceRetryableException = null;
 		$this->getTablesResponse = null;
 		$this->glueEncryptionException = null;
 		$this->internalServiceException = null;

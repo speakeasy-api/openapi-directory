@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum GETDescribeConfigurationSetActionEnum: string
 {
     case DESCRIBE_CONFIGURATION_SET = 'DescribeConfigurationSet';

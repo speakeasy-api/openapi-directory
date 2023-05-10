@@ -30,108 +30,133 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+```php
+<?php
 
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \OpenAPI\OpenAPI\SDK;
+use \OpenAPI\OpenAPI\Models\Shared\Security;
+use \OpenAPI\OpenAPI\Models\Operations\DeleteChargeStationRequest;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new DeleteChargeStationRequest();
+    $request->id = '89bd9d8d-69a6-474e-8f46-7cc8796ed151';
+
+    $response = $sdk->chargeStations->deleteChargeStation($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
-### chargeStations
+### [chargeStations](docs/chargestations/README.md)
 
-* `deleteChargeStation` - Use to delete a charge station
-* `getChargeStation` - Get a single charge station's data
-* `getChargeStationConnectors` - List connectors for a chargestation
-* `getChargeStations` - List all Chargestations
-* `patchChargeStation` - Update a charge station's data
-* `postChargeStations` - Create a new charge station
+* [deleteChargeStation](docs/chargestations/README.md#deletechargestation) - Use to delete a charge station
+* [getChargeStation](docs/chargestations/README.md#getchargestation) - Get a single charge station's data
+* [getChargeStationConnectors](docs/chargestations/README.md#getchargestationconnectors) - List connectors for a chargestation
+* [getChargeStations](docs/chargestations/README.md#getchargestations) - List all Chargestations
+* [patchChargeStation](docs/chargestations/README.md#patchchargestation) - Update a charge station's data
+* [postChargeStations](docs/chargestations/README.md#postchargestations) - Create a new charge station
 
-### commands
+### [commands](docs/commands/README.md)
 
-* `cancelreservation` - Use to request a delete an existing reservation. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
-* `getCommands` - Get Commands data
-* `getVariables` - Get a charge station's config variables
-* `patchChargeStationVariable` - Update config variables for a chargestation
-* `remotestart` - Use to request a remote start command. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
-* `remotestop` - Use to request a remote stop command. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
-* `reserve` - Use to request a reserve command. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
-* `reset` - Use to request a reset command. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
-* `unlockconnector` - Use to request an unlock command for a connector. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
+* [cancelreservation](docs/commands/README.md#cancelreservation) - Use to request a delete an existing reservation. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
+* [getCommands](docs/commands/README.md#getcommands) - Get Commands data
+* [getVariables](docs/commands/README.md#getvariables) - Get a charge station's config variables
+* [patchChargeStationVariable](docs/commands/README.md#patchchargestationvariable) - Update config variables for a chargestation
+* [remotestart](docs/commands/README.md#remotestart) - Use to request a remote start command. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
+* [remotestop](docs/commands/README.md#remotestop) - Use to request a remote stop command. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
+* [reserve](docs/commands/README.md#reserve) - Use to request a reserve command. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
+* [reset](docs/commands/README.md#reset) - Use to request a reset command. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
+* [unlockconnector](docs/commands/README.md#unlockconnector) - Use to request an unlock command for a connector. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
 
-### configurations
+### [configurations](docs/configurations/README.md)
 
-* `getConfiguration` - Get one Configuration data
-* `getConfigurations` - Get Configurations data
-* `postConfigurations` - Create connector with parameters
+* [getConfiguration](docs/configurations/README.md#getconfiguration) - Get one Configuration data
+* [getConfigurations](docs/configurations/README.md#getconfigurations) - Get Configurations data
+* [postConfigurations](docs/configurations/README.md#postconfigurations) - Create connector with parameters
 
-### connectors
+### [connectors](docs/connectors/README.md)
 
-* `deleteConnector` - Delete a connector
-* `getConnector` - Get a connector
-* `getConnectors` - List connectors
-* `patchConnector` - Update a connector's data
-* `postConnectors` - Create a new connector
+* [deleteConnector](docs/connectors/README.md#deleteconnector) - Delete a connector
+* [getConnector](docs/connectors/README.md#getconnector) - Get a connector
+* [getConnectors](docs/connectors/README.md#getconnectors) - List connectors
+* [patchConnector](docs/connectors/README.md#patchconnector) - Update a connector's data
+* [postConnectors](docs/connectors/README.md#postconnectors) - Create a new connector
 
-### drivers
+### [drivers](docs/drivers/README.md)
 
-* `deleteDriver` - Delete a driver
-* `getDriver` - Get a driver's data
-* `getDrivers` - List all drivers
-* `patchDriver` - Update a driver's data
-* `postDrivers` - Create a new driver
+* [deleteDriver](docs/drivers/README.md#deletedriver) - Delete a driver
+* [getDriver](docs/drivers/README.md#getdriver) - Get a driver's data
+* [getDrivers](docs/drivers/README.md#getdrivers) - List all drivers
+* [patchDriver](docs/drivers/README.md#patchdriver) - Update a driver's data
+* [postDrivers](docs/drivers/README.md#postdrivers) - Create a new driver
 
-### locations
+### [locations](docs/locations/README.md)
 
-* `deleteLocation` - Delete a location
-* `getLocation` - Get a location's data
-* `getLocations` - Get Locations data
-* `patchLocation` - Update a location's data
-* `postLocations` - Create a new location
+* [deleteLocation](docs/locations/README.md#deletelocation) - Delete a location
+* [getLocation](docs/locations/README.md#getlocation) - Get a location's data
+* [getLocations](docs/locations/README.md#getlocations) - Get Locations data
+* [patchLocation](docs/locations/README.md#patchlocation) - Update a location's data
+* [postLocations](docs/locations/README.md#postlocations) - Create a new location
 
-### organizations
+### [organizations](docs/organizations/README.md)
 
-* `getOrganization` - Get one organization's data by id
-* `getOrganizations` - Get an array of all Organizations
-* `patchOrganization` - Update an organization's data
+* [getOrganization](docs/organizations/README.md#getorganization) - Get one organization's data by id
+* [getOrganizations](docs/organizations/README.md#getorganizations) - Get an array of all Organizations
+* [patchOrganization](docs/organizations/README.md#patchorganization) - Update an organization's data
 
-### realtime
+### [realtime](docs/realtime/README.md)
 
-* `getRealtime` - Use to request a Websockets handshake
+* [getRealtime](docs/realtime/README.md#getrealtime) - Use to request a Websockets handshake
 
-### reservations
+### [reservations](docs/reservations/README.md)
 
-* `getReservation` - Get one reservation data
-* `getReservations` - Get Reservations data
-* `updatereservation` - Use to request a update an existing reservation. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
+* [getReservation](docs/reservations/README.md#getreservation) - Get one reservation data
+* [getReservations](docs/reservations/README.md#getreservations) - Get Reservations data
+* [updatereservation](docs/reservations/README.md#updatereservation) - Use to request a update an existing reservation. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
 
-### smartCharging
+### [smartCharging](docs/smartcharging/README.md)
 
-* `deletechargingschedule` - Delete a smart charging schedule
-* `setchargingschedule` - Set one of charging power or current of a specific chargestation connector
+* [deletechargingschedule](docs/smartcharging/README.md#deletechargingschedule) - Delete a smart charging schedule
+* [setchargingschedule](docs/smartcharging/README.md#setchargingschedule) - Set one of charging power or current of a specific chargestation connector
 
-### tokens
+### [tokens](docs/tokens/README.md)
 
-* `deleteToken` - Use to delete a token
-* `getToken` - Get a single token's data
-* `getTokens` - List tokens
-* `patchToken` - Update a token
-* `postTokens` - Create a new token
+* [deleteToken](docs/tokens/README.md#deletetoken) - Use to delete a token
+* [getToken](docs/tokens/README.md#gettoken) - Get a single token's data
+* [getTokens](docs/tokens/README.md#gettokens) - List tokens
+* [patchToken](docs/tokens/README.md#patchtoken) - Update a token
+* [postTokens](docs/tokens/README.md#posttokens) - Create a new token
 
-### transactions
+### [transactions](docs/transactions/README.md)
 
-* `getTransaction` - Get a specific transaction
-* `getTransactionCost` - Get a specific transaction's cost
-* `getTransactions` - Get a list of transactions
+* [getTransaction](docs/transactions/README.md#gettransaction) - Get a specific transaction
+* [getTransactionCost](docs/transactions/README.md#gettransactioncost) - Get a specific transaction's cost
+* [getTransactions](docs/transactions/README.md#gettransactions) - Get a list of transactions
 
-### vehicles
+### [vehicles](docs/vehicles/README.md)
 
-* `getVehicle` - Get a vehicle's data
-* `getVehicleBattery` - Get a vehicle's battery
-* `getVehicleCharge` - Get a vehicle's charge
-* `getVehicleLocation` - Get a vehicle's location
-* `getVehicleOdometer` - Get a vehicle's odometer
-* `getVehicles` - List all vehicles
-* `postCharge` - Change charge
+* [getVehicle](docs/vehicles/README.md#getvehicle) - Get a vehicle's data
+* [getVehicleBattery](docs/vehicles/README.md#getvehiclebattery) - Get a vehicle's battery
+* [getVehicleCharge](docs/vehicles/README.md#getvehiclecharge) - Get a vehicle's charge
+* [getVehicleLocation](docs/vehicles/README.md#getvehiclelocation) - Get a vehicle's location
+* [getVehicleOdometer](docs/vehicles/README.md#getvehicleodometer) - Get a vehicle's odometer
+* [getVehicles](docs/vehicles/README.md#getvehicles) - List all vehicles
+* [postCharge](docs/vehicles/README.md#postcharge) - Change charge
 <!-- End SDK Available Operations -->
 
 ### Maturity

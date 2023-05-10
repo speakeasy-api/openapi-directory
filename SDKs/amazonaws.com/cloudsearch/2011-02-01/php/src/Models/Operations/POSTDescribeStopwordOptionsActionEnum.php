@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum POSTDescribeStopwordOptionsActionEnum: string
 {
     case DESCRIBE_STOPWORD_OPTIONS = 'DescribeStopwordOptions';

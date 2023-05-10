@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum DeleteUserPoolDomainXAmzTargetEnum: string
 {
     case AWS_COGNITO_IDENTITY_PROVIDER_SERVICE_DELETE_USER_POOL_DOMAIN = 'AWSCognitoIdentityProviderService.DeleteUserPoolDomain';

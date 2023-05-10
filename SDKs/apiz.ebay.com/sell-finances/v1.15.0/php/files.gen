@@ -62,4 +62,9 @@ src/Models/Shared/TransferDetail.php
 src/Models/Shared/Charge.php
 src/Models/Shared/BalanceAdjustment.php
 src/Models/Shared/FundingSource.php
+docs/sdk/README.md
+docs/payout/README.md
+docs/sellerfundssummary/README.md
+docs/transaction/README.md
+docs/transfer/README.md
 USAGE.md

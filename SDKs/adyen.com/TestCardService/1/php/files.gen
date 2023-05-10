@@ -31,4 +31,6 @@ src/Models/Shared/TestCardRangeThreeDDirectoryServerResponseEnum.php
 src/Models/Shared/TestCardRange.php
 src/Models/Shared/AvsAddress.php
 src/Models/Shared/SchemeBasicAuth.php
+docs/sdk/README.md
+docs/general/README.md
 USAGE.md

@@ -268,6 +268,46 @@ class NetworkAttachments
     }
 	
     /**
+     * Patches the specified NetworkAttachment resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+     * 
+     * @param \OpenAPI\OpenAPI\Models\Operations\ComputeNetworkAttachmentsPatchRequest $request
+     * @param \OpenAPI\OpenAPI\Models\Operations\ComputeNetworkAttachmentsPatchSecurity $security
+     * @return \OpenAPI\OpenAPI\Models\Operations\ComputeNetworkAttachmentsPatchResponse
+     */
+	public function computeNetworkAttachmentsPatch(
+        \OpenAPI\OpenAPI\Models\Operations\ComputeNetworkAttachmentsPatchRequest $request,
+        \OpenAPI\OpenAPI\Models\Operations\ComputeNetworkAttachmentsPatchSecurity $security,
+    ): \OpenAPI\OpenAPI\Models\Operations\ComputeNetworkAttachmentsPatchResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateUrl($baseUrl, '/projects/{project}/regions/{region}/networkAttachments/{networkAttachment}', \OpenAPI\OpenAPI\Models\Operations\ComputeNetworkAttachmentsPatchRequest::class, $request);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, "networkAttachment1", "json");
+        $options = array_merge_recursive($options, $body);
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\OpenAPI\OpenAPI\Models\Operations\ComputeNetworkAttachmentsPatchRequest::class, $request, null));
+        
+        $client = Utils\Utils::configureSecurityClient($this->_defaultClient, $security);
+        $httpResponse = $client->request('PATCH', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \OpenAPI\OpenAPI\Models\Operations\ComputeNetworkAttachmentsPatchResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->operation = $serializer->deserialize((string)$httpResponse->getBody(), 'OpenAPI\OpenAPI\Models\Shared\Operation', 'json');
+            }
+        }
+
+        return $response;
+    }
+	
+    /**
      * Sets the access control policy on the specified resource. Replaces any existing policy.
      * 
      * @param \OpenAPI\OpenAPI\Models\Operations\ComputeNetworkAttachmentsSetIamPolicyRequest $request

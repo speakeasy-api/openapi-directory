@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace OpenAPI\OpenAPI\Models\Operations;
 
 
+/**
+ */
 enum TagResourceXAmzTargetEnum: string
 {
     case EC2_WINDOWS_BARLEY_SERVICE_TAG_RESOURCE = 'EC2WindowsBarleyService.TagResource';

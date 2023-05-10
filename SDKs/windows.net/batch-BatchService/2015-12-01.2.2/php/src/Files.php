@@ -147,8 +147,7 @@ class Files
             $response->headers = $httpResponse->getHeaders();
             
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->fileGetFromComputeNode200ApplicationJSONBinaryString = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->fileGetFromComputeNode200ApplicationJSONBinaryString = $httpResponse->getBody()->getContents();
             }
         }
         else {
@@ -191,8 +190,7 @@ class Files
             $response->headers = $httpResponse->getHeaders();
             
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->fileGetFromTask200ApplicationJSONBinaryString = $serializer->deserialize((string)$httpResponse->getBody(), 'string', 'json');
+                $response->fileGetFromTask200ApplicationJSONBinaryString = $httpResponse->getBody()->getContents();
             }
         }
         else {

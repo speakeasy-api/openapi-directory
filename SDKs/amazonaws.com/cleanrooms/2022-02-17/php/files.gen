@@ -210,4 +210,5 @@ src/Models/Shared/UpdateConfiguredTableAssociationOutput.php
 src/Models/Shared/UpdateMembershipOutput.php
 src/Models/Shared/UpdateProtectedQueryOutput.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
 USAGE.md

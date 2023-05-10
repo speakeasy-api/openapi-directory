@@ -1355,7 +1355,7 @@ class CmFacing
      */
 	public function postV05PatientsProfileShareJson(
         \OpenAPI\OpenAPI\Models\Operations\PostV05PatientsProfileShareJsonRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05PatientsProfileShareJsonResponse
     {
         $baseUrl = CmFacing::POST_V05_PATIENTS_PROFILE_SHARE_JSON_SERVERS[0];
@@ -1415,7 +1415,7 @@ class CmFacing
      */
 	public function postV05PatientsProfileShareRaw(
         \OpenAPI\OpenAPI\Models\Operations\PostV05PatientsProfileShareRawRequest $request,
-        string $serverURL = null,
+        ?string $serverURL = null,
     ): \OpenAPI\OpenAPI\Models\Operations\PostV05PatientsProfileShareRawResponse
     {
         $baseUrl = CmFacing::POST_V05_PATIENTS_PROFILE_SHARE_RAW_SERVERS[0];

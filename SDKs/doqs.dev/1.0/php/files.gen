@@ -37,10 +37,10 @@ src/Models/Operations/DeleteDesignerTemplatesIdDeleteRequest.php
 src/Models/Operations/DeleteDesignerTemplatesIdDeleteResponse.php
 src/Models/Operations/GeneratePdfDesignerTemplatesIdGeneratePostRequest.php
 src/Models/Operations/GeneratePdfDesignerTemplatesIdGeneratePostResponse.php
-src/Models/Operations/ListTemplatesDesignerTemplatesGetRequest.php
-src/Models/Operations/ListTemplatesDesignerTemplatesGetResponse.php
 src/Models/Operations/ListTemplatesDesignerTemplatesIdGetRequest.php
 src/Models/Operations/ListTemplatesDesignerTemplatesIdGetResponse.php
+src/Models/Operations/ListTemplatesDesignerTemplatesGetRequest.php
+src/Models/Operations/ListTemplatesDesignerTemplatesGetResponse.php
 src/Models/Operations/PreviewDesignerTemplatesPreviewPostResponse.php
 src/Models/Operations/UpdateTemplateDesignerTemplatesIdPutRequest.php
 src/Models/Operations/UpdateTemplateDesignerTemplatesIdPutResponse.php
@@ -73,7 +73,9 @@ src/Models/Shared/UpdateTemplateRequest.php
 src/Models/Shared/ResponseOkDesignerTemplate.php
 src/Models/Shared/DesignerTemplate.php
 src/Models/Shared/OrientationEnum.php
+src/Models/Shared/Margin.php
 src/Models/Shared/FormatEnum.php
+src/Models/Shared/CreateOrUpdateTemplateRequestMargin.php
 src/Models/Shared/CreateOrUpdateTemplateRequest.php
 src/Models/Shared/GeneratePDFPayload.php
 src/Models/Shared/ResponseOkListFillrEntitiesDesignerTemplateDesignerTemplate.php
@@ -81,4 +83,6 @@ src/Models/Shared/ResponseOkPreviewResponse.php
 src/Models/Shared/PreviewResponse.php
 src/Models/Shared/PreviewModel.php
 src/Models/Shared/Security.php
+docs/sdk/README.md
+docs/templates/README.md
 USAGE.md
